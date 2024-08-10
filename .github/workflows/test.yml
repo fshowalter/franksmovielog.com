@@ -17,9 +17,9 @@ jobs:
           node-version-file: ".nvmrc"
           cache: "npm"
 
-      - name: install latest npm
+      - name: setup npm
         run: |
-          npm_update &&
+          ./npm_update.sh &&
           npm --version &&
           npm list -g --depth 0
 
