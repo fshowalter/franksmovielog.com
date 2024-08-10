@@ -19,7 +19,7 @@ jobs:
 
       - name: setup npm
         run: |
-          ./npm_update.sh &&
+          ./npm_use.sh &&
           npm --version &&
           npm list -g --depth 0
 
