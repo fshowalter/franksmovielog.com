@@ -54,7 +54,9 @@ export function Header({
   return (
     <>
       <div className="text-center leading-9">
-        <a href="/cast-and-crew/">Cast & Crew</a>
+        <a className="text-accent" href="/cast-and-crew/">
+          Cast & Crew
+        </a>
       </div>
       <div className="spacer-y-4" />
       <div className="flex flex-col items-center">
