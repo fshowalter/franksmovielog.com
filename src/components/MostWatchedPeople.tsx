@@ -38,7 +38,7 @@ export function MostWatchedPeople({
   return (
     <section className="shadow-all">
       <StatHeading>{header}</StatHeading>
-      <header className="sticky top-10 z-30 flex justify-between bg-default px-gutter font-bold leading-[calc(2.5rem_-_2px)] desktop:top-[calc(160px_+_2.5rem)] max:top-[calc(128px_+_2.5rem)]">
+      <header className="sticky top-10 z-30 flex justify-between bg-default px-gutter font-bold leading-[calc(2.5rem_-_2px)] desktop:top-[calc(var(--header-offset)_+_2.5rem)] max:top-[calc(var(--header-offset)_+_2.5rem)]">
         <span className="text-left leading-10">Name</span>
         <span className="text-right leading-10">Viewings</span>
       </header>
@@ -48,7 +48,7 @@ export function MostWatchedPeople({
             <li key={value.name} className="block">
               <div
                 style={{ zIndex: 1 + index }}
-                className="sticky top-20 grid w-full grid-cols-[auto_1fr_calc(6ch_+_var(--gutter-width))] bg-stripe px-gutter leading-10 desktop:top-[calc(160px_+_5rem)] max:top-[calc(128px_+_5rem)]"
+                className="sticky top-20 grid w-full grid-cols-[auto_1fr_calc(6ch_+_var(--gutter-width))] bg-stripe px-gutter leading-10 desktop:top-[calc(var(--header-offset)_+_5rem)] max:top-[calc(var(--header-offset)_+_5rem)]"
               >
                 <span className="leading-10">
                   <Name value={value} />
