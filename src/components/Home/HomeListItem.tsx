@@ -5,9 +5,11 @@ import { RenderedMarkdown } from "src/components/RenderedMarkdown";
 import { Still } from "src/components/Still";
 
 export const StillImageConfig = {
-  width: 416,
+  width: 480,
   height: 270,
-  sizes: "(min-width: 512px) 512px, 100vw",
+  sizes:
+    "(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw",
+  quality: 80,
 };
 
 function formatDate(reviewDate: Date) {
@@ -45,62 +47,55 @@ export function HomeListItem({
   eagerLoadImage: boolean;
 }) {
   return (
-    <li className="flex px-pageMargin odd:bg-subtle">
-      <article className="mx-auto flex max-w-[960px] flex-col items-center py-10 desktop:grid desktop:w-full desktop:grid-cols-[1fr_minmax(min-content,_435px)] desktop:grid-rows-[auto_auto_1fr] desktop:gap-x-[var(--gutter-width)]">
-        <div className="pb-3 text-center text-sm font-light uppercase leading-4 tracking-0.75px text-subtle desktop:text-left desktop:leading-8">
-          {formatDate(value.date)}
-        </div>
+    <li className="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_auto_1fr_auto] tablet:gap-y-4 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default desktop:max-w-unset">
+      <div className="row-start-1 row-end-1">
         <a
-          rel="canonical"
           href={`/reviews/${value.slug}/`}
-          className="still-border block max-w-prose desktop:col-start-2 desktop:col-end-2 desktop:row-span-3 desktop:row-start-1 desktop:justify-end desktop:self-start"
+          className="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[480px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
         >
-          {value.stillImageProps && (
-            <Still
-              title={value.title}
-              year={value.year}
-              width={StillImageConfig.width}
-              height={StillImageConfig.height}
-              sizes={StillImageConfig.sizes}
-              imageProps={value.stillImageProps}
-              loading={eagerLoadImage ? "eager" : "lazy"}
-              className="h-auto"
-              decoding={eagerLoadImage ? "sync" : "async"}
-            />
-          )}
-        </a>
-        <div className="flex max-w-prose flex-col items-center pt-4 desktop:col-span-1 desktop:col-start-1 desktop:row-start-2 desktop:items-start desktop:place-self-start desktop:pt-0">
-          <h2 className="text-2.5xl font-bold leading-8">
-            <a
-              href={`/reviews/${value.slug}/`}
-              rel="canonical"
-              className="inline-block text-default"
-            >
-              {value.title}{" "}
-              <span className="inline-block text-base font-light leading-none text-subtle">
-                {value.year}
-              </span>
-            </a>
-          </h2>
-          <div className="spacer-y-4" />
-          <Grade value={value.grade} height={24} />
-          <div className="spacer-y-6" />
-          <div className="text-sm leading-4 tracking-0.5px text-subtle">
-            {value.genres.map((genre, index) => {
-              if (index === 0) {
-                return <span key={genre}>{genre}</span>;
-              }
-
-              return <span key={genre}> | {genre}</span>;
-            })}
-          </div>
-          <div className="spacer-y-6" />
-          <RenderedMarkdown
-            text={value.excerpt}
-            className="self-start text-lg leading-normal tracking-0.3px text-muted"
+          <Still
+            title={value.title}
+            year={value.year}
+            imageProps={value.stillImageProps}
+            width={StillImageConfig.width}
+            height={StillImageConfig.height}
+            className="h-auto"
+            loading="lazy"
+            decoding="async"
+            sizes={StillImageConfig.sizes}
           />
+        </a>
+      </div>
+      <div className="row-start-2 mb-2 tablet:m-0 tablet:px-6">
+        <a
+          href={`/reviews/${value.slug}/`}
+          className="block text-2.5xl font-bold text-default"
+        >
+          {value.title}{" "}
+          <span className="text-sm font-light leading-none text-muted">
+            {value.year}
+          </span>
+        </a>
+      </div>
+      <div className="tablet:m-0 tablet:px-6">
+        <Grade value={value.grade} height={24} />
+      </div>
+      <RenderedMarkdown
+        text={value.excerpt}
+        className="text-lg leading-normal tracking-0.3px text-muted tablet:px-6"
+      />
+      <div className="spacer-y-6" />
+      <div className="mt-auto tablet:px-6">
+        <div className="text-sm leading-4 tracking-0.5px text-subtle">
+          {value.genres.map((genre, index) => {
+            if (index === 0) {
+              return <span key={genre}>{genre}</span>;
+            }
+
+            return <span key={genre}> | {genre}</span>;
+          })}
         </div>
-      </article>
+      </div>
     </li>
   );
 }
