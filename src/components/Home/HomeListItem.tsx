@@ -5,7 +5,7 @@ import { RenderedMarkdown } from "src/components/RenderedMarkdown";
 import { Still } from "src/components/Still";
 
 export const StillImageConfig = {
-  width: 480,
+  width: 416,
   height: 270,
   sizes: "(min-width: 512px) 512px, 100vw",
 };
@@ -45,8 +45,8 @@ export function HomeListItem({
   eagerLoadImage: boolean;
 }) {
   return (
-    <li className="flex max-w-canvas px-pageMargin odd:bg-subtle">
-      <article className="mx-auto flex max-w-[1080px] flex-col items-center py-10 desktop:grid desktop:w-full desktop:grid-cols-[1fr_minmax(min-content,_498px)] desktop:grid-rows-[auto_auto_1fr] desktop:gap-x-[var(--gutter-width)]">
+    <li className="flex px-pageMargin odd:bg-subtle">
+      <article className="mx-auto flex max-w-[960px] flex-col items-center py-10 desktop:grid desktop:w-full desktop:grid-cols-[1fr_minmax(min-content,_435px)] desktop:grid-rows-[auto_auto_1fr] desktop:gap-x-[var(--gutter-width)]">
         <div className="pb-3 text-center text-sm font-light uppercase leading-4 tracking-0.75px text-subtle desktop:text-left desktop:leading-8">
           {formatDate(value.date)}
         </div>

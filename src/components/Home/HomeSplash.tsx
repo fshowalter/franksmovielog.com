@@ -63,8 +63,8 @@ export function HomeSplash({ value }: { value: ListItemValue }) {
         )}
       </a>
       <div className="flex flex-col items-center pt-4 desktop:col-span-1 desktop:col-start-1 desktop:row-start-2 desktop:mx-[9px] desktop:items-start desktop:place-self-start desktop:pt-0">
-        <div className="spacer-y-4" />
-        <h2 className="text-2.5xl font-bold leading-8">
+        <div className="spacer-y-6" />
+        <h2 className="text-[2.5rem] font-bold leading-8">
           <a
             href={`/reviews/${value.slug}/`}
             rel="canonical"
@@ -77,7 +77,7 @@ export function HomeSplash({ value }: { value: ListItemValue }) {
           </a>
         </h2>
         <div className="spacer-y-4" />
-        <Grade value={value.grade} height={24} />
+        <Grade value={value.grade} height={32} />
         <div className="spacer-y-6" />
         <div className="text-sm leading-4 tracking-0.5px text-subtle">
           {value.genres.map((genre, index) => {
