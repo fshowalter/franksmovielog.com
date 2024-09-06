@@ -8,14 +8,17 @@ export interface Props {
 }
 
 export function Home({ values }: Props): JSX.Element {
+  values = values.slice(1);
   return (
-    <main className="bg-subtle">
+    <main>
       <div className="mx-auto px-pageMargin">
         <div className="spacer-y-6 desktop:spacer-y-8" />
-        <PageTitle className="text-center">Latest Updates</PageTitle>
-        <div className="spacer-y-6 desktop:spacer-y-8" />
+        <HomeSplash value={values[0]} />
+      </div>
+      <div className="mx-auto bg-subtle px-pageMargin">
+        <div className="spacer-y-6 desktop:spacer-y-16" />
         <ul className="mx-auto max-w-[calc(480px_*_3_+_2_*_var(--gutter-width))] tablet:grid tablet:w-auto tablet:grid-cols-[repeat(2,minmax(100px,312px))] tablet:gap-8 tablet:px-gutter desktop:grid-cols-[repeat(3,auto)] desktop:pt-2">
-          {values.map((value, index) => {
+          {values.slice(1).map((value, index) => {
             return (
               <HomeListItem
                 key={value.sequence}
