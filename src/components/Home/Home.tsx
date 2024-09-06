@@ -9,11 +9,15 @@ export interface Props {
 
 export function Home({ values }: Props): JSX.Element {
   return (
-    <main className="mx-auto max-w-canvas">
+    <main className="mx-auto max-w-[calc(1080px_+_2_*_var(--page-margin-width))]">
       <div className="spacer-y-6 desktop:spacer-y-8" />
-      <PageTitle className="text-center">Latest Updates</PageTitle>
+      <PageTitle className="text-center">Latest Update</PageTitle>
       <div className="spacer-y-6 desktop:spacer-y-8" />
       <HomeSplash value={values[0]} />
+      <h3 className="mx-auto max-w-[960px] text-center text-[2rem]">
+        You Might Have Missed
+        <div className="spacer-y-6" />
+      </h3>
       <ol className="flex flex-col">
         {values.slice(1).map((value, index) => {
           return (
