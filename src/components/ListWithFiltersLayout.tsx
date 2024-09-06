@@ -10,7 +10,7 @@ export function ListWithFiltersLayout({
   list: React.ReactNode;
 }): JSX.Element {
   return (
-    <div className="flex flex-col items-center">
+    <div className="mx-auto flex max-w-canvas flex-col items-center">
       <main className="flex w-full max-w-prose flex-col items-stretch gap-x-20 desktop:max-w-full desktop:flex-row desktop:px-pageMargin">
         <div className="flex basis-96 flex-col items-center px-gutter pt-8 desktop:px-0">
           <div className="flex flex-col items-center">{header}</div>

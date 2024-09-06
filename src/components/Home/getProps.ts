@@ -1,5 +1,5 @@
 import { loadExcerptHtml, mostRecentReviews } from "src/api/reviews";
-import { getStills } from "src/api/stills";
+import { getStillImageProps } from "src/api/stills";
 
 import type { Props } from "./Home";
 import { StillImageConfig } from "./HomeListItem";
@@ -13,13 +13,17 @@ export async function getProps(): Promise<Props> {
     }),
   );
 
-  const stills = await getStills(
-    titles.map((title) => title.slug),
-    StillImageConfig,
-  );
-
   return {
-    values,
-    stills,
+    values: await Promise.all(
+      values.map(async (value) => {
+        return {
+          ...value,
+          stillImageProps: await getStillImageProps(
+            value.slug,
+            StillImageConfig,
+          ),
+        };
+      }),
+    ),
   };
 }

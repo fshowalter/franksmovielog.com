@@ -1,34 +1,38 @@
-import type { StillImageProps } from "src/api/stills";
-
+import { PageTitle } from "../PageTitle";
 import type { ListItemValue } from "./HomeListItem";
 import { HomeListItem } from "./HomeListItem";
+import { HomeSplash } from "./HomeSplash";
 
 export interface Props {
   values: ListItemValue[];
-  stills: Record<string, StillImageProps>;
 }
 
-export function Home({ values, stills }: Props): JSX.Element {
+export function Home({ values }: Props): JSX.Element {
   return (
-    <main>
+    <main className="mx-auto max-w-canvas">
+      <div className="spacer-y-6 desktop:spacer-y-8" />
+      <PageTitle className="text-center">Latest Updates</PageTitle>
+      <div className="spacer-y-6 desktop:spacer-y-8" />
+      <HomeSplash value={values[0]} />
       <ol className="flex flex-col">
-        {values.map((value, index) => {
+        {values.slice(1).map((value, index) => {
           return (
             <HomeListItem
               key={value.sequence}
               value={value}
               eagerLoadImage={index === 0}
-              stillImageProps={stills[value.slug]}
             />
           );
         })}
       </ol>
-      <a
-        href="/reviews/"
-        className="flex justify-end px-pageMargin py-10 text-lg text-accent"
-      >
-        All Reviews →
-      </a>
+      <div className="flex py-10">
+        <a
+          href="/reviews/"
+          className="mx-auto px-pageMargin py-2 tracking-wide text-accent shadow-all hover:shadow-border-accent"
+        >
+          All Reviews
+        </a>
+      </div>
     </main>
   );
 }
