@@ -39,14 +39,11 @@ export interface ListItemValue
 
 export function HomeSplash({ value }: { value: ListItemValue }) {
   return (
-    <article className="mx-auto flex max-w-[978px] flex-col items-center pb-16 desktop:w-full">
-      <div className="pb-3 text-center text-sm font-light uppercase leading-4 tracking-0.75px text-subtle desktop:text-left desktop:leading-8">
-        {formatDate(value.date)}
-      </div>
+    <article className="mx-auto flex max-w-[calc(480px_*_3_+_2_*_var(--gutter-width))] flex-row gap-x-[var(--gutter-width)] px-gutter pb-16 desktop:grid desktop:w-full desktop:grid-cols-[minmax(66%,978px)_1fr]">
       <a
         rel="canonical"
         href={`/reviews/${value.slug}/`}
-        className="still-border block desktop:col-start-2 desktop:col-end-2 desktop:row-span-3 desktop:row-start-1 desktop:justify-end desktop:self-start"
+        className="still-border block max-w-[970px]"
       >
         {value.stillImageProps && (
           <Still
@@ -62,8 +59,11 @@ export function HomeSplash({ value }: { value: ListItemValue }) {
           />
         )}
       </a>
-      <div className="flex flex-col items-center pt-4 desktop:col-span-1 desktop:col-start-1 desktop:row-start-2 desktop:mx-[9px] desktop:items-start desktop:place-self-start desktop:pt-0">
-        <div className="spacer-y-6" />
+      <div className="flex flex-col items-center pt-4 desktop:items-start desktop:place-self-start desktop:pt-0">
+        <div className="text-center text-sm font-light uppercase leading-4 tracking-0.75px text-subtle desktop:text-left desktop:leading-8">
+          {formatDate(value.date)}
+        </div>
+        <div className="spacer-y-2" />
         <h2 className="text-[2.5rem] font-bold leading-8">
           <a
             href={`/reviews/${value.slug}/`}
