@@ -60,7 +60,7 @@ export function HomeSplash({ value }: { value: ListItemValue }) {
         )}
       </a>
       <div className="flex flex-col items-center pt-4 desktop:items-start desktop:place-self-start desktop:pt-0">
-        <div className="text-center text-sm font-light uppercase leading-4 tracking-0.75px text-subtle desktop:text-left desktop:leading-8">
+        <div className="text-center font-sans text-sm font-light uppercase leading-4 tracking-0.75px text-subtle desktop:text-left desktop:leading-8">
           {formatDate(value.date)}
         </div>
         <div className="spacer-y-2" />
@@ -79,7 +79,7 @@ export function HomeSplash({ value }: { value: ListItemValue }) {
         <div className="spacer-y-4" />
         <Grade value={value.grade} height={32} />
         <div className="spacer-y-6" />
-        <div className="text-sm leading-4 tracking-0.5px text-subtle">
+        <div className="font-sans text-sm leading-4 tracking-0.5px text-subtle">
           {value.genres.map((genre, index) => {
             if (index === 0) {
               return <span key={genre}>{genre}</span>;

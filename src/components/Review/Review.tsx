@@ -79,9 +79,9 @@ export function Review({
       />
       <div className="spacer-y-20" />
       <div className="w-full max-w-popout">
-        <h3 className="px-gutter text-md font-normal text-subtle shadow-bottom">
+        <h3 className="px-gutter text-lg font-semibold text-subtle shadow-bottom">
           Viewing History
-          <div className="h-2 min-h-2" />
+          <div className="spacer-y-2" />
         </h3>
         <ul>
           {value.viewings.map((viewing) => (

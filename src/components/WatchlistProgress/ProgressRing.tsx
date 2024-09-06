@@ -19,7 +19,7 @@ export function ProgressRing({
   const percent = Math.floor((complete / total) * 100);
 
   return (
-    <svg viewBox="0 0 36 36" {...rest}>
+    <svg className="font-sans" viewBox="0 0 36 36" {...rest}>
       <path
         stroke="var(--bg-canvas)"
         strokeWidth={3.8}

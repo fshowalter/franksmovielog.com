@@ -13,7 +13,7 @@ export function Footer({ currentPath }: { currentPath: string }): JSX.Element {
           currentPath={currentPath}
         />
       </ul>
-      <p className="text-sm font-light leading-4">
+      <p className="font-sans text-sm font-light leading-4">
         All stills used in accordance with the{" "}
         <a
           href="http://www.copyright.gov/title17/92chap1.html#107"

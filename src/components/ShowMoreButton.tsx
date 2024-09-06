@@ -6,7 +6,7 @@ export function ShowMoreButton({
   onClick: () => void;
 }): JSX.Element {
   return (
-    <Button onClick={onClick} className="gap-x-4">
+    <Button onClick={onClick} className="gap-x-4 font-sans">
       <svg
         width="24"
         height="24"

@@ -39,7 +39,7 @@ function Callout({
         subLabel={subLabel}
       />
       <div className="spacer-y-2" />
-      <div className="text-center text-subtle">
+      <div className="text-center font-sans text-subtle">
         <div>
           {reviewed?.toLocaleString()}/{total?.toLocaleString()}
         </div>

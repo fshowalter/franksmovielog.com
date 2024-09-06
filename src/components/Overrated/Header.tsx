@@ -3,7 +3,7 @@ import { PageTitle } from "../PageTitle";
 export function Header(): JSX.Element {
   return (
     <>
-      <div className="text-center">
+      <div className="text-center font-sans text-accent">
         <a href="/reviews/">Reviews</a>
       </div>
       <PageTitle className="text-center desktop:max-w-[26rem]">

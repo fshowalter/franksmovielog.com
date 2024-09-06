@@ -47,7 +47,7 @@ export function HomeListItem({
   eagerLoadImage: boolean;
 }) {
   return (
-    <li className="flow-root px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_auto_1fr_auto] tablet:gap-y-4 tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default desktop:max-w-[480px]">
+    <li className="flow-root px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_auto_auto_1fr_auto] tablet:gap-y-4 tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default desktop:max-w-[480px]">
       <div className="row-start-1 row-end-1">
         <a
           href={`/reviews/${value.slug}/`}
@@ -66,7 +66,10 @@ export function HomeListItem({
           />
         </a>
       </div>
-      <div className="row-start-2 mb-2 tablet:m-0 tablet:px-6">
+      <div className="-mb-4 text-center font-sans text-sm font-light uppercase leading-4 tracking-0.75px text-subtle tablet:px-6 desktop:text-left desktop:leading-8">
+        {formatDate(value.date)}
+      </div>
+      <div className="tablet:m-0 tablet:px-6">
         <a
           href={`/reviews/${value.slug}/`}
           className="block text-2.5xl font-bold text-default"
@@ -86,7 +89,7 @@ export function HomeListItem({
       />
       <div className="spacer-y-6" />
       <div className="mt-auto tablet:px-6">
-        <div className="text-sm leading-4 tracking-0.5px text-subtle">
+        <div className="font-sans text-sm leading-4 tracking-0.5px text-subtle">
           {value.genres.map((genre, index) => {
             if (index === 0) {
               return <span key={genre}>{genre}</span>;
