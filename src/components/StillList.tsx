@@ -15,7 +15,7 @@ export function StillList({
       {values.map((value) => {
         return <StillListItem key={value.slug} value={value} />;
       })}
-      <li className="col-[1_/_-1] block px-gutter py-4 text-right shadow-bottom shadow-border tablet:absolute tablet:right-0 tablet:top-0 tablet:shadow-none desktop:right-[var(--gutter-width)]">
+      <li className="col-[1_/_-1] block px-gutter py-4 text-right font-sans shadow-bottom shadow-border tablet:absolute tablet:right-0 tablet:top-0 tablet:shadow-none desktop:right-[var(--gutter-width)]">
         <a className="text-accent" href={seeAllLinkTarget}>
           All{" "}
           <span className="inline tablet:hidden desktop:inline">

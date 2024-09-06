@@ -18,7 +18,7 @@ export function RenderedMarkdown({
 
   return (
     <Component
-      className={ccn("rendered-markdown font-light", className)}
+      className={ccn("rendered-markdown", className)}
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{
         __html: text,

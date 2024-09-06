@@ -3,7 +3,7 @@ import { PageTitle } from "src/components/PageTitle";
 export function Header(): JSX.Element {
   return (
     <>
-      <div className="text-center">
+      <div className="text-center font-sans text-accent">
         <a href="/reviews/">Reviews</a>
       </div>
       <PageTitle className="text-center">Underseen Gems</PageTitle>

@@ -8,7 +8,6 @@ export interface Props {
 }
 
 export function Home({ values }: Props): JSX.Element {
-  values = values.slice(1);
   return (
     <main>
       <div className="mx-auto px-pageMargin">
@@ -31,7 +30,7 @@ export function Home({ values }: Props): JSX.Element {
         <div className="flex py-10">
           <a
             href="/reviews/"
-            className="mx-auto bg-default px-pageMargin py-2 tracking-wide text-accent shadow-all hover:shadow-border-accent"
+            className="mx-auto bg-default px-pageMargin py-2 font-sans tracking-wide text-accent shadow-all hover:shadow-border-accent"
           >
             All Reviews
           </a>

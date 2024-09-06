@@ -49,6 +49,10 @@ export default {
       flexBasis: {
         md: "28rem",
       },
+      fontFamily: {
+        sans: "Urbanist",
+        serif: "Source Serif 4",
+      },
       fontSize: {
         "2.5xl": "1.625rem",
         md: ["1.125rem", "1.5rem"],
