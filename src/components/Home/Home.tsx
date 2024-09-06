@@ -10,11 +10,11 @@ export interface Props {
 export function Home({ values }: Props): JSX.Element {
   return (
     <main className="bg-subtle">
-      <div className="mx-auto max-w-canvas">
+      <div className="mx-auto px-pageMargin">
         <div className="spacer-y-6 desktop:spacer-y-8" />
         <PageTitle className="text-center">Latest Updates</PageTitle>
         <div className="spacer-y-6 desktop:spacer-y-8" />
-        <ul className="w-full tablet:grid tablet:w-auto tablet:grid-cols-[repeat(2,minmax(100px,312px))] tablet:gap-8 tablet:px-gutter desktop:max-w-unset desktop:grid-cols-[repeat(3,1fr)] desktop:px-pageMargin desktop:pt-2">
+        <ul className="mx-auto max-w-[calc(480px_*_3_+_2_*_var(--gutter-width))] tablet:grid tablet:w-auto tablet:grid-cols-[repeat(2,minmax(100px,312px))] tablet:gap-8 tablet:px-gutter desktop:grid-cols-[repeat(3,auto)] desktop:pt-2">
           {values.map((value, index) => {
             return (
               <HomeListItem
