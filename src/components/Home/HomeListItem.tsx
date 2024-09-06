@@ -47,11 +47,11 @@ export function HomeListItem({
   eagerLoadImage: boolean;
 }) {
   return (
-    <li className="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_auto_1fr_auto] tablet:gap-y-4 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default desktop:max-w-unset">
+    <li className="flow-root px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_auto_1fr_auto] tablet:gap-y-4 tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default desktop:max-w-[480px]">
       <div className="row-start-1 row-end-1">
         <a
           href={`/reviews/${value.slug}/`}
-          className="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[480px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
+          className="float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[480px] tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
         >
           <Still
             title={value.title}
