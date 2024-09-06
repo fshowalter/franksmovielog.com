@@ -11,7 +11,7 @@ export function PageTitle({
     <h1
       data-pagefind-meta="title"
       className={ccn(
-        "text-[2rem] font-normal leading-none desktop:text-[2.25rem]",
+        "text-[2rem] font-bold leading-none desktop:text-[3rem]",
         className,
       )}
     >

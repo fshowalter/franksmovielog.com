@@ -44,7 +44,7 @@ export function StillListItem({ value }: { value: StillListItemValue }) {
       <div className="row-start-2 mb-2 tablet:m-0 tablet:px-6">
         <a
           href={`/reviews/${value.slug}/`}
-          className="block text-md text-default"
+          className="block text-md font-semibold text-default"
         >
           {value.title}{" "}
           <span className="text-sm font-light leading-none text-muted">
@@ -64,7 +64,7 @@ export function StillListItem({ value }: { value: StillListItemValue }) {
 
 function Genres({ values }: { values: readonly string[] }): JSX.Element | null {
   return (
-    <div className="text-sm leading-4 tracking-0.5px text-subtle">
+    <div className="font-sans text-sm leading-4 tracking-0.5px text-subtle">
       {values.map((value, index) => {
         if (index === 0) {
           return <span key={value}>{value}</span>;

@@ -49,7 +49,7 @@ export function Credits({
       )}
       data-pagefind-meta={`image:${posterImageProps.src}`}
     >
-      <header className="flex items-center justify-center gap-x-2 pb-6 text-center text-2.5xl">
+      <header className="flex items-center justify-center gap-x-2 pb-6 text-center text-2.5xl font-bold">
         {title} <span className="text-sm font-light text-subtle">({year})</span>
       </header>
       <div className="poster-border mx-auto mb-4 mt-0 block size-full max-w-poster bg-[#e9e7e0] tablet:float-left tablet:mx-0 tablet:mr-gutter">
@@ -92,7 +92,7 @@ export function Credits({
       <div className="h-8 min-h-8" />
       <a
         href="#top"
-        className="mx-auto flex max-w-[50%] cursor-pointer content-center items-center justify-center rounded-lg p-2 text-accent shadow-all hover:shadow-border-accent"
+        className="mx-auto flex max-w-[50%] cursor-pointer content-center items-center justify-center rounded-lg p-2 font-sans text-accent shadow-all hover:shadow-border-accent"
       >
         Back to Top
         <svg viewBox="0 0 24 24" className="size-6 fill-default">
@@ -107,7 +107,7 @@ function Credit({ term, value }: { term: string; value: React.ReactNode }) {
   return (
     <div className="overflow-hidden">
       <dt className="font-bold text-subtle">{term}</dt>
-      <dd className="text-subtle">{value}</dd>
+      <dd className="font-sans text-subtle">{value}</dd>
     </div>
   );
 }

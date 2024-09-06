@@ -22,7 +22,7 @@ export function WatchlistTitleSlug({
   ];
 
   return (
-    <div className="text-sm font-light leading-4 tracking-0.5px text-subtle">
+    <div className="font-sans text-sm font-light leading-4 tracking-0.5px text-subtle">
       Because {toSentence(credits)}.
     </div>
   );
