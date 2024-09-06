@@ -4,7 +4,7 @@ export function Footer({ currentPath }: { currentPath: string }): JSX.Element {
   return (
     <footer
       className={
-        "flex flex-col items-center gap-y-6 bg-[url('/assets/ripnotcomingsoon.avif')] px-pageMargin py-8 text-inverse"
+        "flex flex-col items-center gap-y-6 bg-[#3D444C] px-pageMargin py-8 text-inverse"
       }
     >
       <ul className="flex w-full flex-wrap justify-center gap-x-4 gap-y-2 text-inverse tablet:gap-x-6 max:w-auto">

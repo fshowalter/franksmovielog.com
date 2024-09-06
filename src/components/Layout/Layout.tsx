@@ -16,13 +16,18 @@ export function Layout({
       >
         Skip to content
       </a>
+      {/* <div
+        className={
+          "image-filter mx-auto min-h-4 w-full bg-[url('/assets/ripnotcomingsoon.avif')] desktop:sticky desktop:top-0 desktop:z-40"
+        }
+      /> */}
       <div
         className={
-          "image-filter mx-auto min-h-4 w-full max-w-canvas bg-[url('/assets/ripnotcomingsoon.avif')] desktop:sticky desktop:top-0 desktop:z-40"
+          "image-filter mx-auto min-h-1 w-full bg-[#579] desktop:sticky desktop:top-0 desktop:z-40"
         }
       />
 
-      <div className="mx-auto flex min-h-full max-w-canvas flex-col bg-default">
+      <div className="mx-auto flex min-h-full flex-col bg-default">
         <Mast currentPath={currentPath} />
         <div className="grow" id="content">
           {children}
