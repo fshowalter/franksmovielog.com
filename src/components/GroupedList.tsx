@@ -58,9 +58,11 @@ function GroupingListItem({
     <li className="block">
       <div
         style={{ zIndex: zIndex }}
-        className="sticky top-8 bg-default pt-0 text-md desktop:top-[calc(var(--header-offset)_+_40px)]"
+        className="sticky top-8 bg-default pt-0 text-md desktop:top-10"
       >
-        <div className="bg-canvas px-gutter py-2 tablet:px-6">{groupText}</div>
+        <div className="bg-canvas px-gutter py-2 text-xl tablet:px-6">
+          {groupText}
+        </div>
       </div>
       <div className="h-0 min-h-0 tablet:h-4 tablet:min-h-4" />
       {children}
