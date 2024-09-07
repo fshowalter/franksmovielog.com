@@ -49,7 +49,7 @@ export function Credits({
       )}
       data-pagefind-meta={`image:${posterImageProps.src}`}
     >
-      <header className="flex items-center justify-center gap-x-2 pb-6 text-center text-2.5xl font-bold">
+      <header className="flex items-center justify-center gap-x-2 pb-6 text-center text-4xl font-bold">
         {title} <span className="text-sm font-light text-subtle">({year})</span>
       </header>
       <div className="poster-border mx-auto mb-4 mt-0 block size-full max-w-poster bg-[#e9e7e0] tablet:float-left tablet:mx-0 tablet:mr-gutter">
@@ -107,7 +107,7 @@ function Credit({ term, value }: { term: string; value: React.ReactNode }) {
   return (
     <div className="overflow-hidden">
       <dt className="font-bold text-subtle">{term}</dt>
-      <dd className="font-sans text-subtle">{value}</dd>
+      <dd className="font-normal text-subtle">{value}</dd>
     </div>
   );
 }
