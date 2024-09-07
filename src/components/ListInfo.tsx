@@ -14,7 +14,7 @@ export function ListInfo({
   }
 
   return (
-    <div className="sticky top-0 z-40 bg-default px-gutter text-center font-sans leading-10 text-subtle desktop:top-[var(--header-offset)]">
+    <div className="font-sans-caps sticky top-0 z-40 bg-default px-gutter text-center uppercase leading-10 tracking-[.6px] text-subtle desktop:top-0">
       {showingText}
     </div>
   );

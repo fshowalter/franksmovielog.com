@@ -52,7 +52,9 @@ export default {
       fontFamily: {
         sans: "GothamMedium",
         "sans-caps": "GothamNarrowMedium",
-        serif: "Source Serif 4",
+        "sans-bold": "GothamNarrowBold",
+        serif: '"Source Serif 4"',
+        "sans-book": "GothamBook",
       },
       fontSize: {
         "2.5xl": "1.625rem",
