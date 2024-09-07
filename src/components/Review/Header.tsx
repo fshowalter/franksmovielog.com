@@ -41,7 +41,7 @@ function Meta({
   runtimeMinutes,
 }: Pick<Props, "year" | "countries" | "runtimeMinutes">) {
   return (
-    <div className="font-sans tracking-wider text-muted">
+    <div className="font-sans text-sm tracking-[.6px] text-muted">
       {year} <span>|</span>{" "}
       {countries.reduce<JSX.Element | null>((acc, country) => {
         if (acc === null) {

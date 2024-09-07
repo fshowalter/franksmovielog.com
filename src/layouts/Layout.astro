@@ -9,6 +9,7 @@ interface Props {
   description: string;
   image?: string | null;
   article?: boolean;
+  hideLogo?: boolean;
 }
 
 const siteMeta = {
@@ -18,7 +19,13 @@ const siteMeta = {
   title: "Frank's Movie Log",
 };
 
-const { title, description, image, article = false } = Astro.props;
+const {
+  title,
+  description,
+  hideLogo = false,
+  image,
+  article = false,
+} = Astro.props;
 let pageTitle;
 
 if (title.startsWith(siteMeta.title)) {
@@ -51,7 +58,7 @@ const pathname = new URL(Astro.request.url).pathname;
     <title>{pageTitle}</title>
   </head>
   <body>
-    <LayoutComponent currentPath={pathname}>
+    <LayoutComponent hideLogo={hideLogo} currentPath={pathname}>
       <slot />
     </LayoutComponent>
     <dialog
