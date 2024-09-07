@@ -5,7 +5,7 @@ import type { Props } from "./Home";
 import { StillImageConfig } from "./HomeListItem";
 
 export async function getProps(): Promise<Props> {
-  const titles = await mostRecentReviews(10);
+  const titles = await mostRecentReviews(12);
 
   const values = await Promise.all(
     titles.map(async (review) => {

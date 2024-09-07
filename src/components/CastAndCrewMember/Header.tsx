@@ -53,7 +53,7 @@ export function Header({
 }): JSX.Element {
   return (
     <>
-      <div className="text-cente font-sans leading-9">
+      <div className="text-center font-sans leading-9">
         <a className="text-accent" href="/cast-and-crew/">
           Cast & Crew
         </a>

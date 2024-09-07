@@ -4,7 +4,7 @@ export function Footer({ currentPath }: { currentPath: string }): JSX.Element {
   return (
     <footer
       className={
-        "image-filter flex flex-col items-center gap-y-6 bg-[#3D444C] px-pageMargin py-8 text-inverse"
+        "image-filter flex flex-col items-center gap-y-6 bg-[#252525] px-pageMargin py-8 text-inverse"
       }
     >
       <ul className="flex w-full flex-wrap justify-center gap-x-4 gap-y-2 text-inverse tablet:gap-x-6 max:w-auto">
@@ -13,7 +13,7 @@ export function Footer({ currentPath }: { currentPath: string }): JSX.Element {
           currentPath={currentPath}
         />
       </ul>
-      <p className="font-sans text-sm font-light leading-4">
+      <p className="font-light leading-4 text-subtle">
         All stills used in accordance with the{" "}
         <a
           href="http://www.copyright.gov/title17/92chap1.html#107"

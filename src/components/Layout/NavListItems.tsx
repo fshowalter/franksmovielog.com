@@ -16,7 +16,7 @@ function NavListItem({
   }
 
   return (
-    <li className="block whitespace-nowrap font-sans tracking-0.5px">
+    <li className="block whitespace-nowrap tracking-0.5px">
       <a className={className} href={to}>
         {children}
       </a>

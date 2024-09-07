@@ -50,7 +50,8 @@ export default {
         md: "28rem",
       },
       fontFamily: {
-        sans: "Urbanist",
+        sans: "GothamMedium",
+        "sans-caps": "GothamNarrowMedium",
         serif: "Source Serif 4",
       },
       fontSize: {
