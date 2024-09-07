@@ -74,13 +74,13 @@ function DateListItem({
   return (
     <ListItem className="items-center pb-0">
       <div>
-        <div className="rounded-md shadow-all">
+        <div className="rounded-md font-sans shadow-all">
           <div className="w-12 bg-canvas py-2 text-center text-sm/none uppercase">
             {day}
           </div>
           <div className="text-center text-2.5xl/8">{date}</div>
         </div>
-        <div className="h-4 min-h-4" />
+        <div className="spacer-y-4" />
       </div>
       <ul className="flex grow flex-col gap-y-4">
         {values.map((value) => {
@@ -109,7 +109,7 @@ function SubListItem({ value }: { value: ListItemValue }): JSX.Element {
           />
           <div className="spacer-y-1 tablet:spacer-y-2" />
         </div>
-        <div className="flex flex-col text-sm/none font-light tracking-0.5px text-subtle">
+        <div className="flex flex-col font-sans text-sm leading-4 tracking-0.5px text-subtle">
           <div className="spacer-y-1 tablet:spacer-y-0" />
           <div>
             <ListItemMediumAndVenue medium={value.medium} venue={value.venue} />
