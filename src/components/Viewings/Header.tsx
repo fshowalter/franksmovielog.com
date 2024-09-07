@@ -23,7 +23,7 @@ export function Header({
       <div className="h-4 min-h-4" />
       <p className="text-subtle">
         See more{" "}
-        <a className="text-accent" href="/viewings/stats/">
+        <a className="font-sans text-accent" href="/viewings/stats/">
           stats
         </a>
         .
