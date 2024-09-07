@@ -19,7 +19,7 @@ export function Header({ reviewCount }: { reviewCount: number }): JSX.Element {
         <p>
           <span className="font-semibold">Looking for something new?</span>
           <br /> Peruse my list of{" "}
-          <a className="text-accent" href="/reviews/underseen/">
+          <a className="font-sans text-accent" href="/reviews/underseen/">
             underseen gems
           </a>
           .
@@ -29,7 +29,7 @@ export function Header({ reviewCount }: { reviewCount: number }): JSX.Element {
           <span className="font-semibold">Feeling contrarian?</span>
           <br />
           Behold my list of{" "}
-          <a className="text-accent" href="/reviews/overrated/">
+          <a className="font-sans text-accent" href="/reviews/overrated/">
             overrated disappointments
           </a>
           .
