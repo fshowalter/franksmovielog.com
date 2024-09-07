@@ -39,7 +39,7 @@ export interface ListItemValue
 
 export function HomeSplash({ value }: { value: ListItemValue }) {
   return (
-    <article className="mx-auto flex max-w-[calc(480px_*_3_+_2_*_var(--gutter-width))] flex-row gap-x-[var(--gutter-width)] px-gutter pb-16 desktop:grid desktop:w-full desktop:grid-cols-[minmax(66%,978px)_1fr]">
+    <article className="mx-auto flex max-w-[calc(480px_*_3_+_2_*_var(--gutter-width))] flex-row gap-x-[var(--gutter-width)] px-gutter pb-16 desktop:grid desktop:w-full desktop:grid-cols-[clamp(540px,66%,978px)_1fr]">
       <a
         rel="canonical"
         href={`/reviews/${value.slug}/`}
