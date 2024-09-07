@@ -3,9 +3,11 @@ import { Mast } from "./Mast";
 
 export function Layout({
   currentPath,
+  hideLogo,
   children,
 }: {
   currentPath: string;
+  hideLogo: boolean;
   children: React.ReactNode;
 }): JSX.Element {
   return (
@@ -21,14 +23,14 @@ export function Layout({
           "image-filter mx-auto min-h-4 w-full bg-[url('/assets/ripnotcomingsoon.avif')] desktop:sticky desktop:top-0 desktop:z-40"
         }
       /> */}
-      <div
+      {/* <div
         className={
           "image-filter mx-auto min-h-1 w-full bg-[#579] desktop:sticky desktop:top-0 desktop:z-40"
         }
-      />
+      /> */}
 
       <div className="mx-auto flex min-h-full flex-col bg-default">
-        <Mast currentPath={currentPath} />
+        <Mast currentPath={currentPath} hideLogo={hideLogo} />
         <div className="grow" id="content">
           {children}
         </div>

@@ -5,8 +5,8 @@ import { RenderedMarkdown } from "src/components/RenderedMarkdown";
 import { Still } from "src/components/Still";
 
 export const StillImageConfig = {
-  width: 960,
-  height: 540,
+  width: 1120,
+  height: 659,
   sizes: "(min-width: 960px) 960px, 100vw",
 };
 
@@ -39,12 +39,8 @@ export interface ListItemValue
 
 export function HomeSplash({ value }: { value: ListItemValue }) {
   return (
-    <article className="mx-auto flex max-w-[calc(480px_*_3_+_2_*_var(--gutter-width))] flex-row gap-x-[var(--gutter-width)] px-gutter pb-16 desktop:grid desktop:w-full desktop:grid-cols-[clamp(540px,66%,978px)_1fr]">
-      <a
-        rel="canonical"
-        href={`/reviews/${value.slug}/`}
-        className="still-border block max-w-[970px]"
-      >
+    <article className="mx-auto flex flex-row gap-x-[6%] px-gutter pb-16 desktop:grid desktop:w-full desktop:grid-cols-[66%_1fr]">
+      <a rel="canonical" href={`/reviews/${value.slug}/`} className="block">
         {value.stillImageProps && (
           <Still
             title={value.title}
@@ -60,7 +56,7 @@ export function HomeSplash({ value }: { value: ListItemValue }) {
         )}
       </a>
       <div className="flex flex-col items-center pt-4 desktop:items-start desktop:place-self-start desktop:pt-0">
-        <div className="text-center font-sans text-sm font-light uppercase leading-4 tracking-0.75px text-subtle desktop:text-left desktop:leading-8">
+        <div className="font-sans-caps text-center text-xs uppercase leading-4 tracking-[1.1px] text-subtle desktop:text-left desktop:leading-8">
           {formatDate(value.date)}
         </div>
         <div className="spacer-y-2" />
@@ -79,7 +75,7 @@ export function HomeSplash({ value }: { value: ListItemValue }) {
         <div className="spacer-y-4" />
         <Grade value={value.grade} height={32} />
         <div className="spacer-y-6" />
-        <div className="font-sans text-sm leading-4 tracking-0.5px text-subtle">
+        <div className="font-sans text-sm leading-4 text-subtle">
           {value.genres.map((genre, index) => {
             if (index === 0) {
               return <span key={genre}>{genre}</span>;

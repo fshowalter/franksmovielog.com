@@ -5,8 +5,8 @@ import { RenderedMarkdown } from "src/components/RenderedMarkdown";
 import { Still } from "src/components/Still";
 
 export const StillImageConfig = {
-  width: 480,
-  height: 270,
+  width: 515,
+  height: 303,
   sizes:
     "(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw",
   quality: 80,
@@ -47,11 +47,11 @@ export function HomeListItem({
   eagerLoadImage: boolean;
 }) {
   return (
-    <li className="flow-root px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_auto_auto_1fr_auto] tablet:gap-y-4 tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default desktop:max-w-[480px]">
-      <div className="row-start-1 row-end-1">
+    <li className="flex max-w-[30.33%] flex-col bg-default">
+      <div>
         <a
           href={`/reviews/${value.slug}/`}
-          className="float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[480px] tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
+          className="float-right mb-2 ml-6 block tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
         >
           <Still
             title={value.title}
@@ -66,37 +66,43 @@ export function HomeListItem({
           />
         </a>
       </div>
-      <div className="-mb-4 text-center font-sans text-sm font-light uppercase leading-4 tracking-0.75px text-subtle tablet:px-6 desktop:text-left desktop:leading-8">
-        {formatDate(value.date)}
-      </div>
-      <div className="tablet:m-0 tablet:px-6">
-        <a
-          href={`/reviews/${value.slug}/`}
-          className="block text-2.5xl font-bold text-default"
-        >
-          {value.title}{" "}
-          <span className="text-sm font-light leading-none text-muted">
-            {value.year}
-          </span>
-        </a>
-      </div>
-      <div className="tablet:m-0 tablet:px-6">
-        <Grade value={value.grade} height={24} />
-      </div>
-      <RenderedMarkdown
-        text={value.excerpt}
-        className="text-lg leading-normal tracking-0.3px text-muted tablet:px-6"
-      />
       <div className="spacer-y-6" />
-      <div className="mt-auto tablet:px-6">
-        <div className="font-sans text-sm leading-4 tracking-0.5px text-subtle">
-          {value.genres.map((genre, index) => {
-            if (index === 0) {
-              return <span key={genre}>{genre}</span>;
-            }
+      <div className="flex grow flex-col pb-6 pl-[8.5%] pr-[10%]">
+        <div className="font-sans-caps text-[10px] uppercase leading-4 tracking-[1.1px] text-subtle">
+          {formatDate(value.date)}
+        </div>
+        <div className="spacer-y-1" />
+        <div className="text-[22px]">
+          <a
+            href={`/reviews/${value.slug}/`}
+            className="block text-2.5xl font-bold text-default"
+          >
+            {value.title}{" "}
+            <span className="text-sm font-light leading-none text-muted">
+              {value.year}
+            </span>
+          </a>
+        </div>
+        <div className="spacer-y-2" />
+        <div>
+          <Grade value={value.grade} height={24} />
+        </div>
+        <div className="spacer-y-8" />
+        <RenderedMarkdown
+          text={value.excerpt}
+          className="text-lg leading-normal tracking-0.3px text-muted"
+        />
+        <div className="spacer-y-6" />
+        <div className="mt-auto">
+          <div className="font-sans text-[10px] leading-4 text-subtle">
+            {value.genres.map((genre, index) => {
+              if (index === 0) {
+                return <span key={genre}>{genre}</span>;
+              }
 
-            return <span key={genre}> | {genre}</span>;
-          })}
+              return <span key={genre}> | {genre}</span>;
+            })}
+          </div>
         </div>
       </div>
     </li>
