@@ -51,7 +51,7 @@ export function HomeListItem({
       <div>
         <a
           href={`/reviews/${value.slug}/`}
-          className="block tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none desktop:float-right desktop:mb-2 desktop:ml-6"
+          className="block tablet:float-none tablet:m-0 tablet:w-auto"
         >
           <Still
             title={value.title}
