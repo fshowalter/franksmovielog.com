@@ -370,9 +370,15 @@
     width: 100%;
     z-index: 250;
     padding: 0 16% 0 12%;
-    margin-top: 160px;
+    margin-top: 80px;
     overflow: unset;
     bottom: 0;
+    overflow: hidden;
+  }
+
+  body:has(#mobile-nav:checked) {
+    position: fixed;
+    overflow: hidden;
   }
 
   .hamburger-menu {

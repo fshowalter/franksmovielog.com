@@ -4,7 +4,7 @@ export function Footer({ currentPath }: { currentPath: string }): JSX.Element {
   return (
     <footer
       className={
-        "dektop:px-pageMargin flex flex-col items-start justify-between bg-[#252525] px-8 pb-20 pt-8 text-inverse desktop:flex-row desktop:py-20"
+        "flex flex-col items-start justify-between bg-[#252525] px-8 pb-20 pt-8 text-inverse tablet:px-12 tablet:pt-10 desktop:flex-row desktop:p-20"
       }
     >
       <div className="items-inherit flex flex-col">
@@ -23,7 +23,7 @@ export function Footer({ currentPath }: { currentPath: string }): JSX.Element {
         </p>
         <div className="spacer-y-12" />
       </div>
-      <div className="tablet:pl-[32%] desktop:w-[51.9607843137%]">
+      <div className="tablet:pl-[32%] desktop:w-[51.9607843137%] desktop:pl-0">
         <ul className="flex w-full flex-col gap-y-10 text-inverse max:w-auto">
           <li className="block w-1/2 whitespace-nowrap text-2xl">
             <a href="/">Home</a>
