@@ -11,14 +11,14 @@ export function Mast({
 }) {
   return (
     <header
-      className="flex flex-col items-center gap-6 px-pageMargin py-8 text-center desktop:inset-x-0 desktop:top-1 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:justify-between desktop:text-left max:justify-end max:pr-48"
+      className="flex w-full items-center justify-end px-[8%] py-4 text-center desktop:inset-x-0 desktop:top-1 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-pageMargin desktop:py-8 desktop:text-left max:justify-end max:pr-48"
       style={{
         color: hasBackdrop ? "#fff" : "var(--fg-default)",
         position: hasBackdrop ? "absolute" : "static",
       }}
     >
       {!hideLogo && (
-        <div className="items-inherit justify-items-inherit flex flex-col max:absolute max:left-[var(--page-margin-width)]">
+        <div className="items-inherit justify-items-inherit flex flex-col desktop:absolute desktop:left-[var(--page-margin-width)]">
           <h1
             className="whitespace-nowrap font-normal leading-8"
             style={{ fontSize: "1.5625rem" }}
@@ -34,37 +34,7 @@ export function Mast({
           </p>
         </div>
       )}
-      <div className="w-full max-w-prose desktop:order-4 desktop:w-auto max:absolute max:right-[var(--page-margin-width)]">
-        <button
-          data-open-modal
-          disabled
-          aria-label="Search"
-          aria-keyshortcuts="Control+K"
-          className="safari-border-radius-fix desktop::w-auto desktop::ring-0 flex w-full items-center overflow-hidden rounded-md text-sm leading-6 ring-1 ring-border hover:ring-accent"
-        >
-          <kbd className="ml-auto mt-px hidden min-h-6 flex-none items-center pl-3 pr-4 font-mono text-sm font-light opacity-70 desktop:flex">
-            <kbd className="text-md leading-5">Ctrl</kbd>
-            <kbd className="text-sm">K</kbd>
-          </kbd>
-          <svg
-            className="mr-2 size-10 flex-none border-0 border-r border-default bg-subtle fill-[current-color] px-3 py-1 desktop:w-4 desktop:border-r-0 desktop:bg-unset desktop:px-0"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fillRule="evenodd"
-              d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z"
-            />
-            <path
-              fillRule="evenodd"
-              d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"
-            />
-          </svg>
-          <span className="flex items-baseline whitespace-nowrap p-2 text-base opacity-70 desktop:hidden">
-            Quick search...
-          </span>
-        </button>
-      </div>
-      <nav className="w-full desktop:w-auto">
+      <nav className="hidden w-full desktop:block desktop:w-auto">
         <ul className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-xl tablet:gap-x-6 desktop:justify-start">
           <NavListItems
             activeClassName="text-[#e0e0e0]"
@@ -72,6 +42,82 @@ export function Mast({
           />
         </ul>
       </nav>
+      <div className="z-[1000] desktop:ml-6 desktop:px-2 desktop:py-1 desktop:shadow-all">
+        <button
+          data-open-modal
+          disabled
+          aria-label="Search"
+          aria-keyshortcuts="Control+K"
+          className="flex w-full items-center overflow-hidden text-sm leading-6 hover:ring-accent desktop:w-auto desktop:ring-0"
+        >
+          <kbd className="ml-auto mt-px hidden min-h-6 flex-none items-center pl-3 pr-4 font-mono text-sm font-light opacity-70 desktop:flex">
+            <kbd className="text-md leading-5">Ctrl</kbd>
+            <kbd className="text-sm">K</kbd>
+          </kbd>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+            />
+          </svg>
+        </button>
+      </div>
+      <input type="checkbox" id="mobile-nav" className="hidden" />
+      <label htmlFor="mobile-nav" className="hamburger-icon desktop:hidden">
+        <span
+          style={{ background: hasBackdrop ? "#fff" : "var(--fg-default)" }}
+          className="hamburger-icon-bars"
+        />
+      </label>
+      <ul className="hamburger-menu flex flex-col items-start gap-y-5 text-left text-[#fff] desktop:hidden max:w-auto">
+        <li className="block w-1/2 whitespace-nowrap text-2xl">
+          <a href="/">Home</a>
+        </li>
+        <li className="block w-1/2 whitespace-nowrap text-2xl">
+          <a href="/how-i-grade/">How I Grade</a>
+        </li>
+        <li className="block w-1/2 whitespace-nowrap text-2xl">
+          <a href="/reviews/">Reviews</a>
+          <ol className="mt-4">
+            <li className="mb-2 font-sans-caps text-sm uppercase tracking-[1px] text-subtle">
+              <a href="/reviews/underseen/">Underseen Gems</a>
+            </li>
+            <li className="mb-2 font-sans-caps text-sm uppercase tracking-[1px] text-subtle">
+              <a href="/reviews/overrated/">Overrated Disappointments</a>
+            </li>
+          </ol>
+        </li>
+        <li className="block w-1/2 whitespace-nowrap text-2xl">
+          <a href="/viewings/">Viewing Log</a>
+          <ol className="mt-4">
+            <li className="mb-2 font-sans-caps text-sm uppercase tracking-[1px] text-subtle">
+              <a href="/viewings/stats/">Stats</a>
+            </li>
+          </ol>
+        </li>
+        <li className="block w-1/2 whitespace-nowrap text-2xl">
+          <a href="/cast-and-crew/">Cast & Crew</a>
+        </li>
+        <li className="block w-1/2 whitespace-nowrap text-2xl">
+          <a href="/collections/">Collections</a>
+        </li>
+        <li className="block w-1/2 whitespace-nowrap text-2xl">
+          <a href="/watchlist/">Watchlist</a>
+          <ol className="mt-4">
+            <li className="mb-2 font-sans-caps text-sm uppercase tracking-[1px] text-subtle">
+              <a href="/watchlist/progress/">Progress</a>
+            </li>
+          </ol>
+        </li>
+      </ul>
     </header>
   );
 }

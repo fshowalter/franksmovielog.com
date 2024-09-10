@@ -31,8 +31,8 @@ export default {
       progress: "var(--fg-progress)",
     },
     screens: {
-      tablet: "510px",
-      desktop: "1288px",
+      tablet: "768px",
+      desktop: "1280px",
       max: "1416px",
     },
     extend: {
