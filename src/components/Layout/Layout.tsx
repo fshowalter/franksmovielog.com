@@ -3,11 +3,13 @@ import { Mast } from "./Mast";
 
 export function Layout({
   currentPath,
-  hideLogo,
+  hideLogo = false,
+  hasBackdrop = true,
   children,
 }: {
   currentPath: string;
-  hideLogo: boolean;
+  hideLogo?: boolean;
+  hasBackdrop?: boolean;
   children: React.ReactNode;
 }): JSX.Element {
   return (
@@ -30,7 +32,11 @@ export function Layout({
       /> */}
 
       <div className="mx-auto flex min-h-full flex-col bg-default">
-        <Mast currentPath={currentPath} hideLogo={hideLogo} />
+        <Mast
+          currentPath={currentPath}
+          hideLogo={hideLogo}
+          hasBackdrop={hasBackdrop}
+        />
         <div className="grow" id="content">
           {children}
         </div>

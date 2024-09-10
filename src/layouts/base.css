@@ -13,9 +13,9 @@
   --border-accent: #054a93;
   --border-default: #e9e7e0;
   --fg-accent: #0056b3;
-  --fg-default: rgb(0 0 0 / 75%);
+  --fg-default: #252525;
   --fg-emphasis: rgb(0 0 0 / 95%);
-  --fg-inverse: rgb(255 255 255 / 75%);
+  --fg-inverse: #fff;
   --fg-muted: rgb(0 0 0 / 65%);
   --fg-subtle: #8e8e8e;
   --gutter-width: 20px;
@@ -82,6 +82,18 @@
 
   img {
     filter: var(--image-filter);
+  }
+
+  @font-face {
+    font-family: "MercuryDisplaySemibold";
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+    src:
+      url("/fonts/MercuryDisplay/MercuryDisplaySemibold_normal_normal.woff2")
+        format("woff2"),
+      url("MercuryDisplay/MercuryDisplaySemibold_normal_normal.woff")
+        format("woff");
   }
 
   @font-face {

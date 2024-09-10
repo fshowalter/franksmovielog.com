@@ -30,25 +30,23 @@ export function Article({
 }: Props): JSX.Element {
   return (
     <main>
-      <article className="flex flex-col items-center">
-        <PageTitle className="px-pageMargin py-6 text-center desktop:py-8">
-          {title}
-        </PageTitle>
-        <img
-          {...backdropImageProps}
-          width={BackdropImageConfig.width}
-          height={BackdropImageConfig.height}
-          sizes={BackdropImageConfig.sizes}
-          loading="lazy"
-          decoding="async"
-          alt={alt}
-          className="mb-[5.33px]"
-        />
-        <div className="spacer-y-16" />
-        <div className="px-pageMargin">
-          <LongFormText text={content} className="max-w-prose" />
-        </div>
-        <div className="spacer-y-32" />
+      <article>
+        <header
+          className="flex min-h-[520px] content-start items-end bg-cover px-20 pb-16 pt-40 text-[#fff] [background-position-x:center]"
+          style={{ backgroundImage: `url(${backdropImageProps.src})` }}
+        >
+          <div className="mx-auto w-full max-w-[1696px] px-20">
+            <h1 className="font-sans-bold text-7xl uppercase">{title}</h1>
+            <div className="spacer-y-4" />
+          </div>
+        </header>
+        <section className="flex flex-col items-center">
+          <div className="spacer-y-16" />
+          <div className="px-pageMargin">
+            <LongFormText text={content} className="max-w-prose" />
+          </div>
+          <div className="spacer-y-32" />
+        </section>
       </article>
       <div
         data-pagefind-ignore

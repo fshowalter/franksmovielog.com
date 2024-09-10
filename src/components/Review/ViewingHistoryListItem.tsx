@@ -97,10 +97,10 @@ function ViewingNotes({ value }: { value: Viewing["viewingNotes"] }) {
 
 export function ViewingHistoryListItem({ value }: { value: Viewing }) {
   return (
-    <li className="flex flex-col px-gutter font-sans even:bg-subtle">
-      <div className="flex gap-x-[1ch] py-4">
-        <div className="h-5 w-4">
-          <DateIcon className="mt-1 w-4" />{" "}
+    <li className="flex flex-col px-gutter font-sans-book text-sm even:bg-subtle">
+      <div className="flex items-center gap-x-[1ch] py-4">
+        <div className="size-auto">
+          <DateIcon className="w-4" />{" "}
         </div>
         <div className="grow">
           <Date date={value.date} />

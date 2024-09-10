@@ -1,6 +1,6 @@
 import { getAvatarImageProps } from "src/api/avatars";
 import { getFluidWidthPosterImageProps } from "src/api/posters";
-import { allReviews, loadContent } from "src/api/reviews";
+import { allReviews, loadContent, loadExcerptHtml } from "src/api/reviews";
 import { getOpenGraphStillSrc, getStillImageProps } from "src/api/stills";
 import { StillListItemImageConfig } from "src/components/StillListItem";
 
@@ -51,10 +51,11 @@ export async function getProps(slug: string): Promise<Props> {
           ...value,
           titles: await Promise.all(
             value.titles.map(async (title) => {
+              const titleWithExcerpt = await loadExcerptHtml(title);
               return {
-                ...title,
+                ...titleWithExcerpt,
                 stillImageProps: await getStillImageProps(
-                  title.slug,
+                  titleWithExcerpt.slug,
                   StillListItemImageConfig,
                 ),
               };
@@ -69,10 +70,11 @@ export async function getProps(slug: string): Promise<Props> {
           ...value,
           titles: await Promise.all(
             value.titles.map(async (title) => {
+              const titleWithExcerpt = await loadExcerptHtml(title);
               return {
-                ...title,
+                ...titleWithExcerpt,
                 stillImageProps: await getStillImageProps(
-                  title.slug,
+                  titleWithExcerpt.slug,
                   StillListItemImageConfig,
                 ),
               };
@@ -83,10 +85,11 @@ export async function getProps(slug: string): Promise<Props> {
     ),
     moreReviews: await Promise.all(
       review.moreReviews.map(async (value) => {
+        const titleWithExcerpt = await loadExcerptHtml(value);
         return {
-          ...value,
+          ...titleWithExcerpt,
           stillImageProps: await getStillImageProps(
-            value.slug,
+            titleWithExcerpt.slug,
             StillListItemImageConfig,
           ),
         };
