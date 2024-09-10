@@ -31,7 +31,7 @@ export function Layout({
         }
       /> */}
 
-      <div className="mx-auto flex min-h-full flex-col bg-default">
+      <div className="flex min-h-full w-full flex-col bg-default">
         <Mast
           currentPath={currentPath}
           hideLogo={hideLogo}
