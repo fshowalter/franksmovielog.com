@@ -291,6 +291,105 @@
 }
 
 @layer components {
+  .hamburger-icon {
+    /* position: absolute; */
+    /* right: -100px;
+    top: -100px; */
+    z-index: 100;
+    /* width: 200px;
+    height: 200px; */
+    padding: 12px;
+    background: transparent;
+    border-radius: 50% 50% 50% 50%;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    box-shadow:
+      0 0 0 0 transparent,
+      0 0 0 0 transparent;
+    cursor: pointer;
+  }
+
+  .hamburger-icon-bars {
+    position: relative;
+    /* top: 128px;
+    left: 48px; */
+    width: 24px;
+    height: 2px;
+    display: block;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+  }
+
+  .hamburger-icon-bars:after,
+  .hamburger-icon-bars:before {
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: inherit;
+  }
+
+  .hamburger-icon-bars:before {
+    top: -8px;
+  }
+
+  .hamburger-icon-bars:after {
+    bottom: -8px;
+  }
+
+  #mobile-nav:checked + .hamburger-icon {
+    box-shadow:
+      0 0 0 100vw #252525,
+      0 0 0 100vh #252525;
+    border-radius: 0;
+    background: #252525;
+  }
+
+  #mobile-nav:checked + .hamburger-icon .hamburger-icon-bars {
+    transform: rotate(45deg);
+  }
+
+  #mobile-nav:checked + .hamburger-icon .hamburger-icon-bars:after {
+    transform: rotate(90deg);
+    bottom: 0;
+  }
+
+  #mobile-nav:checked + .hamburger-icon .hamburger-icon-bars:before {
+    transform: rotate(90deg);
+    top: 0;
+  }
+
+  #mobile-nav:checked + .hamburger-icon + .hamburger-menu {
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    z-index: 250;
+    padding: 0 16% 0 12%;
+    margin-top: 160px;
+    overflow: unset;
+    bottom: 0;
+  }
+
+  .hamburger-menu {
+    position: fixed;
+    width: 0;
+    height: 0;
+    top: -100%;
+    left: 100%;
+    transform: translate(-100%, 100%);
+    opacity: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-transition: 0.2s 0s ease-in-out;
+    transition: 0.2s 0s ease-in-out;
+    overflow: hidden;
+  }
+
   .progress-bar-bg {
     background-image: linear-gradient(
       to right,

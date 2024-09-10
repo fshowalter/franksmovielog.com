@@ -47,11 +47,11 @@ export function HomeListItem({
   eagerLoadImage: boolean;
 }) {
   return (
-    <li className="flex max-w-[30.33%] flex-col bg-default">
+    <li className="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[30.33%]">
       <div>
         <a
           href={`/reviews/${value.slug}/`}
-          className="float-right mb-2 ml-6 block tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
+          className="block tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none desktop:float-right desktop:mb-2 desktop:ml-6"
         >
           <Still
             title={value.title}
@@ -59,7 +59,7 @@ export function HomeListItem({
             imageProps={value.stillImageProps}
             width={StillImageConfig.width}
             height={StillImageConfig.height}
-            className="h-auto"
+            className="h-auto w-full"
             loading="lazy"
             decoding="async"
             sizes={StillImageConfig.sizes}
@@ -67,7 +67,7 @@ export function HomeListItem({
         </a>
       </div>
       <div className="spacer-y-6" />
-      <div className="flex grow flex-col pb-6 pl-[8.5%] pr-[10%]">
+      <div className="flex grow flex-col px-[8%] pb-8 desktop:pl-[8.5%] desktop:pr-[10%]">
         <div className="font-sans-caps text-[10px] uppercase leading-4 tracking-[1.1px] text-subtle">
           {formatDate(value.date)}
         </div>
