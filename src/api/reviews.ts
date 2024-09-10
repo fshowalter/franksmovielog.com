@@ -117,6 +117,7 @@ export interface ReviewWithContent extends Review {
 }
 
 export async function loadContent(review: Review): Promise<ReviewWithContent> {
+  console.log(review);
   const viewingsMarkdown =
     cachedViewingsMarkdown || (await allViewingsMarkdown());
   const reviewedTitlesJson = await allReviewedTitlesJson();

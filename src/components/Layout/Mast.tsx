@@ -3,12 +3,20 @@ import { NavListItems } from "./NavListItems";
 export function Mast({
   currentPath,
   hideLogo,
+  hasBackdrop,
 }: {
   hideLogo: boolean;
+  hasBackdrop: boolean;
   currentPath: string;
 }) {
   return (
-    <header className="flex flex-col items-center gap-6 px-pageMargin py-6 text-center text-[#fff] desktop:absolute desktop:inset-x-0 desktop:top-1 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:justify-between desktop:py-5 desktop:text-left max:justify-end max:pr-48">
+    <header
+      className="flex flex-col items-center gap-6 px-pageMargin py-8 text-center desktop:inset-x-0 desktop:top-1 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:justify-between desktop:text-left max:justify-end max:pr-48"
+      style={{
+        color: hasBackdrop ? "#fff" : "var(--fg-default)",
+        position: hasBackdrop ? "absolute" : "static",
+      }}
+    >
       {!hideLogo && (
         <div className="items-inherit justify-items-inherit flex flex-col max:absolute max:left-[var(--page-margin-width)]">
           <h1
@@ -32,14 +40,14 @@ export function Mast({
           disabled
           aria-label="Search"
           aria-keyshortcuts="Control+K"
-          className="safari-border-radius-fix desktop::w-auto desktop::ring-0 flex w-full items-center overflow-hidden rounded-md text-sm leading-6 text-[#fff] ring-1 ring-border hover:ring-accent"
+          className="safari-border-radius-fix desktop::w-auto desktop::ring-0 flex w-full items-center overflow-hidden rounded-md text-sm leading-6 ring-1 ring-border hover:ring-accent"
         >
           <kbd className="ml-auto mt-px hidden min-h-6 flex-none items-center pl-3 pr-4 font-mono text-sm font-light opacity-70 desktop:flex">
             <kbd className="text-md leading-5">Ctrl</kbd>
             <kbd className="text-sm">K</kbd>
           </kbd>
           <svg
-            className="mr-2 size-10 flex-none border-0 border-r border-default bg-subtle fill-[#fff] px-3 py-1 desktop:w-4 desktop:border-r-0 desktop:bg-unset desktop:px-0"
+            className="mr-2 size-10 flex-none border-0 border-r border-default bg-subtle fill-[current-color] px-3 py-1 desktop:w-4 desktop:border-r-0 desktop:bg-unset desktop:px-0"
             viewBox="0 0 16 16"
           >
             <path
