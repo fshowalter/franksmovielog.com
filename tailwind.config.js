@@ -33,7 +33,7 @@ export default {
     screens: {
       tablet: "768px",
       desktop: "1280px",
-      max: "1416px",
+      max: "1696px",
     },
     extend: {
       boxShadow: {

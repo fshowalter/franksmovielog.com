@@ -11,10 +11,13 @@ export function Mast({
 }) {
   return (
     <header
-      className="flex w-full items-center justify-end px-[8%] py-4 text-center desktop:inset-x-0 desktop:top-1 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-pageMargin desktop:py-8 desktop:text-left max:justify-end max:pr-48"
+      className="flex w-full items-center justify-end px-[8%] py-4 text-center tablet:px-8 tablet:py-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
       style={{
         color: hasBackdrop ? "#fff" : "var(--fg-default)",
         position: hasBackdrop ? "absolute" : "static",
+        backgroundImage: hasBackdrop
+          ? "linear-gradient(to bottom, rgba(0,0,0,.85), transparent)"
+          : "unset",
       }}
     >
       {!hideLogo && (
@@ -42,13 +45,13 @@ export function Mast({
           />
         </ul>
       </nav>
-      <div className="z-[1000] desktop:ml-6 desktop:px-2 desktop:py-1 desktop:shadow-all">
+      <div className="z-[1000]">
         <button
           data-open-modal
           disabled
           aria-label="Search"
           aria-keyshortcuts="Control+K"
-          className="flex w-full items-center overflow-hidden text-sm leading-6 hover:ring-accent desktop:w-auto desktop:ring-0"
+          className="flex w-full items-center overflow-hidden text-sm leading-6 ring-default hover:ring-accent desktop:ml-6 desktop:w-auto desktop:rounded-lg desktop:bg-inverse desktop:px-2 desktop:py-1 desktop:text-[#000] desktop:opacity-85 desktop:shadow-all desktop:ring-1 desktop:hover:opacity-100"
         >
           <kbd className="ml-auto mt-px hidden min-h-6 flex-none items-center pl-3 pr-4 font-mono text-sm font-light opacity-70 desktop:flex">
             <kbd className="text-md leading-5">Ctrl</kbd>
