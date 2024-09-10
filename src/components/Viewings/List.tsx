@@ -74,13 +74,11 @@ function DateListItem({
   return (
     <ListItem className="items-center pb-0">
       <div>
-        <div className="font-sans-caps rounded-md shadow-all">
+        <div className="shadow-all">
           <div className="w-12 bg-canvas py-2 text-center text-sm/none uppercase">
             {day}
           </div>
-          <div className="font-sans-book text-center text-2.5xl/8 text-muted">
-            {date}
-          </div>
+          <div className="text-center text-2.5xl/8 text-muted">{date}</div>
         </div>
         <div className="spacer-y-4" />
       </div>

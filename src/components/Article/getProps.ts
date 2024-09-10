@@ -1,6 +1,6 @@
 import { getBackdropImageProps } from "src/api/backdrops";
 import { getPage } from "src/api/pages";
-import { mostRecentReviews } from "src/api/reviews";
+import { loadExcerptHtml, mostRecentReviews } from "src/api/reviews";
 import { getStillImageProps } from "src/api/stills";
 import { StillListItemImageConfig } from "src/components/StillListItem";
 
@@ -24,10 +24,11 @@ export async function getProps({
     backdropImageProps: await getBackdropImageProps(slug, BackdropImageConfig),
     recentReviews: await Promise.all(
       recentReviews.map(async (review) => {
+        const titleWithExcerpt = await loadExcerptHtml(review);
         return {
-          ...review,
+          ...titleWithExcerpt,
           stillImageProps: await getStillImageProps(
-            review.slug,
+            titleWithExcerpt.slug,
             StillListItemImageConfig,
           ),
         };

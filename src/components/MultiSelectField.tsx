@@ -21,9 +21,9 @@ export function MultiSelectField({
           borderRadius: 4,
           colors: {
             ...theme.colors,
-            neutral0: "var(--bg-subtle)",
+            neutral0: "var(--bg-default)",
             neutral20: "var(--border-default)",
-            neutral50: "var(--fg-subtle)",
+            neutral50: "var(--fg-defaults)",
             danger: "var(--fg-accent)",
             primary25: "var(--bg-stripe)",
           },

@@ -10,6 +10,7 @@ interface Props {
   image?: string | null;
   article?: boolean;
   hideLogo?: boolean;
+  hasBackdrop?: boolean;
 }
 
 const siteMeta = {
@@ -25,6 +26,7 @@ const {
   hideLogo = false,
   image,
   article = false,
+  hasBackdrop = true,
 } = Astro.props;
 let pageTitle;
 
@@ -58,7 +60,11 @@ const pathname = new URL(Astro.request.url).pathname;
     <title>{pageTitle}</title>
   </head>
   <body>
-    <LayoutComponent hideLogo={hideLogo} currentPath={pathname}>
+    <LayoutComponent
+      hideLogo={hideLogo}
+      currentPath={pathname}
+      hasBackdrop={hasBackdrop}
+    >
       <slot />
     </LayoutComponent>
     <dialog

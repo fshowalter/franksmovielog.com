@@ -10,7 +10,7 @@ export function ListItem({
   return (
     <li
       className={ccn(
-        "flex flex-row gap-x-4 px-gutter py-4 even:bg-subtle tablet:gap-x-6 tablet:px-6",
+        "flex flex-row gap-x-4 px-gutter py-4 even:bg-subtle tablet:gap-x-6 tablet:px-6 desktop:gap-x-16",
         className,
       )}
     >

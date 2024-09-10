@@ -22,12 +22,6 @@ interface Props extends Pick<ReviewWithContent, "grade" | "date" | "content"> {
 export function Content({ grade, date, content, className }: Props) {
   return (
     <div className={ccn("flex flex-col gap-y-8", className)}>
-      <div className="flex flex-col items-center">
-        <Grade value={grade} height={32} />
-        <div className="flex flex-col items-center tracking-0.5px text-subtle">
-          <span>on</span> {formatDate(date)}
-        </div>
-      </div>
       <LongFormText text={content} className="max-w-prose" />
     </div>
   );

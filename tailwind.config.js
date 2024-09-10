@@ -55,6 +55,7 @@ export default {
         "sans-bold": "GothamNarrowBold",
         serif: '"Source Serif 4"',
         "sans-book": "GothamBook",
+        "serif-semibold": "MercuryDisplaySemibold",
       },
       fontSize: {
         "2.5xl": "1.625rem",
@@ -70,7 +71,7 @@ export default {
         gutter: "var(--gutter-width)",
       },
       maxWidth: {
-        canvas: `clamp(${STILL_WIDTH}, 95vw, 1416px)`,
+        canvas: "1536px",
         prose: PROSE_CONTENT_WIDTH,
         popout: `calc((var(--gutter-width) * 2) + ${PROSE_CONTENT_WIDTH})`,
         poster: POSTER_WIDTH,

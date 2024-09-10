@@ -49,23 +49,25 @@ export function Credits({
       )}
       data-pagefind-meta={`image:${posterImageProps.src}`}
     >
-      <header className="flex items-center justify-center gap-x-2 pb-6 text-center text-4xl font-bold">
-        {title} <span className="text-sm font-light text-subtle">({year})</span>
+      <header className="tablet:float-left tablet:mx-0 tablet:mr-gutter">
+        <div className="mx-auto mb-4 mt-0 block size-full max-w-poster bg-[#e9e7e0]">
+          <Poster
+            title={title}
+            year={year}
+            width={PosterImageConfig.width}
+            height={PosterImageConfig.height}
+            sizes={PosterImageConfig.sizes}
+            loading="lazy"
+            className="h-auto"
+            decoding="async"
+            imageProps={posterImageProps}
+            data-pagefind-meta="image[src], image_alt[alt]"
+          />
+        </div>
+        <div className="text-center">
+          {title} <span className="text-sm">({year})</span>
+        </div>
       </header>
-      <div className="poster-border mx-auto mb-4 mt-0 block size-full max-w-poster bg-[#e9e7e0] tablet:float-left tablet:mx-0 tablet:mr-gutter">
-        <Poster
-          title={title}
-          year={year}
-          width={PosterImageConfig.width}
-          height={PosterImageConfig.height}
-          sizes={PosterImageConfig.sizes}
-          loading="lazy"
-          className="h-auto rounded-xl"
-          decoding="async"
-          imageProps={posterImageProps}
-          data-pagefind-meta="image[src], image_alt[alt]"
-        />
-      </div>
 
       <dl className="flex flex-col gap-y-4">
         {originalTitle && (
@@ -87,17 +89,14 @@ export function Credits({
         />
         <Credit term="Starring" value={toSentence(principalCastNames)} />
       </dl>
-      <div className="h-8 min-h-8" />
+      <div className="clear-both spacer-y-8" />
       {children}
-      <div className="h-8 min-h-8" />
+      <div className="spacer-y-8" />
       <a
         href="#top"
-        className="mx-auto flex max-w-[50%] cursor-pointer content-center items-center justify-center rounded-lg p-2 font-sans text-accent shadow-all hover:shadow-border-accent"
+        className="mx-auto flex max-w-[50%] cursor-pointer content-center items-center justify-center px-pageMargin py-5 font-sans-caps text-sm uppercase tracking-[.6px] shadow-all hover:text-accent hover:shadow-border-accent"
       >
         Back to Top
-        <svg viewBox="0 0 24 24" className="size-6 fill-default">
-          <path d="M7.997 10l3.515-3.79a.672.672 0 0 1 .89-.076l.086.075L16 10 13 10.001V18h-2v-7.999L7.997 10z"></path>
-        </svg>
       </a>
     </aside>
   );
@@ -106,8 +105,8 @@ export function Credits({
 function Credit({ term, value }: { term: string; value: React.ReactNode }) {
   return (
     <div className="overflow-hidden">
-      <dt className="font-bold text-subtle">{term}</dt>
-      <dd className="font-normal text-subtle">{value}</dd>
+      <dt className="font-sans-caps text-xs uppercase text-subtle">{term}</dt>
+      <dd className="font-normal text-muted">{value}</dd>
     </div>
   );
 }

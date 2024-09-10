@@ -19,11 +19,13 @@ export function Header({
   className,
 }: Props) {
   return (
-    <header className={ccn("flex flex-col gap-y-4", className)}>
-      <PageTitle data-pagefind-meta="title">{title}</PageTitle>
+    <>
+      <h1 data-pagefind-meta="title" className="text-7xl font-bold">
+        {title}
+      </h1>
       <OriginalTitle value={originalTitle} />
       <Meta year={year} countries={countries} runtimeMinutes={runtimeMinutes} />
-    </header>
+    </>
   );
 }
 
@@ -41,7 +43,7 @@ function Meta({
   runtimeMinutes,
 }: Pick<Props, "year" | "countries" | "runtimeMinutes">) {
   return (
-    <div className="font-sans text-sm tracking-[.6px] text-muted">
+    <div className="font-sans text-sm tracking-[.6px]">
       {year} <span>|</span>{" "}
       {countries.reduce<JSX.Element | null>((acc, country) => {
         if (acc === null) {

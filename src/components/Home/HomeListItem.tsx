@@ -75,7 +75,7 @@ export function HomeListItem({
         <div className="text-[22px]">
           <a
             href={`/reviews/${value.slug}/`}
-            className="block text-2.5xl font-bold text-default"
+            className="font-serif-semibold block text-2.5xl text-default"
           >
             {value.title}{" "}
             <span className="text-sm font-light leading-none text-muted">
