@@ -24,26 +24,23 @@ export interface StillListItemValue {
 
 export function StillListItem({ value }: { value: StillListItemValue }) {
   return (
-    <li className="w-full">
+    <li className="w-full tablet:w-[47%]">
       <div className="row-start-1 row-end-1">
-        <a
-          href={`/reviews/${value.slug}/`}
-          className="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] overflow-hidden tablet:float-none tablet:m-0 tablet:w-auto"
-        >
+        <a href={`/reviews/${value.slug}/`} className="block">
           <Still
             title={value.title}
             year={value.year}
             imageProps={value.stillImageProps}
             width={StillListItemImageConfig.width}
             height={StillListItemImageConfig.height}
-            className="h-auto"
+            className="h-auto w-full"
             loading="lazy"
             decoding="async"
             sizes={StillListItemImageConfig.sizes}
           />
         </a>
       </div>
-      <div className="flex flex-col bg-default py-6 pl-[12%] pr-[14%]">
+      <div className="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]">
         <div className="row-start-2">
           <a
             href={`/reviews/${value.slug}/`}

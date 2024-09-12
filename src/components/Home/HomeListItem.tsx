@@ -47,7 +47,7 @@ export function HomeListItem({
   eagerLoadImage: boolean;
 }) {
   return (
-    <li className="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[30.33%]">
+    <li className="mx-auto flex flex-col bg-default tablet:mx-0 tablet:max-w-[47%] desktop:max-w-[31.33%]">
       <div>
         <a
           href={`/reviews/${value.slug}/`}

@@ -20,7 +20,7 @@ export function ListItemPoster({
     return (
       <a
         href={`/reviews/${slug}/`}
-        className="safari-border-radius-fix min-w-14 max-w-14 shrink-0 overflow-hidden rounded-lg shadow-all"
+        className="min-w-14 max-w-14 shrink-0 overflow-hidden"
       >
         <img
           {...imageProps}
