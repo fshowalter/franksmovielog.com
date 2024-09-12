@@ -50,7 +50,7 @@ export function Credits({
       data-pagefind-meta={`image:${posterImageProps.src}`}
     >
       <header className="tablet:float-left tablet:mx-0 tablet:mr-gutter">
-        <div className="mx-auto mb-4 mt-0 block size-full max-w-poster bg-[#e9e7e0]">
+        <div className="mb-4 mt-0 block size-full w-full tablet:max-w-poster">
           <Poster
             title={title}
             year={year}
@@ -64,9 +64,10 @@ export function Credits({
             data-pagefind-meta="image[src], image_alt[alt]"
           />
         </div>
-        <div className="text-center">
+        <div className="font-serif-semibold text-center text-xl">
           {title} <span className="text-sm">({year})</span>
         </div>
+        <div className="spacer-y-8 desktop:spacer-y-0" />
       </header>
 
       <dl className="flex flex-col gap-y-4">

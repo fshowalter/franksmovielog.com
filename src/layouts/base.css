@@ -85,6 +85,16 @@
   }
 
   @font-face {
+    font-family: "GothamBold";
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+    src:
+      url("/fonts/Gotham/GothamBold_normal_normal.woff2") format("woff2"),
+      url("/fonts/Gotham/GothamBold_normal_normal.woff") format("woff");
+  }
+
+  @font-face {
     font-family: "MercuryDisplaySemibold";
     font-style: normal;
     font-stretch: normal;
@@ -292,13 +302,9 @@
 
 @layer components {
   .hamburger-icon {
-    /* position: absolute; */
-    /* right: -100px;
-    top: -100px; */
     z-index: 100;
-    /* width: 200px;
-    height: 200px; */
-    padding: 12px;
+    /* padding: 12px; */
+    margin-left: 16px;
     background: transparent;
     border-radius: 50% 50% 50% 50%;
     -webkit-transition: 0.2s ease-in-out;
@@ -307,12 +313,15 @@
       0 0 0 0 transparent,
       0 0 0 0 transparent;
     cursor: pointer;
+    height: 24px;
+    position: relative;
+    display: flex;
+    align-items: center;
   }
 
   .hamburger-icon-bars {
     position: relative;
-    /* top: 128px;
-    left: 48px; */
+
     width: 24px;
     height: 2px;
     display: block;
@@ -320,11 +329,11 @@
     transform-origin: center;
     -webkit-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
+    transition-property: top, bottom, transform;
   }
 
   .hamburger-icon-bars:after,
   .hamburger-icon-bars:before {
-    -webkit-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
     content: "";
     position: absolute;
@@ -352,6 +361,7 @@
 
   #mobile-nav:checked + .hamburger-icon .hamburger-icon-bars {
     transform: rotate(45deg);
+    background-color: #fff !important;
   }
 
   #mobile-nav:checked + .hamburger-icon .hamburger-icon-bars:after {
@@ -374,6 +384,10 @@
     overflow: unset;
     bottom: 0;
     overflow: hidden;
+  }
+
+  .mast:has(#mobile-nav:checked) {
+    color: #fff !important;
   }
 
   body:has(#mobile-nav:checked) {

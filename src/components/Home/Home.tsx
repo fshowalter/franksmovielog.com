@@ -9,8 +9,14 @@ export interface Props {
 export function Home({ values }: Props): JSX.Element {
   return (
     <main>
-      <header className="flex min-h-[240px] content-start items-end bg-[url(/casablanca.jpg)] bg-cover pb-8 pt-40 text-[#fff] [background-position-x:center] tablet:min-h-[400px] tablet:pb-10 tablet:pt-40 desktop:min-h-[640px] desktop:pb-16 desktop:pt-40">
-        <div className="mx-auto w-full max-w-screen-max px-[8%] tablet:px-12 desktop:px-20 max:w-[1696px]">
+      <header className="relative flex min-h-[240px] content-start items-end bg-cover pb-8 pt-40 text-[#fff] [background-position-x:center] tablet:min-h-[400px] tablet:pb-10 tablet:pt-40 desktop:min-h-[clamp(640px,50vh,1350px)] desktop:pb-16 desktop:pt-40">
+        <img
+          src="/casablanca.jpg"
+          className="absolute inset-0 size-full object-cover object-top"
+          width="2400px"
+          height="1350px"
+        />
+        <div className="z-10 mx-auto w-full max-w-screen-max px-[8%] tablet:px-12 desktop:px-20">
           <h1 className="text-4xl desktop:text-7xl">Frank&apos;s Movie Log</h1>
           <div className="spacer-y-1 desktop:spacer-y-4" />
           <p className="text-base desktop:text-lg">
@@ -19,12 +25,12 @@ export function Home({ values }: Props): JSX.Element {
         </div>
       </header>
       <section className="bg-subtle">
-        <div className="mx-auto max-w-screen-max bg-subtle tablet:px-[calc(48px_-_1.5%)] desktop:px-[calc(80px_-_1.5%)]">
+        <div className="mx-auto max-w-screen-max px-[8%] tablet:px-[calc(48px_-_1.5%)] desktop:px-20">
           <div className="pb-8 desktop:pb-32">
-            <h2 className="px-[8%] py-10 font-sans-bold text-xs font-bold uppercase tracking-[0.8px] text-subtle tablet:px-[1.5%]">
+            <h2 className="py-10 font-sans-bold text-xs font-bold uppercase tracking-[0.8px] text-subtle tablet:px-[1.5%] desktop:px-0">
               Latest Reviews
             </h2>
-            <ul className="flex w-full flex-col flex-wrap justify-center gap-x-[3%] tablet:flex-row tablet:gap-y-8 desktop:gap-y-20">
+            <ul className="flex w-full flex-col flex-wrap justify-center gap-x-[3%] gap-y-8 tablet:flex-row tablet:justify-between tablet:gap-y-8 desktop:gap-y-20">
               {values.map((value, index) => {
                 return (
                   <HomeListItem

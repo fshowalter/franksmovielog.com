@@ -14,7 +14,7 @@ export function ListInfo({
   }
 
   return (
-    <div className="sticky top-0 z-40 bg-default font-sans-caps text-sm uppercase leading-10 tracking-[.6px] text-subtle shadow-bottom desktop:top-0">
+    <div className="sticky top-0 z-40 py-10 font-sans-bold text-xs font-bold uppercase tracking-[0.8px] text-subtle tablet:px-[1.5%] desktop:px-0">
       {showingText}
     </div>
   );

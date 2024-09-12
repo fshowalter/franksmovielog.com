@@ -54,7 +54,7 @@ export function DebouncedInput({
 
   return (
     <label className="flex flex-col text-subtle">
-      <span className="inline-block h-6 text-left font-sans-caps text-xs uppercase leading-none tracking-0.5px">
+      <span className="font-sans-narrow inline-block h-6 text-left text-xs uppercase leading-none tracking-0.5px">
         {label}
       </span>
       <input
