@@ -60,13 +60,13 @@ function GroupingListItem({
         style={{ zIndex: zIndex }}
         className="sticky top-0 bg-default pt-0 text-md"
       >
-        <div className="max-w-screen-max px-[8%] py-8 text-xl shadow-bottom tablet:px-12 desktop:px-20">
+        <div className="max-w-screen-max px-[8%] py-8 text-xl shadow-bottom min-[1024px]:px-0">
           {groupText}
         </div>
       </div>
-      <div className="h-0 min-h-0 tablet:h-4 tablet:min-h-4" />
+      {/* <div className="h-0 min-h-0 tablet:h-4 tablet:min-h-4" /> */}
       {children}
-      <div className="h-0 min-h-0 tablet:h-4 tablet:min-h-4" />
+      {/* <div className="h-0 min-h-0 tablet:h-4 tablet:min-h-4" /> */}
     </li>
   );
 }
