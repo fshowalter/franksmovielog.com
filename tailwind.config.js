@@ -51,8 +51,9 @@ export default {
       },
       fontFamily: {
         sans: "GothamMedium",
-        "sans-caps": "GothamNarrowMedium",
-        "sans-bold": "GothamNarrowBold",
+        "sans-narrow": "GothamNarrowMedium",
+        "sans-bold": "GothamBold",
+        "sans-narrow-bold": "GothamNarrowBold",
         serif: '"Source Serif 4"',
         "sans-book": "GothamBook",
         "serif-semibold": "MercuryDisplaySemibold",

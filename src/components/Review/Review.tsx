@@ -51,13 +51,13 @@ export function Review({
       data-pagefind-body
       className="flex scroll-mt-[var(--header-offset)] flex-col"
     >
-      <header className="flex flex-col items-center pt-10">
-        <h1 data-pagefind-meta="title" className="text-7xl">
+      <header className="flex flex-col items-center px-[8%] pt-10">
+        <h1 data-pagefind-meta="title" className="text-4xl desktop:text-7xl">
           {value.title}
         </h1>
         <OriginalTitle value={value.originalTitle} />
         <div className="spacer-y-4" />
-        <Grade value={value.grade} height={32} />
+        <Grade value={value.grade} height={24} />
         <div className="spacer-y-4" />
         <Meta
           year={value.year}
@@ -77,17 +77,17 @@ export function Review({
           decoding="sync"
         />
       </header>
-      <div className="spacer-y-20" />
-      <div className="flex flex-col items-center">
+      <div className="spacer-y-8 desktop:spacer-y-20" />
+      <div className="flex flex-col items-center px-[8%]">
         <Content
           grade={value.grade}
           date={value.date}
           content={value.content}
-          className="items-center px-pageMargin"
+          className="items-center"
         />
-        <div className="spacer-y-20" />
+        <div className="spacer-y-16 desktop:spacer-y-20" />
         <div className="w-full max-w-popout">
-          <h3 className="px-gutter text-lg font-semibold text-subtle shadow-bottom">
+          <h3 className="font-sans-bold text-xs uppercase tracking-[1px] text-subtle shadow-bottom">
             Viewing History
             <div className="spacer-y-2" />
           </h3>
@@ -97,7 +97,7 @@ export function Review({
             ))}
           </ul>
         </div>
-        <div className="spacer-y-32" />
+        <div className="spacer-y-16 desktop:spacer-y-32" />
         <Credits
           title={value.title}
           year={value.year}
@@ -116,16 +116,15 @@ export function Review({
           </ul>
         </Credits>
       </div>
-      <div className="spacer-y-32" />
+      <div className="spacer-y-20 desktop:spacer-y-32" />
       <div
         data-pagefind-ignore
-        className="flex w-full flex-col items-center gap-y-12 bg-default tablet:max-w-full tablet:bg-subtle tablet:pb-32 tablet:pt-8 desktop:gap-y-24"
+        className="flex w-full flex-col items-center gap-y-12 bg-subtle pb-32 pt-16 tablet:max-w-full tablet:bg-subtle tablet:pt-8 desktop:gap-y-24"
       >
         <MoreFromCastAndCrew values={moreFromCastAndCrew} />
         <MoreInCollections values={moreInCollections} />
         <MoreReviews values={moreReviews} />
       </div>
-      <div className="spacer-y-32 tablet:spacer-y-0" />
       <StructuredData
         title={value.title}
         year={value.year}

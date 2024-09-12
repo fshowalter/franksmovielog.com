@@ -62,7 +62,7 @@ export function Filters({
           })
         }
       />
-      <SelectField
+      {/* <SelectField
         value={sortValue}
         label="Order By"
         onChange={(e) =>
@@ -80,7 +80,7 @@ export function Filters({
         <option value="release-date-asc">Release Date (Oldest First)</option>
         <option value="review-date-desc">Review Date (Newest First)</option>
         <option value="review-date-asc">Review Date (Oldest First)</option>
-      </SelectField>
+      </SelectField> */}
     </>
   );
 }

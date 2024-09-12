@@ -13,7 +13,7 @@ export function StillListHeading({
       <a className="text-accent" href={linkTarget}>
         {linkText}
       </a>
-      <div className="spacer-y-12" />
+      <div className="spacer-y-9 desktop:spacer-y-12" />
     </div>
   );
 }

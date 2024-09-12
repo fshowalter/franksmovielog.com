@@ -77,8 +77,8 @@ export function GradeInput({
   };
 
   return (
-    <fieldset>
-      <legend className="h-6 text-left text-sm font-bold tracking-0.5px text-subtle">
+    <fieldset className="text-subtle">
+      <legend className="font-sans-narrow h-6 text-left text-xs uppercase tracking-0.5px text-subtle">
         {label}
       </legend>
       <div className="flex flex-wrap items-baseline">

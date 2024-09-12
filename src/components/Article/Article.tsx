@@ -31,11 +31,14 @@ export function Article({
   return (
     <main>
       <article>
-        <header
-          className="flex min-h-[520px] content-start items-end bg-cover px-20 pb-16 pt-40 text-[#fff] [background-position-x:center]"
-          style={{ backgroundImage: `url(${backdropImageProps.src})` }}
-        >
-          <div className="mx-auto w-full max-w-[1696px] px-20">
+        <header className="relative flex min-h-[240px] content-start items-end bg-cover pb-8 pt-40 text-[#fff] [background-position-x:center] tablet:min-h-[400px] tablet:pb-10 tablet:pt-40 desktop:min-h-[clamp(640px,66vh,1350px)] desktop:pb-16 desktop:pt-40">
+          <img
+            src={backdropImageProps.src}
+            className="absolute inset-0 size-full object-cover object-top"
+            width="2400px"
+            height="1350px"
+          />
+          <div className="z-10 mx-auto w-full max-w-screen-max px-20">
             <h1 className="font-sans-bold text-7xl uppercase">{title}</h1>
             <div className="spacer-y-4" />
           </div>

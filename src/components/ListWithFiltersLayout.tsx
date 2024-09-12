@@ -1,23 +1,31 @@
 import { Fieldset } from "./Fieldset";
 
 export function ListWithFiltersLayout({
-  header,
+  title,
+  slug,
+  heroSrc,
   filters,
   list,
 }: {
-  header: React.ReactNode;
+  title: string;
+  slug: string;
+  heroSrc: string;
   filters: React.ReactNode;
   list: React.ReactNode;
 }): JSX.Element {
   return (
     <main className="bg-[linear-gradient(90deg,var(--bg-default)_0%,var(--bg-default)_50%,var(--bg-subtle)_50%,var(--bg-subtle)_100%)]">
-      <header className="flex min-h-[520px] content-start items-end bg-[url(/we_have_such_sights.jpg)] bg-cover px-20 pb-16 pt-40 text-[#fff] [background-position-x:center]">
-        <div className="mx-auto w-full max-w-[1696px] px-20">
-          <h1 className="font-sans-bold text-7xl uppercase">Viewing Log</h1>
+      <header className="relative flex min-h-[240px] content-start items-end bg-cover pb-8 pt-40 text-[#fff] [background-position-x:center] tablet:min-h-[400px] tablet:pb-10 tablet:pt-40 desktop:min-h-[clamp(640px,50vh,1350px)] desktop:pb-16 desktop:pt-40">
+        <img
+          src={heroSrc}
+          className="absolute inset-0 size-full object-cover object-top"
+          width="2400px"
+          height="1350px"
+        />
+        <div className="z-10 mx-auto w-full max-w-screen-max px-[8%] tablet:px-12 desktop:px-20">
+          <h1 className="font-sans-bold text-7xl uppercase">{title}</h1>
           <div className="spacer-y-4" />
-          <p className="text-lg">
-            &ldquo;We have such sights to show you.&rdquo;
-          </p>
+          <p className="text-lg">{slug}</p>
         </div>
       </header>
       <section className="mx-auto flex max-w-canvas flex-col items-center">
