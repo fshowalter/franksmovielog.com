@@ -13,7 +13,7 @@ export function LabelText({
 
   return (
     <Component
-      className="font-sans-narrow inline-block h-6 text-left text-xs uppercase leading-none tracking-0.5px"
+      className="font-sans-narrow inline-block h-6 text-left text-xs uppercase leading-none tracking-0.5px text-subtle"
       htmlFor={htmlFor}
     >
       {text}

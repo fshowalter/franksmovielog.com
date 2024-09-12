@@ -34,7 +34,7 @@ export function Reviews({
   );
 
   return (
-    <main className="bg-[linear-gradient(90deg,var(--bg-default)_0%,var(--bg-default)_50%,var(--bg-subtle)_50%,var(--bg-subtle)_100%)]">
+    <main className="min-[1024px]:bg-[linear-gradient(90deg,var(--bg-default)_0%,var(--bg-default)_50%,var(--bg-subtle)_50%,var(--bg-subtle)_100%)]">
       <header className="relative flex min-h-[240px] content-start items-end bg-cover pb-8 pt-40 text-[#fff] [background-position-x:center] tablet:min-h-[400px] tablet:pb-10 tablet:pt-40 desktop:min-h-[clamp(640px,50vh,1350px)] desktop:pb-16 desktop:pt-40">
         <img
           src="/reviews.jpg"
@@ -52,23 +52,7 @@ export function Reviews({
       </header>
       <section className="mx-auto flex max-w-screen-max flex-col items-center">
         <div className="flex w-full flex-col items-stretch desktop:max-w-full desktop:flex-row">
-          <div className="flex-col items-center bg-subtle px-gutter">
-            {/* <div className="flex flex-col items-center">{header}</div> */}
-            <div className="hidden desktop:sticky desktop:top-[var(--header-offset)]">
-              <div className="spacer-y-8" />
-              <Fieldset legend="Filter & Sort" className="desktop:self-start">
-                <Filters
-                  dispatch={dispatch}
-                  sortValue={state.sortValue}
-                  distinctGenres={distinctGenres}
-                  distinctReleaseYears={distinctReleaseYears}
-                  distinctReviewYears={distinctReviewYears}
-                />
-              </Fieldset>
-              <div className="spacer-y-8" />
-            </div>
-          </div>
-          <div className="flex grow flex-col bg-default">
+          <div className="flex grow flex-col tablet:px-12">
             <List
               dispatch={dispatch}
               groupedValues={state.groupedValues}
