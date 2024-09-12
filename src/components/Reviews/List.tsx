@@ -79,6 +79,7 @@ export function List({
             groupedValues={groupedValues}
             visibleCount={visibleCount}
             totalCount={totalCount}
+            className="bg-default min-[1024px]:px-12"
             onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
           >
             {(value) => <ReviewsListItem value={value} key={value.imdbId} />}
