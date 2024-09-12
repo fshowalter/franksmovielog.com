@@ -52,7 +52,7 @@ export function Reviews({
       </header>
       <section className="mx-auto flex max-w-screen-max flex-col items-center">
         <div className="flex w-full flex-col items-stretch desktop:max-w-full desktop:flex-row">
-          <div className="flex-col items-center bg-subtle px-gutter desktop:order-2 desktop:flex desktop:basis-96 desktop:px-pageMargin desktop:pt-8">
+          <div className="flex-col items-center bg-subtle px-gutter">
             {/* <div className="flex flex-col items-center">{header}</div> */}
             <div className="hidden desktop:sticky desktop:top-[var(--header-offset)]">
               <div className="spacer-y-8" />
