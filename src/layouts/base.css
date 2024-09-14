@@ -21,6 +21,7 @@
   --gutter-width: 20px;
   --image-filter: initial;
   --page-margin-width: 20px;
+  --mast-margin: 8%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -47,6 +48,7 @@
   :root {
     --gutter-width: 24px;
     --page-margin-width: 48px;
+    --mast-margin: 24px;
   }
 }
 
@@ -55,6 +57,7 @@
     --gutter-width: 32px;
     --page-margin-width: 64px;
     --header-offset: 93px;
+    --mast-margin: 64px;
   }
 }
 

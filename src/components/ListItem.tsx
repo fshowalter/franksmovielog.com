@@ -10,7 +10,7 @@ export function ListItem({
   return (
     <li
       className={ccn(
-        "flex max-w-screen-max flex-row gap-x-4 px-[8%] py-4 even:bg-subtle tablet:gap-x-6 tablet:px-0 desktop:gap-x-16",
+        "relative mb-px flex max-w-screen-max flex-row gap-x-4 px-[8%] py-4 shadow-bottom even:bg-subtle tablet:gap-x-6 tablet:px-1",
         className,
       )}
     >
