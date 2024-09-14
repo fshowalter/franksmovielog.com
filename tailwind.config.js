@@ -32,6 +32,7 @@ export default {
     },
     screens: {
       tablet: "768px",
+      showFilters: "1024px",
       desktop: "1280px",
       max: "1696px",
     },
@@ -61,6 +62,29 @@ export default {
       fontSize: {
         "2.5xl": "1.625rem",
         md: ["1.125rem", "1.5rem"],
+      },
+      gridColumn: {
+        mast: "mast-start / mast-end",
+        full: "full-start / full-end",
+      },
+      gridRow: {
+        mast: "mast-start / mast-end",
+        footer: "footer-start / footer-end",
+        content: "content-start / content-end",
+        full: "mast-start / content-end",
+      },
+      gridTemplateColumns: {
+        base: " \
+        [full-start] var(--mast-margin) \
+        [mast-start] auto [mast-end] \
+        var(--mast-margin) [full-end]",
+      },
+      gridTemplateRows: {
+        base: " \
+        [mast-start] auto \
+        [mast-end content-start] 1fr [content-end footer start] \
+        auto [footer-end] \
+        ",
       },
       letterSpacing: {
         "0.25px": "0.015625rem",
