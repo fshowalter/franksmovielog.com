@@ -52,7 +52,7 @@ export function Reviews({
       </header>
       <section className="mx-auto flex max-w-screen-max flex-col items-center">
         <div className="flex w-full flex-col items-stretch desktop:max-w-full desktop:flex-row">
-          <div className="flex grow flex-col tablet:px-12">
+          <div className="flex grow flex-col">
             <List
               dispatch={dispatch}
               groupedValues={state.groupedValues}

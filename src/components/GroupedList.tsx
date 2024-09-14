@@ -18,7 +18,7 @@ export function GroupedList<T>({
   className?: string;
 }): JSX.Element {
   return (
-    <div className="bg-subtle">
+    <div className="">
       {/* <ListInfo visibleCount={visibleCount} totalCount={totalCount} /> */}
 
       <ol className={className} {...rest}>
@@ -32,7 +32,7 @@ export function GroupedList<T>({
           );
         })}
       </ol>
-      <div className="flex flex-col items-center px-pageMargin">
+      <div className="flex flex-col items-center px-[8%]">
         {totalCount > visibleCount && (
           <>
             <div className="h-8 min-h-8" />
@@ -56,10 +56,7 @@ function GroupingListItem({
 }) {
   return (
     <li className="block">
-      <div
-        style={{ zIndex: zIndex }}
-        className="sticky top-0 bg-default pt-0 text-md"
-      >
+      <div style={{ zIndex: zIndex }} className="bg-default pt-0 text-md">
         <div className="max-w-screen-max px-[8%] py-8 text-xl shadow-bottom tablet:px-0">
           {groupText}
         </div>
