@@ -1,28 +1,17 @@
 import type { ReviewWithContent } from "src/api/reviews";
-import { Grade } from "src/components/Grade";
 import { LongFormText } from "src/components/LongFormText";
-import { ccn } from "src/utils/concatClassNames";
 
-const dateFormat = new Intl.DateTimeFormat("en-US", {
-  weekday: "short",
-  month: "short",
-  day: "numeric",
-  year: "numeric",
-  timeZone: "UTC",
-});
-
-function formatDate(date: Date) {
-  return dateFormat.format(date);
-}
-
-interface Props extends Pick<ReviewWithContent, "grade" | "date" | "content"> {
+type Props = Pick<ReviewWithContent, "content"> & {
   className?: string;
-}
+};
 
-export function Content({ grade, date, content, className }: Props) {
+export function Content({ content, className }: Props) {
   return (
-    <div className={ccn("flex flex-col gap-y-8", className)}>
-      <LongFormText text={content} className="max-w-prose" />
+    <div className={className}>
+      <LongFormText
+        text={content}
+        className="max-w-prose first-letter:float-left first-letter:mt-[6px] first-letter:pr-2 first-letter:font-sans-narrow-bold first-letter:text-[56px] first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px]"
+      />
     </div>
   );
 }

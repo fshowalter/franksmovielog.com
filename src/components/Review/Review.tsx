@@ -1,16 +1,17 @@
 import type { PosterImageProps } from "src/api/posters";
 import type { Review, ReviewWithContent } from "src/api/reviews";
 import type { StillImageProps } from "src/api/stills";
+import { Grade } from "src/components/Grade";
+import { Layout } from "src/components/Layout";
+import { MoreReviews } from "src/components/MoreReviews";
 import { Still } from "src/components/Still";
+import { SubHeading } from "src/components/SubHeading";
+import { ccn } from "src/utils/concatClassNames";
 
-import { Grade } from "../Grade";
-import { CastAndCrewChips } from "./CastAndCrewChips";
-import { CollectionChips } from "./CollectionChips";
 import { Content } from "./Content";
 import { Credits } from "./Credits";
 import { MoreFromCastAndCrew } from "./MoreFromCastAndCrew";
 import { MoreInCollections } from "./MoreInCollections";
-import { MoreReviews } from "./MoreReviews";
 import { StructuredData } from "./StructuredData";
 import { ViewingHistoryListItem } from "./ViewingHistoryListItem";
 
@@ -29,8 +30,6 @@ export interface Props {
   >["values"];
   moreInCollections: React.ComponentProps<typeof MoreInCollections>["values"];
   moreReviews: React.ComponentProps<typeof MoreReviews>["values"];
-  castAndCrewChips: React.ComponentProps<typeof CastAndCrewChips>["values"];
-  collectionChips: React.ComponentProps<typeof CollectionChips>["values"];
   seoImageSrc: string;
 }
 
@@ -38,33 +37,28 @@ export function Review({
   value,
   stillImageProps,
   posterImageProps,
-  collectionChips,
   seoImageSrc,
   moreFromCastAndCrew,
   moreInCollections,
   moreReviews,
-  castAndCrewChips,
 }: Props): JSX.Element {
   return (
-    <main
-      id="top"
-      data-pagefind-body
-      className="flex scroll-mt-[var(--header-offset)] flex-col"
-    >
-      <header className="flex flex-col items-center px-[8%] pt-10">
+    <Layout hasBackdrop={false} className="flex flex-col" data-pagefind-body>
+      <header className="mb-12 flex flex-col items-center px-container-base pt-10">
         <h1 data-pagefind-meta="title" className="text-4xl desktop:text-7xl">
           {value.title}
         </h1>
-        <OriginalTitle value={value.originalTitle} />
-        <div className="spacer-y-4" />
-        <Grade value={value.grade} height={24} />
-        <div className="spacer-y-4" />
+        <OriginalTitle
+          className="mb-4 text-muted"
+          value={value.originalTitle}
+        />
+        <Grade value={value.grade} height={24} className="mb-6" />
         <Meta
           year={value.year}
           countries={value.countries}
           runtimeMinutes={value.runtimeMinutes}
+          className="mb-12"
         />
-        <div className="spacer-y-12" />
         <Still
           title={value.title}
           year={value.year}
@@ -77,27 +71,18 @@ export function Review({
           decoding="sync"
         />
       </header>
-      <div className="spacer-y-8 desktop:spacer-y-20" />
-      <div className="flex flex-col items-center px-[8%]">
-        <Content
-          grade={value.grade}
-          date={value.date}
-          content={value.content}
-          className="items-center"
-        />
-        <div className="spacer-y-16 desktop:spacer-y-20" />
+      <div className="flex flex-col items-center gap-16 px-container-base pb-20 desktop:gap-20 desktop:pb-32">
+        <Content content={value.content} />
         <div className="w-full max-w-popout">
-          <h3 className="font-sans-bold text-xs uppercase tracking-[1px] text-subtle shadow-bottom">
+          <SubHeading as="h3" className="shadow-bottom">
             Viewing History
-            <div className="spacer-y-2" />
-          </h3>
+          </SubHeading>
           <ul>
             {value.viewings.map((viewing) => (
               <ViewingHistoryListItem key={viewing.sequence} value={viewing} />
             ))}
           </ul>
         </div>
-        <div className="spacer-y-16 desktop:spacer-y-32" />
         <Credits
           title={value.title}
           year={value.year}
@@ -109,21 +94,22 @@ export function Review({
           countries={value.countries}
           posterImageProps={posterImageProps}
           className="w-full max-w-popout"
-        >
-          <ul className="flex flex-wrap gap-2">
-            <CastAndCrewChips values={castAndCrewChips} />
-            <CollectionChips values={collectionChips} />
-          </ul>
-        </Credits>
+        />
       </div>
-      <div className="spacer-y-20 desktop:spacer-y-32" />
       <div
         data-pagefind-ignore
-        className="flex w-full flex-col items-center gap-y-12 bg-subtle pb-32 pt-16 tablet:max-w-full tablet:bg-subtle tablet:pt-8 desktop:gap-y-24"
+        className="flex w-full flex-col items-center gap-y-12 bg-subtle pb-32 pt-16 tablet:pt-8 desktop:gap-y-24"
       >
         <MoreFromCastAndCrew values={moreFromCastAndCrew} />
         <MoreInCollections values={moreInCollections} />
-        <MoreReviews values={moreReviews} />
+        <MoreReviews values={moreReviews}>
+          <SubHeading as="h2">
+            More{" "}
+            <a href={`/reviews/`} className="text-accent">
+              Reviews
+            </a>
+          </SubHeading>
+        </MoreReviews>
       </div>
       <StructuredData
         title={value.title}
@@ -133,25 +119,39 @@ export function Review({
         grade={value.grade}
         seoImageSrc={seoImageSrc}
       />
-    </main>
+    </Layout>
   );
 }
 
-function OriginalTitle({ value }: { value: string | null }) {
+function OriginalTitle({
+  value,
+  className,
+}: {
+  className: string;
+  value: string | null;
+}) {
   if (!value) {
-    return null;
+    return <div className={className} />;
   }
 
-  return <div className="text-muted">({value})</div>;
+  return <div className={className}>({value})</div>;
 }
 
 function Meta({
   year,
   countries,
   runtimeMinutes,
-}: Pick<ReviewWithContent, "year" | "countries" | "runtimeMinutes">) {
+  className,
+}: Pick<ReviewWithContent, "year" | "countries" | "runtimeMinutes"> & {
+  className?: string;
+}) {
   return (
-    <div className="font-sans-caps text-xs uppercase tracking-[1.1px] text-subtle">
+    <div
+      className={ccn(
+        "font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle",
+        className,
+      )}
+    >
       {year} <span>|</span>{" "}
       {countries.reduce<JSX.Element | null>((acc, country) => {
         if (acc === null) {

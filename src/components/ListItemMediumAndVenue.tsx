@@ -8,7 +8,7 @@ export function ListItemMediumAndVenue({
   if (medium && venue) {
     return (
       <>
-        <div>
+        <div className="font-sans-book text-xs text-subtle">
           {medium} at {venue}
         </div>
       </>
@@ -18,7 +18,7 @@ export function ListItemMediumAndVenue({
   if (medium) {
     return (
       <>
-        <div>{medium}</div>
+        <div className="font-sans-book text-xs text-subtle">{medium}</div>
       </>
     );
   }
@@ -26,7 +26,7 @@ export function ListItemMediumAndVenue({
   if (venue) {
     return (
       <>
-        <div>{venue}</div>
+        <div className="font-sans-book text-xs text-subtle">{venue}</div>
       </>
     );
   }

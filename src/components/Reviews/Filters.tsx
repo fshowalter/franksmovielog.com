@@ -13,8 +13,6 @@ export function Filters({
   distinctReleaseYears,
   distinctReviewYears,
   distinctGenres,
-  showFilters,
-  onToggleFilters,
 }: {
   dispatch: React.Dispatch<ActionType>;
   sortValue: string;
@@ -23,71 +21,77 @@ export function Filters({
   distinctGenres: readonly string[];
 }) {
   return (
-    <div className="showFilters:overflow-visible w-full overflow-hidden bg-subtle text-sm">
-      <fieldset className="flex flex-col gap-10 py-10 tablet:gap-12 tablet:px-0">
-        <legend className="hidden w-full py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle shadow-bottom min-[1024px]:block">
-          Filter & Sort
-        </legend>
-        <DebouncedInput
-          label="Title"
-          placeholder="Enter all or part of a title"
-          onInputChange={(value) =>
-            dispatch({ type: Actions.FILTER_TITLE, value })
-          }
-        />
-        <YearInput
-          label="Release Year"
-          years={distinctReleaseYears}
-          onYearChange={(values) =>
-            dispatch({ type: Actions.FILTER_RELEASE_YEAR, values })
-          }
-        />
-        <YearInput
-          label="Review Year"
-          years={distinctReviewYears}
-          onYearChange={(values) =>
-            dispatch({ type: Actions.FILTER_REVIEW_YEAR, values })
-          }
-        />
-        <GradeInput
-          label="Grade"
-          onGradeChange={(values) =>
-            dispatch({
-              type: Actions.FILTER_GRADE,
-              values,
-            })
-          }
-        />
-        <MultiSelectField
-          label="Genres"
-          options={distinctGenres}
-          onChange={(e) =>
-            dispatch({
-              type: Actions.FILTER_GENRES,
-              values: e.map((selection) => selection.value),
-            })
-          }
-        />
-        <SelectField
-          value={sortValue}
-          label="Sort"
-          onChange={(e) =>
-            dispatch({
-              type: Actions.SORT,
-              value: e.target.value as Sort,
-            })
-          }
-        >
-          <option value="title-asc">Title (A &rarr; Z)</option>
-          <option value="title-desc">Title (Z &rarr; A)</option>
-          <option value="grade-desc">Grade (Best First)</option>
-          <option value="grade-asc">Grade (Worst First)</option>
-          <option value="release-date-desc">Release Date (Newest First)</option>
-          <option value="release-date-asc">Release Date (Oldest First)</option>
-          <option value="review-date-desc">Review Date (Newest First)</option>
-          <option value="review-date-asc">Review Date (Oldest First)</option>
-        </SelectField>
-      </fieldset>
-    </div>
+    <>
+      <DebouncedInput
+        label="Title"
+        placeholder="Enter all or part of a title"
+        onInputChange={(value) =>
+          dispatch({ type: Actions.FILTER_TITLE, value })
+        }
+      />
+      <YearInput
+        label="Release Year"
+        years={distinctReleaseYears}
+        onYearChange={(values) =>
+          dispatch({ type: Actions.FILTER_RELEASE_YEAR, values })
+        }
+      />
+      <YearInput
+        label="Review Year"
+        years={distinctReviewYears}
+        onYearChange={(values) =>
+          dispatch({ type: Actions.FILTER_REVIEW_YEAR, values })
+        }
+      />
+      <GradeInput
+        label="Grade"
+        onGradeChange={(values) =>
+          dispatch({
+            type: Actions.FILTER_GRADE,
+            values,
+          })
+        }
+      />
+      <MultiSelectField
+        label="Genres"
+        options={distinctGenres}
+        onChange={(e) =>
+          dispatch({
+            type: Actions.FILTER_GENRES,
+            values: e.map((selection) => selection.value),
+          })
+        }
+      />
+      <SelectField
+        value={sortValue}
+        label="Sort"
+        onChange={(e) =>
+          dispatch({
+            type: Actions.SORT,
+            value: e.target.value as Sort,
+          })
+        }
+      >
+        <option value="title-asc">Title (A &rarr; Z)</option>
+        <option value="title-desc">Title (Z &rarr; A)</option>
+        <option value="grade-desc">Grade (Best First)</option>
+        <option value="grade-asc">Grade (Worst First)</option>
+        <option value="release-date-desc">Release Date (Newest First)</option>
+        <option value="release-date-asc">Release Date (Oldest First)</option>
+        <option value="review-date-desc">Review Date (Newest First)</option>
+        <option value="review-date-asc">Review Date (Oldest First)</option>
+      </SelectField>
+      <p className="font-sans-narrow text-base text-subtle">
+        See also:{" "}
+        <a className="text-accent" href="/reviews/underseen/">
+          underseen gems
+        </a>{" "}
+        and{" "}
+        <a className="text-accent" href="/reviews/overrated/">
+          overrated disappointments
+        </a>
+        .
+      </p>
+    </>
   );
 }

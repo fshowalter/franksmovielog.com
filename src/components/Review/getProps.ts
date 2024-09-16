@@ -2,8 +2,8 @@ import { getAvatarImageProps } from "src/api/avatars";
 import { getFluidWidthPosterImageProps } from "src/api/posters";
 import { allReviews, loadContent, loadExcerptHtml } from "src/api/reviews";
 import { getOpenGraphStillSrc, getStillImageProps } from "src/api/stills";
-import { StillListItemImageConfig } from "src/components/StillListItem";
 
+import { MoreReviewsImageConfig } from "../MoreReviews";
 import { ChipAvatarImageConfig } from "./Chip";
 import { PosterImageConfig } from "./Credits";
 import { type Props, StillImageConfig } from "./Review";
@@ -56,7 +56,7 @@ export async function getProps(slug: string): Promise<Props> {
                 ...titleWithExcerpt,
                 stillImageProps: await getStillImageProps(
                   titleWithExcerpt.slug,
-                  StillListItemImageConfig,
+                  MoreReviewsImageConfig,
                 ),
               };
             }),
@@ -75,7 +75,7 @@ export async function getProps(slug: string): Promise<Props> {
                 ...titleWithExcerpt,
                 stillImageProps: await getStillImageProps(
                   titleWithExcerpt.slug,
-                  StillListItemImageConfig,
+                  MoreReviewsImageConfig,
                 ),
               };
             }),
@@ -90,7 +90,7 @@ export async function getProps(slug: string): Promise<Props> {
           ...titleWithExcerpt,
           stillImageProps: await getStillImageProps(
             titleWithExcerpt.slug,
-            StillListItemImageConfig,
+            MoreReviewsImageConfig,
           ),
         };
       }),

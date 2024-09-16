@@ -39,70 +39,48 @@ export interface ListItemValue
   stillImageProps: StillImageProps;
 }
 
-export function HomeListItem({
-  value,
-  eagerLoadImage,
-}: {
-  value: ListItemValue;
-  eagerLoadImage: boolean;
-}) {
+export function HomeListItem({ value }: { value: ListItemValue }) {
   return (
-    <li className="mx-auto flex flex-col bg-default tablet:mx-0 tablet:max-w-[47%] desktop:max-w-[31.33%]">
-      <div>
-        <a
-          href={`/reviews/${value.slug}/`}
-          className="block tablet:float-none tablet:m-0 tablet:w-auto"
-        >
-          <Still
-            title={value.title}
-            year={value.year}
-            imageProps={value.stillImageProps}
-            width={StillImageConfig.width}
-            height={StillImageConfig.height}
-            className="h-auto w-full"
-            loading="lazy"
-            decoding="async"
-            sizes={StillImageConfig.sizes}
-          />
-        </a>
-      </div>
-      <div className="spacer-y-6" />
-      <div className="flex grow flex-col px-[8%] pb-8 desktop:pl-[8.5%] desktop:pr-[10%]">
-        <div className="font-sans-caps text-[10px] uppercase leading-4 tracking-[1.1px] text-subtle">
+    <li className="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]">
+      <a href={`/reviews/${value.slug}/`} className="mb-6 block">
+        <Still
+          title={value.title}
+          year={value.year}
+          imageProps={value.stillImageProps}
+          width={StillImageConfig.width}
+          height={StillImageConfig.height}
+          className="h-auto w-full"
+          loading="lazy"
+          decoding="async"
+          sizes={StillImageConfig.sizes}
+        />
+      </a>
+      <div className="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]">
+        <div className="mb-1 font-sans-narrow text-xxs uppercase leading-4 tracking-[1.1px] text-subtle">
           {formatDate(value.date)}
         </div>
-        <div className="spacer-y-1" />
-        <div className="text-[22px]">
-          <a
-            href={`/reviews/${value.slug}/`}
-            className="font-serif-semibold block text-2.5xl text-default"
-          >
-            {value.title}{" "}
-            <span className="text-sm font-light leading-none text-muted">
-              {value.year}
-            </span>
-          </a>
-        </div>
-        <div className="spacer-y-2" />
-        <div>
-          <Grade value={value.grade} height={24} />
-        </div>
-        <div className="spacer-y-8" />
+        <a
+          href={`/reviews/${value.slug}/`}
+          className="mb-2 block font-serif-semibold text-2.5xl text-default"
+        >
+          {value.title}{" "}
+          <span className="text-sm font-light leading-none text-muted">
+            {value.year}
+          </span>
+        </a>
+        <Grade value={value.grade} height={24} className="mb-8" />
         <RenderedMarkdown
           text={value.excerpt}
-          className="text-lg leading-normal tracking-0.3px text-muted"
+          className="mb-6 text-lg leading-normal tracking-0.3px text-muted"
         />
-        <div className="spacer-y-6" />
-        <div className="mt-auto">
-          <div className="font-sans text-[10px] leading-4 text-subtle">
-            {value.genres.map((genre, index) => {
-              if (index === 0) {
-                return <span key={genre}>{genre}</span>;
-              }
+        <div className="mt-auto font-sans-narrow text-xxs leading-4 tracking-[1.1px] text-subtle">
+          {value.genres.map((genre, index) => {
+            if (index === 0) {
+              return <span key={genre}>{genre}</span>;
+            }
 
-              return <span key={genre}> | {genre}</span>;
-            })}
-          </div>
+            return <span key={genre}> | {genre}</span>;
+          })}
         </div>
       </div>
     </li>

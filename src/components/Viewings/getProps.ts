@@ -1,9 +1,10 @@
+import { getBackdropImageProps } from "src/api/backdrops";
 import { getFixedWidthPosterImageProps } from "src/api/posters";
 import { allViewings } from "src/api/viewings";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 
-import type { ListItemValue } from "./List";
-import type { Props } from "./Viewings";
+import { BackdropImageConfig } from "../Backdrop";
+import type { ListItemValue, Props } from "./Viewings";
 
 export async function getProps(): Promise<Props> {
   const {
@@ -61,5 +62,9 @@ export async function getProps(): Promise<Props> {
     distinctVenues,
     distinctViewingYears,
     initialSort: "viewing-date-desc",
+    backdropImageProps: await getBackdropImageProps(
+      "viewings",
+      BackdropImageConfig,
+    ),
   };
 }
