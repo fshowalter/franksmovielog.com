@@ -2,8 +2,6 @@
 import "./base.css";
 import "@pagefind/default-ui/css/ui.css";
 
-import { Layout as LayoutComponent } from "src/components/Layout";
-
 interface Props {
   title: string;
   description: string;
@@ -20,14 +18,7 @@ const siteMeta = {
   title: "Frank's Movie Log",
 };
 
-const {
-  title,
-  description,
-  hideLogo = false,
-  image,
-  article = false,
-  hasBackdrop = true,
-} = Astro.props;
+const { title, description, image, article = false } = Astro.props;
 let pageTitle;
 
 if (title.startsWith(siteMeta.title)) {
@@ -60,13 +51,7 @@ const pathname = new URL(Astro.request.url).pathname;
     <title>{pageTitle}</title>
   </head>
   <body>
-    <LayoutComponent
-      hideLogo={hideLogo}
-      currentPath={pathname}
-      hasBackdrop={hasBackdrop}
-    >
-      <slot />
-    </LayoutComponent>
+    <slot />
     <dialog
       class="relative m-0 h-screen max-h-none w-screen max-w-unset border border-default bg-canvas shadow-lg open:flex open:flex-col tablet:mx-auto tablet:mt-16 tablet:h-min tablet:max-h-[min(100vh_-_128px,900px)] tablet:min-h-60 tablet:max-w-[min(100vw_-_2_*_var(--gutter-width),36rem)] tablet:rounded-xl desktop:min-h-0"
       aria-label="Search"
@@ -93,14 +78,11 @@ const pathname = new URL(Astro.request.url).pathname;
 <script is:inline>
   (() => {
     const openBtn = document.querySelector("button[data-open-modal]");
-    const shortcut = openBtn?.querySelector("kbd");
-    if (!openBtn || !(shortcut instanceof HTMLElement)) return;
-    const platformKey = shortcut.querySelector("kbd");
-    if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
-      platformKey.textContent = "⌘";
+    if (!openBtn) return;
+    if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
       openBtn.setAttribute("aria-keyshortcuts", "Meta+K");
+      openBtn.setAttribute("title", `Search: ⌘K`);
     }
-    shortcut.style.display = "";
   })();
 </script>
 

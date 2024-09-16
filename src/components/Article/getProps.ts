@@ -2,10 +2,10 @@ import { getBackdropImageProps } from "src/api/backdrops";
 import { getPage } from "src/api/pages";
 import { loadExcerptHtml, mostRecentReviews } from "src/api/reviews";
 import { getStillImageProps } from "src/api/stills";
-import { StillListItemImageConfig } from "src/components/StillListItem";
+import { MoreReviewsImageConfig } from "src/components/MoreReviews";
 
+import { BackdropImageConfig } from "../Backdrop";
 import type { Props } from "./Article";
-import { BackdropImageConfig } from "./Article";
 
 export async function getProps({
   slug,
@@ -29,7 +29,7 @@ export async function getProps({
           ...titleWithExcerpt,
           stillImageProps: await getStillImageProps(
             titleWithExcerpt.slug,
-            StillListItemImageConfig,
+            MoreReviewsImageConfig,
           ),
         };
       }),

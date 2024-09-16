@@ -7,6 +7,7 @@ export enum Actions {
   FILTER_NAME = "FILTER_NAME",
   FILTER_CREDIT_KIND = "FILTER_CREDIT_KIND",
   SORT = "SORT",
+  TOGGLE_FILTERS = "TOGGLE_FILTERS",
 }
 
 export type Sort =
@@ -34,12 +35,13 @@ function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
   return values.sort(comparer);
 }
 
-interface State {
+type State = {
   allValues: ListItemValue[];
   filteredValues: ListItemValue[];
   filters: Record<string, (value: ListItemValue) => boolean>;
   sortValue: Sort;
-}
+  showFilters: boolean;
+};
 
 export function initState({
   values,
@@ -53,6 +55,7 @@ export function initState({
     filteredValues: [...values],
     filters: {},
     sortValue: initialSort,
+    showFilters: false,
   };
 }
 
@@ -71,7 +74,15 @@ interface SortAction {
   value: Sort;
 }
 
-export type ActionType = FilterNameAction | FilterCreditKindAction | SortAction;
+interface ToggleFiltersAction {
+  type: Actions.TOGGLE_FILTERS;
+}
+
+export type ActionType =
+  | FilterNameAction
+  | FilterCreditKindAction
+  | SortAction
+  | ToggleFiltersAction;
 
 export function reducer(state: State, action: ActionType): State {
   let filters;
@@ -133,6 +144,12 @@ export function reducer(state: State, action: ActionType): State {
         ...state,
         sortValue: action.value,
         filteredValues,
+      };
+    }
+    case Actions.TOGGLE_FILTERS: {
+      return {
+        ...state,
+        showFilters: !state.showFilters,
       };
     }
     // no default

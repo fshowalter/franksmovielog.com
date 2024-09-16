@@ -1,16 +1,20 @@
+import { ccn } from "src/utils/concatClassNames";
+
 import { Footer } from "./Footer";
 import { Mast } from "./Mast";
 
 export function Layout({
-  currentPath,
   hideLogo = false,
   hasBackdrop = true,
   children,
+  className,
+  ...rest
 }: {
-  currentPath: string;
   hideLogo?: boolean;
   hasBackdrop?: boolean;
   children: React.ReactNode;
+  className?: string;
+  [x: string]: unknown;
 }): JSX.Element {
   return (
     <div>
@@ -21,15 +25,11 @@ export function Layout({
         Skip to content
       </a>
       <div className="flex min-h-full w-full flex-col bg-default">
-        <Mast
-          currentPath={currentPath}
-          hideLogo={hideLogo}
-          hasBackdrop={hasBackdrop}
-        />
-        <div className="grow" id="content">
+        <Mast hideLogo={hideLogo} hasBackdrop={hasBackdrop} />
+        <main className={ccn("grow", className)} id="content" {...rest}>
           {children}
-        </div>
-        <Footer currentPath={currentPath} />
+        </main>
+        <Footer />
       </div>
     </div>
   );
