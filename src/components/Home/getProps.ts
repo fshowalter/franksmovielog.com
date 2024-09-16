@@ -1,6 +1,8 @@
+import { getBackdropImageProps } from "src/api/backdrops";
 import { loadExcerptHtml, mostRecentReviews } from "src/api/reviews";
 import { getStillImageProps } from "src/api/stills";
 
+import { BackdropImageConfig } from "../Backdrop";
 import type { Props } from "./Home";
 import { StillImageConfig } from "./HomeListItem";
 
@@ -14,6 +16,10 @@ export async function getProps(): Promise<Props> {
   );
 
   return {
+    backdropImageProps: await getBackdropImageProps(
+      "home",
+      BackdropImageConfig,
+    ),
     values: await Promise.all(
       values.map(async (value) => {
         return {

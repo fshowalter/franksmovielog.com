@@ -1,20 +1,24 @@
 import { ccn } from "src/utils/concatClassNames";
 
-export function ListItem({
+export function SubHeading({
   children,
+  as,
   className,
 }: {
   children: React.ReactNode;
+  as: "h2" | "h3" | "h4" | "h5";
   className?: string;
 }) {
+  const Component = as;
+
   return (
-    <li
+    <Component
       className={ccn(
-        "relative mb-px flex max-w-screen-max flex-row gap-x-4 px-container-base py-4 shadow-bottom even:bg-subtle tablet:gap-x-6 tablet:px-4",
+        "py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle",
         className,
       )}
     >
       {children}
-    </li>
+    </Component>
   );
 }

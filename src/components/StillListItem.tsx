@@ -44,7 +44,7 @@ export function StillListItem({ value }: { value: StillListItemValue }) {
         <div className="row-start-2">
           <a
             href={`/reviews/${value.slug}/`}
-            className="font-serif-semibold block text-xl text-default"
+            className="block font-serif-semibold text-xl text-default"
           >
             {value.title}{" "}
             <span className="text-sm font-light leading-none text-muted">

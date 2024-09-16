@@ -1,5 +1,4 @@
-import { ListInfo } from "./ListInfo";
-import { ShowMoreButton } from "./ShowMoreButton";
+import { Button } from "./Button";
 
 export function GroupedList<T>({
   groupedValues,
@@ -18,9 +17,7 @@ export function GroupedList<T>({
   className?: string;
 }): JSX.Element {
   return (
-    <div className="">
-      {/* <ListInfo visibleCount={visibleCount} totalCount={totalCount} /> */}
-
+    <>
       <ol className={className} {...rest}>
         {[...groupedValues].map((groupedValue, index) => {
           const [group, groupValues] = groupedValue;
@@ -32,16 +29,17 @@ export function GroupedList<T>({
           );
         })}
       </ol>
-      <div className="flex flex-col items-center px-[8%]">
+      <div className="flex flex-col items-center px-container-base py-10">
         {totalCount > visibleCount && (
-          <>
-            <div className="h-8 min-h-8" />
-            <ShowMoreButton onClick={onShowMore} />
-            <div className="h-8 min-h-8" />
-          </>
+          <Button
+            onClick={onShowMore}
+            className="mx-auto w-full max-w-[430px] bg-default px-container-base py-5 text-center font-sans-narrow text-sm uppercase tracking-[.6px] hover:bg-inverse hover:text-inverse"
+          >
+            Show More
+          </Button>
         )}
       </div>
-    </div>
+    </>
   );
 }
 
@@ -57,13 +55,11 @@ function GroupingListItem({
   return (
     <li className="block">
       <div style={{ zIndex: zIndex }} className="bg-default pt-0 text-md">
-        <div className="max-w-screen-max px-[8%] py-8 text-xl shadow-bottom tablet:px-0">
+        <div className="max-w-screen-max bg-canvas px-container-base py-8 text-xl leading-8 shadow-bottom tablet:px-4">
           {groupText}
         </div>
       </div>
-      {/* <div className="h-0 min-h-0 tablet:h-4 tablet:min-h-4" /> */}
       {children}
-      {/* <div className="h-0 min-h-0 tablet:h-4 tablet:min-h-4" /> */}
     </li>
   );
 }

@@ -100,7 +100,7 @@ export async function loadExcerptHtml(
     excerptHtml = excerptHtml.replace(/\n+$/, "");
     excerptHtml = excerptHtml.replace(
       /<\/p>$/,
-      ` <a class="!no-underline uppercase whitespace-nowrap font-normal font-sans-caps text-accent text-xs tracking-[1.1px] leading-none" href="/reviews/${review.slug}/">Continue reading...</a></p>`,
+      ` <a class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline" href="/reviews/${review.slug}/">Continue reading...</a></p>`,
     );
   }
 

@@ -15,7 +15,7 @@ const dateFormat = new Intl.DateTimeFormat("en-US", {
 function Date({ date }: { date: Date }) {
   return (
     <>
-      <span className="inline-block text-default">
+      <span className="inline-block font-sans-bold text-muted">
         {dateFormat.format(date)}
       </span>{" "}
     </>
@@ -27,8 +27,9 @@ function Medium({ value }: { value: Viewing["medium"] }) {
     return null;
   }
   return (
-    <span className="font-light text-muted">
-      <span>via</span> <span>{value}</span>
+    <span className="font-light text-subtle">
+      <span>via</span>{" "}
+      <span className="font-sans-bold text-muted">{value}</span>
     </span>
   );
 }
@@ -97,7 +98,7 @@ function ViewingNotes({ value }: { value: Viewing["viewingNotes"] }) {
 
 export function ViewingHistoryListItem({ value }: { value: Viewing }) {
   return (
-    <li className="flex flex-col font-sans-book text-sm even:bg-subtle">
+    <li className="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle">
       <div className="flex items-center gap-x-[1ch] py-4">
         <div className="size-auto">
           <DateIcon className="w-4" />{" "}
