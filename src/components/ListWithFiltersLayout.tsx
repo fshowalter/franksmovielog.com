@@ -15,6 +15,7 @@ export function ListWithFiltersLayout({
   backdropImageProps,
   filters,
   list,
+  breadcrumb,
   avatarImageProps,
 }: {
   title: string;
@@ -26,14 +27,15 @@ export function ListWithFiltersLayout({
   totalCount: number;
   onToggleFilters: () => void;
   filtersVisible: boolean;
-  avatarImageProps: AvatarImageProps;
+  breadcrumb?: React.ReactNode;
+  avatarImageProps?: AvatarImageProps;
 }): JSX.Element {
   return (
     <Layout className="bg-subtle">
       {avatarImageProps ? (
         <AvatarBackdrop
           avatarImageProps={avatarImageProps}
-          backdropImageProps={backdropImageProps}
+          breadcrumb={breadcrumb}
           name={title}
           deck={deck}
         />
@@ -43,10 +45,11 @@ export function ListWithFiltersLayout({
           title={title}
           alt={alt}
           deck={deck}
+          breadcrumb={breadcrumb}
         />
       )}
-      <section className="mx-auto flex max-w-screen-max flex-col items-center">
-        <div className="flex w-full flex-col items-stretch desktop:max-w-full desktop:flex-row">
+      <section className="mx-auto flex max-w-screen-max flex-col items-center pb-20">
+        <div className="flex w-full flex-col items-stretch">
           <div className="flex grow flex-col">
             <div className="relative grid-cols-[1fr_48px_33%] tablet:px-12 showFilters:grid showFilters:grid-rows-[auto_1fr] showFilters:px-0">
               <div className="relative z-10 row-start-1 text-xs shadow-bottom tablet:shadow-none showFilters:ml-12 desktop:ml-20">
@@ -87,10 +90,12 @@ function AvatarBackdrop({
   backdropImageProps,
   name,
   deck,
+  breadcrumb,
 }: {
   avatarImageProps: AvatarImageProps;
   name: string;
   deck: React.ReactNode;
+  breadcrumb?: React.ReactNode;
 }) {
   return (
     <header className="relative flex min-h-[240px] flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] bg-cover pb-8 pt-40 text-inverse [background-position-x:center] tablet:pb-10 tablet:pt-40 desktop:min-h-[clamp(640px,50vh,1350px)] desktop:pb-16 desktop:pt-40">
@@ -106,6 +111,11 @@ function AvatarBackdrop({
         />
       </div>
       <div className="z-10 mx-auto w-full max-w-screen-max px-container text-center">
+        {breadcrumb && (
+          <p className="mb-2 font-sans-narrow text-sm uppercase tracking-[0.8px] underline decoration-subtle decoration-2 underline-offset-4">
+            {breadcrumb}
+          </p>
+        )}
         <h1 className="font-sans-bold text-2xl uppercase desktop:text-7xl">
           {name}
         </h1>

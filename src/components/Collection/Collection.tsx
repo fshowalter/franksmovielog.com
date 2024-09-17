@@ -1,12 +1,30 @@
 import { useReducer } from "react";
-import type { AvatarImageProps } from "src/api/avatars";
+import type { BackdropImageProps } from "src/api/backdrops";
 import type { Collection } from "src/api/collections";
+import type { PosterImageProps } from "src/api/posters";
 import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
 
-import { initState, reducer, type Sort } from "./Collection.reducer";
+import { Grade } from "../Grade";
+import { GroupedList } from "../GroupedList";
+import { ListItem } from "../ListItem";
+import { ListItemPoster } from "../ListItemPoster";
+import { ListItemTitle } from "../ListItemTitle";
+import { Actions, initState, reducer, type Sort } from "./Collection.reducer";
 import { Filters } from "./Filters";
-import { Header } from "./Header";
-import { List, type ListItemValue } from "./List";
+
+export type ListItemValue = Pick<
+  Collection["titles"][0],
+  | "imdbId"
+  | "title"
+  | "year"
+  | "grade"
+  | "gradeValue"
+  | "slug"
+  | "sortTitle"
+  | "releaseSequence"
+> & {
+  posterImageProps: PosterImageProps;
+};
 
 export interface Props {
   value: Pick<
@@ -16,7 +34,7 @@ export interface Props {
   titles: ListItemValue[];
   distinctReleaseYears: readonly string[];
   initialSort: Sort;
-  avatarImageProps: AvatarImageProps | null;
+  backdropImageProps: BackdropImageProps;
 }
 
 export function Collection({
@@ -24,7 +42,7 @@ export function Collection({
   distinctReleaseYears,
   initialSort,
   titles,
-  avatarImageProps,
+  backdropImageProps,
 }: Props): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
@@ -35,35 +53,75 @@ export function Collection({
     initState,
   );
   return (
-    <div data-pagefind-body>
-      <ListWithFiltersLayout
-        header={
-          <Header
-            name={value.name}
-            reviewCount={value.reviewCount}
-            titleCount={value.titleCount}
-            avatarImageProps={avatarImageProps}
-            description={value.description}
-          />
-        }
-        filters={
-          <Filters
-            dispatch={dispatch}
-            hideReviewed={state.hideReviewed}
-            sortValue={state.sortValue}
-            distinctReleaseYears={distinctReleaseYears}
-            showHideReviewed={value.reviewCount != titles.length}
-          />
-        }
-        list={
-          <List
-            dispatch={dispatch}
-            totalCount={state.filteredValues.length}
-            visibleCount={state.showCount}
-            groupedValues={state.groupedValues}
-          />
-        }
+    <ListWithFiltersLayout
+      title={value.name}
+      alt={value.name}
+      deck={deck(value)}
+      breadcrumb={<a href="/collections/">Collections</a>}
+      backdropImageProps={backdropImageProps}
+      totalCount={state.filteredValues.length}
+      onToggleFilters={() => dispatch({ type: Actions.TOGGLE_FILTERS })}
+      filtersVisible={state.showFilters}
+      data-pagefind-body
+      filters={
+        <Filters
+          dispatch={dispatch}
+          hideReviewed={state.hideReviewed}
+          sortValue={state.sortValue}
+          distinctReleaseYears={distinctReleaseYears}
+          showHideReviewed={value.reviewCount != titles.length}
+        />
+      }
+      list={
+        <GroupedList
+          data-testid="list"
+          groupedValues={state.groupedValues}
+          visibleCount={state.showCount}
+          totalCount={state.filteredValues.length}
+          onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
+        >
+          {(value) => {
+            return <CollectionListItem value={value} key={value.imdbId} />;
+          }}
+        </GroupedList>
+      }
+    />
+  );
+}
+
+function deck(value: Props["value"]): string {
+  if (value.titleCount === value.reviewCount) {
+    return `Collection of ${value.reviewCount.toLocaleString()} reviewed movies.`;
+  }
+
+  return `Collection of ${value.titleCount.toLocaleString()} movies. ${value.reviewCount.toLocaleString()} reviewed.`;
+}
+
+function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
+  return (
+    <ListItem className="items-center">
+      <ListItemPoster
+        slug={value.slug}
+        title={value.title}
+        imageProps={value.posterImageProps}
+        year={value.year}
       />
-    </div>
+      <div className="grow pr-gutter tablet:w-full desktop:pr-4">
+        <div>
+          <ListItemTitle
+            title={value.title}
+            year={value.year}
+            slug={value.slug}
+          />
+          <div className="spacer-y-2" />
+          {value.grade && (
+            <div className="py-px">
+              <Grade value={value.grade} height={18} />
+            </div>
+          )}
+          <div className="spacer-y-2" />
+        </div>
+      </div>
+    </ListItem>
   );
 }
