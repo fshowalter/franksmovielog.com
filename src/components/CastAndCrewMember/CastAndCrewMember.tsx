@@ -28,7 +28,7 @@ export type Props = {
   titles: ListItemValue[];
   initialSort: Sort;
   distinctReleaseYears: readonly string[];
-  avatarImageProps: AvatarImageProps | null;
+  avatarImageProps: AvatarImageProps;
   backdropImageProps: BackdropImageProps;
 };
 
@@ -76,6 +76,8 @@ export function CastAndCrewMember({
     <ListWithFiltersLayout
       title={value.name}
       alt={value.name}
+      data-pagefind-body
+      breadcrumb={<a href="/cast-and-crew/">Cast & Crew</a>}
       avatarImageProps={avatarImageProps}
       deck={deck(value)}
       backdropImageProps={backdropImageProps}
