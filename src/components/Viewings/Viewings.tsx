@@ -127,7 +127,7 @@ function DateListItem({
           </div>
         </div>
       </div>
-      <ul className="flex grow flex-col tablet:gap-y-0 tablet:py-6">
+      <ul className="flex grow flex-col tablet:gap-y-0 tablet:py-4">
         {values.map((value) => {
           return <ViewingListItem value={value} key={value.sequence} />;
         })}

@@ -1,10 +1,7 @@
 import React from "react";
 import { ccn } from "src/utils/concatClassNames";
 
-/**
- * Renders a search icon.
- */
-export default function SvgIcon({
+export function SvgIcon({
   className,
   children,
 }: {
