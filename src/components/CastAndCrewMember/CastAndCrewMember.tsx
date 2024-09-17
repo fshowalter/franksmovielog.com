@@ -88,7 +88,7 @@ export function CastAndCrewMember({
           distinctReleaseYears={distinctReleaseYears}
           creditedAs={value.creditedAs}
           sortValue={state.sortValue}
-          hideReviewed={state.hideReviewed}
+          hideReviewed={state.hi}
         />
       }
       list={
@@ -109,8 +109,10 @@ export function CastAndCrewMember({
 }
 
 function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
+  const className = value.slug ? "bg-default" : "bg-subtle";
+
   return (
-    <ListItem className="">
+    <ListItem className={className}>
       <ListItemPoster
         slug={value.slug}
         title={value.title}
