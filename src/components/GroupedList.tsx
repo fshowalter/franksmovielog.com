@@ -53,9 +53,9 @@ function GroupingListItem({
   zIndex: number;
 }) {
   return (
-    <li className="block tablet:pb-10">
+    <li className="first-of-type:shadow-top block bg-subtle">
       <div style={{ zIndex: zIndex }} className="pt-0 text-md">
-        <div className="max-w-screen-max px-container-base py-8 text-xl leading-8 shadow-all tablet:bg-subtle tablet:px-4">
+        <div className="max-w-screen-max px-container-base py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4">
           {groupText}
         </div>
       </div>

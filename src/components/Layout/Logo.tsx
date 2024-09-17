@@ -7,7 +7,7 @@ export function Logo() {
       >
         <a href="/">Frank&apos;s Movie Log</a>
       </div>
-      <p className={"w-full pl-px text-sm italic leading-4 text-subtle"}>
+      <p className={"w-full pl-px text-sm italic leading-4 opacity-85"}>
         My life at the movies.
       </p>
     </div>

@@ -116,7 +116,7 @@ function DateListItem({
   const [day, date] = dayAndDate.split("-");
 
   return (
-    <ListItem className="flex-col gap-2 py-8 tablet:flex-row tablet:items-center">
+    <li className="relative mb-px flex max-w-screen-max flex-col gap-2 gap-x-4 bg-default px-container-base py-4 shadow-bottom first:pt-0 last-of-type:shadow-none tablet:flex-row tablet:items-center tablet:gap-x-6 tablet:bg-subtle tablet:px-4 tablet:shadow-none showFilters:pr-0 desktop:px-6 desktop:pr-0">
       <div className="text-muted tablet:mt-[2px]">
         <div className="flex items-center gap-1 tablet:block tablet:shadow-all">
           <div className="py-2 uppercase tablet:w-12 tablet:bg-canvas tablet:text-center tablet:text-sm/none">
@@ -127,18 +127,18 @@ function DateListItem({
           </div>
         </div>
       </div>
-      <ul className="flex grow flex-col gap-y-4">
+      <ul className="flex grow flex-col gap-y-4 tablet:gap-y-0 tablet:pb-6 tablet:shadow-bottom">
         {values.map((value) => {
           return <ViewingListItem value={value} key={value.sequence} />;
         })}
       </ul>
-    </ListItem>
+    </li>
   );
 }
 
 function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
-    <li className="flex flex-row items-center gap-x-4 pb-4 shadow-bottom last:pb-0 last:shadow-none tablet:gap-x-6">
+    <li className="mb-px flex flex-row items-center gap-x-4 bg-default pb-4 shadow-bottom last:pb-0 last:shadow-none tablet:gap-x-6 tablet:py-4 tablet:pl-4 tablet:last:pb-4">
       <ListItemPoster
         slug={value.slug}
         title={value.title}
