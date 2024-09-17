@@ -1,10 +1,12 @@
 import { getAvatarImageProps } from "src/api/avatars";
+import { getBackdropImageProps } from "src/api/backdrops";
 import { castAndCrewMember } from "src/api/castAndCrew";
 import { getFixedWidthPosterImageProps } from "src/api/posters";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 
+import { BackdropImageConfig } from "../Backdrop";
 import type { Props } from "./CastAndCrewMember";
-import { AvatarImageConfig } from "./Header";
+import { AvatarImageConfig } from "./CastAndCrewMember";
 
 export async function getProps(slug: string): Promise<Props> {
   const { member, distinctReleaseYears } = await castAndCrewMember(slug);
@@ -15,6 +17,7 @@ export async function getProps(slug: string): Promise<Props> {
 
   return {
     value: member,
+    backdropImageProps: await getBackdropImageProps(slug, BackdropImageConfig),
     titles: await Promise.all(
       member.titles.map(async (title) => {
         return {
