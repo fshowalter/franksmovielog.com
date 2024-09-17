@@ -29,7 +29,7 @@ export function ListWithFiltersLayout({
   avatarImageProps: AvatarImageProps;
 }): JSX.Element {
   return (
-    <Layout className="min-[1024px]:bg-[linear-gradient(90deg,var(--bg-default)_0%,var(--bg-default)_50%,var(--bg-subtle)_50%,var(--bg-subtle)_100%)]">
+    <Layout className="bg-subtle">
       {avatarImageProps ? (
         <AvatarBackdrop
           avatarImageProps={avatarImageProps}
@@ -48,8 +48,8 @@ export function ListWithFiltersLayout({
       <section className="mx-auto flex max-w-screen-max flex-col items-center">
         <div className="flex w-full flex-col items-stretch desktop:max-w-full desktop:flex-row">
           <div className="flex grow flex-col">
-            <div className="relative grid-cols-[1fr_48px_33%] bg-default tablet:px-12 showFilters:grid showFilters:grid-rows-[auto_1fr] showFilters:px-0">
-              <div className="relative z-10 row-start-1 bg-default text-xs shadow-bottom showFilters:ml-12 desktop:ml-20">
+            <div className="relative grid-cols-[1fr_48px_33%] tablet:px-12 showFilters:grid showFilters:grid-rows-[auto_1fr] showFilters:px-0">
+              <div className="relative z-10 row-start-1 text-xs shadow-bottom tablet:shadow-none showFilters:ml-12 desktop:ml-20">
                 <ListHeader
                   totalCount={totalCount}
                   onToggleFilters={onToggleFilters}
@@ -57,12 +57,12 @@ export function ListWithFiltersLayout({
                 />
               </div>
               <div
-                className="relative z-10 col-start-3 row-span-2 row-start-1 grid bg-subtle text-sm shadow-bottom transition-[grid-template-rows] duration-200 ease-in-out showFilters:block showFilters:pb-12 showFilters:shadow-none desktop:py-24"
+                className="relative z-10 col-start-3 row-span-2 row-start-1 grid bg-subtle text-sm shadow-bottom transition-[grid-template-rows] duration-200 ease-in-out showFilters:mr-12 showFilters:block showFilters:py-24 showFilters:pb-12 showFilters:shadow-none desktop:mr-20"
                 style={{
                   gridTemplateRows: filtersVisible ? "1fr" : "0fr",
                 }}
               >
-                <div className="w-full overflow-hidden bg-subtle px-container-base text-sm tablet:px-12 tablet:text-base showFilters:overflow-visible desktop:pr-20">
+                <div className="w-full overflow-hidden bg-default px-container-base text-sm tablet:text-base showFilters:overflow-visible desktop:px-8">
                   <fieldset className="flex flex-col gap-10 py-10 tablet:gap-12 tablet:px-0">
                     <legend className="hidden w-full py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle shadow-bottom min-[1024px]:block">
                       Filter & Sort
@@ -71,7 +71,7 @@ export function ListWithFiltersLayout({
                   </fieldset>
                 </div>
               </div>
-              <div className="col-start-1 row-start-2 bg-default showFilters:pl-12 desktop:pl-20">
+              <div className="col-start-1 row-start-2 showFilters:pl-12 desktop:pl-20">
                 {list}
               </div>
             </div>

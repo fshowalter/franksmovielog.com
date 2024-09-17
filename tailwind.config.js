@@ -40,6 +40,7 @@ export default {
       boxShadow: {
         all: "0 0 0 1px var(--border-default)",
         bottom: "0px 1px var(--border-default)",
+        top: "0px -1px var(--border-default)",
       },
       brightness: {
         dark: "0.8",
