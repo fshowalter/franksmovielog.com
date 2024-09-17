@@ -62,7 +62,7 @@ export function CastAndCrew({
 
 function MemberListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
-    <ListItem className="items-center">
+    <ListItem className="items-center tablet:py-6">
       <ListItemAvatar
         name={value.name}
         href={`/cast-and-crew/${value.slug}/`}

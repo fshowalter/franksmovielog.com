@@ -15,7 +15,7 @@ export function ListItemTitle({
     return (
       <a
         href={`/reviews/${slug}/`}
-        className="block font-sans-bold text-sm text-accent tablet:text-base"
+        className="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
       >
         {title}&#8239;&#8239;{yearBox}
       </a>
@@ -23,7 +23,7 @@ export function ListItemTitle({
   }
 
   return (
-    <span className="block font-sans text-sm text-muted tablet:text-base">
+    <span className="block font-sans-narrow text-sm text-muted tablet:text-base">
       {title}&#8239;&#8239;{yearBox}
     </span>
   );
