@@ -11,12 +11,22 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   "/content/assets/backdrops/*.png",
 );
 
-export async function getOpenGraphBackdropSrc(slug: string) {
-  const backdropFilePath = Object.keys(images).find((path) => {
+async function getBackdropFile(slug: string) {
+  let backdropFilePath = Object.keys(images).find((path) => {
     return path.endsWith(`${slug}.png`);
   })!;
 
-  const backdropFile = await images[backdropFilePath]();
+  backdropFilePath =
+    backdropFilePath ||
+    Object.keys(images).find((path) => {
+      return path.endsWith(`default.png`);
+    })!;
+
+  return await images[backdropFilePath]();
+}
+
+export async function getOpenGraphBackdropSrc(slug: string) {
+  const backdropFile = await getBackdropFile(slug);
 
   const image = await getImage({
     src: backdropFile.default,
@@ -39,11 +49,7 @@ export async function getBackdropImageProps(
     height: number;
   },
 ): Promise<BackdropImageProps> {
-  const backdropFilePath = Object.keys(images).find((path) => {
-    return path.endsWith(`${slug}.png`);
-  })!;
-
-  const backdropFile = await images[backdropFilePath]();
+  const backdropFile = await getBackdropFile(slug);
 
   const optimizedImage = await getImage({
     src: backdropFile.default,

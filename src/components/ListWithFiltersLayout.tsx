@@ -1,6 +1,8 @@
+import type { AvatarImageProps } from "src/api/avatars";
 import type { BackdropImageProps } from "src/api/backdrops";
 
-import { Backdrop } from "./Backdrop";
+import { Avatar } from "./Avatar";
+import { Backdrop, BackdropImageConfig } from "./Backdrop";
 import { Layout } from "./Layout";
 
 export function ListWithFiltersLayout({
@@ -13,6 +15,7 @@ export function ListWithFiltersLayout({
   backdropImageProps,
   filters,
   list,
+  avatarImageProps,
 }: {
   title: string;
   deck: string;
@@ -23,15 +26,25 @@ export function ListWithFiltersLayout({
   totalCount: number;
   onToggleFilters: () => void;
   filtersVisible: boolean;
+  avatarImageProps: AvatarImageProps;
 }): JSX.Element {
   return (
     <Layout className="min-[1024px]:bg-[linear-gradient(90deg,var(--bg-default)_0%,var(--bg-default)_50%,var(--bg-subtle)_50%,var(--bg-subtle)_100%)]">
-      <Backdrop
-        imageProps={backdropImageProps}
-        title={title}
-        alt={alt}
-        deck={deck}
-      />
+      {avatarImageProps ? (
+        <AvatarBackdrop
+          avatarImageProps={avatarImageProps}
+          backdropImageProps={backdropImageProps}
+          name={title}
+          deck={deck}
+        />
+      ) : (
+        <Backdrop
+          imageProps={backdropImageProps}
+          title={title}
+          alt={alt}
+          deck={deck}
+        />
+      )}
       <section className="mx-auto flex max-w-screen-max flex-col items-center">
         <div className="flex w-full flex-col items-stretch desktop:max-w-full desktop:flex-row">
           <div className="flex grow flex-col">
@@ -66,6 +79,41 @@ export function ListWithFiltersLayout({
         </div>
       </section>
     </Layout>
+  );
+}
+
+function AvatarBackdrop({
+  avatarImageProps,
+  backdropImageProps,
+  name,
+  deck,
+}: {
+  avatarImageProps: AvatarImageProps;
+  name: string;
+  deck: React.ReactNode;
+}) {
+  return (
+    <header className="relative flex min-h-[240px] flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] bg-cover pb-8 pt-40 text-inverse [background-position-x:center] tablet:pb-10 tablet:pt-40 desktop:min-h-[clamp(640px,50vh,1350px)] desktop:pb-16 desktop:pt-40">
+      <div className="safari-border-radius-fix w-4/5 max-w-[250px] overflow-hidden rounded-[50%]">
+        <Avatar
+          imageProps={avatarImageProps}
+          name={name}
+          width={250}
+          height={250}
+          loading="lazy"
+          decoding="async"
+          data-pagefind-meta="image[src], image_alt[alt]"
+        />
+      </div>
+      <div className="z-10 mx-auto w-full max-w-screen-max px-container text-center">
+        <h1 className="font-sans-bold text-2xl uppercase desktop:text-7xl">
+          {name}
+        </h1>
+        {deck && (
+          <p className="mt-1 text-base desktop:my-4 desktop:text-lg">{deck}</p>
+        )}
+      </div>
+    </header>
   );
 }
 

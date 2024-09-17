@@ -15,7 +15,7 @@ export function Backdrop({
   imageProps: BackdropImageProps;
   alt: string;
   title: string;
-  deck?: React.ReactNode;
+  deck?: string;
   titleStyle?: string;
 }) {
   return (
@@ -32,9 +32,7 @@ export function Backdrop({
       <div className="z-10 mx-auto w-full max-w-screen-max px-container">
         <h1 className={titleStyle}>{title}</h1>
         {deck && (
-          <p className="mt-1 text-base tablet:text-lg desktop:my-4 desktop:text-xl">
-            {deck}
-          </p>
+          <p className="mt-1 text-base desktop:my-4 desktop:text-lg">{deck}</p>
         )}
       </div>
     </header>

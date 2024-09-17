@@ -2,7 +2,7 @@ import { buildGroupValues } from "src/utils/buildGroupValues";
 import { type FilterableState, filterTools } from "src/utils/filterTools";
 import { collator, sortNumber, sortString } from "src/utils/sortTools";
 
-import type { ListItemValue } from "./List";
+import type { ListItemValue } from "./CastAndCrewMember";
 
 export type Sort =
   | "release-date-desc"

@@ -107,7 +107,7 @@ function ReviewsListItem({ value }: { value: ListItemValue }): JSX.Element {
           year={value.year}
           slug={value.slug}
         />
-        <div className="py-px">
+        <div className="mb-1 py-px">
           <Grade value={value.grade} height={18} className="-mt-1" />
         </div>
         <ListItemGenres values={value.genres} />
