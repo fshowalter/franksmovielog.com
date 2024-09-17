@@ -3,6 +3,7 @@ interface Props extends React.SVGProps<SVGSVGElement> {
   complete: number;
   label: string;
   subLabel?: string | undefined;
+  className?: string;
 }
 
 export function ProgressRing({
@@ -10,6 +11,7 @@ export function ProgressRing({
   complete,
   label,
   subLabel,
+  className,
   ...rest
 }: Props): JSX.Element | null {
   if (total === 0) {
@@ -19,7 +21,7 @@ export function ProgressRing({
   const percent = Math.floor((complete / total) * 100);
 
   return (
-    <svg className="font-sans" viewBox="0 0 36 36" {...rest}>
+    <svg className={className} viewBox="0 0 36 36" {...rest}>
       <path
         stroke="var(--bg-canvas)"
         strokeWidth={3.8}
@@ -52,7 +54,7 @@ export function ProgressRing({
         y="23"
         fill="var(--fg-default)"
         textAnchor="middle"
-        fontSize=".225em"
+        fontSize=".2em"
       >
         {label}
       </text>
@@ -61,7 +63,7 @@ export function ProgressRing({
         y="27"
         fill="var(--fg-subtle)"
         textAnchor="middle"
-        fontSize=".225em"
+        fontSize=".2em"
       >
         {subLabel}
       </text>
