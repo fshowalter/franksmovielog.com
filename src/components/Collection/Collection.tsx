@@ -113,13 +113,9 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
             year={value.year}
             slug={value.slug}
           />
-          <div className="spacer-y-2" />
           {value.grade && (
-            <div className="py-px">
-              <Grade value={value.grade} height={18} />
-            </div>
+            <Grade value={value.grade} height={18} className="py-px" />
           )}
-          <div className="spacer-y-2" />
         </div>
       </div>
     </ListItem>

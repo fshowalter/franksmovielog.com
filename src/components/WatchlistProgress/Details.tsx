@@ -5,8 +5,11 @@ import {
   TableDataCell,
   TableHead,
   TableHeaderCell,
-  TableRow,
+  TableProgressRow,
 } from "src/components/StatsTable";
+
+import { ListItemCounts } from "../ListItemCounts";
+import { SubHeading } from "../SubHeading";
 
 type ValueType = "director" | "writer" | "performer" | "collection";
 
@@ -27,44 +30,44 @@ export function Details({
   values: Value[];
 }) {
   return (
-    <section>
-      <StatHeading>{label}</StatHeading>
-      <Table>
-        <TableHead>
-          <tr>
-            <TableHeaderCell align="left">Name</TableHeaderCell>
-            <th>&nbsp;</th>
-            <TableHeaderCell align="right">Progress</TableHeaderCell>
-          </tr>
-        </TableHead>
-        <tbody>
-          {values.map((value) => {
-            return (
-              <TableRow key={value.name}>
-                <TableDataCell align="left">
-                  <Name value={value} valueType={valueType} />
-                </TableDataCell>
-                <TableDataCell hideOnSmallScreens align="fill">
-                  <BarGradient
-                    value={value.reviewCount}
-                    maxValue={value.titleCount}
-                  />
-                </TableDataCell>
-                <TableDataCell
-                  align="right"
-                  className={
-                    value.reviewCount === value.titleCount
-                      ? "text-progress"
-                      : "text-subtle"
-                  }
-                >
-                  {value.reviewCount}/{value.titleCount}
-                </TableDataCell>
-              </TableRow>
-            );
-          })}
-        </tbody>
-      </Table>
+    <section className="">
+      <SubHeading as="h2" className="px-container">
+        {label}
+      </SubHeading>
+      <div className="bg-default px-container pb-8">
+        <Table>
+          <TableHead>
+            <tr className="col-span-3 grid grid-cols-subgrid">
+              <TableHeaderCell align="left">Name</TableHeaderCell>
+              <th>&nbsp;</th>
+              <TableHeaderCell align="right">Progress</TableHeaderCell>
+            </tr>
+          </TableHead>
+          <tbody className="col-span-3 row-start-2 grid grid-cols-subgrid">
+            {values.map((value) => {
+              return (
+                <TableProgressRow key={value.name}>
+                  <TableDataCell align="left">
+                    <Name value={value} valueType={valueType} />
+                  </TableDataCell>
+                  <TableDataCell hideOnSmallScreens align="fill">
+                    <BarGradient
+                      value={value.reviewCount}
+                      maxValue={value.titleCount}
+                    />
+                  </TableDataCell>
+                  <TableDataCell
+                    align="right"
+                    className="col-start-3 self-center text-nowrap font-sans-narrow text-xs text-subtle tablet:text-sm"
+                  >
+                    {value.reviewCount} / {value.titleCount}
+                  </TableDataCell>
+                </TableProgressRow>
+              );
+            })}
+          </tbody>
+        </Table>
+      </div>
     </section>
   );
 }
@@ -80,10 +83,17 @@ function Name({ value, valueType }: { valueType: ValueType; value: Value }) {
 
   if (value.slug)
     return (
-      <a className="text-accent" href={linkTarget}>
+      <a
+        className="font-sans-book text-sm tracking-[-0.3px] text-accent"
+        href={linkTarget}
+      >
         {value.name}
       </a>
     );
 
-  return <span className="text-subtle">{value.name}</span>;
+  return (
+    <span className="font-sans-book text-sm tracking-[-0.3px] text-subtle">
+      {value.name}
+    </span>
+  );
 }

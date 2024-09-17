@@ -37,9 +37,9 @@ function Callout({
         complete={reviewed ?? 0}
         label={label}
         subLabel={subLabel}
+        className="h-auto w-32 font-sans-narrow tablet:w-36"
       />
-      <div className="spacer-y-2" />
-      <div className="text-center font-sans text-subtle">
+      <div className="pt-2 text-center font-sans-narrow text-base text-subtle">
         <div>
           {reviewed?.toLocaleString()}/{total?.toLocaleString()}
         </div>
@@ -62,9 +62,8 @@ export function Callouts({
   collectionTotal,
 }: Props): JSX.Element {
   return (
-    <section className="flex flex-wrap justify-center gap-x-8">
-      <div className="flex min-w-full flex-col items-center tablet:min-w-0">
-        <div className="spacer-y-8" />
+    <section className="flex flex-wrap justify-center gap-x-8 px-container">
+      <div className="flex min-w-full flex-col items-center pt-8 tablet:min-w-0">
         <Callout total={total} reviewed={reviewed} label="Total Progress" />
       </div>
       <div>

@@ -7,7 +7,7 @@ export function Table({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <table className="relative w-full border-collapse shadow-all tablet:whitespace-nowrap">
+    <table className="grid w-full border-collapse grid-cols-[1fr,0,auto] tablet:grid-cols-[auto,1fr,auto] tablet:whitespace-nowrap">
       {children}
     </table>
   );
@@ -19,7 +19,7 @@ export function TableHead({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <thead className="sticky top-10 z-10 bg-default px-6 leading-[calc(2.5rem_-_2px)] desktop:top-[calc(var(--header-offset)_+_2.5rem)] max:top-[calc(var(--header-offset)_+_2.5rem)]">
+    <thead className="z-10 col-span-3 grid grid-cols-subgrid border-b-2 border-default bg-default text-base">
       {children}
     </thead>
   );
@@ -30,7 +30,23 @@ export function TableRow({
 }: {
   children: React.ReactNode;
 }): JSX.Element {
-  return <tr className="leading-10 odd:bg-subtle">{children}</tr>;
+  return (
+    <tr className="col-span-3 grid grid-cols-subgrid border-b border-default leading-10">
+      {children}
+    </tr>
+  );
+}
+
+export function TableProgressRow({
+  children,
+}: {
+  children: React.ReactNode;
+}): JSX.Element {
+  return (
+    <tr className="col-span-3 grid grid-cols-subgrid border-b border-default leading-10">
+      {children}
+    </tr>
+  );
 }
 
 export function TableHeaderCell({
@@ -41,10 +57,10 @@ export function TableHeaderCell({
   children: React.ReactNode;
 }): JSX.Element {
   if (align === "left") {
-    return <th className="pl-gutter text-left">{children}</th>;
+    return <th className="py-6 text-left font-normal">{children}</th>;
   }
 
-  return <th className="pr-gutter text-right">{children}</th>;
+  return <th className="py-6 text-right font-normal">{children}</th>;
 }
 
 export function TableDataCell({
@@ -64,7 +80,12 @@ export function TableDataCell({
 
   if (align === "fill") {
     return (
-      <td className={ccn("w-full py-0", className, hideOnSmallScreensClass)}>
+      <td
+        className={ccn(
+          "row-start-2 -mt-[3px] w-full p-0 tablet:row-start-auto tablet:mt-0 tablet:py-2",
+          className,
+        )}
+      >
         {children}
       </td>
     );
@@ -74,7 +95,7 @@ export function TableDataCell({
     return (
       <td
         className={ccn(
-          "px-gutter py-0 text-left",
+          "pr-4 text-left tablet:py-2",
           className,
           hideOnSmallScreensClass,
         )}
@@ -87,7 +108,7 @@ export function TableDataCell({
   return (
     <td
       className={ccn(
-        "px-gutter py-0 text-right",
+        "block py-2 pl-4 text-right",
         className,
         hideOnSmallScreensClass,
       )}
