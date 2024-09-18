@@ -1,6 +1,6 @@
 import { ccn } from "src/utils/concatClassNames";
 
-import SvgIcon from "./SvgIcon";
+import { SvgIcon } from "./SvgIcon";
 /**
  * Renders a calendar icon.
  */

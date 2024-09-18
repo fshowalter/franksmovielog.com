@@ -15,7 +15,7 @@ const dateFormat = new Intl.DateTimeFormat("en-US", {
 function Date({ date }: { date: Date }) {
   return (
     <>
-      <span className="inline-block font-sans-bold text-muted">
+      <span className="inline-block font-sans-narrow text-sm tracking-normal text-subtle">
         {dateFormat.format(date)}
       </span>{" "}
     </>
@@ -27,9 +27,9 @@ function Medium({ value }: { value: Viewing["medium"] }) {
     return null;
   }
   return (
-    <span className="font-light text-subtle">
+    <span className="text-subtle">
       <span>via</span>{" "}
-      <span className="font-sans-bold text-muted">{value}</span>
+      <span className="font-sans-narrow text-sm text-subtle">{value}</span>
     </span>
   );
 }
