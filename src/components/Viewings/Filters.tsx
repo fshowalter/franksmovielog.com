@@ -92,13 +92,6 @@ export function Filters({
         <option value="viewing-date-desc">Viewing Date (Newest First)</option>
         <option value="viewing-date-asc">Viewing Date (Oldest First)</option>
       </SelectField>
-      <p className="font-sans-narrow text-base text-subtle">
-        See also:{" "}
-        <a className="text-accent" href="/viewings/stats/">
-          viewing stats
-        </a>
-        .
-      </p>
     </>
   );
 }

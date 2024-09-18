@@ -8,6 +8,7 @@ import {
   TableProgressRow,
 } from "src/components/StatsTable";
 
+import { ListItemAvatar } from "../ListItemAvatar";
 import { ListItemCounts } from "../ListItemCounts";
 import { SubHeading } from "../SubHeading";
 
@@ -30,43 +31,36 @@ export function Details({
   values: Value[];
 }) {
   return (
-    <section className="">
-      <SubHeading as="h2" className="px-container">
-        {label}
-      </SubHeading>
-      <div className="bg-default px-container pb-8">
-        <Table>
-          <TableHead>
-            <tr className="col-span-3 grid grid-cols-subgrid">
-              <TableHeaderCell align="left">Name</TableHeaderCell>
-              <th>&nbsp;</th>
-              <TableHeaderCell align="right">Progress</TableHeaderCell>
-            </tr>
-          </TableHead>
-          <tbody className="col-span-3 row-start-2 grid grid-cols-subgrid">
-            {values.map((value) => {
-              return (
-                <TableProgressRow key={value.name}>
-                  <TableDataCell align="left">
-                    <Name value={value} valueType={valueType} />
-                  </TableDataCell>
-                  <TableDataCell hideOnSmallScreens align="fill">
-                    <BarGradient
-                      value={value.reviewCount}
-                      maxValue={value.titleCount}
-                    />
-                  </TableDataCell>
-                  <TableDataCell
-                    align="right"
-                    className="col-start-3 self-center text-nowrap font-sans-narrow text-xs text-subtle tablet:text-sm"
-                  >
-                    {value.reviewCount} / {value.titleCount}
-                  </TableDataCell>
-                </TableProgressRow>
-              );
-            })}
-          </tbody>
-        </Table>
+    <section className="w-full bg-default px-container pb-8 desktop:w-auto desktop:basis-[calc(50%_-_16px)] desktop:px-gutter">
+      <h2 className="py-4 shadow-bottom tablet:text-xl">{label}</h2>
+      <div className="grid w-full grid-cols-[auto,1fr,auto] tablet:whitespace-nowrap">
+        {values.map((value) => {
+          return (
+            <div
+              key={value.name}
+              className="col-span-3 grid grid-cols-subgrid grid-rows-[1fr,auto,auto,1fr] py-3"
+            >
+              <DetailsItemAvatar
+                imageProps={value.avatarImageProps}
+                name={value.name}
+                href={`/cast-and-crew/${value.slug}`}
+                className="row-span-4 mr-6"
+              />
+              <div className="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid">
+                <Name value={value} valueType={valueType} />
+                <div className="col-start-3 self-center text-nowrap pb-1 text-right font-sans-narrow text-xs text-subtle tablet:text-sm">
+                  {value.reviewCount} / {value.titleCount}
+                </div>
+              </div>
+              <div className="col-span-2 col-start-2 row-start-3 bg-subtle">
+                <BarGradient
+                  value={value.reviewCount}
+                  maxValue={value.titleCount}
+                />
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
@@ -76,15 +70,15 @@ function Name({ value, valueType }: { valueType: ValueType; value: Value }) {
   let linkTarget;
 
   if (valueType === "collection") {
-    linkTarget = `/collections/${value.slug}`;
+    linkTarget = `/collections/${value.slug}/`;
   } else {
-    linkTarget = `/cast-and-crew/${value.slug}`;
+    linkTarget = `/cast-and-crew/${value.slug}/`;
   }
 
   if (value.slug)
     return (
       <a
-        className="font-sans-book text-sm tracking-[-0.3px] text-accent"
+        className="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
         href={linkTarget}
       >
         {value.name}
@@ -92,8 +86,53 @@ function Name({ value, valueType }: { valueType: ValueType; value: Value }) {
     );
 
   return (
-    <span className="font-sans-book text-sm tracking-[-0.3px] text-subtle">
+    <span className="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-subtle">
       {value.name}
     </span>
+  );
+}
+
+import type { AvatarImageProps } from "src/api/avatars";
+import { Avatar } from "src/components/Avatar";
+import { ccn } from "src/utils/concatClassNames";
+
+export const DetailsAvatarImageConfig = {
+  width: 80,
+  height: 80,
+};
+
+export function DetailsItemAvatar({
+  name,
+  href,
+  imageProps,
+  className,
+}: {
+  name: string;
+  href: string;
+  imageProps: AvatarImageProps | null;
+  className?: string;
+}) {
+  const avatar = (
+    <Avatar
+      name={name}
+      imageProps={imageProps}
+      width={DetailsAvatarImageConfig.width}
+      height={DetailsAvatarImageConfig.height}
+      loading="lazy"
+      decoding="async"
+      className="w-full"
+    />
+  );
+
+  return (
+    <a
+      href={href}
+      className={ccn(
+        "safari-border-radius-fix w-full max-w-12 overflow-hidden rounded-[50%]",
+        className,
+      )}
+    >
+      {avatar}
+    </a>
   );
 }

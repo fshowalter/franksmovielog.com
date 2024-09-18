@@ -81,17 +81,6 @@ export function Filters({
         <option value="review-date-desc">Review Date (Newest First)</option>
         <option value="review-date-asc">Review Date (Oldest First)</option>
       </SelectField>
-      <p className="font-sans-narrow text-base text-subtle">
-        See also:{" "}
-        <a className="text-accent" href="/reviews/underseen/">
-          underseen gems
-        </a>{" "}
-        and{" "}
-        <a className="text-accent" href="/reviews/overrated/">
-          overrated disappointments
-        </a>
-        .
-      </p>
     </>
   );
 }
