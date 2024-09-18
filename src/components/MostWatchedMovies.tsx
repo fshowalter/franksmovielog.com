@@ -6,8 +6,8 @@ import { Poster } from "./Poster";
 import { StatHeading } from "./StatHeading";
 
 export const MostWatchedMoviesPosterConfig = {
-  width: 200,
-  height: 300,
+  width: 250,
+  height: 375,
   sizes:
     "(min-width: 510px) 33vw, (min-width: 633px) 25vw, (min-width: 784px) 20vw, (min-width: 936px) 16vw, 48px",
 };
@@ -23,32 +23,37 @@ export interface MostWatchedMoviesListItemValue {
 
 export function MostWatchedMovies({
   values,
+  className,
 }: {
   values: readonly MostWatchedMoviesListItemValue[];
+  className?: string;
 }): JSX.Element | null {
   if (values.length === 0) {
     return null;
   }
 
   return (
-    <section>
-      <StatHeading>Most Watched Movies</StatHeading>
-      <div>
-        <div className="tablet:spacer-y-4" />
-        <List>
-          {values.map((value) => {
-            return <ListItem value={value} key={value.imdbId} />;
-          })}
-        </List>
-        <div className="tablet:spacer-y-4" />
-      </div>
+    <section
+      className={ccn(
+        "bg-default px-container desktop:px-gutter desktop:pb-10",
+        className,
+      )}
+    >
+      <h2 className="py-4 font-serif-semibold shadow-bottom desktop:text-xl">
+        Most Watched Movies
+      </h2>
+      <List>
+        {values.map((value) => {
+          return <ListItem value={value} key={value.imdbId} />;
+        })}
+      </List>
     </section>
   );
 }
 
 function List({ children }: { children: React.ReactNode }): JSX.Element {
   return (
-    <ol className="grid-cols-[repeat(auto-fill,_minmax(128px,_1fr))] gap-x-6 gap-y-8 tablet:grid">
+    <ol className="grid-cols-[repeat(auto-fill,_minmax(128px,_min(calc(100%_/_5_-_24px),250px)))] justify-between gap-x-6 gap-y-8 bg-subtle tablet:grid tablet:bg-default">
       {children}
     </ol>
   );
@@ -60,7 +65,7 @@ function ListItem({
   value: MostWatchedMoviesListItemValue;
 }): JSX.Element {
   return (
-    <li className="flex items-center gap-x-6 px-gutter py-4 even:bg-subtle tablet:flex-col tablet:p-0 tablet:even:bg-unset">
+    <li className="mb-1 flex items-center gap-x-6 bg-default py-4 tablet:flex-col tablet:p-0">
       <FluidListItemPoster
         title={value.title}
         year={value.year}
@@ -70,18 +75,15 @@ function ListItem({
       />
       <div className="grow tablet:w-full">
         <div className="tablet:hidden">
-          <div className="tablet:spacer-y-1" />
           <ListItemTitle
             title={value.title}
             year={value.year}
             slug={value.slug}
           />
-          <div className="spacer-y-1 tablet:spacer-y-2" />
         </div>
         <div className="flex justify-start text-base text-subtle tablet:justify-center">
           <div>{value.count.toLocaleString()} times</div>
         </div>
-        <div className="spacer-y-1 tablet:spacer-y-0" />
       </div>
     </li>
   );
@@ -105,7 +107,7 @@ function FluidListItemPoster({
       <a
         href={`/reviews/${slug}/`}
         className={ccn(
-          "safari-border-radius-fix w-full min-w-12 max-w-12 overflow-hidden rounded-lg shadow-all tablet:max-w-poster",
+          "w-full min-w-12 max-w-12 tablet:max-w-poster",
           className,
         )}
       >
