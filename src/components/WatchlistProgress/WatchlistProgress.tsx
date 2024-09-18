@@ -46,11 +46,12 @@ export function WatchlistProgress({
           collectionReviewed={progress.collectionReviewed}
           collectionTotal={progress.collectionTotal}
         />
-        <div className="mx-auto flex w-full max-w-screen-max flex-wrap items-start justify-center gap-8 py-16 tablet:px-container">
+        <div className="mx-auto w-full max-w-screen-max gap-8 py-16 tablet:px-container desktop:grid desktop:grid-cols-2">
           <Details
             label="Director Progress"
             valueType="director"
             values={progress.directorDetails}
+            className="col-start-1 row-span-3"
           />
           <Details
             label="Performer Progress"
@@ -61,11 +62,13 @@ export function WatchlistProgress({
             label="Writer Progress"
             valueType="writer"
             values={progress.writerDetails}
+            className="col-start-2 row-start-2"
           />
           <Details
             label="Collection Progress"
             valueType="collection"
             values={progress.collectionDetails}
+            className="col-start-2 row-start-3"
           />
         </div>
       </div>
