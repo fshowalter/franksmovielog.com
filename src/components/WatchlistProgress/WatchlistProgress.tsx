@@ -33,7 +33,7 @@ export function WatchlistProgress({
         alt='Darth Vadar in "Star Wars (1977)'
         deck='"I find your lack of faith disturbing."'
       />
-      <div className="flex flex-col items-center pt-10">
+      <div className="flex flex-col items-center">
         <Callouts
           total={progress.total}
           reviewed={progress.reviewed}
