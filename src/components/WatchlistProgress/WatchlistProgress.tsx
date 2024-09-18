@@ -23,11 +23,13 @@ export function WatchlistProgress({
   progress,
   backdropImageProps,
 }: Props): JSX.Element {
+  console.log(progress);
   return (
     <Layout className="bg-subtle">
       <Backdrop
         imageProps={backdropImageProps}
-        title="Watchlist Progress"
+        title="Progress"
+        breadcrumb={<a href="/watchlist/">Watchlist</a>}
         alt='Darth Vadar in "Star Wars (1977)'
         deck='"I find your lack of faith disturbing."'
       />
@@ -44,7 +46,7 @@ export function WatchlistProgress({
           collectionReviewed={progress.collectionReviewed}
           collectionTotal={progress.collectionTotal}
         />
-        <div className="flex w-full max-w-screen-showFilters flex-col items-stretch py-16">
+        <div className="mx-auto flex w-full max-w-screen-max flex-wrap items-start justify-center gap-8 py-16 tablet:px-container">
           <Details
             label="Director Progress"
             valueType="director"

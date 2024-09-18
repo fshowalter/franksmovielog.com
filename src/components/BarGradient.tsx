@@ -11,14 +11,9 @@ export function BarGradient({
     "--bar-percent": `${(value / maxValue) * 100}%`,
   } as React.CSSProperties;
 
-  if (value === 0) {
-    styles["lineHeight"] = 0;
-    styles["margin"] = "0";
-  }
-
   return (
     <div
-      className="progress-bar-bg mb-2 leading-6 tablet:mb-0 tablet:mt-[2px] tablet:leading-9"
+      className="progress-bar-bg leading-[6px] tablet:mb-0 tablet:mt-[2px]"
       style={styles}
     >
       &nbsp;

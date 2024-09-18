@@ -71,6 +71,7 @@ export function Viewings({
       totalCount={state.filteredValues.length}
       onToggleFilters={() => dispatch({ type: Actions.TOGGLE_FILTERS })}
       filtersVisible={state.showFilters}
+      seeAlso={[{ href: "/viewings/stats/", text: "stats" }]}
       filters={
         <Filters
           dispatch={dispatch}
