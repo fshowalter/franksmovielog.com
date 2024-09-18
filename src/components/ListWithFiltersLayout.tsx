@@ -5,6 +5,11 @@ import { Avatar } from "./Avatar";
 import { Backdrop, BackdropImageConfig } from "./Backdrop";
 import { Layout } from "./Layout";
 
+type Link = {
+  text: string;
+  href: string;
+};
+
 export function ListWithFiltersLayout({
   title,
   deck,
@@ -17,6 +22,7 @@ export function ListWithFiltersLayout({
   list,
   breadcrumb,
   avatarImageProps,
+  seeAlso,
 }: {
   title: string;
   deck: string;
@@ -29,6 +35,7 @@ export function ListWithFiltersLayout({
   filtersVisible: boolean;
   breadcrumb?: React.ReactNode;
   avatarImageProps?: AvatarImageProps;
+  seeAlso?: Link[];
 }): JSX.Element {
   return (
     <Layout className="bg-subtle">
@@ -57,6 +64,7 @@ export function ListWithFiltersLayout({
                   totalCount={totalCount}
                   onToggleFilters={onToggleFilters}
                   filtersVisible={filtersVisible}
+                  seeAlso={seeAlso}
                 />
               </div>
               <div
@@ -131,28 +139,43 @@ function ListHeader({
   totalCount,
   onToggleFilters,
   filtersVisible,
+  seeAlso,
 }: {
   totalCount: number;
   onToggleFilters: () => void;
   filtersVisible: boolean;
+  seeAlso?: Link[];
 }): JSX.Element {
   return (
-    <div className="flex w-full items-center justify-between gap-12 px-container-base font-sans-bold uppercase tracking-[0.8px] text-subtle tablet:px-0">
-      <span className="block py-10 tablet:w-full">
+    <div className="flex w-full flex-wrap items-baseline justify-between px-container-base font-sans-bold uppercase tracking-[0.8px] text-subtle tablet:px-0">
+      <span className="block py-10 pr-4">
         <span className="font-sans-bold">{totalCount.toLocaleString()}</span>{" "}
         Results
       </span>
-      <button
-        onClick={onToggleFilters}
-        className="flex items-center gap-x-4 text-nowrap px-4 py-2 uppercase shadow-all min-[1024px]:hidden"
-        style={{
-          backgroundColor: filtersVisible
-            ? "var(--bg-subtle)"
-            : "var(--bg-default",
-        }}
-      >
-        Filter & Sort
-      </button>
+      <div className="ml-auto flex flex-wrap justify-end gap-4 pb-10 tablet:w-auto">
+        {seeAlso &&
+          seeAlso.map((also) => {
+            return (
+              <div
+                key={also.href}
+                className="flex items-start gap-x-4 text-nowrap bg-default px-4 py-2 uppercase text-accent shadow-all hover:bg-accent hover:text-inverse"
+              >
+                <a href={also.href}>{also.text}</a>
+              </div>
+            );
+          })}
+        <button
+          onClick={onToggleFilters}
+          className="flex items-center gap-x-4 text-nowrap px-4 py-2 uppercase text-muted shadow-all min-[1024px]:hidden"
+          style={{
+            backgroundColor: filtersVisible
+              ? "var(--bg-subtle)"
+              : "var(--bg-default)",
+          }}
+        >
+          Filter & Sort
+        </button>
+      </div>
     </div>
   );
 }

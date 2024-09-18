@@ -63,6 +63,10 @@ export function Reviews({
       title="Reviews"
       alt="Choose wisely."
       deck='"He chose... poorly."'
+      seeAlso={[
+        { href: "/reviews/underseen/", text: "underseen" },
+        { href: "/reviews/overrated/", text: "overrated" },
+      ]}
       backdropImageProps={backdropImageProps}
       totalCount={state.filteredValues.length}
       onToggleFilters={() => dispatch({ type: Actions.TOGGLE_FILTERS })}

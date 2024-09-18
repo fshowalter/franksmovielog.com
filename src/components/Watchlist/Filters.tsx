@@ -76,15 +76,6 @@ export function Filters({
         <option value="release-date-asc">Release Date (Oldest First)</option>
         <option value="title">Title</option>
       </SelectField>
-      <p className="text-subtle">
-        <a
-          className="font-sans-narrow text-base text-accent"
-          href="/watchlist/progress/"
-        >
-          Track my progress
-        </a>
-        .
-      </p>
     </>
   );
 }

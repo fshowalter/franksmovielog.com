@@ -55,6 +55,7 @@ export function ProgressRing({
         fill="var(--fg-default)"
         textAnchor="middle"
         fontSize=".2em"
+        className="font-sans-narrow"
       >
         {label}
       </text>
@@ -64,6 +65,7 @@ export function ProgressRing({
         fill="var(--fg-subtle)"
         textAnchor="middle"
         fontSize=".2em"
+        className="font-sans-book"
       >
         {subLabel}
       </text>
