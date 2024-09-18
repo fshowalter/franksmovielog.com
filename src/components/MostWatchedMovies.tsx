@@ -34,12 +34,9 @@ export function MostWatchedMovies({
 
   return (
     <section
-      className={ccn(
-        "bg-default px-container desktop:px-gutter desktop:pb-10",
-        className,
-      )}
+      className={ccn("bg-default px-container desktop:pb-10", className)}
     >
-      <h2 className="py-4 font-serif-semibold shadow-bottom desktop:text-xl">
+      <h2 className="py-4 text-center font-serif-semibold shadow-bottom desktop:py-8 desktop:text-2xl">
         Most Watched Movies
       </h2>
       <List>
@@ -53,7 +50,7 @@ export function MostWatchedMovies({
 
 function List({ children }: { children: React.ReactNode }): JSX.Element {
   return (
-    <ol className="grid-cols-[repeat(auto-fill,_minmax(128px,_min(calc(100%_/_5_-_24px),250px)))] justify-between gap-x-6 gap-y-8 bg-subtle tablet:grid tablet:bg-default">
+    <ol className="grid-cols-[repeat(auto-fill,_minmax(128px,_min(calc(100%_/_5_-_24px),250px)))] items-center justify-center gap-x-6 gap-y-8 bg-subtle tablet:flex tablet:flex-wrap tablet:bg-default">
       {children}
     </ol>
   );
@@ -65,7 +62,7 @@ function ListItem({
   value: MostWatchedMoviesListItemValue;
 }): JSX.Element {
   return (
-    <li className="mb-1 flex items-center gap-x-6 bg-default py-4 tablet:flex-col tablet:p-0">
+    <li className="mb-1 flex items-center gap-x-6 bg-default py-4 tablet:w-32 tablet:flex-col tablet:p-0 desktop:w-auto">
       <FluidListItemPoster
         title={value.title}
         year={value.year}
@@ -126,12 +123,7 @@ function FluidListItemPoster({
   }
 
   return (
-    <div
-      className={ccn(
-        "safari-border-radius-fix min-w-12 max-w-12 overflow-hidden rounded-lg shadow-all tablet:max-w-poster",
-        className,
-      )}
-    >
+    <div className={ccn("min-w-12 max-w-12 tablet:max-w-poster", className)}>
       <Poster
         imageProps={imageProps}
         title={title}
