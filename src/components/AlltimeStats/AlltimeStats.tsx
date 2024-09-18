@@ -42,8 +42,11 @@ export function AlltimeStats({
 }: Props): JSX.Element {
   return (
     <Layout className="flex flex-col items-center bg-subtle">
-      <header className="flex min-h-[240px] w-full flex-col flex-wrap justify-end bg-[#2A2B2A] px-container pb-8 pt-40 text-inverse desktop:min-h-[clamp(640px,50vh,1350px)] desktop:pb-16 desktop:pt-40">
+      <header className="flex min-h-[240px] w-full flex-col flex-wrap justify-end bg-[#2A2B2A] px-container pb-10 pt-40 text-inverse desktop:min-h-[clamp(640px,50vh,1350px)] desktop:pb-16 desktop:pt-40">
         <div className="mx-auto flex max-w-screen-max flex-col items-center">
+          <p className="mb-2 font-sans-narrow text-sm uppercase tracking-[0.8px] underline decoration-subtle decoration-2 underline-offset-8">
+            <a href="/viewings/">Viewing Log</a>
+          </p>
           <h1 className="mb-4 text-4xl desktop:text-7xl">All-Time Stats</h1>
           <p className="mb-6 font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle">
             {`${(distinctStatYears.length - 1).toString()} Years in Review`}

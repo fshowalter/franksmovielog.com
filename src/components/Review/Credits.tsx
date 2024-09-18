@@ -42,7 +42,7 @@ export function Credits({
     <aside
       id="credits"
       className={ccn(
-        "bg-subtle px-container-base pb-8 pt-8 tablet:px-6 tablet:pt-12",
+        "bg-subtle px-container pb-8 pt-8 tablet:pt-12",
         className,
       )}
       data-pagefind-meta={`image:${posterImageProps.src}`}
