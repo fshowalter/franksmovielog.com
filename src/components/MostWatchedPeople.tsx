@@ -114,7 +114,7 @@ function MostWatchedPersonViewingListItem({
           year={value.year}
           slug={value.slug}
         />
-        <div className="py-1 font-sans-book text-xs text-muted">
+        <div className="pb-2 pt-1 font-sans-book text-xs text-muted">
           {value.date}
         </div>
         <ListItemMediumAndVenue medium={value.medium} venue={value.venue} />

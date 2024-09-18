@@ -67,14 +67,14 @@ export function AlltimeStats({
       <div className="mx-auto flex w-full max-w-screen-max flex-col items-stretch gap-y-8 py-10 tablet:px-container">
         <MostWatchedMovies
           values={mostWatchedMovies}
-          className="mx-auto w-full max-w-[960px]"
+          className="mx-auto w-full"
         />
         <div className="flex flex-col items-start gap-y-8 desktop:flex-row desktop:gap-x-8">
           <DecadeDistribution values={stats.decadeDistribution} />
           <MediaDistribution values={stats.mediaDistribution} />
           <GradeDistribution values={stats.gradeDistribution} />
         </div>
-        <div className="mx-auto flex w-full max-w-[960px] flex-col gap-y-8">
+        <div className="mx-auto flex w-full flex-col gap-y-8 desktop:max-w-[calc(66%_+_24px)]">
           <MostWatchedDirectors values={mostWatchedDirectors} />
           <MostWatchedPerformers values={mostWatchedPerformers} />
           <MostWatchedWriters values={mostWatchedWriters} />

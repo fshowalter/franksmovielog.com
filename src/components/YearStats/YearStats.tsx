@@ -1,5 +1,6 @@
 import type { YearStats } from "src/api/yearStats";
 import { DecadeDistribution } from "src/components/DecadeDistribution";
+import { Layout } from "src/components/Layout";
 import { MediaDistribution } from "src/components/MediaDistribution";
 import { MostWatchedDirectors } from "src/components/MostWatchedDirectors";
 import type { MostWatchedMoviesListItemValue } from "src/components/MostWatchedMovies";
@@ -32,16 +33,15 @@ export function YearStats({
   mostWatchedWriters,
 }: Props): JSX.Element {
   return (
-    <main className="flex flex-col items-center">
-      <header className="flex flex-col flex-wrap justify-between px-pageMargin">
-        <div className="flex flex-col items-center">
-          <PageTitle className="pt-6 desktop:pt-8">{`${year} Stats`}</PageTitle>
-          <p className="text-subtle">
+    <Layout className="flex flex-col items-center bg-subtle">
+      <header className="flex min-h-[240px] w-full flex-col flex-wrap justify-end bg-[#2A2B2A] px-container pb-8 pt-40 text-inverse desktop:min-h-[clamp(640px,50vh,1350px)] desktop:pb-16 desktop:pt-40">
+        <div className="mx-auto flex max-w-screen-max flex-col items-center">
+          <h1 className="mb-4 text-4xl desktop:text-7xl">{`${year} Stats`}</h1>
+          <p className="mb-6 font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle">
             {[...distinctStatYears].reverse()[0] === year
               ? "A year in progress..."
               : "A Year in Review"}
           </p>
-          <div className="spacer-y-6" />
           <StatsNavigation
             currentYear={year}
             linkFunc={(year: string) => {
@@ -52,10 +52,8 @@ export function YearStats({
               return `/viewings/stats/${year}/`;
             }}
             years={distinctStatYears}
+            className="mb-8"
           />
-        </div>
-        <div>
-          <div className="spacer-y-8" />
           <Callouts
             titleCount={stats.titleCount}
             newTitleCount={stats.newTitleCount}
@@ -63,14 +61,22 @@ export function YearStats({
           />
         </div>
       </header>
-      <div className="flex w-full max-w-[960px] flex-col items-stretch gap-y-8 py-8 tablet:px-gutter desktop:px-pageMargin">
-        <MostWatchedMovies values={mostWatchedMovies} />
-        <DecadeDistribution values={stats.decadeDistribution} />
-        <MediaDistribution values={stats.mediaDistribution} />
-        <MostWatchedDirectors values={mostWatchedDirectors} />
-        <MostWatchedPerformers values={mostWatchedPerformers} />
-        <MostWatchedWriters values={mostWatchedWriters} />
+
+      <div className="mx-auto flex w-full max-w-screen-max flex-col items-stretch gap-y-8 py-10 tablet:px-container">
+        <MostWatchedMovies
+          values={mostWatchedMovies}
+          className="mx-auto w-full"
+        />
+        <div className="mx-auto flex w-full flex-col items-start gap-y-8 desktop:max-w-[calc(66%_+_24px)] desktop:flex-row desktop:gap-x-8">
+          <DecadeDistribution values={stats.decadeDistribution} />
+          <MediaDistribution values={stats.mediaDistribution} />
+        </div>
+        <div className="mx-auto flex w-full flex-col gap-y-8 desktop:max-w-[calc(66%_+_24px)]">
+          <MostWatchedDirectors values={mostWatchedDirectors} />
+          <MostWatchedPerformers values={mostWatchedPerformers} />
+          <MostWatchedWriters values={mostWatchedWriters} />
+        </div>
       </div>
-    </main>
+    </Layout>
   );
 }
