@@ -396,6 +396,7 @@
   body:has(#mobile-nav:checked) {
     position: fixed;
     overflow: hidden;
+    width: 100vw;
   }
 
   .hamburger-menu {
@@ -427,6 +428,13 @@
   .rendered-markdown {
     a {
       text-decoration-line: underline;
+      text-underline-offset: 4px;
+    }
+
+    a:hover {
+      color: var(--fg-inverse);
+      background-color: var(--bg-inverse);
+      text-decoration-color: var(--fg-inverse);
     }
 
     sup a,

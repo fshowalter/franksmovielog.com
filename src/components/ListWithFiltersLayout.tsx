@@ -26,8 +26,8 @@ export function ListWithFiltersLayout({
 }: {
   title: string;
   deck: string;
-  alt: string;
-  backdropImageProps: BackdropImageProps;
+  alt?: string;
+  backdropImageProps?: BackdropImageProps;
   filters: React.ReactNode;
   list: React.ReactNode;
   totalCount: number;
@@ -46,7 +46,7 @@ export function ListWithFiltersLayout({
           name={title}
           deck={deck}
         />
-      ) : (
+      ) : backdropImageProps ? (
         <Backdrop
           imageProps={backdropImageProps}
           title={title}
@@ -54,6 +54,8 @@ export function ListWithFiltersLayout({
           deck={deck}
           breadcrumb={breadcrumb}
         />
+      ) : (
+        <SolidBackdrop title={title} deck={deck} breadcrumb={breadcrumb} />
       )}
       <section className="mx-auto flex max-w-screen-max flex-col items-center pb-20">
         <div className="flex w-full flex-col items-stretch">
@@ -95,7 +97,6 @@ export function ListWithFiltersLayout({
 
 function AvatarBackdrop({
   avatarImageProps,
-  backdropImageProps,
   name,
   deck,
   breadcrumb,
@@ -135,6 +136,34 @@ function AvatarBackdrop({
   );
 }
 
+function SolidBackdrop({
+  title,
+  deck,
+  breadcrumb,
+}: {
+  title: string;
+  deck: React.ReactNode;
+  breadcrumb?: React.ReactNode;
+}) {
+  return (
+    <header className="relative flex min-h-[240px] flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] bg-cover pb-8 pt-40 text-inverse [background-position-x:center] tablet:pb-10 tablet:pt-40 desktop:min-h-[clamp(640px,50vh,1350px)] desktop:pb-16 desktop:pt-40">
+      <div className="z-10 mx-auto w-full max-w-screen-max px-container">
+        {breadcrumb && (
+          <p className="mb-2 font-sans-narrow text-sm uppercase tracking-[0.8px] underline decoration-subtle decoration-2 underline-offset-4">
+            {breadcrumb}
+          </p>
+        )}
+        <h1 className="font-sans-bold text-2xl uppercase desktop:text-7xl">
+          {title}
+        </h1>
+        {deck && (
+          <p className="mt-1 text-base desktop:my-4 desktop:text-lg">{deck}</p>
+        )}
+      </div>
+    </header>
+  );
+}
+
 function ListHeader({
   totalCount,
   onToggleFilters,
@@ -147,7 +176,7 @@ function ListHeader({
   seeAlso?: Link[];
 }): JSX.Element {
   return (
-    <div className="flex w-full flex-wrap items-baseline justify-between px-container-base font-sans-bold uppercase tracking-[0.8px] text-subtle tablet:px-0">
+    <div className="flex w-full flex-wrap items-baseline justify-between px-container-base font-sans-bold uppercase tracking-[0.5px] text-subtle tablet:px-0">
       <span className="block py-10 pr-4">
         <span className="font-sans-bold">{totalCount.toLocaleString()}</span>{" "}
         Results
