@@ -40,7 +40,9 @@ export function Details({
         className,
       )}
     >
-      <h2 className="py-4 shadow-bottom tablet:text-xl">{label}</h2>
+      <h2 className="py-4 font-serif-semibold shadow-bottom tablet:text-xl">
+        {label}
+      </h2>
       <div className="grid w-full grid-cols-[auto,1fr,auto] tablet:whitespace-nowrap">
         {values.map((value) => {
           return (
