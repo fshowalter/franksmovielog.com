@@ -7,6 +7,7 @@ import {
   TableHeaderCell,
   TableProgressRow,
 } from "src/components/StatsTable";
+import { ccn } from "src/utils/concatClassNames";
 
 import { ListItemAvatar } from "../ListItemAvatar";
 import { ListItemCounts } from "../ListItemCounts";
@@ -25,13 +26,20 @@ export function Details({
   label,
   valueType,
   values,
+  className,
 }: {
   label: string;
   valueType: ValueType;
   values: Value[];
+  className?: string;
 }) {
   return (
-    <section className="w-full bg-default px-container pb-8 desktop:w-auto desktop:basis-[calc(50%_-_16px)] desktop:px-gutter">
+    <section
+      className={ccn(
+        "w-full bg-default px-container pb-8 desktop:w-auto desktop:basis-[calc(50%_-_16px)] desktop:px-gutter",
+        className,
+      )}
+    >
       <h2 className="py-4 shadow-bottom tablet:text-xl">{label}</h2>
       <div className="grid w-full grid-cols-[auto,1fr,auto] tablet:whitespace-nowrap">
         {values.map((value) => {
