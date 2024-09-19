@@ -59,7 +59,7 @@ function groupForValue(value: ListItemValue, sortValue: Sort): string {
 interface State
   extends FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>> {
   hideReviewed: boolean;
-  showFilters: false;
+  showFilters: boolean;
 }
 
 export function initState({
