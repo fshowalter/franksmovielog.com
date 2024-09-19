@@ -79,7 +79,7 @@ export function ListWithFiltersLayout({
         )}
       </div>
       <section className="mx-auto mb-20 flex flex-col items-center bg-default">
-        <div className="mx-auto flex w-full max-w-screen-max flex-col items-stretch pb-10">
+        <div className="mx-auto flex w-full max-w-screen-max flex-col items-stretch">
           <div className="flex grow flex-col bg-subtle">
             <div className="relative grid-cols-[1fr_48px_33%] tablet:px-12 showFilters:grid showFilters:grid-rows-[auto_1fr] showFilters:px-0">
               <div className="relative z-10 row-start-1 bg-default text-xs tablet:-mx-12 tablet:px-16 showFilters:col-span-3 showFilters:mx-0 showFilters:w-full showFilters:px-20">
