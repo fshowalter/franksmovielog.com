@@ -34,7 +34,7 @@ describe("Reviews", () => {
     render(<Reviews {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Review Date (Newest First)",
     );
 
@@ -47,7 +47,7 @@ describe("Reviews", () => {
     render(<Reviews {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Review Date (Oldest First)",
     );
 
@@ -60,7 +60,7 @@ describe("Reviews", () => {
     render(<Reviews {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Title (A → Z)",
     );
 
@@ -73,7 +73,7 @@ describe("Reviews", () => {
     render(<Reviews {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Title (Z → A)",
     );
 
@@ -86,7 +86,7 @@ describe("Reviews", () => {
     render(<Reviews {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Release Date (Oldest First)",
     );
 
@@ -99,7 +99,7 @@ describe("Reviews", () => {
     render(<Reviews {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Release Date (Newest First)",
     );
 
@@ -112,7 +112,7 @@ describe("Reviews", () => {
     render(<Reviews {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Grade (Best First)",
     );
 
@@ -125,7 +125,7 @@ describe("Reviews", () => {
     render(<Reviews {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Grade (Worst First)",
     );
 
@@ -244,7 +244,7 @@ describe("Reviews", () => {
 
     render(<Reviews {...props} />);
 
-    await userEvent.click(screen.getByText("Show More..."));
+    await userEvent.click(screen.getByText("Show More"));
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });

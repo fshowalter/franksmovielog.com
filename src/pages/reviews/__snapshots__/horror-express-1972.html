@@ -34,153 +34,191 @@
         class="absolute left-1/2 top-0.5 z-50 mx-auto bg-subtle px-6 py-2 text-center text-accent [transform:translate(-50%,calc(-100%_-_2px))] focus:[transform:translate(-50%,0%)]"
         >Skip to content</a
       >
-      <div
-        class="image-filter mx-auto min-h-4 w-full max-w-canvas bg-[url(&#x27;/assets/ripnotcomingsoon.avif&#x27;)] desktop:sticky desktop:top-0 desktop:z-40"
-      ></div>
-      <div class="mx-auto flex min-h-full max-w-canvas flex-col bg-default">
+      <div class="flex min-h-full w-full flex-col bg-default">
         <header
-          class="flex flex-col items-center gap-6 bg-default px-pageMargin py-6 text-center shadow-bottom desktop:sticky desktop:top-4 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:justify-between desktop:py-5 desktop:text-left max:justify-center max:py-8"
+          class="z-20 flex w-full items-center justify-between px-container-base py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
+          style="color: var(--fg-default); position: static"
         >
-          <div
-            class="items-inherit justify-items-inherit flex flex-col max:absolute max:left-[var(--page-margin-width)]"
-          >
-            <h1
+          <div class="flex flex-col">
+            <div
               class="whitespace-nowrap font-normal leading-8"
               style="font-size: 1.5625rem"
             >
-              <a class="text-default" href="/">Frank&#x27;s Movie Log</a>
-            </h1>
-            <p class="w-full text-sm italic leading-4 text-muted desktop:pl-px">
+              <a href="/">Frank&#x27;s Movie Log</a>
+            </div>
+            <p class="w-full pl-px text-sm italic leading-4 opacity-85">
               My life at the movies.
             </p>
           </div>
-          <div
-            class="w-full max-w-prose desktop:order-4 desktop:w-auto max:absolute max:right-[var(--page-margin-width)]"
-          >
-            <button
-              data-open-modal="true"
-              disabled=""
-              aria-label="Search"
-              aria-keyshortcuts="Control+K"
-              class="safari-border-radius-fix desktop::w-auto desktop::ring-0 flex w-full items-center overflow-hidden rounded-md text-sm leading-6 text-subtle ring-1 ring-border hover:ring-accent"
-            >
-              <kbd
-                class="ml-auto mt-px hidden min-h-6 flex-none items-center bg-subtle pl-3 pr-4 font-mono text-sm font-light opacity-70 desktop:flex"
-                ><kbd class="text-md leading-5">Ctrl</kbd
-                ><kbd class="text-sm">K</kbd></kbd
-              ><svg
-                class="mr-2 size-10 flex-none border-0 border-r border-default bg-subtle fill-subtle px-3 py-1 desktop:w-4 desktop:border-r-0 desktop:bg-unset desktop:px-0"
-                viewBox="0 0 16 16"
+          <div class="flex items-center">
+            <nav class="hidden w-full desktop:block desktop:w-auto">
+              <ul class="flex flex-wrap justify-start gap-x-6 text-xl">
+                <li class="block whitespace-nowrap tracking-0.5px">
+                  <a class="text-inherit" href="/">Home</a>
+                </li>
+                <li class="block whitespace-nowrap tracking-0.5px">
+                  <a class="text-inherit" href="/how-i-grade/">How I Grade</a>
+                </li>
+                <li class="block whitespace-nowrap tracking-0.5px">
+                  <a class="text-inherit" href="/reviews/">Reviews</a>
+                </li>
+                <li class="block whitespace-nowrap tracking-0.5px">
+                  <a class="text-inherit" href="/viewings/">Viewing Log</a>
+                </li>
+                <li class="block whitespace-nowrap tracking-0.5px">
+                  <a class="text-inherit" href="/cast-and-crew/"
+                    >Cast &amp; Crew</a
+                  >
+                </li>
+                <li class="block whitespace-nowrap tracking-0.5px">
+                  <a class="text-inherit" href="/collections/">Collections</a>
+                </li>
+                <li class="block whitespace-nowrap tracking-0.5px">
+                  <a class="text-inherit" href="/watchlist/">Watchlist</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="z-[1000]">
+              <button
+                data-open-modal="true"
+                disabled=""
+                aria-label="Search"
+                aria-keyshortcuts="Control+K"
+                class="flex items-center justify-between overflow-hidden text-sm leading-6 ring-default desktop:ml-6"
+                type="button"
+                title="Search: Control+K"
               >
-                <path
-                  fill-rule="evenodd"
-                  d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z"
-                ></path>
-                <path
-                  fill-rule="evenodd"
-                  d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"
-                ></path></svg
-              ><span
-                class="flex items-baseline whitespace-nowrap p-2 text-base opacity-70 desktop:hidden"
-                >Quick search...</span
-              >
-            </button>
-          </div>
-          <nav class="w-full desktop:w-auto">
-            <ul
-              class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-accent tablet:gap-x-6 desktop:justify-start"
-            >
-              <li class="block whitespace-nowrap tracking-0.5px">
-                <a class="text-muted" href="/">Home</a>
-              </li>
-              <li class="block whitespace-nowrap tracking-0.5px">
-                <a class="text-inherit" href="/how-i-grade/">How I Grade</a>
-              </li>
-              <li class="block whitespace-nowrap tracking-0.5px">
-                <a class="text-inherit" href="/reviews/">Reviews</a>
-              </li>
-              <li class="block whitespace-nowrap tracking-0.5px">
-                <a class="text-inherit" href="/viewings/">Viewing Log</a>
-              </li>
-              <li class="block whitespace-nowrap tracking-0.5px">
-                <a class="text-inherit" href="/cast-and-crew/"
-                  >Cast &amp; Crew</a
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6 desktop:size-7"
                 >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <input type="checkbox" id="mobile-nav" class="hidden" /><label
+              for="mobile-nav"
+              class="hamburger-icon desktop:hidden"
+              ><span
+                style="background: var(--fg-default)"
+                class="hamburger-icon-bars"
+              ></span
+            ></label>
+            <ul
+              class="hamburger-menu flex flex-col items-start gap-y-5 text-left text-inverse desktop:hidden"
+            >
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/">Home</a>
               </li>
-              <li class="block whitespace-nowrap tracking-0.5px">
-                <a class="text-inherit" href="/collections/">Collections</a>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/how-i-grade/">How I Grade</a>
               </li>
-              <li class="block whitespace-nowrap tracking-0.5px">
-                <a class="text-inherit" href="/watchlist/">Watchlist</a>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/reviews/">Reviews</a>
+                <ol class="mt-4">
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/reviews/underseen/">Underseen Gems</a>
+                  </li>
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/reviews/overrated/">Overrated Disappointments</a>
+                  </li>
+                </ol>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/viewings/">Viewing Log</a>
+                <ol class="mt-4">
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/viewings/stats/">Stats</a>
+                  </li>
+                </ol>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/cast-and-crew/">Cast &amp; Crew</a>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/collections/">Collections</a>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/watchlist/">Watchlist</a>
+                <ol class="mt-4">
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/watchlist/progress/">Progress</a>
+                  </li>
+                </ol>
               </li>
             </ul>
-          </nav>
+          </div>
         </header>
-        <div class="grow" id="content">
-          <main
-            id="top"
-            data-pagefind-body="true"
-            class="flex scroll-mt-[var(--header-offset)] flex-col items-center"
+        <main class="grow flex flex-col" id="content" data-pagefind-body="true">
+          <header
+            class="mb-12 flex flex-col items-center px-container-base pt-10"
           >
-            <header
-              class="flex flex-col gap-y-4 px-pageMargin py-6 text-center desktop:py-8"
+            <h1 data-pagefind-meta="title" class="text-4xl desktop:text-7xl">
+              Horror Express
+            </h1>
+            <div class="mb-4 text-muted">
+              (<!-- -->Pánico en el Transiberiano<!-- -->)
+            </div>
+            <picture
+              ><source
+                srcset="/svg/2-stars-dark.svg"
+                media="(prefers-color-scheme: dark)" />
+              <img
+                src="/svg/2-stars.svg"
+                alt="D+: 2 stars (out of 5)"
+                height="24"
+                width="120"
+                class="mb-6"
+            /></picture>
+            <div
+              class="font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle mb-12"
             >
-              <h1
-                data-pagefind-meta="title"
-                class="text-[2rem] font-normal leading-none desktop:text-[2.25rem]"
-              >
-                Horror Express
-              </h1>
-              <div class="text-muted">
-                (<!-- -->Pánico en el Transiberiano<!-- -->)
-              </div>
-              <div class="text-muted">
-                1972<!-- -->
-                <span>|</span>
-                <!-- -->Spain<span>–</span>United Kingdom<!-- -->
-                <span>|</span>
-                <!-- -->88<!-- --> min<!-- -->
-                <span><span>|</span> <a href="#credits">More...</a></span>
-              </div>
-            </header>
+              1972<!-- -->
+              <span>|</span>
+              <!-- -->Spain<span>–</span>United Kingdom<!-- -->
+              <span>|</span>
+              <!-- -->88<!-- --> min<!-- -->
+              <span><span>|</span> <a href="#credits">More...</a></span>
+            </div>
             <img
               srcset="
-                /_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=240&amp;q=80&amp;f=avif   240w,
-                /_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=480&amp;q=80&amp;f=avif   480w,
-                /_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=960&amp;q=80&amp;f=avif   960w,
-                /_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=1920&amp;q=80&amp;f=avif 1920w
+                /_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=384&amp;q=80&amp;f=avif             384w,
+                /_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=768&amp;q=80&amp;f=avif             768w,
+                /_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=1536&amp;q=80&amp;f=avif           1536w,
+                /_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=1536&amp;h=864&amp;q=80&amp;f=avif 3072w
               "
-              src="/_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=960&amp;h=540&amp;q=80&amp;f=avif"
+              src="/_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=1536&amp;h=864&amp;q=80&amp;f=avif"
               alt="A still from Horror Express (1972)"
               loading="eager"
               decoding="sync"
-              width="960"
-              height="540"
+              width="1536"
+              height="864"
               sizes="(min-width: 960px) 960px, 100vw"
-              class="aspect-[1.77777778] mb-[5.33px]"
+              class="aspect-[1.77777778] mx-auto mb-[5.33px]"
             />
-            <div class="h-6 min-h-6 tablet:h-8 tablet:min-h-8"></div>
-            <div class="flex flex-col gap-y-8 items-center px-pageMargin">
-              <div class="flex flex-col items-center">
-                <picture
-                  ><source
-                    srcset="/svg/2-stars-dark.svg"
-                    media="(prefers-color-scheme: dark)" />
-                  <img
-                    src="/svg/2-stars.svg"
-                    alt="D+: 2 stars (out of 5)"
-                    height="32"
-                    width="160"
-                /></picture>
-                <div
-                  class="flex flex-col items-center tracking-0.5px text-subtle"
-                >
-                  <span>on</span>
-                  <!-- -->Sat, Apr 27, 2024
-                </div>
-              </div>
+          </header>
+          <div
+            class="flex flex-col items-center gap-16 px-container-base pb-20 desktop:gap-20 desktop:pb-32"
+          >
+            <div>
               <div
-                class="rendered-markdown font-light text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose"
+                class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:float-left first-letter:mt-[6px] first-letter:pr-2 first-letter:font-sans-narrow-bold first-letter:text-[56px] first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px]"
               >
                 <p>
                   <em>Horror Express</em> may be flawed, but the production,
@@ -258,23 +296,23 @@
                 </p>
               </div>
             </div>
-            <div class="spacer-y-20"></div>
             <div class="w-full max-w-popout">
               <h3
-                class="px-gutter text-md font-normal text-subtle shadow-bottom"
+                class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle shadow-bottom"
               >
                 Viewing History
-                <div class="h-2 min-h-2"></div>
               </h3>
               <ul>
-                <li class="flex flex-col px-gutter even:bg-subtle">
-                  <div class="flex gap-x-[1ch] py-4">
-                    <div class="h-5 w-4">
+                <li
+                  class="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle"
+                >
+                  <div class="flex items-center gap-x-[1ch] py-4">
+                    <div class="size-auto">
                       <svg
                         width="1em"
                         height="1em"
                         viewBox="0 0 16 16"
-                        class="fill-subtle mr-[1ch] min-h-4 min-w-4 mt-1 w-4"
+                        class="fill-subtle mr-[1ch] min-h-4 min-w-4 w-4"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <title>Watched on</title>
@@ -293,25 +331,31 @@
                       </svg>
                     </div>
                     <div class="grow">
-                      <span class="inline-block text-default"
+                      <span
+                        class="inline-block font-sans-narrow text-sm tracking-normal text-subtle"
                         >Sun, Mar 25, 2012</span
                       >
-                      <span class="font-light text-muted"
-                        ><span>via</span> <span>TCM HD</span></span
+                      <span class="text-subtle"
+                        ><span>via</span>
+                        <span class="font-sans-narrow text-sm text-subtle"
+                          >TCM HD</span
+                        ></span
                       >
                       <!-- -->
                     </div>
                   </div>
                   <div></div>
                 </li>
-                <li class="flex flex-col px-gutter even:bg-subtle">
-                  <div class="flex gap-x-[1ch] py-4">
-                    <div class="h-5 w-4">
+                <li
+                  class="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle"
+                >
+                  <div class="flex items-center gap-x-[1ch] py-4">
+                    <div class="size-auto">
                       <svg
                         width="1em"
                         height="1em"
                         viewBox="0 0 16 16"
-                        class="fill-subtle mr-[1ch] min-h-4 min-w-4 mt-1 w-4"
+                        class="fill-subtle mr-[1ch] min-h-4 min-w-4 w-4"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <title>Watched on</title>
@@ -330,7 +374,8 @@
                       </svg>
                     </div>
                     <div class="grow">
-                      <span class="inline-block text-default"
+                      <span
+                        class="inline-block font-sans-narrow text-sm tracking-normal text-subtle"
                         >Sat, Apr 27, 2024</span
                       >
                       <!-- -->
@@ -339,8 +384,7 @@
                         <span>Alamo Drafthouse Cinema - One Loudoun</span></span
                       >
                       <span class="text-sm font-light leading-none text-subtle"
-                        >(<span
-                          class="rendered-markdown font-light text-sm leading-none"
+                        >(<span class="rendered-markdown text-sm leading-none"
                           ><span>Railway to Hell Mystery Marathon</span></span
                         >)</span
                       >
@@ -350,351 +394,462 @@
                 </li>
               </ul>
             </div>
-            <div class="spacer-y-32"></div>
             <aside
               id="credits"
-              class="relative scroll-mt-[var(--header-offset)] bg-subtle px-gutter pb-8 pt-8 tablet:pt-12 w-full max-w-popout"
+              class="bg-subtle px-container pb-8 pt-8 tablet:pt-12 w-full max-w-popout"
               data-pagefind-meta="image:/_image?/content%2Fassets%2Fposters%2Fhorror-express-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
             >
-              <header
-                class="flex items-center justify-center gap-x-2 pb-6 text-center text-2.5xl"
-              >
-                Horror Express<!-- -->
-                <span class="text-sm font-light text-subtle"
-                  >(<!-- -->1972<!-- -->)</span
-                >
-              </header>
               <div
-                class="poster-border mx-auto mb-4 mt-0 block size-full max-w-poster bg-[#e9e7e0] tablet:float-left tablet:mx-0 tablet:mr-gutter"
+                class="flex flex-wrap justify-center gap-8 tablet:flex-nowrap"
               >
-                <img
-                  srcset="
-                    /_image?/content%2Fassets%2Fposters%2Fhorror-express-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;q=80&amp;f=avif   62w,
-                    /_image?/content%2Fassets%2Fposters%2Fhorror-express-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=124&amp;q=80&amp;f=avif 124w,
-                    /_image?/content%2Fassets%2Fposters%2Fhorror-express-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;q=80&amp;f=avif 248w,
-                    /_image?/content%2Fassets%2Fposters%2Fhorror-express-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=496&amp;q=80&amp;f=avif 496w
-                  "
-                  src="/_image?/content%2Fassets%2Fposters%2Fhorror-express-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
-                  alt="A poster from Horror Express (1972)"
-                  width="248"
-                  height="372"
-                  sizes="(min-width: 248px) 248px, 100vw"
-                  data-pagefind-meta="image[src], image_alt[alt]"
-                  class="aspect-[0.66666667] h-auto rounded-xl"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <div class="shrink-0">
+                  <div class="block">
+                    <img
+                      srcset="
+                        /_image?/content%2Fassets%2Fposters%2Fhorror-express-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;q=80&amp;f=avif   62w,
+                        /_image?/content%2Fassets%2Fposters%2Fhorror-express-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=124&amp;q=80&amp;f=avif 124w,
+                        /_image?/content%2Fassets%2Fposters%2Fhorror-express-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;q=80&amp;f=avif 248w,
+                        /_image?/content%2Fassets%2Fposters%2Fhorror-express-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=496&amp;q=80&amp;f=avif 496w
+                      "
+                      src="/_image?/content%2Fassets%2Fposters%2Fhorror-express-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
+                      alt="A poster from Horror Express (1972)"
+                      width="248"
+                      height="372"
+                      sizes="(min-width: 248px) 248px, 100vw"
+                      data-pagefind-meta="image[src], image_alt[alt]"
+                      class="aspect-[0.66666667] h-auto"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+                <dl class="flex min-w-0 shrink flex-col items-start gap-y-4">
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Title
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">
+                      Horror Express
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Original Title
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">
+                      Pánico en el Transiberiano
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Year
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">1972</dd>
+                  </div>
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Financing
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">
+                      Spain and United Kingdom
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Running Time
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">88 min</dd>
+                  </div>
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Directed by
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">
+                      <div>Eugenio Martín</div>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Written by
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">
+                      <div>Arnaud d&#x27;Usseau</div>
+                      <div>Julian Zimet</div>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Starring
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">
+                      Christopher Lee, Peter Cushing, Alberto de Mendoza, and
+                      Telly Savalas
+                    </dd>
+                  </div>
+                </dl>
               </div>
-              <dl class="flex flex-col gap-y-4">
-                <div class="overflow-hidden">
-                  <dt class="font-bold text-subtle">Original Title</dt>
-                  <dd class="text-subtle">Pánico en el Transiberiano</dd>
-                </div>
-                <div class="overflow-hidden">
-                  <dt class="font-bold text-subtle">Financing</dt>
-                  <dd class="text-subtle">Spain and United Kingdom</dd>
-                </div>
-                <div class="overflow-hidden">
-                  <dt class="font-bold text-subtle">Running Time</dt>
-                  <dd class="text-subtle">88 min</dd>
-                </div>
-                <div class="overflow-hidden">
-                  <dt class="font-bold text-subtle">Directed by</dt>
-                  <dd class="text-subtle"><div>Eugenio Martín</div></dd>
-                </div>
-                <div class="overflow-hidden">
-                  <dt class="font-bold text-subtle">Written by</dt>
-                  <dd class="text-subtle">
-                    <div>Arnaud d&#x27;Usseau</div>
-                    <div>Julian Zimet</div>
-                  </dd>
-                </div>
-                <div class="overflow-hidden">
-                  <dt class="font-bold text-subtle">Starring</dt>
-                  <dd class="text-subtle">
-                    Christopher Lee, Peter Cushing, Alberto de Mendoza, and
-                    Telly Savalas
-                  </dd>
-                </div>
-              </dl>
-              <div class="h-8 min-h-8"></div>
-              <ul class="flex flex-wrap gap-2">
-                <li class="block">
-                  <a
-                    href="/cast-and-crew/peter-cushing/"
-                    class="flex items-center whitespace-nowrap rounded-lg bg-inverse px-4 py-2 text-accent shadow-all hover:shadow-accent"
-                    ><img
-                      alt="More Peter Cushing reviews"
-                      srcset="
-                        /_image?/content%2Fassets%2Favatars%2Fpeter-cushing.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=40&amp;q=80&amp;f=avif 1x,
-                        /_image?/content%2Fassets%2Favatars%2Fpeter-cushing.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif 2x
-                      "
-                      src="/_image?/content%2Fassets%2Favatars%2Fpeter-cushing.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=40&amp;h=40&amp;q=80&amp;f=avif"
-                      width="40"
-                      height="40"
-                      loading="lazy"
-                      decoding="async"
-                      class="mr-[1ch] block size-10 rounded-[50%]"
-                    />Peter Cushing</a
-                  >
-                </li>
-                <li class="block">
-                  <a
-                    href="/cast-and-crew/christopher-lee/"
-                    class="flex items-center whitespace-nowrap rounded-lg bg-inverse px-4 py-2 text-accent shadow-all hover:shadow-accent"
-                    ><img
-                      alt="More Christopher Lee reviews"
-                      srcset="
-                        /_image?/content%2Fassets%2Favatars%2Fchristopher-lee.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=40&amp;q=80&amp;f=avif 1x,
-                        /_image?/content%2Fassets%2Favatars%2Fchristopher-lee.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif 2x
-                      "
-                      src="/_image?/content%2Fassets%2Favatars%2Fchristopher-lee.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=40&amp;h=40&amp;q=80&amp;f=avif"
-                      width="40"
-                      height="40"
-                      loading="lazy"
-                      decoding="async"
-                      class="mr-[1ch] block size-10 rounded-[50%]"
-                    />Christopher Lee</a
-                  >
-                </li>
-              </ul>
-              <div class="h-8 min-h-8"></div>
               <a
                 href="#top"
-                class="mx-auto flex max-w-[50%] cursor-pointer content-center items-center justify-center rounded-lg p-2 text-accent shadow-all hover:shadow-border-accent"
-                >Back to Top<svg
-                  viewBox="0 0 24 24"
-                  class="size-6 fill-default"
-                >
-                  <path
-                    d="M7.997 10l3.515-3.79a.672.672 0 0 1 .89-.076l.086.075L16 10 13 10.001V18h-2v-7.999L7.997 10z"
-                  ></path></svg
-              ></a>
-            </aside>
-            <div class="spacer-y-32"></div>
-            <div
-              data-pagefind-ignore="true"
-              class="flex w-full max-w-popout flex-col items-center gap-y-12 bg-default tablet:max-w-full tablet:bg-subtle tablet:pb-32 tablet:pt-8 desktop:gap-y-24"
-            >
-              <nav
-                class="relative flex w-full flex-col items-center tablet:w-auto"
+                class="mx-auto mt-8 flex w-full max-w-[430px] cursor-pointer content-center items-center justify-center py-5 font-sans-narrow text-sm uppercase tracking-[.6px] shadow-all hover:bg-inverse hover:text-inverse"
+                >Back to Top</a
               >
-                <div
-                  class="w-full px-gutter py-2 shadow-bottom tablet:py-4 tablet:shadow-none desktop:px-pageMargin desktop:py-4"
+            </aside>
+          </div>
+          <div
+            data-pagefind-ignore="true"
+            class="flex w-full flex-col items-center gap-y-12 bg-subtle pb-32 pt-16 tablet:pt-8 desktop:gap-y-24"
+          >
+            <nav data-pagefind-ignore="true">
+              <div
+                class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
+              >
+                <h2
+                  class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
                 >
-                  <span class="font-semibold text-muted"
-                    >More with<!-- --> </span
-                  ><a class="text-accent" href="/cast-and-crew/peter-cushing"
+                  More with<!-- -->
+                  <a href="/cast-and-crew/peter-cushing" class="text-accent"
                     >Peter Cushing</a
                   >
-                </div>
+                </h2>
                 <ul
-                  class="w-full tablet:grid tablet:w-auto tablet:grid-cols-[repeat(2,minmax(100px,312px))] tablet:gap-8 tablet:px-gutter desktop:max-w-unset desktop:grid-cols-[repeat(4,1fr)] desktop:px-pageMargin desktop:pt-2"
+                  class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
                 >
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a href="/reviews/i-monster-1971/" class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from I, Monster (1971)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/i-monster-1971/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from I, Monster (1971)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/i-monster-1971/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >I, Monster<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1971</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/2-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/2-stars.svg"
                           alt="D+: 2 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          “He would be the most dangerous human being on earth.
+                          A monster.”
+                        </p>
+                        <p>
+                          That’s how a learned doctor describes the titular
+                          character in <em>I, Monster</em>. Unfortunately, the
+                          script, from Robert Louis Stevenson’s
+                          <em>Strange Case of Dr. Jekyll and Mr Hyde</em>,
+                          doesn’t live up to its own hype.
+                        </p>
+                        <p>
+                          Christopher Lee, sporting an unwieldy hairpiece, plays
+                          Marlowe, a psychiatrist in early 20th century England
+                          exploring Freud’s theories of the id, ego and
+                          super-ego. Marlowe invents a drug that removes the ego
+                          and super-ego, leaving only the primal id.
+                        </p>
+                        <p>
+                          Well, mostly. At first, the subjects turn primal.
+                          Violent, lusty, or terrified. But later, the titular
+                          character shows signs of an ego, formulating long term
+                          plans and deferring gratification. I’m not sure we’re
+                          meant to notice this behavior.
+                        </p>
+                        <p>
+                          Anyway. After dosing his cat, and a few of his
+                          patients, Marlowe begins experimenting on himself.
+                          This brings forth the contemptible Mr. Blake.
+                          Marlowe’s transformation is physical as well as
+                          mental. The more corrupt and immoral Blake becomes,
+                          the more hideous Blake’s visage. It’s not clear how
+                          this relates to Freud’s theories.
+                        </p>
+                        <p>
+                          In time, Marlowe’s friend and solicitor Mr. Utterson,
+                          played by Peter Cushing, comes to believe Blake is
+                          blackmailing Marlowe. Seeking to aid his friend,
+                          Utterson investigates Blake, and begins to suspect the
+                          unthinkable truth.
+                        </p>
+                        <p>
+                          <em>I, Monster</em> disappoints given its two leads.
+                          Lee is magnetic during his transformation scenes, and
+                          repulsive yet captivating as Blake. Cushing’s
+                          character is little more than a plot device, but he’s
+                          still fun to watch. A Jekyll and Hyde story featuring
+                          these two shouldn’t be so forgettable.
+                        </p>
+                        <p>
+                          Where the film shines is in its art direction.
+                          Marlowe’s laboratory has a cluttered, lived-in feel
+                          that lends atmosphere while avoiding the usual mad
+                          scientist tropes. His club sees cultured, well-dressed
+                          gentlemen sipping whiskey in overstuffed chairs while
+                          discussing professional and philosophical issues. I
+                          could almost smell the leather and tobacco.
+                        </p>
+                        <p>
+                          Yet, the film doesn’t work. Even at a scant 75
+                          minutes, <em>I, Monster</em> is too long. There’s just
+                          not enough story to sustain a feature length film.
+                          Having Marlowe inject the serum instead of gulping a
+                          potion is a nice touch, but the script doesn’t run
+                          with the addiction metaphor.
+                        </p>
+                        <p>
+                          Instead, we see characters walking down hallways,
+                          walking across rooms, and going up and down stairs.
+                          Lots of extraneous shots that add nothing, but seem
+                          necessary to pad the running time. Perhaps these bits
+                          were part of the abandoned attempt to utilize the
+                          Pulfrich effect for 3-D.
+                        </p>
+                        <p>
+                          Regardless, one could drop fifteen minutes and have a
+                          solid film, but then it wouldn’t be a feature. The
+                          studio, Amicus, is best known for their horror
+                          anthologies. Films like
+                          <em>Dr. Terror’s House of Horrors</em>,<em
+                            >Torture Garden</em
+                          >,
+                          <a href="/reviews/the-house-that-dripped-blood-1971/"
+                            ><em>The House That Dripped Blood</em></a
+                          >, <em>Tales from the Crypt</em>,
+                          <a href="/reviews/asylum-1972/"><em>Asylum</em></a
+                          >, <em>Vault of Horror</em> and
+                          <em>From Beyond the Grave</em>. Perhaps they would
+                          have done better by shortening <em>I, Monster</em> and
+                          using it in one of them instead.
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Horror</span>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a href="/reviews/asylum-1972/" class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fasylum-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fasylum-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fasylum-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fasylum-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fasylum-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from Asylum (1972)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/asylum-1972/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fasylum-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fasylum-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fasylum-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fasylum-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fasylum-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from Asylum (1972)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/asylum-1972/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >Asylum<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1972</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/2-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/2-stars.svg"
                           alt="D+: 2 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          <em>Asylum</em> is another anthology horror from
+                          Amicus Productions. As with
+                          <a href="/reviews/the-house-that-dripped-blood-1971/"
+                            ><em>The House That Dripped Blood (1971)</em></a
+                          >, the script comes courtesy of Robert Bloch.
+                          <a
+                            class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                            href="/reviews/asylum-1972/"
+                            >Continue reading...</a
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Horror</span>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a
+                      href="/reviews/and-now-the-screaming-starts-1973/"
+                      class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fand-now-the-screaming-starts-1973.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fand-now-the-screaming-starts-1973.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fand-now-the-screaming-starts-1973.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fand-now-the-screaming-starts-1973.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fand-now-the-screaming-starts-1973.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from And Now the Screaming Starts! (1973)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/and-now-the-screaming-starts-1973/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fand-now-the-screaming-starts-1973.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fand-now-the-screaming-starts-1973.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fand-now-the-screaming-starts-1973.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fand-now-the-screaming-starts-1973.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fand-now-the-screaming-starts-1973.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from And Now the Screaming Starts! (1973)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/and-now-the-screaming-starts-1973/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >And Now the Screaming Starts!<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1973</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/2-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/2-stars.svg"
                           alt="D+: 2 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>The severed hand is surprisingly effective.</p>
+                        <p>
+                          Gory details aside, the story feels familiar.
+                          Attractive young Catherine marries handsome young
+                          English nobleman Charles. They move into his ancestral
+                          manor. Strange things happen. Bumps in the night.
+                          Catherine sees visions of a man with a severed hand
+                          and empty, bleeding eye sockets. An unseen apparition
+                          rapes her in their marriage bed…
+                        </p>
+                        <p>
+                          And don’t forget the severed hand. It’s always lurking
+                          about.
+                        </p>
+                        <p>
+                          Catherine begins to suspect Charles is keeping
+                          something from her. She digs for the truth, but every
+                          time she gets close, someone ends up dead.
+                        </p>
+                        <p>
+                          Soon, Catherine is pregnant. Charles, worried for her
+                          sanity, calls in Dr. Pope, played by Peter Cushing.
+                          Pope is like a non-believing Van Helsing in an
+                          atrocious wig. Though he’s window dressing tangential
+                          to plot, Peter Cushing’s always welcome.
+                        </p>
+                        <p>
+                          But the script mishandles the mystery. Rather than
+                          dole out clues, it reveals everything in a single
+                          flashback before the film’s finale. This approach only
+                          works if the script leads the audience to a wrong
+                          conclusion before shocking them straight.
+                        </p>
+                        <p>
+                          But we guess the big twist long before the script gets
+                          around to revealing it. Then we have to sit through
+                          the drawn out ending. The big reveal should be the
+                          climax, not precede it.
+                        </p>
+                        <p>
+                          And that’s the film’s biggest problem. It overstays
+                          its welcome. Even at 91 minutes, it’s too long.
+                          Granted, the rain during the finale is a nice touch,
+                          but, then again, everything in the film looks great.
+                          It’s the execution that’s lacking.
+                          <em>And Now the Screaming Starts</em> has all the
+                          ingredients for solid gothic thriller. It just screws
+                          up the recipe.
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Horror</span>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a
+                      href="/reviews/star-wars-episode-iv-a-new-hope-1977/"
+                      class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fstar-wars-episode-iv-a-new-hope-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fstar-wars-episode-iv-a-new-hope-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fstar-wars-episode-iv-a-new-hope-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fstar-wars-episode-iv-a-new-hope-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fstar-wars-episode-iv-a-new-hope-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from Star Wars: Episode IV - A New Hope (1977)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/star-wars-episode-iv-a-new-hope-1977/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fstar-wars-episode-iv-a-new-hope-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fstar-wars-episode-iv-a-new-hope-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fstar-wars-episode-iv-a-new-hope-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fstar-wars-episode-iv-a-new-hope-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fstar-wars-episode-iv-a-new-hope-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from Star Wars: Episode IV - A New Hope (1977)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/star-wars-episode-iv-a-new-hope-1977/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >Star Wars: Episode IV - A New Hope<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1977</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/3-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/3-stars.svg"
                           alt="C: 3 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          First time seeing the “Special Edition” since its
+                          theatrical run in 1997. Once was enough.
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Action</span
                         ><span>
                           |
@@ -709,134 +864,212 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="col-[1_/_-1] block px-gutter py-4 text-right shadow-bottom shadow-border tablet:absolute tablet:right-0 tablet:top-0 tablet:shadow-none desktop:right-[var(--gutter-width)]"
-                  >
-                    <a class="text-accent" href="/cast-and-crew/peter-cushing"
-                      >All<!-- -->
-                      <span class="inline tablet:hidden desktop:inline"
-                        >Peter Cushing</span
-                      >
-                      <!-- -->→</a
-                    >
-                  </li>
                 </ul>
-              </nav>
-              <nav
-                class="relative flex w-full flex-col items-center tablet:w-auto"
+              </div>
+            </nav>
+            <nav data-pagefind-ignore="true">
+              <div
+                class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
               >
-                <div
-                  class="w-full px-gutter py-2 shadow-bottom tablet:py-4 tablet:shadow-none desktop:px-pageMargin desktop:py-4"
+                <h2
+                  class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
                 >
-                  <span class="font-semibold text-muted"
-                    >More with<!-- --> </span
-                  ><a class="text-accent" href="/cast-and-crew/christopher-lee"
+                  More with<!-- -->
+                  <a href="/cast-and-crew/christopher-lee" class="text-accent"
                     >Christopher Lee</a
                   >
-                </div>
+                </h2>
                 <ul
-                  class="w-full tablet:grid tablet:w-auto tablet:grid-cols-[repeat(2,minmax(100px,312px))] tablet:gap-8 tablet:px-gutter desktop:max-w-unset desktop:grid-cols-[repeat(4,1fr)] desktop:px-pageMargin desktop:pt-2"
+                  class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
                 >
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a href="/reviews/i-monster-1971/" class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from I, Monster (1971)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/i-monster-1971/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from I, Monster (1971)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/i-monster-1971/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >I, Monster<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1971</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/2-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/2-stars.svg"
                           alt="D+: 2 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          “He would be the most dangerous human being on earth.
+                          A monster.”
+                        </p>
+                        <p>
+                          That’s how a learned doctor describes the titular
+                          character in <em>I, Monster</em>. Unfortunately, the
+                          script, from Robert Louis Stevenson’s
+                          <em>Strange Case of Dr. Jekyll and Mr Hyde</em>,
+                          doesn’t live up to its own hype.
+                        </p>
+                        <p>
+                          Christopher Lee, sporting an unwieldy hairpiece, plays
+                          Marlowe, a psychiatrist in early 20th century England
+                          exploring Freud’s theories of the id, ego and
+                          super-ego. Marlowe invents a drug that removes the ego
+                          and super-ego, leaving only the primal id.
+                        </p>
+                        <p>
+                          Well, mostly. At first, the subjects turn primal.
+                          Violent, lusty, or terrified. But later, the titular
+                          character shows signs of an ego, formulating long term
+                          plans and deferring gratification. I’m not sure we’re
+                          meant to notice this behavior.
+                        </p>
+                        <p>
+                          Anyway. After dosing his cat, and a few of his
+                          patients, Marlowe begins experimenting on himself.
+                          This brings forth the contemptible Mr. Blake.
+                          Marlowe’s transformation is physical as well as
+                          mental. The more corrupt and immoral Blake becomes,
+                          the more hideous Blake’s visage. It’s not clear how
+                          this relates to Freud’s theories.
+                        </p>
+                        <p>
+                          In time, Marlowe’s friend and solicitor Mr. Utterson,
+                          played by Peter Cushing, comes to believe Blake is
+                          blackmailing Marlowe. Seeking to aid his friend,
+                          Utterson investigates Blake, and begins to suspect the
+                          unthinkable truth.
+                        </p>
+                        <p>
+                          <em>I, Monster</em> disappoints given its two leads.
+                          Lee is magnetic during his transformation scenes, and
+                          repulsive yet captivating as Blake. Cushing’s
+                          character is little more than a plot device, but he’s
+                          still fun to watch. A Jekyll and Hyde story featuring
+                          these two shouldn’t be so forgettable.
+                        </p>
+                        <p>
+                          Where the film shines is in its art direction.
+                          Marlowe’s laboratory has a cluttered, lived-in feel
+                          that lends atmosphere while avoiding the usual mad
+                          scientist tropes. His club sees cultured, well-dressed
+                          gentlemen sipping whiskey in overstuffed chairs while
+                          discussing professional and philosophical issues. I
+                          could almost smell the leather and tobacco.
+                        </p>
+                        <p>
+                          Yet, the film doesn’t work. Even at a scant 75
+                          minutes, <em>I, Monster</em> is too long. There’s just
+                          not enough story to sustain a feature length film.
+                          Having Marlowe inject the serum instead of gulping a
+                          potion is a nice touch, but the script doesn’t run
+                          with the addiction metaphor.
+                        </p>
+                        <p>
+                          Instead, we see characters walking down hallways,
+                          walking across rooms, and going up and down stairs.
+                          Lots of extraneous shots that add nothing, but seem
+                          necessary to pad the running time. Perhaps these bits
+                          were part of the abandoned attempt to utilize the
+                          Pulfrich effect for 3-D.
+                        </p>
+                        <p>
+                          Regardless, one could drop fifteen minutes and have a
+                          solid film, but then it wouldn’t be a feature. The
+                          studio, Amicus, is best known for their horror
+                          anthologies. Films like
+                          <em>Dr. Terror’s House of Horrors</em>,<em
+                            >Torture Garden</em
+                          >,
+                          <a href="/reviews/the-house-that-dripped-blood-1971/"
+                            ><em>The House That Dripped Blood</em></a
+                          >, <em>Tales from the Crypt</em>,
+                          <a href="/reviews/asylum-1972/"><em>Asylum</em></a
+                          >, <em>Vault of Horror</em> and
+                          <em>From Beyond the Grave</em>. Perhaps they would
+                          have done better by shortening <em>I, Monster</em> and
+                          using it in one of them instead.
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Horror</span>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a href="/reviews/hannie-caulder-1971/" class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fhannie-caulder-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fhannie-caulder-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fhannie-caulder-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fhannie-caulder-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fhannie-caulder-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from Hannie Caulder (1971)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/hannie-caulder-1971/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fhannie-caulder-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fhannie-caulder-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fhannie-caulder-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fhannie-caulder-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fhannie-caulder-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from Hannie Caulder (1971)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/hannie-caulder-1971/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >Hannie Caulder<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1971</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/4-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/4-stars.svg"
                           alt="B: 4 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          Raquel Welch plays the titular Hannie, a woman who
+                          recruits a bounty hunter to train her to exact revenge
+                          on the outlaws that murdered her husband then raped
+                          her.
+                          <a
+                            class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                            href="/reviews/hannie-caulder-1971/"
+                            >Continue reading...</a
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Crime</span
                         ><span>
                           |
@@ -848,106 +1081,262 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a
+                      href="/reviews/to-the-devil-a-daughter-1976/"
+                      class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fto-the-devil-a-daughter-1976.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fto-the-devil-a-daughter-1976.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fto-the-devil-a-daughter-1976.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fto-the-devil-a-daughter-1976.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fto-the-devil-a-daughter-1976.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from To the Devil a Daughter (1976)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/to-the-devil-a-daughter-1976/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fto-the-devil-a-daughter-1976.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fto-the-devil-a-daughter-1976.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fto-the-devil-a-daughter-1976.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fto-the-devil-a-daughter-1976.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fto-the-devil-a-daughter-1976.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from To the Devil a Daughter (1976)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/to-the-devil-a-daughter-1976/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >To the Devil a Daughter<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1976</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/2-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/2-stars.svg"
                           alt="D+: 2 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          <em>To the Devil a Daughter</em> was the final film of
+                          Hammer Film Productions. The studio rose to prominence
+                          with films such as
+                          <a href="/reviews/the-curse-of-frankenstein-1957/"
+                            ><em>The Curse of Frankenstein</em></a
+                          >
+                          and
+                          <a href="/reviews/horror-of-dracula-1958/"
+                            ><em>Horror of Dracula</em></a
+                          >. Unlike those staged, period pieces, this film is
+                          set in contemporary times and shot on location. It
+                          represented a big departure for Hammer, but it was too
+                          little too late.
+                        </p>
+                        <p>
+                          The story—ah, well, you’ll have to bear with me here.
+                          I’ve seen the movie twice and I’m still not sure about
+                          some of the details. According the featurette on
+                          Anchor Bay’s DVD, the filmmaker’s were writing the
+                          script as they went along. It shows in the final
+                          product.
+                        </p>
+                        <p>
+                          As near as I can tell, Father Michael, played by
+                          Christopher Lee, is a priest who commits the heresy of
+                          putting his faith in man over God. To that end—and
+                          here’s where things get fuzzy—he retreats to a
+                          compound in Bavaria where he forms his own Satanic
+                          religion which masquerades as Catholicism. One of his
+                          acolytes dies during childbirth and Father Michael
+                          baptizes the baby, a girl, in her dead mother’s blood.
+                          The girl, Catherine, grows up as a nun in Father
+                          Michael’s compound. On her eighteenth birthday she
+                          travels to London. There, Father Michael will baptize
+                          her in the blood of a demon creature birthed by
+                          another of Father Michael’s acolytes.
+                        </p>
+                        <p>
+                          But, fortunately for humanity, Catherine’s father,
+                          Henry, has a change of heart. Henry appeals to occult
+                          novelist John Verney, played by Richard Widmark.
+                          Verney intercepts Catherine at Heathrow airport.
+                          Verney had hoped to get a book out of Henry’s story,
+                          but soon realizes the stakes are much higher.
+                        </p>
+                        <p>
+                          Father Michael attempts to reclaim Catherine by
+                          possessing her. Verney tries to keep her safe. During
+                          the tug-of-war we’re presented with a couple of
+                          disturbing scenes.
+                        </p>
+                        <p>
+                          The first concerns the birth of the demon creature.
+                          Picture a staged, antiseptic facsimile of a young
+                          girl’s bedroom. On the bed, a woman prepares to give
+                          birth. Strips of white cloth bind her wrists to the
+                          headboard and clamp her knees and ankles shut, giving
+                          the baby no escape. Arms spread, knees clenched, she
+                          lays crucified. Her face glistens with sweat as her
+                          back arches and her body spasms from another
+                          contraction. Her belly swells. Beside her, Father
+                          Michael stands waiting, smiling with eager eyes.
+                        </p>
+                        <p>
+                          And later, we see one of Catherine’s visions/dreams.
+                          We’re looking through her eyes. She’s pregnant and
+                          laying on her back. We see her bulging womb. Her legs
+                          are open, knees up, in the traditional birthing
+                          position. Still through her eyes, we see something
+                          crawling up from between her legs. At first glimpse it
+                          seems to be a baby, but no, it’s a horrid combination
+                          of baby and beast with a monstrous jaw and reptilian
+                          eyes. Covered in blood, it writhes between her legs,
+                          smearing her thighs and stomach with gore. She reaches
+                          down and strokes the creature’s grotesque head. Now
+                          her midsection is awash in thick, almost syrupy, blood
+                          as she gently pushes the thing back down, between her
+                          legs. Still through her eyes, we hear her moan in a
+                          mixture of agony and ecstasy as she forces the
+                          monstrosity <em>back up into her womb</em>.
+                        </p>
+                        <p>
+                          The quality of the creature effects in this scene is
+                          laughable. And what’s worse the scene has little to do
+                          with the story. Instead, it feels like something
+                          tacked on as a reaction to
+                          <em>Rosemary’s Baby</em> and <em>The Exorcist</em>.
+                        </p>
+                        <p>
+                          And it’s when you compare this film to those, that one
+                          realizes how far Hammer had fallen.
+                        </p>
+                        <p>
+                          This was a studio that, nineteen years prior, had
+                          revived the horror genre by injecting a liberal dose
+                          of gore and sex into the monster movie. The resulting
+                          films were edgy and fresh.
+                        </p>
+                        <p>
+                          But time passed. Those kids who flocked theaters for
+                          Hammer’s earlier films now had kids of their own. To
+                          this new generation, Hammer’s period monster movies
+                          were passé. They were your <em>parent’s</em> horror
+                          movies. Even this wave of satanic themed films was on
+                          it’s nadir. Two years later
+                          <a href="/reviews/halloween-1978/"
+                            ><em>Halloween</em></a
+                          >
+                          would usher in the slasher genre that would dominate
+                          horror for the next decade.
+                        </p>
+                        <p>
+                          By the time Hammer woke up and tried to tap into the
+                          mainstream horror pulse, it lacked the resources to
+                          pull off a competent film. Christopher Lee does his
+                          best, but Richard Widmark looks tired and annoyed.
+                          He’s just cashing a paycheck.
+                        </p>
+                        <p>
+                          The worst part is the ending. Remember how I said they
+                          were writing the script as they went along? As it
+                          turns out, they ran out of money by the time they got
+                          to the end. After an hour and a half of buildup,
+                          Verney and Father Michael square off in a mausoleum.
+                          Father Michael stands in a large circle made of blood.
+                        </p>
+                        <p>
+                          Says Verney, “You really think this circle will
+                          protect you, don’t you? It won’t.”
+                        </p>
+                        <p>
+                          “But it will,” says Father Michael. “Because this
+                          circle stands upon a hill of flint, and flint is the
+                          sacred stone of Astaroth.”
+                        </p>
+                        <p>
+                          Verney holds up a rock he literally just picked up
+                          five minutes earlier and used to club one of Father
+                          Michael’s henchman. “But this sacred stone of Astaroth
+                          has the blood of your disciple on it. Now, the demons
+                          will protect me.”
+                        </p>
+                        <p>
+                          Verney steps into the circle and throws the rock at
+                          Father Michael, hitting him on the head. Father
+                          Michael falls to the ground and disappears. Movie
+                          over. That’s the ending. A mumbo-jumbo bit of
+                          rock-paper-scissors involving flint and the blood of a
+                          disciple. Two bits of information
+                          <em>never mentioned in the film before</em>.
+                        </p>
+                        <p>
+                          If this was the best Hammer could do, then the
+                          studio’s death was a mercy killing.
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Horror</span>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a
+                      href="/reviews/howling-ii-your-sister-is-a-werewolf-1985/"
+                      class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from Howling II: ... Your Sister Is a Werewolf (1985)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/howling-ii-your-sister-is-a-werewolf-1985/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from Howling II: ... Your Sister Is a Werewolf (1985)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/howling-ii-your-sister-is-a-werewolf-1985/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >Howling II: ... Your Sister Is a Werewolf<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1985</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/1-star-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/1-star.svg"
                           alt="F: 1 star (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          Christopher Lee plays an “occult investigator” hunting
+                          a ten-thousand-year-old werewolf queen to prevent a
+                          werewolf apocalypse.
+                          <a
+                            class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                            href="/reviews/howling-ii-your-sister-is-a-werewolf-1985/"
+                            >Continue reading...</a
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Horror</span
                         ><span>
                           |
@@ -956,79 +1345,75 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="col-[1_/_-1] block px-gutter py-4 text-right shadow-bottom shadow-border tablet:absolute tablet:right-0 tablet:top-0 tablet:shadow-none desktop:right-[var(--gutter-width)]"
-                  >
-                    <a class="text-accent" href="/cast-and-crew/christopher-lee"
-                      >All<!-- -->
-                      <span class="inline tablet:hidden desktop:inline"
-                        >Christopher Lee</span
-                      >
-                      <!-- -->→</a
-                    >
-                  </li>
                 </ul>
-              </nav>
-              <nav
-                class="relative flex w-full flex-col items-center tablet:w-auto"
+              </div>
+            </nav>
+            <nav data-pagefind-ignore="true">
+              <div
+                class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
               >
-                <div
-                  class="w-full px-gutter py-2 shadow-bottom tablet:py-4 tablet:shadow-none desktop:px-pageMargin desktop:py-4"
+                <h2
+                  class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
                 >
-                  <span class="font-semibold text-muted">More<!-- --> </span
-                  ><a class="text-accent" href="/reviews/">Reviews</a>
-                </div>
+                  More<!-- -->
+                  <a href="/reviews/" class="text-accent">Reviews</a>
+                </h2>
                 <ul
-                  class="w-full tablet:grid tablet:w-auto tablet:grid-cols-[repeat(2,minmax(100px,312px))] tablet:gap-8 tablet:px-gutter desktop:max-w-unset desktop:grid-cols-[repeat(4,1fr)] desktop:px-pageMargin desktop:pt-2"
+                  class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
                 >
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a href="/reviews/the-hoodlum-saint-1946/" class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fthe-hoodlum-saint-1946.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-hoodlum-saint-1946.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-hoodlum-saint-1946.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-hoodlum-saint-1946.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fthe-hoodlum-saint-1946.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from The Hoodlum Saint (1946)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/the-hoodlum-saint-1946/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fthe-hoodlum-saint-1946.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-hoodlum-saint-1946.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-hoodlum-saint-1946.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-hoodlum-saint-1946.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fthe-hoodlum-saint-1946.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from The Hoodlum Saint (1946)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/the-hoodlum-saint-1946/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >The Hoodlum Saint<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1946</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/2-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/2-stars.svg"
                           alt="D: 2 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          William Powell plays a newspaper man returned home
+                          from World War I to find himself unemployed and broke.
+                          He finagles a job as a corporate executive, amasses a
+                          fortune, loses it in the crash of ‘29, and finds
+                          religion.
+                          <a
+                            class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                            href="/reviews/the-hoodlum-saint-1946/"
+                            >Continue reading...</a
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Drama</span
                         ><span>
                           |
@@ -1037,106 +1422,115 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a href="/reviews/hoppy-serves-a-writ-1943/" class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fhoppy-serves-a-writ-1943.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fhoppy-serves-a-writ-1943.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fhoppy-serves-a-writ-1943.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fhoppy-serves-a-writ-1943.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fhoppy-serves-a-writ-1943.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from Hoppy Serves a Writ (1943)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/hoppy-serves-a-writ-1943/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fhoppy-serves-a-writ-1943.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fhoppy-serves-a-writ-1943.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fhoppy-serves-a-writ-1943.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fhoppy-serves-a-writ-1943.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fhoppy-serves-a-writ-1943.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from Hoppy Serves a Writ (1943)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/hoppy-serves-a-writ-1943/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >Hoppy Serves a Writ<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1943</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/2-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/2-stars.svg"
                           alt="D: 2 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          <strong>Robert Mitchum’s inauspicious debut.</strong>
+                          He plays a grunt in an outlaw gang that’s fled into
+                          Oklahoma, where Texas sheriff Hopalong “Hoppy”
+                          Cassidy, played by William Boyd, lacks jurisdiction.
+                          Mitchum’s part amounts to a single forgettable line.
+                          <a
+                            class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                            href="/reviews/hoppy-serves-a-writ-1943/"
+                            >Continue reading...</a
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Western</span>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a href="/reviews/horror-of-dracula-1958/" class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from Horror of Dracula (1958)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/horror-of-dracula-1958/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from Horror of Dracula (1958)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/horror-of-dracula-1958/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >Horror of Dracula<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1958</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/4-half-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/4-half-stars.svg"
                           alt="A-: 4.5 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          Howard Hawks’s recipe for a good movie comprised
+                          “three great scenes and no bad ones.” Hammer’s first
+                          entry in its <em>Dracula</em> franchise gives us
+                          exactly that.
+                          <a
+                            class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                            href="/reviews/horror-of-dracula-1958/"
+                            >Continue reading...</a
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Drama</span
                         ><span>
                           |
@@ -1145,54 +1539,59 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a
+                      href="/reviews/the-house-that-dripped-blood-1971/"
+                      class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fthe-house-that-dripped-blood-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-house-that-dripped-blood-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-house-that-dripped-blood-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-house-that-dripped-blood-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fthe-house-that-dripped-blood-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from The House That Dripped Blood (1971)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/the-house-that-dripped-blood-1971/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fthe-house-that-dripped-blood-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-house-that-dripped-blood-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-house-that-dripped-blood-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-house-that-dripped-blood-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fthe-house-that-dripped-blood-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from The House That Dripped Blood (1971)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/the-house-that-dripped-blood-1971/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >The House That Dripped Blood<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1971</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/3-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/3-stars.svg"
                           alt="C+: 3 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          Reviewing anthology movies is hard. I picture you,
+                          dear reader, trudging through endless paragraphs of
+                          plot synopsis and I feel guilty. I have let you down.
+                          <a
+                            class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                            href="/reviews/the-house-that-dripped-blood-1971/"
+                            >Continue reading...</a
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Drama</span
                         ><span>
                           |
@@ -1210,76 +1609,110 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="col-[1_/_-1] block px-gutter py-4 text-right shadow-bottom shadow-border tablet:absolute tablet:right-0 tablet:top-0 tablet:shadow-none desktop:right-[var(--gutter-width)]"
-                  >
-                    <a class="text-accent" href="/reviews/"
-                      >All<!-- -->
-                      <span class="inline tablet:hidden desktop:inline"
-                        >Reviews</span
-                      >
-                      <!-- -->→</a
-                    >
-                  </li>
                 </ul>
-              </nav>
-            </div>
-            <div class="spacer-y-32 tablet:spacer-y-0"></div>
-            <script type="application/ld+json">
-              {
-                "@context": "http://schema.org",
-                "@type": "Review",
-                "itemReviewed": {
-                  "@type": "Movie",
-                  "name": "Horror Express",
-                  "sameAs": "http://www.imdb.com/title/tt0068713/",
-                  "image": "/_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1200&h=675&q=80&f=jpeg",
-                  "dateCreated": "1972",
-                  "director": { "@type": "Person", "name": "Eugenio Martín" }
-                },
-                "reviewRating": { "@type": "Rating", "ratingValue": 2 },
-                "author": { "@type": "Person", "name": "Frank Showalter" }
-              }
-            </script>
-          </main>
-        </div>
+              </div>
+            </nav>
+          </div>
+          <script type="application/ld+json">
+            {
+              "@context": "http://schema.org",
+              "@type": "Review",
+              "itemReviewed": {
+                "@type": "Movie",
+                "name": "Horror Express",
+                "sameAs": "http://www.imdb.com/title/tt0068713/",
+                "image": "/_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1200&h=675&q=80&f=jpeg",
+                "dateCreated": "1972",
+                "director": { "@type": "Person", "name": "Eugenio Martín" }
+              },
+              "reviewRating": { "@type": "Rating", "ratingValue": 2 },
+              "author": { "@type": "Person", "name": "Frank Showalter" }
+            }
+          </script>
+        </main>
         <footer
-          class="flex flex-col items-center gap-y-6 bg-[url(&#x27;/assets/ripnotcomingsoon.avif&#x27;)] px-pageMargin py-8 text-inverse"
+          class="flex flex-wrap items-start justify-between gap-[10%] bg-[#252525] px-container-base py-20 text-inverse tablet:px-12 tablet:pt-10 desktop:p-20"
         >
-          <ul
-            class="flex w-full flex-wrap justify-center gap-x-4 gap-y-2 text-inverse tablet:gap-x-6 max:w-auto"
+          <div class="flex flex-col">
+            <div class="flex flex-col">
+              <div
+                class="whitespace-nowrap font-normal leading-8"
+                style="font-size: 1.5625rem"
+              >
+                <a href="/">Frank&#x27;s Movie Log</a>
+              </div>
+              <p class="w-full pl-px text-sm italic leading-4 opacity-85">
+                My life at the movies.
+              </p>
+            </div>
+            <div class="spacer-y-12"></div>
+          </div>
+          <div
+            class="flex flex-col gap-20 pb-20 pt-10 tablet:basis-1/2 tablet:pt-20"
           >
-            <li class="block whitespace-nowrap tracking-0.5px">
-              <a class="text-inverse" href="/">Home</a>
-            </li>
-            <li class="block whitespace-nowrap tracking-0.5px">
-              <a class="text-inherit" href="/how-i-grade/">How I Grade</a>
-            </li>
-            <li class="block whitespace-nowrap tracking-0.5px">
-              <a class="text-inherit" href="/reviews/">Reviews</a>
-            </li>
-            <li class="block whitespace-nowrap tracking-0.5px">
-              <a class="text-inherit" href="/viewings/">Viewing Log</a>
-            </li>
-            <li class="block whitespace-nowrap tracking-0.5px">
-              <a class="text-inherit" href="/cast-and-crew/">Cast &amp; Crew</a>
-            </li>
-            <li class="block whitespace-nowrap tracking-0.5px">
-              <a class="text-inherit" href="/collections/">Collections</a>
-            </li>
-            <li class="block whitespace-nowrap tracking-0.5px">
-              <a class="text-inherit" href="/watchlist/">Watchlist</a>
-            </li>
-          </ul>
-          <p class="text-sm font-light leading-4">
-            All stills used in accordance with the<!-- -->
+            <ul class="flex w-full flex-col gap-y-10 text-inverse max:w-auto">
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/">Home</a>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/how-i-grade/">How I Grade</a>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/reviews/">Reviews</a>
+                <ol class="mt-4">
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/reviews/underseen/">Underseen Gems</a>
+                  </li>
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/reviews/overrated/">Overrated Disappointments</a>
+                  </li>
+                </ol>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/viewings/">Viewing Log</a>
+                <ol class="mt-4">
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/viewings/stats/">Stats</a>
+                  </li>
+                </ol>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/cast-and-crew/">Cast &amp; Crew</a>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/collections/">Collections</a>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/watchlist/">Watchlist</a>
+                <ol class="mt-4">
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/watchlist/progress/">Progress</a>
+                  </li>
+                </ol>
+              </li>
+            </ul>
             <a
-              href="http://www.copyright.gov/title17/92chap1.html#107"
-              class="text-inherit"
-              >Fair Use Law.</a
+              href="#top"
+              class="mb-8 w-full max-w-[320px] bg-canvas px-pageMargin py-5 text-center font-sans-narrow text-sm uppercase tracking-[.6px] text-default hover:bg-inverse hover:text-inverse"
+              >To the top</a
             >
-          </p>
-          <a href="#top" class="sr-only">To the top ↑</a>
+            <p class="w-full font-light leading-4 text-subtle">
+              All stills used in accordance with the<!-- -->
+              <a
+                href="http://www.copyright.gov/title17/92chap1.html#107"
+                class="text-inherit"
+                >Fair Use Law.</a
+              >
+            </p>
+          </div>
         </footer>
       </div>
     </div>
@@ -1305,14 +1738,11 @@
     <script>
       (() => {
         const openBtn = document.querySelector("button[data-open-modal]");
-        const shortcut = openBtn?.querySelector("kbd");
-        if (!openBtn || !(shortcut instanceof HTMLElement)) return;
-        const platformKey = shortcut.querySelector("kbd");
-        if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
-          platformKey.textContent = "⌘";
+        if (!openBtn) return;
+        if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
           openBtn.setAttribute("aria-keyshortcuts", "Meta+K");
+          openBtn.setAttribute("title", `Search: ⌘K`);
         }
-        shortcut.style.display = "";
       })();
     </script>
   </body>

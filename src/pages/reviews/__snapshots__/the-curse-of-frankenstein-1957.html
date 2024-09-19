@@ -34,150 +34,189 @@
         class="absolute left-1/2 top-0.5 z-50 mx-auto bg-subtle px-6 py-2 text-center text-accent [transform:translate(-50%,calc(-100%_-_2px))] focus:[transform:translate(-50%,0%)]"
         >Skip to content</a
       >
-      <div
-        class="image-filter mx-auto min-h-4 w-full max-w-canvas bg-[url(&#x27;/assets/ripnotcomingsoon.avif&#x27;)] desktop:sticky desktop:top-0 desktop:z-40"
-      ></div>
-      <div class="mx-auto flex min-h-full max-w-canvas flex-col bg-default">
+      <div class="flex min-h-full w-full flex-col bg-default">
         <header
-          class="flex flex-col items-center gap-6 bg-default px-pageMargin py-6 text-center shadow-bottom desktop:sticky desktop:top-4 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:justify-between desktop:py-5 desktop:text-left max:justify-center max:py-8"
+          class="z-20 flex w-full items-center justify-between px-container-base py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
+          style="color: var(--fg-default); position: static"
         >
-          <div
-            class="items-inherit justify-items-inherit flex flex-col max:absolute max:left-[var(--page-margin-width)]"
-          >
-            <h1
+          <div class="flex flex-col">
+            <div
               class="whitespace-nowrap font-normal leading-8"
               style="font-size: 1.5625rem"
             >
-              <a class="text-default" href="/">Frank&#x27;s Movie Log</a>
-            </h1>
-            <p class="w-full text-sm italic leading-4 text-muted desktop:pl-px">
+              <a href="/">Frank&#x27;s Movie Log</a>
+            </div>
+            <p class="w-full pl-px text-sm italic leading-4 opacity-85">
               My life at the movies.
             </p>
           </div>
-          <div
-            class="w-full max-w-prose desktop:order-4 desktop:w-auto max:absolute max:right-[var(--page-margin-width)]"
-          >
-            <button
-              data-open-modal="true"
-              disabled=""
-              aria-label="Search"
-              aria-keyshortcuts="Control+K"
-              class="safari-border-radius-fix desktop::w-auto desktop::ring-0 flex w-full items-center overflow-hidden rounded-md text-sm leading-6 text-subtle ring-1 ring-border hover:ring-accent"
-            >
-              <kbd
-                class="ml-auto mt-px hidden min-h-6 flex-none items-center bg-subtle pl-3 pr-4 font-mono text-sm font-light opacity-70 desktop:flex"
-                ><kbd class="text-md leading-5">Ctrl</kbd
-                ><kbd class="text-sm">K</kbd></kbd
-              ><svg
-                class="mr-2 size-10 flex-none border-0 border-r border-default bg-subtle fill-subtle px-3 py-1 desktop:w-4 desktop:border-r-0 desktop:bg-unset desktop:px-0"
-                viewBox="0 0 16 16"
+          <div class="flex items-center">
+            <nav class="hidden w-full desktop:block desktop:w-auto">
+              <ul class="flex flex-wrap justify-start gap-x-6 text-xl">
+                <li class="block whitespace-nowrap tracking-0.5px">
+                  <a class="text-inherit" href="/">Home</a>
+                </li>
+                <li class="block whitespace-nowrap tracking-0.5px">
+                  <a class="text-inherit" href="/how-i-grade/">How I Grade</a>
+                </li>
+                <li class="block whitespace-nowrap tracking-0.5px">
+                  <a class="text-inherit" href="/reviews/">Reviews</a>
+                </li>
+                <li class="block whitespace-nowrap tracking-0.5px">
+                  <a class="text-inherit" href="/viewings/">Viewing Log</a>
+                </li>
+                <li class="block whitespace-nowrap tracking-0.5px">
+                  <a class="text-inherit" href="/cast-and-crew/"
+                    >Cast &amp; Crew</a
+                  >
+                </li>
+                <li class="block whitespace-nowrap tracking-0.5px">
+                  <a class="text-inherit" href="/collections/">Collections</a>
+                </li>
+                <li class="block whitespace-nowrap tracking-0.5px">
+                  <a class="text-inherit" href="/watchlist/">Watchlist</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="z-[1000]">
+              <button
+                data-open-modal="true"
+                disabled=""
+                aria-label="Search"
+                aria-keyshortcuts="Control+K"
+                class="flex items-center justify-between overflow-hidden text-sm leading-6 ring-default desktop:ml-6"
+                type="button"
+                title="Search: Control+K"
               >
-                <path
-                  fill-rule="evenodd"
-                  d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z"
-                ></path>
-                <path
-                  fill-rule="evenodd"
-                  d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"
-                ></path></svg
-              ><span
-                class="flex items-baseline whitespace-nowrap p-2 text-base opacity-70 desktop:hidden"
-                >Quick search...</span
-              >
-            </button>
-          </div>
-          <nav class="w-full desktop:w-auto">
-            <ul
-              class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-accent tablet:gap-x-6 desktop:justify-start"
-            >
-              <li class="block whitespace-nowrap tracking-0.5px">
-                <a class="text-muted" href="/">Home</a>
-              </li>
-              <li class="block whitespace-nowrap tracking-0.5px">
-                <a class="text-inherit" href="/how-i-grade/">How I Grade</a>
-              </li>
-              <li class="block whitespace-nowrap tracking-0.5px">
-                <a class="text-inherit" href="/reviews/">Reviews</a>
-              </li>
-              <li class="block whitespace-nowrap tracking-0.5px">
-                <a class="text-inherit" href="/viewings/">Viewing Log</a>
-              </li>
-              <li class="block whitespace-nowrap tracking-0.5px">
-                <a class="text-inherit" href="/cast-and-crew/"
-                  >Cast &amp; Crew</a
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6 desktop:size-7"
                 >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <input type="checkbox" id="mobile-nav" class="hidden" /><label
+              for="mobile-nav"
+              class="hamburger-icon desktop:hidden"
+              ><span
+                style="background: var(--fg-default)"
+                class="hamburger-icon-bars"
+              ></span
+            ></label>
+            <ul
+              class="hamburger-menu flex flex-col items-start gap-y-5 text-left text-inverse desktop:hidden"
+            >
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/">Home</a>
               </li>
-              <li class="block whitespace-nowrap tracking-0.5px">
-                <a class="text-inherit" href="/collections/">Collections</a>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/how-i-grade/">How I Grade</a>
               </li>
-              <li class="block whitespace-nowrap tracking-0.5px">
-                <a class="text-inherit" href="/watchlist/">Watchlist</a>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/reviews/">Reviews</a>
+                <ol class="mt-4">
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/reviews/underseen/">Underseen Gems</a>
+                  </li>
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/reviews/overrated/">Overrated Disappointments</a>
+                  </li>
+                </ol>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/viewings/">Viewing Log</a>
+                <ol class="mt-4">
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/viewings/stats/">Stats</a>
+                  </li>
+                </ol>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/cast-and-crew/">Cast &amp; Crew</a>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/collections/">Collections</a>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/watchlist/">Watchlist</a>
+                <ol class="mt-4">
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/watchlist/progress/">Progress</a>
+                  </li>
+                </ol>
               </li>
             </ul>
-          </nav>
+          </div>
         </header>
-        <div class="grow" id="content">
-          <main
-            id="top"
-            data-pagefind-body="true"
-            class="flex scroll-mt-[var(--header-offset)] flex-col items-center"
+        <main class="grow flex flex-col" id="content" data-pagefind-body="true">
+          <header
+            class="mb-12 flex flex-col items-center px-container-base pt-10"
           >
-            <header
-              class="flex flex-col gap-y-4 px-pageMargin py-6 text-center desktop:py-8"
+            <h1 data-pagefind-meta="title" class="text-4xl desktop:text-7xl">
+              The Curse of Frankenstein
+            </h1>
+            <div class="mb-4 text-muted"></div>
+            <picture
+              ><source
+                srcset="/svg/5-stars-dark.svg"
+                media="(prefers-color-scheme: dark)" />
+              <img
+                src="/svg/5-stars.svg"
+                alt="A: 5 stars (out of 5)"
+                height="24"
+                width="120"
+                class="mb-6"
+            /></picture>
+            <div
+              class="font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle mb-12"
             >
-              <h1
-                data-pagefind-meta="title"
-                class="text-[2rem] font-normal leading-none desktop:text-[2.25rem]"
-              >
-                The Curse of Frankenstein
-              </h1>
-              <div class="text-muted">
-                1957<!-- -->
-                <span>|</span>
-                <!-- -->United Kingdom<!-- -->
-                <span>|</span>
-                <!-- -->82<!-- --> min<!-- -->
-                <span><span>|</span> <a href="#credits">More...</a></span>
-              </div>
-            </header>
+              1957<!-- -->
+              <span>|</span>
+              <!-- -->United Kingdom<!-- -->
+              <span>|</span>
+              <!-- -->82<!-- --> min<!-- -->
+              <span><span>|</span> <a href="#credits">More...</a></span>
+            </div>
             <img
               srcset="
-                /_image?/content%2Fassets%2Fstills%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=240&amp;q=80&amp;f=avif   240w,
-                /_image?/content%2Fassets%2Fstills%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=480&amp;q=80&amp;f=avif   480w,
-                /_image?/content%2Fassets%2Fstills%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=960&amp;q=80&amp;f=avif   960w,
-                /_image?/content%2Fassets%2Fstills%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=1920&amp;q=80&amp;f=avif 1920w
+                /_image?/content%2Fassets%2Fstills%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=384&amp;q=80&amp;f=avif             384w,
+                /_image?/content%2Fassets%2Fstills%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=768&amp;q=80&amp;f=avif             768w,
+                /_image?/content%2Fassets%2Fstills%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=1536&amp;q=80&amp;f=avif           1536w,
+                /_image?/content%2Fassets%2Fstills%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=1536&amp;h=864&amp;q=80&amp;f=avif 3072w
               "
-              src="/_image?/content%2Fassets%2Fstills%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=960&amp;h=540&amp;q=80&amp;f=avif"
+              src="/_image?/content%2Fassets%2Fstills%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=1536&amp;h=864&amp;q=80&amp;f=avif"
               alt="A still from The Curse of Frankenstein (1957)"
               loading="eager"
               decoding="sync"
-              width="960"
-              height="540"
+              width="1536"
+              height="864"
               sizes="(min-width: 960px) 960px, 100vw"
-              class="aspect-[1.77777778] mb-[5.33px]"
+              class="aspect-[1.77777778] mx-auto mb-[5.33px]"
             />
-            <div class="h-6 min-h-6 tablet:h-8 tablet:min-h-8"></div>
-            <div class="flex flex-col gap-y-8 items-center px-pageMargin">
-              <div class="flex flex-col items-center">
-                <picture
-                  ><source
-                    srcset="/svg/5-stars-dark.svg"
-                    media="(prefers-color-scheme: dark)" />
-                  <img
-                    src="/svg/5-stars.svg"
-                    alt="A: 5 stars (out of 5)"
-                    height="32"
-                    width="160"
-                /></picture>
-                <div
-                  class="flex flex-col items-center tracking-0.5px text-subtle"
-                >
-                  <span>on</span>
-                  <!-- -->Sat, Sep 19, 2020
-                </div>
-              </div>
+          </header>
+          <div
+            class="flex flex-col items-center gap-16 px-container-base pb-20 desktop:gap-20 desktop:pb-32"
+          >
+            <div>
               <div
-                class="rendered-markdown font-light text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose"
+                class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:float-left first-letter:mt-[6px] first-letter:pr-2 first-letter:font-sans-narrow-bold first-letter:text-[56px] first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px]"
               >
                 <p>
                   For Peter Cushing and Christopher Lee’s first film for Hammer,
@@ -244,23 +283,23 @@
                 </p>
               </div>
             </div>
-            <div class="spacer-y-20"></div>
             <div class="w-full max-w-popout">
               <h3
-                class="px-gutter text-md font-normal text-subtle shadow-bottom"
+                class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle shadow-bottom"
               >
                 Viewing History
-                <div class="h-2 min-h-2"></div>
               </h3>
               <ul>
-                <li class="flex flex-col px-gutter even:bg-subtle">
-                  <div class="flex gap-x-[1ch] py-4">
-                    <div class="h-5 w-4">
+                <li
+                  class="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle"
+                >
+                  <div class="flex items-center gap-x-[1ch] py-4">
+                    <div class="size-auto">
                       <svg
                         width="1em"
                         height="1em"
                         viewBox="0 0 16 16"
-                        class="fill-subtle mr-[1ch] min-h-4 min-w-4 mt-1 w-4"
+                        class="fill-subtle mr-[1ch] min-h-4 min-w-4 w-4"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <title>Watched on</title>
@@ -279,25 +318,31 @@
                       </svg>
                     </div>
                     <div class="grow">
-                      <span class="inline-block text-default"
+                      <span
+                        class="inline-block font-sans-narrow text-sm tracking-normal text-subtle"
                         >Sat, Oct 24, 2015</span
                       >
-                      <span class="font-light text-muted"
-                        ><span>via</span> <span>Blu-ray</span></span
+                      <span class="text-subtle"
+                        ><span>via</span>
+                        <span class="font-sans-narrow text-sm text-subtle"
+                          >Blu-ray</span
+                        ></span
                       >
                       <!-- -->
                     </div>
                   </div>
                   <div></div>
                 </li>
-                <li class="flex flex-col px-gutter even:bg-subtle">
-                  <div class="flex gap-x-[1ch] py-4">
-                    <div class="h-5 w-4">
+                <li
+                  class="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle"
+                >
+                  <div class="flex items-center gap-x-[1ch] py-4">
+                    <div class="size-auto">
                       <svg
                         width="1em"
                         height="1em"
                         viewBox="0 0 16 16"
-                        class="fill-subtle mr-[1ch] min-h-4 min-w-4 mt-1 w-4"
+                        class="fill-subtle mr-[1ch] min-h-4 min-w-4 w-4"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <title>Watched on</title>
@@ -316,15 +361,18 @@
                       </svg>
                     </div>
                     <div class="grow">
-                      <span class="inline-block text-default"
+                      <span
+                        class="inline-block font-sans-narrow text-sm tracking-normal text-subtle"
                         >Sat, Sep 19, 2020</span
                       >
-                      <span class="font-light text-muted"
-                        ><span>via</span> <span>Blu-ray</span></span
+                      <span class="text-subtle"
+                        ><span>via</span>
+                        <span class="font-sans-narrow text-sm text-subtle"
+                          >Blu-ray</span
+                        ></span
                       >
                       <span class="text-sm font-light leading-none text-subtle"
-                        >(<span
-                          class="rendered-markdown font-light text-sm leading-none"
+                        >(<span class="rendered-markdown text-sm leading-none"
                           ><span
                             >2012 | Lionsgate Films | Academy ratio</span
                           ></span
@@ -336,210 +384,180 @@
                 </li>
               </ul>
             </div>
-            <div class="spacer-y-32"></div>
             <aside
               id="credits"
-              class="relative scroll-mt-[var(--header-offset)] bg-subtle px-gutter pb-8 pt-8 tablet:pt-12 w-full max-w-popout"
+              class="bg-subtle px-container pb-8 pt-8 tablet:pt-12 w-full max-w-popout"
               data-pagefind-meta="image:/_image?/content%2Fassets%2Fposters%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
             >
-              <header
-                class="flex items-center justify-center gap-x-2 pb-6 text-center text-2.5xl"
-              >
-                The Curse of Frankenstein<!-- -->
-                <span class="text-sm font-light text-subtle"
-                  >(<!-- -->1957<!-- -->)</span
-                >
-              </header>
               <div
-                class="poster-border mx-auto mb-4 mt-0 block size-full max-w-poster bg-[#e9e7e0] tablet:float-left tablet:mx-0 tablet:mr-gutter"
+                class="flex flex-wrap justify-center gap-8 tablet:flex-nowrap"
               >
-                <img
-                  srcset="
-                    /_image?/content%2Fassets%2Fposters%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;q=80&amp;f=avif   62w,
-                    /_image?/content%2Fassets%2Fposters%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=124&amp;q=80&amp;f=avif 124w,
-                    /_image?/content%2Fassets%2Fposters%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;q=80&amp;f=avif 248w,
-                    /_image?/content%2Fassets%2Fposters%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=496&amp;q=80&amp;f=avif 496w
-                  "
-                  src="/_image?/content%2Fassets%2Fposters%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
-                  alt="A poster from The Curse of Frankenstein (1957)"
-                  width="248"
-                  height="372"
-                  sizes="(min-width: 248px) 248px, 100vw"
-                  data-pagefind-meta="image[src], image_alt[alt]"
-                  class="aspect-[0.66666667] h-auto rounded-xl"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <div class="shrink-0">
+                  <div class="block">
+                    <img
+                      srcset="
+                        /_image?/content%2Fassets%2Fposters%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;q=80&amp;f=avif   62w,
+                        /_image?/content%2Fassets%2Fposters%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=124&amp;q=80&amp;f=avif 124w,
+                        /_image?/content%2Fassets%2Fposters%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;q=80&amp;f=avif 248w,
+                        /_image?/content%2Fassets%2Fposters%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=496&amp;q=80&amp;f=avif 496w
+                      "
+                      src="/_image?/content%2Fassets%2Fposters%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
+                      alt="A poster from The Curse of Frankenstein (1957)"
+                      width="248"
+                      height="372"
+                      sizes="(min-width: 248px) 248px, 100vw"
+                      data-pagefind-meta="image[src], image_alt[alt]"
+                      class="aspect-[0.66666667] h-auto"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+                <dl class="flex min-w-0 shrink flex-col items-start gap-y-4">
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Title
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">
+                      The Curse of Frankenstein
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Year
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">1957</dd>
+                  </div>
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Financing
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">
+                      United Kingdom
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Running Time
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">82 min</dd>
+                  </div>
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Directed by
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">
+                      <div>Terence Fisher</div>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Written by
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">
+                      <div>Jimmy Sangster</div>
+                      <div>Mary Shelley</div>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Starring
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">
+                      Peter Cushing, Hazel Court, Robert Urquhart, and
+                      Christopher Lee
+                    </dd>
+                  </div>
+                </dl>
               </div>
-              <dl class="flex flex-col gap-y-4">
-                <div class="overflow-hidden">
-                  <dt class="font-bold text-subtle">Financing</dt>
-                  <dd class="text-subtle">United Kingdom</dd>
-                </div>
-                <div class="overflow-hidden">
-                  <dt class="font-bold text-subtle">Running Time</dt>
-                  <dd class="text-subtle">82 min</dd>
-                </div>
-                <div class="overflow-hidden">
-                  <dt class="font-bold text-subtle">Directed by</dt>
-                  <dd class="text-subtle"><div>Terence Fisher</div></dd>
-                </div>
-                <div class="overflow-hidden">
-                  <dt class="font-bold text-subtle">Written by</dt>
-                  <dd class="text-subtle">
-                    <div>Jimmy Sangster</div>
-                    <div>Mary Shelley</div>
-                  </dd>
-                </div>
-                <div class="overflow-hidden">
-                  <dt class="font-bold text-subtle">Starring</dt>
-                  <dd class="text-subtle">
-                    Peter Cushing, Hazel Court, Robert Urquhart, and Christopher
-                    Lee
-                  </dd>
-                </div>
-              </dl>
-              <div class="h-8 min-h-8"></div>
-              <ul class="flex flex-wrap gap-2">
-                <li class="block">
-                  <a
-                    href="/cast-and-crew/peter-cushing/"
-                    class="flex items-center whitespace-nowrap rounded-lg bg-inverse px-4 py-2 text-accent shadow-all hover:shadow-accent"
-                    ><img
-                      alt="More Peter Cushing reviews"
-                      srcset="
-                        /_image?/content%2Fassets%2Favatars%2Fpeter-cushing.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=40&amp;q=80&amp;f=avif 1x,
-                        /_image?/content%2Fassets%2Favatars%2Fpeter-cushing.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif 2x
-                      "
-                      src="/_image?/content%2Fassets%2Favatars%2Fpeter-cushing.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=40&amp;h=40&amp;q=80&amp;f=avif"
-                      width="40"
-                      height="40"
-                      loading="lazy"
-                      decoding="async"
-                      class="mr-[1ch] block size-10 rounded-[50%]"
-                    />Peter Cushing</a
-                  >
-                </li>
-                <li class="block">
-                  <a
-                    href="/cast-and-crew/christopher-lee/"
-                    class="flex items-center whitespace-nowrap rounded-lg bg-inverse px-4 py-2 text-accent shadow-all hover:shadow-accent"
-                    ><img
-                      alt="More Christopher Lee reviews"
-                      srcset="
-                        /_image?/content%2Fassets%2Favatars%2Fchristopher-lee.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=40&amp;q=80&amp;f=avif 1x,
-                        /_image?/content%2Fassets%2Favatars%2Fchristopher-lee.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif 2x
-                      "
-                      src="/_image?/content%2Fassets%2Favatars%2Fchristopher-lee.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=40&amp;h=40&amp;q=80&amp;f=avif"
-                      width="40"
-                      height="40"
-                      loading="lazy"
-                      decoding="async"
-                      class="mr-[1ch] block size-10 rounded-[50%]"
-                    />Christopher Lee</a
-                  >
-                </li>
-                <li class="block">
-                  <a
-                    href="/collections/hammer-films"
-                    class="flex items-center whitespace-nowrap rounded-lg bg-inverse px-4 py-2 text-accent shadow-all hover:shadow-accent"
-                    ><img
-                      alt="More Hammer Films reviews"
-                      srcset="
-                        /_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=40&amp;q=80&amp;f=avif 1x,
-                        /_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif 2x
-                      "
-                      src="/_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=40&amp;h=40&amp;q=80&amp;f=avif"
-                      width="40"
-                      height="40"
-                      loading="lazy"
-                      decoding="async"
-                      class="mr-[1ch] block size-10 rounded-[50%]"
-                    />Hammer Films</a
-                  >
-                </li>
-              </ul>
-              <div class="h-8 min-h-8"></div>
               <a
                 href="#top"
-                class="mx-auto flex max-w-[50%] cursor-pointer content-center items-center justify-center rounded-lg p-2 text-accent shadow-all hover:shadow-border-accent"
-                >Back to Top<svg
-                  viewBox="0 0 24 24"
-                  class="size-6 fill-default"
-                >
-                  <path
-                    d="M7.997 10l3.515-3.79a.672.672 0 0 1 .89-.076l.086.075L16 10 13 10.001V18h-2v-7.999L7.997 10z"
-                  ></path></svg
-              ></a>
-            </aside>
-            <div class="spacer-y-32"></div>
-            <div
-              data-pagefind-ignore="true"
-              class="flex w-full max-w-popout flex-col items-center gap-y-12 bg-default tablet:max-w-full tablet:bg-subtle tablet:pb-32 tablet:pt-8 desktop:gap-y-24"
-            >
-              <nav
-                class="relative flex w-full flex-col items-center tablet:w-auto"
+                class="mx-auto mt-8 flex w-full max-w-[430px] cursor-pointer content-center items-center justify-center py-5 font-sans-narrow text-sm uppercase tracking-[.6px] shadow-all hover:bg-inverse hover:text-inverse"
+                >Back to Top</a
               >
-                <div
-                  class="w-full px-gutter py-2 shadow-bottom tablet:py-4 tablet:shadow-none desktop:px-pageMargin desktop:py-4"
+            </aside>
+          </div>
+          <div
+            data-pagefind-ignore="true"
+            class="flex w-full flex-col items-center gap-y-12 bg-subtle pb-32 pt-16 tablet:pt-8 desktop:gap-y-24"
+          >
+            <nav data-pagefind-ignore="true">
+              <div
+                class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
+              >
+                <h2
+                  class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
                 >
-                  <span class="font-semibold text-muted"
-                    >More with<!-- --> </span
-                  ><a class="text-accent" href="/cast-and-crew/peter-cushing"
+                  More with<!-- -->
+                  <a href="/cast-and-crew/peter-cushing" class="text-accent"
                     >Peter Cushing</a
                   >
-                </div>
+                </h2>
                 <ul
-                  class="w-full tablet:grid tablet:w-auto tablet:grid-cols-[repeat(2,minmax(100px,312px))] tablet:gap-8 tablet:px-gutter desktop:max-w-unset desktop:grid-cols-[repeat(4,1fr)] desktop:px-pageMargin desktop:pt-2"
+                  class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
                 >
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a
+                      href="/reviews/the-man-in-the-iron-mask-1939/"
+                      class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fthe-man-in-the-iron-mask-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-man-in-the-iron-mask-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-man-in-the-iron-mask-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-man-in-the-iron-mask-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fthe-man-in-the-iron-mask-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from The Man in the Iron Mask (1939)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/the-man-in-the-iron-mask-1939/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fthe-man-in-the-iron-mask-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-man-in-the-iron-mask-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-man-in-the-iron-mask-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-man-in-the-iron-mask-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fthe-man-in-the-iron-mask-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from The Man in the Iron Mask (1939)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/the-man-in-the-iron-mask-1939/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >The Man in the Iron Mask<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1939</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/3-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/3-stars.svg"
                           alt="C: 3 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          <strong>Peter Cushing’s debut.</strong> Fitting it
+                          should come in a film directed by James Whale, who
+                          had—eight years prior—directed
+                          <a href="/reviews/frankenstein-1931/"
+                            ><em>Frankenstein</em></a
+                          >. This loose adaptation of Alexandre Dumas’s novel
+                          boasts a winning double-role from Louis Hayward. The
+                          lavish sets scream for Technicolor, but the optical
+                          effects involved in Hayward playing opposite himself
+                          may have prevented it. I’d have preferred more
+                          swashbuckling and less melodrama, but it’s still an
+                          entertaining ride. The climactic chase reminded me of
+                          a western. Our heroes on horseback pursing the villain
+                          across the California landscape as he shoots back at
+                          them. It also drove home that we weren’t in France.
+                          Cushing has one scene as the vice-goon of a band of
+                          soldiers sent to arrest d’Artagnan.
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Adventure</span
                         ><span>
                           |
@@ -551,54 +569,57 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a href="/reviews/a-chump-at-oxford-1939/" class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fa-chump-at-oxford-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fa-chump-at-oxford-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fa-chump-at-oxford-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fa-chump-at-oxford-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fa-chump-at-oxford-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from A Chump at Oxford (1940)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/a-chump-at-oxford-1939/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fa-chump-at-oxford-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fa-chump-at-oxford-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fa-chump-at-oxford-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fa-chump-at-oxford-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fa-chump-at-oxford-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from A Chump at Oxford (1940)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/a-chump-at-oxford-1939/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >A Chump at Oxford<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1940</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/2-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/2-stars.svg"
                           alt="D+: 2 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          <strong>Peter Cushing’s second film.</strong> He has a
+                          minor speaking part playing one of the Oxford students
+                          who hassle Laurel and Hardy.
+                          <a
+                            class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                            href="/reviews/a-chump-at-oxford-1939/"
+                            >Continue reading...</a
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Comedy</span
                         ><span>
                           |
@@ -607,54 +628,64 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a
+                      href="/reviews/the-abominable-snowman-1957/"
+                      class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from The Abominable Snowman (1957)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/the-abominable-snowman-1957/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from The Abominable Snowman (1957)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/the-abominable-snowman-1957/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >The Abominable Snowman<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1957</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/2-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/2-stars.svg"
                           alt="D+: 2 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          <strong
+                            >Peter Cushing’s second film for Hammer.</strong
+                          >
+                          He plays a botanist who hitches a ride aboard Forrest
+                          Tucker’s Himalayan expedition to find and study the
+                          legendary Yeti. Of course, Tucker’s motives prove less
+                          than scientific. And of course, one-by-one the party
+                          members meet unfortunate ends.
+                          <a
+                            class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                            href="/reviews/the-abominable-snowman-1957/"
+                            >Continue reading...</a
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Adventure</span
                         ><span>
                           |
@@ -663,54 +694,61 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a href="/reviews/violent-playground-1958/" class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fviolent-playground-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fviolent-playground-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fviolent-playground-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fviolent-playground-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fviolent-playground-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from Violent Playground (1958)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/violent-playground-1958/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fviolent-playground-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fviolent-playground-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fviolent-playground-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fviolent-playground-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fviolent-playground-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from Violent Playground (1958)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/violent-playground-1958/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >Violent Playground<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1958</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/3-half-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/3-half-stars.svg"
                           alt="B-: 3.5 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          A stacked cast and vivid location photography elevate
+                          this story of juvenile delinquency. Stanley Baker
+                          makes a strong case for Watchlist inclusion as a
+                          Liverpool detective volun-told to take over as
+                          Juvenile Liaison Officer. David McCallum plays the
+                          requisite troubled youth. Peter Cushing turns up as
+                          the local priest. The Liverpool photography puts you
+                          on the streets of the Beatles hometown a few years
+                          before they broke big. Baker and McCallum ensure
+                          you’re never bored. The script avoids soapbox
+                          soliloquies and rations the melodramatics. A pleasant
+                          surprise.
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Drama</span
                         ><span>
                           |
@@ -719,82 +757,77 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="col-[1_/_-1] block px-gutter py-4 text-right shadow-bottom shadow-border tablet:absolute tablet:right-0 tablet:top-0 tablet:shadow-none desktop:right-[var(--gutter-width)]"
-                  >
-                    <a class="text-accent" href="/cast-and-crew/peter-cushing"
-                      >All<!-- -->
-                      <span class="inline tablet:hidden desktop:inline"
-                        >Peter Cushing</span
-                      >
-                      <!-- -->→</a
-                    >
-                  </li>
                 </ul>
-              </nav>
-              <nav
-                class="relative flex w-full flex-col items-center tablet:w-auto"
+              </div>
+            </nav>
+            <nav data-pagefind-ignore="true">
+              <div
+                class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
               >
-                <div
-                  class="w-full px-gutter py-2 shadow-bottom tablet:py-4 tablet:shadow-none desktop:px-pageMargin desktop:py-4"
+                <h2
+                  class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
                 >
-                  <span class="font-semibold text-muted"
-                    >More with<!-- --> </span
-                  ><a class="text-accent" href="/cast-and-crew/christopher-lee"
+                  More with<!-- -->
+                  <a href="/cast-and-crew/christopher-lee" class="text-accent"
                     >Christopher Lee</a
                   >
-                </div>
+                </h2>
                 <ul
-                  class="w-full tablet:grid tablet:w-auto tablet:grid-cols-[repeat(2,minmax(100px,312px))] tablet:gap-8 tablet:px-gutter desktop:max-w-unset desktop:grid-cols-[repeat(4,1fr)] desktop:px-pageMargin desktop:pt-2"
+                  class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
                 >
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a
+                      href="/reviews/howling-ii-your-sister-is-a-werewolf-1985/"
+                      class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from Howling II: ... Your Sister Is a Werewolf (1985)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/howling-ii-your-sister-is-a-werewolf-1985/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from Howling II: ... Your Sister Is a Werewolf (1985)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/howling-ii-your-sister-is-a-werewolf-1985/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >Howling II: ... Your Sister Is a Werewolf<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1985</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/1-star-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/1-star.svg"
                           alt="F: 1 star (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          Christopher Lee plays an “occult investigator” hunting
+                          a ten-thousand-year-old werewolf queen to prevent a
+                          werewolf apocalypse.
+                          <a
+                            class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                            href="/reviews/howling-ii-your-sister-is-a-werewolf-1985/"
+                            >Continue reading...</a
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Horror</span
                         ><span>
                           |
@@ -803,54 +836,61 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a href="/reviews/corridor-of-mirrors-1948/" class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fcorridor-of-mirrors-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fcorridor-of-mirrors-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fcorridor-of-mirrors-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fcorridor-of-mirrors-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fcorridor-of-mirrors-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from Corridor of Mirrors (1948)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/corridor-of-mirrors-1948/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fcorridor-of-mirrors-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fcorridor-of-mirrors-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fcorridor-of-mirrors-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fcorridor-of-mirrors-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fcorridor-of-mirrors-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from Corridor of Mirrors (1948)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/corridor-of-mirrors-1948/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >Corridor of Mirrors<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1948</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/2-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/2-stars.svg"
                           alt="D+: 2 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          <strong>Christopher Lee’s feature debut.</strong> Also
+                          Terence Young’s directorial debut. A
+                          <em>Rebecca</em> knock-off featuring Eric Portman as a
+                          wealthy eccentric who believes Edana Romney to be the
+                          reincarnation of an Italian countess he loved in a
+                          past life. Lee’s bit part comes early and his lone
+                          line lacks his resonant baritone.
+                          <a
+                            class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                            href="/reviews/corridor-of-mirrors-1948/"
+                            >Continue reading...</a
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Drama</span
                         ><span>
                           |
@@ -859,54 +899,58 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a href="/reviews/horror-of-dracula-1958/" class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from Horror of Dracula (1958)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/horror-of-dracula-1958/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from Horror of Dracula (1958)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/horror-of-dracula-1958/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >Horror of Dracula<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1958</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/4-half-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/4-half-stars.svg"
                           alt="A-: 4.5 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          Howard Hawks’s recipe for a good movie comprised
+                          “three great scenes and no bad ones.” Hammer’s first
+                          entry in its <em>Dracula</em> franchise gives us
+                          exactly that.
+                          <a
+                            class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                            href="/reviews/horror-of-dracula-1958/"
+                            >Continue reading...</a
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Drama</span
                         ><span>
                           |
@@ -915,54 +959,166 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a href="/reviews/the-city-of-the-dead-1960/" class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fthe-city-of-the-dead-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-city-of-the-dead-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-city-of-the-dead-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-city-of-the-dead-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fthe-city-of-the-dead-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from The City of the Dead (1960)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/the-city-of-the-dead-1960/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fthe-city-of-the-dead-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-city-of-the-dead-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-city-of-the-dead-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-city-of-the-dead-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fthe-city-of-the-dead-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from The City of the Dead (1960)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/the-city-of-the-dead-1960/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >The City of the Dead<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1960</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/4-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/4-stars.svg"
                           alt="B: 4 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          <em>The City of the Dead</em> opens in a small,
+                          fog-shrouded village. The locals have gathered to burn
+                          Elizabeth Selwyn for the crime of witchcraft. As the
+                          flames consume her, Elizabeth pledges her soul to
+                          Lucifer in exchange for eternal life. The bloodthirsty
+                          villagers drown her out, chanting “Burn witch, burn!”
+                        </p>
+                        <p>
+                          Smash-cut to an extreme close-up of Christopher Lee
+                          repeating the same line. It’s present day. Lee plays
+                          Alan Driscoll, a college professor lecturing a group
+                          of young students on the history of witchcraft. In
+                          attendance are our heroine, Nan, and her boyfriend
+                          Bill. Nan sits in rapt attention, shushing Bill’s
+                          snide comments. It’s clear Bill took the course just
+                          to hit on Nan. It’s less clear what she sees in him.
+                        </p>
+                        <p>
+                          After the lecture, Nan approaches Professor Driscoll.
+                          Nan wants to use her upcoming winter break to write a
+                          thesis on witchcraft in New England, but feels she
+                          needs some first-hand research. She plans to get a
+                          room in the smallest, oldest town in New England she
+                          can find. There she’ll comb through the town hall
+                          records, recheck the libraries, and interview the
+                          puritan descendants. Impressed by her enthusiasm,
+                          Driscoll suggests she visit his hometown, a small New
+                          England village called Whitewood. Nan agrees.
+                        </p>
+                        <p>
+                          Bill, who’d hoped Nan would spend the break with him,
+                          tries to dissuade her, but Nan remains resolute.
+                        </p>
+                        <p>
+                          Before long, Nan’s pulling up to a desolate filling
+                          station in the dead of night asking for directions to
+                          Whitewood. The station attendant tries to warn her
+                          away, but Nan dismisses his concern. Armed with
+                          directions, she heads out into the fog-covered night.
+                        </p>
+                        <p>
+                          Outside of town, Nan picks up a hitchhiker, played by
+                          Valentine Dyall. Dyall’s performance is all ominous
+                          menace. When he speaks, it’s as though someone is
+                          talking <em>through</em> him.
+                        </p>
+                        <p>
+                          When Nan finally arrives in Whitewood, we recognize it
+                          from the opening sequence. The town drips atmosphere,
+                          from the fog-laced streets to the dark, claustrophobic
+                          interiors. Nan turns to her passenger who, of course,
+                          has vanished.
+                        </p>
+                        <p>
+                          Nan checks into the local inn. The proprietor bears an
+                          uncanny resemblance to Elizabeth Selwyn.
+                        </p>
+                        <p>Can you see where this is going?</p>
+                        <p>
+                          Before I venture any further, let me say that the DVD
+                          from VCI is under $10 on Amazon. It’s the only way to
+                          watch the film. There’s a print streaming on Amazon
+                          Prime and I’ve seen a few others floating around on
+                          YouTube, but they’re all cropped, scratchy or low
+                          resolution. Spend the $9 and change and watch it on a
+                          decent up-converting DVD player. It’s worth it.
+                        </p>
+                        <p>
+                          Back to the review. At this point, those weary of
+                          spoilers should stop reading as I must cover a few
+                          plot points to illustrate why the film is so good.
+                        </p>
+                        <p>
+                          You see, despite setting up a predictable plot where
+                          Nan gets captured by Elizabeth and rescued by her
+                          boyfriend, the film takes a darker turn. The witches
+                          of Whitewood lure Nan into the tunnels beneath the
+                          inn. They snatch her and drag her screaming into a
+                          hidden chamber. They place her on a sacrificial altar,
+                          holding her down as she kicks and thrashes. A black
+                          robed figure raises a knife over her chest. Nan
+                          screams. The knife drives toward her chest as we
+                          smash-cut to a knife plunging into a cake.
+                        </p>
+                        <p>Nan is dead.</p>
+                        <p>
+                          It’s quite a narrative surprise, considering she’d
+                          been our lone protagonist. Now it’s Nan’s brother,
+                          Bob, and Bill who retrace her steps and confront the
+                          evil lurking in the village.
+                        </p>
+                        <p>
+                          And remember Professor Driscoll? It’s hinted early
+                          that he might be up to no good, but after Nan meets
+                          her fate, there’s no doubt left. Driscoll is a wolf in
+                          sheep’s clothing, searching for victims to sustain his
+                          cursed brethren. Lee plays him with a perfect mix of
+                          cultured charm and seething menace.
+                        </p>
+                        <p>
+                          Indeed, Lee’s performance, like the film, is an
+                          overlooked gem. While critics laud Lee’s early work
+                          for Hammer productions, this entry by Hammer rival
+                          Amicus remains forgotten. It’s a shame, especially
+                          considering this film’s combination of contemporary
+                          setting and satanic themes foreshadowed the cinematic
+                          horror trends that proved to be Hammer’s undoing.
+                        </p>
+                        <p>
+                          To that end, one could say
+                          <em>The City of the Dead</em> was ahead of its time.
+                          That elements like the filling station attendant
+                          attempting to warn the unsuspecting strangers, or the
+                          red-herring protagonist, have been copied by so many
+                          other films they’re now regarded as tropes. But I’ll
+                          leave the academia to others. Suffice it to say the
+                          film <em>works</em>.
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Horror</span
                         ><span>
                           |
@@ -974,81 +1130,90 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="col-[1_/_-1] block px-gutter py-4 text-right shadow-bottom shadow-border tablet:absolute tablet:right-0 tablet:top-0 tablet:shadow-none desktop:right-[var(--gutter-width)]"
-                  >
-                    <a class="text-accent" href="/cast-and-crew/christopher-lee"
-                      >All<!-- -->
-                      <span class="inline tablet:hidden desktop:inline"
-                        >Christopher Lee</span
-                      >
-                      <!-- -->→</a
-                    >
-                  </li>
                 </ul>
-              </nav>
-              <nav
-                class="relative flex w-full flex-col items-center tablet:w-auto"
+              </div>
+            </nav>
+            <nav data-pagefind-ignore="true">
+              <div
+                class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
               >
-                <div
-                  class="w-full px-gutter py-2 shadow-bottom tablet:py-4 tablet:shadow-none desktop:px-pageMargin desktop:py-4"
+                <h2
+                  class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
                 >
-                  <span class="font-semibold text-muted">More<!-- --> </span
-                  ><a class="text-accent" href="/collections/hammer-films"
+                  More<!-- -->
+                  <a href="/collections/hammer-films" class="text-accent"
                     >Hammer Films</a
                   >
-                </div>
+                </h2>
                 <ul
-                  class="w-full tablet:grid tablet:w-auto tablet:grid-cols-[repeat(2,minmax(100px,312px))] tablet:gap-8 tablet:px-gutter desktop:max-w-unset desktop:grid-cols-[repeat(4,1fr)] desktop:px-pageMargin desktop:pt-2"
+                  class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
                 >
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a
+                      href="/reviews/the-quatermass-xperiment-1955/"
+                      class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fthe-quatermass-xperiment-1955.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-quatermass-xperiment-1955.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-quatermass-xperiment-1955.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-quatermass-xperiment-1955.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fthe-quatermass-xperiment-1955.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from The Quatermass Xperiment (1955)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/the-quatermass-xperiment-1955/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fthe-quatermass-xperiment-1955.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-quatermass-xperiment-1955.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-quatermass-xperiment-1955.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-quatermass-xperiment-1955.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fthe-quatermass-xperiment-1955.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from The Quatermass Xperiment (1955)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/the-quatermass-xperiment-1955/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >The Quatermass Xperiment<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1955</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/3-half-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/3-half-stars.svg"
                           alt="B-: 3.5 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          <strong
+                            >Hammer’s first plunge into sci-fi horror</strong
+                          >
+                          stars Brian Donlevy as bulldog scientist Quatermass
+                          dealing with a rocket ship returned from space whose
+                          lone-survivor, played by Richard Wordsworth, may no
+                          longer be human. Donlevy’s commanding presence
+                          overcomes his suspect casting as a scientist, and
+                          Wordsworth steals the film with his dead-eyed
+                          performance. Love director Val Guest’s decision to
+                          adopt a realistic style—it helps the film age well. He
+                          keeps the special effects off-screen as much as
+                          possible. When he does show the goods they often
+                          deliver, and even when they fall short they’re still
+                          unsettling. The Kino Lorber print looks great.
+                        </p>
+                        <p>
+                          Followed by
+                          <a href="/reviews/quatermass-2-1957/"
+                            ><em>Quatermass 2</em></a
+                          >.
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Horror</span
                         ><span>
                           |
@@ -1057,54 +1222,68 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a href="/reviews/x-the-unknown-1956/" class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fx-the-unknown-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fx-the-unknown-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fx-the-unknown-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fx-the-unknown-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fx-the-unknown-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from X the Unknown (1956)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/x-the-unknown-1956/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fx-the-unknown-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fx-the-unknown-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fx-the-unknown-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fx-the-unknown-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fx-the-unknown-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from X the Unknown (1956)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/x-the-unknown-1956/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >X the Unknown<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1956</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/3-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/3-stars.svg"
                           alt="C+: 3 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          <strong
+                            >If
+                            <a href="/reviews/the-quatermass-xperiment-1955/"
+                              ><em>The Quatermass Xperiment</em> marked Hammer
+                              Horror’s conception, this marks its birth.</a
+                            ></strong
+                          >
+                          Dean Jagger plays a scientist battling a radioactive
+                          blob spewed forth from the earth’s core. Unlike the
+                          other blob movie (that came two years later), Jimmy
+                          Sangster’s screenplay—his first produced—plays more
+                          grown-up, remixing the Quatermass essence into an
+                          efficient thriller exploiting the era’s atomic-age
+                          fears. Engaging performances and gruesome makeup
+                          effects offset the budget-constrained miniature work.
+                          Love the pervasive hints of cold, from the ice in the
+                          mud to the foggy puffs of breath in every outdoor
+                          shot. The Scream Factory print looks great, though not
+                          as good as the Kino Lorber Quatermass.
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Horror</span
                         ><span>
                           |
@@ -1113,54 +1292,61 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a href="/reviews/quatermass-2-1957/" class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fquatermass-2-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fquatermass-2-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fquatermass-2-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fquatermass-2-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fquatermass-2-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from Quatermass 2 (1957)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/quatermass-2-1957/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fquatermass-2-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fquatermass-2-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fquatermass-2-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fquatermass-2-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fquatermass-2-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from Quatermass 2 (1957)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/quatermass-2-1957/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >Quatermass 2<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1957</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/2-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/2-stars.svg"
                           alt="D+: 2 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          Disappointing sequel to
+                          <a href="/reviews/the-quatermass-xperiment-1955/"
+                            ><em>The Quatermass Xperiment</em></a
+                          >
+                          sees Brian Donlevy returning in the titular role, but
+                          the character has changed. A bulldog in the first
+                          film, this script affords Quatermass little agency.
+                          <a
+                            class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                            href="/reviews/quatermass-2-1957/"
+                            >Continue reading...</a
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Sci-Fi</span
                         ><span>
                           |
@@ -1169,54 +1355,64 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a
+                      href="/reviews/the-abominable-snowman-1957/"
+                      class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from The Abominable Snowman (1957)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/the-abominable-snowman-1957/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from The Abominable Snowman (1957)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/the-abominable-snowman-1957/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >The Abominable Snowman<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1957</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/2-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/2-stars.svg"
                           alt="D+: 2 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          <strong
+                            >Peter Cushing’s second film for Hammer.</strong
+                          >
+                          He plays a botanist who hitches a ride aboard Forrest
+                          Tucker’s Himalayan expedition to find and study the
+                          legendary Yeti. Of course, Tucker’s motives prove less
+                          than scientific. And of course, one-by-one the party
+                          members meet unfortunate ends.
+                          <a
+                            class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                            href="/reviews/the-abominable-snowman-1957/"
+                            >Continue reading...</a
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Adventure</span
                         ><span>
                           |
@@ -1225,79 +1421,80 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="col-[1_/_-1] block px-gutter py-4 text-right shadow-bottom shadow-border tablet:absolute tablet:right-0 tablet:top-0 tablet:shadow-none desktop:right-[var(--gutter-width)]"
-                  >
-                    <a class="text-accent" href="/collections/hammer-films"
-                      >All<!-- -->
-                      <span class="inline tablet:hidden desktop:inline"
-                        >Hammer Films</span
-                      >
-                      <!-- -->→</a
-                    >
-                  </li>
                 </ul>
-              </nav>
-              <nav
-                class="relative flex w-full flex-col items-center tablet:w-auto"
+              </div>
+            </nav>
+            <nav data-pagefind-ignore="true">
+              <div
+                class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
               >
-                <div
-                  class="w-full px-gutter py-2 shadow-bottom tablet:py-4 tablet:shadow-none desktop:px-pageMargin desktop:py-4"
+                <h2
+                  class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
                 >
-                  <span class="font-semibold text-muted">More<!-- --> </span
-                  ><a class="text-accent" href="/reviews/">Reviews</a>
-                </div>
+                  More<!-- -->
+                  <a href="/reviews/" class="text-accent">Reviews</a>
+                </h2>
                 <ul
-                  class="w-full tablet:grid tablet:w-auto tablet:grid-cols-[repeat(2,minmax(100px,312px))] tablet:gap-8 tablet:px-gutter desktop:max-w-unset desktop:grid-cols-[repeat(4,1fr)] desktop:px-pageMargin desktop:pt-2"
+                  class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
                 >
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a href="/reviews/cure-1997/" class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fcure-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fcure-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fcure-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fcure-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fcure-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from Cure (1997)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/cure-1997/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fcure-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fcure-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fcure-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fcure-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fcure-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from Cure (1997)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/cure-1997/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >Cure<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1997</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/3-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/3-stars.svg"
                           alt="C+: 3 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          Detective Takabe investigates a growing series of
+                          murders where the perpetrators carve a large “X” into
+                          their victim’s throats. Though they admit guilt, the
+                          perpetrators cannot explain their motives, just that
+                          the urge to kill felt as matter-of-fact as turning on
+                          the lights in a dark room. The trail leads Takabe to a
+                          mysterious young man named Mamiya who claims amnesia
+                          and displays an inability to form fresh memories, but
+                          harbors a dark secret.
+                          <strong>Spoilers follow.</strong>
+                          <a
+                            class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                            href="/reviews/cure-1997/"
+                            >Continue reading...</a
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Crime</span
                         ><span>
                           |
@@ -1312,54 +1509,63 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a href="/reviews/curse-of-chucky-2013/" class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fcurse-of-chucky-2013.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fcurse-of-chucky-2013.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fcurse-of-chucky-2013.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fcurse-of-chucky-2013.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fcurse-of-chucky-2013.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from Curse of Chucky (2013)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/curse-of-chucky-2013/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fcurse-of-chucky-2013.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fcurse-of-chucky-2013.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fcurse-of-chucky-2013.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fcurse-of-chucky-2013.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fcurse-of-chucky-2013.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from Curse of Chucky (2013)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/curse-of-chucky-2013/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >Curse of Chucky<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >2013</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/3-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/3-stars.svg"
                           alt="C+: 3 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          A back-to-basics sequel set in an old house full of
+                          long shadows and creaky doors. Outside, a perpetual
+                          thunderstorm rages. Inside, a wheelchair-bound young
+                          woman realizes the toy doll in her home may have
+                          supernatural powers. Throwing back to
+                          <a href="/reviews/childs-play-1988/">the original</a>,
+                          we have a young moppet. But unlike the early films,
+                          she’s not central to the plot and disappears for the
+                          finale. Instead, the film proffers a surprising sexual
+                          thriller alongside the traditional bit where our leads
+                          must acknowledge and thwart Chucky. I loved the gothic
+                          atmosphere and found the performances entertaining
+                          throughout. And for franchise fans, the post-credits
+                          tag proves brilliant.
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Horror</span
                         ><span>
                           |
@@ -1368,54 +1574,63 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a href="/reviews/curse-of-the-demon-1957/" class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from Curse of the Demon (1957)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/curse-of-the-demon-1957/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from Curse of the Demon (1957)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/curse-of-the-demon-1957/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >Curse of the Demon<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1957</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/4-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/4-stars.svg"
                           alt="B: 4 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          <strong
+                            ><em>Curse of the Demon</em> offers the best kind of
+                            thriller:</strong
+                          >
+                          one populated by intelligent characters behaving
+                          according to their personalities, not the whims of the
+                          plot. It avoids cheap jump-scares, preferring shadowy
+                          hallways and darkened rooms to keep us on edge. And,
+                          for the real horror, there’s Niall MacGinnis.
+                          <a
+                            class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                            href="/reviews/curse-of-the-demon-1957/"
+                            >Continue reading...</a
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Fantasy</span
                         ><span>
                           |
@@ -1430,54 +1645,61 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a href="/reviews/dagon-2001/" class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fdagon-2001.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fdagon-2001.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fdagon-2001.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fdagon-2001.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fdagon-2001.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from Dagon (2001)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/dagon-2001/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fdagon-2001.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fdagon-2001.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fdagon-2001.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fdagon-2001.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fdagon-2001.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from Dagon (2001)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/dagon-2001/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >Dagon<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >2001</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/4-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/4-stars.svg"
                           alt="B: 4 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          Stuart Gordon’s take on Lovecraft is becoming my
+                          favorite. He delivers the source material’s
+                          existential dread and world-building while stirring in
+                          a liberal dose of sleaze. While this would have
+                          offended the prudish author, it sets the stories
+                          outside conventional morality, heightening the sense
+                          of an ancient “other” lurking below society’s norms.
+                          <a
+                            class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                            href="/reviews/dagon-2001/"
+                            >Continue reading...</a
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Fantasy</span
                         ><span>
                           |
@@ -1489,76 +1711,110 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="col-[1_/_-1] block px-gutter py-4 text-right shadow-bottom shadow-border tablet:absolute tablet:right-0 tablet:top-0 tablet:shadow-none desktop:right-[var(--gutter-width)]"
-                  >
-                    <a class="text-accent" href="/reviews/"
-                      >All<!-- -->
-                      <span class="inline tablet:hidden desktop:inline"
-                        >Reviews</span
-                      >
-                      <!-- -->→</a
-                    >
-                  </li>
                 </ul>
-              </nav>
-            </div>
-            <div class="spacer-y-32 tablet:spacer-y-0"></div>
-            <script type="application/ld+json">
-              {
-                "@context": "http://schema.org",
-                "@type": "Review",
-                "itemReviewed": {
-                  "@type": "Movie",
-                  "name": "The Curse of Frankenstein",
-                  "sameAs": "http://www.imdb.com/title/tt0050280/",
-                  "image": "/_image?/content%2Fassets%2Fstills%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1200&h=675&q=80&f=jpeg",
-                  "dateCreated": "1957",
-                  "director": { "@type": "Person", "name": "Terence Fisher" }
-                },
-                "reviewRating": { "@type": "Rating", "ratingValue": 5 },
-                "author": { "@type": "Person", "name": "Frank Showalter" }
-              }
-            </script>
-          </main>
-        </div>
+              </div>
+            </nav>
+          </div>
+          <script type="application/ld+json">
+            {
+              "@context": "http://schema.org",
+              "@type": "Review",
+              "itemReviewed": {
+                "@type": "Movie",
+                "name": "The Curse of Frankenstein",
+                "sameAs": "http://www.imdb.com/title/tt0050280/",
+                "image": "/_image?/content%2Fassets%2Fstills%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1200&h=675&q=80&f=jpeg",
+                "dateCreated": "1957",
+                "director": { "@type": "Person", "name": "Terence Fisher" }
+              },
+              "reviewRating": { "@type": "Rating", "ratingValue": 5 },
+              "author": { "@type": "Person", "name": "Frank Showalter" }
+            }
+          </script>
+        </main>
         <footer
-          class="flex flex-col items-center gap-y-6 bg-[url(&#x27;/assets/ripnotcomingsoon.avif&#x27;)] px-pageMargin py-8 text-inverse"
+          class="flex flex-wrap items-start justify-between gap-[10%] bg-[#252525] px-container-base py-20 text-inverse tablet:px-12 tablet:pt-10 desktop:p-20"
         >
-          <ul
-            class="flex w-full flex-wrap justify-center gap-x-4 gap-y-2 text-inverse tablet:gap-x-6 max:w-auto"
+          <div class="flex flex-col">
+            <div class="flex flex-col">
+              <div
+                class="whitespace-nowrap font-normal leading-8"
+                style="font-size: 1.5625rem"
+              >
+                <a href="/">Frank&#x27;s Movie Log</a>
+              </div>
+              <p class="w-full pl-px text-sm italic leading-4 opacity-85">
+                My life at the movies.
+              </p>
+            </div>
+            <div class="spacer-y-12"></div>
+          </div>
+          <div
+            class="flex flex-col gap-20 pb-20 pt-10 tablet:basis-1/2 tablet:pt-20"
           >
-            <li class="block whitespace-nowrap tracking-0.5px">
-              <a class="text-inverse" href="/">Home</a>
-            </li>
-            <li class="block whitespace-nowrap tracking-0.5px">
-              <a class="text-inherit" href="/how-i-grade/">How I Grade</a>
-            </li>
-            <li class="block whitespace-nowrap tracking-0.5px">
-              <a class="text-inherit" href="/reviews/">Reviews</a>
-            </li>
-            <li class="block whitespace-nowrap tracking-0.5px">
-              <a class="text-inherit" href="/viewings/">Viewing Log</a>
-            </li>
-            <li class="block whitespace-nowrap tracking-0.5px">
-              <a class="text-inherit" href="/cast-and-crew/">Cast &amp; Crew</a>
-            </li>
-            <li class="block whitespace-nowrap tracking-0.5px">
-              <a class="text-inherit" href="/collections/">Collections</a>
-            </li>
-            <li class="block whitespace-nowrap tracking-0.5px">
-              <a class="text-inherit" href="/watchlist/">Watchlist</a>
-            </li>
-          </ul>
-          <p class="text-sm font-light leading-4">
-            All stills used in accordance with the<!-- -->
+            <ul class="flex w-full flex-col gap-y-10 text-inverse max:w-auto">
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/">Home</a>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/how-i-grade/">How I Grade</a>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/reviews/">Reviews</a>
+                <ol class="mt-4">
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/reviews/underseen/">Underseen Gems</a>
+                  </li>
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/reviews/overrated/">Overrated Disappointments</a>
+                  </li>
+                </ol>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/viewings/">Viewing Log</a>
+                <ol class="mt-4">
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/viewings/stats/">Stats</a>
+                  </li>
+                </ol>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/cast-and-crew/">Cast &amp; Crew</a>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/collections/">Collections</a>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/watchlist/">Watchlist</a>
+                <ol class="mt-4">
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/watchlist/progress/">Progress</a>
+                  </li>
+                </ol>
+              </li>
+            </ul>
             <a
-              href="http://www.copyright.gov/title17/92chap1.html#107"
-              class="text-inherit"
-              >Fair Use Law.</a
+              href="#top"
+              class="mb-8 w-full max-w-[320px] bg-canvas px-pageMargin py-5 text-center font-sans-narrow text-sm uppercase tracking-[.6px] text-default hover:bg-inverse hover:text-inverse"
+              >To the top</a
             >
-          </p>
-          <a href="#top" class="sr-only">To the top ↑</a>
+            <p class="w-full font-light leading-4 text-subtle">
+              All stills used in accordance with the<!-- -->
+              <a
+                href="http://www.copyright.gov/title17/92chap1.html#107"
+                class="text-inherit"
+                >Fair Use Law.</a
+              >
+            </p>
+          </div>
         </footer>
       </div>
     </div>
@@ -1584,14 +1840,11 @@
     <script>
       (() => {
         const openBtn = document.querySelector("button[data-open-modal]");
-        const shortcut = openBtn?.querySelector("kbd");
-        if (!openBtn || !(shortcut instanceof HTMLElement)) return;
-        const platformKey = shortcut.querySelector("kbd");
-        if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
-          platformKey.textContent = "⌘";
+        if (!openBtn) return;
+        if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
           openBtn.setAttribute("aria-keyshortcuts", "Meta+K");
+          openBtn.setAttribute("title", `Search: ⌘K`);
         }
-        shortcut.style.display = "";
       })();
     </script>
   </body>

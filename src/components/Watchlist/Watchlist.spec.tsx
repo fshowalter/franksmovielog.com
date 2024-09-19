@@ -154,7 +154,7 @@ describe("/watchlist", () => {
 
     render(<Watchlist {...props} />);
 
-    await userEvent.selectOptions(screen.getByLabelText("Order By"), "Title");
+    await userEvent.selectOptions(screen.getByLabelText("Sort"), "Title");
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
@@ -165,7 +165,7 @@ describe("/watchlist", () => {
     render(<Watchlist {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Release Date (Oldest First)",
     );
 
@@ -178,7 +178,7 @@ describe("/watchlist", () => {
     render(<Watchlist {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Release Date (Newest First)",
     );
 
@@ -205,7 +205,7 @@ describe("/watchlist", () => {
 
     render(<Watchlist {...props} />);
 
-    await userEvent.click(screen.getByText("Show More..."));
+    await userEvent.click(screen.getByText("Show More"));
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });

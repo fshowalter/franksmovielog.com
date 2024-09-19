@@ -46,7 +46,7 @@ export function Filters({
       />
       <SelectField
         value={sortValue}
-        label="Order By"
+        label="Sort"
         onChange={(e) =>
           dispatch({
             type: Actions.SORT,
