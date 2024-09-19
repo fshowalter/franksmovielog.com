@@ -62,12 +62,12 @@ export function ListWithFiltersLayout({
       )}
       <div className="bg-subtle">
         {subNav ? (
-          <ul className="flex justify-center gap-x-6 text-nowrap py-8 font-sans-narrow-bold text-sm uppercase tracking-[1px] desktop:py-12">
+          <ul className="flex justify-center gap-x-6 text-nowrap font-sans-narrow-bold text-sm uppercase tracking-[1px] text-accent">
             {subNav.map((also) => {
               return (
                 <li
                   key={also.href}
-                  className={`opacity-75 ${also.active ? "text-subtle" : ""}`}
+                  className={`py-8 opacity-75 desktop:py-12 ${also.active ? "border-b-4 text-subtle" : ""}`}
                 >
                   <a href={also.href}>{also.text}</a>
                 </li>
