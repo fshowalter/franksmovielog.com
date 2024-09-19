@@ -2,7 +2,7 @@ import { allOverratedDisappointments } from "src/api/overratedDisappointments";
 import { getFixedWidthPosterImageProps } from "src/api/posters";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 
-import type { ListItemValue } from "./List";
+import type { ListItemValue } from "./Overrated";
 import type { Props } from "./Overrated";
 
 export async function getProps(): Promise<Props> {
