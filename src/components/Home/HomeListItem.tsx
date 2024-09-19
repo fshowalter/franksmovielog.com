@@ -1,4 +1,4 @@
-import type { ReviewWithExcerpt } from "src/api/reviews";
+import type { Review, ReviewExcerpt } from "src/api/reviews";
 import type { StillImageProps } from "src/api/stills";
 import { Grade } from "src/components/Grade";
 import { RenderedMarkdown } from "src/components/RenderedMarkdown";
@@ -21,23 +21,22 @@ function formatDate(reviewDate: Date) {
   });
 }
 
-export interface ListItemValue
-  extends Pick<
-    ReviewWithExcerpt,
-    | "imdbId"
-    | "sequence"
-    | "title"
-    | "year"
-    | "date"
-    | "slug"
-    | "grade"
-    | "principalCastNames"
-    | "directorNames"
-    | "excerpt"
-    | "genres"
-  > {
-  stillImageProps: StillImageProps;
-}
+export type ListItemValue = Pick<
+  Review,
+  | "imdbId"
+  | "sequence"
+  | "title"
+  | "year"
+  | "date"
+  | "slug"
+  | "grade"
+  | "principalCastNames"
+  | "directorNames"
+  | "genres"
+> &
+  ReviewExcerpt & {
+    stillImageProps: StillImageProps;
+  };
 
 export function HomeListItem({ value }: { value: ListItemValue }) {
   return (
