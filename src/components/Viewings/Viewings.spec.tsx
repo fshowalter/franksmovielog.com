@@ -79,7 +79,7 @@ describe("Viewings", () => {
     render(<Viewings {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Viewing Date (Newest First)",
     );
 
@@ -92,7 +92,7 @@ describe("Viewings", () => {
     render(<Viewings {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Viewing Date (Oldest First)",
     );
 
@@ -179,7 +179,7 @@ describe("Viewings", () => {
 
     render(<Viewings {...props} />);
 
-    await userEvent.click(screen.getByText("Show More..."));
+    await userEvent.click(screen.getByText("Show More"));
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });

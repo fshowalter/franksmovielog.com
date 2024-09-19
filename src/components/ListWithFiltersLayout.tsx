@@ -77,20 +77,22 @@ export function ListWithFiltersLayout({
       ) : (
         <SolidBackdrop title={title} deck={deck} breadcrumb={breadcrumb} />
       )}
-      <div className="bg-subtle">
+      <div
+        className={`${backdropImageProps ? "bg-[#1d1210]" : "bg-[#252525]"}`}
+      >
         {subNav ? (
-          <ul className="mx-auto flex justify-center gap-x-6 text-nowrap px-container font-sans-narrow-bold text-sm uppercase tracking-[1px] text-muted">
+          <ul className="mx-auto flex justify-center gap-x-6 text-nowrap px-container font-sans-narrow-bold text-sm uppercase tracking-[1px] text-subtle">
             {subNav.map((also) => {
               return (
                 <li
                   key={also.href}
-                  className={`w-full max-w-32 text-center opacity-75 ${also.active ? "text-subtle opacity-75" : ""}`}
+                  className={`w-full max-w-32 text-center opacity-75 ${also.active ? "text-inverse opacity-75" : ""}`}
                 >
                   {also.active ? (
                     <div className="px-4 py-8 desktop:py-12">{also.text}</div>
                   ) : (
                     <a
-                      className="block px-4 py-8 hover:bg-accent hover:text-inverse desktop:py-12"
+                      className="block px-4 py-8 hover:bg-default hover:text-default desktop:py-12"
                       href={also.href}
                     >
                       {also.text}

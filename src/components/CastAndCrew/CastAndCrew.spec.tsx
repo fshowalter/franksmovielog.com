@@ -28,7 +28,7 @@ describe("CastAndCrew", () => {
     render(<CastAndCrew {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Name (Z → A)",
     );
 
@@ -41,7 +41,7 @@ describe("CastAndCrew", () => {
     render(<CastAndCrew {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Name (A → Z)",
     );
 
@@ -54,7 +54,7 @@ describe("CastAndCrew", () => {
     render(<CastAndCrew {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Title Count (Most First)",
     );
 
@@ -67,7 +67,7 @@ describe("CastAndCrew", () => {
     render(<CastAndCrew {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Title Count (Fewest First)",
     );
 
@@ -80,7 +80,7 @@ describe("CastAndCrew", () => {
     render(<CastAndCrew {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Review Count (Most First)",
     );
 
@@ -93,7 +93,7 @@ describe("CastAndCrew", () => {
     render(<CastAndCrew {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Review Count (Fewest First)",
     );
 

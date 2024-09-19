@@ -32,7 +32,7 @@ describe("Collection", () => {
 
     render(<Collection {...props} />);
 
-    await userEvent.selectOptions(screen.getByLabelText("Order By"), "Title");
+    await userEvent.selectOptions(screen.getByLabelText("Sort"), "Title");
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
@@ -43,7 +43,7 @@ describe("Collection", () => {
     render(<Collection {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Release Date (Oldest First)",
     );
 
@@ -56,7 +56,7 @@ describe("Collection", () => {
     render(<Collection {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Release Date (Newest First)",
     );
 
@@ -69,7 +69,7 @@ describe("Collection", () => {
     render(<Collection {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Grade (Best First)",
     );
 
@@ -82,7 +82,7 @@ describe("Collection", () => {
     render(<Collection {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Grade (Worst First)",
     );
 
@@ -130,7 +130,7 @@ describe("Collection", () => {
 
     render(<Collection {...props} />);
 
-    await userEvent.click(screen.getByText("Show More..."));
+    await userEvent.click(screen.getByText("Show More"));
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });

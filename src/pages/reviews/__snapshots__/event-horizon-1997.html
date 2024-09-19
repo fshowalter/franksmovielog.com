@@ -34,151 +34,190 @@
         class="absolute left-1/2 top-0.5 z-50 mx-auto bg-subtle px-6 py-2 text-center text-accent [transform:translate(-50%,calc(-100%_-_2px))] focus:[transform:translate(-50%,0%)]"
         >Skip to content</a
       >
-      <div
-        class="image-filter mx-auto min-h-4 w-full max-w-canvas bg-[url(&#x27;/assets/ripnotcomingsoon.avif&#x27;)] desktop:sticky desktop:top-0 desktop:z-40"
-      ></div>
-      <div class="mx-auto flex min-h-full max-w-canvas flex-col bg-default">
+      <div class="flex min-h-full w-full flex-col bg-default">
         <header
-          class="flex flex-col items-center gap-6 bg-default px-pageMargin py-6 text-center shadow-bottom desktop:sticky desktop:top-4 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:justify-between desktop:py-5 desktop:text-left max:justify-center max:py-8"
+          class="z-20 flex w-full items-center justify-between px-container-base py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
+          style="color: var(--fg-default); position: static"
         >
-          <div
-            class="items-inherit justify-items-inherit flex flex-col max:absolute max:left-[var(--page-margin-width)]"
-          >
-            <h1
+          <div class="flex flex-col">
+            <div
               class="whitespace-nowrap font-normal leading-8"
               style="font-size: 1.5625rem"
             >
-              <a class="text-default" href="/">Frank&#x27;s Movie Log</a>
-            </h1>
-            <p class="w-full text-sm italic leading-4 text-muted desktop:pl-px">
+              <a href="/">Frank&#x27;s Movie Log</a>
+            </div>
+            <p class="w-full pl-px text-sm italic leading-4 opacity-85">
               My life at the movies.
             </p>
           </div>
-          <div
-            class="w-full max-w-prose desktop:order-4 desktop:w-auto max:absolute max:right-[var(--page-margin-width)]"
-          >
-            <button
-              data-open-modal="true"
-              disabled=""
-              aria-label="Search"
-              aria-keyshortcuts="Control+K"
-              class="safari-border-radius-fix desktop::w-auto desktop::ring-0 flex w-full items-center overflow-hidden rounded-md text-sm leading-6 text-subtle ring-1 ring-border hover:ring-accent"
-            >
-              <kbd
-                class="ml-auto mt-px hidden min-h-6 flex-none items-center bg-subtle pl-3 pr-4 font-mono text-sm font-light opacity-70 desktop:flex"
-                ><kbd class="text-md leading-5">Ctrl</kbd
-                ><kbd class="text-sm">K</kbd></kbd
-              ><svg
-                class="mr-2 size-10 flex-none border-0 border-r border-default bg-subtle fill-subtle px-3 py-1 desktop:w-4 desktop:border-r-0 desktop:bg-unset desktop:px-0"
-                viewBox="0 0 16 16"
+          <div class="flex items-center">
+            <nav class="hidden w-full desktop:block desktop:w-auto">
+              <ul class="flex flex-wrap justify-start gap-x-6 text-xl">
+                <li class="block whitespace-nowrap tracking-0.5px">
+                  <a class="text-inherit" href="/">Home</a>
+                </li>
+                <li class="block whitespace-nowrap tracking-0.5px">
+                  <a class="text-inherit" href="/how-i-grade/">How I Grade</a>
+                </li>
+                <li class="block whitespace-nowrap tracking-0.5px">
+                  <a class="text-inherit" href="/reviews/">Reviews</a>
+                </li>
+                <li class="block whitespace-nowrap tracking-0.5px">
+                  <a class="text-inherit" href="/viewings/">Viewing Log</a>
+                </li>
+                <li class="block whitespace-nowrap tracking-0.5px">
+                  <a class="text-inherit" href="/cast-and-crew/"
+                    >Cast &amp; Crew</a
+                  >
+                </li>
+                <li class="block whitespace-nowrap tracking-0.5px">
+                  <a class="text-inherit" href="/collections/">Collections</a>
+                </li>
+                <li class="block whitespace-nowrap tracking-0.5px">
+                  <a class="text-inherit" href="/watchlist/">Watchlist</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="z-[1000]">
+              <button
+                data-open-modal="true"
+                disabled=""
+                aria-label="Search"
+                aria-keyshortcuts="Control+K"
+                class="flex items-center justify-between overflow-hidden text-sm leading-6 ring-default desktop:ml-6"
+                type="button"
+                title="Search: Control+K"
               >
-                <path
-                  fill-rule="evenodd"
-                  d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z"
-                ></path>
-                <path
-                  fill-rule="evenodd"
-                  d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"
-                ></path></svg
-              ><span
-                class="flex items-baseline whitespace-nowrap p-2 text-base opacity-70 desktop:hidden"
-                >Quick search...</span
-              >
-            </button>
-          </div>
-          <nav class="w-full desktop:w-auto">
-            <ul
-              class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-accent tablet:gap-x-6 desktop:justify-start"
-            >
-              <li class="block whitespace-nowrap tracking-0.5px">
-                <a class="text-muted" href="/">Home</a>
-              </li>
-              <li class="block whitespace-nowrap tracking-0.5px">
-                <a class="text-inherit" href="/how-i-grade/">How I Grade</a>
-              </li>
-              <li class="block whitespace-nowrap tracking-0.5px">
-                <a class="text-inherit" href="/reviews/">Reviews</a>
-              </li>
-              <li class="block whitespace-nowrap tracking-0.5px">
-                <a class="text-inherit" href="/viewings/">Viewing Log</a>
-              </li>
-              <li class="block whitespace-nowrap tracking-0.5px">
-                <a class="text-inherit" href="/cast-and-crew/"
-                  >Cast &amp; Crew</a
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6 desktop:size-7"
                 >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <input type="checkbox" id="mobile-nav" class="hidden" /><label
+              for="mobile-nav"
+              class="hamburger-icon desktop:hidden"
+              ><span
+                style="background: var(--fg-default)"
+                class="hamburger-icon-bars"
+              ></span
+            ></label>
+            <ul
+              class="hamburger-menu flex flex-col items-start gap-y-5 text-left text-inverse desktop:hidden"
+            >
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/">Home</a>
               </li>
-              <li class="block whitespace-nowrap tracking-0.5px">
-                <a class="text-inherit" href="/collections/">Collections</a>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/how-i-grade/">How I Grade</a>
               </li>
-              <li class="block whitespace-nowrap tracking-0.5px">
-                <a class="text-inherit" href="/watchlist/">Watchlist</a>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/reviews/">Reviews</a>
+                <ol class="mt-4">
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/reviews/underseen/">Underseen Gems</a>
+                  </li>
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/reviews/overrated/">Overrated Disappointments</a>
+                  </li>
+                </ol>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/viewings/">Viewing Log</a>
+                <ol class="mt-4">
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/viewings/stats/">Stats</a>
+                  </li>
+                </ol>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/cast-and-crew/">Cast &amp; Crew</a>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/collections/">Collections</a>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/watchlist/">Watchlist</a>
+                <ol class="mt-4">
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/watchlist/progress/">Progress</a>
+                  </li>
+                </ol>
               </li>
             </ul>
-          </nav>
+          </div>
         </header>
-        <div class="grow" id="content">
-          <main
-            id="top"
-            data-pagefind-body="true"
-            class="flex scroll-mt-[var(--header-offset)] flex-col items-center"
+        <main class="grow flex flex-col" id="content" data-pagefind-body="true">
+          <header
+            class="mb-12 flex flex-col items-center px-container-base pt-10"
           >
-            <header
-              class="flex flex-col gap-y-4 px-pageMargin py-6 text-center desktop:py-8"
+            <h1 data-pagefind-meta="title" class="text-4xl desktop:text-7xl">
+              Event Horizon
+            </h1>
+            <div class="mb-4 text-muted"></div>
+            <picture
+              ><source
+                srcset="/svg/4-stars-dark.svg"
+                media="(prefers-color-scheme: dark)" />
+              <img
+                src="/svg/4-stars.svg"
+                alt="B: 4 stars (out of 5)"
+                height="24"
+                width="120"
+                class="mb-6"
+            /></picture>
+            <div
+              class="font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle mb-12"
             >
-              <h1
-                data-pagefind-meta="title"
-                class="text-[2rem] font-normal leading-none desktop:text-[2.25rem]"
-              >
-                Event Horizon
-              </h1>
-              <div class="text-muted">
-                1997<!-- -->
-                <span>|</span>
-                <!-- -->United Kingdom<span>–</span>United
-                States<span>–</span>Canada<!-- -->
-                <span>|</span>
-                <!-- -->96<!-- --> min<!-- -->
-                <span><span>|</span> <a href="#credits">More...</a></span>
-              </div>
-            </header>
+              1997<!-- -->
+              <span>|</span>
+              <!-- -->United Kingdom<span>–</span>United
+              States<span>–</span>Canada<!-- -->
+              <span>|</span>
+              <!-- -->96<!-- --> min<!-- -->
+              <span><span>|</span> <a href="#credits">More...</a></span>
+            </div>
             <img
               srcset="
-                /_image?/content%2Fassets%2Fstills%2Fevent-horizon-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=240&amp;q=80&amp;f=avif   240w,
-                /_image?/content%2Fassets%2Fstills%2Fevent-horizon-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=480&amp;q=80&amp;f=avif   480w,
-                /_image?/content%2Fassets%2Fstills%2Fevent-horizon-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=960&amp;q=80&amp;f=avif   960w,
-                /_image?/content%2Fassets%2Fstills%2Fevent-horizon-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=1920&amp;q=80&amp;f=avif 1920w
+                /_image?/content%2Fassets%2Fstills%2Fevent-horizon-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=384&amp;q=80&amp;f=avif             384w,
+                /_image?/content%2Fassets%2Fstills%2Fevent-horizon-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=768&amp;q=80&amp;f=avif             768w,
+                /_image?/content%2Fassets%2Fstills%2Fevent-horizon-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=1536&amp;q=80&amp;f=avif           1536w,
+                /_image?/content%2Fassets%2Fstills%2Fevent-horizon-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=1536&amp;h=864&amp;q=80&amp;f=avif 3072w
               "
-              src="/_image?/content%2Fassets%2Fstills%2Fevent-horizon-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=960&amp;h=540&amp;q=80&amp;f=avif"
+              src="/_image?/content%2Fassets%2Fstills%2Fevent-horizon-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=1536&amp;h=864&amp;q=80&amp;f=avif"
               alt="A still from Event Horizon (1997)"
               loading="eager"
               decoding="sync"
-              width="960"
-              height="540"
+              width="1536"
+              height="864"
               sizes="(min-width: 960px) 960px, 100vw"
-              class="aspect-[1.77777778] mb-[5.33px]"
+              class="aspect-[1.77777778] mx-auto mb-[5.33px]"
             />
-            <div class="h-6 min-h-6 tablet:h-8 tablet:min-h-8"></div>
-            <div class="flex flex-col gap-y-8 items-center px-pageMargin">
-              <div class="flex flex-col items-center">
-                <picture
-                  ><source
-                    srcset="/svg/4-stars-dark.svg"
-                    media="(prefers-color-scheme: dark)" />
-                  <img
-                    src="/svg/4-stars.svg"
-                    alt="B: 4 stars (out of 5)"
-                    height="32"
-                    width="160"
-                /></picture>
-                <div
-                  class="flex flex-col items-center tracking-0.5px text-subtle"
-                >
-                  <span>on</span>
-                  <!-- -->Fri, Jan 28, 2022
-                </div>
-              </div>
+          </header>
+          <div
+            class="flex flex-col items-center gap-16 px-container-base pb-20 desktop:gap-20 desktop:pb-32"
+          >
+            <div>
               <div
-                class="rendered-markdown font-light text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose"
+                class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:float-left first-letter:mt-[6px] first-letter:pr-2 first-letter:font-sans-narrow-bold first-letter:text-[56px] first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px]"
               >
                 <p>
                   Seven years ago, the starship <em>Event Horizon</em> vanished
@@ -248,23 +287,23 @@
                 <p>Do you see? Indeed.</p>
               </div>
             </div>
-            <div class="spacer-y-20"></div>
             <div class="w-full max-w-popout">
               <h3
-                class="px-gutter text-md font-normal text-subtle shadow-bottom"
+                class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle shadow-bottom"
               >
                 Viewing History
-                <div class="h-2 min-h-2"></div>
               </h3>
               <ul>
-                <li class="flex flex-col px-gutter even:bg-subtle">
-                  <div class="flex gap-x-[1ch] py-4">
-                    <div class="h-5 w-4">
+                <li
+                  class="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle"
+                >
+                  <div class="flex items-center gap-x-[1ch] py-4">
+                    <div class="size-auto">
                       <svg
                         width="1em"
                         height="1em"
                         viewBox="0 0 16 16"
-                        class="fill-subtle mr-[1ch] min-h-4 min-w-4 mt-1 w-4"
+                        class="fill-subtle mr-[1ch] min-h-4 min-w-4 w-4"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <title>Watched on</title>
@@ -283,25 +322,31 @@
                       </svg>
                     </div>
                     <div class="grow">
-                      <span class="inline-block text-default"
+                      <span
+                        class="inline-block font-sans-narrow text-sm tracking-normal text-subtle"
                         >Fri, Jan 28, 2022</span
                       >
-                      <span class="font-light text-muted"
-                        ><span>via</span> <span>HBO Max</span></span
+                      <span class="text-subtle"
+                        ><span>via</span>
+                        <span class="font-sans-narrow text-sm text-subtle"
+                          >HBO Max</span
+                        ></span
                       >
                       <!-- -->
                     </div>
                   </div>
                   <div></div>
                 </li>
-                <li class="flex flex-col px-gutter even:bg-subtle">
-                  <div class="flex gap-x-[1ch] py-4">
-                    <div class="h-5 w-4">
+                <li
+                  class="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle"
+                >
+                  <div class="flex items-center gap-x-[1ch] py-4">
+                    <div class="size-auto">
                       <svg
                         width="1em"
                         height="1em"
                         viewBox="0 0 16 16"
-                        class="fill-subtle mr-[1ch] min-h-4 min-w-4 mt-1 w-4"
+                        class="fill-subtle mr-[1ch] min-h-4 min-w-4 w-4"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <title>Watched on</title>
@@ -320,11 +365,15 @@
                       </svg>
                     </div>
                     <div class="grow">
-                      <span class="inline-block text-default"
+                      <span
+                        class="inline-block font-sans-narrow text-sm tracking-normal text-subtle"
                         >Sun, May 29, 2022</span
                       >
-                      <span class="font-light text-muted"
-                        ><span>via</span> <span>35mm</span></span
+                      <span class="text-subtle"
+                        ><span>via</span>
+                        <span class="font-sans-narrow text-sm text-subtle"
+                          >35mm</span
+                        ></span
                       >
                       <span class="font-light text-subtle"
                         ><span>at</span>
@@ -335,7 +384,7 @@
                   <div>
                     <div class="pb-6">
                       <div
-                        class="rendered-markdown font-light leading-normal text-default"
+                        class="rendered-markdown leading-normal text-default"
                       >
                         <p>
                           After two years of pandemic avoidance, I returned to
@@ -364,148 +413,168 @@
                 </li>
               </ul>
             </div>
-            <div class="spacer-y-32"></div>
             <aside
               id="credits"
-              class="relative scroll-mt-[var(--header-offset)] bg-subtle px-gutter pb-8 pt-8 tablet:pt-12 w-full max-w-popout"
+              class="bg-subtle px-container pb-8 pt-8 tablet:pt-12 w-full max-w-popout"
               data-pagefind-meta="image:/_image?/content%2Fassets%2Fposters%2Fevent-horizon-1997.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
             >
-              <header
-                class="flex items-center justify-center gap-x-2 pb-6 text-center text-2.5xl"
-              >
-                Event Horizon<!-- -->
-                <span class="text-sm font-light text-subtle"
-                  >(<!-- -->1997<!-- -->)</span
-                >
-              </header>
               <div
-                class="poster-border mx-auto mb-4 mt-0 block size-full max-w-poster bg-[#e9e7e0] tablet:float-left tablet:mx-0 tablet:mr-gutter"
+                class="flex flex-wrap justify-center gap-8 tablet:flex-nowrap"
               >
-                <img
-                  srcset="
-                    /_image?/content%2Fassets%2Fposters%2Fevent-horizon-1997.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;q=80&amp;f=avif   62w,
-                    /_image?/content%2Fassets%2Fposters%2Fevent-horizon-1997.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=124&amp;q=80&amp;f=avif 124w,
-                    /_image?/content%2Fassets%2Fposters%2Fevent-horizon-1997.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;q=80&amp;f=avif 248w,
-                    /_image?/content%2Fassets%2Fposters%2Fevent-horizon-1997.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=496&amp;q=80&amp;f=avif 496w
-                  "
-                  src="/_image?/content%2Fassets%2Fposters%2Fevent-horizon-1997.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
-                  alt="A poster from Event Horizon (1997)"
-                  width="248"
-                  height="372"
-                  sizes="(min-width: 248px) 248px, 100vw"
-                  data-pagefind-meta="image[src], image_alt[alt]"
-                  class="aspect-[0.66666667] h-auto rounded-xl"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <div class="shrink-0">
+                  <div class="block">
+                    <img
+                      srcset="
+                        /_image?/content%2Fassets%2Fposters%2Fevent-horizon-1997.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;q=80&amp;f=avif   62w,
+                        /_image?/content%2Fassets%2Fposters%2Fevent-horizon-1997.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=124&amp;q=80&amp;f=avif 124w,
+                        /_image?/content%2Fassets%2Fposters%2Fevent-horizon-1997.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;q=80&amp;f=avif 248w,
+                        /_image?/content%2Fassets%2Fposters%2Fevent-horizon-1997.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=496&amp;q=80&amp;f=avif 496w
+                      "
+                      src="/_image?/content%2Fassets%2Fposters%2Fevent-horizon-1997.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
+                      alt="A poster from Event Horizon (1997)"
+                      width="248"
+                      height="372"
+                      sizes="(min-width: 248px) 248px, 100vw"
+                      data-pagefind-meta="image[src], image_alt[alt]"
+                      class="aspect-[0.66666667] h-auto"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+                <dl class="flex min-w-0 shrink flex-col items-start gap-y-4">
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Title
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">
+                      Event Horizon
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Year
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">1997</dd>
+                  </div>
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Financing
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">
+                      United Kingdom, United States, and Canada
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Running Time
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">96 min</dd>
+                  </div>
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Directed by
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">
+                      <div>Paul W.S. Anderson</div>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Written by
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">
+                      <div>Philip Eisner</div>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="font-sans-narrow text-xs uppercase text-subtle">
+                      Starring
+                    </dt>
+                    <dd class="text-wrap font-normal text-muted">
+                      Laurence Fishburne, Sam Neill, Kathleen Quinlan, and Joely
+                      Richardson
+                    </dd>
+                  </div>
+                </dl>
               </div>
-              <dl class="flex flex-col gap-y-4">
-                <div class="overflow-hidden">
-                  <dt class="font-bold text-subtle">Financing</dt>
-                  <dd class="text-subtle">
-                    United Kingdom, United States, and Canada
-                  </dd>
-                </div>
-                <div class="overflow-hidden">
-                  <dt class="font-bold text-subtle">Running Time</dt>
-                  <dd class="text-subtle">96 min</dd>
-                </div>
-                <div class="overflow-hidden">
-                  <dt class="font-bold text-subtle">Directed by</dt>
-                  <dd class="text-subtle"><div>Paul W.S. Anderson</div></dd>
-                </div>
-                <div class="overflow-hidden">
-                  <dt class="font-bold text-subtle">Written by</dt>
-                  <dd class="text-subtle"><div>Philip Eisner</div></dd>
-                </div>
-                <div class="overflow-hidden">
-                  <dt class="font-bold text-subtle">Starring</dt>
-                  <dd class="text-subtle">
-                    Laurence Fishburne, Sam Neill, Kathleen Quinlan, and Joely
-                    Richardson
-                  </dd>
-                </div>
-              </dl>
-              <div class="h-8 min-h-8"></div>
-              <ul class="flex flex-wrap gap-2"></ul>
-              <div class="h-8 min-h-8"></div>
               <a
                 href="#top"
-                class="mx-auto flex max-w-[50%] cursor-pointer content-center items-center justify-center rounded-lg p-2 text-accent shadow-all hover:shadow-border-accent"
-                >Back to Top<svg
-                  viewBox="0 0 24 24"
-                  class="size-6 fill-default"
-                >
-                  <path
-                    d="M7.997 10l3.515-3.79a.672.672 0 0 1 .89-.076l.086.075L16 10 13 10.001V18h-2v-7.999L7.997 10z"
-                  ></path></svg
-              ></a>
-            </aside>
-            <div class="spacer-y-32"></div>
-            <div
-              data-pagefind-ignore="true"
-              class="flex w-full max-w-popout flex-col items-center gap-y-12 bg-default tablet:max-w-full tablet:bg-subtle tablet:pb-32 tablet:pt-8 desktop:gap-y-24"
-            >
-              <nav
-                class="relative flex w-full flex-col items-center tablet:w-auto"
+                class="mx-auto mt-8 flex w-full max-w-[430px] cursor-pointer content-center items-center justify-center py-5 font-sans-narrow text-sm uppercase tracking-[.6px] shadow-all hover:bg-inverse hover:text-inverse"
+                >Back to Top</a
               >
-                <div
-                  class="w-full px-gutter py-2 shadow-bottom tablet:py-4 tablet:shadow-none desktop:px-pageMargin desktop:py-4"
+            </aside>
+          </div>
+          <div
+            data-pagefind-ignore="true"
+            class="flex w-full flex-col items-center gap-y-12 bg-subtle pb-32 pt-16 tablet:pt-8 desktop:gap-y-24"
+          >
+            <nav data-pagefind-ignore="true">
+              <div
+                class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
+              >
+                <h2
+                  class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
                 >
-                  <span class="font-semibold text-muted">More<!-- --> </span
-                  ><a class="text-accent" href="/reviews/">Reviews</a>
-                </div>
+                  More<!-- -->
+                  <a href="/reviews/" class="text-accent">Reviews</a>
+                </h2>
                 <ul
-                  class="w-full tablet:grid tablet:w-auto tablet:grid-cols-[repeat(2,minmax(100px,312px))] tablet:gap-8 tablet:px-gutter desktop:max-w-unset desktop:grid-cols-[repeat(4,1fr)] desktop:px-pageMargin desktop:pt-2"
+                  class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
                 >
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a href="/reviews/the-endless-2017/" class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fthe-endless-2017.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-endless-2017.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-endless-2017.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-endless-2017.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fthe-endless-2017.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from The Endless (2017)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/the-endless-2017/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fthe-endless-2017.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-endless-2017.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-endless-2017.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-endless-2017.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fthe-endless-2017.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from The Endless (2017)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/the-endless-2017/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >The Endless<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >2017</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/4-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/4-stars.svg"
                           alt="B+: 4 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          Writer-directors Justin Benson and Aaron Moorhead play
+                          brothers struggling to forge a life outside the UFO
+                          death cult that raised them when a video-taped message
+                          prompts them to pay a return visit before the group’s
+                          “ascension.” <strong>Spoilers follow.</strong>
+                          <a
+                            class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                            href="/reviews/the-endless-2017/"
+                            >Continue reading...</a
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Drama</span
                         ><span>
                           |
@@ -526,54 +595,58 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a href="/reviews/the-entity-1982/" class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fthe-entity-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-entity-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-entity-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-entity-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fthe-entity-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from The Entity (1982)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/the-entity-1982/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fthe-entity-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-entity-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-entity-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-entity-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fthe-entity-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from The Entity (1982)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/the-entity-1982/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >The Entity<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1982</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/2-stars-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/2-stars.svg"
                           alt="D+: 2 stars (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          Barbara Hershey plays a single mother who finds
+                          herself under repeated, violent sexual assault from an
+                          unseen force. Everywhere she turns for help, she finds
+                          men eager to dismiss, manipulate, or abandon her.
+                          <a
+                            class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                            href="/reviews/the-entity-1982/"
+                            >Continue reading...</a
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Drama</span
                         ><span>
                           |
@@ -582,54 +655,59 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a
+                      href="/reviews/every-girl-should-be-married-1948/"
+                      class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fevery-girl-should-be-married-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fevery-girl-should-be-married-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fevery-girl-should-be-married-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fevery-girl-should-be-married-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fevery-girl-should-be-married-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from Every Girl Should Be Married (1948)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/every-girl-should-be-married-1948/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fevery-girl-should-be-married-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fevery-girl-should-be-married-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fevery-girl-should-be-married-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fevery-girl-should-be-married-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fevery-girl-should-be-married-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from Every Girl Should Be Married (1948)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/every-girl-should-be-married-1948/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >Every Girl Should Be Married<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1948</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/1-star-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/1-star.svg"
                           alt="F: 1 star (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          Betsy Drake plays a department store clerk who
+                          obsesses over trapping a pediatrician, played by Cary
+                          Grant, into marriage.
+                          <a
+                            class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                            href="/reviews/every-girl-should-be-married-1948/"
+                            >Continue reading...</a
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Comedy</span
                         ><span>
                           |
@@ -641,54 +719,64 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
-                  >
-                    <div class="row-start-1 row-end-1">
+                  <li class="w-full tablet:w-[47%]">
+                    <a href="/reviews/the-falcon-takes-over-1942/" class="block"
+                      ><img
+                        srcset="/_image?/content%2Fassets%2Fstills%2Fthe-falcon-takes-over-1942.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=108.75&amp;q=80&amp;f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-falcon-takes-over-1942.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=217.5&amp;q=80&amp;f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-falcon-takes-over-1942.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;q=80&amp;f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-falcon-takes-over-1942.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=870&amp;q=80&amp;f=avif 870w"
+                        src="/_image?/content%2Fassets%2Fstills%2Fthe-falcon-takes-over-1942.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=435&amp;h=179&amp;q=80&amp;f=avif"
+                        alt="A still from The Falcon Takes Over (1942)"
+                        loading="lazy"
+                        decoding="async"
+                        width="435"
+                        height="179"
+                        sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                        class="aspect-[1.77777778] h-auto w-full"
+                    /></a>
+                    <div
+                      class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                    >
                       <a
                         href="/reviews/the-falcon-takes-over-1942/"
-                        class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
-                        ><img
-                          srcset="
-                            /_image?/content%2Fassets%2Fstills%2Fthe-falcon-takes-over-1942.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=78&amp;q=80&amp;f=avif   78w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-falcon-takes-over-1942.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=156&amp;q=80&amp;f=avif 156w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-falcon-takes-over-1942.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;q=80&amp;f=avif 312w,
-                            /_image?/content%2Fassets%2Fstills%2Fthe-falcon-takes-over-1942.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=624&amp;q=80&amp;f=avif 624w
-                          "
-                          src="/_image?/content%2Fassets%2Fstills%2Fthe-falcon-takes-over-1942.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=312&amp;h=176&amp;q=80&amp;f=avif"
-                          alt="A still from The Falcon Takes Over (1942)"
-                          loading="lazy"
-                          decoding="async"
-                          width="312"
-                          height="175.5"
-                          sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                          class="aspect-[1.77777778] h-auto"
-                      /></a>
-                    </div>
-                    <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
-                      <a
-                        href="/reviews/the-falcon-takes-over-1942/"
-                        class="block text-md text-default"
+                        class="mb-4 block font-serif-semibold text-xl text-default"
                         >The Falcon Takes Over<!-- -->
                         <span class="text-sm font-light leading-none text-muted"
                           >1942</span
                         ></a
-                      >
-                    </div>
-                    <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-                      <picture
+                      ><picture
                         ><source
                           srcset="/svg/1-star-dark.svg"
                           media="(prefers-color-scheme: dark)" />
                         <img
                           src="/svg/1-star.svg"
                           alt="F: 1 star (out of 5)"
-                          height="16"
-                          width="80"
+                          height="18"
+                          width="90"
+                          class="mb-4"
                       /></picture>
-                    </div>
-                    <div class="tablet:px-6">
-                      <div class="text-sm leading-4 tracking-0.5px text-subtle">
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-0.3px text-muted"
+                      >
+                        <p>
+                          <strong
+                            >The screen’s first Raymond Chandler
+                            adaptation.</strong
+                          >
+                          It takes the setup and principal characters of
+                          Chandler’s novel, <em>Farewell, My Lovely</em>,
+                          transplants the location to New York City, substitutes
+                          gentleman detective Gay Laurence (aka The Falcon),
+                          played by George Sanders, for Philip Marlowe, and
+                          grafts on a pair of sidekicks. The result underwhelms.
+                          <a
+                            class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                            href="/reviews/the-falcon-takes-over-1942/"
+                            >Continue reading...</a
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle"
+                      >
                         <span>Comedy</span
                         ><span>
                           |
@@ -706,79 +794,110 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="col-[1_/_-1] block px-gutter py-4 text-right shadow-bottom shadow-border tablet:absolute tablet:right-0 tablet:top-0 tablet:shadow-none desktop:right-[var(--gutter-width)]"
-                  >
-                    <a class="text-accent" href="/reviews/"
-                      >All<!-- -->
-                      <span class="inline tablet:hidden desktop:inline"
-                        >Reviews</span
-                      >
-                      <!-- -->→</a
-                    >
-                  </li>
                 </ul>
-              </nav>
-            </div>
-            <div class="spacer-y-32 tablet:spacer-y-0"></div>
-            <script type="application/ld+json">
-              {
-                "@context": "http://schema.org",
-                "@type": "Review",
-                "itemReviewed": {
-                  "@type": "Movie",
-                  "name": "Event Horizon",
-                  "sameAs": "http://www.imdb.com/title/tt0119081/",
-                  "image": "/_image?/content%2Fassets%2Fstills%2Fevent-horizon-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1200&h=675&q=80&f=jpeg",
-                  "dateCreated": "1997",
-                  "director": {
-                    "@type": "Person",
-                    "name": "Paul W.S. Anderson"
-                  }
-                },
-                "reviewRating": { "@type": "Rating", "ratingValue": 4 },
-                "author": { "@type": "Person", "name": "Frank Showalter" }
-              }
-            </script>
-          </main>
-        </div>
+              </div>
+            </nav>
+          </div>
+          <script type="application/ld+json">
+            {
+              "@context": "http://schema.org",
+              "@type": "Review",
+              "itemReviewed": {
+                "@type": "Movie",
+                "name": "Event Horizon",
+                "sameAs": "http://www.imdb.com/title/tt0119081/",
+                "image": "/_image?/content%2Fassets%2Fstills%2Fevent-horizon-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1200&h=675&q=80&f=jpeg",
+                "dateCreated": "1997",
+                "director": { "@type": "Person", "name": "Paul W.S. Anderson" }
+              },
+              "reviewRating": { "@type": "Rating", "ratingValue": 4 },
+              "author": { "@type": "Person", "name": "Frank Showalter" }
+            }
+          </script>
+        </main>
         <footer
-          class="flex flex-col items-center gap-y-6 bg-[url(&#x27;/assets/ripnotcomingsoon.avif&#x27;)] px-pageMargin py-8 text-inverse"
+          class="flex flex-wrap items-start justify-between gap-[10%] bg-[#252525] px-container-base py-20 text-inverse tablet:px-12 tablet:pt-10 desktop:p-20"
         >
-          <ul
-            class="flex w-full flex-wrap justify-center gap-x-4 gap-y-2 text-inverse tablet:gap-x-6 max:w-auto"
+          <div class="flex flex-col">
+            <div class="flex flex-col">
+              <div
+                class="whitespace-nowrap font-normal leading-8"
+                style="font-size: 1.5625rem"
+              >
+                <a href="/">Frank&#x27;s Movie Log</a>
+              </div>
+              <p class="w-full pl-px text-sm italic leading-4 opacity-85">
+                My life at the movies.
+              </p>
+            </div>
+            <div class="spacer-y-12"></div>
+          </div>
+          <div
+            class="flex flex-col gap-20 pb-20 pt-10 tablet:basis-1/2 tablet:pt-20"
           >
-            <li class="block whitespace-nowrap tracking-0.5px">
-              <a class="text-inverse" href="/">Home</a>
-            </li>
-            <li class="block whitespace-nowrap tracking-0.5px">
-              <a class="text-inherit" href="/how-i-grade/">How I Grade</a>
-            </li>
-            <li class="block whitespace-nowrap tracking-0.5px">
-              <a class="text-inherit" href="/reviews/">Reviews</a>
-            </li>
-            <li class="block whitespace-nowrap tracking-0.5px">
-              <a class="text-inherit" href="/viewings/">Viewing Log</a>
-            </li>
-            <li class="block whitespace-nowrap tracking-0.5px">
-              <a class="text-inherit" href="/cast-and-crew/">Cast &amp; Crew</a>
-            </li>
-            <li class="block whitespace-nowrap tracking-0.5px">
-              <a class="text-inherit" href="/collections/">Collections</a>
-            </li>
-            <li class="block whitespace-nowrap tracking-0.5px">
-              <a class="text-inherit" href="/watchlist/">Watchlist</a>
-            </li>
-          </ul>
-          <p class="text-sm font-light leading-4">
-            All stills used in accordance with the<!-- -->
+            <ul class="flex w-full flex-col gap-y-10 text-inverse max:w-auto">
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/">Home</a>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/how-i-grade/">How I Grade</a>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/reviews/">Reviews</a>
+                <ol class="mt-4">
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/reviews/underseen/">Underseen Gems</a>
+                  </li>
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/reviews/overrated/">Overrated Disappointments</a>
+                  </li>
+                </ol>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/viewings/">Viewing Log</a>
+                <ol class="mt-4">
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/viewings/stats/">Stats</a>
+                  </li>
+                </ol>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/cast-and-crew/">Cast &amp; Crew</a>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/collections/">Collections</a>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a href="/watchlist/">Watchlist</a>
+                <ol class="mt-4">
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a href="/watchlist/progress/">Progress</a>
+                  </li>
+                </ol>
+              </li>
+            </ul>
             <a
-              href="http://www.copyright.gov/title17/92chap1.html#107"
-              class="text-inherit"
-              >Fair Use Law.</a
+              href="#top"
+              class="mb-8 w-full max-w-[320px] bg-canvas px-pageMargin py-5 text-center font-sans-narrow text-sm uppercase tracking-[.6px] text-default hover:bg-inverse hover:text-inverse"
+              >To the top</a
             >
-          </p>
-          <a href="#top" class="sr-only">To the top ↑</a>
+            <p class="w-full font-light leading-4 text-subtle">
+              All stills used in accordance with the<!-- -->
+              <a
+                href="http://www.copyright.gov/title17/92chap1.html#107"
+                class="text-inherit"
+                >Fair Use Law.</a
+              >
+            </p>
+          </div>
         </footer>
       </div>
     </div>
@@ -804,14 +923,11 @@
     <script>
       (() => {
         const openBtn = document.querySelector("button[data-open-modal]");
-        const shortcut = openBtn?.querySelector("kbd");
-        if (!openBtn || !(shortcut instanceof HTMLElement)) return;
-        const platformKey = shortcut.querySelector("kbd");
-        if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
-          platformKey.textContent = "⌘";
+        if (!openBtn) return;
+        if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
           openBtn.setAttribute("aria-keyshortcuts", "Meta+K");
+          openBtn.setAttribute("title", `Search: ⌘K`);
         }
-        shortcut.style.display = "";
       })();
     </script>
   </body>

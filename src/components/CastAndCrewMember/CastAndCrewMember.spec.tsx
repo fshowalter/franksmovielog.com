@@ -34,7 +34,7 @@ describe("CastAndCrewMember", () => {
 
     render(<CastAndCrewMember {...props} />);
 
-    await userEvent.selectOptions(screen.getByLabelText("Order By"), "Title");
+    await userEvent.selectOptions(screen.getByLabelText("Sort"), "Title");
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
@@ -45,7 +45,7 @@ describe("CastAndCrewMember", () => {
     render(<CastAndCrewMember {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Release Date (Oldest First)",
     );
 
@@ -58,7 +58,7 @@ describe("CastAndCrewMember", () => {
     render(<CastAndCrewMember {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Release Date (Newest First)",
     );
 
@@ -71,7 +71,7 @@ describe("CastAndCrewMember", () => {
     render(<CastAndCrewMember {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Grade (Best First)",
     );
 
@@ -84,7 +84,7 @@ describe("CastAndCrewMember", () => {
     render(<CastAndCrewMember {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Grade (Worst First)",
     );
 
@@ -201,7 +201,7 @@ describe("CastAndCrewMember", () => {
 
     render(<CastAndCrewMember {...props} />);
 
-    await userEvent.click(screen.getByText("Show More..."));
+    await userEvent.click(screen.getByText("Show More"));
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
