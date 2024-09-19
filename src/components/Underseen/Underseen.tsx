@@ -58,6 +58,11 @@ export function Underseen({
           <a href="/reviews/">Reviews</a>
         </>
       }
+      subNav={[
+        { href: "/reviews/", text: "all" },
+        { href: "/reviews/underseen/", text: "underseen", active: true },
+        { href: "/reviews/overrated/", text: "overrated" },
+      ]}
       deck="Four and five star movies with a below average number of IMDb votes."
       totalCount={state.filteredValues.length}
       onToggleFilters={() => dispatch({ type: Actions.TOGGLE_FILTERS })}

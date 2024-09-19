@@ -63,7 +63,8 @@ export function Reviews({
       title="Reviews"
       alt="Choose wisely."
       deck='"He chose... poorly."'
-      seeAlso={[
+      subNav={[
+        { href: "/reviews/", text: "all", active: true },
         { href: "/reviews/underseen/", text: "underseen" },
         { href: "/reviews/overrated/", text: "overrated" },
       ]}

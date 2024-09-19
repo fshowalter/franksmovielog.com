@@ -113,7 +113,7 @@ function WatchlistListItem({
   defaultPosterImageProps: PosterImageProps;
 }): JSX.Element {
   return (
-    <ListItem className="mb-0 items-center border-b border-default bg-subtle shadow-none first:pt-0">
+    <ListItem className="mb-0 items-center bg-subtle shadow-none">
       <ListItemPoster
         title={value.title}
         year={value.year}
