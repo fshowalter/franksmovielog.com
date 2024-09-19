@@ -1,6 +1,5 @@
 import { useReducer } from "react";
 import type { AvatarImageProps } from "src/api/avatars";
-import type { BackdropImageProps } from "src/api/backdrops";
 import type { CastAndCrewMember } from "src/api/castAndCrew";
 import type { PosterImageProps } from "src/api/posters";
 import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
@@ -28,8 +27,7 @@ export type Props = {
   titles: ListItemValue[];
   initialSort: Sort;
   distinctReleaseYears: readonly string[];
-  avatarImageProps: AvatarImageProps;
-  backdropImageProps: BackdropImageProps;
+  avatarImageProps: AvatarImageProps | null;
 };
 
 export const AvatarImageConfig = {
@@ -62,7 +60,6 @@ export function CastAndCrewMember({
   initialSort,
   distinctReleaseYears,
   avatarImageProps,
-  backdropImageProps,
 }: Props): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
@@ -75,12 +72,10 @@ export function CastAndCrewMember({
   return (
     <ListWithFiltersLayout
       title={value.name}
-      alt={value.name}
       data-pagefind-body
       breadcrumb={<a href="/cast-and-crew/">Cast & Crew</a>}
       avatarImageProps={avatarImageProps}
       deck={deck(value)}
-      backdropImageProps={backdropImageProps}
       totalCount={state.filteredValues.length}
       onToggleFilters={() => dispatch({ type: Actions.TOGGLE_FILTERS })}
       filtersVisible={state.showFilters}
