@@ -50,7 +50,7 @@ export function CastAndCrew({
       filtersVisible={state.showFilters}
       filters={<Filters dispatch={dispatch} sortValue={state.sortValue} />}
       list={
-        <ol data-testid="list" className="mb-20 bg-subtle">
+        <ol data-testid="list" className="my-24 bg-subtle">
           {values.map((value) => {
             return <MemberListItem key={value.name} value={value} />;
           })}

@@ -75,12 +75,12 @@ export function ListWithFiltersLayout({
             })}
           </ul>
         ) : (
-          <div className="hidden bg-subtle py-8 tablet:block desktop:py-12" />
+          <></>
         )}
       </div>
-      <section className="mx-auto mb-20 flex max-w-screen-max flex-col items-center bg-default">
-        <div className="flex w-full flex-col items-stretch">
-          <div className="flex grow flex-col">
+      <section className="mx-auto mb-20 flex flex-col items-center bg-default">
+        <div className="mx-auto flex w-full max-w-screen-max flex-col items-stretch pb-10">
+          <div className="flex grow flex-col bg-subtle">
             <div className="relative grid-cols-[1fr_48px_33%] tablet:px-12 showFilters:grid showFilters:grid-rows-[auto_1fr] showFilters:px-0">
               <div className="relative z-10 row-start-1 bg-default text-xs tablet:-mx-12 tablet:px-16 showFilters:col-span-3 showFilters:mx-0 showFilters:w-full showFilters:px-20">
                 <ListHeader
@@ -92,13 +92,13 @@ export function ListWithFiltersLayout({
               </div>
 
               <div
-                className="relative z-10 col-start-3 row-span-2 row-start-2 grid bg-default text-sm transition-[grid-template-rows] duration-200 ease-in-out showFilters:mr-12 showFilters:block showFilters:py-24 showFilters:pb-12 showFilters:shadow-none desktop:mr-20"
+                className="relative z-10 col-start-3 row-span-2 row-start-2 grid text-sm transition-[grid-template-rows] duration-200 ease-in-out showFilters:mr-12 showFilters:block showFilters:py-24 showFilters:pb-12 showFilters:shadow-none desktop:mr-20"
                 style={{
                   gridTemplateRows: filtersVisible ? "1fr" : "0fr",
                   marginBottom: filtersVisible ? "24px" : 0,
                 }}
               >
-                <div className="w-full overflow-hidden bg-subtle px-container-base text-sm tablet:text-base showFilters:overflow-visible desktop:px-8">
+                <div className="w-full overflow-hidden bg-default px-container-base text-sm tablet:text-base showFilters:overflow-visible desktop:px-8">
                   <fieldset className="flex flex-col gap-10 py-10 tablet:gap-12 tablet:px-0">
                     <legend className="hidden w-full py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle showFilters:shadow-bottom min-[1024px]:block">
                       Filter & Sort

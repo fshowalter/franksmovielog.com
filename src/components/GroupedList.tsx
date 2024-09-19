@@ -59,7 +59,7 @@ function GroupingListItem({
           {groupText}
         </div>
       </div>
-      <div className="my-4 bg-subtle">{children}</div>
+      <div className="bg-subtle">{children}</div>
     </li>
   );
 }
