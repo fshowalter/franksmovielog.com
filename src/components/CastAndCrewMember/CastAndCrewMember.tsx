@@ -90,7 +90,7 @@ export function CastAndCrewMember({
           distinctReleaseYears={distinctReleaseYears}
           creditedAs={value.creditedAs}
           sortValue={state.sortValue}
-          hideReviewed={state.hi}
+          hideReviewed={state.hideReviewed}
         />
       }
       list={

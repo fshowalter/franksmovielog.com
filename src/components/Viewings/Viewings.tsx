@@ -3,7 +3,6 @@ import type { BackdropImageProps } from "src/api/backdrops";
 import type { PosterImageProps } from "src/api/posters";
 import type { Viewing } from "src/api/viewings";
 import { GroupedList } from "src/components/GroupedList";
-import { ListItem } from "src/components/ListItem";
 import { ListItemMediumAndVenue } from "src/components/ListItemMediumAndVenue";
 import { ListItemPoster } from "src/components/ListItemPoster";
 import { ListItemTitle } from "src/components/ListItemTitle";

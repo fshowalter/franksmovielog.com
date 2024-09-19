@@ -4,7 +4,6 @@ import { ListItem } from "./ListItem";
 import { ListItemMediumAndVenue } from "./ListItemMediumAndVenue";
 import { ListItemPoster } from "./ListItemPoster";
 import { ListItemTitle } from "./ListItemTitle";
-import { StatHeading } from "./StatHeading";
 
 interface ViewingSubListItemValue {
   sequence: number;

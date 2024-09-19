@@ -1,17 +1,7 @@
+import type { AvatarImageProps } from "src/api/avatars";
+import { Avatar } from "src/components/Avatar";
 import { BarGradient } from "src/components/BarGradient";
-import { StatHeading } from "src/components/StatHeading";
-import {
-  Table,
-  TableDataCell,
-  TableHead,
-  TableHeaderCell,
-  TableProgressRow,
-} from "src/components/StatsTable";
 import { ccn } from "src/utils/concatClassNames";
-
-import { ListItemAvatar } from "../ListItemAvatar";
-import { ListItemCounts } from "../ListItemCounts";
-import { SubHeading } from "../SubHeading";
 
 type ValueType = "director" | "writer" | "performer" | "collection";
 
@@ -101,10 +91,6 @@ function Name({ value, valueType }: { valueType: ValueType; value: Value }) {
     </span>
   );
 }
-
-import type { AvatarImageProps } from "src/api/avatars";
-import { Avatar } from "src/components/Avatar";
-import { ccn } from "src/utils/concatClassNames";
 
 export const DetailsAvatarImageConfig = {
   width: 80,

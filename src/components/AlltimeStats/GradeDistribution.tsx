@@ -1,13 +1,5 @@
 import type { AlltimeStats } from "src/api/alltimeStats";
 import { BarGradient } from "src/components/BarGradient";
-import { StatHeading } from "src/components/StatHeading";
-import {
-  Table,
-  TableDataCell,
-  TableHead,
-  TableHeaderCell,
-  TableRow,
-} from "src/components/StatsTable";
 
 export function GradeDistribution({
   values,
