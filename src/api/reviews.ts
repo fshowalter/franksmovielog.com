@@ -70,13 +70,13 @@ function getHtmlAsSpan(
   return linkReviewedTitles(html, reviewedTitles);
 }
 
-export interface ReviewWithExcerpt extends Review {
+export interface ReviewExcerpt {
   excerpt: string;
 }
 
-export async function loadExcerptHtml(
-  review: Review,
-): Promise<ReviewWithExcerpt> {
+export async function loadExcerptHtml<T extends { slug: string }>(
+  review: T,
+): Promise<T & ReviewExcerpt> {
   const reviewsMarkdown = cachedMarkdownReviews || (await allReviewsMarkdown());
   const reviewedTitlesJson =
     cachedReviewedTitlesJson || (await allReviewedTitlesJson());
@@ -110,14 +110,15 @@ export async function loadExcerptHtml(
   };
 }
 
-export interface ReviewWithContent extends Review {
+export interface ReviewContent {
   viewings: ReviewViewing[];
   excerptPlainText: string;
   content: string | null;
 }
 
-export async function loadContent(review: Review): Promise<ReviewWithContent> {
-  console.log(review);
+export async function loadContent<
+  T extends { imdbId: string; rawContent: string; title: string },
+>(review: T): Promise<ReviewContent & T> {
   const viewingsMarkdown =
     cachedViewingsMarkdown || (await allViewingsMarkdown());
   const reviewedTitlesJson = await allReviewedTitlesJson();

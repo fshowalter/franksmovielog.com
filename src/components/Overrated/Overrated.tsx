@@ -11,7 +11,7 @@ import { ListItemPoster } from "../ListItemPoster";
 import { ListItemTitle } from "../ListItemTitle";
 import { Filters } from "./Filters";
 import type { Sort } from "./Overrated.reducer";
-import { initState, reducer } from "./Overrated.reducer";
+import { Actions, initState, reducer } from "./Overrated.reducer";
 
 export type Props = {
   values: ListItemValue[];

@@ -1,5 +1,5 @@
 import type { PosterImageProps } from "src/api/posters";
-import type { Review, ReviewWithContent } from "src/api/reviews";
+import type { Review, ReviewContent } from "src/api/reviews";
 import type { StillImageProps } from "src/api/stills";
 import { Grade } from "src/components/Grade";
 import { Layout } from "src/components/Layout";
@@ -22,7 +22,7 @@ export const StillImageConfig = {
 };
 
 export interface Props {
-  value: ReviewWithContent;
+  value: Review & ReviewContent;
   stillImageProps: StillImageProps;
   posterImageProps: PosterImageProps;
   moreFromCastAndCrew: React.ComponentProps<
@@ -142,7 +142,7 @@ function Meta({
   countries,
   runtimeMinutes,
   className,
-}: Pick<ReviewWithContent, "year" | "countries" | "runtimeMinutes"> & {
+}: Pick<Review, "year" | "countries" | "runtimeMinutes"> & {
   className?: string;
 }) {
   return (

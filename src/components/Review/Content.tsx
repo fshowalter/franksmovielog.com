@@ -1,7 +1,7 @@
-import type { ReviewWithContent } from "src/api/reviews";
+import type { ReviewContent } from "src/api/reviews";
 import { LongFormText } from "src/components/LongFormText";
 
-type Props = Pick<ReviewWithContent, "content"> & {
+type Props = Pick<ReviewContent, "content"> & {
   className?: string;
 };
 
