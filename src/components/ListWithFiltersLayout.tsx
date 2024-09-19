@@ -62,14 +62,23 @@ export function ListWithFiltersLayout({
       )}
       <div className="bg-subtle">
         {subNav ? (
-          <ul className="flex justify-center gap-x-6 text-nowrap font-sans-narrow-bold text-sm uppercase tracking-[1px] text-accent">
+          <ul className="mx-auto flex justify-center gap-x-6 text-nowrap px-container font-sans-narrow-bold text-sm uppercase tracking-[1px] text-muted">
             {subNav.map((also) => {
               return (
                 <li
                   key={also.href}
-                  className={`py-8 opacity-75 desktop:py-12 ${also.active ? "border-b-4 text-subtle" : ""}`}
+                  className={`w-full max-w-32 text-center opacity-75 ${also.active ? "text-subtle opacity-75" : ""}`}
                 >
-                  <a href={also.href}>{also.text}</a>
+                  {also.active ? (
+                    <div className="px-4 py-8 desktop:py-12">{also.text}</div>
+                  ) : (
+                    <a
+                      className="block px-4 py-8 hover:bg-accent hover:text-inverse desktop:py-12"
+                      href={also.href}
+                    >
+                      {also.text}
+                    </a>
+                  )}
                 </li>
               );
             })}
@@ -95,7 +104,7 @@ export function ListWithFiltersLayout({
                 className="relative z-10 col-start-3 row-span-2 row-start-2 grid text-sm transition-[grid-template-rows] duration-200 ease-in-out showFilters:mr-12 showFilters:block showFilters:py-24 showFilters:pb-12 showFilters:shadow-none desktop:mr-20"
                 style={{
                   gridTemplateRows: filtersVisible ? "1fr" : "0fr",
-                  marginBottom: filtersVisible ? "24px" : 0,
+                  marginTop: filtersVisible ? "24px" : 0,
                 }}
               >
                 <div className="w-full overflow-hidden bg-default px-container-base text-sm tablet:text-base showFilters:overflow-visible desktop:px-8">
