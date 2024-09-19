@@ -49,7 +49,7 @@ export function Collections({
       filtersVisible={state.showFilters}
       filters={<Filters dispatch={dispatch} sortValue={state.sortValue} />}
       list={
-        <ol data-testid="list" className="my-24">
+        <ol data-testid="list" className="mt-4 bg-subtle showFilters:my-24">
           {values.map((value) => {
             return <CollectionListItem key={value.name} value={value} />;
           })}
