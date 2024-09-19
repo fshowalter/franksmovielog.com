@@ -2,7 +2,7 @@ import { buildGroupValues } from "src/utils/buildGroupValues";
 import { type FilterableState, filterTools } from "src/utils/filterTools";
 import { collator, sortString } from "src/utils/sortTools";
 
-import type { ListItemValue } from "./List";
+import type { ListItemValue } from "./Watchlist";
 
 export type Sort = "release-date-desc" | "release-date-asc" | "title";
 
@@ -47,6 +47,7 @@ function groupForValue(value: ListItemValue, sortValue: Sort): string {
 interface State
   extends FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>> {
   hideReviewed: boolean;
+  showFilters: boolean;
 }
 
 export function initState({
@@ -67,6 +68,7 @@ export function initState({
     showCount: SHOW_COUNT_DEFAULT,
     sortValue: initialSort,
     hideReviewed: false,
+    showFilters: false,
   };
 }
 
@@ -79,6 +81,7 @@ export enum Actions {
   FILTER_COLLECTION = "FILTER_COLLECTION",
   SORT = "SORT",
   SHOW_MORE = "SHOW_MORE",
+  TOGGLE_FILTERS = "TOGGLE_FILTERS",
 }
 
 interface FilterTitleAction {
@@ -120,6 +123,10 @@ interface ShowMoreAction {
   type: Actions.SHOW_MORE;
 }
 
+interface ToggleFiltersAction {
+  type: Actions.TOGGLE_FILTERS;
+}
+
 export type ActionType =
   | FilterTitleAction
   | FilterDirectorAction
@@ -128,7 +135,8 @@ export type ActionType =
   | FilterCollectionAction
   | FilterReleaseYearAction
   | SortAction
-  | ShowMoreAction;
+  | ShowMoreAction
+  | ToggleFiltersAction;
 
 function clearFilter(
   value: string,
@@ -224,6 +232,12 @@ export function reducer(state: State, action: ActionType): State {
         ...state,
         groupedValues,
         showCount,
+      };
+    }
+    case Actions.TOGGLE_FILTERS: {
+      return {
+        ...state,
+        showFilters: !state.showFilters,
       };
     }
 

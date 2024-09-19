@@ -11,7 +11,7 @@ import { ListWithFiltersLayout } from "../ListWithFiltersLayout";
 import { SvgIcon } from "../SvgIcon";
 import { WatchlistTitleSlug } from "../WatchlistTitleSlug";
 import { Filters } from "./Filters";
-import { initState, reducer, type Sort } from "./Watchlist.reducer";
+import { Actions, initState, reducer, type Sort } from "./Watchlist.reducer";
 
 export type ListItemValue = Pick<
   WatchlistTitle,

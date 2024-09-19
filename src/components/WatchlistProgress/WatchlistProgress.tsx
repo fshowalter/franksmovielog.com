@@ -1,3 +1,4 @@
+import type { AvatarImageProps } from "src/api/avatars";
 import type { BackdropImageProps } from "src/api/backdrops";
 import type { WatchlistProgress } from "src/api/watchlistProgress";
 
@@ -8,14 +9,20 @@ import { Callouts } from "./Callouts";
 import { Details } from "./Details";
 
 export type Props = {
-  progress: Pick<
-    WatchlistProgress,
-    | "collectionDetails"
-    | "directorDetails"
-    | "writerDetails"
-    | "performerDetails"
-  > &
-    CalloutsProps;
+  progress: {
+    collectionDetails: (WatchlistProgress["collectionDetails"][number] & {
+      avatarImageProps: AvatarImageProps | null;
+    })[];
+    directorDetails: (WatchlistProgress["directorDetails"][number] & {
+      avatarImageProps: AvatarImageProps | null;
+    })[];
+    performerDetails: (WatchlistProgress["performerDetails"][number] & {
+      avatarImageProps: AvatarImageProps | null;
+    })[];
+    writerDetails: (WatchlistProgress["writerDetails"][number] & {
+      avatarImageProps: AvatarImageProps | null;
+    })[];
+  } & CalloutsProps;
   backdropImageProps: BackdropImageProps;
 };
 
