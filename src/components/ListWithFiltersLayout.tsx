@@ -8,6 +8,7 @@ import { Layout } from "./Layout";
 type Link = {
   text: string;
   href: string;
+  active?: boolean;
 };
 
 export function ListWithFiltersLayout({
@@ -23,10 +24,12 @@ export function ListWithFiltersLayout({
   breadcrumb,
   avatarImageProps,
   seeAlso,
+  subNav,
 }: {
   title: string;
   deck: string;
   alt?: string;
+  subNav?: Link[];
   backdropImageProps?: BackdropImageProps;
   filters: React.ReactNode;
   list: React.ReactNode;
@@ -57,11 +60,29 @@ export function ListWithFiltersLayout({
       ) : (
         <SolidBackdrop title={title} deck={deck} breadcrumb={breadcrumb} />
       )}
-      <section className="mx-auto flex max-w-screen-max flex-col items-center pb-20">
+      <div className="bg-subtle">
+        {subNav ? (
+          <ul className="flex justify-center gap-x-6 text-nowrap py-8 font-sans-narrow-bold text-sm uppercase tracking-[1px] desktop:py-12">
+            {subNav.map((also) => {
+              return (
+                <li
+                  key={also.href}
+                  className={`opacity-75 ${also.active ? "text-subtle" : ""}`}
+                >
+                  <a href={also.href}>{also.text}</a>
+                </li>
+              );
+            })}
+          </ul>
+        ) : (
+          <div className="hidden bg-subtle py-8 tablet:block desktop:py-12" />
+        )}
+      </div>
+      <section className="mx-auto mb-20 flex max-w-screen-max flex-col items-center bg-default">
         <div className="flex w-full flex-col items-stretch">
           <div className="flex grow flex-col">
             <div className="relative grid-cols-[1fr_48px_33%] tablet:px-12 showFilters:grid showFilters:grid-rows-[auto_1fr] showFilters:px-0">
-              <div className="relative z-10 row-start-1 text-xs shadow-bottom tablet:shadow-none showFilters:ml-12 desktop:ml-20">
+              <div className="relative z-10 row-start-1 bg-default text-xs tablet:-mx-12 tablet:px-16 showFilters:col-span-3 showFilters:mx-0 showFilters:w-full showFilters:px-20">
                 <ListHeader
                   totalCount={totalCount}
                   onToggleFilters={onToggleFilters}
@@ -69,21 +90,24 @@ export function ListWithFiltersLayout({
                   seeAlso={seeAlso}
                 />
               </div>
+
               <div
-                className="relative z-10 col-start-3 row-span-2 row-start-1 grid bg-subtle text-sm shadow-bottom transition-[grid-template-rows] duration-200 ease-in-out showFilters:mr-12 showFilters:block showFilters:py-24 showFilters:pb-12 showFilters:shadow-none desktop:mr-20"
+                className="relative z-10 col-start-3 row-span-2 row-start-2 grid bg-default text-sm transition-[grid-template-rows] duration-200 ease-in-out showFilters:mr-12 showFilters:block showFilters:py-24 showFilters:pb-12 showFilters:shadow-none desktop:mr-20"
                 style={{
                   gridTemplateRows: filtersVisible ? "1fr" : "0fr",
+                  marginBottom: filtersVisible ? "24px" : 0,
                 }}
               >
-                <div className="w-full overflow-hidden bg-default px-container-base text-sm tablet:text-base showFilters:overflow-visible desktop:px-8">
+                <div className="w-full overflow-hidden bg-subtle px-container-base text-sm tablet:text-base showFilters:overflow-visible desktop:px-8">
                   <fieldset className="flex flex-col gap-10 py-10 tablet:gap-12 tablet:px-0">
-                    <legend className="hidden w-full py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle shadow-bottom min-[1024px]:block">
+                    <legend className="hidden w-full py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle showFilters:shadow-bottom min-[1024px]:block">
                       Filter & Sort
                     </legend>
                     {filters}
                   </fieldset>
                 </div>
               </div>
+
               <div className="col-start-1 row-start-2 showFilters:pl-12 desktop:pl-20">
                 {list}
               </div>
@@ -176,35 +200,37 @@ function ListHeader({
   seeAlso?: Link[];
 }): JSX.Element {
   return (
-    <div className="flex w-full flex-wrap items-baseline justify-between px-container-base font-sans-bold uppercase tracking-[0.5px] text-subtle tablet:px-0">
-      <span className="block py-10 pr-4">
+    <div className="flex w-full flex-wrap items-baseline justify-between gap-x-4 gap-y-5 px-container-base py-10 font-sans-bold uppercase tracking-[0.5px] text-subtle tablet:px-0">
+      <span className="block pr-4">
         <span className="font-sans-bold">{totalCount.toLocaleString()}</span>{" "}
         Results
       </span>
-      <div className="ml-auto flex flex-wrap justify-end gap-4 pb-10 tablet:w-auto">
-        {seeAlso &&
-          seeAlso.map((also) => {
+
+      {seeAlso && (
+        <div className="ml-auto flex w-1/2 flex-wrap justify-end gap-4">
+          {seeAlso.map((also) => {
             return (
               <div
                 key={also.href}
-                className="flex items-start gap-x-4 text-nowrap bg-default px-4 py-2 uppercase text-accent shadow-all hover:bg-accent hover:text-inverse"
+                className="flex items-start gap-x-4 text-nowrap bg-default py-2 uppercase text-accent hover:bg-accent hover:text-inverse"
               >
                 <a href={also.href}>{also.text}</a>
               </div>
             );
           })}
-        <button
-          onClick={onToggleFilters}
-          className="flex items-center gap-x-4 text-nowrap px-4 py-2 uppercase text-muted shadow-all min-[1024px]:hidden"
-          style={{
-            backgroundColor: filtersVisible
-              ? "var(--bg-subtle)"
-              : "var(--bg-default)",
-          }}
-        >
-          Filter & Sort
-        </button>
-      </div>
+        </div>
+      )}
+      <button
+        onClick={onToggleFilters}
+        className={`ml-auto flex justify-center gap-x-4 text-nowrap px-4 py-2 uppercase text-muted shadow-all min-[1024px]:hidden`}
+        style={{
+          backgroundColor: filtersVisible
+            ? "var(--bg-subtle)"
+            : "var(--bg-default)",
+        }}
+      >
+        Filter & Sort
+      </button>
     </div>
   );
 }

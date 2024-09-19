@@ -117,7 +117,7 @@ function DateListItem({
   const [day, date] = dayAndDate.split("-");
 
   return (
-    <li className="relative mb-px flex max-w-screen-max flex-col gap-2 gap-x-4 bg-subtle first:pt-0 tablet:flex-row tablet:items-center tablet:gap-x-8 tablet:bg-subtle tablet:px-4 showFilters:pr-0 desktop:px-6 desktop:pr-0">
+    <li className="relative flex max-w-screen-max flex-col gap-2 gap-x-4 first:pt-0 tablet:flex-row tablet:items-center tablet:gap-x-8 tablet:bg-default tablet:px-4 showFilters:pr-0 desktop:px-6 desktop:pr-0">
       <div className="px-container-base py-1 text-muted tablet:px-0">
         <div className="flex items-center gap-1 tablet:block tablet:shadow-all">
           <div className="py-2 uppercase tablet:w-12 tablet:bg-canvas tablet:text-center tablet:text-sm/none">
@@ -128,7 +128,7 @@ function DateListItem({
           </div>
         </div>
       </div>
-      <ul className="flex grow flex-col tablet:gap-y-0 tablet:py-4">
+      <ul className="flex grow flex-col tablet:my-4 tablet:gap-y-0 tablet:bg-subtle">
         {values.map((value) => {
           return <ViewingListItem value={value} key={value.sequence} />;
         })}
@@ -145,7 +145,7 @@ function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
 
   return (
     <li
-      className="mb-1 flex flex-row items-center gap-x-4 bg-default px-container-base py-4 last:shadow-none tablet:gap-x-6 tablet:py-4 tablet:pl-6"
+      className="mb-1 flex flex-row items-center gap-x-4 bg-default px-container-base py-4 last:shadow-none last-of-type:mb-0 only-of-type:mb-0 tablet:gap-x-6 tablet:py-4 tablet:pl-6"
       style={{
         background: value.slug ? "var(--bg-default)" : "var(--bg-subtle)",
       }}

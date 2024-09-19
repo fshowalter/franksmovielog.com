@@ -53,13 +53,13 @@ function GroupingListItem({
   zIndex: number;
 }) {
   return (
-    <li className="first-of-type:shadow-top block bg-subtle">
+    <li className="block">
       <div style={{ zIndex: zIndex }} className="pt-0 text-md">
-        <div className="max-w-screen-max px-container-base py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4">
+        <div className="mb-1 max-w-screen-max bg-subtle px-container-base py-8 text-xl leading-8 tablet:px-4">
           {groupText}
         </div>
       </div>
-      {children}
+      <div className="my-4 bg-subtle">{children}</div>
     </li>
   );
 }
