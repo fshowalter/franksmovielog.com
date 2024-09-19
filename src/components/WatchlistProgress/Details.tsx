@@ -10,6 +10,7 @@ interface Value {
   reviewCount: number;
   titleCount: number;
   slug: string | null;
+  avatarImageProps: AvatarImageProps | null;
 }
 
 export function Details({
