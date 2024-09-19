@@ -63,7 +63,7 @@ export function Callouts({
 }: Props): JSX.Element {
   return (
     <section className="mx-auto w-full max-w-screen-max tablet:mt-12 tablet:px-container">
-      <div className="flex w-full flex-wrap justify-center gap-x-8 bg-default px-container py-10">
+      <div className="flex w-full flex-wrap justify-center gap-x-8 px-container py-10">
         <div className="flex min-w-full flex-col items-center pt-8 tablet:min-w-0">
           <Callout total={total} reviewed={reviewed} label="Total Progress" />
         </div>

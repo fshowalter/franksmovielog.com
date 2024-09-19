@@ -40,7 +40,7 @@ export function Details({
         className,
       )}
     >
-      <h2 className="py-4 font-serif-semibold shadow-bottom tablet:text-xl">
+      <h2 className="py-4 font-sans-narrow-bold text-xs uppercase tracking-[1px] text-muted shadow-bottom">
         {label}
       </h2>
       <div className="grid w-full grid-cols-[auto,1fr,auto] tablet:whitespace-nowrap">

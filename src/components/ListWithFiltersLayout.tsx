@@ -212,7 +212,7 @@ function ListHeader({
             return (
               <div
                 key={also.href}
-                className="flex items-start gap-x-4 text-nowrap bg-default py-2 uppercase text-accent hover:bg-accent hover:text-inverse"
+                className="flex items-start gap-x-4 text-nowrap bg-default px-4 py-2 uppercase text-accent hover:bg-accent hover:text-inverse"
               >
                 <a href={also.href}>{also.text}</a>
               </div>
