@@ -46,7 +46,7 @@ export function WatchlistProgress({
           collectionReviewed={progress.collectionReviewed}
           collectionTotal={progress.collectionTotal}
         />
-        <div className="mx-auto w-full max-w-screen-max gap-8 py-16 tablet:px-container desktop:grid desktop:grid-cols-2">
+        <div className="mx-auto flex w-full max-w-screen-max flex-col gap-8 py-16 tablet:px-container desktop:grid desktop:grid-cols-2">
           <Details
             label="Director Progress"
             valueType="director"
