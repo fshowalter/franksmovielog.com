@@ -5,7 +5,7 @@ import { ListItemAvatarImageConfig } from "src/components/ListItemAvatar";
 
 import { BackdropImageConfig } from "../Backdrop";
 import type { Props } from "./Collections";
-import { type ListItemValue } from "./List";
+import { type ListItemValue } from "./Collections";
 
 export async function getProps(): Promise<Props> {
   const { collections } = await allCollections();

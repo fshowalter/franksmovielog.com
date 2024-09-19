@@ -2,7 +2,7 @@ import { getFixedWidthPosterImageProps } from "src/api/posters";
 import { allUnderseenGems } from "src/api/underseenGems";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 
-import type { ListItemValue } from "./List";
+import type { ListItemValue } from "./Underseen";
 import type { Props } from "./Underseen";
 
 export async function getProps(): Promise<Props> {
