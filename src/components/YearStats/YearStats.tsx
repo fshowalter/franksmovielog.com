@@ -8,7 +8,6 @@ import { MostWatchedMovies } from "src/components/MostWatchedMovies";
 import type { MostWatchedPeopleListItemValue } from "src/components/MostWatchedPeople";
 import { MostWatchedPerformers } from "src/components/MostWatchedPerformers";
 import { MostWatchedWriters } from "src/components/MostWatchedWriters";
-import { PageTitle } from "src/components/PageTitle";
 import { StatsNavigation } from "src/components/StatsNavigation";
 
 import { Callouts } from "./Callouts";

@@ -1,12 +1,4 @@
 import { BarGradient } from "./BarGradient";
-import { StatHeading } from "./StatHeading";
-import {
-  Table,
-  TableDataCell,
-  TableHead,
-  TableHeaderCell,
-  TableRow,
-} from "./StatsTable";
 
 interface Value {
   name: string;

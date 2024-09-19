@@ -3,7 +3,6 @@ import { ccn } from "src/utils/concatClassNames";
 
 import { ListItemTitle } from "./ListItemTitle";
 import { Poster } from "./Poster";
-import { StatHeading } from "./StatHeading";
 
 export const MostWatchedMoviesPosterConfig = {
   width: 250,

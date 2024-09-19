@@ -2,7 +2,7 @@ import { buildGroupValues } from "src/utils/buildGroupValues";
 import { type FilterableState, filterTools } from "src/utils/filterTools";
 import { collator, sortNumber, sortString } from "src/utils/sortTools";
 
-import type { ListItemValue } from "./List";
+import type { ListItemValue } from "./Reviews";
 
 const SHOW_COUNT_DEFAULT = 100;
 
