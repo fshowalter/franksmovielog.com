@@ -2,13 +2,44 @@ import type { AvatarImageProps } from "src/api/avatars";
 import type { BackdropImageProps } from "src/api/backdrops";
 
 import { Avatar } from "./Avatar";
-import { Backdrop, BackdropImageConfig } from "./Backdrop";
+import { Backdrop } from "./Backdrop";
 import { Layout } from "./Layout";
 
 type Link = {
   text: string;
   href: string;
   active?: boolean;
+};
+
+type BaseProps = {
+  title: string;
+  deck: string;
+  subNav?: Link[];
+  filters: React.ReactNode;
+  list: React.ReactNode;
+  totalCount: number;
+  onToggleFilters: () => void;
+  filtersVisible: boolean;
+  breadcrumb?: React.ReactNode;
+  seeAlso?: Link[];
+};
+
+type BackdropProps = BaseProps & {
+  alt: string;
+  backdropImageProps: BackdropImageProps;
+  avatarImageProps?: undefined;
+};
+
+type AvatarProps = BaseProps & {
+  avatarImageProps: AvatarImageProps | null;
+  alt?: undefined;
+  backdropImageProps?: undefined;
+};
+
+type SolidProps = BaseProps & {
+  avatarImageProps?: undefined;
+  alt?: undefined;
+  backdropImageProps?: undefined;
 };
 
 export function ListWithFiltersLayout({
@@ -25,21 +56,7 @@ export function ListWithFiltersLayout({
   avatarImageProps,
   seeAlso,
   subNav,
-}: {
-  title: string;
-  deck: string;
-  alt?: string;
-  subNav?: Link[];
-  backdropImageProps?: BackdropImageProps;
-  filters: React.ReactNode;
-  list: React.ReactNode;
-  totalCount: number;
-  onToggleFilters: () => void;
-  filtersVisible: boolean;
-  breadcrumb?: React.ReactNode;
-  avatarImageProps?: AvatarImageProps;
-  seeAlso?: Link[];
-}): JSX.Element {
+}: BackdropProps | AvatarProps | SolidProps): JSX.Element {
   return (
     <Layout className="bg-subtle">
       {avatarImageProps ? (
