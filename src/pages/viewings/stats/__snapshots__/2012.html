@@ -34,7 +34,16 @@
       <div class="flex min-h-full w-full flex-col bg-default">
         <header
           class="z-20 flex w-full items-center justify-between px-container-base py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
-          style="color: #fff; position: absolute"
+          style="
+            color: #fff;
+            position: absolute;
+            background-image: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0.35),
+              rgba(0, 0, 0, 0.55) 55%,
+              transparent
+            );
+          "
         >
           <div class="flex flex-col">
             <div
@@ -51,27 +60,53 @@
             <nav class="hidden w-full desktop:block desktop:w-auto">
               <ul class="flex flex-wrap justify-start gap-x-6 text-xl">
                 <li class="block whitespace-nowrap tracking-0.5px">
-                  <a class="text-inherit" href="/">Home</a>
+                  <a
+                    class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                    href="/"
+                    >Home</a
+                  >
                 </li>
                 <li class="block whitespace-nowrap tracking-0.5px">
-                  <a class="text-inherit" href="/how-i-grade/">How I Grade</a>
+                  <a
+                    class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                    href="/how-i-grade/"
+                    >How I Grade</a
+                  >
                 </li>
                 <li class="block whitespace-nowrap tracking-0.5px">
-                  <a class="text-inherit" href="/reviews/">Reviews</a>
+                  <a
+                    class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                    href="/reviews/"
+                    >Reviews</a
+                  >
                 </li>
                 <li class="block whitespace-nowrap tracking-0.5px">
-                  <a class="text-inherit" href="/viewings/">Viewing Log</a>
+                  <a
+                    class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                    href="/viewings/"
+                    >Viewing Log</a
+                  >
                 </li>
                 <li class="block whitespace-nowrap tracking-0.5px">
-                  <a class="text-inherit" href="/cast-and-crew/"
+                  <a
+                    class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                    href="/cast-and-crew/"
                     >Cast &amp; Crew</a
                   >
                 </li>
                 <li class="block whitespace-nowrap tracking-0.5px">
-                  <a class="text-inherit" href="/collections/">Collections</a>
+                  <a
+                    class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                    href="/collections/"
+                    >Collections</a
+                  >
                 </li>
                 <li class="block whitespace-nowrap tracking-0.5px">
-                  <a class="text-inherit" href="/watchlist/">Watchlist</a>
+                  <a
+                    class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                    href="/watchlist/"
+                    >Watchlist</a
+                  >
                 </li>
               </ul>
             </nav>
@@ -176,22 +211,100 @@
                 A Year in Review
               </p>
               <ul
-                class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-md underline decoration-1 underline-offset-8 desktop:text-xl mb-8"
+                class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-md desktop:text-xl mb-8"
               >
-                <li class="block"><a href="/viewings/stats/">All-Time</a></li>
-                <li class="block"><a href="/viewings/stats/2024/">2024</a></li>
-                <li class="block"><a href="/viewings/stats/2023/">2023</a></li>
-                <li class="block"><a href="/viewings/stats/2022/">2022</a></li>
-                <li class="block"><a href="/viewings/stats/2021/">2021</a></li>
-                <li class="block"><a href="/viewings/stats/2020/">2020</a></li>
-                <li class="block"><a href="/viewings/stats/2019/">2019</a></li>
-                <li class="block"><a href="/viewings/stats/2018/">2018</a></li>
-                <li class="block"><a href="/viewings/stats/2017/">2017</a></li>
-                <li class="block"><a href="/viewings/stats/2016/">2016</a></li>
-                <li class="block"><a href="/viewings/stats/2015/">2015</a></li>
-                <li class="block"><a href="/viewings/stats/2014/">2014</a></li>
-                <li class="block"><a href="/viewings/stats/2013/">2013</a></li>
-                <li class="block">2012</li>
+                <li class="block">
+                  <a
+                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
+                    href="/viewings/stats/"
+                    >All-Time</a
+                  >
+                </li>
+                <li class="block">
+                  <a
+                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
+                    href="/viewings/stats/2024/"
+                    >2024</a
+                  >
+                </li>
+                <li class="block">
+                  <a
+                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
+                    href="/viewings/stats/2023/"
+                    >2023</a
+                  >
+                </li>
+                <li class="block">
+                  <a
+                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
+                    href="/viewings/stats/2022/"
+                    >2022</a
+                  >
+                </li>
+                <li class="block">
+                  <a
+                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
+                    href="/viewings/stats/2021/"
+                    >2021</a
+                  >
+                </li>
+                <li class="block">
+                  <a
+                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
+                    href="/viewings/stats/2020/"
+                    >2020</a
+                  >
+                </li>
+                <li class="block">
+                  <a
+                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
+                    href="/viewings/stats/2019/"
+                    >2019</a
+                  >
+                </li>
+                <li class="block">
+                  <a
+                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
+                    href="/viewings/stats/2018/"
+                    >2018</a
+                  >
+                </li>
+                <li class="block">
+                  <a
+                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
+                    href="/viewings/stats/2017/"
+                    >2017</a
+                  >
+                </li>
+                <li class="block">
+                  <a
+                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
+                    href="/viewings/stats/2016/"
+                    >2016</a
+                  >
+                </li>
+                <li class="block">
+                  <a
+                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
+                    href="/viewings/stats/2015/"
+                    >2015</a
+                  >
+                </li>
+                <li class="block">
+                  <a
+                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
+                    href="/viewings/stats/2014/"
+                    >2014</a
+                  >
+                </li>
+                <li class="block">
+                  <a
+                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
+                    href="/viewings/stats/2013/"
+                    >2013</a
+                  >
+                </li>
+                <li class="block font-serif-semibold">2012</li>
               </ul>
               <div
                 class="flex flex-wrap justify-center gap-6 desktop:flex-nowrap"
@@ -258,7 +371,7 @@
                     <div class="tablet:hidden">
                       <a
                         href="/reviews/fright-night-1985/"
-                        class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                        class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                         >Fright Night<!-- -->  <span
                           class="text-xs text-subtle tablet:text-sm"
                           >1985</span
@@ -880,7 +993,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/arrowsmith-1931/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Arrowsmith<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1931</span
@@ -1171,7 +1284,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/riders-of-destiny-1933/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Riders of Destiny<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1933</span
@@ -1209,7 +1322,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-lawless-frontier-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Lawless Frontier<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -1323,7 +1436,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-star-packer-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Star Packer<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -1399,7 +1512,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-lucky-texan-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Lucky Texan<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -1770,7 +1883,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/halloween-1978/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Halloween<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1978</span
@@ -2463,7 +2576,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-devil-rides-out-1968/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Devil Rides Out<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1968</span
@@ -2564,7 +2677,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-key-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Key<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -2678,7 +2791,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/life-with-father-1947/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Life with Father<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1947</span
@@ -2716,7 +2829,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/virginia-city-1940/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Virginia City<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1940</span
@@ -2998,7 +3111,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/fright-night-1985/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Fright Night<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1985</span
@@ -3036,7 +3149,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/fright-night-1985/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Fright Night<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1985</span
@@ -3076,7 +3189,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/fright-night-1985/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Fright Night<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1985</span
@@ -3116,7 +3229,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/fright-night-1985/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Fright Night<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1985</span
@@ -3487,7 +3600,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/riders-of-destiny-1933/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Riders of Destiny<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1933</span
@@ -3525,7 +3638,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/his-private-secretary-1933/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >His Private Secretary<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1933</span
@@ -3563,7 +3676,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-lawless-frontier-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Lawless Frontier<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -3601,7 +3714,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/sagebrush-trail-1933/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Sagebrush Trail<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1933</span
@@ -3791,7 +3904,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-star-packer-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Star Packer<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -3867,7 +3980,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-lucky-texan-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Lucky Texan<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -3981,7 +4094,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/randy-rides-alone-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Randy Rides Alone<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -4314,7 +4427,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/conflict-1945/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Conflict<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1945</span
@@ -4504,7 +4617,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/virginia-city-1940/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Virginia City<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1940</span
@@ -4618,7 +4731,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/they-drive-by-night-1940/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >They Drive by Night<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1940</span
@@ -4656,7 +4769,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/invisible-stripes-1939/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Invisible Stripes<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1939</span
@@ -4808,7 +4921,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/black-legion-1937/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Black Legion<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1937</span
@@ -4846,7 +4959,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/men-are-such-fools-1938/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Men Are Such Fools<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1938</span
@@ -4884,7 +4997,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/dead-reckoning-1947/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Dead Reckoning<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1946</span
@@ -4985,7 +5098,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/riders-of-destiny-1933/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Riders of Destiny<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1933</span
@@ -5023,7 +5136,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-lawless-frontier-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Lawless Frontier<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -5061,7 +5174,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/sagebrush-trail-1933/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Sagebrush Trail<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1933</span
@@ -5251,7 +5364,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-star-packer-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Star Packer<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -5289,7 +5402,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-lucky-texan-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Lucky Texan<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -5327,7 +5440,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/randy-rides-alone-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Randy Rides Alone<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -5546,7 +5659,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-crimson-cult-1968/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Crimson Cult<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1968</span
@@ -5622,7 +5735,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/horror-express-1972/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Horror Express<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1972</span
@@ -5774,7 +5887,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-devil-rides-out-1968/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Devil Rides Out<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1968</span
@@ -5955,7 +6068,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/bandido-1956/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Bandido!<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1956</span
@@ -6402,7 +6515,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-ghoul-1933/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Ghoul<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1933</span
@@ -6440,7 +6553,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-body-snatcher-1945/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Body Snatcher<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1945</span
@@ -6592,7 +6705,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-crimson-cult-1968/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Crimson Cult<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1968</span
@@ -6706,7 +6819,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/frankenstein-1931/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Frankenstein<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1931</span
@@ -6807,7 +6920,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/riders-of-destiny-1933/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Riders of Destiny<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1933</span
@@ -6845,7 +6958,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-lawless-frontier-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Lawless Frontier<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -6997,7 +7110,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-star-packer-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Star Packer<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -7035,7 +7148,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-lucky-texan-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Lucky Texan<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -7111,7 +7224,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/randy-rides-alone-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Randy Rides Alone<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -7406,7 +7519,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-three-musketeers-1948/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Three Musketeers<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1948</span
@@ -7587,7 +7700,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/fashions-of-1934-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Fashions of 1934<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -7625,7 +7738,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/high-pressure-1932/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >High Pressure<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1932</span
@@ -7663,7 +7776,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-road-to-singapore-1931/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Road to Singapore<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1931</span
@@ -7701,7 +7814,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-key-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Key<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -7739,7 +7852,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-girl-who-had-everything-1953/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Girl Who Had Everything<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1953</span
@@ -7777,7 +7890,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/life-with-father-1947/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Life with Father<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1947</span
@@ -7815,7 +7928,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/jewel-robbery-1932/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Jewel Robbery<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1932</span
@@ -7891,7 +8004,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-thin-man-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Thin Man<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -7956,7 +8069,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/crisis-1950/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Crisis<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1950</span
@@ -8332,7 +8445,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/riders-of-destiny-1933/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Riders of Destiny<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1933</span
@@ -8370,7 +8483,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-lawless-frontier-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Lawless Frontier<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -8446,7 +8559,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-star-packer-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Star Packer<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -8484,7 +8597,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-lucky-texan-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Lucky Texan<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -8623,7 +8736,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/murders-in-the-rue-morgue-1932/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Murders in the Rue Morgue<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1932</span
@@ -9129,7 +9242,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/sagebrush-trail-1933/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Sagebrush Trail<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1933</span
@@ -9319,7 +9432,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/randy-rides-alone-1934/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Randy Rides Alone<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1934</span
@@ -9382,7 +9495,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/curse-of-the-demon-1957/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Curse of the Demon<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1957</span
@@ -9673,7 +9786,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/the-devil-rides-out-1968/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >The Devil Rides Out<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1968</span
@@ -9812,7 +9925,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/murders-in-the-rue-morgue-1932/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Murders in the Rue Morgue<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1932</span
@@ -9917,7 +10030,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/murder-my-sweet-1944/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Murder, My Sweet<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1944</span
@@ -10271,7 +10384,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/fright-night-1985/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Fright Night<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1985</span
@@ -10309,7 +10422,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/fright-night-1985/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Fright Night<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1985</span
@@ -10349,7 +10462,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/fright-night-1985/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Fright Night<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1985</span
@@ -10389,7 +10502,7 @@
                             <div class="grow">
                               <a
                                 href="/reviews/fright-night-1985/"
-                                class="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+                                class="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
                                 >Fright Night<!-- -->  <span
                                   class="text-xs text-subtle tablet:text-sm"
                                   >1985</span
@@ -10438,49 +10551,63 @@
           >
             <ul class="flex w-full flex-col gap-y-10 text-inverse max:w-auto">
               <li class="block w-1/2 whitespace-nowrap text-2xl">
-                <a href="/">Home</a>
+                <a class="hover:text-accent" href="/">Home</a>
               </li>
               <li class="block w-1/2 whitespace-nowrap text-2xl">
-                <a href="/how-i-grade/">How I Grade</a>
+                <a class="hover:text-accent" href="/how-i-grade/"
+                  >How I Grade</a
+                >
               </li>
               <li class="block w-1/2 whitespace-nowrap text-2xl">
-                <a href="/reviews/">Reviews</a>
+                <a class="hover:text-accent" href="/reviews/">Reviews</a>
                 <ol class="mt-4">
                   <li
                     class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                   >
-                    <a href="/reviews/underseen/">Underseen Gems</a>
+                    <a class="hover:text-inverse" href="/reviews/underseen/"
+                      >Underseen Gems</a
+                    >
                   </li>
                   <li
                     class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                   >
-                    <a href="/reviews/overrated/">Overrated Disappointments</a>
-                  </li>
-                </ol>
-              </li>
-              <li class="block w-1/2 whitespace-nowrap text-2xl">
-                <a href="/viewings/">Viewing Log</a>
-                <ol class="mt-4">
-                  <li
-                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
-                  >
-                    <a href="/viewings/stats/">Stats</a>
+                    <a class="hover:text-inverse" href="/reviews/overrated/"
+                      >Overrated Disappointments</a
+                    >
                   </li>
                 </ol>
               </li>
               <li class="block w-1/2 whitespace-nowrap text-2xl">
-                <a href="/cast-and-crew/">Cast &amp; Crew</a>
-              </li>
-              <li class="block w-1/2 whitespace-nowrap text-2xl">
-                <a href="/collections/">Collections</a>
-              </li>
-              <li class="block w-1/2 whitespace-nowrap text-2xl">
-                <a href="/watchlist/">Watchlist</a>
+                <a class="hover:text-accent" href="/viewings/">Viewing Log</a>
                 <ol class="mt-4">
                   <li
                     class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                   >
-                    <a href="/watchlist/progress/">Progress</a>
+                    <a class="hover:text-inverse" href="/viewings/stats/"
+                      >Stats</a
+                    >
+                  </li>
+                </ol>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a class="hover:text-accent" href="/cast-and-crew/"
+                  >Cast &amp; Crew</a
+                >
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a class="hover:text-accent" href="/collections/"
+                  >Collections</a
+                >
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a class="hover:text-accent" href="/watchlist/">Watchlist</a>
+                <ol class="mt-4">
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a class="hover:text-inverse" href="/watchlist/progress/"
+                      >Progress</a
+                    >
                   </li>
                 </ol>
               </li>

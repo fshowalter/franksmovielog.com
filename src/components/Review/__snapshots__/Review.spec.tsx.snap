@@ -48,7 +48,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/"
                 >
                   Home
@@ -58,7 +58,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/how-i-grade/"
                 >
                   How I Grade
@@ -68,7 +68,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/reviews/"
                 >
                   Reviews
@@ -78,7 +78,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/viewings/"
                 >
                   Viewing Log
@@ -88,7 +88,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/cast-and-crew/"
                 >
                   Cast & Crew
@@ -98,7 +98,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/collections/"
                 >
                   Collections
@@ -108,7 +108,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/watchlist/"
                 >
                   Watchlist
@@ -1143,6 +1143,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/"
               >
                 Home
@@ -1152,6 +1153,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/how-i-grade/"
               >
                 How I Grade
@@ -1161,6 +1163,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/reviews/"
               >
                 Reviews
@@ -1172,6 +1175,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/reviews/underseen/"
                   >
                     Underseen Gems
@@ -1181,6 +1185,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/reviews/overrated/"
                   >
                     Overrated Disappointments
@@ -1192,6 +1197,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/viewings/"
               >
                 Viewing Log
@@ -1203,6 +1209,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/viewings/stats/"
                   >
                     Stats
@@ -1214,6 +1221,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/cast-and-crew/"
               >
                 Cast & Crew
@@ -1223,6 +1231,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/collections/"
               >
                 Collections
@@ -1232,6 +1241,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/watchlist/"
               >
                 Watchlist
@@ -1243,6 +1253,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/watchlist/progress/"
                   >
                     Progress
@@ -1323,7 +1334,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/"
                 >
                   Home
@@ -1333,7 +1344,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/how-i-grade/"
                 >
                   How I Grade
@@ -1343,7 +1354,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/reviews/"
                 >
                   Reviews
@@ -1353,7 +1364,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/viewings/"
                 >
                   Viewing Log
@@ -1363,7 +1374,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/cast-and-crew/"
                 >
                   Cast & Crew
@@ -1373,7 +1384,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/collections/"
                 >
                   Collections
@@ -1383,7 +1394,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/watchlist/"
                 >
                   Watchlist
@@ -2631,6 +2642,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/"
               >
                 Home
@@ -2640,6 +2652,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/how-i-grade/"
               >
                 How I Grade
@@ -2649,6 +2662,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/reviews/"
               >
                 Reviews
@@ -2660,6 +2674,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/reviews/underseen/"
                   >
                     Underseen Gems
@@ -2669,6 +2684,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/reviews/overrated/"
                   >
                     Overrated Disappointments
@@ -2680,6 +2696,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/viewings/"
               >
                 Viewing Log
@@ -2691,6 +2708,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/viewings/stats/"
                   >
                     Stats
@@ -2702,6 +2720,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/cast-and-crew/"
               >
                 Cast & Crew
@@ -2711,6 +2730,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/collections/"
               >
                 Collections
@@ -2720,6 +2740,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/watchlist/"
               >
                 Watchlist
@@ -2731,6 +2752,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/watchlist/progress/"
                   >
                     Progress
@@ -2811,7 +2833,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/"
                 >
                   Home
@@ -2821,7 +2843,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/how-i-grade/"
                 >
                   How I Grade
@@ -2831,7 +2853,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/reviews/"
                 >
                   Reviews
@@ -2841,7 +2863,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/viewings/"
                 >
                   Viewing Log
@@ -2851,7 +2873,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/cast-and-crew/"
                 >
                   Cast & Crew
@@ -2861,7 +2883,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/collections/"
                 >
                   Collections
@@ -2871,7 +2893,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/watchlist/"
                 >
                   Watchlist
@@ -4806,6 +4828,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/"
               >
                 Home
@@ -4815,6 +4838,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/how-i-grade/"
               >
                 How I Grade
@@ -4824,6 +4848,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/reviews/"
               >
                 Reviews
@@ -4835,6 +4860,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/reviews/underseen/"
                   >
                     Underseen Gems
@@ -4844,6 +4870,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/reviews/overrated/"
                   >
                     Overrated Disappointments
@@ -4855,6 +4882,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/viewings/"
               >
                 Viewing Log
@@ -4866,6 +4894,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/viewings/stats/"
                   >
                     Stats
@@ -4877,6 +4906,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/cast-and-crew/"
               >
                 Cast & Crew
@@ -4886,6 +4916,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/collections/"
               >
                 Collections
@@ -4895,6 +4926,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/watchlist/"
               >
                 Watchlist
@@ -4906,6 +4938,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/watchlist/progress/"
                   >
                     Progress
@@ -4986,7 +5019,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/"
                 >
                   Home
@@ -4996,7 +5029,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/how-i-grade/"
                 >
                   How I Grade
@@ -5006,7 +5039,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/reviews/"
                 >
                   Reviews
@@ -5016,7 +5049,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/viewings/"
                 >
                   Viewing Log
@@ -5026,7 +5059,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/cast-and-crew/"
                 >
                   Cast & Crew
@@ -5036,7 +5069,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/collections/"
                 >
                   Collections
@@ -5046,7 +5079,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/watchlist/"
                 >
                   Watchlist
@@ -6145,6 +6178,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/"
               >
                 Home
@@ -6154,6 +6188,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/how-i-grade/"
               >
                 How I Grade
@@ -6163,6 +6198,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/reviews/"
               >
                 Reviews
@@ -6174,6 +6210,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/reviews/underseen/"
                   >
                     Underseen Gems
@@ -6183,6 +6220,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/reviews/overrated/"
                   >
                     Overrated Disappointments
@@ -6194,6 +6232,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/viewings/"
               >
                 Viewing Log
@@ -6205,6 +6244,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/viewings/stats/"
                   >
                     Stats
@@ -6216,6 +6256,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/cast-and-crew/"
               >
                 Cast & Crew
@@ -6225,6 +6266,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/collections/"
               >
                 Collections
@@ -6234,6 +6276,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/watchlist/"
               >
                 Watchlist
@@ -6245,6 +6288,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/watchlist/progress/"
                   >
                     Progress
@@ -6325,7 +6369,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/"
                 >
                   Home
@@ -6335,7 +6379,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/how-i-grade/"
                 >
                   How I Grade
@@ -6345,7 +6389,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/reviews/"
                 >
                   Reviews
@@ -6355,7 +6399,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/viewings/"
                 >
                   Viewing Log
@@ -6365,7 +6409,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/cast-and-crew/"
                 >
                   Cast & Crew
@@ -6375,7 +6419,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/collections/"
                 >
                   Collections
@@ -6385,7 +6429,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/watchlist/"
                 >
                   Watchlist
@@ -8504,6 +8548,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/"
               >
                 Home
@@ -8513,6 +8558,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/how-i-grade/"
               >
                 How I Grade
@@ -8522,6 +8568,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/reviews/"
               >
                 Reviews
@@ -8533,6 +8580,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/reviews/underseen/"
                   >
                     Underseen Gems
@@ -8542,6 +8590,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/reviews/overrated/"
                   >
                     Overrated Disappointments
@@ -8553,6 +8602,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/viewings/"
               >
                 Viewing Log
@@ -8564,6 +8614,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/viewings/stats/"
                   >
                     Stats
@@ -8575,6 +8626,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/cast-and-crew/"
               >
                 Cast & Crew
@@ -8584,6 +8636,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/collections/"
               >
                 Collections
@@ -8593,6 +8646,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/watchlist/"
               >
                 Watchlist
@@ -8604,6 +8658,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/watchlist/progress/"
                   >
                     Progress
@@ -8684,7 +8739,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/"
                 >
                   Home
@@ -8694,7 +8749,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/how-i-grade/"
                 >
                   How I Grade
@@ -8704,7 +8759,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/reviews/"
                 >
                   Reviews
@@ -8714,7 +8769,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/viewings/"
                 >
                   Viewing Log
@@ -8724,7 +8779,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/cast-and-crew/"
                 >
                   Cast & Crew
@@ -8734,7 +8789,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/collections/"
                 >
                   Collections
@@ -8744,7 +8799,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
                   href="/watchlist/"
                 >
                   Watchlist
@@ -10766,6 +10821,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/"
               >
                 Home
@@ -10775,6 +10831,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/how-i-grade/"
               >
                 How I Grade
@@ -10784,6 +10841,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/reviews/"
               >
                 Reviews
@@ -10795,6 +10853,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/reviews/underseen/"
                   >
                     Underseen Gems
@@ -10804,6 +10863,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/reviews/overrated/"
                   >
                     Overrated Disappointments
@@ -10815,6 +10875,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/viewings/"
               >
                 Viewing Log
@@ -10826,6 +10887,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/viewings/stats/"
                   >
                     Stats
@@ -10837,6 +10899,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/cast-and-crew/"
               >
                 Cast & Crew
@@ -10846,6 +10909,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/collections/"
               >
                 Collections
@@ -10855,6 +10919,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/watchlist/"
               >
                 Watchlist
@@ -10866,6 +10931,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/watchlist/progress/"
                   >
                     Progress

@@ -7,7 +7,7 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     backgroundColor: {
-      accent: "var(--fg-accent)",
+      accent: "var(--bg-accent)",
       default: "var(--bg-default)",
       subtle: "var(--bg-subtle)",
       canvas: "var(--bg-canvas)",

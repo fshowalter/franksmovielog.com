@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --bg-accent: #0056b3;
+  --bg-accent: #925e78;
   --bg-canvas: #dfdfdf;
   --bg-default: #fff;
   --bg-inverse: rgb(0 0 0 / 75%);
@@ -286,7 +286,7 @@
 
     a:hover {
       color: var(--fg-inverse);
-      background-color: var(--fg-accent);
+      background-color: var(--bg-accent);
       text-decoration-color: var(--fg-inverse);
     }
 

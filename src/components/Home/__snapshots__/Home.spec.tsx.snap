@@ -30,7 +30,7 @@ exports[`Home > matches snapshot 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
                   href="/"
                 >
                   Home
@@ -40,7 +40,7 @@ exports[`Home > matches snapshot 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
                   href="/how-i-grade/"
                 >
                   How I Grade
@@ -50,7 +50,7 @@ exports[`Home > matches snapshot 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
                   href="/reviews/"
                 >
                   Reviews
@@ -60,7 +60,7 @@ exports[`Home > matches snapshot 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
                   href="/viewings/"
                 >
                   Viewing Log
@@ -70,7 +70,7 @@ exports[`Home > matches snapshot 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
                   href="/cast-and-crew/"
                 >
                   Cast & Crew
@@ -80,7 +80,7 @@ exports[`Home > matches snapshot 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
                   href="/collections/"
                 >
                   Collections
@@ -90,7 +90,7 @@ exports[`Home > matches snapshot 1`] = `
                 class="block whitespace-nowrap tracking-0.5px"
               >
                 <a
-                  class="text-inherit"
+                  class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
                   href="/watchlist/"
                 >
                   Watchlist
@@ -328,7 +328,7 @@ exports[`Home > matches snapshot 1`] = `
                   23 Jun 2024
                 </div>
                 <a
-                  class="mb-2 block font-serif-semibold text-2.5xl text-default"
+                  class="mb-2 block font-serif-semibold text-2.5xl text-default hover:text-accent"
                   href="/reviews/chamber-of-horrors-1966/"
                 >
                   Chamber of Horrors 
@@ -411,7 +411,7 @@ exports[`Home > matches snapshot 1`] = `
                   18 Jun 2024
                 </div>
                 <a
-                  class="mb-2 block font-serif-semibold text-2.5xl text-default"
+                  class="mb-2 block font-serif-semibold text-2.5xl text-default hover:text-accent"
                   href="/reviews/two-for-the-seesaw-1962/"
                 >
                   Two for the Seesaw 
@@ -495,7 +495,7 @@ exports[`Home > matches snapshot 1`] = `
                   08 Jun 2024
                 </div>
                 <a
-                  class="mb-2 block font-serif-semibold text-2.5xl text-default"
+                  class="mb-2 block font-serif-semibold text-2.5xl text-default hover:text-accent"
                   href="/reviews/the-man-with-nine-lives-1940/"
                 >
                   The Man with Nine Lives 
@@ -578,7 +578,7 @@ exports[`Home > matches snapshot 1`] = `
                   23 May 2024
                 </div>
                 <a
-                  class="mb-2 block font-serif-semibold text-2.5xl text-default"
+                  class="mb-2 block font-serif-semibold text-2.5xl text-default hover:text-accent"
                   href="/reviews/burial-ground-the-nights-of-terror-1981/"
                 >
                   Burial Ground: The Nights of Terror 
@@ -659,7 +659,7 @@ exports[`Home > matches snapshot 1`] = `
                   15 May 2024
                 </div>
                 <a
-                  class="mb-2 block font-serif-semibold text-2.5xl text-default"
+                  class="mb-2 block font-serif-semibold text-2.5xl text-default hover:text-accent"
                   href="/reviews/lucifers-women-1974/"
                 >
                   Lucifer's Women 
@@ -740,7 +740,7 @@ exports[`Home > matches snapshot 1`] = `
                   27 Apr 2024
                 </div>
                 <a
-                  class="mb-2 block font-serif-semibold text-2.5xl text-default"
+                  class="mb-2 block font-serif-semibold text-2.5xl text-default hover:text-accent"
                   href="/reviews/beyond-the-door-iii-1989/"
                 >
                   Beyond the Door III 
@@ -819,7 +819,7 @@ exports[`Home > matches snapshot 1`] = `
                   27 Apr 2024
                 </div>
                 <a
-                  class="mb-2 block font-serif-semibold text-2.5xl text-default"
+                  class="mb-2 block font-serif-semibold text-2.5xl text-default hover:text-accent"
                   href="/reviews/the-midnight-meat-train-2008/"
                 >
                   The Midnight Meat Train 
@@ -902,7 +902,7 @@ exports[`Home > matches snapshot 1`] = `
                   27 Apr 2024
                 </div>
                 <a
-                  class="mb-2 block font-serif-semibold text-2.5xl text-default"
+                  class="mb-2 block font-serif-semibold text-2.5xl text-default hover:text-accent"
                   href="/reviews/horror-express-1972/"
                 >
                   Horror Express 
@@ -987,7 +987,7 @@ exports[`Home > matches snapshot 1`] = `
                   27 Apr 2024
                 </div>
                 <a
-                  class="mb-2 block font-serif-semibold text-2.5xl text-default"
+                  class="mb-2 block font-serif-semibold text-2.5xl text-default hover:text-accent"
                   href="/reviews/night-train-to-terror-1985/"
                 >
                   Night Train to Terror 
@@ -1076,7 +1076,7 @@ exports[`Home > matches snapshot 1`] = `
                   24 Apr 2024
                 </div>
                 <a
-                  class="mb-2 block font-serif-semibold text-2.5xl text-default"
+                  class="mb-2 block font-serif-semibold text-2.5xl text-default hover:text-accent"
                   href="/reviews/human-lanterns-1982/"
                 >
                   Human Lanterns 
@@ -1167,7 +1167,7 @@ exports[`Home > matches snapshot 1`] = `
                   24 Apr 2024
                 </div>
                 <a
-                  class="mb-2 block font-serif-semibold text-2.5xl text-default"
+                  class="mb-2 block font-serif-semibold text-2.5xl text-default hover:text-accent"
                   href="/reviews/ninja-in-the-dragons-den-1982/"
                 >
                   Ninja in the Dragon's Den 
@@ -1247,7 +1247,7 @@ exports[`Home > matches snapshot 1`] = `
                   13 Apr 2024
                 </div>
                 <a
-                  class="mb-2 block font-serif-semibold text-2.5xl text-default"
+                  class="mb-2 block font-serif-semibold text-2.5xl text-default hover:text-accent"
                   href="/reviews/mandy-2018/"
                 >
                   Mandy 
@@ -1358,6 +1358,7 @@ exports[`Home > matches snapshot 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/"
               >
                 Home
@@ -1367,6 +1368,7 @@ exports[`Home > matches snapshot 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/how-i-grade/"
               >
                 How I Grade
@@ -1376,6 +1378,7 @@ exports[`Home > matches snapshot 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/reviews/"
               >
                 Reviews
@@ -1387,6 +1390,7 @@ exports[`Home > matches snapshot 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/reviews/underseen/"
                   >
                     Underseen Gems
@@ -1396,6 +1400,7 @@ exports[`Home > matches snapshot 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/reviews/overrated/"
                   >
                     Overrated Disappointments
@@ -1407,6 +1412,7 @@ exports[`Home > matches snapshot 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/viewings/"
               >
                 Viewing Log
@@ -1418,6 +1424,7 @@ exports[`Home > matches snapshot 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/viewings/stats/"
                   >
                     Stats
@@ -1429,6 +1436,7 @@ exports[`Home > matches snapshot 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/cast-and-crew/"
               >
                 Cast & Crew
@@ -1438,6 +1446,7 @@ exports[`Home > matches snapshot 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/collections/"
               >
                 Collections
@@ -1447,6 +1456,7 @@ exports[`Home > matches snapshot 1`] = `
               class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
+                class="hover:text-accent"
                 href="/watchlist/"
               >
                 Watchlist
@@ -1458,6 +1468,7 @@ exports[`Home > matches snapshot 1`] = `
                   class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                 >
                   <a
+                    class="hover:text-inverse"
                     href="/watchlist/progress/"
                   >
                     Progress
