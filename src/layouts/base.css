@@ -4,15 +4,15 @@
 
 :root {
   --bg-accent: #0056b3;
-  --bg-canvas: #f2f0e8;
+  --bg-canvas: #dfdfdf;
   --bg-default: #fff;
   --bg-inverse: rgb(0 0 0 / 75%);
   --bg-progress: #14bd41;
-  --bg-stripe: #f7f5f3;
-  --bg-subtle: #fafafa;
+  --bg-stripe: #fcfcfc;
+  --bg-subtle: #f6f6f6;
   --border-accent: #054a93;
   --border-default: #e9e7e0;
-  --fg-accent: #0056b3;
+  --fg-accent: #925e78;
   --fg-default: #252525;
   --fg-emphasis: rgb(0 0 0 / 95%);
   --fg-inverse: #fff;
@@ -433,7 +433,7 @@
 
     a:hover {
       color: var(--fg-inverse);
-      background-color: var(--bg-inverse);
+      background-color: var(--fg-accent);
       text-decoration-color: var(--fg-inverse);
     }
 
