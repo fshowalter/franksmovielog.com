@@ -8,7 +8,10 @@ import { ListItem } from "src/components/ListItem";
 import { ListItemGenres } from "src/components/ListItemGenres";
 import { ListItemPoster } from "src/components/ListItemPoster";
 import { ListItemTitle } from "src/components/ListItemTitle";
-import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
+import {
+  ListWithFiltersLayout,
+  SubNav,
+} from "src/components/ListWithFiltersLayout";
 
 import { Filters } from "./Filters";
 import type { Sort } from "./Reviews.reducer";
@@ -63,11 +66,15 @@ export function Reviews({
       title="Reviews"
       alt="Choose wisely."
       deck='"He chose... poorly."'
-      subNav={[
-        { href: "/reviews/", text: "all", active: true },
-        { href: "/reviews/underseen/", text: "underseen" },
-        { href: "/reviews/overrated/", text: "overrated" },
-      ]}
+      subNav={
+        <SubNav
+          values={[
+            { href: "/reviews/", text: "all", active: true },
+            { href: "/reviews/underseen/", text: "underseen" },
+            { href: "/reviews/overrated/", text: "overrated" },
+          ]}
+        />
+      }
       backdropImageProps={backdropImageProps}
       totalCount={state.filteredValues.length}
       onToggleFilters={() => dispatch({ type: Actions.TOGGLE_FILTERS })}
