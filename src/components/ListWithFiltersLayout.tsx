@@ -1,81 +1,33 @@
 import type { AvatarImageProps } from "src/api/avatars";
-import type { BackdropImageProps } from "src/api/backdrops";
 
 import { Avatar } from "./Avatar";
-import { Backdrop } from "./Backdrop";
 import { Layout } from "./Layout";
 
-type BaseProps = {
-  title: string;
-  deck: string;
+type Props = {
+  backdrop: React.ReactNode;
   subNav?: React.ReactNode;
   filters: React.ReactNode;
   list: React.ReactNode;
   totalCount: number;
   onToggleFilters: () => void;
   filtersVisible: boolean;
-  breadcrumb?: React.ReactNode;
   seeAlso?: SubNavValue[];
 };
 
-type BackdropProps = BaseProps & {
-  alt: string;
-  backdropImageProps: BackdropImageProps;
-  avatarImageProps?: undefined;
-};
-
-type AvatarProps = BaseProps & {
-  avatarImageProps: AvatarImageProps | null;
-  alt?: undefined;
-  backdropImageProps?: undefined;
-};
-
-type SolidProps = BaseProps & {
-  avatarImageProps?: undefined;
-  alt?: undefined;
-  backdropImageProps?: undefined;
-};
-
 export function ListWithFiltersLayout({
-  title,
-  deck,
-  alt,
   totalCount,
+  backdrop,
   onToggleFilters,
   filtersVisible,
-  backdropImageProps,
   filters,
   list,
-  breadcrumb,
-  avatarImageProps,
   seeAlso,
   subNav,
-}: BackdropProps | AvatarProps | SolidProps): JSX.Element {
+}: Props): JSX.Element {
   return (
     <Layout className="bg-subtle">
-      {avatarImageProps ? (
-        <AvatarBackdrop
-          avatarImageProps={avatarImageProps}
-          breadcrumb={breadcrumb}
-          name={title}
-          deck={deck}
-        />
-      ) : backdropImageProps ? (
-        <Backdrop
-          imageProps={backdropImageProps}
-          title={title}
-          alt={alt}
-          deck={deck}
-          breadcrumb={breadcrumb}
-        />
-      ) : (
-        <SolidBackdrop title={title} deck={deck} breadcrumb={breadcrumb} />
-      )}
-      <nav
-        className={`${backdropImageProps ? "bg-[#252525]" : "bg-[#252525]"}`}
-      >
-        {subNav && subNav}
-      </nav>
+      {backdrop}
+      {subNav && subNav}
       <section className="mx-auto flex flex-col items-center bg-default">
         <div className="mx-auto flex w-full flex-col items-stretch">
           <div className="flex grow flex-col bg-subtle">
@@ -118,13 +70,13 @@ export function ListWithFiltersLayout({
   );
 }
 
-function AvatarBackdrop({
+export function AvatarBackdrop({
   avatarImageProps,
   name,
   deck,
   breadcrumb,
 }: {
-  avatarImageProps: AvatarImageProps;
+  avatarImageProps: AvatarImageProps | null;
   name: string;
   deck: React.ReactNode;
   breadcrumb?: React.ReactNode;
@@ -159,7 +111,7 @@ function AvatarBackdrop({
   );
 }
 
-function SolidBackdrop({
+export function SolidBackdrop({
   title,
   deck,
   breadcrumb,

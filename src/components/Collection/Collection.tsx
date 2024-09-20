@@ -4,6 +4,7 @@ import type { Collection } from "src/api/collections";
 import type { PosterImageProps } from "src/api/posters";
 import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
 
+import { Backdrop } from "../Backdrop";
 import { Grade } from "../Grade";
 import { GroupedList } from "../GroupedList";
 import { ListItem } from "../ListItem";
@@ -54,11 +55,15 @@ export function Collection({
   );
   return (
     <ListWithFiltersLayout
-      title={value.name}
-      alt={value.name}
-      deck={deck(value)}
-      breadcrumb={<a href="/collections/">Collections</a>}
-      backdropImageProps={backdropImageProps}
+      backdrop={
+        <Backdrop
+          imageProps={backdropImageProps}
+          title={value.name}
+          alt={value.name}
+          deck={deck(value)}
+          breadcrumb={<a href="/collections/">Collections</a>}
+        />
+      }
       totalCount={state.filteredValues.length}
       onToggleFilters={() => dispatch({ type: Actions.TOGGLE_FILTERS })}
       filtersVisible={state.showFilters}

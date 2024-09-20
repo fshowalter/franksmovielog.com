@@ -3,6 +3,7 @@ import type { PosterImageProps } from "src/api/posters";
 import type { UnderseenGem } from "src/api/underseenGems";
 import {
   ListWithFiltersLayout,
+  SolidBackdrop,
   SubNav,
 } from "src/components/ListWithFiltersLayout";
 
@@ -55,11 +56,16 @@ export function Underseen({
 
   return (
     <ListWithFiltersLayout
-      title="Underseen Gems"
-      breadcrumb={
-        <>
-          <a href="/reviews/">Reviews</a>
-        </>
+      backdrop={
+        <SolidBackdrop
+          title="Underseen Gems"
+          breadcrumb={
+            <>
+              <a href="/reviews/">Reviews</a>
+            </>
+          }
+          deck="Four and five star movies with a below average number of IMDb votes."
+        />
       }
       subNav={
         <SubNav
@@ -70,7 +76,6 @@ export function Underseen({
           ]}
         />
       }
-      deck="Four and five star movies with a below average number of IMDb votes."
       totalCount={state.filteredValues.length}
       onToggleFilters={() => dispatch({ type: Actions.TOGGLE_FILTERS })}
       filtersVisible={state.showFilters}

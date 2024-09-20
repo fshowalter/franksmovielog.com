@@ -13,6 +13,7 @@ import {
   SubNav,
 } from "src/components/ListWithFiltersLayout";
 
+import { Backdrop } from "../Backdrop";
 import { Filters } from "./Filters";
 import type { Sort } from "./Reviews.reducer";
 import { Actions, initState, reducer } from "./Reviews.reducer";
@@ -63,9 +64,14 @@ export function Reviews({
 
   return (
     <ListWithFiltersLayout
-      title="Reviews"
-      alt="Choose wisely."
-      deck='"He chose... poorly."'
+      backdrop={
+        <Backdrop
+          imageProps={backdropImageProps}
+          title="Reviews"
+          deck='"He chose... poorly."'
+          alt="The guardian of the Grail in Indiana Jones and the Last Crusade (1989)"
+        />
+      }
       subNav={
         <SubNav
           values={[
@@ -75,7 +81,6 @@ export function Reviews({
           ]}
         />
       }
-      backdropImageProps={backdropImageProps}
       totalCount={state.filteredValues.length}
       onToggleFilters={() => dispatch({ type: Actions.TOGGLE_FILTERS })}
       filtersVisible={state.showFilters}

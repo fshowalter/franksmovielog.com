@@ -3,6 +3,7 @@ import type { BackdropImageProps } from "src/api/backdrops";
 import type { PosterImageProps } from "src/api/posters";
 import type { WatchlistTitle } from "src/api/watchlistTitles";
 
+import { Backdrop } from "../Backdrop";
 import { GroupedList } from "../GroupedList";
 import { ListItem } from "../ListItem";
 import { ListItemPoster } from "../ListItemPoster";
@@ -61,10 +62,14 @@ export function Watchlist({
 
   return (
     <ListWithFiltersLayout
-      title="Watchlist"
-      alt="Choose wisely."
-      deck={`"A man's got to know his limitations"`}
-      backdropImageProps={backdropImageProps}
+      backdrop={
+        <Backdrop
+          title="Watchlist"
+          alt='Clint Eastwood as "Dirty" Harry Callahan in "Magnum Force (1973)".'
+          deck={`"A man's got to know his limitations"`}
+          imageProps={backdropImageProps}
+        />
+      }
       totalCount={state.filteredValues.length}
       onToggleFilters={() => dispatch({ type: Actions.TOGGLE_FILTERS })}
       filtersVisible={state.showFilters}

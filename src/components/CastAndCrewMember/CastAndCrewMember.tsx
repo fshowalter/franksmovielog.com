@@ -2,7 +2,10 @@ import { useReducer } from "react";
 import type { AvatarImageProps } from "src/api/avatars";
 import type { CastAndCrewMember } from "src/api/castAndCrew";
 import type { PosterImageProps } from "src/api/posters";
-import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
+import {
+  AvatarBackdrop,
+  ListWithFiltersLayout,
+} from "src/components/ListWithFiltersLayout";
 
 import { CreditedAs } from "../CreditedAs";
 import { Grade } from "../Grade";
@@ -71,11 +74,15 @@ export function CastAndCrewMember({
   );
   return (
     <ListWithFiltersLayout
-      title={value.name}
       data-pagefind-body
-      breadcrumb={<a href="/cast-and-crew/">Cast & Crew</a>}
-      avatarImageProps={avatarImageProps}
-      deck={deck(value)}
+      backdrop={
+        <AvatarBackdrop
+          avatarImageProps={avatarImageProps}
+          breadcrumb={<a href="/cast-and-crew/">Cast & Crew</a>}
+          name={value.name}
+          deck={deck(value)}
+        />
+      }
       totalCount={state.filteredValues.length}
       onToggleFilters={() => dispatch({ type: Actions.TOGGLE_FILTERS })}
       filtersVisible={state.showFilters}

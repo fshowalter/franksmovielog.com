@@ -8,6 +8,7 @@ import { ListItemPoster } from "src/components/ListItemPoster";
 import { ListItemTitle } from "src/components/ListItemTitle";
 import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
 
+import { Backdrop } from "../Backdrop";
 import { Filters } from "./Filters";
 import type { Sort } from "./Viewings.reducer";
 import { Actions, initState, reducer } from "./Viewings.reducer";
@@ -63,10 +64,14 @@ export function Viewings({
 
   return (
     <ListWithFiltersLayout
-      title="Viewing Log"
-      alt="Angels to some, demons to others."
-      deck='"We have such sights to show you!"'
-      backdropImageProps={backdropImageProps}
+      backdrop={
+        <Backdrop
+          title="Viewing Log"
+          alt='Doug Bradley as the Hell Priest in "Hellraiser (1987)".'
+          deck='"We have such sights to show you!"'
+          imageProps={backdropImageProps}
+        />
+      }
       totalCount={state.filteredValues.length}
       onToggleFilters={() => dispatch({ type: Actions.TOGGLE_FILTERS })}
       filtersVisible={state.showFilters}
