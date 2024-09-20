@@ -5,23 +5,17 @@ import { Avatar } from "./Avatar";
 import { Backdrop } from "./Backdrop";
 import { Layout } from "./Layout";
 
-type Link = {
-  text: string;
-  href: string;
-  active?: boolean;
-};
-
 type BaseProps = {
   title: string;
   deck: string;
-  subNav?: Link[];
+  subNav?: React.ReactNode;
   filters: React.ReactNode;
   list: React.ReactNode;
   totalCount: number;
   onToggleFilters: () => void;
   filtersVisible: boolean;
   breadcrumb?: React.ReactNode;
-  seeAlso?: Link[];
+  seeAlso?: SubNavValue[];
 };
 
 type BackdropProps = BaseProps & {
@@ -80,31 +74,7 @@ export function ListWithFiltersLayout({
       <nav
         className={`${backdropImageProps ? "bg-[#252525]" : "bg-[#252525]"}`}
       >
-        {subNav ? (
-          <ul className="mx-auto flex justify-center gap-x-6 text-nowrap px-container font-sans-narrow-bold text-sm uppercase tracking-[1px] text-subtle">
-            {subNav.map((also) => {
-              return (
-                <li
-                  key={also.href}
-                  className={`w-full max-w-32 text-center opacity-75 ${also.active ? "text-inverse opacity-75" : ""}`}
-                >
-                  {also.active ? (
-                    <div className="px-4 py-8 desktop:py-12">{also.text}</div>
-                  ) : (
-                    <a
-                      className="block px-4 py-8 hover:bg-default hover:text-default desktop:py-12"
-                      href={also.href}
-                    >
-                      {also.text}
-                    </a>
-                  )}
-                </li>
-              );
-            })}
-          </ul>
-        ) : (
-          <></>
-        )}
+        {subNav && subNav}
       </nav>
       <section className="mx-auto flex flex-col items-center bg-default">
         <div className="mx-auto flex w-full flex-col items-stretch">
@@ -226,7 +196,7 @@ function ListHeader({
   totalCount: number;
   onToggleFilters: () => void;
   filtersVisible: boolean;
-  seeAlso?: Link[];
+  seeAlso?: SubNavValue[];
 }): JSX.Element {
   return (
     <div className="mx-auto flex w-full max-w-screen-max flex-wrap items-baseline justify-between gap-x-4 gap-y-5 px-container py-10 font-sans-bold uppercase tracking-[0.5px] text-subtle">
@@ -261,5 +231,45 @@ function ListHeader({
         Filter & Sort
       </button>
     </div>
+  );
+}
+
+type SubNavValue = {
+  text: string;
+  href: string;
+  active?: boolean;
+};
+
+export function SubNav({
+  values,
+  className = "bg-[#252525]",
+}: {
+  values: SubNavValue[];
+  className?: string;
+}) {
+  return (
+    <nav className={className}>
+      <ul className="mx-auto flex justify-center gap-x-6 text-nowrap px-container font-sans-narrow-bold text-sm uppercase tracking-[1px] text-subtle">
+        {values.map((value) => {
+          return (
+            <li
+              key={value.href}
+              className={`w-full max-w-32 text-center opacity-75 ${value.active ? "text-inverse opacity-75" : ""}`}
+            >
+              {value.active ? (
+                <div className="px-4 py-8 desktop:py-12">{value.text}</div>
+              ) : (
+                <a
+                  className="block px-4 py-8 hover:bg-default hover:text-default desktop:py-12"
+                  href={value.href}
+                >
+                  {value.text}
+                </a>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
   );
 }

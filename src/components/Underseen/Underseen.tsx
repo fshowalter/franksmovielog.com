@@ -1,7 +1,10 @@
 import { useReducer } from "react";
 import type { PosterImageProps } from "src/api/posters";
 import type { UnderseenGem } from "src/api/underseenGems";
-import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
+import {
+  ListWithFiltersLayout,
+  SubNav,
+} from "src/components/ListWithFiltersLayout";
 
 import { Grade } from "../Grade";
 import { GroupedList } from "../GroupedList";
@@ -58,11 +61,15 @@ export function Underseen({
           <a href="/reviews/">Reviews</a>
         </>
       }
-      subNav={[
-        { href: "/reviews/", text: "all" },
-        { href: "/reviews/underseen/", text: "underseen", active: true },
-        { href: "/reviews/overrated/", text: "overrated" },
-      ]}
+      subNav={
+        <SubNav
+          values={[
+            { href: "/reviews/", text: "all" },
+            { href: "/reviews/underseen/", text: "underseen", active: true },
+            { href: "/reviews/overrated/", text: "overrated" },
+          ]}
+        />
+      }
       deck="Four and five star movies with a below average number of IMDb votes."
       totalCount={state.filteredValues.length}
       onToggleFilters={() => dispatch({ type: Actions.TOGGLE_FILTERS })}

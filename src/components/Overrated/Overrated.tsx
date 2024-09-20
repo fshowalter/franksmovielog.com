@@ -1,7 +1,10 @@
 import { useReducer } from "react";
 import type { OverratedDisappointment } from "src/api/overratedDisappointments";
 import type { PosterImageProps } from "src/api/posters";
-import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
+import {
+  ListWithFiltersLayout,
+  SubNav,
+} from "src/components/ListWithFiltersLayout";
 
 import { Grade } from "../Grade";
 import { GroupedList } from "../GroupedList";
@@ -58,11 +61,15 @@ export function Overrated({
           <a href="/reviews/">Reviews</a>
         </>
       }
-      subNav={[
-        { href: "/reviews/", text: "all" },
-        { href: "/reviews/underseen/", text: "underseen" },
-        { href: "/reviews/overrated/", text: "overrated", active: true },
-      ]}
+      subNav={
+        <SubNav
+          values={[
+            { href: "/reviews/", text: "all" },
+            { href: "/reviews/underseen/", text: "underseen" },
+            { href: "/reviews/overrated/", text: "overrated", active: true },
+          ]}
+        />
+      }
       deck=" One and two star movies with an above-average IMDb rating and vote
         count."
       totalCount={state.filteredValues.length}
