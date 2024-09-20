@@ -62,7 +62,6 @@ function groupForValue(value: ListItemValue, sortValue: Sort): string {
 interface State
   extends FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>> {
   hideReviewed: boolean;
-  showFilters: boolean;
 }
 
 export function initState({
@@ -83,7 +82,6 @@ export function initState({
     showCount: SHOW_COUNT_DEFAULT,
     sortValue: initialSort,
     hideReviewed: false,
-    showFilters: false,
   };
 }
 
@@ -94,7 +92,6 @@ export enum Actions {
   SHOW_MORE = "SHOW_MORE",
   TOGGLE_REVIEWED = "TOGGLE_REVIEWED",
   FILTER_CREDIT_KIND = "FILTER_CREDIT_KIND",
-  TOGGLE_FILTERS = "TOGGLE_FILTERS",
 }
 
 interface FilterTitleAction {
@@ -125,18 +122,13 @@ interface ToggleReviewedAction {
   type: Actions.TOGGLE_REVIEWED;
 }
 
-interface ToggleFiltersAction {
-  type: Actions.TOGGLE_FILTERS;
-}
-
 export type ActionType =
   | FilterTitleAction
   | FilterReleaseYearAction
   | FilterCreditKindAction
   | SortAction
   | ShowMoreAction
-  | ToggleReviewedAction
-  | ToggleFiltersAction;
+  | ToggleReviewedAction;
 
 /**
  * Applies the given action to the given state, returning a new State object.
@@ -215,12 +207,6 @@ export function reducer(state: State, action: ActionType): State {
       return {
         ...applyFilters(filters, state),
         hideReviewed: !state.hideReviewed,
-      };
-    }
-    case Actions.TOGGLE_FILTERS: {
-      return {
-        ...state,
-        showFilters: !state.showFilters,
       };
     }
     // no default

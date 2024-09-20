@@ -55,9 +55,7 @@ type State = FilterableState<
   ListItemValue,
   Sort,
   Map<string, Map<string, ListItemValue[]>>
-> & {
-  showFilters: boolean;
-};
+>;
 
 export function initState({
   values,
@@ -73,7 +71,6 @@ export function initState({
     groupedValues: groupValues(values.slice(0, SHOW_COUNT_DEFAULT)),
     showCount: SHOW_COUNT_DEFAULT,
     sortValue: initialSort,
-    showFilters: false,
   };
 }
 
@@ -86,7 +83,6 @@ export enum Actions {
   FILTER_VENUE = "FILTER_VENUE",
   SORT = "SORT",
   SHOW_MORE = "SHOW_MORE",
-  TOGGLE_FILTERS = "TOGGLE_FILTERS",
 }
 
 interface FilterTitleAction {
@@ -128,10 +124,6 @@ interface ShowMoreAction {
   type: Actions.SHOW_MORE;
 }
 
-interface ToggleFiltersAction {
-  type: Actions.TOGGLE_FILTERS;
-}
-
 export type ActionType =
   | FilterTitleAction
   | FilterReleaseYearAction
@@ -140,8 +132,7 @@ export type ActionType =
   | FilterVenueAction
   | FilterGenresAction
   | SortAction
-  | ShowMoreAction
-  | ToggleFiltersAction;
+  | ShowMoreAction;
 
 export function reducer(state: State, action: ActionType): State {
   let groupedValues;
@@ -212,12 +203,7 @@ export function reducer(state: State, action: ActionType): State {
         showCount,
       };
     }
-    case Actions.TOGGLE_FILTERS: {
-      return {
-        ...state,
-        showFilters: !state.showFilters,
-      };
-    }
+
     // no default
   }
 }

@@ -77,8 +77,6 @@ export function Underseen({
         />
       }
       totalCount={state.filteredValues.length}
-      onToggleFilters={() => dispatch({ type: Actions.TOGGLE_FILTERS })}
-      filtersVisible={state.showFilters}
       filters={
         <Filters
           dispatch={dispatch}

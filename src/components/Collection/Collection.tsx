@@ -65,8 +65,6 @@ export function Collection({
         />
       }
       totalCount={state.filteredValues.length}
-      onToggleFilters={() => dispatch({ type: Actions.TOGGLE_FILTERS })}
-      filtersVisible={state.showFilters}
       data-pagefind-body
       filters={
         <Filters

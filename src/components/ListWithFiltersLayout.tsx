@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { AvatarImageProps } from "src/api/avatars";
 
 import { Avatar } from "./Avatar";
@@ -9,21 +10,19 @@ type Props = {
   filters: React.ReactNode;
   list: React.ReactNode;
   totalCount: number;
-  onToggleFilters: () => void;
-  filtersVisible: boolean;
   seeAlso?: SubNavValue[];
 };
 
 export function ListWithFiltersLayout({
   totalCount,
   backdrop,
-  onToggleFilters,
-  filtersVisible,
   filters,
   list,
   seeAlso,
   subNav,
 }: Props): JSX.Element {
+  const [filtersVisible, toggleFilters] = useState(false);
+
   return (
     <Layout className="bg-subtle">
       {backdrop}
@@ -35,7 +34,7 @@ export function ListWithFiltersLayout({
               <div className="relative z-10 row-start-1 bg-default text-xs tablet:-mx-12 tablet:px-0 showFilters:col-span-3 showFilters:mx-0 showFilters:w-full">
                 <ListHeader
                   totalCount={totalCount}
-                  onToggleFilters={onToggleFilters}
+                  onToggleFilters={() => toggleFilters(!filtersVisible)}
                   filtersVisible={filtersVisible}
                   seeAlso={seeAlso}
                 />
