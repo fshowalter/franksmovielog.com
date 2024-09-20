@@ -10,7 +10,7 @@ import { ListItem } from "../ListItem";
 import { ListItemAvatar } from "../ListItemAvatar";
 import { ListItemCounts } from "../ListItemCounts";
 import type { Sort } from "./CastAndCrew.reducer";
-import { Actions, initState, reducer } from "./CastAndCrew.reducer";
+import { initState, reducer } from "./CastAndCrew.reducer";
 import { Filters } from "./Filters";
 
 export type Props = {
@@ -51,8 +51,6 @@ export function CastAndCrew({
         />
       }
       totalCount={state.filteredValues.length}
-      onToggleFilters={() => dispatch({ type: Actions.TOGGLE_FILTERS })}
-      filtersVisible={state.showFilters}
       filters={<Filters dispatch={dispatch} sortValue={state.sortValue} />}
       list={
         <ol data-testid="list" className="mt-4 bg-subtle showFilters:my-24">

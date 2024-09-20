@@ -39,7 +39,6 @@ interface State {
   filteredValues: ListItemValue[];
   filters: Record<string, (value: ListItemValue) => boolean>;
   sortValue: Sort;
-  showFilters: boolean;
 }
 
 export function initState({
@@ -54,7 +53,6 @@ export function initState({
     filteredValues: [...values],
     filters: {},
     sortValue: initialSort,
-    showFilters: false,
   };
 }
 
@@ -68,11 +66,7 @@ interface SortAction {
   value: Sort;
 }
 
-interface ToggleFiltersAction {
-  type: Actions.TOGGLE_FILTERS;
-}
-
-export type ActionType = FilterNameAction | SortAction | ToggleFiltersAction;
+export type ActionType = FilterNameAction | SortAction;
 
 export function reducer(state: State, action: ActionType): State {
   let filters;
@@ -108,12 +102,7 @@ export function reducer(state: State, action: ActionType): State {
         filteredValues,
       };
     }
-    case Actions.TOGGLE_FILTERS: {
-      return {
-        ...state,
-        showFilters: !state.showFilters,
-      };
-    }
+
     // no default
   }
 }
