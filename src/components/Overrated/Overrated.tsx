@@ -3,6 +3,7 @@ import type { OverratedDisappointment } from "src/api/overratedDisappointments";
 import type { PosterImageProps } from "src/api/posters";
 import {
   ListWithFiltersLayout,
+  SolidBackdrop,
   SubNav,
 } from "src/components/ListWithFiltersLayout";
 
@@ -55,11 +56,17 @@ export function Overrated({
 
   return (
     <ListWithFiltersLayout
-      title="Overrated Disappointments"
-      breadcrumb={
-        <>
-          <a href="/reviews/">Reviews</a>
-        </>
+      backdrop={
+        <SolidBackdrop
+          title="Overrated Disappointments"
+          deck=" One and two star movies with an above-average IMDb rating and vote
+        count."
+          breadcrumb={
+            <>
+              <a href="/reviews/">Reviews</a>
+            </>
+          }
+        />
       }
       subNav={
         <SubNav
@@ -70,8 +77,6 @@ export function Overrated({
           ]}
         />
       }
-      deck=" One and two star movies with an above-average IMDb rating and vote
-        count."
       totalCount={state.filteredValues.length}
       onToggleFilters={() => dispatch({ type: Actions.TOGGLE_FILTERS })}
       filtersVisible={state.showFilters}

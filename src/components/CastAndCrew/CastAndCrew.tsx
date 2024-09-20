@@ -4,6 +4,7 @@ import type { BackdropImageProps } from "src/api/backdrops";
 import type { CastAndCrewMember } from "src/api/castAndCrew";
 import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
 
+import { Backdrop } from "../Backdrop";
 import { CreditedAs } from "../CreditedAs";
 import { ListItem } from "../ListItem";
 import { ListItemAvatar } from "../ListItemAvatar";
@@ -41,10 +42,14 @@ export function CastAndCrew({
 
   return (
     <ListWithFiltersLayout
-      title="Cast & Crew"
-      alt='Claude Rains giving orders in "Casablanca (1942)"'
-      deck='"Round up the usual suspects."'
-      backdropImageProps={backdropImageProps}
+      backdrop={
+        <Backdrop
+          imageProps={backdropImageProps}
+          title="Cast & Crew"
+          alt='Claude Rains giving orders in "Casablanca (1942)"'
+          deck='"Round up the usual suspects."'
+        />
+      }
       totalCount={state.filteredValues.length}
       onToggleFilters={() => dispatch({ type: Actions.TOGGLE_FILTERS })}
       filtersVisible={state.showFilters}

@@ -4,6 +4,7 @@ import type { BackdropImageProps } from "src/api/backdrops";
 import type { Collection } from "src/api/collections";
 import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
 
+import { Backdrop } from "../Backdrop";
 import { ListItem } from "../ListItem";
 import { ListItemAvatar } from "../ListItemAvatar";
 import { ListItemCounts } from "../ListItemCounts";
@@ -40,10 +41,14 @@ export function Collections({
 
   return (
     <ListWithFiltersLayout
-      title="Collections"
-      alt='Claude Rains giving orders in "Casablanca (1942)"'
-      deck={`"Okay ramblers, let's get rambling."`}
-      backdropImageProps={backdropImageProps}
+      backdrop={
+        <Backdrop
+          title="Collections"
+          alt='George Clooney and Quentin Tarantino getting ready to ramble in "From Dusk till Dawn (1996)"'
+          deck={`"Okay ramblers, let's get rambling."`}
+          imageProps={backdropImageProps}
+        />
+      }
       totalCount={state.filteredValues.length}
       onToggleFilters={() => dispatch({ type: Actions.TOGGLE_FILTERS })}
       filtersVisible={state.showFilters}

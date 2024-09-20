@@ -305,7 +305,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
             />
           </picture>
           <div
-            class="font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle mb-12"
+            class="text-center font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle mb-12"
           >
             1997 
             <span>
@@ -353,7 +353,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
         >
           <div>
             <div
-              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:float-left first-letter:mt-[6px] first-letter:pr-2 first-letter:font-sans-narrow-bold first-letter:text-[56px] first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px]"
+              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px] [&>p:first-child]:first-letter:float-left [&>p:first-child]:first-letter:mt-[6px] [&>p:first-child]:first-letter:pr-2 [&>p:first-child]:first-letter:font-sans-narrow-bold [&>p:first-child]:first-letter:text-[56px]"
             >
               <p>
                 Seven years ago, the starship 
@@ -460,7 +460,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
             </h3>
             <ul>
               <li
-                class="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle"
+                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -521,7 +521,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 <div />
               </li>
               <li
-                class="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle"
+                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -1591,7 +1591,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
             />
           </picture>
           <div
-            class="font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle mb-12"
+            class="text-center font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle mb-12"
           >
             1987 
             <span>
@@ -1631,7 +1631,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
         >
           <div>
             <div
-              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:float-left first-letter:mt-[6px] first-letter:pr-2 first-letter:font-sans-narrow-bold first-letter:text-[56px] first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px]"
+              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px] [&>p:first-child]:first-letter:float-left [&>p:first-child]:first-letter:mt-[6px] [&>p:first-child]:first-letter:pr-2 [&>p:first-child]:first-letter:font-sans-narrow-bold [&>p:first-child]:first-letter:text-[56px]"
             >
               <p>
                 <strong>
@@ -1678,7 +1678,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
             </h3>
             <ul>
               <li
-                class="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle"
+                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -1739,7 +1739,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 <div />
               </li>
               <li
-                class="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle"
+                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -3092,7 +3092,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
             />
           </picture>
           <div
-            class="font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle mb-12"
+            class="text-center font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle mb-12"
           >
             1972 
             <span>
@@ -3136,7 +3136,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
         >
           <div>
             <div
-              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:float-left first-letter:mt-[6px] first-letter:pr-2 first-letter:font-sans-narrow-bold first-letter:text-[56px] first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px]"
+              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px] [&>p:first-child]:first-letter:float-left [&>p:first-child]:first-letter:mt-[6px] [&>p:first-child]:first-letter:pr-2 [&>p:first-child]:first-letter:font-sans-narrow-bold [&>p:first-child]:first-letter:text-[56px]"
             >
               <p>
                 <em>
@@ -3210,7 +3210,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
             </h3>
             <ul>
               <li
-                class="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle"
+                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -3271,7 +3271,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 <div />
               </li>
               <li
-                class="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle"
+                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -5276,7 +5276,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
             />
           </picture>
           <div
-            class="font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle mb-12"
+            class="text-center font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle mb-12"
           >
             1985 
             <span>
@@ -5316,7 +5316,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
         >
           <div>
             <div
-              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:float-left first-letter:mt-[6px] first-letter:pr-2 first-letter:font-sans-narrow-bold first-letter:text-[56px] first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px]"
+              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px] [&>p:first-child]:first-letter:float-left [&>p:first-child]:first-letter:mt-[6px] [&>p:first-child]:first-letter:pr-2 [&>p:first-child]:first-letter:font-sans-narrow-bold [&>p:first-child]:first-letter:text-[56px]"
             >
               <p>
                 For an anthology comprising three unrelated low-budget horror features cut to half or a third of their running time and book-ended by God and Satan riding a train to Las Vegas with an 80s teen pop-rock band, 
@@ -5454,7 +5454,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
             </h3>
             <ul>
               <li
-                class="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle"
+                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -5529,7 +5529,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 <div />
               </li>
               <li
-                class="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle"
+                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -5604,7 +5604,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 <div />
               </li>
               <li
-                class="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle"
+                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -6626,7 +6626,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
             />
           </picture>
           <div
-            class="font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle mb-12"
+            class="text-center font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle mb-12"
           >
             1959 
             <span>
@@ -6666,7 +6666,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
         >
           <div>
             <div
-              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:float-left first-letter:mt-[6px] first-letter:pr-2 first-letter:font-sans-narrow-bold first-letter:text-[56px] first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px]"
+              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px] [&>p:first-child]:first-letter:float-left [&>p:first-child]:first-letter:mt-[6px] [&>p:first-child]:first-letter:pr-2 [&>p:first-child]:first-letter:font-sans-narrow-bold [&>p:first-child]:first-letter:text-[56px]"
             >
               <p>
                 <strong>
@@ -6708,7 +6708,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
             </h3>
             <ul>
               <li
-                class="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle"
+                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -6767,7 +6767,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 <div />
               </li>
               <li
-                class="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle"
+                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -6828,7 +6828,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 <div />
               </li>
               <li
-                class="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle"
+                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -6889,7 +6889,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 <div />
               </li>
               <li
-                class="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle"
+                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -8996,7 +8996,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             />
           </picture>
           <div
-            class="font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle mb-12"
+            class="text-center font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle mb-12"
           >
             1957 
             <span>
@@ -9036,7 +9036,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
         >
           <div>
             <div
-              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:float-left first-letter:mt-[6px] first-letter:pr-2 first-letter:font-sans-narrow-bold first-letter:text-[56px] first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px]"
+              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px] [&>p:first-child]:first-letter:float-left [&>p:first-child]:first-letter:mt-[6px] [&>p:first-child]:first-letter:pr-2 [&>p:first-child]:first-letter:font-sans-narrow-bold [&>p:first-child]:first-letter:text-[56px]"
             >
               <p>
                 For Peter Cushing and Christopher Lee’s first film for Hammer, 
@@ -9112,7 +9112,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             </h3>
             <ul>
               <li
-                class="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle"
+                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -9173,7 +9173,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 <div />
               </li>
               <li
-                class="flex flex-col font-sans-book text-xs tracking-[-.1px] even:bg-subtle"
+                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
