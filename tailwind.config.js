@@ -56,7 +56,7 @@ export default {
         "sans-narrow": "GothamNarrowMedium",
         "sans-bold": "GothamBold",
         "sans-narrow-bold": "GothamNarrowBold",
-        serif: '"Source Serif 4"',
+        serif: "MercuryTextG1Regular",
         "sans-book": "GothamBook",
         "serif-semibold": "MercuryDisplaySemibold",
       },
