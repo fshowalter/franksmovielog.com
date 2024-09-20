@@ -75,7 +75,10 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
 
 function CollectionName({ value }: { value: ListItemValue }) {
   return (
-    <a href={`/collections/${value.slug}/`} className="text-md text-accent">
+    <a
+      href={`/collections/${value.slug}/`}
+      className="font-sans-narrow-bold text-sm text-accent tablet:text-base"
+    >
       <div className="leading-normal">{value.name}</div>
     </a>
   );
