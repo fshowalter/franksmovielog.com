@@ -23,9 +23,8 @@ export function ProgressRing({
   return (
     <svg className={className} viewBox="0 0 36 36" {...rest}>
       <path
-        stroke="var(--fg-default)"
+        stroke="var(--bg-canvas)"
         strokeWidth={1.8}
-        opacity={0.5}
         fill={"none" as const}
         d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831

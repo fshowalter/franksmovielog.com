@@ -15,9 +15,9 @@ export function Mast({
       style={{
         color: hasBackdrop ? "#fff" : "var(--fg-default)",
         position: hasBackdrop ? "absolute" : "static",
-        // backgroundImage: hasBackdrop
-        //   ? "linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.55) 55%, transparent)"
-        //   : "unset",
+        backgroundImage: hasBackdrop
+          ? "linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.55) 55%, transparent)"
+          : "unset",
       }}
     >
       {hideLogo ? <div /> : <Logo />}
@@ -80,7 +80,10 @@ function SubMenu({ values }: { values: NavItem[] }): JSX.Element | null {
 function NavListItem({ value }: { value: NavItem }): JSX.Element {
   return (
     <li className="block whitespace-nowrap tracking-0.5px">
-      <a className="text-inherit" href={value.target}>
+      <a
+        className="text-inherit transition-all duration-500 ease-in-out hover:text-accent hover:brightness-150"
+        href={value.target}
+      >
         {value.text}
       </a>
     </li>
