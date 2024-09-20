@@ -18,7 +18,8 @@ import { ViewingHistoryListItem } from "./ViewingHistoryListItem";
 export const StillImageConfig = {
   width: 1536,
   height: 864,
-  sizes: "(min-width: 960px) 960px, 100vw",
+  sizes:
+    "(max-width: 767px) calc(100vw - 16%), (max-width: 1279px) calc(100vw - 48px), 1536px",
 };
 
 export interface Props {
