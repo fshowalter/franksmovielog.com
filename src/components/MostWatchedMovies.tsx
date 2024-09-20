@@ -77,7 +77,7 @@ function ListItem({
             slug={value.slug}
           />
         </div>
-        <div className="flex justify-start text-base text-subtle tablet:justify-center">
+        <div className="flex justify-start font-sans-narrow text-base text-sm text-subtle tablet:justify-center">
           <div>{value.count.toLocaleString()} times</div>
         </div>
       </div>
