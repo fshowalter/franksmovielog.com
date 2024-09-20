@@ -39,12 +39,12 @@ function MediumNotes({ value }: { value: Viewing["mediumNotes"] }) {
     return null;
   }
   return (
-    <span className="text-sm font-light leading-none text-subtle">
+    <span className="text-subtle">
       (
       <RenderedMarkdown
         // eslint-disable-next-line react/no-danger
         text={value}
-        className="text-sm leading-none"
+        className="leading-none"
         as="span"
       />
       )
@@ -57,7 +57,7 @@ function VenueNotes({ value }: { value: Viewing["venueNotes"] }) {
     return null;
   }
   return (
-    <span className="text-sm font-light leading-none text-subtle">
+    <span className="text-sm leading-none text-subtle">
       (
       <RenderedMarkdown
         // eslint-disable-next-line react/no-danger
@@ -75,7 +75,7 @@ function Venue({ value }: { value: Viewing["venue"] }) {
     return null;
   }
   return (
-    <span className="font-light text-subtle">
+    <span className="text-subtle">
       <span>at</span> <span>{value}</span>
     </span>
   );
