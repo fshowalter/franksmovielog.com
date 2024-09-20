@@ -15,7 +15,7 @@ export function ListItemTitle({
     return (
       <a
         href={`/reviews/${slug}/`}
-        className="block font-sans-narrow-bold text-sm text-accent tablet:text-base"
+        className="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
       >
         {title}&#8239;&#8239;{yearBox}
       </a>

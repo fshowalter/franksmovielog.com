@@ -13,7 +13,12 @@ function AllTimeLink({
 
   return (
     <li className="block">
-      <a href={linkFunc("all")}>All-Time</a>
+      <a
+        className="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
+        href={linkFunc("all")}
+      >
+        All-Time
+      </a>
     </li>
   );
 }
@@ -28,12 +33,17 @@ function YearLink({
   linkFunc: (y: string) => string;
 }): JSX.Element | null {
   if (year === currentYear) {
-    return <li className="block">{year}</li>;
+    return <li className="block font-serif-semibold">{year}</li>;
   }
 
   return (
     <li className="block">
-      <a href={linkFunc(year)}>{year}</a>
+      <a
+        className="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
+        href={linkFunc(year)}
+      >
+        {year}
+      </a>
     </li>
   );
 }
@@ -52,7 +62,7 @@ export function StatsNavigation({
   return (
     <ul
       className={ccn(
-        "flex flex-wrap justify-center gap-x-4 gap-y-2 text-md underline decoration-1 underline-offset-8 desktop:text-xl",
+        "flex flex-wrap justify-center gap-x-4 gap-y-2 text-md desktop:text-xl",
         className,
       )}
     >

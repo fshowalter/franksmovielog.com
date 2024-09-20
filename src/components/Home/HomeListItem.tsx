@@ -60,7 +60,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
         </div>
         <a
           href={`/reviews/${value.slug}/`}
-          className="mb-2 block font-serif-semibold text-2.5xl text-default"
+          className="mb-2 block font-serif-semibold text-2.5xl text-default hover:text-accent"
         >
           {value.title}{" "}
           <span className="text-sm font-light leading-none text-muted">

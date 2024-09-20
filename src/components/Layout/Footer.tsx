@@ -42,7 +42,9 @@ export function Footer(): JSX.Element {
 function NavListItem({ value }: { value: NavItem }): JSX.Element {
   return (
     <li className="block w-1/2 whitespace-nowrap text-2xl">
-      <a href={value.target}>{value.text}</a>
+      <a className="hover:text-accent" href={value.target}>
+        {value.text}
+      </a>
       <SubNavList values={value.subItems} />
     </li>
   );
@@ -61,7 +63,9 @@ function SubNavList({ values }: { values: NavItem[] }): JSX.Element | null {
             key={value.target}
             className="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
           >
-            <a href={value.target}>{value.text}</a>
+            <a className="hover:text-inverse" href={value.target}>
+              {value.text}
+            </a>
           </li>
         );
       })}

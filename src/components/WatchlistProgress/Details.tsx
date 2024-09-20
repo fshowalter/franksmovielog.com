@@ -79,7 +79,7 @@ function Name({ value, valueType }: { valueType: ValueType; value: Value }) {
   if (value.slug)
     return (
       <a
-        className="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+        className="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
         href={linkTarget}
       >
         {value.name}
@@ -87,7 +87,7 @@ function Name({ value, valueType }: { valueType: ValueType; value: Value }) {
     );
 
   return (
-    <span className="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-subtle">
+    <span className="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-subtle">
       {value.name}
     </span>
   );

@@ -34,7 +34,16 @@
       <div class="flex min-h-full w-full flex-col bg-default">
         <header
           class="z-20 flex w-full items-center justify-between px-container-base py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
-          style="color: #fff; position: absolute"
+          style="
+            color: #fff;
+            position: absolute;
+            background-image: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0.35),
+              rgba(0, 0, 0, 0.55) 55%,
+              transparent
+            );
+          "
         >
           <div class="flex flex-col">
             <div
@@ -51,27 +60,53 @@
             <nav class="hidden w-full desktop:block desktop:w-auto">
               <ul class="flex flex-wrap justify-start gap-x-6 text-xl">
                 <li class="block whitespace-nowrap tracking-0.5px">
-                  <a class="text-inherit" href="/">Home</a>
+                  <a
+                    class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                    href="/"
+                    >Home</a
+                  >
                 </li>
                 <li class="block whitespace-nowrap tracking-0.5px">
-                  <a class="text-inherit" href="/how-i-grade/">How I Grade</a>
+                  <a
+                    class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                    href="/how-i-grade/"
+                    >How I Grade</a
+                  >
                 </li>
                 <li class="block whitespace-nowrap tracking-0.5px">
-                  <a class="text-inherit" href="/reviews/">Reviews</a>
+                  <a
+                    class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                    href="/reviews/"
+                    >Reviews</a
+                  >
                 </li>
                 <li class="block whitespace-nowrap tracking-0.5px">
-                  <a class="text-inherit" href="/viewings/">Viewing Log</a>
+                  <a
+                    class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                    href="/viewings/"
+                    >Viewing Log</a
+                  >
                 </li>
                 <li class="block whitespace-nowrap tracking-0.5px">
-                  <a class="text-inherit" href="/cast-and-crew/"
+                  <a
+                    class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                    href="/cast-and-crew/"
                     >Cast &amp; Crew</a
                   >
                 </li>
                 <li class="block whitespace-nowrap tracking-0.5px">
-                  <a class="text-inherit" href="/collections/">Collections</a>
+                  <a
+                    class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                    href="/collections/"
+                    >Collections</a
+                  >
                 </li>
                 <li class="block whitespace-nowrap tracking-0.5px">
-                  <a class="text-inherit" href="/watchlist/">Watchlist</a>
+                  <a
+                    class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                    href="/watchlist/"
+                    >Watchlist</a
+                  >
                 </li>
               </ul>
             </nav>
@@ -209,9 +244,8 @@
                     height="144"
                   >
                     <path
-                      stroke="var(--fg-default)"
+                      stroke="var(--bg-canvas)"
                       stroke-width="1.8"
-                      opacity="0.5"
                       fill="none"
                       d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
@@ -271,9 +305,8 @@
                     height="144"
                   >
                     <path
-                      stroke="var(--fg-default)"
+                      stroke="var(--bg-canvas)"
                       stroke-width="1.8"
-                      opacity="0.5"
                       fill="none"
                       d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
@@ -335,9 +368,8 @@
                     height="144"
                   >
                     <path
-                      stroke="var(--fg-default)"
+                      stroke="var(--bg-canvas)"
                       stroke-width="1.8"
-                      opacity="0.5"
                       fill="none"
                       d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
@@ -399,9 +431,8 @@
                     height="144"
                   >
                     <path
-                      stroke="var(--fg-default)"
+                      stroke="var(--bg-canvas)"
                       stroke-width="1.8"
-                      opacity="0.5"
                       fill="none"
                       d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
@@ -463,9 +494,8 @@
                     height="144"
                   >
                     <path
-                      stroke="var(--fg-default)"
+                      stroke="var(--bg-canvas)"
                       stroke-width="1.8"
-                      opacity="0.5"
                       fill="none"
                       d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
@@ -557,7 +587,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/abel-ferrara/"
                         >Abel Ferrara</a
                       >
@@ -609,7 +639,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <span
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-subtle"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-subtle"
                         >Akira Kurosawa</span
                       >
                       <div
@@ -652,7 +682,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/alfred-hitchcock/"
                         >Alfred Hitchcock</a
                       >
@@ -696,7 +726,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/billy-wilder/"
                         >Billy Wilder</a
                       >
@@ -740,7 +770,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/brian-de-palma/"
                         >Brian De Palma</a
                       >
@@ -784,7 +814,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/dario-argento/"
                         >Dario Argento</a
                       >
@@ -828,7 +858,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/david-cronenberg/"
                         >David Cronenberg</a
                       >
@@ -872,7 +902,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/david-lean/"
                         >David Lean</a
                       >
@@ -924,7 +954,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <span
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-subtle"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-subtle"
                         >François Truffaut</span
                       >
                       <div
@@ -967,7 +997,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/fritz-lang/"
                         >Fritz Lang</a
                       >
@@ -1011,7 +1041,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/george-a-romero/"
                         >George A. Romero</a
                       >
@@ -1055,7 +1085,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/howard-hawks/"
                         >Howard Hawks</a
                       >
@@ -1099,7 +1129,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/ingmar-bergman/"
                         >Ingmar Bergman</a
                       >
@@ -1143,7 +1173,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/john-boorman/"
                         >John Boorman</a
                       >
@@ -1187,7 +1217,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/john-carpenter/"
                         >John Carpenter</a
                       >
@@ -1231,7 +1261,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/john-ford/"
                         >John Ford</a
                       >
@@ -1275,7 +1305,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/john-frankenheimer/"
                         >John Frankenheimer</a
                       >
@@ -1327,7 +1357,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <span
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-subtle"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-subtle"
                         >John Huston</span
                       >
                       <div
@@ -1370,7 +1400,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/john-sturges/"
                         >John Sturges</a
                       >
@@ -1414,7 +1444,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/ken-russell/"
                         >Ken Russell</a
                       >
@@ -1458,7 +1488,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/lucio-fulci/"
                         >Lucio Fulci</a
                       >
@@ -1502,7 +1532,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/luis-bunuel/"
                         >Luis Buñuel</a
                       >
@@ -1546,7 +1576,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/mario-bava/"
                         >Mario Bava</a
                       >
@@ -1598,7 +1628,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <span
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-subtle"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-subtle"
                         >Martin Scorsese</span
                       >
                       <div
@@ -1641,7 +1671,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/michael-haneke/"
                         >Michael Haneke</a
                       >
@@ -1685,7 +1715,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/michele-soavi/"
                         >Michele Soavi</a
                       >
@@ -1737,7 +1767,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <span
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-subtle"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-subtle"
                         >Mike Nichols</span
                       >
                       <div
@@ -1780,7 +1810,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/paul-thomas-anderson/"
                         >Paul Thomas Anderson</a
                       >
@@ -1832,7 +1862,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <span
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-subtle"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-subtle"
                         >Paul Verhoeven</span
                       >
                       <div
@@ -1883,7 +1913,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <span
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-subtle"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-subtle"
                         >Quentin Tarantino</span
                       >
                       <div
@@ -1934,7 +1964,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <span
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-subtle"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-subtle"
                         >Ridley Scott</span
                       >
                       <div
@@ -1977,7 +2007,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/robert-altman/"
                         >Robert Altman</a
                       >
@@ -2021,7 +2051,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/roger-corman/"
                         >Roger Corman</a
                       >
@@ -2065,7 +2095,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/roman-polanski/"
                         >Roman Polanski</a
                       >
@@ -2109,7 +2139,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/sam-peckinpah/"
                         >Sam Peckinpah</a
                       >
@@ -2161,7 +2191,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <span
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-subtle"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-subtle"
                         >Sergio Leone</span
                       >
                       <div
@@ -2204,7 +2234,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/sidney-lumet/"
                         >Sidney Lumet</a
                       >
@@ -2248,7 +2278,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/stanley-kubrick/"
                         >Stanley Kubrick</a
                       >
@@ -2300,7 +2330,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <span
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-subtle"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-subtle"
                         >The Coen Brothers</span
                       >
                       <div
@@ -2343,7 +2373,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/tobe-hooper/"
                         >Tobe Hooper</a
                       >
@@ -2387,7 +2417,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/tod-browning/"
                         >Tod Browning</a
                       >
@@ -2431,7 +2461,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/tony-scott/"
                         >Tony Scott</a
                       >
@@ -2483,7 +2513,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <span
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-subtle"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-subtle"
                         >Wes Anderson</span
                       >
                       <div
@@ -2526,7 +2556,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/wes-craven/"
                         >Wes Craven</a
                       >
@@ -2570,7 +2600,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/william-friedkin/"
                         >William Friedkin</a
                       >
@@ -2627,7 +2657,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/bela-lugosi/"
                         >Bela Lugosi</a
                       >
@@ -2671,7 +2701,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/bette-davis/"
                         >Bette Davis</a
                       >
@@ -2715,7 +2745,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/boris-karloff/"
                         >Boris Karloff</a
                       >
@@ -2759,7 +2789,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/burt-reynolds/"
                         >Burt Reynolds</a
                       >
@@ -2803,7 +2833,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/cary-grant/"
                         >Cary Grant</a
                       >
@@ -2847,7 +2877,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/christopher-lee/"
                         >Christopher Lee</a
                       >
@@ -2891,7 +2921,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/dean-martin/"
                         >Dean Martin</a
                       >
@@ -2935,7 +2965,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/errol-flynn/"
                         >Errol Flynn</a
                       >
@@ -2979,7 +3009,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/frank-sinatra/"
                         >Frank Sinatra</a
                       >
@@ -3023,7 +3053,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/gene-hackman/"
                         >Gene Hackman</a
                       >
@@ -3067,7 +3097,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/humphrey-bogart/"
                         >Humphrey Bogart</a
                       >
@@ -3111,7 +3141,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/jack-lemmon/"
                         >Jack Lemmon</a
                       >
@@ -3155,7 +3185,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/jack-nicholson/"
                         >Jack Nicholson</a
                       >
@@ -3199,7 +3229,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/james-coburn/"
                         >James Coburn</a
                       >
@@ -3251,7 +3281,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <span
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-subtle"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-subtle"
                         >James Garner</span
                       >
                       <div
@@ -3294,7 +3324,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/james-stewart/"
                         >James Stewart</a
                       >
@@ -3338,7 +3368,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/john-wayne/"
                         >John Wayne</a
                       >
@@ -3382,7 +3412,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/lee-marvin/"
                         >Lee Marvin</a
                       >
@@ -3426,7 +3456,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/marilyn-monroe/"
                         >Marilyn Monroe</a
                       >
@@ -3478,7 +3508,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <span
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-subtle"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-subtle"
                         >Paul Newman</span
                       >
                       <div
@@ -3521,7 +3551,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/peter-cushing/"
                         >Peter Cushing</a
                       >
@@ -3565,7 +3595,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/robert-mitchum/"
                         >Robert Mitchum</a
                       >
@@ -3617,7 +3647,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <span
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-subtle"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-subtle"
                         >Sean Connery</span
                       >
                       <div
@@ -3660,7 +3690,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/steve-mcqueen/"
                         >Steve McQueen</a
                       >
@@ -3704,7 +3734,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/vincent-price/"
                         >Vincent Price</a
                       >
@@ -3748,7 +3778,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/warren-oates/"
                         >Warren Oates</a
                       >
@@ -3792,7 +3822,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/william-holden/"
                         >William Holden</a
                       >
@@ -3836,7 +3866,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/william-powell/"
                         >William Powell</a
                       >
@@ -3901,7 +3931,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <span
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-subtle"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-subtle"
                         >Anthony Shaffer</span
                       >
                       <div
@@ -3944,7 +3974,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/clive-barker/"
                         >Clive Barker</a
                       >
@@ -3988,7 +4018,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/david-mamet/"
                         >David Mamet</a
                       >
@@ -4032,7 +4062,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/leigh-brackett/"
                         >Leigh Brackett</a
                       >
@@ -4076,7 +4106,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/neil-labute/"
                         >Neil LaBute</a
                       >
@@ -4120,7 +4150,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/raymond-chandler/"
                         >Raymond Chandler</a
                       >
@@ -4164,7 +4194,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/cast-and-crew/stephen-king/"
                         >Stephen King</a
                       >
@@ -4221,7 +4251,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/collections/friday-the-13th/"
                         >Friday the 13th</a
                       >
@@ -4265,7 +4295,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/collections/halloween/"
                         >Halloween</a
                       >
@@ -4309,7 +4339,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/collections/hammer-films/"
                         >Hammer Films</a
                       >
@@ -4353,7 +4383,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/collections/james-bond/"
                         >James Bond</a
                       >
@@ -4397,7 +4427,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/collections/saw/"
                         >Saw</a
                       >
@@ -4441,7 +4471,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/collections/shaw-brothers/"
                         >Shaw Brothers</a
                       >
@@ -4485,7 +4515,7 @@
                       class="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid"
                     >
                       <a
-                        class="block pb-1 font-sans-book text-sm leading-none tracking-[-0.3px] text-accent"
+                        class="block pb-1 font-sans-narrow text-sm leading-none tracking-[-0.3px] text-accent"
                         href="/collections/universal-monsters/"
                         >Universal Monsters</a
                       >
@@ -4533,49 +4563,63 @@
           >
             <ul class="flex w-full flex-col gap-y-10 text-inverse max:w-auto">
               <li class="block w-1/2 whitespace-nowrap text-2xl">
-                <a href="/">Home</a>
+                <a class="hover:text-accent" href="/">Home</a>
               </li>
               <li class="block w-1/2 whitespace-nowrap text-2xl">
-                <a href="/how-i-grade/">How I Grade</a>
+                <a class="hover:text-accent" href="/how-i-grade/"
+                  >How I Grade</a
+                >
               </li>
               <li class="block w-1/2 whitespace-nowrap text-2xl">
-                <a href="/reviews/">Reviews</a>
+                <a class="hover:text-accent" href="/reviews/">Reviews</a>
                 <ol class="mt-4">
                   <li
                     class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                   >
-                    <a href="/reviews/underseen/">Underseen Gems</a>
+                    <a class="hover:text-inverse" href="/reviews/underseen/"
+                      >Underseen Gems</a
+                    >
                   </li>
                   <li
                     class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                   >
-                    <a href="/reviews/overrated/">Overrated Disappointments</a>
-                  </li>
-                </ol>
-              </li>
-              <li class="block w-1/2 whitespace-nowrap text-2xl">
-                <a href="/viewings/">Viewing Log</a>
-                <ol class="mt-4">
-                  <li
-                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
-                  >
-                    <a href="/viewings/stats/">Stats</a>
+                    <a class="hover:text-inverse" href="/reviews/overrated/"
+                      >Overrated Disappointments</a
+                    >
                   </li>
                 </ol>
               </li>
               <li class="block w-1/2 whitespace-nowrap text-2xl">
-                <a href="/cast-and-crew/">Cast &amp; Crew</a>
-              </li>
-              <li class="block w-1/2 whitespace-nowrap text-2xl">
-                <a href="/collections/">Collections</a>
-              </li>
-              <li class="block w-1/2 whitespace-nowrap text-2xl">
-                <a href="/watchlist/">Watchlist</a>
+                <a class="hover:text-accent" href="/viewings/">Viewing Log</a>
                 <ol class="mt-4">
                   <li
                     class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
                   >
-                    <a href="/watchlist/progress/">Progress</a>
+                    <a class="hover:text-inverse" href="/viewings/stats/"
+                      >Stats</a
+                    >
+                  </li>
+                </ol>
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a class="hover:text-accent" href="/cast-and-crew/"
+                  >Cast &amp; Crew</a
+                >
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a class="hover:text-accent" href="/collections/"
+                  >Collections</a
+                >
+              </li>
+              <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <a class="hover:text-accent" href="/watchlist/">Watchlist</a>
+                <ol class="mt-4">
+                  <li
+                    class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                  >
+                    <a class="hover:text-inverse" href="/watchlist/progress/"
+                      >Progress</a
+                    >
                   </li>
                 </ol>
               </li>
