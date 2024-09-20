@@ -30,7 +30,6 @@ export function WatchlistProgress({
   progress,
   backdropImageProps,
 }: Props): JSX.Element {
-  console.log(progress);
   return (
     <Layout className="bg-subtle">
       <Backdrop
