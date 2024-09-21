@@ -36,7 +36,7 @@ export function WatchlistProgress({
         imageProps={backdropImageProps}
         title="Progress"
         breadcrumb={<a href="/watchlist/">Watchlist</a>}
-        alt='Darth Vadar in "Star Wars (1977)'
+        alt='Darth Vader in "Star Wars (1977)'
         deck='"I find your lack of faith disturbing."'
       />
       <div className="flex flex-col items-center">
