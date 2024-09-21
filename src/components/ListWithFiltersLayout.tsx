@@ -22,11 +22,12 @@ export function ListWithFiltersLayout({
   listHeaderButtons,
   subNav,
   mastGradient,
+  ...rest
 }: Props): JSX.Element {
   const [filtersVisible, toggleFilters] = useState(false);
 
   return (
-    <Layout className="bg-subtle" addGradient={mastGradient}>
+    <Layout className="bg-subtle" {...rest} addGradient={mastGradient}>
       {backdrop}
       {subNav && subNav}
       <section className="mx-auto flex flex-col items-center bg-default">
