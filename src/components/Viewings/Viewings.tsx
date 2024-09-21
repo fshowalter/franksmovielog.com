@@ -6,7 +6,10 @@ import { GroupedList } from "src/components/GroupedList";
 import { ListItemMediumAndVenue } from "src/components/ListItemMediumAndVenue";
 import { ListItemPoster } from "src/components/ListItemPoster";
 import { ListItemTitle } from "src/components/ListItemTitle";
-import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
+import {
+  ListHeaderButton,
+  ListWithFiltersLayout,
+} from "src/components/ListWithFiltersLayout";
 
 import { Backdrop } from "../Backdrop";
 import { Filters } from "./Filters";
@@ -73,7 +76,9 @@ export function Viewings({
         />
       }
       totalCount={state.filteredValues.length}
-      seeAlso={[{ href: "/viewings/stats/", text: "stats" }]}
+      listHeaderButtons={
+        <ListHeaderButton href="/viewings/stats/" text="stats" />
+      }
       filters={
         <Filters
           dispatch={dispatch}

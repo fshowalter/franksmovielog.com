@@ -26,7 +26,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-accent: #0056b3;
+    --bg-accent: #a52422;
     --bg-canvas: #484745;
     --bg-default: #322f2f;
     --bg-inverse: #322f2f;
@@ -35,7 +35,7 @@
     --bg-subtle: #373434;
     --border-accent: #499ef8;
     --border-default: #484745;
-    --fg-accent: #499ef8;
+    --fg-accent: #ff9191;
     --fg-default: rgb(255 255 255 / 75%);
     --fg-emphasis: rgb(255 255 255 / 95%);
     --fg-muted: rgb(255 255 255 / 65%);
@@ -56,7 +56,6 @@
   :root {
     --gutter-width: 32px;
     --page-margin-width: 64px;
-    --header-offset: 93px;
     --container-padding: 80px;
   }
 }
