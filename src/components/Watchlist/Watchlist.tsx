@@ -8,7 +8,10 @@ import { GroupedList } from "../GroupedList";
 import { ListItem } from "../ListItem";
 import { ListItemPoster } from "../ListItemPoster";
 import { ListItemTitle } from "../ListItemTitle";
-import { ListWithFiltersLayout } from "../ListWithFiltersLayout";
+import {
+  ListHeaderButton,
+  ListWithFiltersLayout,
+} from "../ListWithFiltersLayout";
 import { SvgIcon } from "../SvgIcon";
 import { WatchlistTitleSlug } from "../WatchlistTitleSlug";
 import { Filters } from "./Filters";
@@ -71,7 +74,9 @@ export function Watchlist({
         />
       }
       totalCount={state.filteredValues.length}
-      seeAlso={[{ href: "/watchlist/progress/", text: "progress" }]}
+      listHeaderButtons={
+        <ListHeaderButton href="/watchlist/progress/" text="progress" />
+      }
       filters={
         <Filters
           sortValue={state.sortValue}

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { type ReactNode, useState } from "react";
 import type { AvatarImageProps } from "src/api/avatars";
 
 import { Avatar } from "./Avatar";
@@ -10,7 +10,7 @@ type Props = {
   filters: React.ReactNode;
   list: React.ReactNode;
   totalCount: number;
-  seeAlso?: SubNavValue[];
+  listHeaderButtons?: React.ReactNode;
 };
 
 export function ListWithFiltersLayout({
@@ -18,7 +18,7 @@ export function ListWithFiltersLayout({
   backdrop,
   filters,
   list,
-  seeAlso,
+  listHeaderButtons,
   subNav,
 }: Props): JSX.Element {
   const [filtersVisible, toggleFilters] = useState(false);
@@ -36,7 +36,7 @@ export function ListWithFiltersLayout({
                   totalCount={totalCount}
                   onToggleFilters={() => toggleFilters(!filtersVisible)}
                   filtersVisible={filtersVisible}
-                  seeAlso={seeAlso}
+                  listHeaderButtons={listHeaderButtons}
                 />
               </div>
               <div className="mx-auto max-w-screen-max grid-cols-[1fr_48px_33%] showFilters:grid showFilters:grid-rows-[auto_1fr]">
@@ -142,12 +142,12 @@ function ListHeader({
   totalCount,
   onToggleFilters,
   filtersVisible,
-  seeAlso,
+  listHeaderButtons,
 }: {
   totalCount: number;
   onToggleFilters: () => void;
   filtersVisible: boolean;
-  seeAlso?: SubNavValue[];
+  listHeaderButtons?: ReactNode;
 }): JSX.Element {
   return (
     <div className="mx-auto flex w-full max-w-screen-max flex-wrap items-baseline justify-between gap-x-4 gap-y-5 px-container py-10 font-sans-bold uppercase tracking-[0.5px] text-subtle">
@@ -155,19 +155,9 @@ function ListHeader({
         <span className="font-sans-bold">{totalCount.toLocaleString()}</span>{" "}
         Results
       </span>
-
-      {seeAlso && (
+      {listHeaderButtons && (
         <div className="ml-auto flex w-1/2 flex-wrap justify-end gap-4">
-          {seeAlso.map((also) => {
-            return (
-              <div
-                key={also.href}
-                className="flex items-start gap-x-4 text-nowrap bg-default px-4 py-2 uppercase text-accent hover:bg-accent hover:text-inverse"
-              >
-                <a href={also.href}>{also.text}</a>
-              </div>
-            );
-          })}
+          {listHeaderButtons}
         </div>
       )}
       <button
@@ -181,6 +171,20 @@ function ListHeader({
       >
         Filter & Sort
       </button>
+    </div>
+  );
+}
+
+export function ListHeaderButton({
+  href,
+  text,
+}: {
+  href: string;
+  text: string;
+}) {
+  return (
+    <div className="flex items-start gap-x-4 text-nowrap bg-default px-4 py-2 uppercase text-accent hover:bg-accent hover:text-inverse">
+      <a href={href}>{text}</a>
     </div>
   );
 }
