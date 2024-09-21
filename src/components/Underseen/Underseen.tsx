@@ -56,6 +56,7 @@ export function Underseen({
 
   return (
     <ListWithFiltersLayout
+      mastGradient={false}
       backdrop={
         <SolidBackdrop
           title="Underseen Gems"

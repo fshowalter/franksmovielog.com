@@ -75,6 +75,7 @@ export function CastAndCrewMember({
   return (
     <ListWithFiltersLayout
       data-pagefind-body
+      mastGradient={false}
       backdrop={
         <AvatarBackdrop
           avatarImageProps={avatarImageProps}

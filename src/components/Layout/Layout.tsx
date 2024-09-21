@@ -6,16 +6,22 @@ import { Mast } from "./Mast";
 export function Layout({
   hideLogo = false,
   hasBackdrop = true,
+  addGradient,
   children,
   className,
   ...rest
 }: {
   hideLogo?: boolean;
+  addGradient?: boolean;
   hasBackdrop?: boolean;
   children: React.ReactNode;
   className?: string;
   [x: string]: unknown;
 }): JSX.Element {
+  if (typeof addGradient == "undefined") {
+    addGradient = hasBackdrop;
+  }
+
   return (
     <div>
       <a
@@ -25,7 +31,11 @@ export function Layout({
         Skip to content
       </a>
       <div className="flex min-h-full w-full flex-col bg-default">
-        <Mast hideLogo={hideLogo} hasBackdrop={hasBackdrop} />
+        <Mast
+          hideLogo={hideLogo}
+          hasBackdrop={hasBackdrop}
+          addGradient={addGradient}
+        />
         <main className={ccn("grow", className)} id="content" {...rest}>
           {children}
         </main>

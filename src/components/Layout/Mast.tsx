@@ -5,9 +5,11 @@ import { navItems } from "./navItems";
 export function Mast({
   hideLogo,
   hasBackdrop,
+  addGradient,
 }: {
   hideLogo: boolean;
   hasBackdrop: boolean;
+  addGradient: boolean;
 }) {
   return (
     <header
@@ -15,7 +17,7 @@ export function Mast({
       style={{
         color: hasBackdrop ? "#fff" : "var(--fg-default)",
         position: hasBackdrop ? "absolute" : "static",
-        backgroundImage: hasBackdrop
+        backgroundImage: addGradient
           ? "linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.55) 55%, transparent)"
           : "unset",
       }}
