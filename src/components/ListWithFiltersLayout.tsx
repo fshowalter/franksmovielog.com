@@ -184,8 +184,13 @@ export function ListHeaderButton({
   text: string;
 }) {
   return (
-    <div className="flex items-start gap-x-4 text-nowrap bg-default px-4 py-2 uppercase text-accent hover:bg-accent hover:text-inverse">
-      <a href={href}>{text}</a>
+    <div className="flex items-start gap-x-4 text-nowrap bg-default uppercase text-accent">
+      <a
+        className="block px-4 py-2 hover:bg-accent hover:text-inverse"
+        href={href}
+      >
+        {text}
+      </a>
     </div>
   );
 }

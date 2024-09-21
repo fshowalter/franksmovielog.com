@@ -61361,6 +61361,7 @@ exports[`/watchlist > renders 1`] = `
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
                   href="/"
+                  style="text-shadow: 1px 1px 2px black;"
                 >
                   Home
                 </a>
@@ -61371,6 +61372,7 @@ exports[`/watchlist > renders 1`] = `
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
                   href="/how-i-grade/"
+                  style="text-shadow: 1px 1px 2px black;"
                 >
                   How I Grade
                 </a>
@@ -61381,6 +61383,7 @@ exports[`/watchlist > renders 1`] = `
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
                   href="/reviews/"
+                  style="text-shadow: 1px 1px 2px black;"
                 >
                   Reviews
                 </a>
@@ -61391,6 +61394,7 @@ exports[`/watchlist > renders 1`] = `
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
                   href="/viewings/"
+                  style="text-shadow: 1px 1px 2px black;"
                 >
                   Viewing Log
                 </a>
@@ -61401,6 +61405,7 @@ exports[`/watchlist > renders 1`] = `
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
                   href="/cast-and-crew/"
+                  style="text-shadow: 1px 1px 2px black;"
                 >
                   Cast & Crew
                 </a>
@@ -61411,6 +61416,7 @@ exports[`/watchlist > renders 1`] = `
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
                   href="/collections/"
+                  style="text-shadow: 1px 1px 2px black;"
                 >
                   Collections
                 </a>
@@ -61421,6 +61427,7 @@ exports[`/watchlist > renders 1`] = `
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
                   href="/watchlist/"
+                  style="text-shadow: 1px 1px 2px black;"
                 >
                   Watchlist
                 </a>
@@ -61612,7 +61619,7 @@ exports[`/watchlist > renders 1`] = `
               Watchlist
             </h1>
             <p
-              class="mt-1 text-base desktop:my-4 desktop:text-xl"
+              class="mt-1 text-base [text-shadow:1px_1px_2px_black] desktop:my-4 desktop:text-xl"
             >
               "A man's got to know his limitations"
             </p>
@@ -61650,9 +61657,10 @@ exports[`/watchlist > renders 1`] = `
                       class="ml-auto flex w-1/2 flex-wrap justify-end gap-4"
                     >
                       <div
-                        class="flex items-start gap-x-4 text-nowrap bg-default px-4 py-2 uppercase text-accent hover:bg-accent hover:text-inverse"
+                        class="flex items-start gap-x-4 text-nowrap bg-default uppercase text-accent"
                       >
                         <a
+                          class="block px-4 py-2 hover:bg-accent hover:text-inverse"
                           href="/watchlist/progress/"
                         >
                           progress

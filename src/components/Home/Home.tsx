@@ -19,7 +19,7 @@ export function Home({ values, backdropImageProps }: Props): JSX.Element {
         title="Frank's Movie Log"
         alt='Humphrey Bogart in "Casablanca (1942)"'
         deck="Quality reviews of films of questionable quality."
-        titleStyle="text-4xl desktop:text-7xl"
+        titleStyle="[text-shadow:1px_1px_2px_black] text-4xl desktop:text-7xl"
       />
       <nav className="mx-auto max-w-screen-max px-container">
         <SubHeading as="h2">Latest Reviews</SubHeading>

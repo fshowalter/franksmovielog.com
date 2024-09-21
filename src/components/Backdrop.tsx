@@ -39,7 +39,9 @@ export function Backdrop({
         )}
         <h1 className={titleStyle}>{title}</h1>
         {deck && (
-          <p className="mt-1 text-base desktop:my-4 desktop:text-xl">{deck}</p>
+          <p className="mt-1 text-base [text-shadow:1px_1px_2px_black] desktop:my-4 desktop:text-xl">
+            {deck}
+          </p>
         )}
       </div>
     </header>
