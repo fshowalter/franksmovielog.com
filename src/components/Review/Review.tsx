@@ -46,7 +46,10 @@ export function Review({
   return (
     <Layout hasBackdrop={false} className="flex flex-col" data-pagefind-body>
       <header className="mb-12 flex flex-col items-center px-container-base pt-10">
-        <h1 data-pagefind-meta="title" className="text-4xl desktop:text-7xl">
+        <h1
+          data-pagefind-meta="title"
+          className="text-center text-4xl desktop:text-7xl"
+        >
           {value.title}
         </h1>
         <OriginalTitle
