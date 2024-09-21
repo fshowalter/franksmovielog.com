@@ -60,7 +60,6 @@ export function Collection({
           imageProps={backdropImageProps}
           title={value.name}
           alt={value.name}
-          deck={deck(value)}
           breadcrumb={<a href="/collections/">Collections</a>}
         />
       }
@@ -90,14 +89,6 @@ export function Collection({
       }
     />
   );
-}
-
-function deck(value: Props["value"]): string {
-  if (value.titleCount === value.reviewCount) {
-    return `Collection of ${value.reviewCount.toLocaleString()} reviewed movies.`;
-  }
-
-  return `Collection of ${value.titleCount.toLocaleString()} movies. ${value.reviewCount.toLocaleString()} reviewed.`;
 }
 
 function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
