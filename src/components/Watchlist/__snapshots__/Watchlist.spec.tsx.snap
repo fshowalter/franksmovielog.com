@@ -61671,13 +61671,13 @@ exports[`/watchlist > renders 1`] = `
                 >
                   <div
                     class="relative z-10 col-start-3 row-span-2 row-start-2 grid text-sm transition-[grid-template-rows] duration-200 ease-in-out showFilters:mr-12 showFilters:block showFilters:py-24 showFilters:pb-12 showFilters:shadow-none desktop:mr-20"
-                    style="grid-template-rows: 0fr; margin-top: 0px;"
+                    style="grid-template-rows: 0fr;"
                   >
                     <div
-                      class="w-full overflow-hidden bg-default px-container-base text-sm tablet:text-base showFilters:overflow-visible desktop:px-8"
+                      class="w-full overflow-hidden bg-subtle px-container-base text-sm tablet:text-base showFilters:overflow-visible showFilters:bg-default showFilters:pt-0 desktop:px-8"
                     >
                       <fieldset
-                        class="flex flex-col gap-10 py-10 tablet:gap-12 tablet:px-0"
+                        class="mt-4 flex flex-col gap-10 bg-default px-container py-10 tablet:gap-12 showFilters:mt-0 showFilters:px-0"
                       >
                         <legend
                           class="hidden w-full py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle showFilters:shadow-bottom min-[1024px]:block"
@@ -68324,7 +68324,7 @@ exports[`/watchlist > renders 1`] = `
                       class="flex flex-col items-center px-container-base py-10"
                     >
                       <button
-                        class="mx-auto w-full max-w-[430px] px-pageMargin py-5 text-center font-sans-narrow text-sm uppercase tracking-[.6px] shadow-all hover:bg-inverse hover:text-inverse mx-auto w-full max-w-[430px] bg-default px-container-base py-5 text-center font-sans-narrow text-sm uppercase tracking-[.6px] hover:bg-inverse hover:text-inverse"
+                        class="mx-auto w-full max-w-[430px] bg-canvas px-pageMargin py-5 text-center font-sans-narrow text-sm uppercase tracking-[.6px] shadow-all hover:bg-inverse hover:text-inverse mx-auto w-full max-w-[430px] bg-canvas px-container-base py-5 text-center font-sans-narrow text-sm uppercase tracking-[.6px] hover:bg-inverse hover:text-inverse"
                         type="button"
                       >
                         Show More
