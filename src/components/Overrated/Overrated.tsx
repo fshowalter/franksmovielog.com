@@ -56,6 +56,7 @@ export function Overrated({
 
   return (
     <ListWithFiltersLayout
+      mastGradient={false}
       backdrop={
         <SolidBackdrop
           title="Overrated Disappointments"

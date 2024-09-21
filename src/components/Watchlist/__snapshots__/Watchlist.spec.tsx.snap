@@ -68324,7 +68324,7 @@ exports[`/watchlist > renders 1`] = `
                       class="flex flex-col items-center px-container-base py-10"
                     >
                       <button
-                        class="mx-auto w-full max-w-[430px] px-pageMargin py-5 text-center font-sans-narrow text-sm uppercase tracking-[.6px] shadow-all mx-auto w-full max-w-[430px] bg-default px-container-base py-5 text-center font-sans-narrow text-sm uppercase tracking-[.6px] hover:bg-inverse hover:text-inverse"
+                        class="mx-auto w-full max-w-[430px] px-pageMargin py-5 text-center font-sans-narrow text-sm uppercase tracking-[.6px] shadow-all hover:bg-inverse hover:text-inverse mx-auto w-full max-w-[430px] bg-default px-container-base py-5 text-center font-sans-narrow text-sm uppercase tracking-[.6px] hover:bg-inverse hover:text-inverse"
                         type="button"
                       >
                         Show More
