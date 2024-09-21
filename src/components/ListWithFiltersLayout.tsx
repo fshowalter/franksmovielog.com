@@ -46,11 +46,10 @@ export function ListWithFiltersLayout({
                   className="relative z-10 col-start-3 row-span-2 row-start-2 grid text-sm transition-[grid-template-rows] duration-200 ease-in-out showFilters:mr-12 showFilters:block showFilters:py-24 showFilters:pb-12 showFilters:shadow-none desktop:mr-20"
                   style={{
                     gridTemplateRows: filtersVisible ? "1fr" : "0fr",
-                    marginTop: filtersVisible ? "24px" : 0,
                   }}
                 >
-                  <div className="w-full overflow-hidden bg-default px-container-base text-sm tablet:text-base showFilters:overflow-visible desktop:px-8">
-                    <fieldset className="flex flex-col gap-10 py-10 tablet:gap-12 tablet:px-0">
+                  <div className="w-full overflow-hidden bg-subtle px-container-base text-sm tablet:text-base showFilters:overflow-visible showFilters:bg-default showFilters:pt-0 desktop:px-8">
+                    <fieldset className="mt-4 flex flex-col gap-10 bg-default px-container py-10 tablet:gap-12 showFilters:mt-0 showFilters:px-0">
                       <legend className="hidden w-full py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle showFilters:shadow-bottom min-[1024px]:block">
                         Filter & Sort
                       </legend>
@@ -168,7 +167,7 @@ function ListHeader({
         style={{
           backgroundColor: filtersVisible
             ? "var(--bg-subtle)"
-            : "var(--bg-default)",
+            : "var(--bg-canvas)",
         }}
       >
         Filter & Sort
