@@ -1193,13 +1193,18 @@
       </div>
     </div>
     <dialog
-      class="relative m-0 h-screen max-h-none w-screen max-w-unset border border-default bg-canvas shadow-lg open:flex open:flex-col tablet:mx-auto tablet:mt-16 tablet:h-min tablet:max-h-[min(100vh_-_128px,900px)] tablet:min-h-60 tablet:max-w-[min(100vw_-_2_*_var(--gutter-width),36rem)] tablet:rounded-xl desktop:min-h-0"
+      class="relative m-0 h-screen max-h-none w-screen max-w-unset border border-default bg-subtle shadow-lg open:flex open:flex-col tablet:mx-auto tablet:mt-16 tablet:h-min tablet:max-h-[min(100vh_-_128px,900px)] tablet:min-h-60 tablet:max-w-[min(100vw_-_2_*_var(--gutter-width),36rem)] tablet:rounded-xl desktop:min-h-0"
       aria-label="Search"
     >
       <div data-dialog-frame class="contents">
-        <button data-close-modal>Cancel</button>
+        <button
+          data-close-modal
+          class="px-4 font-sans-narrow text-sm hover:bg-inverse hover:text-inverse"
+        >
+          Cancel
+        </button>
         <div class="contents"><div id="pagefind__search"></div></div>
-        <div class="hidden px-gutter py-4 desktop:block">
+        <div class="hidden px-container py-4 desktop:block">
           <kbd class="rounded-md bg-default p-2 font-mono text-xs text-subtle"
             >Tab</kbd
           >

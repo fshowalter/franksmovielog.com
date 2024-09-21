@@ -37798,6 +37798,7 @@ exports[`Collection > renders 1`] = `
       </header>
       <main
         class="grow bg-subtle"
+        data-pagefind-body="true"
         id="content"
       >
         <header
@@ -37809,8 +37810,8 @@ exports[`Collection > renders 1`] = `
             fetchpriority="high"
             height="1350"
             loading="eager"
-            src="/_image?/content%2Fassets%2Fbackdrops%2Fdefault.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&w=2400&h=1350&q=80&f=avif"
-            srcset="/_image?/content%2Fassets%2Fbackdrops%2Fdefault.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&w=600&q=80&f=avif 600w, /_image?/content%2Fassets%2Fbackdrops%2Fdefault.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&w=1200&q=80&f=avif 1200w, /_image?/content%2Fassets%2Fbackdrops%2Fdefault.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&w=2400&h=1350&q=80&f=avif 2400w, /_image?/content%2Fassets%2Fbackdrops%2Fdefault.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&w=2400&h=1350&q=80&f=avif 4800w"
+            src="/_image?/content%2Fassets%2Fbackdrops%2Fshaw-brothers.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&w=2400&h=1350&q=80&f=avif"
+            srcset="/_image?/content%2Fassets%2Fbackdrops%2Fshaw-brothers.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&w=600&q=80&f=avif 600w, /_image?/content%2Fassets%2Fbackdrops%2Fshaw-brothers.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&w=1200&q=80&f=avif 1200w, /_image?/content%2Fassets%2Fbackdrops%2Fshaw-brothers.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&w=2400&h=1350&q=80&f=avif 2400w, /_image?/content%2Fassets%2Fbackdrops%2Fshaw-brothers.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&w=2400&h=1350&q=80&f=avif 4800w"
             width="2400"
           />
           <div
@@ -37830,11 +37831,6 @@ exports[`Collection > renders 1`] = `
             >
               Shaw Brothers
             </h1>
-            <p
-              class="mt-1 text-base [text-shadow:1px_1px_2px_black] desktop:my-4 desktop:text-xl"
-            >
-              Collection of 208 movies. 7 reviewed.
-            </p>
           </div>
         </header>
         <section
