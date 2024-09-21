@@ -33,7 +33,7 @@ export function GroupedList<T>({
         {totalCount > visibleCount && (
           <Button
             onClick={onShowMore}
-            className="mx-auto w-full max-w-[430px] bg-default px-container-base py-5 text-center font-sans-narrow text-sm uppercase tracking-[.6px] hover:bg-inverse hover:text-inverse"
+            className="mx-auto w-full max-w-[430px] bg-canvas px-container-base py-5 text-center font-sans-narrow text-sm uppercase tracking-[.6px] hover:bg-inverse hover:text-inverse"
           >
             Show More
           </Button>
