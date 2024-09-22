@@ -39,7 +39,7 @@ function Callout({
         subLabel={subLabel}
         className="h-auto w-32 tablet:w-36"
       />
-      <div className="pt-2 text-center font-sans text-base font-bold text-muted">
+      <div className="pt-2 text-center font-sans text-base font-semibold text-muted">
         <div>
           {reviewed?.toLocaleString()} / {total?.toLocaleString()}
         </div>

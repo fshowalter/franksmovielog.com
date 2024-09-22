@@ -7,13 +7,9 @@ export const ListItemPosterImageConfig = {
 
 export function ListItemPoster({
   slug,
-  title,
-  year,
   imageProps,
 }: {
   slug?: string | null;
-  title: string;
-  year: string;
   imageProps: PosterImageProps;
 }) {
   if (slug) {
@@ -24,7 +20,7 @@ export function ListItemPoster({
       >
         <img
           {...imageProps}
-          alt={`A poster from ${title} (${year})`}
+          alt=""
           width={ListItemPosterImageConfig.width}
           height={ListItemPosterImageConfig.height}
           loading="lazy"
@@ -39,7 +35,7 @@ export function ListItemPoster({
     <div className="w-auto min-w-16 max-w-16 shrink-0 tablet:max-w-unset">
       <img
         {...imageProps}
-        alt="An unreviewed title."
+        alt=""
         width={ListItemPosterImageConfig.width}
         height={ListItemPosterImageConfig.height}
         loading="lazy"

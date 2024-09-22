@@ -133,7 +133,6 @@ function FluidListItemPoster({
         loading="lazy"
         decoding="async"
         className="h-auto"
-        alt={`${title} (${year})`}
       />
     </div>
   );

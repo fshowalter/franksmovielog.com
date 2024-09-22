@@ -17,7 +17,6 @@ export function Home({ values, backdropImageProps }: Props): JSX.Element {
       <Backdrop
         imageProps={backdropImageProps}
         title="Frank's Movie Log"
-        alt='Humphrey Bogart in "Casablanca (1942)"'
         deck="Quality reviews of films of questionable quality."
         titleStyle="[text-shadow:1px_1px_2px_black] text-4xl desktop:text-7xl"
       />

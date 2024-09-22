@@ -69,7 +69,6 @@ export function Reviews({
           imageProps={backdropImageProps}
           title="Reviews"
           deck='"He chose... poorly."'
-          alt="The guardian of the Grail in Indiana Jones and the Last Crusade (1989)"
         />
       }
       subNav={
@@ -110,12 +109,7 @@ export function Reviews({
 function ReviewsListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
     <ListItem className="">
-      <ListItemPoster
-        slug={value.slug}
-        title={value.title}
-        year={value.year}
-        imageProps={value.posterImageProps}
-      />
+      <ListItemPoster slug={value.slug} imageProps={value.posterImageProps} />
       <div className="flex grow flex-col gap-2 tablet:w-full desktop:pr-4">
         <ListItemTitle
           title={value.title}

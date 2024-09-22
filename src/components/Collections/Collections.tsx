@@ -44,7 +44,6 @@ export function Collections({
       backdrop={
         <Backdrop
           title="Collections"
-          alt='George Clooney and Quentin Tarantino getting ready to ramble in "From Dusk till Dawn (1996)"'
           deck={`"Okay ramblers, let's get rambling."`}
           imageProps={backdropImageProps}
         />

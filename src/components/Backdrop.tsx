@@ -9,19 +9,26 @@ export function Backdrop({
   imageProps,
   title,
   deck,
-  alt,
   breadcrumb,
   titleStyle = "font-sans font-bold tracking-[2px] text-2xl uppercase desktop:text-7xl",
+  size = "default",
 }: {
   imageProps: BackdropImageProps;
-  alt: string;
   title: string;
   deck?: string;
   titleStyle?: string;
   breadcrumb?: React.ReactNode;
+  size?: "default" | "large";
 }) {
+  const defaultSizes =
+    "min-h-[400px] tablet:min-h-[640px] desktop:min-h-[clamp(640px,60vh,1350px)]";
+
+  const largeSizes = "min-h-[90vh] max-h-[1350px]";
+
   return (
-    <header className="relative flex min-h-[240px] content-start items-end bg-cover pb-8 pt-40 text-inverse [background-position-x:center] tablet:min-h-[400px] tablet:pb-10 tablet:pt-40 desktop:min-h-[clamp(640px,50vh,1350px)] desktop:pb-16 desktop:pt-40">
+    <header
+      className={`relative flex content-start items-end bg-cover pb-8 pt-40 text-inverse [background-position-x:center] tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40 ${size === "default" ? defaultSizes : largeSizes}`}
+    >
       <img
         className="absolute inset-0 size-full object-cover object-top"
         {...imageProps}
@@ -29,7 +36,7 @@ export function Backdrop({
         height={BackdropImageConfig.height}
         loading="eager"
         fetchPriority="high"
-        alt={alt}
+        alt=""
       />
       <div className="z-10 mx-auto w-full max-w-screen-max px-container">
         {breadcrumb && (

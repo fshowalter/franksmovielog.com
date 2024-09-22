@@ -7,24 +7,29 @@ import { MoreReviews } from "src/components/MoreReviews";
 import { SubHeading } from "src/components/SubHeading";
 
 export interface Props {
-  alt: string;
   content: string | null;
   title: string;
+  deck: string;
   backdropImageProps: BackdropImageProps;
   recentReviews: MoreReviewsValue[];
 }
 
 export function Article({
-  alt,
   title,
   content,
   recentReviews,
+  deck,
   backdropImageProps,
 }: Props): JSX.Element {
   return (
     <Layout>
       <article>
-        <Backdrop imageProps={backdropImageProps} title={title} alt={alt} />
+        <Backdrop
+          imageProps={backdropImageProps}
+          title={title}
+          deck={deck}
+          size="large"
+        />
         <section className="flex flex-col items-center">
           <div className="spacer-y-16" />
           <div className="px-pageMargin">

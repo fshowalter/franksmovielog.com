@@ -59,7 +59,6 @@ export function Collection({
         <Backdrop
           imageProps={backdropImageProps}
           title={value.name}
-          alt={value.name}
           breadcrumb={<a href="/collections/">Collections</a>}
         />
       }
@@ -94,12 +93,7 @@ export function Collection({
 function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
     <ListItem className="items-center">
-      <ListItemPoster
-        slug={value.slug}
-        title={value.title}
-        imageProps={value.posterImageProps}
-        year={value.year}
-      />
+      <ListItemPoster slug={value.slug} imageProps={value.posterImageProps} />
       <div className="grow pr-gutter tablet:w-full desktop:pr-4">
         <div>
           <ListItemTitle

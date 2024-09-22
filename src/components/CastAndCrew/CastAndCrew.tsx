@@ -46,7 +46,6 @@ export function CastAndCrew({
         <Backdrop
           imageProps={backdropImageProps}
           title="Cast & Crew"
-          alt='Claude Rains giving orders in "Casablanca (1942)"'
           deck='"Round up the usual suspects."'
         />
       }
