@@ -93,7 +93,7 @@ function NavListItem({
   hasBackdrop: boolean;
 }): JSX.Element {
   return (
-    <li className="block whitespace-nowrap tracking-0.5px">
+    <li className="block whitespace-nowrap tracking-[0.6px]">
       <a
         className={`text-inherit transition-all duration-500 ease-in-out ${hasBackdrop ? "hover:bg-[rgba(0,0,0,.50)]" : "hover:text-accent"}`}
         href={value.target}

@@ -15,7 +15,7 @@ const dateFormat = new Intl.DateTimeFormat("en-US", {
 function Date({ date }: { date: Date }) {
   return (
     <>
-      <span className="inline-block font-sans-narrow text-sm tracking-normal text-subtle">
+      <span className="inline-block font-sans-narrow text-sm font-semibold tracking-normal text-subtle">
         {dateFormat.format(date)}
       </span>{" "}
     </>
@@ -29,7 +29,9 @@ function Medium({ value }: { value: Viewing["medium"] }) {
   return (
     <span className="text-subtle">
       <span>via</span>{" "}
-      <span className="font-sans-narrow text-sm text-subtle">{value}</span>
+      <span className="font-sans-narrow text-sm font-semibold text-subtle">
+        {value}
+      </span>
     </span>
   );
 }
@@ -86,7 +88,7 @@ function ViewingNotes({ value }: { value: Viewing["viewingNotes"] }) {
     return null;
   }
   return (
-    <div className="pb-6">
+    <div className="pb-6 text-sm font-extralight">
       <RenderedMarkdown
         className="leading-normal text-default"
         // eslint-disable-next-line react/no-danger
@@ -98,7 +100,7 @@ function ViewingNotes({ value }: { value: Viewing["viewingNotes"] }) {
 
 export function ViewingHistoryListItem({ value }: { value: Viewing }) {
   return (
-    <li className="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe">
+    <li className="flex flex-col px-gutter font-sans text-xs font-normal even:bg-stripe">
       <div className="flex items-center gap-x-[1ch] py-4">
         <div className="size-auto">
           <DateIcon className="w-4" />{" "}

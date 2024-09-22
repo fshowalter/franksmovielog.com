@@ -4,7 +4,7 @@ export function ListItemGenres({
   values: readonly string[];
 }): JSX.Element | null {
   return (
-    <div className="font-sans-book text-xs leading-4 text-subtle">
+    <div className="font-sans text-xs leading-4 text-subtle">
       {values.map((value, index) => {
         if (index === 0) {
           return <span key={value}>{value}</span>;

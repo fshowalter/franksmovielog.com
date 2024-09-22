@@ -8,14 +8,16 @@ export function ListItemTitle({
   slug?: string | null;
 }) {
   const yearBox = (
-    <span className="text-xs text-subtle tablet:text-sm">{year}</span>
+    <span className="text-xs font-normal text-subtle tablet:text-sm">
+      {year}
+    </span>
   );
 
   if (slug) {
     return (
       <a
         href={`/reviews/${slug}/`}
-        className="block font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+        className="block font-sans-narrow text-sm font-bold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
       >
         {title}&#8239;&#8239;{yearBox}
       </a>
@@ -23,7 +25,7 @@ export function ListItemTitle({
   }
 
   return (
-    <span className="block font-sans-narrow text-sm text-muted tablet:text-base">
+    <span className="block font-sans-narrow text-sm font-semibold text-muted tablet:text-base">
       {title}&#8239;&#8239;{yearBox}
     </span>
   );

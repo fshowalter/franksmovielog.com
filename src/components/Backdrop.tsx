@@ -11,7 +11,7 @@ export function Backdrop({
   deck,
   alt,
   breadcrumb,
-  titleStyle = "font-sans-bold text-2xl uppercase desktop:text-7xl",
+  titleStyle = "font-sans font-bold tracking-[2px] text-2xl uppercase desktop:text-7xl",
 }: {
   imageProps: BackdropImageProps;
   alt: string;
@@ -33,7 +33,7 @@ export function Backdrop({
       />
       <div className="z-10 mx-auto w-full max-w-screen-max px-container">
         {breadcrumb && (
-          <p className="mb-2 font-sans-narrow text-sm uppercase tracking-[0.8px] underline decoration-subtle decoration-2 underline-offset-4">
+          <p className="mb-2 font-sans-narrow text-sm font-medium uppercase tracking-[0.8px] underline decoration-subtle decoration-2 underline-offset-4">
             {breadcrumb}
           </p>
         )}

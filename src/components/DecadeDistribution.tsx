@@ -16,9 +16,7 @@ export function DecadeDistribution({
 
   return (
     <section className="w-full bg-default px-container pb-8">
-      <h2 className="py-4 font-serif-semibold desktop:text-xl">
-        By Release Year
-      </h2>
+      <h2 className="py-4 font-medium desktop:text-xl">By Release Year</h2>
       <div className="grid w-full grid-cols-[1fr,auto] tablet:whitespace-nowrap">
         {values.map((value) => {
           return (
@@ -27,10 +25,10 @@ export function DecadeDistribution({
               className="col-span-2 grid grid-cols-subgrid py-3"
             >
               <div className="col-span-2 grid grid-cols-subgrid">
-                <div className="font-sans-narrow text-sm text-muted">
+                <div className="font-sans-narrow text-sm font-medium text-muted">
                   {value.name}
                 </div>
-                <div className="col-start-2 self-center text-nowrap pb-1 text-right font-sans-narrow text-sm text-subtle tablet:text-sm">
+                <div className="col-start-2 self-center text-nowrap pb-1 text-right font-sans-narrow text-sm font-medium text-subtle tablet:text-sm">
                   {value.count}
                 </div>
               </div>

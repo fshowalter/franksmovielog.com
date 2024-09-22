@@ -35,7 +35,7 @@ export function MostWatchedMovies({
     <section
       className={ccn("bg-default px-container desktop:pb-10", className)}
     >
-      <h2 className="py-4 font-serif-semibold shadow-bottom tablet:text-center desktop:py-8 desktop:text-2xl">
+      <h2 className="py-4 font-medium shadow-bottom tablet:text-center desktop:py-8 desktop:text-2xl">
         Most Watched Movies
       </h2>
       <List>

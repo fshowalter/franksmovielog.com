@@ -55,15 +55,15 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
         />
       </a>
       <div className="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]">
-        <div className="mb-1 font-sans-narrow text-xxs uppercase leading-4 tracking-[1.1px] text-subtle">
+        <div className="mb-1 font-sans-narrow text-xxs font-medium uppercase leading-4 tracking-[1.1px] text-subtle">
           {formatDate(value.date)}
         </div>
         <a
           href={`/reviews/${value.slug}/`}
-          className="mb-2 block font-serif-semibold text-2.5xl text-default hover:text-accent"
+          className="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
         >
           {value.title}{" "}
-          <span className="text-sm font-light leading-none text-muted">
+          <span className="text-sm font-normal leading-none text-muted">
             {value.year}
           </span>
         </a>
@@ -72,7 +72,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
           text={value.excerpt}
           className="mb-6 text-lg leading-normal tracking-0.3px text-muted"
         />
-        <div className="mt-auto font-sans-narrow text-xxs leading-4 tracking-[1.1px] text-subtle">
+        <div className="mt-auto font-sans-narrow text-xxs font-medium leading-4 tracking-[1.1px] text-subtle">
           {value.genres.map((genre, index) => {
             if (index === 0) {
               return <span key={genre}>{genre}</span>;

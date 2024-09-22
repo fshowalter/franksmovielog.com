@@ -152,7 +152,7 @@ function Meta({
   return (
     <div
       className={ccn(
-        "text-center font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle",
+        "text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle",
         className,
       )}
     >

@@ -82,7 +82,7 @@ function MemberName({ value }: { value: ListItemValue }) {
     <div>
       <a
         href={`/cast-and-crew/${value.slug}/`}
-        className="font-sans-narrow-bold text-sm text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+        className="font-sans-narrow text-sm font-bold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
       >
         <div className="leading-normal">{value.name}</div>
       </a>

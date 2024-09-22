@@ -51,7 +51,7 @@ export function ListWithFiltersLayout({
                 >
                   <div className="w-full overflow-hidden bg-subtle px-container-base text-sm tablet:text-base showFilters:overflow-visible showFilters:bg-default showFilters:pt-0 desktop:px-8">
                     <fieldset className="mt-4 flex flex-col gap-10 bg-default px-container py-10 tablet:gap-12 showFilters:mt-0 showFilters:px-0">
-                      <legend className="hidden w-full py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle showFilters:shadow-bottom min-[1024px]:block">
+                      <legend className="hidden w-full py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle showFilters:shadow-bottom min-[1024px]:block">
                         Filter & Sort
                       </legend>
                       {filters}
@@ -101,7 +101,7 @@ export function AvatarBackdrop({
             {breadcrumb}
           </p>
         )}
-        <h1 className="font-sans-bold text-2xl uppercase desktop:text-7xl">
+        <h1 className="font-sans text-2xl font-bold uppercase desktop:text-7xl">
           {name}
         </h1>
         {deck && (
@@ -129,7 +129,7 @@ export function SolidBackdrop({
             {breadcrumb}
           </p>
         )}
-        <h1 className="font-sans-bold text-2xl uppercase desktop:text-7xl">
+        <h1 className="font-sans text-2xl font-bold uppercase desktop:text-7xl">
           {title}
         </h1>
         {deck && (
@@ -152,9 +152,11 @@ function ListHeader({
   listHeaderButtons?: ReactNode;
 }): JSX.Element {
   return (
-    <div className="mx-auto flex w-full max-w-screen-max flex-wrap items-baseline justify-between gap-x-4 gap-y-5 px-container py-10 font-sans-bold uppercase tracking-[0.5px] text-subtle">
+    <div className="mx-auto flex w-full max-w-screen-max flex-wrap items-baseline justify-between gap-x-4 gap-y-5 px-container py-10 font-sans font-bold uppercase tracking-[0.5px] text-subtle">
       <span className="block pr-4">
-        <span className="font-sans-bold">{totalCount.toLocaleString()}</span>{" "}
+        <span className="font-sans font-bold">
+          {totalCount.toLocaleString()}
+        </span>{" "}
         Results
       </span>
       {listHeaderButtons && (
@@ -211,7 +213,7 @@ export function SubNav({
 }) {
   return (
     <nav className={className}>
-      <ul className="mx-auto flex justify-center gap-x-6 text-nowrap px-container font-sans-narrow-bold text-sm uppercase tracking-[1px] text-subtle">
+      <ul className="mx-auto flex justify-center gap-x-6 text-nowrap px-container font-sans-narrow text-sm font-bold uppercase tracking-[1px] text-subtle">
         {values.map((value) => {
           return (
             <li

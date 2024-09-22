@@ -33,7 +33,7 @@ function YearLink({
   linkFunc: (y: string) => string;
 }): JSX.Element | null {
   if (year === currentYear) {
-    return <li className="block font-serif-semibold">{year}</li>;
+    return <li className="block font-medium">{year}</li>;
   }
 
   return (

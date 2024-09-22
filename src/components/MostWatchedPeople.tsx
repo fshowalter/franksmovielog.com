@@ -36,7 +36,7 @@ export function MostWatchedPeople({
 
   return (
     <section className="w-full bg-default pb-8 tablet:px-container">
-      <h2 className="px-container py-4 font-serif-semibold tablet:px-0 desktop:text-xl">
+      <h2 className="px-container py-4 font-medium tablet:px-0 desktop:text-xl">
         {header}
       </h2>
       <div className="w-full tablet:whitespace-nowrap">
@@ -53,7 +53,7 @@ export function MostWatchedPeople({
               </div>
               <div className="col-span-2 row-start-2 bg-subtle px-container tablet:px-0">
                 <details>
-                  <summary className="py-1 font-sans-book text-sm text-subtle tablet:px-gutter desktop:px-2">
+                  <summary className="py-1 font-sans text-sm text-subtle tablet:px-gutter desktop:px-2">
                     Details
                   </summary>
                   <ol className="py-4 tablet:px-gutter">
@@ -113,7 +113,7 @@ function MostWatchedPersonViewingListItem({
           year={value.year}
           slug={value.slug}
         />
-        <div className="pb-2 pt-1 font-sans-book text-xs text-muted">
+        <div className="pb-2 pt-1 font-sans text-xs font-light text-muted">
           {value.date}
         </div>
         <ListItemMediumAndVenue medium={value.medium} venue={value.venue} />

@@ -52,13 +52,9 @@ export default {
         md: "28rem",
       },
       fontFamily: {
-        sans: "GothamMedium",
-        "sans-narrow": "GothamNarrowMedium",
-        "sans-bold": "GothamBold",
-        "sans-narrow-bold": "GothamNarrowBold",
-        serif: "MercuryTextG1Regular",
-        "sans-book": "GothamBook",
-        "serif-semibold": "MercuryDisplaySemibold",
+        sans: "Geologica",
+        "sans-narrow": "RadioCanada",
+        serif: "FrankRuhlLibre",
       },
       fontSize: {
         "2.5xl": "1.625rem",

@@ -16,7 +16,7 @@ export function MediaDistribution({
 
   return (
     <section className="w-full bg-default px-container pb-8">
-      <h2 className="py-4 font-serif-semibold desktop:text-xl">Top Media</h2>
+      <h2 className="py-4 font-medium desktop:text-xl">Top Media</h2>
       <div className="grid w-full grid-cols-[1fr,auto] tablet:whitespace-nowrap">
         {values.map((value) => {
           return (

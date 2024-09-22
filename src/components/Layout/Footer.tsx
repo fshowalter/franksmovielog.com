@@ -25,7 +25,7 @@ export function Footer(): JSX.Element {
         >
           To the top
         </a>
-        <p className="w-full font-light leading-4 text-subtle">
+        <p className="w-full font-normal leading-4 text-subtle">
           All stills used in accordance with the{" "}
           <a
             href="http://www.copyright.gov/title17/92chap1.html#107"
