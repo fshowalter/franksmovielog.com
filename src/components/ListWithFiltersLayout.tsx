@@ -152,7 +152,7 @@ function ListHeader({
   listHeaderButtons?: ReactNode;
 }): JSX.Element {
   return (
-    <div className="mx-auto flex w-full max-w-screen-max flex-wrap items-baseline justify-between gap-x-4 gap-y-5 px-container py-10 font-sans font-bold uppercase tracking-[0.5px] text-subtle">
+    <div className="mx-auto flex w-full max-w-screen-max flex-wrap items-baseline justify-between gap-x-4 gap-y-5 px-container py-10 font-sans font-bold uppercase tracking-[1.2px] text-subtle">
       <span className="block pr-4">
         <span className="font-sans font-bold">
           {totalCount.toLocaleString()}
