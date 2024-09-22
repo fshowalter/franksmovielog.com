@@ -64,7 +64,12 @@ export function Overrated({
         count."
           breadcrumb={
             <>
-              <a href="/reviews/">Reviews</a>
+              <a
+                className="hover:bg-default hover:text-default"
+                href="/reviews/"
+              >
+                Reviews
+              </a>
             </>
           }
         />

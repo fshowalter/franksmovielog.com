@@ -62,7 +62,12 @@ export function Underseen({
           title="Underseen Gems"
           breadcrumb={
             <>
-              <a href="/reviews/">Reviews</a>
+              <a
+                className="hover:bg-default hover:text-default"
+                href="/reviews/"
+              >
+                Reviews
+              </a>
             </>
           }
           deck="Four and five star movies with a below average number of IMDb votes."

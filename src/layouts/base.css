@@ -75,7 +75,7 @@
     -moz-osx-font-smoothing: grayscale;
     font-family: "FrankRuhlLibre", "Iowan Old Style", "Georgia", "Cambria",
       "Times New Roman", "Times", "serif";
-    font-feature-settings: "kern", "liga", "clig", "calt", "ss06";
+    font-feature-settings: "kern", "liga", "clig", "calt", "ss06", "lnum";
     font-kerning: normal;
     background-color: var(--bg-canvas);
     color: var(--fg-default);
@@ -91,6 +91,7 @@
     src: url("/fonts/ArgentumSans/ArgentumSans-SemiBold.woff2") format("woff2");
     font-weight: bold;
     font-style: normal;
+    font-variant-numeric: lining-nums;
   }
 
   @font-face {

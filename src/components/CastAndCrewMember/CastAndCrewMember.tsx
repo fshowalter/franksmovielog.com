@@ -79,7 +79,14 @@ export function CastAndCrewMember({
       backdrop={
         <AvatarBackdrop
           avatarImageProps={avatarImageProps}
-          breadcrumb={<a href="/cast-and-crew/">Cast & Crew</a>}
+          breadcrumb={
+            <a
+              className="px-4 hover:bg-default hover:text-default"
+              href="/cast-and-crew/"
+            >
+              Cast & Crew
+            </a>
+          }
           name={value.name}
           deck={deck(value)}
         />

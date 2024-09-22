@@ -53,7 +53,7 @@ export function MostWatchedPeople({
               </div>
               <div className="col-span-2 row-start-2 bg-subtle px-container tablet:px-0">
                 <details>
-                  <summary className="py-1 font-sans text-sm text-subtle tablet:px-gutter desktop:px-2">
+                  <summary className="cursor-pointer py-1 font-sans text-sm text-subtle tablet:px-gutter desktop:px-2">
                     Details
                   </summary>
                   <ol className="py-4 tablet:px-gutter">
