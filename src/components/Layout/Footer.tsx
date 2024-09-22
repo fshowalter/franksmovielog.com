@@ -61,7 +61,7 @@ function SubNavList({ values }: { values: NavItem[] }): JSX.Element | null {
         return (
           <li
             key={value.target}
-            className="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+            className="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle brightness-200"
           >
             <a className="hover:text-inverse" href={value.target}>
               {value.text}
