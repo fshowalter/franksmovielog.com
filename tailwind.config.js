@@ -52,8 +52,8 @@ export default {
         md: "28rem",
       },
       fontFamily: {
-        sans: "Geologica",
-        "sans-narrow": "RadioCanada",
+        sans: "ArgentumSans",
+        "sans-narrow": "Radio Canada Big",
         serif: "FrankRuhlLibre",
       },
       fontSize: {

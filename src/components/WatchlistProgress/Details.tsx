@@ -31,7 +31,7 @@ export function Details({
         className,
       )}
     >
-      <h2 className="py-4 font-sans-narrow text-xs font-bold uppercase tracking-[1px] text-muted shadow-bottom">
+      <h2 className="py-4 font-sans-narrow text-xs font-semibold uppercase tracking-[1px] text-muted shadow-bottom">
         {label}
       </h2>
       <div className="grid w-full grid-cols-[auto,1fr,auto] tablet:whitespace-nowrap">

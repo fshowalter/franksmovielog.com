@@ -41,7 +41,7 @@ function Callout({
       />
       <div className="pt-2 text-center font-sans text-base font-bold text-muted">
         <div>
-          {reviewed?.toLocaleString()}/{total?.toLocaleString()}
+          {reviewed?.toLocaleString()} / {total?.toLocaleString()}
         </div>
         <div className="font-sans text-sm font-light leading-4">Reviewed</div>
       </div>
