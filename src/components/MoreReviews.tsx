@@ -5,10 +5,10 @@ import { RenderedMarkdown } from "./RenderedMarkdown";
 import { Still } from "./Still";
 
 export const MoreReviewsImageConfig = {
-  width: 435,
-  height: 179,
+  width: 640,
+  height: 360,
   sizes:
-    "(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw",
+    "(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px",
   quality: 80,
 };
 
@@ -33,7 +33,7 @@ export function MoreReviews({
     <nav data-pagefind-ignore>
       <div className="relative mx-auto w-full max-w-screen-max px-container desktop:px-20">
         {children}
-        <ul className="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap">
+        <ul className="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap">
           {values.map((value) => {
             return <MoreReviewsCard key={value.slug} value={value} />;
           })}

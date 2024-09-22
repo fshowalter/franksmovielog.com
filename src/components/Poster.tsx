@@ -5,7 +5,6 @@ interface PosterProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   title: string;
   year: string | number;
   imageProps: PosterImageProps | undefined;
-  sizes: string;
   width: number;
   height: number;
   loading: "lazy" | "eager";

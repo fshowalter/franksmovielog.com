@@ -23,7 +23,7 @@ export function Home({ values, backdropImageProps }: Props): JSX.Element {
       />
       <nav className="mx-auto max-w-screen-max px-container">
         <SubHeading as="h2">Latest Reviews</SubHeading>
-        <ul className="flex w-full flex-col flex-wrap justify-center gap-x-[3%] gap-y-8 pb-8 tablet:flex-row tablet:justify-between tablet:gap-y-8 desktop:gap-y-20">
+        <ul className="flex w-full flex-col flex-wrap justify-center gap-x-[3%] gap-y-[6vw] pb-8 tablet:flex-row tablet:justify-between desktop:gap-y-[3vw] max:gap-y-14">
           {values.map((value) => {
             return <HomeListItem key={value.sequence} value={value} />;
           })}
