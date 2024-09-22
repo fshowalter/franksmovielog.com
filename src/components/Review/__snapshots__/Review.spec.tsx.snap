@@ -45,7 +45,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
               class="flex flex-wrap justify-start gap-x-6 text-xl"
             >
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -56,7 +56,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -67,7 +67,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -78,7 +78,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -89,7 +89,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -100,7 +100,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -111,7 +111,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -312,7 +312,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
             />
           </picture>
           <div
-            class="text-center font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle mb-12"
+            class="text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle mb-12"
           >
             1997 
             <span>
@@ -360,7 +360,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
         >
           <div>
             <div
-              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px] [&>p:first-child]:first-letter:float-left [&>p:first-child]:first-letter:mt-[6px] [&>p:first-child]:first-letter:pr-2 [&>p:first-child]:first-letter:font-sans-narrow-bold [&>p:first-child]:first-letter:text-[56px]"
+              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px] [&>p:first-child]:first-letter:float-left [&>p:first-child]:first-letter:mt-[6px] [&>p:first-child]:first-letter:pr-2 [&>p:first-child]:first-letter:font-sans-narrow [&>p:first-child]:first-letter:text-[56px] [&>p:first-child]:first-letter:font-bold"
             >
               <p>
                 Seven years ago, the starship 
@@ -461,13 +461,13 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
             class="w-full max-w-popout"
           >
             <h3
-              class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle shadow-bottom"
+              class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle shadow-bottom"
             >
               Viewing History
             </h3>
             <ul>
               <li
-                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
+                class="flex flex-col px-gutter font-sans text-xs font-normal even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -504,7 +504,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                     class="grow"
                   >
                     <span
-                      class="inline-block font-sans-narrow text-sm tracking-normal text-subtle"
+                      class="inline-block font-sans-narrow text-sm font-semibold tracking-normal text-subtle"
                     >
                       Fri, Jan 28, 2022
                     </span>
@@ -517,7 +517,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                       </span>
                        
                       <span
-                        class="font-sans-narrow text-sm text-subtle"
+                        class="font-sans-narrow text-sm font-semibold text-subtle"
                       >
                         HBO Max
                       </span>
@@ -528,7 +528,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 <div />
               </li>
               <li
-                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
+                class="flex flex-col px-gutter font-sans text-xs font-normal even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -565,7 +565,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                     class="grow"
                   >
                     <span
-                      class="inline-block font-sans-narrow text-sm tracking-normal text-subtle"
+                      class="inline-block font-sans-narrow text-sm font-semibold tracking-normal text-subtle"
                     >
                       Sun, May 29, 2022
                     </span>
@@ -578,7 +578,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                       </span>
                        
                       <span
-                        class="font-sans-narrow text-sm text-subtle"
+                        class="font-sans-narrow text-sm font-semibold text-subtle"
                       >
                         35mm
                       </span>
@@ -600,7 +600,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 </div>
                 <div>
                   <div
-                    class="pb-6"
+                    class="pb-6 text-sm font-extralight"
                   >
                     <div
                       class="rendered-markdown leading-normal text-default"
@@ -662,7 +662,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
               >
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Title
                   </dt>
@@ -674,7 +674,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Year
                   </dt>
@@ -686,7 +686,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Financing
                   </dt>
@@ -698,7 +698,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Running Time
                   </dt>
@@ -710,7 +710,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Directed by
                   </dt>
@@ -724,7 +724,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Written by
                   </dt>
@@ -738,7 +738,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Starring
                   </dt>
@@ -769,7 +769,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
               >
                 More 
                 <a
@@ -805,12 +805,12 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/the-endless-2017/"
                     >
                       The Endless 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         2017
                       </span>
@@ -838,7 +838,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                         </strong>
                          
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/the-endless-2017/"
                         >
                           Continue reading...
@@ -892,12 +892,12 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/the-entity-1982/"
                     >
                       The Entity 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1982
                       </span>
@@ -921,7 +921,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                       <p>
                         Barbara Hershey plays a single mother who finds herself under repeated, violent sexual assault from an unseen force. Everywhere she turns for help, she finds men eager to dismiss, manipulate, or abandon her. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/the-entity-1982/"
                         >
                           Continue reading...
@@ -963,12 +963,12 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/every-girl-should-be-married-1948/"
                     >
                       Every Girl Should Be Married 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1948
                       </span>
@@ -992,7 +992,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                       <p>
                         Betsy Drake plays a department store clerk who obsesses over trapping a pediatrician, played by Cary Grant, into marriage. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/every-girl-should-be-married-1948/"
                         >
                           Continue reading...
@@ -1037,12 +1037,12 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/the-falcon-takes-over-1942/"
                     >
                       The Falcon Takes Over 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1942
                       </span>
@@ -1073,7 +1073,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                         </em>
                         , transplants the location to New York City, substitutes gentleman detective Gay Laurence (aka The Falcon), played by George Sanders, for Philip Marlowe, and grafts on a pair of sidekicks. The result underwhelms. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/the-falcon-takes-over-1942/"
                         >
                           Continue reading...
@@ -1276,7 +1276,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
             To the top
           </a>
           <p
-            class="w-full font-light leading-4 text-subtle"
+            class="w-full font-normal leading-4 text-subtle"
           >
             All stills used in accordance with the 
             <a
@@ -1338,7 +1338,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
               class="flex flex-wrap justify-start gap-x-6 text-xl"
             >
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -1349,7 +1349,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -1360,7 +1360,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -1371,7 +1371,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -1382,7 +1382,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -1393,7 +1393,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -1404,7 +1404,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -1605,7 +1605,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
             />
           </picture>
           <div
-            class="text-center font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle mb-12"
+            class="text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle mb-12"
           >
             1987 
             <span>
@@ -1645,7 +1645,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
         >
           <div>
             <div
-              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px] [&>p:first-child]:first-letter:float-left [&>p:first-child]:first-letter:mt-[6px] [&>p:first-child]:first-letter:pr-2 [&>p:first-child]:first-letter:font-sans-narrow-bold [&>p:first-child]:first-letter:text-[56px]"
+              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px] [&>p:first-child]:first-letter:float-left [&>p:first-child]:first-letter:mt-[6px] [&>p:first-child]:first-letter:pr-2 [&>p:first-child]:first-letter:font-sans-narrow [&>p:first-child]:first-letter:text-[56px] [&>p:first-child]:first-letter:font-bold"
             >
               <p>
                 <strong>
@@ -1686,13 +1686,13 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
             class="w-full max-w-popout"
           >
             <h3
-              class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle shadow-bottom"
+              class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle shadow-bottom"
             >
               Viewing History
             </h3>
             <ul>
               <li
-                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
+                class="flex flex-col px-gutter font-sans text-xs font-normal even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -1729,7 +1729,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                     class="grow"
                   >
                     <span
-                      class="inline-block font-sans-narrow text-sm tracking-normal text-subtle"
+                      class="inline-block font-sans-narrow text-sm font-semibold tracking-normal text-subtle"
                     >
                       Thu, Oct 31, 2013
                     </span>
@@ -1742,7 +1742,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       </span>
                        
                       <span
-                        class="font-sans-narrow text-sm text-subtle"
+                        class="font-sans-narrow text-sm font-semibold text-subtle"
                       >
                         Blu-ray
                       </span>
@@ -1753,7 +1753,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 <div />
               </li>
               <li
-                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
+                class="flex flex-col px-gutter font-sans text-xs font-normal even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -1790,7 +1790,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                     class="grow"
                   >
                     <span
-                      class="inline-block font-sans-narrow text-sm tracking-normal text-subtle"
+                      class="inline-block font-sans-narrow text-sm font-semibold tracking-normal text-subtle"
                     >
                       Wed, Nov 4, 2020
                     </span>
@@ -1803,7 +1803,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       </span>
                        
                       <span
-                        class="font-sans-narrow text-sm text-subtle"
+                        class="font-sans-narrow text-sm font-semibold text-subtle"
                       >
                         Blu-ray
                       </span>
@@ -1862,7 +1862,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
               >
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Title
                   </dt>
@@ -1874,7 +1874,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Year
                   </dt>
@@ -1886,7 +1886,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Financing
                   </dt>
@@ -1898,7 +1898,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Running Time
                   </dt>
@@ -1910,7 +1910,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Directed by
                   </dt>
@@ -1924,7 +1924,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Written by
                   </dt>
@@ -1938,7 +1938,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Starring
                   </dt>
@@ -1969,7 +1969,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
               >
                 More written by 
                 <a
@@ -2005,12 +2005,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/underworld-1985/"
                     >
                       Underworld 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1985
                       </span>
@@ -2037,7 +2037,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                         </strong>
                          Larry Lamb plays Roy Bain, a retired enforcer recruited by a mob boss, to find a missing high-class prostitute. His investigation uncovers a group of mutants living in the London Underground. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/underworld-1985/"
                         >
                           Continue reading...
@@ -2085,12 +2085,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/rawhead-rex-1986/"
                     >
                       Rawhead Rex 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1986
                       </span>
@@ -2114,7 +2114,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       <p>
                         I can say this about Rawhead Rex: the plot wastes little time getting started. Slight spoilers follow. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/rawhead-rex-1986/"
                         >
                           Continue reading...
@@ -2162,12 +2162,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/hellbound-hellraiser-ii-1988/"
                     >
                       Hellbound: Hellraiser II 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1988
                       </span>
@@ -2191,7 +2191,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       <p>
                         The big-bad dangles from an extradimensional entity’s unending tree-trunk-sized penis. And that’s not the film’s most bonkers aspect. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/hellbound-hellraiser-ii-1988/"
                         >
                           Continue reading...
@@ -2233,12 +2233,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/the-midnight-meat-train-2008/"
                     >
                       The Midnight Meat Train 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         2008
                       </span>
@@ -2266,7 +2266,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                         </em>
                         . 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/the-midnight-meat-train-2008/"
                         >
                           Continue reading...
@@ -2298,7 +2298,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
               >
                 More 
                 <a
@@ -2334,12 +2334,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/hells-house-1932/"
                     >
                       Hell's House 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1932
                       </span>
@@ -2363,7 +2363,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       <p>
                         A reform school drama buoyed by early charismatic performances from Pat O’Brien and Bette Davis. Junior Durkin plays Jimmy, a fourteen-year-old who travels to the big city to live with his aunt and uncle. He soon becomes enraptured by their smooth-talking boarder, played by O’Brien, who takes a shine to Jimmy and hires him to watch his office and take messages. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/hells-house-1932/"
                         >
                           Continue reading...
@@ -2402,12 +2402,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/hellbound-hellraiser-ii-1988/"
                     >
                       Hellbound: Hellraiser II 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1988
                       </span>
@@ -2431,7 +2431,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       <p>
                         The big-bad dangles from an extradimensional entity’s unending tree-trunk-sized penis. And that’s not the film’s most bonkers aspect. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/hellbound-hellraiser-ii-1988/"
                         >
                           Continue reading...
@@ -2473,12 +2473,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/hereditary-2018/"
                     >
                       Hereditary 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         2018
                       </span>
@@ -2551,12 +2551,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/hi-mom-1970/"
                     >
                       Hi, Mom! 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1970
                       </span>
@@ -2588,7 +2588,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                         </a>
                          that sees Robert De Niro reprising his role as Jon Rubin, now a Vietnam War vet returned home to New York City. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/hi-mom-1970/"
                         >
                           Continue reading...
@@ -2782,7 +2782,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
             To the top
           </a>
           <p
-            class="w-full font-light leading-4 text-subtle"
+            class="w-full font-normal leading-4 text-subtle"
           >
             All stills used in accordance with the 
             <a
@@ -2844,7 +2844,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
               class="flex flex-wrap justify-start gap-x-6 text-xl"
             >
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -2855,7 +2855,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -2866,7 +2866,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -2877,7 +2877,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -2888,7 +2888,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -2899,7 +2899,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -2910,7 +2910,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -3113,7 +3113,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
             />
           </picture>
           <div
-            class="text-center font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle mb-12"
+            class="text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle mb-12"
           >
             1972 
             <span>
@@ -3157,7 +3157,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
         >
           <div>
             <div
-              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px] [&>p:first-child]:first-letter:float-left [&>p:first-child]:first-letter:mt-[6px] [&>p:first-child]:first-letter:pr-2 [&>p:first-child]:first-letter:font-sans-narrow-bold [&>p:first-child]:first-letter:text-[56px]"
+              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px] [&>p:first-child]:first-letter:float-left [&>p:first-child]:first-letter:mt-[6px] [&>p:first-child]:first-letter:pr-2 [&>p:first-child]:first-letter:font-sans-narrow [&>p:first-child]:first-letter:text-[56px] [&>p:first-child]:first-letter:font-bold"
             >
               <p>
                 <em>
@@ -3225,13 +3225,13 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
             class="w-full max-w-popout"
           >
             <h3
-              class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle shadow-bottom"
+              class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle shadow-bottom"
             >
               Viewing History
             </h3>
             <ul>
               <li
-                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
+                class="flex flex-col px-gutter font-sans text-xs font-normal even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -3268,7 +3268,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                     class="grow"
                   >
                     <span
-                      class="inline-block font-sans-narrow text-sm tracking-normal text-subtle"
+                      class="inline-block font-sans-narrow text-sm font-semibold tracking-normal text-subtle"
                     >
                       Sun, Mar 25, 2012
                     </span>
@@ -3281,7 +3281,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       </span>
                        
                       <span
-                        class="font-sans-narrow text-sm text-subtle"
+                        class="font-sans-narrow text-sm font-semibold text-subtle"
                       >
                         TCM HD
                       </span>
@@ -3292,7 +3292,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 <div />
               </li>
               <li
-                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
+                class="flex flex-col px-gutter font-sans text-xs font-normal even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -3329,7 +3329,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                     class="grow"
                   >
                     <span
-                      class="inline-block font-sans-narrow text-sm tracking-normal text-subtle"
+                      class="inline-block font-sans-narrow text-sm font-semibold tracking-normal text-subtle"
                     >
                       Sat, Apr 27, 2024
                     </span>
@@ -3398,7 +3398,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
               >
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Title
                   </dt>
@@ -3410,7 +3410,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Original Title
                   </dt>
@@ -3422,7 +3422,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Year
                   </dt>
@@ -3434,7 +3434,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Financing
                   </dt>
@@ -3446,7 +3446,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Running Time
                   </dt>
@@ -3458,7 +3458,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Directed by
                   </dt>
@@ -3472,7 +3472,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Written by
                   </dt>
@@ -3489,7 +3489,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Starring
                   </dt>
@@ -3520,7 +3520,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
               >
                 More with 
                 <a
@@ -3556,12 +3556,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/i-monster-1971/"
                     >
                       I, Monster 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1971
                       </span>
@@ -3723,12 +3723,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/asylum-1972/"
                     >
                       Asylum 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1972
                       </span>
@@ -3763,7 +3763,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                         </a>
                         , the script comes courtesy of Robert Bloch. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/asylum-1972/"
                         >
                           Continue reading...
@@ -3802,12 +3802,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/and-now-the-screaming-starts-1973/"
                     >
                       And Now the Screaming Starts! 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1973
                       </span>
@@ -3903,12 +3903,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/star-wars-episode-iv-a-new-hope-1977/"
                     >
                       Star Wars: Episode IV - A New Hope 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1977
                       </span>
@@ -3961,7 +3961,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
               >
                 More with 
                 <a
@@ -3997,12 +3997,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/i-monster-1971/"
                     >
                       I, Monster 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1971
                       </span>
@@ -4164,12 +4164,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/hannie-caulder-1971/"
                     >
                       Hannie Caulder 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1971
                       </span>
@@ -4193,7 +4193,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       <p>
                         Raquel Welch plays the titular Hannie, a woman who recruits a bounty hunter to train her to exact revenge on the outlaws that murdered her husband then raped her. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/hannie-caulder-1971/"
                         >
                           Continue reading...
@@ -4238,12 +4238,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/to-the-devil-a-daughter-1976/"
                     >
                       To the Devil a Daughter 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1976
                       </span>
@@ -4432,12 +4432,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/howling-ii-your-sister-is-a-werewolf-1985/"
                     >
                       Howling II: ... Your Sister Is a Werewolf 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1985
                       </span>
@@ -4461,7 +4461,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       <p>
                         Christopher Lee plays an “occult investigator” hunting a ten-thousand-year-old werewolf queen to prevent a werewolf apocalypse. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/howling-ii-your-sister-is-a-werewolf-1985/"
                         >
                           Continue reading...
@@ -4490,7 +4490,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
               >
                 More 
                 <a
@@ -4526,12 +4526,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/the-hoodlum-saint-1946/"
                     >
                       The Hoodlum Saint 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1946
                       </span>
@@ -4555,7 +4555,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       <p>
                         William Powell plays a newspaper man returned home from World War I to find himself unemployed and broke. He finagles a job as a corporate executive, amasses a fortune, loses it in the crash of ‘29, and finds religion. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/the-hoodlum-saint-1946/"
                         >
                           Continue reading...
@@ -4597,12 +4597,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/hoppy-serves-a-writ-1943/"
                     >
                       Hoppy Serves a Writ 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1943
                       </span>
@@ -4629,7 +4629,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                         </strong>
                          He plays a grunt in an outlaw gang that’s fled into Oklahoma, where Texas sheriff Hopalong “Hoppy” Cassidy, played by William Boyd, lacks jurisdiction. Mitchum’s part amounts to a single forgettable line. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/hoppy-serves-a-writ-1943/"
                         >
                           Continue reading...
@@ -4668,12 +4668,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/horror-of-dracula-1958/"
                     >
                       Horror of Dracula 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1958
                       </span>
@@ -4701,7 +4701,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                         </em>
                          franchise gives us exactly that. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/horror-of-dracula-1958/"
                         >
                           Continue reading...
@@ -4743,12 +4743,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/the-house-that-dripped-blood-1971/"
                     >
                       The House That Dripped Blood 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1971
                       </span>
@@ -4772,7 +4772,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       <p>
                         Reviewing anthology movies is hard. I picture you, dear reader, trudging through endless paragraphs of plot synopsis and I feel guilty. I have let you down. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/the-house-that-dripped-blood-1971/"
                         >
                           Continue reading...
@@ -4975,7 +4975,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
             To the top
           </a>
           <p
-            class="w-full font-light leading-4 text-subtle"
+            class="w-full font-normal leading-4 text-subtle"
           >
             All stills used in accordance with the 
             <a
@@ -5037,7 +5037,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
               class="flex flex-wrap justify-start gap-x-6 text-xl"
             >
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -5048,7 +5048,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -5059,7 +5059,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -5070,7 +5070,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -5081,7 +5081,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -5092,7 +5092,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -5103,7 +5103,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -5304,7 +5304,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
             />
           </picture>
           <div
-            class="text-center font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle mb-12"
+            class="text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle mb-12"
           >
             1985 
             <span>
@@ -5344,7 +5344,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
         >
           <div>
             <div
-              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px] [&>p:first-child]:first-letter:float-left [&>p:first-child]:first-letter:mt-[6px] [&>p:first-child]:first-letter:pr-2 [&>p:first-child]:first-letter:font-sans-narrow-bold [&>p:first-child]:first-letter:text-[56px]"
+              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px] [&>p:first-child]:first-letter:float-left [&>p:first-child]:first-letter:mt-[6px] [&>p:first-child]:first-letter:pr-2 [&>p:first-child]:first-letter:font-sans-narrow [&>p:first-child]:first-letter:text-[56px] [&>p:first-child]:first-letter:font-bold"
             >
               <p>
                 For an anthology comprising three unrelated low-budget horror features cut to half or a third of their running time and book-ended by God and Satan riding a train to Las Vegas with an 80s teen pop-rock band, 
@@ -5476,13 +5476,13 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
             class="w-full max-w-popout"
           >
             <h3
-              class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle shadow-bottom"
+              class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle shadow-bottom"
             >
               Viewing History
             </h3>
             <ul>
               <li
-                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
+                class="flex flex-col px-gutter font-sans text-xs font-normal even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -5519,7 +5519,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                     class="grow"
                   >
                     <span
-                      class="inline-block font-sans-narrow text-sm tracking-normal text-subtle"
+                      class="inline-block font-sans-narrow text-sm font-semibold tracking-normal text-subtle"
                     >
                       Sat, Mar 25, 2023
                     </span>
@@ -5532,7 +5532,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                       </span>
                        
                       <span
-                        class="font-sans-narrow text-sm text-subtle"
+                        class="font-sans-narrow text-sm font-semibold text-subtle"
                       >
                         Blu-ray
                       </span>
@@ -5557,7 +5557,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 <div />
               </li>
               <li
-                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
+                class="flex flex-col px-gutter font-sans text-xs font-normal even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -5594,7 +5594,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                     class="grow"
                   >
                     <span
-                      class="inline-block font-sans-narrow text-sm tracking-normal text-subtle"
+                      class="inline-block font-sans-narrow text-sm font-semibold tracking-normal text-subtle"
                     >
                       Thu, Jan 4, 2024
                     </span>
@@ -5607,7 +5607,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                       </span>
                        
                       <span
-                        class="font-sans-narrow text-sm text-subtle"
+                        class="font-sans-narrow text-sm font-semibold text-subtle"
                       >
                         Blu-ray
                       </span>
@@ -5632,7 +5632,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 <div />
               </li>
               <li
-                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
+                class="flex flex-col px-gutter font-sans text-xs font-normal even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -5669,7 +5669,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                     class="grow"
                   >
                     <span
-                      class="inline-block font-sans-narrow text-sm tracking-normal text-subtle"
+                      class="inline-block font-sans-narrow text-sm font-semibold tracking-normal text-subtle"
                     >
                       Sat, Apr 27, 2024
                     </span>
@@ -5738,7 +5738,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
               >
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Title
                   </dt>
@@ -5750,7 +5750,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Year
                   </dt>
@@ -5762,7 +5762,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Financing
                   </dt>
@@ -5774,7 +5774,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Running Time
                   </dt>
@@ -5786,7 +5786,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Directed by
                   </dt>
@@ -5812,7 +5812,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Written by
                   </dt>
@@ -5826,7 +5826,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Starring
                   </dt>
@@ -5857,7 +5857,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
               >
                 More 
                 <a
@@ -5893,12 +5893,12 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/next-of-kin-1989/"
                     >
                       Next of Kin 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1989
                       </span>
@@ -5964,12 +5964,12 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/the-night-they-raided-minskys-1968/"
                     >
                       The Night They Raided Minsky's 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1968
                       </span>
@@ -5993,7 +5993,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                       <p>
                         For his second feature, director William Friedkin tries another musical comedy, this one about the waning days of burlesque. He should have known better, but given the circumstances, I understand. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/the-night-they-raided-minskys-1968/"
                         >
                           Continue reading...
@@ -6032,12 +6032,12 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/night-of-the-demons-1988/"
                     >
                       Night of the Demons 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1988
                       </span>
@@ -6061,7 +6061,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                       <p>
                         High-school teens stage a Halloween party in an abandoned funeral home only to fall prey to demons who murder them and possess their corpses. Remind you of anything? 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/night-of-the-demons-1988/"
                         >
                           Continue reading...
@@ -6106,12 +6106,12 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/nightcrawler-2014/"
                     >
                       Nightcrawler 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         2014
                       </span>
@@ -6135,7 +6135,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                       <p>
                         Scathing indictment of the news media. Gyllenhaal plays a ghoulish sociopath who stumbles into a career filming the graphic aftermath of car crashes, domestic violence, and home invasions. He sells his wares to Russo, who plays the graveyard-shift news manager at a local TV station. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/nightcrawler-2014/"
                         >
                           Continue reading...
@@ -6332,7 +6332,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
             To the top
           </a>
           <p
-            class="w-full font-light leading-4 text-subtle"
+            class="w-full font-normal leading-4 text-subtle"
           >
             All stills used in accordance with the 
             <a
@@ -6394,7 +6394,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
               class="flex flex-wrap justify-start gap-x-6 text-xl"
             >
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -6405,7 +6405,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -6416,7 +6416,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -6427,7 +6427,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -6438,7 +6438,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -6449,7 +6449,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -6460,7 +6460,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -6661,7 +6661,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
             />
           </picture>
           <div
-            class="text-center font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle mb-12"
+            class="text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle mb-12"
           >
             1959 
             <span>
@@ -6701,7 +6701,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
         >
           <div>
             <div
-              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px] [&>p:first-child]:first-letter:float-left [&>p:first-child]:first-letter:mt-[6px] [&>p:first-child]:first-letter:pr-2 [&>p:first-child]:first-letter:font-sans-narrow-bold [&>p:first-child]:first-letter:text-[56px]"
+              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px] [&>p:first-child]:first-letter:float-left [&>p:first-child]:first-letter:mt-[6px] [&>p:first-child]:first-letter:pr-2 [&>p:first-child]:first-letter:font-sans-narrow [&>p:first-child]:first-letter:text-[56px] [&>p:first-child]:first-letter:font-bold"
             >
               <p>
                 <strong>
@@ -6737,13 +6737,13 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
             class="w-full max-w-popout"
           >
             <h3
-              class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle shadow-bottom"
+              class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle shadow-bottom"
             >
               Viewing History
             </h3>
             <ul>
               <li
-                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
+                class="flex flex-col px-gutter font-sans text-xs font-normal even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -6780,7 +6780,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     class="grow"
                   >
                     <span
-                      class="inline-block font-sans-narrow text-sm tracking-normal text-subtle"
+                      class="inline-block font-sans-narrow text-sm font-semibold tracking-normal text-subtle"
                     >
                       Sun, Jun 18, 2017
                     </span>
@@ -6802,7 +6802,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 <div />
               </li>
               <li
-                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
+                class="flex flex-col px-gutter font-sans text-xs font-normal even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -6839,7 +6839,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     class="grow"
                   >
                     <span
-                      class="inline-block font-sans-narrow text-sm tracking-normal text-subtle"
+                      class="inline-block font-sans-narrow text-sm font-semibold tracking-normal text-subtle"
                     >
                       Sat, Dec 9, 2017
                     </span>
@@ -6852,7 +6852,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       </span>
                        
                       <span
-                        class="font-sans-narrow text-sm text-subtle"
+                        class="font-sans-narrow text-sm font-semibold text-subtle"
                       >
                         Blu-ray
                       </span>
@@ -6863,7 +6863,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 <div />
               </li>
               <li
-                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
+                class="flex flex-col px-gutter font-sans text-xs font-normal even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -6900,7 +6900,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     class="grow"
                   >
                     <span
-                      class="inline-block font-sans-narrow text-sm tracking-normal text-subtle"
+                      class="inline-block font-sans-narrow text-sm font-semibold tracking-normal text-subtle"
                     >
                       Sun, Jun 17, 2018
                     </span>
@@ -6913,7 +6913,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       </span>
                        
                       <span
-                        class="font-sans-narrow text-sm text-subtle"
+                        class="font-sans-narrow text-sm font-semibold text-subtle"
                       >
                         Blu-ray
                       </span>
@@ -6924,7 +6924,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 <div />
               </li>
               <li
-                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
+                class="flex flex-col px-gutter font-sans text-xs font-normal even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -6961,7 +6961,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     class="grow"
                   >
                     <span
-                      class="inline-block font-sans-narrow text-sm tracking-normal text-subtle"
+                      class="inline-block font-sans-narrow text-sm font-semibold tracking-normal text-subtle"
                     >
                       Fri, Jan 29, 2021
                     </span>
@@ -6974,7 +6974,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       </span>
                        
                       <span
-                        class="font-sans-narrow text-sm text-subtle"
+                        class="font-sans-narrow text-sm font-semibold text-subtle"
                       >
                         Blu-ray
                       </span>
@@ -7033,7 +7033,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
               >
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Title
                   </dt>
@@ -7045,7 +7045,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Year
                   </dt>
@@ -7057,7 +7057,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Financing
                   </dt>
@@ -7069,7 +7069,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Running Time
                   </dt>
@@ -7081,7 +7081,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Directed by
                   </dt>
@@ -7095,7 +7095,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Written by
                   </dt>
@@ -7115,7 +7115,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Starring
                   </dt>
@@ -7146,7 +7146,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
               >
                 More directed by 
                 <a
@@ -7182,12 +7182,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/scarface-1932/"
                     >
                       Scarface 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1932
                       </span>
@@ -7211,7 +7211,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       <p>
                         Paul Muni plays Tony Camonte, a low-level mafia hood who explains, “In this business there’s only one law you gotta follow to keep out of trouble: Do it first, do it yourself, and keep on doing it.” The “it” in question is murder, and Tony does plenty as he shoots his way to the top of Chicago’s underworld. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/scarface-1932/"
                         >
                           Continue reading...
@@ -7262,12 +7262,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/the-crowd-roars-1932/"
                     >
                       The Crowd Roars 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1932
                       </span>
@@ -7291,7 +7291,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       <p>
                         James Cagney plays a hotshot race car driver whose ego can’t handle kid brother Eric Linden’s talent. Ann Dvorak plays Cagney’s long-suffering girlfriend. Joan Blondell plays Dvorak’s friend and Linden’s love-interest. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/the-crowd-roars-1932/"
                         >
                           Continue reading...
@@ -7336,12 +7336,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/the-dawn-patrol-1930/"
                     >
                       The Dawn Patrol 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1930
                       </span>
@@ -7412,12 +7412,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/the-criminal-code-1930/"
                     >
                       The Criminal Code 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1930
                       </span>
@@ -7470,7 +7470,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
               >
                 More with 
                 <a
@@ -7506,12 +7506,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/the-oklahoma-kid-1939/"
                     >
                       The Oklahoma Kid 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1939
                       </span>
@@ -7535,7 +7535,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       <p>
                         Humphrey Bogart plays Whip McCord, the leader of an outlaw gang who opens the film robbing a stagecoach. Enter James Cagney as the titular kid, another outlaw who, in turn, robs McCord and his gang. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/the-oklahoma-kid-1939/"
                         >
                           Continue reading...
@@ -7577,12 +7577,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/the-searchers-1956/"
                     >
                       The Searchers 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1956
                       </span>
@@ -7692,12 +7692,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/salute-1929/"
                     >
                       Salute 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1929
                       </span>
@@ -7724,7 +7724,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                         </strong>
                          George O’Brien joins the Naval Academy, endures hazing from the upperclassmen, and rivals his older brother, a West Point cadet, for a girl. John Wayne and Ward Bond have small parts as O’Brien’s upperclassmen tormentors. The film culminates with the big Army-Navy football game pitting brother against brother. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/salute-1929/"
                         >
                           Continue reading...
@@ -7769,12 +7769,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/born-reckless-1930/"
                     >
                       Born Reckless 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1930
                       </span>
@@ -7824,7 +7824,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
               >
                 More with 
                 <a
@@ -7860,12 +7860,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/big-jim-mclain-1952/"
                     >
                       Big Jim McLain 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1952
                       </span>
@@ -7889,7 +7889,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       <p>
                         John Wayne’s first production under his Wayne-Fellows Productions company (later renamed Batjac) sees him playing a House UnAmerican Activities investigator ferreting out communists and romancing a war-widow played by Nancy Olson in Hawaii. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/big-jim-mclain-1952/"
                         >
                           Continue reading...
@@ -7940,12 +7940,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/the-searchers-1956/"
                     >
                       The Searchers 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1956
                       </span>
@@ -8055,12 +8055,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/the-big-trail-1930/"
                     >
                       The Big Trail 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1930
                       </span>
@@ -8087,7 +8087,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                         </strong>
                          He’s good but raw—on par with the poverty-row oaters he’d headline for the next nine years. Here he plays a trapper leading a wagon train up the Oregon Trail. The script includes the requisite character drama and romantic interest. Disregard them. The production itself proves the real star. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/the-big-trail-1930/"
                         >
                           Continue reading...
@@ -8135,12 +8135,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/arizona-1931/"
                     >
                       Arizona 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1931
                       </span>
@@ -8167,7 +8167,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                         </strong>
                          The film opens during the big Army-Navy football game. Wayne plays Army’s star senior quarterback, so beloved he’s not expected to end his sentences with “sir” when talking to the brass. He’s also a womanizer. After the game, with graduation and an assignment to Arizona looming. he jilts his longtime girl, played by Laura La Plante. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/arizona-1931/"
                         >
                           Continue reading...
@@ -8196,7 +8196,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
               >
                 More 
                 <a
@@ -8232,12 +8232,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/ride-lonesome-1959/"
                     >
                       Ride Lonesome 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1959
                       </span>
@@ -8264,7 +8264,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                         </strong>
                          Randolph Scott plays a bounty hunter determined to bring in his query at all costs. Coburn plays the dim-witted sidekick of a man Scott meets on the trail. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/ride-lonesome-1959/"
                         >
                           Continue reading...
@@ -8303,12 +8303,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/riders-of-destiny-1933/"
                     >
                       Riders of Destiny 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1933
                       </span>
@@ -8403,12 +8403,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/the-rise-and-fall-of-legs-diamond-1960/"
                     >
                       The Rise and Fall of Legs Diamond 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1960
                       </span>
@@ -8471,12 +8471,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/rituals-1977/"
                     >
                       Rituals 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1977
                       </span>
@@ -8512,7 +8512,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                         </em>
                          revels in the land’s brutality. The cinematography finds majesty in savagery as the doctors endure jagged rocks, boggy swamps, and flies. Tons of flies. These early sequences pay off when the doctors awake the first morning to find their boots missing. This proves the first incursion by an unseen assailant determined to torture and kill the group. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/rituals-1977/"
                         >
                           Continue reading...
@@ -8709,7 +8709,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
             To the top
           </a>
           <p
-            class="w-full font-light leading-4 text-subtle"
+            class="w-full font-normal leading-4 text-subtle"
           >
             All stills used in accordance with the 
             <a
@@ -8771,7 +8771,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               class="flex flex-wrap justify-start gap-x-6 text-xl"
             >
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -8782,7 +8782,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -8793,7 +8793,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -8804,7 +8804,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -8815,7 +8815,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -8826,7 +8826,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -8837,7 +8837,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-0.5px"
+                class="block whitespace-nowrap tracking-[0.6px]"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:text-accent"
@@ -9038,7 +9038,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             />
           </picture>
           <div
-            class="text-center font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle mb-12"
+            class="text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle mb-12"
           >
             1957 
             <span>
@@ -9078,7 +9078,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
         >
           <div>
             <div
-              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px] [&>p:first-child]:first-letter:float-left [&>p:first-child]:first-letter:mt-[6px] [&>p:first-child]:first-letter:pr-2 [&>p:first-child]:first-letter:font-sans-narrow-bold [&>p:first-child]:first-letter:text-[56px]"
+              class="rendered-markdown text-md/7 tracking-0.3px tablet:text-xl/8 max-w-prose first-letter:leading-[.8] first-letter:text-[#252525] tablet:first-letter:pr-3 desktop:first-letter:text-[64px] [&>p:first-child]:first-letter:float-left [&>p:first-child]:first-letter:mt-[6px] [&>p:first-child]:first-letter:pr-2 [&>p:first-child]:first-letter:font-sans-narrow [&>p:first-child]:first-letter:text-[56px] [&>p:first-child]:first-letter:font-bold"
             >
               <p>
                 For Peter Cushing and Christopher Lee’s first film for Hammer, 
@@ -9148,13 +9148,13 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             class="w-full max-w-popout"
           >
             <h3
-              class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle shadow-bottom"
+              class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle shadow-bottom"
             >
               Viewing History
             </h3>
             <ul>
               <li
-                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
+                class="flex flex-col px-gutter font-sans text-xs font-normal even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -9191,7 +9191,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     class="grow"
                   >
                     <span
-                      class="inline-block font-sans-narrow text-sm tracking-normal text-subtle"
+                      class="inline-block font-sans-narrow text-sm font-semibold tracking-normal text-subtle"
                     >
                       Sat, Oct 24, 2015
                     </span>
@@ -9204,7 +9204,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       </span>
                        
                       <span
-                        class="font-sans-narrow text-sm text-subtle"
+                        class="font-sans-narrow text-sm font-semibold text-subtle"
                       >
                         Blu-ray
                       </span>
@@ -9215,7 +9215,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 <div />
               </li>
               <li
-                class="flex flex-col px-gutter font-sans-book text-xs tracking-[-.1px] even:bg-stripe"
+                class="flex flex-col px-gutter font-sans text-xs font-normal even:bg-stripe"
               >
                 <div
                   class="flex items-center gap-x-[1ch] py-4"
@@ -9252,7 +9252,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     class="grow"
                   >
                     <span
-                      class="inline-block font-sans-narrow text-sm tracking-normal text-subtle"
+                      class="inline-block font-sans-narrow text-sm font-semibold tracking-normal text-subtle"
                     >
                       Sat, Sep 19, 2020
                     </span>
@@ -9265,7 +9265,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       </span>
                        
                       <span
-                        class="font-sans-narrow text-sm text-subtle"
+                        class="font-sans-narrow text-sm font-semibold text-subtle"
                       >
                         Blu-ray
                       </span>
@@ -9324,7 +9324,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               >
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Title
                   </dt>
@@ -9336,7 +9336,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Year
                   </dt>
@@ -9348,7 +9348,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Financing
                   </dt>
@@ -9360,7 +9360,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Running Time
                   </dt>
@@ -9372,7 +9372,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Directed by
                   </dt>
@@ -9386,7 +9386,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Written by
                   </dt>
@@ -9403,7 +9403,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </div>
                 <div>
                   <dt
-                    class="font-sans-narrow text-xs uppercase text-subtle"
+                    class="font-sans-narrow text-xs font-semibold uppercase text-subtle"
                   >
                     Starring
                   </dt>
@@ -9434,7 +9434,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
               >
                 More with 
                 <a
@@ -9470,12 +9470,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/the-man-in-the-iron-mask-1939/"
                     >
                       The Man in the Iron Mask 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1939
                       </span>
@@ -9549,12 +9549,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/a-chump-at-oxford-1939/"
                     >
                       A Chump at Oxford 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1940
                       </span>
@@ -9581,7 +9581,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                         </strong>
                          He has a minor speaking part playing one of the Oxford students who hassle Laurel and Hardy. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/a-chump-at-oxford-1939/"
                         >
                           Continue reading...
@@ -9623,12 +9623,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/the-abominable-snowman-1957/"
                     >
                       The Abominable Snowman 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1957
                       </span>
@@ -9655,7 +9655,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                         </strong>
                          He plays a botanist who hitches a ride aboard Forrest Tucker’s Himalayan expedition to find and study the legendary Yeti. Of course, Tucker’s motives prove less than scientific. And of course, one-by-one the party members meet unfortunate ends. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/the-abominable-snowman-1957/"
                         >
                           Continue reading...
@@ -9697,12 +9697,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/violent-playground-1958/"
                     >
                       Violent Playground 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1958
                       </span>
@@ -9749,7 +9749,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
               >
                 More with 
                 <a
@@ -9785,12 +9785,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/howling-ii-your-sister-is-a-werewolf-1985/"
                     >
                       Howling II: ... Your Sister Is a Werewolf 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1985
                       </span>
@@ -9814,7 +9814,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       <p>
                         Christopher Lee plays an “occult investigator” hunting a ten-thousand-year-old werewolf queen to prevent a werewolf apocalypse. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/howling-ii-your-sister-is-a-werewolf-1985/"
                         >
                           Continue reading...
@@ -9856,12 +9856,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/corridor-of-mirrors-1948/"
                     >
                       Corridor of Mirrors 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1948
                       </span>
@@ -9892,7 +9892,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                         </em>
                          knock-off featuring Eric Portman as a wealthy eccentric who believes Edana Romney to be the reincarnation of an Italian countess he loved in a past life. Lee’s bit part comes early and his lone line lacks his resonant baritone. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/corridor-of-mirrors-1948/"
                         >
                           Continue reading...
@@ -9934,12 +9934,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/horror-of-dracula-1958/"
                     >
                       Horror of Dracula 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1958
                       </span>
@@ -9967,7 +9967,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                         </em>
                          franchise gives us exactly that. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/horror-of-dracula-1958/"
                         >
                           Continue reading...
@@ -10009,12 +10009,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/the-city-of-the-dead-1960/"
                     >
                       The City of the Dead 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1960
                       </span>
@@ -10159,7 +10159,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
               >
                 More 
                 <a
@@ -10195,12 +10195,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/the-quatermass-xperiment-1955/"
                     >
                       The Quatermass Xperiment 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1955
                       </span>
@@ -10276,12 +10276,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/x-the-unknown-1956/"
                     >
                       X the Unknown 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1956
                       </span>
@@ -10352,12 +10352,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/quatermass-2-1957/"
                     >
                       Quatermass 2 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1957
                       </span>
@@ -10389,7 +10389,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                         </a>
                          sees Brian Donlevy returning in the titular role, but the character has changed. A bulldog in the first film, this script affords Quatermass little agency. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/quatermass-2-1957/"
                         >
                           Continue reading...
@@ -10431,12 +10431,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/the-abominable-snowman-1957/"
                     >
                       The Abominable Snowman 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1957
                       </span>
@@ -10463,7 +10463,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                         </strong>
                          He plays a botanist who hitches a ride aboard Forrest Tucker’s Himalayan expedition to find and study the legendary Yeti. Of course, Tucker’s motives prove less than scientific. And of course, one-by-one the party members meet unfortunate ends. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/the-abominable-snowman-1957/"
                         >
                           Continue reading...
@@ -10492,7 +10492,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans-bold text-xs uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
               >
                 More 
                 <a
@@ -10528,12 +10528,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/cure-1997/"
                     >
                       Cure 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1997
                       </span>
@@ -10561,7 +10561,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                         </strong>
                          
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/cure-1997/"
                         >
                           Continue reading...
@@ -10609,12 +10609,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/curse-of-chucky-2013/"
                     >
                       Curse of Chucky 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         2013
                       </span>
@@ -10680,12 +10680,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/curse-of-the-demon-1957/"
                     >
                       Curse of the Demon 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         1957
                       </span>
@@ -10715,7 +10715,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                         </strong>
                          one populated by intelligent characters behaving according to their personalities, not the whims of the plot. It avoids cheap jump-scares, preferring shadowy hallways and darkened rooms to keep us on edge. And, for the real horror, there’s Niall MacGinnis. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/curse-of-the-demon-1957/"
                         >
                           Continue reading...
@@ -10763,12 +10763,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block font-serif-semibold text-xl text-default"
+                      class="mb-4 block text-xl font-medium text-default"
                       href="/reviews/dagon-2001/"
                     >
                       Dagon 
                       <span
-                        class="text-sm font-light leading-none text-muted"
+                        class="text-sm font-normal leading-none text-muted"
                       >
                         2001
                       </span>
@@ -10792,7 +10792,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       <p>
                         Stuart Gordon’s take on Lovecraft is becoming my favorite. He delivers the source material’s existential dread and world-building while stirring in a liberal dose of sleaze. While this would have offended the prudish author, it sets the stories outside conventional morality, heightening the sense of an ancient “other” lurking below society’s norms. 
                         <a
-                          class="!no-underline uppercase whitespace-nowrap font-normal font-sans-narrow text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                          class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
                           href="/reviews/dagon-2001/"
                         >
                           Continue reading...
@@ -10989,7 +10989,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             To the top
           </a>
           <p
-            class="w-full font-light leading-4 text-subtle"
+            class="w-full font-normal leading-4 text-subtle"
           >
             All stills used in accordance with the 
             <a
