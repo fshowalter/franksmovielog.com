@@ -1,5 +1,4 @@
-import { ListInfo } from "./ListInfo";
-import { ShowMoreButton } from "./ShowMoreButton";
+import { Button } from "./Button";
 
 export function GroupedList<T>({
   groupedValues,
@@ -19,8 +18,6 @@ export function GroupedList<T>({
 }): JSX.Element {
   return (
     <>
-      <ListInfo visibleCount={visibleCount} totalCount={totalCount} />
-
       <ol className={className} {...rest}>
         {[...groupedValues].map((groupedValue, index) => {
           const [group, groupValues] = groupedValue;
@@ -32,13 +29,14 @@ export function GroupedList<T>({
           );
         })}
       </ol>
-      <div className="flex flex-col items-center px-pageMargin">
+      <div className="flex flex-col items-center px-container-base py-10">
         {totalCount > visibleCount && (
-          <>
-            <div className="h-8 min-h-8" />
-            <ShowMoreButton onClick={onShowMore} />
-            <div className="h-8 min-h-8" />
-          </>
+          <Button
+            onClick={onShowMore}
+            className="mx-auto w-full max-w-[430px] bg-canvas px-container-base py-5 text-center font-sans-narrow text-sm font-medium uppercase tracking-[.6px] hover:bg-inverse hover:text-inverse"
+          >
+            Show More
+          </Button>
         )}
       </div>
     </>
@@ -56,15 +54,12 @@ function GroupingListItem({
 }) {
   return (
     <li className="block">
-      <div
-        style={{ zIndex: zIndex }}
-        className="sticky top-8 bg-default pt-0 text-md desktop:top-[calc(var(--header-offset)_+_40px)]"
-      >
-        <div className="bg-canvas px-gutter py-2 tablet:px-6">{groupText}</div>
+      <div style={{ zIndex: zIndex }} className="pt-0 text-md">
+        <div className="mb-1 max-w-screen-max bg-subtle px-container-base py-8 text-xl leading-8 tablet:px-4">
+          {groupText}
+        </div>
       </div>
-      <div className="h-0 min-h-0 tablet:h-4 tablet:min-h-4" />
-      {children}
-      <div className="h-0 min-h-0 tablet:h-4 tablet:min-h-4" />
+      <div className="bg-subtle">{children}</div>
     </li>
   );
 }

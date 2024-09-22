@@ -1,30 +1,32 @@
 import type { Review } from "src/api/reviews";
 import type { StillImageProps } from "src/api/stills";
-
-import { MoreStillList } from "./MoreStillList";
+import { MoreReviews } from "src/components/MoreReviews";
+import { SubHeading } from "src/components/SubHeading";
 
 type CastAndCrewMemberTitle =
   Review["moreCastAndCrew"][number]["titles"][number] & {
     stillImageProps: StillImageProps;
+    excerpt: string;
   };
 
-type CastAndCrewMember = Review["moreCastAndCrew"][number] & {
+type CastAndCrewMember = Omit<Review["moreCastAndCrew"][number], "titles"> & {
   titles: CastAndCrewMemberTitle[];
 };
 
-interface Props {
+type Props = {
   values: CastAndCrewMember[];
-}
+};
 
 export function MoreFromCastAndCrew({ values }: Props) {
   return values.map((value) => (
-    <MoreStillList
-      key={value.slug}
-      leadText={leadTextForCreditKind(value.creditKind)}
-      linkText={value.name}
-      linkTarget={`/cast-and-crew/${value.slug}`}
-      values={value.titles}
-    />
+    <MoreReviews key={value.slug} values={value.titles}>
+      <SubHeading as="h2">
+        {leadTextForCreditKind(value.creditKind)}{" "}
+        <a href={`/cast-and-crew/${value.slug}`} className="text-accent">
+          {value.name}
+        </a>
+      </SubHeading>
+    </MoreReviews>
   ));
 }
 

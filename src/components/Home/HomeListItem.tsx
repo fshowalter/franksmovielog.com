@@ -1,14 +1,15 @@
-import type { ReviewWithExcerpt } from "src/api/reviews";
+import type { Review, ReviewExcerpt } from "src/api/reviews";
 import type { StillImageProps } from "src/api/stills";
 import { Grade } from "src/components/Grade";
 import { RenderedMarkdown } from "src/components/RenderedMarkdown";
 import { Still } from "src/components/Still";
-import { toSentence } from "src/utils/toSentence";
 
 export const StillImageConfig = {
-  width: 480,
-  height: 270,
-  sizes: "(min-width: 512px) 512px, 100vw",
+  width: 515,
+  height: 303,
+  sizes:
+    "(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw",
+  quality: 80,
 };
 
 function formatDate(reviewDate: Date) {
@@ -20,82 +21,67 @@ function formatDate(reviewDate: Date) {
   });
 }
 
-export interface ListItemValue
-  extends Pick<
-    ReviewWithExcerpt,
-    | "imdbId"
-    | "sequence"
-    | "title"
-    | "year"
-    | "date"
-    | "slug"
-    | "grade"
-    | "principalCastNames"
-    | "directorNames"
-    | "excerpt"
-  > {}
+export type ListItemValue = Pick<
+  Review,
+  | "imdbId"
+  | "sequence"
+  | "title"
+  | "year"
+  | "date"
+  | "slug"
+  | "grade"
+  | "principalCastNames"
+  | "directorNames"
+  | "genres"
+> &
+  ReviewExcerpt & {
+    stillImageProps: StillImageProps;
+  };
 
-export function HomeListItem({
-  value,
-  eagerLoadImage,
-  stillImageProps: stillImageData,
-}: {
-  value: ListItemValue;
-  eagerLoadImage: boolean;
-  stillImageProps: StillImageProps | undefined;
-}) {
+export function HomeListItem({ value }: { value: ListItemValue }) {
   return (
-    <li className="flex even:bg-subtle">
-      <article className="mx-auto flex flex-col items-center px-pageMargin py-10 desktop:grid desktop:w-full desktop:grid-cols-2 desktop:gap-x-[calc(2_*_var(--gutter-width))] max:grid-cols-7">
-        <div className="col-span-full mb-6 text-center text-sm font-light uppercase leading-4 tracking-0.75px text-subtle desktop:mb-0 desktop:pb-6 desktop:text-left desktop:leading-8 max:col-span-1 max:self-start">
+    <li className="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]">
+      <a href={`/reviews/${value.slug}/`} className="mb-6 block">
+        <Still
+          title={value.title}
+          year={value.year}
+          imageProps={value.stillImageProps}
+          width={StillImageConfig.width}
+          height={StillImageConfig.height}
+          className="h-auto w-full"
+          loading="lazy"
+          decoding="async"
+          sizes={StillImageConfig.sizes}
+        />
+      </a>
+      <div className="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]">
+        <div className="mb-1 font-sans-narrow text-xxs font-medium uppercase leading-4 tracking-[1.1px] text-subtle">
           {formatDate(value.date)}
         </div>
         <a
-          rel="canonical"
           href={`/reviews/${value.slug}/`}
-          className="still-border block max-w-prose desktop:col-start-2 desktop:col-end-2 desktop:row-span-2 desktop:row-start-2 desktop:self-start desktop:justify-self-end max:col-start-4 max:col-end-9 max:row-start-1 max:mt-0"
+          className="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
         >
-          {stillImageData && (
-            <Still
-              title={value.title}
-              year={value.year}
-              width={StillImageConfig.width}
-              height={StillImageConfig.height}
-              sizes={StillImageConfig.sizes}
-              imageProps={stillImageData}
-              loading={eagerLoadImage ? "eager" : "lazy"}
-              className="h-auto rounded-xl"
-              decoding={eagerLoadImage ? "sync" : "async"}
-            />
-          )}
+          {value.title}{" "}
+          <span className="text-sm font-normal leading-none text-muted">
+            {value.year}
+          </span>
         </a>
-        <div className="flex max-w-lg flex-col items-center pt-4 desktop:col-span-1 desktop:col-start-1 desktop:row-start-2 desktop:items-start desktop:place-self-start desktop:pt-0 max:col-span-3 max:col-start-2 max:row-start-1 max:max-w-unset">
-          <h2 className="text-2.5xl font-bold leading-8">
-            <a
-              href={`/reviews/${value.slug}/`}
-              rel="canonical"
-              className="inline-block text-default"
-            >
-              {value.title}{" "}
-              <span className="inline-block text-base font-light leading-none text-subtle">
-                {value.year}
-              </span>
-            </a>
-          </h2>
-          <div className="spacer-y-4" />
-          <Grade value={value.grade} height={32} />
-          <div className="spacer-y-6" />
-          <p className="text-base font-normal leading-normal tracking-0.25px text-subtle">
-            Directed by {toSentence(value.directorNames)}. Starring{" "}
-            {toSentence(value.principalCastNames)}.
-          </p>
-          <div className="spacer-y-6" />
-          <RenderedMarkdown
-            text={value.excerpt}
-            className="self-start text-lg leading-normal tracking-0.3px text-muted"
-          />
+        <Grade value={value.grade} height={24} className="mb-8" />
+        <RenderedMarkdown
+          text={value.excerpt}
+          className="mb-6 text-lg leading-normal tracking-0.3px text-muted"
+        />
+        <div className="mt-auto font-sans-narrow text-xxs font-medium leading-4 tracking-[1.1px] text-subtle">
+          {value.genres.map((genre, index) => {
+            if (index === 0) {
+              return <span key={genre}>{genre}</span>;
+            }
+
+            return <span key={genre}> | {genre}</span>;
+          })}
         </div>
-      </article>
+      </div>
     </li>
   );
 }

@@ -12,7 +12,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 );
 
 export async function getAvatarImageProps(
-  slug: string,
+  slug: string | null,
   {
     width,
     height,

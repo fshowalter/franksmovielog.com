@@ -4,7 +4,7 @@ import { getFixedWidthPosterImageProps } from "src/api/posters";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 
 import type { Props } from "./CastAndCrewMember";
-import { AvatarImageConfig } from "./Header";
+import { AvatarImageConfig } from "./CastAndCrewMember";
 
 export async function getProps(slug: string): Promise<Props> {
   const { member, distinctReleaseYears } = await castAndCrewMember(slug);

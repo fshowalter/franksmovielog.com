@@ -7,9 +7,9 @@ import { MostWatchedMovies } from "src/components/MostWatchedMovies";
 import type { MostWatchedPeopleListItemValue } from "src/components/MostWatchedPeople";
 import { MostWatchedPerformers } from "src/components/MostWatchedPerformers";
 import { MostWatchedWriters } from "src/components/MostWatchedWriters";
-import { PageTitle } from "src/components/PageTitle";
 import { StatsNavigation } from "src/components/StatsNavigation";
 
+import { Layout } from "../Layout";
 import { Callouts } from "./Callouts";
 import { GradeDistribution } from "./GradeDistribution";
 
@@ -40,24 +40,27 @@ export function AlltimeStats({
   mostWatchedWriters,
 }: Props): JSX.Element {
   return (
-    <main className="flex flex-col items-center">
-      <header className="flex flex-col flex-wrap justify-between px-pageMargin">
-        <div className="flex flex-col items-center">
-          <PageTitle className="pt-6 desktop:pt-8">All-Time Stats</PageTitle>
-          <p className="text-subtle">
+    <Layout
+      addGradient={false}
+      className="flex flex-col items-center bg-subtle"
+    >
+      <header className="flex min-h-[240px] w-full flex-col flex-wrap justify-end bg-[#2A2B2A] px-container pb-10 pt-40 text-inverse desktop:min-h-[clamp(640px,50vh,1350px)] desktop:pb-16 desktop:pt-40">
+        <div className="mx-auto flex max-w-screen-max flex-col items-center">
+          <p className="mb-2 font-sans-narrow text-sm uppercase tracking-[0.8px] underline decoration-subtle decoration-2 underline-offset-8">
+            <a href="/viewings/">Viewing Log</a>
+          </p>
+          <h1 className="mb-4 text-4xl desktop:text-7xl">All-Time Stats</h1>
+          <p className="mb-6 font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle">
             {`${(distinctStatYears.length - 1).toString()} Years in Review`}
           </p>
-          <div className="spacer-y-6" />
           <StatsNavigation
             currentYear={"all"}
             linkFunc={(year: string) => {
               return `/viewings/stats/${year}/`;
             }}
             years={distinctStatYears}
+            className="mb-8"
           />
-        </div>
-        <div>
-          <div className="spacer-y-8" />
           <Callouts
             titleCount={stats.titleCount}
             viewingCount={stats.viewingCount}
@@ -66,15 +69,22 @@ export function AlltimeStats({
           />
         </div>
       </header>
-      <div className="flex w-full max-w-[960px] flex-col items-stretch gap-y-8 py-8 tablet:px-gutter desktop:px-pageMargin">
-        <MostWatchedMovies values={mostWatchedMovies} />
-        <DecadeDistribution values={stats.decadeDistribution} />
-        <MediaDistribution values={stats.mediaDistribution} />
-        <GradeDistribution values={stats.gradeDistribution} />
-        <MostWatchedDirectors values={mostWatchedDirectors} />
-        <MostWatchedPerformers values={mostWatchedPerformers} />
-        <MostWatchedWriters values={mostWatchedWriters} />
+      <div className="mx-auto flex w-full max-w-screen-max flex-col items-stretch gap-y-8 py-10 tablet:px-container">
+        <MostWatchedMovies
+          values={mostWatchedMovies}
+          className="mx-auto w-full"
+        />
+        <div className="flex flex-col items-start gap-y-8 desktop:flex-row desktop:gap-x-8">
+          <DecadeDistribution values={stats.decadeDistribution} />
+          <MediaDistribution values={stats.mediaDistribution} />
+          <GradeDistribution values={stats.gradeDistribution} />
+        </div>
+        <div className="mx-auto flex w-full flex-col gap-y-8 desktop:max-w-[calc(66%_+_24px)]">
+          <MostWatchedDirectors values={mostWatchedDirectors} />
+          <MostWatchedPerformers values={mostWatchedPerformers} />
+          <MostWatchedWriters values={mostWatchedWriters} />
+        </div>
       </div>
-    </main>
+    </Layout>
   );
 }

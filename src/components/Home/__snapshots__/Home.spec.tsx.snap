@@ -2,965 +2,1508 @@
 
 exports[`Home > matches snapshot 1`] = `
 <DocumentFragment>
-  <main>
-    <ol
-      class="flex flex-col"
+  <div>
+    <a
+      class="absolute left-1/2 top-0.5 z-50 mx-auto bg-subtle px-6 py-2 text-center text-accent [transform:translate(-50%,calc(-100%_-_2px))] focus:[transform:translate(-50%,0%)]"
+      href="#content"
     >
-      <li
-        class="flex even:bg-subtle"
+      Skip to content
+    </a>
+    <div
+      class="flex min-h-full w-full flex-col bg-default"
+    >
+      <header
+        class="z-20 flex w-full items-center justify-between px-container-base py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
+        style="color: rgb(255, 255, 255); position: absolute;"
       >
-        <article
-          class="mx-auto flex flex-col items-center px-pageMargin py-10 desktop:grid desktop:w-full desktop:grid-cols-2 desktop:gap-x-[calc(2_*_var(--gutter-width))] max:grid-cols-7"
+        <div />
+        <div
+          class="flex items-center"
         >
-          <div
-            class="col-span-full mb-6 text-center text-sm font-light uppercase leading-4 tracking-0.75px text-subtle desktop:mb-0 desktop:pb-6 desktop:text-left desktop:leading-8 max:col-span-1 max:self-start"
+          <nav
+            class="hidden w-full desktop:block desktop:w-auto"
           >
-            23 Jun 2024
+            <ul
+              class="flex flex-wrap justify-start gap-x-6 text-xl"
+            >
+              <li
+                class="block whitespace-nowrap tracking-[0.6px]"
+              >
+                <a
+                  class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                  href="/"
+                  style="text-shadow: 1px 1px 2px black;"
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                class="block whitespace-nowrap tracking-[0.6px]"
+              >
+                <a
+                  class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                  href="/how-i-grade/"
+                  style="text-shadow: 1px 1px 2px black;"
+                >
+                  How I Grade
+                </a>
+              </li>
+              <li
+                class="block whitespace-nowrap tracking-[0.6px]"
+              >
+                <a
+                  class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                  href="/reviews/"
+                  style="text-shadow: 1px 1px 2px black;"
+                >
+                  Reviews
+                </a>
+              </li>
+              <li
+                class="block whitespace-nowrap tracking-[0.6px]"
+              >
+                <a
+                  class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                  href="/viewings/"
+                  style="text-shadow: 1px 1px 2px black;"
+                >
+                  Viewing Log
+                </a>
+              </li>
+              <li
+                class="block whitespace-nowrap tracking-[0.6px]"
+              >
+                <a
+                  class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                  href="/cast-and-crew/"
+                  style="text-shadow: 1px 1px 2px black;"
+                >
+                  Cast & Crew
+                </a>
+              </li>
+              <li
+                class="block whitespace-nowrap tracking-[0.6px]"
+              >
+                <a
+                  class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                  href="/collections/"
+                  style="text-shadow: 1px 1px 2px black;"
+                >
+                  Collections
+                </a>
+              </li>
+              <li
+                class="block whitespace-nowrap tracking-[0.6px]"
+              >
+                <a
+                  class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                  href="/watchlist/"
+                  style="text-shadow: 1px 1px 2px black;"
+                >
+                  Watchlist
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div
+            class="z-[1000]"
+          >
+            <button
+              aria-keyshortcuts="Control+K"
+              aria-label="Search"
+              class="flex items-center justify-between overflow-hidden text-sm leading-6 ring-default desktop:ml-6"
+              data-open-modal="true"
+              disabled=""
+              title="Search: Control+K"
+              type="button"
+            >
+              <svg
+                class="size-6 desktop:size-7"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
           </div>
-          <a
-            class="still-border block max-w-prose desktop:col-start-2 desktop:col-end-2 desktop:row-span-2 desktop:row-start-2 desktop:self-start desktop:justify-self-end max:col-start-4 max:col-end-9 max:row-start-1 max:mt-0"
-            href="/reviews/chamber-of-horrors-1966/"
-            rel="canonical"
+          <input
+            class="hidden"
+            id="mobile-nav"
+            type="checkbox"
+          />
+          <label
+            class="hamburger-icon desktop:hidden"
+            for="mobile-nav"
           >
-            <img
-              alt="A still from Chamber of Horrors (1966)"
-              class="aspect-[1.77777778] h-auto rounded-xl"
-              decoding="sync"
-              height="270"
-              loading="eager"
-              sizes="(min-width: 512px) 512px, 100vw"
-              src="/_image?/content%2Fassets%2Fstills%2Fchamber-of-horrors-1966.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=480&h=270&q=80&f=avif"
-              srcset="/_image?/content%2Fassets%2Fstills%2Fchamber-of-horrors-1966.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=120&q=80&f=avif 120w, /_image?/content%2Fassets%2Fstills%2Fchamber-of-horrors-1966.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=240&q=80&f=avif 240w, /_image?/content%2Fassets%2Fstills%2Fchamber-of-horrors-1966.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=480&q=80&f=avif 480w, /_image?/content%2Fassets%2Fstills%2Fchamber-of-horrors-1966.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=960&q=80&f=avif 960w"
-              width="480"
+            <span
+              class="hamburger-icon-bars"
+              style="background: rgb(255, 255, 255);"
             />
-          </a>
-          <div
-            class="flex max-w-lg flex-col items-center pt-4 desktop:col-span-1 desktop:col-start-1 desktop:row-start-2 desktop:items-start desktop:place-self-start desktop:pt-0 max:col-span-3 max:col-start-2 max:row-start-1 max:max-w-unset"
+          </label>
+          <ul
+            class="hamburger-menu flex flex-col items-start gap-y-5 text-left text-inverse desktop:hidden"
           >
-            <h2
-              class="text-2.5xl font-bold leading-8"
+            <li
+              class="block w-1/2 whitespace-nowrap text-2xl"
             >
               <a
-                class="inline-block text-default"
-                href="/reviews/chamber-of-horrors-1966/"
-                rel="canonical"
+                href="/"
               >
-                Chamber of Horrors 
-                <span
-                  class="inline-block text-base font-light leading-none text-subtle"
-                >
-                  1966
-                </span>
+                Home
               </a>
-            </h2>
-            <div
-              class="spacer-y-4"
-            />
-            <picture>
-              <source
-                media="(prefers-color-scheme: dark)"
-                srcset="/svg/2-stars-dark.svg"
-              />
-              <img
-                alt="D+: 2 stars (out of 5)"
-                height="32"
-                src="/svg/2-stars.svg"
-                width="160"
-              />
-            </picture>
-            <div
-              class="spacer-y-6"
-            />
+            </li>
+            <li
+              class="block w-1/2 whitespace-nowrap text-2xl"
+            >
+              <a
+                href="/how-i-grade/"
+              >
+                How I Grade
+              </a>
+            </li>
+            <li
+              class="block w-1/2 whitespace-nowrap text-2xl"
+            >
+              <a
+                href="/reviews/"
+              >
+                Reviews
+              </a>
+              <ol
+                class="mt-4"
+              >
+                <li
+                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                >
+                  <a
+                    href="/reviews/underseen/"
+                  >
+                    Underseen Gems
+                  </a>
+                </li>
+                <li
+                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                >
+                  <a
+                    href="/reviews/overrated/"
+                  >
+                    Overrated Disappointments
+                  </a>
+                </li>
+              </ol>
+            </li>
+            <li
+              class="block w-1/2 whitespace-nowrap text-2xl"
+            >
+              <a
+                href="/viewings/"
+              >
+                Viewing Log
+              </a>
+              <ol
+                class="mt-4"
+              >
+                <li
+                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                >
+                  <a
+                    href="/viewings/stats/"
+                  >
+                    Stats
+                  </a>
+                </li>
+              </ol>
+            </li>
+            <li
+              class="block w-1/2 whitespace-nowrap text-2xl"
+            >
+              <a
+                href="/cast-and-crew/"
+              >
+                Cast & Crew
+              </a>
+            </li>
+            <li
+              class="block w-1/2 whitespace-nowrap text-2xl"
+            >
+              <a
+                href="/collections/"
+              >
+                Collections
+              </a>
+            </li>
+            <li
+              class="block w-1/2 whitespace-nowrap text-2xl"
+            >
+              <a
+                href="/watchlist/"
+              >
+                Watchlist
+              </a>
+              <ol
+                class="mt-4"
+              >
+                <li
+                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                >
+                  <a
+                    href="/watchlist/progress/"
+                  >
+                    Progress
+                  </a>
+                </li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <main
+        class="grow bg-subtle pb-8"
+        id="content"
+      >
+        <header
+          class="relative flex min-h-[240px] content-start items-end bg-cover pb-8 pt-40 text-inverse [background-position-x:center] tablet:min-h-[400px] tablet:pb-10 tablet:pt-40 desktop:min-h-[clamp(640px,50vh,1350px)] desktop:pb-16 desktop:pt-40"
+        >
+          <img
+            alt="Humphrey Bogart in "Casablanca (1942)""
+            class="absolute inset-0 size-full object-cover object-top"
+            fetchpriority="high"
+            height="1350"
+            loading="eager"
+            src="/_image?/content%2Fassets%2Fbackdrops%2Fhome.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&w=2400&h=1350&q=80&f=avif"
+            srcset="/_image?/content%2Fassets%2Fbackdrops%2Fhome.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&w=600&q=80&f=avif 600w, /_image?/content%2Fassets%2Fbackdrops%2Fhome.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&w=1200&q=80&f=avif 1200w, /_image?/content%2Fassets%2Fbackdrops%2Fhome.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&w=2400&h=1350&q=80&f=avif 2400w, /_image?/content%2Fassets%2Fbackdrops%2Fhome.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&w=2400&h=1350&q=80&f=avif 4800w"
+            width="2400"
+          />
+          <div
+            class="z-10 mx-auto w-full max-w-screen-max px-container"
+          >
+            <h1
+              class="[text-shadow:1px_1px_2px_black] text-4xl desktop:text-7xl"
+            >
+              Frank's Movie Log
+            </h1>
             <p
-              class="text-base font-normal leading-normal tracking-0.25px text-subtle"
+              class="mt-1 text-base [text-shadow:1px_1px_2px_black] desktop:my-4 desktop:text-xl"
             >
-              Directed by Hy Averback. Starring Patrick O'Neal, Cesare Danova, Wilfrid Hyde-White, and Laura Devon.
+              Quality reviews of films of questionable quality.
             </p>
-            <div
-              class="spacer-y-6"
-            />
-            <div
-              class="rendered-markdown font-light self-start text-lg leading-normal tracking-0.3px text-muted"
+          </div>
+        </header>
+        <nav
+          class="mx-auto max-w-screen-max px-container"
+        >
+          <h2
+            class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
+          >
+            Latest Reviews
+          </h2>
+          <ul
+            class="flex w-full flex-col flex-wrap justify-center gap-x-[3%] gap-y-8 pb-8 tablet:flex-row tablet:justify-between tablet:gap-y-8 desktop:gap-y-20"
+          >
+            <li
+              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
-              <p>
-                Warner Bros. shot 
-                <em>
-                  Chamber of Horrors
-                </em>
-                 as a television movie, intended as a series pilot. When the network deemed the finished product too violent for television, the studio added some gimmicks and released it as a theatrical feature. The result looks good but underwhelms. 
+              <a
+                class="mb-6 block"
+                href="/reviews/chamber-of-horrors-1966/"
+              >
+                <img
+                  alt="A still from Chamber of Horrors (1966)"
+                  class="aspect-[1.77777778] h-auto w-full"
+                  decoding="async"
+                  height="303"
+                  loading="lazy"
+                  sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                  src="/_image?/content%2Fassets%2Fstills%2Fchamber-of-horrors-1966.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&h=303&q=80&f=avif"
+                  srcset="/_image?/content%2Fassets%2Fstills%2Fchamber-of-horrors-1966.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=128.75&q=80&f=avif 128.75w, /_image?/content%2Fassets%2Fstills%2Fchamber-of-horrors-1966.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=257.5&q=80&f=avif 257.5w, /_image?/content%2Fassets%2Fstills%2Fchamber-of-horrors-1966.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&q=80&f=avif 515w, /_image?/content%2Fassets%2Fstills%2Fchamber-of-horrors-1966.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1030&q=80&f=avif 1030w"
+                  width="515"
+                />
+              </a>
+              <div
+                class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+              >
+                <div
+                  class="mb-1 font-sans-narrow text-xxs font-medium uppercase leading-4 tracking-[1.1px] text-subtle"
+                >
+                  23 Jun 2024
+                </div>
                 <a
-                  class="!no-underline uppercase whitespace-nowrap text-accent text-sm leading-none"
+                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
                   href="/reviews/chamber-of-horrors-1966/"
                 >
-                  Continue reading...
+                  Chamber of Horrors 
+                  <span
+                    class="text-sm font-normal leading-none text-muted"
+                  >
+                    1966
+                  </span>
                 </a>
-              </p>
-            </div>
-          </div>
-        </article>
-      </li>
-      <li
-        class="flex even:bg-subtle"
-      >
-        <article
-          class="mx-auto flex flex-col items-center px-pageMargin py-10 desktop:grid desktop:w-full desktop:grid-cols-2 desktop:gap-x-[calc(2_*_var(--gutter-width))] max:grid-cols-7"
-        >
-          <div
-            class="col-span-full mb-6 text-center text-sm font-light uppercase leading-4 tracking-0.75px text-subtle desktop:mb-0 desktop:pb-6 desktop:text-left desktop:leading-8 max:col-span-1 max:self-start"
-          >
-            18 Jun 2024
-          </div>
-          <a
-            class="still-border block max-w-prose desktop:col-start-2 desktop:col-end-2 desktop:row-span-2 desktop:row-start-2 desktop:self-start desktop:justify-self-end max:col-start-4 max:col-end-9 max:row-start-1 max:mt-0"
-            href="/reviews/two-for-the-seesaw-1962/"
-            rel="canonical"
-          >
-            <img
-              alt="A still from Two for the Seesaw (1962)"
-              class="aspect-[1.77777778] h-auto rounded-xl"
-              decoding="async"
-              height="270"
-              loading="lazy"
-              sizes="(min-width: 512px) 512px, 100vw"
-              src="/_image?/content%2Fassets%2Fstills%2Ftwo-for-the-seesaw-1962.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=480&h=270&q=80&f=avif"
-              srcset="/_image?/content%2Fassets%2Fstills%2Ftwo-for-the-seesaw-1962.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=120&q=80&f=avif 120w, /_image?/content%2Fassets%2Fstills%2Ftwo-for-the-seesaw-1962.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=240&q=80&f=avif 240w, /_image?/content%2Fassets%2Fstills%2Ftwo-for-the-seesaw-1962.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=480&q=80&f=avif 480w, /_image?/content%2Fassets%2Fstills%2Ftwo-for-the-seesaw-1962.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=960&q=80&f=avif 960w"
-              width="480"
-            />
-          </a>
-          <div
-            class="flex max-w-lg flex-col items-center pt-4 desktop:col-span-1 desktop:col-start-1 desktop:row-start-2 desktop:items-start desktop:place-self-start desktop:pt-0 max:col-span-3 max:col-start-2 max:row-start-1 max:max-w-unset"
-          >
-            <h2
-              class="text-2.5xl font-bold leading-8"
+                <picture>
+                  <source
+                    media="(prefers-color-scheme: dark)"
+                    srcset="/svg/2-stars-dark.svg"
+                  />
+                  <img
+                    alt="D+: 2 stars (out of 5)"
+                    class="mb-8"
+                    height="24"
+                    src="/svg/2-stars.svg"
+                    width="120"
+                  />
+                </picture>
+                <div
+                  class="rendered-markdown mb-6 text-lg leading-normal tracking-0.3px text-muted"
+                >
+                  <p>
+                    Warner Bros. shot 
+                    <em>
+                      Chamber of Horrors
+                    </em>
+                     as a television movie, intended as a series pilot. When the network deemed the finished product too violent for television, the studio added some gimmicks and released it as a theatrical feature. The result looks good but underwhelms. 
+                    <a
+                      class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                      href="/reviews/chamber-of-horrors-1966/"
+                    >
+                      Continue reading...
+                    </a>
+                  </p>
+                </div>
+                <div
+                  class="mt-auto font-sans-narrow text-xxs font-medium leading-4 tracking-[1.1px] text-subtle"
+                >
+                  <span>
+                    Crime
+                  </span>
+                  <span>
+                     | Horror
+                  </span>
+                  <span>
+                     | Thriller
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li
+              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
               <a
-                class="inline-block text-default"
+                class="mb-6 block"
                 href="/reviews/two-for-the-seesaw-1962/"
-                rel="canonical"
               >
-                Two for the Seesaw 
-                <span
-                  class="inline-block text-base font-light leading-none text-subtle"
-                >
-                  1962
-                </span>
+                <img
+                  alt="A still from Two for the Seesaw (1962)"
+                  class="aspect-[1.77777778] h-auto w-full"
+                  decoding="async"
+                  height="303"
+                  loading="lazy"
+                  sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                  src="/_image?/content%2Fassets%2Fstills%2Ftwo-for-the-seesaw-1962.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&h=303&q=80&f=avif"
+                  srcset="/_image?/content%2Fassets%2Fstills%2Ftwo-for-the-seesaw-1962.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=128.75&q=80&f=avif 128.75w, /_image?/content%2Fassets%2Fstills%2Ftwo-for-the-seesaw-1962.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=257.5&q=80&f=avif 257.5w, /_image?/content%2Fassets%2Fstills%2Ftwo-for-the-seesaw-1962.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&q=80&f=avif 515w, /_image?/content%2Fassets%2Fstills%2Ftwo-for-the-seesaw-1962.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1030&q=80&f=avif 1030w"
+                  width="515"
+                />
               </a>
-            </h2>
-            <div
-              class="spacer-y-4"
-            />
-            <picture>
-              <source
-                media="(prefers-color-scheme: dark)"
-                srcset="/svg/3-stars-dark.svg"
-              />
-              <img
-                alt="C+: 3 stars (out of 5)"
-                height="32"
-                src="/svg/3-stars.svg"
-                width="160"
-              />
-            </picture>
-            <div
-              class="spacer-y-6"
-            />
-            <p
-              class="text-base font-normal leading-normal tracking-0.25px text-subtle"
-            >
-              Directed by Robert Wise. Starring Robert Mitchum, Shirley MacLaine, Edmon Ryan, and Elisabeth Fraser.
-            </p>
-            <div
-              class="spacer-y-6"
-            />
-            <div
-              class="rendered-markdown font-light self-start text-lg leading-normal tracking-0.3px text-muted"
-            >
-              <p>
-                In 
-                <em>
-                  Two for the Seesaw
-                </em>
-                , Robert Mitchum plays a middle-aged, midwestern lawyer who—after his wife of twelve years asks for a divorce—flees his cushy job and pampered lifestyle for New York City. There, he meets a late-twenty-something dancer played by Shirley MacLaine. A romance blooms. 
-                <strong>
-                  Spoilers follow
-                </strong>
-                . 
+              <div
+                class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+              >
+                <div
+                  class="mb-1 font-sans-narrow text-xxs font-medium uppercase leading-4 tracking-[1.1px] text-subtle"
+                >
+                  18 Jun 2024
+                </div>
                 <a
-                  class="!no-underline uppercase whitespace-nowrap text-accent text-sm leading-none"
+                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
                   href="/reviews/two-for-the-seesaw-1962/"
                 >
-                  Continue reading...
+                  Two for the Seesaw 
+                  <span
+                    class="text-sm font-normal leading-none text-muted"
+                  >
+                    1962
+                  </span>
                 </a>
-              </p>
-            </div>
-          </div>
-        </article>
-      </li>
-      <li
-        class="flex even:bg-subtle"
-      >
-        <article
-          class="mx-auto flex flex-col items-center px-pageMargin py-10 desktop:grid desktop:w-full desktop:grid-cols-2 desktop:gap-x-[calc(2_*_var(--gutter-width))] max:grid-cols-7"
-        >
-          <div
-            class="col-span-full mb-6 text-center text-sm font-light uppercase leading-4 tracking-0.75px text-subtle desktop:mb-0 desktop:pb-6 desktop:text-left desktop:leading-8 max:col-span-1 max:self-start"
-          >
-            08 Jun 2024
-          </div>
-          <a
-            class="still-border block max-w-prose desktop:col-start-2 desktop:col-end-2 desktop:row-span-2 desktop:row-start-2 desktop:self-start desktop:justify-self-end max:col-start-4 max:col-end-9 max:row-start-1 max:mt-0"
-            href="/reviews/the-man-with-nine-lives-1940/"
-            rel="canonical"
-          >
-            <img
-              alt="A still from The Man with Nine Lives (1940)"
-              class="aspect-[1.77777778] h-auto rounded-xl"
-              decoding="async"
-              height="270"
-              loading="lazy"
-              sizes="(min-width: 512px) 512px, 100vw"
-              src="/_image?/content%2Fassets%2Fstills%2Fthe-man-with-nine-lives-1940.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=480&h=270&q=80&f=avif"
-              srcset="/_image?/content%2Fassets%2Fstills%2Fthe-man-with-nine-lives-1940.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=120&q=80&f=avif 120w, /_image?/content%2Fassets%2Fstills%2Fthe-man-with-nine-lives-1940.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=240&q=80&f=avif 240w, /_image?/content%2Fassets%2Fstills%2Fthe-man-with-nine-lives-1940.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=480&q=80&f=avif 480w, /_image?/content%2Fassets%2Fstills%2Fthe-man-with-nine-lives-1940.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=960&q=80&f=avif 960w"
-              width="480"
-            />
-          </a>
-          <div
-            class="flex max-w-lg flex-col items-center pt-4 desktop:col-span-1 desktop:col-start-1 desktop:row-start-2 desktop:items-start desktop:place-self-start desktop:pt-0 max:col-span-3 max:col-start-2 max:row-start-1 max:max-w-unset"
-          >
-            <h2
-              class="text-2.5xl font-bold leading-8"
+                <picture>
+                  <source
+                    media="(prefers-color-scheme: dark)"
+                    srcset="/svg/3-stars-dark.svg"
+                  />
+                  <img
+                    alt="C+: 3 stars (out of 5)"
+                    class="mb-8"
+                    height="24"
+                    src="/svg/3-stars.svg"
+                    width="120"
+                  />
+                </picture>
+                <div
+                  class="rendered-markdown mb-6 text-lg leading-normal tracking-0.3px text-muted"
+                >
+                  <p>
+                    In 
+                    <em>
+                      Two for the Seesaw
+                    </em>
+                    , Robert Mitchum plays a middle-aged, midwestern lawyer who—after his wife of twelve years asks for a divorce—flees his cushy job and pampered lifestyle for New York City. There, he meets a late-twenty-something dancer played by Shirley MacLaine. A romance blooms. 
+                    <strong>
+                      Spoilers follow
+                    </strong>
+                    . 
+                    <a
+                      class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                      href="/reviews/two-for-the-seesaw-1962/"
+                    >
+                      Continue reading...
+                    </a>
+                  </p>
+                </div>
+                <div
+                  class="mt-auto font-sans-narrow text-xxs font-medium leading-4 tracking-[1.1px] text-subtle"
+                >
+                  <span>
+                    Drama
+                  </span>
+                  <span>
+                     | Romance
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li
+              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
               <a
-                class="inline-block text-default"
+                class="mb-6 block"
                 href="/reviews/the-man-with-nine-lives-1940/"
-                rel="canonical"
               >
-                The Man with Nine Lives 
-                <span
-                  class="inline-block text-base font-light leading-none text-subtle"
-                >
-                  1940
-                </span>
+                <img
+                  alt="A still from The Man with Nine Lives (1940)"
+                  class="aspect-[1.77777778] h-auto w-full"
+                  decoding="async"
+                  height="303"
+                  loading="lazy"
+                  sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                  src="/_image?/content%2Fassets%2Fstills%2Fthe-man-with-nine-lives-1940.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&h=303&q=80&f=avif"
+                  srcset="/_image?/content%2Fassets%2Fstills%2Fthe-man-with-nine-lives-1940.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=128.75&q=80&f=avif 128.75w, /_image?/content%2Fassets%2Fstills%2Fthe-man-with-nine-lives-1940.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=257.5&q=80&f=avif 257.5w, /_image?/content%2Fassets%2Fstills%2Fthe-man-with-nine-lives-1940.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&q=80&f=avif 515w, /_image?/content%2Fassets%2Fstills%2Fthe-man-with-nine-lives-1940.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1030&q=80&f=avif 1030w"
+                  width="515"
+                />
               </a>
-            </h2>
-            <div
-              class="spacer-y-4"
-            />
-            <picture>
-              <source
-                media="(prefers-color-scheme: dark)"
-                srcset="/svg/2-half-stars-dark.svg"
-              />
-              <img
-                alt="C-: 2.5 stars (out of 5)"
-                height="32"
-                src="/svg/2-half-stars.svg"
-                width="160"
-              />
-            </picture>
-            <div
-              class="spacer-y-6"
-            />
-            <p
-              class="text-base font-normal leading-normal tracking-0.25px text-subtle"
-            >
-              Directed by Nick Grinde. Starring Boris Karloff, Roger Pryor, Jo Ann Sayers, and Stanley Brown.
-            </p>
-            <div
-              class="spacer-y-6"
-            />
-            <div
-              class="rendered-markdown font-light self-start text-lg leading-normal tracking-0.3px text-muted"
-            >
-              <p>
-                Despite Boris Karloff playing a doctor with a secret underground laboratory where he holds six people hostage as unwilling test subjects, 
-                <em>
-                  The Man with Nine Lives
-                </em>
-                 isn’t a mad scientist picture. It’s a drama centered on an ethical dilemma: Would you risk the deaths of six people to save millions? 
+              <div
+                class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+              >
+                <div
+                  class="mb-1 font-sans-narrow text-xxs font-medium uppercase leading-4 tracking-[1.1px] text-subtle"
+                >
+                  08 Jun 2024
+                </div>
                 <a
-                  class="!no-underline uppercase whitespace-nowrap text-accent text-sm leading-none"
+                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
                   href="/reviews/the-man-with-nine-lives-1940/"
                 >
-                  Continue reading...
+                  The Man with Nine Lives 
+                  <span
+                    class="text-sm font-normal leading-none text-muted"
+                  >
+                    1940
+                  </span>
                 </a>
-              </p>
-            </div>
-          </div>
-        </article>
-      </li>
-      <li
-        class="flex even:bg-subtle"
-      >
-        <article
-          class="mx-auto flex flex-col items-center px-pageMargin py-10 desktop:grid desktop:w-full desktop:grid-cols-2 desktop:gap-x-[calc(2_*_var(--gutter-width))] max:grid-cols-7"
-        >
-          <div
-            class="col-span-full mb-6 text-center text-sm font-light uppercase leading-4 tracking-0.75px text-subtle desktop:mb-0 desktop:pb-6 desktop:text-left desktop:leading-8 max:col-span-1 max:self-start"
-          >
-            23 May 2024
-          </div>
-          <a
-            class="still-border block max-w-prose desktop:col-start-2 desktop:col-end-2 desktop:row-span-2 desktop:row-start-2 desktop:self-start desktop:justify-self-end max:col-start-4 max:col-end-9 max:row-start-1 max:mt-0"
-            href="/reviews/burial-ground-the-nights-of-terror-1981/"
-            rel="canonical"
-          >
-            <img
-              alt="A still from Burial Ground: The Nights of Terror (1981)"
-              class="aspect-[1.77777778] h-auto rounded-xl"
-              decoding="async"
-              height="270"
-              loading="lazy"
-              sizes="(min-width: 512px) 512px, 100vw"
-              src="/_image?/content%2Fassets%2Fstills%2Fburial-ground-the-nights-of-terror-1981.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=480&h=270&q=80&f=avif"
-              srcset="/_image?/content%2Fassets%2Fstills%2Fburial-ground-the-nights-of-terror-1981.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=120&q=80&f=avif 120w, /_image?/content%2Fassets%2Fstills%2Fburial-ground-the-nights-of-terror-1981.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=240&q=80&f=avif 240w, /_image?/content%2Fassets%2Fstills%2Fburial-ground-the-nights-of-terror-1981.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=480&q=80&f=avif 480w, /_image?/content%2Fassets%2Fstills%2Fburial-ground-the-nights-of-terror-1981.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=960&q=80&f=avif 960w"
-              width="480"
-            />
-          </a>
-          <div
-            class="flex max-w-lg flex-col items-center pt-4 desktop:col-span-1 desktop:col-start-1 desktop:row-start-2 desktop:items-start desktop:place-self-start desktop:pt-0 max:col-span-3 max:col-start-2 max:row-start-1 max:max-w-unset"
-          >
-            <h2
-              class="text-2.5xl font-bold leading-8"
+                <picture>
+                  <source
+                    media="(prefers-color-scheme: dark)"
+                    srcset="/svg/2-half-stars-dark.svg"
+                  />
+                  <img
+                    alt="C-: 2.5 stars (out of 5)"
+                    class="mb-8"
+                    height="24"
+                    src="/svg/2-half-stars.svg"
+                    width="120"
+                  />
+                </picture>
+                <div
+                  class="rendered-markdown mb-6 text-lg leading-normal tracking-0.3px text-muted"
+                >
+                  <p>
+                    Despite Boris Karloff playing a doctor with a secret underground laboratory where he holds six people hostage as unwilling test subjects, 
+                    <em>
+                      The Man with Nine Lives
+                    </em>
+                     isn’t a mad scientist picture. It’s a drama centered on an ethical dilemma: Would you risk the deaths of six people to save millions? 
+                    <a
+                      class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                      href="/reviews/the-man-with-nine-lives-1940/"
+                    >
+                      Continue reading...
+                    </a>
+                  </p>
+                </div>
+                <div
+                  class="mt-auto font-sans-narrow text-xxs font-medium leading-4 tracking-[1.1px] text-subtle"
+                >
+                  <span>
+                    Horror
+                  </span>
+                  <span>
+                     | Mystery
+                  </span>
+                  <span>
+                     | Sci-Fi
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li
+              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
               <a
-                class="inline-block text-default"
+                class="mb-6 block"
                 href="/reviews/burial-ground-the-nights-of-terror-1981/"
-                rel="canonical"
               >
-                Burial Ground: The Nights of Terror 
-                <span
-                  class="inline-block text-base font-light leading-none text-subtle"
-                >
-                  1981
-                </span>
+                <img
+                  alt="A still from Burial Ground: The Nights of Terror (1981)"
+                  class="aspect-[1.77777778] h-auto w-full"
+                  decoding="async"
+                  height="303"
+                  loading="lazy"
+                  sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                  src="/_image?/content%2Fassets%2Fstills%2Fburial-ground-the-nights-of-terror-1981.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&h=303&q=80&f=avif"
+                  srcset="/_image?/content%2Fassets%2Fstills%2Fburial-ground-the-nights-of-terror-1981.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=128.75&q=80&f=avif 128.75w, /_image?/content%2Fassets%2Fstills%2Fburial-ground-the-nights-of-terror-1981.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=257.5&q=80&f=avif 257.5w, /_image?/content%2Fassets%2Fstills%2Fburial-ground-the-nights-of-terror-1981.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&q=80&f=avif 515w, /_image?/content%2Fassets%2Fstills%2Fburial-ground-the-nights-of-terror-1981.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1030&q=80&f=avif 1030w"
+                  width="515"
+                />
               </a>
-            </h2>
-            <div
-              class="spacer-y-4"
-            />
-            <picture>
-              <source
-                media="(prefers-color-scheme: dark)"
-                srcset="/svg/3-stars-dark.svg"
-              />
-              <img
-                alt="C: 3 stars (out of 5)"
-                height="32"
-                src="/svg/3-stars.svg"
-                width="160"
-              />
-            </picture>
-            <div
-              class="spacer-y-6"
-            />
-            <p
-              class="text-base font-normal leading-normal tracking-0.25px text-subtle"
-            >
-              Directed by Andrea Bianchi. Starring Karin Well, Gianluigi Chirizzi, Simone Mattioli, and Antonella Antinori.
-            </p>
-            <div
-              class="spacer-y-6"
-            />
-            <div
-              class="rendered-markdown font-light self-start text-lg leading-normal tracking-0.3px text-muted"
-            >
-              <p>
-                Teamwork wins. That’s the takeaway from 
-                <em>
-                  Burial Ground
-                </em>
-                , an Italian zombie horror that packs just enough originality to set itself above the mass of 
-                <em>
-                  Zombie
-                </em>
-                 knock-offs. 
+              <div
+                class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+              >
+                <div
+                  class="mb-1 font-sans-narrow text-xxs font-medium uppercase leading-4 tracking-[1.1px] text-subtle"
+                >
+                  23 May 2024
+                </div>
                 <a
-                  class="!no-underline uppercase whitespace-nowrap text-accent text-sm leading-none"
+                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
                   href="/reviews/burial-ground-the-nights-of-terror-1981/"
                 >
-                  Continue reading...
+                  Burial Ground: The Nights of Terror 
+                  <span
+                    class="text-sm font-normal leading-none text-muted"
+                  >
+                    1981
+                  </span>
                 </a>
-              </p>
-            </div>
-          </div>
-        </article>
-      </li>
-      <li
-        class="flex even:bg-subtle"
-      >
-        <article
-          class="mx-auto flex flex-col items-center px-pageMargin py-10 desktop:grid desktop:w-full desktop:grid-cols-2 desktop:gap-x-[calc(2_*_var(--gutter-width))] max:grid-cols-7"
-        >
-          <div
-            class="col-span-full mb-6 text-center text-sm font-light uppercase leading-4 tracking-0.75px text-subtle desktop:mb-0 desktop:pb-6 desktop:text-left desktop:leading-8 max:col-span-1 max:self-start"
-          >
-            15 May 2024
-          </div>
-          <a
-            class="still-border block max-w-prose desktop:col-start-2 desktop:col-end-2 desktop:row-span-2 desktop:row-start-2 desktop:self-start desktop:justify-self-end max:col-start-4 max:col-end-9 max:row-start-1 max:mt-0"
-            href="/reviews/lucifers-women-1974/"
-            rel="canonical"
-          >
-            <img
-              alt="A still from Lucifer's Women (1974)"
-              class="aspect-[1.77777778] h-auto rounded-xl"
-              decoding="async"
-              height="270"
-              loading="lazy"
-              sizes="(min-width: 512px) 512px, 100vw"
-              src="/_image?/content%2Fassets%2Fstills%2Flucifers-women-1974.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=480&h=270&q=80&f=avif"
-              srcset="/_image?/content%2Fassets%2Fstills%2Flucifers-women-1974.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=120&q=80&f=avif 120w, /_image?/content%2Fassets%2Fstills%2Flucifers-women-1974.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=240&q=80&f=avif 240w, /_image?/content%2Fassets%2Fstills%2Flucifers-women-1974.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=480&q=80&f=avif 480w, /_image?/content%2Fassets%2Fstills%2Flucifers-women-1974.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=960&q=80&f=avif 960w"
-              width="480"
-            />
-          </a>
-          <div
-            class="flex max-w-lg flex-col items-center pt-4 desktop:col-span-1 desktop:col-start-1 desktop:row-start-2 desktop:items-start desktop:place-self-start desktop:pt-0 max:col-span-3 max:col-start-2 max:row-start-1 max:max-w-unset"
-          >
-            <h2
-              class="text-2.5xl font-bold leading-8"
+                <picture>
+                  <source
+                    media="(prefers-color-scheme: dark)"
+                    srcset="/svg/3-stars-dark.svg"
+                  />
+                  <img
+                    alt="C: 3 stars (out of 5)"
+                    class="mb-8"
+                    height="24"
+                    src="/svg/3-stars.svg"
+                    width="120"
+                  />
+                </picture>
+                <div
+                  class="rendered-markdown mb-6 text-lg leading-normal tracking-0.3px text-muted"
+                >
+                  <p>
+                    Teamwork wins. That’s the takeaway from 
+                    <em>
+                      Burial Ground
+                    </em>
+                    , an Italian zombie horror that packs just enough originality to set itself above the mass of 
+                    <em>
+                      Zombie
+                    </em>
+                     knock-offs. 
+                    <a
+                      class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                      href="/reviews/burial-ground-the-nights-of-terror-1981/"
+                    >
+                      Continue reading...
+                    </a>
+                  </p>
+                </div>
+                <div
+                  class="mt-auto font-sans-narrow text-xxs font-medium leading-4 tracking-[1.1px] text-subtle"
+                >
+                  <span>
+                    Horror
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li
+              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
               <a
-                class="inline-block text-default"
+                class="mb-6 block"
                 href="/reviews/lucifers-women-1974/"
-                rel="canonical"
               >
-                Lucifer's Women 
-                <span
-                  class="inline-block text-base font-light leading-none text-subtle"
-                >
-                  1974
-                </span>
+                <img
+                  alt="A still from Lucifer's Women (1974)"
+                  class="aspect-[1.77777778] h-auto w-full"
+                  decoding="async"
+                  height="303"
+                  loading="lazy"
+                  sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                  src="/_image?/content%2Fassets%2Fstills%2Flucifers-women-1974.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&h=303&q=80&f=avif"
+                  srcset="/_image?/content%2Fassets%2Fstills%2Flucifers-women-1974.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=128.75&q=80&f=avif 128.75w, /_image?/content%2Fassets%2Fstills%2Flucifers-women-1974.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=257.5&q=80&f=avif 257.5w, /_image?/content%2Fassets%2Fstills%2Flucifers-women-1974.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&q=80&f=avif 515w, /_image?/content%2Fassets%2Fstills%2Flucifers-women-1974.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1030&q=80&f=avif 1030w"
+                  width="515"
+                />
               </a>
-            </h2>
-            <div
-              class="spacer-y-4"
-            />
-            <picture>
-              <source
-                media="(prefers-color-scheme: dark)"
-                srcset="/svg/2-stars-dark.svg"
-              />
-              <img
-                alt="D: 2 stars (out of 5)"
-                height="32"
-                src="/svg/2-stars.svg"
-                width="160"
-              />
-            </picture>
-            <div
-              class="spacer-y-6"
-            />
-            <p
-              class="text-base font-normal leading-normal tracking-0.25px text-subtle"
-            >
-              Directed by Paul Aratow. Starring Larry Hankin, Jane Brunel-Cohen, Norman Pierce, and Paul Thomas.
-            </p>
-            <div
-              class="spacer-y-6"
-            />
-            <div
-              class="rendered-markdown font-light self-start text-lg leading-normal tracking-0.3px text-muted"
-            >
-              <p>
-                I watched 
-                <em>
-                  Lucifer’s Women
-                </em>
-                 after seeing the trailer during Alamo Drafthouse’s 
-                <em>
-                  Railway to Hell
-                </em>
-                 marathon. The trailer paints it as a satanic shocker, but it proves more of a sleazy riff on the Svengali story. 
+              <div
+                class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+              >
+                <div
+                  class="mb-1 font-sans-narrow text-xxs font-medium uppercase leading-4 tracking-[1.1px] text-subtle"
+                >
+                  15 May 2024
+                </div>
                 <a
-                  class="!no-underline uppercase whitespace-nowrap text-accent text-sm leading-none"
+                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
                   href="/reviews/lucifers-women-1974/"
                 >
-                  Continue reading...
+                  Lucifer's Women 
+                  <span
+                    class="text-sm font-normal leading-none text-muted"
+                  >
+                    1974
+                  </span>
                 </a>
-              </p>
-            </div>
-          </div>
-        </article>
-      </li>
-      <li
-        class="flex even:bg-subtle"
-      >
-        <article
-          class="mx-auto flex flex-col items-center px-pageMargin py-10 desktop:grid desktop:w-full desktop:grid-cols-2 desktop:gap-x-[calc(2_*_var(--gutter-width))] max:grid-cols-7"
-        >
-          <div
-            class="col-span-full mb-6 text-center text-sm font-light uppercase leading-4 tracking-0.75px text-subtle desktop:mb-0 desktop:pb-6 desktop:text-left desktop:leading-8 max:col-span-1 max:self-start"
-          >
-            27 Apr 2024
-          </div>
-          <a
-            class="still-border block max-w-prose desktop:col-start-2 desktop:col-end-2 desktop:row-span-2 desktop:row-start-2 desktop:self-start desktop:justify-self-end max:col-start-4 max:col-end-9 max:row-start-1 max:mt-0"
-            href="/reviews/beyond-the-door-iii-1989/"
-            rel="canonical"
-          >
-            <img
-              alt="A still from Beyond the Door III (1989)"
-              class="aspect-[1.77777778] h-auto rounded-xl"
-              decoding="async"
-              height="270"
-              loading="lazy"
-              sizes="(min-width: 512px) 512px, 100vw"
-              src="/_image?/content%2Fassets%2Fstills%2Fbeyond-the-door-iii-1989.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=480&h=270&q=80&f=avif"
-              srcset="/_image?/content%2Fassets%2Fstills%2Fbeyond-the-door-iii-1989.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=120&q=80&f=avif 120w, /_image?/content%2Fassets%2Fstills%2Fbeyond-the-door-iii-1989.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=240&q=80&f=avif 240w, /_image?/content%2Fassets%2Fstills%2Fbeyond-the-door-iii-1989.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=480&q=80&f=avif 480w, /_image?/content%2Fassets%2Fstills%2Fbeyond-the-door-iii-1989.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=960&q=80&f=avif 960w"
-              width="480"
-            />
-          </a>
-          <div
-            class="flex max-w-lg flex-col items-center pt-4 desktop:col-span-1 desktop:col-start-1 desktop:row-start-2 desktop:items-start desktop:place-self-start desktop:pt-0 max:col-span-3 max:col-start-2 max:row-start-1 max:max-w-unset"
-          >
-            <h2
-              class="text-2.5xl font-bold leading-8"
+                <picture>
+                  <source
+                    media="(prefers-color-scheme: dark)"
+                    srcset="/svg/2-stars-dark.svg"
+                  />
+                  <img
+                    alt="D: 2 stars (out of 5)"
+                    class="mb-8"
+                    height="24"
+                    src="/svg/2-stars.svg"
+                    width="120"
+                  />
+                </picture>
+                <div
+                  class="rendered-markdown mb-6 text-lg leading-normal tracking-0.3px text-muted"
+                >
+                  <p>
+                    I watched 
+                    <em>
+                      Lucifer’s Women
+                    </em>
+                     after seeing the trailer during Alamo Drafthouse’s 
+                    <em>
+                      Railway to Hell
+                    </em>
+                     marathon. The trailer paints it as a satanic shocker, but it proves more of a sleazy riff on the Svengali story. 
+                    <a
+                      class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                      href="/reviews/lucifers-women-1974/"
+                    >
+                      Continue reading...
+                    </a>
+                  </p>
+                </div>
+                <div
+                  class="mt-auto font-sans-narrow text-xxs font-medium leading-4 tracking-[1.1px] text-subtle"
+                >
+                  <span>
+                    Horror
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li
+              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
               <a
-                class="inline-block text-default"
+                class="mb-6 block"
                 href="/reviews/beyond-the-door-iii-1989/"
-                rel="canonical"
               >
-                Beyond the Door III 
-                <span
-                  class="inline-block text-base font-light leading-none text-subtle"
-                >
-                  1989
-                </span>
+                <img
+                  alt="A still from Beyond the Door III (1989)"
+                  class="aspect-[1.77777778] h-auto w-full"
+                  decoding="async"
+                  height="303"
+                  loading="lazy"
+                  sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                  src="/_image?/content%2Fassets%2Fstills%2Fbeyond-the-door-iii-1989.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&h=303&q=80&f=avif"
+                  srcset="/_image?/content%2Fassets%2Fstills%2Fbeyond-the-door-iii-1989.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=128.75&q=80&f=avif 128.75w, /_image?/content%2Fassets%2Fstills%2Fbeyond-the-door-iii-1989.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=257.5&q=80&f=avif 257.5w, /_image?/content%2Fassets%2Fstills%2Fbeyond-the-door-iii-1989.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&q=80&f=avif 515w, /_image?/content%2Fassets%2Fstills%2Fbeyond-the-door-iii-1989.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1030&q=80&f=avif 1030w"
+                  width="515"
+                />
               </a>
-            </h2>
-            <div
-              class="spacer-y-4"
-            />
-            <picture>
-              <source
-                media="(prefers-color-scheme: dark)"
-                srcset="/svg/3-half-stars-dark.svg"
-              />
-              <img
-                alt="B-: 3.5 stars (out of 5)"
-                height="32"
-                src="/svg/3-half-stars.svg"
-                width="160"
-              />
-            </picture>
-            <div
-              class="spacer-y-6"
-            />
-            <p
-              class="text-base font-normal leading-normal tracking-0.25px text-subtle"
-            >
-              Directed by Jeff Kwitny. Starring Mary Kohnert, Bo Svenson, Victoria Zinny, and Savina Gersak.
-            </p>
-            <div
-              class="spacer-y-6"
-            />
-            <div
-              class="rendered-markdown font-light self-start text-lg leading-normal tracking-0.3px text-muted"
-            >
-              <p>
-                Bonkers in the best way possible. 
+              <div
+                class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+              >
+                <div
+                  class="mb-1 font-sans-narrow text-xxs font-medium uppercase leading-4 tracking-[1.1px] text-subtle"
+                >
+                  27 Apr 2024
+                </div>
                 <a
-                  class="!no-underline uppercase whitespace-nowrap text-accent text-sm leading-none"
+                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
                   href="/reviews/beyond-the-door-iii-1989/"
                 >
-                  Continue reading...
+                  Beyond the Door III 
+                  <span
+                    class="text-sm font-normal leading-none text-muted"
+                  >
+                    1989
+                  </span>
                 </a>
-              </p>
-            </div>
-          </div>
-        </article>
-      </li>
-      <li
-        class="flex even:bg-subtle"
-      >
-        <article
-          class="mx-auto flex flex-col items-center px-pageMargin py-10 desktop:grid desktop:w-full desktop:grid-cols-2 desktop:gap-x-[calc(2_*_var(--gutter-width))] max:grid-cols-7"
-        >
-          <div
-            class="col-span-full mb-6 text-center text-sm font-light uppercase leading-4 tracking-0.75px text-subtle desktop:mb-0 desktop:pb-6 desktop:text-left desktop:leading-8 max:col-span-1 max:self-start"
-          >
-            27 Apr 2024
-          </div>
-          <a
-            class="still-border block max-w-prose desktop:col-start-2 desktop:col-end-2 desktop:row-span-2 desktop:row-start-2 desktop:self-start desktop:justify-self-end max:col-start-4 max:col-end-9 max:row-start-1 max:mt-0"
-            href="/reviews/the-midnight-meat-train-2008/"
-            rel="canonical"
-          >
-            <img
-              alt="A still from The Midnight Meat Train (2008)"
-              class="aspect-[1.77777778] h-auto rounded-xl"
-              decoding="async"
-              height="270"
-              loading="lazy"
-              sizes="(min-width: 512px) 512px, 100vw"
-              src="/_image?/content%2Fassets%2Fstills%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=480&h=270&q=80&f=avif"
-              srcset="/_image?/content%2Fassets%2Fstills%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=120&q=80&f=avif 120w, /_image?/content%2Fassets%2Fstills%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=240&q=80&f=avif 240w, /_image?/content%2Fassets%2Fstills%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=480&q=80&f=avif 480w, /_image?/content%2Fassets%2Fstills%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=960&q=80&f=avif 960w"
-              width="480"
-            />
-          </a>
-          <div
-            class="flex max-w-lg flex-col items-center pt-4 desktop:col-span-1 desktop:col-start-1 desktop:row-start-2 desktop:items-start desktop:place-self-start desktop:pt-0 max:col-span-3 max:col-start-2 max:row-start-1 max:max-w-unset"
-          >
-            <h2
-              class="text-2.5xl font-bold leading-8"
+                <picture>
+                  <source
+                    media="(prefers-color-scheme: dark)"
+                    srcset="/svg/3-half-stars-dark.svg"
+                  />
+                  <img
+                    alt="B-: 3.5 stars (out of 5)"
+                    class="mb-8"
+                    height="24"
+                    src="/svg/3-half-stars.svg"
+                    width="120"
+                  />
+                </picture>
+                <div
+                  class="rendered-markdown mb-6 text-lg leading-normal tracking-0.3px text-muted"
+                >
+                  <p>
+                    Bonkers in the best way possible. 
+                    <a
+                      class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                      href="/reviews/beyond-the-door-iii-1989/"
+                    >
+                      Continue reading...
+                    </a>
+                  </p>
+                </div>
+                <div
+                  class="mt-auto font-sans-narrow text-xxs font-medium leading-4 tracking-[1.1px] text-subtle"
+                >
+                  <span>
+                    Drama
+                  </span>
+                  <span>
+                     | Fantasy
+                  </span>
+                  <span>
+                     | Horror
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li
+              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
               <a
-                class="inline-block text-default"
+                class="mb-6 block"
                 href="/reviews/the-midnight-meat-train-2008/"
-                rel="canonical"
               >
-                The Midnight Meat Train 
-                <span
-                  class="inline-block text-base font-light leading-none text-subtle"
-                >
-                  2008
-                </span>
+                <img
+                  alt="A still from The Midnight Meat Train (2008)"
+                  class="aspect-[1.77777778] h-auto w-full"
+                  decoding="async"
+                  height="303"
+                  loading="lazy"
+                  sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                  src="/_image?/content%2Fassets%2Fstills%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&h=303&q=80&f=avif"
+                  srcset="/_image?/content%2Fassets%2Fstills%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=128.75&q=80&f=avif 128.75w, /_image?/content%2Fassets%2Fstills%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=257.5&q=80&f=avif 257.5w, /_image?/content%2Fassets%2Fstills%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&q=80&f=avif 515w, /_image?/content%2Fassets%2Fstills%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1030&q=80&f=avif 1030w"
+                  width="515"
+                />
               </a>
-            </h2>
-            <div
-              class="spacer-y-4"
-            />
-            <picture>
-              <source
-                media="(prefers-color-scheme: dark)"
-                srcset="/svg/2-stars-dark.svg"
-              />
-              <img
-                alt="D: 2 stars (out of 5)"
-                height="32"
-                src="/svg/2-stars.svg"
-                width="160"
-              />
-            </picture>
-            <div
-              class="spacer-y-6"
-            />
-            <p
-              class="text-base font-normal leading-normal tracking-0.25px text-subtle"
-            >
-              Directed by Ryûhei Kitamura. Starring Bradley Cooper, Leslie Bibb, Brooke Shields, and Vinnie Jones.
-            </p>
-            <div
-              class="spacer-y-6"
-            />
-            <div
-              class="rendered-markdown font-light self-start text-lg leading-normal tracking-0.3px text-muted"
-            >
-              <p>
-                Sometimes, frustrating films are worse than bad ones. Such is the case with 
-                <em>
-                  The Midnight Meat Train
-                </em>
-                . 
+              <div
+                class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+              >
+                <div
+                  class="mb-1 font-sans-narrow text-xxs font-medium uppercase leading-4 tracking-[1.1px] text-subtle"
+                >
+                  27 Apr 2024
+                </div>
                 <a
-                  class="!no-underline uppercase whitespace-nowrap text-accent text-sm leading-none"
+                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
                   href="/reviews/the-midnight-meat-train-2008/"
                 >
-                  Continue reading...
+                  The Midnight Meat Train 
+                  <span
+                    class="text-sm font-normal leading-none text-muted"
+                  >
+                    2008
+                  </span>
                 </a>
-              </p>
-            </div>
-          </div>
-        </article>
-      </li>
-      <li
-        class="flex even:bg-subtle"
-      >
-        <article
-          class="mx-auto flex flex-col items-center px-pageMargin py-10 desktop:grid desktop:w-full desktop:grid-cols-2 desktop:gap-x-[calc(2_*_var(--gutter-width))] max:grid-cols-7"
-        >
-          <div
-            class="col-span-full mb-6 text-center text-sm font-light uppercase leading-4 tracking-0.75px text-subtle desktop:mb-0 desktop:pb-6 desktop:text-left desktop:leading-8 max:col-span-1 max:self-start"
-          >
-            27 Apr 2024
-          </div>
-          <a
-            class="still-border block max-w-prose desktop:col-start-2 desktop:col-end-2 desktop:row-span-2 desktop:row-start-2 desktop:self-start desktop:justify-self-end max:col-start-4 max:col-end-9 max:row-start-1 max:mt-0"
-            href="/reviews/horror-express-1972/"
-            rel="canonical"
-          >
-            <img
-              alt="A still from Horror Express (1972)"
-              class="aspect-[1.77777778] h-auto rounded-xl"
-              decoding="async"
-              height="270"
-              loading="lazy"
-              sizes="(min-width: 512px) 512px, 100vw"
-              src="/_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=480&h=270&q=80&f=avif"
-              srcset="/_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=120&q=80&f=avif 120w, /_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=240&q=80&f=avif 240w, /_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=480&q=80&f=avif 480w, /_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=960&q=80&f=avif 960w"
-              width="480"
-            />
-          </a>
-          <div
-            class="flex max-w-lg flex-col items-center pt-4 desktop:col-span-1 desktop:col-start-1 desktop:row-start-2 desktop:items-start desktop:place-self-start desktop:pt-0 max:col-span-3 max:col-start-2 max:row-start-1 max:max-w-unset"
-          >
-            <h2
-              class="text-2.5xl font-bold leading-8"
+                <picture>
+                  <source
+                    media="(prefers-color-scheme: dark)"
+                    srcset="/svg/2-stars-dark.svg"
+                  />
+                  <img
+                    alt="D: 2 stars (out of 5)"
+                    class="mb-8"
+                    height="24"
+                    src="/svg/2-stars.svg"
+                    width="120"
+                  />
+                </picture>
+                <div
+                  class="rendered-markdown mb-6 text-lg leading-normal tracking-0.3px text-muted"
+                >
+                  <p>
+                    Sometimes, frustrating films are worse than bad ones. Such is the case with 
+                    <em>
+                      The Midnight Meat Train
+                    </em>
+                    . 
+                    <a
+                      class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                      href="/reviews/the-midnight-meat-train-2008/"
+                    >
+                      Continue reading...
+                    </a>
+                  </p>
+                </div>
+                <div
+                  class="mt-auto font-sans-narrow text-xxs font-medium leading-4 tracking-[1.1px] text-subtle"
+                >
+                  <span>
+                    Horror
+                  </span>
+                  <span>
+                     | Mystery
+                  </span>
+                  <span>
+                     | Thriller
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li
+              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
               <a
-                class="inline-block text-default"
+                class="mb-6 block"
                 href="/reviews/horror-express-1972/"
-                rel="canonical"
               >
-                Horror Express 
-                <span
-                  class="inline-block text-base font-light leading-none text-subtle"
-                >
-                  1972
-                </span>
+                <img
+                  alt="A still from Horror Express (1972)"
+                  class="aspect-[1.77777778] h-auto w-full"
+                  decoding="async"
+                  height="303"
+                  loading="lazy"
+                  sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                  src="/_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&h=303&q=80&f=avif"
+                  srcset="/_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=128.75&q=80&f=avif 128.75w, /_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=257.5&q=80&f=avif 257.5w, /_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&q=80&f=avif 515w, /_image?/content%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1030&q=80&f=avif 1030w"
+                  width="515"
+                />
               </a>
-            </h2>
-            <div
-              class="spacer-y-4"
-            />
-            <picture>
-              <source
-                media="(prefers-color-scheme: dark)"
-                srcset="/svg/2-stars-dark.svg"
-              />
-              <img
-                alt="D+: 2 stars (out of 5)"
-                height="32"
-                src="/svg/2-stars.svg"
-                width="160"
-              />
-            </picture>
-            <div
-              class="spacer-y-6"
-            />
-            <p
-              class="text-base font-normal leading-normal tracking-0.25px text-subtle"
-            >
-              Directed by Eugenio Martín. Starring Christopher Lee, Peter Cushing, Alberto de Mendoza, and Telly Savalas.
-            </p>
-            <div
-              class="spacer-y-6"
-            />
-            <div
-              class="rendered-markdown font-light self-start text-lg leading-normal tracking-0.3px text-muted"
-            >
-              <p>
-                <em>
-                  Horror Express
-                </em>
-                 may be flawed, but the production, performances, and novelty of genre icons Peter Cushing and Christopher Lee working as allies make it hard to resist. 
+              <div
+                class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+              >
+                <div
+                  class="mb-1 font-sans-narrow text-xxs font-medium uppercase leading-4 tracking-[1.1px] text-subtle"
+                >
+                  27 Apr 2024
+                </div>
                 <a
-                  class="!no-underline uppercase whitespace-nowrap text-accent text-sm leading-none"
+                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
                   href="/reviews/horror-express-1972/"
                 >
-                  Continue reading...
+                  Horror Express 
+                  <span
+                    class="text-sm font-normal leading-none text-muted"
+                  >
+                    1972
+                  </span>
                 </a>
-              </p>
-            </div>
-          </div>
-        </article>
-      </li>
-      <li
-        class="flex even:bg-subtle"
-      >
-        <article
-          class="mx-auto flex flex-col items-center px-pageMargin py-10 desktop:grid desktop:w-full desktop:grid-cols-2 desktop:gap-x-[calc(2_*_var(--gutter-width))] max:grid-cols-7"
-        >
-          <div
-            class="col-span-full mb-6 text-center text-sm font-light uppercase leading-4 tracking-0.75px text-subtle desktop:mb-0 desktop:pb-6 desktop:text-left desktop:leading-8 max:col-span-1 max:self-start"
-          >
-            27 Apr 2024
-          </div>
-          <a
-            class="still-border block max-w-prose desktop:col-start-2 desktop:col-end-2 desktop:row-span-2 desktop:row-start-2 desktop:self-start desktop:justify-self-end max:col-start-4 max:col-end-9 max:row-start-1 max:mt-0"
-            href="/reviews/night-train-to-terror-1985/"
-            rel="canonical"
-          >
-            <img
-              alt="A still from Night Train to Terror (1985)"
-              class="aspect-[1.77777778] h-auto rounded-xl"
-              decoding="async"
-              height="270"
-              loading="lazy"
-              sizes="(min-width: 512px) 512px, 100vw"
-              src="/_image?/content%2Fassets%2Fstills%2Fnight-train-to-terror-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=480&h=270&q=80&f=avif"
-              srcset="/_image?/content%2Fassets%2Fstills%2Fnight-train-to-terror-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=120&q=80&f=avif 120w, /_image?/content%2Fassets%2Fstills%2Fnight-train-to-terror-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=240&q=80&f=avif 240w, /_image?/content%2Fassets%2Fstills%2Fnight-train-to-terror-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=480&q=80&f=avif 480w, /_image?/content%2Fassets%2Fstills%2Fnight-train-to-terror-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=960&q=80&f=avif 960w"
-              width="480"
-            />
-          </a>
-          <div
-            class="flex max-w-lg flex-col items-center pt-4 desktop:col-span-1 desktop:col-start-1 desktop:row-start-2 desktop:items-start desktop:place-self-start desktop:pt-0 max:col-span-3 max:col-start-2 max:row-start-1 max:max-w-unset"
-          >
-            <h2
-              class="text-2.5xl font-bold leading-8"
+                <picture>
+                  <source
+                    media="(prefers-color-scheme: dark)"
+                    srcset="/svg/2-stars-dark.svg"
+                  />
+                  <img
+                    alt="D+: 2 stars (out of 5)"
+                    class="mb-8"
+                    height="24"
+                    src="/svg/2-stars.svg"
+                    width="120"
+                  />
+                </picture>
+                <div
+                  class="rendered-markdown mb-6 text-lg leading-normal tracking-0.3px text-muted"
+                >
+                  <p>
+                    <em>
+                      Horror Express
+                    </em>
+                     may be flawed, but the production, performances, and novelty of genre icons Peter Cushing and Christopher Lee working as allies make it hard to resist. 
+                    <a
+                      class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                      href="/reviews/horror-express-1972/"
+                    >
+                      Continue reading...
+                    </a>
+                  </p>
+                </div>
+                <div
+                  class="mt-auto font-sans-narrow text-xxs font-medium leading-4 tracking-[1.1px] text-subtle"
+                >
+                  <span>
+                    Adventure
+                  </span>
+                  <span>
+                     | Horror
+                  </span>
+                  <span>
+                     | Sci-Fi
+                  </span>
+                  <span>
+                     | Thriller
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li
+              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
               <a
-                class="inline-block text-default"
+                class="mb-6 block"
                 href="/reviews/night-train-to-terror-1985/"
-                rel="canonical"
               >
-                Night Train to Terror 
-                <span
-                  class="inline-block text-base font-light leading-none text-subtle"
-                >
-                  1985
-                </span>
+                <img
+                  alt="A still from Night Train to Terror (1985)"
+                  class="aspect-[1.77777778] h-auto w-full"
+                  decoding="async"
+                  height="303"
+                  loading="lazy"
+                  sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                  src="/_image?/content%2Fassets%2Fstills%2Fnight-train-to-terror-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&h=303&q=80&f=avif"
+                  srcset="/_image?/content%2Fassets%2Fstills%2Fnight-train-to-terror-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=128.75&q=80&f=avif 128.75w, /_image?/content%2Fassets%2Fstills%2Fnight-train-to-terror-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=257.5&q=80&f=avif 257.5w, /_image?/content%2Fassets%2Fstills%2Fnight-train-to-terror-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&q=80&f=avif 515w, /_image?/content%2Fassets%2Fstills%2Fnight-train-to-terror-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1030&q=80&f=avif 1030w"
+                  width="515"
+                />
               </a>
-            </h2>
-            <div
-              class="spacer-y-4"
-            />
-            <picture>
-              <source
-                media="(prefers-color-scheme: dark)"
-                srcset="/svg/3-stars-dark.svg"
-              />
-              <img
-                alt="C: 3 stars (out of 5)"
-                height="32"
-                src="/svg/3-stars.svg"
-                width="160"
-              />
-            </picture>
-            <div
-              class="spacer-y-6"
-            />
-            <p
-              class="text-base font-normal leading-normal tracking-0.25px text-subtle"
-            >
-              Directed by John Carr, Phillip Marshak, Tom McGowan, Jay Schlossberg-Cohen, and Gregg G. Tallas. Starring Barbara Wyler, Jamie Scoggin, Stacey Lyons, and Linda Maderas.
-            </p>
-            <div
-              class="spacer-y-6"
-            />
-            <div
-              class="rendered-markdown font-light self-start text-lg leading-normal tracking-0.3px text-muted"
-            >
-              <p>
-                For an anthology comprising three unrelated low-budget horror features cut to half or a third of their running time and book-ended by God and Satan riding a train to Las Vegas with an 80s teen pop-rock band, 
-                <em>
-                  Night Train to Terror
-                </em>
-                 is better than you’d expect. 
+              <div
+                class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+              >
+                <div
+                  class="mb-1 font-sans-narrow text-xxs font-medium uppercase leading-4 tracking-[1.1px] text-subtle"
+                >
+                  27 Apr 2024
+                </div>
                 <a
-                  class="!no-underline uppercase whitespace-nowrap text-accent text-sm leading-none"
+                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
                   href="/reviews/night-train-to-terror-1985/"
                 >
-                  Continue reading...
+                  Night Train to Terror 
+                  <span
+                    class="text-sm font-normal leading-none text-muted"
+                  >
+                    1985
+                  </span>
                 </a>
-              </p>
-            </div>
-          </div>
-        </article>
-      </li>
-      <li
-        class="flex even:bg-subtle"
-      >
-        <article
-          class="mx-auto flex flex-col items-center px-pageMargin py-10 desktop:grid desktop:w-full desktop:grid-cols-2 desktop:gap-x-[calc(2_*_var(--gutter-width))] max:grid-cols-7"
-        >
-          <div
-            class="col-span-full mb-6 text-center text-sm font-light uppercase leading-4 tracking-0.75px text-subtle desktop:mb-0 desktop:pb-6 desktop:text-left desktop:leading-8 max:col-span-1 max:self-start"
-          >
-            24 Apr 2024
-          </div>
-          <a
-            class="still-border block max-w-prose desktop:col-start-2 desktop:col-end-2 desktop:row-span-2 desktop:row-start-2 desktop:self-start desktop:justify-self-end max:col-start-4 max:col-end-9 max:row-start-1 max:mt-0"
-            href="/reviews/human-lanterns-1982/"
-            rel="canonical"
-          >
-            <img
-              alt="A still from Human Lanterns (1982)"
-              class="aspect-[1.77777778] h-auto rounded-xl"
-              decoding="async"
-              height="270"
-              loading="lazy"
-              sizes="(min-width: 512px) 512px, 100vw"
-              src="/_image?/content%2Fassets%2Fstills%2Fhuman-lanterns-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=480&h=270&q=80&f=avif"
-              srcset="/_image?/content%2Fassets%2Fstills%2Fhuman-lanterns-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=120&q=80&f=avif 120w, /_image?/content%2Fassets%2Fstills%2Fhuman-lanterns-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=240&q=80&f=avif 240w, /_image?/content%2Fassets%2Fstills%2Fhuman-lanterns-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=480&q=80&f=avif 480w, /_image?/content%2Fassets%2Fstills%2Fhuman-lanterns-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=960&q=80&f=avif 960w"
-              width="480"
-            />
-          </a>
-          <div
-            class="flex max-w-lg flex-col items-center pt-4 desktop:col-span-1 desktop:col-start-1 desktop:row-start-2 desktop:items-start desktop:place-self-start desktop:pt-0 max:col-span-3 max:col-start-2 max:row-start-1 max:max-w-unset"
-          >
-            <h2
-              class="text-2.5xl font-bold leading-8"
+                <picture>
+                  <source
+                    media="(prefers-color-scheme: dark)"
+                    srcset="/svg/3-stars-dark.svg"
+                  />
+                  <img
+                    alt="C: 3 stars (out of 5)"
+                    class="mb-8"
+                    height="24"
+                    src="/svg/3-stars.svg"
+                    width="120"
+                  />
+                </picture>
+                <div
+                  class="rendered-markdown mb-6 text-lg leading-normal tracking-0.3px text-muted"
+                >
+                  <p>
+                    For an anthology comprising three unrelated low-budget horror features cut to half or a third of their running time and book-ended by God and Satan riding a train to Las Vegas with an 80s teen pop-rock band, 
+                    <em>
+                      Night Train to Terror
+                    </em>
+                     is better than you’d expect. 
+                    <a
+                      class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                      href="/reviews/night-train-to-terror-1985/"
+                    >
+                      Continue reading...
+                    </a>
+                  </p>
+                </div>
+                <div
+                  class="mt-auto font-sans-narrow text-xxs font-medium leading-4 tracking-[1.1px] text-subtle"
+                >
+                  <span>
+                    Drama
+                  </span>
+                  <span>
+                     | Fantasy
+                  </span>
+                  <span>
+                     | Horror
+                  </span>
+                  <span>
+                     | Mystery
+                  </span>
+                  <span>
+                     | Thriller
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li
+              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
               <a
-                class="inline-block text-default"
+                class="mb-6 block"
                 href="/reviews/human-lanterns-1982/"
-                rel="canonical"
               >
-                Human Lanterns 
-                <span
-                  class="inline-block text-base font-light leading-none text-subtle"
-                >
-                  1982
-                </span>
+                <img
+                  alt="A still from Human Lanterns (1982)"
+                  class="aspect-[1.77777778] h-auto w-full"
+                  decoding="async"
+                  height="303"
+                  loading="lazy"
+                  sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                  src="/_image?/content%2Fassets%2Fstills%2Fhuman-lanterns-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&h=303&q=80&f=avif"
+                  srcset="/_image?/content%2Fassets%2Fstills%2Fhuman-lanterns-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=128.75&q=80&f=avif 128.75w, /_image?/content%2Fassets%2Fstills%2Fhuman-lanterns-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=257.5&q=80&f=avif 257.5w, /_image?/content%2Fassets%2Fstills%2Fhuman-lanterns-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&q=80&f=avif 515w, /_image?/content%2Fassets%2Fstills%2Fhuman-lanterns-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1030&q=80&f=avif 1030w"
+                  width="515"
+                />
               </a>
-            </h2>
-            <div
-              class="spacer-y-4"
-            />
-            <picture>
-              <source
-                media="(prefers-color-scheme: dark)"
-                srcset="/svg/3-stars-dark.svg"
-              />
-              <img
-                alt="C: 3 stars (out of 5)"
-                height="32"
-                src="/svg/3-stars.svg"
-                width="160"
-              />
-            </picture>
-            <div
-              class="spacer-y-6"
-            />
-            <p
-              class="text-base font-normal leading-normal tracking-0.25px text-subtle"
-            >
-              Directed by Chung Sun. Starring Tony Liu, Kuan Tai Chen, Lieh Lo, and Ni Tien.
-            </p>
-            <div
-              class="spacer-y-6"
-            />
-            <div
-              class="rendered-markdown font-light self-start text-lg leading-normal tracking-0.3px text-muted"
-            >
-              <p>
-                <em>
-                  Human Lanterns
-                </em>
-                 may not be a great martial arts movie or a great horror movie, but it proves an intriguing bridge for Shaw Brothers productions. A transitional piece between the straightforward kung-fu actioners like 
-                <em>
-                  The Five Deadly Venoms
-                </em>
-                 that launched the studio to worldwide recognition, and the more overt horrors like 
-                <a
-                  href="/reviews/the-boxers-omen-1983/"
+              <div
+                class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+              >
+                <div
+                  class="mb-1 font-sans-narrow text-xxs font-medium uppercase leading-4 tracking-[1.1px] text-subtle"
                 >
-                  <em>
-                    The Boxer’s Omen
-                  </em>
-                </a>
-                 that saw the studio trying to adjust to changing audience tastes. 
+                  24 Apr 2024
+                </div>
                 <a
-                  class="!no-underline uppercase whitespace-nowrap text-accent text-sm leading-none"
+                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
                   href="/reviews/human-lanterns-1982/"
                 >
-                  Continue reading...
+                  Human Lanterns 
+                  <span
+                    class="text-sm font-normal leading-none text-muted"
+                  >
+                    1982
+                  </span>
                 </a>
-              </p>
-            </div>
+                <picture>
+                  <source
+                    media="(prefers-color-scheme: dark)"
+                    srcset="/svg/3-stars-dark.svg"
+                  />
+                  <img
+                    alt="C: 3 stars (out of 5)"
+                    class="mb-8"
+                    height="24"
+                    src="/svg/3-stars.svg"
+                    width="120"
+                  />
+                </picture>
+                <div
+                  class="rendered-markdown mb-6 text-lg leading-normal tracking-0.3px text-muted"
+                >
+                  <p>
+                    <em>
+                      Human Lanterns
+                    </em>
+                     may not be a great martial arts movie or a great horror movie, but it proves an intriguing bridge for Shaw Brothers productions. A transitional piece between the straightforward kung-fu actioners like 
+                    <em>
+                      The Five Deadly Venoms
+                    </em>
+                     that launched the studio to worldwide recognition, and the more overt horrors like 
+                    <a
+                      href="/reviews/the-boxers-omen-1983/"
+                    >
+                      <em>
+                        The Boxer’s Omen
+                      </em>
+                    </a>
+                     that saw the studio trying to adjust to changing audience tastes. 
+                    <a
+                      class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                      href="/reviews/human-lanterns-1982/"
+                    >
+                      Continue reading...
+                    </a>
+                  </p>
+                </div>
+                <div
+                  class="mt-auto font-sans-narrow text-xxs font-medium leading-4 tracking-[1.1px] text-subtle"
+                >
+                  <span>
+                    Horror
+                  </span>
+                  <span>
+                     | Action
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li
+              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
+            >
+              <a
+                class="mb-6 block"
+                href="/reviews/ninja-in-the-dragons-den-1982/"
+              >
+                <img
+                  alt="A still from Ninja in the Dragon's Den (1982)"
+                  class="aspect-[1.77777778] h-auto w-full"
+                  decoding="async"
+                  height="303"
+                  loading="lazy"
+                  sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                  src="/_image?/content%2Fassets%2Fstills%2Fninja-in-the-dragons-den-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&h=303&q=80&f=avif"
+                  srcset="/_image?/content%2Fassets%2Fstills%2Fninja-in-the-dragons-den-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=128.75&q=80&f=avif 128.75w, /_image?/content%2Fassets%2Fstills%2Fninja-in-the-dragons-den-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=257.5&q=80&f=avif 257.5w, /_image?/content%2Fassets%2Fstills%2Fninja-in-the-dragons-den-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&q=80&f=avif 515w, /_image?/content%2Fassets%2Fstills%2Fninja-in-the-dragons-den-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1030&q=80&f=avif 1030w"
+                  width="515"
+                />
+              </a>
+              <div
+                class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+              >
+                <div
+                  class="mb-1 font-sans-narrow text-xxs font-medium uppercase leading-4 tracking-[1.1px] text-subtle"
+                >
+                  24 Apr 2024
+                </div>
+                <a
+                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
+                  href="/reviews/ninja-in-the-dragons-den-1982/"
+                >
+                  Ninja in the Dragon's Den 
+                  <span
+                    class="text-sm font-normal leading-none text-muted"
+                  >
+                    1982
+                  </span>
+                </a>
+                <picture>
+                  <source
+                    media="(prefers-color-scheme: dark)"
+                    srcset="/svg/4-stars-dark.svg"
+                  />
+                  <img
+                    alt="B: 4 stars (out of 5)"
+                    class="mb-8"
+                    height="24"
+                    src="/svg/4-stars.svg"
+                    width="120"
+                  />
+                </picture>
+                <div
+                  class="rendered-markdown mb-6 text-lg leading-normal tracking-0.3px text-muted"
+                >
+                  <p>
+                    The overarching plot of 
+                    <em>
+                      Ninja in the Dragon’s Den
+                    </em>
+                     concerns a rogue ninja, played Hiroyuki Sanada, who travels to China seeking vengeance, but finds his target protected by a hot-shot young kung-fu master played by Conan Lee. But tight plotting is not the film’s strong suit, it’s bone-crunching stunts and action sequences. 
+                    <a
+                      class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                      href="/reviews/ninja-in-the-dragons-den-1982/"
+                    >
+                      Continue reading...
+                    </a>
+                  </p>
+                </div>
+                <div
+                  class="mt-auto font-sans-narrow text-xxs font-medium leading-4 tracking-[1.1px] text-subtle"
+                >
+                  <span>
+                    Action
+                  </span>
+                  <span>
+                     | Comedy
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li
+              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
+            >
+              <a
+                class="mb-6 block"
+                href="/reviews/mandy-2018/"
+              >
+                <img
+                  alt="A still from Mandy (2018)"
+                  class="aspect-[1.77777778] h-auto w-full"
+                  decoding="async"
+                  height="303"
+                  loading="lazy"
+                  sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
+                  src="/_image?/content%2Fassets%2Fstills%2Fmandy-2018.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&h=303&q=80&f=avif"
+                  srcset="/_image?/content%2Fassets%2Fstills%2Fmandy-2018.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=128.75&q=80&f=avif 128.75w, /_image?/content%2Fassets%2Fstills%2Fmandy-2018.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=257.5&q=80&f=avif 257.5w, /_image?/content%2Fassets%2Fstills%2Fmandy-2018.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=515&q=80&f=avif 515w, /_image?/content%2Fassets%2Fstills%2Fmandy-2018.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1030&q=80&f=avif 1030w"
+                  width="515"
+                />
+              </a>
+              <div
+                class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+              >
+                <div
+                  class="mb-1 font-sans-narrow text-xxs font-medium uppercase leading-4 tracking-[1.1px] text-subtle"
+                >
+                  13 Apr 2024
+                </div>
+                <a
+                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
+                  href="/reviews/mandy-2018/"
+                >
+                  Mandy 
+                  <span
+                    class="text-sm font-normal leading-none text-muted"
+                  >
+                    2018
+                  </span>
+                </a>
+                <picture>
+                  <source
+                    media="(prefers-color-scheme: dark)"
+                    srcset="/svg/5-stars-dark.svg"
+                  />
+                  <img
+                    alt="A+: 5 stars (out of 5)"
+                    class="mb-8"
+                    height="24"
+                    src="/svg/5-stars.svg"
+                    width="120"
+                  />
+                </picture>
+                <div
+                  class="rendered-markdown mb-6 text-lg leading-normal tracking-0.3px text-muted"
+                >
+                  <p>
+                    Saying 
+                    <em>
+                      Mandy
+                    </em>
+                     is about a man who exacts revenge on the Manson-like cult that murdered his girlfriend is like saying 
+                    <em>
+                      Kill Bill
+                    </em>
+                     is about a woman exacting revenge on her boss after he kills her husband. Explaining the plot provides no sense of the viewing experience. 
+                    <a
+                      class="!no-underline uppercase whitespace-nowrap font-medium font-sans-narrow  text-accent text-xs tracking-[1.1px] leading-none hover:!underline"
+                      href="/reviews/mandy-2018/"
+                    >
+                      Continue reading...
+                    </a>
+                  </p>
+                </div>
+                <div
+                  class="mt-auto font-sans-narrow text-xxs font-medium leading-4 tracking-[1.1px] text-subtle"
+                >
+                  <span>
+                    Action
+                  </span>
+                  <span>
+                     | Fantasy
+                  </span>
+                  <span>
+                     | Horror
+                  </span>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div
+            class="flex py-10"
+          >
+            <a
+              class="mx-auto w-full max-w-[430px] bg-default px-pageMargin py-5 text-center font-sans-narrow text-sm font-semibold uppercase tracking-[.6px] text-accent hover:bg-accent hover:text-inverse"
+              href="/reviews/"
+            >
+              All Reviews
+            </a>
           </div>
-        </article>
-      </li>
-    </ol>
-    <a
-      class="flex justify-end px-pageMargin py-10 text-lg text-accent"
-      href="/reviews/"
-    >
-      All Reviews →
-    </a>
-  </main>
+        </nav>
+      </main>
+      <footer
+        class="flex flex-wrap items-start justify-between gap-[10%] bg-[#252525] px-container-base py-20 text-inverse tablet:px-12 tablet:pt-10 desktop:p-20"
+      >
+        <div
+          class="flex flex-col"
+        >
+          <div
+            class="flex flex-col"
+          >
+            <div
+              class="whitespace-nowrap font-normal leading-8"
+              style="font-size: 1.5625rem;"
+            >
+              <a
+                href="/"
+              >
+                Frank's Movie Log
+              </a>
+            </div>
+            <p
+              class="w-full pl-px text-sm italic leading-4 opacity-85"
+            >
+              My life at the movies.
+            </p>
+          </div>
+          <div
+            class="spacer-y-12"
+          />
+        </div>
+        <div
+          class="flex flex-col gap-20 pb-20 pt-10 tablet:basis-1/2 tablet:pt-20"
+        >
+          <ul
+            class="flex w-full flex-col gap-y-10 text-inverse max:w-auto"
+          >
+            <li
+              class="block w-1/2 whitespace-nowrap text-2xl"
+            >
+              <a
+                class="hover:text-accent"
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+            <li
+              class="block w-1/2 whitespace-nowrap text-2xl"
+            >
+              <a
+                class="hover:text-accent"
+                href="/how-i-grade/"
+              >
+                How I Grade
+              </a>
+            </li>
+            <li
+              class="block w-1/2 whitespace-nowrap text-2xl"
+            >
+              <a
+                class="hover:text-accent"
+                href="/reviews/"
+              >
+                Reviews
+              </a>
+              <ol
+                class="mt-4"
+              >
+                <li
+                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                >
+                  <a
+                    class="hover:text-inverse"
+                    href="/reviews/underseen/"
+                  >
+                    Underseen Gems
+                  </a>
+                </li>
+                <li
+                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                >
+                  <a
+                    class="hover:text-inverse"
+                    href="/reviews/overrated/"
+                  >
+                    Overrated Disappointments
+                  </a>
+                </li>
+              </ol>
+            </li>
+            <li
+              class="block w-1/2 whitespace-nowrap text-2xl"
+            >
+              <a
+                class="hover:text-accent"
+                href="/viewings/"
+              >
+                Viewing Log
+              </a>
+              <ol
+                class="mt-4"
+              >
+                <li
+                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                >
+                  <a
+                    class="hover:text-inverse"
+                    href="/viewings/stats/"
+                  >
+                    Stats
+                  </a>
+                </li>
+              </ol>
+            </li>
+            <li
+              class="block w-1/2 whitespace-nowrap text-2xl"
+            >
+              <a
+                class="hover:text-accent"
+                href="/cast-and-crew/"
+              >
+                Cast & Crew
+              </a>
+            </li>
+            <li
+              class="block w-1/2 whitespace-nowrap text-2xl"
+            >
+              <a
+                class="hover:text-accent"
+                href="/collections/"
+              >
+                Collections
+              </a>
+            </li>
+            <li
+              class="block w-1/2 whitespace-nowrap text-2xl"
+            >
+              <a
+                class="hover:text-accent"
+                href="/watchlist/"
+              >
+                Watchlist
+              </a>
+              <ol
+                class="mt-4"
+              >
+                <li
+                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle"
+                >
+                  <a
+                    class="hover:text-inverse"
+                    href="/watchlist/progress/"
+                  >
+                    Progress
+                  </a>
+                </li>
+              </ol>
+            </li>
+          </ul>
+          <a
+            class="mb-8 w-full max-w-[320px] bg-canvas px-pageMargin py-5 text-center font-sans-narrow text-sm uppercase tracking-[.6px] text-default hover:bg-inverse hover:text-inverse"
+            href="#top"
+          >
+            To the top
+          </a>
+          <p
+            class="w-full font-normal leading-4 text-subtle"
+          >
+            All stills used in accordance with the 
+            <a
+              class="text-inherit"
+              href="http://www.copyright.gov/title17/92chap1.html#107"
+            >
+              Fair Use Law.
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </div>
 </DocumentFragment>
 `;

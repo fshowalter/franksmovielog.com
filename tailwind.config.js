@@ -1,5 +1,4 @@
-const STILL_WIDTH = "960px";
-const PROSE_CONTENT_WIDTH = "36rem";
+const PROSE_CONTENT_WIDTH = "39rem";
 const POSTER_WIDTH = "248px";
 import plugin from "tailwindcss/plugin";
 
@@ -8,6 +7,7 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     backgroundColor: {
+      accent: "var(--bg-accent)",
       default: "var(--bg-default)",
       subtle: "var(--bg-subtle)",
       canvas: "var(--bg-canvas)",
@@ -31,14 +31,16 @@ export default {
       progress: "var(--fg-progress)",
     },
     screens: {
-      tablet: "510px",
-      desktop: "1288px",
-      max: "1416px",
+      tablet: "768px",
+      showFilters: "1024px",
+      desktop: "1280px",
+      max: "1696px",
     },
     extend: {
       boxShadow: {
         all: "0 0 0 1px var(--border-default)",
         bottom: "0px 1px var(--border-default)",
+        top: "0px -1px var(--border-default)",
       },
       brightness: {
         dark: "0.8",
@@ -49,9 +51,15 @@ export default {
       flexBasis: {
         md: "28rem",
       },
+      fontFamily: {
+        sans: "ArgentumSans",
+        "sans-narrow": "Radio Canada Big",
+        serif: "FrankRuhlLibre",
+      },
       fontSize: {
         "2.5xl": "1.625rem",
         md: ["1.125rem", "1.5rem"],
+        xxs: "0.625rem",
       },
       letterSpacing: {
         "0.25px": "0.015625rem",
@@ -63,13 +71,15 @@ export default {
         gutter: "var(--gutter-width)",
       },
       maxWidth: {
-        canvas: `clamp(${STILL_WIDTH}, 95vw, 1416px)`,
+        canvas: "1536px",
         prose: PROSE_CONTENT_WIDTH,
         popout: `calc((var(--gutter-width) * 2) + ${PROSE_CONTENT_WIDTH})`,
         poster: POSTER_WIDTH,
         unset: "unset",
       },
       padding: {
+        "container-base": "8%",
+        container: "var(--container-padding)",
         pageMargin: "var(--page-margin-width)",
         gutter: "var(--gutter-width)",
         ch: "1ch",

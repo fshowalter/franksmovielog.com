@@ -2,7 +2,7 @@ import type { FilterableState } from "src/utils/filterTools";
 import { filterTools } from "src/utils/filterTools";
 import { sortNumber } from "src/utils/sortTools";
 
-import type { ListItemValue } from "./List";
+import type { ListItemValue } from "./Viewings";
 
 const SHOW_COUNT_DEFAULT = 100;
 
@@ -203,6 +203,7 @@ export function reducer(state: State, action: ActionType): State {
         showCount,
       };
     }
+
     // no default
   }
 }

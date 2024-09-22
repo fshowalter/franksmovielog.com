@@ -34,7 +34,7 @@ describe("Underseen", () => {
     render(<Underseen {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Title (A → Z)",
     );
 
@@ -47,7 +47,7 @@ describe("Underseen", () => {
     render(<Underseen {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Title (Z → A)",
     );
 
@@ -60,7 +60,7 @@ describe("Underseen", () => {
     render(<Underseen {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Release Date (Oldest First)",
     );
 
@@ -73,7 +73,7 @@ describe("Underseen", () => {
     render(<Underseen {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Release Date (Newest First)",
     );
 
@@ -86,7 +86,7 @@ describe("Underseen", () => {
     render(<Underseen {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Grade (Best First)",
     );
 
@@ -99,7 +99,7 @@ describe("Underseen", () => {
     render(<Underseen {...props} />);
 
     await userEvent.selectOptions(
-      screen.getByLabelText("Order By"),
+      screen.getByLabelText("Sort"),
       "Grade (Worst First)",
     );
 

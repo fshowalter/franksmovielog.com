@@ -1,11 +1,12 @@
 import { filterValues } from "src/utils/filterTools";
 import { sortNumber, sortString } from "src/utils/sortTools";
 
-import type { ListItemValue } from "./List";
+import type { ListItemValue } from "./Collections";
 
 export enum Actions {
   FILTER_NAME = "FILTER_NAME",
   SORT = "SORT",
+  TOGGLE_FILTERS = "TOGGLE_FILTERS",
 }
 
 export type Sort =
@@ -101,6 +102,7 @@ export function reducer(state: State, action: ActionType): State {
         filteredValues,
       };
     }
+
     // no default
   }
 }

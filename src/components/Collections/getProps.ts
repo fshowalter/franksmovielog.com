@@ -1,9 +1,11 @@
 import { getAvatarImageProps } from "src/api/avatars";
+import { getBackdropImageProps } from "src/api/backdrops";
 import { allCollections } from "src/api/collections";
 import { ListItemAvatarImageConfig } from "src/components/ListItemAvatar";
 
+import { BackdropImageConfig } from "../Backdrop";
 import type { Props } from "./Collections";
-import { type ListItemValue } from "./List";
+import { type ListItemValue } from "./Collections";
 
 export async function getProps(): Promise<Props> {
   const { collections } = await allCollections();
@@ -27,5 +29,12 @@ export async function getProps(): Promise<Props> {
     }),
   );
 
-  return { values, initialSort: "name-asc" };
+  return {
+    values,
+    initialSort: "name-asc",
+    backdropImageProps: await getBackdropImageProps(
+      "collections",
+      BackdropImageConfig,
+    ),
+  };
 }

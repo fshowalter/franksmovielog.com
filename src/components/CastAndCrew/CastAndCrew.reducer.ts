@@ -1,12 +1,13 @@
 import { filterValues } from "src/utils/filterTools";
 import { sortNumber, sortString } from "src/utils/sortTools";
 
-import type { ListItemValue } from "./List";
+import type { ListItemValue } from "./CastAndCrew";
 
 export enum Actions {
   FILTER_NAME = "FILTER_NAME",
   FILTER_CREDIT_KIND = "FILTER_CREDIT_KIND",
   SORT = "SORT",
+  TOGGLE_FILTERS = "TOGGLE_FILTERS",
 }
 
 export type Sort =
@@ -34,12 +35,12 @@ function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
   return values.sort(comparer);
 }
 
-interface State {
+type State = {
   allValues: ListItemValue[];
   filteredValues: ListItemValue[];
   filters: Record<string, (value: ListItemValue) => boolean>;
   sortValue: Sort;
-}
+};
 
 export function initState({
   values,
@@ -135,6 +136,7 @@ export function reducer(state: State, action: ActionType): State {
         filteredValues,
       };
     }
+
     // no default
   }
 }

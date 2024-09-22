@@ -3,29 +3,30 @@
 @tailwind utilities;
 
 :root {
-  --bg-accent: #0056b3;
-  --bg-canvas: #f2f0e8;
+  --bg-accent: #a52422;
+  --bg-canvas: #dfdfdf;
   --bg-default: #fff;
-  --bg-inverse: rgb(255 255 255 / 75%);
+  --bg-inverse: rgb(0 0 0 / 75%);
   --bg-progress: #14bd41;
-  --bg-stripe: #f7f5f3;
-  --bg-subtle: #fafafa;
+  --bg-stripe: #fcfcfc;
+  --bg-subtle: #f6f6f6;
   --border-accent: #054a93;
   --border-default: #e9e7e0;
-  --fg-accent: #0056b3;
-  --fg-default: rgb(0 0 0 / 75%);
+  --fg-accent: #a52422;
+  --fg-default: #252525;
   --fg-emphasis: rgb(0 0 0 / 95%);
-  --fg-inverse: rgb(255 255 255 / 75%);
+  --fg-inverse: #fff;
   --fg-muted: rgb(0 0 0 / 65%);
-  --fg-subtle: rgb(0 0 0 / 60%);
+  --fg-subtle: #8e8e8e;
   --gutter-width: 20px;
   --image-filter: initial;
   --page-margin-width: 20px;
+  --container-padding: 8%;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-accent: #0056b3;
+    --bg-accent: #a52422;
     --bg-canvas: #484745;
     --bg-default: #322f2f;
     --bg-inverse: #322f2f;
@@ -34,7 +35,7 @@
     --bg-subtle: #373434;
     --border-accent: #499ef8;
     --border-default: #484745;
-    --fg-accent: #499ef8;
+    --fg-accent: #c49090;
     --fg-default: rgb(255 255 255 / 75%);
     --fg-emphasis: rgb(255 255 255 / 95%);
     --fg-muted: rgb(255 255 255 / 65%);
@@ -47,6 +48,7 @@
   :root {
     --gutter-width: 24px;
     --page-margin-width: 48px;
+    --container-padding: 48px;
   }
 }
 
@@ -54,7 +56,7 @@
   :root {
     --gutter-width: 32px;
     --page-margin-width: 64px;
-    --header-offset: 105px;
+    --container-padding: 80px;
   }
 }
 
@@ -71,20 +73,210 @@
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: "Charter", "Iowan Old Style", "Georgia", "Cambria",
+    font-family: "FrankRuhlLibre", "Iowan Old Style", "Georgia", "Cambria",
       "Times New Roman", "Times", "serif";
-    font-feature-settings: "kern", "liga", "clig", "calt";
+    font-feature-settings: "kern", "liga", "clig", "calt", "ss06";
     font-kerning: normal;
     background-color: var(--bg-canvas);
     color: var(--fg-default);
+    font-weight: normal;
   }
 
   img {
     filter: var(--image-filter);
   }
+
+  @font-face {
+    font-family: "ArgentumSans";
+    src: url("/fonts/ArgentumSans/ArgentumSans-SemiBold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "ArgentumSans";
+    src: url("/fonts/ArgentumSans/ArgentumSans-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "ArgentumSans";
+    src: url("/fonts/ArgentumSans/ArgentumSans-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "FrankRuhlLibre";
+    font-style: normal;
+    font-weight: 300 900;
+    font-display: swap;
+    src: url("/fonts/Frank-Ruhl-Libre/Frank-Ruhl-Libre_latin_300 900_normal.woff2")
+      format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+      U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  /* radio-canada-big-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Radio Canada Big";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/Radio-Canada-Big/radio-canada-big-v1-latin-regular.woff2")
+      format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* radio-canada-big-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Radio Canada Big";
+    font-style: normal;
+    font-weight: 500;
+    src: url("/fonts/Radio-Canada-Big/radio-canada-big-v1-latin-500.woff2")
+      format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* radio-canada-big-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Radio Canada Big";
+    font-style: normal;
+    font-weight: 600;
+    src: url("/fonts/Radio-Canada-Big/radio-canada-big-v1-latin-600.woff2")
+      format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* radio-canada-big-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Radio Canada Big";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/fonts/Radio-Canada-Big/radio-canada-big-v1-latin-700.woff2")
+      format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Radio Canada Big";
+    font-style: italic;
+    font-weight: 700;
+    src: url("/fonts/Radio-Canada-Big/radio-canada-big-v1-latin-700italic.woff2")
+      format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
 }
 
 @layer components {
+  .hamburger-icon {
+    z-index: 100;
+    /* padding: 12px; */
+    margin-left: 16px;
+    background: transparent;
+    border-radius: 50% 50% 50% 50%;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    box-shadow:
+      0 0 0 0 transparent,
+      0 0 0 0 transparent;
+    cursor: pointer;
+    height: 24px;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .hamburger-icon-bars {
+    position: relative;
+
+    width: 24px;
+    height: 2px;
+    display: block;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    transition-property: top, bottom, transform;
+  }
+
+  .hamburger-icon-bars:after,
+  .hamburger-icon-bars:before {
+    transition: 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: inherit;
+  }
+
+  .hamburger-icon-bars:before {
+    top: -8px;
+  }
+
+  .hamburger-icon-bars:after {
+    bottom: -8px;
+  }
+
+  #mobile-nav:checked + .hamburger-icon {
+    box-shadow:
+      0 0 0 100vw #252525,
+      0 0 0 100vh #252525;
+    border-radius: 0;
+    background: #252525;
+  }
+
+  #mobile-nav:checked + .hamburger-icon .hamburger-icon-bars {
+    transform: rotate(45deg);
+    background-color: #fff !important;
+  }
+
+  #mobile-nav:checked + .hamburger-icon .hamburger-icon-bars:after {
+    transform: rotate(90deg);
+    bottom: 0;
+  }
+
+  #mobile-nav:checked + .hamburger-icon .hamburger-icon-bars:before {
+    transform: rotate(90deg);
+    top: 0;
+  }
+
+  #mobile-nav:checked + .hamburger-icon + .hamburger-menu {
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    z-index: 250;
+    padding: 0 16% 0 12%;
+    margin-top: 80px;
+    overflow: unset;
+    bottom: 0;
+    overflow: hidden;
+  }
+
+  .mast:has(#mobile-nav:checked) {
+    color: #fff !important;
+  }
+
+  body:has(#mobile-nav:checked) {
+    position: fixed;
+    overflow: hidden;
+    width: 100vw;
+  }
+
+  .hamburger-menu {
+    position: fixed;
+    width: 0;
+    height: 0;
+    top: -100%;
+    left: 100%;
+    transform: translate(-100%, 100%);
+    opacity: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-transition: 0.2s 0s ease-in-out;
+    transition: 0.2s 0s ease-in-out;
+    overflow: hidden;
+  }
+
   .progress-bar-bg {
     background-image: linear-gradient(
       to right,
@@ -99,6 +291,13 @@
   .rendered-markdown {
     a {
       text-decoration-line: underline;
+      text-underline-offset: 4px;
+    }
+
+    a:hover {
+      color: var(--fg-inverse);
+      background-color: var(--bg-accent);
+      text-decoration-color: var(--fg-inverse);
     }
 
     sup a,
@@ -168,6 +367,10 @@
       padding-left: 1.4rem;
     }
 
+    > ul {
+      padding-left: 0;
+    }
+
     li {
       line-height: 28px;
       margin-bottom: 1.4rem;
@@ -176,7 +379,7 @@
     .footnotes {
       box-shadow: 0px -1px var(--border-default);
       padding-top: 2rem;
-      font-size: 0.875rem;
+      font-size: 1rem;
 
       ol {
         list-style-type: none;
@@ -205,237 +408,6 @@
     background-position-x: calc(100% - 8px);
     background-position-y: 8px;
     background-repeat: no-repeat;
-  }
-
-  .still-border {
-    border: solid 12px var(--border-default);
-    clip-path: polygon(
-      3% 0,
-      7% 1%,
-      11% 0%,
-      16% 2%,
-      20% 0,
-      23% 2%,
-      28% 2%,
-      32% 1%,
-      35% 1%,
-      39% 3%,
-      41% 1%,
-      45% 0%,
-      47% 2%,
-      50% 2%,
-      53% 0,
-      58% 2%,
-      60% 2%,
-      63% 1%,
-      65% 0%,
-      67% 2%,
-      69% 2%,
-      73% 1%,
-      76% 1%,
-      79% 0,
-      82% 1%,
-      85% 0,
-      87% 1%,
-      89% 0,
-      92% 1%,
-      96% 0,
-      98% 3%,
-      99% 3%,
-      99% 6%,
-      100% 11%,
-      98% 15%,
-      100% 21%,
-      99% 28%,
-      100% 32%,
-      99% 35%,
-      99% 40%,
-      100% 43%,
-      99% 48%,
-      100% 53%,
-      100% 57%,
-      99% 60%,
-      100% 64%,
-      100% 68%,
-      99% 72%,
-      100% 75%,
-      100% 79%,
-      99% 83%,
-      100% 86%,
-      100% 90%,
-      99% 94%,
-      99% 98%,
-      95% 99%,
-      92% 99%,
-      89% 100%,
-      86% 99%,
-      83% 100%,
-      77% 99%,
-      72% 100%,
-      66% 98%,
-      62% 100%,
-      59% 99%,
-      54% 99%,
-      49% 100%,
-      46% 98%,
-      43% 100%,
-      40% 98%,
-      38% 100%,
-      35% 99%,
-      31% 100%,
-      28% 99%,
-      25% 99%,
-      22% 100%,
-      19% 99%,
-      16% 100%,
-      13% 99%,
-      10% 99%,
-      7% 100%,
-      4% 99%,
-      2% 97%,
-      1% 97%,
-      0% 94%,
-      1% 89%,
-      0% 84%,
-      1% 81%,
-      0 76%,
-      0 71%,
-      1% 66%,
-      0% 64%,
-      0% 61%,
-      0% 59%,
-      1% 54%,
-      0% 49%,
-      1% 45%,
-      0% 40%,
-      1% 37%,
-      0% 34%,
-      1% 29%,
-      0% 23%,
-      2% 20%,
-      1% 17%,
-      1% 13%,
-      0 10%,
-      1% 6%,
-      1% 3%
-    );
-    margin-bottom: 4.57px;
-    background-color: var(--border-default);
-  }
-
-  .poster-border {
-    transform: translateZ(0);
-    border: solid 8px var(--border-default);
-    clip-path: polygon(
-      3% 0,
-      7% 1%,
-      11% 0%,
-      16% 2%,
-      20% 0,
-      23% 2%,
-      28% 2%,
-      32% 1%,
-      35% 1%,
-      39% 3%,
-      41% 1%,
-      45% 0%,
-      47% 2%,
-      50% 2%,
-      53% 0,
-      58% 2%,
-      60% 2%,
-      63% 1%,
-      65% 0%,
-      67% 2%,
-      69% 2%,
-      73% 1%,
-      76% 1%,
-      79% 0,
-      82% 1%,
-      85% 0,
-      87% 1%,
-      89% 0,
-      92% 1%,
-      96% 0,
-      98% 3%,
-      99% 3%,
-      99% 6%,
-      100% 11%,
-      98% 15%,
-      100% 21%,
-      99% 28%,
-      100% 32%,
-      99% 35%,
-      99% 40%,
-      100% 43%,
-      99% 48%,
-      100% 53%,
-      100% 57%,
-      99% 60%,
-      100% 64%,
-      100% 68%,
-      99% 72%,
-      100% 75%,
-      100% 79%,
-      99% 83%,
-      100% 86%,
-      100% 90%,
-      99% 94%,
-      99% 98%,
-      95% 99%,
-      92% 99%,
-      89% 100%,
-      86% 99%,
-      83% 100%,
-      77% 99%,
-      72% 100%,
-      66% 98%,
-      62% 100%,
-      59% 99%,
-      54% 99%,
-      49% 100%,
-      46% 98%,
-      43% 100%,
-      40% 98%,
-      38% 100%,
-      35% 99%,
-      31% 100%,
-      28% 99%,
-      25% 99%,
-      22% 100%,
-      19% 99%,
-      16% 100%,
-      13% 99%,
-      10% 99%,
-      7% 100%,
-      4% 99%,
-      2% 97%,
-      1% 97%,
-      0% 94%,
-      1% 89%,
-      0% 84%,
-      1% 81%,
-      0 76%,
-      0 71%,
-      1% 66%,
-      0% 64%,
-      0% 61%,
-      0% 59%,
-      1% 54%,
-      0% 49%,
-      1% 45%,
-      0% 40%,
-      1% 37%,
-      0% 34%,
-      1% 29%,
-      0% 23%,
-      2% 20%,
-      1% 17%,
-      1% 13%,
-      0 10%,
-      1% 6%,
-      1% 3%
-    );
   }
 }
 

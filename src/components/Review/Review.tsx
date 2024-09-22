@@ -1,27 +1,29 @@
 import type { PosterImageProps } from "src/api/posters";
-import type { Review, ReviewWithContent } from "src/api/reviews";
+import type { Review, ReviewContent } from "src/api/reviews";
 import type { StillImageProps } from "src/api/stills";
+import { Grade } from "src/components/Grade";
+import { Layout } from "src/components/Layout";
+import { MoreReviews } from "src/components/MoreReviews";
 import { Still } from "src/components/Still";
+import { SubHeading } from "src/components/SubHeading";
+import { ccn } from "src/utils/concatClassNames";
 
-import { CastAndCrewChips } from "./CastAndCrewChips";
-import { CollectionChips } from "./CollectionChips";
 import { Content } from "./Content";
 import { Credits } from "./Credits";
-import { Header } from "./Header";
 import { MoreFromCastAndCrew } from "./MoreFromCastAndCrew";
 import { MoreInCollections } from "./MoreInCollections";
-import { MoreReviews } from "./MoreReviews";
 import { StructuredData } from "./StructuredData";
 import { ViewingHistoryListItem } from "./ViewingHistoryListItem";
 
 export const StillImageConfig = {
-  width: 960,
-  height: 540,
-  sizes: "(min-width: 960px) 960px, 100vw",
+  width: 1536,
+  height: 864,
+  sizes:
+    "(max-width: 767px) calc(100vw - 16%), (max-width: 1279px) calc(100vw - 48px), 1536px",
 };
 
 export interface Props {
-  value: ReviewWithContent;
+  value: Review & ReviewContent;
   stillImageProps: StillImageProps;
   posterImageProps: PosterImageProps;
   moreFromCastAndCrew: React.ComponentProps<
@@ -29,8 +31,6 @@ export interface Props {
   >["values"];
   moreInCollections: React.ComponentProps<typeof MoreInCollections>["values"];
   moreReviews: React.ComponentProps<typeof MoreReviews>["values"];
-  castAndCrewChips: React.ComponentProps<typeof CastAndCrewChips>["values"];
-  collectionChips: React.ComponentProps<typeof CollectionChips>["values"];
   seoImageSrc: string;
 }
 
@@ -38,85 +38,83 @@ export function Review({
   value,
   stillImageProps,
   posterImageProps,
-  collectionChips,
   seoImageSrc,
   moreFromCastAndCrew,
   moreInCollections,
   moreReviews,
-  castAndCrewChips,
 }: Props): JSX.Element {
   return (
-    <main
-      id="top"
-      data-pagefind-body
-      className="flex scroll-mt-[var(--header-offset)] flex-col items-center"
-    >
-      <Header
-        title={value.title}
-        year={value.year}
-        originalTitle={value.originalTitle}
-        countries={value.countries}
-        runtimeMinutes={value.runtimeMinutes}
-        className="px-pageMargin py-6 text-center desktop:py-8"
-      />
-      <Still
-        title={value.title}
-        year={value.year}
-        width={StillImageConfig.width}
-        height={StillImageConfig.height}
-        sizes={StillImageConfig.sizes}
-        className="mb-[5.33px]"
-        imageProps={stillImageProps}
-        loading="eager"
-        decoding="sync"
-      />
-      <div className="h-6 min-h-6 tablet:h-8 tablet:min-h-8" />
-      <Content
-        grade={value.grade}
-        date={value.date}
-        content={value.content}
-        className="items-center px-pageMargin"
-      />
-      <div className="spacer-y-20" />
-      <div className="w-full max-w-popout">
-        <h3 className="px-gutter text-md font-normal text-subtle shadow-bottom">
-          Viewing History
-          <div className="h-2 min-h-2" />
-        </h3>
-        <ul>
-          {value.viewings.map((viewing) => (
-            <ViewingHistoryListItem key={viewing.sequence} value={viewing} />
-          ))}
-        </ul>
+    <Layout hasBackdrop={false} className="flex flex-col" data-pagefind-body>
+      <header className="mb-12 flex flex-col items-center px-container-base pt-10">
+        <h1
+          data-pagefind-meta="title"
+          className="text-center text-4xl desktop:text-7xl"
+        >
+          {value.title}
+        </h1>
+        <OriginalTitle
+          className="mb-4 text-muted"
+          value={value.originalTitle}
+        />
+        <Grade value={value.grade} height={24} className="mb-6" />
+        <Meta
+          year={value.year}
+          countries={value.countries}
+          runtimeMinutes={value.runtimeMinutes}
+          className="mb-12"
+        />
+        <Still
+          title={value.title}
+          year={value.year}
+          width={StillImageConfig.width}
+          height={StillImageConfig.height}
+          sizes={StillImageConfig.sizes}
+          className="mx-auto mb-[5.33px]"
+          imageProps={stillImageProps}
+          loading="eager"
+          decoding="sync"
+        />
+      </header>
+      <div className="flex flex-col items-center gap-16 px-container-base pb-20 desktop:gap-20 desktop:pb-32">
+        <Content content={value.content} />
+        <div className="w-full max-w-popout">
+          <SubHeading as="h3" className="shadow-bottom">
+            Viewing History
+          </SubHeading>
+          <ul>
+            {value.viewings.map((viewing) => (
+              <ViewingHistoryListItem key={viewing.sequence} value={viewing} />
+            ))}
+          </ul>
+        </div>
+        <Credits
+          title={value.title}
+          year={value.year}
+          directorNames={value.directorNames}
+          principalCastNames={value.principalCastNames}
+          writerNames={value.writerNames}
+          originalTitle={value.originalTitle}
+          runtimeMinutes={value.runtimeMinutes}
+          countries={value.countries}
+          posterImageProps={posterImageProps}
+          className="w-full max-w-popout"
+        />
       </div>
-      <div className="spacer-y-32" />
-      <Credits
-        title={value.title}
-        year={value.year}
-        directorNames={value.directorNames}
-        principalCastNames={value.principalCastNames}
-        writerNames={value.writerNames}
-        originalTitle={value.originalTitle}
-        runtimeMinutes={value.runtimeMinutes}
-        countries={value.countries}
-        posterImageProps={posterImageProps}
-        className="w-full max-w-popout"
-      >
-        <ul className="flex flex-wrap gap-2">
-          <CastAndCrewChips values={castAndCrewChips} />
-          <CollectionChips values={collectionChips} />
-        </ul>
-      </Credits>
-      <div className="spacer-y-32" />
       <div
         data-pagefind-ignore
-        className="flex w-full max-w-popout flex-col items-center gap-y-12 bg-default tablet:max-w-full tablet:bg-subtle tablet:pb-32 tablet:pt-8 desktop:gap-y-24"
+        className="flex w-full flex-col items-center gap-y-12 bg-subtle pb-32 pt-16 tablet:pt-8 desktop:gap-y-24"
       >
         <MoreFromCastAndCrew values={moreFromCastAndCrew} />
         <MoreInCollections values={moreInCollections} />
-        <MoreReviews values={moreReviews} />
+        <MoreReviews values={moreReviews}>
+          <SubHeading as="h2">
+            More{" "}
+            <a href={`/reviews/`} className="text-accent">
+              Reviews
+            </a>
+          </SubHeading>
+        </MoreReviews>
       </div>
-      <div className="spacer-y-32 tablet:spacer-y-0" />
       <StructuredData
         title={value.title}
         year={value.year}
@@ -125,6 +123,58 @@ export function Review({
         grade={value.grade}
         seoImageSrc={seoImageSrc}
       />
-    </main>
+    </Layout>
+  );
+}
+
+function OriginalTitle({
+  value,
+  className,
+}: {
+  className: string;
+  value: string | null;
+}) {
+  if (!value) {
+    return <div className={className} />;
+  }
+
+  return <div className={className}>({value})</div>;
+}
+
+function Meta({
+  year,
+  countries,
+  runtimeMinutes,
+  className,
+}: Pick<Review, "year" | "countries" | "runtimeMinutes"> & {
+  className?: string;
+}) {
+  return (
+    <div
+      className={ccn(
+        "text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle",
+        className,
+      )}
+    >
+      {year} <span>|</span>{" "}
+      {countries.reduce<JSX.Element | null>((acc, country) => {
+        if (acc === null) {
+          return <>{country}</>;
+        }
+
+        return (
+          <>
+            {acc}
+            <span>&ndash;</span>
+            {country}
+          </>
+        );
+      }, null)}{" "}
+      <span>|</span> {runtimeMinutes}
+      &#x02009;min{" "}
+      <span>
+        <span>|</span> <a href="#credits">More...</a>
+      </span>
+    </div>
   );
 }

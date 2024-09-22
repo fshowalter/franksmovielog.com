@@ -23,7 +23,7 @@ export function Grade({
   className,
 }: {
   value?: string | null;
-  height: 32 | 18 | 16;
+  height: 32 | 24 | 18 | 16;
   className?: string;
 }): JSX.Element | null {
   if (!value) {

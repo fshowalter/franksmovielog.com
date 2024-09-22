@@ -1,9 +1,11 @@
 import { getAvatarImageProps } from "src/api/avatars";
+import { getBackdropImageProps } from "src/api/backdrops";
 import { allCastAndCrew } from "src/api/castAndCrew";
 import { ListItemAvatarImageConfig } from "src/components/ListItemAvatar";
 
+import { BackdropImageConfig } from "../Backdrop";
 import type { Props } from "./CastAndCrew";
-import type { ListItemValue } from "./List";
+import type { ListItemValue } from "./CastAndCrew";
 
 export async function getProps(): Promise<Props> {
   const { castAndCrew } = await allCastAndCrew();
@@ -28,5 +30,12 @@ export async function getProps(): Promise<Props> {
     }),
   );
 
-  return { values, initialSort: "name-asc" };
+  return {
+    values,
+    initialSort: "name-asc",
+    backdropImageProps: await getBackdropImageProps(
+      "cast-and-crew",
+      BackdropImageConfig,
+    ),
+  };
 }

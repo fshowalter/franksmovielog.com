@@ -1,19 +1,43 @@
 import { useReducer } from "react";
-import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
+import type { OverratedDisappointment } from "src/api/overratedDisappointments";
+import type { PosterImageProps } from "src/api/posters";
+import {
+  ListWithFiltersLayout,
+  SolidBackdrop,
+  SubNav,
+} from "src/components/ListWithFiltersLayout";
 
+import { Grade } from "../Grade";
+import { GroupedList } from "../GroupedList";
+import { ListItem } from "../ListItem";
+import { ListItemGenres } from "../ListItemGenres";
+import { ListItemPoster } from "../ListItemPoster";
+import { ListItemTitle } from "../ListItemTitle";
 import { Filters } from "./Filters";
-import { Header } from "./Header";
-import type { ListItemValue } from "./List";
-import { List } from "./List";
 import type { Sort } from "./Overrated.reducer";
-import { initState, reducer } from "./Overrated.reducer";
+import { Actions, initState, reducer } from "./Overrated.reducer";
 
-export interface Props {
+export type Props = {
   values: ListItemValue[];
   distinctGenres: string[];
   distinctReleaseYears: string[];
   initialSort: Sort;
-}
+};
+
+export type ListItemValue = Pick<
+  OverratedDisappointment,
+  | "releaseSequence"
+  | "title"
+  | "year"
+  | "sortTitle"
+  | "slug"
+  | "genres"
+  | "grade"
+  | "gradeValue"
+  | "imdbId"
+> & {
+  posterImageProps: PosterImageProps;
+};
 
 export function Overrated({
   values,
@@ -32,7 +56,29 @@ export function Overrated({
 
   return (
     <ListWithFiltersLayout
-      header={<Header />}
+      mastGradient={false}
+      backdrop={
+        <SolidBackdrop
+          title="Overrated Disappointments"
+          deck=" One and two star movies with an above-average IMDb rating and vote
+        count."
+          breadcrumb={
+            <>
+              <a href="/reviews/">Reviews</a>
+            </>
+          }
+        />
+      }
+      subNav={
+        <SubNav
+          values={[
+            { href: "/reviews/", text: "all" },
+            { href: "/reviews/underseen/", text: "underseen" },
+            { href: "/reviews/overrated/", text: "overrated", active: true },
+          ]}
+        />
+      }
+      totalCount={state.filteredValues.length}
       filters={
         <Filters
           dispatch={dispatch}
@@ -42,13 +88,52 @@ export function Overrated({
         />
       }
       list={
-        <List
-          dispatch={dispatch}
+        <GroupedList
+          data-testid="list"
           groupedValues={state.groupedValues}
           visibleCount={state.showCount}
           totalCount={state.filteredValues.length}
-        />
+          className="bg-default"
+          onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
+        >
+          {(value) => (
+            <UnderseenGemsListItem value={value} key={value.imdbId} />
+          )}
+        </GroupedList>
       }
     />
+  );
+}
+
+function UnderseenGemsListItem({
+  value,
+}: {
+  value: ListItemValue;
+}): JSX.Element {
+  return (
+    <ListItem className="items-center">
+      <ListItemPoster
+        slug={value.slug}
+        title={value.title}
+        year={value.year}
+        imageProps={value.posterImageProps}
+      />
+      <div className="grow pr-gutter tablet:w-full desktop:pr-4">
+        <div>
+          <ListItemTitle
+            title={value.title}
+            year={value.year}
+            slug={value.slug}
+          />
+          <div className="spacer-y-1" />
+          <div className="py-px">
+            <Grade value={value.grade} height={18} />
+          </div>
+          <div className="spacer-y-2" />
+          <ListItemGenres values={value.genres} />
+          <div className="spacer-y-2" />
+        </div>
+      </div>
+    </ListItem>
   );
 }

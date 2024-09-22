@@ -1,12 +1,7 @@
+import type { AvatarImageProps } from "src/api/avatars";
+import { Avatar } from "src/components/Avatar";
 import { BarGradient } from "src/components/BarGradient";
-import { StatHeading } from "src/components/StatHeading";
-import {
-  Table,
-  TableDataCell,
-  TableHead,
-  TableHeaderCell,
-  TableRow,
-} from "src/components/StatsTable";
+import { ccn } from "src/utils/concatClassNames";
 
 type ValueType = "director" | "writer" | "performer" | "collection";
 
@@ -15,56 +10,59 @@ interface Value {
   reviewCount: number;
   titleCount: number;
   slug: string | null;
+  avatarImageProps: AvatarImageProps | null;
 }
 
 export function Details({
   label,
   valueType,
   values,
+  className,
 }: {
   label: string;
   valueType: ValueType;
   values: Value[];
+  className?: string;
 }) {
   return (
-    <section>
-      <StatHeading>{label}</StatHeading>
-      <Table>
-        <TableHead>
-          <tr>
-            <TableHeaderCell align="left">Name</TableHeaderCell>
-            <th>&nbsp;</th>
-            <TableHeaderCell align="right">Progress</TableHeaderCell>
-          </tr>
-        </TableHead>
-        <tbody>
-          {values.map((value) => {
-            return (
-              <TableRow key={value.name}>
-                <TableDataCell align="left">
-                  <Name value={value} valueType={valueType} />
-                </TableDataCell>
-                <TableDataCell hideOnSmallScreens align="fill">
-                  <BarGradient
-                    value={value.reviewCount}
-                    maxValue={value.titleCount}
-                  />
-                </TableDataCell>
-                <TableDataCell
-                  align="right"
-                  className={
-                    value.reviewCount === value.titleCount
-                      ? "text-progress"
-                      : "text-subtle"
-                  }
-                >
-                  {value.reviewCount}/{value.titleCount}
-                </TableDataCell>
-              </TableRow>
-            );
-          })}
-        </tbody>
-      </Table>
+    <section
+      className={ccn(
+        "w-full bg-default px-container pb-8 desktop:w-auto desktop:basis-[calc(50%_-_16px)] desktop:px-gutter",
+        className,
+      )}
+    >
+      <h2 className="py-4 font-sans-narrow text-xs font-semibold uppercase tracking-[1px] text-muted shadow-bottom">
+        {label}
+      </h2>
+      <div className="grid w-full grid-cols-[auto,1fr,auto] tablet:whitespace-nowrap">
+        {values.map((value) => {
+          return (
+            <div
+              key={value.name}
+              className="col-span-3 grid grid-cols-subgrid grid-rows-[1fr,auto,auto,1fr] py-3"
+            >
+              <DetailsItemAvatar
+                imageProps={value.avatarImageProps}
+                name={value.name}
+                href={`/cast-and-crew/${value.slug}`}
+                className="row-span-4 mr-6"
+              />
+              <div className="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid">
+                <Name value={value} valueType={valueType} />
+                <div className="col-start-3 self-center text-nowrap pb-1 text-right font-sans-narrow text-xs text-subtle tablet:text-sm">
+                  {value.reviewCount} / {value.titleCount}
+                </div>
+              </div>
+              <div className="col-span-2 col-start-2 row-start-3 bg-subtle">
+                <BarGradient
+                  value={value.reviewCount}
+                  maxValue={value.titleCount}
+                />
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 }
@@ -73,17 +71,65 @@ function Name({ value, valueType }: { valueType: ValueType; value: Value }) {
   let linkTarget;
 
   if (valueType === "collection") {
-    linkTarget = `/collections/${value.slug}`;
+    linkTarget = `/collections/${value.slug}/`;
   } else {
-    linkTarget = `/cast-and-crew/${value.slug}`;
+    linkTarget = `/cast-and-crew/${value.slug}/`;
   }
 
   if (value.slug)
     return (
-      <a className="text-accent" href={linkTarget}>
+      <a
+        className="block pb-1 font-sans-narrow text-sm font-medium leading-none tracking-[-0.3px] text-accent"
+        href={linkTarget}
+      >
         {value.name}
       </a>
     );
 
-  return <span className="text-subtle">{value.name}</span>;
+  return (
+    <span className="block pb-1 font-sans-narrow text-sm font-medium leading-none tracking-[-0.3px] text-subtle">
+      {value.name}
+    </span>
+  );
+}
+
+export const DetailsAvatarImageConfig = {
+  width: 80,
+  height: 80,
+};
+
+export function DetailsItemAvatar({
+  name,
+  href,
+  imageProps,
+  className,
+}: {
+  name: string;
+  href: string;
+  imageProps: AvatarImageProps | null;
+  className?: string;
+}) {
+  const avatar = (
+    <Avatar
+      name={name}
+      imageProps={imageProps}
+      width={DetailsAvatarImageConfig.width}
+      height={DetailsAvatarImageConfig.height}
+      loading="lazy"
+      decoding="async"
+      className="w-full"
+    />
+  );
+
+  return (
+    <a
+      href={href}
+      className={ccn(
+        "safari-border-radius-fix w-full max-w-12 overflow-hidden rounded-[50%]",
+        className,
+      )}
+    >
+      {avatar}
+    </a>
+  );
 }

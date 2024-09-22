@@ -23,7 +23,6 @@ interface Props
     | "writerNames"
   > {
   className?: string;
-  children: React.ReactNode;
   posterImageProps: PosterImageProps;
 }
 
@@ -37,67 +36,63 @@ export function Credits({
   principalCastNames,
   writerNames,
   className,
-  children,
   posterImageProps,
 }: Props): JSX.Element {
   return (
     <aside
       id="credits"
       className={ccn(
-        "relative scroll-mt-[var(--header-offset)] bg-subtle px-gutter pb-8 pt-8 tablet:pt-12",
+        "bg-subtle px-container pb-8 pt-8 tablet:pt-12",
         className,
       )}
       data-pagefind-meta={`image:${posterImageProps.src}`}
     >
-      <header className="flex items-center justify-center gap-x-2 pb-6 text-center text-2.5xl">
-        {title} <span className="text-sm font-light text-subtle">({year})</span>
-      </header>
-      <div className="poster-border mx-auto mb-4 mt-0 block size-full max-w-poster bg-[#e9e7e0] tablet:float-left tablet:mx-0 tablet:mr-gutter">
-        <Poster
-          title={title}
-          year={year}
-          width={PosterImageConfig.width}
-          height={PosterImageConfig.height}
-          sizes={PosterImageConfig.sizes}
-          loading="lazy"
-          className="h-auto rounded-xl"
-          decoding="async"
-          imageProps={posterImageProps}
-          data-pagefind-meta="image[src], image_alt[alt]"
-        />
-      </div>
+      <div className="flex flex-wrap justify-center gap-8 tablet:flex-nowrap">
+        <div className="shrink-0">
+          <div className="block">
+            <Poster
+              title={title}
+              year={year}
+              width={PosterImageConfig.width}
+              height={PosterImageConfig.height}
+              sizes={PosterImageConfig.sizes}
+              loading="lazy"
+              className="h-auto"
+              decoding="async"
+              imageProps={posterImageProps}
+              data-pagefind-meta="image[src], image_alt[alt]"
+            />
+          </div>
+        </div>
 
-      <dl className="flex flex-col gap-y-4">
-        {originalTitle && (
-          <Credit term="Original Title" value={originalTitle} />
-        )}
-        <Credit term="Financing" value={toSentence(countries)} />
-        <Credit term="Running Time" value={`${runtimeMinutes} min`} />
-        <Credit
-          term="Directed by"
-          value={directorNames.map((name) => (
-            <div key={name}>{name}</div>
-          ))}
-        />
-        <Credit
-          term="Written by"
-          value={writerNames.map((name) => (
-            <div key={name}>{name}</div>
-          ))}
-        />
-        <Credit term="Starring" value={toSentence(principalCastNames)} />
-      </dl>
-      <div className="h-8 min-h-8" />
-      {children}
-      <div className="h-8 min-h-8" />
+        <dl className="flex min-w-0 shrink flex-col items-start gap-y-4">
+          <Credit term="Title" value={title} />
+          {originalTitle && (
+            <Credit term="Original Title" value={originalTitle} />
+          )}
+          <Credit term="Year" value={year} />
+          <Credit term="Financing" value={toSentence(countries)} />
+          <Credit term="Running Time" value={`${runtimeMinutes} min`} />
+          <Credit
+            term="Directed by"
+            value={directorNames.map((name) => (
+              <div key={name}>{name}</div>
+            ))}
+          />
+          <Credit
+            term="Written by"
+            value={writerNames.map((name) => (
+              <div key={name}>{name}</div>
+            ))}
+          />
+          <Credit term="Starring" value={toSentence(principalCastNames)} />
+        </dl>
+      </div>
       <a
         href="#top"
-        className="mx-auto flex max-w-[50%] cursor-pointer content-center items-center justify-center rounded-lg p-2 text-accent shadow-all hover:shadow-border-accent"
+        className="mx-auto mt-8 flex w-full max-w-[430px] cursor-pointer content-center items-center justify-center py-5 font-sans-narrow text-sm uppercase tracking-[.6px] shadow-all hover:bg-inverse hover:text-inverse"
       >
         Back to Top
-        <svg viewBox="0 0 24 24" className="size-6 fill-default">
-          <path d="M7.997 10l3.515-3.79a.672.672 0 0 1 .89-.076l.086.075L16 10 13 10.001V18h-2v-7.999L7.997 10z"></path>
-        </svg>
       </a>
     </aside>
   );
@@ -105,9 +100,11 @@ export function Credits({
 
 function Credit({ term, value }: { term: string; value: React.ReactNode }) {
   return (
-    <div className="overflow-hidden">
-      <dt className="font-bold text-subtle">{term}</dt>
-      <dd className="text-subtle">{value}</dd>
+    <div>
+      <dt className="font-sans-narrow text-xs font-medium uppercase tracking-[0.3px] text-subtle">
+        {term}
+      </dt>
+      <dd className="text-wrap font-normal text-muted">{value}</dd>
     </div>
   );
 }

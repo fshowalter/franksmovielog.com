@@ -2,7 +2,7 @@ import { buildGroupValues } from "src/utils/buildGroupValues";
 import { type FilterableState, filterTools } from "src/utils/filterTools";
 import { collator, sortNumber, sortString } from "src/utils/sortTools";
 
-import type { ListItemValue } from "./List";
+import type { ListItemValue } from "./Reviews";
 
 const SHOW_COUNT_DEFAULT = 100;
 
@@ -66,7 +66,11 @@ function groupForValue(value: ListItemValue, sortValue: Sort): string {
   }
 }
 
-type State = FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>>;
+type State = FilterableState<
+  ListItemValue,
+  Sort,
+  Map<string, ListItemValue[]>
+> & { showFilters: boolean };
 
 export function initState({
   values,
@@ -85,6 +89,7 @@ export function initState({
     filters: {},
     showCount: SHOW_COUNT_DEFAULT,
     sortValue: initialSort,
+    showFilters: false,
   };
 }
 
@@ -204,6 +209,7 @@ export function reducer(state: State, action: ActionType): State {
         showCount,
       };
     }
+
     // no default
   }
 }

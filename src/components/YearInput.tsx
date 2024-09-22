@@ -38,7 +38,7 @@ export function YearInput({
   };
 
   return (
-    <fieldset>
+    <fieldset className="text-subtle">
       <LabelText as="legend" text={label} />
       <div className="flex items-baseline">
         <label className="flex flex-1 items-center gap-x-[.5ch]">

@@ -7,12 +7,15 @@ export function BarGradient({
   value: number;
   maxValue: number;
 }): JSX.Element {
-  const barPercentProperty = {
+  const styles = {
     "--bar-percent": `${(value / maxValue) * 100}%`,
   } as React.CSSProperties;
 
   return (
-    <div className="progress-bar-bg leading-[38px]" style={barPercentProperty}>
+    <div
+      className="progress-bar-bg leading-[6px] tablet:mb-0 tablet:mt-[2px]"
+      style={styles}
+    >
       &nbsp;
     </div>
   );

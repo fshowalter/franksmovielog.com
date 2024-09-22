@@ -4,7 +4,6 @@ import { ListItem } from "./ListItem";
 import { ListItemMediumAndVenue } from "./ListItemMediumAndVenue";
 import { ListItemPoster } from "./ListItemPoster";
 import { ListItemTitle } from "./ListItemTitle";
-import { StatHeading } from "./StatHeading";
 
 interface ViewingSubListItemValue {
   sequence: number;
@@ -36,34 +35,28 @@ export function MostWatchedPeople({
   }
 
   return (
-    <section className="shadow-all">
-      <StatHeading>{header}</StatHeading>
-      <header className="sticky top-10 z-30 flex justify-between bg-default px-gutter font-bold leading-[calc(2.5rem_-_2px)] desktop:top-[calc(var(--header-offset)_+_2.5rem)] max:top-[calc(var(--header-offset)_+_2.5rem)]">
-        <span className="text-left leading-10">Name</span>
-        <span className="text-right leading-10">Viewings</span>
-      </header>
-      <ol>
-        {values.map((value, index) => {
+    <section className="w-full bg-default pb-8 tablet:px-container">
+      <h2 className="px-container py-4 font-medium tablet:px-0 desktop:text-xl">
+        {header}
+      </h2>
+      <div className="w-full tablet:whitespace-nowrap">
+        {values.map((value) => {
           return (
-            <li key={value.name} className="block">
-              <div
-                style={{ zIndex: 1 + index }}
-                className="sticky top-20 grid w-full grid-cols-[auto_1fr_calc(6ch_+_var(--gutter-width))] bg-stripe px-gutter leading-10 desktop:top-[calc(var(--header-offset)_+_5rem)] max:top-[calc(var(--header-offset)_+_5rem)]"
-              >
-                <span className="leading-10">
+            <div key={value.name} className="py-3">
+              <div className="flex justify-between px-container tablet:px-0">
+                <div className="font-sans-narrow text-sm text-muted">
                   <Name value={value} />
-                </span>
-                <span className="leading-10">&nbsp;</span>
-                <span className="bg-stripe text-right leading-10">
+                </div>
+                <div className="col-start-2 self-center text-nowrap pb-1 text-right font-sans-narrow text-sm text-subtle tablet:text-sm">
                   {value.count}
-                </span>
+                </div>
               </div>
-              <div className="col-start-1 col-end-4 leading-10">
+              <div className="col-span-2 row-start-2 bg-subtle px-container tablet:px-0">
                 <details>
-                  <summary className="px-gutter tracking-0.25px text-subtle">
+                  <summary className="py-1 font-sans text-sm text-subtle tablet:px-gutter desktop:px-2">
                     Details
                   </summary>
-                  <ol className="tablet:px-gutter">
+                  <ol className="py-4 tablet:px-gutter">
                     {value.viewings.map((viewing) => {
                       return (
                         <MostWatchedPersonViewingListItem
@@ -75,10 +68,10 @@ export function MostWatchedPeople({
                   </ol>
                 </details>
               </div>
-            </li>
+            </div>
           );
         })}
-      </ol>
+      </div>
     </section>
   );
 }
@@ -104,8 +97,10 @@ function MostWatchedPersonViewingListItem({
 }: {
   value: ViewingSubListItemValue;
 }) {
+  const className = value.slug ? "bg-default" : "bg-subtle";
+
   return (
-    <ListItem className="items-center">
+    <ListItem className={className}>
       <ListItemPoster
         slug={value.slug}
         title={value.title}
@@ -113,23 +108,15 @@ function MostWatchedPersonViewingListItem({
         imageProps={value.posterImageProps}
       />
       <div className="grow">
-        <div>
-          <ListItemTitle
-            title={value.title}
-            year={value.year}
-            slug={value.slug}
-          />
-          <div className="spacer-y-1 tablet:spacer-y-2" />
+        <ListItemTitle
+          title={value.title}
+          year={value.year}
+          slug={value.slug}
+        />
+        <div className="pb-2 pt-1 font-sans text-xs font-light text-muted">
+          {value.date}
         </div>
-        <div className="flex flex-col text-sm font-light tracking-0.5px text-subtle">
-          <div className="spacer-y-1 tablet:spacer-y-0" />
-          <div>
-            {value.date}
-            <div className="spacer-y-2" />
-            <ListItemMediumAndVenue medium={value.medium} venue={value.venue} />
-          </div>
-        </div>
-        <div className="spacer-y-2" />
+        <ListItemMediumAndVenue medium={value.medium} venue={value.venue} />
       </div>
     </ListItem>
   );

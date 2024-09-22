@@ -1,11 +1,13 @@
+import { getBackdropImageProps } from "src/api/backdrops";
 import { loadExcerptHtml, mostRecentReviews } from "src/api/reviews";
-import { getStills } from "src/api/stills";
+import { getStillImageProps } from "src/api/stills";
 
+import { BackdropImageConfig } from "../Backdrop";
 import type { Props } from "./Home";
 import { StillImageConfig } from "./HomeListItem";
 
 export async function getProps(): Promise<Props> {
-  const titles = await mostRecentReviews(10);
+  const titles = await mostRecentReviews(12);
 
   const values = await Promise.all(
     titles.map(async (review) => {
@@ -13,13 +15,21 @@ export async function getProps(): Promise<Props> {
     }),
   );
 
-  const stills = await getStills(
-    titles.map((title) => title.slug),
-    StillImageConfig,
-  );
-
   return {
-    values,
-    stills,
+    backdropImageProps: await getBackdropImageProps(
+      "home",
+      BackdropImageConfig,
+    ),
+    values: await Promise.all(
+      values.map(async (value) => {
+        return {
+          ...value,
+          stillImageProps: await getStillImageProps(
+            value.slug,
+            StillImageConfig,
+          ),
+        };
+      }),
+    ),
   };
 }

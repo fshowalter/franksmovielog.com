@@ -1,8 +1,8 @@
 import type { PosterImageProps } from "src/api/posters";
 
 export const ListItemPosterImageConfig = {
-  width: 56,
-  height: 84,
+  width: 75,
+  height: 113,
 };
 
 export function ListItemPoster({
@@ -20,7 +20,7 @@ export function ListItemPoster({
     return (
       <a
         href={`/reviews/${slug}/`}
-        className="safari-border-radius-fix min-w-14 max-w-14 shrink-0 overflow-hidden rounded-lg shadow-all"
+        className="w-auto min-w-16 max-w-16 shrink-0 tablet:max-w-unset"
       >
         <img
           {...imageProps}
@@ -36,7 +36,7 @@ export function ListItemPoster({
   }
 
   return (
-    <div className="safari-border-radius-fix min-w-14 max-w-14 shrink-0 overflow-hidden rounded-lg shadow-all">
+    <div className="w-auto min-w-16 max-w-16 shrink-0 tablet:max-w-unset">
       <img
         {...imageProps}
         alt="An unreviewed title."

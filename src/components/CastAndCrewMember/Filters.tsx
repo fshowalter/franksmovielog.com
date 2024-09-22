@@ -25,11 +25,12 @@ export function Filters({
 }): JSX.Element {
   return (
     <>
-      <div className="flex basis-full flex-col items-center justify-end">
-        <Button onClick={() => dispatch({ type: Actions.TOGGLE_REVIEWED })}>
-          {hideReviewed ? "Show Reviewed" : "Hide Reviewed"}
-        </Button>
-      </div>
+      <Button
+        onClick={() => dispatch({ type: Actions.TOGGLE_REVIEWED })}
+        className="hover:bg-inverse hover:text-inverse"
+      >
+        {hideReviewed ? "Show Reviewed" : "Hide Reviewed"}
+      </Button>
       {creditedAs.length > 1 && (
         <SelectField
           className="basis-full"
@@ -69,7 +70,7 @@ export function Filters({
       <SelectField
         className="basis-full"
         value={sortValue}
-        label="Order By"
+        label="Sort"
         onChange={(e) =>
           dispatch({
             type: Actions.SORT,

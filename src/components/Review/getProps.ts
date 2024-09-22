@@ -1,10 +1,8 @@
-import { getAvatarImageProps } from "src/api/avatars";
 import { getFluidWidthPosterImageProps } from "src/api/posters";
-import { allReviews, loadContent } from "src/api/reviews";
+import { allReviews, loadContent, loadExcerptHtml } from "src/api/reviews";
 import { getOpenGraphStillSrc, getStillImageProps } from "src/api/stills";
-import { StillListItemImageConfig } from "src/components/StillListItem";
 
-import { ChipAvatarImageConfig } from "./Chip";
+import { MoreReviewsImageConfig } from "../MoreReviews";
 import { PosterImageConfig } from "./Credits";
 import { type Props, StillImageConfig } from "./Review";
 
@@ -23,39 +21,18 @@ export async function getProps(slug: string): Promise<Props> {
       slug,
       PosterImageConfig,
     ),
-    castAndCrewChips: await Promise.all(
-      review.castAndCrew.map(async (value) => {
-        return {
-          ...value,
-          avatarImageProps: await getAvatarImageProps(
-            value.slug,
-            ChipAvatarImageConfig,
-          ),
-        };
-      }),
-    ),
-    collectionChips: await Promise.all(
-      review.collections.map(async (value) => {
-        return {
-          ...value,
-          avatarImageProps: await getAvatarImageProps(
-            value.slug,
-            ChipAvatarImageConfig,
-          ),
-        };
-      }),
-    ),
     moreFromCastAndCrew: await Promise.all(
       review.moreCastAndCrew.map(async (value) => {
         return {
           ...value,
           titles: await Promise.all(
             value.titles.map(async (title) => {
+              const titleWithExcerpt = await loadExcerptHtml(title);
               return {
-                ...title,
+                ...titleWithExcerpt,
                 stillImageProps: await getStillImageProps(
-                  title.slug,
-                  StillListItemImageConfig,
+                  titleWithExcerpt.slug,
+                  MoreReviewsImageConfig,
                 ),
               };
             }),
@@ -69,11 +46,12 @@ export async function getProps(slug: string): Promise<Props> {
           ...value,
           titles: await Promise.all(
             value.titles.map(async (title) => {
+              const titleWithExcerpt = await loadExcerptHtml(title);
               return {
-                ...title,
+                ...titleWithExcerpt,
                 stillImageProps: await getStillImageProps(
-                  title.slug,
-                  StillListItemImageConfig,
+                  titleWithExcerpt.slug,
+                  MoreReviewsImageConfig,
                 ),
               };
             }),
@@ -83,11 +61,12 @@ export async function getProps(slug: string): Promise<Props> {
     ),
     moreReviews: await Promise.all(
       review.moreReviews.map(async (value) => {
+        const titleWithExcerpt = await loadExcerptHtml(value);
         return {
-          ...value,
+          ...titleWithExcerpt,
           stillImageProps: await getStillImageProps(
-            value.slug,
-            StillListItemImageConfig,
+            titleWithExcerpt.slug,
+            MoreReviewsImageConfig,
           ),
         };
       }),
