@@ -308,11 +308,10 @@ exports[`Home > matches snapshot 1`] = `
             class="flex w-full flex-col flex-wrap justify-center gap-x-[3%] gap-y-[6vw] pb-8 tablet:flex-row tablet:justify-between desktop:gap-y-[3vw] max:gap-y-14"
           >
             <li
-              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
+              class="relative flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
-              <a
+              <div
                 class="mb-6 block"
-                href="/reviews/chamber-of-horrors-1966/"
               >
                 <img
                   alt=""
@@ -327,7 +326,7 @@ exports[`Home > matches snapshot 1`] = `
                   width="640"
                   year="1966"
                 />
-              </a>
+              </div>
               <div
                 class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
               >
@@ -337,7 +336,7 @@ exports[`Home > matches snapshot 1`] = `
                   23 Jun 2024
                 </div>
                 <a
-                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
+                  class="mb-2 block text-2.5xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                   href="/reviews/chamber-of-horrors-1966/"
                 >
                   Chamber of Horrors 
@@ -393,11 +392,10 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
+              class="relative flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
-              <a
+              <div
                 class="mb-6 block"
-                href="/reviews/two-for-the-seesaw-1962/"
               >
                 <img
                   alt=""
@@ -412,7 +410,7 @@ exports[`Home > matches snapshot 1`] = `
                   width="640"
                   year="1962"
                 />
-              </a>
+              </div>
               <div
                 class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
               >
@@ -422,7 +420,7 @@ exports[`Home > matches snapshot 1`] = `
                   18 Jun 2024
                 </div>
                 <a
-                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
+                  class="mb-2 block text-2.5xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                   href="/reviews/two-for-the-seesaw-1962/"
                 >
                   Two for the Seesaw 
@@ -479,11 +477,10 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
+              class="relative flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
-              <a
+              <div
                 class="mb-6 block"
-                href="/reviews/the-man-with-nine-lives-1940/"
               >
                 <img
                   alt=""
@@ -498,7 +495,7 @@ exports[`Home > matches snapshot 1`] = `
                   width="640"
                   year="1940"
                 />
-              </a>
+              </div>
               <div
                 class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
               >
@@ -508,7 +505,7 @@ exports[`Home > matches snapshot 1`] = `
                   08 Jun 2024
                 </div>
                 <a
-                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
+                  class="mb-2 block text-2.5xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                   href="/reviews/the-man-with-nine-lives-1940/"
                 >
                   The Man with Nine Lives 
@@ -564,11 +561,10 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
+              class="relative flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
-              <a
+              <div
                 class="mb-6 block"
-                href="/reviews/burial-ground-the-nights-of-terror-1981/"
               >
                 <img
                   alt=""
@@ -583,7 +579,7 @@ exports[`Home > matches snapshot 1`] = `
                   width="640"
                   year="1981"
                 />
-              </a>
+              </div>
               <div
                 class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
               >
@@ -593,7 +589,7 @@ exports[`Home > matches snapshot 1`] = `
                   23 May 2024
                 </div>
                 <a
-                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
+                  class="mb-2 block text-2.5xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                   href="/reviews/burial-ground-the-nights-of-terror-1981/"
                 >
                   Burial Ground: The Nights of Terror 
@@ -647,11 +643,10 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
+              class="relative flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
-              <a
+              <div
                 class="mb-6 block"
-                href="/reviews/lucifers-women-1974/"
               >
                 <img
                   alt=""
@@ -666,7 +661,7 @@ exports[`Home > matches snapshot 1`] = `
                   width="640"
                   year="1974"
                 />
-              </a>
+              </div>
               <div
                 class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
               >
@@ -676,7 +671,7 @@ exports[`Home > matches snapshot 1`] = `
                   15 May 2024
                 </div>
                 <a
-                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
+                  class="mb-2 block text-2.5xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                   href="/reviews/lucifers-women-1974/"
                 >
                   Lucifer's Women 
@@ -730,11 +725,10 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
+              class="relative flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
-              <a
+              <div
                 class="mb-6 block"
-                href="/reviews/beyond-the-door-iii-1989/"
               >
                 <img
                   alt=""
@@ -749,7 +743,7 @@ exports[`Home > matches snapshot 1`] = `
                   width="640"
                   year="1989"
                 />
-              </a>
+              </div>
               <div
                 class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
               >
@@ -759,7 +753,7 @@ exports[`Home > matches snapshot 1`] = `
                   27 Apr 2024
                 </div>
                 <a
-                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
+                  class="mb-2 block text-2.5xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                   href="/reviews/beyond-the-door-iii-1989/"
                 >
                   Beyond the Door III 
@@ -811,11 +805,10 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
+              class="relative flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
-              <a
+              <div
                 class="mb-6 block"
-                href="/reviews/the-midnight-meat-train-2008/"
               >
                 <img
                   alt=""
@@ -830,7 +823,7 @@ exports[`Home > matches snapshot 1`] = `
                   width="640"
                   year="2008"
                 />
-              </a>
+              </div>
               <div
                 class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
               >
@@ -840,7 +833,7 @@ exports[`Home > matches snapshot 1`] = `
                   27 Apr 2024
                 </div>
                 <a
-                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
+                  class="mb-2 block text-2.5xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                   href="/reviews/the-midnight-meat-train-2008/"
                 >
                   The Midnight Meat Train 
@@ -896,11 +889,10 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
+              class="relative flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
-              <a
+              <div
                 class="mb-6 block"
-                href="/reviews/horror-express-1972/"
               >
                 <img
                   alt=""
@@ -915,7 +907,7 @@ exports[`Home > matches snapshot 1`] = `
                   width="640"
                   year="1972"
                 />
-              </a>
+              </div>
               <div
                 class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
               >
@@ -925,7 +917,7 @@ exports[`Home > matches snapshot 1`] = `
                   27 Apr 2024
                 </div>
                 <a
-                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
+                  class="mb-2 block text-2.5xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                   href="/reviews/horror-express-1972/"
                 >
                   Horror Express 
@@ -983,11 +975,10 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
+              class="relative flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
-              <a
+              <div
                 class="mb-6 block"
-                href="/reviews/night-train-to-terror-1985/"
               >
                 <img
                   alt=""
@@ -1002,7 +993,7 @@ exports[`Home > matches snapshot 1`] = `
                   width="640"
                   year="1985"
                 />
-              </a>
+              </div>
               <div
                 class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
               >
@@ -1012,7 +1003,7 @@ exports[`Home > matches snapshot 1`] = `
                   27 Apr 2024
                 </div>
                 <a
-                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
+                  class="mb-2 block text-2.5xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                   href="/reviews/night-train-to-terror-1985/"
                 >
                   Night Train to Terror 
@@ -1074,11 +1065,10 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
+              class="relative flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
-              <a
+              <div
                 class="mb-6 block"
-                href="/reviews/human-lanterns-1982/"
               >
                 <img
                   alt=""
@@ -1093,7 +1083,7 @@ exports[`Home > matches snapshot 1`] = `
                   width="640"
                   year="1982"
                 />
-              </a>
+              </div>
               <div
                 class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
               >
@@ -1103,7 +1093,7 @@ exports[`Home > matches snapshot 1`] = `
                   24 Apr 2024
                 </div>
                 <a
-                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
+                  class="mb-2 block text-2.5xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                   href="/reviews/human-lanterns-1982/"
                 >
                   Human Lanterns 
@@ -1167,11 +1157,10 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
+              class="relative flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
-              <a
+              <div
                 class="mb-6 block"
-                href="/reviews/ninja-in-the-dragons-den-1982/"
               >
                 <img
                   alt=""
@@ -1186,7 +1175,7 @@ exports[`Home > matches snapshot 1`] = `
                   width="640"
                   year="1982"
                 />
-              </a>
+              </div>
               <div
                 class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
               >
@@ -1196,7 +1185,7 @@ exports[`Home > matches snapshot 1`] = `
                   24 Apr 2024
                 </div>
                 <a
-                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
+                  class="mb-2 block text-2.5xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                   href="/reviews/ninja-in-the-dragons-den-1982/"
                 >
                   Ninja in the Dragon's Den 
@@ -1249,11 +1238,10 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
+              class="relative flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]"
             >
-              <a
+              <div
                 class="mb-6 block"
-                href="/reviews/mandy-2018/"
               >
                 <img
                   alt=""
@@ -1268,7 +1256,7 @@ exports[`Home > matches snapshot 1`] = `
                   width="640"
                   year="2018"
                 />
-              </a>
+              </div>
               <div
                 class="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
               >
@@ -1278,7 +1266,7 @@ exports[`Home > matches snapshot 1`] = `
                   13 Apr 2024
                 </div>
                 <a
-                  class="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
+                  class="mb-2 block text-2.5xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                   href="/reviews/mandy-2018/"
                 >
                   Mandy 

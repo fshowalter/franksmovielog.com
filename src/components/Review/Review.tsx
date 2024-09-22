@@ -78,7 +78,7 @@ export function Review({
       <div className="flex flex-col items-center gap-16 px-container-base pb-20 desktop:gap-20 desktop:pb-32">
         <Content content={value.content} />
         <div className="w-full max-w-popout">
-          <SubHeading as="h3" className="shadow-bottom">
+          <SubHeading as="h2" className="shadow-bottom">
             Viewing History
           </SubHeading>
           <ul>
@@ -152,7 +152,7 @@ function Meta({
   return (
     <div
       className={ccn(
-        "text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle",
+        "text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle desktop:text-sm desktop:font-normal",
         className,
       )}
     >

@@ -312,7 +312,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
             />
           </picture>
           <div
-            class="text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle mb-12"
+            class="text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle desktop:text-sm desktop:font-normal mb-12"
           >
             1997 
             <span>
@@ -462,11 +462,11 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
           <div
             class="w-full max-w-popout"
           >
-            <h3
+            <h2
               class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle shadow-bottom"
             >
               Viewing History
-            </h3>
+            </h2>
             <ul>
               <li
                 class="flex flex-col px-gutter font-sans text-xs font-light even:bg-stripe"
@@ -786,11 +786,10 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/the-endless-2017/"
                   >
                     <img
                       alt=""
@@ -805,12 +804,12 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                       width="640"
                       year="2017"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/the-endless-2017/"
                     >
                       The Endless 
@@ -875,11 +874,10 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/the-entity-1982/"
                   >
                     <img
                       alt=""
@@ -894,12 +892,12 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                       width="640"
                       year="1982"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/the-entity-1982/"
                     >
                       The Entity 
@@ -948,11 +946,10 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/every-girl-should-be-married-1948/"
                   >
                     <img
                       alt=""
@@ -967,12 +964,12 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                       width="640"
                       year="1948"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/every-girl-should-be-married-1948/"
                     >
                       Every Girl Should Be Married 
@@ -1024,11 +1021,10 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/the-falcon-takes-over-1942/"
                   >
                     <img
                       alt=""
@@ -1043,12 +1039,12 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                       width="640"
                       year="1942"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/the-falcon-takes-over-1942/"
                     >
                       The Falcon Takes Over 
@@ -1616,7 +1612,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
             />
           </picture>
           <div
-            class="text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle mb-12"
+            class="text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle desktop:text-sm desktop:font-normal mb-12"
           >
             1987 
             <span>
@@ -1698,11 +1694,11 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
           <div
             class="w-full max-w-popout"
           >
-            <h3
+            <h2
               class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle shadow-bottom"
             >
               Viewing History
-            </h3>
+            </h2>
             <ul>
               <li
                 class="flex flex-col px-gutter font-sans text-xs font-light even:bg-stripe"
@@ -1995,11 +1991,10 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/underworld-1985/"
                   >
                     <img
                       alt=""
@@ -2014,12 +2009,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       width="640"
                       year="1985"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/underworld-1985/"
                     >
                       Underworld 
@@ -2077,11 +2072,10 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/rawhead-rex-1986/"
                   >
                     <img
                       alt=""
@@ -2096,12 +2090,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       width="640"
                       year="1986"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/rawhead-rex-1986/"
                     >
                       Rawhead Rex 
@@ -2156,11 +2150,10 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/hellbound-hellraiser-ii-1988/"
                   >
                     <img
                       alt=""
@@ -2175,12 +2168,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       width="640"
                       year="1988"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/hellbound-hellraiser-ii-1988/"
                     >
                       Hellbound: Hellraiser II 
@@ -2229,11 +2222,10 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/the-midnight-meat-train-2008/"
                   >
                     <img
                       alt=""
@@ -2248,12 +2240,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       width="640"
                       year="2008"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/the-midnight-meat-train-2008/"
                     >
                       The Midnight Meat Train 
@@ -2332,11 +2324,10 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/hells-house-1932/"
                   >
                     <img
                       alt=""
@@ -2351,12 +2342,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       width="640"
                       year="1932"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/hells-house-1932/"
                     >
                       Hell's House 
@@ -2402,11 +2393,10 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/hellbound-hellraiser-ii-1988/"
                   >
                     <img
                       alt=""
@@ -2421,12 +2411,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       width="640"
                       year="1988"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/hellbound-hellraiser-ii-1988/"
                     >
                       Hellbound: Hellraiser II 
@@ -2475,11 +2465,10 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/hereditary-2018/"
                   >
                     <img
                       alt=""
@@ -2494,12 +2483,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       width="640"
                       year="2018"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/hereditary-2018/"
                     >
                       Hereditary 
@@ -2555,11 +2544,10 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/hi-mom-1970/"
                   >
                     <img
                       alt=""
@@ -2574,12 +2562,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       width="640"
                       year="1970"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/hi-mom-1970/"
                     >
                       Hi, Mom! 
@@ -3141,7 +3129,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
             />
           </picture>
           <div
-            class="text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle mb-12"
+            class="text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle desktop:text-sm desktop:font-normal mb-12"
           >
             1972 
             <span>
@@ -3254,11 +3242,11 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
           <div
             class="w-full max-w-popout"
           >
-            <h3
+            <h2
               class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle shadow-bottom"
             >
               Viewing History
-            </h3>
+            </h2>
             <ul>
               <li
                 class="flex flex-col px-gutter font-sans text-xs font-light even:bg-stripe"
@@ -3565,11 +3553,10 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/i-monster-1971/"
                   >
                     <img
                       alt=""
@@ -3584,12 +3571,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       width="640"
                       year="1971"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/i-monster-1971/"
                     >
                       I, Monster 
@@ -3734,11 +3721,10 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/asylum-1972/"
                   >
                     <img
                       alt=""
@@ -3753,12 +3739,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       width="640"
                       year="1972"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/asylum-1972/"
                     >
                       Asylum 
@@ -3815,11 +3801,10 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/and-now-the-screaming-starts-1973/"
                   >
                     <img
                       alt=""
@@ -3834,12 +3819,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       width="640"
                       year="1973"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/and-now-the-screaming-starts-1973/"
                     >
                       And Now the Screaming Starts! 
@@ -3918,11 +3903,10 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/star-wars-episode-iv-a-new-hope-1977/"
                   >
                     <img
                       alt=""
@@ -3937,12 +3921,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       width="640"
                       year="1977"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/star-wars-episode-iv-a-new-hope-1977/"
                     >
                       Star Wars: Episode IV - A New Hope 
@@ -4014,11 +3998,10 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/i-monster-1971/"
                   >
                     <img
                       alt=""
@@ -4033,12 +4016,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       width="640"
                       year="1971"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/i-monster-1971/"
                     >
                       I, Monster 
@@ -4183,11 +4166,10 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/hannie-caulder-1971/"
                   >
                     <img
                       alt=""
@@ -4202,12 +4184,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       width="640"
                       year="1971"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/hannie-caulder-1971/"
                     >
                       Hannie Caulder 
@@ -4259,11 +4241,10 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/to-the-devil-a-daughter-1976/"
                   >
                     <img
                       alt=""
@@ -4278,12 +4259,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       width="640"
                       year="1976"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/to-the-devil-a-daughter-1976/"
                     >
                       To the Devil a Daughter 
@@ -4455,11 +4436,10 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/howling-ii-your-sister-is-a-werewolf-1985/"
                   >
                     <img
                       alt=""
@@ -4474,12 +4454,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       width="640"
                       year="1985"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/howling-ii-your-sister-is-a-werewolf-1985/"
                     >
                       Howling II: ... Your Sister Is a Werewolf 
@@ -4551,11 +4531,10 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/the-hoodlum-saint-1946/"
                   >
                     <img
                       alt=""
@@ -4570,12 +4549,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       width="640"
                       year="1946"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/the-hoodlum-saint-1946/"
                     >
                       The Hoodlum Saint 
@@ -4624,11 +4603,10 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/hoppy-serves-a-writ-1943/"
                   >
                     <img
                       alt=""
@@ -4643,12 +4621,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       width="640"
                       year="1943"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/hoppy-serves-a-writ-1943/"
                     >
                       Hoppy Serves a Writ 
@@ -4697,11 +4675,10 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/horror-of-dracula-1958/"
                   >
                     <img
                       alt=""
@@ -4716,12 +4693,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       width="640"
                       year="1958"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/horror-of-dracula-1958/"
                     >
                       Horror of Dracula 
@@ -4774,11 +4751,10 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/the-house-that-dripped-blood-1971/"
                   >
                     <img
                       alt=""
@@ -4793,12 +4769,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       width="640"
                       year="1971"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/the-house-that-dripped-blood-1971/"
                     >
                       The House That Dripped Blood 
@@ -5359,7 +5335,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
             />
           </picture>
           <div
-            class="text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle mb-12"
+            class="text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle desktop:text-sm desktop:font-normal mb-12"
           >
             1985 
             <span>
@@ -5532,11 +5508,11 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
           <div
             class="w-full max-w-popout"
           >
-            <h3
+            <h2
               class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle shadow-bottom"
             >
               Viewing History
-            </h3>
+            </h2>
             <ul>
               <li
                 class="flex flex-col px-gutter font-sans text-xs font-light even:bg-stripe"
@@ -5929,11 +5905,10 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/next-of-kin-1989/"
                   >
                     <img
                       alt=""
@@ -5948,12 +5923,12 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                       width="640"
                       year="1989"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/next-of-kin-1989/"
                     >
                       Next of Kin 
@@ -6002,11 +5977,10 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/the-night-they-raided-minskys-1968/"
                   >
                     <img
                       alt=""
@@ -6021,12 +5995,12 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                       width="640"
                       year="1968"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/the-night-they-raided-minskys-1968/"
                     >
                       The Night They Raided Minsky's 
@@ -6072,11 +6046,10 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/night-of-the-demons-1988/"
                   >
                     <img
                       alt=""
@@ -6091,12 +6064,12 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                       width="640"
                       year="1988"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/night-of-the-demons-1988/"
                     >
                       Night of the Demons 
@@ -6148,11 +6121,10 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/nightcrawler-2014/"
                   >
                     <img
                       alt=""
@@ -6167,12 +6139,12 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                       width="640"
                       year="2014"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/nightcrawler-2014/"
                     >
                       Nightcrawler 
@@ -6727,7 +6699,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
             />
           </picture>
           <div
-            class="text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle mb-12"
+            class="text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle desktop:text-sm desktop:font-normal mb-12"
           >
             1959 
             <span>
@@ -6804,11 +6776,11 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
           <div
             class="w-full max-w-popout"
           >
-            <h3
+            <h2
               class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle shadow-bottom"
             >
               Viewing History
-            </h3>
+            </h2>
             <ul>
               <li
                 class="flex flex-col px-gutter font-sans text-xs font-light even:bg-stripe"
@@ -7229,11 +7201,10 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/scarface-1932/"
                   >
                     <img
                       alt=""
@@ -7248,12 +7219,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       width="640"
                       year="1932"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/scarface-1932/"
                     >
                       Scarface 
@@ -7311,11 +7282,10 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/the-crowd-roars-1932/"
                   >
                     <img
                       alt=""
@@ -7330,12 +7300,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       width="640"
                       year="1932"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/the-crowd-roars-1932/"
                     >
                       The Crowd Roars 
@@ -7387,11 +7357,10 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/the-dawn-patrol-1930/"
                   >
                     <img
                       alt=""
@@ -7406,12 +7375,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       width="640"
                       year="1930"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/the-dawn-patrol-1930/"
                     >
                       The Dawn Patrol 
@@ -7465,11 +7434,10 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/the-criminal-code-1930/"
                   >
                     <img
                       alt=""
@@ -7484,12 +7452,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       width="640"
                       year="1930"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/the-criminal-code-1930/"
                     >
                       The Criminal Code 
@@ -7561,11 +7529,10 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/the-oklahoma-kid-1939/"
                   >
                     <img
                       alt=""
@@ -7580,12 +7547,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       width="640"
                       year="1939"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/the-oklahoma-kid-1939/"
                     >
                       The Oklahoma Kid 
@@ -7634,11 +7601,10 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/the-searchers-1956/"
                   >
                     <img
                       alt=""
@@ -7653,12 +7619,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       width="640"
                       year="1956"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/the-searchers-1956/"
                     >
                       The Searchers 
@@ -7751,11 +7717,10 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/salute-1929/"
                   >
                     <img
                       alt=""
@@ -7770,12 +7735,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       width="640"
                       year="1929"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/salute-1929/"
                     >
                       Salute 
@@ -7830,11 +7795,10 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/born-reckless-1930/"
                   >
                     <img
                       alt=""
@@ -7849,12 +7813,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       width="640"
                       year="1930"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/born-reckless-1930/"
                     >
                       Born Reckless 
@@ -7923,11 +7887,10 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/big-jim-mclain-1952/"
                   >
                     <img
                       alt=""
@@ -7942,12 +7905,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       width="640"
                       year="1952"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/big-jim-mclain-1952/"
                     >
                       Big Jim McLain 
@@ -8005,11 +7968,10 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/the-searchers-1956/"
                   >
                     <img
                       alt=""
@@ -8024,12 +7986,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       width="640"
                       year="1956"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/the-searchers-1956/"
                     >
                       The Searchers 
@@ -8122,11 +8084,10 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/the-big-trail-1930/"
                   >
                     <img
                       alt=""
@@ -8141,12 +8102,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       width="640"
                       year="1930"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/the-big-trail-1930/"
                     >
                       The Big Trail 
@@ -8204,11 +8165,10 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/arizona-1931/"
                   >
                     <img
                       alt=""
@@ -8223,12 +8183,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       width="640"
                       year="1931"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/arizona-1931/"
                     >
                       Arizona 
@@ -8303,11 +8263,10 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/ride-lonesome-1959/"
                   >
                     <img
                       alt=""
@@ -8322,12 +8281,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       width="640"
                       year="1959"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/ride-lonesome-1959/"
                     >
                       Ride Lonesome 
@@ -8376,11 +8335,10 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/riders-of-destiny-1933/"
                   >
                     <img
                       alt=""
@@ -8395,12 +8353,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       width="640"
                       year="1933"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/riders-of-destiny-1933/"
                     >
                       Riders of Destiny 
@@ -8478,11 +8436,10 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/the-rise-and-fall-of-legs-diamond-1960/"
                   >
                     <img
                       alt=""
@@ -8497,12 +8454,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       width="640"
                       year="1960"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/the-rise-and-fall-of-legs-diamond-1960/"
                     >
                       The Rise and Fall of Legs Diamond 
@@ -8548,11 +8505,10 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/rituals-1977/"
                   >
                     <img
                       alt=""
@@ -8567,12 +8523,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       width="640"
                       year="1977"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/rituals-1977/"
                     >
                       Rituals 
@@ -9139,7 +9095,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             />
           </picture>
           <div
-            class="text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle mb-12"
+            class="text-center font-sans-narrow text-xs font-medium uppercase tracking-[.6px] text-subtle desktop:text-sm desktop:font-normal mb-12"
           >
             1957 
             <span>
@@ -9250,11 +9206,11 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
           <div
             class="w-full max-w-popout"
           >
-            <h3
+            <h2
               class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle shadow-bottom"
             >
               Viewing History
-            </h3>
+            </h2>
             <ul>
               <li
                 class="flex flex-col px-gutter font-sans text-xs font-light even:bg-stripe"
@@ -9550,11 +9506,10 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/the-man-in-the-iron-mask-1939/"
                   >
                     <img
                       alt=""
@@ -9569,12 +9524,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       width="640"
                       year="1939"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/the-man-in-the-iron-mask-1939/"
                     >
                       The Man in the Iron Mask 
@@ -9631,11 +9586,10 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/a-chump-at-oxford-1939/"
                   >
                     <img
                       alt=""
@@ -9650,12 +9604,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       width="640"
                       year="1940"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/a-chump-at-oxford-1939/"
                     >
                       A Chump at Oxford 
@@ -9707,11 +9661,10 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/the-abominable-snowman-1957/"
                   >
                     <img
                       alt=""
@@ -9726,12 +9679,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       width="640"
                       year="1957"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/the-abominable-snowman-1957/"
                     >
                       The Abominable Snowman 
@@ -9783,11 +9736,10 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/violent-playground-1958/"
                   >
                     <img
                       alt=""
@@ -9802,12 +9754,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       width="640"
                       year="1958"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/violent-playground-1958/"
                     >
                       Violent Playground 
@@ -9873,11 +9825,10 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/howling-ii-your-sister-is-a-werewolf-1985/"
                   >
                     <img
                       alt=""
@@ -9892,12 +9843,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       width="640"
                       year="1985"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/howling-ii-your-sister-is-a-werewolf-1985/"
                     >
                       Howling II: ... Your Sister Is a Werewolf 
@@ -9946,11 +9897,10 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/corridor-of-mirrors-1948/"
                   >
                     <img
                       alt=""
@@ -9965,12 +9915,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       width="640"
                       year="1948"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/corridor-of-mirrors-1948/"
                     >
                       Corridor of Mirrors 
@@ -10026,11 +9976,10 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/horror-of-dracula-1958/"
                   >
                     <img
                       alt=""
@@ -10045,12 +9994,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       width="640"
                       year="1958"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/horror-of-dracula-1958/"
                     >
                       Horror of Dracula 
@@ -10103,11 +10052,10 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/the-city-of-the-dead-1960/"
                   >
                     <img
                       alt=""
@@ -10122,12 +10070,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       width="640"
                       year="1960"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/the-city-of-the-dead-1960/"
                     >
                       The City of the Dead 
@@ -10291,11 +10239,10 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/the-quatermass-xperiment-1955/"
                   >
                     <img
                       alt=""
@@ -10310,12 +10257,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       width="640"
                       year="1955"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/the-quatermass-xperiment-1955/"
                     >
                       The Quatermass Xperiment 
@@ -10374,11 +10321,10 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/x-the-unknown-1956/"
                   >
                     <img
                       alt=""
@@ -10393,12 +10339,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       width="640"
                       year="1956"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/x-the-unknown-1956/"
                     >
                       X the Unknown 
@@ -10452,11 +10398,10 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/quatermass-2-1957/"
                   >
                     <img
                       alt=""
@@ -10471,12 +10416,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       width="640"
                       year="1957"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/quatermass-2-1957/"
                     >
                       Quatermass 2 
@@ -10533,11 +10478,10 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/the-abominable-snowman-1957/"
                   >
                     <img
                       alt=""
@@ -10552,12 +10496,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       width="640"
                       year="1957"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/the-abominable-snowman-1957/"
                     >
                       The Abominable Snowman 
@@ -10632,11 +10576,10 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/cure-1997/"
                   >
                     <img
                       alt=""
@@ -10651,12 +10594,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       width="640"
                       year="1997"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/cure-1997/"
                     >
                       Cure 
@@ -10715,11 +10658,10 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/curse-of-chucky-2013/"
                   >
                     <img
                       alt=""
@@ -10734,12 +10676,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       width="640"
                       year="2013"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/curse-of-chucky-2013/"
                     >
                       Curse of Chucky 
@@ -10788,11 +10730,10 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/curse-of-the-demon-1957/"
                   >
                     <img
                       alt=""
@@ -10807,12 +10748,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       width="640"
                       year="1957"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/curse-of-the-demon-1957/"
                     >
                       Curse of the Demon 
@@ -10873,11 +10814,10 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   </div>
                 </li>
                 <li
-                  class="w-full tablet:w-[47%]"
+                  class="relative w-full tablet:w-[47%]"
                 >
-                  <a
+                  <div
                     class="block"
-                    href="/reviews/dagon-2001/"
                   >
                     <img
                       alt=""
@@ -10892,12 +10832,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       width="640"
                       year="2001"
                     />
-                  </a>
+                  </div>
                   <div
                     class="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
                   >
                     <a
-                      class="mb-4 block text-xl font-medium text-default"
+                      class="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
                       href="/reviews/dagon-2001/"
                     >
                       Dagon 
