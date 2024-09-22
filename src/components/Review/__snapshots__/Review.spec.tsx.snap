@@ -461,7 +461,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
             class="w-full max-w-popout"
           >
             <h3
-              class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle shadow-bottom"
+              class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle shadow-bottom"
             >
               Viewing History
             </h3>
@@ -652,7 +652,6 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                     decoding="async"
                     height="372"
                     loading="lazy"
-                    sizes="(min-width: 248px) 248px, 100vw"
                     src="/_image?/content%2Fassets%2Fposters%2Fevent-horizon-1997.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=248&h=372&q=80&f=avif"
                     srcset="/_image?/content%2Fassets%2Fposters%2Fevent-horizon-1997.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=62&q=80&f=avif 62w, /_image?/content%2Fassets%2Fposters%2Fevent-horizon-1997.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=124&q=80&f=avif 124w, /_image?/content%2Fassets%2Fposters%2Fevent-horizon-1997.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=248&q=80&f=avif 248w, /_image?/content%2Fassets%2Fposters%2Fevent-horizon-1997.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=496&q=80&f=avif 496w"
                     width="248"
@@ -771,7 +770,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle"
               >
                 More 
                 <a
@@ -782,7 +781,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 </a>
               </h2>
               <ul
-                class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
+                class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
                   class="w-full tablet:w-[47%]"
@@ -795,12 +794,12 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                       alt="A still from The Endless (2017)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fthe-endless-2017.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-endless-2017.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-endless-2017.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-endless-2017.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-endless-2017.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fthe-endless-2017.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-endless-2017.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fthe-endless-2017.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fthe-endless-2017.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fthe-endless-2017.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -882,12 +881,12 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                       alt="A still from The Entity (1982)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fthe-entity-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-entity-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-entity-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-entity-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-entity-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fthe-entity-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-entity-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fthe-entity-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fthe-entity-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fthe-entity-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -953,12 +952,12 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                       alt="A still from Every Girl Should Be Married (1948)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fevery-girl-should-be-married-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fevery-girl-should-be-married-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fevery-girl-should-be-married-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fevery-girl-should-be-married-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fevery-girl-should-be-married-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fevery-girl-should-be-married-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fevery-girl-should-be-married-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fevery-girl-should-be-married-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fevery-girl-should-be-married-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fevery-girl-should-be-married-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -1027,12 +1026,12 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                       alt="A still from The Falcon Takes Over (1942)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fthe-falcon-takes-over-1942.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-falcon-takes-over-1942.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-falcon-takes-over-1942.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-falcon-takes-over-1942.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-falcon-takes-over-1942.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fthe-falcon-takes-over-1942.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-falcon-takes-over-1942.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fthe-falcon-takes-over-1942.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fthe-falcon-takes-over-1942.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fthe-falcon-takes-over-1942.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -1688,7 +1687,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
             class="w-full max-w-popout"
           >
             <h3
-              class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle shadow-bottom"
+              class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle shadow-bottom"
             >
               Viewing History
             </h3>
@@ -1852,7 +1851,6 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                     decoding="async"
                     height="372"
                     loading="lazy"
-                    sizes="(min-width: 248px) 248px, 100vw"
                     src="/_image?/content%2Fassets%2Fposters%2Fhellraiser-1987.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=248&h=372&q=80&f=avif"
                     srcset="/_image?/content%2Fassets%2Fposters%2Fhellraiser-1987.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=62&q=80&f=avif 62w, /_image?/content%2Fassets%2Fposters%2Fhellraiser-1987.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=124&q=80&f=avif 124w, /_image?/content%2Fassets%2Fposters%2Fhellraiser-1987.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=248&q=80&f=avif 248w, /_image?/content%2Fassets%2Fposters%2Fhellraiser-1987.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=496&q=80&f=avif 496w"
                     width="248"
@@ -1971,7 +1969,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle"
               >
                 More written by 
                 <a
@@ -1982,7 +1980,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 </a>
               </h2>
               <ul
-                class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
+                class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
                   class="w-full tablet:w-[47%]"
@@ -1995,12 +1993,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       alt="A still from Underworld (1985)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Funderworld-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Funderworld-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Funderworld-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Funderworld-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Funderworld-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Funderworld-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Funderworld-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Funderworld-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Funderworld-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Funderworld-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -2075,12 +2073,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       alt="A still from Rawhead Rex (1986)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Frawhead-rex-1986.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Frawhead-rex-1986.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Frawhead-rex-1986.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Frawhead-rex-1986.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Frawhead-rex-1986.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Frawhead-rex-1986.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Frawhead-rex-1986.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Frawhead-rex-1986.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Frawhead-rex-1986.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Frawhead-rex-1986.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -2152,12 +2150,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       alt="A still from Hellbound: Hellraiser II (1988)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fhellbound-hellraiser-ii-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fhellbound-hellraiser-ii-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fhellbound-hellraiser-ii-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fhellbound-hellraiser-ii-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fhellbound-hellraiser-ii-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fhellbound-hellraiser-ii-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fhellbound-hellraiser-ii-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fhellbound-hellraiser-ii-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fhellbound-hellraiser-ii-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fhellbound-hellraiser-ii-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -2223,12 +2221,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       alt="A still from The Midnight Meat Train (2008)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -2300,7 +2298,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle"
               >
                 More 
                 <a
@@ -2311,7 +2309,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 </a>
               </h2>
               <ul
-                class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
+                class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
                   class="w-full tablet:w-[47%]"
@@ -2324,12 +2322,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       alt="A still from Hell's House (1932)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fhells-house-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fhells-house-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fhells-house-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fhells-house-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fhells-house-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fhells-house-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fhells-house-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fhells-house-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fhells-house-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fhells-house-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -2392,12 +2390,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       alt="A still from Hellbound: Hellraiser II (1988)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fhellbound-hellraiser-ii-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fhellbound-hellraiser-ii-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fhellbound-hellraiser-ii-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fhellbound-hellraiser-ii-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fhellbound-hellraiser-ii-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fhellbound-hellraiser-ii-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fhellbound-hellraiser-ii-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fhellbound-hellraiser-ii-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fhellbound-hellraiser-ii-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fhellbound-hellraiser-ii-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -2463,12 +2461,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       alt="A still from Hereditary (2018)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fhereditary-2018.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fhereditary-2018.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fhereditary-2018.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fhereditary-2018.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fhereditary-2018.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fhereditary-2018.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fhereditary-2018.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fhereditary-2018.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fhereditary-2018.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fhereditary-2018.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -2541,12 +2539,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                       alt="A still from Hi, Mom! (1970)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fhi-mom-1970.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fhi-mom-1970.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fhi-mom-1970.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fhi-mom-1970.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fhi-mom-1970.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fhi-mom-1970.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fhi-mom-1970.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fhi-mom-1970.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fhi-mom-1970.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fhi-mom-1970.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -3227,7 +3225,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
             class="w-full max-w-popout"
           >
             <h3
-              class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle shadow-bottom"
+              class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle shadow-bottom"
             >
               Viewing History
             </h3>
@@ -3390,7 +3388,6 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                     decoding="async"
                     height="372"
                     loading="lazy"
-                    sizes="(min-width: 248px) 248px, 100vw"
                     src="/_image?/content%2Fassets%2Fposters%2Fhorror-express-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=248&h=372&q=80&f=avif"
                     srcset="/_image?/content%2Fassets%2Fposters%2Fhorror-express-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=62&q=80&f=avif 62w, /_image?/content%2Fassets%2Fposters%2Fhorror-express-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=124&q=80&f=avif 124w, /_image?/content%2Fassets%2Fposters%2Fhorror-express-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=248&q=80&f=avif 248w, /_image?/content%2Fassets%2Fposters%2Fhorror-express-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=496&q=80&f=avif 496w"
                     width="248"
@@ -3524,7 +3521,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle"
               >
                 More with 
                 <a
@@ -3535,7 +3532,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 </a>
               </h2>
               <ul
-                class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
+                class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
                   class="w-full tablet:w-[47%]"
@@ -3548,12 +3545,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       alt="A still from I, Monster (1971)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -3715,12 +3712,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       alt="A still from Asylum (1972)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fasylum-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fasylum-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fasylum-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fasylum-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fasylum-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fasylum-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fasylum-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fasylum-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fasylum-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fasylum-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -3794,12 +3791,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       alt="A still from And Now the Screaming Starts! (1973)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fand-now-the-screaming-starts-1973.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fand-now-the-screaming-starts-1973.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fand-now-the-screaming-starts-1973.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fand-now-the-screaming-starts-1973.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fand-now-the-screaming-starts-1973.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fand-now-the-screaming-starts-1973.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fand-now-the-screaming-starts-1973.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fand-now-the-screaming-starts-1973.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fand-now-the-screaming-starts-1973.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fand-now-the-screaming-starts-1973.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -3895,12 +3892,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       alt="A still from Star Wars: Episode IV - A New Hope (1977)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fstar-wars-episode-iv-a-new-hope-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fstar-wars-episode-iv-a-new-hope-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fstar-wars-episode-iv-a-new-hope-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fstar-wars-episode-iv-a-new-hope-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fstar-wars-episode-iv-a-new-hope-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fstar-wars-episode-iv-a-new-hope-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fstar-wars-episode-iv-a-new-hope-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fstar-wars-episode-iv-a-new-hope-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fstar-wars-episode-iv-a-new-hope-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fstar-wars-episode-iv-a-new-hope-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -3965,7 +3962,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle"
               >
                 More with 
                 <a
@@ -3976,7 +3973,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 </a>
               </h2>
               <ul
-                class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
+                class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
                   class="w-full tablet:w-[47%]"
@@ -3989,12 +3986,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       alt="A still from I, Monster (1971)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fi-monster-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -4156,12 +4153,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       alt="A still from Hannie Caulder (1971)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fhannie-caulder-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fhannie-caulder-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fhannie-caulder-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fhannie-caulder-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fhannie-caulder-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fhannie-caulder-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fhannie-caulder-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fhannie-caulder-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fhannie-caulder-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fhannie-caulder-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -4230,12 +4227,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       alt="A still from To the Devil a Daughter (1976)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fto-the-devil-a-daughter-1976.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fto-the-devil-a-daughter-1976.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fto-the-devil-a-daughter-1976.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fto-the-devil-a-daughter-1976.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fto-the-devil-a-daughter-1976.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fto-the-devil-a-daughter-1976.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fto-the-devil-a-daughter-1976.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fto-the-devil-a-daughter-1976.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fto-the-devil-a-daughter-1976.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fto-the-devil-a-daughter-1976.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -4424,12 +4421,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       alt="A still from Howling II: ... Your Sister Is a Werewolf (1985)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -4494,7 +4491,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle"
               >
                 More 
                 <a
@@ -4505,7 +4502,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 </a>
               </h2>
               <ul
-                class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
+                class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
                   class="w-full tablet:w-[47%]"
@@ -4518,12 +4515,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       alt="A still from The Hoodlum Saint (1946)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fthe-hoodlum-saint-1946.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-hoodlum-saint-1946.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-hoodlum-saint-1946.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-hoodlum-saint-1946.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-hoodlum-saint-1946.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fthe-hoodlum-saint-1946.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-hoodlum-saint-1946.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fthe-hoodlum-saint-1946.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fthe-hoodlum-saint-1946.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fthe-hoodlum-saint-1946.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -4589,12 +4586,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       alt="A still from Hoppy Serves a Writ (1943)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fhoppy-serves-a-writ-1943.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fhoppy-serves-a-writ-1943.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fhoppy-serves-a-writ-1943.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fhoppy-serves-a-writ-1943.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fhoppy-serves-a-writ-1943.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fhoppy-serves-a-writ-1943.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fhoppy-serves-a-writ-1943.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fhoppy-serves-a-writ-1943.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fhoppy-serves-a-writ-1943.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fhoppy-serves-a-writ-1943.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -4660,12 +4657,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       alt="A still from Horror of Dracula (1958)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -4735,12 +4732,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       alt="A still from The House That Dripped Blood (1971)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fthe-house-that-dripped-blood-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-house-that-dripped-blood-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-house-that-dripped-blood-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-house-that-dripped-blood-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-house-that-dripped-blood-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fthe-house-that-dripped-blood-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-house-that-dripped-blood-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fthe-house-that-dripped-blood-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fthe-house-that-dripped-blood-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fthe-house-that-dripped-blood-1971.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -5480,7 +5477,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
             class="w-full max-w-popout"
           >
             <h3
-              class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle shadow-bottom"
+              class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle shadow-bottom"
             >
               Viewing History
             </h3>
@@ -5732,7 +5729,6 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                     decoding="async"
                     height="372"
                     loading="lazy"
-                    sizes="(min-width: 248px) 248px, 100vw"
                     src="/_image?/content%2Fassets%2Fposters%2Fnight-train-to-terror-1985.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=248&h=372&q=80&f=avif"
                     srcset="/_image?/content%2Fassets%2Fposters%2Fnight-train-to-terror-1985.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=62&q=80&f=avif 62w, /_image?/content%2Fassets%2Fposters%2Fnight-train-to-terror-1985.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=124&q=80&f=avif 124w, /_image?/content%2Fassets%2Fposters%2Fnight-train-to-terror-1985.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=248&q=80&f=avif 248w, /_image?/content%2Fassets%2Fposters%2Fnight-train-to-terror-1985.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=496&q=80&f=avif 496w"
                     width="248"
@@ -5863,7 +5859,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle"
               >
                 More 
                 <a
@@ -5874,7 +5870,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 </a>
               </h2>
               <ul
-                class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
+                class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
                   class="w-full tablet:w-[47%]"
@@ -5887,12 +5883,12 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                       alt="A still from Next of Kin (1989)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fnext-of-kin-1989.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fnext-of-kin-1989.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fnext-of-kin-1989.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fnext-of-kin-1989.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fnext-of-kin-1989.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fnext-of-kin-1989.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fnext-of-kin-1989.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fnext-of-kin-1989.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fnext-of-kin-1989.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fnext-of-kin-1989.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -5958,12 +5954,12 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                       alt="A still from The Night They Raided Minsky's (1968)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fthe-night-they-raided-minskys-1968.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-night-they-raided-minskys-1968.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-night-they-raided-minskys-1968.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-night-they-raided-minskys-1968.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-night-they-raided-minskys-1968.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fthe-night-they-raided-minskys-1968.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-night-they-raided-minskys-1968.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fthe-night-they-raided-minskys-1968.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fthe-night-they-raided-minskys-1968.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fthe-night-they-raided-minskys-1968.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -6026,12 +6022,12 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                       alt="A still from Night of the Demons (1988)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fnight-of-the-demons-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fnight-of-the-demons-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fnight-of-the-demons-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fnight-of-the-demons-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fnight-of-the-demons-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fnight-of-the-demons-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fnight-of-the-demons-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fnight-of-the-demons-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fnight-of-the-demons-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fnight-of-the-demons-1988.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -6100,12 +6096,12 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                       alt="A still from Nightcrawler (2014)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fnightcrawler-2014.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fnightcrawler-2014.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fnightcrawler-2014.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fnightcrawler-2014.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fnightcrawler-2014.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fnightcrawler-2014.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fnightcrawler-2014.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fnightcrawler-2014.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fnightcrawler-2014.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fnightcrawler-2014.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -6743,7 +6739,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
             class="w-full max-w-popout"
           >
             <h3
-              class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle shadow-bottom"
+              class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle shadow-bottom"
             >
               Viewing History
             </h3>
@@ -7029,7 +7025,6 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     decoding="async"
                     height="372"
                     loading="lazy"
-                    sizes="(min-width: 248px) 248px, 100vw"
                     src="/_image?/content%2Fassets%2Fposters%2Frio-bravo-1959.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=248&h=372&q=80&f=avif"
                     srcset="/_image?/content%2Fassets%2Fposters%2Frio-bravo-1959.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=62&q=80&f=avif 62w, /_image?/content%2Fassets%2Fposters%2Frio-bravo-1959.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=124&q=80&f=avif 124w, /_image?/content%2Fassets%2Fposters%2Frio-bravo-1959.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=248&q=80&f=avif 248w, /_image?/content%2Fassets%2Fposters%2Frio-bravo-1959.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=496&q=80&f=avif 496w"
                     width="248"
@@ -7154,7 +7149,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle"
               >
                 More directed by 
                 <a
@@ -7165,7 +7160,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 </a>
               </h2>
               <ul
-                class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
+                class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
                   class="w-full tablet:w-[47%]"
@@ -7178,12 +7173,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       alt="A still from Scarface (1932)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fscarface-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fscarface-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fscarface-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fscarface-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fscarface-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fscarface-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fscarface-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fscarface-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fscarface-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fscarface-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -7258,12 +7253,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       alt="A still from The Crowd Roars (1932)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fthe-crowd-roars-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-crowd-roars-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-crowd-roars-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-crowd-roars-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-crowd-roars-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fthe-crowd-roars-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-crowd-roars-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fthe-crowd-roars-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fthe-crowd-roars-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fthe-crowd-roars-1932.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -7332,12 +7327,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       alt="A still from The Dawn Patrol (1930)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fthe-dawn-patrol-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-dawn-patrol-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-dawn-patrol-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-dawn-patrol-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-dawn-patrol-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fthe-dawn-patrol-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-dawn-patrol-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fthe-dawn-patrol-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fthe-dawn-patrol-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fthe-dawn-patrol-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -7408,12 +7403,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       alt="A still from The Criminal Code (1930)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fthe-criminal-code-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-criminal-code-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-criminal-code-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-criminal-code-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-criminal-code-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fthe-criminal-code-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-criminal-code-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fthe-criminal-code-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fthe-criminal-code-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fthe-criminal-code-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -7478,7 +7473,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle"
               >
                 More with 
                 <a
@@ -7489,7 +7484,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 </a>
               </h2>
               <ul
-                class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
+                class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
                   class="w-full tablet:w-[47%]"
@@ -7502,12 +7497,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       alt="A still from The Oklahoma Kid (1939)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fthe-oklahoma-kid-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-oklahoma-kid-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-oklahoma-kid-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-oklahoma-kid-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-oklahoma-kid-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fthe-oklahoma-kid-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-oklahoma-kid-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fthe-oklahoma-kid-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fthe-oklahoma-kid-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fthe-oklahoma-kid-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -7573,12 +7568,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       alt="A still from The Searchers (1956)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fthe-searchers-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-searchers-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-searchers-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-searchers-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-searchers-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fthe-searchers-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-searchers-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fthe-searchers-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fthe-searchers-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fthe-searchers-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -7688,12 +7683,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       alt="A still from Salute (1929)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fsalute-1929.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fsalute-1929.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fsalute-1929.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fsalute-1929.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fsalute-1929.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fsalute-1929.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fsalute-1929.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fsalute-1929.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fsalute-1929.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fsalute-1929.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -7765,12 +7760,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       alt="A still from Born Reckless (1930)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fborn-reckless-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fborn-reckless-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fborn-reckless-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fborn-reckless-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fborn-reckless-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fborn-reckless-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fborn-reckless-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fborn-reckless-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fborn-reckless-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fborn-reckless-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -7832,7 +7827,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle"
               >
                 More with 
                 <a
@@ -7843,7 +7838,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 </a>
               </h2>
               <ul
-                class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
+                class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
                   class="w-full tablet:w-[47%]"
@@ -7856,12 +7851,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       alt="A still from Big Jim McLain (1952)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fbig-jim-mclain-1952.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fbig-jim-mclain-1952.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fbig-jim-mclain-1952.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fbig-jim-mclain-1952.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fbig-jim-mclain-1952.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fbig-jim-mclain-1952.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fbig-jim-mclain-1952.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fbig-jim-mclain-1952.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fbig-jim-mclain-1952.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fbig-jim-mclain-1952.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -7936,12 +7931,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       alt="A still from The Searchers (1956)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fthe-searchers-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-searchers-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-searchers-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-searchers-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-searchers-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fthe-searchers-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-searchers-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fthe-searchers-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fthe-searchers-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fthe-searchers-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -8051,12 +8046,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       alt="A still from The Big Trail (1930)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fthe-big-trail-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-big-trail-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-big-trail-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-big-trail-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-big-trail-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fthe-big-trail-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-big-trail-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fthe-big-trail-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fthe-big-trail-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fthe-big-trail-1930.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -8131,12 +8126,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       alt="A still from Arizona (1931)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Farizona-1931.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Farizona-1931.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Farizona-1931.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Farizona-1931.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Farizona-1931.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Farizona-1931.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Farizona-1931.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Farizona-1931.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Farizona-1931.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Farizona-1931.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -8204,7 +8199,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle"
               >
                 More 
                 <a
@@ -8215,7 +8210,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 </a>
               </h2>
               <ul
-                class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
+                class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
                   class="w-full tablet:w-[47%]"
@@ -8228,12 +8223,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       alt="A still from Ride Lonesome (1959)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fride-lonesome-1959.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fride-lonesome-1959.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fride-lonesome-1959.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fride-lonesome-1959.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fride-lonesome-1959.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fride-lonesome-1959.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fride-lonesome-1959.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fride-lonesome-1959.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fride-lonesome-1959.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fride-lonesome-1959.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -8299,12 +8294,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       alt="A still from Riders of Destiny (1933)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Friders-of-destiny-1933.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Friders-of-destiny-1933.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Friders-of-destiny-1933.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Friders-of-destiny-1933.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Friders-of-destiny-1933.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Friders-of-destiny-1933.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Friders-of-destiny-1933.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Friders-of-destiny-1933.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Friders-of-destiny-1933.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Friders-of-destiny-1933.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -8399,12 +8394,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       alt="A still from The Rise and Fall of Legs Diamond (1960)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fthe-rise-and-fall-of-legs-diamond-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-rise-and-fall-of-legs-diamond-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-rise-and-fall-of-legs-diamond-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-rise-and-fall-of-legs-diamond-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-rise-and-fall-of-legs-diamond-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fthe-rise-and-fall-of-legs-diamond-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-rise-and-fall-of-legs-diamond-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fthe-rise-and-fall-of-legs-diamond-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fthe-rise-and-fall-of-legs-diamond-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fthe-rise-and-fall-of-legs-diamond-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -8467,12 +8462,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                       alt="A still from Rituals (1977)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Frituals-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Frituals-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Frituals-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Frituals-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Frituals-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Frituals-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Frituals-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Frituals-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Frituals-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Frituals-1977.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -9156,7 +9151,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             class="w-full max-w-popout"
           >
             <h3
-              class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle shadow-bottom"
+              class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle shadow-bottom"
             >
               Viewing History
             </h3>
@@ -9320,7 +9315,6 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     decoding="async"
                     height="372"
                     loading="lazy"
-                    sizes="(min-width: 248px) 248px, 100vw"
                     src="/_image?/content%2Fassets%2Fposters%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=248&h=372&q=80&f=avif"
                     srcset="/_image?/content%2Fassets%2Fposters%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=62&q=80&f=avif 62w, /_image?/content%2Fassets%2Fposters%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=124&q=80&f=avif 124w, /_image?/content%2Fassets%2Fposters%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=248&q=80&f=avif 248w, /_image?/content%2Fassets%2Fposters%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=496&q=80&f=avif 496w"
                     width="248"
@@ -9442,7 +9436,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle"
               >
                 More with 
                 <a
@@ -9453,7 +9447,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </a>
               </h2>
               <ul
-                class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
+                class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
                   class="w-full tablet:w-[47%]"
@@ -9466,12 +9460,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       alt="A still from The Man in the Iron Mask (1939)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fthe-man-in-the-iron-mask-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-man-in-the-iron-mask-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-man-in-the-iron-mask-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-man-in-the-iron-mask-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-man-in-the-iron-mask-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fthe-man-in-the-iron-mask-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-man-in-the-iron-mask-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fthe-man-in-the-iron-mask-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fthe-man-in-the-iron-mask-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fthe-man-in-the-iron-mask-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -9545,12 +9539,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       alt="A still from A Chump at Oxford (1940)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fa-chump-at-oxford-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fa-chump-at-oxford-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fa-chump-at-oxford-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fa-chump-at-oxford-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fa-chump-at-oxford-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fa-chump-at-oxford-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fa-chump-at-oxford-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fa-chump-at-oxford-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fa-chump-at-oxford-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fa-chump-at-oxford-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -9619,12 +9613,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       alt="A still from The Abominable Snowman (1957)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -9693,12 +9687,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       alt="A still from Violent Playground (1958)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fviolent-playground-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fviolent-playground-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fviolent-playground-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fviolent-playground-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fviolent-playground-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fviolent-playground-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fviolent-playground-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fviolent-playground-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fviolent-playground-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fviolent-playground-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -9757,7 +9751,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle"
               >
                 More with 
                 <a
@@ -9768,7 +9762,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </a>
               </h2>
               <ul
-                class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
+                class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
                   class="w-full tablet:w-[47%]"
@@ -9781,12 +9775,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       alt="A still from Howling II: ... Your Sister Is a Werewolf (1985)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fhowling-ii-your-sister-is-a-werewolf-1985.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -9852,12 +9846,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       alt="A still from Corridor of Mirrors (1948)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fcorridor-of-mirrors-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fcorridor-of-mirrors-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fcorridor-of-mirrors-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fcorridor-of-mirrors-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fcorridor-of-mirrors-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fcorridor-of-mirrors-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fcorridor-of-mirrors-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fcorridor-of-mirrors-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fcorridor-of-mirrors-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fcorridor-of-mirrors-1948.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -9930,12 +9924,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       alt="A still from Horror of Dracula (1958)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fhorror-of-dracula-1958.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -10005,12 +9999,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       alt="A still from The City of the Dead (1960)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fthe-city-of-the-dead-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-city-of-the-dead-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-city-of-the-dead-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-city-of-the-dead-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-city-of-the-dead-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fthe-city-of-the-dead-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-city-of-the-dead-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fthe-city-of-the-dead-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fthe-city-of-the-dead-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fthe-city-of-the-dead-1960.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -10167,7 +10161,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle"
               >
                 More 
                 <a
@@ -10178,7 +10172,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </a>
               </h2>
               <ul
-                class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
+                class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
                   class="w-full tablet:w-[47%]"
@@ -10191,12 +10185,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       alt="A still from The Quatermass Xperiment (1955)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fthe-quatermass-xperiment-1955.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-quatermass-xperiment-1955.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-quatermass-xperiment-1955.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-quatermass-xperiment-1955.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-quatermass-xperiment-1955.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fthe-quatermass-xperiment-1955.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-quatermass-xperiment-1955.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fthe-quatermass-xperiment-1955.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fthe-quatermass-xperiment-1955.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fthe-quatermass-xperiment-1955.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -10272,12 +10266,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       alt="A still from X the Unknown (1956)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fx-the-unknown-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fx-the-unknown-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fx-the-unknown-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fx-the-unknown-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fx-the-unknown-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fx-the-unknown-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fx-the-unknown-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fx-the-unknown-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fx-the-unknown-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fx-the-unknown-1956.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -10348,12 +10342,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       alt="A still from Quatermass 2 (1957)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fquatermass-2-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fquatermass-2-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fquatermass-2-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fquatermass-2-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fquatermass-2-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fquatermass-2-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fquatermass-2-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fquatermass-2-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fquatermass-2-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fquatermass-2-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -10427,12 +10421,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       alt="A still from The Abominable Snowman (1957)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fthe-abominable-snowman-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -10500,7 +10494,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               class="relative mx-auto w-full max-w-screen-max px-container desktop:px-20"
             >
               <h2
-                class="py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle"
+                class="py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle"
               >
                 More 
                 <a
@@ -10511,7 +10505,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </a>
               </h2>
               <ul
-                class="flex w-full flex-col gap-x-[2.60416667%] gap-y-6 tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
+                class="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap"
               >
                 <li
                   class="w-full tablet:w-[47%]"
@@ -10524,12 +10518,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       alt="A still from Cure (1997)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fcure-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fcure-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fcure-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fcure-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fcure-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fcure-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fcure-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fcure-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fcure-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fcure-1997.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -10605,12 +10599,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       alt="A still from Curse of Chucky (2013)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fcurse-of-chucky-2013.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fcurse-of-chucky-2013.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fcurse-of-chucky-2013.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fcurse-of-chucky-2013.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fcurse-of-chucky-2013.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fcurse-of-chucky-2013.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fcurse-of-chucky-2013.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fcurse-of-chucky-2013.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fcurse-of-chucky-2013.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fcurse-of-chucky-2013.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -10676,12 +10670,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       alt="A still from Curse of the Demon (1957)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
@@ -10759,12 +10753,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       alt="A still from Dagon (2001)"
                       class="aspect-[1.77777778] h-auto w-full"
                       decoding="async"
-                      height="179"
+                      height="360"
                       loading="lazy"
-                      sizes="(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw"
-                      src="/_image?/content%2Fassets%2Fstills%2Fdagon-2001.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&h=179&q=80&f=avif"
-                      srcset="/_image?/content%2Fassets%2Fstills%2Fdagon-2001.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=108.75&q=80&f=avif 108.75w, /_image?/content%2Fassets%2Fstills%2Fdagon-2001.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=217.5&q=80&f=avif 217.5w, /_image?/content%2Fassets%2Fstills%2Fdagon-2001.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=435&q=80&f=avif 435w, /_image?/content%2Fassets%2Fstills%2Fdagon-2001.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=870&q=80&f=avif 870w"
-                      width="435"
+                      sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px"
+                      src="/_image?/content%2Fassets%2Fstills%2Fdagon-2001.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                      srcset="/_image?/content%2Fassets%2Fstills%2Fdagon-2001.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&q=80&f=avif 160w, /_image?/content%2Fassets%2Fstills%2Fdagon-2001.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&q=80&f=avif 320w, /_image?/content%2Fassets%2Fstills%2Fdagon-2001.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&q=80&f=avif 640w, /_image?/content%2Fassets%2Fstills%2Fdagon-2001.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&q=80&f=avif 1280w"
+                      width="640"
                     />
                   </a>
                   <div
