@@ -42,7 +42,7 @@ export function YearStats({
             <a href="/viewings/">Viewing Log</a>
           </p>
           <h1 className="mb-4 text-4xl desktop:text-7xl">{`${year} Stats`}</h1>
-          <p className="mb-6 font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle">
+          <p className="mb-6 font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle brightness-200">
             {[...distinctStatYears].reverse()[0] === year
               ? "A year in progress..."
               : "A Year in Review"}
