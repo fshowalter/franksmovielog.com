@@ -7,13 +7,9 @@ export const ListItemPosterImageConfig = {
 
 export function ListItemPoster({
   slug,
-  title,
-  year,
   imageProps,
 }: {
   slug?: string | null;
-  title: string;
-  year: string;
   imageProps: PosterImageProps;
 }) {
   if (slug) {

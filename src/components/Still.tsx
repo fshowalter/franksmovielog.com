@@ -14,8 +14,6 @@ interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {
 }
 
 export function Still({
-  title,
-  year,
   imageProps,
   loading = "lazy",
   decoding = "async",

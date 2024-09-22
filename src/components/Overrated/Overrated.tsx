@@ -117,12 +117,7 @@ function UnderseenGemsListItem({
 }): JSX.Element {
   return (
     <ListItem className="items-center">
-      <ListItemPoster
-        slug={value.slug}
-        title={value.title}
-        year={value.year}
-        imageProps={value.posterImageProps}
-      />
+      <ListItemPoster slug={value.slug} imageProps={value.posterImageProps} />
       <div className="grow pr-gutter tablet:w-full desktop:pr-4">
         <div>
           <ListItemTitle

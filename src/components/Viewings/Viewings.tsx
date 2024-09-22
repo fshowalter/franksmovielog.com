@@ -157,12 +157,7 @@ function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
       }}
       {...rest}
     >
-      <ListItemPoster
-        slug={value.slug}
-        title={value.title}
-        year={value.year}
-        imageProps={value.posterImageProps}
-      />
+      <ListItemPoster slug={value.slug} imageProps={value.posterImageProps} />
       <div className="flex grow flex-col gap-1">
         <ListItemTitle
           title={value.title}

@@ -119,11 +119,7 @@ function WatchlistListItem({
 }): JSX.Element {
   return (
     <ListItem className="mb-0 items-center bg-subtle shadow-none odd:bg-stripe">
-      <ListItemPoster
-        title={value.title}
-        year={value.year}
-        imageProps={defaultPosterImageProps}
-      />
+      <ListItemPoster imageProps={defaultPosterImageProps} />
       <div className="flex-1 pr-gutter tablet:w-full desktop:pr-4">
         <div>
           <ListItemTitle title={value.title} year={value.year} />
