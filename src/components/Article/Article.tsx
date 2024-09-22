@@ -7,7 +7,6 @@ import { MoreReviews } from "src/components/MoreReviews";
 import { SubHeading } from "src/components/SubHeading";
 
 export interface Props {
-  alt: string;
   content: string | null;
   title: string;
   backdropImageProps: BackdropImageProps;
@@ -15,7 +14,6 @@ export interface Props {
 }
 
 export function Article({
-  alt,
   title,
   content,
   recentReviews,
@@ -24,7 +22,7 @@ export function Article({
   return (
     <Layout>
       <article>
-        <Backdrop imageProps={backdropImageProps} title={title} alt={alt} />
+        <Backdrop imageProps={backdropImageProps} title={title} />
         <section className="flex flex-col items-center">
           <div className="spacer-y-16" />
           <div className="px-pageMargin">

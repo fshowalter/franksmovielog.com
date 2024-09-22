@@ -40,7 +40,6 @@ export function WatchlistProgress({
             Watchlist
           </a>
         }
-        alt='Darth Vader in "Star Wars (1977)'
         deck='"I find your lack of faith disturbing."'
       />
       <div className="flex flex-col items-center">

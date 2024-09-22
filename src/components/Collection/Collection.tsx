@@ -59,7 +59,6 @@ export function Collection({
         <Backdrop
           imageProps={backdropImageProps}
           title={value.name}
-          alt={value.name}
           breadcrumb={<a href="/collections/">Collections</a>}
         />
       }

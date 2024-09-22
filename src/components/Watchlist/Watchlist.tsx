@@ -68,7 +68,6 @@ export function Watchlist({
       backdrop={
         <Backdrop
           title="Watchlist"
-          alt='Clint Eastwood as "Dirty" Harry Callahan in "Magnum Force (1973)".'
           deck={`"A man's got to know his limitations"`}
           imageProps={backdropImageProps}
         />

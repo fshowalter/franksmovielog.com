@@ -69,7 +69,6 @@ export function Reviews({
           imageProps={backdropImageProps}
           title="Reviews"
           deck='"He chose... poorly."'
-          alt="The guardian of the Grail in Indiana Jones and the Last Crusade (1989)"
         />
       }
       subNav={

@@ -70,7 +70,6 @@ export function Viewings({
       backdrop={
         <Backdrop
           title="Viewing Log"
-          alt='Doug Bradley as the Hell Priest in "Hellraiser (1987)".'
           deck='"We have such sights to show you!"'
           imageProps={backdropImageProps}
         />

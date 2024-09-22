@@ -25,7 +25,7 @@ export function Still({
   return (
     <img
       {...imageProps}
-      alt={`A still from ${title} (${year})`}
+      alt=""
       loading={loading}
       decoding={decoding}
       {...rest}

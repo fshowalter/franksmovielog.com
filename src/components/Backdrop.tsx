@@ -9,12 +9,10 @@ export function Backdrop({
   imageProps,
   title,
   deck,
-  alt,
   breadcrumb,
   titleStyle = "font-sans font-bold tracking-[2px] text-2xl uppercase desktop:text-7xl",
 }: {
   imageProps: BackdropImageProps;
-  alt: string;
   title: string;
   deck?: string;
   titleStyle?: string;
@@ -29,7 +27,7 @@ export function Backdrop({
         height={BackdropImageConfig.height}
         loading="eager"
         fetchPriority="high"
-        alt={alt}
+        alt=""
       />
       <div className="z-10 mx-auto w-full max-w-screen-max px-container">
         {breadcrumb && (
