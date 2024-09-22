@@ -5,10 +5,10 @@ import { RenderedMarkdown } from "src/components/RenderedMarkdown";
 import { Still } from "src/components/Still";
 
 export const StillImageConfig = {
-  width: 515,
-  height: 303,
+  width: 640,
+  height: 360,
   sizes:
-    "(min-width: 706px) 312px, (min-width: 1280) 25vw, (min-width: 1472px) 312px, 50vw",
+    "(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160px) * 0.3132965), 482px",
   quality: 80,
 };
 

@@ -7,7 +7,6 @@ import { toSentence } from "src/utils/toSentence";
 export const PosterImageConfig = {
   width: 248,
   height: 372,
-  sizes: "(min-width: 248px) 248px, 100vw",
 };
 
 interface Props
@@ -55,7 +54,6 @@ export function Credits({
               year={year}
               width={PosterImageConfig.width}
               height={PosterImageConfig.height}
-              sizes={PosterImageConfig.sizes}
               loading="lazy"
               className="h-auto"
               decoding="async"

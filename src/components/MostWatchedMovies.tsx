@@ -5,10 +5,10 @@ import { ListItemTitle } from "./ListItemTitle";
 import { Poster } from "./Poster";
 
 export const MostWatchedMoviesPosterConfig = {
-  width: 250,
-  height: 375,
+  width: 248,
+  height: 372,
   sizes:
-    "(min-width: 510px) 33vw, (min-width: 633px) 25vw, (min-width: 784px) 20vw, (min-width: 936px) 16vw, 48px",
+    "(max-width: 767px) 64px, (max-width: 1279) 128px, (min-width: 784px) 20vw, 248px",
 };
 
 export interface MostWatchedMoviesListItemValue {
@@ -103,7 +103,7 @@ function FluidListItemPoster({
       <a
         href={`/reviews/${slug}/`}
         className={ccn(
-          "w-full min-w-12 max-w-12 tablet:max-w-poster",
+          "w-full min-w-16 max-w-16 tablet:max-w-[248px]",
           className,
         )}
       >
@@ -122,7 +122,7 @@ function FluidListItemPoster({
   }
 
   return (
-    <div className={ccn("min-w-12 max-w-12 tablet:max-w-poster", className)}>
+    <div className={ccn("min-w-12 max-w-12 tablet:max-w-[248px]", className)}>
       <Poster
         imageProps={imageProps}
         title={title}

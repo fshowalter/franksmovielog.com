@@ -83,13 +83,16 @@ function Name({
 }): JSX.Element {
   if (value.slug) {
     return (
-      <a className="text-accent" href={`/cast-and-crew/${value.slug}/`}>
+      <a
+        className="font-medium text-accent"
+        href={`/cast-and-crew/${value.slug}/`}
+      >
         {value.name}
       </a>
     );
   }
 
-  return <>{value.name}</>;
+  return <span className="font-normal">{value.name}</span>;
 }
 
 function MostWatchedPersonViewingListItem({

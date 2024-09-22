@@ -1,5 +1,4 @@
 const PROSE_CONTENT_WIDTH = "39rem";
-const POSTER_WIDTH = "248px";
 import plugin from "tailwindcss/plugin";
 
 /** @type {import('tailwindcss').Config} */
@@ -74,7 +73,6 @@ export default {
         canvas: "1536px",
         prose: PROSE_CONTENT_WIDTH,
         popout: `calc((var(--gutter-width) * 2) + ${PROSE_CONTENT_WIDTH})`,
-        poster: POSTER_WIDTH,
         unset: "unset",
       },
       padding: {
