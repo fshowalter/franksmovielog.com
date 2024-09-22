@@ -45,8 +45,8 @@ export function MoreReviews({
 
 function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
   return (
-    <li className="w-full tablet:w-[47%]">
-      <a href={`/reviews/${value.slug}/`} className="block">
+    <li className="relative w-full tablet:w-[47%]">
+      <div className="block">
         <Still
           title={value.title}
           year={value.year}
@@ -58,11 +58,11 @@ function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
           decoding="async"
           sizes={MoreReviewsImageConfig.sizes}
         />
-      </a>
+      </div>
       <div className="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]">
         <a
           href={`/reviews/${value.slug}/`}
-          className="mb-4 block text-xl font-medium text-default"
+          className="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
         >
           {value.title}{" "}
           <span className="text-sm font-normal leading-none text-muted">

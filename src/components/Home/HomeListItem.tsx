@@ -40,8 +40,8 @@ export type ListItemValue = Pick<
 
 export function HomeListItem({ value }: { value: ListItemValue }) {
   return (
-    <li className="flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]">
-      <a href={`/reviews/${value.slug}/`} className="mb-6 block">
+    <li className="relative flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]">
+      <div className="mb-6 block">
         <Still
           title={value.title}
           year={value.year}
@@ -53,14 +53,14 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
           decoding="async"
           sizes={StillImageConfig.sizes}
         />
-      </a>
+      </div>
       <div className="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]">
         <div className="mb-1 font-sans-narrow text-xxs font-medium uppercase leading-4 tracking-[1.1px] text-subtle">
           {formatDate(value.date)}
         </div>
         <a
           href={`/reviews/${value.slug}/`}
-          className="mb-2 block text-2.5xl font-medium text-default hover:text-accent"
+          className="mb-2 block text-2.5xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
         >
           {value.title}{" "}
           <span className="text-sm font-normal leading-none text-muted">
