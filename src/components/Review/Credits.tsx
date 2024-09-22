@@ -101,7 +101,7 @@ export function Credits({
 function Credit({ term, value }: { term: string; value: React.ReactNode }) {
   return (
     <div>
-      <dt className="font-sans-narrow text-xs font-semibold uppercase text-subtle">
+      <dt className="font-sans-narrow text-xs font-medium uppercase tracking-[0.3px] text-subtle">
         {term}
       </dt>
       <dd className="text-wrap font-normal text-muted">{value}</dd>

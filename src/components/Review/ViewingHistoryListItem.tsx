@@ -15,7 +15,7 @@ const dateFormat = new Intl.DateTimeFormat("en-US", {
 function Date({ date }: { date: Date }) {
   return (
     <>
-      <span className="inline-block font-sans-narrow text-sm font-semibold tracking-normal text-subtle">
+      <span className="inline-block font-sans-narrow text-sm font-medium tracking-normal text-subtle">
         {dateFormat.format(date)}
       </span>{" "}
     </>
@@ -29,7 +29,7 @@ function Medium({ value }: { value: Viewing["medium"] }) {
   return (
     <span className="text-subtle">
       <span>via</span>{" "}
-      <span className="font-sans-narrow text-sm font-semibold text-subtle">
+      <span className="font-sans-narrow text-sm font-medium text-subtle">
         {value}
       </span>
     </span>
@@ -41,7 +41,7 @@ function MediumNotes({ value }: { value: Viewing["mediumNotes"] }) {
     return null;
   }
   return (
-    <span className="text-subtle">
+    <span className="font-normal text-subtle">
       (
       <RenderedMarkdown
         // eslint-disable-next-line react/no-danger
@@ -59,13 +59,13 @@ function VenueNotes({ value }: { value: Viewing["venueNotes"] }) {
     return null;
   }
   return (
-    <span className="text-sm leading-none text-subtle">
+    <span className="text-sm font-normal leading-none text-subtle">
       (
       <RenderedMarkdown
         // eslint-disable-next-line react/no-danger
         text={value}
         as="span"
-        className="text-sm leading-none"
+        className="leading-none"
       />
       )
     </span>
@@ -78,7 +78,8 @@ function Venue({ value }: { value: Viewing["venue"] }) {
   }
   return (
     <span className="text-subtle">
-      <span>at</span> <span>{value}</span>
+      <span>at</span>{" "}
+      <span className="font-sans-narrow text-sm font-medium">{value}</span>
     </span>
   );
 }
@@ -88,9 +89,9 @@ function ViewingNotes({ value }: { value: Viewing["viewingNotes"] }) {
     return null;
   }
   return (
-    <div className="pb-6 text-sm font-extralight">
+    <div className="pb-6 text-sm font-light">
       <RenderedMarkdown
-        className="leading-normal text-default"
+        className="leading-normal text-muted"
         // eslint-disable-next-line react/no-danger
         text={value}
       />
@@ -100,7 +101,7 @@ function ViewingNotes({ value }: { value: Viewing["viewingNotes"] }) {
 
 export function ViewingHistoryListItem({ value }: { value: Viewing }) {
   return (
-    <li className="flex flex-col px-gutter font-sans text-xs font-normal even:bg-stripe">
+    <li className="flex flex-col px-gutter font-sans text-xs font-light even:bg-stripe">
       <div className="flex items-center gap-x-[1ch] py-4">
         <div className="size-auto">
           <DateIcon className="w-4" />{" "}
