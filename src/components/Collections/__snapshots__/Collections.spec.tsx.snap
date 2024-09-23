@@ -6,7 +6,7 @@ exports[`Collections > can filter by name 1`] = `
   data-testid="list"
 >
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -23,7 +23,7 @@ exports[`Collections > can filter by name 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/childs-play/"
     >
       <div
@@ -41,7 +41,7 @@ exports[`Collections > can filter by name 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -58,7 +58,7 @@ exports[`Collections > can filter by name 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/friday-the-13th/"
     >
       <div
@@ -76,7 +76,7 @@ exports[`Collections > can filter by name 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -93,7 +93,7 @@ exports[`Collections > can filter by name 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/halloween/"
     >
       <div
@@ -111,7 +111,7 @@ exports[`Collections > can filter by name 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -128,7 +128,7 @@ exports[`Collections > can filter by name 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/hammer-films/"
     >
       <div
@@ -146,7 +146,7 @@ exports[`Collections > can filter by name 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -163,7 +163,7 @@ exports[`Collections > can filter by name 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/hatchet/"
     >
       <div
@@ -181,7 +181,7 @@ exports[`Collections > can filter by name 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -198,7 +198,7 @@ exports[`Collections > can filter by name 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/james-bond/"
     >
       <div
@@ -216,7 +216,7 @@ exports[`Collections > can filter by name 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -233,7 +233,7 @@ exports[`Collections > can filter by name 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/phantasm/"
     >
       <div
@@ -251,7 +251,7 @@ exports[`Collections > can filter by name 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -268,7 +268,7 @@ exports[`Collections > can filter by name 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/saw/"
     >
       <div
@@ -286,7 +286,7 @@ exports[`Collections > can filter by name 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -303,7 +303,7 @@ exports[`Collections > can filter by name 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/shaw-brothers/"
     >
       <div
@@ -321,7 +321,7 @@ exports[`Collections > can filter by name 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -338,7 +338,7 @@ exports[`Collections > can filter by name 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/universal-monsters/"
     >
       <div
@@ -364,7 +364,7 @@ exports[`Collections > can sort by name asc 1`] = `
   data-testid="list"
 >
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -381,7 +381,7 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/childs-play/"
     >
       <div
@@ -399,7 +399,7 @@ exports[`Collections > can sort by name asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -416,7 +416,7 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/friday-the-13th/"
     >
       <div
@@ -434,7 +434,7 @@ exports[`Collections > can sort by name asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -451,7 +451,7 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/halloween/"
     >
       <div
@@ -469,7 +469,7 @@ exports[`Collections > can sort by name asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -486,7 +486,7 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/hammer-films/"
     >
       <div
@@ -504,7 +504,7 @@ exports[`Collections > can sort by name asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -521,7 +521,7 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/hatchet/"
     >
       <div
@@ -539,7 +539,7 @@ exports[`Collections > can sort by name asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -556,7 +556,7 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/james-bond/"
     >
       <div
@@ -574,7 +574,7 @@ exports[`Collections > can sort by name asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -591,7 +591,7 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/phantasm/"
     >
       <div
@@ -609,7 +609,7 @@ exports[`Collections > can sort by name asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -626,7 +626,7 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/saw/"
     >
       <div
@@ -644,7 +644,7 @@ exports[`Collections > can sort by name asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -661,7 +661,7 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/shaw-brothers/"
     >
       <div
@@ -679,7 +679,7 @@ exports[`Collections > can sort by name asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -696,7 +696,7 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/universal-monsters/"
     >
       <div
@@ -722,7 +722,7 @@ exports[`Collections > can sort by name desc 1`] = `
   data-testid="list"
 >
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -739,7 +739,7 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/childs-play/"
     >
       <div
@@ -757,7 +757,7 @@ exports[`Collections > can sort by name desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -774,7 +774,7 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/friday-the-13th/"
     >
       <div
@@ -792,7 +792,7 @@ exports[`Collections > can sort by name desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -809,7 +809,7 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/halloween/"
     >
       <div
@@ -827,7 +827,7 @@ exports[`Collections > can sort by name desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -844,7 +844,7 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/hammer-films/"
     >
       <div
@@ -862,7 +862,7 @@ exports[`Collections > can sort by name desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -879,7 +879,7 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/hatchet/"
     >
       <div
@@ -897,7 +897,7 @@ exports[`Collections > can sort by name desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -914,7 +914,7 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/james-bond/"
     >
       <div
@@ -932,7 +932,7 @@ exports[`Collections > can sort by name desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -949,7 +949,7 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/phantasm/"
     >
       <div
@@ -967,7 +967,7 @@ exports[`Collections > can sort by name desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -984,7 +984,7 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/saw/"
     >
       <div
@@ -1002,7 +1002,7 @@ exports[`Collections > can sort by name desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1019,7 +1019,7 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/shaw-brothers/"
     >
       <div
@@ -1037,7 +1037,7 @@ exports[`Collections > can sort by name desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1054,7 +1054,7 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/universal-monsters/"
     >
       <div
@@ -1080,7 +1080,7 @@ exports[`Collections > can sort by review count asc 1`] = `
   data-testid="list"
 >
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1097,7 +1097,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/childs-play/"
     >
       <div
@@ -1115,7 +1115,7 @@ exports[`Collections > can sort by review count asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1132,7 +1132,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/friday-the-13th/"
     >
       <div
@@ -1150,7 +1150,7 @@ exports[`Collections > can sort by review count asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1167,7 +1167,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/halloween/"
     >
       <div
@@ -1185,7 +1185,7 @@ exports[`Collections > can sort by review count asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1202,7 +1202,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/hammer-films/"
     >
       <div
@@ -1220,7 +1220,7 @@ exports[`Collections > can sort by review count asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1237,7 +1237,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/hatchet/"
     >
       <div
@@ -1255,7 +1255,7 @@ exports[`Collections > can sort by review count asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1272,7 +1272,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/james-bond/"
     >
       <div
@@ -1290,7 +1290,7 @@ exports[`Collections > can sort by review count asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1307,7 +1307,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/phantasm/"
     >
       <div
@@ -1325,7 +1325,7 @@ exports[`Collections > can sort by review count asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1342,7 +1342,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/saw/"
     >
       <div
@@ -1360,7 +1360,7 @@ exports[`Collections > can sort by review count asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1377,7 +1377,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/shaw-brothers/"
     >
       <div
@@ -1395,7 +1395,7 @@ exports[`Collections > can sort by review count asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1412,7 +1412,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/universal-monsters/"
     >
       <div
@@ -1438,7 +1438,7 @@ exports[`Collections > can sort by review count desc 1`] = `
   data-testid="list"
 >
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1455,7 +1455,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/childs-play/"
     >
       <div
@@ -1473,7 +1473,7 @@ exports[`Collections > can sort by review count desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1490,7 +1490,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/friday-the-13th/"
     >
       <div
@@ -1508,7 +1508,7 @@ exports[`Collections > can sort by review count desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1525,7 +1525,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/halloween/"
     >
       <div
@@ -1543,7 +1543,7 @@ exports[`Collections > can sort by review count desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1560,7 +1560,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/hammer-films/"
     >
       <div
@@ -1578,7 +1578,7 @@ exports[`Collections > can sort by review count desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1595,7 +1595,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/hatchet/"
     >
       <div
@@ -1613,7 +1613,7 @@ exports[`Collections > can sort by review count desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1630,7 +1630,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/james-bond/"
     >
       <div
@@ -1648,7 +1648,7 @@ exports[`Collections > can sort by review count desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1665,7 +1665,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/phantasm/"
     >
       <div
@@ -1683,7 +1683,7 @@ exports[`Collections > can sort by review count desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1700,7 +1700,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/saw/"
     >
       <div
@@ -1718,7 +1718,7 @@ exports[`Collections > can sort by review count desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1735,7 +1735,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/shaw-brothers/"
     >
       <div
@@ -1753,7 +1753,7 @@ exports[`Collections > can sort by review count desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1770,7 +1770,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/universal-monsters/"
     >
       <div
@@ -1796,7 +1796,7 @@ exports[`Collections > can sort by title count asc 1`] = `
   data-testid="list"
 >
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1813,7 +1813,7 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/childs-play/"
     >
       <div
@@ -1831,7 +1831,7 @@ exports[`Collections > can sort by title count asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1848,7 +1848,7 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/friday-the-13th/"
     >
       <div
@@ -1866,7 +1866,7 @@ exports[`Collections > can sort by title count asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1883,7 +1883,7 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/halloween/"
     >
       <div
@@ -1901,7 +1901,7 @@ exports[`Collections > can sort by title count asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1918,7 +1918,7 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/hammer-films/"
     >
       <div
@@ -1936,7 +1936,7 @@ exports[`Collections > can sort by title count asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1953,7 +1953,7 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/hatchet/"
     >
       <div
@@ -1971,7 +1971,7 @@ exports[`Collections > can sort by title count asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -1988,7 +1988,7 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/james-bond/"
     >
       <div
@@ -2006,7 +2006,7 @@ exports[`Collections > can sort by title count asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -2023,7 +2023,7 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/phantasm/"
     >
       <div
@@ -2041,7 +2041,7 @@ exports[`Collections > can sort by title count asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -2058,7 +2058,7 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/saw/"
     >
       <div
@@ -2076,7 +2076,7 @@ exports[`Collections > can sort by title count asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -2093,7 +2093,7 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/shaw-brothers/"
     >
       <div
@@ -2111,7 +2111,7 @@ exports[`Collections > can sort by title count asc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -2128,7 +2128,7 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/universal-monsters/"
     >
       <div
@@ -2154,7 +2154,7 @@ exports[`Collections > can sort by title count desc 1`] = `
   data-testid="list"
 >
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -2171,7 +2171,7 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/childs-play/"
     >
       <div
@@ -2189,7 +2189,7 @@ exports[`Collections > can sort by title count desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -2206,7 +2206,7 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/friday-the-13th/"
     >
       <div
@@ -2224,7 +2224,7 @@ exports[`Collections > can sort by title count desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -2241,7 +2241,7 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/halloween/"
     >
       <div
@@ -2259,7 +2259,7 @@ exports[`Collections > can sort by title count desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -2276,7 +2276,7 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/hammer-films/"
     >
       <div
@@ -2294,7 +2294,7 @@ exports[`Collections > can sort by title count desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -2311,7 +2311,7 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/hatchet/"
     >
       <div
@@ -2329,7 +2329,7 @@ exports[`Collections > can sort by title count desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -2346,7 +2346,7 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/james-bond/"
     >
       <div
@@ -2364,7 +2364,7 @@ exports[`Collections > can sort by title count desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -2381,7 +2381,7 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/phantasm/"
     >
       <div
@@ -2399,7 +2399,7 @@ exports[`Collections > can sort by title count desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -2416,7 +2416,7 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/saw/"
     >
       <div
@@ -2434,7 +2434,7 @@ exports[`Collections > can sort by title count desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -2451,7 +2451,7 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/shaw-brothers/"
     >
       <div
@@ -2469,7 +2469,7 @@ exports[`Collections > can sort by title count desc 1`] = `
     </div>
   </li>
   <li
-    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
+    class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center tablet:py-6"
   >
     <div
       class="safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20"
@@ -2486,7 +2486,7 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      class="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href="/collections/universal-monsters/"
     >
       <div
