@@ -218,9 +218,8 @@ exports[`CastAndCrewMember > can filter by release year 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/fuzz-1972/"
           >
             <img
               alt=""
@@ -232,7 +231,7 @@ exports[`CastAndCrewMember > can filter by release year 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
@@ -248,7 +247,7 @@ exports[`CastAndCrewMember > can filter by release year 1`] = `
                 class="spacer-y-2"
               />
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/fuzz-1972/"
               >
                 Fuzz
@@ -9123,9 +9122,8 @@ exports[`CastAndCrewMember > can show director titles then show all 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/angel-baby-1961/"
           >
             <img
               alt=""
@@ -9137,7 +9135,7 @@ exports[`CastAndCrewMember > can show director titles then show all 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
@@ -9153,7 +9151,7 @@ exports[`CastAndCrewMember > can show director titles then show all 1`] = `
                 class="spacer-y-2"
               />
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/angel-baby-1961/"
               >
                 Angel Baby
@@ -9872,9 +9870,8 @@ exports[`CastAndCrewMember > can show director titles then show all 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/fuzz-1972/"
           >
             <img
               alt=""
@@ -9886,7 +9883,7 @@ exports[`CastAndCrewMember > can show director titles then show all 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
@@ -9902,7 +9899,7 @@ exports[`CastAndCrewMember > can show director titles then show all 1`] = `
                 class="spacer-y-2"
               />
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/fuzz-1972/"
               >
                 Fuzz
@@ -15804,9 +15801,8 @@ exports[`CastAndCrewMember > can show hidden reviewed titles 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/angel-baby-1961/"
           >
             <img
               alt=""
@@ -15818,7 +15814,7 @@ exports[`CastAndCrewMember > can show hidden reviewed titles 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
@@ -15834,7 +15830,7 @@ exports[`CastAndCrewMember > can show hidden reviewed titles 1`] = `
                 class="spacer-y-2"
               />
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/angel-baby-1961/"
               >
                 Angel Baby
@@ -16553,9 +16549,8 @@ exports[`CastAndCrewMember > can show hidden reviewed titles 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/fuzz-1972/"
           >
             <img
               alt=""
@@ -16567,7 +16562,7 @@ exports[`CastAndCrewMember > can show hidden reviewed titles 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
@@ -16583,7 +16578,7 @@ exports[`CastAndCrewMember > can show hidden reviewed titles 1`] = `
                 class="spacer-y-2"
               />
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/fuzz-1972/"
               >
                 Fuzz
@@ -22485,9 +22480,8 @@ exports[`CastAndCrewMember > can show more credits 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/angel-baby-1961/"
           >
             <img
               alt=""
@@ -22499,7 +22493,7 @@ exports[`CastAndCrewMember > can show more credits 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
@@ -22515,7 +22509,7 @@ exports[`CastAndCrewMember > can show more credits 1`] = `
                 class="spacer-y-2"
               />
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/angel-baby-1961/"
               >
                 Angel Baby
@@ -23234,9 +23228,8 @@ exports[`CastAndCrewMember > can show more credits 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/fuzz-1972/"
           >
             <img
               alt=""
@@ -23248,7 +23241,7 @@ exports[`CastAndCrewMember > can show more credits 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
@@ -23264,7 +23257,7 @@ exports[`CastAndCrewMember > can show more credits 1`] = `
                 class="spacer-y-2"
               />
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/fuzz-1972/"
               >
                 Fuzz
@@ -29962,9 +29955,8 @@ exports[`CastAndCrewMember > can show performer titles 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/angel-baby-1961/"
           >
             <img
               alt=""
@@ -29976,7 +29968,7 @@ exports[`CastAndCrewMember > can show performer titles 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
@@ -29992,7 +29984,7 @@ exports[`CastAndCrewMember > can show performer titles 1`] = `
                 class="spacer-y-2"
               />
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/angel-baby-1961/"
               >
                 Angel Baby
@@ -30711,9 +30703,8 @@ exports[`CastAndCrewMember > can show performer titles 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/fuzz-1972/"
           >
             <img
               alt=""
@@ -30725,7 +30716,7 @@ exports[`CastAndCrewMember > can show performer titles 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
@@ -30741,7 +30732,7 @@ exports[`CastAndCrewMember > can show performer titles 1`] = `
                 class="spacer-y-2"
               />
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/fuzz-1972/"
               >
                 Fuzz
@@ -36643,9 +36634,8 @@ exports[`CastAndCrewMember > can show performer titles then show all 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/angel-baby-1961/"
           >
             <img
               alt=""
@@ -36657,7 +36647,7 @@ exports[`CastAndCrewMember > can show performer titles then show all 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
@@ -36673,7 +36663,7 @@ exports[`CastAndCrewMember > can show performer titles then show all 1`] = `
                 class="spacer-y-2"
               />
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/angel-baby-1961/"
               >
                 Angel Baby
@@ -37392,9 +37382,8 @@ exports[`CastAndCrewMember > can show performer titles then show all 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/fuzz-1972/"
           >
             <img
               alt=""
@@ -37406,7 +37395,7 @@ exports[`CastAndCrewMember > can show performer titles then show all 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
@@ -37422,7 +37411,7 @@ exports[`CastAndCrewMember > can show performer titles then show all 1`] = `
                 class="spacer-y-2"
               />
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/fuzz-1972/"
               >
                 Fuzz
@@ -43413,9 +43402,8 @@ exports[`CastAndCrewMember > can show writer titles then show all 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/angel-baby-1961/"
           >
             <img
               alt=""
@@ -43427,7 +43415,7 @@ exports[`CastAndCrewMember > can show writer titles then show all 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
@@ -43443,7 +43431,7 @@ exports[`CastAndCrewMember > can show writer titles then show all 1`] = `
                 class="spacer-y-2"
               />
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/angel-baby-1961/"
               >
                 Angel Baby
@@ -44162,9 +44150,8 @@ exports[`CastAndCrewMember > can show writer titles then show all 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/fuzz-1972/"
           >
             <img
               alt=""
@@ -44176,7 +44163,7 @@ exports[`CastAndCrewMember > can show writer titles then show all 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
@@ -44192,7 +44179,7 @@ exports[`CastAndCrewMember > can show writer titles then show all 1`] = `
                 class="spacer-y-2"
               />
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/fuzz-1972/"
               >
                 Fuzz
@@ -50094,9 +50081,8 @@ exports[`CastAndCrewMember > can sort by grade with best first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/angel-baby-1961/"
           >
             <img
               alt=""
@@ -50108,7 +50094,7 @@ exports[`CastAndCrewMember > can sort by grade with best first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
@@ -50124,7 +50110,7 @@ exports[`CastAndCrewMember > can sort by grade with best first 1`] = `
                 class="spacer-y-2"
               />
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/angel-baby-1961/"
               >
                 Angel Baby
@@ -50163,9 +50149,8 @@ exports[`CastAndCrewMember > can sort by grade with best first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/fuzz-1972/"
           >
             <img
               alt=""
@@ -50177,7 +50162,7 @@ exports[`CastAndCrewMember > can sort by grade with best first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
@@ -50193,7 +50178,7 @@ exports[`CastAndCrewMember > can sort by grade with best first 1`] = `
                 class="spacer-y-2"
               />
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/fuzz-1972/"
               >
                 Fuzz
@@ -55995,9 +55980,8 @@ exports[`CastAndCrewMember > can sort by grade with worst first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/angel-baby-1961/"
           >
             <img
               alt=""
@@ -56009,7 +55993,7 @@ exports[`CastAndCrewMember > can sort by grade with worst first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
@@ -56025,7 +56009,7 @@ exports[`CastAndCrewMember > can sort by grade with worst first 1`] = `
                 class="spacer-y-2"
               />
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/angel-baby-1961/"
               >
                 Angel Baby
@@ -56064,9 +56048,8 @@ exports[`CastAndCrewMember > can sort by grade with worst first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/fuzz-1972/"
           >
             <img
               alt=""
@@ -56078,7 +56061,7 @@ exports[`CastAndCrewMember > can sort by grade with worst first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
@@ -56094,7 +56077,7 @@ exports[`CastAndCrewMember > can sort by grade with worst first 1`] = `
                 class="spacer-y-2"
               />
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/fuzz-1972/"
               >
                 Fuzz
@@ -68555,9 +68538,8 @@ exports[`CastAndCrewMember > can sort by release date with oldest first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/angel-baby-1961/"
           >
             <img
               alt=""
@@ -68569,7 +68551,7 @@ exports[`CastAndCrewMember > can sort by release date with oldest first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
@@ -68585,7 +68567,7 @@ exports[`CastAndCrewMember > can sort by release date with oldest first 1`] = `
                 class="spacer-y-2"
               />
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/angel-baby-1961/"
               >
                 Angel Baby
@@ -69304,9 +69286,8 @@ exports[`CastAndCrewMember > can sort by release date with oldest first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/fuzz-1972/"
           >
             <img
               alt=""
@@ -69318,7 +69299,7 @@ exports[`CastAndCrewMember > can sort by release date with oldest first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
@@ -69334,7 +69315,7 @@ exports[`CastAndCrewMember > can sort by release date with oldest first 1`] = `
                 class="spacer-y-2"
               />
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/fuzz-1972/"
               >
                 Fuzz
@@ -75314,9 +75295,8 @@ exports[`CastAndCrewMember > can sort by title 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/angel-baby-1961/"
           >
             <img
               alt=""
@@ -75328,7 +75308,7 @@ exports[`CastAndCrewMember > can sort by title 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
@@ -75344,7 +75324,7 @@ exports[`CastAndCrewMember > can sort by title 1`] = `
                 class="spacer-y-2"
               />
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/angel-baby-1961/"
               >
                 Angel Baby
@@ -77459,9 +77439,8 @@ exports[`CastAndCrewMember > can sort by title 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/fuzz-1972/"
           >
             <img
               alt=""
@@ -77473,7 +77452,7 @@ exports[`CastAndCrewMember > can sort by title 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
@@ -77489,7 +77468,7 @@ exports[`CastAndCrewMember > can sort by title 1`] = `
                 class="spacer-y-2"
               />
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/fuzz-1972/"
               >
                 Fuzz
@@ -82414,9 +82393,8 @@ exports[`CastAndCrewMember > renders 1`] = `
                             <li
                               class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
                             >
-                              <a
+                              <div
                                 class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-                                href="/reviews/angel-baby-1961/"
                               >
                                 <img
                                   alt=""
@@ -82428,7 +82406,7 @@ exports[`CastAndCrewMember > renders 1`] = `
                                   srcset="/_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fangel-baby-1961.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
                                   width="80"
                                 />
-                              </a>
+                              </div>
                               <div
                                 class="grow pr-gutter tablet:w-full desktop:pr-4"
                               >
@@ -82444,7 +82422,7 @@ exports[`CastAndCrewMember > renders 1`] = `
                                     class="spacer-y-2"
                                   />
                                   <a
-                                    class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                                    class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                                     href="/reviews/angel-baby-1961/"
                                   >
                                     Angel Baby  
@@ -83132,9 +83110,8 @@ exports[`CastAndCrewMember > renders 1`] = `
                             <li
                               class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 bg-default"
                             >
-                              <a
+                              <div
                                 class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-                                href="/reviews/fuzz-1972/"
                               >
                                 <img
                                   alt=""
@@ -83146,7 +83123,7 @@ exports[`CastAndCrewMember > renders 1`] = `
                                   srcset="/_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffuzz-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
                                   width="80"
                                 />
-                              </a>
+                              </div>
                               <div
                                 class="grow pr-gutter tablet:w-full desktop:pr-4"
                               >
@@ -83162,7 +83139,7 @@ exports[`CastAndCrewMember > renders 1`] = `
                                     class="spacer-y-2"
                                   />
                                   <a
-                                    class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                                    class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                                     href="/reviews/fuzz-1972/"
                                   >
                                     Fuzz  
