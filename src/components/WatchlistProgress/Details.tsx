@@ -39,12 +39,11 @@ export function Details({
           return (
             <div
               key={value.name}
-              className="col-span-3 grid grid-cols-subgrid grid-rows-[1fr,auto,auto,1fr] py-3"
+              className="relative col-span-3 grid grid-cols-subgrid grid-rows-[1fr,auto,auto,1fr] py-3"
             >
               <DetailsItemAvatar
                 imageProps={value.avatarImageProps}
                 name={value.name}
-                href={`/cast-and-crew/${value.slug}`}
                 className="row-span-4 mr-6"
               />
               <div className="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid">
@@ -79,7 +78,7 @@ function Name({ value, valueType }: { valueType: ValueType; value: Value }) {
   if (value.slug)
     return (
       <a
-        className="block pb-1 font-sans-narrow text-sm font-medium leading-none tracking-[-0.3px] text-accent"
+        className="block pb-1 font-sans-narrow text-sm font-medium leading-none tracking-[-0.3px] text-accent before:absolute before:left-0 before:top-3 before:aspect-square before:w-12 hover:underline tablet:text-base"
         href={linkTarget}
       >
         {value.name}
@@ -94,18 +93,16 @@ function Name({ value, valueType }: { valueType: ValueType; value: Value }) {
 }
 
 export const DetailsAvatarImageConfig = {
-  width: 80,
-  height: 80,
+  width: 48,
+  height: 48,
 };
 
 export function DetailsItemAvatar({
   name,
-  href,
   imageProps,
   className,
 }: {
   name: string;
-  href: string;
   imageProps: AvatarImageProps | null;
   className?: string;
 }) {
@@ -121,14 +118,13 @@ export function DetailsItemAvatar({
   );
 
   return (
-    <a
-      href={href}
+    <div
       className={ccn(
-        "safari-border-radius-fix w-full max-w-12 overflow-hidden rounded-[50%]",
+        "safari-border-radius-fix w-12 overflow-hidden rounded-[50%]",
         className,
       )}
     >
       {avatar}
-    </a>
+    </div>
   );
 }
