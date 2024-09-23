@@ -8,8 +8,6 @@ slug: sagebrush-trail-1933
 
 The underwater scenes in _Sagebrush Trail_ belie its shoestring budget.
 
-<!-- end -->
-
 Those scenes come early. John Wayne plays a fugitive named John (of course) stowed away aboard a freight train. As the train pulls into the station, lawmen are waiting. After some cat and mouse, John hops a horse and flees into the countryside. The lawmen pursue. John dead-ends at a lake, dismounts, and dives into the water.
 
 We see John underwater, breathing through a reed. It's not a special effect. I'm not sure how they shot these scenes, but that's Wayne underwater, breathing through a stick in what looks like a lake.
