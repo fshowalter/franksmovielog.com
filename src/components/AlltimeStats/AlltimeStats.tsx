@@ -50,7 +50,7 @@ export function AlltimeStats({
             <a href="/viewings/">Viewing Log</a>
           </p>
           <h1 className="mb-4 text-4xl desktop:text-7xl">All-Time Stats</h1>
-          <p className="mb-6 font-sans-narrow text-xs uppercase tracking-[1.1px] text-subtle brightness-200">
+          <p className="mb-6 font-sans-narrow text-xs uppercase tracking-[1.1px] text-[#B0B0B0]">
             {`${(distinctStatYears.length - 1).toString()} Years in Review`}
           </p>
           <StatsNavigation
