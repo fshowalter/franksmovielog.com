@@ -1,7 +1,7 @@
 import type { PosterImageProps } from "src/api/posters";
 
 export const ListItemPosterImageConfig = {
-  width: 75,
+  width: 80,
   height: 113,
 };
 
@@ -16,7 +16,7 @@ export function ListItemPoster({
     return (
       <a
         href={`/reviews/${slug}/`}
-        className="w-auto min-w-16 max-w-16 shrink-0 tablet:max-w-unset"
+        className="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
       >
         <img
           {...imageProps}
@@ -32,7 +32,7 @@ export function ListItemPoster({
   }
 
   return (
-    <div className="w-auto min-w-16 max-w-16 shrink-0 tablet:max-w-unset">
+    <div className="w-16 shrink-0 tablet:w-[76px] desktop:w-20">
       <img
         {...imageProps}
         alt=""
