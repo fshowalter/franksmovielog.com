@@ -29,7 +29,7 @@ function Callout({
   subLabel?: string;
 }): JSX.Element {
   return (
-    <>
+    <div className="flex flex-col items-center first:min-w-full tablet:first:min-w-0">
       <ProgressRing
         width={144}
         height={144}
@@ -40,12 +40,10 @@ function Callout({
         className="h-auto w-32 tablet:w-36"
       />
       <div className="pt-2 text-center font-sans text-base font-semibold text-muted">
-        <div>
-          {reviewed?.toLocaleString()} / {total?.toLocaleString()}
-        </div>
+        {reviewed?.toLocaleString()} / {total?.toLocaleString()}
         <div className="font-sans text-sm font-light leading-4">Reviewed</div>
       </div>
-    </>
+    </div>
   );
 }
 
@@ -63,46 +61,32 @@ export function Callouts({
 }: Props): JSX.Element {
   return (
     <section className="mx-auto w-full max-w-screen-max tablet:mt-12 tablet:px-container">
-      <div className="flex w-full flex-wrap justify-center gap-x-8 px-container py-10">
-        <div className="flex min-w-full flex-col items-center pt-8 tablet:min-w-0">
-          <Callout total={total} reviewed={reviewed} label="Total Progress" />
-        </div>
-        <div>
-          <div className="spacer-y-8" />
-          <Callout
-            total={directorTotal}
-            reviewed={directorReviewed}
-            label="Director"
-            subLabel="Titles"
-          />
-        </div>
-        <div>
-          <div className="spacer-y-8" />
-          <Callout
-            total={performerTotal}
-            reviewed={performerReviewed}
-            label="Performer"
-            subLabel="Titles"
-          />
-        </div>
-        <div>
-          <div className="spacer-y-8" />
-          <Callout
-            total={writerTotal}
-            reviewed={writerReviewed}
-            label="Writer"
-            subLabel="Titles"
-          />
-        </div>
-        <div>
-          <div className="spacer-y-8" />
-          <Callout
-            total={collectionTotal}
-            reviewed={collectionReviewed}
-            label="Collection"
-            subLabel="Titles"
-          />
-        </div>
+      <div className="flex w-full flex-wrap justify-center gap-8 px-container py-10">
+        <Callout total={total} reviewed={reviewed} label="Total Progress" />
+        <Callout
+          total={directorTotal}
+          reviewed={directorReviewed}
+          label="Director"
+          subLabel="Titles"
+        />
+        <Callout
+          total={performerTotal}
+          reviewed={performerReviewed}
+          label="Performer"
+          subLabel="Titles"
+        />
+        <Callout
+          total={writerTotal}
+          reviewed={writerReviewed}
+          label="Writer"
+          subLabel="Titles"
+        />
+        <Callout
+          total={collectionTotal}
+          reviewed={collectionReviewed}
+          label="Collection"
+          subLabel="Titles"
+        />
       </div>
     </section>
   );
