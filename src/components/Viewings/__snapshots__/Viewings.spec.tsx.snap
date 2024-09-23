@@ -87896,7 +87896,7 @@ exports[`Viewings > renders 1`] = `
         class="flex flex-wrap items-start justify-between gap-[10%] bg-[#252525] px-container-base py-20 text-inverse tablet:px-12 tablet:pt-10 desktop:p-20"
       >
         <div
-          class="flex flex-col"
+          class="flex flex-col pb-12"
         >
           <div
             class="flex flex-col"
@@ -87917,9 +87917,6 @@ exports[`Viewings > renders 1`] = `
               My life at the movies.
             </p>
           </div>
-          <div
-            class="spacer-y-12"
-          />
         </div>
         <div
           class="flex flex-col gap-20 pb-20 pt-10 tablet:basis-1/2 tablet:pt-20"

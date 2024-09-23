@@ -1,5 +1,4 @@
 const PROSE_CONTENT_WIDTH = "39rem";
-import plugin from "tailwindcss/plugin";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -84,24 +83,4 @@ export default {
       },
     },
   },
-  plugins: [
-    plugin(function ({ matchUtilities, theme }) {
-      matchUtilities(
-        {
-          /**
-           *
-           * @param {string} value
-           * @returns
-           */
-          "spacer-y": (value) => {
-            return {
-              height: value,
-              minHeight: value,
-            };
-          },
-        },
-        { values: theme("spacing") },
-      );
-    }),
-  ],
 };
