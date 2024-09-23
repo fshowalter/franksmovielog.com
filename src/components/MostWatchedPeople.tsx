@@ -104,7 +104,7 @@ function MostWatchedPersonViewingListItem({
 
   return (
     <ListItem className={className}>
-      <ListItemPoster slug={value.slug} imageProps={value.posterImageProps} />
+      <ListItemPoster imageProps={value.posterImageProps} />
       <div className="grow">
         <ListItemTitle
           title={value.title}

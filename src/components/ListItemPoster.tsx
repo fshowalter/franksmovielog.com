@@ -6,10 +6,8 @@ export const ListItemPosterImageConfig = {
 };
 
 export function ListItemPoster({
-  slug,
   imageProps,
 }: {
-  slug?: string | null;
   imageProps: PosterImageProps;
 }) {
   return (
