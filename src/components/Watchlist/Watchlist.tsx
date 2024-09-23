@@ -5,7 +5,6 @@ import type { WatchlistTitle } from "src/api/watchlistTitles";
 
 import { Backdrop } from "../Backdrop";
 import { GroupedList } from "../GroupedList";
-import { ListItem } from "../ListItem";
 import { ListItemPoster } from "../ListItemPoster";
 import { ListItemTitle } from "../ListItemTitle";
 import {
