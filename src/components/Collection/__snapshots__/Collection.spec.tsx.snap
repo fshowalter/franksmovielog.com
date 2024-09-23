@@ -939,9 +939,8 @@ exports[`Collection > can filter by release year 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/the-boxer-from-shantung-1972/"
           >
             <img
               alt=""
@@ -953,13 +952,13 @@ exports[`Collection > can filter by release year 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fthe-boxer-from-shantung-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fthe-boxer-from-shantung-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/the-boxer-from-shantung-1972/"
               >
                 The Boxer from Shantung
@@ -1129,9 +1128,8 @@ exports[`Collection > can filter by release year 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/five-fingers-of-death-1972/"
           >
             <img
               alt=""
@@ -1143,13 +1141,13 @@ exports[`Collection > can filter by release year 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffive-fingers-of-death-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffive-fingers-of-death-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/five-fingers-of-death-1972/"
               >
                 Five Fingers of Death
@@ -9274,9 +9272,8 @@ exports[`Collection > can show hidden reviewed titles 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/the-boxer-from-shantung-1972/"
           >
             <img
               alt=""
@@ -9288,13 +9285,13 @@ exports[`Collection > can show hidden reviewed titles 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fthe-boxer-from-shantung-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fthe-boxer-from-shantung-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/the-boxer-from-shantung-1972/"
               >
                 The Boxer from Shantung
@@ -9464,9 +9461,8 @@ exports[`Collection > can show hidden reviewed titles 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/five-fingers-of-death-1972/"
           >
             <img
               alt=""
@@ -9478,13 +9474,13 @@ exports[`Collection > can show hidden reviewed titles 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffive-fingers-of-death-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffive-fingers-of-death-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/five-fingers-of-death-1972/"
               >
                 Five Fingers of Death
@@ -13031,9 +13027,8 @@ exports[`Collection > can show more titles 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/the-boxer-from-shantung-1972/"
           >
             <img
               alt=""
@@ -13045,13 +13040,13 @@ exports[`Collection > can show more titles 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fthe-boxer-from-shantung-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fthe-boxer-from-shantung-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/the-boxer-from-shantung-1972/"
               >
                 The Boxer from Shantung
@@ -13221,9 +13216,8 @@ exports[`Collection > can show more titles 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/five-fingers-of-death-1972/"
           >
             <img
               alt=""
@@ -13235,13 +13229,13 @@ exports[`Collection > can show more titles 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffive-fingers-of-death-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffive-fingers-of-death-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/five-fingers-of-death-1972/"
               >
                 Five Fingers of Death
@@ -15946,9 +15940,8 @@ exports[`Collection > can show more titles 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/crippled-avengers-1978/"
           >
             <img
               alt=""
@@ -15960,13 +15953,13 @@ exports[`Collection > can show more titles 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fcrippled-avengers-1978.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fcrippled-avengers-1978.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/crippled-avengers-1978/"
               >
                 Crippled Avengers
@@ -17791,9 +17784,8 @@ exports[`Collection > can show more titles 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/five-elements-ninjas-1982/"
           >
             <img
               alt=""
@@ -17805,13 +17797,13 @@ exports[`Collection > can show more titles 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffive-elements-ninjas-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffive-elements-ninjas-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/five-elements-ninjas-1982/"
               >
                 Five Elements Ninjas
@@ -17911,9 +17903,8 @@ exports[`Collection > can show more titles 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/human-lanterns-1982/"
           >
             <img
               alt=""
@@ -17925,13 +17916,13 @@ exports[`Collection > can show more titles 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fhuman-lanterns-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fhuman-lanterns-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/human-lanterns-1982/"
               >
                 Human Lanterns
@@ -18401,9 +18392,8 @@ exports[`Collection > can show more titles 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/the-boxers-omen-1983/"
           >
             <img
               alt=""
@@ -18415,13 +18405,13 @@ exports[`Collection > can show more titles 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fthe-boxers-omen-1983.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fthe-boxers-omen-1983.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/the-boxers-omen-1983/"
               >
                 The Boxer's Omen
@@ -18646,9 +18636,8 @@ exports[`Collection > can show more titles 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/the-eight-diagram-pole-fighter-1984/"
           >
             <img
               alt=""
@@ -18660,13 +18649,13 @@ exports[`Collection > can show more titles 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fthe-eight-diagram-pole-fighter-1984.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fthe-eight-diagram-pole-fighter-1984.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/the-eight-diagram-pole-fighter-1984/"
               >
                 The Eight Diagram Pole Fighter
@@ -18723,9 +18712,8 @@ exports[`Collection > can sort by grade with best first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/five-fingers-of-death-1972/"
           >
             <img
               alt=""
@@ -18737,13 +18725,13 @@ exports[`Collection > can sort by grade with best first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffive-fingers-of-death-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffive-fingers-of-death-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/five-fingers-of-death-1972/"
               >
                 Five Fingers of Death
@@ -18773,9 +18761,8 @@ exports[`Collection > can sort by grade with best first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/the-boxers-omen-1983/"
           >
             <img
               alt=""
@@ -18787,13 +18774,13 @@ exports[`Collection > can sort by grade with best first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fthe-boxers-omen-1983.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fthe-boxers-omen-1983.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/the-boxers-omen-1983/"
               >
                 The Boxer's Omen
@@ -18843,9 +18830,8 @@ exports[`Collection > can sort by grade with best first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/the-boxer-from-shantung-1972/"
           >
             <img
               alt=""
@@ -18857,13 +18843,13 @@ exports[`Collection > can sort by grade with best first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fthe-boxer-from-shantung-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fthe-boxer-from-shantung-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/the-boxer-from-shantung-1972/"
               >
                 The Boxer from Shantung
@@ -18893,9 +18879,8 @@ exports[`Collection > can sort by grade with best first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/crippled-avengers-1978/"
           >
             <img
               alt=""
@@ -18907,13 +18892,13 @@ exports[`Collection > can sort by grade with best first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fcrippled-avengers-1978.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fcrippled-avengers-1978.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/crippled-avengers-1978/"
               >
                 Crippled Avengers
@@ -18943,9 +18928,8 @@ exports[`Collection > can sort by grade with best first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/five-elements-ninjas-1982/"
           >
             <img
               alt=""
@@ -18957,13 +18941,13 @@ exports[`Collection > can sort by grade with best first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffive-elements-ninjas-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffive-elements-ninjas-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/five-elements-ninjas-1982/"
               >
                 Five Elements Ninjas
@@ -19013,9 +18997,8 @@ exports[`Collection > can sort by grade with best first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/human-lanterns-1982/"
           >
             <img
               alt=""
@@ -19027,13 +19010,13 @@ exports[`Collection > can sort by grade with best first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fhuman-lanterns-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fhuman-lanterns-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/human-lanterns-1982/"
               >
                 Human Lanterns
@@ -19083,9 +19066,8 @@ exports[`Collection > can sort by grade with best first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/the-eight-diagram-pole-fighter-1984/"
           >
             <img
               alt=""
@@ -19097,13 +19079,13 @@ exports[`Collection > can sort by grade with best first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fthe-eight-diagram-pole-fighter-1984.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fthe-eight-diagram-pole-fighter-1984.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/the-eight-diagram-pole-fighter-1984/"
               >
                 The Eight Diagram Pole Fighter
@@ -22435,9 +22417,8 @@ exports[`Collection > can sort by grade with worst first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/the-eight-diagram-pole-fighter-1984/"
           >
             <img
               alt=""
@@ -22449,13 +22430,13 @@ exports[`Collection > can sort by grade with worst first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fthe-eight-diagram-pole-fighter-1984.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fthe-eight-diagram-pole-fighter-1984.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/the-eight-diagram-pole-fighter-1984/"
               >
                 The Eight Diagram Pole Fighter
@@ -22505,9 +22486,8 @@ exports[`Collection > can sort by grade with worst first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/human-lanterns-1982/"
           >
             <img
               alt=""
@@ -22519,13 +22499,13 @@ exports[`Collection > can sort by grade with worst first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fhuman-lanterns-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fhuman-lanterns-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/human-lanterns-1982/"
               >
                 Human Lanterns
@@ -22575,9 +22555,8 @@ exports[`Collection > can sort by grade with worst first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/the-boxer-from-shantung-1972/"
           >
             <img
               alt=""
@@ -22589,13 +22568,13 @@ exports[`Collection > can sort by grade with worst first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fthe-boxer-from-shantung-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fthe-boxer-from-shantung-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/the-boxer-from-shantung-1972/"
               >
                 The Boxer from Shantung
@@ -22625,9 +22604,8 @@ exports[`Collection > can sort by grade with worst first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/crippled-avengers-1978/"
           >
             <img
               alt=""
@@ -22639,13 +22617,13 @@ exports[`Collection > can sort by grade with worst first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fcrippled-avengers-1978.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fcrippled-avengers-1978.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/crippled-avengers-1978/"
               >
                 Crippled Avengers
@@ -22675,9 +22653,8 @@ exports[`Collection > can sort by grade with worst first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/five-elements-ninjas-1982/"
           >
             <img
               alt=""
@@ -22689,13 +22666,13 @@ exports[`Collection > can sort by grade with worst first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffive-elements-ninjas-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffive-elements-ninjas-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/five-elements-ninjas-1982/"
               >
                 Five Elements Ninjas
@@ -22745,9 +22722,8 @@ exports[`Collection > can sort by grade with worst first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/five-fingers-of-death-1972/"
           >
             <img
               alt=""
@@ -22759,13 +22735,13 @@ exports[`Collection > can sort by grade with worst first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffive-fingers-of-death-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffive-fingers-of-death-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/five-fingers-of-death-1972/"
               >
                 Five Fingers of Death
@@ -22795,9 +22771,8 @@ exports[`Collection > can sort by grade with worst first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/the-boxers-omen-1983/"
           >
             <img
               alt=""
@@ -22809,13 +22784,13 @@ exports[`Collection > can sort by grade with worst first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fthe-boxers-omen-1983.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fthe-boxers-omen-1983.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/the-boxers-omen-1983/"
               >
                 The Boxer's Omen
@@ -26592,9 +26567,8 @@ exports[`Collection > can sort by release date with newest first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/the-eight-diagram-pole-fighter-1984/"
           >
             <img
               alt=""
@@ -26606,13 +26580,13 @@ exports[`Collection > can sort by release date with newest first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fthe-eight-diagram-pole-fighter-1984.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fthe-eight-diagram-pole-fighter-1984.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/the-eight-diagram-pole-fighter-1984/"
               >
                 The Eight Diagram Pole Fighter
@@ -26732,9 +26706,8 @@ exports[`Collection > can sort by release date with newest first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/the-boxers-omen-1983/"
           >
             <img
               alt=""
@@ -26746,13 +26719,13 @@ exports[`Collection > can sort by release date with newest first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fthe-boxers-omen-1983.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fthe-boxers-omen-1983.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/the-boxers-omen-1983/"
               >
                 The Boxer's Omen
@@ -27222,9 +27195,8 @@ exports[`Collection > can sort by release date with newest first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/human-lanterns-1982/"
           >
             <img
               alt=""
@@ -27236,13 +27208,13 @@ exports[`Collection > can sort by release date with newest first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fhuman-lanterns-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fhuman-lanterns-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/human-lanterns-1982/"
               >
                 Human Lanterns
@@ -27342,9 +27314,8 @@ exports[`Collection > can sort by release date with newest first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/five-elements-ninjas-1982/"
           >
             <img
               alt=""
@@ -27356,13 +27327,13 @@ exports[`Collection > can sort by release date with newest first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffive-elements-ninjas-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffive-elements-ninjas-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/five-elements-ninjas-1982/"
               >
                 Five Elements Ninjas
@@ -29222,9 +29193,8 @@ exports[`Collection > can sort by release date with newest first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/crippled-avengers-1978/"
           >
             <img
               alt=""
@@ -29236,13 +29206,13 @@ exports[`Collection > can sort by release date with newest first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fcrippled-avengers-1978.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fcrippled-avengers-1978.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/crippled-avengers-1978/"
               >
                 Crippled Avengers
@@ -31749,9 +31719,8 @@ exports[`Collection > can sort by release date with oldest first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/the-boxer-from-shantung-1972/"
           >
             <img
               alt=""
@@ -31763,13 +31732,13 @@ exports[`Collection > can sort by release date with oldest first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fthe-boxer-from-shantung-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fthe-boxer-from-shantung-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/the-boxer-from-shantung-1972/"
               >
                 The Boxer from Shantung
@@ -31939,9 +31908,8 @@ exports[`Collection > can sort by release date with oldest first 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/five-fingers-of-death-1972/"
           >
             <img
               alt=""
@@ -31953,13 +31921,13 @@ exports[`Collection > can sort by release date with oldest first 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffive-fingers-of-death-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffive-fingers-of-death-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/five-fingers-of-death-1972/"
               >
                 Five Fingers of Death
@@ -34411,9 +34379,8 @@ exports[`Collection > can sort by title 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/the-boxer-from-shantung-1972/"
           >
             <img
               alt=""
@@ -34425,13 +34392,13 @@ exports[`Collection > can sort by title 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fthe-boxer-from-shantung-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fthe-boxer-from-shantung-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/the-boxer-from-shantung-1972/"
               >
                 The Boxer from Shantung
@@ -34496,9 +34463,8 @@ exports[`Collection > can sort by title 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/the-boxers-omen-1983/"
           >
             <img
               alt=""
@@ -34510,13 +34476,13 @@ exports[`Collection > can sort by title 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fthe-boxers-omen-1983.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fthe-boxers-omen-1983.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/the-boxers-omen-1983/"
               >
                 The Boxer's Omen
@@ -35126,9 +35092,8 @@ exports[`Collection > can sort by title 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/crippled-avengers-1978/"
           >
             <img
               alt=""
@@ -35140,13 +35105,13 @@ exports[`Collection > can sort by title 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fcrippled-avengers-1978.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fcrippled-avengers-1978.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/crippled-avengers-1978/"
               >
                 Crippled Avengers
@@ -35741,9 +35706,8 @@ exports[`Collection > can sort by title 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/the-eight-diagram-pole-fighter-1984/"
           >
             <img
               alt=""
@@ -35755,13 +35719,13 @@ exports[`Collection > can sort by title 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fthe-eight-diagram-pole-fighter-1984.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fthe-eight-diagram-pole-fighter-1984.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/the-eight-diagram-pole-fighter-1984/"
               >
                 The Eight Diagram Pole Fighter
@@ -36126,9 +36090,8 @@ exports[`Collection > can sort by title 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/five-elements-ninjas-1982/"
           >
             <img
               alt=""
@@ -36140,13 +36103,13 @@ exports[`Collection > can sort by title 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffive-elements-ninjas-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffive-elements-ninjas-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/five-elements-ninjas-1982/"
               >
                 Five Elements Ninjas
@@ -36176,9 +36139,8 @@ exports[`Collection > can sort by title 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/five-fingers-of-death-1972/"
           >
             <img
               alt=""
@@ -36190,13 +36152,13 @@ exports[`Collection > can sort by title 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Ffive-fingers-of-death-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffive-fingers-of-death-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/five-fingers-of-death-1972/"
               >
                 Five Fingers of Death
@@ -37071,9 +37033,8 @@ exports[`Collection > can sort by title 1`] = `
         <li
           class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
         >
-          <a
+          <div
             class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-            href="/reviews/human-lanterns-1982/"
           >
             <img
               alt=""
@@ -37085,13 +37046,13 @@ exports[`Collection > can sort by title 1`] = `
               srcset="/_image?/content%2Fassets%2Fposters%2Fhuman-lanterns-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fhuman-lanterns-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
               width="80"
             />
-          </a>
+          </div>
           <div
             class="grow pr-gutter tablet:w-full desktop:pr-4"
           >
             <div>
               <a
-                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                 href="/reviews/human-lanterns-1982/"
               >
                 Human Lanterns
@@ -39988,9 +39949,8 @@ exports[`Collection > renders 1`] = `
                             <li
                               class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
                             >
-                              <a
+                              <div
                                 class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-                                href="/reviews/the-boxer-from-shantung-1972/"
                               >
                                 <img
                                   alt=""
@@ -40002,13 +39962,13 @@ exports[`Collection > renders 1`] = `
                                   srcset="/_image?/content%2Fassets%2Fposters%2Fthe-boxer-from-shantung-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Fthe-boxer-from-shantung-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
                                   width="80"
                                 />
-                              </a>
+                              </div>
                               <div
                                 class="grow pr-gutter tablet:w-full desktop:pr-4"
                               >
                                 <div>
                                   <a
-                                    class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                                    class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                                     href="/reviews/the-boxer-from-shantung-1972/"
                                   >
                                     The Boxer from Shantung  
@@ -40173,9 +40133,8 @@ exports[`Collection > renders 1`] = `
                             <li
                               class="relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container-base py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 items-center"
                             >
-                              <a
+                              <div
                                 class="w-16 shrink-0 tablet:w-[76px] desktop:w-20"
-                                href="/reviews/five-fingers-of-death-1972/"
                               >
                                 <img
                                   alt=""
@@ -40187,13 +40146,13 @@ exports[`Collection > renders 1`] = `
                                   srcset="/_image?/content%2Fassets%2Fposters%2Ffive-fingers-of-death-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&q=80&f=avif 1x, /_image?/content%2Fassets%2Fposters%2Ffive-fingers-of-death-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&q=80&f=avif 2x"
                                   width="80"
                                 />
-                              </a>
+                              </div>
                               <div
                                 class="grow pr-gutter tablet:w-full desktop:pr-4"
                               >
                                 <div>
                                   <a
-                                    class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+                                    class="block font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-[0.66666667] before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:min-w-20"
                                     href="/reviews/five-fingers-of-death-1972/"
                                   >
                                     Five Fingers of Death  
