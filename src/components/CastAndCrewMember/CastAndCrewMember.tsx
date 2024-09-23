@@ -124,7 +124,7 @@ function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
     <ListItem className={className}>
       <ListItemPoster imageProps={value.posterImageProps} />
-      <div className="flex grow flex-col gap-2 pb-2 pr-gutter tablet:w-full desktop:pr-4">
+      <div className="flex grow flex-col gap-2 pb-2 tablet:w-full">
         <CreditedAs values={value.creditedAs} />
         <ListItemTitle
           title={value.title}

@@ -27,7 +27,7 @@ export function Details({
   return (
     <section
       className={ccn(
-        "w-full bg-default px-container pb-8 desktop:w-auto desktop:basis-[calc(50%_-_16px)] desktop:px-gutter",
+        "w-full bg-default px-container pb-8 desktop:w-auto desktop:basis-[calc(50%_-_16px)] desktop:px-8",
         className,
       )}
     >

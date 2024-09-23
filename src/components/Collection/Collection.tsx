@@ -94,7 +94,7 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
     <ListItem className="items-center">
       <ListItemPoster imageProps={value.posterImageProps} />
-      <div className="grow pr-gutter tablet:w-full desktop:pr-4">
+      <div className="grow tablet:w-full">
         <div>
           <ListItemTitle
             title={value.title}

@@ -69,15 +69,13 @@ export default {
         gutter: "var(--gutter-width)",
       },
       maxWidth: {
-        canvas: "1536px",
         prose: PROSE_CONTENT_WIDTH,
-        popout: `calc((var(--gutter-width) * 2) + ${PROSE_CONTENT_WIDTH})`,
+        popout: `calc(64px + ${PROSE_CONTENT_WIDTH})`,
         unset: "unset",
       },
       padding: {
         "container-base": "8%",
         container: "var(--container-padding)",
-        gutter: "var(--gutter-width)",
       },
     },
   },

@@ -18,10 +18,9 @@
   --fg-inverse: #fff;
   --fg-muted: rgb(0 0 0 / 65%);
   --fg-subtle: #575757;
-  --gutter-width: 20px;
   --image-filter: initial;
-  --page-margin-width: 20px;
   --container-padding: 8%;
+  --search-dialog-padding: 8%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,17 +45,15 @@
 
 @media screen(tablet) {
   :root {
-    --gutter-width: 24px;
-    --page-margin-width: 48px;
     --container-padding: 48px;
+    --search-dialog-padding: 24px;
   }
 }
 
 @media screen(desktop) {
   :root {
-    --gutter-width: 32px;
-    --page-margin-width: 64px;
     --container-padding: 80px;
+    --search-dialog-padding: 32px;
   }
 }
 
