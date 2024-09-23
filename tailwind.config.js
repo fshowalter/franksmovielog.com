@@ -2,7 +2,7 @@ const PROSE_CONTENT_WIDTH = "39rem";
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}"],
   theme: {
     backgroundColor: {
       accent: "var(--bg-accent)",
@@ -77,9 +77,7 @@ export default {
       padding: {
         "container-base": "8%",
         container: "var(--container-padding)",
-        pageMargin: "var(--page-margin-width)",
         gutter: "var(--gutter-width)",
-        ch: "1ch",
       },
     },
   },

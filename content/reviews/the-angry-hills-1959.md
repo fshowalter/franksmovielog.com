@@ -10,8 +10,6 @@ _The Angry Hills_ starts well enough. It's 1941. Robert Mitchum plays Mike Morri
 
 So far, so good. But then the film goes off the rails.
 
-<!-- end -->
-
 The script jumps ahead. We learn that the Germans bombed the British Convoy and that Mike survived thanks to some fishermen who took him to a remote village. _Then_ the film jumps back and we see the convoy get bombed. Then we're back with Mike in a small Greek village.
 
 These village scenes are dull and uninspiring. Stilted melodrama replaces suspense. A young, hotheaded female villager named Eleftheria nurses Mike back to health.

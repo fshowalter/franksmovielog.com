@@ -51,12 +51,12 @@ export function MostWatchedPeople({
                   {value.count}
                 </div>
               </div>
-              <div className="col-span-2 row-start-2 bg-subtle px-container tablet:px-0">
-                <details>
-                  <summary className="cursor-pointer py-1 font-sans text-sm text-subtle tablet:px-gutter desktop:px-2">
+              <div className="col-span-2 row-start-2 bg-subtle">
+                <details className="bg-subtle tablet:px-2">
+                  <summary className="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0">
                     Details
                   </summary>
-                  <ol className="py-4 tablet:px-gutter">
+                  <ol className="py-2 tablet:px-4">
                     {value.viewings.map((viewing) => {
                       return (
                         <MostWatchedPersonViewingListItem
