@@ -23,7 +23,6 @@ export function ListItemAvatar({
       width={ListItemAvatarImageConfig.width}
       height={ListItemAvatarImageConfig.height}
       loading="lazy"
-      decoding="async"
       className="w-full"
     />
   );

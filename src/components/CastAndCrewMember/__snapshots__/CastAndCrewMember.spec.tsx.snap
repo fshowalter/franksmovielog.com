@@ -78876,9 +78876,9 @@ exports[`CastAndCrewMember > renders 1`] = `
             <img
               alt="Burt Reynolds"
               data-pagefind-meta="image[src], image_alt[alt]"
-              decoding="async"
+              fetchpriority="high"
               height="250"
-              loading="lazy"
+              loading="eager"
               src="/_image?/content%2Fassets%2Favatars%2Fburt-reynolds.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=250&h=250&q=80&f=avif"
               srcset="/_image?/content%2Fassets%2Favatars%2Fburt-reynolds.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=250&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fburt-reynolds.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=250&h=250&q=80&f=avif 2x"
               width="250"
