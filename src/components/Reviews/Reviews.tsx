@@ -109,7 +109,7 @@ export function Reviews({
 function ReviewsListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
     <ListItem className="">
-      <ListItemPoster slug={value.slug} imageProps={value.posterImageProps} />
+      <ListItemPoster imageProps={value.posterImageProps} />
       <div className="flex grow flex-col gap-2 tablet:w-full desktop:pr-4">
         <ListItemTitle
           title={value.title}
