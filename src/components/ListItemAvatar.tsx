@@ -9,12 +9,10 @@ export const ListItemAvatarImageConfig = {
 
 export function ListItemAvatar({
   name,
-  href,
   imageProps,
   className,
 }: {
   name: string;
-  href: string;
   imageProps: AvatarImageProps | null;
   className?: string;
 }) {
@@ -31,14 +29,13 @@ export function ListItemAvatar({
   );
 
   return (
-    <a
-      href={href}
+    <div
       className={ccn(
-        "safari-border-radius-fix w-full max-w-16 overflow-hidden rounded-[50%] shadow-all tablet:max-w-20",
+        "safari-border-radius-fix w-16 overflow-hidden rounded-[50%] shadow-all tablet:w-20",
         className,
       )}
     >
       {avatar}
-    </a>
+    </div>
   );
 }
