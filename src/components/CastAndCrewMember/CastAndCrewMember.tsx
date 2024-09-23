@@ -124,33 +124,26 @@ function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
     <ListItem className={className}>
       <ListItemPoster imageProps={value.posterImageProps} />
-      <div className="grow pr-gutter tablet:w-full desktop:pr-4">
-        <div>
-          <CreditedAs values={value.creditedAs} />
-          <div className="spacer-y-2" />
-          <ListItemTitle
-            title={value.title}
-            year={value.year}
-            slug={value.slug}
-          />
-          <div className="spacer-y-2" />
-          {value.grade && (
-            <div className="py-px">
-              <Grade value={value.grade} height={18} />
-            </div>
-          )}
-          {!value.grade && (
-            <>
-              <WatchlistTitleSlug
-                directorNames={value.watchlistDirectorNames}
-                performerNames={value.watchlistPerformerNames}
-                writerNames={value.watchlistWriterNames}
-                collectionNames={value.collectionNames}
-              />
-            </>
-          )}
-          <div className="spacer-y-2" />
-        </div>
+      <div className="flex grow flex-col gap-2 pb-2 pr-gutter tablet:w-full desktop:pr-4">
+        <CreditedAs values={value.creditedAs} />
+        <ListItemTitle
+          title={value.title}
+          year={value.year}
+          slug={value.slug}
+        />
+        {value.grade && (
+          <Grade value={value.grade} height={18} className="py-px" />
+        )}
+        {!value.grade && (
+          <>
+            <WatchlistTitleSlug
+              directorNames={value.watchlistDirectorNames}
+              performerNames={value.watchlistPerformerNames}
+              writerNames={value.watchlistWriterNames}
+              collectionNames={value.collectionNames}
+            />
+          </>
+        )}
       </div>
     </ListItem>
   );
