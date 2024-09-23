@@ -151,7 +151,7 @@ function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
 
   return (
     <li
-      className="relative mb-1 flex flex-row items-center gap-x-4 bg-default px-container-base py-4 last:shadow-none last-of-type:mb-0 only-of-type:mb-0 tablet:gap-x-6 tablet:pl-6"
+      className="relative mb-1 flex flex-row items-center gap-x-4 bg-default px-container-base py-4 last:shadow-none last-of-type:mb-0 only-of-type:mb-0 tablet:gap-x-6 tablet:pl-4"
       style={{
         background: value.slug ? "var(--bg-default)" : "var(--bg-subtle)",
       }}
