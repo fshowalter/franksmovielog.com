@@ -63,12 +63,8 @@ export function Collections({
 
 function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
-    <ListItem className="items-center">
-      <ListItemAvatar
-        name={value.name}
-        href={`/collections/${value.slug}/`}
-        imageProps={value.avatarImageProps}
-      />
+    <ListItem className="items-center tablet:py-6">
+      <ListItemAvatar name={value.name} imageProps={value.avatarImageProps} />
       <CollectionName value={value} />
       <ListItemCounts current={value.reviewCount} total={value.titleCount} />
     </ListItem>
@@ -79,7 +75,7 @@ function CollectionName({ value }: { value: ListItemValue }) {
   return (
     <a
       href={`/collections/${value.slug}/`}
-      className="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 hover:underline tablet:text-base"
+      className="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
     >
       <div className="leading-normal">{value.name}</div>
     </a>
