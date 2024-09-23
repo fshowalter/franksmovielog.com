@@ -9,9 +9,8 @@ export function Footer(): JSX.Element {
         "flex flex-wrap items-start justify-between gap-[10%] bg-[#252525] px-container-base py-20 text-inverse tablet:px-12 tablet:pt-10 desktop:p-20"
       }
     >
-      <div className="flex flex-col">
+      <div className="flex flex-col pb-12">
         <Logo />
-        <div className="spacer-y-12" />
       </div>
       <div className="flex flex-col gap-20 pb-20 pt-10 tablet:basis-1/2 tablet:pt-20">
         <ul className="flex w-full flex-col gap-y-10 text-inverse max:w-auto">

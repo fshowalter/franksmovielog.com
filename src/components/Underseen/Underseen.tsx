@@ -115,23 +115,18 @@ function UnderseenGemsListItem({
   value: ListItemValue;
 }): JSX.Element {
   return (
-    <ListItem className="items-center">
+    <ListItem>
       <ListItemPoster imageProps={value.posterImageProps} />
-      <div className="grow pr-gutter tablet:w-full desktop:pr-4">
-        <div>
-          <ListItemTitle
-            title={value.title}
-            year={value.year}
-            slug={value.slug}
-          />
-          <div className="spacer-y-1" />
-          <div className="py-px">
-            <Grade value={value.grade} height={18} />
-          </div>
-          <div className="spacer-y-2" />
-          <ListItemGenres values={value.genres} />
-          <div className="spacer-y-2" />
+      <div className="flex grow flex-col gap-2 tablet:w-full desktop:pr-4">
+        <ListItemTitle
+          title={value.title}
+          year={value.year}
+          slug={value.slug}
+        />
+        <div className="mb-1 py-px">
+          <Grade value={value.grade} height={18} className="-mt-1" />
         </div>
+        <ListItemGenres values={value.genres} />
       </div>
     </ListItem>
   );
