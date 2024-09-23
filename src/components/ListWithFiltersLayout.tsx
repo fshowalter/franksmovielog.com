@@ -218,7 +218,7 @@ export function SubNav({
           return (
             <li
               key={value.href}
-              className={`w-full max-w-32 text-center opacity-75 ${value.active ? "text-inverse opacity-75" : ""}`}
+              className={`w-full max-w-32 text-center ${value.active ? "text-inverse" : "text-[#B8B8B8]"}`}
             >
               {value.active ? (
                 <div className="px-4 py-8 desktop:py-12">{value.text}</div>
