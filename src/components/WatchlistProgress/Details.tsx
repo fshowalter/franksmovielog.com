@@ -116,7 +116,6 @@ export function DetailsItemAvatar({
       width={DetailsAvatarImageConfig.width}
       height={DetailsAvatarImageConfig.height}
       loading="lazy"
-      decoding="async"
       className="w-full"
     />
   );

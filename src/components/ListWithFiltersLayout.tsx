@@ -90,8 +90,8 @@ export function AvatarBackdrop({
           name={name}
           width={250}
           height={250}
-          loading="lazy"
-          decoding="async"
+          loading="eager"
+          fetchPriority="high"
           data-pagefind-meta="image[src], image_alt[alt]"
         />
       </div>
