@@ -9,10 +9,10 @@ export function CreditedAs({
     <div className="font-sans text-xs font-light leading-4 tracking-[-.3px] text-subtle tablet:text-sm">
       {values.map((value, index) => {
         if (index === 0) {
-          return <span key={value}>{capitalize(value)}</span>;
+          return `${capitalize(value)}`;
         }
 
-        return <span key={value}> | {capitalize(value)}</span>;
+        return ` | ${capitalize(value)}`;
       })}
     </div>
   );
