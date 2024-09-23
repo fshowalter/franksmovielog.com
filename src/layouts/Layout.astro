@@ -53,7 +53,7 @@ const pathname = new URL(Astro.request.url).pathname;
   <body>
     <slot />
     <dialog
-      class="relative m-0 h-screen max-h-none w-screen max-w-unset border border-default bg-subtle shadow-lg open:flex open:flex-col tablet:mx-auto tablet:mt-16 tablet:h-min tablet:max-h-[min(100vh_-_128px,900px)] tablet:min-h-60 tablet:max-w-[min(100vw_-_2_*_var(--gutter-width),36rem)] tablet:rounded-xl desktop:min-h-0"
+      class="relative m-0 h-screen max-h-none w-screen max-w-unset border border-default bg-subtle shadow-lg open:flex open:flex-col tablet:mx-auto tablet:mt-16 tablet:h-min tablet:max-h-[min(100vh_-_128px,900px)] tablet:min-h-60 tablet:max-w-[min(100vw_-_64px,36rem)] tablet:rounded-xl desktop:min-h-0"
       aria-label="Search"
     >
       <div data-dialog-frame class="contents">
@@ -70,7 +70,7 @@ const pathname = new URL(Astro.request.url).pathname;
           <kbd class="rounded-md bg-default p-2 font-mono text-xs text-subtle"
             >Tab</kbd
           > to navigate
-          <kbd class="rounded-md bg-subtle p-2 font-mono text-xs text-subtle"
+          <kbd class="rounded-md bg-default p-2 font-mono text-xs text-subtle"
             >ESC</kbd
           > to close
         </div>
@@ -147,6 +147,7 @@ const pathname = new URL(Astro.request.url).pathname;
 
   // Listen for `ctrl + k` and `cmd + k` keyboard shortcuts.
   window.addEventListener("keydown", (e: KeyboardEvent) => {
+    console.log(e);
     if ((e.metaKey === true || e.ctrlKey === true) && e.key === "k") {
       dialog.open ? closeModal() : openModal();
       e.preventDefault();
@@ -191,7 +192,7 @@ const pathname = new URL(Astro.request.url).pathname;
     cursor: pointer;
     color: var(--fg-muted);
     top: 1rem;
-    right: var(--container-padding);
+    right: var(--search-dialog-padding);
   }
 
   #pagefind__search {
@@ -205,7 +206,7 @@ const pathname = new URL(Astro.request.url).pathname;
     --pagefind-ui-border-radius: 8px;
     --pagefind-ui-image-border-radius: 8px;
     --pagefind-ui-image-box-ratio: 3 / 2;
-    --pagefind-ui-font: "MercuryTextG1Regular";
+    --pagefind-ui-font: "FrankRuhlLibre";
     --cancel-space: 5rem;
     --pagefind-ui-image-border-radius: "unset";
   }
@@ -216,11 +217,14 @@ const pathname = new URL(Astro.request.url).pathname;
   }
 
   #pagefind__search .pagefind-ui__search-input {
-    width: calc(100% - (var(--cancel-space)) - 2 * var(--container-padding));
+    width: calc(
+      100% - (var(--cancel-space)) - 2 * var(--search-dialog-padding)
+    );
     margin: 1rem 0;
     flex-shrink: 0;
-    font-family: "MercuryTextG1Regular";
-    left: var(--container-padding);
+    font-family: "FrankRuhlLibre";
+    left: var(--search-dialog-padding);
+    font-weight: normal;
   }
 
   #pagefind__search,
@@ -230,7 +234,7 @@ const pathname = new URL(Astro.request.url).pathname;
   }
 
   #pagefind__search .pagefind-ui__form:before {
-    left: calc(var(--container-padding) + 1rem);
+    left: calc(var(--search-dialog-padding) + 1rem);
     top: calc(43px * var(--pagefind-ui-scale));
     width: calc(20px * var(--pagefind-ui-scale));
     height: calc(20px * var(--pagefind-ui-scale));
@@ -267,7 +271,7 @@ const pathname = new URL(Astro.request.url).pathname;
     background-color: transparent;
     overflow: hidden;
     top: calc(2px + 1rem);
-    right: calc(var(--container-padding) + var(--cancel-space));
+    right: calc(var(--search-dialog-padding) + var(--cancel-space) + 2px);
   }
 
   #pagefind__search .pagefind-ui__search-clear:focus {
@@ -280,17 +284,19 @@ const pathname = new URL(Astro.request.url).pathname;
       center / 50% no-repeat;
     mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m13.41 12 6.3-6.29a1 1 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1 1 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 .33 1.64 1 1 0 0 0 1.09-.22l6.29-6.3 6.29 6.3a1 1 0 0 0 1.64-.33 1 1 0 0 0-.22-1.09L13.41 12Z'/%3E%3C/svg%3E")
       center / 50% no-repeat;
-    background-color: var(--fg-muted);
+    background-color: var(--fg-subtle);
     display: block;
-    width: calc(44px * var(--pagefind-ui-scale));
-    height: calc(44px * var(--pagefind-ui-scale));
-    padding: calc(30px * var(--pagefind-ui-scale)) 0;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    padding: calc(30px * var(--pagefind-ui-scale)) 8px;
+    display: flex;
   }
 
   #pagefind__search .pagefind-ui__message {
-    padding: 1rem var(--container-padding);
+    padding: 1rem var(--search-dialog-padding);
     letter-spacing: 0.8px;
-    font-family: "GothamNarrowBold";
+    font-family: "Radio Canada Big";
     color: var(--fg-subtle);
   }
 
@@ -299,7 +305,7 @@ const pathname = new URL(Astro.request.url).pathname;
   }
 
   #pagefind__search .pagefind-ui__result {
-    padding: 1rem var(--container-padding);
+    padding: 1rem var(--search-dialog-padding);
     display: grid;
     grid-template-columns: 25% 1fr;
     column-gap: 1.5rem;
@@ -330,12 +336,12 @@ const pathname = new URL(Astro.request.url).pathname;
 
   #pagefind__search .pagefind-ui__button {
     margin: 1rem auto;
-    width: calc(100% - 2 * var(--container-padding));
+    width: calc(100% - 2 * var(--search-dialog-padding));
     font-size: 1rem;
     font-weight: normal;
     height: 2.5rem;
     display: block;
-    font-family: "GothamNarrowMedium";
+    font-family: "Radio Canada Big";
     text-transform: uppercase;
     background-color: var(--bg-canvas);
     letter-spacing: 0.6px;
@@ -350,7 +356,7 @@ const pathname = new URL(Astro.request.url).pathname;
   }
 
   #pagefind__search .pagefind-ui__result-title {
-    font-family: "GothamNarrowBold";
+    font-family: "Radio Canada Big";
     line-height: 1.25rem;
   }
 
@@ -359,7 +365,7 @@ const pathname = new URL(Astro.request.url).pathname;
   }
 
   #pagefind__search .pagefind-ui__result-excerpt {
-    font-family: "MercuryTextG1Regular";
+    font-family: "FrankRuhlLibre";
   }
 
   #pagefind__search .pagefind-ui__button:focus {

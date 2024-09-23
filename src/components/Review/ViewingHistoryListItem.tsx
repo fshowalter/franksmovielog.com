@@ -101,7 +101,7 @@ function ViewingNotes({ value }: { value: Viewing["viewingNotes"] }) {
 
 export function ViewingHistoryListItem({ value }: { value: Viewing }) {
   return (
-    <li className="flex flex-col px-gutter font-sans text-xs font-light even:bg-stripe">
+    <li className="flex flex-col px-4 font-sans text-xs font-light even:bg-stripe">
       <div className="flex items-center gap-x-[1ch] py-4">
         <div className="size-auto">
           <DateIcon className="w-4" />{" "}
