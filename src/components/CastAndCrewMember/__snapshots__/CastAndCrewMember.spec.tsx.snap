@@ -88827,7 +88827,7 @@ exports[`CastAndCrewMember > renders 1`] = `
                 class="mt-4"
               >
                 <li
-                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle brightness-200"
+                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-[#B0B0B0]"
                 >
                   <a
                     class="hover:text-inverse"
@@ -88837,7 +88837,7 @@ exports[`CastAndCrewMember > renders 1`] = `
                   </a>
                 </li>
                 <li
-                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle brightness-200"
+                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-[#B0B0B0]"
                 >
                   <a
                     class="hover:text-inverse"
@@ -88861,7 +88861,7 @@ exports[`CastAndCrewMember > renders 1`] = `
                 class="mt-4"
               >
                 <li
-                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle brightness-200"
+                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-[#B0B0B0]"
                 >
                   <a
                     class="hover:text-inverse"
@@ -88905,7 +88905,7 @@ exports[`CastAndCrewMember > renders 1`] = `
                 class="mt-4"
               >
                 <li
-                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle brightness-200"
+                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-[#B0B0B0]"
                 >
                   <a
                     class="hover:text-inverse"
@@ -88924,11 +88924,11 @@ exports[`CastAndCrewMember > renders 1`] = `
             To the top
           </a>
           <p
-            class="w-full font-normal leading-4 text-subtle"
+            class="w-full font-normal leading-4 text-[#B0B0B0]"
           >
             All stills used in accordance with the 
             <a
-              class="text-inherit"
+              class="text-inherit underline decoration-2 underline-offset-4 hover:bg-default hover:text-default"
               href="http://www.copyright.gov/title17/92chap1.html#107"
             >
               Fair Use Law.

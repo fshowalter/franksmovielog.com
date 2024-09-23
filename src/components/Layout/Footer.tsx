@@ -25,11 +25,11 @@ export function Footer(): JSX.Element {
         >
           To the top
         </a>
-        <p className="w-full font-normal leading-4 text-subtle">
+        <p className="w-full font-normal leading-4 text-[#B0B0B0]">
           All stills used in accordance with the{" "}
           <a
             href="http://www.copyright.gov/title17/92chap1.html#107"
-            className="text-inherit"
+            className="text-inherit underline decoration-2 underline-offset-4 hover:bg-default hover:text-default"
           >
             Fair Use Law.
           </a>
@@ -61,7 +61,7 @@ function SubNavList({ values }: { values: NavItem[] }): JSX.Element | null {
         return (
           <li
             key={value.target}
-            className="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-subtle brightness-200"
+            className="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-[#B0B0B0]"
           >
             <a className="hover:text-inverse" href={value.target}>
               {value.text}
