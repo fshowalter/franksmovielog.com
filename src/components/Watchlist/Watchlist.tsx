@@ -118,19 +118,16 @@ function WatchlistListItem({
   defaultPosterImageProps: PosterImageProps;
 }): JSX.Element {
   return (
-    <ListItem className="mb-0 items-center bg-subtle shadow-none odd:bg-stripe">
+    <li className="relative flex max-w-screen-max flex-row items-center gap-x-4 bg-subtle px-container-base py-4 odd:bg-stripe tablet:gap-x-6 tablet:px-4 desktop:px-6">
       <ListItemPoster imageProps={defaultPosterImageProps} />
-      <div className="flex-1 pr-gutter tablet:w-full desktop:pr-4">
-        <div>
-          <ListItemTitle title={value.title} year={value.year} />
-          <WatchlistTitleSlug
-            directorNames={value.directorNames}
-            performerNames={value.performerNames}
-            writerNames={value.writerNames}
-            collectionNames={value.collectionNames}
-          />
-          <div className="spacer-y-2" />
-        </div>
+      <div className="flex flex-1 flex-col pr-gutter tablet:w-full desktop:pr-4">
+        <ListItemTitle title={value.title} year={value.year} />
+        <WatchlistTitleSlug
+          directorNames={value.directorNames}
+          performerNames={value.performerNames}
+          writerNames={value.writerNames}
+          collectionNames={value.collectionNames}
+        />
       </div>
       <div className="pr-gutter desktop:pr-4">
         {value.viewed && (
@@ -157,6 +154,6 @@ function WatchlistListItem({
           </SvgIcon>
         )}
       </div>
-    </ListItem>
+    </li>
   );
 }
