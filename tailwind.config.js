@@ -39,15 +39,6 @@ export default {
         all: "0 0 0 1px var(--border-default)",
         bottom: "0px 1px var(--border-default)",
       },
-      brightness: {
-        dark: "0.8",
-      },
-      contrast: {
-        dark: "1.2",
-      },
-      flexBasis: {
-        md: "28rem",
-      },
       fontFamily: {
         sans: "var(--font-sans)",
         "sans-narrow": "var(--font-sans-narrow)",
