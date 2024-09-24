@@ -180,7 +180,7 @@ exports[`Home > matches snapshot 1`] = `
                 class="mt-4"
               >
                 <li
-                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-[#B0B0B0]"
+                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-inverse-subtle"
                 >
                   <a
                     href="/reviews/underseen/"
@@ -189,7 +189,7 @@ exports[`Home > matches snapshot 1`] = `
                   </a>
                 </li>
                 <li
-                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-[#B0B0B0]"
+                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-inverse-subtle"
                 >
                   <a
                     href="/reviews/overrated/"
@@ -211,7 +211,7 @@ exports[`Home > matches snapshot 1`] = `
                 class="mt-4"
               >
                 <li
-                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-[#B0B0B0]"
+                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-inverse-subtle"
                 >
                   <a
                     href="/viewings/stats/"
@@ -251,7 +251,7 @@ exports[`Home > matches snapshot 1`] = `
                 class="mt-4"
               >
                 <li
-                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-[#B0B0B0]"
+                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-inverse-subtle"
                 >
                   <a
                     href="/watchlist/progress/"
@@ -269,7 +269,7 @@ exports[`Home > matches snapshot 1`] = `
         id="content"
       >
         <header
-          class="min-h-[400px] tablet:min-h-[640px] desktop:min-h-[clamp(640px,60vh,1350px)] relative flex flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pb-8 pt-40 text-inverse tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40"
+          class="min-h-[400px] tablet:min-h-[640px] desktop:min-h-[clamp(640px,60vh,1350px)] relative flex w-full flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pb-8 pt-40 text-inverse tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40"
         >
           <img
             alt=""
@@ -282,7 +282,7 @@ exports[`Home > matches snapshot 1`] = `
             width="2400"
           />
           <div
-            class=" z-10 mx-auto w-full max-w-screen-max px-container"
+            class=" z-10 mx-auto flex w-full max-w-screen-max flex-col px-container"
           >
             <h1
               class="[text-shadow:1px_1px_2px_black] text-4xl desktop:text-7xl"
@@ -315,7 +315,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <img
                   alt=""
-                  class="aspect-[1.77777778] h-auto w-full"
+                  class="aspect-video h-auto w-full"
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -399,7 +399,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <img
                   alt=""
-                  class="aspect-[1.77777778] h-auto w-full"
+                  class="aspect-video h-auto w-full"
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -484,7 +484,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <img
                   alt=""
-                  class="aspect-[1.77777778] h-auto w-full"
+                  class="aspect-video h-auto w-full"
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -568,7 +568,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <img
                   alt=""
-                  class="aspect-[1.77777778] h-auto w-full"
+                  class="aspect-video h-auto w-full"
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -650,7 +650,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <img
                   alt=""
-                  class="aspect-[1.77777778] h-auto w-full"
+                  class="aspect-video h-auto w-full"
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -732,7 +732,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <img
                   alt=""
-                  class="aspect-[1.77777778] h-auto w-full"
+                  class="aspect-video h-auto w-full"
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -812,7 +812,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <img
                   alt=""
-                  class="aspect-[1.77777778] h-auto w-full"
+                  class="aspect-video h-auto w-full"
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -896,7 +896,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <img
                   alt=""
-                  class="aspect-[1.77777778] h-auto w-full"
+                  class="aspect-video h-auto w-full"
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -982,7 +982,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <img
                   alt=""
-                  class="aspect-[1.77777778] h-auto w-full"
+                  class="aspect-video h-auto w-full"
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -1072,7 +1072,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <img
                   alt=""
-                  class="aspect-[1.77777778] h-auto w-full"
+                  class="aspect-video h-auto w-full"
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -1164,7 +1164,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <img
                   alt=""
-                  class="aspect-[1.77777778] h-auto w-full"
+                  class="aspect-video h-auto w-full"
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -1245,7 +1245,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <img
                   alt=""
-                  class="aspect-[1.77777778] h-auto w-full"
+                  class="aspect-video h-auto w-full"
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -1403,7 +1403,7 @@ exports[`Home > matches snapshot 1`] = `
                 class="mt-4"
               >
                 <li
-                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-[#B0B0B0]"
+                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-inverse-subtle"
                 >
                   <a
                     class="hover:text-inverse"
@@ -1413,7 +1413,7 @@ exports[`Home > matches snapshot 1`] = `
                   </a>
                 </li>
                 <li
-                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-[#B0B0B0]"
+                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-inverse-subtle"
                 >
                   <a
                     class="hover:text-inverse"
@@ -1437,7 +1437,7 @@ exports[`Home > matches snapshot 1`] = `
                 class="mt-4"
               >
                 <li
-                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-[#B0B0B0]"
+                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-inverse-subtle"
                 >
                   <a
                     class="hover:text-inverse"
@@ -1481,7 +1481,7 @@ exports[`Home > matches snapshot 1`] = `
                 class="mt-4"
               >
                 <li
-                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-[#B0B0B0]"
+                  class="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-inverse-subtle"
                 >
                   <a
                     class="hover:text-inverse"
@@ -1500,7 +1500,7 @@ exports[`Home > matches snapshot 1`] = `
             To the top
           </a>
           <p
-            class="w-full font-normal leading-4 text-[#B0B0B0]"
+            class="w-full font-normal leading-4 text-inverse-subtle"
           >
             All stills used in accordance with the 
             <a

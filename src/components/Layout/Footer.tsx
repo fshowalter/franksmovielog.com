@@ -24,7 +24,7 @@ export function Footer(): JSX.Element {
         >
           To the top
         </a>
-        <p className="w-full font-normal leading-4 text-[#B0B0B0]">
+        <p className="w-full font-normal leading-4 text-inverse-subtle">
           All stills used in accordance with the{" "}
           <a
             href="http://www.copyright.gov/title17/92chap1.html#107"
@@ -60,7 +60,7 @@ function SubNavList({ values }: { values: NavItem[] }): JSX.Element | null {
         return (
           <li
             key={value.target}
-            className="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-[#B0B0B0]"
+            className="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-inverse-subtle"
           >
             <a className="hover:text-inverse" href={value.target}>
               {value.text}

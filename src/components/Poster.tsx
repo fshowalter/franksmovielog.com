@@ -26,7 +26,7 @@ export function Poster({
       {...imageProps}
       alt={`A poster from ${title} (${year})`}
       {...rest}
-      className={ccn("aspect-[0.66666667]", className)}
+      className={ccn("aspect-poster", className)}
       loading={loading}
       decoding={decoding}
     />

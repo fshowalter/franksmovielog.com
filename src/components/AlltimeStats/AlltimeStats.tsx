@@ -9,6 +9,7 @@ import { MostWatchedPerformers } from "src/components/MostWatchedPerformers";
 import { MostWatchedWriters } from "src/components/MostWatchedWriters";
 import { StatsNavigation } from "src/components/StatsNavigation";
 
+import { StatsBackdrop } from "../Backdrop";
 import { Layout } from "../Layout";
 import { Callouts } from "./Callouts";
 import { GradeDistribution } from "./GradeDistribution";
@@ -44,31 +45,26 @@ export function AlltimeStats({
       addGradient={false}
       className="flex flex-col items-center bg-subtle"
     >
-      <header className="flex min-h-[240px] w-full flex-col flex-wrap justify-end bg-[#2A2B2A] px-container pb-10 pt-40 text-inverse desktop:min-h-[clamp(640px,50vh,1350px)] desktop:pb-16 desktop:pt-40">
-        <div className="mx-auto flex max-w-screen-max flex-col items-center">
-          <p className="mb-2 font-sans-narrow text-sm uppercase tracking-[0.8px] underline decoration-subtle decoration-2 underline-offset-8">
-            <a href="/viewings/">Viewing Log</a>
-          </p>
-          <h1 className="mb-4 text-4xl desktop:text-7xl">All-Time Stats</h1>
-          <p className="mb-6 font-sans-narrow text-xs uppercase tracking-[1.1px] text-[#B0B0B0]">
-            {`${(distinctStatYears.length - 1).toString()} Years in Review`}
-          </p>
-          <StatsNavigation
-            currentYear={"all"}
-            linkFunc={(year: string) => {
-              return `/viewings/stats/${year}/`;
-            }}
-            years={distinctStatYears}
-            className="mb-8"
-          />
-          <Callouts
-            titleCount={stats.titleCount}
-            viewingCount={stats.viewingCount}
-            reviewCount={stats.reviewCount}
-            watchlistTitlesReviewedCount={stats.watchlistTitlesReviewedCount}
-          />
-        </div>
-      </header>
+      <StatsBackdrop
+        breadcrumb={<a href="/viewings/">Viewing Log</a>}
+        title="All-Time Stats"
+        deck={`${(distinctStatYears.length - 1).toString()} Years in Review`}
+      >
+        <StatsNavigation
+          currentYear={"all"}
+          linkFunc={(year: string) => {
+            return `/viewings/stats/${year}/`;
+          }}
+          years={distinctStatYears}
+          className="mb-8"
+        />
+        <Callouts
+          titleCount={stats.titleCount}
+          viewingCount={stats.viewingCount}
+          reviewCount={stats.reviewCount}
+          watchlistTitlesReviewedCount={stats.watchlistTitlesReviewedCount}
+        />
+      </StatsBackdrop>
       <div className="mx-auto flex w-full max-w-screen-max flex-col items-stretch gap-y-8 py-10 tablet:px-container">
         <MostWatchedMovies
           values={mostWatchedMovies}

@@ -52,7 +52,10 @@ export function CastAndCrew({
       totalCount={state.filteredValues.length}
       filters={<Filters dispatch={dispatch} sortValue={state.sortValue} />}
       list={
-        <ol data-testid="list" className="mt-4 bg-subtle showFilters:my-24">
+        <ol
+          data-testid="list"
+          className="mt-4 bg-subtle tablet-landscape:my-24"
+        >
           {values.map((value) => {
             return <MemberListItem key={value.name} value={value} />;
           })}

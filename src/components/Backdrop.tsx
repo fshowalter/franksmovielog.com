@@ -93,6 +93,29 @@ export function AvatarBackdrop({
   );
 }
 
+export function StatsBackdrop({
+  title,
+  deck,
+  breadcrumb,
+  children,
+}: {
+  title: string;
+  deck: React.ReactNode;
+  breadcrumb: React.ReactNode;
+  children: React.ReactNode;
+}) {
+  return (
+    <Wrapper centerText={true} size="small">
+      <Breadcrumb value={breadcrumb} />
+      <Title className="mb-4 text-4xl desktop:text-7xl" value={title} />
+      <p className="mb-6 font-sans-narrow text-xs uppercase tracking-[1.1px] text-inverse-subtle">
+        {deck}
+      </p>
+      {children}
+    </Wrapper>
+  );
+}
+
 function Wrapper({
   children,
   centerText = false,
@@ -120,11 +143,11 @@ function Wrapper({
 
   return (
     <header
-      className={`${sizes} relative flex flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pb-8 pt-40 text-inverse tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40`}
+      className={`${sizes} relative flex w-full flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pb-8 pt-40 text-inverse tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40`}
     >
       {heroImage}
       <div
-        className={`${centerText ? "text-center" : ""} z-10 mx-auto w-full max-w-screen-max px-container`}
+        className={`${centerText ? "items-center" : ""} z-10 mx-auto flex w-full max-w-screen-max flex-col px-container`}
       >
         {children}
       </div>
@@ -152,7 +175,7 @@ function Breadcrumb({ value }: { value?: React.ReactNode }) {
   }
 
   return (
-    <p className="mb-2 font-sans-narrow text-sm uppercase tracking-[0.8px] underline decoration-subtle decoration-2 underline-offset-4">
+    <p className="mb-2 font-sans-narrow text-sm uppercase tracking-[0.8px] underline decoration-subtle decoration-2 underline-offset-8">
       {value}
     </p>
   );

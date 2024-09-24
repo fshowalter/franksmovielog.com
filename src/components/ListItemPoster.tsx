@@ -19,7 +19,7 @@ export function ListItemPoster({
         height={ListItemPosterImageConfig.height}
         loading="lazy"
         decoding="async"
-        className="aspect-[0.66666667]"
+        className="aspect-poster"
       />
     </div>
   );
