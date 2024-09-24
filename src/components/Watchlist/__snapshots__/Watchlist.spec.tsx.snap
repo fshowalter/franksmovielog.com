@@ -52473,12 +52473,12 @@ exports[`/watchlist > renders 1`] = `
             class=" z-10 mx-auto flex w-full max-w-screen-max flex-col px-container"
           >
             <h1
-              class="font-sans text-2xl font-bold uppercase tracking-[2px] desktop:text-7xl"
+              class="font-sans  text-2xl font-bold uppercase tracking-[2px] desktop:text-7xl"
             >
               Watchlist
             </h1>
             <p
-              class="mt-1 text-base desktop:my-4 desktop:text-xl [text-shadow:1px_1px_2px_black]"
+              class="mt-1 text-base desktop:my-4 desktop:text-xl [text-shadow:1px_1px_2px_black] "
             >
               "A man's got to know his limitations"
             </p>
