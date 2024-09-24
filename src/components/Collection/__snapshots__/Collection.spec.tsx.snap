@@ -37861,7 +37861,7 @@ exports[`Collection > renders 1`] = `
                           class="flex flex-col text-subtle"
                         >
                           <span
-                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-0.5px"
+                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-[0.5px] text-subtle"
                           >
                             Title
                           </span>
@@ -37875,7 +37875,7 @@ exports[`Collection > renders 1`] = `
                           class="text-subtle"
                         >
                           <legend
-                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-0.5px text-subtle"
+                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-[0.5px] text-subtle"
                           >
                             Release Year
                           </legend>
@@ -37886,7 +37886,7 @@ exports[`Collection > renders 1`] = `
                               class="flex flex-1 items-center gap-x-[.5ch]"
                             >
                               <span
-                                class="min-w-10 text-left text-sm tracking-0.5px"
+                                class="min-w-10 text-left text-sm tracking-[0.5px]"
                               >
                                 From
                               </span>
@@ -38009,7 +38009,7 @@ exports[`Collection > renders 1`] = `
                               class="flex flex-1 items-center"
                             >
                               <span
-                                class="min-w-10 text-center text-sm tracking-0.5px"
+                                class="min-w-10 text-center text-sm tracking-[0.5px]"
                               >
                                 to
                               </span>
@@ -38134,7 +38134,7 @@ exports[`Collection > renders 1`] = `
                           class="flex flex-col basis-full"
                         >
                           <span
-                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-0.5px text-subtle"
+                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-[0.5px] text-subtle"
                           >
                             Sort
                           </span>

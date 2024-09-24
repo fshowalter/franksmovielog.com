@@ -1,3 +1,5 @@
+import { LabelText } from "./LabelText";
+
 type onChangeHandler = (value: string) => void;
 
 /**
@@ -54,9 +56,7 @@ export function DebouncedInput({
 
   return (
     <label className="flex flex-col text-subtle">
-      <span className="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-0.5px">
-        {label}
-      </span>
+      <LabelText value={label} />
       <input
         type="text"
         placeholder={placeholder}

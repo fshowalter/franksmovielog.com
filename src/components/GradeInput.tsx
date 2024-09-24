@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import { LabelText } from "./LabelText";
 import { SelectInput } from "./SelectInput";
 
 const options = [
@@ -78,12 +79,10 @@ export function GradeInput({
 
   return (
     <fieldset className="text-subtle">
-      <legend className="h-6 text-left font-sans-narrow text-xs font-medium uppercase tracking-0.5px text-subtle">
-        {label}
-      </legend>
+      <LabelText as="legend" value={label} />
       <div className="flex flex-wrap items-baseline">
         <label className="flex flex-1 items-center gap-x-[.5ch]">
-          <span className="min-w-10 text-left text-sm tracking-0.5px">
+          <span className="min-w-10 text-left text-sm tracking-[0.5px]">
             From
           </span>
           <SelectInput
@@ -94,7 +93,7 @@ export function GradeInput({
           </SelectInput>
         </label>
         <label className="flex flex-1 items-center">
-          <span className="min-w-10 text-center text-sm tracking-0.5px">
+          <span className="min-w-10 text-center text-sm tracking-[0.5px]">
             to
           </span>
           <SelectInput

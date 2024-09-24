@@ -39,10 +39,10 @@ export function YearInput({
 
   return (
     <fieldset className="text-subtle">
-      <LabelText as="legend" text={label} />
+      <LabelText as="legend" value={label} />
       <div className="flex items-baseline">
         <label className="flex flex-1 items-center gap-x-[.5ch]">
-          <span className="min-w-10 text-left text-sm tracking-0.5px">
+          <span className="min-w-10 text-left text-sm tracking-[0.5px]">
             From
           </span>
           <SelectInput
@@ -59,7 +59,7 @@ export function YearInput({
           </SelectInput>
         </label>
         <label className="flex flex-1 items-center">
-          <span className="min-w-10 text-center text-sm tracking-0.5px">
+          <span className="min-w-10 text-center text-sm tracking-[0.5px]">
             to
           </span>
           <SelectInput
