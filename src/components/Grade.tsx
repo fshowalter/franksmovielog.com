@@ -22,14 +22,10 @@ export function Grade({
   height,
   className,
 }: {
-  value?: string | null;
+  value: string;
   height: 32 | 24 | 18 | 16;
   className?: string;
 }): JSX.Element | null {
-  if (!value) {
-    return null;
-  }
-
   const [src, alt] = gradeMap[value];
 
   const width = height * 5;
