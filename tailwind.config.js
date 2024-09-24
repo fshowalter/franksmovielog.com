@@ -38,7 +38,6 @@ export default {
       boxShadow: {
         all: "0 0 0 1px var(--border-default)",
         bottom: "0px 1px var(--border-default)",
-        top: "0px -1px var(--border-default)",
       },
       brightness: {
         dark: "0.8",
@@ -64,9 +63,6 @@ export default {
         "0.3px": "0.01875rem",
         "0.5px": "0.03125rem",
         "0.75px": "0.046875rem",
-      },
-      margin: {
-        gutter: "var(--gutter-width)",
       },
       maxWidth: {
         prose: PROSE_CONTENT_WIDTH,
