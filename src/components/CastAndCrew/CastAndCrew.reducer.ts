@@ -7,7 +7,6 @@ export enum Actions {
   FILTER_NAME = "FILTER_NAME",
   FILTER_CREDIT_KIND = "FILTER_CREDIT_KIND",
   SORT = "SORT",
-  TOGGLE_FILTERS = "TOGGLE_FILTERS",
 }
 
 export type Sort =

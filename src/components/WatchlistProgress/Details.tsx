@@ -97,7 +97,7 @@ export const DetailsAvatarImageConfig = {
   height: 48,
 };
 
-export function DetailsItemAvatar({
+function DetailsItemAvatar({
   name,
   imageProps,
   className,

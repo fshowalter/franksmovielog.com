@@ -3,7 +3,7 @@ import { getBackdropImageProps } from "src/api/backdrops";
 import { watchlistProgress } from "src/api/watchlistProgress";
 
 import { BackdropImageConfig } from "../Backdrop";
-import { ListItemAvatarImageConfig } from "../ListItemAvatar";
+import { DetailsAvatarImageConfig } from "./Details";
 import type { Props } from "./WatchlistProgress";
 
 export async function getProps(): Promise<Props> {
@@ -22,7 +22,7 @@ export async function getProps(): Promise<Props> {
             ...detail,
             avatarImageProps: await getAvatarImageProps(
               detail.slug,
-              ListItemAvatarImageConfig,
+              DetailsAvatarImageConfig,
             ),
           };
         }),
@@ -33,7 +33,7 @@ export async function getProps(): Promise<Props> {
             ...detail,
             avatarImageProps: await getAvatarImageProps(
               detail.slug,
-              ListItemAvatarImageConfig,
+              DetailsAvatarImageConfig,
             ),
           };
         }),
@@ -44,7 +44,7 @@ export async function getProps(): Promise<Props> {
             ...detail,
             avatarImageProps: await getAvatarImageProps(
               detail.slug,
-              ListItemAvatarImageConfig,
+              DetailsAvatarImageConfig,
             ),
           };
         }),
@@ -55,7 +55,7 @@ export async function getProps(): Promise<Props> {
             ...detail,
             avatarImageProps: await getAvatarImageProps(
               detail.slug,
-              ListItemAvatarImageConfig,
+              DetailsAvatarImageConfig,
             ),
           };
         }),
