@@ -54,7 +54,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
           sizes={StillImageConfig.sizes}
         />
       </div>
-      <div className="flex grow flex-col px-container-base pb-8 desktop:pl-[8.5%] desktop:pr-[10%]">
+      <div className="flex grow flex-col px-[8%] pb-8 desktop:pl-[8.5%] desktop:pr-[10%]">
         <div className="mb-1 font-sans-narrow text-xxs font-medium uppercase leading-4 tracking-[1.1px] text-subtle">
           {formatDate(value.date)}
         </div>

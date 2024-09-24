@@ -13,7 +13,7 @@ export function Mast({
 }) {
   return (
     <header
-      className="z-20 flex w-full items-center justify-between px-container-base py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
+      className="z-20 flex w-full items-center justify-between px-container py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
       style={{
         color: hasBackdrop ? "#fff" : "var(--fg-default)",
         position: hasBackdrop ? "absolute" : "static",

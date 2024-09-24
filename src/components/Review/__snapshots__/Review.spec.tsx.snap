@@ -13,7 +13,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
       class="flex min-h-full w-full flex-col bg-default"
     >
       <header
-        class="z-20 flex w-full items-center justify-between px-container-base py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
+        class="z-20 flex w-full items-center justify-between px-container py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
         style="position: static;"
       >
         <div
@@ -287,7 +287,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
         id="content"
       >
         <header
-          class="mb-12 flex flex-col items-center px-container-base pt-10"
+          class="mb-12 flex flex-col items-center px-[8%] pt-10"
         >
           <h1
             class="text-center text-4xl desktop:text-7xl"
@@ -358,7 +358,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
           />
         </header>
         <div
-          class="flex flex-col items-center gap-16 px-container-base pb-20 desktop:gap-20 desktop:pb-32"
+          class="flex flex-col items-center gap-16 px-container pb-20 desktop:gap-20 desktop:pb-32"
         >
           <div>
             <div
@@ -1119,7 +1119,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
         </script>
       </main>
       <footer
-        class="flex flex-wrap items-start justify-between gap-[10%] bg-[#252525] px-container-base py-20 text-inverse tablet:px-12 tablet:pt-10 desktop:p-20"
+        class="flex flex-wrap items-start justify-between gap-[10%] bg-[#252525] px-container py-20 text-inverse tablet:px-12 tablet:pt-10 desktop:p-20"
       >
         <div
           class="flex flex-col pb-12"
@@ -1310,7 +1310,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
       class="flex min-h-full w-full flex-col bg-default"
     >
       <header
-        class="z-20 flex w-full items-center justify-between px-container-base py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
+        class="z-20 flex w-full items-center justify-between px-container py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
         style="position: static;"
       >
         <div
@@ -1584,7 +1584,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
         id="content"
       >
         <header
-          class="mb-12 flex flex-col items-center px-container-base pt-10"
+          class="mb-12 flex flex-col items-center px-[8%] pt-10"
         >
           <h1
             class="text-center text-4xl desktop:text-7xl"
@@ -1647,7 +1647,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
           />
         </header>
         <div
-          class="flex flex-col items-center gap-16 px-container-base pb-20 desktop:gap-20 desktop:pb-32"
+          class="flex flex-col items-center gap-16 px-container pb-20 desktop:gap-20 desktop:pb-32"
         >
           <div>
             <div
@@ -2631,7 +2631,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
         </script>
       </main>
       <footer
-        class="flex flex-wrap items-start justify-between gap-[10%] bg-[#252525] px-container-base py-20 text-inverse tablet:px-12 tablet:pt-10 desktop:p-20"
+        class="flex flex-wrap items-start justify-between gap-[10%] bg-[#252525] px-container py-20 text-inverse tablet:px-12 tablet:pt-10 desktop:p-20"
       >
         <div
           class="flex flex-col pb-12"
@@ -2822,7 +2822,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
       class="flex min-h-full w-full flex-col bg-default"
     >
       <header
-        class="z-20 flex w-full items-center justify-between px-container-base py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
+        class="z-20 flex w-full items-center justify-between px-container py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
         style="position: static;"
       >
         <div
@@ -3096,7 +3096,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
         id="content"
       >
         <header
-          class="mb-12 flex flex-col items-center px-container-base pt-10"
+          class="mb-12 flex flex-col items-center px-[8%] pt-10"
         >
           <h1
             class="text-center text-4xl desktop:text-7xl"
@@ -3165,7 +3165,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
           />
         </header>
         <div
-          class="flex flex-col items-center gap-16 px-container-base pb-20 desktop:gap-20 desktop:pb-32"
+          class="flex flex-col items-center gap-16 px-container pb-20 desktop:gap-20 desktop:pb-32"
         >
           <div>
             <div
@@ -4836,7 +4836,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
         </script>
       </main>
       <footer
-        class="flex flex-wrap items-start justify-between gap-[10%] bg-[#252525] px-container-base py-20 text-inverse tablet:px-12 tablet:pt-10 desktop:p-20"
+        class="flex flex-wrap items-start justify-between gap-[10%] bg-[#252525] px-container py-20 text-inverse tablet:px-12 tablet:pt-10 desktop:p-20"
       >
         <div
           class="flex flex-col pb-12"
@@ -5027,7 +5027,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
       class="flex min-h-full w-full flex-col bg-default"
     >
       <header
-        class="z-20 flex w-full items-center justify-between px-container-base py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
+        class="z-20 flex w-full items-center justify-between px-container py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
         style="position: static;"
       >
         <div
@@ -5301,7 +5301,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
         id="content"
       >
         <header
-          class="mb-12 flex flex-col items-center px-container-base pt-10"
+          class="mb-12 flex flex-col items-center px-[8%] pt-10"
         >
           <h1
             class="text-center text-4xl desktop:text-7xl"
@@ -5364,7 +5364,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
           />
         </header>
         <div
-          class="flex flex-col items-center gap-16 px-container-base pb-20 desktop:gap-20 desktop:pb-32"
+          class="flex flex-col items-center gap-16 px-container pb-20 desktop:gap-20 desktop:pb-32"
         >
           <div>
             <div
@@ -6197,7 +6197,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
         </script>
       </main>
       <footer
-        class="flex flex-wrap items-start justify-between gap-[10%] bg-[#252525] px-container-base py-20 text-inverse tablet:px-12 tablet:pt-10 desktop:p-20"
+        class="flex flex-wrap items-start justify-between gap-[10%] bg-[#252525] px-container py-20 text-inverse tablet:px-12 tablet:pt-10 desktop:p-20"
       >
         <div
           class="flex flex-col pb-12"
@@ -6388,7 +6388,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
       class="flex min-h-full w-full flex-col bg-default"
     >
       <header
-        class="z-20 flex w-full items-center justify-between px-container-base py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
+        class="z-20 flex w-full items-center justify-between px-container py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
         style="position: static;"
       >
         <div
@@ -6662,7 +6662,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
         id="content"
       >
         <header
-          class="mb-12 flex flex-col items-center px-container-base pt-10"
+          class="mb-12 flex flex-col items-center px-[8%] pt-10"
         >
           <h1
             class="text-center text-4xl desktop:text-7xl"
@@ -6725,7 +6725,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
           />
         </header>
         <div
-          class="flex flex-col items-center gap-16 px-container-base pb-20 desktop:gap-20 desktop:pb-32"
+          class="flex flex-col items-center gap-16 px-container pb-20 desktop:gap-20 desktop:pb-32"
         >
           <div>
             <div
@@ -8590,7 +8590,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
         </script>
       </main>
       <footer
-        class="flex flex-wrap items-start justify-between gap-[10%] bg-[#252525] px-container-base py-20 text-inverse tablet:px-12 tablet:pt-10 desktop:p-20"
+        class="flex flex-wrap items-start justify-between gap-[10%] bg-[#252525] px-container py-20 text-inverse tablet:px-12 tablet:pt-10 desktop:p-20"
       >
         <div
           class="flex flex-col pb-12"
@@ -8781,7 +8781,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
       class="flex min-h-full w-full flex-col bg-default"
     >
       <header
-        class="z-20 flex w-full items-center justify-between px-container-base py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
+        class="z-20 flex w-full items-center justify-between px-container py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
         style="position: static;"
       >
         <div
@@ -9055,7 +9055,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
         id="content"
       >
         <header
-          class="mb-12 flex flex-col items-center px-container-base pt-10"
+          class="mb-12 flex flex-col items-center px-[8%] pt-10"
         >
           <h1
             class="text-center text-4xl desktop:text-7xl"
@@ -9118,7 +9118,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
           />
         </header>
         <div
-          class="flex flex-col items-center gap-16 px-container-base pb-20 desktop:gap-20 desktop:pb-32"
+          class="flex flex-col items-center gap-16 px-container pb-20 desktop:gap-20 desktop:pb-32"
         >
           <div>
             <div
@@ -10884,7 +10884,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
         </script>
       </main>
       <footer
-        class="flex flex-wrap items-start justify-between gap-[10%] bg-[#252525] px-container-base py-20 text-inverse tablet:px-12 tablet:pt-10 desktop:p-20"
+        class="flex flex-wrap items-start justify-between gap-[10%] bg-[#252525] px-container py-20 text-inverse tablet:px-12 tablet:pt-10 desktop:p-20"
       >
         <div
           class="flex flex-col pb-12"
