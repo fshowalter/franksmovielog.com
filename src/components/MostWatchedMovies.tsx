@@ -8,7 +8,7 @@ export const MostWatchedMoviesPosterConfig = {
   width: 248,
   height: 372,
   sizes:
-    "(max-width: 767px) 64px, (max-width: 1279) 128px, (min-width: 784px) 20vw, 248px",
+    "(max-width: 767px) 64px, (max-width: 1279px) 128px, (min-width: 784px) 20vw, 248px",
 };
 
 export interface MostWatchedMoviesListItemValue {
