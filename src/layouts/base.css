@@ -21,6 +21,9 @@
   --image-filter: initial;
   --container-padding: 8%;
   --search-dialog-padding: 8%;
+  --font-sans: "ArgentumSans";
+  --font-sans-narrow: "Radio Canada Big";
+  --font-serif: "FrankRuhlLibre";
 }
 
 @media (prefers-color-scheme: dark) {

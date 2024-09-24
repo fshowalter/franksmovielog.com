@@ -39,19 +39,10 @@ export default {
         all: "0 0 0 1px var(--border-default)",
         bottom: "0px 1px var(--border-default)",
       },
-      brightness: {
-        dark: "0.8",
-      },
-      contrast: {
-        dark: "1.2",
-      },
-      flexBasis: {
-        md: "28rem",
-      },
       fontFamily: {
-        sans: "ArgentumSans",
-        "sans-narrow": "Radio Canada Big",
-        serif: "FrankRuhlLibre",
+        sans: "var(--font-sans)",
+        "sans-narrow": "var(--font-sans-narrow)",
+        serif: "var(--font-serif)",
       },
       fontSize: {
         "2.5xl": "1.625rem",
