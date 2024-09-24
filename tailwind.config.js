@@ -6,11 +6,12 @@ export default {
   theme: {
     backgroundColor: {
       accent: "var(--bg-accent)",
-      default: "var(--bg-default)",
-      subtle: "var(--bg-subtle)",
       canvas: "var(--bg-canvas)",
+      default: "var(--bg-default)",
+      footer: "var(--bg-footer)",
       inverse: "var(--bg-inverse)",
       stripe: "var(--bg-stripe)",
+      subtle: "var(--bg-subtle)",
       unset: "unset",
     },
     borderColor: {
