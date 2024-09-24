@@ -7,11 +7,14 @@ export default getViteConfig({
     setupFiles: ["setupTests.ts"],
     globals: true, // needed for testing-library teardown
     environmentMatchGlobs: [
+      ["src/api/**", "node"],
       ["src/pages/**", "node"],
-      ["src/components/**", "jsdom"],
+      ["src/components/**/*.ts", "node"],
+      ["src/components/**/*.tsx", "jsdom"],
       // ...
     ],
     coverage: {
+      provider: "istanbul",
       include: ["src/**"],
     },
   },
