@@ -37795,7 +37795,7 @@ exports[`Collection > renders 1`] = `
             </h1>
           </div>
         </header>
-        <section
+        <div
           class="mx-auto flex flex-col items-center bg-default"
         >
           <div
@@ -41842,7 +41842,7 @@ exports[`Collection > renders 1`] = `
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </main>
       <footer
         class="flex flex-wrap items-start justify-between gap-[10%] bg-footer px-container py-20 text-inverse tablet:px-12 tablet:pt-10 desktop:p-20"

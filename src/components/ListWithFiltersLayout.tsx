@@ -28,7 +28,7 @@ export function ListWithFiltersLayout({
     <Layout className="bg-subtle" {...rest} addGradient={mastGradient}>
       {backdrop}
       {subNav && subNav}
-      <section className="mx-auto flex flex-col items-center bg-default">
+      <div className="mx-auto flex flex-col items-center bg-default">
         <div className="mx-auto flex w-full flex-col items-stretch">
           <div className="flex grow flex-col bg-subtle">
             <div className="relative tablet:px-12 tablet-landscape:px-0">
@@ -64,7 +64,7 @@ export function ListWithFiltersLayout({
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </Layout>
   );
 }
