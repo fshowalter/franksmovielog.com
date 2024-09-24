@@ -33066,12 +33066,12 @@ exports[`Overrated > renders 1`] = `
               </a>
             </p>
             <h1
-              class="font-sans text-2xl font-bold uppercase tracking-[2px] desktop:text-7xl"
+              class="font-sans  text-2xl font-bold uppercase tracking-[2px] desktop:text-7xl"
             >
               Overrated Disappointments
             </h1>
             <p
-              class="mt-1 text-base desktop:my-4 desktop:text-xl "
+              class="mt-1 text-base desktop:my-4 desktop:text-xl  "
             >
                One and two star movies with an above-average IMDb rating and vote
         count.

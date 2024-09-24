@@ -87,8 +87,8 @@ export function AvatarBackdrop({
         />
       </div>
       <Breadcrumb value={breadcrumb} />
-      <Title value={name} />
-      <Deck value={deck} shadow={false} />
+      <Title value={name} center={true} />
+      <Deck value={deck} shadow={false} center={true} />
     </Wrapper>
   );
 }
@@ -107,8 +107,12 @@ export function StatsBackdrop({
   return (
     <Wrapper centerText={true} size="small">
       <Breadcrumb value={breadcrumb} />
-      <Title className="mb-4 text-4xl desktop:text-7xl" value={title} />
-      <p className="mb-6 font-sans-narrow text-xs uppercase tracking-[1.1px] text-inverse-subtle">
+      <Title
+        className="mb-4 text-4xl desktop:text-7xl"
+        center={true}
+        value={title}
+      />
+      <p className="mb-6 text-center font-sans-narrow text-xs uppercase tracking-[1.1px] text-inverse-subtle">
         {deck}
       </p>
       {children}
@@ -155,13 +159,21 @@ function Wrapper({
   );
 }
 
-function Title({ value, className }: { value: string; className?: string }) {
+function Title({
+  value,
+  className,
+  center,
+}: {
+  value: string;
+  className?: string;
+  center?: boolean;
+}) {
   return (
     <h1
       className={
         className
           ? className
-          : `font-sans text-2xl font-bold uppercase tracking-[2px] desktop:text-7xl`
+          : `font-sans ${center ? "text-center" : ""} text-2xl font-bold uppercase tracking-[2px] desktop:text-7xl`
       }
     >
       {value}
@@ -181,14 +193,22 @@ function Breadcrumb({ value }: { value?: React.ReactNode }) {
   );
 }
 
-function Deck({ value, shadow }: { value?: React.ReactNode; shadow: boolean }) {
+function Deck({
+  value,
+  shadow,
+  center,
+}: {
+  value?: React.ReactNode;
+  shadow: boolean;
+  center?: boolean;
+}) {
   if (!value) {
     return null;
   }
 
   return (
     <p
-      className={`mt-1 text-base desktop:my-4 desktop:text-xl ${shadow ? "[text-shadow:1px_1px_2px_black]" : ""}`}
+      className={`mt-1 text-base desktop:my-4 desktop:text-xl ${shadow ? "[text-shadow:1px_1px_2px_black]" : ""} ${center ? "text-center" : ""}`}
     >
       {value}
     </p>
