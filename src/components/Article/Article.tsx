@@ -36,7 +36,7 @@ export function Article({
           </div>
         </section>
       </article>
-      <section className="bg-subtle pb-16 pt-6">
+      <div className="bg-subtle pb-16 pt-6">
         <MoreReviews values={recentReviews}>
           <SubHeading as="h2">
             Recent{" "}
@@ -45,7 +45,7 @@ export function Article({
             </a>
           </SubHeading>
         </MoreReviews>
-      </section>
+      </div>
     </Layout>
   );
 }
