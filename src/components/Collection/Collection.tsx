@@ -92,7 +92,10 @@ export function Collection({
 
 function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
-    <ListItem className="items-center">
+    <ListItem
+      background={value.slug ? "bg-default" : "bg-subtle"}
+      itemsCenter={true}
+    >
       <ListItemPoster imageProps={value.posterImageProps} />
       <div className="grow tablet:w-full">
         <div>

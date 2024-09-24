@@ -120,7 +120,7 @@ function Wrapper({
 
   return (
     <header
-      className={`${sizes} relative flex min-h-[240px] flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pb-8 pt-40 text-inverse tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40`}
+      className={`${sizes} relative flex flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pb-8 pt-40 text-inverse tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40`}
     >
       {heroImage}
       <div

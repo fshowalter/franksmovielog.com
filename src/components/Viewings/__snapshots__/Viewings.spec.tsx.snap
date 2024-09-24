@@ -80332,7 +80332,7 @@ exports[`Viewings > renders 1`] = `
         id="content"
       >
         <header
-          class="min-h-[400px] tablet:min-h-[640px] desktop:min-h-[clamp(640px,60vh,1350px)] relative flex min-h-[240px] flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pb-8 pt-40 text-inverse tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40"
+          class="min-h-[400px] tablet:min-h-[640px] desktop:min-h-[clamp(640px,60vh,1350px)] relative flex flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pb-8 pt-40 text-inverse tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40"
         >
           <img
             alt=""
