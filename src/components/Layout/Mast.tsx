@@ -75,7 +75,7 @@ function SubMenu({ values }: { values: NavItem[] }): JSX.Element | null {
         return (
           <li
             key={value.target}
-            className="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-[#B0B0B0]"
+            className="mb-2 font-sans-narrow text-sm uppercase tracking-[1px] text-inverse-subtle"
           >
             <a href={value.target}>{value.text}</a>
           </li>

@@ -2,7 +2,7 @@
 
 exports[`Collections > can filter by name 1`] = `
 <ol
-  class="mt-4 bg-subtle showFilters:my-24"
+  class="mt-4 bg-subtle tablet-landscape:my-24"
   data-testid="list"
 >
   <li
@@ -350,7 +350,7 @@ exports[`Collections > can filter by name 1`] = `
 
 exports[`Collections > can sort by name asc 1`] = `
 <ol
-  class="mt-4 bg-subtle showFilters:my-24"
+  class="mt-4 bg-subtle tablet-landscape:my-24"
   data-testid="list"
 >
   <li
@@ -698,7 +698,7 @@ exports[`Collections > can sort by name asc 1`] = `
 
 exports[`Collections > can sort by name desc 1`] = `
 <ol
-  class="mt-4 bg-subtle showFilters:my-24"
+  class="mt-4 bg-subtle tablet-landscape:my-24"
   data-testid="list"
 >
   <li
@@ -1046,7 +1046,7 @@ exports[`Collections > can sort by name desc 1`] = `
 
 exports[`Collections > can sort by review count asc 1`] = `
 <ol
-  class="mt-4 bg-subtle showFilters:my-24"
+  class="mt-4 bg-subtle tablet-landscape:my-24"
   data-testid="list"
 >
   <li
@@ -1394,7 +1394,7 @@ exports[`Collections > can sort by review count asc 1`] = `
 
 exports[`Collections > can sort by review count desc 1`] = `
 <ol
-  class="mt-4 bg-subtle showFilters:my-24"
+  class="mt-4 bg-subtle tablet-landscape:my-24"
   data-testid="list"
 >
   <li
@@ -1742,7 +1742,7 @@ exports[`Collections > can sort by review count desc 1`] = `
 
 exports[`Collections > can sort by title count asc 1`] = `
 <ol
-  class="mt-4 bg-subtle showFilters:my-24"
+  class="mt-4 bg-subtle tablet-landscape:my-24"
   data-testid="list"
 >
   <li
@@ -2090,7 +2090,7 @@ exports[`Collections > can sort by title count asc 1`] = `
 
 exports[`Collections > can sort by title count desc 1`] = `
 <ol
-  class="mt-4 bg-subtle showFilters:my-24"
+  class="mt-4 bg-subtle tablet-landscape:my-24"
   data-testid="list"
 >
   <li

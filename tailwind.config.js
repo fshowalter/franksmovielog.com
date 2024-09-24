@@ -23,6 +23,7 @@ export default {
       default: "var(--fg-default)",
       muted: "var(--fg-muted)",
       inverse: "var(--fg-inverse)",
+      "inverse-subtle": "var(--fg-inverse-subtle)",
       subtle: "var(--fg-subtle)",
       inherit: "inherit",
       emphasis: "var(--fg-emphasis)",
@@ -30,11 +31,14 @@ export default {
     },
     screens: {
       tablet: "768px",
-      showFilters: "1024px",
+      "tablet-landscape": "1024px",
       desktop: "1280px",
       max: "1696px",
     },
     extend: {
+      aspectRatio: {
+        poster: "1 / 1.5",
+      },
       boxShadow: {
         all: "0 0 0 1px var(--border-default)",
         bottom: "0px 1px var(--border-default)",

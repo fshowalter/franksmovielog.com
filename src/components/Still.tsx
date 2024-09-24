@@ -27,7 +27,7 @@ export function Still({
       loading={loading}
       decoding={decoding}
       {...rest}
-      className={ccn("aspect-[1.77777778]", className)}
+      className={ccn("aspect-video", className)}
     />
   );
 }
