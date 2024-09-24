@@ -6,7 +6,6 @@ import type { ListItemValue } from "./Collections";
 export enum Actions {
   FILTER_NAME = "FILTER_NAME",
   SORT = "SORT",
-  TOGGLE_FILTERS = "TOGGLE_FILTERS",
 }
 
 export type Sort =
