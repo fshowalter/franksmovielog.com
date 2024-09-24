@@ -37763,7 +37763,7 @@ exports[`Collection > renders 1`] = `
         id="content"
       >
         <header
-          class="relative flex content-start items-end bg-cover pb-8 pt-40 text-inverse [background-position-x:center] tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40 min-h-[400px] tablet:min-h-[640px] desktop:min-h-[clamp(640px,60vh,1350px)]"
+          class="min-h-[400px] tablet:min-h-[640px] desktop:min-h-[clamp(640px,60vh,1350px)] relative flex min-h-[240px] flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pb-8 pt-40 text-inverse tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40"
         >
           <img
             alt=""
@@ -37776,10 +37776,10 @@ exports[`Collection > renders 1`] = `
             width="2400"
           />
           <div
-            class="z-10 mx-auto w-full max-w-screen-max px-container"
+            class=" z-10 mx-auto w-full max-w-screen-max px-container"
           >
             <p
-              class="mb-2 font-sans-narrow text-sm font-medium uppercase tracking-[0.8px] underline decoration-subtle decoration-2 underline-offset-4"
+              class="mb-2 font-sans-narrow text-sm uppercase tracking-[0.8px] underline decoration-subtle decoration-2 underline-offset-4"
             >
               <a
                 href="/collections/"
@@ -37788,7 +37788,7 @@ exports[`Collection > renders 1`] = `
               </a>
             </p>
             <h1
-              class="font-sans font-bold tracking-[2px] text-2xl uppercase desktop:text-7xl"
+              class="font-sans text-2xl font-bold uppercase tracking-[2px] desktop:text-7xl"
             >
               Shaw Brothers
             </h1>

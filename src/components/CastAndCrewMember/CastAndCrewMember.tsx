@@ -2,11 +2,9 @@ import { useReducer } from "react";
 import type { AvatarImageProps } from "src/api/avatars";
 import type { CastAndCrewMember } from "src/api/castAndCrew";
 import type { PosterImageProps } from "src/api/posters";
-import {
-  AvatarBackdrop,
-  ListWithFiltersLayout,
-} from "src/components/ListWithFiltersLayout";
+import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
 
+import { AvatarBackdrop } from "../Backdrop";
 import { CreditedAs } from "../CreditedAs";
 import { Grade } from "../Grade";
 import { GroupedList } from "../GroupedList";

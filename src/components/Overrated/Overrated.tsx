@@ -3,10 +3,10 @@ import type { OverratedDisappointment } from "src/api/overratedDisappointments";
 import type { PosterImageProps } from "src/api/posters";
 import {
   ListWithFiltersLayout,
-  SolidBackdrop,
   SubNav,
 } from "src/components/ListWithFiltersLayout";
 
+import { SolidBackdrop } from "../Backdrop";
 import { Grade } from "../Grade";
 import { GroupedList } from "../GroupedList";
 import { ListItem } from "../ListItem";
