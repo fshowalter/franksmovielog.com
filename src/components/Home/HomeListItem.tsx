@@ -43,8 +43,6 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
     <li className="relative flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]">
       <div className="mb-6 block">
         <Still
-          title={value.title}
-          year={value.year}
           imageProps={value.stillImageProps}
           width={StillImageConfig.width}
           height={StillImageConfig.height}

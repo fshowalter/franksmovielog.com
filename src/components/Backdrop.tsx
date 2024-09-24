@@ -6,6 +6,7 @@ import { Avatar } from "./Avatar";
 export const BackdropImageConfig = {
   width: 2400,
   height: 1350,
+  sizes: "100vw",
 };
 
 export function Backdrop({
@@ -27,8 +28,7 @@ export function Backdrop({
     <img
       className="absolute inset-0 size-full object-cover object-top"
       {...imageProps}
-      width={BackdropImageConfig.width}
-      height={BackdropImageConfig.height}
+      {...BackdropImageConfig}
       loading="eager"
       fetchPriority="high"
       alt=""
