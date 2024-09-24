@@ -1,7 +1,5 @@
 import { type ReactNode, useState } from "react";
-import type { AvatarImageProps } from "src/api/avatars";
 
-import { Avatar } from "./Avatar";
 import { Layout } from "./Layout";
 
 type Props = {
@@ -68,75 +66,6 @@ export function ListWithFiltersLayout({
         </div>
       </section>
     </Layout>
-  );
-}
-
-export function AvatarBackdrop({
-  avatarImageProps,
-  name,
-  deck,
-  breadcrumb,
-}: {
-  avatarImageProps: AvatarImageProps | null;
-  name: string;
-  deck: React.ReactNode;
-  breadcrumb?: React.ReactNode;
-}) {
-  return (
-    <header className="relative flex min-h-[240px] flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] bg-cover pb-8 pt-40 text-inverse [background-position-x:center] tablet:pb-10 tablet:pt-40 desktop:min-h-[clamp(640px,50vh,1350px)] desktop:pb-16 desktop:pt-40">
-      <div className="safari-border-radius-fix w-4/5 max-w-[250px] overflow-hidden rounded-[50%]">
-        <Avatar
-          imageProps={avatarImageProps}
-          name={name}
-          width={250}
-          height={250}
-          loading="lazy"
-          decoding="async"
-          data-pagefind-meta="image[src], image_alt[alt]"
-        />
-      </div>
-      <div className="z-10 mx-auto w-full max-w-screen-max px-container text-center">
-        {breadcrumb && (
-          <p className="mb-2 font-sans-narrow text-sm uppercase tracking-[0.8px] underline decoration-subtle decoration-2 underline-offset-4">
-            {breadcrumb}
-          </p>
-        )}
-        <h1 className="font-sans text-2xl font-bold uppercase desktop:text-7xl">
-          {name}
-        </h1>
-        {deck && (
-          <p className="mt-1 text-base desktop:my-4 desktop:text-lg">{deck}</p>
-        )}
-      </div>
-    </header>
-  );
-}
-
-export function SolidBackdrop({
-  title,
-  deck,
-  breadcrumb,
-}: {
-  title: string;
-  deck: React.ReactNode;
-  breadcrumb?: React.ReactNode;
-}) {
-  return (
-    <header className="relative flex min-h-[240px] flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] bg-cover pb-8 pt-40 text-inverse [background-position-x:center] tablet:pb-10 tablet:pt-40 desktop:min-h-[clamp(640px,50vh,1350px)] desktop:pb-16 desktop:pt-40">
-      <div className="z-10 mx-auto w-full max-w-screen-max px-container">
-        {breadcrumb && (
-          <p className="mb-2 font-sans-narrow text-sm uppercase tracking-[0.8px] underline decoration-subtle decoration-2 underline-offset-4">
-            {breadcrumb}
-          </p>
-        )}
-        <h1 className="font-sans text-2xl font-bold uppercase desktop:text-7xl">
-          {title}
-        </h1>
-        {deck && (
-          <p className="mt-1 text-base desktop:my-4 desktop:text-lg">{deck}</p>
-        )}
-      </div>
-    </header>
   );
 }
 

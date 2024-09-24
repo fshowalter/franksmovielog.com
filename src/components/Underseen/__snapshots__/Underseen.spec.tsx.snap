@@ -15945,10 +15945,10 @@ exports[`Underseen > renders 1`] = `
         id="content"
       >
         <header
-          class="relative flex min-h-[240px] flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] bg-cover pb-8 pt-40 text-inverse [background-position-x:center] tablet:pb-10 tablet:pt-40 desktop:min-h-[clamp(640px,50vh,1350px)] desktop:pb-16 desktop:pt-40"
+          class="min-h-[240px] desktop:min-h-[clamp(640px,50vh,1350px)] relative flex min-h-[240px] flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pb-8 pt-40 text-inverse tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40"
         >
           <div
-            class="z-10 mx-auto w-full max-w-screen-max px-container"
+            class=" z-10 mx-auto w-full max-w-screen-max px-container"
           >
             <p
               class="mb-2 font-sans-narrow text-sm uppercase tracking-[0.8px] underline decoration-subtle decoration-2 underline-offset-4"
@@ -15961,12 +15961,12 @@ exports[`Underseen > renders 1`] = `
               </a>
             </p>
             <h1
-              class="font-sans text-2xl font-bold uppercase desktop:text-7xl"
+              class="font-sans text-2xl font-bold uppercase tracking-[2px] desktop:text-7xl"
             >
               Underseen Gems
             </h1>
             <p
-              class="mt-1 text-base desktop:my-4 desktop:text-lg"
+              class="mt-1 text-base desktop:my-4 desktop:text-xl "
             >
               Four and five star movies with a below average number of IMDb votes.
             </p>

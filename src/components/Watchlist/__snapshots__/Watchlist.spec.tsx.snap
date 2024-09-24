@@ -52457,7 +52457,7 @@ exports[`/watchlist > renders 1`] = `
         id="content"
       >
         <header
-          class="relative flex content-start items-end bg-cover pb-8 pt-40 text-inverse [background-position-x:center] tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40 min-h-[400px] tablet:min-h-[640px] desktop:min-h-[clamp(640px,60vh,1350px)]"
+          class="min-h-[400px] tablet:min-h-[640px] desktop:min-h-[clamp(640px,60vh,1350px)] relative flex min-h-[240px] flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pb-8 pt-40 text-inverse tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40"
         >
           <img
             alt=""
@@ -52470,15 +52470,15 @@ exports[`/watchlist > renders 1`] = `
             width="2400"
           />
           <div
-            class="z-10 mx-auto w-full max-w-screen-max px-container"
+            class=" z-10 mx-auto w-full max-w-screen-max px-container"
           >
             <h1
-              class="font-sans font-bold tracking-[2px] text-2xl uppercase desktop:text-7xl"
+              class="font-sans text-2xl font-bold uppercase tracking-[2px] desktop:text-7xl"
             >
               Watchlist
             </h1>
             <p
-              class="mt-1 text-base [text-shadow:1px_1px_2px_black] desktop:my-4 desktop:text-xl"
+              class="mt-1 text-base desktop:my-4 desktop:text-xl [text-shadow:1px_1px_2px_black]"
             >
               "A man's got to know his limitations"
             </p>

@@ -3,10 +3,10 @@ import type { PosterImageProps } from "src/api/posters";
 import type { UnderseenGem } from "src/api/underseenGems";
 import {
   ListWithFiltersLayout,
-  SolidBackdrop,
   SubNav,
 } from "src/components/ListWithFiltersLayout";
 
+import { SolidBackdrop } from "../Backdrop";
 import { Grade } from "../Grade";
 import { GroupedList } from "../GroupedList";
 import { ListItem } from "../ListItem";
