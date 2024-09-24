@@ -100,10 +100,8 @@ function MostWatchedPersonViewingListItem({
 }: {
   value: ViewingSubListItemValue;
 }) {
-  const className = value.slug ? "bg-default" : "bg-subtle";
-
   return (
-    <ListItem className={className}>
+    <ListItem background={value.slug ? "bg-default" : "bg-subtle"}>
       <ListItemPoster imageProps={value.posterImageProps} />
       <div className="grow">
         <ListItemTitle

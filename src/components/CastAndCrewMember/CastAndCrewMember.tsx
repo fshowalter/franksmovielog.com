@@ -117,10 +117,8 @@ export function CastAndCrewMember({
 }
 
 function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
-  const className = value.slug ? "bg-default" : "bg-subtle";
-
   return (
-    <ListItem className={className}>
+    <ListItem background={value.slug ? "bg-default" : "bg-subtle"}>
       <ListItemPoster imageProps={value.posterImageProps} />
       <div className="flex grow flex-col gap-2 pb-2 tablet:w-full">
         <CreditedAs values={value.creditedAs} />

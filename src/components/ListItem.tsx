@@ -1,18 +1,17 @@
-import { ccn } from "src/utils/concatClassNames";
-
 export function ListItem({
   children,
-  className,
+  background = "bg-default",
+  itemsCenter = false,
+  extraVerticalPadding = false,
 }: {
   children: React.ReactNode;
-  className?: string;
+  background?: string;
+  itemsCenter?: boolean;
+  extraVerticalPadding?: boolean;
 }) {
   return (
     <li
-      className={ccn(
-        "relative mb-1 flex max-w-screen-max flex-row gap-x-4 bg-default px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6",
-        className,
-      )}
+      className={`${background} ${itemsCenter ? "items-center" : ""} ${extraVerticalPadding ? "tablet:py-6" : ""}relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6`}
     >
       {children}
     </li>

@@ -63,7 +63,7 @@ export function Collections({
 
 function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
-    <ListItem className="items-center tablet:py-6">
+    <ListItem itemsCenter={true} extraVerticalPadding={true}>
       <ListItemAvatar name={value.name} imageProps={value.avatarImageProps} />
       <CollectionName value={value} />
       <ListItemCounts current={value.reviewCount} total={value.titleCount} />

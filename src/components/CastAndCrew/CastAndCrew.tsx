@@ -64,7 +64,11 @@ export function CastAndCrew({
 
 function MemberListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
-    <ListItem className="items-center tablet:py-6">
+    <ListItem
+      background={value.slug ? "bg-default" : "bg-subtle"}
+      itemsCenter={true}
+      extraVerticalPadding={true}
+    >
       <ListItemAvatar name={value.name} imageProps={value.avatarImageProps} />
       <MemberName value={value} />
       <ListItemCounts current={value.reviewCount} total={value.totalCount} />
