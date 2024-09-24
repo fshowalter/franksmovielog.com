@@ -70,7 +70,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
         <Grade value={value.grade} height={24} className="mb-8" />
         <RenderedMarkdown
           text={value.excerpt}
-          className="mb-6 text-lg leading-normal tracking-0.3px text-muted"
+          className="mb-6 text-lg leading-normal tracking-[0.3px] text-muted"
         />
         <div className="mt-auto font-sans-narrow text-xxs font-medium leading-4 tracking-[1.1px] text-subtle">
           {value.genres.map((genre, index) => {

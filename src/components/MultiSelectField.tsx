@@ -13,7 +13,7 @@ export function MultiSelectField({
 }) {
   return (
     <div className="flex flex-col text-left text-subtle">
-      <LabelText text={label} as="label" htmlFor={label} />
+      <LabelText value={label} as="label" htmlFor={label} />
       <Select
         inputId={label}
         theme={(theme) => ({

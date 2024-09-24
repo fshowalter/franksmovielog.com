@@ -80430,7 +80430,7 @@ exports[`Viewings > renders 1`] = `
                           class="flex flex-col text-subtle"
                         >
                           <span
-                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-0.5px"
+                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-[0.5px] text-subtle"
                           >
                             Title
                           </span>
@@ -80444,7 +80444,7 @@ exports[`Viewings > renders 1`] = `
                           class="text-subtle"
                         >
                           <legend
-                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-0.5px text-subtle"
+                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-[0.5px] text-subtle"
                           >
                             Release Year
                           </legend>
@@ -80455,7 +80455,7 @@ exports[`Viewings > renders 1`] = `
                               class="flex flex-1 items-center gap-x-[.5ch]"
                             >
                               <span
-                                class="min-w-10 text-left text-sm tracking-0.5px"
+                                class="min-w-10 text-left text-sm tracking-[0.5px]"
                               >
                                 From
                               </span>
@@ -80953,7 +80953,7 @@ exports[`Viewings > renders 1`] = `
                               class="flex flex-1 items-center"
                             >
                               <span
-                                class="min-w-10 text-center text-sm tracking-0.5px"
+                                class="min-w-10 text-center text-sm tracking-[0.5px]"
                               >
                                 to
                               </span>
@@ -81453,7 +81453,7 @@ exports[`Viewings > renders 1`] = `
                           class="text-subtle"
                         >
                           <legend
-                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-0.5px text-subtle"
+                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-[0.5px] text-subtle"
                           >
                             Viewing Year
                           </legend>
@@ -81464,7 +81464,7 @@ exports[`Viewings > renders 1`] = `
                               class="flex flex-1 items-center gap-x-[.5ch]"
                             >
                               <span
-                                class="min-w-10 text-left text-sm tracking-0.5px"
+                                class="min-w-10 text-left text-sm tracking-[0.5px]"
                               >
                                 From
                               </span>
@@ -81542,7 +81542,7 @@ exports[`Viewings > renders 1`] = `
                               class="flex flex-1 items-center"
                             >
                               <span
-                                class="min-w-10 text-center text-sm tracking-0.5px"
+                                class="min-w-10 text-center text-sm tracking-[0.5px]"
                               >
                                 to
                               </span>
@@ -81622,7 +81622,7 @@ exports[`Viewings > renders 1`] = `
                           class="flex flex-col"
                         >
                           <span
-                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-0.5px text-subtle"
+                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-[0.5px] text-subtle"
                           >
                             Medium
                           </span>
@@ -81810,7 +81810,7 @@ exports[`Viewings > renders 1`] = `
                           class="flex flex-col"
                         >
                           <span
-                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-0.5px text-subtle"
+                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-[0.5px] text-subtle"
                           >
                             Venue
                           </span>
@@ -81873,7 +81873,7 @@ exports[`Viewings > renders 1`] = `
                           class="flex flex-col text-left text-subtle"
                         >
                           <label
-                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-0.5px text-subtle"
+                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-[0.5px] text-subtle"
                             for="Genres"
                           >
                             Genres
@@ -81950,7 +81950,7 @@ exports[`Viewings > renders 1`] = `
                           class="flex flex-col"
                         >
                           <span
-                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-0.5px text-subtle"
+                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-[0.5px] text-subtle"
                           >
                             Sort
                           </span>

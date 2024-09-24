@@ -52555,7 +52555,7 @@ exports[`/watchlist > renders 1`] = `
                           class="flex flex-col text-subtle"
                         >
                           <span
-                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-0.5px"
+                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-[0.5px] text-subtle"
                           >
                             Title
                           </span>
@@ -52569,7 +52569,7 @@ exports[`/watchlist > renders 1`] = `
                           class="flex flex-col"
                         >
                           <span
-                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-0.5px text-subtle"
+                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-[0.5px] text-subtle"
                           >
                             Director
                           </span>
@@ -52812,7 +52812,7 @@ exports[`/watchlist > renders 1`] = `
                           class="flex flex-col"
                         >
                           <span
-                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-0.5px text-subtle"
+                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-[0.5px] text-subtle"
                           >
                             Performer
                           </span>
@@ -52970,7 +52970,7 @@ exports[`/watchlist > renders 1`] = `
                           class="flex flex-col"
                         >
                           <span
-                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-0.5px text-subtle"
+                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-[0.5px] text-subtle"
                           >
                             Writer
                           </span>
@@ -53023,7 +53023,7 @@ exports[`/watchlist > renders 1`] = `
                           class="flex flex-col"
                         >
                           <span
-                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-0.5px text-subtle"
+                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-[0.5px] text-subtle"
                           >
                             Collection
                           </span>
@@ -53076,7 +53076,7 @@ exports[`/watchlist > renders 1`] = `
                           class="text-subtle"
                         >
                           <legend
-                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-0.5px text-subtle"
+                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-[0.5px] text-subtle"
                           >
                             Release Year
                           </legend>
@@ -53087,7 +53087,7 @@ exports[`/watchlist > renders 1`] = `
                               class="flex flex-1 items-center gap-x-[.5ch]"
                             >
                               <span
-                                class="min-w-10 text-left text-sm tracking-0.5px"
+                                class="min-w-10 text-left text-sm tracking-[0.5px]"
                               >
                                 From
                               </span>
@@ -53575,7 +53575,7 @@ exports[`/watchlist > renders 1`] = `
                               class="flex flex-1 items-center"
                             >
                               <span
-                                class="min-w-10 text-center text-sm tracking-0.5px"
+                                class="min-w-10 text-center text-sm tracking-[0.5px]"
                               >
                                 to
                               </span>
@@ -54065,7 +54065,7 @@ exports[`/watchlist > renders 1`] = `
                           class="flex flex-col"
                         >
                           <span
-                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-0.5px text-subtle"
+                            class="inline-block h-6 text-left font-sans-narrow text-xs font-medium uppercase leading-none tracking-[0.5px] text-subtle"
                           >
                             Sort
                           </span>

@@ -58,12 +58,6 @@ export default {
         md: ["1.125rem", "1.5rem"],
         xxs: "0.625rem",
       },
-      letterSpacing: {
-        "0.25px": "0.015625rem",
-        "0.3px": "0.01875rem",
-        "0.5px": "0.03125rem",
-        "0.75px": "0.046875rem",
-      },
       maxWidth: {
         prose: PROSE_CONTENT_WIDTH,
         popout: `calc(64px + ${PROSE_CONTENT_WIDTH})`,
