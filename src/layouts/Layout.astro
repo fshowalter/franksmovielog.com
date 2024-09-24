@@ -66,11 +66,14 @@ const pathname = new URL(Astro.request.url).pathname;
           <div id="pagefind__search"></div>
         </div>
 
-        <div class="hidden px-container py-4 desktop:block">
+        <div
+          class="hidden px-[var(--search-dialog-padding)] py-4 font-sans-narrow text-sm tracking-[0.3px] text-subtle desktop:block"
+        >
           <kbd class="rounded-md bg-default p-2 font-mono text-xs text-subtle"
             >Tab</kbd
           > to navigate
-          <kbd class="rounded-md bg-default p-2 font-mono text-xs text-subtle"
+          <kbd
+            class="ml-4 rounded-md bg-default p-2 font-mono text-xs text-subtle"
             >ESC</kbd
           > to close
         </div>
@@ -206,7 +209,7 @@ const pathname = new URL(Astro.request.url).pathname;
     --pagefind-ui-border-radius: 8px;
     --pagefind-ui-image-border-radius: 8px;
     --pagefind-ui-image-box-ratio: 3 / 2;
-    --pagefind-ui-font: "FrankRuhlLibre";
+    --pagefind-ui-font: var(--font-serif);
     --cancel-space: 5rem;
     --pagefind-ui-image-border-radius: "unset";
   }
@@ -222,7 +225,7 @@ const pathname = new URL(Astro.request.url).pathname;
     );
     margin: 1rem 0;
     flex-shrink: 0;
-    font-family: "FrankRuhlLibre";
+    font-family: var(--font-serif);
     left: var(--search-dialog-padding);
     font-weight: normal;
   }
@@ -296,7 +299,7 @@ const pathname = new URL(Astro.request.url).pathname;
   #pagefind__search .pagefind-ui__message {
     padding: 1rem var(--search-dialog-padding);
     letter-spacing: 0.8px;
-    font-family: "Radio Canada Big";
+    font-family: var(--font-sans-narrow);
     color: var(--fg-subtle);
   }
 
@@ -341,7 +344,7 @@ const pathname = new URL(Astro.request.url).pathname;
     font-weight: normal;
     height: 2.5rem;
     display: block;
-    font-family: "Radio Canada Big";
+    font-family: var(--font-sans-narrow);
     text-transform: uppercase;
     background-color: var(--bg-canvas);
     letter-spacing: 0.6px;
@@ -356,7 +359,7 @@ const pathname = new URL(Astro.request.url).pathname;
   }
 
   #pagefind__search .pagefind-ui__result-title {
-    font-family: "Radio Canada Big";
+    font-family: var(--font-sans-narrow);
     line-height: 1.25rem;
   }
 
@@ -365,7 +368,7 @@ const pathname = new URL(Astro.request.url).pathname;
   }
 
   #pagefind__search .pagefind-ui__result-excerpt {
-    font-family: "FrankRuhlLibre";
+    font-family: var(--font-serif);
   }
 
   #pagefind__search .pagefind-ui__button:focus {

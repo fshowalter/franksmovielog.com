@@ -49,9 +49,9 @@ export default {
         md: "28rem",
       },
       fontFamily: {
-        sans: "ArgentumSans",
-        "sans-narrow": "Radio Canada Big",
-        serif: "FrankRuhlLibre",
+        sans: "var(--font-sans)",
+        "sans-narrow": "var(--font-sans-narrow)",
+        serif: "var(--font-serif)",
       },
       fontSize: {
         "2.5xl": "1.625rem",
