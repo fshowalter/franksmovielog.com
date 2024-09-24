@@ -45,7 +45,7 @@ export function Review({
 }: Props): JSX.Element {
   return (
     <Layout hasBackdrop={false} className="flex flex-col" data-pagefind-body>
-      <header className="mb-12 flex flex-col items-center px-container-base pt-10">
+      <header className="mb-12 flex flex-col items-center px-[8%] pt-10">
         <h1
           data-pagefind-meta="title"
           className="text-center text-4xl desktop:text-7xl"
@@ -75,7 +75,7 @@ export function Review({
           decoding="sync"
         />
       </header>
-      <div className="flex flex-col items-center gap-16 px-container-base pb-20 desktop:gap-20 desktop:pb-32">
+      <div className="flex flex-col items-center gap-16 px-container pb-20 desktop:gap-20 desktop:pb-32">
         <Content content={value.content} />
         <div className="w-full max-w-popout">
           <SubHeading as="h2" className="shadow-bottom">

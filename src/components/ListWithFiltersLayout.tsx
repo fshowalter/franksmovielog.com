@@ -49,7 +49,7 @@ export function ListWithFiltersLayout({
                     gridTemplateRows: filtersVisible ? "1fr" : "0fr",
                   }}
                 >
-                  <div className="w-full overflow-hidden bg-subtle px-container-base text-sm tablet:text-base showFilters:overflow-visible showFilters:bg-default showFilters:pt-0 desktop:px-8">
+                  <div className="w-full overflow-hidden bg-subtle px-container text-sm tablet:text-base showFilters:overflow-visible showFilters:bg-default showFilters:pt-0 desktop:px-8">
                     <fieldset className="mt-4 flex flex-col gap-10 bg-default px-container py-10 tablet:gap-12 showFilters:mt-0 showFilters:px-0">
                       <legend className="hidden w-full py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle showFilters:shadow-bottom min-[1024px]:block">
                         Filter & Sort
@@ -90,8 +90,8 @@ export function AvatarBackdrop({
           name={name}
           width={250}
           height={250}
-          loading="eager"
-          fetchPriority="high"
+          loading="lazy"
+          decoding="async"
           data-pagefind-meta="image[src], image_alt[alt]"
         />
       </div>

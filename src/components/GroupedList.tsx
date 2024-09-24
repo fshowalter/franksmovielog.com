@@ -29,14 +29,9 @@ export function GroupedList<T>({
           );
         })}
       </ol>
-      <div className="flex flex-col items-center px-container-base py-10">
+      <div className="flex flex-col items-center py-10">
         {totalCount > visibleCount && (
-          <Button
-            onClick={onShowMore}
-            className="mx-auto w-full max-w-[430px] bg-canvas px-container-base py-5 text-center font-sans-narrow text-sm font-medium uppercase tracking-[.6px] hover:bg-inverse hover:text-inverse"
-          >
-            Show More
-          </Button>
+          <Button onClick={onShowMore}>Show More</Button>
         )}
       </div>
     </>
@@ -55,7 +50,7 @@ function GroupingListItem({
   return (
     <li className="block">
       <div style={{ zIndex: zIndex }} className="pt-0 text-md">
-        <div className="mb-1 max-w-screen-max bg-subtle px-container-base py-8 text-xl leading-8 tablet:px-4">
+        <div className="mb-1 max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:px-4">
           {groupText}
         </div>
       </div>
