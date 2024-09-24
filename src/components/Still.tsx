@@ -2,8 +2,6 @@ import type { StillImageProps } from "src/api/stills";
 import { ccn } from "src/utils/concatClassNames";
 
 interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {
-  title: string;
-  year: string | number;
   imageProps: StillImageProps;
   sizes: string;
   width: number;

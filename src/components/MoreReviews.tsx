@@ -9,7 +9,6 @@ export const MoreReviewsImageConfig = {
   height: 360,
   sizes:
     "(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px",
-  quality: 80,
 };
 
 export interface MoreReviewsValue {
@@ -48,15 +47,11 @@ function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
     <li className="relative w-full tablet:w-[47%]">
       <div className="block">
         <Still
-          title={value.title}
-          year={value.year}
           imageProps={value.stillImageProps}
-          width={MoreReviewsImageConfig.width}
-          height={MoreReviewsImageConfig.height}
+          {...MoreReviewsImageConfig}
           className="h-auto w-full"
           loading="lazy"
           decoding="async"
-          sizes={MoreReviewsImageConfig.sizes}
         />
       </div>
       <div className="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]">

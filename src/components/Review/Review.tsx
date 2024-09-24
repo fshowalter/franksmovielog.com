@@ -64,11 +64,7 @@ export function Review({
           className="mb-12"
         />
         <Still
-          title={value.title}
-          year={value.year}
-          width={StillImageConfig.width}
-          height={StillImageConfig.height}
-          sizes={StillImageConfig.sizes}
+          {...StillImageConfig}
           className="mx-auto mb-[5.33px]"
           imageProps={stillImageProps}
           loading="eager"
