@@ -65165,10 +65165,10 @@ exports[`CastAndCrewMember > renders 1`] = `
                   </div>
                 </div>
                 <div
-                  class="mx-auto max-w-screen-max grid-cols-[1fr_48px_33%] showFilters:grid showFilters:grid-rows-[auto_1fr]"
+                  class="mx-auto max-w-screen-max grid-cols-[1fr_48px_minmax(398px,33%)] showFilters:grid showFilters:grid-rows-[auto_1fr]"
                 >
                   <div
-                    class="relative z-10 col-start-3 row-span-2 row-start-2 grid text-sm transition-[grid-template-rows] duration-200 ease-in-out showFilters:mr-12 showFilters:block showFilters:py-24 showFilters:pb-12 showFilters:shadow-none desktop:mr-20"
+                    class="relative z-10 col-start-3 row-span-2 row-start-2 grid min-w-[350px] text-sm transition-[grid-template-rows] duration-200 ease-in-out showFilters:mr-12 showFilters:block showFilters:py-24 showFilters:pb-12 showFilters:shadow-none desktop:mr-20"
                     style="grid-template-rows: 0fr;"
                   >
                     <div

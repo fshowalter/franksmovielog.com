@@ -40,9 +40,9 @@ export function ListWithFiltersLayout({
                   listHeaderButtons={listHeaderButtons}
                 />
               </div>
-              <div className="mx-auto max-w-screen-max grid-cols-[1fr_48px_33%] showFilters:grid showFilters:grid-rows-[auto_1fr]">
+              <div className="mx-auto max-w-screen-max grid-cols-[1fr_48px_minmax(398px,33%)] showFilters:grid showFilters:grid-rows-[auto_1fr]">
                 <div
-                  className="relative z-10 col-start-3 row-span-2 row-start-2 grid text-sm transition-[grid-template-rows] duration-200 ease-in-out showFilters:mr-12 showFilters:block showFilters:py-24 showFilters:pb-12 showFilters:shadow-none desktop:mr-20"
+                  className="relative z-10 col-start-3 row-span-2 row-start-2 grid min-w-[350px] text-sm transition-[grid-template-rows] duration-200 ease-in-out showFilters:mr-12 showFilters:block showFilters:py-24 showFilters:pb-12 showFilters:shadow-none desktop:mr-20"
                   style={{
                     gridTemplateRows: filtersVisible ? "1fr" : "0fr",
                   }}
