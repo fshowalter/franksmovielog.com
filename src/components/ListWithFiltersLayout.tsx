@@ -133,21 +133,15 @@ type SubNavValue = {
   active?: boolean;
 };
 
-export function SubNav({
-  values,
-  className = "bg-[#252525]",
-}: {
-  values: SubNavValue[];
-  className?: string;
-}) {
+export function SubNav({ values }: { values: SubNavValue[] }) {
   return (
-    <nav className={className}>
+    <nav className="bg-footer">
       <ul className="mx-auto flex justify-center gap-x-6 text-nowrap px-container font-sans-narrow text-sm font-bold uppercase tracking-[1px] text-subtle">
         {values.map((value) => {
           return (
             <li
               key={value.href}
-              className={`w-full max-w-32 text-center ${value.active ? "text-inverse" : "text-[#B8B8B8]"}`}
+              className={`w-full max-w-32 text-center ${value.active ? "text-inverse" : "text-inverse-subtle"}`}
             >
               {value.active ? (
                 <div className="px-4 py-8 desktop:py-12">{value.text}</div>
