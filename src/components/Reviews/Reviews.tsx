@@ -68,7 +68,7 @@ export function Reviews({
         <Backdrop
           imageProps={backdropImageProps}
           title="Reviews"
-          deck='"He chose... poorly."'
+          deck={`"'Sorry' don't get it done, Dude."`}
         />
       }
       subNav={
