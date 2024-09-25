@@ -60,7 +60,7 @@ export function Callouts({
   collectionTotal,
 }: Props): JSX.Element {
   return (
-    <section className="mx-auto w-full max-w-screen-max tablet:mt-12 tablet:px-container">
+    <div className="mx-auto w-full max-w-screen-max tablet:mt-12 tablet:px-container">
       <div className="flex w-full flex-wrap justify-center gap-8 px-container py-10">
         <Callout total={total} reviewed={reviewed} label="Total Progress" />
         <Callout
@@ -88,6 +88,6 @@ export function Callouts({
           subLabel="Titles"
         />
       </div>
-    </section>
+    </div>
   );
 }
