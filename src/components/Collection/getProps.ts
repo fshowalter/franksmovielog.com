@@ -1,6 +1,6 @@
 import { getBackdropImageProps } from "src/api/backdrops";
 import { collectionDetails } from "src/api/collections";
-import { getFixedWidthPosterImageProps } from "src/api/posters";
+import { getFluidWidthPosterImageProps } from "src/api/posters";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 
 import { BackdropImageConfig } from "../Backdrop";
@@ -19,7 +19,7 @@ export async function getProps(slug: string): Promise<Props> {
       collection.titles.map(async (title) => {
         return {
           ...title,
-          posterImageProps: await getFixedWidthPosterImageProps(
+          posterImageProps: await getFluidWidthPosterImageProps(
             title.slug,
             ListItemPosterImageConfig,
           ),

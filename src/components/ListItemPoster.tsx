@@ -16,8 +16,7 @@ export function ListItemPoster({
       <img
         {...imageProps}
         alt=""
-        width={ListItemPosterImageConfig.width}
-        height={ListItemPosterImageConfig.height}
+        {...ListItemPosterImageConfig}
         loading="lazy"
         decoding="async"
         className="aspect-poster"
