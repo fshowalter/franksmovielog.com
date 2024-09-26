@@ -75,7 +75,7 @@ export function AvatarBackdrop({
 }) {
   return (
     <Wrapper centerText={true} size="small">
-      <div className="safari-border-radius-fix mx-auto mb-6 w-4/5 max-w-[250px] overflow-hidden rounded-[50%]">
+      <div className="safari-border-radius-fix mx-auto mb-6 w-4/5 max-w-[250px] overflow-hidden rounded-full">
         <Avatar
           imageProps={avatarImageProps}
           name={name}

@@ -11,7 +11,7 @@ export function ListItemPoster({
   imageProps: PosterImageProps;
 }) {
   return (
-    <div className="w-16 shrink-0 tablet:w-[76px] desktop:w-20">
+    <div className="w-list-item-poster shrink-0">
       <img
         {...imageProps}
         alt=""

@@ -65,7 +65,7 @@ export function Review({
         />
         <Still
           {...StillImageConfig}
-          className="mx-auto mb-[5.33px]"
+          className="mx-auto mb-[.191px]"
           imageProps={stillImageProps}
           loading="eager"
           decoding="sync"
