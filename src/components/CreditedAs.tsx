@@ -6,7 +6,7 @@ export function CreditedAs({
   values: readonly string[];
 }): JSX.Element | null {
   return (
-    <div className="font-sans text-xs font-light leading-4 tracking-[-.3px] text-subtle tablet:text-sm">
+    <div className="font-sans text-xs font-light leading-4 text-subtle tablet:text-sm">
       {values.map((value, index) => {
         if (index === 0) {
           return `${capitalize(value)}`;
