@@ -69,7 +69,7 @@ function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
           text={value.excerpt}
           className="mb-8 text-base leading-[1.6] tracking-[0.3px] text-muted"
         />
-        <div className="font-sans-narrow text-xxs uppercase leading-4 tracking-[0.8px] text-subtle">
+        <div className="font-sans text-xxs font-light leading-4 tracking-[1.1px] text-subtle">
           {value.genres.map((genre, index) => {
             if (index === 0) {
               return <span key={genre}>{genre}</span>;

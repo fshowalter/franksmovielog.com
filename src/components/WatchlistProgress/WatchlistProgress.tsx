@@ -57,24 +57,24 @@ export function WatchlistProgress({
         />
         <div className="mx-auto flex w-full max-w-screen-max flex-col gap-8 py-16 tablet:px-container desktop:grid desktop:grid-cols-2">
           <Details
-            label="Director Progress"
+            label="Directors"
             valueType="director"
             values={progress.directorDetails}
             className="col-start-1 row-span-3"
           />
           <Details
-            label="Performer Progress"
+            label="Performers"
             valueType="performer"
             values={progress.performerDetails}
           />
           <Details
-            label="Writer Progress"
+            label="Writers"
             valueType="writer"
             values={progress.writerDetails}
             className="col-start-2 row-start-2"
           />
           <Details
-            label="Collection Progress"
+            label="Collections"
             valueType="collection"
             values={progress.collectionDetails}
             className="col-start-2 row-start-3"

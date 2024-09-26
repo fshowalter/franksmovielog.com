@@ -27,10 +27,8 @@ export function Distribution({
               className="col-span-2 grid grid-cols-subgrid py-3"
             >
               <div className="col-span-2 grid grid-cols-subgrid">
-                <div className="font-sans-narrow text-sm text-muted">
-                  {value.name}
-                </div>
-                <div className="col-start-2 self-center text-nowrap pb-1 text-right font-sans-narrow text-sm text-subtle tablet:text-sm">
+                <div className="font-sans text-xs text-muted">{value.name}</div>
+                <div className="col-start-2 self-center text-nowrap pb-1 text-right font-sans text-xs text-subtle">
                   {value.count}
                 </div>
               </div>

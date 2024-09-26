@@ -15,7 +15,7 @@ const dateFormat = new Intl.DateTimeFormat("en-US", {
 function Date({ date }: { date: Date }) {
   return (
     <>
-      <span className="inline-block font-sans-narrow text-sm font-medium tracking-normal text-subtle">
+      <span className="inline-block font-sans text-xs font-normal tracking-normal text-subtle">
         {dateFormat.format(date)}
       </span>{" "}
     </>
@@ -29,9 +29,7 @@ function Medium({ value }: { value: Viewing["medium"] }) {
   return (
     <span className="text-subtle">
       <span>via</span>{" "}
-      <span className="font-sans-narrow text-sm font-medium text-subtle">
-        {value}
-      </span>
+      <span className="font-sans text-xs font-normal text-subtle">{value}</span>
     </span>
   );
 }
@@ -41,7 +39,7 @@ function MediumNotes({ value }: { value: Viewing["mediumNotes"] }) {
     return null;
   }
   return (
-    <span className="font-normal text-subtle">
+    <span className="font-light tracking-normal text-subtle">
       (
       <RenderedMarkdown
         // eslint-disable-next-line react/no-danger
@@ -59,7 +57,7 @@ function VenueNotes({ value }: { value: Viewing["venueNotes"] }) {
     return null;
   }
   return (
-    <span className="text-sm font-normal leading-none text-subtle">
+    <span className="font-light tracking-normal text-subtle">
       (
       <RenderedMarkdown
         // eslint-disable-next-line react/no-danger
@@ -79,7 +77,7 @@ function Venue({ value }: { value: Viewing["venue"] }) {
   return (
     <span className="text-subtle">
       <span>at</span>{" "}
-      <span className="font-sans-narrow text-sm font-medium">{value}</span>
+      <span className="font-sans text-xs font-normal text-subtle">{value}</span>
     </span>
   );
 }

@@ -51,7 +51,7 @@ export function ProgressRing({
         fill="var(--fg-default)"
         textAnchor="middle"
         fontSize=".2em"
-        className="font-sans-narrow font-medium"
+        className="font-sans font-normal"
       >
         {label}
       </text>

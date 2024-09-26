@@ -14,7 +14,7 @@ export function Button({
       type="button"
       onClick={onClick}
       className={ccn(
-        "mx-auto w-full max-w-[430px] bg-canvas py-5 text-center font-sans-narrow text-sm font-medium uppercase tracking-[.6px] shadow-all hover:bg-inverse hover:text-inverse",
+        "mx-auto w-full max-w-[430px] bg-canvas py-5 text-center font-sans text-xs font-semibold uppercase tracking-[.8px] shadow-all hover:bg-inverse hover:text-inverse",
         className,
       )}
     >

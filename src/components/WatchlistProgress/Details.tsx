@@ -31,7 +31,7 @@ export function Details({
         className,
       )}
     >
-      <h2 className="py-4 font-sans-narrow text-xs font-semibold uppercase tracking-[1px] text-muted shadow-bottom">
+      <h2 className="py-4 font-sans text-xs font-medium uppercase tracking-[.8px] text-muted shadow-bottom">
         {label}
       </h2>
       <div className="grid w-full grid-cols-[auto,1fr,auto] tablet:whitespace-nowrap">
@@ -48,7 +48,7 @@ export function Details({
               />
               <div className="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid">
                 <Name value={value} valueType={valueType} />
-                <div className="col-start-3 self-center text-nowrap pb-1 text-right font-sans-narrow text-xs text-subtle tablet:text-sm">
+                <div className="col-start-3 self-center text-nowrap pb-1 text-right font-sans text-xs text-subtle">
                   {value.reviewCount} / {value.titleCount}
                 </div>
               </div>
@@ -78,7 +78,7 @@ function Name({ value, valueType }: { valueType: ValueType; value: Value }) {
   if (value.slug)
     return (
       <a
-        className="block pb-1 font-sans-narrow text-sm font-medium leading-none tracking-[-0.3px] text-accent before:absolute before:left-0 before:top-3 before:aspect-square before:w-12 hover:underline tablet:text-base"
+        className="block pb-1 font-sans text-sm font-normal leading-none text-accent before:absolute before:left-0 before:top-3 before:aspect-square before:w-12 hover:underline"
         href={linkTarget}
       >
         {value.name}
@@ -86,7 +86,7 @@ function Name({ value, valueType }: { valueType: ValueType; value: Value }) {
     );
 
   return (
-    <span className="block pb-1 font-sans-narrow text-sm font-medium leading-none tracking-[-0.3px] text-subtle">
+    <span className="block pb-1 font-sans text-sm font-light leading-none text-subtle">
       {value.name}
     </span>
   );

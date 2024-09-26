@@ -46,7 +46,6 @@ export default {
       },
       fontFamily: {
         sans: "var(--font-sans)",
-        "sans-narrow": "var(--font-sans-narrow)",
         serif: "var(--font-serif)",
       },
       fontSize: {
