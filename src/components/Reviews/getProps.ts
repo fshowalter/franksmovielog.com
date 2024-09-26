@@ -1,5 +1,5 @@
 import { getBackdropImageProps } from "src/api/backdrops";
-import { getFixedWidthPosterImageProps } from "src/api/posters";
+import { getFluidWidthPosterImageProps } from "src/api/posters";
 import { allReviews } from "src/api/reviews";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 
@@ -33,7 +33,7 @@ export async function getProps(): Promise<Props> {
         releaseSequence: review.releaseSequence,
         gradeValue: review.gradeValue,
         sortTitle: review.sortTitle,
-        posterImageProps: await getFixedWidthPosterImageProps(
+        posterImageProps: await getFluidWidthPosterImageProps(
           review.slug,
           ListItemPosterImageConfig,
         ),

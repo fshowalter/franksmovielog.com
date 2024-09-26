@@ -9,7 +9,6 @@ export const StillImageConfig = {
   height: 360,
   sizes:
     "(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160px) * 0.3132965), 482px",
-  quality: 80,
 };
 
 function formatDate(reviewDate: Date) {
@@ -44,12 +43,10 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
       <div className="mb-6 block">
         <Still
           imageProps={value.stillImageProps}
-          width={StillImageConfig.width}
-          height={StillImageConfig.height}
+          {...StillImageConfig}
           className="h-auto w-full"
           loading="lazy"
           decoding="async"
-          sizes={StillImageConfig.sizes}
         />
       </div>
       <div className="flex grow flex-col px-[8%] pb-8 desktop:pl-[8.5%] desktop:pr-[10%]">
