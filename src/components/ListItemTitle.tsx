@@ -17,7 +17,7 @@ export function ListItemTitle({
     return (
       <a
         href={`/reviews/${slug}/`}
-        className="block font-sans-narrow text-base font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-16 hover:underline tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:w-20"
+        className="block font-sans text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:w-20"
       >
         {title}
         {"\u202F"}
@@ -28,7 +28,7 @@ export function ListItemTitle({
   }
 
   return (
-    <span className="block font-sans-narrow text-base font-medium text-muted tablet:text-base">
+    <span className="block font-sans text-sm font-medium text-muted tablet:text-base">
       {title}
       {"\u202F"}
       {"\u202F"}
