@@ -136,7 +136,7 @@ type SubNavValue = {
 export function SubNav({ values }: { values: SubNavValue[] }) {
   return (
     <nav className="bg-footer">
-      <ul className="mx-auto flex justify-center gap-x-6 text-nowrap px-container font-sans text-sm font-bold uppercase tracking-wider text-subtle">
+      <ul className="mx-auto flex justify-center text-nowrap px-container font-sans text-sm font-bold uppercase tracking-wider text-subtle">
         {values.map((value) => {
           return (
             <li
