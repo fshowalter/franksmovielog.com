@@ -60,7 +60,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
           href={`/reviews/${value.slug}/`}
           className="mb-2 block text-2.5xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
         >
-          {value.title}{" "}
+          {value.title}&nbsp;
           <span className="text-sm font-normal leading-none text-muted">
             {value.year}
           </span>
