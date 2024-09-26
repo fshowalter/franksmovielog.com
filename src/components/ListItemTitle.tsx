@@ -8,7 +8,7 @@ export function ListItemTitle({
   slug?: string | null;
 }) {
   const yearBox = (
-    <span className="text-xs font-normal tracking-[.3px] text-subtle tablet:text-xs">
+    <span className="text-xxs font-light text-subtle tablet:text-xs">
       {year}
     </span>
   );
@@ -17,7 +17,7 @@ export function ListItemTitle({
     return (
       <a
         href={`/reviews/${slug}/`}
-        className="block font-sans text-base font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-16 hover:underline tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:w-20"
+        className="block font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-16 hover:underline tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:w-20"
       >
         {title}
         {"\u202F"}
@@ -28,7 +28,7 @@ export function ListItemTitle({
   }
 
   return (
-    <span className="block font-sans text-base font-medium text-muted">
+    <span className="block font-sans text-sm font-normal text-muted">
       {title}
       {"\u202F"}
       {"\u202F"}

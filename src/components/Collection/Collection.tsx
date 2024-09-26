@@ -105,7 +105,7 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
             slug={value.slug}
           />
           {value.grade && (
-            <Grade value={value.grade} height={18} className="py-px" />
+            <Grade value={value.grade} height={18} className="mt-1 py-px" />
           )}
         </div>
       </div>

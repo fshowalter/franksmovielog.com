@@ -59,7 +59,7 @@ const pathname = new URL(Astro.request.url).pathname;
       <div data-dialog-frame class="contents">
         <button
           data-close-modal
-          class="px-4 font-sans-narrow text-sm hover:bg-inverse hover:text-inverse"
+          class="px-4 font-sans text-sm font-light hover:bg-inverse hover:text-inverse focus:outline-accent"
           >Cancel</button
         >
         <div class="contents">
@@ -67,7 +67,7 @@ const pathname = new URL(Astro.request.url).pathname;
         </div>
 
         <div
-          class="hidden px-[var(--search-dialog-padding)] py-4 font-sans-narrow text-sm tracking-[0.3px] text-subtle desktop:block"
+          class="hidden px-[var(--search-dialog-padding)] py-4 font-sans text-xs font-light tracking-[0.3px] text-subtle desktop:block"
         >
           <kbd class="rounded-md bg-default p-2 font-mono text-xs text-subtle"
             >Tab</kbd
@@ -298,8 +298,8 @@ const pathname = new URL(Astro.request.url).pathname;
 
   #pagefind__search .pagefind-ui__message {
     padding: 1rem var(--search-dialog-padding);
-    letter-spacing: 0.8px;
-    font-family: var(--font-sans-narrow);
+    font-weight: normal;
+    font-family: var(--font-sans);
     color: var(--fg-subtle);
   }
 
@@ -327,10 +327,6 @@ const pathname = new URL(Astro.request.url).pathname;
     transform: unset;
   }
 
-  #pagefind__search .pagefind-ui__result-link:focus {
-    outline: 1px solid var(--fg-accent);
-  }
-
   #pagefind__search .pagefind-ui__result:focus-within {
     outline: 1px solid var(--fg-accent);
     background-color: var(--bg-subtle);
@@ -341,25 +337,27 @@ const pathname = new URL(Astro.request.url).pathname;
     margin: 1rem auto;
     width: calc(100% - 2 * var(--search-dialog-padding));
     font-size: 1rem;
-    font-weight: normal;
+    font-weight: 600;
     height: 2.5rem;
     display: block;
-    font-family: var(--font-sans-narrow);
+    font-family: var(--font-sans);
     text-transform: uppercase;
     background-color: var(--bg-canvas);
-    letter-spacing: 0.6px;
+    letter-spacing: 0.8px;
     font-size: 12px;
     color: var(--fg-default);
     max-width: 430px;
+    border-radius: unset;
   }
 
   #pagefind__search .pagefind-ui__button:hover {
     color: var(--fg-inverse);
     background-color: var(--bg-inverse);
+    border-color: inherit;
   }
 
   #pagefind__search .pagefind-ui__result-title {
-    font-family: var(--font-sans-narrow);
+    font-family: var(--font-sans);
     line-height: 1.25rem;
   }
 

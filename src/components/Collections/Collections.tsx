@@ -78,7 +78,7 @@ function CollectionName({ value }: { value: ListItemValue }) {
   return (
     <a
       href={`/collections/${value.slug}/`}
-      className="font-sans-narrow text-sm font-semibold text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:text-base tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      className="font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
     >
       <div className="leading-normal">{value.name}</div>
     </a>

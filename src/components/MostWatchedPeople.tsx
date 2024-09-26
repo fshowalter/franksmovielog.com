@@ -44,10 +44,10 @@ export function MostWatchedPeople({
           return (
             <div key={value.name} className="py-3">
               <div className="flex justify-between px-container tablet:px-0">
-                <div className="font-sans-narrow text-sm text-muted">
+                <div className="font-sans text-sm text-muted">
                   <Name value={value} />
                 </div>
-                <div className="col-start-2 self-center text-nowrap pb-1 text-right font-sans-narrow text-sm text-subtle tablet:text-sm">
+                <div className="col-start-2 self-center text-nowrap pb-1 text-right font-sans text-xs text-subtle">
                   {value.count}
                 </div>
               </div>
@@ -84,7 +84,7 @@ function Name({
   if (value.slug) {
     return (
       <a
-        className="font-medium text-accent"
+        className="font-normal text-accent"
         href={`/cast-and-crew/${value.slug}/`}
       >
         {value.name}
@@ -103,13 +103,13 @@ function MostWatchedPersonViewingListItem({
   return (
     <ListItem background={value.slug ? "bg-default" : "bg-subtle"}>
       <ListItemPoster imageProps={value.posterImageProps} />
-      <div className="grow">
+      <div className="flex grow flex-col gap-1">
         <ListItemTitle
           title={value.title}
           year={value.year}
           slug={value.slug}
         />
-        <div className="pb-2 pt-1 font-sans text-xs font-light text-muted">
+        <div className="-mt-px font-sans text-xs font-light text-muted">
           {value.date}
         </div>
         <ListItemMediumAndVenue medium={value.medium} venue={value.venue} />
