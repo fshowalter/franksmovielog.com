@@ -30,7 +30,7 @@ export function Home({ values, backdropImageProps }: Props): JSX.Element {
         <div className="flex py-10">
           <a
             href="/reviews/"
-            className="mx-auto w-full max-w-[430px] bg-default py-5 text-center font-sans text-xs font-semibold uppercase tracking-[.8px] text-accent hover:bg-accent hover:text-inverse"
+            className="mx-auto w-full max-w-[430px] bg-default py-5 text-center font-sans text-xs font-semibold uppercase tracking-wide text-accent hover:bg-accent hover:text-inverse"
           >
             All Reviews
           </a>

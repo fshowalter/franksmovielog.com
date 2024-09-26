@@ -112,7 +112,7 @@ export function StatsBackdrop({
         center={true}
         value={title}
       />
-      <p className="mb-6 text-center font-sans text-xs uppercase tracking-[.8px] text-inverse-subtle">
+      <p className="mb-6 text-center font-sans text-xs uppercase tracking-wide text-inverse-subtle">
         {deck}
       </p>
       {children}
@@ -173,7 +173,7 @@ function Title({
       className={
         className
           ? className
-          : `font-sans ${center ? "text-center" : ""} text-2xl font-bold uppercase tracking-[2px] desktop:text-7xl`
+          : `font-sans ${center ? "text-center" : ""} text-2xl font-bold uppercase tracking-widest desktop:text-7xl`
       }
     >
       {value}
@@ -187,7 +187,7 @@ function Breadcrumb({ value }: { value?: React.ReactNode }) {
   }
 
   return (
-    <p className="mb-2 font-sans text-sm uppercase tracking-[0.8px] underline decoration-subtle decoration-2 underline-offset-8">
+    <p className="mb-2 font-sans text-sm uppercase tracking-wide underline decoration-subtle decoration-2 underline-offset-8">
       {value}
     </p>
   );

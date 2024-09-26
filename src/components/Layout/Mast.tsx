@@ -75,7 +75,7 @@ function SubMenu({ values }: { values: NavItem[] }): JSX.Element | null {
         return (
           <li
             key={value.target}
-            className="mb-2 font-sans text-xs uppercase tracking-[.8px] text-inverse-subtle"
+            className="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
           >
             <a href={value.target}>{value.text}</a>
           </li>
@@ -93,7 +93,7 @@ function NavListItem({
   hasBackdrop: boolean;
 }): JSX.Element {
   return (
-    <li className="block whitespace-nowrap tracking-[0.6px]">
+    <li className="block whitespace-nowrap tracking-serif-wide">
       <a
         className={`text-inherit transition-all duration-500 ease-in-out ${hasBackdrop ? "hover:bg-[rgba(0,0,0,.50)]" : "hover:text-accent"}`}
         href={value.target}

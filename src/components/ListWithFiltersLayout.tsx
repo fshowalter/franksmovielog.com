@@ -49,7 +49,7 @@ export function ListWithFiltersLayout({
                 >
                   <div className="w-full overflow-hidden bg-subtle px-container text-sm tablet:text-base tablet-landscape:overflow-visible tablet-landscape:bg-default tablet-landscape:pt-0 desktop:px-8">
                     <fieldset className="mt-4 flex flex-col gap-10 bg-default px-container py-10 tablet:gap-12 tablet-landscape:mt-0 tablet-landscape:px-0">
-                      <legend className="hidden w-full py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle tablet-landscape:shadow-bottom min-[1024px]:block">
+                      <legend className="hidden w-full py-10 font-sans text-xs font-bold uppercase tracking-wide text-subtle tablet-landscape:shadow-bottom min-[1024px]:block">
                         Filter & Sort
                       </legend>
                       {filters}
@@ -81,9 +81,9 @@ function ListHeader({
   listHeaderButtons?: ReactNode;
 }): JSX.Element {
   return (
-    <div className="mx-auto flex w-full max-w-screen-max flex-wrap items-baseline justify-between gap-x-4 gap-y-5 px-container py-10 font-sans font-bold uppercase tracking-[1.2px] text-subtle">
+    <div className="mx-auto flex w-full max-w-screen-max flex-wrap items-baseline justify-between gap-x-4 gap-y-5 px-container py-10 font-sans font-medium uppercase tracking-wide text-subtle">
       <span className="block pr-4">
-        <span className="font-sans font-bold">
+        <span className="font-semibold text-default">
           {totalCount.toLocaleString()}
         </span>{" "}
         Results
@@ -136,7 +136,7 @@ type SubNavValue = {
 export function SubNav({ values }: { values: SubNavValue[] }) {
   return (
     <nav className="bg-footer">
-      <ul className="mx-auto flex justify-center gap-x-6 text-nowrap px-container font-sans text-sm font-bold uppercase tracking-[1px] text-subtle">
+      <ul className="mx-auto flex justify-center gap-x-6 text-nowrap px-container font-sans text-sm font-bold uppercase tracking-wider text-subtle">
         {values.map((value) => {
           return (
             <li

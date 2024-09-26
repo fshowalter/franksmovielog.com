@@ -30,6 +30,14 @@ export default {
       emphasis: "var(--fg-emphasis)",
       progress: "var(--fg-progress)",
     },
+    letterSpacing: {
+      normal: "0",
+      wide: ".8px",
+      "serif-wide": ".6px",
+      prose: ".3px",
+      wider: "1.1px",
+      widest: "2px",
+    },
     screens: {
       tablet: "768px",
       "tablet-landscape": "1024px",
@@ -51,7 +59,7 @@ export default {
       fontSize: {
         "2.5xl": "1.625rem",
         md: ["1.125rem", "1.5rem"],
-        xxs: "0.625rem",
+        xxs: "0.6875rem",
       },
       maxWidth: {
         prose: PROSE_CONTENT_WIDTH,

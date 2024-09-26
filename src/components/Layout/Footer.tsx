@@ -20,7 +20,7 @@ export function Footer(): JSX.Element {
         </ul>
         <a
           href="#top"
-          className="mb-8 w-full max-w-[320px] bg-canvas py-5 text-center font-sans text-xs uppercase tracking-[.8px] text-default hover:bg-inverse hover:text-inverse"
+          className="mb-8 w-full max-w-[320px] bg-canvas py-5 text-center font-sans text-xs uppercase tracking-wide text-default hover:bg-inverse hover:text-inverse"
         >
           To the top
         </a>
@@ -60,7 +60,7 @@ function SubNavList({ values }: { values: NavItem[] }): JSX.Element | null {
         return (
           <li
             key={value.target}
-            className="mb-2 font-sans text-xs uppercase tracking-[.8px] text-inverse-subtle"
+            className="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
           >
             <a className="hover:text-inverse" href={value.target}>
               {value.text}

@@ -33244,7 +33244,7 @@ exports[`Overrated > renders 1`] = `
               class="flex flex-wrap justify-start gap-x-6 text-xl"
             >
               <li
-                class="block whitespace-nowrap tracking-[0.6px]"
+                class="block whitespace-nowrap tracking-serif-wide"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
@@ -33255,7 +33255,7 @@ exports[`Overrated > renders 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-[0.6px]"
+                class="block whitespace-nowrap tracking-serif-wide"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
@@ -33266,7 +33266,7 @@ exports[`Overrated > renders 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-[0.6px]"
+                class="block whitespace-nowrap tracking-serif-wide"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
@@ -33277,7 +33277,7 @@ exports[`Overrated > renders 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-[0.6px]"
+                class="block whitespace-nowrap tracking-serif-wide"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
@@ -33288,7 +33288,7 @@ exports[`Overrated > renders 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-[0.6px]"
+                class="block whitespace-nowrap tracking-serif-wide"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
@@ -33299,7 +33299,7 @@ exports[`Overrated > renders 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-[0.6px]"
+                class="block whitespace-nowrap tracking-serif-wide"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
@@ -33310,7 +33310,7 @@ exports[`Overrated > renders 1`] = `
                 </a>
               </li>
               <li
-                class="block whitespace-nowrap tracking-[0.6px]"
+                class="block whitespace-nowrap tracking-serif-wide"
               >
                 <a
                   class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
@@ -33397,7 +33397,7 @@ exports[`Overrated > renders 1`] = `
                 class="mt-4"
               >
                 <li
-                  class="mb-2 font-sans text-xs uppercase tracking-[.8px] text-inverse-subtle"
+                  class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
                 >
                   <a
                     href="/reviews/underseen/"
@@ -33406,7 +33406,7 @@ exports[`Overrated > renders 1`] = `
                   </a>
                 </li>
                 <li
-                  class="mb-2 font-sans text-xs uppercase tracking-[.8px] text-inverse-subtle"
+                  class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
                 >
                   <a
                     href="/reviews/overrated/"
@@ -33428,7 +33428,7 @@ exports[`Overrated > renders 1`] = `
                 class="mt-4"
               >
                 <li
-                  class="mb-2 font-sans text-xs uppercase tracking-[.8px] text-inverse-subtle"
+                  class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
                 >
                   <a
                     href="/viewings/stats/"
@@ -33468,7 +33468,7 @@ exports[`Overrated > renders 1`] = `
                 class="mt-4"
               >
                 <li
-                  class="mb-2 font-sans text-xs uppercase tracking-[.8px] text-inverse-subtle"
+                  class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
                 >
                   <a
                     href="/watchlist/progress/"
@@ -33492,7 +33492,7 @@ exports[`Overrated > renders 1`] = `
             class=" z-10 mx-auto flex w-full max-w-screen-max flex-col px-container"
           >
             <p
-              class="mb-2 font-sans text-sm uppercase tracking-[0.8px] underline decoration-subtle decoration-2 underline-offset-8"
+              class="mb-2 font-sans text-sm uppercase tracking-wide underline decoration-subtle decoration-2 underline-offset-8"
             >
               <a
                 class="hover:bg-default hover:text-default"
@@ -33502,7 +33502,7 @@ exports[`Overrated > renders 1`] = `
               </a>
             </p>
             <h1
-              class="font-sans  text-2xl font-bold uppercase tracking-[2px] desktop:text-7xl"
+              class="font-sans  text-2xl font-bold uppercase tracking-widest desktop:text-7xl"
             >
               Overrated Disappointments
             </h1>
@@ -33518,7 +33518,7 @@ exports[`Overrated > renders 1`] = `
           class="bg-footer"
         >
           <ul
-            class="mx-auto flex justify-center gap-x-6 text-nowrap px-container font-sans text-sm font-bold uppercase tracking-[1px] text-subtle"
+            class="mx-auto flex justify-center gap-x-6 text-nowrap px-container font-sans text-sm font-bold uppercase tracking-wider text-subtle"
           >
             <li
               class="w-full max-w-32 text-center text-inverse-subtle"
@@ -33567,13 +33567,13 @@ exports[`Overrated > renders 1`] = `
                   class="relative z-10 row-start-1 bg-default text-xs tablet:-mx-12 tablet:px-0 tablet-landscape:col-span-3 tablet-landscape:mx-0 tablet-landscape:w-full"
                 >
                   <div
-                    class="mx-auto flex w-full max-w-screen-max flex-wrap items-baseline justify-between gap-x-4 gap-y-5 px-container py-10 font-sans font-bold uppercase tracking-[1.2px] text-subtle"
+                    class="mx-auto flex w-full max-w-screen-max flex-wrap items-baseline justify-between gap-x-4 gap-y-5 px-container py-10 font-sans font-medium uppercase tracking-wide text-subtle"
                   >
                     <span
                       class="block pr-4"
                     >
                       <span
-                        class="font-sans font-bold"
+                        class="font-semibold text-default"
                       >
                         63
                       </span>
@@ -33600,7 +33600,7 @@ exports[`Overrated > renders 1`] = `
                         class="mt-4 flex flex-col gap-10 bg-default px-container py-10 tablet:gap-12 tablet-landscape:mt-0 tablet-landscape:px-0"
                       >
                         <legend
-                          class="hidden w-full py-10 font-sans text-xs font-bold uppercase tracking-[0.8px] text-subtle tablet-landscape:shadow-bottom min-[1024px]:block"
+                          class="hidden w-full py-10 font-sans text-xs font-bold uppercase tracking-wide text-subtle tablet-landscape:shadow-bottom min-[1024px]:block"
                         >
                           Filter & Sort
                         </legend>
@@ -33608,7 +33608,7 @@ exports[`Overrated > renders 1`] = `
                           class="flex flex-col text-subtle"
                         >
                           <span
-                            class="inline-block h-6 text-left font-sans text-xs uppercase leading-none tracking-[0.8px] text-subtle"
+                            class="inline-block h-6 text-left font-sans text-xxs uppercase leading-none tracking-wide text-subtle"
                           >
                             Title
                           </span>
@@ -33622,7 +33622,7 @@ exports[`Overrated > renders 1`] = `
                           class="text-subtle"
                         >
                           <legend
-                            class="inline-block h-6 text-left font-sans text-xs uppercase leading-none tracking-[0.8px] text-subtle"
+                            class="inline-block h-6 text-left font-sans text-xxs uppercase leading-none tracking-wide text-subtle"
                           >
                             Release Year
                           </legend>
@@ -33633,7 +33633,7 @@ exports[`Overrated > renders 1`] = `
                               class="flex flex-1 items-center gap-x-[.5ch]"
                             >
                               <span
-                                class="min-w-10 text-left text-sm tracking-[0.5px]"
+                                class="min-w-10 text-left text-sm tracking-serif-wide"
                               >
                                 From
                               </span>
@@ -33856,7 +33856,7 @@ exports[`Overrated > renders 1`] = `
                               class="flex flex-1 items-center"
                             >
                               <span
-                                class="min-w-10 text-center text-sm tracking-[0.5px]"
+                                class="min-w-10 text-center text-sm tracking-serif-wide"
                               >
                                 to
                               </span>
@@ -34081,7 +34081,7 @@ exports[`Overrated > renders 1`] = `
                           class="flex flex-col text-left text-subtle"
                         >
                           <label
-                            class="inline-block h-6 text-left font-sans text-xs uppercase leading-none tracking-[0.8px] text-subtle"
+                            class="inline-block h-6 text-left font-sans text-xxs uppercase leading-none tracking-wide text-subtle"
                             for="Genres"
                           >
                             Genres
@@ -34158,7 +34158,7 @@ exports[`Overrated > renders 1`] = `
                           class="flex flex-col"
                         >
                           <span
-                            class="inline-block h-6 text-left font-sans text-xs uppercase leading-none tracking-[0.8px] text-subtle"
+                            class="inline-block h-6 text-left font-sans text-xxs uppercase leading-none tracking-wide text-subtle"
                           >
                             Sort
                           </span>
@@ -39134,7 +39134,7 @@ exports[`Overrated > renders 1`] = `
                 class="mt-4"
               >
                 <li
-                  class="mb-2 font-sans text-xs uppercase tracking-[.8px] text-inverse-subtle"
+                  class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
                 >
                   <a
                     class="hover:text-inverse"
@@ -39144,7 +39144,7 @@ exports[`Overrated > renders 1`] = `
                   </a>
                 </li>
                 <li
-                  class="mb-2 font-sans text-xs uppercase tracking-[.8px] text-inverse-subtle"
+                  class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
                 >
                   <a
                     class="hover:text-inverse"
@@ -39168,7 +39168,7 @@ exports[`Overrated > renders 1`] = `
                 class="mt-4"
               >
                 <li
-                  class="mb-2 font-sans text-xs uppercase tracking-[.8px] text-inverse-subtle"
+                  class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
                 >
                   <a
                     class="hover:text-inverse"
@@ -39212,7 +39212,7 @@ exports[`Overrated > renders 1`] = `
                 class="mt-4"
               >
                 <li
-                  class="mb-2 font-sans text-xs uppercase tracking-[.8px] text-inverse-subtle"
+                  class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
                 >
                   <a
                     class="hover:text-inverse"
@@ -39225,7 +39225,7 @@ exports[`Overrated > renders 1`] = `
             </li>
           </ul>
           <a
-            class="mb-8 w-full max-w-[320px] bg-canvas py-5 text-center font-sans text-xs uppercase tracking-[.8px] text-default hover:bg-inverse hover:text-inverse"
+            class="mb-8 w-full max-w-[320px] bg-canvas py-5 text-center font-sans text-xs uppercase tracking-wide text-default hover:bg-inverse hover:text-inverse"
             href="#top"
           >
             To the top

@@ -88,7 +88,7 @@ export function Credits({
       </div>
       <a
         href="#top"
-        className="mx-auto mt-8 flex w-full max-w-[430px] cursor-pointer content-center items-center justify-center py-5 font-sans text-xs uppercase tracking-[.8px] shadow-all hover:bg-inverse hover:text-inverse"
+        className="mx-auto mt-8 flex w-full max-w-[430px] cursor-pointer content-center items-center justify-center py-5 font-sans text-xs uppercase tracking-wide shadow-all hover:bg-inverse hover:text-inverse"
       >
         Back to Top
       </a>
@@ -99,7 +99,7 @@ export function Credits({
 function Credit({ term, value }: { term: string; value: React.ReactNode }) {
   return (
     <div>
-      <dt className="font-sans text-xs font-normal uppercase tracking-[0.8px] text-subtle">
+      <dt className="font-sans text-xxs uppercase tracking-wide text-subtle">
         {term}
       </dt>
       <dd className="text-wrap font-normal text-muted">{value}</dd>

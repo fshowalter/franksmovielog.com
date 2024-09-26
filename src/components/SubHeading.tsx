@@ -14,7 +14,7 @@ export function SubHeading({
   return (
     <Component
       className={ccn(
-        "py-10 font-sans text-xs font-bold uppercase tracking-[1.2px] text-subtle",
+        "py-10 font-sans text-xs font-semibold uppercase tracking-wide text-subtle",
         className,
       )}
     >
