@@ -28,7 +28,7 @@ export function ListItemTitle({
   }
 
   return (
-    <span className="block font-sans-narrow text-sm font-medium text-muted tablet:text-base">
+    <span className="block font-sans-narrow text-base font-medium text-muted tablet:text-base">
       {title}
       {"\u202F"}
       {"\u202F"}
