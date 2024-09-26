@@ -84,7 +84,7 @@ function Name({
   if (value.slug) {
     return (
       <a
-        className="font-normal text-accent"
+        className="inline-block font-normal leading-6 text-accent"
         href={`/cast-and-crew/${value.slug}/`}
       >
         {value.name}
