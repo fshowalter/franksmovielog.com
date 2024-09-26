@@ -88,7 +88,7 @@ export function Credits({
       </div>
       <a
         href="#top"
-        className="mx-auto mt-8 flex w-full max-w-[430px] cursor-pointer content-center items-center justify-center py-5 font-sans text-xs uppercase tracking-wide shadow-all hover:bg-inverse hover:text-inverse"
+        className="mx-auto mt-8 flex w-full max-w-button cursor-pointer content-center items-center justify-center py-5 font-sans text-xs uppercase tracking-wide shadow-all hover:bg-inverse hover:text-inverse"
       >
         Back to Top
       </a>

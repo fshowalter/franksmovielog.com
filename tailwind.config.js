@@ -65,9 +65,13 @@ export default {
         prose: PROSE_CONTENT_WIDTH,
         popout: `calc(64px + ${PROSE_CONTENT_WIDTH})`,
         unset: "unset",
+        button: "430px",
       },
       padding: {
         container: "var(--container-padding)",
+      },
+      width: {
+        "list-item-poster": "var(--list-item-poster-width)",
       },
     },
   },

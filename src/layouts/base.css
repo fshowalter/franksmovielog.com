@@ -26,6 +26,7 @@
   --font-sans: "ArgentumSans";
   --font-sans-narrow: "Radio Canada";
   --font-serif: "FrankRuhlLibre";
+  --list-item-poster-width: 64px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -52,6 +53,7 @@
   :root {
     --container-padding: 48px;
     --search-dialog-padding: 24px;
+    --list-item-poster-width: 76px;
   }
 }
 
@@ -59,6 +61,7 @@
   :root {
     --container-padding: 80px;
     --search-dialog-padding: 32px;
+    --list-item-poster-width: 80px;
   }
 }
 

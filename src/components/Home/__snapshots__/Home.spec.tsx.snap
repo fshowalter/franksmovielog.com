@@ -1307,7 +1307,7 @@ exports[`Home > matches snapshot 1`] = `
             class="flex py-10"
           >
             <a
-              class="mx-auto w-full max-w-[430px] bg-default py-5 text-center font-sans text-xs font-semibold uppercase tracking-wide text-accent hover:bg-accent hover:text-inverse"
+              class="mx-auto w-full max-w-button bg-default py-5 text-center font-sans text-xs font-semibold uppercase tracking-wide text-accent hover:bg-accent hover:text-inverse"
               href="/reviews/"
             >
               All Reviews
@@ -1471,7 +1471,7 @@ exports[`Home > matches snapshot 1`] = `
             </li>
           </ul>
           <a
-            class="mb-8 w-full max-w-[320px] bg-canvas py-5 text-center font-sans text-xs uppercase tracking-wide text-default hover:bg-inverse hover:text-inverse"
+            class="mb-8 w-full max-w-button bg-canvas py-5 text-center font-sans text-xs uppercase tracking-wide text-default hover:bg-inverse hover:text-inverse"
             href="#top"
           >
             To the top

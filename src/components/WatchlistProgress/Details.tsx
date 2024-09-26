@@ -120,7 +120,7 @@ function DetailsItemAvatar({
   return (
     <div
       className={ccn(
-        "safari-border-radius-fix w-12 overflow-hidden rounded-[50%]",
+        "safari-border-radius-fix w-12 overflow-hidden rounded-full",
         className,
       )}
     >

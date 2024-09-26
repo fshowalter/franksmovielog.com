@@ -17,7 +17,7 @@ export function ListItemTitle({
     return (
       <a
         href={`/reviews/${slug}/`}
-        className="block font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-16 hover:underline tablet:before:left-4 tablet:before:w-[76px] desktop:before:left-6 desktop:before:w-20"
+        className="block font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster hover:underline tablet:before:left-4 desktop:before:left-6"
       >
         {title}
         {"\u202F"}

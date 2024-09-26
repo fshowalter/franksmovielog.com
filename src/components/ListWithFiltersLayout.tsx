@@ -49,7 +49,7 @@ export function ListWithFiltersLayout({
                 >
                   <div className="w-full overflow-hidden bg-subtle px-container text-sm tablet:text-base tablet-landscape:overflow-visible tablet-landscape:bg-default tablet-landscape:pt-0 desktop:px-8">
                     <fieldset className="mt-4 flex flex-col gap-10 bg-default px-container py-10 tablet:gap-12 tablet-landscape:mt-0 tablet-landscape:px-0">
-                      <legend className="hidden w-full py-10 font-sans text-xs font-bold uppercase tracking-wide text-subtle tablet-landscape:shadow-bottom min-[1024px]:block">
+                      <legend className="tablet-landscape::block hidden w-full py-10 font-sans text-xs font-bold uppercase tracking-wide text-subtle tablet-landscape:shadow-bottom">
                         Filter & Sort
                       </legend>
                       {filters}

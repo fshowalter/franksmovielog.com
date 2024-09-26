@@ -20,7 +20,7 @@ export function Footer(): JSX.Element {
         </ul>
         <a
           href="#top"
-          className="mb-8 w-full max-w-[320px] bg-canvas py-5 text-center font-sans text-xs uppercase tracking-wide text-default hover:bg-inverse hover:text-inverse"
+          className="mb-8 w-full max-w-button bg-canvas py-5 text-center font-sans text-xs uppercase tracking-wide text-default hover:bg-inverse hover:text-inverse"
         >
           To the top
         </a>
