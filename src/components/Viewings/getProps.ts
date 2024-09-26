@@ -1,5 +1,5 @@
 import { getBackdropImageProps } from "src/api/backdrops";
-import { getFixedWidthPosterImageProps } from "src/api/posters";
+import { getFluidWidthPosterImageProps } from "src/api/posters";
 import { allViewings } from "src/api/viewings";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 
@@ -44,7 +44,7 @@ export async function getProps(): Promise<Props> {
         venue: viewing.venue,
         medium: viewing.medium,
         sequence: viewing.sequence,
-        posterImageProps: await getFixedWidthPosterImageProps(
+        posterImageProps: await getFluidWidthPosterImageProps(
           viewing.slug,
           ListItemPosterImageConfig,
         ),

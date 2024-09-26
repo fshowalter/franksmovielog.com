@@ -1,6 +1,6 @@
 import { getAvatarImageProps } from "src/api/avatars";
 import { castAndCrewMember } from "src/api/castAndCrew";
-import { getFixedWidthPosterImageProps } from "src/api/posters";
+import { getFluidWidthPosterImageProps } from "src/api/posters";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 
 import type { Props } from "./CastAndCrewMember";
@@ -19,7 +19,7 @@ export async function getProps(slug: string): Promise<Props> {
       member.titles.map(async (title) => {
         return {
           ...title,
-          posterImageProps: await getFixedWidthPosterImageProps(
+          posterImageProps: await getFluidWidthPosterImageProps(
             title.slug,
             ListItemPosterImageConfig,
           ),

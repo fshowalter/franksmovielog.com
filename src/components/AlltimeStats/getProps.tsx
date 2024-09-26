@@ -1,8 +1,5 @@
 import { alltimeStats } from "src/api/alltimeStats";
-import {
-  getFixedWidthPosterImageProps,
-  getFluidWidthPosterImageProps,
-} from "src/api/posters";
+import { getFluidWidthPosterImageProps } from "src/api/posters";
 import { allStatYears } from "src/api/yearStats";
 import { MostWatchedMoviesPosterConfig } from "src/components/MostWatchedMovies";
 
@@ -33,7 +30,7 @@ export async function getProps(): Promise<Props> {
             person.viewings.map(async (viewing) => {
               return {
                 ...viewing,
-                posterImageProps: await getFixedWidthPosterImageProps(
+                posterImageProps: await getFluidWidthPosterImageProps(
                   viewing.slug,
                   MostWatchedMoviesPosterConfig,
                 ),
@@ -51,7 +48,7 @@ export async function getProps(): Promise<Props> {
             person.viewings.map(async (viewing) => {
               return {
                 ...viewing,
-                posterImageProps: await getFixedWidthPosterImageProps(
+                posterImageProps: await getFluidWidthPosterImageProps(
                   viewing.slug,
                   MostWatchedMoviesPosterConfig,
                 ),
@@ -69,7 +66,7 @@ export async function getProps(): Promise<Props> {
             person.viewings.map(async (viewing) => {
               return {
                 ...viewing,
-                posterImageProps: await getFixedWidthPosterImageProps(
+                posterImageProps: await getFluidWidthPosterImageProps(
                   viewing.slug,
                   MostWatchedMoviesPosterConfig,
                 ),
