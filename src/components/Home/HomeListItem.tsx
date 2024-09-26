@@ -53,7 +53,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
         />
       </div>
       <div className="flex grow flex-col px-[8%] pb-8 desktop:pl-[8.5%] desktop:pr-[10%]">
-        <div className="mb-1 font-sans text-xxs font-light uppercase leading-4 tracking-[1.1px] text-subtle">
+        <div className="mb-1 font-sans text-xxs font-light uppercase leading-4 tracking-wider text-subtle desktop:tracking-wide">
           {formatDate(value.date)}
         </div>
         <a
@@ -68,9 +68,9 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
         <Grade value={value.grade} height={24} className="mb-8" />
         <RenderedMarkdown
           text={value.excerpt}
-          className="mb-6 text-lg leading-normal tracking-[0.3px] text-muted"
+          className="mb-6 text-lg leading-normal tracking-prose text-muted"
         />
-        <div className="mt-auto font-sans text-xxs font-light leading-4 tracking-[1.1px] text-subtle">
+        <div className="mt-auto font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide">
           {value.genres.map((genre, index) => {
             if (index === 0) {
               return <span key={genre}>{genre}</span>;

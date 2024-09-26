@@ -67,9 +67,9 @@ function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
         <Grade value={value.grade} height={18} className="mb-4" />
         <RenderedMarkdown
           text={value.excerpt}
-          className="mb-8 text-base leading-[1.6] tracking-[0.3px] text-muted"
+          className="mb-8 text-base leading-[1.6] tracking-prose text-muted"
         />
-        <div className="font-sans text-xxs font-light leading-4 tracking-[1.1px] text-subtle">
+        <div className="font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide">
           {value.genres.map((genre, index) => {
             if (index === 0) {
               return <span key={genre}>{genre}</span>;
