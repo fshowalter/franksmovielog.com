@@ -29,7 +29,7 @@ export function GroupedList<T>({
           );
         })}
       </ol>
-      <div className="flex flex-col items-center py-10">
+      <div className="flex flex-col items-center px-container py-10">
         {totalCount > visibleCount && (
           <Button onClick={onShowMore}>Show More</Button>
         )}
