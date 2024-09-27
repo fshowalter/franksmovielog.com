@@ -1615,50 +1615,7 @@
       ]
     },
     {
-      "name": "Jack Kirby",
-      "count": 4,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 829,
-          "date": "2020-05-16",
-          "slug": null,
-          "title": "Captain America: The First Avenger",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2011"
-        },
-        {
-          "sequence": 831,
-          "date": "2020-05-31",
-          "slug": null,
-          "title": "Iron Man 3",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2013"
-        },
-        {
-          "sequence": 879,
-          "date": "2020-10-03",
-          "slug": "black-panther-2018",
-          "title": "Black Panther",
-          "medium": "Disney+",
-          "venue": null,
-          "year": "2018"
-        },
-        {
-          "sequence": 900,
-          "date": "2020-10-24",
-          "slug": "ant-man-and-the-wasp-2018",
-          "title": "Ant-Man and the Wasp",
-          "medium": "Disney+",
-          "venue": null,
-          "year": "2018"
-        }
-      ]
-    },
-    {
-      "name": "Stan Lee",
+      "name": "Larry Lieber",
       "count": 4,
       "slug": null,
       "viewings": [
@@ -1672,13 +1629,22 @@
           "year": "2013"
         },
         {
-          "sequence": 865,
-          "date": "2020-09-05",
-          "slug": "spider-man-homecoming-2017",
-          "title": "Spider-Man: Homecoming",
-          "medium": "iTunes",
+          "sequence": 832,
+          "date": "2020-06-06",
+          "slug": null,
+          "title": "Thor: The Dark World",
+          "medium": "4k UHD Blu-ray",
           "venue": null,
-          "year": "2017"
+          "year": "2013"
+        },
+        {
+          "sequence": 842,
+          "date": "2020-07-18",
+          "slug": "ant-man-2015",
+          "title": "Ant-Man",
+          "medium": "Disney+",
+          "venue": null,
+          "year": "2015"
         },
         {
           "sequence": 900,
@@ -1688,15 +1654,6 @@
           "medium": "Disney+",
           "venue": null,
           "year": "2018"
-        },
-        {
-          "sequence": 921,
-          "date": "2020-11-21",
-          "slug": "spider-man-far-from-home-2019",
-          "title": "Spider-Man: Far from Home",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2019"
         }
       ]
     },
@@ -1885,6 +1842,40 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1958"
+        }
+      ]
+    },
+    {
+      "name": "Alfred Hitchcock",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 838,
+          "date": "2020-07-10",
+          "slug": "blackmail-1929",
+          "title": "Blackmail",
+          "medium": "Kanopy",
+          "venue": null,
+          "year": "1929"
+        },
+        {
+          "sequence": 876,
+          "date": "2020-09-28",
+          "slug": "murder-1930",
+          "title": "Murder!",
+          "medium": "iTunes",
+          "venue": null,
+          "year": "1930"
+        },
+        {
+          "sequence": 909,
+          "date": "2020-11-02",
+          "slug": "juno-and-the-paycock-1930",
+          "title": "Juno and the Paycock",
+          "medium": "DVD",
+          "venue": null,
+          "year": "1929"
         }
       ]
     }

@@ -6,7 +6,10 @@ import path from "node:path";
 import chokidar from "chokidar";
 
 chokidar
-  .watch(["../movielog/reviews", "../movielog/export", "../movielog/viewings"])
+  .watch(
+    ["../movielog/reviews", "../movielog/export", "../movielog/viewings"],
+    { awaitWriteFinish: true },
+  )
   .on("all", (event, sourcePath) => {
     if (event === "add" || event === "change") {
       console.log(event, sourcePath);
