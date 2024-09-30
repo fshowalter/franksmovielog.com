@@ -1,14 +1,17 @@
 ---
+import { getOpenGraphBackdropSrc } from "src/api/backdrops";
 import { WatchlistProgress } from "src/components/WatchlistProgress";
 import { getProps } from "src/components/WatchlistProgress/getProps";
 import Layout from "src/layouts/Layout.astro";
 
 const props = await getProps();
+const openGraphImageSrc = await getOpenGraphBackdropSrc("watchlist-progress");
 ---
 
 <Layout
   title="Watchlist Progress"
   description="My progress working through my movie review bucketlist."
+  image={openGraphImageSrc}
 >
   <WatchlistProgress {...props} />
 </Layout>

@@ -11,13 +11,13 @@ const props = await getProps({
   deck: '"Forget it, Jake. It\'s Chinatown."',
 });
 
-const openGraphImage = await getOpenGraphBackdropSrc(slug);
+const openGraphImageSrc = await getOpenGraphBackdropSrc(slug);
 ---
 
 <Layout
   title="410: Gone"
   description="Forget it, Jake. It's Chinatown."
-  image={openGraphImage}
+  image={openGraphImageSrc}
   article
 >
   <Article {...props} />
