@@ -35,7 +35,6 @@ const props = await getProps(slug);
   title={`${props.value.title} (${props.value.year})`}
   description={`${textStarsForGrade(props.value.grade)} ${props.value.excerptPlainText}`}
   image={props.seoImageSrc}
-  hasBackdrop={false}
   article
 >
   <Review {...props} />
