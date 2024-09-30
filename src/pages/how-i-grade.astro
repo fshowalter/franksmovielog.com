@@ -11,13 +11,13 @@ const props = await getProps({
   deck: `"Should I watch this movie?"`,
 });
 
-const openGraphImage = await getOpenGraphBackdropSrc(slug);
+const openGraphImageSrc = await getOpenGraphBackdropSrc(slug);
 ---
 
 <Layout
   title={props.title}
   description="The criteria I use to rate movies on this site."
-  image={openGraphImage}
+  image={openGraphImageSrc}
   article
 >
   <div data-pagefind-body>

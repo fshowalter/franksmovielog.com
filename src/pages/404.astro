@@ -11,13 +11,13 @@ const props = await getProps({
   deck: '"Dick Laurent is dead."',
 });
 
-const openGraphImage = await getOpenGraphBackdropSrc(slug);
+const openGraphImageSrc = await getOpenGraphBackdropSrc(slug);
 ---
 
 <Layout
   title="404: Not Found"
   description="Dick Laurent is dead."
-  image={openGraphImage}
+  image={openGraphImageSrc}
   article
 >
   <Article {...props} />
