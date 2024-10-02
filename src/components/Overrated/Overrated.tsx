@@ -1,4 +1,5 @@
 import { useReducer } from "react";
+import type { BackdropImageProps } from "src/api/backdrops";
 import type { OverratedDisappointment } from "src/api/overratedDisappointments";
 import type { PosterImageProps } from "src/api/posters";
 import {
@@ -6,7 +7,7 @@ import {
   SubNav,
 } from "src/components/ListWithFiltersLayout";
 
-import { SolidBackdrop } from "../Backdrop";
+import { Backdrop } from "../Backdrop";
 import { Grade } from "../Grade";
 import { GroupedList } from "../GroupedList";
 import { ListItem } from "../ListItem";
@@ -22,6 +23,7 @@ export type Props = {
   distinctGenres: string[];
   distinctReleaseYears: string[];
   initialSort: Sort;
+  backdropImageProps: BackdropImageProps;
 };
 
 export type ListItemValue = Pick<
@@ -44,6 +46,7 @@ export function Overrated({
   distinctGenres,
   distinctReleaseYears,
   initialSort,
+  backdropImageProps,
 }: Props): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
@@ -58,10 +61,11 @@ export function Overrated({
     <ListWithFiltersLayout
       mastGradient={false}
       backdrop={
-        <SolidBackdrop
+        <Backdrop
           title="Overrated Disappointments"
           deck=" One and two star movies with an above-average IMDb rating and vote
         count."
+          imageProps={backdropImageProps}
           breadcrumb={
             <>
               <a

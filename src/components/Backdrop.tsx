@@ -132,7 +132,7 @@ function Wrapper({
   heroImage?: React.ReactNode;
 }) {
   const defaultSizes =
-    "min-h-[400px] tablet:min-h-[640px] desktop:min-h-[clamp(640px,60vh,1350px)]";
+    "min-h-[400px] tablet:min-h-[640px] desktop:min-h-[clamp(640px,70vh,1350px)]";
 
   const largeSizes = "min-h-[90vh] max-h-[1350px]";
 

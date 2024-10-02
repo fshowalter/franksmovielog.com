@@ -103,7 +103,7 @@ function FluidListItemPoster({
       <a
         href={`/reviews/${slug}/`}
         className={ccn(
-          "w-full min-w-16 max-w-16 tablet:max-w-[248px]",
+          "relative block w-full before:absolute before:inset-0 before:z-10 before:aspect-poster before:opacity-15 hover:before:opacity-0 tablet:max-w-[248px] tablet:before:bg-[#fff]",
           className,
         )}
       >
@@ -116,6 +116,7 @@ function FluidListItemPoster({
           sizes={MostWatchedMoviesPosterConfig.sizes}
           loading="lazy"
           decoding="async"
+          className="h-auto"
         />
       </a>
     );

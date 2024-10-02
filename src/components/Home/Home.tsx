@@ -20,9 +20,11 @@ export function Home({ values, backdropImageProps }: Props): JSX.Element {
         deck="Quality reviews of films of questionable quality."
         titleStyle="[text-shadow:1px_1px_2px_black] text-4xl desktop:text-7xl"
       />
-      <nav className="mx-auto max-w-screen-max px-container">
-        <SubHeading as="h2">Latest Reviews</SubHeading>
-        <ul className="flex w-full flex-col flex-wrap justify-center gap-x-[3%] gap-y-[6vw] pb-8 tablet:flex-row tablet:justify-between desktop:gap-y-[3vw] max:gap-y-14">
+      <nav className="mx-auto max-w-screen-max">
+        <SubHeading as="h2" className="px-container">
+          Latest Reviews
+        </SubHeading>
+        <ul className="flex w-full flex-col flex-wrap justify-center gap-x-[3%] gap-y-[6vw] px-[4%] pb-8 tablet:flex-row tablet:justify-between tablet:px-container desktop:gap-y-[3vw] max:gap-y-14">
           {values.map((value) => {
             return <HomeListItem key={value.sequence} value={value} />;
           })}
