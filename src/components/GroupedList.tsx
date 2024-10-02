@@ -50,7 +50,7 @@ function GroupingListItem({
   return (
     <li className="block">
       <div style={{ zIndex: zIndex }} className="pt-0 text-md">
-        <div className="mb-1 max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:px-4">
+        <div className="max-w-screen-max bg-footer px-container py-8 text-xl leading-8 text-inverse opacity-85 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100">
           {groupText}
         </div>
       </div>
