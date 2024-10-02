@@ -67,6 +67,7 @@ export function Viewings({
 
   return (
     <ListWithFiltersLayout
+      className="bg-subtle [--bg-subtle:#fafafa]"
       backdrop={
         <Backdrop
           title="Viewing Log"
@@ -151,7 +152,7 @@ function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
 
   return (
     <li
-      className="relative mb-1 flex flex-row items-center gap-x-4 bg-default px-container py-4 tablet:gap-x-6 tablet:pl-4"
+      className="relative mb-1 flex flex-row items-center gap-x-4 bg-default px-container py-4 last-of-type:mb-0 tablet:gap-x-6 tablet:pl-4"
       style={{
         background: value.slug ? "var(--bg-default)" : "var(--bg-subtle)",
       }}
