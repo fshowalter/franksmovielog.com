@@ -1,4 +1,5 @@
 import { useReducer } from "react";
+import type { BackdropImageProps } from "src/api/backdrops";
 import type { PosterImageProps } from "src/api/posters";
 import type { UnderseenGem } from "src/api/underseenGems";
 import {
@@ -6,7 +7,7 @@ import {
   SubNav,
 } from "src/components/ListWithFiltersLayout";
 
-import { SolidBackdrop } from "../Backdrop";
+import { Backdrop } from "../Backdrop";
 import { Grade } from "../Grade";
 import { GroupedList } from "../GroupedList";
 import { ListItem } from "../ListItem";
@@ -22,6 +23,7 @@ export type Props = {
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
   initialSort: Sort;
+  backdropImageProps: BackdropImageProps;
 };
 
 export type ListItemValue = Pick<
@@ -44,6 +46,7 @@ export function Underseen({
   distinctGenres,
   distinctReleaseYears,
   initialSort,
+  backdropImageProps,
 }: Props): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
@@ -58,8 +61,9 @@ export function Underseen({
     <ListWithFiltersLayout
       mastGradient={false}
       backdrop={
-        <SolidBackdrop
+        <Backdrop
           title="Underseen Gems"
+          imageProps={backdropImageProps}
           breadcrumb={
             <>
               <a

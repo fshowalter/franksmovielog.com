@@ -1,7 +1,9 @@
+import { getBackdropImageProps } from "src/api/backdrops";
 import { getFixedWidthPosterImageProps } from "src/api/posters";
 import { allUnderseenGems } from "src/api/underseenGems";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 
+import { BackdropImageConfig } from "../Backdrop";
 import type { ListItemValue } from "./Underseen";
 import type { Props } from "./Underseen";
 
@@ -40,5 +42,9 @@ export async function getProps(): Promise<Props> {
     initialSort: "release-date-desc",
     distinctGenres,
     distinctReleaseYears,
+    backdropImageProps: await getBackdropImageProps(
+      "underseen",
+      BackdropImageConfig,
+    ),
   };
 }

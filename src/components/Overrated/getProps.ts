@@ -1,7 +1,9 @@
+import { getBackdropImageProps } from "src/api/backdrops";
 import { allOverratedDisappointments } from "src/api/overratedDisappointments";
 import { getFixedWidthPosterImageProps } from "src/api/posters";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 
+import { BackdropImageConfig } from "../Backdrop";
 import type { ListItemValue } from "./Overrated";
 import type { Props } from "./Overrated";
 
@@ -40,5 +42,9 @@ export async function getProps(): Promise<Props> {
     initialSort: "release-date-desc",
     distinctGenres,
     distinctReleaseYears,
+    backdropImageProps: await getBackdropImageProps(
+      "overrated",
+      BackdropImageConfig,
+    ),
   };
 }
