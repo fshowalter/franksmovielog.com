@@ -48,7 +48,7 @@ export function OpenGraphImage({
             textTransform: "uppercase",
           }}
         >
-          Frank's Movie Log
+          Frank&apos;s Movie Log
         </span>
         <span
           style={{
