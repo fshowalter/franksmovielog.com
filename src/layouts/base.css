@@ -10,6 +10,8 @@
   --bg-inverse: rgb(0 0 0 / 75%);
   --bg-progress: #14bd41;
   --bg-stripe: #fcfcfc;
+  --bg-unwatched: #fcfcfc;
+  --bg-group: #ededed;
   --bg-subtle: #f6f6f6;
   --border-accent: #054a93;
   --border-default: #e9e7e0;
@@ -35,7 +37,9 @@
     --bg-default: #322f2f;
     --bg-inverse: #322f2f;
     --bg-progress: #379634;
+    --bg-group: #464646;
     --bg-stripe: #3c393a;
+    --bg-unwatched: #3c393a;
     --bg-subtle: #373434;
     --border-accent: #499ef8;
     --border-default: #484745;

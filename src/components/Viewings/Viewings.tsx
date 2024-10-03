@@ -123,7 +123,7 @@ function DateListItem({
   const [day, date] = dayAndDate.split("-");
 
   return (
-    <li className="relative flex max-w-screen-max flex-col bg-[#ededed] last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4">
+    <li className="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4">
       <div className="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted">
         <div className="flex items-center gap-1 tablet:block">
           <div className="text-center text-2xl text-muted tablet:text-2.5xl/8">
@@ -153,7 +153,7 @@ function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
     <li
       className="relative mb-1 flex flex-row items-center gap-x-4 bg-default px-container py-4 last-of-type:mb-0 tablet:gap-x-6 tablet:pl-4"
       style={{
-        background: value.slug ? "var(--bg-default)" : "var(--bg-stripe)",
+        background: value.slug ? "var(--bg-default)" : "var(--bg-unwatched)",
       }}
       {...rest}
     >

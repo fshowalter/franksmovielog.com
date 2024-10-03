@@ -52,7 +52,7 @@ export function MostWatchedPeople({
                 </div>
               </div>
               <div className="col-span-2 row-start-2 bg-subtle">
-                <details className="bg-[#ededed] tablet:px-2">
+                <details className="bg-group tablet:px-2">
                   <summary className="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0">
                     Details
                   </summary>
@@ -101,7 +101,7 @@ function MostWatchedPersonViewingListItem({
   value: ViewingSubListItemValue;
 }) {
   return (
-    <ListItem background={value.slug ? "bg-default" : "bg-stripe"}>
+    <ListItem background={value.slug ? "bg-default" : "bg-unwatched"}>
       <ListItemPoster imageProps={value.posterImageProps} />
       <div className="flex grow flex-col gap-1">
         <ListItemTitle
