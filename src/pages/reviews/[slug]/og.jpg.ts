@@ -42,6 +42,8 @@ export const GET: APIRoute = async function get({ props }) {
     path.resolve(`./public${fileForGrade(reviewProps.value.grade)}`),
   );
 
+  console.log(grade);
+
   const png = await componentToPng(
     OpenGraphImage({
       title: reviewProps.value.title,
