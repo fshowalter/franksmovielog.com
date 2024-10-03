@@ -67,7 +67,6 @@ export function Viewings({
 
   return (
     <ListWithFiltersLayout
-      className="bg-subtle [--bg-subtle:#fafafa]"
       backdrop={
         <Backdrop
           title="Viewing Log"
@@ -124,18 +123,18 @@ function DateListItem({
   const [day, date] = dayAndDate.split("-");
 
   return (
-    <li className="relative flex max-w-screen-max flex-col gap-2 gap-x-4 bg-stripe first:pt-0 tablet:flex-row tablet:items-center tablet:gap-x-8 tablet:px-4 tablet:even:bg-subtle desktop:px-6">
-      <div className="px-container py-1 text-muted tablet:px-0">
-        <div className="flex items-center gap-1 tablet:block tablet:shadow-all">
-          <div className="py-2 uppercase tablet:w-12 tablet:bg-canvas tablet:text-center tablet:text-sm/none">
-            {day}
-          </div>
-          <div className="text-center text-muted tablet:text-2.5xl/8">
+    <li className="relative flex max-w-screen-max flex-col bg-[#ededed] last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4">
+      <div className="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted">
+        <div className="flex items-center gap-1 tablet:block">
+          <div className="text-center text-2xl text-muted tablet:text-2.5xl/8">
             {date}
+          </div>
+          <div className="ml-1 py-2 font-sans text-xxs/none uppercase text-subtle tablet:ml-0 tablet:w-12 tablet:text-center">
+            {day}
           </div>
         </div>
       </div>
-      <ul className="flex grow flex-col tablet:my-4 tablet:gap-y-0">
+      <ul className="flex h-full grow flex-col tablet:gap-y-0">
         {values.map((value) => {
           return <ViewingListItem value={value} key={value.sequence} />;
         })}
@@ -154,7 +153,7 @@ function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
     <li
       className="relative mb-1 flex flex-row items-center gap-x-4 bg-default px-container py-4 last-of-type:mb-0 tablet:gap-x-6 tablet:pl-4"
       style={{
-        background: value.slug ? "var(--bg-default)" : "var(--bg-subtle)",
+        background: value.slug ? "var(--bg-default)" : "var(--bg-stripe)",
       }}
       {...rest}
     >
