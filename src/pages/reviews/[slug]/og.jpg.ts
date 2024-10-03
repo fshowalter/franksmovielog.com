@@ -1,7 +1,7 @@
+import fs from "node:fs/promises";
 import path from "node:path";
 
 import type { APIRoute, InferGetStaticPropsType } from "astro";
-import image2uri from "image2uri";
 import sharp from "sharp";
 import { allReviews } from "src/api/reviews";
 import { fileForGrade } from "src/components/Grade";
@@ -38,24 +38,22 @@ export const GET: APIRoute = async function get({ props }) {
     .toFormat("png")
     .toBuffer();
 
-  const grade = await image2uri(
+  const gradeBuffer = await fs.readFile(
     path.resolve(`./public${fileForGrade(reviewProps.value.grade)}`),
   );
 
-  console.log(grade);
-
-  const png = await componentToPng(
+  const jpeg = await componentToPng(
     OpenGraphImage({
       title: reviewProps.value.title,
       year: reviewProps.value.year,
       backdrop: `data:${"image/png"};base64,${imageBuffer.toString("base64")}`,
-      grade: grade,
+      grade: `data:${"image/svg+xml"};base64,${gradeBuffer.toString("base64")}`,
     }),
   );
 
-  return new Response(png, {
+  return new Response(jpeg, {
     headers: {
-      "Content-Type": "image/png",
+      "Content-Type": "image/jpg",
     },
   });
 };
