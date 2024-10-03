@@ -103,7 +103,7 @@ function FluidListItemPoster({
       <a
         href={`/reviews/${slug}/`}
         className={ccn(
-          "relative block w-full before:absolute before:inset-0 before:z-10 before:aspect-poster before:opacity-15 hover:before:opacity-0 tablet:max-w-[248px] tablet:before:bg-[#fff]",
+          "relative block w-list-item-poster before:absolute before:inset-0 before:z-10 before:aspect-poster before:opacity-15 hover:before:opacity-0 tablet:w-full tablet:max-w-[248px] tablet:before:bg-[#fff]",
           className,
         )}
       >
