@@ -8,18 +8,18 @@ export async function componentToSvg(component: JSX.Element) {
     height: 630,
     fonts: [
       {
-        name: "ArgentumSans",
+        name: "FrankRuhlLibre",
         data: await fs.readFile(
-          "./public/fonts/ArgentumSans/ArgentumSans-Regular.ttf",
+          "./public/fonts/Frank-Ruhl-Libre/Frank-Ruhl-Libre-Regular.ttf",
         ),
         weight: 400,
       },
       {
         name: "ArgentumSans",
         data: await fs.readFile(
-          "./public/fonts/ArgentumSans/ArgentumSans-SemiBold.ttf",
+          "./public/fonts/ArgentumSans/ArgentumSans-Regular.ttf",
         ),
-        weight: 700,
+        weight: 400,
       },
     ],
   });
@@ -27,6 +27,6 @@ export async function componentToSvg(component: JSX.Element) {
 
 export async function componentToPng(component: JSX.Element) {
   return await sharp(Buffer.from(await componentToSvg(component)))
-    .png()
+    .jpeg()
     .toBuffer();
 }

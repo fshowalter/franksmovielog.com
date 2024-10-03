@@ -12,7 +12,6 @@ import { Content } from "./Content";
 import { Credits } from "./Credits";
 import { MoreFromCastAndCrew } from "./MoreFromCastAndCrew";
 import { MoreInCollections } from "./MoreInCollections";
-import { OpenGraphImage } from "./OpenGraphImage";
 import { StructuredData } from "./StructuredData";
 import { ViewingHistoryListItem } from "./ViewingHistoryListItem";
 
