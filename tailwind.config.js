@@ -10,6 +10,8 @@ export default {
       default: "var(--bg-default)",
       footer: "var(--bg-footer)",
       inverse: "var(--bg-inverse)",
+      group: "var(--bg-group)",
+      unwatched: "var(--bg-unwatched)",
       stripe: "var(--bg-stripe)",
       subtle: "var(--bg-subtle)",
       unset: "unset",
