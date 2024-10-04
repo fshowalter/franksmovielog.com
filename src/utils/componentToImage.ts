@@ -4,7 +4,6 @@ import sharp from "sharp";
 
 export async function componentToSvg(component: JSX.Element) {
   return await satori(component, {
-    debug: true,
     width: 1200,
     height: 630,
     fonts: [

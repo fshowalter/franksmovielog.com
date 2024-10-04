@@ -1,5 +1,3 @@
-import { wrap } from "node:module";
-
 export function OpenGraphImage({
   title,
   year,
