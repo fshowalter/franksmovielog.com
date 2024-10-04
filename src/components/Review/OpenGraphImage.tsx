@@ -9,6 +9,7 @@ export function OpenGraphImage({
   backdrop: string;
   grade: string;
 }): JSX.Element {
+  console.log(grade);
   return (
     <div
       style={{
