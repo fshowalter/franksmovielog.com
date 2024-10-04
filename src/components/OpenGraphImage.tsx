@@ -1,13 +1,9 @@
 export function OpenGraphImage({
   title,
-  year,
   backdrop,
-  grade,
 }: {
   title: string;
-  year: string;
   backdrop: string;
-  grade: string;
 }): JSX.Element {
   return (
     <div
@@ -23,28 +19,27 @@ export function OpenGraphImage({
         style={{
           objectFit: "cover",
         }}
-        width={600}
+        width={1200}
         height={630}
       />
       <div
         style={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
           paddingLeft: "80px",
           paddingRight: "80px",
-          paddingBottom: "32px",
+          paddingBottom: "64px",
           paddingTop: "32px",
-          width: "600px",
-          height: "630px",
-          backgroundColor: "#252525",
+          width: "1200px",
+          position: "absolute",
+          bottom: 0,
         }}
       >
         <div
           style={{
             fontFamily: "ArgentumSans",
             color: "#b0b0b0",
-            marginBottom: "24px",
+            marginBottom: "16px",
             textTransform: "uppercase",
           }}
         >
@@ -52,24 +47,19 @@ export function OpenGraphImage({
         </div>
         <div
           style={{
-            fontFamily: "FrankRuhlLibre",
+            fontFamily: "ArgentumSans",
             color: "#fff",
             fontSize: "64px",
             lineHeight: 1,
             textWrap: "balance",
             display: "flex",
             flexWrap: "wrap",
+            fontWeight: 600,
+            textTransform: "uppercase",
           }}
         >
-          {title} ({year})
+          {title}
         </div>
-
-        <img
-          src={grade}
-          height={48}
-          width={240}
-          style={{ marginTop: "36px" }}
-        />
       </div>
     </div>
   );
