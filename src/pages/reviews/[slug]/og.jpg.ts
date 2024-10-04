@@ -34,20 +34,23 @@ export const GET: APIRoute = async function get({ props }) {
   const imageBuffer = await sharp(
     path.resolve(`./content/assets/stills/${slug}.png`),
   )
-    .resize(600)
+    .resize(1200)
     .toFormat("png")
     .toBuffer();
 
-  const gradeBuffer = await fs.readFile(
+  const gradeBuffer = await sharp(
     path.resolve(`./public${fileForGrade(reviewProps.value.grade)}`),
-  );
+  )
+    .resize(240)
+    .toFormat("png")
+    .toBuffer();
 
   const jpeg = await componentToImage(
     OpenGraphImage({
       title: reviewProps.value.title,
       year: reviewProps.value.year,
       backdrop: `data:${"image/png"};base64,${imageBuffer.toString("base64")}`,
-      grade: `data:${"image/svg+xml"};base64,${gradeBuffer.toString("base64")}`,
+      grade: `data:${"image/png"};base64,${gradeBuffer.toString("base64")}`,
     }),
   );
 

@@ -1,3 +1,5 @@
+import { wrap } from "node:module";
+
 export function OpenGraphImage({
   title,
   year,
@@ -58,9 +60,10 @@ export function OpenGraphImage({
             lineHeight: 1,
             textWrap: "balance",
             display: "flex",
+            flexWrap: "wrap",
           }}
         >
-          {title}&nbsp;({year})
+          {title} ({year})
         </div>
 
         <img
