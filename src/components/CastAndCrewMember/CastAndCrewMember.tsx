@@ -145,7 +145,7 @@ function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
   );
 }
 
-function deck(value: Props["value"]) {
+export function deck(value: Props["value"]) {
   const creditString = new Intl.ListFormat().format(value.creditedAs);
 
   const creditList =

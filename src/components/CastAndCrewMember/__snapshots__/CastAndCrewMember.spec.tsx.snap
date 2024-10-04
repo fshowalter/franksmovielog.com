@@ -67691,7 +67691,7 @@ exports[`CastAndCrewMember > renders 1`] = `
                             Credits
                           </span>
                           <select
-                            class="w-full appearance-none border-none bg-default py-2 pl-4 pr-8 text-base leading-6 text-subtle shadow-all"
+                            class="w-full appearance-none border-none bg-default py-2 pl-4 pr-8 text-base leading-6 text-subtle shadow-all outline-accent"
                           >
                             <option
                               value="All"
@@ -67724,7 +67724,7 @@ exports[`CastAndCrewMember > renders 1`] = `
                             Title
                           </span>
                           <input
-                            class="border-0 bg-default px-4 py-2 text-base text-default shadow-all placeholder:text-default placeholder:opacity-50"
+                            class="border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
                             placeholder="Enter all or part of a title"
                             type="text"
                           />
@@ -67749,7 +67749,7 @@ exports[`CastAndCrewMember > renders 1`] = `
                                 From
                               </span>
                               <select
-                                class="w-full appearance-none border-none bg-default py-2 pl-4 pr-8 text-base leading-6 text-subtle shadow-all"
+                                class="w-full appearance-none border-none bg-default py-2 pl-4 pr-8 text-base leading-6 text-subtle shadow-all outline-accent"
                               >
                                 <option
                                   value="1961"
@@ -67992,7 +67992,7 @@ exports[`CastAndCrewMember > renders 1`] = `
                                 to
                               </span>
                               <select
-                                class="w-full appearance-none border-none bg-default py-2 pl-4 pr-8 text-base leading-6 text-subtle shadow-all"
+                                class="w-full appearance-none border-none bg-default py-2 pl-4 pr-8 text-base leading-6 text-subtle shadow-all outline-accent"
                               >
                                 <option
                                   value="2021"
@@ -68237,7 +68237,7 @@ exports[`CastAndCrewMember > renders 1`] = `
                             Sort
                           </span>
                           <select
-                            class="w-full appearance-none border-none bg-default py-2 pl-4 pr-8 text-base leading-6 text-subtle shadow-all"
+                            class="w-full appearance-none border-none bg-default py-2 pl-4 pr-8 text-base leading-6 text-subtle shadow-all outline-accent"
                           >
                             <option
                               value="release-date-desc"

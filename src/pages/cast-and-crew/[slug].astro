@@ -1,6 +1,9 @@
 ---
 import { allCastAndCrew } from "src/api/castAndCrew";
-import { CastAndCrewMember } from "src/components/CastAndCrewMember/CastAndCrewMember";
+import {
+  CastAndCrewMember,
+  deck,
+} from "src/components/CastAndCrewMember/CastAndCrewMember";
 import { getProps } from "src/components/CastAndCrewMember/getProps";
 import Layout from "src/layouts/Layout.astro";
 
@@ -29,7 +32,8 @@ const props = await getProps(slug);
 
 <Layout
   title={props.value.name}
-  description={`A sortable and filterable list of reviews of ${props.value.name} movies.`}
+  description={deck(props.value)}
+  image={`/cast-and-crew/${slug}/og.jpg`}
 >
   <CastAndCrewMember client:load {...props} />
 </Layout>
