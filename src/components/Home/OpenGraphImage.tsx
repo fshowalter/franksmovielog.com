@@ -35,18 +35,16 @@ export function OpenGraphImage({
       >
         <div
           style={{
-            fontFamily: "ArgentumSans",
+            fontFamily: "FrankRuhlLibre",
             color: "#fff",
-            fontSize: "88px",
+            fontSize: "72px",
             lineHeight: 1,
-            textWrap: "balance",
             display: "flex",
-            flexWrap: "wrap",
-            fontWeight: 600,
-            textTransform: "uppercase",
+            fontWeight: 400,
+            textShadow: "1px 1px 2px black",
           }}
         >
-          {name}
+          Frank&apos;s Movie Log
         </div>
       </div>
     </div>
