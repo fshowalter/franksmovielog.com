@@ -30,7 +30,8 @@ const props = await getProps(slug);
 
 <Layout
   title={props.value.name}
-  description={`A sortable and filterable list of reviews of movies in the ${props.value.name} collection.`}
+  description={`The ${props.value.name} collection.`}
+  image={`/collections/${slug}/og.jpg`}
 >
   <Collection client:load {...props} />
 </Layout>

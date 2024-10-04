@@ -21,6 +21,13 @@ export async function componentToSvg(component: JSX.Element) {
         ),
         weight: 400,
       },
+      {
+        name: "ArgentumSans",
+        data: await fs.readFile(
+          "./public/fonts/ArgentumSans/ArgentumSans-SemiBold.ttf",
+        ),
+        weight: 600,
+      },
     ],
   });
 }

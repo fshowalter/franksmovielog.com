@@ -14,7 +14,7 @@ export function OpenGraphImage({
       style={{
         display: "flex",
         position: "relative",
-        height: "627px",
+        height: "630px",
         width: "1200px",
       }}
     >

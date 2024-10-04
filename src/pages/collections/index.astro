@@ -1,17 +1,15 @@
 ---
-import { getOpenGraphBackdropSrc } from "src/api/backdrops";
 import { Collections } from "src/components/Collections/Collections";
 import { getProps } from "src/components/Collections/getProps";
 import Layout from "src/layouts/Layout.astro";
 
 const props = await getProps();
-const opengraphImageSrc = await getOpenGraphBackdropSrc("collections");
 ---
 
 <Layout
   title="Collections"
-  description="A sortable and filterable list of movie collections."
-  image={opengraphImageSrc}
+  description="Okay ramblers, let's get rambling."
+  image="/reviews/collections/og.jpg"
 >
   <Collections client:load {...props} />
 </Layout>

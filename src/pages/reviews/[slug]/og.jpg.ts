@@ -4,7 +4,6 @@ import type { APIRoute, InferGetStaticPropsType } from "astro";
 import sharp from "sharp";
 import { allReviews } from "src/api/reviews";
 import { fileForGrade } from "src/components/Grade";
-import { getProps } from "src/components/Review/getProps";
 import { OpenGraphImage } from "src/components/Review/OpenGraphImage";
 import { componentToImage } from "src/utils/componentToImage";
 
@@ -18,6 +17,9 @@ export async function getStaticPaths() {
       },
       props: {
         slug: review.slug,
+        title: review.title,
+        year: review.year,
+        grade: review.grade,
       },
     };
   });
@@ -26,9 +28,7 @@ export async function getStaticPaths() {
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 export const GET: APIRoute = async function get({ props }) {
-  const { slug } = props as Props;
-
-  const reviewProps = await getProps(slug);
+  const { slug, title, year, grade } = props as Props;
 
   const imageBuffer = await sharp(
     path.resolve(`./content/assets/stills/${slug}.png`),
@@ -38,7 +38,7 @@ export const GET: APIRoute = async function get({ props }) {
     .toBuffer();
 
   const gradeBuffer = await sharp(
-    path.resolve(`./public${fileForGrade(reviewProps.value.grade)}`),
+    path.resolve(`./public${fileForGrade(grade)}`),
   )
     .resize(240)
     .toFormat("png")
@@ -46,8 +46,8 @@ export const GET: APIRoute = async function get({ props }) {
 
   const jpeg = await componentToImage(
     OpenGraphImage({
-      title: reviewProps.value.title,
-      year: reviewProps.value.year,
+      title,
+      year,
       backdrop: `data:${"image/png"};base64,${imageBuffer.toString("base64")}`,
       grade: `data:${"image/png"};base64,${gradeBuffer.toString("base64")}`,
     }),

@@ -25,20 +25,6 @@ async function getBackdropFile(slug: string) {
   return await images[backdropFilePath]();
 }
 
-export async function getOpenGraphBackdropSrc(slug: string) {
-  const backdropFile = await getBackdropFile(slug);
-
-  const image = await getImage({
-    src: backdropFile.default,
-    width: 1200,
-    height: 675,
-    format: "jpeg",
-    quality: 80,
-  });
-
-  return normalizeSources(image.src);
-}
-
 export async function getBackdropImageProps(
   slug: string,
   {

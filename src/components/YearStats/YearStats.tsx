@@ -42,7 +42,7 @@ export function YearStats({
         title={`${year} Stats`}
         deck={
           [...distinctStatYears].reverse()[0] === year
-            ? "A year in progress..."
+            ? "A Year in Progress..."
             : "A Year in Review"
         }
       >

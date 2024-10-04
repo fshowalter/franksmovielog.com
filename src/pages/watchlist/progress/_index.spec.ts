@@ -5,7 +5,7 @@ import { loadRenderers } from "astro:container";
 import * as prettier from "prettier";
 import { describe, it } from "vitest";
 
-import page from "./progress.astro";
+import page from "./index.astro";
 
 describe("/watchlist/progress", () => {
   it("matches snapshot", { timeout: 20000 }, async ({ expect }) => {

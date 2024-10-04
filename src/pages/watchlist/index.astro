@@ -1,17 +1,15 @@
 ---
-import { getOpenGraphBackdropSrc } from "src/api/backdrops";
 import { getProps } from "src/components/Watchlist/getProps";
 import { Watchlist } from "src/components/Watchlist/Watchlist";
 import Layout from "src/layouts/Layout.astro";
 
 const props = await getProps();
-const openGraphImageSrc = await getOpenGraphBackdropSrc("watchlist");
 ---
 
 <Layout
   title="Watchlist"
-  description="My movie review bucketlist."
-  image={openGraphImageSrc}
+  description="A man's got to know his limitations"
+  image="/watchlist/og.jpg"
 >
   <Watchlist client:load {...props} />
 </Layout>

@@ -30,7 +30,10 @@ const props = await getProps(year);
 
 <Layout
   title={`${props.year} Stats`}
-  description={`My most-watched titles, performers, directors, writers and other stats for ${props.year}.`}
+  description={[...props.distinctStatYears].reverse()[0] === year
+    ? "A Year in Progress..."
+    : "A Year in Review"}
+  image={`/viewings/stats/${props.year}/og.jpg`}
 >
   <YearStats {...props} />
 </Layout>

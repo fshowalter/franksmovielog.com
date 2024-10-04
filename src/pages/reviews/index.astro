@@ -1,17 +1,15 @@
 ---
-import { getOpenGraphBackdropSrc } from "src/api/backdrops";
 import { getProps } from "src/components/Reviews/getProps";
 import { Reviews } from "src/components/Reviews/Reviews";
 import Layout from "src/layouts/Layout.astro";
 
 const props = await getProps();
-const openGraphImageSrc = await getOpenGraphBackdropSrc("reviews");
 ---
 
 <Layout
   title="Reviews"
-  description="A sortable and filterable list of every movie I've reviewed since 2012."
-  image={openGraphImageSrc}
+  description=`"Sorry" don't get it done, Dude.`
+  image="/reviews/og.jpg"
 >
   <Reviews client:load {...props} />
 </Layout>

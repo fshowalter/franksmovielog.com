@@ -1,5 +1,4 @@
 ---
-import { getOpenGraphBackdropSrc } from "src/api/backdrops";
 import { Article } from "src/components/Article/Article";
 import { getProps } from "src/components/Article/getProps";
 import Layout from "src/layouts/Layout.astro";
@@ -10,14 +9,12 @@ const props = await getProps({
   slug,
   deck: `"Should I watch this movie?"`,
 });
-
-const openGraphImageSrc = await getOpenGraphBackdropSrc(slug);
 ---
 
 <Layout
   title={props.title}
-  description="The criteria I use to rate movies on this site."
-  image={openGraphImageSrc}
+  description="Should I watch this movie?"
+  image="/how-i-grade/og.jpg"
   article
 >
   <div data-pagefind-body>

@@ -1,17 +1,15 @@
 ---
-import { getOpenGraphBackdropSrc } from "src/api/backdrops";
 import { CastAndCrew } from "src/components/CastAndCrew/CastAndCrew";
 import { getProps } from "src/components/CastAndCrew/getProps";
 import Layout from "src/layouts/Layout.astro";
 
 const props = await getProps();
-const opengraphImageSrc = await getOpenGraphBackdropSrc("cast-and-crew");
 ---
 
 <Layout
   title="Cast and Crew"
-  description="A sortable and filterable list of select cast and crew members of reviewed movies."
-  image={opengraphImageSrc}
+  description="Round up the usual suspects."
+  image="/cast-and-crew/og.jpg"
 >
   <CastAndCrew client:load {...props} />
 </Layout>
