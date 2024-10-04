@@ -9,7 +9,6 @@ export function OpenGraphImage({
   backdrop: string;
   grade: string;
 }): JSX.Element {
-  console.log(grade);
   return (
     <div
       style={{
@@ -41,7 +40,7 @@ export function OpenGraphImage({
           backgroundColor: "#252525",
         }}
       >
-        <span
+        <div
           style={{
             fontFamily: "ArgentumSans",
             color: "#b0b0b0",
@@ -50,8 +49,8 @@ export function OpenGraphImage({
           }}
         >
           Frank&apos;s Movie Log
-        </span>
-        <span
+        </div>
+        <div
           style={{
             fontFamily: "FrankRuhlLibre",
             color: "#fff",
@@ -62,7 +61,7 @@ export function OpenGraphImage({
           }}
         >
           {title}&nbsp;({year})
-        </span>
+        </div>
 
         <img
           src={grade}

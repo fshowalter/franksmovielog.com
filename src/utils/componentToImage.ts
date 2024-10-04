@@ -4,6 +4,7 @@ import sharp from "sharp";
 
 export async function componentToSvg(component: JSX.Element) {
   return await satori(component, {
+    debug: true,
     width: 1200,
     height: 630,
     fonts: [
@@ -25,7 +26,7 @@ export async function componentToSvg(component: JSX.Element) {
   });
 }
 
-export async function componentToPng(component: JSX.Element) {
+export async function componentToImage(component: JSX.Element) {
   return await sharp(Buffer.from(await componentToSvg(component)))
     .jpeg()
     .toBuffer();

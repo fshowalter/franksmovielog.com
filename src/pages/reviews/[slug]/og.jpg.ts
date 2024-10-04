@@ -7,7 +7,7 @@ import { allReviews } from "src/api/reviews";
 import { fileForGrade } from "src/components/Grade";
 import { getProps } from "src/components/Review/getProps";
 import { OpenGraphImage } from "src/components/Review/OpenGraphImage";
-import { componentToPng } from "src/utils/componentToImage";
+import { componentToImage } from "src/utils/componentToImage";
 
 export async function getStaticPaths() {
   const { reviews } = await allReviews();
@@ -42,7 +42,7 @@ export const GET: APIRoute = async function get({ props }) {
     path.resolve(`./public${fileForGrade(reviewProps.value.grade)}`),
   );
 
-  const jpeg = await componentToPng(
+  const jpeg = await componentToImage(
     OpenGraphImage({
       title: reviewProps.value.title,
       year: reviewProps.value.year,
