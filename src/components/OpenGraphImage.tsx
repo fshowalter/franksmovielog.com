@@ -41,6 +41,7 @@ export function OpenGraphImage({
             color: "#b0b0b0",
             marginBottom: "16px",
             textTransform: "uppercase",
+            textShadow: "1px 1px 2px black",
           }}
         >
           Frank&apos;s Movie Log
@@ -49,7 +50,7 @@ export function OpenGraphImage({
           style={{
             fontFamily: "ArgentumSans",
             color: "#fff",
-            fontSize: "64px",
+            fontSize: "88px",
             lineHeight: 1,
             textWrap: "balance",
             display: "flex",
