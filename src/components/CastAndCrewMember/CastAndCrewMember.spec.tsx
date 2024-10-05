@@ -20,7 +20,6 @@ describe("CastAndCrewMember", () => {
     expect.hasAssertions();
     render(<CastAndCrewMember {...props} />);
 
-    // eslint-disable-next-line testing-library/no-unnecessary-act
     await act(async () => {
       await userEvent.type(screen.getByLabelText("Title"), "Cannonball");
       await new Promise((r) => setTimeout(r, 500));

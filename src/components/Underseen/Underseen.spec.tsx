@@ -19,7 +19,6 @@ describe("Underseen", () => {
     expect.hasAssertions();
     render(<Underseen {...props} />);
 
-    // eslint-disable-next-line testing-library/no-unnecessary-act
     await act(async () => {
       await userEvent.type(screen.getByLabelText("Title"), "Arrebato");
       await new Promise((r) => setTimeout(r, 500));
