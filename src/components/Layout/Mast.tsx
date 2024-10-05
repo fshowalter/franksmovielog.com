@@ -115,7 +115,7 @@ function SearchButton() {
         disabled
         aria-label="Search"
         aria-keyshortcuts="Control+K"
-        className="flex items-center justify-between overflow-hidden text-sm leading-6 ring-default desktop:ml-6"
+        className="flex size-10 items-center justify-center overflow-hidden text-sm leading-6 ring-default desktop:ml-6"
         type="button"
         title="Search: Control+K"
       >
@@ -125,7 +125,7 @@ function SearchButton() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="size-6 desktop:size-7"
+          className="size-7"
         >
           <path
             strokeLinecap="round"
