@@ -1,8 +1,10 @@
 import { alltimeStats } from "src/api/alltimeStats";
+import { getBackdropImageProps } from "src/api/backdrops";
 import { getFluidWidthPosterImageProps } from "src/api/posters";
 import { allStatYears } from "src/api/yearStats";
 import { MostWatchedMoviesPosterConfig } from "src/components/MostWatchedMovies";
 
+import { BackdropImageConfig } from "../Backdrop";
 import { type Props } from "./AlltimeStats";
 
 export async function getProps(): Promise<Props> {
@@ -11,6 +13,10 @@ export async function getProps(): Promise<Props> {
 
   return {
     stats,
+    backdropImageProps: await getBackdropImageProps(
+      "stats",
+      BackdropImageConfig,
+    ),
     mostWatchedMovies: await Promise.all(
       stats.mostWatchedTitles.map(async (title) => {
         return {
