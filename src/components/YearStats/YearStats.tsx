@@ -1,3 +1,4 @@
+import type { BackdropImageProps } from "src/api/backdrops";
 import type { YearStats } from "src/api/yearStats";
 import { DecadeDistribution } from "src/components/DecadeDistribution";
 import { Layout } from "src/components/Layout";
@@ -10,7 +11,7 @@ import { MostWatchedPerformers } from "src/components/MostWatchedPerformers";
 import { MostWatchedWriters } from "src/components/MostWatchedWriters";
 import { StatsNavigation } from "src/components/StatsNavigation";
 
-import { StatsBackdrop } from "../Backdrop";
+import { Backdrop } from "../Backdrop";
 import { Callouts } from "./Callouts";
 
 export interface Props {
@@ -21,6 +22,7 @@ export interface Props {
   mostWatchedDirectors: MostWatchedPeopleListItemValue[];
   mostWatchedPerformers: MostWatchedPeopleListItemValue[];
   mostWatchedWriters: MostWatchedPeopleListItemValue[];
+  backdropImageProps: BackdropImageProps;
 }
 
 export function YearStats({
@@ -31,13 +33,15 @@ export function YearStats({
   mostWatchedDirectors,
   mostWatchedPerformers,
   mostWatchedWriters,
+  backdropImageProps,
 }: Props): JSX.Element {
   return (
     <Layout
       addGradient={false}
       className="flex flex-col items-center bg-subtle"
     >
-      <StatsBackdrop
+      <Backdrop
+        imageProps={backdropImageProps}
         breadcrumb={<a href="/viewings/">Viewing Log</a>}
         title={`${year} Stats`}
         deck={
@@ -45,25 +49,24 @@ export function YearStats({
             ? "A Year in Progress..."
             : "A Year in Review"
         }
-      >
-        <StatsNavigation
-          currentYear={year}
-          linkFunc={(year: string) => {
-            if (year === "all") {
-              return "/viewings/stats/";
-            }
+      />
+      <StatsNavigation
+        currentYear={year}
+        linkFunc={(year: string) => {
+          if (year === "all") {
+            return "/viewings/stats/";
+          }
 
-            return `/viewings/stats/${year}/`;
-          }}
-          years={distinctStatYears}
-          className="mb-8"
-        />
-        <Callouts
-          titleCount={stats.titleCount}
-          newTitleCount={stats.newTitleCount}
-          viewingCount={stats.viewingCount}
-        />
-      </StatsBackdrop>
+          return `/viewings/stats/${year}/`;
+        }}
+        years={distinctStatYears}
+        className="mb-12 w-full"
+      />
+      <Callouts
+        titleCount={stats.titleCount}
+        newTitleCount={stats.newTitleCount}
+        viewingCount={stats.viewingCount}
+      />
       <div className="mx-auto flex w-full max-w-screen-max flex-col items-stretch gap-y-8 py-10 tablet:px-container">
         <MostWatchedMovies
           values={mostWatchedMovies}

@@ -1,6 +1,14 @@
 {
   "$schema": "https://unpkg.com/knip@5/schema.json",
   "entry": ["src/pages/**/*.astro"],
-  "project": ["**/*", "!src/**/__mocks__/**"],
+  "project": [
+    "**/*",
+    "!src/**/__mocks__/**",
+    "!content/**",
+    "!public/**",
+    "!**/__snapshots__/**",
+    "!**/__image_snapshots__/**",
+    "!src/**/fixtures/**"
+  ],
   "ignoreDependencies": ["@prettier/plugin-xml"]
 }
