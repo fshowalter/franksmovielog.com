@@ -1,10 +1,10 @@
 import { useReducer } from "react";
-import type { AvatarImageProps } from "src/api/avatars";
+import type { BackdropImageProps } from "src/api/backdrops";
 import type { CastAndCrewMember } from "src/api/castAndCrew";
 import type { PosterImageProps } from "src/api/posters";
 import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
 
-import { AvatarBackdrop, BreadcrumbLink } from "../Backdrop";
+import { Backdrop, BreadcrumbLink } from "../Backdrop";
 import { CreditedAs } from "../CreditedAs";
 import { Grade } from "../Grade";
 import { GroupedList } from "../GroupedList";
@@ -28,7 +28,7 @@ export type Props = {
   titles: ListItemValue[];
   initialSort: Sort;
   distinctReleaseYears: readonly string[];
-  avatarImageProps: AvatarImageProps | null;
+  backdropImageProps: BackdropImageProps;
 };
 
 export const AvatarImageConfig = {
@@ -60,7 +60,7 @@ export function CastAndCrewMember({
   titles,
   initialSort,
   distinctReleaseYears,
-  avatarImageProps,
+  backdropImageProps,
 }: Props): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
@@ -73,14 +73,13 @@ export function CastAndCrewMember({
   return (
     <ListWithFiltersLayout
       data-pagefind-body
-      mastGradient={false}
       backdrop={
-        <AvatarBackdrop
-          avatarImageProps={avatarImageProps}
+        <Backdrop
+          imageProps={backdropImageProps}
           breadcrumb={
             <BreadcrumbLink href="/cast-and-crew/">Cast & Crew</BreadcrumbLink>
           }
-          name={value.name}
+          title={value.name}
           deck={deck(value)}
         />
       }
