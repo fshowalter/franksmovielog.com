@@ -36,7 +36,7 @@ export function MostWatchedPeople({
 
   return (
     <section className="w-full bg-default pb-8 tablet:px-container">
-      <h2 className="px-container py-4 font-medium tablet:px-0 desktop:text-xl">
+      <h2 className="px-container py-4 font-medium tablet:px-0 tablet:text-xl">
         {header}
       </h2>
       <div className="w-full tablet:whitespace-nowrap">

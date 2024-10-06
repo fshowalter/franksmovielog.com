@@ -27,7 +27,7 @@
           class="z-20 flex w-full items-center justify-between px-container py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
           style="color: #fff; position: absolute; background-image: unset"
         >
-          <div class="flex flex-col">
+          <div class="flex flex-col mt-2 tablet:mt-0">
             <div
               class="whitespace-nowrap font-normal leading-8"
               style="font-size: 1.5625rem"
@@ -185,154 +185,172 @@
         </header>
         <main class="grow flex flex-col items-center bg-subtle" id="content">
           <header
-            class="min-h-[240px] desktop:min-h-[clamp(640px,50vh,1350px)] relative flex w-full flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pb-8 pt-40 text-inverse tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40"
+            class="min-h-[400px] tablet:min-h-[640px] desktop:min-h-[clamp(640px,70vh,1350px)] relative flex w-full flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pb-8 pt-40 text-inverse tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40"
           >
+            <img
+              class="absolute inset-0 size-full object-cover object-top"
+              srcset="
+                /_image?/content%2Fassets%2Fbackdrops%2F2012.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=600&amp;q=80&amp;f=avif              600w,
+                /_image?/content%2Fassets%2Fbackdrops%2F2012.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=1200&amp;q=80&amp;f=avif            1200w,
+                /_image?/content%2Fassets%2Fbackdrops%2F2012.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=2400&amp;h=1350&amp;q=80&amp;f=avif 2400w,
+                /_image?/content%2Fassets%2Fbackdrops%2F2012.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=2400&amp;h=1350&amp;q=80&amp;f=avif 4800w
+              "
+              src="/_image?/content%2Fassets%2Fbackdrops%2F2012.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=2400&amp;h=1350&amp;q=80&amp;f=avif"
+              width="2400"
+              height="1350"
+              sizes="100vw"
+              loading="eager"
+              fetchpriority="high"
+              alt=""
+            />
             <div
-              class="items-center z-10 mx-auto flex w-full max-w-screen-max flex-col px-container"
+              class="z-10 mx-auto flex w-full max-w-screen-max flex-col px-container"
             >
-              <p
-                class="mb-2 font-sans text-sm uppercase tracking-wide underline decoration-subtle decoration-2 underline-offset-8"
-              >
-                <a href="/viewings/">Viewing Log</a>
+              <p class="mb-2">
+                <a
+                  href="/viewings/"
+                  class="font-sans text-sm uppercase tracking-wide decoration-inverse-subtle decoration-2 underline-offset-8 hover:underline"
+                  >Viewing Log</a
+                >
               </p>
-              <h1 class="mb-4 text-4xl desktop:text-7xl">2012 Stats</h1>
+              <h1
+                class="font-sans text-2xl font-bold uppercase tracking-widest desktop:text-7xl"
+              >
+                2012 Stats
+              </h1>
               <p
-                class="mb-6 text-center font-sans text-xs uppercase tracking-wide text-inverse-subtle"
+                class="mt-1 text-base desktop:my-4 desktop:text-xl [text-shadow:1px_1px_2px_black]"
               >
                 A Year in Review
               </p>
-              <ul
-                class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-md desktop:text-xl mb-8"
-              >
-                <li class="block">
-                  <a
-                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
-                    href="/viewings/stats/"
-                    >All-Time</a
-                  >
-                </li>
-                <li class="block">
-                  <a
-                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
-                    href="/viewings/stats/2024/"
-                    >2024</a
-                  >
-                </li>
-                <li class="block">
-                  <a
-                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
-                    href="/viewings/stats/2023/"
-                    >2023</a
-                  >
-                </li>
-                <li class="block">
-                  <a
-                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
-                    href="/viewings/stats/2022/"
-                    >2022</a
-                  >
-                </li>
-                <li class="block">
-                  <a
-                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
-                    href="/viewings/stats/2021/"
-                    >2021</a
-                  >
-                </li>
-                <li class="block">
-                  <a
-                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
-                    href="/viewings/stats/2020/"
-                    >2020</a
-                  >
-                </li>
-                <li class="block">
-                  <a
-                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
-                    href="/viewings/stats/2019/"
-                    >2019</a
-                  >
-                </li>
-                <li class="block">
-                  <a
-                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
-                    href="/viewings/stats/2018/"
-                    >2018</a
-                  >
-                </li>
-                <li class="block">
-                  <a
-                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
-                    href="/viewings/stats/2017/"
-                    >2017</a
-                  >
-                </li>
-                <li class="block">
-                  <a
-                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
-                    href="/viewings/stats/2016/"
-                    >2016</a
-                  >
-                </li>
-                <li class="block">
-                  <a
-                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
-                    href="/viewings/stats/2015/"
-                    >2015</a
-                  >
-                </li>
-                <li class="block">
-                  <a
-                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
-                    href="/viewings/stats/2014/"
-                    >2014</a
-                  >
-                </li>
-                <li class="block">
-                  <a
-                    class="decoration-1 underline-offset-8 opacity-75 hover:underline hover:opacity-100"
-                    href="/viewings/stats/2013/"
-                    >2013</a
-                  >
-                </li>
-                <li class="block font-medium">2012</li>
-              </ul>
-              <div
-                class="flex flex-wrap justify-center gap-6 desktop:flex-nowrap"
-              >
-                <div
-                  class="flex size-36 flex-col justify-center rounded-full bg-subtle text-center text-default shadow-all"
-                >
-                  <div class="text-[2rem] leading-8">257</div>
-                  <div
-                    class="font-sans text-sm font-light leading-6 text-subtle"
-                  >
-                    Viewings
-                  </div>
-                </div>
-                <div
-                  class="flex size-36 flex-col justify-center rounded-full bg-subtle text-center text-default shadow-all"
-                >
-                  <div class="text-[2rem] leading-8">253</div>
-                  <div
-                    class="font-sans text-sm font-light leading-6 text-subtle"
-                  >
-                    Movies
-                  </div>
-                </div>
-                <div
-                  class="flex size-36 flex-col justify-center rounded-full bg-subtle text-center text-default shadow-all"
-                >
-                  <div class="text-[2rem] leading-8">253</div>
-                  <div
-                    class="font-sans text-sm font-light leading-6 text-subtle"
-                  >
-                    New Movies
-                  </div>
-                </div>
-              </div>
             </div>
           </header>
+          <nav class="bg-footer mb-12 w-full">
+            <ul
+              class="mx-auto flex max-w-screen-max overflow-y-auto px-container font-sans text-sm font-normal tracking-wide desktop:justify-center"
+            >
+              <li class="text-center text-inverse-subtle">
+                <a
+                  class="block whitespace-nowrap p-4 hover:bg-default hover:text-default desktop:py-4"
+                  href="/viewings/stats/"
+                  >All-Time</a
+                >
+              </li>
+              <li class="text-center text-inverse-subtle">
+                <a
+                  class="block p-4 hover:bg-default hover:text-default"
+                  href="/viewings/stats/2024/"
+                  >2024</a
+                >
+              </li>
+              <li class="text-center text-inverse-subtle">
+                <a
+                  class="block p-4 hover:bg-default hover:text-default"
+                  href="/viewings/stats/2023/"
+                  >2023</a
+                >
+              </li>
+              <li class="text-center text-inverse-subtle">
+                <a
+                  class="block p-4 hover:bg-default hover:text-default"
+                  href="/viewings/stats/2022/"
+                  >2022</a
+                >
+              </li>
+              <li class="text-center text-inverse-subtle">
+                <a
+                  class="block p-4 hover:bg-default hover:text-default"
+                  href="/viewings/stats/2021/"
+                  >2021</a
+                >
+              </li>
+              <li class="text-center text-inverse-subtle">
+                <a
+                  class="block p-4 hover:bg-default hover:text-default"
+                  href="/viewings/stats/2020/"
+                  >2020</a
+                >
+              </li>
+              <li class="text-center text-inverse-subtle">
+                <a
+                  class="block p-4 hover:bg-default hover:text-default"
+                  href="/viewings/stats/2019/"
+                  >2019</a
+                >
+              </li>
+              <li class="text-center text-inverse-subtle">
+                <a
+                  class="block p-4 hover:bg-default hover:text-default"
+                  href="/viewings/stats/2018/"
+                  >2018</a
+                >
+              </li>
+              <li class="text-center text-inverse-subtle">
+                <a
+                  class="block p-4 hover:bg-default hover:text-default"
+                  href="/viewings/stats/2017/"
+                  >2017</a
+                >
+              </li>
+              <li class="text-center text-inverse-subtle">
+                <a
+                  class="block p-4 hover:bg-default hover:text-default"
+                  href="/viewings/stats/2016/"
+                  >2016</a
+                >
+              </li>
+              <li class="text-center text-inverse-subtle">
+                <a
+                  class="block p-4 hover:bg-default hover:text-default"
+                  href="/viewings/stats/2015/"
+                  >2015</a
+                >
+              </li>
+              <li class="text-center text-inverse-subtle">
+                <a
+                  class="block p-4 hover:bg-default hover:text-default"
+                  href="/viewings/stats/2014/"
+                  >2014</a
+                >
+              </li>
+              <li class="text-center text-inverse-subtle">
+                <a
+                  class="block p-4 hover:bg-default hover:text-default"
+                  href="/viewings/stats/2013/"
+                  >2013</a
+                >
+              </li>
+              <li class="text-center text-inverse">
+                <div class="p-4 desktop:py-4">2012</div>
+              </li>
+            </ul>
+          </nav>
+          <div class="flex flex-wrap justify-center gap-6 desktop:flex-nowrap">
+            <div
+              class="flex size-36 flex-col justify-center rounded-full bg-stripe text-center text-default shadow-all"
+            >
+              <div class="text-[2rem] leading-8">257</div>
+              <div class="font-sans text-sm font-light leading-6 text-subtle">
+                Viewings
+              </div>
+            </div>
+            <div
+              class="flex size-36 flex-col justify-center rounded-full bg-stripe text-center text-default shadow-all"
+            >
+              <div class="text-[2rem] leading-8">253</div>
+              <div class="font-sans text-sm font-light leading-6 text-subtle">
+                Movies
+              </div>
+            </div>
+            <div
+              class="flex size-36 flex-col justify-center rounded-full bg-stripe text-center text-default shadow-all"
+            >
+              <div class="text-[2rem] leading-8">253</div>
+              <div class="font-sans text-sm font-light leading-6 text-subtle">
+                New Movies
+              </div>
+            </div>
+          </div>
           <div
             class="mx-auto flex w-full max-w-screen-max flex-col items-stretch gap-y-8 py-10 tablet:px-container"
           >
@@ -340,20 +358,18 @@
               class="bg-default px-container desktop:pb-10 mx-auto w-full"
             >
               <h2
-                class="py-4 font-medium shadow-bottom tablet:text-center desktop:py-8 desktop:text-2xl"
+                class="py-4 font-medium shadow-bottom tablet:text-center tablet:text-2xl desktop:py-8"
               >
                 Most Watched Movies
               </h2>
               <ol
-                class="grid-cols-[repeat(auto-fill,_minmax(128px,_min(calc(100%_/_5_-_24px),250px)))] items-center justify-center gap-x-6 gap-y-8 bg-subtle tablet:flex tablet:flex-wrap tablet:bg-default"
+                class="grid-cols-[repeat(auto-fit,_minmax(128px,_min(calc(100%_/_5_-_24px),248px)))] items-center justify-center gap-x-6 gap-y-8 bg-subtle tablet:grid tablet:items-start tablet:bg-default"
               >
                 <li
-                  class="mb-1 flex items-center gap-x-6 bg-default py-4 tablet:w-32 tablet:flex-col tablet:p-0 desktop:w-auto"
+                  class="relative mb-1 flex items-center gap-x-6 bg-default py-4 tablet:w-auto tablet:flex-col tablet:p-0 desktop:w-auto"
                 >
-                  <a
-                    href="/reviews/fright-night-1985/"
-                    class="relative block w-list-item-poster before:absolute before:inset-0 before:z-10 before:aspect-poster before:opacity-15 hover:before:opacity-0 tablet:w-full tablet:max-w-[248px] tablet:before:bg-[#fff] shrink-0"
-                    ><img
+                  <div class="min-w-12 max-w-12 tablet:max-w-[248px] shrink-0">
+                    <img
                       srcset="
                         /_image?/content%2Fassets%2Fposters%2Ffright-night-1985.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;q=80&amp;f=avif   62w,
                         /_image?/content%2Fassets%2Fposters%2Ffright-night-1985.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=124&amp;q=80&amp;f=avif 124w,
@@ -361,25 +377,24 @@
                         /_image?/content%2Fassets%2Fposters%2Ffright-night-1985.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=496&amp;q=80&amp;f=avif 496w
                       "
                       src="/_image?/content%2Fassets%2Fposters%2Ffright-night-1985.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
-                      alt="A poster from Fright Night (1985)"
+                      alt=""
                       width="248"
                       height="372"
                       sizes="(max-width: 767px) 64px, (max-width: 1279px) 128px, (min-width: 784px) 20vw, 248px"
                       class="aspect-poster h-auto"
                       loading="lazy"
                       decoding="async"
-                  /></a>
+                    />
+                  </div>
                   <div class="grow tablet:w-full">
-                    <div class="tablet:hidden">
-                      <a
-                        href="/reviews/fright-night-1985/"
-                        class="block font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 hover:underline hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-[#fff] desktop:before:left-6"
-                        >Fright Night<!-- --> <!-- --> <span
-                          class="text-xxs font-light text-subtle tablet:text-xs"
-                          >1985</span
-                        ></a
-                      >
-                    </div>
+                    <a
+                      href="/reviews/fright-night-1985/"
+                      class="block font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:bg-[#fff] before:opacity-15 hover:underline hover:before:opacity-0 tablet:text-center tablet:before:left-0 tablet:before:top-0 tablet:before:w-full"
+                      >Fright Night<!-- --> <!-- --> <span
+                        class="text-xxs font-light text-subtle tablet:text-xs"
+                        >1985</span
+                      ></a
+                    >
                     <div
                       class="flex justify-start font-sans text-xs font-light text-subtle tablet:justify-center tablet:text-sm"
                     >
@@ -389,7 +404,7 @@
                   </div>
                 </li>
                 <li
-                  class="mb-1 flex items-center gap-x-6 bg-default py-4 tablet:w-32 tablet:flex-col tablet:p-0 desktop:w-auto"
+                  class="relative mb-1 flex items-center gap-x-6 bg-default py-4 tablet:w-auto tablet:flex-col tablet:p-0 desktop:w-auto"
                 >
                   <div class="min-w-12 max-w-12 tablet:max-w-[248px] shrink-0">
                     <img
@@ -400,7 +415,7 @@
                         /_image?/content%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=496&amp;q=80&amp;f=avif 496w
                       "
                       src="/_image?/content%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
-                      alt="A poster from The Big Sleep (1946)"
+                      alt=""
                       width="248"
                       height="372"
                       sizes="(max-width: 767px) 64px, (max-width: 1279px) 128px, (min-width: 784px) 20vw, 248px"
@@ -410,15 +425,13 @@
                     />
                   </div>
                   <div class="grow tablet:w-full">
-                    <div class="tablet:hidden">
-                      <span
-                        class="block font-sans text-sm font-normal text-muted"
-                        >The Big Sleep<!-- --> <!-- --> <span
-                          class="text-xxs font-light text-subtle tablet:text-xs"
-                          >1946</span
-                        ></span
-                      >
-                    </div>
+                    <span
+                      class="block font-sans text-sm font-normal text-muted tablet:text-center"
+                      >The Big Sleep<!-- --> <!-- --> <span
+                        class="text-xxs font-light text-subtle tablet:text-xs"
+                        >1946</span
+                      ></span
+                    >
                     <div
                       class="flex justify-start font-sans text-xs font-light text-subtle tablet:justify-center tablet:text-sm"
                     >
@@ -433,9 +446,7 @@
               class="mx-auto flex w-full flex-col items-start gap-y-8 desktop:max-w-[calc(66%_+_24px)] desktop:flex-row desktop:gap-x-8"
             >
               <section class="w-full bg-default px-container pb-8">
-                <h2 class="py-4 font-medium desktop:text-xl">
-                  By Release Year
-                </h2>
+                <h2 class="py-4 font-medium tablet:text-xl">By Release Year</h2>
                 <div
                   class="grid w-full grid-cols-[1fr,auto] tablet:whitespace-nowrap"
                 >
@@ -604,7 +615,7 @@
                 </div>
               </section>
               <section class="w-full bg-default px-container pb-8">
-                <h2 class="py-4 font-medium desktop:text-xl">Top Media</h2>
+                <h2 class="py-4 font-medium tablet:text-xl">Top Media</h2>
                 <div
                   class="grid w-full grid-cols-[1fr,auto] tablet:whitespace-nowrap"
                 >
@@ -724,7 +735,7 @@
             >
               <section class="w-full bg-default pb-8 tablet:px-container">
                 <h2
-                  class="px-container py-4 font-medium tablet:px-0 desktop:text-xl"
+                  class="px-container py-4 font-medium tablet:px-0 tablet:text-xl"
                 >
                   Most Watched Directors
                 </h2>
@@ -3551,7 +3562,7 @@
               </section>
               <section class="w-full bg-default pb-8 tablet:px-container">
                 <h2
-                  class="px-container py-4 font-medium tablet:px-0 desktop:text-xl"
+                  class="px-container py-4 font-medium tablet:px-0 tablet:text-xl"
                 >
                   Most Watched Performers
                 </h2>
@@ -8951,7 +8962,7 @@
               </section>
               <section class="w-full bg-default pb-8 tablet:px-container">
                 <h2
-                  class="px-container py-4 font-medium tablet:px-0 desktop:text-xl"
+                  class="px-container py-4 font-medium tablet:px-0 tablet:text-xl"
                 >
                   Most Watched Writers
                 </h2>

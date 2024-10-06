@@ -1,6 +1,9 @@
+import path from "node:path";
+
 import type { APIRoute, InferGetStaticPropsType } from "astro";
+import sharp from "sharp";
 import { allStatYears } from "src/api/yearStats";
-import { OpenGraphImage } from "src/components/YearStats/OpenGraphImage";
+import { OpenGraphImage } from "src/components/OpenGraphImage";
 import { componentToImage } from "src/utils/componentToImage";
 
 export async function getStaticPaths() {
@@ -23,9 +26,17 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 export const GET: APIRoute = async function get({ props }) {
   const { year } = props as Props;
 
+  const imageBuffer = await sharp(
+    path.resolve(`./content/assets/backdrops/${year}.png`),
+  )
+    .resize(1200)
+    .toFormat("png")
+    .toBuffer();
+
   const jpeg = await componentToImage(
     OpenGraphImage({
-      year,
+      title: `${year} Stats`,
+      backdrop: `data:${"image/png"};base64,${imageBuffer.toString("base64")}`,
     }),
   );
 

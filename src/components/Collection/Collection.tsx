@@ -4,7 +4,7 @@ import type { Collection } from "src/api/collections";
 import type { PosterImageProps } from "src/api/posters";
 import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
 
-import { Backdrop } from "../Backdrop";
+import { Backdrop, BreadcrumbLink } from "../Backdrop";
 import { Grade } from "../Grade";
 import { GroupedList } from "../GroupedList";
 import { ListItem } from "../ListItem";
@@ -59,7 +59,9 @@ export function Collection({
         <Backdrop
           imageProps={backdropImageProps}
           title={value.name}
-          breadcrumb={<a href="/collections/">Collections</a>}
+          breadcrumb={
+            <BreadcrumbLink href="/collections/">Collections</BreadcrumbLink>
+          }
         />
       }
       totalCount={state.filteredValues.length}

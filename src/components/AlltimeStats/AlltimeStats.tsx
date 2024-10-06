@@ -1,4 +1,5 @@
 import type { AlltimeStats } from "src/api/alltimeStats";
+import type { BackdropImageProps } from "src/api/backdrops";
 import { DecadeDistribution } from "src/components/DecadeDistribution";
 import { MediaDistribution } from "src/components/MediaDistribution";
 import { MostWatchedDirectors } from "src/components/MostWatchedDirectors";
@@ -9,7 +10,7 @@ import { MostWatchedPerformers } from "src/components/MostWatchedPerformers";
 import { MostWatchedWriters } from "src/components/MostWatchedWriters";
 import { StatsNavigation } from "src/components/StatsNavigation";
 
-import { StatsBackdrop } from "../Backdrop";
+import { Backdrop, BreadcrumbLink } from "../Backdrop";
 import { Layout } from "../Layout";
 import { Callouts } from "./Callouts";
 import { GradeDistribution } from "./GradeDistribution";
@@ -30,6 +31,7 @@ export interface Props {
   mostWatchedPerformers: MostWatchedPeopleListItemValue[];
   mostWatchedWriters: MostWatchedPeopleListItemValue[];
   distinctStatYears: readonly string[];
+  backdropImageProps: BackdropImageProps;
 }
 
 export function AlltimeStats({
@@ -39,32 +41,35 @@ export function AlltimeStats({
   mostWatchedDirectors,
   mostWatchedPerformers,
   mostWatchedWriters,
+  backdropImageProps,
 }: Props): JSX.Element {
   return (
     <Layout
       addGradient={false}
       className="flex flex-col items-center bg-subtle"
     >
-      <StatsBackdrop
-        breadcrumb={<a href="/viewings/">Viewing Log</a>}
+      <Backdrop
+        imageProps={backdropImageProps}
+        breadcrumb={
+          <BreadcrumbLink href="/viewings/">Viewing Log</BreadcrumbLink>
+        }
         title="All-Time Stats"
         deck={`${(distinctStatYears.length - 1).toString()} Years in Review`}
-      >
-        <StatsNavigation
-          currentYear={"all"}
-          linkFunc={(year: string) => {
-            return `/viewings/stats/${year}/`;
-          }}
-          years={distinctStatYears}
-          className="mb-8"
-        />
-        <Callouts
-          titleCount={stats.titleCount}
-          viewingCount={stats.viewingCount}
-          reviewCount={stats.reviewCount}
-          watchlistTitlesReviewedCount={stats.watchlistTitlesReviewedCount}
-        />
-      </StatsBackdrop>
+      />
+      <StatsNavigation
+        currentYear={"all"}
+        linkFunc={(year: string) => {
+          return `/viewings/stats/${year}/`;
+        }}
+        years={distinctStatYears}
+        className="mb-12 w-full"
+      />
+      <Callouts
+        titleCount={stats.titleCount}
+        viewingCount={stats.viewingCount}
+        reviewCount={stats.reviewCount}
+        watchlistTitlesReviewedCount={stats.watchlistTitlesReviewedCount}
+      />
       <div className="mx-auto flex w-full max-w-screen-max flex-col items-stretch gap-y-8 py-10 tablet:px-container">
         <MostWatchedMovies
           values={mostWatchedMovies}

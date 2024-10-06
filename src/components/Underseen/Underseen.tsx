@@ -7,7 +7,7 @@ import {
   SubNav,
 } from "src/components/ListWithFiltersLayout";
 
-import { Backdrop } from "../Backdrop";
+import { Backdrop, BreadcrumbLink } from "../Backdrop";
 import { Grade } from "../Grade";
 import { GroupedList } from "../GroupedList";
 import { ListItem } from "../ListItem";
@@ -64,16 +64,7 @@ export function Underseen({
         <Backdrop
           title="Underseen Gems"
           imageProps={backdropImageProps}
-          breadcrumb={
-            <>
-              <a
-                className="hover:bg-default hover:text-default"
-                href="/reviews/"
-              >
-                Reviews
-              </a>
-            </>
-          }
+          breadcrumb={<BreadcrumbLink href="/reviews/">Reviews</BreadcrumbLink>}
           deck="Four and five star movies with a below average number of IMDb votes."
         />
       }

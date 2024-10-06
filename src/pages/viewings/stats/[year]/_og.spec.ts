@@ -4,7 +4,7 @@ import path from "node:path";
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import { describe, it } from "vitest";
 
-import * as OgEndpoint from "../og.jpg.ts";
+import * as OgEndpoint from "./og.jpg.ts";
 
 describe("/reviews/:slug/og.jpg", () => {
   it.for(["2012", "2024", "2022"])(

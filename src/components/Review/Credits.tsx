@@ -50,8 +50,6 @@ export function Credits({
         <div className="shrink-0">
           <div className="block">
             <Poster
-              title={title}
-              year={year}
               width={PosterImageConfig.width}
               height={PosterImageConfig.height}
               loading="lazy"
