@@ -5,7 +5,6 @@ import type { Viewing } from "src/api/viewings";
 import { GroupedList } from "src/components/GroupedList";
 import { ListItemMediumAndVenue } from "src/components/ListItemMediumAndVenue";
 import { ListItemPoster } from "src/components/ListItemPoster";
-import { ListItemTitle } from "src/components/ListItemTitle";
 import {
   ListHeaderButton,
   ListWithFiltersLayout,
@@ -167,5 +166,44 @@ function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
         <ListItemMediumAndVenue medium={value.medium} venue={value.venue} />
       </div>
     </li>
+  );
+}
+
+export function ListItemTitle({
+  title,
+  year,
+  slug,
+}: {
+  title: string;
+  year: string;
+  slug?: string | null;
+}) {
+  const yearBox = (
+    <span className="text-xxs font-light text-subtle tablet:text-xs">
+      {year}
+    </span>
+  );
+
+  if (slug) {
+    return (
+      <a
+        href={`/reviews/${slug}/`}
+        className="block font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 hover:underline hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-[#fff]"
+      >
+        {title}
+        {"\u202F"}
+        {"\u202F"}
+        {yearBox}
+      </a>
+    );
+  }
+
+  return (
+    <span className="block font-sans text-sm font-normal text-muted">
+      {title}
+      {"\u202F"}
+      {"\u202F"}
+      {yearBox}
+    </span>
   );
 }

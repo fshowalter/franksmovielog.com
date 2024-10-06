@@ -1,9 +1,24 @@
+import path from "node:path";
+
 import type { APIRoute } from "astro";
-import { OpenGraphImage } from "src/components/AlltimeStats/OpenGraphImage";
+import sharp from "sharp";
+import { OpenGraphImage } from "src/components/OpenGraphImage";
 import { componentToImage } from "src/utils/componentToImage";
 
 export const GET: APIRoute = async function get() {
-  const jpeg = await componentToImage(OpenGraphImage());
+  const imageBuffer = await sharp(
+    path.resolve(`./content/assets/backdrops/stats.png`),
+  )
+    .resize(1200)
+    .toFormat("png")
+    .toBuffer();
+
+  const jpeg = await componentToImage(
+    OpenGraphImage({
+      title: "All-Time Stats",
+      backdrop: `data:${"image/png"};base64,${imageBuffer.toString("base64")}`,
+    }),
+  );
 
   return new Response(jpeg, {
     headers: {

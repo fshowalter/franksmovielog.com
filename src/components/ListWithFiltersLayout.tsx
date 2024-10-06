@@ -150,10 +150,10 @@ export function SubNav({ values }: { values: SubNavValue[] }) {
               className={`w-full max-w-32 text-center ${value.active ? "text-inverse" : "text-inverse-subtle"}`}
             >
               {value.active ? (
-                <div className="px-4 py-8 desktop:py-12">{value.text}</div>
+                <div className="px-4 py-6">{value.text}</div>
               ) : (
                 <a
-                  className="block px-4 py-8 hover:bg-default hover:text-default desktop:py-12"
+                  className="block px-4 py-6 hover:bg-default hover:text-default"
                   href={value.href}
                 >
                   {value.text}

@@ -42,7 +42,7 @@ function YearLink({
         <div className="p-4 desktop:py-4">{year}</div>
       ) : (
         <a
-          className="block p-4 hover:bg-default hover:text-default desktop:py-4"
+          className="block p-4 hover:bg-default hover:text-default"
           href={linkFunc(year)}
         >
           {year}

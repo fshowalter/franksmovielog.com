@@ -22,7 +22,7 @@ export function Mast({
           : "unset",
       }}
     >
-      {hideLogo ? <div /> : <Logo />}
+      {hideLogo ? <div /> : <Logo className="mt-2 tablet:mt-0" />}
       <div className="flex items-center">
         <nav className="hidden w-full desktop:block desktop:w-auto">
           <ul className={`flex flex-wrap justify-start gap-x-6 text-xl`}>

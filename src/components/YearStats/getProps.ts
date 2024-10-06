@@ -13,10 +13,7 @@ export async function getProps(year: string): Promise<Props> {
   return {
     year,
     stats,
-    backdropImageProps: await getBackdropImageProps(
-      "stats",
-      BackdropImageConfig,
-    ),
+    backdropImageProps: await getBackdropImageProps(year, BackdropImageConfig),
     mostWatchedMovies: await Promise.all(
       stats.mostWatchedTitles.map(async (title) => {
         return {

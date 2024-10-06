@@ -33652,7 +33652,7 @@ exports[`Overrated > renders 1`] = `
         style="color: rgb(255, 255, 255); position: absolute;"
       >
         <div
-          class="flex flex-col"
+          class="flex flex-col mt-2 tablet:mt-0"
         >
           <div
             class="whitespace-nowrap font-normal leading-8"
@@ -33939,10 +33939,10 @@ exports[`Overrated > renders 1`] = `
             class=" z-10 mx-auto flex w-full max-w-screen-max flex-col px-container"
           >
             <p
-              class="mb-2 font-sans text-sm uppercase tracking-wide underline decoration-subtle decoration-2 underline-offset-8"
+              class="mb-2"
             >
               <a
-                class="hover:bg-default hover:text-default"
+                class="font-sans text-sm uppercase tracking-wide decoration-inverse-subtle decoration-2 underline-offset-8 hover:underline"
                 href="/reviews/"
               >
                 Reviews
@@ -33971,7 +33971,7 @@ exports[`Overrated > renders 1`] = `
               class="w-full max-w-32 text-center text-inverse-subtle"
             >
               <a
-                class="block px-4 py-8 hover:bg-default hover:text-default desktop:py-12"
+                class="block px-4 py-6 hover:bg-default hover:text-default"
                 href="/reviews/"
               >
                 all
@@ -33981,7 +33981,7 @@ exports[`Overrated > renders 1`] = `
               class="w-full max-w-32 text-center text-inverse-subtle"
             >
               <a
-                class="block px-4 py-8 hover:bg-default hover:text-default desktop:py-12"
+                class="block px-4 py-6 hover:bg-default hover:text-default"
                 href="/reviews/underseen/"
               >
                 underseen
@@ -33991,7 +33991,7 @@ exports[`Overrated > renders 1`] = `
               class="w-full max-w-32 text-center text-inverse"
             >
               <div
-                class="px-4 py-8 desktop:py-12"
+                class="px-4 py-6"
               >
                 overrated
               </div>

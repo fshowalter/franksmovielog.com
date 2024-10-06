@@ -2,7 +2,7 @@ import type { AvatarImageProps } from "src/api/avatars";
 import type { BackdropImageProps } from "src/api/backdrops";
 import type { WatchlistProgress } from "src/api/watchlistProgress";
 
-import { Backdrop } from "../Backdrop";
+import { Backdrop, BreadcrumbLink } from "../Backdrop";
 import { Layout } from "../Layout";
 import type { Props as CalloutsProps } from "./Callouts";
 import { Callouts } from "./Callouts";
@@ -36,9 +36,7 @@ export function WatchlistProgress({
         imageProps={backdropImageProps}
         title="Progress"
         breadcrumb={
-          <a className="hover:bg-default hover:text-default" href="/watchlist/">
-            Watchlist
-          </a>
+          <BreadcrumbLink href="/watchlist/">Watchlist</BreadcrumbLink>
         }
         deck='"I find your lack of faith disturbing."'
       />

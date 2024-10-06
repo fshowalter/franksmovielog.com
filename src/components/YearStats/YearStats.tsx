@@ -11,7 +11,7 @@ import { MostWatchedPerformers } from "src/components/MostWatchedPerformers";
 import { MostWatchedWriters } from "src/components/MostWatchedWriters";
 import { StatsNavigation } from "src/components/StatsNavigation";
 
-import { Backdrop } from "../Backdrop";
+import { Backdrop, BreadcrumbLink } from "../Backdrop";
 import { Callouts } from "./Callouts";
 
 export interface Props {
@@ -42,7 +42,9 @@ export function YearStats({
     >
       <Backdrop
         imageProps={backdropImageProps}
-        breadcrumb={<a href="/viewings/">Viewing Log</a>}
+        breadcrumb={
+          <BreadcrumbLink href="/viewings/">Viewing Log</BreadcrumbLink>
+        }
         title={`${year} Stats`}
         deck={
           [...distinctStatYears].reverse()[0] === year

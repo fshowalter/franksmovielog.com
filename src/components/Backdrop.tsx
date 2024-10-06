@@ -1,3 +1,4 @@
+import type React from "react";
 import type { AvatarImageProps } from "src/api/avatars";
 import type { BackdropImageProps } from "src/api/backdrops";
 
@@ -186,10 +187,23 @@ function Breadcrumb({ value }: { value?: React.ReactNode }) {
     return null;
   }
 
+  return <p className="mb-2">{value}</p>;
+}
+
+export function BreadcrumbLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
   return (
-    <p className="mb-2 font-sans text-sm uppercase tracking-wide underline decoration-subtle decoration-2 underline-offset-8">
-      {value}
-    </p>
+    <a
+      href={href}
+      className="font-sans text-sm uppercase tracking-wide decoration-inverse-subtle decoration-2 underline-offset-8 hover:underline"
+    >
+      {children}
+    </a>
   );
 }
 

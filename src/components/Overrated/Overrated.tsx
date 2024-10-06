@@ -7,7 +7,7 @@ import {
   SubNav,
 } from "src/components/ListWithFiltersLayout";
 
-import { Backdrop } from "../Backdrop";
+import { Backdrop, BreadcrumbLink } from "../Backdrop";
 import { Grade } from "../Grade";
 import { GroupedList } from "../GroupedList";
 import { ListItem } from "../ListItem";
@@ -66,16 +66,7 @@ export function Overrated({
           deck=" One and two star movies with an above-average IMDb rating and vote
         count."
           imageProps={backdropImageProps}
-          breadcrumb={
-            <>
-              <a
-                className="hover:bg-default hover:text-default"
-                href="/reviews/"
-              >
-                Reviews
-              </a>
-            </>
-          }
+          breadcrumb={<BreadcrumbLink href="/reviews/">Reviews</BreadcrumbLink>}
         />
       }
       subNav={

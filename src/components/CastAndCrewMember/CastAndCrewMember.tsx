@@ -4,7 +4,7 @@ import type { CastAndCrewMember } from "src/api/castAndCrew";
 import type { PosterImageProps } from "src/api/posters";
 import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
 
-import { AvatarBackdrop } from "../Backdrop";
+import { AvatarBackdrop, BreadcrumbLink } from "../Backdrop";
 import { CreditedAs } from "../CreditedAs";
 import { Grade } from "../Grade";
 import { GroupedList } from "../GroupedList";
@@ -78,12 +78,7 @@ export function CastAndCrewMember({
         <AvatarBackdrop
           avatarImageProps={avatarImageProps}
           breadcrumb={
-            <a
-              className="px-4 hover:bg-default hover:text-default"
-              href="/cast-and-crew/"
-            >
-              Cast & Crew
-            </a>
+            <BreadcrumbLink href="/cast-and-crew/">Cast & Crew</BreadcrumbLink>
           }
           name={value.name}
           deck={deck(value)}

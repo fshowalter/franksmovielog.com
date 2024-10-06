@@ -10,7 +10,7 @@ import { MostWatchedPerformers } from "src/components/MostWatchedPerformers";
 import { MostWatchedWriters } from "src/components/MostWatchedWriters";
 import { StatsNavigation } from "src/components/StatsNavigation";
 
-import { Backdrop } from "../Backdrop";
+import { Backdrop, BreadcrumbLink } from "../Backdrop";
 import { Layout } from "../Layout";
 import { Callouts } from "./Callouts";
 import { GradeDistribution } from "./GradeDistribution";
@@ -50,7 +50,9 @@ export function AlltimeStats({
     >
       <Backdrop
         imageProps={backdropImageProps}
-        breadcrumb={<a href="/viewings/">Viewing Log</a>}
+        breadcrumb={
+          <BreadcrumbLink href="/viewings/">Viewing Log</BreadcrumbLink>
+        }
         title="All-Time Stats"
         deck={`${(distinctStatYears.length - 1).toString()} Years in Review`}
       />
