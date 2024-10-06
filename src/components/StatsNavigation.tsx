@@ -12,10 +12,10 @@ function AllTimeLink({
       className={`text-center ${"all" === currentYear ? "text-inverse" : "text-inverse-subtle"}`}
     >
       {"all" === currentYear ? (
-        <div className="whitespace-nowrap p-4 desktop:py-4">All-Time</div>
+        <div className="whitespace-nowrap desktop:py-4">All-Time</div>
       ) : (
         <a
-          className="block whitespace-nowrap p-4 hover:bg-default hover:text-default desktop:py-4"
+          className="block whitespace-nowrap hover:bg-default hover:text-default desktop:py-4"
           href={linkFunc("all")}
         >
           All-Time
@@ -39,10 +39,10 @@ function YearLink({
       className={`text-center ${year === currentYear ? "text-inverse" : "text-inverse-subtle"}`}
     >
       {year === currentYear ? (
-        <div className="p-4 desktop:py-4">{year}</div>
+        <div className="">{year}</div>
       ) : (
         <a
-          className="block p-4 hover:bg-default hover:text-default desktop:py-4"
+          className="block hover:bg-default hover:text-default desktop:py-4"
           href={linkFunc(year)}
         >
           {year}
@@ -65,7 +65,7 @@ export function StatsNavigation({
 }): JSX.Element {
   return (
     <nav className={ccn("bg-footer", className)}>
-      <ul className="mx-auto flex max-w-screen-max overflow-y-auto px-container font-sans text-sm font-normal tracking-wide desktop:justify-center">
+      <ul className="mx-auto flex max-w-screen-max flex-wrap justify-center gap-x-4 gap-y-2 px-container py-4 font-sans text-sm">
         <AllTimeLink currentYear={currentYear} linkFunc={linkFunc} />
         {[...years].reverse().map((year) => {
           return (
