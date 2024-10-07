@@ -1,21 +1,14 @@
-import path from "node:path";
-
 import type { APIRoute } from "astro";
-import sharp from "sharp";
-import { OpenGraphImage } from "src/components/WatchlistProgress/OpenGraphImage";
+import { getOpenGraphBackdropAsBase64String } from "src/api/backdrops";
+import { OpenGraphImage } from "src/components/OpenGraphImage";
 import { componentToImage } from "src/utils/componentToImage";
 
 export const GET: APIRoute = async function get() {
-  const imageBuffer = await sharp(
-    path.resolve(`./content/assets/backdrops/watchlist-progress.png`),
-  )
-    .resize(1200)
-    .toFormat("png")
-    .toBuffer();
-
   const jpeg = await componentToImage(
     OpenGraphImage({
-      backdrop: `data:${"image/png"};base64,${imageBuffer.toString("base64")}`,
+      sectionHead: "Watchlist",
+      title: "Progress",
+      backdrop: await getOpenGraphBackdropAsBase64String("watchlist-progress"),
     }),
   );
 

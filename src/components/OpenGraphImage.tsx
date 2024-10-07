@@ -1,7 +1,9 @@
 export function OpenGraphImage({
   title,
   backdrop,
+  sectionHead = "Frank's Movie Log",
 }: {
+  sectionHead?: string;
   title: string;
   backdrop: string;
 }): JSX.Element {
@@ -44,7 +46,7 @@ export function OpenGraphImage({
             textShadow: "1px 1px 2px black",
           }}
         >
-          Frank&apos;s Movie Log
+          {sectionHead}
         </div>
         <div
           style={{

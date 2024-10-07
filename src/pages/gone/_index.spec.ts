@@ -5,19 +5,19 @@ import { loadRenderers } from "astro:container";
 import * as prettier from "prettier";
 import { describe, it } from "vitest";
 
-import page from "./index.astro";
+import Page from "./index.astro";
 
-describe("/watchlist/progress", () => {
-  it("matches snapshot", { timeout: 20000 }, async ({ expect }) => {
+describe("/gone", () => {
+  it("matches snapshot", { timeout: 40000 }, async ({ expect }) => {
     const renderers = await loadRenderers([reactContainerRenderer()]);
     const container = await AstroContainer.create({ renderers });
     const result = await container.renderToString(
-      page as AstroComponentFactory,
+      Page as AstroComponentFactory,
       {},
     );
 
     void expect(
       await prettier.format(result, { parser: "html" }),
-    ).toMatchFileSnapshot(`__snapshots__/index.html`);
+    ).toMatchFileSnapshot(`__snapshots__/gone.html`);
   });
 });

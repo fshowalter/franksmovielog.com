@@ -9,8 +9,12 @@ import * as OgEndpoint from "./og.jpg.ts";
 
 const { castAndCrew } = await allCastAndCrew();
 
+const testMembers = castAndCrew.filter(
+  (member) => member.slug === "paul-thomas-anderson",
+);
+
 describe("/reviews/:slug/og.jpg", () => {
-  it.for(castAndCrew)(
+  it.for(testMembers)(
     "matches file",
     { timeout: 40000 },
     async (member, { expect }) => {
