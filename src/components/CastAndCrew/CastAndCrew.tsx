@@ -6,11 +6,12 @@ import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
 
 import { Backdrop } from "../Backdrop";
 import { CreditedAs } from "../CreditedAs";
+import { GroupedList } from "../GroupedList";
 import { ListItem } from "../ListItem";
 import { ListItemAvatar } from "../ListItemAvatar";
 import { ListItemCounts } from "../ListItemCounts";
 import type { Sort } from "./CastAndCrew.reducer";
-import { initState, reducer } from "./CastAndCrew.reducer";
+import { Actions, initState, reducer } from "./CastAndCrew.reducer";
 import { Filters } from "./Filters";
 
 export type Props = {
@@ -52,14 +53,17 @@ export function CastAndCrew({
       totalCount={state.filteredValues.length}
       filters={<Filters dispatch={dispatch} sortValue={state.sortValue} />}
       list={
-        <ol
+        <GroupedList
           data-testid="list"
-          className="mt-4 bg-subtle tablet-landscape:my-24"
+          groupedValues={state.groupedValues}
+          visibleCount={state.showCount}
+          totalCount={state.filteredValues.length}
+          onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
         >
-          {values.map((value) => {
+          {(value) => {
             return <MemberListItem key={value.name} value={value} />;
-          })}
-        </ol>
+          }}
+        </GroupedList>
       }
     />
   );
