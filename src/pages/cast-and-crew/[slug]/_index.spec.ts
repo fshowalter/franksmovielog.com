@@ -1,0 +1,42 @@
+import { getContainerRenderer as reactContainerRenderer } from "@astrojs/react";
+import { experimental_AstroContainer as AstroContainer } from "astro/container";
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
+import { loadRenderers } from "astro:container";
+import * as prettier from "prettier";
+import { allCastAndCrew } from "src/api/castAndCrew";
+import { describe, it } from "vitest";
+
+import Review from "./index.astro";
+
+const { castAndCrew } = await allCastAndCrew();
+const testSlugs = new Set(["john-wayne", "burt-reynolds", "christopher-lee"]);
+
+const testMembers = castAndCrew.filter((member) => {
+  return testSlugs.has(member.slug);
+});
+
+describe("/cast-and-crew/:slug", () => {
+  it.for(testMembers)(
+    "matches snapshot for slug $slug",
+    { timeout: 10000 },
+    async (member, { expect }) => {
+      const renderers = await loadRenderers([reactContainerRenderer()]);
+      const container = await AstroContainer.create({ renderers });
+      container.addClientRenderer({
+        name: "@astrojs/react",
+        entrypoint: "@astrojs/react/client.js",
+      });
+
+      const result = await container.renderToString(
+        Review as AstroComponentFactory,
+        {
+          props: { slug: member.slug },
+        },
+      );
+
+      void expect(
+        await prettier.format(result, { parser: "html" }),
+      ).toMatchFileSnapshot(`__snapshots__/${member.slug}.html`);
+    },
+  );
+});

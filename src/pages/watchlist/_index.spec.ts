@@ -7,10 +7,14 @@ import { describe, it } from "vitest";
 
 import Index from "./index.astro";
 
-describe("/viewings/stats/", () => {
+describe("/watchlist/", () => {
   it("matches snapshot", { timeout: 10000 }, async ({ expect }) => {
     const renderers = await loadRenderers([reactContainerRenderer()]);
     const container = await AstroContainer.create({ renderers });
+    container.addClientRenderer({
+      name: "@astrojs/react",
+      entrypoint: "@astrojs/react/client.js",
+    });
     const result = await container.renderToString(
       Index as AstroComponentFactory,
       {},
