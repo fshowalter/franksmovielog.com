@@ -1,8 +1,5 @@
 import type React from "react";
-import type { AvatarImageProps } from "src/api/avatars";
 import type { BackdropImageProps } from "src/api/backdrops";
-
-import { Avatar } from "./Avatar";
 
 export const BackdropImageConfig = {
   width: 2400,
