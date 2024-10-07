@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import satori from "satori";
 import sharp from "sharp";
 
-export async function componentToSvg(component: JSX.Element) {
+async function componentToSvg(component: JSX.Element) {
   return await satori(component, {
     width: 1200,
     height: 630,

@@ -78,7 +78,7 @@ function ListItem({
   );
 }
 
-export function Title({
+function Title({
   title,
   year,
   slug,
