@@ -31,11 +31,6 @@ export type Props = {
   backdropImageProps: BackdropImageProps;
 };
 
-export const AvatarImageConfig = {
-  width: 250,
-  height: 250,
-};
-
 export type ListItemValue = Pick<
   CastAndCrewMember["titles"][0],
   | "imdbId"

@@ -169,7 +169,7 @@ function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
   );
 }
 
-export function ListItemTitle({
+function ListItemTitle({
   title,
   year,
   slug,
