@@ -9,10 +9,6 @@ export function LongFormText({
   text: string | null;
   className?: string;
 }) {
-  if (!text) {
-    return null;
-  }
-
   return (
     <RenderedMarkdown
       text={text}

@@ -72,7 +72,7 @@ export function CastAndCrew({
 function MemberListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
     <ListItem
-      background={value.slug ? "bg-default" : "bg-subtle"}
+      background="bg-default"
       itemsCenter={true}
       extraVerticalPadding={true}
     >
