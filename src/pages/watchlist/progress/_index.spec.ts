@@ -18,6 +18,6 @@ describe("/watchlist/progress", () => {
 
     void expect(
       await prettier.format(result, { parser: "html" }),
-    ).toMatchFileSnapshot(`__snapshots__/progress.html`);
+    ).toMatchFileSnapshot(`__snapshots__/index.html`);
   });
 });

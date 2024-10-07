@@ -36,10 +36,7 @@ export function YearStats({
   backdropImageProps,
 }: Props): JSX.Element {
   return (
-    <Layout
-      addGradient={false}
-      className="flex flex-col items-center bg-subtle"
-    >
+    <Layout className="flex flex-col items-center bg-subtle">
       <Backdrop
         imageProps={backdropImageProps}
         breadcrumb={

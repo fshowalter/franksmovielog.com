@@ -1,4 +1,7 @@
+import path from "node:path";
+
 import { getImage } from "astro:assets";
+import sharp from "sharp";
 
 import { normalizeSources } from "./utils/normalizeSources";
 
@@ -23,6 +26,17 @@ async function getBackdropFile(slug: string) {
     })!;
 
   return await images[backdropFilePath]();
+}
+
+export async function getOpenGraphBackdropAsBase64String(slug: string) {
+  const imageBuffer = await sharp(
+    path.resolve(`./content/assets/backdrops/${slug}.png`),
+  )
+    .resize(1200)
+    .toFormat("png")
+    .toBuffer();
+
+  return `data:${"image/png"};base64,${imageBuffer.toString("base64")}`;
 }
 
 export async function getBackdropImageProps(

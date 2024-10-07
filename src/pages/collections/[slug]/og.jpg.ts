@@ -1,9 +1,7 @@
-import path from "node:path";
-
 import type { APIRoute, InferGetStaticPropsType } from "astro";
-import sharp from "sharp";
+import { getOpenGraphBackdropAsBase64String } from "src/api/backdrops";
 import { allCollections } from "src/api/collections";
-import { OpenGraphImage } from "src/components/Collection/OpenGraphImage";
+import { OpenGraphImage } from "src/components/OpenGraphImage";
 import { componentToImage } from "src/utils/componentToImage";
 
 export async function getStaticPaths() {
@@ -27,17 +25,11 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 export const GET: APIRoute = async function get({ props }) {
   const { slug, name } = props as Props;
 
-  const imageBuffer = await sharp(
-    path.resolve(`./content/assets/backdrops/${slug}.png`),
-  )
-    .resize(1200)
-    .toFormat("png")
-    .toBuffer();
-
   const jpeg = await componentToImage(
     OpenGraphImage({
-      name,
-      backdrop: `data:${"image/png"};base64,${imageBuffer.toString("base64")}`,
+      title: name,
+      sectionHead: "Collections",
+      backdrop: await getOpenGraphBackdropAsBase64String(slug),
     }),
   );
 

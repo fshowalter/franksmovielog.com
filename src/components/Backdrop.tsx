@@ -1,8 +1,5 @@
 import type React from "react";
-import type { AvatarImageProps } from "src/api/avatars";
 import type { BackdropImageProps } from "src/api/backdrops";
-
-import { Avatar } from "./Avatar";
 
 export const BackdropImageConfig = {
   width: 2400,
@@ -41,82 +38,6 @@ export function Backdrop({
       <Breadcrumb value={breadcrumb} />
       <Title value={title} className={titleStyle} />
       <Deck value={deck} shadow={true} />
-    </Wrapper>
-  );
-}
-
-export function SolidBackdrop({
-  title,
-  deck,
-  breadcrumb,
-}: {
-  title: string;
-  deck: React.ReactNode;
-  breadcrumb?: React.ReactNode;
-}) {
-  return (
-    <Wrapper size="small">
-      <Breadcrumb value={breadcrumb} />
-      <Title value={title} />
-      <Deck value={deck} shadow={false} />
-    </Wrapper>
-  );
-}
-
-export function AvatarBackdrop({
-  avatarImageProps,
-  name,
-  deck,
-  breadcrumb,
-}: {
-  avatarImageProps: AvatarImageProps | null;
-  name: string;
-  deck: React.ReactNode;
-  breadcrumb?: React.ReactNode;
-}) {
-  return (
-    <Wrapper centerText={true} size="small">
-      <div className="safari-border-radius-fix mx-auto mb-6 w-4/5 max-w-[250px] overflow-hidden rounded-full">
-        <Avatar
-          imageProps={avatarImageProps}
-          name={name}
-          width={250}
-          height={250}
-          loading="lazy"
-          decoding="async"
-          data-pagefind-meta="image[src], image_alt[alt]"
-        />
-      </div>
-      <Breadcrumb value={breadcrumb} />
-      <Title value={name} center={true} />
-      <Deck value={deck} shadow={false} center={true} />
-    </Wrapper>
-  );
-}
-
-export function StatsBackdrop({
-  title,
-  deck,
-  breadcrumb,
-  children,
-}: {
-  title: string;
-  deck: React.ReactNode;
-  breadcrumb: React.ReactNode;
-  children: React.ReactNode;
-}) {
-  return (
-    <Wrapper centerText={true} size="small">
-      <Breadcrumb value={breadcrumb} />
-      <Title
-        className="mb-4 text-4xl desktop:text-7xl"
-        center={true}
-        value={title}
-      />
-      <p className="mb-6 text-center font-sans text-xs uppercase tracking-wide text-inverse-subtle">
-        {deck}
-      </p>
-      {children}
     </Wrapper>
   );
 }

@@ -1,4 +1,6 @@
-import { filterValues } from "src/utils/filterTools";
+import { buildGroupValues } from "src/utils/buildGroupValues";
+import type { FilterableState } from "src/utils/filterTools";
+import { filterTools } from "src/utils/filterTools";
 import { sortNumber, sortString } from "src/utils/sortTools";
 
 import type { ListItemValue } from "./CastAndCrew";
@@ -7,6 +9,7 @@ export enum Actions {
   FILTER_NAME = "FILTER_NAME",
   FILTER_CREDIT_KIND = "FILTER_CREDIT_KIND",
   SORT = "SORT",
+  SHOW_MORE = "SHOW_MORE",
 }
 
 export type Sort =
@@ -16,6 +19,9 @@ export type Sort =
   | "title-count-desc"
   | "review-count-asc"
   | "review-count-desc";
+
+const groupValues = buildGroupValues(groupForValue);
+const { updateFilter, clearFilter } = filterTools(sortValues, groupValues);
 
 function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
   const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
@@ -34,24 +40,50 @@ function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
   return values.sort(comparer);
 }
 
-type State = {
-  allValues: ListItemValue[];
-  filteredValues: ListItemValue[];
-  filters: Record<string, (value: ListItemValue) => boolean>;
-  sortValue: Sort;
-};
+function groupForValue(item: ListItemValue, sortValue: Sort): string {
+  switch (sortValue) {
+    case "name-asc":
+    case "name-desc": {
+      const letter = item.name.substring(0, 1);
+
+      if (letter.toLowerCase() == letter.toUpperCase()) {
+        return "#";
+      }
+
+      return item.name.substring(0, 1).toLocaleUpperCase();
+    }
+    case "review-count-asc":
+    case "review-count-desc": {
+      return "";
+    }
+    case "title-count-asc":
+    case "title-count-desc": {
+      return "";
+    }
+    // no default
+  }
+}
+
+type State = FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>>;
+
+const SHOW_COUNT_DEFAULT = 100;
 
 export function initState({
   values,
   initialSort,
 }: {
-  values: readonly ListItemValue[];
+  values: ListItemValue[];
   initialSort: Sort;
 }): State {
   return {
-    allValues: [...values],
-    filteredValues: [...values],
+    allValues: values,
+    filteredValues: values,
+    groupedValues: groupValues(
+      values.slice(0, SHOW_COUNT_DEFAULT),
+      initialSort,
+    ),
     filters: {},
+    showCount: SHOW_COUNT_DEFAULT,
     sortValue: initialSort,
   };
 }
@@ -71,68 +103,60 @@ interface SortAction {
   value: Sort;
 }
 
-export type ActionType = FilterNameAction | FilterCreditKindAction | SortAction;
+interface ShowMoreAction {
+  type: Actions.SHOW_MORE;
+}
+
+export type ActionType =
+  | FilterNameAction
+  | FilterCreditKindAction
+  | SortAction
+  | ShowMoreAction;
 
 export function reducer(state: State, action: ActionType): State {
-  let filters;
+  let groupedValues;
   let filteredValues;
 
   switch (action.type) {
     case Actions.FILTER_NAME: {
       const regex = new RegExp(action.value, "i");
-      filters = {
-        ...state.filters,
-        name: (value: ListItemValue) => {
-          return regex.test(value.name);
-        },
-      };
-      filteredValues = sortValues(
-        filterValues<ListItemValue>({
-          values: state.allValues,
-          filters,
-        }),
-        state.sortValue,
-      );
-      return {
-        ...state,
-        filters,
-        filteredValues,
-      };
+      return updateFilter(state, "name", (value) => {
+        return regex.test(value.name);
+      });
     }
     case Actions.FILTER_CREDIT_KIND: {
-      if (action.value === "All") {
-        filters = {
-          ...state.filters,
-        };
+      return (
+        clearFilter(action.value, state, "credits") ??
+        updateFilter(state, "credits", (value) => {
+          return value.creditedAs.includes(action.value);
+        })
+      );
+    }
+    case Actions.SHOW_MORE: {
+      const showCount = state.showCount + SHOW_COUNT_DEFAULT;
 
-        delete filters.credits;
-      } else {
-        filters = {
-          ...state.filters,
-          credits: (value: ListItemValue) => {
-            return value.creditedAs.includes(action.value);
-          },
-        };
-      }
-      filteredValues = sortValues(
-        filterValues<ListItemValue>({
-          values: state.allValues,
-          filters,
-        }),
+      groupedValues = groupValues(
+        state.filteredValues.slice(0, showCount),
         state.sortValue,
       );
+
       return {
         ...state,
-        filters,
-        filteredValues,
+        groupedValues,
+        showCount,
       };
     }
     case Actions.SORT: {
       filteredValues = sortValues(state.filteredValues, action.value);
+      groupedValues = groupValues(
+        filteredValues.slice(0, state.showCount),
+        action.value,
+      );
       return {
         ...state,
         sortValue: action.value,
         filteredValues,
+        groupedValues,
       };
     }
 

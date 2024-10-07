@@ -18,7 +18,7 @@ export function Mast({
         color: hasBackdrop ? "#fff" : "var(--fg-default)",
         position: hasBackdrop ? "absolute" : "static",
         backgroundImage: addGradient
-          ? "linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.55) 55%, transparent)"
+          ? "linear-gradient(to bottom, rgba(0,0,0,.85), transparent 95%)"
           : "unset",
       }}
     >
