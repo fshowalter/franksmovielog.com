@@ -1,0 +1,1006 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="description" content="Okay ramblers, let's get rambling." />
+    <meta name="og:image" content="/reviews/collections/og.jpg" />
+    <meta property="og:url" content="https://www.franksmovielog.com//" />
+    <meta property="og:title" content="Collections" />
+    <meta
+      property="og:description"
+      content="Okay ramblers, let's get rambling."
+    />
+    <title>Collections | Frank&#39;s Movie Log</title>
+  </head>
+  <body>
+    <style>
+      astro-island,
+      astro-slot,
+      astro-static-slot {
+        display: contents;
+      }
+    </style>
+    <script>
+      (() => {
+        var e = async (t) => {
+          await (
+            await t()
+          )();
+        };
+        (self.Astro || (self.Astro = {})).load = e;
+        window.dispatchEvent(new Event("astro:load"));
+      })();
+      (() => {
+        var A = Object.defineProperty;
+        var g = (i, o, a) =>
+          o in i
+            ? A(i, o, {
+                enumerable: !0,
+                configurable: !0,
+                writable: !0,
+                value: a,
+              })
+            : (i[o] = a);
+        var d = (i, o, a) => g(i, typeof o != "symbol" ? o + "" : o, a);
+        {
+          let i = {
+              0: (t) => m(t),
+              1: (t) => a(t),
+              2: (t) => new RegExp(t),
+              3: (t) => new Date(t),
+              4: (t) => new Map(a(t)),
+              5: (t) => new Set(a(t)),
+              6: (t) => BigInt(t),
+              7: (t) => new URL(t),
+              8: (t) => new Uint8Array(t),
+              9: (t) => new Uint16Array(t),
+              10: (t) => new Uint32Array(t),
+              11: (t) => (1 / 0) * t,
+            },
+            o = (t) => {
+              let [l, e] = t;
+              return l in i ? i[l](e) : void 0;
+            },
+            a = (t) => t.map(o),
+            m = (t) =>
+              typeof t != "object" || t === null
+                ? t
+                : Object.fromEntries(
+                    Object.entries(t).map(([l, e]) => [l, o(e)]),
+                  );
+          class y extends HTMLElement {
+            constructor() {
+              super(...arguments);
+              d(this, "Component");
+              d(this, "hydrator");
+              d(this, "hydrate", async () => {
+                var b;
+                if (!this.hydrator || !this.isConnected) return;
+                let e =
+                  (b = this.parentElement) == null
+                    ? void 0
+                    : b.closest("astro-island[ssr]");
+                if (e) {
+                  e.addEventListener("astro:hydrate", this.hydrate, {
+                    once: !0,
+                  });
+                  return;
+                }
+                let c = this.querySelectorAll("astro-slot"),
+                  n = {},
+                  h = this.querySelectorAll("template[data-astro-template]");
+                for (let r of h) {
+                  let s = r.closest(this.tagName);
+                  s != null &&
+                    s.isSameNode(this) &&
+                    ((n[r.getAttribute("data-astro-template") || "default"] =
+                      r.innerHTML),
+                    r.remove());
+                }
+                for (let r of c) {
+                  let s = r.closest(this.tagName);
+                  s != null &&
+                    s.isSameNode(this) &&
+                    (n[r.getAttribute("name") || "default"] = r.innerHTML);
+                }
+                let p;
+                try {
+                  p = this.hasAttribute("props")
+                    ? m(JSON.parse(this.getAttribute("props")))
+                    : {};
+                } catch (r) {
+                  let s = this.getAttribute("component-url") || "<unknown>",
+                    v = this.getAttribute("component-export");
+                  throw (
+                    (v && (s += ` (export ${v})`),
+                    console.error(
+                      `[hydrate] Error parsing props for component ${s}`,
+                      this.getAttribute("props"),
+                      r,
+                    ),
+                    r)
+                  );
+                }
+                let u;
+                await this.hydrator(this)(this.Component, p, n, {
+                  client: this.getAttribute("client"),
+                }),
+                  this.removeAttribute("ssr"),
+                  this.dispatchEvent(new CustomEvent("astro:hydrate"));
+              });
+              d(this, "unmount", () => {
+                this.isConnected ||
+                  this.dispatchEvent(new CustomEvent("astro:unmount"));
+              });
+            }
+            disconnectedCallback() {
+              document.removeEventListener("astro:after-swap", this.unmount),
+                document.addEventListener("astro:after-swap", this.unmount, {
+                  once: !0,
+                });
+            }
+            connectedCallback() {
+              if (
+                !this.hasAttribute("await-children") ||
+                document.readyState === "interactive" ||
+                document.readyState === "complete"
+              )
+                this.childrenConnectedCallback();
+              else {
+                let e = () => {
+                    document.removeEventListener("DOMContentLoaded", e),
+                      c.disconnect(),
+                      this.childrenConnectedCallback();
+                  },
+                  c = new MutationObserver(() => {
+                    var n;
+                    ((n = this.lastChild) == null ? void 0 : n.nodeType) ===
+                      Node.COMMENT_NODE &&
+                      this.lastChild.nodeValue === "astro:end" &&
+                      (this.lastChild.remove(), e());
+                  });
+                c.observe(this, { childList: !0 }),
+                  document.addEventListener("DOMContentLoaded", e);
+              }
+            }
+            async childrenConnectedCallback() {
+              let e = this.getAttribute("before-hydration-url");
+              e && (await import(e)), this.start();
+            }
+            async start() {
+              let e = JSON.parse(this.getAttribute("opts")),
+                c = this.getAttribute("client");
+              if (Astro[c] === void 0) {
+                window.addEventListener(`astro:${c}`, () => this.start(), {
+                  once: !0,
+                });
+                return;
+              }
+              try {
+                await Astro[c](
+                  async () => {
+                    let n = this.getAttribute("renderer-url"),
+                      [h, { default: p }] = await Promise.all([
+                        import(this.getAttribute("component-url")),
+                        n ? import(n) : () => () => {},
+                      ]),
+                      u = this.getAttribute("component-export") || "default";
+                    if (!u.includes(".")) this.Component = h[u];
+                    else {
+                      this.Component = h;
+                      for (let f of u.split("."))
+                        this.Component = this.Component[f];
+                    }
+                    return (this.hydrator = p), this.hydrate;
+                  },
+                  e,
+                  this,
+                );
+              } catch (n) {
+                console.error(
+                  `[astro-island] Error hydrating ${this.getAttribute("component-url")}`,
+                  n,
+                );
+              }
+            }
+            attributeChangedCallback() {
+              this.hydrate();
+            }
+          }
+          d(y, "observedAttributes", ["props"]),
+            customElements.get("astro-island") ||
+              customElements.define("astro-island", y);
+        }
+      })();
+    </script>
+    <astro-island
+      uid="JmjOt"
+      prefix="r0"
+      component-url="src/components/Collections/Collections"
+      component-export="Collections"
+      renderer-url="@astrojs/react/client.js"
+      props='{"values":[1,[[0,{"name":[0,"Child&#39;s Play"],"slug":[0,"childs-play"],"reviewCount":[0,8],"titleCount":[0,8],"avatarImageProps":[0,{"srcSet":[0,"/_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=160&amp;q=80&amp;f=avif 2x"],"src":[0,"/_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"]}]}],[0,{"name":[0,"Friday the 13th"],"slug":[0,"friday-the-13th"],"reviewCount":[0,10],"titleCount":[0,12],"avatarImageProps":[0,{"srcSet":[0,"/_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif 1x, /_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=160&amp;q=80&amp;f=avif 2x"],"src":[0,"/_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"]}]}],[0,{"name":[0,"Halloween"],"slug":[0,"halloween"],"reviewCount":[0,6],"titleCount":[0,13],"avatarImageProps":[0,{"srcSet":[0,"/_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=160&amp;q=80&amp;f=avif 2x"],"src":[0,"/_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"]}]}],[0,{"name":[0,"Hammer Films"],"slug":[0,"hammer-films"],"reviewCount":[0,10],"titleCount":[0,94],"avatarImageProps":[0,{"srcSet":[0,"/_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=160&amp;q=80&amp;f=avif 2x"],"src":[0,"/_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"]}]}],[0,{"name":[0,"Hatchet"],"slug":[0,"hatchet"],"reviewCount":[0,4],"titleCount":[0,4],"avatarImageProps":[0,{"srcSet":[0,"/_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=160&amp;q=80&amp;f=avif 2x"],"src":[0,"/_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"]}]}],[0,{"name":[0,"James Bond"],"slug":[0,"james-bond"],"reviewCount":[0,6],"titleCount":[0,27],"avatarImageProps":[0,{"srcSet":[0,"/_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=160&amp;q=80&amp;f=avif 2x"],"src":[0,"/_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"]}]}],[0,{"name":[0,"Phantasm"],"slug":[0,"phantasm"],"reviewCount":[0,5],"titleCount":[0,5],"avatarImageProps":[0,{"srcSet":[0,"/_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=160&amp;q=80&amp;f=avif 2x"],"src":[0,"/_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"]}]}],[0,{"name":[0,"Saw"],"slug":[0,"saw"],"reviewCount":[0,7],"titleCount":[0,9],"avatarImageProps":[0,{"srcSet":[0,"/_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=160&amp;q=80&amp;f=avif 2x"],"src":[0,"/_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"]}]}],[0,{"name":[0,"Shaw Brothers"],"slug":[0,"shaw-brothers"],"reviewCount":[0,7],"titleCount":[0,208],"avatarImageProps":[0,{"srcSet":[0,"/_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=160&amp;q=80&amp;f=avif 2x"],"src":[0,"/_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"]}]}],[0,{"name":[0,"Universal Monsters"],"slug":[0,"universal-monsters"],"reviewCount":[0,3],"titleCount":[0,29],"avatarImageProps":[0,{"srcSet":[0,"/_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif 1x, /_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=160&amp;q=80&amp;f=avif 2x"],"src":[0,"/_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"]}]}]]],"initialSort":[0,"name-asc"],"backdropImageProps":[0,{"srcSet":[0,"/_image?/content%2Fassets%2Fbackdrops%2Fcollections.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=600&amp;q=80&amp;f=avif 600w, /_image?/content%2Fassets%2Fbackdrops%2Fcollections.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=1200&amp;q=80&amp;f=avif 1200w, /_image?/content%2Fassets%2Fbackdrops%2Fcollections.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=2400&amp;h=1350&amp;q=80&amp;f=avif 2400w, /_image?/content%2Fassets%2Fbackdrops%2Fcollections.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=2400&amp;h=1350&amp;q=80&amp;f=avif 4800w"],"src":[0,"/_image?/content%2Fassets%2Fbackdrops%2Fcollections.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=2400&amp;h=1350&amp;q=80&amp;f=avif"]}]}'
+      ssr=""
+      client="load"
+      before-hydration-url="astro:scripts/before-hydration.js"
+      opts='{"name":"Collections","value":true}'
+      await-children=""
+      ><div>
+        <a
+          href="#content"
+          class="absolute left-1/2 top-0.5 z-50 mx-auto bg-subtle px-6 py-2 text-center text-accent [transform:translate(-50%,calc(-100%_-_2px))] focus:[transform:translate(-50%,0%)]"
+          >Skip to content</a
+        >
+        <div class="flex min-h-full w-full flex-col bg-default">
+          <header
+            class="z-20 flex w-full items-center justify-between px-container py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
+            style="
+              color: #fff;
+              position: absolute;
+              background-image: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0.85),
+                transparent 95%
+              );
+            "
+          >
+            <div class="flex flex-col mt-2 tablet:mt-0">
+              <div
+                class="whitespace-nowrap font-normal leading-8"
+                style="font-size: 1.5625rem"
+              >
+                <a href="/">Frank&#x27;s Movie Log</a>
+              </div>
+              <p class="w-full pl-px text-sm italic leading-4 opacity-85">
+                My life at the movies.
+              </p>
+            </div>
+            <div class="flex items-center">
+              <nav class="hidden w-full desktop:block desktop:w-auto">
+                <ul class="flex flex-wrap justify-start gap-x-6 text-xl">
+                  <li class="block whitespace-nowrap tracking-serif-wide">
+                    <a
+                      class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                      href="/"
+                      style="text-shadow: 1px 1px 2px black"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="block whitespace-nowrap tracking-serif-wide">
+                    <a
+                      class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                      href="/how-i-grade/"
+                      style="text-shadow: 1px 1px 2px black"
+                      >How I Grade</a
+                    >
+                  </li>
+                  <li class="block whitespace-nowrap tracking-serif-wide">
+                    <a
+                      class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                      href="/reviews/"
+                      style="text-shadow: 1px 1px 2px black"
+                      >Reviews</a
+                    >
+                  </li>
+                  <li class="block whitespace-nowrap tracking-serif-wide">
+                    <a
+                      class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                      href="/viewings/"
+                      style="text-shadow: 1px 1px 2px black"
+                      >Viewing Log</a
+                    >
+                  </li>
+                  <li class="block whitespace-nowrap tracking-serif-wide">
+                    <a
+                      class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                      href="/cast-and-crew/"
+                      style="text-shadow: 1px 1px 2px black"
+                      >Cast &amp; Crew</a
+                    >
+                  </li>
+                  <li class="block whitespace-nowrap tracking-serif-wide">
+                    <a
+                      class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                      href="/collections/"
+                      style="text-shadow: 1px 1px 2px black"
+                      >Collections</a
+                    >
+                  </li>
+                  <li class="block whitespace-nowrap tracking-serif-wide">
+                    <a
+                      class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                      href="/watchlist/"
+                      style="text-shadow: 1px 1px 2px black"
+                      >Watchlist</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <div class="z-[1000]">
+                <button
+                  data-open-modal="true"
+                  disabled=""
+                  aria-label="Search"
+                  aria-keyshortcuts="Control+K"
+                  class="flex size-10 items-center justify-center overflow-hidden text-sm leading-6 ring-default desktop:ml-6"
+                  type="button"
+                  title="Search: Control+K"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-7"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+              <input type="checkbox" id="mobile-nav" class="hidden" /><label
+                for="mobile-nav"
+                class="hamburger-icon desktop:hidden"
+                ><span
+                  style="background: #fff"
+                  class="hamburger-icon-bars"
+                ></span
+              ></label>
+              <ul
+                class="hamburger-menu flex flex-col items-start gap-y-5 text-left text-inverse desktop:hidden"
+              >
+                <li class="block w-1/2 whitespace-nowrap text-2xl">
+                  <a href="/">Home</a>
+                </li>
+                <li class="block w-1/2 whitespace-nowrap text-2xl">
+                  <a href="/how-i-grade/">How I Grade</a>
+                </li>
+                <li class="block w-1/2 whitespace-nowrap text-2xl">
+                  <a href="/reviews/">Reviews</a>
+                  <ol class="mt-4">
+                    <li
+                      class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
+                    >
+                      <a href="/reviews/underseen/">Underseen Gems</a>
+                    </li>
+                    <li
+                      class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
+                    >
+                      <a href="/reviews/overrated/"
+                        >Overrated Disappointments</a
+                      >
+                    </li>
+                  </ol>
+                </li>
+                <li class="block w-1/2 whitespace-nowrap text-2xl">
+                  <a href="/viewings/">Viewing Log</a>
+                  <ol class="mt-4">
+                    <li
+                      class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
+                    >
+                      <a href="/viewings/stats/">Stats</a>
+                    </li>
+                  </ol>
+                </li>
+                <li class="block w-1/2 whitespace-nowrap text-2xl">
+                  <a href="/cast-and-crew/">Cast &amp; Crew</a>
+                </li>
+                <li class="block w-1/2 whitespace-nowrap text-2xl">
+                  <a href="/collections/">Collections</a>
+                </li>
+                <li class="block w-1/2 whitespace-nowrap text-2xl">
+                  <a href="/watchlist/">Watchlist</a>
+                  <ol class="mt-4">
+                    <li
+                      class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
+                    >
+                      <a href="/watchlist/progress/">Progress</a>
+                    </li>
+                  </ol>
+                </li>
+              </ul>
+            </div>
+          </header>
+          <main class="grow bg-subtle" id="content">
+            <header
+              class="min-h-[400px] tablet:min-h-[640px] desktop:min-h-[clamp(640px,70vh,1350px)] relative flex w-full flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pb-8 pt-40 text-inverse tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40"
+            >
+              <img
+                class="absolute inset-0 size-full object-cover object-top"
+                srcset="
+                  /_image?/content%2Fassets%2Fbackdrops%2Fcollections.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=600&amp;q=80&amp;f=avif              600w,
+                  /_image?/content%2Fassets%2Fbackdrops%2Fcollections.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=1200&amp;q=80&amp;f=avif            1200w,
+                  /_image?/content%2Fassets%2Fbackdrops%2Fcollections.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=2400&amp;h=1350&amp;q=80&amp;f=avif 2400w,
+                  /_image?/content%2Fassets%2Fbackdrops%2Fcollections.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=2400&amp;h=1350&amp;q=80&amp;f=avif 4800w
+                "
+                src="/_image?/content%2Fassets%2Fbackdrops%2Fcollections.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=2400&amp;h=1350&amp;q=80&amp;f=avif"
+                width="2400"
+                height="1350"
+                sizes="100vw"
+                loading="eager"
+                fetchpriority="high"
+                alt=""
+              />
+              <div
+                class="z-10 mx-auto flex w-full max-w-screen-max flex-col px-container"
+              >
+                <h1
+                  class="font-sans text-2xl font-bold uppercase tracking-widest desktop:text-7xl"
+                >
+                  Collections
+                </h1>
+                <p
+                  class="mt-1 text-base desktop:my-4 desktop:text-xl [text-shadow:1px_1px_2px_black]"
+                >
+                  &quot;Okay ramblers, let&#x27;s get rambling.&quot;
+                </p>
+              </div>
+            </header>
+            <div class="mx-auto flex flex-col items-center bg-default">
+              <div class="mx-auto flex w-full flex-col items-stretch">
+                <div class="flex grow flex-col bg-subtle">
+                  <div class="relative tablet:px-12 tablet-landscape:px-0">
+                    <div
+                      class="relative z-10 row-start-1 bg-default text-xs tablet:-mx-12 tablet:px-0 tablet-landscape:col-span-3 tablet-landscape:mx-0 tablet-landscape:w-full"
+                    >
+                      <div
+                        class="mx-auto flex w-full max-w-screen-max flex-wrap items-baseline justify-between gap-x-4 gap-y-5 px-container py-10 font-sans font-medium uppercase tracking-wide text-subtle"
+                      >
+                        <span class="block pr-4"
+                          ><span class="font-semibold text-default">10</span>
+                          <!-- -->Results</span
+                        ><button
+                          class="ml-auto flex justify-center gap-x-4 text-nowrap px-4 py-2 uppercase text-muted shadow-all tablet-landscape:hidden"
+                          style="background-color: var(--bg-canvas)"
+                        >
+                          Filter &amp; Sort
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="mx-auto max-w-screen-max grid-cols-[1fr_48px_minmax(398px,33%)] tablet-landscape:grid tablet-landscape:grid-rows-[auto_1fr]"
+                    >
+                      <div
+                        class="relative z-10 col-start-3 row-span-2 row-start-2 grid min-w-[350px] text-sm transition-[grid-template-rows] duration-200 ease-in-out tablet-landscape:mr-12 tablet-landscape:block tablet-landscape:py-24 tablet-landscape:pb-12 tablet-landscape:shadow-none desktop:mr-20"
+                        style="grid-template-rows: 0fr"
+                      >
+                        <div
+                          class="w-full overflow-hidden bg-subtle text-sm tablet:text-base tablet-landscape:overflow-visible tablet-landscape:bg-default tablet-landscape:px-container tablet-landscape:pt-0 desktop:px-8"
+                        >
+                          <fieldset
+                            class="flex flex-col gap-10 bg-default px-container py-10 tablet:gap-12 tablet-landscape:mt-0 tablet-landscape:px-0"
+                          >
+                            <legend
+                              class="tablet-landscape::block hidden w-full py-10 font-sans text-xs font-bold uppercase tracking-wide text-subtle tablet-landscape:shadow-bottom"
+                            >
+                              Filter &amp; Sort
+                            </legend>
+                            <label class="flex flex-col text-subtle"
+                              ><span
+                                class="inline-block h-6 text-left font-sans text-xxs uppercase leading-none tracking-wide text-subtle"
+                                >Name</span
+                              ><input
+                                type="text"
+                                placeholder="Enter all or part of a name"
+                                class="border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50" /></label
+                            ><label class="flex flex-col"
+                              ><span
+                                class="inline-block h-6 text-left font-sans text-xxs uppercase leading-none tracking-wide text-subtle"
+                                >Sort</span
+                              ><select
+                                class="w-full appearance-none border-none bg-default py-2 pl-4 pr-8 text-base leading-6 text-subtle shadow-all outline-accent"
+                              >
+                                <option value="name-asc" selected="">
+                                  Name (A → Z)
+                                </option>
+                                <option value="name-desc">Name (Z → A)</option>
+                                <option value="title-count-desc">
+                                  Title Count (Most First)
+                                </option>
+                                <option value="title-count-asc">
+                                  Title Count (Fewest First)
+                                </option>
+                                <option value="review-count-desc">
+                                  Review Count (Most First)
+                                </option>
+                                <option value="review-count-asc">
+                                  Review Count (Fewest First)
+                                </option>
+                              </select></label
+                            >
+                          </fieldset>
+                        </div>
+                      </div>
+                      <div
+                        class="col-start-1 row-start-2 pb-10 tablet-landscape:pl-12 desktop:pl-20"
+                      >
+                        <ol
+                          data-testid="list"
+                          class="mt-4 bg-subtle tablet-landscape:my-24"
+                        >
+                          <li
+                            class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                          >
+                            <div
+                              class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+                            >
+                              <img
+                                alt="Child&#x27;s Play"
+                                srcset="
+                                  /_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif  1x,
+                                  /_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=160&amp;q=80&amp;f=avif 2x
+                                "
+                                src="/_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"
+                                width="80"
+                                height="80"
+                                loading="lazy"
+                                class="w-full"
+                              />
+                            </div>
+                            <a
+                              href="/collections/childs-play/"
+                              class="font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+                              ><div class="leading-normal">
+                                Child&#x27;s Play
+                              </div></a
+                            >
+                            <div
+                              class="ml-auto text-nowrap font-sans text-xs text-subtle"
+                            >
+                              8<!-- -->
+                              /
+                              <!-- -->8
+                            </div>
+                          </li>
+                          <li
+                            class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                          >
+                            <div
+                              class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+                            >
+                              <img
+                                alt="Friday the 13th"
+                                srcset="
+                                  /_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif  1x,
+                                  /_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=160&amp;q=80&amp;f=avif 2x
+                                "
+                                src="/_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"
+                                width="80"
+                                height="80"
+                                loading="lazy"
+                                class="w-full"
+                              />
+                            </div>
+                            <a
+                              href="/collections/friday-the-13th/"
+                              class="font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+                              ><div class="leading-normal">
+                                Friday the 13th
+                              </div></a
+                            >
+                            <div
+                              class="ml-auto text-nowrap font-sans text-xs text-subtle"
+                            >
+                              10<!-- -->
+                              /
+                              <!-- -->12
+                            </div>
+                          </li>
+                          <li
+                            class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                          >
+                            <div
+                              class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+                            >
+                              <img
+                                alt="Halloween"
+                                srcset="
+                                  /_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif  1x,
+                                  /_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=160&amp;q=80&amp;f=avif 2x
+                                "
+                                src="/_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"
+                                width="80"
+                                height="80"
+                                loading="lazy"
+                                class="w-full"
+                              />
+                            </div>
+                            <a
+                              href="/collections/halloween/"
+                              class="font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+                              ><div class="leading-normal">Halloween</div></a
+                            >
+                            <div
+                              class="ml-auto text-nowrap font-sans text-xs text-subtle"
+                            >
+                              6<!-- -->
+                              /
+                              <!-- -->13
+                            </div>
+                          </li>
+                          <li
+                            class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                          >
+                            <div
+                              class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+                            >
+                              <img
+                                alt="Hammer Films"
+                                srcset="
+                                  /_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif  1x,
+                                  /_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=160&amp;q=80&amp;f=avif 2x
+                                "
+                                src="/_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"
+                                width="80"
+                                height="80"
+                                loading="lazy"
+                                class="w-full"
+                              />
+                            </div>
+                            <a
+                              href="/collections/hammer-films/"
+                              class="font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+                              ><div class="leading-normal">Hammer Films</div></a
+                            >
+                            <div
+                              class="ml-auto text-nowrap font-sans text-xs text-subtle"
+                            >
+                              10<!-- -->
+                              /
+                              <!-- -->94
+                            </div>
+                          </li>
+                          <li
+                            class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                          >
+                            <div
+                              class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+                            >
+                              <img
+                                alt="Hatchet"
+                                srcset="
+                                  /_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif  1x,
+                                  /_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=160&amp;q=80&amp;f=avif 2x
+                                "
+                                src="/_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"
+                                width="80"
+                                height="80"
+                                loading="lazy"
+                                class="w-full"
+                              />
+                            </div>
+                            <a
+                              href="/collections/hatchet/"
+                              class="font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+                              ><div class="leading-normal">Hatchet</div></a
+                            >
+                            <div
+                              class="ml-auto text-nowrap font-sans text-xs text-subtle"
+                            >
+                              4<!-- -->
+                              /
+                              <!-- -->4
+                            </div>
+                          </li>
+                          <li
+                            class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                          >
+                            <div
+                              class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+                            >
+                              <img
+                                alt="James Bond"
+                                srcset="
+                                  /_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif  1x,
+                                  /_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=160&amp;q=80&amp;f=avif 2x
+                                "
+                                src="/_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"
+                                width="80"
+                                height="80"
+                                loading="lazy"
+                                class="w-full"
+                              />
+                            </div>
+                            <a
+                              href="/collections/james-bond/"
+                              class="font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+                              ><div class="leading-normal">James Bond</div></a
+                            >
+                            <div
+                              class="ml-auto text-nowrap font-sans text-xs text-subtle"
+                            >
+                              6<!-- -->
+                              /
+                              <!-- -->27
+                            </div>
+                          </li>
+                          <li
+                            class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                          >
+                            <div
+                              class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+                            >
+                              <img
+                                alt="Phantasm"
+                                srcset="
+                                  /_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif  1x,
+                                  /_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=160&amp;q=80&amp;f=avif 2x
+                                "
+                                src="/_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"
+                                width="80"
+                                height="80"
+                                loading="lazy"
+                                class="w-full"
+                              />
+                            </div>
+                            <a
+                              href="/collections/phantasm/"
+                              class="font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+                              ><div class="leading-normal">Phantasm</div></a
+                            >
+                            <div
+                              class="ml-auto text-nowrap font-sans text-xs text-subtle"
+                            >
+                              5<!-- -->
+                              /
+                              <!-- -->5
+                            </div>
+                          </li>
+                          <li
+                            class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                          >
+                            <div
+                              class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+                            >
+                              <img
+                                alt="Saw"
+                                srcset="
+                                  /_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif  1x,
+                                  /_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=160&amp;q=80&amp;f=avif 2x
+                                "
+                                src="/_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"
+                                width="80"
+                                height="80"
+                                loading="lazy"
+                                class="w-full"
+                              />
+                            </div>
+                            <a
+                              href="/collections/saw/"
+                              class="font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+                              ><div class="leading-normal">Saw</div></a
+                            >
+                            <div
+                              class="ml-auto text-nowrap font-sans text-xs text-subtle"
+                            >
+                              7<!-- -->
+                              /
+                              <!-- -->9
+                            </div>
+                          </li>
+                          <li
+                            class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                          >
+                            <div
+                              class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+                            >
+                              <img
+                                alt="Shaw Brothers"
+                                srcset="
+                                  /_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif  1x,
+                                  /_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=160&amp;q=80&amp;f=avif 2x
+                                "
+                                src="/_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"
+                                width="80"
+                                height="80"
+                                loading="lazy"
+                                class="w-full"
+                              />
+                            </div>
+                            <a
+                              href="/collections/shaw-brothers/"
+                              class="font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+                              ><div class="leading-normal">
+                                Shaw Brothers
+                              </div></a
+                            >
+                            <div
+                              class="ml-auto text-nowrap font-sans text-xs text-subtle"
+                            >
+                              7<!-- -->
+                              /
+                              <!-- -->208
+                            </div>
+                          </li>
+                          <li
+                            class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                          >
+                            <div
+                              class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+                            >
+                              <img
+                                alt="Universal Monsters"
+                                srcset="
+                                  /_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;q=80&amp;f=avif  1x,
+                                  /_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=160&amp;q=80&amp;f=avif 2x
+                                "
+                                src="/_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"
+                                width="80"
+                                height="80"
+                                loading="lazy"
+                                class="w-full"
+                              />
+                            </div>
+                            <a
+                              href="/collections/universal-monsters/"
+                              class="font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+                              ><div class="leading-normal">
+                                Universal Monsters
+                              </div></a
+                            >
+                            <div
+                              class="ml-auto text-nowrap font-sans text-xs text-subtle"
+                            >
+                              3<!-- -->
+                              /
+                              <!-- -->29
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+          <footer
+            class="flex flex-wrap items-start justify-between gap-[10%] bg-footer px-container py-20 text-inverse tablet:px-12 tablet:pt-10 desktop:p-20"
+          >
+            <div class="flex flex-col pb-12">
+              <div class="flex flex-col">
+                <div
+                  class="whitespace-nowrap font-normal leading-8"
+                  style="font-size: 1.5625rem"
+                >
+                  <a href="/">Frank&#x27;s Movie Log</a>
+                </div>
+                <p class="w-full pl-px text-sm italic leading-4 opacity-85">
+                  My life at the movies.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-20 pb-20 pt-10 tablet:basis-1/2 tablet:pt-20"
+            >
+              <ul class="flex w-full flex-col gap-y-10 text-inverse max:w-auto">
+                <li class="block w-1/2 whitespace-nowrap text-2xl">
+                  <a class="hover:text-accent" href="/">Home</a>
+                </li>
+                <li class="block w-1/2 whitespace-nowrap text-2xl">
+                  <a class="hover:text-accent" href="/how-i-grade/"
+                    >How I Grade</a
+                  >
+                </li>
+                <li class="block w-1/2 whitespace-nowrap text-2xl">
+                  <a class="hover:text-accent" href="/reviews/">Reviews</a>
+                  <ol class="mt-4">
+                    <li
+                      class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
+                    >
+                      <a class="hover:text-inverse" href="/reviews/underseen/"
+                        >Underseen Gems</a
+                      >
+                    </li>
+                    <li
+                      class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
+                    >
+                      <a class="hover:text-inverse" href="/reviews/overrated/"
+                        >Overrated Disappointments</a
+                      >
+                    </li>
+                  </ol>
+                </li>
+                <li class="block w-1/2 whitespace-nowrap text-2xl">
+                  <a class="hover:text-accent" href="/viewings/">Viewing Log</a>
+                  <ol class="mt-4">
+                    <li
+                      class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
+                    >
+                      <a class="hover:text-inverse" href="/viewings/stats/"
+                        >Stats</a
+                      >
+                    </li>
+                  </ol>
+                </li>
+                <li class="block w-1/2 whitespace-nowrap text-2xl">
+                  <a class="hover:text-accent" href="/cast-and-crew/"
+                    >Cast &amp; Crew</a
+                  >
+                </li>
+                <li class="block w-1/2 whitespace-nowrap text-2xl">
+                  <a class="hover:text-accent" href="/collections/"
+                    >Collections</a
+                  >
+                </li>
+                <li class="block w-1/2 whitespace-nowrap text-2xl">
+                  <a class="hover:text-accent" href="/watchlist/">Watchlist</a>
+                  <ol class="mt-4">
+                    <li
+                      class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
+                    >
+                      <a class="hover:text-inverse" href="/watchlist/progress/"
+                        >Progress</a
+                      >
+                    </li>
+                  </ol>
+                </li>
+              </ul>
+              <a
+                href="#top"
+                class="mb-8 w-full max-w-button bg-canvas py-5 text-center font-sans text-xs uppercase tracking-wide text-default hover:bg-inverse hover:text-inverse"
+                >To the top</a
+              >
+              <p class="w-full font-normal leading-4 text-inverse-subtle">
+                All stills used in accordance with the<!-- -->
+                <a
+                  href="http://www.copyright.gov/title17/92chap1.html#107"
+                  class="text-inherit underline decoration-2 underline-offset-4 hover:bg-default hover:text-default"
+                  >Fair Use Law.</a
+                >
+              </p>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <!--astro:end--></astro-island
+    >
+    <dialog
+      class="relative m-0 h-screen max-h-none w-screen max-w-unset border border-default bg-subtle shadow-lg open:flex open:flex-col tablet:mx-auto tablet:mt-16 tablet:h-min tablet:max-h-[min(100vh_-_128px,900px)] tablet:min-h-60 tablet:max-w-[min(100vw_-_64px,36rem)] tablet:rounded-xl desktop:min-h-0"
+      aria-label="Search"
+    >
+      <div data-dialog-frame class="contents">
+        <button
+          data-close-modal
+          class="px-4 font-sans text-sm font-light hover:bg-inverse hover:text-inverse focus:outline-accent"
+        >
+          Cancel
+        </button>
+        <div class="contents"><div id="pagefind__search"></div></div>
+        <div
+          class="hidden px-[var(--search-dialog-padding)] py-4 font-sans text-xs font-light tracking-wide text-subtle desktop:block"
+        >
+          <kbd class="rounded-md bg-default p-2 font-mono text-xs text-subtle"
+            >Tab</kbd
+          >
+          to navigate
+          <kbd
+            class="ml-4 rounded-md bg-default p-2 font-mono text-xs text-subtle"
+            >ESC</kbd
+          >
+          to close
+        </div>
+      </div>
+    </dialog>
+    <script>
+      (() => {
+        const openBtn = document.querySelector("button[data-open-modal]");
+        if (!openBtn) return;
+        if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+          openBtn.setAttribute("aria-keyshortcuts", "Meta+K");
+          openBtn.setAttribute("title", `Search: ⌘K`);
+        }
+      })();
+    </script>
+  </body>
+</html>
