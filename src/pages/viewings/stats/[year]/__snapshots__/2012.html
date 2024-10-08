@@ -235,7 +235,7 @@
           </header>
           <nav class="bg-footer mb-12 w-full">
             <ul
-              class="mx-auto flex max-w-screen-max overflow-y-auto px-container font-sans text-sm font-normal tracking-wide desktop:justify-center"
+              class="scrollbar-hidden mx-auto flex max-w-screen-max overflow-x-auto px-container font-sans text-sm font-normal tracking-wide desktop:justify-center"
             >
               <li class="text-center text-inverse-subtle">
                 <a
@@ -366,17 +366,17 @@
               class="bg-default px-container desktop:pb-10 mx-auto w-full"
             >
               <h2
-                class="py-4 font-medium shadow-bottom tablet:text-center tablet:text-2xl desktop:py-8"
+                class="py-4 text-xl font-medium shadow-bottom tablet:text-center tablet:text-2xl desktop:py-8"
               >
                 Most Watched Movies
               </h2>
               <ol
-                class="grid-cols-[repeat(auto-fit,_minmax(128px,_min(calc(100%_/_5_-_24px),248px)))] items-center justify-center gap-x-6 gap-y-8 bg-subtle tablet:grid tablet:items-start tablet:bg-default"
+                class="grid-cols-[repeat(auto-fit,_minmax(128px,248px))] items-center justify-center gap-x-6 gap-y-8 bg-subtle tablet:grid tablet:items-start tablet:bg-default"
               >
                 <li
                   class="relative mb-1 flex items-center gap-x-6 bg-default py-4 tablet:w-auto tablet:flex-col tablet:p-0 desktop:w-auto"
                 >
-                  <div class="min-w-12 max-w-12 tablet:max-w-[248px] shrink-0">
+                  <div class="w-16 tablet:w-auto tablet:max-w-[248px]">
                     <img
                       srcset="
                         /_image?/content%2Fassets%2Fposters%2Ffright-night-1985.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;q=80&amp;f=avif   62w,
@@ -397,7 +397,7 @@
                   <div class="grow tablet:w-full">
                     <a
                       href="/reviews/fright-night-1985/"
-                      class="block font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:bg-[#fff] before:opacity-15 hover:underline hover:before:opacity-0 tablet:text-center tablet:before:left-0 tablet:before:top-0 tablet:before:w-full"
+                      class="block font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-0 before:top-4 before:aspect-poster before:w-list-item-poster before:bg-[#fff] before:opacity-15 hover:underline hover:before:opacity-0 tablet:text-center tablet:before:top-0 tablet:before:w-full"
                       >Fright Night<!-- --> <!-- --> <span
                         class="text-xxs font-light text-subtle tablet:text-xs"
                         >1985</span
@@ -414,7 +414,7 @@
                 <li
                   class="relative mb-1 flex items-center gap-x-6 bg-default py-4 tablet:w-auto tablet:flex-col tablet:p-0 desktop:w-auto"
                 >
-                  <div class="min-w-12 max-w-12 tablet:max-w-[248px] shrink-0">
+                  <div class="w-16 tablet:w-auto tablet:max-w-[248px]">
                     <img
                       srcset="
                         /_image?/content%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;q=80&amp;f=avif   62w,
@@ -454,7 +454,7 @@
               class="mx-auto flex w-full flex-col items-start gap-y-8 desktop:max-w-[calc(66%_+_24px)] desktop:flex-row desktop:gap-x-8"
             >
               <section class="w-full bg-default px-container pb-8">
-                <h2 class="py-4 font-medium tablet:text-xl">By Release Year</h2>
+                <h2 class="py-4 text-xl font-medium">By Release Year</h2>
                 <div
                   class="grid w-full grid-cols-[1fr,auto] tablet:whitespace-nowrap"
                 >
@@ -623,7 +623,7 @@
                 </div>
               </section>
               <section class="w-full bg-default px-container pb-8">
-                <h2 class="py-4 font-medium tablet:text-xl">Top Media</h2>
+                <h2 class="py-4 text-xl font-medium">Top Media</h2>
                 <div
                   class="grid w-full grid-cols-[1fr,auto] tablet:whitespace-nowrap"
                 >
@@ -742,9 +742,7 @@
               class="mx-auto flex w-full flex-col gap-y-8 desktop:max-w-[calc(66%_+_24px)]"
             >
               <section class="w-full bg-default pb-8 tablet:px-container">
-                <h2
-                  class="px-container py-4 font-medium tablet:px-0 tablet:text-xl"
-                >
+                <h2 class="px-container py-4 text-xl font-medium tablet:px-0">
                   Most Watched Directors
                 </h2>
                 <div class="w-full tablet:whitespace-nowrap">
@@ -763,16 +761,18 @@
                         12
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -813,7 +813,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -854,7 +854,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -895,7 +895,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -936,7 +936,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -977,7 +977,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1019,7 +1019,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1060,7 +1060,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1101,7 +1101,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1142,7 +1142,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1183,7 +1183,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1224,7 +1224,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1279,16 +1279,18 @@
                         10
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1330,7 +1332,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1372,7 +1374,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1413,7 +1415,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1454,7 +1456,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1496,7 +1498,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1537,7 +1539,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1579,7 +1581,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1620,7 +1622,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1661,7 +1663,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1720,16 +1722,18 @@
                         6
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1770,7 +1774,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1811,7 +1815,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1852,7 +1856,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1893,7 +1897,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1934,7 +1938,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -1994,16 +1998,18 @@
                         6
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -2044,7 +2050,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -2085,7 +2091,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -2126,7 +2132,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -2167,7 +2173,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -2208,7 +2214,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -2269,16 +2275,18 @@
                         6
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -2319,7 +2327,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -2360,7 +2368,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -2401,7 +2409,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -2442,7 +2450,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -2483,7 +2491,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -2538,16 +2546,18 @@
                         5
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -2588,7 +2598,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -2629,7 +2639,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -2670,7 +2680,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -2712,7 +2722,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -2767,16 +2777,18 @@
                         5
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -2818,7 +2830,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -2859,7 +2871,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -2900,7 +2912,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -2942,7 +2954,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3002,16 +3014,18 @@
                         5
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3052,7 +3066,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3093,7 +3107,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3134,7 +3148,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3175,7 +3189,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3230,16 +3244,18 @@
                         4
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3281,7 +3297,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3325,7 +3341,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3369,7 +3385,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3431,16 +3447,18 @@
                         3
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3481,7 +3499,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3522,7 +3540,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3569,9 +3587,7 @@
                 </div>
               </section>
               <section class="w-full bg-default pb-8 tablet:px-container">
-                <h2
-                  class="px-container py-4 font-medium tablet:px-0 tablet:text-xl"
-                >
+                <h2 class="px-container py-4 text-xl font-medium tablet:px-0">
                   Most Watched Performers
                 </h2>
                 <div class="w-full tablet:whitespace-nowrap">
@@ -3590,16 +3606,18 @@
                         22
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3640,7 +3658,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3681,7 +3699,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3722,7 +3740,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3763,7 +3781,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3805,7 +3823,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3847,7 +3865,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3889,7 +3907,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3931,7 +3949,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -3972,7 +3990,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4013,7 +4031,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4054,7 +4072,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4095,7 +4113,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4137,7 +4155,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4178,7 +4196,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4220,7 +4238,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4261,7 +4279,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4302,7 +4320,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4344,7 +4362,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4385,7 +4403,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4426,7 +4444,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4467,7 +4485,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4526,16 +4544,18 @@
                         20
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4576,7 +4596,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4617,7 +4637,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4658,7 +4678,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4700,7 +4720,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4741,7 +4761,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4782,7 +4802,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4823,7 +4843,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4864,7 +4884,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4906,7 +4926,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4947,7 +4967,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -4988,7 +5008,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5030,7 +5050,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5072,7 +5092,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5113,7 +5133,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5154,7 +5174,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5195,7 +5215,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5237,7 +5257,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5279,7 +5299,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5321,7 +5341,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5376,16 +5396,18 @@
                         13
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5427,7 +5449,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5469,7 +5491,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5511,7 +5533,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5552,7 +5574,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5593,7 +5615,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5634,7 +5656,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5675,7 +5697,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5717,7 +5739,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5759,7 +5781,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5801,7 +5823,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5842,7 +5864,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5883,7 +5905,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5942,16 +5964,18 @@
                         11
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -5992,7 +6016,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6034,7 +6058,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6075,7 +6099,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6117,7 +6141,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6158,7 +6182,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6199,7 +6223,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6240,7 +6264,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6282,7 +6306,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6323,7 +6347,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6364,7 +6388,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6423,16 +6447,18 @@
                         11
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6474,7 +6500,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6515,7 +6541,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6556,7 +6582,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6597,7 +6623,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6638,7 +6664,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6679,7 +6705,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6720,7 +6746,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6761,7 +6787,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6802,7 +6828,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6843,7 +6869,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6902,16 +6928,18 @@
                         10
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6953,7 +6981,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -6995,7 +7023,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7036,7 +7064,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7077,7 +7105,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7118,7 +7146,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7160,7 +7188,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7201,7 +7229,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7242,7 +7270,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7284,7 +7312,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7341,16 +7369,18 @@
                         10
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7392,7 +7422,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7434,7 +7464,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7475,7 +7505,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7516,7 +7546,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7557,7 +7587,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7599,7 +7629,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7641,7 +7671,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7682,7 +7712,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7724,7 +7754,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7783,16 +7813,18 @@
                         9
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7833,7 +7865,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7874,7 +7906,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7915,7 +7947,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7956,7 +7988,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -7997,7 +8029,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8039,7 +8071,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8080,7 +8112,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8121,7 +8153,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8180,16 +8212,18 @@
                         9
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8231,7 +8265,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8273,7 +8307,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8315,7 +8349,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8357,7 +8391,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8399,7 +8433,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8441,7 +8475,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8483,7 +8517,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8524,7 +8558,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8584,16 +8618,18 @@
                         9
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8635,7 +8671,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8676,7 +8712,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8717,7 +8753,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8758,7 +8794,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8799,7 +8835,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8840,7 +8876,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8881,7 +8917,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8922,7 +8958,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -8969,9 +9005,7 @@
                 </div>
               </section>
               <section class="w-full bg-default pb-8 tablet:px-container">
-                <h2
-                  class="px-container py-4 font-medium tablet:px-0 tablet:text-xl"
-                >
+                <h2 class="px-container py-4 text-xl font-medium tablet:px-0">
                   Most Watched Writers
                 </h2>
                 <div class="w-full tablet:whitespace-nowrap">
@@ -8986,16 +9020,18 @@
                         7
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9037,7 +9073,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9079,7 +9115,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9120,7 +9156,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9162,7 +9198,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9204,7 +9240,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9245,7 +9281,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9300,16 +9336,18 @@
                         6
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9351,7 +9389,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9392,7 +9430,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9433,7 +9471,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9474,7 +9512,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9515,7 +9553,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9570,16 +9608,18 @@
                         6
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9620,7 +9660,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9661,7 +9701,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9702,7 +9742,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9743,7 +9783,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9784,7 +9824,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9839,16 +9879,18 @@
                         6
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9890,7 +9932,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9931,7 +9973,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -9972,7 +10014,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10013,7 +10055,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10054,7 +10096,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10110,16 +10152,18 @@
                         4
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10161,7 +10205,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10202,7 +10246,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10243,7 +10287,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10298,16 +10342,18 @@
                         4
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10348,7 +10394,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10389,7 +10435,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10430,7 +10476,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10486,16 +10532,18 @@
                         4
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10536,7 +10584,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10577,7 +10625,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10619,7 +10667,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10678,16 +10726,18 @@
                         4
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10729,7 +10779,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10770,7 +10820,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10811,7 +10861,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10866,16 +10916,18 @@
                         4
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10916,7 +10968,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10957,7 +11009,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -10998,7 +11050,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-unwatched relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -11053,16 +11105,18 @@
                         4
                       </div>
                     </div>
-                    <div class="col-span-2 row-start-2 bg-subtle">
+                    <div
+                      class="col-span-2 row-start-2 px-container tablet:px-0"
+                    >
                       <details class="bg-group tablet:px-2">
                         <summary
-                          class="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0"
+                          class="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0"
                         >
                           Details
                         </summary>
                         <ol class="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -11104,7 +11158,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -11148,7 +11202,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
@@ -11192,7 +11246,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
+                            class="bg-default relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6"
                           >
                             <div class="w-list-item-poster shrink-0">
                               <img
