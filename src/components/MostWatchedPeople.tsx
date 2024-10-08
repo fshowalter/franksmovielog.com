@@ -1,6 +1,5 @@
 import type { PosterImageProps } from "src/api/posters";
 
-import { ListItem } from "./ListItem";
 import { ListItemMediumAndVenue } from "./ListItemMediumAndVenue";
 import { ListItemPoster } from "./ListItemPoster";
 import { ListItemTitle } from "./ListItemTitle";
@@ -36,7 +35,7 @@ export function MostWatchedPeople({
 
   return (
     <section className="w-full bg-default pb-8 tablet:px-container">
-      <h2 className="px-container py-4 font-medium tablet:px-0 tablet:text-xl">
+      <h2 className="px-container py-4 text-xl font-medium tablet:px-0">
         {header}
       </h2>
       <div className="w-full tablet:whitespace-nowrap">
@@ -51,9 +50,9 @@ export function MostWatchedPeople({
                   {value.count}
                 </div>
               </div>
-              <div className="col-span-2 row-start-2 bg-subtle">
+              <div className="col-span-2 row-start-2 px-container tablet:px-0">
                 <details className="bg-group tablet:px-2">
-                  <summary className="cursor-pointer px-container py-1 font-sans text-sm text-subtle tablet:px-0">
+                  <summary className="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0">
                     Details
                   </summary>
                   <ol className="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
@@ -101,7 +100,9 @@ function MostWatchedPersonViewingListItem({
   value: ViewingSubListItemValue;
 }) {
   return (
-    <ListItem background={value.slug ? "bg-default" : "bg-unwatched"}>
+    <li
+      className={`${value.slug ? "bg-default" : "bg-unwatched"} relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6`}
+    >
       <ListItemPoster imageProps={value.posterImageProps} />
       <div className="flex grow flex-col gap-1">
         <ListItemTitle
@@ -114,6 +115,6 @@ function MostWatchedPersonViewingListItem({
         </div>
         <ListItemMediumAndVenue medium={value.medium} venue={value.venue} />
       </div>
-    </ListItem>
+    </li>
   );
 }
