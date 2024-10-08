@@ -8,7 +8,7 @@ export const StillImageConfig = {
   width: 640,
   height: 360,
   sizes:
-    "(max-width: 767px) 92vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160px) * 0.3132965), 482px",
+    "(max-width: 767px) 100vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160px) * 0.3132965), 482px",
 };
 
 function formatDate(reviewDate: Date) {
@@ -55,7 +55,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
         </div>
         <a
           href={`/reviews/${value.slug}/`}
-          className="mb-2 block text-2.5xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video before:opacity-15 hover:text-accent hover:before:opacity-0 tablet:before:bg-[#fff]"
+          className="mb-2 block text-2.5xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video before:bg-[#fff] before:opacity-15 hover:text-accent hover:before:opacity-0"
         >
           {value.title}&nbsp;
           <span className="text-sm font-normal leading-none text-muted">

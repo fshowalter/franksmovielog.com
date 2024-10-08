@@ -408,4 +408,13 @@
   .justify-items-inherit {
     justify-items: inherit;
   }
+
+  .scrollbar-hidden {
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
 }

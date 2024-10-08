@@ -34,7 +34,7 @@ export function MostWatchedMovies({
     <section
       className={ccn("bg-default px-container desktop:pb-10", className)}
     >
-      <h2 className="py-4 font-medium shadow-bottom tablet:text-center tablet:text-2xl desktop:py-8">
+      <h2 className="py-4 text-xl font-medium shadow-bottom tablet:text-center tablet:text-2xl desktop:py-8">
         Most Watched Movies
       </h2>
       <List>
@@ -48,7 +48,7 @@ export function MostWatchedMovies({
 
 function List({ children }: { children: React.ReactNode }): JSX.Element {
   return (
-    <ol className="grid-cols-[repeat(auto-fit,_minmax(128px,_min(calc(100%_/_5_-_24px),248px)))] items-center justify-center gap-x-6 gap-y-8 bg-subtle tablet:grid tablet:items-start tablet:bg-default">
+    <ol className="grid-cols-[repeat(auto-fit,_minmax(128px,248px))] items-center justify-center gap-x-6 gap-y-8 bg-subtle tablet:grid tablet:items-start tablet:bg-default">
       {children}
     </ol>
   );
@@ -66,7 +66,6 @@ function ListItem({
         year={value.year}
         slug={value.slug}
         imageProps={value.posterImageProps}
-        className="shrink-0"
       />
       <div className="grow tablet:w-full">
         <Title title={value.title} year={value.year} slug={value.slug} />
@@ -97,7 +96,7 @@ function Title({
     return (
       <a
         href={`/reviews/${slug}/`}
-        className="block font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:bg-[#fff] before:opacity-15 hover:underline hover:before:opacity-0 tablet:text-center tablet:before:left-0 tablet:before:top-0 tablet:before:w-full"
+        className="block font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-0 before:top-4 before:aspect-poster before:w-list-item-poster before:bg-[#fff] before:opacity-15 hover:underline hover:before:opacity-0 tablet:text-center tablet:before:top-0 tablet:before:w-full"
       >
         {title}
         {"\u202F"}
@@ -128,7 +127,7 @@ function FluidListItemPoster({
   imageProps: PosterImageProps;
 }) {
   return (
-    <div className={ccn("min-w-12 max-w-12 tablet:max-w-[248px]", className)}>
+    <div className={ccn("w-16 tablet:w-auto tablet:max-w-[248px]", className)}>
       <Poster
         imageProps={imageProps}
         width={MostWatchedMoviesPosterConfig.width}
