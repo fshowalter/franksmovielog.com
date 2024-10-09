@@ -43,9 +43,7 @@ export async function GET() {
           title: `${item.title} (${item.year})`,
           pubDate: item.date,
           link: `https://www.franksmovielog.com/reviews/${item.slug}/`,
-          content: `<img src="${
-            stillSrc
-          }" alt="A still from ${item.title}">${addMetaToExcerpt(
+          content: `<img src="${stillSrc}" alt="">${addMetaToExcerpt(
             item.excerpt,
             item,
           )}`,

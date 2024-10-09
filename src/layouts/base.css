@@ -10,7 +10,7 @@
   --bg-inverse: rgb(0 0 0 / 75%);
   --bg-progress: #14bd41;
   --bg-stripe: #fcfcfc;
-  --bg-unwatched: #fcfcfc;
+  --bg-unreviewed: #fcfcfc;
   --bg-group: #ededed;
   --bg-subtle: #f6f6f6;
   --border-accent: #054a93;
@@ -143,7 +143,6 @@
 @layer components {
   .hamburger-icon {
     z-index: 100;
-    /* padding: 12px; */
     margin-left: 8px;
     background: transparent;
     border-radius: 50% 50% 50% 50%;

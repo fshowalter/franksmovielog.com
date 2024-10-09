@@ -8,7 +8,7 @@ const props = await getProps();
 
 <Layout
   title="Cast and Crew"
-  description="Round up the usual suspects."
+  description={props.deck}
   image="/cast-and-crew/og.jpg"
 >
   <CastAndCrew client:load {...props} />

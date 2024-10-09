@@ -33,6 +33,7 @@ export async function getProps(): Promise<Props> {
   return {
     values,
     initialSort: "name-asc",
+    deck: '"Round up the usual suspects."',
     backdropImageProps: await getBackdropImageProps(
       "cast-and-crew",
       BackdropImageConfig,

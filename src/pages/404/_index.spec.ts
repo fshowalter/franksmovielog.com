@@ -18,6 +18,6 @@ describe("/404", () => {
 
     void expect(
       await prettier.format(result, { parser: "html" }),
-    ).toMatchFileSnapshot(`__snapshots__/404.html`);
+    ).toMatchFileSnapshot(`__snapshots__/index.html`);
   });
 });
