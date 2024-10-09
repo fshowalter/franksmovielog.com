@@ -18,6 +18,7 @@ export type Props = {
   values: ListItemValue[];
   initialSort: Sort;
   backdropImageProps: BackdropImageProps;
+  deck: string;
 };
 
 export type ListItemValue = Pick<
@@ -29,6 +30,7 @@ export type ListItemValue = Pick<
 
 export function CastAndCrew({
   values,
+  deck,
   initialSort,
   backdropImageProps,
 }: Props): JSX.Element {
@@ -47,7 +49,7 @@ export function CastAndCrew({
         <Backdrop
           imageProps={backdropImageProps}
           title="Cast & Crew"
-          deck='"Round up the usual suspects."'
+          deck={deck}
         />
       }
       totalCount={state.filteredValues.length}
