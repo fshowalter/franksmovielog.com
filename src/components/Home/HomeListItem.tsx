@@ -39,8 +39,8 @@ export type ListItemValue = Pick<
 
 export function HomeListItem({ value }: { value: ListItemValue }) {
   return (
-    <li className="relative flex flex-col bg-default tablet:max-w-[47%] desktop:max-w-[31.33%]">
-      <div className="mb-6 block">
+    <li className="relative mb-1 flex flex-col bg-default pt-12 tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]">
+      <div className="mx-[8%] mb-6 block tablet:mx-0">
         <Still
           imageProps={value.stillImageProps}
           {...StillImageConfig}
@@ -55,7 +55,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
         </div>
         <a
           href={`/reviews/${value.slug}/`}
-          className="mb-2 block text-2.5xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video before:bg-[#fff] before:opacity-15 hover:text-accent hover:before:opacity-0"
+          className="mb-2 block text-2.5xl font-medium text-default before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
         >
           {value.title}&nbsp;
           <span className="text-sm font-normal leading-none text-muted">
