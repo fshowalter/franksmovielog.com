@@ -1,5 +1,6 @@
 import type { BackdropImageProps } from "src/api/backdrops";
 import type { YearStats } from "src/api/yearStats";
+import { Backdrop, BreadcrumbLink } from "src/components/Backdrop";
 import { DecadeDistribution } from "src/components/DecadeDistribution";
 import { Layout } from "src/components/Layout";
 import { MediaDistribution } from "src/components/MediaDistribution";
@@ -11,7 +12,6 @@ import { MostWatchedPerformers } from "src/components/MostWatchedPerformers";
 import { MostWatchedWriters } from "src/components/MostWatchedWriters";
 import { StatsNavigation } from "src/components/StatsNavigation";
 
-import { Backdrop, BreadcrumbLink } from "../Backdrop";
 import { Callouts } from "./Callouts";
 
 export interface Props {

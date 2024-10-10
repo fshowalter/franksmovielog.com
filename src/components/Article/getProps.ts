@@ -2,9 +2,9 @@ import { getBackdropImageProps } from "src/api/backdrops";
 import { getPage } from "src/api/pages";
 import { loadExcerptHtml, mostRecentReviews } from "src/api/reviews";
 import { getStillImageProps } from "src/api/stills";
+import { BackdropImageConfig } from "src/components/Backdrop";
 import { MoreReviewsImageConfig } from "src/components/MoreReviews";
 
-import { BackdropImageConfig } from "../Backdrop";
 import type { Props } from "./Article";
 
 export async function getProps({

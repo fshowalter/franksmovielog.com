@@ -2,17 +2,17 @@ import { useReducer } from "react";
 import type { BackdropImageProps } from "src/api/backdrops";
 import type { PosterImageProps } from "src/api/posters";
 import type { WatchlistTitle } from "src/api/watchlistTitles";
-
-import { Backdrop } from "../Backdrop";
-import { GroupedList } from "../GroupedList";
-import { ListItemPoster } from "../ListItemPoster";
-import { ListItemTitle } from "../ListItemTitle";
+import { Backdrop } from "src/components/Backdrop";
+import { GroupedList } from "src/components/GroupedList";
+import { ListItemPoster } from "src/components/ListItemPoster";
+import { ListItemTitle } from "src/components/ListItemTitle";
 import {
   ListHeaderButton,
   ListWithFiltersLayout,
-} from "../ListWithFiltersLayout";
-import { SvgIcon } from "../SvgIcon";
-import { WatchlistTitleSlug } from "../WatchlistTitleSlug";
+} from "src/components/ListWithFiltersLayout";
+import { SvgIcon } from "src/components/SvgIcon";
+import { WatchlistTitleSlug } from "src/components/WatchlistTitleSlug";
+
 import { Filters } from "./Filters";
 import { Actions, initState, reducer, type Sort } from "./Watchlist.reducer";
 

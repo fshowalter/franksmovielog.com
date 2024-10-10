@@ -1,9 +1,9 @@
 import { getBackdropImageProps } from "src/api/backdrops";
 import { getFluidWidthPosterImageProps } from "src/api/posters";
 import { allViewings } from "src/api/viewings";
+import { BackdropImageConfig } from "src/components/Backdrop";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 
-import { BackdropImageConfig } from "../Backdrop";
 import type { ListItemValue, Props } from "./Viewings";
 
 export async function getProps(): Promise<Props> {

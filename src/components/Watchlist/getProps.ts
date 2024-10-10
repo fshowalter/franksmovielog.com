@@ -1,9 +1,9 @@
 import { getBackdropImageProps } from "src/api/backdrops";
 import { getFixedWidthPosterImageProps } from "src/api/posters";
 import { allWatchlistTitles } from "src/api/watchlistTitles";
+import { BackdropImageConfig } from "src/components/Backdrop";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 
-import { BackdropImageConfig } from "../Backdrop";
 import type { Props } from "./Watchlist";
 
 export async function getProps(): Promise<Props> {

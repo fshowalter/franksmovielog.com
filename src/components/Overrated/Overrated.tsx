@@ -2,18 +2,18 @@ import { useReducer } from "react";
 import type { BackdropImageProps } from "src/api/backdrops";
 import type { OverratedDisappointment } from "src/api/overratedDisappointments";
 import type { PosterImageProps } from "src/api/posters";
+import { Backdrop, BreadcrumbLink } from "src/components/Backdrop";
+import { Grade } from "src/components/Grade";
+import { GroupedList } from "src/components/GroupedList";
+import { ListItem } from "src/components/ListItem";
+import { ListItemGenres } from "src/components/ListItemGenres";
+import { ListItemPoster } from "src/components/ListItemPoster";
+import { ListItemTitle } from "src/components/ListItemTitle";
 import {
   ListWithFiltersLayout,
   SubNav,
 } from "src/components/ListWithFiltersLayout";
 
-import { Backdrop, BreadcrumbLink } from "../Backdrop";
-import { Grade } from "../Grade";
-import { GroupedList } from "../GroupedList";
-import { ListItem } from "../ListItem";
-import { ListItemGenres } from "../ListItemGenres";
-import { ListItemPoster } from "../ListItemPoster";
-import { ListItemTitle } from "../ListItemTitle";
 import { Filters } from "./Filters";
 import type { Sort } from "./Overrated.reducer";
 import { Actions, initState, reducer } from "./Overrated.reducer";

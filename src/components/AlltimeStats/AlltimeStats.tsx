@@ -1,6 +1,8 @@
 import type { AlltimeStats } from "src/api/alltimeStats";
 import type { BackdropImageProps } from "src/api/backdrops";
+import { Backdrop, BreadcrumbLink } from "src/components/Backdrop";
 import { DecadeDistribution } from "src/components/DecadeDistribution";
+import { Layout } from "src/components/Layout";
 import { MediaDistribution } from "src/components/MediaDistribution";
 import { MostWatchedDirectors } from "src/components/MostWatchedDirectors";
 import type { MostWatchedMoviesListItemValue } from "src/components/MostWatchedMovies";
@@ -10,8 +12,6 @@ import { MostWatchedPerformers } from "src/components/MostWatchedPerformers";
 import { MostWatchedWriters } from "src/components/MostWatchedWriters";
 import { StatsNavigation } from "src/components/StatsNavigation";
 
-import { Backdrop, BreadcrumbLink } from "../Backdrop";
-import { Layout } from "../Layout";
 import { Callouts } from "./Callouts";
 import { GradeDistribution } from "./GradeDistribution";
 

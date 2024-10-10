@@ -2,14 +2,14 @@ import { useReducer } from "react";
 import type { BackdropImageProps } from "src/api/backdrops";
 import type { Collection, CollectionWithDetails } from "src/api/collections";
 import type { PosterImageProps } from "src/api/posters";
+import { Backdrop, BreadcrumbLink } from "src/components/Backdrop";
+import { Grade } from "src/components/Grade";
+import { GroupedList } from "src/components/GroupedList";
+import { ListItem } from "src/components/ListItem";
+import { ListItemPoster } from "src/components/ListItemPoster";
+import { ListItemTitle } from "src/components/ListItemTitle";
 import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
 
-import { Backdrop, BreadcrumbLink } from "../Backdrop";
-import { Grade } from "../Grade";
-import { GroupedList } from "../GroupedList";
-import { ListItem } from "../ListItem";
-import { ListItemPoster } from "../ListItemPoster";
-import { ListItemTitle } from "../ListItemTitle";
 import { Actions, initState, reducer, type Sort } from "./Collection.reducer";
 import { Filters } from "./Filters";
 
