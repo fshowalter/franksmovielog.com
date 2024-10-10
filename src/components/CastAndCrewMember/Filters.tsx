@@ -11,16 +11,16 @@ import {
 } from "./CastAndCrewMember.reducer";
 
 export function Filters({
+  creditedAs,
   dispatch,
   distinctReleaseYears,
   hideReviewed,
   sortValue,
-  creditedAs,
 }: {
-  dispatch: React.Dispatch<ActionType>;
-  hideReviewed: boolean;
-  distinctReleaseYears: readonly string[];
   creditedAs: readonly string[];
+  dispatch: React.Dispatch<ActionType>;
+  distinctReleaseYears: readonly string[];
+  hideReviewed: boolean;
   sortValue: Sort;
 }): JSX.Element {
   return (
@@ -51,22 +51,21 @@ export function Filters({
       )}
       <DebouncedInput
         label="Title"
-        placeholder="Enter all or part of a title"
         onInputChange={(value) =>
           dispatch({ type: Actions.FILTER_TITLE, value })
         }
+        placeholder="Enter all or part of a title"
       />
 
       <YearInput
         label="Release Year"
-        years={distinctReleaseYears}
         onYearChange={(values) =>
           dispatch({ type: Actions.FILTER_RELEASE_YEAR, values })
         }
+        years={distinctReleaseYears}
       />
       <SelectField
         className="basis-full"
-        value={sortValue}
         label="Sort"
         onChange={(e) =>
           dispatch({
@@ -74,6 +73,7 @@ export function Filters({
             value: e.target.value as Sort,
           })
         }
+        value={sortValue}
       >
         <option value="release-date-desc">Release Date (Newest First)</option>
         <option value="release-date-asc">Release Date (Oldest First)</option>

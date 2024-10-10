@@ -11,21 +11,21 @@ export enum Actions {
 export type Sort =
   | "name-asc"
   | "name-desc"
-  | "title-count-asc"
-  | "title-count-desc"
   | "review-count-asc"
-  | "review-count-desc";
+  | "review-count-desc"
+  | "title-count-asc"
+  | "title-count-desc";
 
 function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
   const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
     {
       "name-asc": (a, b) => sortString(a.name, b.name),
       "name-desc": (a, b) => sortString(a.name, b.name) * -1,
-      "title-count-asc": (a, b) => sortNumber(a.titleCount, b.titleCount),
-      "title-count-desc": (a, b) => sortNumber(a.titleCount, b.titleCount) * -1,
       "review-count-asc": (a, b) => sortNumber(a.reviewCount, b.reviewCount),
       "review-count-desc": (a, b) =>
         sortNumber(a.reviewCount, b.reviewCount) * -1,
+      "title-count-asc": (a, b) => sortNumber(a.titleCount, b.titleCount),
+      "title-count-desc": (a, b) => sortNumber(a.titleCount, b.titleCount) * -1,
     };
 
   const comparer = sortMap[sortOrder];
@@ -41,11 +41,11 @@ interface State {
 }
 
 export function initState({
-  values,
   initialSort,
+  values,
 }: {
-  values: readonly ListItemValue[];
   initialSort: Sort;
+  values: readonly ListItemValue[];
 }): State {
   return {
     allValues: [...values],
@@ -82,23 +82,23 @@ export function reducer(state: State, action: ActionType): State {
       };
       filteredValues = sortValues(
         filterValues<ListItemValue>({
-          values: state.allValues,
           filters,
+          values: state.allValues,
         }),
         state.sortValue,
       );
       return {
         ...state,
-        filters,
         filteredValues,
+        filters,
       };
     }
     case Actions.SORT: {
       filteredValues = sortValues(state.filteredValues, action.value);
       return {
         ...state,
-        sortValue: action.value,
         filteredValues,
+        sortValue: action.value,
       };
     }
 

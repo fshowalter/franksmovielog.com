@@ -4,20 +4,20 @@ import { collator, sortString } from "src/utils/sortTools";
 
 import type { ListItemValue } from "./Watchlist";
 
-export type Sort = "release-date-desc" | "release-date-asc" | "title";
+export type Sort = "release-date-asc" | "release-date-desc" | "title";
 
 const SHOW_COUNT_DEFAULT = 100;
 
 const groupValues = buildGroupValues(groupForValue);
-const { updateFilter, applyFilters } = filterTools(sortValues, groupValues);
+const { applyFilters, updateFilter } = filterTools(sortValues, groupValues);
 
 function sortValues(values: ListItemValue[], sortOrder: Sort) {
   const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
     {
-      "release-date-desc": (a, b) =>
-        sortString(a.releaseSequence, b.releaseSequence) * -1,
       "release-date-asc": (a, b) =>
         sortString(a.releaseSequence, b.releaseSequence),
+      "release-date-desc": (a, b) =>
+        sortString(a.releaseSequence, b.releaseSequence) * -1,
       title: (a, b) => collator.compare(a.sortTitle, b.sortTitle),
     };
 
@@ -50,11 +50,11 @@ interface State
 }
 
 export function initState({
-  values,
   initialSort,
+  values,
 }: {
-  values: ListItemValue[];
   initialSort: Sort;
+  values: ListItemValue[];
 }): State {
   return {
     allValues: values,
@@ -64,21 +64,21 @@ export function initState({
       values.slice(0, SHOW_COUNT_DEFAULT),
       initialSort,
     ),
+    hideReviewed: false,
     showCount: SHOW_COUNT_DEFAULT,
     sortValue: initialSort,
-    hideReviewed: false,
   };
 }
 
 export enum Actions {
-  FILTER_TITLE = "FILTER_TITLE",
-  FILTER_RELEASE_YEAR = "FILTER_RELEASE_YEAR",
+  FILTER_COLLECTION = "FILTER_COLLECTION",
   FILTER_DIRECTOR = "FILTER_DIRECTOR",
   FILTER_PERFORMER = "FILTER_PERFORMER",
+  FILTER_RELEASE_YEAR = "FILTER_RELEASE_YEAR",
+  FILTER_TITLE = "FILTER_TITLE",
   FILTER_WRITER = "FILTER_WRITER",
-  FILTER_COLLECTION = "FILTER_COLLECTION",
-  SORT = "SORT",
   SHOW_MORE = "SHOW_MORE",
+  SORT = "SORT",
 }
 
 interface FilterTitleAction {
@@ -121,20 +121,20 @@ interface ShowMoreAction {
 }
 
 export type ActionType =
-  | FilterTitleAction
+  | FilterCollectionAction
   | FilterDirectorAction
   | FilterPerformerAction
-  | FilterWriterAction
-  | FilterCollectionAction
   | FilterReleaseYearAction
-  | SortAction
-  | ShowMoreAction;
+  | FilterTitleAction
+  | FilterWriterAction
+  | ShowMoreAction
+  | SortAction;
 
 function clearFilter(
   value: string,
   currentState: State,
   key: string,
-): State | null {
+): null | State {
   if (value != "All") {
     return null;
   }
@@ -207,9 +207,9 @@ export function reducer(state: State, action: ActionType): State {
       );
       return {
         ...state,
-        sortValue: action.value,
         filteredValues,
         groupedValues,
+        sortValue: action.value,
       };
     }
     case Actions.SHOW_MORE: {

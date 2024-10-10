@@ -1,6 +1,7 @@
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
+
 import { getContainerRenderer as reactContainerRenderer } from "@astrojs/react";
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
-import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 import { loadRenderers } from "astro:container";
 import * as prettier from "prettier";
 import { allCastAndCrew } from "src/api/castAndCrew";
@@ -9,7 +10,7 @@ import { describe, it } from "vitest";
 import Review from "./index.astro";
 
 const { castAndCrew } = await allCastAndCrew();
-const testSlugs = new Set(["john-wayne", "burt-reynolds", "christopher-lee"]);
+const testSlugs = new Set(["burt-reynolds", "christopher-lee", "john-wayne"]);
 
 const testMembers = castAndCrew.filter((member) => {
   return testSlugs.has(member.slug);
@@ -23,8 +24,8 @@ describe("/cast-and-crew/:slug", () => {
       const renderers = await loadRenderers([reactContainerRenderer()]);
       const container = await AstroContainer.create({ renderers });
       container.addClientRenderer({
-        name: "@astrojs/react",
         entrypoint: "@astrojs/react/client.js",
+        name: "@astrojs/react",
       });
 
       const result = await container.renderToString(

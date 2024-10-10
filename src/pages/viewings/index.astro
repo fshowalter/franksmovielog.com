@@ -6,6 +6,6 @@ import Layout from "src/layouts/Layout.astro";
 const props = await getProps();
 ---
 
-<Layout title="Viewing Log" description={props.deck}>
+<Layout description={props.deck} title="Viewing Log">
   <Viewings client:load {...props} />
 </Layout>

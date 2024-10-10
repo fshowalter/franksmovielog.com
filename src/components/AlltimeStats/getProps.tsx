@@ -12,23 +12,12 @@ export async function getProps(): Promise<Props> {
   const distinctStatYears = await allStatYears();
 
   return {
-    deck: `${(distinctStatYears.length - 1).toString()} Years in Review`,
-    stats,
     backdropImageProps: await getBackdropImageProps(
       "stats",
       BackdropImageConfig,
     ),
-    mostWatchedMovies: await Promise.all(
-      stats.mostWatchedTitles.map(async (title) => {
-        return {
-          ...title,
-          posterImageProps: await getFluidWidthPosterImageProps(
-            title.slug,
-            MostWatchedMoviesPosterConfig,
-          ),
-        };
-      }),
-    ),
+    deck: `${(distinctStatYears.length - 1).toString()} Years in Review`,
+    distinctStatYears,
     mostWatchedDirectors: await Promise.all(
       stats.mostWatchedDirectors.map(async (person) => {
         return {
@@ -43,6 +32,17 @@ export async function getProps(): Promise<Props> {
                 ),
               };
             }),
+          ),
+        };
+      }),
+    ),
+    mostWatchedMovies: await Promise.all(
+      stats.mostWatchedTitles.map(async (title) => {
+        return {
+          ...title,
+          posterImageProps: await getFluidWidthPosterImageProps(
+            title.slug,
+            MostWatchedMoviesPosterConfig,
           ),
         };
       }),
@@ -83,6 +83,6 @@ export async function getProps(): Promise<Props> {
         };
       }),
     ),
-    distinctStatYears,
+    stats,
   };
 }

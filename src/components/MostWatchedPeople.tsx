@@ -5,26 +5,26 @@ import { ListItemPoster } from "./ListItemPoster";
 import { ListItemTitle } from "./ListItemTitle";
 
 interface ViewingSubListItemValue {
-  sequence: number;
   date: string;
-  venue: string | null;
-  medium: string | null;
-  title: string;
-  year: string;
-  slug: string | null;
+  medium: null | string;
   posterImageProps: PosterImageProps;
+  sequence: number;
+  slug: null | string;
+  title: string;
+  venue: null | string;
+  year: string;
 }
 
 export interface MostWatchedPeopleListItemValue {
-  name: string;
-  slug: string | null;
   count: number;
+  name: string;
+  slug: null | string;
   viewings: ViewingSubListItemValue[];
 }
 
 export function MostWatchedPeople({
-  values,
   header,
+  values,
 }: {
   header: string;
   values: readonly MostWatchedPeopleListItemValue[];
@@ -41,7 +41,7 @@ export function MostWatchedPeople({
       <div className="w-full tablet:whitespace-nowrap">
         {values.map((value) => {
           return (
-            <div key={value.name} className="py-3">
+            <div className="py-3" key={value.name}>
               <div className="flex justify-between px-container tablet:px-0">
                 <div className="font-sans text-sm text-muted">
                   <Name value={value} />
@@ -106,9 +106,9 @@ function MostWatchedPersonViewingListItem({
       <ListItemPoster imageProps={value.posterImageProps} />
       <div className="flex grow flex-col gap-1">
         <ListItemTitle
+          slug={value.slug}
           title={value.title}
           year={value.year}
-          slug={value.slug}
         />
         <div className="-mt-px font-sans text-xs font-light text-muted">
           {value.date}

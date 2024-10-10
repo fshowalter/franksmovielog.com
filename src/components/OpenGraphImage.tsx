@@ -1,64 +1,64 @@
 export function OpenGraphImage({
-  title,
   backdrop,
   sectionHead = "Frank's Movie Log",
+  title,
 }: {
+  backdrop: string;
   sectionHead?: string;
   title: string;
-  backdrop: string;
 }): JSX.Element {
   return (
     <div
       style={{
         display: "flex",
-        position: "relative",
         height: "630px",
+        position: "relative",
         width: "1200px",
       }}
     >
       <img
+        height={630}
         src={backdrop}
         style={{
           objectFit: "cover",
         }}
         width={1200}
-        height={630}
       />
       <div
         style={{
+          bottom: 0,
           display: "flex",
           flexDirection: "column",
+          paddingBottom: "64px",
           paddingLeft: "80px",
           paddingRight: "80px",
-          paddingBottom: "64px",
           paddingTop: "32px",
-          width: "1200px",
           position: "absolute",
-          bottom: 0,
+          width: "1200px",
         }}
       >
         <div
           style={{
-            fontFamily: "ArgentumSans",
             color: "#b0b0b0",
+            fontFamily: "ArgentumSans",
             marginBottom: "16px",
-            textTransform: "uppercase",
             textShadow: "1px 1px 2px black",
+            textTransform: "uppercase",
           }}
         >
           {sectionHead}
         </div>
         <div
           style={{
-            fontFamily: "ArgentumSans",
             color: "#fff",
-            fontSize: "88px",
-            lineHeight: 1,
-            textWrap: "balance",
             display: "flex",
             flexWrap: "wrap",
+            fontFamily: "ArgentumSans",
+            fontSize: "88px",
             fontWeight: 600,
+            lineHeight: 1,
             textTransform: "uppercase",
+            textWrap: "balance",
           }}
         >
           {title}

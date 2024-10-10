@@ -6,6 +6,6 @@ import Layout from "src/layouts/Layout.astro";
 const props = await getProps();
 ---
 
-<Layout title="Cast and Crew" description={props.deck}>
+<Layout description={props.deck} title="Cast and Crew">
   <CastAndCrew client:load {...props} />
 </Layout>

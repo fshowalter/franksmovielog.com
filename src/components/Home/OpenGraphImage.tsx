@@ -7,40 +7,40 @@ export function OpenGraphImage({
     <div
       style={{
         display: "flex",
-        position: "relative",
         height: "630px",
+        position: "relative",
         width: "1200px",
       }}
     >
       <img
+        height={630}
         src={backdrop}
         style={{
           objectFit: "cover",
         }}
         width={1200}
-        height={630}
       />
       <div
         style={{
+          bottom: 0,
           display: "flex",
           flexDirection: "column",
+          paddingBottom: "64px",
           paddingLeft: "80px",
           paddingRight: "80px",
-          paddingBottom: "64px",
           paddingTop: "32px",
-          width: "1200px",
           position: "absolute",
-          bottom: 0,
+          width: "1200px",
         }}
       >
         <div
           style={{
-            fontFamily: "FrankRuhlLibre",
             color: "#fff",
-            fontSize: "72px",
-            lineHeight: 1,
             display: "flex",
+            fontFamily: "FrankRuhlLibre",
+            fontSize: "72px",
             fontWeight: 400,
+            lineHeight: 1,
             textShadow: "1px 1px 2px black",
           }}
         >

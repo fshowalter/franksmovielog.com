@@ -1,8 +1,8 @@
 import eslint from "@eslint/js";
 import vitest from "@vitest/eslint-plugin";
 import eslintPluginAstro from "eslint-plugin-astro";
+import perfectionist from "eslint-plugin-perfectionist";
 import react from "eslint-plugin-react";
-import simpleImportSort from "eslint-plugin-simple-import-sort";
 import tailwind from "eslint-plugin-tailwindcss";
 import globals from "globals";
 import tsEslint from "typescript-eslint";
@@ -12,15 +12,7 @@ export default tsEslint.config(
     ignores: ["dist/", ".astro/"],
   },
   eslint.configs.recommended,
-  {
-    plugins: {
-      "simple-import-sort": simpleImportSort,
-    },
-    rules: {
-      "simple-import-sort/imports": "error",
-      "simple-import-sort/exports": "error",
-    },
-  },
+  perfectionist.configs["recommended-natural"],
   ...eslintPluginAstro.configs.recommended,
   {
     files: ["*.js"],
@@ -31,8 +23,8 @@ export default tsEslint.config(
     },
   },
   {
-    files: ["**/*.ts", "**/*.tsx"],
     extends: [...tsEslint.configs.recommendedTypeChecked],
+    files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
       parserOptions: {
         project: true,
@@ -63,19 +55,19 @@ export default tsEslint.config(
     },
   },
   {
-    files: ["**/*.tsx"],
     extends: [...tailwind.configs["flat/recommended"]],
+    files: ["**/*.tsx"],
     plugins: {
       react,
+    },
+    rules: {
+      ...react.configs.recommended.rules,
+      "react/react-in-jsx-scope": "off",
     },
     settings: {
       react: {
         version: "detect",
       },
-    },
-    rules: {
-      ...react.configs.recommended.rules,
-      "react/react-in-jsx-scope": "off",
     },
   },
   {

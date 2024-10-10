@@ -7,7 +7,7 @@ import smartypants from "remark-smartypants";
 import { linkReviewedTitles } from "src/api/utils/linkReviewedTitles";
 
 export function getHtml(
-  content: string | null,
+  content: null | string,
   reviewedTitles: { imdbId: string; slug: string }[],
 ) {
   if (!content) {

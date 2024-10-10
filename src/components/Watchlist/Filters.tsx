@@ -7,63 +7,62 @@ import { Actions, type ActionType, type Sort } from "./Watchlist.reducer";
 
 export function Filters({
   dispatch,
-  sortValue,
+  distinctCollections,
   distinctDirectors,
   distinctPerformers,
-  distinctWriters,
-  distinctCollections,
   distinctReleaseYears,
+  distinctWriters,
+  sortValue,
 }: {
   dispatch: React.Dispatch<ActionType>;
-  sortValue: string;
+  distinctCollections: readonly string[];
   distinctDirectors: readonly string[];
   distinctPerformers: readonly string[];
-  distinctWriters: readonly string[];
-  distinctCollections: readonly string[];
   distinctReleaseYears: readonly string[];
+  distinctWriters: readonly string[];
+  sortValue: string;
 }): JSX.Element {
   return (
     <>
       <DebouncedInput
         label="Title"
-        placeholder="Enter all or part of a title"
         onInputChange={(value) =>
           dispatch({ type: Actions.FILTER_TITLE, value })
         }
+        placeholder="Enter all or part of a title"
       />
       <CreditSelectField
-        label="Director"
-        dispatch={dispatch}
         actionType={Actions.FILTER_DIRECTOR}
+        dispatch={dispatch}
+        label="Director"
         options={distinctDirectors}
       />
       <CreditSelectField
-        label="Performer"
-        dispatch={dispatch}
         actionType={Actions.FILTER_PERFORMER}
+        dispatch={dispatch}
+        label="Performer"
         options={distinctPerformers}
       />
       <CreditSelectField
-        label="Writer"
-        dispatch={dispatch}
         actionType={Actions.FILTER_WRITER}
+        dispatch={dispatch}
+        label="Writer"
         options={distinctWriters}
       />
       <CreditSelectField
-        label="Collection"
-        dispatch={dispatch}
         actionType={Actions.FILTER_COLLECTION}
+        dispatch={dispatch}
+        label="Collection"
         options={distinctCollections}
       />
       <YearInput
         label="Release Year"
-        years={distinctReleaseYears}
         onYearChange={(values) =>
           dispatch({ type: Actions.FILTER_RELEASE_YEAR, values })
         }
+        years={distinctReleaseYears}
       />
       <SelectField
-        value={sortValue}
         label="Sort"
         onChange={(e) =>
           dispatch({
@@ -71,6 +70,7 @@ export function Filters({
             value: e.target.value as Sort,
           })
         }
+        value={sortValue}
       >
         <option value="release-date-desc">Release Date (Newest First)</option>
         <option value="release-date-asc">Release Date (Oldest First)</option>
@@ -81,18 +81,18 @@ export function Filters({
 }
 
 function CreditSelectField({
-  label,
-  dispatch,
   actionType,
+  dispatch,
+  label,
   options,
 }: {
-  label: string;
-  dispatch: React.Dispatch<ActionType>;
   actionType:
     | Actions.FILTER_COLLECTION
     | Actions.FILTER_DIRECTOR
     | Actions.FILTER_PERFORMER
     | Actions.FILTER_WRITER;
+  dispatch: React.Dispatch<ActionType>;
+  label: string;
   options: readonly string[];
 }) {
   return (

@@ -14,10 +14,10 @@ export function Filters({
     <>
       <DebouncedInput
         label="Name"
-        placeholder="Enter all or part of a name"
         onInputChange={(value) =>
           dispatch({ type: Actions.FILTER_NAME, value })
         }
+        placeholder="Enter all or part of a name"
       />
       <SelectField
         className="basis-full"
@@ -35,7 +35,6 @@ export function Filters({
         <option value="performer">Performer</option>
       </SelectField>
       <SelectField
-        value={sortValue}
         label="Sort"
         onChange={(e) =>
           dispatch({
@@ -43,6 +42,7 @@ export function Filters({
             value: e.target.value as Sort,
           })
         }
+        value={sortValue}
       >
         <option value="name-asc">Name (A &rarr; Z)</option>
         <option value="name-desc">Name (Z &rarr; A)</option>

@@ -2,8 +2,8 @@ export function ListItemMediumAndVenue({
   medium,
   venue,
 }: {
-  medium?: string | null;
-  venue?: string | null;
+  medium?: null | string;
+  venue?: null | string;
 }): JSX.Element | null {
   if (medium && venue) {
     return (

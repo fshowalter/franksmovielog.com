@@ -28,6 +28,6 @@ const { slug } = Astro.props;
 const props = await getProps(slug);
 ---
 
-<Layout title={props.value.name} description={props.value.description}>
+<Layout description={props.value.description} title={props.value.name}>
   <Collection client:load {...props} />
 </Layout>

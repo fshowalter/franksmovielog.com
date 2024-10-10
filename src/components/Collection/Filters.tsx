@@ -9,13 +9,13 @@ export function Filters({
   dispatch,
   distinctReleaseYears,
   hideReviewed,
-  sortValue,
   showHideReviewed,
+  sortValue,
 }: {
   dispatch: React.Dispatch<ActionType>;
-  showHideReviewed: boolean;
-  hideReviewed: boolean;
   distinctReleaseYears: readonly string[];
+  hideReviewed: boolean;
+  showHideReviewed: boolean;
   sortValue: Sort;
 }): JSX.Element {
   return (
@@ -29,22 +29,21 @@ export function Filters({
       )}
       <DebouncedInput
         label="Title"
-        placeholder="Enter all or part of a title"
         onInputChange={(value) =>
           dispatch({ type: Actions.FILTER_TITLE, value })
         }
+        placeholder="Enter all or part of a title"
       />
 
       <YearInput
         label="Release Year"
-        years={distinctReleaseYears}
         onYearChange={(values) =>
           dispatch({ type: Actions.FILTER_RELEASE_YEAR, values })
         }
+        years={distinctReleaseYears}
       />
       <SelectField
         className="basis-full"
-        value={sortValue}
         label="Sort"
         onChange={(e) =>
           dispatch({
@@ -52,6 +51,7 @@ export function Filters({
             value: e.target.value as Sort,
           })
         }
+        value={sortValue}
       >
         <option value="release-date-desc">Release Date (Newest First)</option>
         <option value="release-date-asc">Release Date (Oldest First)</option>

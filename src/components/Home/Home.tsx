@@ -1,24 +1,26 @@
 import type { BackdropImageProps } from "src/api/backdrops";
+
 import { Backdrop } from "src/components/Backdrop";
 import { Layout } from "src/components/Layout";
 import { SubHeading } from "src/components/SubHeading";
 
 import type { ListItemValue } from "./HomeListItem";
+
 import { HomeListItem } from "./HomeListItem";
 
 export interface Props {
-  values: ListItemValue[];
   backdropImageProps: BackdropImageProps;
   deck: string;
+  values: ListItemValue[];
 }
 
-export function Home({ values, backdropImageProps, deck }: Props): JSX.Element {
+export function Home({ backdropImageProps, deck, values }: Props): JSX.Element {
   return (
-    <Layout hideLogo={true} className="bg-subtle pb-8">
+    <Layout className="bg-subtle pb-8" hideLogo={true}>
       <Backdrop
+        deck={deck}
         imageProps={backdropImageProps}
         title="Frank's Movie Log"
-        deck={deck}
         titleStyle="[text-shadow:1px_1px_2px_black] text-4xl desktop:text-7xl"
       />
       <nav className="mx-auto max-w-screen-max">
@@ -32,8 +34,8 @@ export function Home({ values, backdropImageProps, deck }: Props): JSX.Element {
         </ul>
         <div className="flex px-container py-10">
           <a
-            href="/reviews/"
             className="mx-auto w-full max-w-button bg-default py-5 text-center font-sans text-xs font-semibold uppercase tracking-wide text-accent hover:bg-accent hover:text-inverse"
+            href="/reviews/"
           >
             All Reviews
           </a>

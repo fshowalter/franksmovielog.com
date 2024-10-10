@@ -1,38 +1,39 @@
 import type { BackdropImageProps } from "src/api/backdrops";
+import type { MoreReviewsValue } from "src/components/MoreReviews";
+
 import { Backdrop } from "src/components/Backdrop";
 import { Layout } from "src/components/Layout";
 import { LongFormText } from "src/components/LongFormText";
-import type { MoreReviewsValue } from "src/components/MoreReviews";
 import { MoreReviews } from "src/components/MoreReviews";
 import { SubHeading } from "src/components/SubHeading";
 
 export interface Props {
-  content: string | null;
-  title: string;
-  deck: string;
   backdropImageProps: BackdropImageProps;
+  content: null | string;
+  deck: string;
   recentReviews: MoreReviewsValue[];
+  title: string;
 }
 
 export function Article({
-  title,
-  content,
-  recentReviews,
-  deck,
   backdropImageProps,
+  content,
+  deck,
+  recentReviews,
+  title,
 }: Props): JSX.Element {
   return (
     <Layout>
       <article>
         <Backdrop
-          imageProps={backdropImageProps}
-          title={title}
           deck={deck}
+          imageProps={backdropImageProps}
           size="large"
+          title={title}
         />
         <section className="flex flex-col items-center pb-32 pt-16">
           <div className="px-container">
-            <LongFormText text={content} className="max-w-prose" />
+            <LongFormText className="max-w-prose" text={content} />
           </div>
         </section>
       </article>
@@ -40,7 +41,7 @@ export function Article({
         <MoreReviews values={recentReviews}>
           <SubHeading as="h2">
             Recent{" "}
-            <a href="/reviews/" className="text-accent">
+            <a className="text-accent" href="/reviews/">
               Reviews
             </a>
           </SubHeading>

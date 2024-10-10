@@ -8,12 +8,12 @@ import type { Props } from "./Watchlist";
 
 export async function getProps(): Promise<Props> {
   const {
-    watchlistTitles,
     distinctCollections,
     distinctDirectors,
     distinctPerformers,
     distinctReleaseYears,
     distinctWriters,
+    watchlistTitles,
   } = await allWatchlistTitles();
 
   const defaultPosterImageProps = await getFixedWidthPosterImageProps(
@@ -26,18 +26,18 @@ export async function getProps(): Promise<Props> {
   );
 
   return {
-    deck: `"A man's got to know his limitations"`,
     backdropImageProps: await getBackdropImageProps(
       "watchlist",
       BackdropImageConfig,
     ),
-    values: watchlistTitles,
+    deck: `"A man's got to know his limitations"`,
+    defaultPosterImageProps,
     distinctCollections,
     distinctDirectors,
     distinctPerformers,
-    distinctWriters,
     distinctReleaseYears,
-    defaultPosterImageProps,
+    distinctWriters,
     initialSort: "release-date-asc",
+    values: watchlistTitles,
   };
 }

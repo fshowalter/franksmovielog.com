@@ -15,15 +15,15 @@ export async function getProps(): Promise<Props> {
   const values = await Promise.all(
     castAndCrew.map(async (member) => {
       const value: ListItemValue = {
-        name: member.name,
-        slug: member.slug,
-        reviewCount: member.reviewCount,
-        totalCount: member.totalCount,
-        creditedAs: member.creditedAs,
         avatarImageProps: await getAvatarImageProps(
           member.slug,
           ListItemAvatarImageConfig,
         ),
+        creditedAs: member.creditedAs,
+        name: member.name,
+        reviewCount: member.reviewCount,
+        slug: member.slug,
+        totalCount: member.totalCount,
       };
 
       return value;
@@ -31,12 +31,12 @@ export async function getProps(): Promise<Props> {
   );
 
   return {
-    values,
-    initialSort: "name-asc",
-    deck: '"Round up the usual suspects."',
     backdropImageProps: await getBackdropImageProps(
       "cast-and-crew",
       BackdropImageConfig,
     ),
+    deck: '"Round up the usual suspects."',
+    initialSort: "name-asc",
+    values,
   };
 }

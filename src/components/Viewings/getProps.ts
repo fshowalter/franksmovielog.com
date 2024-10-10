@@ -8,12 +8,12 @@ import type { ListItemValue, Props } from "./Viewings";
 
 export async function getProps(): Promise<Props> {
   const {
-    viewings,
     distinctGenres,
-    distinctReleaseYears,
     distinctMedia,
+    distinctReleaseYears,
     distinctVenues,
     distinctViewingYears,
+    viewings,
   } = await allViewings();
 
   viewings.sort((a, b) => b.sequence - a.sequence);
@@ -22,32 +22,32 @@ export async function getProps(): Promise<Props> {
     viewings.map(async (viewing) => {
       const viewingDate = new Date(viewing.viewingDate);
       const value: ListItemValue = {
+        genres: viewing.genres,
+        medium: viewing.medium,
+        posterImageProps: await getFluidWidthPosterImageProps(
+          viewing.slug,
+          ListItemPosterImageConfig,
+        ),
+        releaseSequence: viewing.releaseSequence,
+        sequence: viewing.sequence,
+        slug: viewing.slug,
+        sortTitle: viewing.sortTitle,
+        title: viewing.title,
+        venue: viewing.venue,
         viewingDate: viewingDate.toLocaleString("en-US", {
           day: "numeric",
           timeZone: "UTC",
+        }),
+        viewingDay: viewingDate.toLocaleString("en-US", {
+          timeZone: "UTC",
+          weekday: "short",
         }),
         viewingMonth: viewingDate.toLocaleString("en-US", {
           month: "long",
           timeZone: "UTC",
         }),
-        viewingDay: viewingDate.toLocaleString("en-US", {
-          weekday: "short",
-          timeZone: "UTC",
-        }),
-        title: viewing.title,
-        year: viewing.year,
-        slug: viewing.slug,
-        genres: viewing.genres,
-        releaseSequence: viewing.releaseSequence,
-        sortTitle: viewing.sortTitle,
         viewingYear: viewing.viewingYear,
-        venue: viewing.venue,
-        medium: viewing.medium,
-        sequence: viewing.sequence,
-        posterImageProps: await getFluidWidthPosterImageProps(
-          viewing.slug,
-          ListItemPosterImageConfig,
-        ),
+        year: viewing.year,
       };
 
       return value;
@@ -55,17 +55,17 @@ export async function getProps(): Promise<Props> {
   );
 
   return {
+    backdropImageProps: await getBackdropImageProps(
+      "viewings",
+      BackdropImageConfig,
+    ),
     deck: '"We have such sights to show you!"',
-    values,
     distinctGenres,
     distinctMedia,
     distinctReleaseYears,
     distinctVenues,
     distinctViewingYears,
     initialSort: "viewing-date-desc",
-    backdropImageProps: await getBackdropImageProps(
-      "viewings",
-      BackdropImageConfig,
-    ),
+    values,
   };
 }

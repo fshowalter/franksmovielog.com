@@ -19,11 +19,11 @@ export async function getOpenGraphStillSrc(slug: string) {
   const stillFile = await images[stillFilePath]();
 
   const image = await getImage({
+    format: "jpeg",
+    height: 675,
+    quality: 80,
     src: stillFile.default,
     width: 1200,
-    height: 675,
-    format: "jpeg",
-    quality: 80,
   });
 
   return normalizeSources(image.src);
@@ -32,11 +32,11 @@ export async function getOpenGraphStillSrc(slug: string) {
 export async function getStillImageProps(
   slug: string,
   {
-    width,
     height,
+    width,
   }: {
-    width: number;
     height: number;
+    width: number;
   },
 ): Promise<StillImageProps> {
   const stillFilePath = Object.keys(images).find((path) => {
@@ -46,16 +46,16 @@ export async function getStillImageProps(
   const stillFile = await images[stillFilePath]();
 
   const optimizedImage = await getImage({
+    format: "avif",
+    height: height,
+    quality: 80,
     src: stillFile.default,
     width: width,
-    height: height,
-    format: "avif",
     widths: [0.25, 0.5, 1, 2].map((w) => w * width),
-    quality: 80,
   });
 
   return {
-    srcSet: normalizeSources(optimizedImage.srcSet.attribute),
     src: normalizeSources(optimizedImage.src),
+    srcSet: normalizeSources(optimizedImage.srcSet.attribute),
   };
 }

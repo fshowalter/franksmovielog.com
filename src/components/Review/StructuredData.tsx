@@ -3,7 +3,7 @@ import type { Review } from "src/api/reviews";
 interface Props
   extends Pick<
     Review,
-    "title" | "imdbId" | "directorNames" | "year" | "grade"
+    "directorNames" | "grade" | "imdbId" | "title" | "year"
   > {
   seoImageSrc: string;
 }
@@ -17,41 +17,41 @@ const gradeMap: Record<string, number> = {
 };
 
 export function StructuredData({
-  title,
-  imdbId,
   directorNames,
-  year,
   grade,
+  imdbId,
   seoImageSrc,
+  title,
+  year,
 }: Props) {
   const structuredData = {
     "@context": "http://schema.org",
     "@type": "Review",
+    author: {
+      "@type": "Person",
+      name: "Frank Showalter",
+    },
     itemReviewed: {
       "@type": "Movie",
-      name: title,
-      sameAs: `http://www.imdb.com/title/${imdbId}/`,
-      image: seoImageSrc,
       dateCreated: year,
       director: {
         "@type": "Person",
         name: directorNames[0],
       },
+      image: seoImageSrc,
+      name: title,
+      sameAs: `http://www.imdb.com/title/${imdbId}/`,
     },
     reviewRating: {
       "@type": "Rating",
       ratingValue: gradeMap[grade[0]],
     },
-    author: {
-      "@type": "Person",
-      name: "Frank Showalter",
-    },
   };
 
   return (
     <script
-      type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      type="application/ld+json"
     />
   );
 }

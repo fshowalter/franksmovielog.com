@@ -1,7 +1,8 @@
-import { useReducer } from "react";
 import type { BackdropImageProps } from "src/api/backdrops";
 import type { Collection, CollectionWithDetails } from "src/api/collections";
 import type { PosterImageProps } from "src/api/posters";
+
+import { useReducer } from "react";
 import { Backdrop, BreadcrumbLink } from "src/components/Backdrop";
 import { Grade } from "src/components/Grade";
 import { GroupedList } from "src/components/GroupedList";
@@ -13,43 +14,43 @@ import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
 import { Actions, initState, reducer, type Sort } from "./Collection.reducer";
 import { Filters } from "./Filters";
 
-export type ListItemValue = Pick<
+export type ListItemValue = {
+  posterImageProps: PosterImageProps;
+} & Pick<
   Collection["titles"][0],
-  | "imdbId"
-  | "title"
-  | "year"
   | "grade"
   | "gradeValue"
+  | "imdbId"
+  | "releaseSequence"
   | "slug"
   | "sortTitle"
-  | "releaseSequence"
-> & {
-  posterImageProps: PosterImageProps;
-};
+  | "title"
+  | "year"
+>;
 
 export interface Props {
-  value: Pick<
-    CollectionWithDetails,
-    "descriptionHtml" | "description" | "reviewCount" | "slug" | "name"
-  >;
-  titles: ListItemValue[];
+  backdropImageProps: BackdropImageProps;
   distinctReleaseYears: readonly string[];
   initialSort: Sort;
-  backdropImageProps: BackdropImageProps;
+  titles: ListItemValue[];
+  value: Pick<
+    CollectionWithDetails,
+    "description" | "descriptionHtml" | "name" | "reviewCount" | "slug"
+  >;
 }
 
 export function Collection({
-  value,
+  backdropImageProps,
   distinctReleaseYears,
   initialSort,
   titles,
-  backdropImageProps,
+  value,
 }: Props): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
-      values: [...titles],
       initialSort,
+      values: [...titles],
     },
     initState,
   );
@@ -57,8 +58,9 @@ export function Collection({
     <ListWithFiltersLayout
       backdrop={
         <Backdrop
-          imageProps={backdropImageProps}
-          title={value.name}
+          breadcrumb={
+            <BreadcrumbLink href="/collections/">Collections</BreadcrumbLink>
+          }
           deck={
             value.descriptionHtml ? (
               <span
@@ -66,35 +68,34 @@ export function Collection({
               />
             ) : null
           }
-          breadcrumb={
-            <BreadcrumbLink href="/collections/">Collections</BreadcrumbLink>
-          }
+          imageProps={backdropImageProps}
+          title={value.name}
         />
       }
-      totalCount={state.filteredValues.length}
       data-pagefind-body
       filters={
         <Filters
           dispatch={dispatch}
-          hideReviewed={state.hideReviewed}
-          sortValue={state.sortValue}
           distinctReleaseYears={distinctReleaseYears}
+          hideReviewed={state.hideReviewed}
           showHideReviewed={value.reviewCount != titles.length}
+          sortValue={state.sortValue}
         />
       }
       list={
         <GroupedList
           data-testid="list"
           groupedValues={state.groupedValues}
-          visibleCount={state.showCount}
-          totalCount={state.filteredValues.length}
           onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
+          totalCount={state.filteredValues.length}
+          visibleCount={state.showCount}
         >
           {(value) => {
-            return <CollectionListItem value={value} key={value.imdbId} />;
+            return <CollectionListItem key={value.imdbId} value={value} />;
           }}
         </GroupedList>
       }
+      totalCount={state.filteredValues.length}
     />
   );
 }
@@ -109,12 +110,12 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
       <div className="grow tablet:w-full">
         <div>
           <ListItemTitle
+            slug={value.slug}
             title={value.title}
             year={value.year}
-            slug={value.slug}
           />
           {value.grade && (
-            <Grade value={value.grade} height={18} className="mt-1 py-px" />
+            <Grade className="mt-1 py-px" height={18} value={value.grade} />
           )}
         </div>
       </div>

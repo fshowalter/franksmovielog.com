@@ -7,32 +7,33 @@ import { Actions, type ActionType, type Sort } from "./Overrated.reducer";
 
 export function Filters({
   dispatch,
-  sortValue,
-  distinctReleaseYears,
   distinctGenres,
+  distinctReleaseYears,
+  sortValue,
 }: {
   dispatch: React.Dispatch<ActionType>;
-  sortValue: Sort;
-  distinctReleaseYears: readonly string[];
   distinctGenres: readonly string[];
+  distinctReleaseYears: readonly string[];
+  sortValue: Sort;
 }) {
   return (
     <>
       <DebouncedInput
         label="Title"
-        placeholder="Enter all or part of a title"
         onInputChange={(value) =>
           dispatch({ type: Actions.FILTER_TITLE, value })
         }
+        placeholder="Enter all or part of a title"
       />
       <YearInput
         label="Release Year"
-        years={distinctReleaseYears}
         onYearChange={(values) =>
           dispatch({ type: Actions.FILTER_RELEASE_YEAR, values })
         }
+        years={distinctReleaseYears}
       />
       <MultiSelectField
+        label="Genres"
         onChange={(e) =>
           dispatch({
             type: Actions.FILTER_GENRES,
@@ -40,10 +41,8 @@ export function Filters({
           })
         }
         options={distinctGenres}
-        label="Genres"
       />
       <SelectField
-        value={sortValue}
         label="Sort"
         onChange={(e) =>
           dispatch({
@@ -51,6 +50,7 @@ export function Filters({
             value: e.target.value as Sort,
           })
         }
+        value={sortValue}
       >
         <option value="title-asc">Title (A &rarr; Z)</option>
         <option value="title-desc">Title (Z &rarr; A)</option>

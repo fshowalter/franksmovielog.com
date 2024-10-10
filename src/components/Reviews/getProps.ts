@@ -7,7 +7,7 @@ import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 import type { ListItemValue, Props } from "./Reviews";
 
 export async function getProps(): Promise<Props> {
-  const { reviews, distinctGenres, distinctReleaseYears, distinctReviewYears } =
+  const { distinctGenres, distinctReleaseYears, distinctReviewYears, reviews } =
     await allReviews();
 
   reviews.sort((a, b) => a.sortTitle.localeCompare(b.sortTitle));
@@ -15,28 +15,28 @@ export async function getProps(): Promise<Props> {
   const values = await Promise.all(
     reviews.map(async (review) => {
       const value: ListItemValue = {
+        genres: review.genres,
+        grade: review.grade,
+        gradeValue: review.gradeValue,
+        imdbId: review.imdbId,
+        posterImageProps: await getFluidWidthPosterImageProps(
+          review.slug,
+          ListItemPosterImageConfig,
+        ),
+        releaseSequence: review.releaseSequence,
         reviewDate: review.date.toISOString(),
         reviewMonth: review.date.toLocaleDateString("en-US", {
-          timeZone: "UTC",
           month: "long",
+          timeZone: "UTC",
         }),
         reviewYear: review.date.toLocaleDateString("en-US", {
           timeZone: "UTC",
           year: "numeric",
         }),
-        imdbId: review.imdbId,
+        slug: review.slug,
+        sortTitle: review.sortTitle,
         title: review.title,
         year: review.year,
-        slug: review.slug,
-        genres: review.genres,
-        grade: review.grade,
-        releaseSequence: review.releaseSequence,
-        gradeValue: review.gradeValue,
-        sortTitle: review.sortTitle,
-        posterImageProps: await getFluidWidthPosterImageProps(
-          review.slug,
-          ListItemPosterImageConfig,
-        ),
       };
 
       return value;
@@ -44,15 +44,15 @@ export async function getProps(): Promise<Props> {
   );
 
   return {
-    deck: `"'Sorry' don't get it done, Dude."`,
-    values,
-    distinctGenres,
-    distinctReleaseYears,
-    distinctReviewYears,
-    initialSort: "title-asc",
     backdropImageProps: await getBackdropImageProps(
       "reviews",
       BackdropImageConfig,
     ),
+    deck: `"'Sorry' don't get it done, Dude."`,
+    distinctGenres,
+    distinctReleaseYears,
+    distinctReviewYears,
+    initialSort: "title-asc",
+    values,
   };
 }

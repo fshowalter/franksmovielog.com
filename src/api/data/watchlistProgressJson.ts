@@ -1,5 +1,4 @@
 import { promises as fs } from "node:fs";
-
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
@@ -11,26 +10,26 @@ const watchlistProgressJsonFile = getContentPath(
 
 const Detail = z.object({
   name: z.string(),
-  titleCount: z.number(),
-  slug: z.nullable(z.string()),
   reviewCount: z.number(),
+  slug: z.nullable(z.string()),
+  titleCount: z.number(),
 });
 
 const WatchlistProgressJsonSchema = z.object({
-  total: z.number(),
-  reviewed: z.number(),
-  directorTotal: z.number(),
-  directorReviewed: z.number(),
-  directorDetails: z.array(Detail),
-  performerTotal: z.number(),
-  performerReviewed: z.number(),
-  performerDetails: z.array(Detail),
-  writerTotal: z.number(),
-  writerReviewed: z.number(),
-  writerDetails: z.array(Detail),
-  collectionTotal: z.number(),
-  collectionReviewed: z.number(),
   collectionDetails: z.array(Detail),
+  collectionReviewed: z.number(),
+  collectionTotal: z.number(),
+  directorDetails: z.array(Detail),
+  directorReviewed: z.number(),
+  directorTotal: z.number(),
+  performerDetails: z.array(Detail),
+  performerReviewed: z.number(),
+  performerTotal: z.number(),
+  reviewed: z.number(),
+  total: z.number(),
+  writerDetails: z.array(Detail),
+  writerReviewed: z.number(),
+  writerTotal: z.number(),
 });
 
 export type WatchlistProgressJson = z.infer<typeof WatchlistProgressJsonSchema>;

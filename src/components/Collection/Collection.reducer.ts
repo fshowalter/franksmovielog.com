@@ -5,28 +5,28 @@ import { collator, sortNumber, sortString } from "src/utils/sortTools";
 import type { ListItemValue } from "./Collection";
 
 export type Sort =
-  | "release-date-desc"
-  | "release-date-asc"
-  | "title"
   | "grade-asc"
-  | "grade-desc";
+  | "grade-desc"
+  | "release-date-asc"
+  | "release-date-desc"
+  | "title";
 
 const SHOW_COUNT_DEFAULT = 100;
 
 const groupValues = buildGroupValues(groupForValue);
-const { updateFilter, applyFilters } = filterTools(sortValues, groupValues);
+const { applyFilters, updateFilter } = filterTools(sortValues, groupValues);
 
 function sortValues(values: ListItemValue[], sortOrder: Sort) {
   const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
     {
-      "release-date-desc": (a, b) =>
-        sortString(a.releaseSequence, b.releaseSequence) * -1,
-      "release-date-asc": (a, b) =>
-        sortString(a.releaseSequence, b.releaseSequence),
-      title: (a, b) => collator.compare(a.sortTitle, b.sortTitle),
       "grade-asc": (a, b) => sortNumber(a.gradeValue ?? 50, b.gradeValue ?? 50),
       "grade-desc": (a, b) =>
         sortNumber(a.gradeValue ?? -1, b.gradeValue ?? -1) * -1,
+      "release-date-asc": (a, b) =>
+        sortString(a.releaseSequence, b.releaseSequence),
+      "release-date-desc": (a, b) =>
+        sortString(a.releaseSequence, b.releaseSequence) * -1,
+      title: (a, b) => collator.compare(a.sortTitle, b.sortTitle),
     };
 
   const comparer = sortMap[sortOrder];
@@ -62,11 +62,11 @@ interface State
 }
 
 export function initState({
-  values,
   initialSort,
+  values,
 }: {
-  values: ListItemValue[];
   initialSort: Sort;
+  values: ListItemValue[];
 }): State {
   return {
     allValues: values,
@@ -76,17 +76,17 @@ export function initState({
       values.slice(0, SHOW_COUNT_DEFAULT),
       initialSort,
     ),
+    hideReviewed: false,
     showCount: SHOW_COUNT_DEFAULT,
     sortValue: initialSort,
-    hideReviewed: false,
   };
 }
 
 export enum Actions {
-  FILTER_TITLE = "FILTER_TITLE",
   FILTER_RELEASE_YEAR = "FILTER_RELEASE_YEAR",
-  SORT = "SORT",
+  FILTER_TITLE = "FILTER_TITLE",
   SHOW_MORE = "SHOW_MORE",
+  SORT = "SORT",
   TOGGLE_REVIEWED = "TOGGLE_REVIEWED",
 }
 
@@ -114,10 +114,10 @@ interface ToggleReviewedAction {
 }
 
 export type ActionType =
-  | FilterTitleAction
   | FilterReleaseYearAction
-  | SortAction
+  | FilterTitleAction
   | ShowMoreAction
+  | SortAction
   | ToggleReviewedAction;
 
 export function reducer(state: State, action: ActionType): State {
@@ -148,9 +148,9 @@ export function reducer(state: State, action: ActionType): State {
       );
       return {
         ...state,
-        sortValue: action.value,
         filteredValues,
         groupedValues,
+        sortValue: action.value,
       };
     }
     case Actions.SHOW_MORE: {

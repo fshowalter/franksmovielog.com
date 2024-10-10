@@ -1,83 +1,85 @@
 import type { AvatarImageProps } from "src/api/avatars";
 import type { BackdropImageProps } from "src/api/backdrops";
 import type { WatchlistProgress } from "src/api/watchlistProgress";
+
 import { Backdrop, BreadcrumbLink } from "src/components/Backdrop";
 import { Layout } from "src/components/Layout";
 
 import type { Props as CalloutsProps } from "./Callouts";
+
 import { Callouts } from "./Callouts";
 import { Details } from "./Details";
 
 export type Props = {
-  progress: {
-    collectionDetails: (WatchlistProgress["collectionDetails"][number] & {
-      avatarImageProps: AvatarImageProps | null;
-    })[];
-    directorDetails: (WatchlistProgress["directorDetails"][number] & {
-      avatarImageProps: AvatarImageProps | null;
-    })[];
-    performerDetails: (WatchlistProgress["performerDetails"][number] & {
-      avatarImageProps: AvatarImageProps | null;
-    })[];
-    writerDetails: (WatchlistProgress["writerDetails"][number] & {
-      avatarImageProps: AvatarImageProps | null;
-    })[];
-  } & CalloutsProps;
   backdropImageProps: BackdropImageProps;
   deck: string;
+  progress: {
+    collectionDetails: ({
+      avatarImageProps: AvatarImageProps | null;
+    } & WatchlistProgress["collectionDetails"][number])[];
+    directorDetails: ({
+      avatarImageProps: AvatarImageProps | null;
+    } & WatchlistProgress["directorDetails"][number])[];
+    performerDetails: ({
+      avatarImageProps: AvatarImageProps | null;
+    } & WatchlistProgress["performerDetails"][number])[];
+    writerDetails: ({
+      avatarImageProps: AvatarImageProps | null;
+    } & WatchlistProgress["writerDetails"][number])[];
+  } & CalloutsProps;
 };
 
 export function WatchlistProgress({
-  progress,
   backdropImageProps,
   deck,
+  progress,
 }: Props): JSX.Element {
   return (
     <Layout className="bg-subtle">
       <Backdrop
-        imageProps={backdropImageProps}
-        title="Progress"
         breadcrumb={
           <BreadcrumbLink href="/watchlist/">Watchlist</BreadcrumbLink>
         }
         deck={deck}
+        imageProps={backdropImageProps}
+        title="Progress"
       />
       <div className="flex flex-col items-center">
         <Callouts
-          total={progress.total}
-          reviewed={progress.reviewed}
-          writerReviewed={progress.writerReviewed}
-          writerTotal={progress.writerTotal}
+          collectionReviewed={progress.collectionReviewed}
+          collectionTotal={progress.collectionTotal}
           directorReviewed={progress.directorReviewed}
           directorTotal={progress.directorTotal}
           performerReviewed={progress.performerReviewed}
           performerTotal={progress.performerTotal}
-          collectionReviewed={progress.collectionReviewed}
-          collectionTotal={progress.collectionTotal}
+          reviewed={progress.reviewed}
+          total={progress.total}
+          writerReviewed={progress.writerReviewed}
+          writerTotal={progress.writerTotal}
         />
         <div className="mx-auto flex w-full max-w-screen-max flex-col gap-8 py-16 tablet:px-container desktop:grid desktop:grid-cols-2">
           <Details
-            label="Directors"
-            valueType="director"
-            values={progress.directorDetails}
             className="col-start-1 row-span-3"
+            label="Directors"
+            values={progress.directorDetails}
+            valueType="director"
           />
           <Details
             label="Performers"
-            valueType="performer"
             values={progress.performerDetails}
+            valueType="performer"
           />
           <Details
-            label="Writers"
-            valueType="writer"
-            values={progress.writerDetails}
             className="col-start-2 row-start-2"
+            label="Writers"
+            values={progress.writerDetails}
+            valueType="writer"
           />
           <Details
-            label="Collections"
-            valueType="collection"
-            values={progress.collectionDetails}
             className="col-start-2 row-start-3"
+            label="Collections"
+            values={progress.collectionDetails}
+            valueType="collection"
           />
         </div>
       </div>

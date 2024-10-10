@@ -1,7 +1,8 @@
-import { useReducer } from "react";
 import type { BackdropImageProps } from "src/api/backdrops";
 import type { PosterImageProps } from "src/api/posters";
 import type { Viewing } from "src/api/viewings";
+
+import { useReducer } from "react";
 import { Backdrop } from "src/components/Backdrop";
 import { GroupedList } from "src/components/GroupedList";
 import { ListItemMediumAndVenue } from "src/components/ListItemMediumAndVenue";
@@ -11,57 +12,58 @@ import {
   ListWithFiltersLayout,
 } from "src/components/ListWithFiltersLayout";
 
-import { Filters } from "./Filters";
 import type { Sort } from "./Viewings.reducer";
+
+import { Filters } from "./Filters";
 import { Actions, initState, reducer } from "./Viewings.reducer";
 
 export type Props = {
-  values: ListItemValue[];
-  distinctGenres: readonly string[];
-  distinctMedia: readonly string[];
-  distinctVenues: readonly string[];
-  distinctReleaseYears: readonly string[];
-  distinctViewingYears: readonly string[];
-  initialSort: Sort;
   backdropImageProps: BackdropImageProps;
   deck: string;
+  distinctGenres: readonly string[];
+  distinctMedia: readonly string[];
+  distinctReleaseYears: readonly string[];
+  distinctVenues: readonly string[];
+  distinctViewingYears: readonly string[];
+  initialSort: Sort;
+  values: ListItemValue[];
 };
 
-export type ListItemValue = Pick<
-  Viewing,
-  | "sequence"
-  | "viewingYear"
-  | "viewingDate"
-  | "releaseSequence"
-  | "title"
-  | "medium"
-  | "venue"
-  | "year"
-  | "sortTitle"
-  | "slug"
-  | "genres"
-> & {
-  viewingMonth: string;
-  viewingDay: string;
+export type ListItemValue = {
   posterImageProps: PosterImageProps;
-};
+  viewingDay: string;
+  viewingMonth: string;
+} & Pick<
+  Viewing,
+  | "genres"
+  | "medium"
+  | "releaseSequence"
+  | "sequence"
+  | "slug"
+  | "sortTitle"
+  | "title"
+  | "venue"
+  | "viewingDate"
+  | "viewingYear"
+  | "year"
+>;
 
 export function Viewings({
-  values,
-  distinctGenres,
-  distinctMedia,
-  distinctVenues,
-  distinctReleaseYears,
-  distinctViewingYears,
-  initialSort,
   backdropImageProps,
   deck,
+  distinctGenres,
+  distinctMedia,
+  distinctReleaseYears,
+  distinctVenues,
+  distinctViewingYears,
+  initialSort,
+  values,
 }: Props): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
-      values,
       initialSort,
+      values,
     },
     initState,
   );
@@ -70,22 +72,18 @@ export function Viewings({
     <ListWithFiltersLayout
       backdrop={
         <Backdrop
-          title="Viewing Log"
           deck={deck}
           imageProps={backdropImageProps}
+          title="Viewing Log"
         />
-      }
-      totalCount={state.filteredValues.length}
-      listHeaderButtons={
-        <ListHeaderButton href="/viewings/stats/" text="stats" />
       }
       filters={
         <Filters
           dispatch={dispatch}
           distinctGenres={distinctGenres}
           distinctMedia={distinctMedia}
-          distinctVenues={distinctVenues}
           distinctReleaseYears={distinctReleaseYears}
+          distinctVenues={distinctVenues}
           distinctViewingYears={distinctViewingYears}
           sortValue={state.sortValue}
         />
@@ -94,22 +92,26 @@ export function Viewings({
         <GroupedList
           data-testid="list"
           groupedValues={state.groupedValues}
-          visibleCount={state.showCount}
-          totalCount={state.filteredValues.length}
           onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
+          totalCount={state.filteredValues.length}
+          visibleCount={state.showCount}
         >
           {(dateGroup) => {
             const [dayAndDate, values] = dateGroup;
             return (
               <DateListItem
-                values={values}
-                key={dayAndDate}
                 dayAndDate={dayAndDate}
+                key={dayAndDate}
+                values={values}
               />
             );
           }}
         </GroupedList>
       }
+      listHeaderButtons={
+        <ListHeaderButton href="/viewings/stats/" text="stats" />
+      }
+      totalCount={state.filteredValues.length}
     />
   );
 }
@@ -137,7 +139,7 @@ function DateListItem({
       </div>
       <ul className="flex h-full grow flex-col tablet:gap-y-0">
         {values.map((value) => {
-          return <ViewingListItem value={value} key={value.sequence} />;
+          return <ViewingListItem key={value.sequence} value={value} />;
         })}
       </ul>
     </li>
@@ -161,9 +163,9 @@ function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
       <ListItemPoster imageProps={value.posterImageProps} />
       <div className="flex grow flex-col gap-1">
         <ListItemTitle
+          slug={value.slug}
           title={value.title}
           year={value.year}
-          slug={value.slug}
         />
         <ListItemMediumAndVenue medium={value.medium} venue={value.venue} />
       </div>
@@ -172,13 +174,13 @@ function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
 }
 
 function ListItemTitle({
+  slug,
   title,
   year,
-  slug,
 }: {
+  slug?: null | string;
   title: string;
   year: string;
-  slug?: string | null;
 }) {
   const yearBox = (
     <span className="text-xxs font-light text-subtle tablet:text-xs">
@@ -189,8 +191,8 @@ function ListItemTitle({
   if (slug) {
     return (
       <a
-        href={`/reviews/${slug}/`}
         className="block font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 hover:underline hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-[#fff]"
+        href={`/reviews/${slug}/`}
       >
         {title}
         {"\u202F"}

@@ -1,4 +1,5 @@
 import type { FilterableState } from "src/utils/filterTools";
+
 import { filterTools } from "src/utils/filterTools";
 import { sortNumber } from "src/utils/sortTools";
 
@@ -6,15 +7,15 @@ import type { ListItemValue } from "./Viewings";
 
 const SHOW_COUNT_DEFAULT = 100;
 
-export type Sort = "viewing-date-desc" | "viewing-date-asc";
+export type Sort = "viewing-date-asc" | "viewing-date-desc";
 
-const { updateFilter, clearFilter } = filterTools(sortValues, groupValues);
+const { clearFilter, updateFilter } = filterTools(sortValues, groupValues);
 
 function sortValues(values: ListItemValue[], sortOrder: Sort) {
   const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
     {
-      "viewing-date-desc": (a, b) => sortNumber(a.sequence, b.sequence) * -1,
       "viewing-date-asc": (a, b) => sortNumber(a.sequence, b.sequence),
+      "viewing-date-desc": (a, b) => sortNumber(a.sequence, b.sequence) * -1,
     };
 
   const comparer = sortMap[sortOrder];
@@ -58,11 +59,11 @@ type State = FilterableState<
 >;
 
 export function initState({
-  values,
   initialSort,
+  values,
 }: {
-  values: ListItemValue[];
   initialSort: Sort;
+  values: ListItemValue[];
 }): State {
   return {
     allValues: values,
@@ -75,14 +76,14 @@ export function initState({
 }
 
 export enum Actions {
-  FILTER_TITLE = "FILTER_TITLE",
-  FILTER_MEDIUM = "FILTER_MEDIUM",
   FILTER_GENRES = "FILTER_GENRES",
-  FILTER_VIEWING_YEAR = "FILTER_VIEWING_YEAR",
+  FILTER_MEDIUM = "FILTER_MEDIUM",
   FILTER_RELEASE_YEAR = "FILTER_RELEASE_YEAR",
+  FILTER_TITLE = "FILTER_TITLE",
   FILTER_VENUE = "FILTER_VENUE",
-  SORT = "SORT",
+  FILTER_VIEWING_YEAR = "FILTER_VIEWING_YEAR",
   SHOW_MORE = "SHOW_MORE",
+  SORT = "SORT",
 }
 
 interface FilterTitleAction {
@@ -125,14 +126,14 @@ interface ShowMoreAction {
 }
 
 export type ActionType =
-  | FilterTitleAction
-  | FilterReleaseYearAction
-  | FilterViewingYearAction
-  | FilterMediumAction
-  | FilterVenueAction
   | FilterGenresAction
-  | SortAction
-  | ShowMoreAction;
+  | FilterMediumAction
+  | FilterReleaseYearAction
+  | FilterTitleAction
+  | FilterVenueAction
+  | FilterViewingYearAction
+  | ShowMoreAction
+  | SortAction;
 
 export function reducer(state: State, action: ActionType): State {
   let groupedValues;
@@ -187,9 +188,9 @@ export function reducer(state: State, action: ActionType): State {
       groupedValues = groupValues(filteredValues.slice(0, state.showCount));
       return {
         ...state,
-        sortValue: action.value,
         filteredValues,
         groupedValues,
+        sortValue: action.value,
       };
     }
     case Actions.SHOW_MORE: {

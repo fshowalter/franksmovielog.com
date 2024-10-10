@@ -1,6 +1,5 @@
-import path from "node:path";
-
 import { getImage } from "astro:assets";
+import path from "node:path";
 import sharp from "sharp";
 
 import { normalizeSources } from "./utils/normalizeSources";
@@ -42,26 +41,26 @@ export async function getOpenGraphBackdropAsBase64String(slug: string) {
 export async function getBackdropImageProps(
   slug: string,
   {
-    width,
     height,
+    width,
   }: {
-    width: number;
     height: number;
+    width: number;
   },
 ): Promise<BackdropImageProps> {
   const backdropFile = await getBackdropFile(slug);
 
   const optimizedImage = await getImage({
+    format: "avif",
+    height: height,
+    quality: 80,
     src: backdropFile.default,
     width: width,
-    height: height,
-    format: "avif",
     widths: [0.25, 0.5, 1, 2].map((w) => w * width),
-    quality: 80,
   });
 
   return {
-    srcSet: normalizeSources(optimizedImage.srcSet.attribute),
     src: normalizeSources(optimizedImage.src),
+    srcSet: normalizeSources(optimizedImage.srcSet.attribute),
   };
 }

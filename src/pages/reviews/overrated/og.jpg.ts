@@ -1,6 +1,6 @@
-import path from "node:path";
-
 import type { APIRoute } from "astro";
+
+import path from "node:path";
 import sharp from "sharp";
 import { OpenGraphImage } from "src/components/OpenGraphImage";
 import { componentToImage } from "src/utils/componentToImage";
@@ -15,8 +15,8 @@ export const GET: APIRoute = async function get() {
 
   const jpeg = await componentToImage(
     OpenGraphImage({
-      title: "Overrated Disappointments",
       backdrop: `data:${"image/png"};base64,${imageBuffer.toString("base64")}`,
+      title: "Overrated Disappointments",
     }),
   );
 

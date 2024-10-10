@@ -8,20 +8,19 @@ import { MoreReviewsImageConfig } from "src/components/MoreReviews";
 import type { Props } from "./Article";
 
 export async function getProps({
-  slug,
   deck,
+  slug,
 }: {
-  slug: string;
   deck: string;
+  slug: string;
 }): Promise<Props> {
-  const { title, content } = await getPage(slug);
+  const { content, title } = await getPage(slug);
   const recentReviews = await mostRecentReviews(4);
 
   return {
-    title,
+    backdropImageProps: await getBackdropImageProps(slug, BackdropImageConfig),
     content,
     deck,
-    backdropImageProps: await getBackdropImageProps(slug, BackdropImageConfig),
     recentReviews: await Promise.all(
       recentReviews.map(async (review) => {
         const titleWithExcerpt = await loadExcerptHtml(review);
@@ -34,5 +33,6 @@ export async function getProps({
         };
       }),
     ),
+    title,
   };
 }

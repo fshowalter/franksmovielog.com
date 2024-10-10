@@ -1,29 +1,30 @@
 import type { StillImageProps } from "src/api/stills";
+
 import { ccn } from "src/utils/concatClassNames";
 
 interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {
+  className?: string;
+  decoding: "async" | "auto" | "sync";
+  height: number;
   imageProps: StillImageProps;
+  loading: "eager" | "lazy";
   sizes: string;
   width: number;
-  height: number;
-  loading: "lazy" | "eager";
-  decoding: "async" | "auto" | "sync";
-  className?: string;
 }
 
 export function Still({
+  className,
+  decoding = "async",
   imageProps,
   loading = "lazy",
-  decoding = "async",
-  className,
   ...rest
 }: Props): JSX.Element {
   return (
     <img
       {...imageProps}
       alt=""
-      loading={loading}
       decoding={decoding}
+      loading={loading}
       {...rest}
       className={ccn("aspect-video", className)}
     />

@@ -1,5 +1,4 @@
 import { promises as fs } from "node:fs";
-
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
@@ -7,46 +6,46 @@ import { getContentPath } from "./utils/getContentPath";
 const yearStatsJsonDirectory = getContentPath("data", "year-stats");
 
 const Distribution = z.object({
-  name: z.string(),
   count: z.number(),
+  name: z.string(),
 });
 
 const MostWatchedTitle = z.object({
-  title: z.string(),
-  imdbId: z.string(),
-  year: z.string(),
   count: z.number(),
+  imdbId: z.string(),
   slug: z.nullable(z.string()),
+  title: z.string(),
+  year: z.string(),
 });
 
 const MostWatchedPersonViewing = z.object({
-  sequence: z.number(),
   date: z.string(),
+  medium: z.nullable(z.string()),
+  sequence: z.number(),
   slug: z.nullable(z.string()),
   title: z.string(),
-  medium: z.nullable(z.string()),
   venue: z.nullable(z.string()),
   year: z.string(),
 });
 
 const MostWatchedPersonSchema = z.object({
-  name: z.string(),
   count: z.number(),
+  name: z.string(),
   slug: z.nullable(z.string()),
   viewings: z.array(MostWatchedPersonViewing),
 });
 
 const YearStatsJsonSchema = z.object({
-  year: z.string(),
-  newTitleCount: z.number(),
-  viewingCount: z.number(),
-  titleCount: z.number(),
-  mediaDistribution: z.array(Distribution),
   decadeDistribution: z.array(Distribution),
-  mostWatchedTitles: z.array(MostWatchedTitle),
+  mediaDistribution: z.array(Distribution),
   mostWatchedDirectors: z.array(MostWatchedPersonSchema),
   mostWatchedPerformers: z.array(MostWatchedPersonSchema),
+  mostWatchedTitles: z.array(MostWatchedTitle),
   mostWatchedWriters: z.array(MostWatchedPersonSchema),
+  newTitleCount: z.number(),
+  titleCount: z.number(),
+  viewingCount: z.number(),
+  year: z.string(),
 });
 
 export type YearStatsJson = z.infer<typeof YearStatsJsonSchema>;

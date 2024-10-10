@@ -1,7 +1,8 @@
-import { useReducer } from "react";
 import type { BackdropImageProps } from "src/api/backdrops";
 import type { CastAndCrewMember } from "src/api/castAndCrew";
 import type { PosterImageProps } from "src/api/posters";
+
+import { useReducer } from "react";
 import { Backdrop, BreadcrumbLink } from "src/components/Backdrop";
 import { CreditedAs } from "src/components/CreditedAs";
 import { Grade } from "src/components/Grade";
@@ -21,88 +22,88 @@ import {
 import { Filters } from "./Filters";
 
 export type Props = {
-  value: Pick<
-    CastAndCrewMember,
-    "name" | "reviewCount" | "totalCount" | "creditedAs"
-  >;
-  titles: ListItemValue[];
-  initialSort: Sort;
-  distinctReleaseYears: readonly string[];
   backdropImageProps: BackdropImageProps;
   deck: string;
+  distinctReleaseYears: readonly string[];
+  initialSort: Sort;
+  titles: ListItemValue[];
+  value: Pick<
+    CastAndCrewMember,
+    "creditedAs" | "name" | "reviewCount" | "totalCount"
+  >;
 };
 
-export type ListItemValue = Pick<
+export type ListItemValue = {
+  posterImageProps: PosterImageProps;
+} & Pick<
   CastAndCrewMember["titles"][0],
-  | "imdbId"
-  | "title"
-  | "year"
+  | "collectionNames"
+  | "creditedAs"
   | "grade"
   | "gradeValue"
+  | "imdbId"
+  | "releaseSequence"
   | "slug"
   | "sortTitle"
-  | "releaseSequence"
-  | "creditedAs"
+  | "title"
   | "watchlistDirectorNames"
   | "watchlistPerformerNames"
   | "watchlistWriterNames"
-  | "collectionNames"
-> & {
-  posterImageProps: PosterImageProps;
-};
+  | "year"
+>;
 
 export function CastAndCrewMember({
-  value,
-  titles,
-  initialSort,
-  distinctReleaseYears,
   backdropImageProps,
   deck,
+  distinctReleaseYears,
+  initialSort,
+  titles,
+  value,
 }: Props): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
-      values: [...titles],
       initialSort,
+      values: [...titles],
     },
     initState,
   );
   return (
     <ListWithFiltersLayout
-      data-pagefind-body
       backdrop={
         <Backdrop
-          imageProps={backdropImageProps}
           breadcrumb={
             <BreadcrumbLink href="/cast-and-crew/">Cast & Crew</BreadcrumbLink>
           }
-          title={value.name}
           deck={deck}
+          imageProps={backdropImageProps}
+          title={value.name}
         />
       }
-      totalCount={state.filteredValues.length}
+      data-pagefind-body
       filters={
         <Filters
+          creditedAs={value.creditedAs}
           dispatch={dispatch}
           distinctReleaseYears={distinctReleaseYears}
-          creditedAs={value.creditedAs}
-          sortValue={state.sortValue}
           hideReviewed={state.hideReviewed}
+          sortValue={state.sortValue}
         />
       }
       list={
         <GroupedList
           data-testid="list"
           groupedValues={state.groupedValues}
-          visibleCount={state.showCount}
-          totalCount={state.filteredValues.length}
           onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
+          totalCount={state.filteredValues.length}
+          visibleCount={state.showCount}
         >
           {(value) => {
-            return <TitleListItem value={value} key={value.imdbId} />;
+            return <TitleListItem key={value.imdbId} value={value} />;
           }}
         </GroupedList>
       }
+      totalCount={state.filteredValues.length}
     />
   );
 }
@@ -114,20 +115,20 @@ function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
       <div className="flex grow flex-col gap-2 pb-2 tablet:w-full">
         <CreditedAs values={value.creditedAs} />
         <ListItemTitle
+          slug={value.slug}
           title={value.title}
           year={value.year}
-          slug={value.slug}
         />
         {value.grade && (
-          <Grade value={value.grade} height={18} className="py-px" />
+          <Grade className="py-px" height={18} value={value.grade} />
         )}
         {!value.grade && (
           <>
             <WatchlistTitleSlug
+              collectionNames={value.collectionNames}
               directorNames={value.watchlistDirectorNames}
               performerNames={value.watchlistPerformerNames}
               writerNames={value.watchlistWriterNames}
-              collectionNames={value.collectionNames}
             />
           </>
         )}

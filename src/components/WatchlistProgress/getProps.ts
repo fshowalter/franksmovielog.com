@@ -3,22 +3,23 @@ import { getBackdropImageProps } from "src/api/backdrops";
 import { watchlistProgress } from "src/api/watchlistProgress";
 import { BackdropImageConfig } from "src/components/Backdrop";
 
-import { DetailsAvatarImageConfig } from "./Details";
 import type { Props } from "./WatchlistProgress";
+
+import { DetailsAvatarImageConfig } from "./Details";
 
 export async function getProps(): Promise<Props> {
   const progress = await watchlistProgress();
 
   return {
-    deck: '"I find your lack of faith disturbing."',
     backdropImageProps: await getBackdropImageProps(
       "watchlist-progress",
       BackdropImageConfig,
     ),
+    deck: '"I find your lack of faith disturbing."',
     progress: {
       ...progress,
-      directorDetails: await Promise.all(
-        progress.directorDetails.map(async (detail) => {
+      collectionDetails: await Promise.all(
+        progress.collectionDetails.map(async (detail) => {
           return {
             ...detail,
             avatarImageProps: await getAvatarImageProps(
@@ -28,8 +29,8 @@ export async function getProps(): Promise<Props> {
           };
         }),
       ),
-      writerDetails: await Promise.all(
-        progress.writerDetails.map(async (detail) => {
+      directorDetails: await Promise.all(
+        progress.directorDetails.map(async (detail) => {
           return {
             ...detail,
             avatarImageProps: await getAvatarImageProps(
@@ -50,8 +51,8 @@ export async function getProps(): Promise<Props> {
           };
         }),
       ),
-      collectionDetails: await Promise.all(
-        progress.collectionDetails.map(async (detail) => {
+      writerDetails: await Promise.all(
+        progress.writerDetails.map(async (detail) => {
           return {
             ...detail,
             avatarImageProps: await getAvatarImageProps(

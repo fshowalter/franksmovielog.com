@@ -1,4 +1,5 @@
 import type { APIRoute, InferGetStaticPropsType } from "astro";
+
 import { getOpenGraphBackdropAsBase64String } from "src/api/backdrops";
 import { allCollections } from "src/api/collections";
 import { OpenGraphImage } from "src/components/OpenGraphImage";
@@ -13,8 +14,8 @@ export async function getStaticPaths() {
         slug: collection.slug,
       },
       props: {
-        slug: collection.slug,
         name: collection.name,
+        slug: collection.slug,
       },
     };
   });
@@ -23,13 +24,13 @@ export async function getStaticPaths() {
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 export const GET: APIRoute = async function get({ props }) {
-  const { slug, name } = props as Props;
+  const { name, slug } = props as Props;
 
   const jpeg = await componentToImage(
     OpenGraphImage({
-      title: name,
-      sectionHead: "Collections",
       backdrop: await getOpenGraphBackdropAsBase64String(slug),
+      sectionHead: "Collections",
+      title: name,
     }),
   );
 

@@ -7,10 +7,11 @@ import smartypants from "remark-smartypants";
 import strip from "strip-markdown";
 
 import type { ReviewedTitleJson } from "./data/reviewedTitlesJson";
-import { allReviewedTitlesJson } from "./data/reviewedTitlesJson";
 import type { MarkdownReview } from "./data/reviewsMarkdown";
-import { allReviewsMarkdown } from "./data/reviewsMarkdown";
 import type { MarkdownViewing } from "./data/viewingsMarkdown";
+
+import { allReviewedTitlesJson } from "./data/reviewedTitlesJson";
+import { allReviewsMarkdown } from "./data/reviewsMarkdown";
 import { allViewingsMarkdown } from "./data/viewingsMarkdown";
 import { linkReviewedTitles } from "./utils/linkReviewedTitles";
 import { getHtml } from "./utils/markdown/getHtml";
@@ -23,8 +24,8 @@ import {
 
 let cachedViewingsMarkdown: MarkdownViewing[] | null = null;
 let cachedMarkdownReviews: MarkdownReview[] | null = null;
-let cachedReviewedTitlesJson: ReviewedTitleJson[] | null = null;
-let cachedReviews: Reviews | null = null;
+let cachedReviewedTitlesJson: null | ReviewedTitleJson[] = null;
+let cachedReviews: null | Reviews = null;
 
 if (import.meta.env.MODE !== "development") {
   cachedViewingsMarkdown = await allViewingsMarkdown();
@@ -33,18 +34,18 @@ if (import.meta.env.MODE !== "development") {
 }
 
 interface ReviewViewing extends MarkdownViewing {
-  venueNotes: string | null;
-  mediumNotes: string | null;
-  viewingNotes: string | null;
+  mediumNotes: null | string;
+  venueNotes: null | string;
+  viewingNotes: null | string;
 }
 
 export interface Review extends ReviewedTitleJson, MarkdownReview {}
 
 interface Reviews {
-  reviews: Review[];
-  distinctReviewYears: string[];
-  distinctReleaseYears: string[];
   distinctGenres: string[];
+  distinctReleaseYears: string[];
+  distinctReviewYears: string[];
+  reviews: Review[];
 }
 
 function getMastProcessor() {
@@ -52,7 +53,7 @@ function getMastProcessor() {
 }
 
 function getHtmlAsSpan(
-  content: string | null,
+  content: null | string,
   reviewedTitles: { imdbId: string; slug: string }[],
 ) {
   if (!content) {
@@ -76,7 +77,7 @@ export interface ReviewExcerpt {
 
 export async function loadExcerptHtml<T extends { slug: string }>(
   review: T,
-): Promise<T & ReviewExcerpt> {
+): Promise<ReviewExcerpt & T> {
   const reviewsMarkdown = cachedMarkdownReviews || (await allReviewsMarkdown());
   const reviewedTitlesJson =
     cachedReviewedTitlesJson || (await allReviewedTitlesJson());
@@ -111,9 +112,9 @@ export async function loadExcerptHtml<T extends { slug: string }>(
 }
 
 export interface ReviewContent {
-  viewings: ReviewViewing[];
+  content: null | string;
   excerptPlainText: string;
-  content: string | null;
+  viewings: ReviewViewing[];
 }
 
 export async function loadContent<
@@ -137,8 +138,8 @@ export async function loadContent<
     .map((viewing) => {
       return {
         ...viewing,
-        venueNotes: getHtmlAsSpan(viewing.venueNotesRaw, reviewedTitlesJson),
         mediumNotes: getHtmlAsSpan(viewing.mediumNotesRaw, reviewedTitlesJson),
+        venueNotes: getHtmlAsSpan(viewing.venueNotesRaw, reviewedTitlesJson),
         viewingNotes: getHtml(viewing.viewingNotesRaw, reviewedTitlesJson),
       };
     });
@@ -151,9 +152,9 @@ export async function loadContent<
 
   return {
     ...review,
-    viewings,
     content: getHtml(review.rawContent, reviewedTitlesJson),
     excerptPlainText,
+    viewings,
   };
 }
 
@@ -169,7 +170,7 @@ async function parseReviewedTitlesJson(
     title.genres.forEach((genre) => distinctGenres.add(genre));
     distinctReleaseYears.add(title.year);
 
-    const { rawContent, grade, date } = reviewsMarkdown.find(
+    const { date, grade, rawContent } = reviewsMarkdown.find(
       (reviewsmarkdown) => {
         return reviewsmarkdown.slug === title.slug;
       },
@@ -184,17 +185,17 @@ async function parseReviewedTitlesJson(
 
     return {
       ...title,
-      rawContent,
-      grade,
       date,
+      grade,
+      rawContent,
     };
   });
 
   return {
-    reviews,
     distinctGenres: Array.from(distinctGenres).toSorted(),
     distinctReleaseYears: Array.from(distinctReleaseYears).toSorted(),
     distinctReviewYears: Array.from(distinctReviewYears).toSorted(),
+    reviews,
   };
 }
 

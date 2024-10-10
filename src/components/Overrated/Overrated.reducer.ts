@@ -7,12 +7,12 @@ import type { ListItemValue } from "./Overrated";
 const SHOW_COUNT_DEFAULT = 100;
 
 export type Sort =
-  | "release-date-desc"
-  | "release-date-asc"
-  | "title-asc"
-  | "title-desc"
   | "grade-asc"
-  | "grade-desc";
+  | "grade-desc"
+  | "release-date-asc"
+  | "release-date-desc"
+  | "title-asc"
+  | "title-desc";
 
 const groupValues = buildGroupValues(groupForValue);
 const { updateFilter } = filterTools(sortValues, groupValues);
@@ -20,14 +20,14 @@ const { updateFilter } = filterTools(sortValues, groupValues);
 function sortValues(values: ListItemValue[], sortOrder: Sort) {
   const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
     {
-      "release-date-desc": (a, b) =>
-        sortString(a.releaseSequence, b.releaseSequence) * -1,
-      "release-date-asc": (a, b) =>
-        sortString(a.releaseSequence, b.releaseSequence),
-      "title-asc": (a, b) => collator.compare(a.sortTitle, b.sortTitle),
-      "title-desc": (a, b) => collator.compare(a.sortTitle, b.sortTitle) * -1,
       "grade-asc": (a, b) => sortNumber(a.gradeValue, b.gradeValue),
       "grade-desc": (a, b) => sortNumber(a.gradeValue, b.gradeValue) * -1,
+      "release-date-asc": (a, b) =>
+        sortString(a.releaseSequence, b.releaseSequence),
+      "release-date-desc": (a, b) =>
+        sortString(a.releaseSequence, b.releaseSequence) * -1,
+      "title-asc": (a, b) => collator.compare(a.sortTitle, b.sortTitle),
+      "title-desc": (a, b) => collator.compare(a.sortTitle, b.sortTitle) * -1,
     };
 
   const comparer = sortMap[sortOrder];
@@ -61,31 +61,31 @@ function groupForValue(value: ListItemValue, sortValue: Sort): string {
 type State = FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>>;
 
 export function initState({
-  values,
   initialSort,
+  values,
 }: {
-  values: ListItemValue[];
   initialSort: Sort;
+  values: ListItemValue[];
 }): State {
   return {
     allValues: values,
     filteredValues: values,
+    filters: {},
     groupedValues: groupValues(
       values.slice(0, SHOW_COUNT_DEFAULT),
       initialSort,
     ),
-    filters: {},
     showCount: SHOW_COUNT_DEFAULT,
     sortValue: initialSort,
   };
 }
 
 export enum Actions {
-  FILTER_TITLE = "FILTER_TITLE",
   FILTER_GENRES = "FILTER_GENRES",
   FILTER_RELEASE_YEAR = "FILTER_RELEASE_YEAR",
-  SORT = "SORT",
+  FILTER_TITLE = "FILTER_TITLE",
   SHOW_MORE = "SHOW_MORE",
+  SORT = "SORT",
 }
 
 interface FilterTitleAction {
@@ -113,11 +113,11 @@ interface ShowMoreAction {
 }
 
 export type ActionType =
-  | FilterTitleAction
-  | FilterReleaseYearAction
   | FilterGenresAction
-  | SortAction
-  | ShowMoreAction;
+  | FilterReleaseYearAction
+  | FilterTitleAction
+  | ShowMoreAction
+  | SortAction;
 
 export function reducer(state: State, action: ActionType): State {
   let filteredValues;
@@ -151,9 +151,9 @@ export function reducer(state: State, action: ActionType): State {
       );
       return {
         ...state,
-        sortValue: action.value,
         filteredValues,
         groupedValues,
+        sortValue: action.value,
       };
     }
     case Actions.SHOW_MORE: {

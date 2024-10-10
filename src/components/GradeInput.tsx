@@ -86,8 +86,8 @@ export function GradeInput({
             From
           </span>
           <SelectInput
-            value={minValue}
             onChange={(e) => handleMinChange(e.target.value)}
+            value={minValue}
           >
             {options.slice().reverse()}
           </SelectInput>
@@ -97,8 +97,8 @@ export function GradeInput({
             to
           </span>
           <SelectInput
-            value={maxValue}
             onChange={(e) => handleMaxChange(e.target.value)}
+            value={maxValue}
           >
             {options.slice()}
           </SelectInput>

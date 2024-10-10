@@ -12,13 +12,13 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 );
 
 export async function getAvatarImageProps(
-  slug: string | null,
+  slug: null | string,
   {
-    width,
     height,
+    width,
   }: {
-    width: number;
     height: number;
+    width: number;
   },
 ): Promise<AvatarImageProps | null> {
   const avatarFilePath = Object.keys(images).find((path) => {
@@ -32,16 +32,16 @@ export async function getAvatarImageProps(
   const avatarFile = await images[avatarFilePath]();
 
   const optimizedImage = await getImage({
+    densities: [1, 2],
+    format: "avif",
+    height: height,
+    quality: 80,
     src: avatarFile.default,
     width: width,
-    height: height,
-    format: "avif",
-    densities: [1, 2],
-    quality: 80,
   });
 
   return {
-    srcSet: normalizeSources(optimizedImage.srcSet.attribute),
     src: normalizeSources(optimizedImage.src),
+    srcSet: normalizeSources(optimizedImage.srcSet.attribute),
   };
 }

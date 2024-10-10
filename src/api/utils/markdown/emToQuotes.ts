@@ -1,4 +1,5 @@
 import type { Literal, Node, Parent } from "unist";
+
 import { CONTINUE, visit } from "unist-util-visit";
 
 export function emToQuotes() {

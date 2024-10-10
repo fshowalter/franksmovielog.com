@@ -5,43 +5,44 @@ import { SelectField } from "src/components/SelectField";
 import { YearInput } from "src/components/YearInput";
 
 import type { ActionType, Sort } from "./Reviews.reducer";
+
 import { Actions } from "./Reviews.reducer";
 
 export function Filters({
   dispatch,
-  sortValue,
+  distinctGenres,
   distinctReleaseYears,
   distinctReviewYears,
-  distinctGenres,
+  sortValue,
 }: {
   dispatch: React.Dispatch<ActionType>;
-  sortValue: string;
-  distinctReviewYears: readonly string[];
-  distinctReleaseYears: readonly string[];
   distinctGenres: readonly string[];
+  distinctReleaseYears: readonly string[];
+  distinctReviewYears: readonly string[];
+  sortValue: string;
 }) {
   return (
     <>
       <DebouncedInput
         label="Title"
-        placeholder="Enter all or part of a title"
         onInputChange={(value) =>
           dispatch({ type: Actions.FILTER_TITLE, value })
         }
+        placeholder="Enter all or part of a title"
       />
       <YearInput
         label="Release Year"
-        years={distinctReleaseYears}
         onYearChange={(values) =>
           dispatch({ type: Actions.FILTER_RELEASE_YEAR, values })
         }
+        years={distinctReleaseYears}
       />
       <YearInput
         label="Review Year"
-        years={distinctReviewYears}
         onYearChange={(values) =>
           dispatch({ type: Actions.FILTER_REVIEW_YEAR, values })
         }
+        years={distinctReviewYears}
       />
       <GradeInput
         label="Grade"
@@ -54,16 +55,15 @@ export function Filters({
       />
       <MultiSelectField
         label="Genres"
-        options={distinctGenres}
         onChange={(e) =>
           dispatch({
             type: Actions.FILTER_GENRES,
             values: e.map((selection) => selection.value),
           })
         }
+        options={distinctGenres}
       />
       <SelectField
-        value={sortValue}
         label="Sort"
         onChange={(e) =>
           dispatch({
@@ -71,6 +71,7 @@ export function Filters({
             value: e.target.value as Sort,
           })
         }
+        value={sortValue}
       >
         <option value="title-asc">Title (A &rarr; Z)</option>
         <option value="title-desc">Title (Z &rarr; A)</option>
