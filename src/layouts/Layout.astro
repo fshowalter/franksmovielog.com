@@ -15,7 +15,12 @@ const siteMeta = {
   title: "Frank's Movie Log",
 };
 
-const { title, description, article = false, noOpenGraph = false } = Astro.props;
+const {
+  title,
+  description,
+  article = false,
+  noOpenGraph = false,
+} = Astro.props;
 let pageTitle;
 
 if (title.startsWith(siteMeta.title)) {
@@ -38,11 +43,15 @@ const pathname = new URL(Astro.request.url).pathname;
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="description" content={description} />
-    {!noOpenGraph && 
-      <meta name="og:image" content={`${siteMeta.url}${pathname}og.jpg`} />
-      <meta property="og:url" content={`${siteMeta.url}${pathname}`} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
+    {
+      !noOpenGraph && (
+        <>
+          <meta name="og:image" content={`${siteMeta.url}${pathname}og.jpg`} />
+          <meta property="og:url" content={`${siteMeta.url}${pathname}`} />
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={description} />
+        </>
+      )
     }
     {!noOpenGraph && article && <meta property="og:type" content="article" />}
     <title>{pageTitle}</title>
