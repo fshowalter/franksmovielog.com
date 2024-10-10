@@ -6,10 +6,6 @@ import Layout from "src/layouts/Layout.astro";
 const props = await getProps();
 ---
 
-<Layout
-  title="Underseen Gems"
-  description="Four and five star movies with a below average number of votes on the IMDb."
-  image="/reviews/underseen/og.jpg"
->
+<Layout title="Underseen Gems" description={props.deck}>
   <Underseen client:load {...props} />
 </Layout>

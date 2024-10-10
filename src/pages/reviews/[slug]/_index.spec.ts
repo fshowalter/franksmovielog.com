@@ -33,6 +33,9 @@ describe("/reviews/:slug", () => {
         Review as AstroComponentFactory,
         {
           props: { slug: review.slug },
+          request: new Request(
+            `https://www.franksmovielog.com/reviews/${review.slug}/`,
+          ),
         },
       );
 

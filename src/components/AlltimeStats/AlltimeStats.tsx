@@ -32,6 +32,7 @@ export interface Props {
   mostWatchedWriters: MostWatchedPeopleListItemValue[];
   distinctStatYears: readonly string[];
   backdropImageProps: BackdropImageProps;
+  deck: string;
 }
 
 export function AlltimeStats({
@@ -42,6 +43,7 @@ export function AlltimeStats({
   mostWatchedPerformers,
   mostWatchedWriters,
   backdropImageProps,
+  deck,
 }: Props): JSX.Element {
   return (
     <Layout
@@ -54,7 +56,7 @@ export function AlltimeStats({
           <BreadcrumbLink href="/viewings/">Viewing Log</BreadcrumbLink>
         }
         title="All-Time Stats"
-        deck={`${(distinctStatYears.length - 1).toString()} Years in Review`}
+        deck={deck}
       />
       <StatsNavigation
         currentYear={"all"}

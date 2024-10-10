@@ -9,7 +9,7 @@ import * as OgEndpoint from "./og.jpg.ts";
 
 const { collections } = await allCollections();
 
-describe("/reviews/:slug/og.jpg", () => {
+describe("/collections/:slug/og.jpg", () => {
   it.for(collections)(
     "matches file",
     { timeout: 40000 },

@@ -10,6 +10,7 @@ export async function getProps(): Promise<Props> {
   const progress = await watchlistProgress();
 
   return {
+    deck: '"I find your lack of faith disturbing."',
     backdropImageProps: await getBackdropImageProps(
       "watchlist-progress",
       BackdropImageConfig,

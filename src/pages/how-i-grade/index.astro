@@ -4,19 +4,15 @@ import { getProps } from "src/components/Article/getProps";
 import Layout from "src/layouts/Layout.astro";
 
 const slug = "how-i-grade";
+const deck = `"Should I watch this movie?"`;
 
 const props = await getProps({
   slug,
-  deck: `"Should I watch this movie?"`,
+  deck,
 });
 ---
 
-<Layout
-  title={props.title}
-  description="Should I watch this movie?"
-  image="/how-i-grade/og.jpg"
-  article
->
+<Layout title={props.title} description={deck} article>
   <div data-pagefind-body>
     <Article {...props} />
   </div>

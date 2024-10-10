@@ -13,7 +13,7 @@ const testMembers = castAndCrew.filter(
   (member) => member.slug === "paul-thomas-anderson",
 );
 
-describe("/reviews/:slug/og.jpg", () => {
+describe("/cast-and-crew/:slug/og.jpg", () => {
   it.for(testMembers)(
     "matches file",
     { timeout: 40000 },

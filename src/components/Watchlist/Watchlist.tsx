@@ -40,6 +40,7 @@ export type Props = {
   distinctReleaseYears: string[];
   defaultPosterImageProps: PosterImageProps;
   backdropImageProps: BackdropImageProps;
+  deck: string;
 };
 
 export function Watchlist({
@@ -52,6 +53,7 @@ export function Watchlist({
   distinctReleaseYears,
   defaultPosterImageProps,
   backdropImageProps,
+  deck,
 }: Props): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
@@ -67,7 +69,7 @@ export function Watchlist({
       backdrop={
         <Backdrop
           title="Watchlist"
-          deck={`"A man's got to know his limitations"`}
+          deck={deck}
           imageProps={backdropImageProps}
         />
       }

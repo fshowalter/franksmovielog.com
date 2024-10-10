@@ -24,6 +24,7 @@ export type Props = {
   distinctViewingYears: readonly string[];
   initialSort: Sort;
   backdropImageProps: BackdropImageProps;
+  deck: string;
 };
 
 export type ListItemValue = Pick<
@@ -54,6 +55,7 @@ export function Viewings({
   distinctViewingYears,
   initialSort,
   backdropImageProps,
+  deck,
 }: Props): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
@@ -69,7 +71,7 @@ export function Viewings({
       backdrop={
         <Backdrop
           title="Viewing Log"
-          deck='"We have such sights to show you!"'
+          deck={deck}
           imageProps={backdropImageProps}
         />
       }

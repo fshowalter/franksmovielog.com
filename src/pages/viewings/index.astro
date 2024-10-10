@@ -6,10 +6,6 @@ import Layout from "src/layouts/Layout.astro";
 const props = await getProps();
 ---
 
-<Layout
-  title="Viewing Log"
-  description="We have such sights to show you!"
-  image="/viewings/og.jpg"
->
+<Layout title="Viewing Log" description={props.deck}>
   <Viewings client:load {...props} />
 </Layout>

@@ -6,7 +6,7 @@ import { describe, it } from "vitest";
 
 import * as OgEndpoint from "./og.jpg.ts";
 
-describe("/og.jpg", () => {
+describe("/reviews/overrated/og.jpg", () => {
   it("matches file", { timeout: 40000 }, async ({ expect }) => {
     const container = await AstroContainer.create();
 

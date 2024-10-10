@@ -17,7 +17,11 @@ describe("/reviews/underseen/", () => {
     });
     const result = await container.renderToString(
       Index as AstroComponentFactory,
-      {},
+      {
+        request: new Request(
+          `https://www.franksmovielog.com/reviews/underseen/`,
+        ),
+      },
     );
 
     void expect(

@@ -43,6 +43,7 @@ export type Props = {
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   backdropImageProps: BackdropImageProps;
+  deck: string;
 };
 
 export function Reviews({
@@ -52,6 +53,7 @@ export function Reviews({
   distinctReleaseYears,
   distinctReviewYears,
   backdropImageProps,
+  deck,
 }: Props): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
@@ -65,11 +67,7 @@ export function Reviews({
   return (
     <ListWithFiltersLayout
       backdrop={
-        <Backdrop
-          imageProps={backdropImageProps}
-          title="Reviews"
-          deck={`"'Sorry' don't get it done, Dude."`}
-        />
+        <Backdrop imageProps={backdropImageProps} title="Reviews" deck={deck} />
       }
       subNav={
         <SubNav

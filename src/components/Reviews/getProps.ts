@@ -44,6 +44,7 @@ export async function getProps(): Promise<Props> {
   );
 
   return {
+    deck: `"'Sorry' don't get it done, Dude."`,
     values,
     distinctGenres,
     distinctReleaseYears,

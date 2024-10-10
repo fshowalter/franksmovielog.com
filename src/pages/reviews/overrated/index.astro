@@ -6,10 +6,6 @@ import Layout from "src/layouts/Layout.astro";
 const props = await getProps();
 ---
 
-<Layout
-  title="Overrated Disappointments"
-  description="One and two star movies with an above-average IMDb rating and vote count."
-  image="/reviews/overrated/og.jpg"
->
+<Layout title="Overrated Disappointments" description={props.deck}>
   <Overrated client:load {...props} />
 </Layout>

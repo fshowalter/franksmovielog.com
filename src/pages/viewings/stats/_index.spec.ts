@@ -13,7 +13,9 @@ describe("/viewings/stats/", () => {
     const container = await AstroContainer.create({ renderers });
     const result = await container.renderToString(
       Index as AstroComponentFactory,
-      {},
+      {
+        request: new Request(`https://www.franksmovielog.com/viewings/stats/`),
+      },
     );
 
     void expect(

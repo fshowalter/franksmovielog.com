@@ -17,7 +17,7 @@ describe("/viewings/", () => {
     });
     const result = await container.renderToString(
       Index as AstroComponentFactory,
-      {},
+      { request: new Request(`https://www.franksmovielog.com/viewings/`) },
     );
 
     void expect(

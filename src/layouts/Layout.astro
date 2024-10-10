@@ -2,21 +2,25 @@
 import "./base.css";
 import "@pagefind/default-ui/css/ui.css";
 
-interface Props {
+type Props = {
   title: string;
   description: string;
-  image?: string | null;
   article?: boolean;
-}
+  noOpenGraph?: boolean;
+};
 
 const siteMeta = {
   author: "Frank Showalter",
-  url: "https://www.franksmovielog.com/",
-  image: "/assets/default_og.jpg",
+  url: "https://www.franksmovielog.com",
   title: "Frank's Movie Log",
 };
 
-const { title, description, image, article = false } = Astro.props;
+const {
+  title,
+  description,
+  article = false,
+  noOpenGraph = false,
+} = Astro.props;
 let pageTitle;
 
 if (title.startsWith(siteMeta.title)) {
@@ -24,8 +28,6 @@ if (title.startsWith(siteMeta.title)) {
 } else {
   pageTitle = `${title} | ${siteMeta.title}`;
 }
-
-const ogImage = image || "https://www.franksmovielog.com/assets/default_og.jpg";
 
 const pathname = new URL(Astro.request.url).pathname;
 ---
@@ -41,11 +43,17 @@ const pathname = new URL(Astro.request.url).pathname;
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="description" content={description} />
-    <meta name="og:image" content={ogImage} />
-    <meta property="og:url" content={`${siteMeta.url}${pathname}`} />
-    {article && <meta property="og:type" content="article" />}
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    {
+      !noOpenGraph && (
+        <>
+          <meta name="og:image" content={`${siteMeta.url}${pathname}og.jpg`} />
+          <meta property="og:url" content={`${siteMeta.url}${pathname}`} />
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={description} />
+        </>
+      )
+    }
+    {!noOpenGraph && article && <meta property="og:type" content="article" />}
     <title>{pageTitle}</title>
   </head>
   <body>
@@ -148,7 +156,6 @@ const pathname = new URL(Astro.request.url).pathname;
 
   // Listen for `ctrl + k` and `cmd + k` keyboard shortcuts.
   window.addEventListener("keydown", (e: KeyboardEvent) => {
-    console.log(e);
     if ((e.metaKey === true || e.ctrlKey === true) && e.key === "k") {
       dialog.open ? closeModal() : openModal();
       e.preventDefault();
