@@ -1,17 +1,17 @@
-import type { BackdropImageProps } from "src/api/backdrops";
-import type { YearStats } from "src/api/yearStats";
-import type { MostWatchedMoviesListItemValue } from "src/components/MostWatchedMovies";
-import type { MostWatchedPeopleListItemValue } from "src/components/MostWatchedPeople";
+import type { BackdropImageProps } from "~/api/backdrops";
+import type { YearStats } from "~/api/yearStats";
+import type { MostWatchedMoviesListItemValue } from "~/components/MostWatchedMovies";
+import type { MostWatchedPeopleListItemValue } from "~/components/MostWatchedPeople";
 
-import { Backdrop, BreadcrumbLink } from "src/components/Backdrop";
-import { DecadeDistribution } from "src/components/DecadeDistribution";
-import { Layout } from "src/components/Layout";
-import { MediaDistribution } from "src/components/MediaDistribution";
-import { MostWatchedDirectors } from "src/components/MostWatchedDirectors";
-import { MostWatchedMovies } from "src/components/MostWatchedMovies";
-import { MostWatchedPerformers } from "src/components/MostWatchedPerformers";
-import { MostWatchedWriters } from "src/components/MostWatchedWriters";
-import { StatsNavigation } from "src/components/StatsNavigation";
+import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
+import { DecadeDistribution } from "~/components/DecadeDistribution";
+import { Layout } from "~/components/Layout";
+import { MediaDistribution } from "~/components/MediaDistribution";
+import { MostWatchedDirectors } from "~/components/MostWatchedDirectors";
+import { MostWatchedMovies } from "~/components/MostWatchedMovies";
+import { MostWatchedPerformers } from "~/components/MostWatchedPerformers";
+import { MostWatchedWriters } from "~/components/MostWatchedWriters";
+import { StatsNavigation } from "~/components/StatsNavigation";
 
 import { Callouts } from "./Callouts";
 

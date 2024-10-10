@@ -1,17 +1,18 @@
-import type { BackdropImageProps } from "src/api/backdrops";
-import type { CastAndCrewMember } from "src/api/castAndCrew";
-import type { PosterImageProps } from "src/api/posters";
-
 import { useReducer } from "react";
-import { Backdrop, BreadcrumbLink } from "src/components/Backdrop";
-import { CreditedAs } from "src/components/CreditedAs";
-import { Grade } from "src/components/Grade";
-import { GroupedList } from "src/components/GroupedList";
-import { ListItem } from "src/components/ListItem";
-import { ListItemPoster } from "src/components/ListItemPoster";
-import { ListItemTitle } from "src/components/ListItemTitle";
-import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
-import { WatchlistTitleSlug } from "src/components/WatchlistTitleSlug";
+
+import type { BackdropImageProps } from "~/api/backdrops";
+import type { CastAndCrewMember } from "~/api/castAndCrew";
+import type { PosterImageProps } from "~/api/posters";
+
+import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
+import { CreditedAs } from "~/components/CreditedAs";
+import { Grade } from "~/components/Grade";
+import { GroupedList } from "~/components/GroupedList";
+import { ListItem } from "~/components/ListItem";
+import { ListItemPoster } from "~/components/ListItemPoster";
+import { ListItemTitle } from "~/components/ListItemTitle";
+import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
+import { WatchlistTitleSlug } from "~/components/WatchlistTitleSlug";
 
 import {
   Actions,

@@ -1,8 +1,9 @@
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import fs from "node:fs";
 import path from "node:path";
-import { allReviews } from "src/api/reviews.ts";
 import { describe, it } from "vitest";
+
+import { allReviews } from "~/api/reviews.ts";
 
 import * as OgEndpoint from "./og.jpg.ts";
 

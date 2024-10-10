@@ -1,8 +1,8 @@
 ---
-import { allStatYears } from "src/api/yearStats";
-import { getProps } from "src/components/YearStats/getProps";
-import { YearStats } from "src/components/YearStats/YearStats";
-import Layout from "src/layouts/Layout.astro";
+import { allStatYears } from "~/api/yearStats";
+import { getProps } from "~/components/YearStats/getProps";
+import { YearStats } from "~/components/YearStats/YearStats";
+import Layout from "~/layouts/Layout.astro";
 
 export async function getStaticPaths() {
   const statYears = await allStatYears();

@@ -1,8 +1,8 @@
-import { getAvatarImageProps } from "src/api/avatars";
-import { getBackdropImageProps } from "src/api/backdrops";
-import { allCollections } from "src/api/collections";
-import { BackdropImageConfig } from "src/components/Backdrop";
-import { ListItemAvatarImageConfig } from "src/components/ListItemAvatar";
+import { getAvatarImageProps } from "~/api/avatars";
+import { getBackdropImageProps } from "~/api/backdrops";
+import { allCollections } from "~/api/collections";
+import { BackdropImageConfig } from "~/components/Backdrop";
+import { ListItemAvatarImageConfig } from "~/components/ListItemAvatar";
 
 import type { Props } from "./Collections";
 

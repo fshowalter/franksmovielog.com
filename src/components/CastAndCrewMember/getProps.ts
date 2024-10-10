@@ -1,8 +1,8 @@
-import { getBackdropImageProps } from "src/api/backdrops";
-import { castAndCrewMember } from "src/api/castAndCrew";
-import { getFluidWidthPosterImageProps } from "src/api/posters";
-import { BackdropImageConfig } from "src/components/Backdrop";
-import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
+import { getBackdropImageProps } from "~/api/backdrops";
+import { castAndCrewMember } from "~/api/castAndCrew";
+import { getFluidWidthPosterImageProps } from "~/api/posters";
+import { BackdropImageConfig } from "~/components/Backdrop";
+import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
 
 import type { Props } from "./CastAndCrewMember";
 

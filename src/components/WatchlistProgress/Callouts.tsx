@@ -1,4 +1,4 @@
-import type { WatchlistProgress } from "src/api/watchlistProgress";
+import type { WatchlistProgress } from "~/api/watchlistProgress";
 
 import { ProgressRing } from "./ProgressRing";
 

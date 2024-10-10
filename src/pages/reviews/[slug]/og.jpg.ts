@@ -2,10 +2,11 @@ import type { APIRoute, InferGetStaticPropsType } from "astro";
 
 import path from "node:path";
 import sharp from "sharp";
-import { allReviews } from "src/api/reviews";
-import { fileForGrade } from "src/components/Grade";
-import { OpenGraphImage } from "src/components/Review/OpenGraphImage";
-import { componentToImage } from "src/utils/componentToImage";
+
+import { allReviews } from "~/api/reviews";
+import { fileForGrade } from "~/components/Grade";
+import { OpenGraphImage } from "~/components/Review/OpenGraphImage";
+import { componentToImage } from "~/utils/componentToImage";
 
 export async function getStaticPaths() {
   const { reviews } = await allReviews();

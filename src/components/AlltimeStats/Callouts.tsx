@@ -1,6 +1,6 @@
-import type { AlltimeStats } from "src/api/alltimeStats";
+import type { AlltimeStats } from "~/api/alltimeStats";
 
-import { StatsCallout } from "src/components/StatsCallout";
+import { StatsCallout } from "~/components/StatsCallout";
 
 type Props = {} & Pick<
   AlltimeStats,

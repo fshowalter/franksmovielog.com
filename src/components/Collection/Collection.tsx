@@ -1,15 +1,16 @@
-import type { BackdropImageProps } from "src/api/backdrops";
-import type { Collection, CollectionWithDetails } from "src/api/collections";
-import type { PosterImageProps } from "src/api/posters";
-
 import { useReducer } from "react";
-import { Backdrop, BreadcrumbLink } from "src/components/Backdrop";
-import { Grade } from "src/components/Grade";
-import { GroupedList } from "src/components/GroupedList";
-import { ListItem } from "src/components/ListItem";
-import { ListItemPoster } from "src/components/ListItemPoster";
-import { ListItemTitle } from "src/components/ListItemTitle";
-import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
+
+import type { BackdropImageProps } from "~/api/backdrops";
+import type { Collection, CollectionWithDetails } from "~/api/collections";
+import type { PosterImageProps } from "~/api/posters";
+
+import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
+import { Grade } from "~/components/Grade";
+import { GroupedList } from "~/components/GroupedList";
+import { ListItem } from "~/components/ListItem";
+import { ListItemPoster } from "~/components/ListItemPoster";
+import { ListItemTitle } from "~/components/ListItemTitle";
+import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 
 import { Actions, initState, reducer, type Sort } from "./Collection.reducer";
 import { Filters } from "./Filters";

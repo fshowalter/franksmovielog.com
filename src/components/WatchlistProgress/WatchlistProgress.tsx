@@ -1,9 +1,9 @@
-import type { AvatarImageProps } from "src/api/avatars";
-import type { BackdropImageProps } from "src/api/backdrops";
-import type { WatchlistProgress } from "src/api/watchlistProgress";
+import type { AvatarImageProps } from "~/api/avatars";
+import type { BackdropImageProps } from "~/api/backdrops";
+import type { WatchlistProgress } from "~/api/watchlistProgress";
 
-import { Backdrop, BreadcrumbLink } from "src/components/Backdrop";
-import { Layout } from "src/components/Layout";
+import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
+import { Layout } from "~/components/Layout";
 
 import type { Props as CalloutsProps } from "./Callouts";
 

@@ -1,8 +1,8 @@
 ---
-import { allCastAndCrew } from "src/api/castAndCrew";
-import { CastAndCrewMember } from "src/components/CastAndCrewMember/CastAndCrewMember";
-import { getProps } from "src/components/CastAndCrewMember/getProps";
-import Layout from "src/layouts/Layout.astro";
+import { allCastAndCrew } from "~/api/castAndCrew";
+import { CastAndCrewMember } from "~/components/CastAndCrewMember/CastAndCrewMember";
+import { getProps } from "~/components/CastAndCrewMember/getProps";
+import Layout from "~/layouts/Layout.astro";
 
 export async function getStaticPaths() {
   const { castAndCrew } = await allCastAndCrew();

@@ -1,6 +1,6 @@
-import type { StillImageProps } from "src/api/stills";
+import type { StillImageProps } from "~/api/stills";
 
-import { ccn } from "src/utils/concatClassNames";
+import { ccn } from "~/utils/concatClassNames";
 
 type Props = {
   className?: string;

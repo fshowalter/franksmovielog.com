@@ -1,8 +1,8 @@
-import { getAvatarImageProps } from "src/api/avatars";
-import { getBackdropImageProps } from "src/api/backdrops";
-import { allCastAndCrew } from "src/api/castAndCrew";
-import { BackdropImageConfig } from "src/components/Backdrop";
-import { ListItemAvatarImageConfig } from "src/components/ListItemAvatar";
+import { getAvatarImageProps } from "~/api/avatars";
+import { getBackdropImageProps } from "~/api/backdrops";
+import { allCastAndCrew } from "~/api/castAndCrew";
+import { BackdropImageConfig } from "~/components/Backdrop";
+import { ListItemAvatarImageConfig } from "~/components/ListItemAvatar";
 
 import type { Props } from "./CastAndCrew";
 import type { ListItemValue } from "./CastAndCrew";

@@ -1,8 +1,8 @@
-import type { AvatarImageProps } from "src/api/avatars";
+import type { AvatarImageProps } from "~/api/avatars";
 
-import { Avatar } from "src/components/Avatar";
-import { BarGradient } from "src/components/BarGradient";
-import { ccn } from "src/utils/concatClassNames";
+import { Avatar } from "~/components/Avatar";
+import { BarGradient } from "~/components/BarGradient";
+import { ccn } from "~/utils/concatClassNames";
 
 type ValueType = "collection" | "director" | "performer" | "writer";
 

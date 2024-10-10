@@ -1,4 +1,4 @@
-import type { AvatarImageProps } from "src/api/avatars";
+import type { AvatarImageProps } from "~/api/avatars";
 
 type AvatarProps = {
   className?: string;

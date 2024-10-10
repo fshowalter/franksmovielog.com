@@ -1,4 +1,4 @@
-import type { Review } from "src/api/reviews";
+import type { Review } from "~/api/reviews";
 
 type Props = {
   seoImageSrc: string;

@@ -1,6 +1,6 @@
-import type { PosterImageProps } from "src/api/posters";
+import type { PosterImageProps } from "~/api/posters";
 
-import { ccn } from "src/utils/concatClassNames";
+import { ccn } from "~/utils/concatClassNames";
 
 type PosterProps = {
   className?: string;

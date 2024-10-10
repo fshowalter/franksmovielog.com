@@ -1,9 +1,9 @@
 import type { APIRoute, InferGetStaticPropsType } from "astro";
 
-import { getOpenGraphBackdropAsBase64String } from "src/api/backdrops";
-import { allStatYears } from "src/api/yearStats";
-import { OpenGraphImage } from "src/components/OpenGraphImage";
-import { componentToImage } from "src/utils/componentToImage";
+import { getOpenGraphBackdropAsBase64String } from "~/api/backdrops";
+import { allStatYears } from "~/api/yearStats";
+import { OpenGraphImage } from "~/components/OpenGraphImage";
+import { componentToImage } from "~/utils/componentToImage";
 
 export async function getStaticPaths() {
   const years = await allStatYears();

@@ -1,7 +1,7 @@
-import type { ReviewContent } from "src/api/reviews";
+import type { ReviewContent } from "~/api/reviews";
 
-import { DateIcon } from "src/components/DateIcon";
-import { RenderedMarkdown } from "src/components/RenderedMarkdown";
+import { DateIcon } from "~/components/DateIcon";
+import { RenderedMarkdown } from "~/components/RenderedMarkdown";
 
 type Viewing = ReviewContent["viewings"][0];
 

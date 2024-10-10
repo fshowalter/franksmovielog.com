@@ -1,16 +1,17 @@
-import type { BackdropImageProps } from "src/api/backdrops";
-import type { PosterImageProps } from "src/api/posters";
-import type { Viewing } from "src/api/viewings";
-
 import { useReducer } from "react";
-import { Backdrop } from "src/components/Backdrop";
-import { GroupedList } from "src/components/GroupedList";
-import { ListItemMediumAndVenue } from "src/components/ListItemMediumAndVenue";
-import { ListItemPoster } from "src/components/ListItemPoster";
+
+import type { BackdropImageProps } from "~/api/backdrops";
+import type { PosterImageProps } from "~/api/posters";
+import type { Viewing } from "~/api/viewings";
+
+import { Backdrop } from "~/components/Backdrop";
+import { GroupedList } from "~/components/GroupedList";
+import { ListItemMediumAndVenue } from "~/components/ListItemMediumAndVenue";
+import { ListItemPoster } from "~/components/ListItemPoster";
 import {
   ListHeaderButton,
   ListWithFiltersLayout,
-} from "src/components/ListWithFiltersLayout";
+} from "~/components/ListWithFiltersLayout";
 
 import type { Sort } from "./Viewings.reducer";
 

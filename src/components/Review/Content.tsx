@@ -1,6 +1,6 @@
-import type { ReviewContent } from "src/api/reviews";
+import type { ReviewContent } from "~/api/reviews";
 
-import { LongFormText } from "src/components/LongFormText";
+import { LongFormText } from "~/components/LongFormText";
 
 type Props = {
   className?: string;

@@ -1,8 +1,8 @@
 ---
-import { allCollections } from "src/api/collections";
-import { Collection } from "src/components/Collection/Collection";
-import { getProps } from "src/components/Collection/getProps";
-import Layout from "src/layouts/Layout.astro";
+import { allCollections } from "~/api/collections";
+import { Collection } from "~/components/Collection/Collection";
+import { getProps } from "~/components/Collection/getProps";
+import Layout from "~/layouts/Layout.astro";
 
 export async function getStaticPaths() {
   const { collections } = await allCollections();
