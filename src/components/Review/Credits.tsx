@@ -1,9 +1,9 @@
-import type { PosterImageProps } from "src/api/posters";
-import type { Review } from "src/api/reviews";
+import type { PosterImageProps } from "~/api/posters";
+import type { Review } from "~/api/reviews";
 
-import { Poster } from "src/components/Poster";
-import { ccn } from "src/utils/concatClassNames";
-import { toSentence } from "src/utils/toSentence";
+import { Poster } from "~/components/Poster";
+import { ccn } from "~/utils/concatClassNames";
+import { toSentence } from "~/utils/toSentence";
 
 export const PosterImageConfig = {
   height: 372,

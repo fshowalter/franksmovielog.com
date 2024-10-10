@@ -1,8 +1,8 @@
 ---
-import { allReviews } from "src/api/reviews";
-import { getProps } from "src/components/Review/getProps";
-import { Review } from "src/components/Review/Review";
-import Layout from "src/layouts/Layout.astro";
+import { allReviews } from "~/api/reviews";
+import { getProps } from "~/components/Review/getProps";
+import { Review } from "~/components/Review/Review";
+import Layout from "~/layouts/Layout.astro";
 
 export async function getStaticPaths() {
   const { reviews } = await allReviews();

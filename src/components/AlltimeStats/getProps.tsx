@@ -1,9 +1,9 @@
-import { alltimeStats } from "src/api/alltimeStats";
-import { getBackdropImageProps } from "src/api/backdrops";
-import { getFluidWidthPosterImageProps } from "src/api/posters";
-import { allStatYears } from "src/api/yearStats";
-import { BackdropImageConfig } from "src/components/Backdrop";
-import { MostWatchedMoviesPosterConfig } from "src/components/MostWatchedMovies";
+import { alltimeStats } from "~/api/alltimeStats";
+import { getBackdropImageProps } from "~/api/backdrops";
+import { getFluidWidthPosterImageProps } from "~/api/posters";
+import { allStatYears } from "~/api/yearStats";
+import { BackdropImageConfig } from "~/components/Backdrop";
+import { MostWatchedMoviesPosterConfig } from "~/components/MostWatchedMovies";
 
 import { type Props } from "./AlltimeStats";
 

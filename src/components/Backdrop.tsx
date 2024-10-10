@@ -1,5 +1,6 @@
 import type React from "react";
-import type { BackdropImageProps } from "src/api/backdrops";
+
+import type { BackdropImageProps } from "~/api/backdrops";
 
 export const BackdropImageConfig = {
   height: 1350,

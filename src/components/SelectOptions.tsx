@@ -1,4 +1,4 @@
-import { collator } from "src/utils/sortTools";
+import { collator } from "~/utils/sortTools";
 
 export function SelectOptions({ options }: { options: readonly string[] }) {
   const sortedOptions = [...options].sort((a, b) => collator.compare(a, b));

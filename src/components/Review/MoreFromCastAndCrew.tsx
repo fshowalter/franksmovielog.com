@@ -1,8 +1,8 @@
-import type { Review } from "src/api/reviews";
-import type { StillImageProps } from "src/api/stills";
+import type { Review } from "~/api/reviews";
+import type { StillImageProps } from "~/api/stills";
 
-import { MoreReviews } from "src/components/MoreReviews";
-import { SubHeading } from "src/components/SubHeading";
+import { MoreReviews } from "~/components/MoreReviews";
+import { SubHeading } from "~/components/SubHeading";
 
 type CastAndCrewMemberTitle = {
   excerpt: string;

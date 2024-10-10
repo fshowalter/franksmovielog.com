@@ -4,8 +4,9 @@ import { getContainerRenderer as reactContainerRenderer } from "@astrojs/react";
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import { loadRenderers } from "astro:container";
 import * as prettier from "prettier";
-import { allCollections } from "src/api/collections";
 import { describe, it } from "vitest";
+
+import { allCollections } from "~/api/collections";
 
 import Review from "./index.astro";
 

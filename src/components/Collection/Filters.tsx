@@ -1,7 +1,7 @@
-import { Button } from "src/components/Button";
-import { DebouncedInput } from "src/components/DebouncedInput";
-import { SelectField } from "src/components/SelectField";
-import { YearInput } from "src/components/YearInput";
+import { Button } from "~/components/Button";
+import { DebouncedInput } from "~/components/DebouncedInput";
+import { SelectField } from "~/components/SelectField";
+import { YearInput } from "~/components/YearInput";
 
 import { Actions, type ActionType, type Sort } from "./Collection.reducer";
 

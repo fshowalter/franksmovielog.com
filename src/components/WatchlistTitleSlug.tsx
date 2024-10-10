@@ -1,4 +1,4 @@
-import { toSentence } from "src/utils/toSentence";
+import { toSentence } from "~/utils/toSentence";
 
 export function WatchlistTitleSlug({
   collectionNames,

@@ -1,6 +1,6 @@
-import type { YearStats } from "src/api/yearStats";
+import type { YearStats } from "~/api/yearStats";
 
-import { StatsCallout } from "src/components/StatsCallout";
+import { StatsCallout } from "~/components/StatsCallout";
 
 type Props = Pick<YearStats, "newTitleCount" | "titleCount" | "viewingCount">;
 

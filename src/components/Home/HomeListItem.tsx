@@ -1,9 +1,9 @@
-import type { Review, ReviewExcerpt } from "src/api/reviews";
-import type { StillImageProps } from "src/api/stills";
+import type { Review, ReviewExcerpt } from "~/api/reviews";
+import type { StillImageProps } from "~/api/stills";
 
-import { Grade } from "src/components/Grade";
-import { RenderedMarkdown } from "src/components/RenderedMarkdown";
-import { Still } from "src/components/Still";
+import { Grade } from "~/components/Grade";
+import { RenderedMarkdown } from "~/components/RenderedMarkdown";
+import { Still } from "~/components/Still";
 
 export const StillImageConfig = {
   height: 360,

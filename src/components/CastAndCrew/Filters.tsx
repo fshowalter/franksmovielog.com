@@ -1,5 +1,5 @@
-import { DebouncedInput } from "src/components/DebouncedInput";
-import { SelectField } from "src/components/SelectField";
+import { DebouncedInput } from "~/components/DebouncedInput";
+import { SelectField } from "~/components/SelectField";
 
 import { Actions, type ActionType, type Sort } from "./CastAndCrew.reducer";
 

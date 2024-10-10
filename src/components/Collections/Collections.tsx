@@ -1,13 +1,14 @@
-import type { AvatarImageProps } from "src/api/avatars";
-import type { BackdropImageProps } from "src/api/backdrops";
-import type { Collection } from "src/api/collections";
-
 import { useReducer } from "react";
-import { Backdrop } from "src/components/Backdrop";
-import { ListItem } from "src/components/ListItem";
-import { ListItemAvatar } from "src/components/ListItemAvatar";
-import { ListItemCounts } from "src/components/ListItemCounts";
-import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
+
+import type { AvatarImageProps } from "~/api/avatars";
+import type { BackdropImageProps } from "~/api/backdrops";
+import type { Collection } from "~/api/collections";
+
+import { Backdrop } from "~/components/Backdrop";
+import { ListItem } from "~/components/ListItem";
+import { ListItemAvatar } from "~/components/ListItemAvatar";
+import { ListItemCounts } from "~/components/ListItemCounts";
+import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 
 import type { Sort } from "./Collections.reducer";
 

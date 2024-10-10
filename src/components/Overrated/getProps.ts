@@ -1,8 +1,8 @@
-import { getBackdropImageProps } from "src/api/backdrops";
-import { allOverratedDisappointments } from "src/api/overratedDisappointments";
-import { getFixedWidthPosterImageProps } from "src/api/posters";
-import { BackdropImageConfig } from "src/components/Backdrop";
-import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
+import { getBackdropImageProps } from "~/api/backdrops";
+import { allOverratedDisappointments } from "~/api/overratedDisappointments";
+import { getFixedWidthPosterImageProps } from "~/api/posters";
+import { BackdropImageConfig } from "~/components/Backdrop";
+import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
 
 import type { ListItemValue } from "./Overrated";
 import type { Props } from "./Overrated";

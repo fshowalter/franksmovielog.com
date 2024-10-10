@@ -1,19 +1,20 @@
-import type { BackdropImageProps } from "src/api/backdrops";
-import type { PosterImageProps } from "src/api/posters";
-import type { Review } from "src/api/reviews";
-
 import { useReducer } from "react";
-import { Backdrop } from "src/components/Backdrop";
-import { Grade } from "src/components/Grade";
-import { GroupedList } from "src/components/GroupedList";
-import { ListItem } from "src/components/ListItem";
-import { ListItemGenres } from "src/components/ListItemGenres";
-import { ListItemPoster } from "src/components/ListItemPoster";
-import { ListItemTitle } from "src/components/ListItemTitle";
+
+import type { BackdropImageProps } from "~/api/backdrops";
+import type { PosterImageProps } from "~/api/posters";
+import type { Review } from "~/api/reviews";
+
+import { Backdrop } from "~/components/Backdrop";
+import { Grade } from "~/components/Grade";
+import { GroupedList } from "~/components/GroupedList";
+import { ListItem } from "~/components/ListItem";
+import { ListItemGenres } from "~/components/ListItemGenres";
+import { ListItemPoster } from "~/components/ListItemPoster";
+import { ListItemTitle } from "~/components/ListItemTitle";
 import {
   ListWithFiltersLayout,
   SubNav,
-} from "src/components/ListWithFiltersLayout";
+} from "~/components/ListWithFiltersLayout";
 
 import type { Sort } from "./Reviews.reducer";
 

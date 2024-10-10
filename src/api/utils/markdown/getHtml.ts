@@ -4,7 +4,8 @@ import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import smartypants from "remark-smartypants";
-import { linkReviewedTitles } from "src/api/utils/linkReviewedTitles";
+
+import { linkReviewedTitles } from "~/api/utils/linkReviewedTitles";
 
 export function getHtml(
   content: null | string,

@@ -1,4 +1,4 @@
-import type { PosterImageProps } from "src/api/posters";
+import type { PosterImageProps } from "~/api/posters";
 
 export const ListItemPosterImageConfig = {
   height: 113,

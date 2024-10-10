@@ -1,13 +1,13 @@
-import type { PosterImageProps } from "src/api/posters";
-import type { Review, ReviewContent } from "src/api/reviews";
-import type { StillImageProps } from "src/api/stills";
+import type { PosterImageProps } from "~/api/posters";
+import type { Review, ReviewContent } from "~/api/reviews";
+import type { StillImageProps } from "~/api/stills";
 
-import { Grade } from "src/components/Grade";
-import { Layout } from "src/components/Layout";
-import { MoreReviews } from "src/components/MoreReviews";
-import { Still } from "src/components/Still";
-import { SubHeading } from "src/components/SubHeading";
-import { ccn } from "src/utils/concatClassNames";
+import { Grade } from "~/components/Grade";
+import { Layout } from "~/components/Layout";
+import { MoreReviews } from "~/components/MoreReviews";
+import { Still } from "~/components/Still";
+import { SubHeading } from "~/components/SubHeading";
+import { ccn } from "~/utils/concatClassNames";
 
 import { Content } from "./Content";
 import { Credits } from "./Credits";

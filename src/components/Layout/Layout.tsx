@@ -1,4 +1,4 @@
-import { ccn } from "src/utils/concatClassNames";
+import { ccn } from "~/utils/concatClassNames";
 
 import { Footer } from "./Footer";
 import { Mast } from "./Mast";

@@ -1,9 +1,10 @@
-import type { Review } from "src/api/reviews";
-
 import rss from "@astrojs/rss";
-import { loadExcerptHtml, mostRecentReviews } from "src/api/reviews";
-import { getOpenGraphStillSrc } from "src/api/stills";
-import { textStarsForGrade } from "src/utils/textStarsForGrade";
+
+import type { Review } from "~/api/reviews";
+
+import { loadExcerptHtml, mostRecentReviews } from "~/api/reviews";
+import { getOpenGraphStillSrc } from "~/api/stills";
+import { textStarsForGrade } from "~/utils/textStarsForGrade";
 
 function addMetaToExcerpt(excerpt: string, review: Review) {
   const meta = `${textStarsForGrade(

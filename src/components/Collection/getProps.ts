@@ -1,8 +1,8 @@
-import { getBackdropImageProps } from "src/api/backdrops";
-import { collectionDetails } from "src/api/collections";
-import { getFluidWidthPosterImageProps } from "src/api/posters";
-import { BackdropImageConfig } from "src/components/Backdrop";
-import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
+import { getBackdropImageProps } from "~/api/backdrops";
+import { collectionDetails } from "~/api/collections";
+import { getFluidWidthPosterImageProps } from "~/api/posters";
+import { BackdropImageConfig } from "~/components/Backdrop";
+import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
 
 import type { Props } from "./Collection";
 

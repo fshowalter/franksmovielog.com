@@ -1,7 +1,8 @@
 import type { ChangeEvent } from "react";
 
 import React from "react";
-import { ccn } from "src/utils/concatClassNames";
+
+import { ccn } from "~/utils/concatClassNames";
 
 export function SelectInput({
   children,

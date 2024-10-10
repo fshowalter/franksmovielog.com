@@ -1,8 +1,8 @@
-import type { BackdropImageProps } from "src/api/backdrops";
+import type { BackdropImageProps } from "~/api/backdrops";
 
-import { Backdrop } from "src/components/Backdrop";
-import { Layout } from "src/components/Layout";
-import { SubHeading } from "src/components/SubHeading";
+import { Backdrop } from "~/components/Backdrop";
+import { Layout } from "~/components/Layout";
+import { SubHeading } from "~/components/SubHeading";
 
 import type { ListItemValue } from "./HomeListItem";
 

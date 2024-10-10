@@ -1,6 +1,6 @@
-import type { AlltimeStats } from "src/api/alltimeStats";
+import type { AlltimeStats } from "~/api/alltimeStats";
 
-import { Distribution } from "src/components/Distribution";
+import { Distribution } from "~/components/Distribution";
 
 export function GradeDistribution({
   values,

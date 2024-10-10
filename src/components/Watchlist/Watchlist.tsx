@@ -1,18 +1,19 @@
-import type { BackdropImageProps } from "src/api/backdrops";
-import type { PosterImageProps } from "src/api/posters";
-import type { WatchlistTitle } from "src/api/watchlistTitles";
-
 import { useReducer } from "react";
-import { Backdrop } from "src/components/Backdrop";
-import { GroupedList } from "src/components/GroupedList";
-import { ListItemPoster } from "src/components/ListItemPoster";
-import { ListItemTitle } from "src/components/ListItemTitle";
+
+import type { BackdropImageProps } from "~/api/backdrops";
+import type { PosterImageProps } from "~/api/posters";
+import type { WatchlistTitle } from "~/api/watchlistTitles";
+
+import { Backdrop } from "~/components/Backdrop";
+import { GroupedList } from "~/components/GroupedList";
+import { ListItemPoster } from "~/components/ListItemPoster";
+import { ListItemTitle } from "~/components/ListItemTitle";
 import {
   ListHeaderButton,
   ListWithFiltersLayout,
-} from "src/components/ListWithFiltersLayout";
-import { SvgIcon } from "src/components/SvgIcon";
-import { WatchlistTitleSlug } from "src/components/WatchlistTitleSlug";
+} from "~/components/ListWithFiltersLayout";
+import { SvgIcon } from "~/components/SvgIcon";
+import { WatchlistTitleSlug } from "~/components/WatchlistTitleSlug";
 
 import { Filters } from "./Filters";
 import { Actions, initState, reducer, type Sort } from "./Watchlist.reducer";
