@@ -3,7 +3,7 @@ import {
   type CastAndCrewMemberJson,
 } from "./data/castAndCrewJson";
 
-export interface CastAndCrewMember extends CastAndCrewMemberJson {}
+export type CastAndCrewMember = {} & CastAndCrewMemberJson;
 
 export async function allCastAndCrew(): Promise<{
   castAndCrew: CastAndCrewMember[];

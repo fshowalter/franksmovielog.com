@@ -4,7 +4,7 @@ import { ListItemMediumAndVenue } from "./ListItemMediumAndVenue";
 import { ListItemPoster } from "./ListItemPoster";
 import { ListItemTitle } from "./ListItemTitle";
 
-interface ViewingSubListItemValue {
+type ViewingSubListItemValue = {
   date: string;
   medium: null | string;
   posterImageProps: PosterImageProps;
@@ -13,14 +13,14 @@ interface ViewingSubListItemValue {
   title: string;
   venue: null | string;
   year: string;
-}
+};
 
-export interface MostWatchedPeopleListItemValue {
+export type MostWatchedPeopleListItemValue = {
   count: number;
   name: string;
   slug: null | string;
   viewings: ViewingSubListItemValue[];
-}
+};
 
 export function MostWatchedPeople({
   header,

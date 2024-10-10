@@ -1,12 +1,8 @@
 import type { Review } from "src/api/reviews";
 
-interface Props
-  extends Pick<
-    Review,
-    "directorNames" | "grade" | "imdbId" | "title" | "year"
-  > {
+type Props = {
   seoImageSrc: string;
-}
+} & Pick<Review, "directorNames" | "grade" | "imdbId" | "title" | "year">;
 
 const gradeMap: Record<string, number> = {
   A: 5,

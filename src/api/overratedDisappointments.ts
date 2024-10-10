@@ -2,13 +2,13 @@ import type { OverratedDisappointmentsJson } from "./data/overratedDisappointmen
 
 import { allOverratedDisappointmentsJson } from "./data/overratedDisappointmentsJson";
 
-export interface OverratedDisappointment extends OverratedDisappointmentsJson {}
+export type OverratedDisappointment = {} & OverratedDisappointmentsJson;
 
-interface OverratedDisappointments {
+type OverratedDisappointments = {
   distinctGenres: string[];
   distinctReleaseYears: string[];
   overratedDisappointments: OverratedDisappointment[];
-}
+};
 
 export async function allOverratedDisappointments(): Promise<OverratedDisappointments> {
   const overratedJson = await allOverratedDisappointmentsJson();

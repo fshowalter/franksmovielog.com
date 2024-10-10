@@ -1,11 +1,11 @@
-export interface FilterableState<T, S, G> {
+export type FilterableState<T, S, G> = {
   allValues: T[];
   filteredValues: T[];
   filters: Record<string, (item: T) => boolean>;
   groupedValues: G;
   showCount: number;
   sortValue: S;
-}
+};
 
 export function filterTools<T, S, G>(
   sorter: (items: T[], sortOrder: S) => T[],

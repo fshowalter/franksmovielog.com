@@ -6,13 +6,13 @@ import { ccn } from "src/utils/concatClassNames";
 
 type ValueType = "collection" | "director" | "performer" | "writer";
 
-interface Value {
+type Value = {
   avatarImageProps: AvatarImageProps | null;
   name: string;
   reviewCount: number;
   slug: null | string;
   titleCount: number;
-}
+};
 
 export function Details({
   className,

@@ -2,7 +2,7 @@ import type { StillImageProps } from "src/api/stills";
 
 import { ccn } from "src/utils/concatClassNames";
 
-interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {
+type Props = {
   className?: string;
   decoding: "async" | "auto" | "sync";
   height: number;
@@ -10,7 +10,7 @@ interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {
   loading: "eager" | "lazy";
   sizes: string;
   width: number;
-}
+} & React.ImgHTMLAttributes<HTMLImageElement>;
 
 export function Still({
   className,

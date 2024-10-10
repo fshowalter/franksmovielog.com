@@ -89,24 +89,24 @@ export function initState({
   };
 }
 
-interface FilterNameAction {
+type FilterNameAction = {
   type: Actions.FILTER_NAME;
   value: string;
-}
+};
 
-interface FilterCreditKindAction {
+type FilterCreditKindAction = {
   type: Actions.FILTER_CREDIT_KIND;
   value: string;
-}
+};
 
-interface SortAction {
+type SortAction = {
   type: Actions.SORT;
   value: Sort;
-}
+};
 
-interface ShowMoreAction {
+type ShowMoreAction = {
   type: Actions.SHOW_MORE;
-}
+};
 
 export type ActionType =
   | FilterCreditKindAction

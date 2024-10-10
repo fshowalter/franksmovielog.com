@@ -88,29 +88,29 @@ export enum Actions {
   SORT = "SORT",
 }
 
-interface FilterTitleAction {
+type FilterTitleAction = {
   type: Actions.FILTER_TITLE;
   value: string;
-}
+};
 
-interface FilterGenresAction {
+type FilterGenresAction = {
   type: Actions.FILTER_GENRES;
   values: string[];
-}
+};
 
-interface FilterReleaseYearAction {
+type FilterReleaseYearAction = {
   type: Actions.FILTER_RELEASE_YEAR;
   values: [string, string];
-}
+};
 
-interface SortAction {
+type SortAction = {
   type: Actions.SORT;
   value: Sort;
-}
+};
 
-interface ShowMoreAction {
+type ShowMoreAction = {
   type: Actions.SHOW_MORE;
-}
+};
 
 export type ActionType =
   | FilterGenresAction

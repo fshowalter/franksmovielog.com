@@ -13,11 +13,11 @@ import {
 import { emToQuotes } from "./utils/markdown/emToQuotes";
 import { rootAsSpan } from "./utils/markdown/rootAsSpan";
 
-export interface Collection extends CollectionJson {}
+export type Collection = {} & CollectionJson;
 
-export interface CollectionWithDetails extends Collection {
+export type CollectionWithDetails = {
   descriptionHtml: null | string;
-}
+} & Collection;
 
 function getMastProcessor() {
   return remark().use(remarkGfm).use(smartypants);

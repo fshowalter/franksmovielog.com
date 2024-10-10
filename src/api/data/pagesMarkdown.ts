@@ -6,11 +6,11 @@ import { getContentPath } from "./utils/getContentPath";
 
 const pagesMarkdownDirectory = getContentPath("pages");
 
-interface MarkdownPage {
+type MarkdownPage = {
   rawContent: string;
   slug: string;
   title: string;
-}
+};
 
 const DataSchema = z.object({
   slug: z.string(),

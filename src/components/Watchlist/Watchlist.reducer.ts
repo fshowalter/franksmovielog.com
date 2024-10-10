@@ -44,10 +44,9 @@ function groupForValue(value: ListItemValue, sortValue: Sort): string {
   }
 }
 
-interface State
-  extends FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>> {
+type State = {
   hideReviewed: boolean;
-}
+} & FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>>;
 
 export function initState({
   initialSort,
@@ -81,44 +80,44 @@ export enum Actions {
   SORT = "SORT",
 }
 
-interface FilterTitleAction {
+type FilterTitleAction = {
   type: Actions.FILTER_TITLE;
   value: string;
-}
+};
 
-interface FilterCollectionAction {
+type FilterCollectionAction = {
   type: Actions.FILTER_COLLECTION;
   value: string;
-}
+};
 
-interface FilterDirectorAction {
+type FilterDirectorAction = {
   type: Actions.FILTER_DIRECTOR;
   value: string;
-}
+};
 
-interface FilterPerformerAction {
+type FilterPerformerAction = {
   type: Actions.FILTER_PERFORMER;
   value: string;
-}
+};
 
-interface FilterWriterAction {
+type FilterWriterAction = {
   type: Actions.FILTER_WRITER;
   value: string;
-}
+};
 
-interface FilterReleaseYearAction {
+type FilterReleaseYearAction = {
   type: Actions.FILTER_RELEASE_YEAR;
   values: [string, string];
-}
+};
 
-interface SortAction {
+type SortAction = {
   type: Actions.SORT;
   value: Sort;
-}
+};
 
-interface ShowMoreAction {
+type ShowMoreAction = {
   type: Actions.SHOW_MORE;
-}
+};
 
 export type ActionType =
   | FilterCollectionAction

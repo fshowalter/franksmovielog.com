@@ -11,7 +11,7 @@ export const MoreReviewsImageConfig = {
   width: 640,
 };
 
-export interface MoreReviewsValue {
+export type MoreReviewsValue = {
   excerpt: string;
   genres: string[];
   grade: string;
@@ -19,7 +19,7 @@ export interface MoreReviewsValue {
   stillImageProps: StillImageProps;
   title: string;
   year: string;
-}
+};
 
 export function MoreReviews({
   children,

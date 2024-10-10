@@ -2,16 +2,16 @@ import type { ViewingJson } from "./data/viewingsJson";
 
 import { allViewingsJson } from "./data/viewingsJson";
 
-export interface Viewing extends ViewingJson {}
+export type Viewing = {} & ViewingJson;
 
-interface Viewings {
+type Viewings = {
   distinctGenres: string[];
   distinctMedia: string[];
   distinctReleaseYears: string[];
   distinctVenues: string[];
   distinctViewingYears: string[];
   viewings: Viewing[];
-}
+};
 
 export async function allViewings(): Promise<Viewings> {
   const viewingsJson = await allViewingsJson();

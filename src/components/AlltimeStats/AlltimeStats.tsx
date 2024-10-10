@@ -16,7 +16,7 @@ import { StatsNavigation } from "src/components/StatsNavigation";
 import { Callouts } from "./Callouts";
 import { GradeDistribution } from "./GradeDistribution";
 
-export interface Props {
+export type Props = {
   backdropImageProps: BackdropImageProps;
   deck: string;
   distinctStatYears: readonly string[];
@@ -34,7 +34,7 @@ export interface Props {
     | "viewingCount"
     | "watchlistTitlesReviewedCount"
   >;
-}
+};
 
 export function AlltimeStats({
   backdropImageProps,

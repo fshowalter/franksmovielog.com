@@ -6,13 +6,13 @@ import { getContentPath } from "./utils/getContentPath";
 
 const reviewsMarkdownDirectory = getContentPath("reviews");
 
-export interface MarkdownReview {
+export type MarkdownReview = {
   date: Date;
   grade: string;
   imdbId: string;
   rawContent: string;
   slug: string;
-}
+};
 
 const DataSchema = z.object({
   date: z.date(),
