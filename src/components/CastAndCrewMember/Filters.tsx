@@ -25,10 +25,7 @@ export function Filters({
 }): JSX.Element {
   return (
     <>
-      <Button
-        onClick={() => dispatch({ type: Actions.TOGGLE_REVIEWED })}
-        className="hover:bg-inverse hover:text-inverse"
-      >
+      <Button onClick={() => dispatch({ type: Actions.TOGGLE_REVIEWED })}>
         {hideReviewed ? "Show Reviewed" : "Hide Reviewed"}
       </Button>
       {creditedAs.length > 1 && (
