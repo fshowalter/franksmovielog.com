@@ -11,6 +11,10 @@ export async function getProps(year: string): Promise<Props> {
   const distinctStatYears = await allStatYears();
 
   return {
+    deck:
+      [...distinctStatYears].reverse()[0] === year
+        ? "A Year in Progress..."
+        : "A Year in Review",
     year,
     stats,
     backdropImageProps: await getBackdropImageProps(year, BackdropImageConfig),

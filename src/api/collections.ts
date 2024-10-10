@@ -1,9 +1,45 @@
+import rehypeRaw from "rehype-raw";
+import rehypeStringify from "rehype-stringify";
+import { remark } from "remark";
+import remarkGfm from "remark-gfm";
+import remarkRehype from "remark-rehype";
+import smartypants from "remark-smartypants";
+import strip from "strip-markdown";
+
 import {
   allCollectionsJson,
   type CollectionJson,
 } from "./data/collectionsJson";
+import { emToQuotes } from "./utils/markdown/emToQuotes";
+import { rootAsSpan } from "./utils/markdown/rootAsSpan";
 
 export interface Collection extends CollectionJson {}
+
+export interface CollectionWithDetails extends Collection {
+  descriptionHtml: string | null;
+}
+
+function getMastProcessor() {
+  return remark().use(remarkGfm).use(smartypants);
+}
+
+export function descriptionToString(description: string) {
+  return getMastProcessor()
+    .use(emToQuotes)
+    .use(strip)
+    .processSync(description)
+    .toString();
+}
+
+function descriptionToHtml(description: string) {
+  return getMastProcessor()
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    .use(rootAsSpan)
+    .use(rehypeStringify)
+    .processSync(description)
+    .toString();
+}
 
 export async function allCollections(): Promise<{
   collections: Collection[];
@@ -25,7 +61,7 @@ export async function allCollections(): Promise<{
 }
 
 export async function collectionDetails(slug: string): Promise<{
-  collection: Collection;
+  collection: CollectionWithDetails;
   distinctReleaseYears: string[];
 }> {
   const collections = await allCollectionsJson();
@@ -38,7 +74,11 @@ export async function collectionDetails(slug: string): Promise<{
   });
 
   return {
-    collection,
+    collection: {
+      ...collection,
+      description: descriptionToString(collection.description),
+      descriptionHtml: descriptionToHtml(collection.description),
+    },
     distinctReleaseYears: Array.from(releaseYears).toSorted(),
   };
 }

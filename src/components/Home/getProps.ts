@@ -16,6 +16,7 @@ export async function getProps(): Promise<Props> {
   );
 
   return {
+    deck: "Quality reviews of films of questionable quality.",
     backdropImageProps: await getBackdropImageProps(
       "home",
       BackdropImageConfig,

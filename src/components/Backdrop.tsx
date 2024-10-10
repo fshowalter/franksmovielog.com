@@ -17,7 +17,7 @@ export function Backdrop({
 }: {
   imageProps: BackdropImageProps;
   title: string;
-  deck?: string;
+  deck?: React.ReactNode | null;
   titleStyle?: string;
   breadcrumb?: React.ReactNode;
   size?: "default" | "large";

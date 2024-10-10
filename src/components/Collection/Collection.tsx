@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 import type { BackdropImageProps } from "src/api/backdrops";
-import type { Collection } from "src/api/collections";
+import type { Collection, CollectionWithDetails } from "src/api/collections";
 import type { PosterImageProps } from "src/api/posters";
 import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
 
@@ -29,8 +29,8 @@ export type ListItemValue = Pick<
 
 export interface Props {
   value: Pick<
-    Collection,
-    "description" | "reviewCount" | "titleCount" | "slug" | "name"
+    CollectionWithDetails,
+    "descriptionHtml" | "description" | "reviewCount" | "slug" | "name"
   >;
   titles: ListItemValue[];
   distinctReleaseYears: readonly string[];
@@ -59,6 +59,13 @@ export function Collection({
         <Backdrop
           imageProps={backdropImageProps}
           title={value.name}
+          deck={
+            value.descriptionHtml ? (
+              <span
+                dangerouslySetInnerHTML={{ __html: value.descriptionHtml }}
+              />
+            ) : null
+          }
           breadcrumb={
             <BreadcrumbLink href="/collections/">Collections</BreadcrumbLink>
           }
@@ -95,7 +102,7 @@ export function Collection({
 function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
     <ListItem
-      background={value.slug ? "bg-default" : "bg-subtle"}
+      background={value.slug ? "bg-default" : "bg-unreviewed"}
       itemsCenter={true}
     >
       <ListItemPoster imageProps={value.posterImageProps} />

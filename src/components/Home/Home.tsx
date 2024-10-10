@@ -9,15 +9,16 @@ import { HomeListItem } from "./HomeListItem";
 export interface Props {
   values: ListItemValue[];
   backdropImageProps: BackdropImageProps;
+  deck: string;
 }
 
-export function Home({ values, backdropImageProps }: Props): JSX.Element {
+export function Home({ values, backdropImageProps, deck }: Props): JSX.Element {
   return (
     <Layout hideLogo={true} className="bg-subtle pb-8">
       <Backdrop
         imageProps={backdropImageProps}
         title="Frank's Movie Log"
-        deck="Quality reviews of films of questionable quality."
+        deck={deck}
         titleStyle="[text-shadow:1px_1px_2px_black] text-4xl desktop:text-7xl"
       />
       <nav className="mx-auto max-w-screen-max">

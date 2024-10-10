@@ -22,7 +22,7 @@ const CollectionJsonSchema = z.object({
   slug: z.string(),
   reviewCount: z.number(),
   titleCount: z.number(),
-  description: z.nullable(z.string()),
+  description: z.string(),
   titles: z.array(TitleSchema),
 });
 

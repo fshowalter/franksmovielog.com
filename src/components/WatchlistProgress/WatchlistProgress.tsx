@@ -24,11 +24,13 @@ export type Props = {
     })[];
   } & CalloutsProps;
   backdropImageProps: BackdropImageProps;
+  deck: string;
 };
 
 export function WatchlistProgress({
   progress,
   backdropImageProps,
+  deck,
 }: Props): JSX.Element {
   return (
     <Layout className="bg-subtle">
@@ -38,7 +40,7 @@ export function WatchlistProgress({
         breadcrumb={
           <BreadcrumbLink href="/watchlist/">Watchlist</BreadcrumbLink>
         }
-        deck='"I find your lack of faith disturbing."'
+        deck={deck}
       />
       <div className="flex flex-col items-center">
         <Callouts

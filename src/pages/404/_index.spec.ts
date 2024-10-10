@@ -7,7 +7,7 @@ import { describe, it } from "vitest";
 
 import Page from "./index.astro";
 
-describe("/404", () => {
+describe("/404/", () => {
   it("matches snapshot", { timeout: 40000 }, async ({ expect }) => {
     const renderers = await loadRenderers([reactContainerRenderer()]);
     const container = await AstroContainer.create({ renderers });

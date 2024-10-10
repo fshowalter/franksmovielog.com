@@ -23,6 +23,7 @@ export interface Props {
   mostWatchedPerformers: MostWatchedPeopleListItemValue[];
   mostWatchedWriters: MostWatchedPeopleListItemValue[];
   backdropImageProps: BackdropImageProps;
+  deck: string;
 }
 
 export function YearStats({
@@ -34,6 +35,7 @@ export function YearStats({
   mostWatchedPerformers,
   mostWatchedWriters,
   backdropImageProps,
+  deck,
 }: Props): JSX.Element {
   return (
     <Layout className="flex flex-col items-center bg-subtle">
@@ -43,11 +45,7 @@ export function YearStats({
           <BreadcrumbLink href="/viewings/">Viewing Log</BreadcrumbLink>
         }
         title={`${year} Stats`}
-        deck={
-          [...distinctStatYears].reverse()[0] === year
-            ? "A Year in Progress..."
-            : "A Year in Review"
-        }
+        deck={deck}
       />
       <StatsNavigation
         currentYear={year}

@@ -38,6 +38,7 @@ export async function getProps(): Promise<Props> {
   );
 
   return {
+    deck: "One and two star movies with an above-average IMDb rating and vote count.",
     values,
     initialSort: "release-date-desc",
     distinctGenres,

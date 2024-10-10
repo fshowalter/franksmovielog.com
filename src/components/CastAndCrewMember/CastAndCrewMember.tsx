@@ -29,6 +29,7 @@ export type Props = {
   initialSort: Sort;
   distinctReleaseYears: readonly string[];
   backdropImageProps: BackdropImageProps;
+  deck: string;
 };
 
 export type ListItemValue = Pick<
@@ -56,6 +57,7 @@ export function CastAndCrewMember({
   initialSort,
   distinctReleaseYears,
   backdropImageProps,
+  deck,
 }: Props): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
@@ -75,7 +77,7 @@ export function CastAndCrewMember({
             <BreadcrumbLink href="/cast-and-crew/">Cast & Crew</BreadcrumbLink>
           }
           title={value.name}
-          deck={deck(value)}
+          deck={deck}
         />
       }
       totalCount={state.filteredValues.length}
@@ -132,28 +134,4 @@ function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
       </div>
     </ListItem>
   );
-}
-
-export function deck(value: Props["value"]) {
-  const creditString = new Intl.ListFormat().format(value.creditedAs);
-
-  const creditList =
-    creditString.charAt(0).toUpperCase() + creditString.slice(1);
-
-  let watchlistTitleCount;
-  if (value.reviewCount === value.totalCount) {
-    watchlistTitleCount = "";
-  } else {
-    watchlistTitleCount = ` and ${value.totalCount - value.reviewCount} watchlist`;
-  }
-
-  let titles;
-
-  if (value.reviewCount === 1 && value.totalCount - value.reviewCount < 2) {
-    titles = "title";
-  } else {
-    titles = `titles`;
-  }
-
-  return `${creditList} with ${value.reviewCount} reviewed${watchlistTitleCount} ${titles}.`;
 }

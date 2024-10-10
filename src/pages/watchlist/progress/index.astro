@@ -6,10 +6,6 @@ import Layout from "src/layouts/Layout.astro";
 const props = await getProps();
 ---
 
-<Layout
-  title="Watchlist Progress"
-  description="I find your lack of faith disturbing."
-  image="/watchlist/progress/og.jpg"
->
+<Layout title="Watchlist Progress" description={props.deck}>
   <WatchlistProgress {...props} />
 </Layout>

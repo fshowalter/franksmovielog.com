@@ -24,6 +24,7 @@ export type Props = {
   distinctReleaseYears: string[];
   initialSort: Sort;
   backdropImageProps: BackdropImageProps;
+  deck: string;
 };
 
 export type ListItemValue = Pick<
@@ -47,6 +48,7 @@ export function Overrated({
   distinctReleaseYears,
   initialSort,
   backdropImageProps,
+  deck,
 }: Props): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
@@ -63,8 +65,7 @@ export function Overrated({
       backdrop={
         <Backdrop
           title="Overrated Disappointments"
-          deck=" One and two star movies with an above-average IMDb rating and vote
-        count."
+          deck={deck}
           imageProps={backdropImageProps}
           breadcrumb={<BreadcrumbLink href="/reviews/">Reviews</BreadcrumbLink>}
         />

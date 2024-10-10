@@ -7,13 +7,13 @@ import { describe, it } from "vitest";
 
 import Page from "./index.astro";
 
-describe("/how-i-grade", () => {
+describe("/how-i-grade/", () => {
   it("matches snapshot", { timeout: 40000 }, async ({ expect }) => {
     const renderers = await loadRenderers([reactContainerRenderer()]);
     const container = await AstroContainer.create({ renderers });
     const result = await container.renderToString(
       Page as AstroComponentFactory,
-      {},
+      { request: new Request(`https://www.franksmovielog.com/how-i-grade/`) },
     );
 
     void expect(

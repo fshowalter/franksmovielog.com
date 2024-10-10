@@ -55,6 +55,7 @@ export async function getProps(): Promise<Props> {
   );
 
   return {
+    deck: '"We have such sights to show you!"',
     values,
     distinctGenres,
     distinctMedia,

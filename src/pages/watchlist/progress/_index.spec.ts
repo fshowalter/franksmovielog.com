@@ -13,7 +13,11 @@ describe("/watchlist/progress", () => {
     const container = await AstroContainer.create({ renderers });
     const result = await container.renderToString(
       page as AstroComponentFactory,
-      {},
+      {
+        request: new Request(
+          `https://www.franksmovielog.com/watchlist/progress/`,
+        ),
+      },
     );
 
     void expect(

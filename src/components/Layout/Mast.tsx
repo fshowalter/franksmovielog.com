@@ -111,6 +111,7 @@ function SearchButton() {
   return (
     <div className="z-[1000]">
       <button
+        suppressHydrationWarning
         data-open-modal
         disabled
         aria-label="Search"

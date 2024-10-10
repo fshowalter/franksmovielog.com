@@ -24,6 +24,7 @@ export type Props = {
   distinctReleaseYears: readonly string[];
   initialSort: Sort;
   backdropImageProps: BackdropImageProps;
+  deck: string;
 };
 
 export type ListItemValue = Pick<
@@ -47,6 +48,7 @@ export function Underseen({
   distinctReleaseYears,
   initialSort,
   backdropImageProps,
+  deck,
 }: Props): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
@@ -65,7 +67,7 @@ export function Underseen({
           title="Underseen Gems"
           imageProps={backdropImageProps}
           breadcrumb={<BreadcrumbLink href="/reviews/">Reviews</BreadcrumbLink>}
-          deck="Four and five star movies with a below average number of IMDb votes."
+          deck={deck}
         />
       }
       subNav={

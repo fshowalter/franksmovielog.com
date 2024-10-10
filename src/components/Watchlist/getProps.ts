@@ -26,6 +26,7 @@ export async function getProps(): Promise<Props> {
   );
 
   return {
+    deck: `"A man's got to know his limitations"`,
     backdropImageProps: await getBackdropImageProps(
       "watchlist",
       BackdropImageConfig,

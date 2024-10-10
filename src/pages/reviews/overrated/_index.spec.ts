@@ -17,7 +17,11 @@ describe("/reviews/overrated/", () => {
     });
     const result = await container.renderToString(
       Index as AstroComponentFactory,
-      {},
+      {
+        request: new Request(
+          `https://www.franksmovielog.com/reviews/overrated/`,
+        ),
+      },
     );
 
     void expect(

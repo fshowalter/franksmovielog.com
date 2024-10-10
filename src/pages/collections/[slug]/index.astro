@@ -28,10 +28,6 @@ const { slug } = Astro.props;
 const props = await getProps(slug);
 ---
 
-<Layout
-  title={props.value.name}
-  description={`The ${props.value.name} collection.`}
-  image={`/collections/${slug}/og.jpg`}
->
+<Layout title={props.value.name} description={props.value.description}>
   <Collection client:load {...props} />
 </Layout>

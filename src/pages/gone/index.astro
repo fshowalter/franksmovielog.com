@@ -4,18 +4,14 @@ import { getProps } from "src/components/Article/getProps";
 import Layout from "src/layouts/Layout.astro";
 
 const slug = "gone";
+const deck = '"Forget it, Jake. It\'s Chinatown."';
 
 const props = await getProps({
   slug,
-  deck: '"Forget it, Jake. It\'s Chinatown."',
+  deck,
 });
 ---
 
-<Layout
-  title="410: Gone"
-  description="Forget it, Jake. It's Chinatown."
-  image="/gone/og.jpg"
-  article
->
+<Layout title="410: Gone" description={deck} noOpenGraph>
   <Article {...props} />
 </Layout>

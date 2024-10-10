@@ -18,6 +18,9 @@ describe("/viewings/stats/:year", () => {
         YearStats as AstroComponentFactory,
         {
           props: { year: year },
+          request: new Request(
+            `https://www.franksmovielog.com/viewings/stats/${year}/`,
+          ),
         },
       );
 
