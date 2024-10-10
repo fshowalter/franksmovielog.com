@@ -1,6 +1,6 @@
 {
-  "viewingCount": 1638,
-  "titleCount": 1335,
+  "viewingCount": 1645,
+  "titleCount": 1341,
   "reviewCount": 718,
   "watchlistTitlesReviewedCount": 396,
   "gradeDistribution": [
@@ -73,7 +73,7 @@
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 305
+      "count": 308
     },
     {
       "name": "Netflix",
@@ -93,11 +93,11 @@
     },
     {
       "name": "4k UHD Blu-ray",
-      "count": 69
+      "count": 71
     },
     {
       "name": "DVD",
-      "count": 66
+      "count": 67
     },
     {
       "name": "Amazon",
@@ -127,7 +127,7 @@
     },
     {
       "name": "1950s",
-      "count": 112
+      "count": 113
     },
     {
       "name": "1960s",
@@ -135,11 +135,11 @@
     },
     {
       "name": "1970s",
-      "count": 183
+      "count": 185
     },
     {
       "name": "1980s",
-      "count": 266
+      "count": 267
     },
     {
       "name": "1990s",
@@ -147,15 +147,15 @@
     },
     {
       "name": "2000s",
-      "count": 129
+      "count": 130
     },
     {
       "name": "2010s",
-      "count": 347
+      "count": 348
     },
     {
       "name": "2020s",
-      "count": 69
+      "count": 70
     }
   ],
   "mostWatchedTitles": [
@@ -202,6 +202,13 @@
       "slug": "mandy-2018"
     },
     {
+      "title": "Videodrome",
+      "imdbId": "tt0086541",
+      "year": "1983",
+      "count": 4,
+      "slug": null
+    },
+    {
       "title": "Halloween",
       "imdbId": "tt0077651",
       "year": "1978",
@@ -221,13 +228,6 @@
       "year": "1958",
       "count": 4,
       "slug": "horror-of-dracula-1958"
-    },
-    {
-      "title": "Die Hard",
-      "imdbId": "tt0095016",
-      "year": "1988",
-      "count": 4,
-      "slug": "die-hard-1988"
     }
   ],
   "mostWatchedDirectors": [
@@ -1780,126 +1780,126 @@
       ]
     },
     {
-      "name": "Alfred Hitchcock",
+      "name": "David Cronenberg",
       "count": 13,
-      "slug": "alfred-hitchcock",
+      "slug": "david-cronenberg",
       "viewings": [
         {
-          "sequence": 59,
-          "date": "2012-02-04",
+          "sequence": 54,
+          "date": "2012-01-30",
           "slug": null,
-          "title": "Suspicion",
-          "medium": "TCM HD",
+          "title": "Videodrome",
+          "medium": "Netflix",
           "venue": null,
-          "year": "1941"
+          "year": "1983"
         },
         {
-          "sequence": 73,
-          "date": "2012-02-14",
+          "sequence": 352,
+          "date": "2013-12-21",
           "slug": null,
-          "title": "Rear Window",
-          "medium": "Encore HD",
+          "title": "eXistenZ",
+          "medium": "Netflix",
           "venue": null,
-          "year": "1954"
+          "year": "1999"
         },
         {
-          "sequence": 149,
-          "date": "2012-04-08",
+          "sequence": 443,
+          "date": "2014-11-01",
           "slug": null,
-          "title": "I Confess",
-          "medium": "TCM HD",
-          "venue": null,
-          "year": "1953"
-        },
-        {
-          "sequence": 182,
-          "date": "2012-06-10",
-          "slug": null,
-          "title": "Foreign Correspondent",
-          "medium": "TCM HD",
-          "venue": null,
-          "year": "1940"
-        },
-        {
-          "sequence": 184,
-          "date": "2012-06-12",
-          "slug": null,
-          "title": "Under Capricorn",
-          "medium": "TCM HD",
-          "venue": null,
-          "year": "1949"
-        },
-        {
-          "sequence": 198,
-          "date": "2012-07-08",
-          "slug": null,
-          "title": "Vertigo",
-          "medium": "70mm",
-          "venue": "AFI Silver",
-          "year": "1958"
-        },
-        {
-          "sequence": 438,
-          "date": "2014-10-23",
-          "slug": null,
-          "title": "Rear Window",
-          "medium": null,
-          "venue": "Angelika Film Center Mosaic",
-          "year": "1954"
-        },
-        {
-          "sequence": 660,
-          "date": "2018-04-04",
-          "slug": null,
-          "title": "Young and Innocent",
-          "medium": "TCM",
-          "venue": null,
-          "year": "1937"
-        },
-        {
-          "sequence": 838,
-          "date": "2020-07-10",
-          "slug": "blackmail-1929",
-          "title": "Blackmail",
-          "medium": "Kanopy",
-          "venue": null,
-          "year": "1929"
-        },
-        {
-          "sequence": 876,
-          "date": "2020-09-28",
-          "slug": "murder-1930",
-          "title": "Murder!",
-          "medium": "iTunes",
-          "venue": null,
-          "year": "1930"
-        },
-        {
-          "sequence": 909,
-          "date": "2020-11-02",
-          "slug": "juno-and-the-paycock-1930",
-          "title": "Juno and the Paycock",
-          "medium": "DVD",
-          "venue": null,
-          "year": "1929"
-        },
-        {
-          "sequence": 979,
-          "date": "2021-01-09",
-          "slug": "the-skin-game-1931",
-          "title": "The Skin Game",
+          "title": "Videodrome",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "1931"
+          "year": "1983"
         },
         {
-          "sequence": 1093,
-          "date": "2021-04-27",
-          "slug": "east-of-shanghai-1931",
-          "title": "East of Shanghai",
+          "sequence": 528,
+          "date": "2015-10-24",
+          "slug": null,
+          "title": "Scanners",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1981"
+        },
+        {
+          "sequence": 704,
+          "date": "2018-10-01",
+          "slug": null,
+          "title": "Videodrome",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "1983"
+        },
+        {
+          "sequence": 964,
+          "date": "2020-12-26",
+          "slug": "stereo-tile-3b-of-a-caee-educational-mosaic-1969",
+          "title": "Stereo (Tile 3B of a CAEE Educational Mosaic)",
+          "medium": "Criterion Channel",
+          "venue": null,
+          "year": "1969"
+        },
+        {
+          "sequence": 972,
+          "date": "2021-01-03",
+          "slug": "crimes-of-the-future-1970",
+          "title": "Crimes of the Future",
+          "medium": "Criterion Channel",
+          "venue": null,
+          "year": "1970"
+        },
+        {
+          "sequence": 1000,
+          "date": "2021-01-28",
+          "slug": "shivers-1975",
+          "title": "Shivers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1975"
+        },
+        {
+          "sequence": 1007,
+          "date": "2021-02-04",
+          "slug": "rabid-1977",
+          "title": "Rabid",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1977"
+        },
+        {
+          "sequence": 1246,
+          "date": "2022-02-08",
+          "slug": "fast-company-1979",
+          "title": "Fast Company",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1979"
+        },
+        {
+          "sequence": 1286,
+          "date": "2022-06-18",
+          "slug": "the-brood-1979",
+          "title": "The Brood",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1979"
+        },
+        {
+          "sequence": 1446,
+          "date": "2023-03-02",
+          "slug": "crimes-of-the-future-2022",
+          "title": "Crimes of the Future",
           "medium": "iTunes",
           "venue": null,
-          "year": "1931"
+          "year": "2022"
+        },
+        {
+          "sequence": 1642,
+          "date": "2024-10-04",
+          "slug": null,
+          "title": "Videodrome",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1983"
         }
       ]
     }
@@ -6565,6 +6565,130 @@
       ]
     },
     {
+      "name": "David Cronenberg",
+      "count": 13,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 54,
+          "date": "2012-01-30",
+          "slug": null,
+          "title": "Videodrome",
+          "medium": "Netflix",
+          "venue": null,
+          "year": "1983"
+        },
+        {
+          "sequence": 352,
+          "date": "2013-12-21",
+          "slug": null,
+          "title": "eXistenZ",
+          "medium": "Netflix",
+          "venue": null,
+          "year": "1999"
+        },
+        {
+          "sequence": 443,
+          "date": "2014-11-01",
+          "slug": null,
+          "title": "Videodrome",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1983"
+        },
+        {
+          "sequence": 528,
+          "date": "2015-10-24",
+          "slug": null,
+          "title": "Scanners",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1981"
+        },
+        {
+          "sequence": 704,
+          "date": "2018-10-01",
+          "slug": null,
+          "title": "Videodrome",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "1983"
+        },
+        {
+          "sequence": 964,
+          "date": "2020-12-26",
+          "slug": "stereo-tile-3b-of-a-caee-educational-mosaic-1969",
+          "title": "Stereo (Tile 3B of a CAEE Educational Mosaic)",
+          "medium": "Criterion Channel",
+          "venue": null,
+          "year": "1969"
+        },
+        {
+          "sequence": 972,
+          "date": "2021-01-03",
+          "slug": "crimes-of-the-future-1970",
+          "title": "Crimes of the Future",
+          "medium": "Criterion Channel",
+          "venue": null,
+          "year": "1970"
+        },
+        {
+          "sequence": 1000,
+          "date": "2021-01-28",
+          "slug": "shivers-1975",
+          "title": "Shivers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1975"
+        },
+        {
+          "sequence": 1007,
+          "date": "2021-02-04",
+          "slug": "rabid-1977",
+          "title": "Rabid",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1977"
+        },
+        {
+          "sequence": 1246,
+          "date": "2022-02-08",
+          "slug": "fast-company-1979",
+          "title": "Fast Company",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1979"
+        },
+        {
+          "sequence": 1286,
+          "date": "2022-06-18",
+          "slug": "the-brood-1979",
+          "title": "The Brood",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1979"
+        },
+        {
+          "sequence": 1446,
+          "date": "2023-03-02",
+          "slug": "crimes-of-the-future-2022",
+          "title": "Crimes of the Future",
+          "medium": "iTunes",
+          "venue": null,
+          "year": "2022"
+        },
+        {
+          "sequence": 1642,
+          "date": "2024-10-04",
+          "slug": null,
+          "title": "Videodrome",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1983"
+        }
+      ]
+    },
+    {
       "name": "Lucio Fulci",
       "count": 13,
       "slug": null,
@@ -6800,121 +6924,6 @@
           "medium": "Watch TCM",
           "venue": null,
           "year": "1951"
-        }
-      ]
-    },
-    {
-      "name": "David Cronenberg",
-      "count": 12,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 54,
-          "date": "2012-01-30",
-          "slug": null,
-          "title": "Videodrome",
-          "medium": "Netflix",
-          "venue": null,
-          "year": "1983"
-        },
-        {
-          "sequence": 352,
-          "date": "2013-12-21",
-          "slug": null,
-          "title": "eXistenZ",
-          "medium": "Netflix",
-          "venue": null,
-          "year": "1999"
-        },
-        {
-          "sequence": 443,
-          "date": "2014-11-01",
-          "slug": null,
-          "title": "Videodrome",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1983"
-        },
-        {
-          "sequence": 528,
-          "date": "2015-10-24",
-          "slug": null,
-          "title": "Scanners",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1981"
-        },
-        {
-          "sequence": 704,
-          "date": "2018-10-01",
-          "slug": null,
-          "title": "Videodrome",
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1983"
-        },
-        {
-          "sequence": 964,
-          "date": "2020-12-26",
-          "slug": "stereo-tile-3b-of-a-caee-educational-mosaic-1969",
-          "title": "Stereo (Tile 3B of a CAEE Educational Mosaic)",
-          "medium": "Criterion Channel",
-          "venue": null,
-          "year": "1969"
-        },
-        {
-          "sequence": 972,
-          "date": "2021-01-03",
-          "slug": "crimes-of-the-future-1970",
-          "title": "Crimes of the Future",
-          "medium": "Criterion Channel",
-          "venue": null,
-          "year": "1970"
-        },
-        {
-          "sequence": 1000,
-          "date": "2021-01-28",
-          "slug": "shivers-1975",
-          "title": "Shivers",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1975"
-        },
-        {
-          "sequence": 1007,
-          "date": "2021-02-04",
-          "slug": "rabid-1977",
-          "title": "Rabid",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1977"
-        },
-        {
-          "sequence": 1246,
-          "date": "2022-02-08",
-          "slug": "fast-company-1979",
-          "title": "Fast Company",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1979"
-        },
-        {
-          "sequence": 1286,
-          "date": "2022-06-18",
-          "slug": "the-brood-1979",
-          "title": "The Brood",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1979"
-        },
-        {
-          "sequence": 1446,
-          "date": "2023-03-02",
-          "slug": "crimes-of-the-future-2022",
-          "title": "Crimes of the Future",
-          "medium": "iTunes",
-          "venue": null,
-          "year": "2022"
         }
       ]
     },
