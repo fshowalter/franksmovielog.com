@@ -2,20 +2,19 @@ import type { WatchlistProgress } from "src/api/watchlistProgress";
 
 import { ProgressRing } from "./ProgressRing";
 
-export interface Props
-  extends Pick<
-    WatchlistProgress,
-    | "collectionReviewed"
-    | "collectionTotal"
-    | "directorReviewed"
-    | "directorTotal"
-    | "performerReviewed"
-    | "performerTotal"
-    | "reviewed"
-    | "total"
-    | "writerReviewed"
-    | "writerTotal"
-  > {}
+export type Props = Pick<
+  WatchlistProgress,
+  | "collectionReviewed"
+  | "collectionTotal"
+  | "directorReviewed"
+  | "directorTotal"
+  | "performerReviewed"
+  | "performerTotal"
+  | "reviewed"
+  | "total"
+  | "writerReviewed"
+  | "writerTotal"
+>;
 
 function Callout({
   label,

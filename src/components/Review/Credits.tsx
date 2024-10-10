@@ -10,21 +10,20 @@ export const PosterImageConfig = {
   width: 248,
 };
 
-interface Props
-  extends Pick<
-    Review,
-    | "countries"
-    | "directorNames"
-    | "originalTitle"
-    | "principalCastNames"
-    | "runtimeMinutes"
-    | "title"
-    | "writerNames"
-    | "year"
-  > {
+type Props = {
   className?: string;
   posterImageProps: PosterImageProps;
-}
+} & Pick<
+  Review,
+  | "countries"
+  | "directorNames"
+  | "originalTitle"
+  | "principalCastNames"
+  | "runtimeMinutes"
+  | "title"
+  | "writerNames"
+  | "year"
+>;
 
 export function Credits({
   className,

@@ -23,7 +23,7 @@ export const StillImageConfig = {
   width: 1536,
 };
 
-export interface Props {
+export type Props = {
   moreFromCastAndCrew: React.ComponentProps<
     typeof MoreFromCastAndCrew
   >["values"];
@@ -33,7 +33,7 @@ export interface Props {
   seoImageSrc: string;
   stillImageProps: StillImageProps;
   value: Review & ReviewContent;
-}
+};
 
 export function Review({
   moreFromCastAndCrew,

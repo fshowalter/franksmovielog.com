@@ -2,8 +2,7 @@ import type { YearStats } from "src/api/yearStats";
 
 import { StatsCallout } from "src/components/StatsCallout";
 
-interface Props
-  extends Pick<YearStats, "newTitleCount" | "titleCount" | "viewingCount"> {}
+type Props = Pick<YearStats, "newTitleCount" | "titleCount" | "viewingCount">;
 
 export function Callouts({
   newTitleCount,

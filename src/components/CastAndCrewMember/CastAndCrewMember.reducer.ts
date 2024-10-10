@@ -59,10 +59,9 @@ function groupForValue(value: ListItemValue, sortValue: Sort): string {
   }
 }
 
-interface State
-  extends FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>> {
+type State = {
   hideReviewed: boolean;
-}
+} & FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>>;
 
 export function initState({
   initialSort,
@@ -94,33 +93,33 @@ export enum Actions {
   TOGGLE_REVIEWED = "TOGGLE_REVIEWED",
 }
 
-interface FilterTitleAction {
+type FilterTitleAction = {
   type: Actions.FILTER_TITLE;
   value: string;
-}
+};
 
-interface FilterCreditKindAction {
+type FilterCreditKindAction = {
   type: Actions.FILTER_CREDIT_KIND;
   value: string;
-}
+};
 
-interface FilterReleaseYearAction {
+type FilterReleaseYearAction = {
   type: Actions.FILTER_RELEASE_YEAR;
   values: [string, string];
-}
+};
 
-interface SortAction {
+type SortAction = {
   type: Actions.SORT;
   value: Sort;
-}
+};
 
-interface ShowMoreAction {
+type ShowMoreAction = {
   type: Actions.SHOW_MORE;
-}
+};
 
-interface ToggleReviewedAction {
+type ToggleReviewedAction = {
   type: Actions.TOGGLE_REVIEWED;
-}
+};
 
 export type ActionType =
   | FilterCreditKindAction

@@ -18,12 +18,12 @@ export type ListItemValue = {
   avatarImageProps: AvatarImageProps | null;
 } & Pick<Collection, "name" | "reviewCount" | "slug" | "titleCount">;
 
-export interface Props {
+export type Props = {
   backdropImageProps: BackdropImageProps;
   deck: string;
   initialSort: Sort;
   values: readonly ListItemValue[];
-}
+};
 
 export function Collections({
   backdropImageProps,

@@ -2,14 +2,10 @@ import type { AlltimeStats } from "src/api/alltimeStats";
 
 import { StatsCallout } from "src/components/StatsCallout";
 
-interface Props
-  extends Pick<
-    AlltimeStats,
-    | "reviewCount"
-    | "titleCount"
-    | "viewingCount"
-    | "watchlistTitlesReviewedCount"
-  > {}
+type Props = {} & Pick<
+  AlltimeStats,
+  "reviewCount" | "titleCount" | "viewingCount" | "watchlistTitlesReviewedCount"
+>;
 
 export function Callouts({
   reviewCount,

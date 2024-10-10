@@ -16,7 +16,7 @@ const DataSchema = z.object({
   venueNotes: z.nullable(z.string()),
 });
 
-export interface MarkdownViewing {
+export type MarkdownViewing = {
   date: Date;
   imdbId: string;
   medium: null | string;
@@ -25,7 +25,7 @@ export interface MarkdownViewing {
   venue: null | string;
   venueNotesRaw: null | string;
   viewingNotesRaw: null | string;
-}
+};
 
 async function parseAllViewingsMarkdown() {
   const dirents = await fs.readdir(viewingsMarkdownDirectory, {

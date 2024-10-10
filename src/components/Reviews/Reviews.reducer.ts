@@ -103,39 +103,39 @@ export enum Actions {
   SORT = "SORT",
 }
 
-interface FilterTitleAction {
+type FilterTitleAction = {
   type: Actions.FILTER_TITLE;
   value: string;
-}
+};
 
-interface FilterGenresAction {
+type FilterGenresAction = {
   type: Actions.FILTER_GENRES;
   values: string[];
-}
+};
 
-interface FilterGradeAction {
+type FilterGradeAction = {
   type: Actions.FILTER_GRADE;
   values: [number, number];
-}
+};
 
-interface FilterReleaseYearAction {
+type FilterReleaseYearAction = {
   type: Actions.FILTER_RELEASE_YEAR;
   values: [string, string];
-}
+};
 
-interface FilterReviewYearAction {
+type FilterReviewYearAction = {
   type: Actions.FILTER_REVIEW_YEAR;
   values: [string, string];
-}
+};
 
-interface SortAction {
+type SortAction = {
   type: Actions.SORT;
   value: Sort;
-}
+};
 
-interface ShowMoreAction {
+type ShowMoreAction = {
   type: Actions.SHOW_MORE;
-}
+};
 
 export type ActionType =
   | FilterGenresAction

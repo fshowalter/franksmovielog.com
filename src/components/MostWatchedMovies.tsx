@@ -11,14 +11,14 @@ export const MostWatchedMoviesPosterConfig = {
   width: 248,
 };
 
-export interface MostWatchedMoviesListItemValue {
+export type MostWatchedMoviesListItemValue = {
   count: number;
   imdbId: string;
   posterImageProps: PosterImageProps;
   slug: null | string;
   title: string;
   year: string;
-}
+};
 
 export function MostWatchedMovies({
   className,

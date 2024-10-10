@@ -1,9 +1,9 @@
 import { BarGradient } from "./BarGradient";
 
-interface Value {
+type Value = {
   count: number;
   name: string;
-}
+};
 
 export function Distribution({
   title,

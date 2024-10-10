@@ -28,7 +28,7 @@ export type ListItemValue = {
   | "year"
 >;
 
-export interface Props {
+export type Props = {
   backdropImageProps: BackdropImageProps;
   distinctReleaseYears: readonly string[];
   initialSort: Sort;
@@ -37,7 +37,7 @@ export interface Props {
     CollectionWithDetails,
     "description" | "descriptionHtml" | "name" | "reviewCount" | "slug"
   >;
-}
+};
 
 export function Collection({
   backdropImageProps,

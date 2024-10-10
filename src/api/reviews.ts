@@ -33,20 +33,20 @@ if (import.meta.env.MODE !== "development") {
   cachedMarkdownReviews = await allReviewsMarkdown();
 }
 
-interface ReviewViewing extends MarkdownViewing {
+type ReviewViewing = {
   mediumNotes: null | string;
   venueNotes: null | string;
   viewingNotes: null | string;
-}
+} & MarkdownViewing;
 
-export interface Review extends ReviewedTitleJson, MarkdownReview {}
+export type Review = {} & MarkdownReview & ReviewedTitleJson;
 
-interface Reviews {
+type Reviews = {
   distinctGenres: string[];
   distinctReleaseYears: string[];
   distinctReviewYears: string[];
   reviews: Review[];
-}
+};
 
 function getMastProcessor() {
   return remark().use(remarkGfm).use(smartypants);
@@ -71,9 +71,9 @@ function getHtmlAsSpan(
   return linkReviewedTitles(html, reviewedTitles);
 }
 
-export interface ReviewExcerpt {
+export type ReviewExcerpt = {
   excerpt: string;
-}
+};
 
 export async function loadExcerptHtml<T extends { slug: string }>(
   review: T,
@@ -111,11 +111,11 @@ export async function loadExcerptHtml<T extends { slug: string }>(
   };
 }
 
-export interface ReviewContent {
+export type ReviewContent = {
   content: null | string;
   excerptPlainText: string;
   viewings: ReviewViewing[];
-}
+};
 
 export async function loadContent<
   T extends { imdbId: string; rawContent: string; title: string },

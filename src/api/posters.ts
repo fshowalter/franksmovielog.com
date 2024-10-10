@@ -2,10 +2,10 @@ import { getImage } from "astro:assets";
 
 import { normalizeSources } from "./utils/normalizeSources";
 
-export interface PosterImageProps {
+export type PosterImageProps = {
   src: string;
   srcSet: string;
-}
+};
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/content/assets/posters/*.png",

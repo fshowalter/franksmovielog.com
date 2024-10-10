@@ -1,6 +1,6 @@
 import { allYearStatsJson, type YearStatsJson } from "./data/yearStatsJson";
 
-export interface YearStats extends YearStatsJson {}
+export type YearStats = {} & YearStatsJson;
 
 const cache: Record<string, YearStats> = {};
 const statYears = new Set<string>();

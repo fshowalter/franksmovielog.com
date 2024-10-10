@@ -8,11 +8,11 @@ import type { ListItemValue } from "./HomeListItem";
 
 import { HomeListItem } from "./HomeListItem";
 
-export interface Props {
+export type Props = {
   backdropImageProps: BackdropImageProps;
   deck: string;
   values: ListItemValue[];
-}
+};
 
 export function Home({ backdropImageProps, deck, values }: Props): JSX.Element {
   return (

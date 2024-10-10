@@ -33,12 +33,12 @@ function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
   return values.sort(comparer);
 }
 
-interface State {
+type State = {
   allValues: ListItemValue[];
   filteredValues: ListItemValue[];
   filters: Record<string, (value: ListItemValue) => boolean>;
   sortValue: Sort;
-}
+};
 
 export function initState({
   initialSort,
@@ -55,15 +55,15 @@ export function initState({
   };
 }
 
-interface FilterNameAction {
+type FilterNameAction = {
   type: Actions.FILTER_NAME;
   value: string;
-}
+};
 
-interface SortAction {
+type SortAction = {
   type: Actions.SORT;
   value: Sort;
-}
+};
 
 export type ActionType = FilterNameAction | SortAction;
 

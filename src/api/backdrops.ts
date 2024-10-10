@@ -4,10 +4,10 @@ import sharp from "sharp";
 
 import { normalizeSources } from "./utils/normalizeSources";
 
-export interface BackdropImageProps {
+export type BackdropImageProps = {
   src: string;
   srcSet: string;
-}
+};
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/content/assets/backdrops/*.png",

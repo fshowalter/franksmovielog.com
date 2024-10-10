@@ -15,7 +15,7 @@ import { StatsNavigation } from "src/components/StatsNavigation";
 
 import { Callouts } from "./Callouts";
 
-export interface Props {
+export type Props = {
   backdropImageProps: BackdropImageProps;
   deck: string;
   distinctStatYears: readonly string[];
@@ -25,7 +25,7 @@ export interface Props {
   mostWatchedWriters: MostWatchedPeopleListItemValue[];
   stats: YearStats;
   year: string;
-}
+};
 
 export function YearStats({
   backdropImageProps,

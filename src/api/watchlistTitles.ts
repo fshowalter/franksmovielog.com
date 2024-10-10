@@ -3,16 +3,16 @@ import {
   type WatchlistTitleJson,
 } from "./data/watchlistTitlesJson";
 
-export interface WatchlistTitle extends WatchlistTitleJson {}
+export type WatchlistTitle = {} & WatchlistTitleJson;
 
-interface WatchlistTitles {
+type WatchlistTitles = {
   distinctCollections: string[];
   distinctDirectors: string[];
   distinctPerformers: string[];
   distinctReleaseYears: string[];
   distinctWriters: string[];
   watchlistTitles: WatchlistTitle[];
-}
+};
 
 export async function allWatchlistTitles(): Promise<WatchlistTitles> {
   const watchlistTitlesJson = await allWatchlistTitlesJson();

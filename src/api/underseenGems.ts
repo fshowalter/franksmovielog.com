@@ -2,13 +2,13 @@ import type { UnderseenGemsJson } from "./data/underseenGemsJson";
 
 import { allUnderseenGemsJson } from "./data/underseenGemsJson";
 
-export interface UnderseenGem extends UnderseenGemsJson {}
+export type UnderseenGem = {} & UnderseenGemsJson;
 
-interface UnderseenGems {
+type UnderseenGems = {
   distinctGenres: string[];
   distinctReleaseYears: string[];
   underseenGems: UnderseenGem[];
-}
+};
 
 export async function allUnderseenGems(): Promise<UnderseenGems> {
   const underseenGemsJson = await allUnderseenGemsJson();

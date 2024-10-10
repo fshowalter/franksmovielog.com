@@ -7,13 +7,13 @@ import { LongFormText } from "src/components/LongFormText";
 import { MoreReviews } from "src/components/MoreReviews";
 import { SubHeading } from "src/components/SubHeading";
 
-export interface Props {
+export type Props = {
   backdropImageProps: BackdropImageProps;
   content: null | string;
   deck: string;
   recentReviews: MoreReviewsValue[];
   title: string;
-}
+};
 
 export function Article({
   backdropImageProps,
