@@ -2,12 +2,12 @@ import { useReducer } from "react";
 import type { AvatarImageProps } from "src/api/avatars";
 import type { BackdropImageProps } from "src/api/backdrops";
 import type { Collection } from "src/api/collections";
+import { Backdrop } from "src/components/Backdrop";
+import { ListItem } from "src/components/ListItem";
+import { ListItemAvatar } from "src/components/ListItemAvatar";
+import { ListItemCounts } from "src/components/ListItemCounts";
 import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
 
-import { Backdrop } from "../Backdrop";
-import { ListItem } from "../ListItem";
-import { ListItemAvatar } from "../ListItemAvatar";
-import { ListItemCounts } from "../ListItemCounts";
 import type { Sort } from "./Collections.reducer";
 import { initState, reducer } from "./Collections.reducer";
 import { Filters } from "./Filters";

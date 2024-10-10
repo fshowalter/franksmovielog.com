@@ -1,8 +1,8 @@
 import { getAvatarImageProps } from "src/api/avatars";
 import { getBackdropImageProps } from "src/api/backdrops";
 import { watchlistProgress } from "src/api/watchlistProgress";
+import { BackdropImageConfig } from "src/components/Backdrop";
 
-import { BackdropImageConfig } from "../Backdrop";
 import { DetailsAvatarImageConfig } from "./Details";
 import type { Props } from "./WatchlistProgress";
 

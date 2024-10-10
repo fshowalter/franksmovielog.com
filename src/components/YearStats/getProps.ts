@@ -1,9 +1,9 @@
 import { getBackdropImageProps } from "src/api/backdrops";
 import { getFluidWidthPosterImageProps } from "src/api/posters";
 import { allStatYears, statsForYear } from "src/api/yearStats";
+import { BackdropImageConfig } from "src/components/Backdrop";
 import { MostWatchedMoviesPosterConfig } from "src/components/MostWatchedMovies";
 
-import { BackdropImageConfig } from "../Backdrop";
 import { type Props } from "./YearStats";
 
 export async function getProps(year: string): Promise<Props> {

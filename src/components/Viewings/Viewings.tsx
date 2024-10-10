@@ -2,6 +2,7 @@ import { useReducer } from "react";
 import type { BackdropImageProps } from "src/api/backdrops";
 import type { PosterImageProps } from "src/api/posters";
 import type { Viewing } from "src/api/viewings";
+import { Backdrop } from "src/components/Backdrop";
 import { GroupedList } from "src/components/GroupedList";
 import { ListItemMediumAndVenue } from "src/components/ListItemMediumAndVenue";
 import { ListItemPoster } from "src/components/ListItemPoster";
@@ -10,7 +11,6 @@ import {
   ListWithFiltersLayout,
 } from "src/components/ListWithFiltersLayout";
 
-import { Backdrop } from "../Backdrop";
 import { Filters } from "./Filters";
 import type { Sort } from "./Viewings.reducer";
 import { Actions, initState, reducer } from "./Viewings.reducer";

@@ -1,9 +1,9 @@
 import { getAvatarImageProps } from "src/api/avatars";
 import { getBackdropImageProps } from "src/api/backdrops";
 import { allCastAndCrew } from "src/api/castAndCrew";
+import { BackdropImageConfig } from "src/components/Backdrop";
 import { ListItemAvatarImageConfig } from "src/components/ListItemAvatar";
 
-import { BackdropImageConfig } from "../Backdrop";
 import type { Props } from "./CastAndCrew";
 import type { ListItemValue } from "./CastAndCrew";
 

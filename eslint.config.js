@@ -49,6 +49,17 @@ export default tsEslint.config(
           allowInterfaces: "with-single-extends",
         },
       ],
+      "no-restricted-imports": [
+        "error",
+        {
+          patterns: [
+            {
+              group: ["../*"],
+              message: "no relative imports outside current folder",
+            },
+          ],
+        },
+      ],
     },
   },
   {

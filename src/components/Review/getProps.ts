@@ -1,8 +1,8 @@
 import { getFixedWidthPosterImageProps } from "src/api/posters";
 import { allReviews, loadContent, loadExcerptHtml } from "src/api/reviews";
 import { getOpenGraphStillSrc, getStillImageProps } from "src/api/stills";
+import { MoreReviewsImageConfig } from "src/components/MoreReviews";
 
-import { MoreReviewsImageConfig } from "../MoreReviews";
 import { PosterImageConfig } from "./Credits";
 import { type Props, StillImageConfig } from "./Review";
 

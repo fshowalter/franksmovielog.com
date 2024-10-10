@@ -2,6 +2,7 @@ import { useReducer } from "react";
 import type { BackdropImageProps } from "src/api/backdrops";
 import type { PosterImageProps } from "src/api/posters";
 import type { Review } from "src/api/reviews";
+import { Backdrop } from "src/components/Backdrop";
 import { Grade } from "src/components/Grade";
 import { GroupedList } from "src/components/GroupedList";
 import { ListItem } from "src/components/ListItem";
@@ -13,7 +14,6 @@ import {
   SubNav,
 } from "src/components/ListWithFiltersLayout";
 
-import { Backdrop } from "../Backdrop";
 import { Filters } from "./Filters";
 import type { Sort } from "./Reviews.reducer";
 import { Actions, initState, reducer } from "./Reviews.reducer";
