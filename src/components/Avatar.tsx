@@ -1,18 +1,18 @@
 import type { AvatarImageProps } from "src/api/avatars";
 
 interface AvatarProps extends React.ImgHTMLAttributes<HTMLImageElement> {
-  name: string;
-  imageProps: AvatarImageProps | null;
-  width: number;
-  height: number;
-  loading: "lazy" | "eager";
   className?: string;
+  height: number;
+  imageProps: AvatarImageProps | null;
+  loading: "eager" | "lazy";
+  name: string;
+  width: number;
 }
 
 export function Avatar({
-  name,
-  imageProps,
   className,
+  imageProps,
+  name,
   ...rest
 }: AvatarProps): JSX.Element {
   if (imageProps) {
@@ -23,10 +23,10 @@ export function Avatar({
     <div data-pagefind-meta="image:/assets/default_avatar.svg">
       <div className={className} data-pagefind-meta={`image_alt:${name}`}>
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 16 16"
           fill="var(--bg-canvas)"
+          viewBox="0 0 16 16"
           width="100%"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clipRule="evenodd"

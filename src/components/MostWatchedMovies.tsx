@@ -1,30 +1,31 @@
 import type { PosterImageProps } from "src/api/posters";
+
 import { ccn } from "src/utils/concatClassNames";
 
 import { Poster } from "./Poster";
 
 export const MostWatchedMoviesPosterConfig = {
-  width: 248,
   height: 372,
   sizes:
     "(max-width: 767px) 64px, (max-width: 1279px) 128px, (min-width: 784px) 20vw, 248px",
+  width: 248,
 };
 
 export interface MostWatchedMoviesListItemValue {
+  count: number;
   imdbId: string;
+  posterImageProps: PosterImageProps;
+  slug: null | string;
   title: string;
   year: string;
-  slug: string | null;
-  count: number;
-  posterImageProps: PosterImageProps;
 }
 
 export function MostWatchedMovies({
-  values,
   className,
+  values,
 }: {
-  values: readonly MostWatchedMoviesListItemValue[];
   className?: string;
+  values: readonly MostWatchedMoviesListItemValue[];
 }): JSX.Element | null {
   if (values.length === 0) {
     return null;
@@ -39,7 +40,7 @@ export function MostWatchedMovies({
       </h2>
       <List>
         {values.map((value) => {
-          return <ListItem value={value} key={value.imdbId} />;
+          return <ListItem key={value.imdbId} value={value} />;
         })}
       </List>
     </section>
@@ -62,13 +63,13 @@ function ListItem({
   return (
     <li className="relative mb-1 flex items-center gap-x-6 bg-default py-4 tablet:w-auto tablet:flex-col tablet:p-0 desktop:w-auto">
       <FluidListItemPoster
+        imageProps={value.posterImageProps}
+        slug={value.slug}
         title={value.title}
         year={value.year}
-        slug={value.slug}
-        imageProps={value.posterImageProps}
       />
       <div className="grow tablet:w-full">
-        <Title title={value.title} year={value.year} slug={value.slug} />
+        <Title slug={value.slug} title={value.title} year={value.year} />
         <div className="flex justify-start font-sans text-xs font-light text-subtle tablet:justify-center tablet:text-sm">
           {value.count.toLocaleString()} times
         </div>
@@ -78,13 +79,13 @@ function ListItem({
 }
 
 function Title({
+  slug,
   title,
   year,
-  slug,
 }: {
+  slug?: null | string;
   title: string;
   year: string;
-  slug?: string | null;
 }) {
   const yearBox = (
     <span className="text-xxs font-light text-subtle tablet:text-xs">
@@ -95,8 +96,8 @@ function Title({
   if (slug) {
     return (
       <a
-        href={`/reviews/${slug}/`}
         className="block font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-0 before:top-4 before:aspect-poster before:w-list-item-poster before:bg-[#fff] before:opacity-15 hover:underline hover:before:opacity-0 tablet:text-center tablet:before:top-0 tablet:before:w-full"
+        href={`/reviews/${slug}/`}
       >
         {title}
         {"\u202F"}
@@ -120,22 +121,22 @@ function FluidListItemPoster({
   className,
   imageProps,
 }: {
-  title: string;
-  slug: string | null;
-  year: string;
   className?: string;
   imageProps: PosterImageProps;
+  slug: null | string;
+  title: string;
+  year: string;
 }) {
   return (
     <div className={ccn("w-16 tablet:w-auto tablet:max-w-[248px]", className)}>
       <Poster
-        imageProps={imageProps}
-        width={MostWatchedMoviesPosterConfig.width}
-        height={MostWatchedMoviesPosterConfig.height}
-        sizes={MostWatchedMoviesPosterConfig.sizes}
-        loading="lazy"
-        decoding="async"
         className="h-auto"
+        decoding="async"
+        height={MostWatchedMoviesPosterConfig.height}
+        imageProps={imageProps}
+        loading="lazy"
+        sizes={MostWatchedMoviesPosterConfig.sizes}
+        width={MostWatchedMoviesPosterConfig.width}
       />
     </div>
   );

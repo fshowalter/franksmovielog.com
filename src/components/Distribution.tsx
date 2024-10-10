@@ -1,8 +1,8 @@
 import { BarGradient } from "./BarGradient";
 
 interface Value {
-  name: string;
   count: number;
+  name: string;
 }
 
 export function Distribution({
@@ -23,8 +23,8 @@ export function Distribution({
         {values.map((value) => {
           return (
             <div
-              key={value.name}
               className="col-span-2 grid grid-cols-subgrid py-3"
+              key={value.name}
             >
               <div className="col-span-2 grid grid-cols-subgrid">
                 <div className="font-sans text-xs text-muted">{value.name}</div>
@@ -33,7 +33,7 @@ export function Distribution({
                 </div>
               </div>
               <div className="col-span-2 row-start-2 bg-subtle">
-                <BarGradient value={value.count} maxValue={maxBar} />
+                <BarGradient maxValue={maxBar} value={value.count} />
               </div>
             </div>
           );

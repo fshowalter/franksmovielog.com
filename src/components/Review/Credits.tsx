@@ -1,62 +1,63 @@
 import type { PosterImageProps } from "src/api/posters";
 import type { Review } from "src/api/reviews";
+
 import { Poster } from "src/components/Poster";
 import { ccn } from "src/utils/concatClassNames";
 import { toSentence } from "src/utils/toSentence";
 
 export const PosterImageConfig = {
-  width: 248,
   height: 372,
+  width: 248,
 };
 
 interface Props
   extends Pick<
     Review,
-    | "title"
-    | "year"
-    | "originalTitle"
     | "countries"
-    | "runtimeMinutes"
     | "directorNames"
+    | "originalTitle"
     | "principalCastNames"
+    | "runtimeMinutes"
+    | "title"
     | "writerNames"
+    | "year"
   > {
   className?: string;
   posterImageProps: PosterImageProps;
 }
 
 export function Credits({
-  title,
-  year,
-  originalTitle,
-  countries,
-  runtimeMinutes,
-  directorNames,
-  principalCastNames,
-  writerNames,
   className,
+  countries,
+  directorNames,
+  originalTitle,
   posterImageProps,
+  principalCastNames,
+  runtimeMinutes,
+  title,
+  writerNames,
+  year,
 }: Props): JSX.Element {
   return (
     <aside
-      id="credits"
       className={ccn(
         "bg-subtle px-container pb-8 pt-8 tablet:pt-12",
         className,
       )}
       data-pagefind-meta={`image:${posterImageProps.src}`}
+      id="credits"
     >
       <div className="flex flex-wrap justify-center gap-8 tablet:flex-nowrap">
         <div className="shrink-0">
           <div className="block">
             <Poster
-              width={PosterImageConfig.width}
-              height={PosterImageConfig.height}
-              loading="lazy"
               className="h-auto"
-              decoding="async"
-              imageProps={posterImageProps}
               data-pagefind-meta="image[src], image_alt[alt]"
+              decoding="async"
+              height={PosterImageConfig.height}
+              imageProps={posterImageProps}
+              loading="lazy"
+              width={PosterImageConfig.width}
             />
           </div>
         </div>
@@ -85,8 +86,8 @@ export function Credits({
         </dl>
       </div>
       <a
-        href="#top"
         className="mx-auto mt-8 flex w-full max-w-button cursor-pointer content-center items-center justify-center py-5 font-sans text-xs uppercase tracking-wide shadow-all hover:bg-inverse hover:text-inverse"
+        href="#top"
       >
         Back to Top
       </a>

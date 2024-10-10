@@ -1,20 +1,21 @@
 import type { PosterImageProps } from "src/api/posters";
+
 import { ccn } from "src/utils/concatClassNames";
 
 interface PosterProps extends React.ImgHTMLAttributes<HTMLImageElement> {
-  imageProps: PosterImageProps | undefined;
-  width: number;
-  height: number;
-  loading: "lazy" | "eager";
-  decoding: "async" | "auto" | "sync";
   className?: string;
+  decoding: "async" | "auto" | "sync";
+  height: number;
+  imageProps: PosterImageProps | undefined;
+  loading: "eager" | "lazy";
+  width: number;
 }
 
 export function Poster({
+  className,
+  decoding = "async",
   imageProps,
   loading = "lazy",
-  decoding = "async",
-  className,
   ...rest
 }: PosterProps): JSX.Element {
   return (
@@ -23,8 +24,8 @@ export function Poster({
       alt=""
       {...rest}
       className={ccn("aspect-poster", className)}
-      loading={loading}
       decoding={decoding}
+      loading={loading}
     />
   );
 }

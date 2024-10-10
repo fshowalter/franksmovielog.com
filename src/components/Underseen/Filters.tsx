@@ -5,34 +5,35 @@ import { YearInput } from "src/components/YearInput";
 
 import type { Sort } from "./Underseen.reducer";
 import type { ActionType } from "./Underseen.reducer";
+
 import { Actions } from "./Underseen.reducer";
 
 export function Filters({
   dispatch,
-  sortValue,
-  distinctReleaseYears,
   distinctGenres,
+  distinctReleaseYears,
+  sortValue,
 }: {
   dispatch: React.Dispatch<ActionType>;
-  sortValue: Sort;
-  distinctReleaseYears: readonly string[];
   distinctGenres: readonly string[];
+  distinctReleaseYears: readonly string[];
+  sortValue: Sort;
 }) {
   return (
     <>
       <DebouncedInput
         label="Title"
-        placeholder="Enter all or part of a title"
         onInputChange={(value) =>
           dispatch({ type: Actions.FILTER_TITLE, value })
         }
+        placeholder="Enter all or part of a title"
       />
       <YearInput
         label="Release Year"
-        years={distinctReleaseYears}
         onYearChange={(values) =>
           dispatch({ type: Actions.FILTER_RELEASE_YEAR, values })
         }
+        years={distinctReleaseYears}
       />
       <MultiSelectField
         label="Genres"
@@ -45,7 +46,6 @@ export function Filters({
         options={distinctGenres}
       />
       <SelectField
-        value={sortValue}
         label="Sort"
         onChange={(e) =>
           dispatch({
@@ -53,6 +53,7 @@ export function Filters({
             value: e.target.value as Sort,
           })
         }
+        value={sortValue}
       >
         <option value="title-asc">Title (A &rarr; Z)</option>
         <option value="title-desc">Title (Z &rarr; A)</option>

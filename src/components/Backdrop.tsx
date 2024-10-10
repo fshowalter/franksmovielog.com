@@ -2,56 +2,56 @@ import type React from "react";
 import type { BackdropImageProps } from "src/api/backdrops";
 
 export const BackdropImageConfig = {
-  width: 2400,
   height: 1350,
   sizes: "100vw",
+  width: 2400,
 };
 
 export function Backdrop({
-  imageProps,
-  title,
-  deck,
   breadcrumb,
-  titleStyle,
+  deck,
+  imageProps,
   size = "default",
+  title,
+  titleStyle,
 }: {
-  imageProps: BackdropImageProps;
-  title: string;
-  deck?: React.ReactNode | null;
-  titleStyle?: string;
   breadcrumb?: React.ReactNode;
+  deck?: null | React.ReactNode;
+  imageProps: BackdropImageProps;
   size?: "default" | "large";
+  title: string;
+  titleStyle?: string;
 }) {
   const heroImage = (
     <img
       className="absolute inset-0 size-full object-cover object-top"
       {...imageProps}
       {...BackdropImageConfig}
-      loading="eager"
-      fetchPriority="high"
       alt=""
+      fetchPriority="high"
+      loading="eager"
     />
   );
 
   return (
     <Wrapper heroImage={heroImage} size={size}>
       <Breadcrumb value={breadcrumb} />
-      <Title value={title} className={titleStyle} />
-      <Deck value={deck} shadow={true} />
+      <Title className={titleStyle} value={title} />
+      <Deck shadow={true} value={deck} />
     </Wrapper>
   );
 }
 
 function Wrapper({
-  children,
   centerText = false,
-  size = "default",
+  children,
   heroImage,
+  size = "default",
 }: {
-  children: React.ReactNode;
   centerText?: boolean;
-  size?: "default" | "large" | "small";
+  children: React.ReactNode;
   heroImage?: React.ReactNode;
+  size?: "default" | "large" | "small";
 }) {
   const defaultSizes =
     "min-h-[400px] tablet:min-h-[640px] desktop:min-h-[clamp(640px,70vh,1350px)]";
@@ -82,13 +82,13 @@ function Wrapper({
 }
 
 function Title({
-  value,
-  className,
   center,
+  className,
+  value,
 }: {
-  value: string;
-  className?: string;
   center?: boolean;
+  className?: string;
+  value: string;
 }) {
   return (
     <h1
@@ -112,16 +112,16 @@ function Breadcrumb({ value }: { value?: React.ReactNode }) {
 }
 
 export function BreadcrumbLink({
-  href,
   children,
+  href,
 }: {
-  href: string;
   children: React.ReactNode;
+  href: string;
 }) {
   return (
     <a
-      href={href}
       className="font-sans text-sm uppercase tracking-wide decoration-inverse-subtle decoration-2 underline-offset-8 hover:underline"
+      href={href}
     >
       {children}
     </a>
@@ -129,13 +129,13 @@ export function BreadcrumbLink({
 }
 
 function Deck({
-  value,
-  shadow,
   center,
+  shadow,
+  value,
 }: {
-  value?: React.ReactNode;
-  shadow: boolean;
   center?: boolean;
+  shadow: boolean;
+  value?: React.ReactNode;
 }) {
   if (!value) {
     return null;

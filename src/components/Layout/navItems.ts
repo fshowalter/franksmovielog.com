@@ -1,66 +1,66 @@
 export type NavItem = {
-  text: string;
-  target: string;
   subItems: NavItem[];
+  target: string;
+  text: string;
 };
 
 export const navItems: NavItem[] = [
   {
-    text: "Home",
+    subItems: [],
     target: "/",
-    subItems: [],
+    text: "Home",
   },
   {
-    text: "How I Grade",
+    subItems: [],
     target: "/how-i-grade/",
-    subItems: [],
+    text: "How I Grade",
   },
   {
-    text: "Reviews",
-    target: "/reviews/",
     subItems: [
       {
-        text: "Underseen Gems",
+        subItems: [],
         target: "/reviews/underseen/",
-        subItems: [],
+        text: "Underseen Gems",
       },
       {
-        text: "Overrated Disappointments",
+        subItems: [],
         target: "/reviews/overrated/",
-        subItems: [],
+        text: "Overrated Disappointments",
       },
     ],
+    target: "/reviews/",
+    text: "Reviews",
   },
   {
-    text: "Viewing Log",
-    target: "/viewings/",
     subItems: [
       {
-        text: "Stats",
+        subItems: [],
         target: "/viewings/stats/",
-        subItems: [],
+        text: "Stats",
       },
     ],
+    target: "/viewings/",
+    text: "Viewing Log",
   },
   {
-    text: "Cast & Crew",
+    subItems: [],
     target: "/cast-and-crew/",
-    subItems: [],
+    text: "Cast & Crew",
   },
   {
-    text: "Collections",
+    subItems: [],
     target: "/collections/",
-    subItems: [],
+    text: "Collections",
   },
   {
-    text: "Watchlist",
-    target: "/watchlist/",
     subItems: [
       {
-        text: "Progress",
-        target: "/watchlist/progress/",
         subItems: [],
+        target: "/watchlist/progress/",
+        text: "Progress",
       },
     ],
+    target: "/watchlist/",
+    text: "Watchlist",
   },
 ];

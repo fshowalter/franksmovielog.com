@@ -1,6 +1,5 @@
-import { promises as fs } from "node:fs";
-
 import matter from "gray-matter";
+import { promises as fs } from "node:fs";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
@@ -8,24 +7,24 @@ import { getContentPath } from "./utils/getContentPath";
 const viewingsMarkdownDirectory = getContentPath("viewings");
 
 const DataSchema = z.object({
-  imdbId: z.string(),
   date: z.date(),
+  imdbId: z.string(),
+  medium: z.nullable(z.string()),
+  mediumNotes: z.nullable(z.string()),
   sequence: z.number(),
   venue: z.nullable(z.string()),
-  medium: z.nullable(z.string()),
   venueNotes: z.nullable(z.string()),
-  mediumNotes: z.nullable(z.string()),
 });
 
 export interface MarkdownViewing {
-  sequence: number;
-  imdbId: string;
   date: Date;
-  venue: string | null;
-  venueNotesRaw: string | null;
-  medium: string | null;
-  mediumNotesRaw: string | null;
-  viewingNotesRaw: string | null;
+  imdbId: string;
+  medium: null | string;
+  mediumNotesRaw: null | string;
+  sequence: number;
+  venue: null | string;
+  venueNotesRaw: null | string;
+  viewingNotesRaw: null | string;
 }
 
 async function parseAllViewingsMarkdown() {
@@ -42,17 +41,17 @@ async function parseAllViewingsMarkdown() {
           "utf8",
         );
 
-        const { data, content } = matter(fileContents);
+        const { content, data } = matter(fileContents);
         const greyMatter = DataSchema.parse(data);
 
         const markdownViewing: MarkdownViewing = {
-          sequence: greyMatter.sequence,
           date: greyMatter.date,
-          venue: greyMatter.venue,
           imdbId: greyMatter.imdbId,
           medium: greyMatter.medium,
-          venueNotesRaw: greyMatter.venueNotes,
           mediumNotesRaw: greyMatter.mediumNotes,
+          sequence: greyMatter.sequence,
+          venue: greyMatter.venue,
+          venueNotesRaw: greyMatter.venueNotes,
           viewingNotesRaw: content,
         };
 

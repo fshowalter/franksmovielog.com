@@ -14,7 +14,12 @@ export async function getProps(slug: string): Promise<Props> {
   );
 
   return {
-    value: collection,
+    backdropImageProps: await getBackdropImageProps(
+      collection.slug,
+      BackdropImageConfig,
+    ),
+    distinctReleaseYears,
+    initialSort: "release-date-asc",
     titles: await Promise.all(
       collection.titles.map(async (title) => {
         return {
@@ -26,11 +31,6 @@ export async function getProps(slug: string): Promise<Props> {
         };
       }),
     ),
-    backdropImageProps: await getBackdropImageProps(
-      collection.slug,
-      BackdropImageConfig,
-    ),
-    distinctReleaseYears,
-    initialSort: "release-date-asc",
+    value: collection,
   };
 }

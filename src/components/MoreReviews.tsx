@@ -5,28 +5,28 @@ import { RenderedMarkdown } from "./RenderedMarkdown";
 import { Still } from "./Still";
 
 export const MoreReviewsImageConfig = {
-  width: 640,
   height: 360,
   sizes:
     "(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px",
+  width: 640,
 };
 
 export interface MoreReviewsValue {
-  title: string;
-  grade: string;
-  slug: string;
-  year: string;
   excerpt: string;
   genres: string[];
+  grade: string;
+  slug: string;
   stillImageProps: StillImageProps;
+  title: string;
+  year: string;
 }
 
 export function MoreReviews({
-  values,
   children,
+  values,
 }: {
-  values: MoreReviewsValue[];
   children: React.ReactNode;
+  values: MoreReviewsValue[];
 }): JSX.Element {
   return (
     <nav data-pagefind-ignore>
@@ -50,24 +50,24 @@ function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
           imageProps={value.stillImageProps}
           {...MoreReviewsImageConfig}
           className="h-auto w-full"
-          loading="lazy"
           decoding="async"
+          loading="lazy"
         />
       </div>
       <div className="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]">
         <a
-          href={`/reviews/${value.slug}/`}
           className="mb-4 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
+          href={`/reviews/${value.slug}/`}
         >
           {value.title}{" "}
           <span className="text-sm font-normal leading-none text-muted">
             {value.year}
           </span>
         </a>
-        <Grade value={value.grade} height={18} className="mb-4" />
+        <Grade className="mb-4" height={18} value={value.grade} />
         <RenderedMarkdown
-          text={value.excerpt}
           className="mb-8 text-base leading-[1.6] tracking-prose text-muted"
+          text={value.excerpt}
         />
         <div className="font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide">
           {value.genres.map((genre, index) => {

@@ -16,7 +16,7 @@ import { rootAsSpan } from "./utils/markdown/rootAsSpan";
 export interface Collection extends CollectionJson {}
 
 export interface CollectionWithDetails extends Collection {
-  descriptionHtml: string | null;
+  descriptionHtml: null | string;
 }
 
 function getMastProcessor() {

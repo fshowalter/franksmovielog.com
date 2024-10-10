@@ -2,19 +2,19 @@ import React from "react";
 import { ccn } from "src/utils/concatClassNames";
 
 export function SvgIcon({
-  className,
   children,
+  className,
 }: {
+  children: React.ReactNode;
   /** CSS class to apply to the rendered element. */
   className?: string;
-  children: React.ReactNode;
 }): JSX.Element {
   return (
     <svg
-      width="1em"
+      className={ccn("fill-subtle", className)}
       height="1em"
       viewBox="0 0 16 16"
-      className={ccn("fill-subtle", className)}
+      width="1em"
       xmlns="http://www.w3.org/2000/svg"
     >
       {children}

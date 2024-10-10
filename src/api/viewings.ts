@@ -1,15 +1,16 @@
 import type { ViewingJson } from "./data/viewingsJson";
+
 import { allViewingsJson } from "./data/viewingsJson";
 
 export interface Viewing extends ViewingJson {}
 
 interface Viewings {
-  viewings: Viewing[];
-  distinctReleaseYears: string[];
   distinctGenres: string[];
-  distinctViewingYears: string[];
   distinctMedia: string[];
+  distinctReleaseYears: string[];
   distinctVenues: string[];
+  distinctViewingYears: string[];
+  viewings: Viewing[];
 }
 
 export async function allViewings(): Promise<Viewings> {
@@ -37,11 +38,11 @@ export async function allViewings(): Promise<Viewings> {
   });
 
   return {
-    viewings: viewings,
     distinctGenres: Array.from(distinctGenres).toSorted(),
-    distinctReleaseYears: Array.from(distinctReleaseYears).toSorted(),
-    distinctViewingYears: Array.from(distinctViewingYears).toSorted(),
-    distinctVenues: Array.from(distinctVenues).toSorted(),
     distinctMedia: Array.from(distinctMedia).toSorted(),
+    distinctReleaseYears: Array.from(distinctReleaseYears).toSorted(),
+    distinctVenues: Array.from(distinctVenues).toSorted(),
+    distinctViewingYears: Array.from(distinctViewingYears).toSorted(),
+    viewings: viewings,
   };
 }

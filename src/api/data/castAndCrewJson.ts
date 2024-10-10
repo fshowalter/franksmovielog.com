@@ -1,5 +1,4 @@
 import { promises as fs } from "node:fs";
-
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
@@ -7,30 +6,30 @@ import { getContentPath } from "./utils/getContentPath";
 const castAndCrewJsonDirectory = getContentPath("data", "cast-and-crew");
 
 const TitleSchema = z.object({
+  collectionNames: z.array(z.string()),
   creditedAs: z.array(z.string()),
-  imdbId: z.string(),
-  title: z.string(),
-  year: z.string(),
-  slug: z.nullable(z.string()),
   grade: z.nullable(z.string()),
-  sortTitle: z.string(),
   gradeValue: z.nullable(z.number()),
+  imdbId: z.string(),
   releaseSequence: z.string(),
   reviewDate: z.nullable(z.string()),
+  slug: z.nullable(z.string()),
+  sortTitle: z.string(),
+  title: z.string(),
   viewingSequence: z.nullable(z.string()),
   watchlistDirectorNames: z.array(z.string()),
   watchlistPerformerNames: z.array(z.string()),
   watchlistWriterNames: z.array(z.string()),
-  collectionNames: z.array(z.string()),
+  year: z.string(),
 });
 
 const CastAndCrewJsonSchema = z.object({
-  name: z.string(),
-  slug: z.string(),
-  reviewCount: z.number(),
-  totalCount: z.number(),
   creditedAs: z.array(z.string()),
+  name: z.string(),
+  reviewCount: z.number(),
+  slug: z.string(),
   titles: z.array(TitleSchema),
+  totalCount: z.number(),
 });
 
 async function parseAllCastAndCrewJson() {

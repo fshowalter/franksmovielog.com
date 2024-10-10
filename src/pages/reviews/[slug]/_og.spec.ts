@@ -1,7 +1,6 @@
+import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import fs from "node:fs";
 import path from "node:path";
-
-import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import { allReviews } from "src/api/reviews.ts";
 import { describe, it } from "vitest";
 
@@ -9,12 +8,12 @@ import * as OgEndpoint from "./og.jpg.ts";
 
 const { reviews } = await allReviews();
 const testSlugs = new Set([
-  "the-curse-of-frankenstein-1957",
   "event-horizon-1997",
   "hellraiser-1987",
-  "rio-bravo-1959",
-  "night-train-to-terror-1985",
   "horror-express-1972",
+  "night-train-to-terror-1985",
+  "rio-bravo-1959",
+  "the-curse-of-frankenstein-1957",
 ]);
 
 const testReviews = reviews.filter((review) => {
@@ -30,13 +29,13 @@ describe("/reviews/:slug/og.jpg", () => {
 
       // @ts-expect-error astro signature is wrong
       const response = await container.renderToResponse(OgEndpoint, {
-        routeType: "endpoint",
         props: {
+          grade: review.grade,
           slug: review.slug,
           title: review.title,
           year: review.year,
-          grade: review.grade,
         },
+        routeType: "endpoint",
       });
 
       const result = Buffer.from(await response.arrayBuffer());

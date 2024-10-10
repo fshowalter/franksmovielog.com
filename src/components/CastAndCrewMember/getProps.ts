@@ -31,15 +31,20 @@ export function deck(value: Props["value"]) {
 }
 
 export async function getProps(slug: string): Promise<Props> {
-  const { member, distinctReleaseYears } = await castAndCrewMember(slug);
+  const { distinctReleaseYears, member } = await castAndCrewMember(slug);
 
   member.titles.sort((a, b) =>
     a.releaseSequence.localeCompare(b.releaseSequence),
   );
 
   return {
-    value: member,
+    backdropImageProps: await getBackdropImageProps(
+      member.slug,
+      BackdropImageConfig,
+    ),
     deck: deck(member),
+    distinctReleaseYears,
+    initialSort: "release-date-asc",
     titles: await Promise.all(
       member.titles.map(async (title) => {
         return {
@@ -51,11 +56,6 @@ export async function getProps(slug: string): Promise<Props> {
         };
       }),
     ),
-    backdropImageProps: await getBackdropImageProps(
-      member.slug,
-      BackdropImageConfig,
-    ),
-    distinctReleaseYears,
-    initialSort: "release-date-asc",
+    value: member,
   };
 }

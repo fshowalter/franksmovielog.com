@@ -31,9 +31,9 @@ const props = await getProps(slug);
 ---
 
 <Layout
-  title={`${props.value.title} (${props.value.year})`}
-  description={props.value.excerptPlainText}
   article
+  description={props.value.excerptPlainText}
+  title={`${props.value.title} (${props.value.year})`}
 >
   <Review {...props} />
 </Layout>

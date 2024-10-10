@@ -4,6 +4,7 @@ import { getStillImageProps } from "src/api/stills";
 import { BackdropImageConfig } from "src/components/Backdrop";
 
 import type { Props } from "./Home";
+
 import { StillImageConfig } from "./HomeListItem";
 
 export async function getProps(): Promise<Props> {
@@ -16,11 +17,11 @@ export async function getProps(): Promise<Props> {
   );
 
   return {
-    deck: "Quality reviews of films of questionable quality.",
     backdropImageProps: await getBackdropImageProps(
       "home",
       BackdropImageConfig,
     ),
+    deck: "Quality reviews of films of questionable quality.",
     values: await Promise.all(
       values.map(async (value) => {
         return {

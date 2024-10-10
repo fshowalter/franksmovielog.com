@@ -1,38 +1,39 @@
-import { buildGroupValues } from "src/utils/buildGroupValues";
 import type { FilterableState } from "src/utils/filterTools";
+
+import { buildGroupValues } from "src/utils/buildGroupValues";
 import { filterTools } from "src/utils/filterTools";
 import { sortNumber, sortString } from "src/utils/sortTools";
 
 import type { ListItemValue } from "./CastAndCrew";
 
 export enum Actions {
-  FILTER_NAME = "FILTER_NAME",
   FILTER_CREDIT_KIND = "FILTER_CREDIT_KIND",
-  SORT = "SORT",
+  FILTER_NAME = "FILTER_NAME",
   SHOW_MORE = "SHOW_MORE",
+  SORT = "SORT",
 }
 
 export type Sort =
   | "name-asc"
   | "name-desc"
-  | "title-count-asc"
-  | "title-count-desc"
   | "review-count-asc"
-  | "review-count-desc";
+  | "review-count-desc"
+  | "title-count-asc"
+  | "title-count-desc";
 
 const groupValues = buildGroupValues(groupForValue);
-const { updateFilter, clearFilter } = filterTools(sortValues, groupValues);
+const { clearFilter, updateFilter } = filterTools(sortValues, groupValues);
 
 function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
   const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
     {
       "name-asc": (a, b) => sortString(a.name, b.name),
       "name-desc": (a, b) => sortString(a.name, b.name) * -1,
-      "title-count-asc": (a, b) => sortNumber(a.totalCount, b.totalCount),
-      "title-count-desc": (a, b) => sortNumber(a.totalCount, b.totalCount) * -1,
       "review-count-asc": (a, b) => sortNumber(a.reviewCount, b.reviewCount),
       "review-count-desc": (a, b) =>
         sortNumber(a.reviewCount, b.reviewCount) * -1,
+      "title-count-asc": (a, b) => sortNumber(a.totalCount, b.totalCount),
+      "title-count-desc": (a, b) => sortNumber(a.totalCount, b.totalCount) * -1,
     };
 
   const comparer = sortMap[sortOrder];
@@ -69,20 +70,20 @@ type State = FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>>;
 const SHOW_COUNT_DEFAULT = 100;
 
 export function initState({
-  values,
   initialSort,
+  values,
 }: {
-  values: ListItemValue[];
   initialSort: Sort;
+  values: ListItemValue[];
 }): State {
   return {
     allValues: values,
     filteredValues: values,
+    filters: {},
     groupedValues: groupValues(
       values.slice(0, SHOW_COUNT_DEFAULT),
       initialSort,
     ),
-    filters: {},
     showCount: SHOW_COUNT_DEFAULT,
     sortValue: initialSort,
   };
@@ -108,10 +109,10 @@ interface ShowMoreAction {
 }
 
 export type ActionType =
-  | FilterNameAction
   | FilterCreditKindAction
-  | SortAction
-  | ShowMoreAction;
+  | FilterNameAction
+  | ShowMoreAction
+  | SortAction;
 
 export function reducer(state: State, action: ActionType): State {
   let groupedValues;
@@ -154,9 +155,9 @@ export function reducer(state: State, action: ActionType): State {
       );
       return {
         ...state,
-        sortValue: action.value,
         filteredValues,
         groupedValues,
+        sortValue: action.value,
       };
     }
 

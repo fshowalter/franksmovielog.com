@@ -14,13 +14,6 @@ export async function getProps(slug: string): Promise<Props> {
   })!;
 
   return {
-    value: await loadContent(review),
-    seoImageSrc: await getOpenGraphStillSrc(slug),
-    stillImageProps: await getStillImageProps(slug, StillImageConfig),
-    posterImageProps: await getFixedWidthPosterImageProps(
-      slug,
-      PosterImageConfig,
-    ),
     moreFromCastAndCrew: await Promise.all(
       review.moreCastAndCrew.map(async (value) => {
         return {
@@ -71,5 +64,12 @@ export async function getProps(slug: string): Promise<Props> {
         };
       }),
     ),
+    posterImageProps: await getFixedWidthPosterImageProps(
+      slug,
+      PosterImageConfig,
+    ),
+    seoImageSrc: await getOpenGraphStillSrc(slug),
+    stillImageProps: await getStillImageProps(slug, StillImageConfig),
+    value: await loadContent(review),
   };
 }

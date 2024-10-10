@@ -1,7 +1,8 @@
-import { useReducer } from "react";
 import type { BackdropImageProps } from "src/api/backdrops";
 import type { PosterImageProps } from "src/api/posters";
 import type { UnderseenGem } from "src/api/underseenGems";
+
+import { useReducer } from "react";
 import { Backdrop, BreadcrumbLink } from "src/components/Backdrop";
 import { Grade } from "src/components/Grade";
 import { GroupedList } from "src/components/GroupedList";
@@ -14,94 +15,95 @@ import {
   SubNav,
 } from "src/components/ListWithFiltersLayout";
 
-import { Filters } from "./Filters";
 import type { Sort } from "./Underseen.reducer";
+
+import { Filters } from "./Filters";
 import { Actions, initState, reducer } from "./Underseen.reducer";
 
 export type Props = {
-  values: ListItemValue[];
+  backdropImageProps: BackdropImageProps;
+  deck: string;
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
   initialSort: Sort;
-  backdropImageProps: BackdropImageProps;
-  deck: string;
+  values: ListItemValue[];
 };
 
-export type ListItemValue = Pick<
+export type ListItemValue = {
+  posterImageProps: PosterImageProps;
+} & Pick<
   UnderseenGem,
-  | "releaseSequence"
-  | "title"
-  | "year"
-  | "sortTitle"
-  | "slug"
+  | "genres"
   | "grade"
   | "gradeValue"
   | "imdbId"
-  | "genres"
-> & {
-  posterImageProps: PosterImageProps;
-};
+  | "releaseSequence"
+  | "slug"
+  | "sortTitle"
+  | "title"
+  | "year"
+>;
 
 export function Underseen({
-  values,
+  backdropImageProps,
+  deck,
   distinctGenres,
   distinctReleaseYears,
   initialSort,
-  backdropImageProps,
-  deck,
+  values,
 }: Props): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
-      values,
       initialSort,
+      values,
     },
     initState,
   );
 
   return (
     <ListWithFiltersLayout
-      mastGradient={false}
       backdrop={
         <Backdrop
-          title="Underseen Gems"
-          imageProps={backdropImageProps}
           breadcrumb={<BreadcrumbLink href="/reviews/">Reviews</BreadcrumbLink>}
           deck={deck}
+          imageProps={backdropImageProps}
+          title="Underseen Gems"
         />
       }
+      filters={
+        <Filters
+          dispatch={dispatch}
+          distinctGenres={distinctGenres}
+          distinctReleaseYears={distinctReleaseYears}
+          sortValue={state.sortValue}
+        />
+      }
+      list={
+        <GroupedList
+          className="bg-default"
+          data-testid="list"
+          groupedValues={state.groupedValues}
+          onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
+          totalCount={state.filteredValues.length}
+          visibleCount={state.showCount}
+        >
+          {(value) => (
+            <UnderseenGemsListItem key={value.imdbId} value={value} />
+          )}
+        </GroupedList>
+      }
+      mastGradient={false}
       subNav={
         <SubNav
           values={[
             { href: "/reviews/", text: "all" },
-            { href: "/reviews/underseen/", text: "underseen", active: true },
+            { active: true, href: "/reviews/underseen/", text: "underseen" },
             { href: "/reviews/overrated/", text: "overrated" },
           ]}
         />
       }
       totalCount={state.filteredValues.length}
-      filters={
-        <Filters
-          dispatch={dispatch}
-          sortValue={state.sortValue}
-          distinctGenres={distinctGenres}
-          distinctReleaseYears={distinctReleaseYears}
-        />
-      }
-      list={
-        <GroupedList
-          data-testid="list"
-          groupedValues={state.groupedValues}
-          visibleCount={state.showCount}
-          totalCount={state.filteredValues.length}
-          className="bg-default"
-          onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
-        >
-          {(value) => (
-            <UnderseenGemsListItem value={value} key={value.imdbId} />
-          )}
-        </GroupedList>
-      }
     />
   );
 }
@@ -116,12 +118,12 @@ function UnderseenGemsListItem({
       <ListItemPoster imageProps={value.posterImageProps} />
       <div className="flex grow flex-col gap-2 tablet:w-full desktop:pr-4">
         <ListItemTitle
+          slug={value.slug}
           title={value.title}
           year={value.year}
-          slug={value.slug}
         />
         <div className="mb-1 py-px">
-          <Grade value={value.grade} height={18} className="-mt-1" />
+          <Grade className="-mt-1" height={18} value={value.grade} />
         </div>
         <ListItemGenres values={value.genres} />
       </div>

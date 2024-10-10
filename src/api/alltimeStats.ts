@@ -1,4 +1,5 @@
 import type { AlltimeStatsJson } from "./data/alltimeStatsJson";
+
 import { alltimeStatsJson } from "./data/alltimeStatsJson";
 
 export interface AlltimeStats extends AlltimeStatsJson {}

@@ -1,7 +1,6 @@
+import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import fs from "node:fs";
 import path from "node:path";
-
-import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import { allCastAndCrew } from "src/api/castAndCrew.ts";
 import { describe, it } from "vitest";
 
@@ -22,11 +21,11 @@ describe("/cast-and-crew/:slug/og.jpg", () => {
 
       // @ts-expect-error astro signature is wrong
       const response = await container.renderToResponse(OgEndpoint, {
-        routeType: "endpoint",
         props: {
-          slug: member.slug,
           name: member.name,
+          slug: member.slug,
         },
+        routeType: "endpoint",
       });
 
       const result = Buffer.from(await response.arrayBuffer());

@@ -1,12 +1,13 @@
 import type { OverratedDisappointmentsJson } from "./data/overratedDisappointmentsJson";
+
 import { allOverratedDisappointmentsJson } from "./data/overratedDisappointmentsJson";
 
 export interface OverratedDisappointment extends OverratedDisappointmentsJson {}
 
 interface OverratedDisappointments {
-  overratedDisappointments: OverratedDisappointment[];
-  distinctReleaseYears: string[];
   distinctGenres: string[];
+  distinctReleaseYears: string[];
+  overratedDisappointments: OverratedDisappointment[];
 }
 
 export async function allOverratedDisappointments(): Promise<OverratedDisappointments> {
@@ -24,8 +25,8 @@ export async function allOverratedDisappointments(): Promise<OverratedDisappoint
   });
 
   return {
-    overratedDisappointments: overratedDisappointments,
     distinctGenres: Array.from(distinctGenres).toSorted(),
     distinctReleaseYears: Array.from(distinctReleaseYears).toSorted(),
+    overratedDisappointments: overratedDisappointments,
   };
 }

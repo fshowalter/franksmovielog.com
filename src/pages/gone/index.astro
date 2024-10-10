@@ -7,11 +7,11 @@ const slug = "gone";
 const deck = '"Forget it, Jake. It\'s Chinatown."';
 
 const props = await getProps({
-  slug,
   deck,
+  slug,
 });
 ---
 
-<Layout title="410: Gone" description={deck} noOpenGraph>
+<Layout description={deck} noOpenGraph title="410: Gone">
   <Article {...props} />
 </Layout>

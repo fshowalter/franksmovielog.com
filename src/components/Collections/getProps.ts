@@ -5,6 +5,7 @@ import { BackdropImageConfig } from "src/components/Backdrop";
 import { ListItemAvatarImageConfig } from "src/components/ListItemAvatar";
 
 import type { Props } from "./Collections";
+
 import { type ListItemValue } from "./Collections";
 
 export async function getProps(): Promise<Props> {
@@ -15,14 +16,14 @@ export async function getProps(): Promise<Props> {
   const values = await Promise.all(
     collections.map(async (collection) => {
       const listItemValue: ListItemValue = {
-        name: collection.name,
-        slug: collection.slug,
-        reviewCount: collection.reviewCount,
-        titleCount: collection.titleCount,
         avatarImageProps: await getAvatarImageProps(
           collection.slug,
           ListItemAvatarImageConfig,
         ),
+        name: collection.name,
+        reviewCount: collection.reviewCount,
+        slug: collection.slug,
+        titleCount: collection.titleCount,
       };
 
       return listItemValue;
@@ -30,11 +31,12 @@ export async function getProps(): Promise<Props> {
   );
 
   return {
-    values,
-    initialSort: "name-asc",
     backdropImageProps: await getBackdropImageProps(
       "collections",
       BackdropImageConfig,
     ),
+    deck: `"Okay ramblers, let's get rambling."`,
+    initialSort: "name-asc",
+    values,
   };
 }

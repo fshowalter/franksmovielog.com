@@ -6,12 +6,12 @@ import {
 export interface WatchlistTitle extends WatchlistTitleJson {}
 
 interface WatchlistTitles {
-  watchlistTitles: WatchlistTitle[];
+  distinctCollections: string[];
   distinctDirectors: string[];
   distinctPerformers: string[];
-  distinctWriters: string[];
-  distinctCollections: string[];
   distinctReleaseYears: string[];
+  distinctWriters: string[];
+  watchlistTitles: WatchlistTitle[];
 }
 
 export async function allWatchlistTitles(): Promise<WatchlistTitles> {
@@ -35,11 +35,11 @@ export async function allWatchlistTitles(): Promise<WatchlistTitles> {
   });
 
   return {
-    watchlistTitles,
+    distinctCollections: Array.from(distinctCollections).toSorted(),
     distinctDirectors: Array.from(distinctDirectors).toSorted(),
     distinctPerformers: Array.from(distinctPerformers).toSorted(),
-    distinctWriters: Array.from(distinctWriters).toSorted(),
-    distinctCollections: Array.from(distinctCollections).toSorted(),
     distinctReleaseYears: Array.from(distinctReleaseYears).toSorted(),
+    distinctWriters: Array.from(distinctWriters).toSorted(),
+    watchlistTitles,
   };
 }

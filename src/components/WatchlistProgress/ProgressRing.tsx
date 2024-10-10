@@ -1,17 +1,17 @@
 interface Props extends React.SVGProps<SVGSVGElement> {
-  total: number;
+  className?: string;
   complete: number;
   label: string;
   subLabel?: string | undefined;
-  className?: string;
+  total: number;
 }
 
 export function ProgressRing({
-  total,
+  className,
   complete,
   label,
   subLabel,
-  className,
+  total,
   ...rest
 }: Props): JSX.Element | null {
   const percent = Math.floor((complete / total) * 100);
@@ -19,49 +19,49 @@ export function ProgressRing({
   return (
     <svg className={className} viewBox="0 0 36 36" {...rest}>
       <path
-        stroke="var(--bg-canvas)"
-        strokeWidth={1.8}
-        fill={"none" as const}
         d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"
+        fill={"none" as const}
+        stroke="var(--bg-canvas)"
+        strokeWidth={1.8}
       />
       <path
         d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"
-        stroke="var(--bg-progress)"
-        strokeLinecap="round"
         fill={"none" as const}
-        strokeWidth={1.8}
+        stroke="var(--bg-progress)"
         strokeDasharray={`${percent}, 100`}
+        strokeLinecap="round"
+        strokeWidth={1.8}
       />
       <text
+        fill="var(--fg-default)"
+        fontSize=".5em"
+        textAnchor="middle"
         x="18"
         y="17"
-        fill="var(--fg-default)"
-        textAnchor="middle"
-        fontSize=".5em"
       >
         {percent}%
       </text>
       <text
+        className="font-sans font-normal"
+        fill="var(--fg-default)"
+        fontSize=".2em"
+        textAnchor="middle"
         x="18"
         y="23"
-        fill="var(--fg-default)"
-        textAnchor="middle"
-        fontSize=".2em"
-        className="font-sans font-normal"
       >
         {label}
       </text>
       <text
+        className="font-sans font-light"
+        fill="var(--fg-subtle)"
+        fontSize=".2em"
+        textAnchor="middle"
         x="18"
         y="27"
-        fill="var(--fg-subtle)"
-        textAnchor="middle"
-        fontSize=".2em"
-        className="font-sans font-light"
       >
         {subLabel}
       </text>

@@ -1,9 +1,9 @@
 import type { PosterImageProps } from "src/api/posters";
 
 export const ListItemPosterImageConfig = {
-  width: 80,
   height: 113,
   sizes: "(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px",
+  width: 80,
 };
 
 export function ListItemPoster({
@@ -17,9 +17,9 @@ export function ListItemPoster({
         {...imageProps}
         alt=""
         {...ListItemPosterImageConfig}
-        loading="lazy"
-        decoding="async"
         className="aspect-poster"
+        decoding="async"
+        loading="lazy"
       />
     </div>
   );

@@ -3,9 +3,10 @@ import { getViteConfig } from "astro/config";
 
 export default getViteConfig({
   test: {
-    // Vitest configuration options
-    setupFiles: ["setupTests.ts"],
-    globals: true, // needed for testing-library teardown
+    coverage: {
+      include: ["src/**"],
+      provider: "istanbul",
+    },
     environmentMatchGlobs: [
       ["src/api/**", "node"],
       ["src/pages/**", "node"],
@@ -13,9 +14,8 @@ export default getViteConfig({
       ["src/components/**/*.tsx", "jsdom"],
       // ...
     ],
-    coverage: {
-      provider: "istanbul",
-      include: ["src/**"],
-    },
+    globals: true, // needed for testing-library teardown
+    // Vitest configuration options
+    setupFiles: ["setupTests.ts"],
   },
 });

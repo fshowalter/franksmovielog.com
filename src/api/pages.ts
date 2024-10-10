@@ -3,8 +3,8 @@ import { allReviewedTitlesJson } from "./data/reviewedTitlesJson";
 import { getHtml } from "./utils/markdown/getHtml";
 
 interface MarkdownPage {
+  content: null | string;
   title: string;
-  content: string | null;
 }
 
 export async function getPage(slug: string): Promise<MarkdownPage> {
@@ -17,7 +17,7 @@ export async function getPage(slug: string): Promise<MarkdownPage> {
   const reviewedTitlesJson = await allReviewedTitlesJson();
 
   return {
-    title: matchingPage.title,
     content: getHtml(matchingPage?.rawContent, reviewedTitlesJson),
+    title: matchingPage.title,
   };
 }

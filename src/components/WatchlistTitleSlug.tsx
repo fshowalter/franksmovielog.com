@@ -1,15 +1,15 @@
 import { toSentence } from "src/utils/toSentence";
 
 export function WatchlistTitleSlug({
+  collectionNames,
   directorNames,
   performerNames,
   writerNames,
-  collectionNames,
 }: {
+  collectionNames: readonly string[];
   directorNames: readonly string[];
   performerNames: readonly string[];
   writerNames: readonly string[];
-  collectionNames: readonly string[];
 }): JSX.Element {
   const credits = [
     ...formatPeopleNames(directorNames, "directed"),

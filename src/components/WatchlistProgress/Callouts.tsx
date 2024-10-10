@@ -5,39 +5,39 @@ import { ProgressRing } from "./ProgressRing";
 export interface Props
   extends Pick<
     WatchlistProgress,
-    | "reviewed"
-    | "total"
-    | "directorTotal"
-    | "directorReviewed"
-    | "performerTotal"
-    | "performerReviewed"
-    | "writerReviewed"
-    | "writerTotal"
     | "collectionReviewed"
     | "collectionTotal"
+    | "directorReviewed"
+    | "directorTotal"
+    | "performerReviewed"
+    | "performerTotal"
+    | "reviewed"
+    | "total"
+    | "writerReviewed"
+    | "writerTotal"
   > {}
 
 function Callout({
-  total,
-  reviewed,
   label,
+  reviewed,
   subLabel,
+  total,
 }: {
-  total: number | null;
-  reviewed: number | null;
   label: string;
+  reviewed: null | number;
   subLabel?: string;
+  total: null | number;
 }): JSX.Element {
   return (
     <div className="flex flex-col items-center first:min-w-full tablet:first:min-w-0">
       <ProgressRing
-        width={144}
-        height={144}
-        total={total ?? 0}
+        className="h-auto w-32 tablet:w-36"
         complete={reviewed ?? 0}
+        height={144}
         label={label}
         subLabel={subLabel}
-        className="h-auto w-32 tablet:w-36"
+        total={total ?? 0}
+        width={144}
       />
       <div className="pt-2 text-center font-sans text-base font-semibold text-muted">
         {reviewed?.toLocaleString()} / {total?.toLocaleString()}
@@ -48,44 +48,44 @@ function Callout({
 }
 
 export function Callouts({
-  reviewed,
-  total,
-  directorTotal,
-  directorReviewed,
-  performerReviewed,
-  performerTotal,
-  writerReviewed,
-  writerTotal,
   collectionReviewed,
   collectionTotal,
+  directorReviewed,
+  directorTotal,
+  performerReviewed,
+  performerTotal,
+  reviewed,
+  total,
+  writerReviewed,
+  writerTotal,
 }: Props): JSX.Element {
   return (
     <div className="mx-auto w-full max-w-screen-max tablet:mt-12 tablet:px-container">
       <div className="flex w-full flex-wrap justify-center gap-8 px-container py-10">
-        <Callout total={total} reviewed={reviewed} label="Total Progress" />
+        <Callout label="Total Progress" reviewed={reviewed} total={total} />
         <Callout
-          total={directorTotal}
-          reviewed={directorReviewed}
           label="Director"
+          reviewed={directorReviewed}
           subLabel="Titles"
+          total={directorTotal}
         />
         <Callout
-          total={performerTotal}
-          reviewed={performerReviewed}
           label="Performer"
+          reviewed={performerReviewed}
           subLabel="Titles"
+          total={performerTotal}
         />
         <Callout
-          total={writerTotal}
-          reviewed={writerReviewed}
           label="Writer"
+          reviewed={writerReviewed}
           subLabel="Titles"
+          total={writerTotal}
         />
         <Callout
-          total={collectionTotal}
-          reviewed={collectionReviewed}
           label="Collection"
+          reviewed={collectionReviewed}
           subLabel="Titles"
+          total={collectionTotal}
         />
       </div>
     </div>

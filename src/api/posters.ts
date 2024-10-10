@@ -12,13 +12,13 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 );
 
 export async function getFluidWidthPosterImageProps(
-  slug: string | null,
+  slug: null | string,
   {
-    width,
     height,
+    width,
   }: {
-    width: number;
     height: number;
+    width: number;
   },
 ): Promise<PosterImageProps> {
   if (!slug) {
@@ -32,28 +32,28 @@ export async function getFluidWidthPosterImageProps(
   const posterFile = await images[posterFilePath]();
 
   const optimizedImage = await getImage({
+    format: "avif",
+    height: height,
+    quality: 80,
     src: posterFile.default,
     width: width,
-    height: height,
-    format: "avif",
     widths: [0.25, 0.5, 1, 2].map((w) => w * width),
-    quality: 80,
   });
 
   return {
-    srcSet: normalizeSources(optimizedImage.srcSet.attribute),
     src: normalizeSources(optimizedImage.src),
+    srcSet: normalizeSources(optimizedImage.srcSet.attribute),
   };
 }
 
 export async function getFixedWidthPosterImageProps(
-  slug: string | null,
+  slug: null | string,
   {
-    width,
     height,
+    width,
   }: {
-    width: number;
     height: number;
+    width: number;
   },
 ): Promise<PosterImageProps> {
   if (!slug) {
@@ -67,16 +67,16 @@ export async function getFixedWidthPosterImageProps(
   const posterFile = await images[posterFilePath]();
 
   const optimizedImage = await getImage({
+    densities: [1, 2],
+    format: "avif",
+    height: height,
+    quality: 80,
     src: posterFile.default,
     width: width,
-    height: height,
-    format: "avif",
-    densities: [1, 2],
-    quality: 80,
   });
 
   return {
-    srcSet: normalizeSources(optimizedImage.srcSet.attribute),
     src: normalizeSources(optimizedImage.src),
+    srcSet: normalizeSources(optimizedImage.srcSet.attribute),
   };
 }

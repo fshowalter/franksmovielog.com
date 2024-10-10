@@ -1,12 +1,13 @@
 import type { UnderseenGemsJson } from "./data/underseenGemsJson";
+
 import { allUnderseenGemsJson } from "./data/underseenGemsJson";
 
 export interface UnderseenGem extends UnderseenGemsJson {}
 
 interface UnderseenGems {
-  underseenGems: UnderseenGem[];
-  distinctReleaseYears: string[];
   distinctGenres: string[];
+  distinctReleaseYears: string[];
+  underseenGems: UnderseenGem[];
 }
 
 export async function allUnderseenGems(): Promise<UnderseenGems> {
@@ -24,8 +25,8 @@ export async function allUnderseenGems(): Promise<UnderseenGems> {
   });
 
   return {
-    underseenGems: underseenGems,
     distinctGenres: Array.from(distinctGenres).toSorted(),
     distinctReleaseYears: Array.from(distinctReleaseYears).toSorted(),
+    underseenGems: underseenGems,
   };
 }

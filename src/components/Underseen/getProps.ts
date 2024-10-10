@@ -8,7 +8,7 @@ import type { ListItemValue } from "./Underseen";
 import type { Props } from "./Underseen";
 
 export async function getProps(): Promise<Props> {
-  const { underseenGems, distinctGenres, distinctReleaseYears } =
+  const { distinctGenres, distinctReleaseYears, underseenGems } =
     await allUnderseenGems();
 
   underseenGems.sort((a, b) =>
@@ -18,19 +18,19 @@ export async function getProps(): Promise<Props> {
   const values = await Promise.all(
     underseenGems.map(async (review) => {
       const value: ListItemValue = {
-        imdbId: review.imdbId,
-        title: review.title,
-        year: review.year,
-        slug: review.slug,
         genres: review.genres,
         grade: review.grade,
-        releaseSequence: review.releaseSequence,
         gradeValue: review.gradeValue,
-        sortTitle: review.sortTitle,
+        imdbId: review.imdbId,
         posterImageProps: await getFixedWidthPosterImageProps(
           review.slug,
           ListItemPosterImageConfig,
         ),
+        releaseSequence: review.releaseSequence,
+        slug: review.slug,
+        sortTitle: review.sortTitle,
+        title: review.title,
+        year: review.year,
       };
 
       return value;
@@ -38,14 +38,14 @@ export async function getProps(): Promise<Props> {
   );
 
   return {
-    deck: "Four and five star movies with a below average number of IMDb votes.",
-    values,
-    initialSort: "release-date-desc",
-    distinctGenres,
-    distinctReleaseYears,
     backdropImageProps: await getBackdropImageProps(
       "underseen",
       BackdropImageConfig,
     ),
+    deck: "Four and five star movies with a below average number of IMDb votes.",
+    distinctGenres,
+    distinctReleaseYears,
+    initialSort: "release-date-desc",
+    values,
   };
 }

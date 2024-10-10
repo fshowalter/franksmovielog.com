@@ -1,17 +1,17 @@
 import type { Review } from "src/api/reviews";
 import type { StillImageProps } from "src/api/stills";
+
 import { MoreReviews } from "src/components/MoreReviews";
 import { SubHeading } from "src/components/SubHeading";
 
-type CastAndCrewMemberTitle =
-  Review["moreCastAndCrew"][number]["titles"][number] & {
-    stillImageProps: StillImageProps;
-    excerpt: string;
-  };
+type CastAndCrewMemberTitle = {
+  excerpt: string;
+  stillImageProps: StillImageProps;
+} & Review["moreCastAndCrew"][number]["titles"][number];
 
-type CastAndCrewMember = Omit<Review["moreCastAndCrew"][number], "titles"> & {
+type CastAndCrewMember = {
   titles: CastAndCrewMemberTitle[];
-};
+} & Omit<Review["moreCastAndCrew"][number], "titles">;
 
 type Props = {
   values: CastAndCrewMember[];
@@ -22,7 +22,7 @@ export function MoreFromCastAndCrew({ values }: Props) {
     <MoreReviews key={value.slug} values={value.titles}>
       <SubHeading as="h2">
         {leadTextForCreditKind(value.creditKind)}{" "}
-        <a href={`/cast-and-crew/${value.slug}`} className="text-accent">
+        <a className="text-accent" href={`/cast-and-crew/${value.slug}`}>
           {value.name}
         </a>
       </SubHeading>

@@ -1,28 +1,29 @@
 import type { AvatarImageProps } from "src/api/avatars";
+
 import { Avatar } from "src/components/Avatar";
 import { BarGradient } from "src/components/BarGradient";
 import { ccn } from "src/utils/concatClassNames";
 
-type ValueType = "director" | "writer" | "performer" | "collection";
+type ValueType = "collection" | "director" | "performer" | "writer";
 
 interface Value {
+  avatarImageProps: AvatarImageProps | null;
   name: string;
   reviewCount: number;
+  slug: null | string;
   titleCount: number;
-  slug: string | null;
-  avatarImageProps: AvatarImageProps | null;
 }
 
 export function Details({
-  label,
-  valueType,
-  values,
   className,
+  label,
+  values,
+  valueType,
 }: {
-  label: string;
-  valueType: ValueType;
-  values: Value[];
   className?: string;
+  label: string;
+  values: Value[];
+  valueType: ValueType;
 }) {
   return (
     <section
@@ -38,13 +39,13 @@ export function Details({
         {values.map((value) => {
           return (
             <div
-              key={value.name}
               className="relative col-span-3 grid grid-cols-subgrid grid-rows-[1fr,auto,auto,1fr] py-3"
+              key={value.name}
             >
               <DetailsItemAvatar
+                className="row-span-4 mr-6"
                 imageProps={value.avatarImageProps}
                 name={value.name}
-                className="row-span-4 mr-6"
               />
               <div className="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid">
                 <Name value={value} valueType={valueType} />
@@ -54,8 +55,8 @@ export function Details({
               </div>
               <div className="col-span-2 col-start-2 row-start-3 bg-subtle">
                 <BarGradient
-                  value={value.reviewCount}
                   maxValue={value.titleCount}
+                  value={value.reviewCount}
                 />
               </div>
             </div>
@@ -66,7 +67,7 @@ export function Details({
   );
 }
 
-function Name({ value, valueType }: { valueType: ValueType; value: Value }) {
+function Name({ value, valueType }: { value: Value; valueType: ValueType }) {
   let linkTarget;
 
   if (valueType === "collection") {
@@ -93,27 +94,27 @@ function Name({ value, valueType }: { valueType: ValueType; value: Value }) {
 }
 
 export const DetailsAvatarImageConfig = {
-  width: 48,
   height: 48,
+  width: 48,
 };
 
 function DetailsItemAvatar({
-  name,
-  imageProps,
   className,
+  imageProps,
+  name,
 }: {
-  name: string;
-  imageProps: AvatarImageProps | null;
   className?: string;
+  imageProps: AvatarImageProps | null;
+  name: string;
 }) {
   const avatar = (
     <Avatar
-      name={name}
-      imageProps={imageProps}
-      width={DetailsAvatarImageConfig.width}
-      height={DetailsAvatarImageConfig.height}
-      loading="lazy"
       className="w-full"
+      height={DetailsAvatarImageConfig.height}
+      imageProps={imageProps}
+      loading="lazy"
+      name={name}
+      width={DetailsAvatarImageConfig.width}
     />
   );
 

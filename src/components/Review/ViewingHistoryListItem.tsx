@@ -1,15 +1,16 @@
 import type { ReviewContent } from "src/api/reviews";
+
 import { DateIcon } from "src/components/DateIcon";
 import { RenderedMarkdown } from "src/components/RenderedMarkdown";
 
 type Viewing = ReviewContent["viewings"][0];
 
 const dateFormat = new Intl.DateTimeFormat("en-US", {
-  weekday: "short",
-  month: "short",
   day: "numeric",
-  year: "numeric",
+  month: "short",
   timeZone: "UTC",
+  weekday: "short",
+  year: "numeric",
 });
 
 function Date({ date }: { date: Date }) {
@@ -41,7 +42,7 @@ function MediumNotes({ value }: { value: Viewing["mediumNotes"] }) {
   return (
     <span className="font-light tracking-normal text-subtle">
       (
-      <RenderedMarkdown text={value} className="leading-none" as="span" />)
+      <RenderedMarkdown as="span" className="leading-none" text={value} />)
     </span>
   );
 }
@@ -53,7 +54,7 @@ function VenueNotes({ value }: { value: Viewing["venueNotes"] }) {
   return (
     <span className="font-light tracking-normal text-subtle">
       (
-      <RenderedMarkdown text={value} as="span" className="leading-none" />)
+      <RenderedMarkdown as="span" className="leading-none" text={value} />)
     </span>
   );
 }

@@ -7,12 +7,12 @@ const slug = "how-i-grade";
 const deck = `"Should I watch this movie?"`;
 
 const props = await getProps({
-  slug,
   deck,
+  slug,
 });
 ---
 
-<Layout title={props.title} description={deck} article>
+<Layout article description={deck} title={props.title}>
   <div data-pagefind-body>
     <Article {...props} />
   </div>

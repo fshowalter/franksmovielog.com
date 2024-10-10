@@ -25,8 +25,8 @@ export async function allCastAndCrew(): Promise<{
 }
 
 export async function castAndCrewMember(slug: string): Promise<{
-  member: CastAndCrewMember;
   distinctReleaseYears: string[];
+  member: CastAndCrewMember;
 }> {
   const castAndCrewJson = await allCastAndCrewJson();
   const member = castAndCrewJson.find((value) => value.slug === slug)!;
@@ -38,7 +38,7 @@ export async function castAndCrewMember(slug: string): Promise<{
   });
 
   return {
-    member,
     distinctReleaseYears: Array.from(releaseYears).toSorted(),
+    member,
   };
 }

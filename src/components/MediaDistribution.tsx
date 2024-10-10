@@ -5,5 +5,5 @@ export function MediaDistribution({
 }: {
   values: React.ComponentProps<typeof Distribution>["values"];
 }) {
-  return <Distribution values={values} title="Top Media" />;
+  return <Distribution title="Top Media" values={values} />;
 }

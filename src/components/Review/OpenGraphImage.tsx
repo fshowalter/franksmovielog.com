@@ -1,49 +1,49 @@
 export function OpenGraphImage({
-  title,
-  year,
   backdrop,
   grade,
+  title,
+  year,
 }: {
-  title: string;
-  year: string;
   backdrop: string;
   grade: string;
+  title: string;
+  year: string;
 }): JSX.Element {
   return (
     <div
       style={{
         display: "flex",
-        position: "relative",
         height: "630px",
+        position: "relative",
         width: "1200px",
       }}
     >
       <img
+        height={630}
         src={backdrop}
         style={{
           objectFit: "cover",
         }}
         width={600}
-        height={630}
       />
       <div
         style={{
+          backgroundColor: "#252525",
           display: "flex",
           flexDirection: "column",
+          height: "630px",
           justifyContent: "center",
+          paddingBottom: "32px",
           paddingLeft: "80px",
           paddingRight: "80px",
-          paddingBottom: "32px",
           paddingTop: "32px",
           width: "600px",
-          height: "630px",
-          backgroundColor: "#252525",
         }}
       >
         <div
           style={{
-            fontFamily: "ArgentumSans",
             color: "#b0b0b0",
+            fontFamily: "ArgentumSans",
             marginBottom: "24px",
             textTransform: "uppercase",
           }}
@@ -52,23 +52,23 @@ export function OpenGraphImage({
         </div>
         <div
           style={{
-            fontFamily: "FrankRuhlLibre",
             color: "#fff",
+            display: "flex",
+            flexWrap: "wrap",
+            fontFamily: "FrankRuhlLibre",
             fontSize: "64px",
             lineHeight: 1,
             textWrap: "balance",
-            display: "flex",
-            flexWrap: "wrap",
           }}
         >
           {title} ({year})
         </div>
 
         <img
-          src={grade}
           height={48}
-          width={240}
+          src={grade}
           style={{ marginTop: "36px" }}
+          width={240}
         />
       </div>
     </div>

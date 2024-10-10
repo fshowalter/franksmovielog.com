@@ -1,32 +1,28 @@
 import type { MultiValue } from "react-select";
+
 import Select from "react-select";
 import { LabelText } from "src/components/LabelText";
 
 export function MultiSelectField({
+  label,
   onChange,
   options,
-  label,
 }: {
   label: string;
-  onChange: (e: MultiValue<{ value: string; label: string }>) => void;
+  onChange: (e: MultiValue<{ label: string; value: string }>) => void;
   options: readonly string[];
 }) {
   return (
     <div className="flex flex-col text-left text-subtle">
-      <LabelText value={label} as="label" htmlFor={label} />
+      <LabelText as="label" htmlFor={label} value={label} />
       <Select
+        classNamePrefix="reactSelect"
         inputId={label}
-        theme={(theme) => ({
-          ...theme,
-          borderRadius: 4,
-          colors: {
-            ...theme.colors,
-            neutral0: "var(--bg-default)",
-            neutral20: "var(--border-default)",
-            neutral50: "var(--fg-defaults)",
-            danger: "var(--fg-accent)",
-            primary25: "var(--bg-stripe)",
-          },
+        isMulti={true}
+        isSearchable={false}
+        onChange={onChange}
+        options={options.map((option) => {
+          return { label: option, value: option };
         })}
         styles={{
           dropdownIndicator: (baseStyles) => ({
@@ -34,12 +30,17 @@ export function MultiSelectField({
             color: "var(--border-color-accent)",
           }),
         }}
-        classNamePrefix="reactSelect"
-        isSearchable={false}
-        onChange={onChange}
-        isMulti={true}
-        options={options.map((option) => {
-          return { value: option, label: option };
+        theme={(theme) => ({
+          ...theme,
+          borderRadius: 4,
+          colors: {
+            ...theme.colors,
+            danger: "var(--fg-accent)",
+            neutral0: "var(--bg-default)",
+            neutral20: "var(--border-default)",
+            neutral50: "var(--fg-defaults)",
+            primary25: "var(--bg-stripe)",
+          },
         })}
       />
     </div>
