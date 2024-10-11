@@ -6,14 +6,23 @@ import react from "eslint-plugin-react";
 import tailwind from "eslint-plugin-tailwindcss";
 import globals from "globals";
 import tsEslint from "typescript-eslint";
+import eslintPluginUnicorn from "eslint-plugin-unicorn";
 
 export default tsEslint.config(
   {
-    ignores: ["dist/", ".astro/"],
+    ignores: ["dist/", ".astro/", "coverage/", "content/", "public/"],
   },
   eslint.configs.recommended,
+  eslintPluginUnicorn.configs["flat/recommended"],
   perfectionist.configs["recommended-natural"],
   ...eslintPluginAstro.configs.recommended,
+  {
+    rules: {
+      "unicorn/filename-case": "off",
+      "unicorn/no-nested-ternary": "off",
+      "unicorn/prevent-abbreviations": "off",
+    },
+  },
   {
     files: ["*.js"],
     languageOptions: {
