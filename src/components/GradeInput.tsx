@@ -56,7 +56,7 @@ export function GradeInput({
   const [maxValue, setMaxValue] = useState(13);
 
   const handleMinChange = (value: string) => {
-    const newMin = parseInt(value, 10);
+    const newMin = Number.parseInt(value, 10);
     setMinValue(newMin);
 
     if (newMin <= maxValue) {
@@ -67,7 +67,7 @@ export function GradeInput({
   };
 
   const handleMaxChange = (value: string) => {
-    const newMax = parseInt(value, 10);
+    const newMax = Number.parseInt(value, 10);
     setMaxValue(newMax);
 
     if (minValue <= newMax) {
@@ -89,7 +89,7 @@ export function GradeInput({
             onChange={(e) => handleMinChange(e.target.value)}
             value={minValue}
           >
-            {options.slice().reverse()}
+            {[...options].reverse()}
           </SelectInput>
         </label>
         <label className="flex flex-1 items-center">
@@ -100,7 +100,7 @@ export function GradeInput({
             onChange={(e) => handleMaxChange(e.target.value)}
             value={maxValue}
           >
-            {options.slice()}
+            {[...options]}
           </SelectInput>
         </label>
       </div>

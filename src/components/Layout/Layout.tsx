@@ -18,7 +18,7 @@ export function Layout({
   hasBackdrop?: boolean;
   hideLogo?: boolean;
 }): JSX.Element {
-  if (typeof addGradient == "undefined") {
+  if (addGradient === undefined) {
     addGradient = hasBackdrop;
   }
 

@@ -45,13 +45,13 @@ function groupForValue(item: ListItemValue, sortValue: Sort): string {
   switch (sortValue) {
     case "name-asc":
     case "name-desc": {
-      const letter = item.name.substring(0, 1);
+      const letter = item.name.slice(0, 1);
 
       if (letter.toLowerCase() == letter.toUpperCase()) {
         return "#";
       }
 
-      return item.name.substring(0, 1).toLocaleUpperCase();
+      return item.name.slice(0, 1).toLocaleUpperCase();
     }
     case "review-count-asc":
     case "review-count-desc": {

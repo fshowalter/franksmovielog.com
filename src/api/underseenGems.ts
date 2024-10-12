@@ -16,7 +16,7 @@ export async function allUnderseenGems(): Promise<UnderseenGems> {
   const distinctGenres = new Set<string>();
 
   const underseenGems = underseenGemsJson.map((title) => {
-    title.genres.forEach((genre) => distinctGenres.add(genre));
+    for (const genre of title.genres) distinctGenres.add(genre);
     distinctReleaseYears.add(title.year);
 
     return {
@@ -25,8 +25,8 @@ export async function allUnderseenGems(): Promise<UnderseenGems> {
   });
 
   return {
-    distinctGenres: Array.from(distinctGenres).toSorted(),
-    distinctReleaseYears: Array.from(distinctReleaseYears).toSorted(),
+    distinctGenres: [...distinctGenres].toSorted(),
+    distinctReleaseYears: [...distinctReleaseYears].toSorted(),
     underseenGems: underseenGems,
   };
 }

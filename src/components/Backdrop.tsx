@@ -94,9 +94,8 @@ function Title({
   return (
     <h1
       className={
-        className
-          ? className
-          : `font-sans ${center ? "text-center" : ""} text-2xl font-bold uppercase tracking-widest desktop:text-7xl`
+        className ||
+        `font-sans ${center ? "text-center" : ""} text-2xl font-bold uppercase tracking-widest desktop:text-7xl`
       }
     >
       {value}
@@ -106,7 +105,7 @@ function Title({
 
 function Breadcrumb({ value }: { value?: React.ReactNode }) {
   if (!value) {
-    return null;
+    return false;
   }
 
   return <p className="mb-2">{value}</p>;
@@ -139,7 +138,7 @@ function Deck({
   value?: React.ReactNode;
 }) {
   if (!value) {
-    return null;
+    return false;
   }
 
   return (

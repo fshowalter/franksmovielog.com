@@ -16,7 +16,7 @@ const testMembers = castAndCrew.filter(
 describe("/cast-and-crew/:slug/og.jpg", () => {
   it.for(testMembers)(
     "matches file",
-    { timeout: 40000 },
+    { timeout: 40_000 },
     async (member, { expect }) => {
       const container = await AstroContainer.create();
 
@@ -32,7 +32,7 @@ describe("/cast-and-crew/:slug/og.jpg", () => {
       const result = Buffer.from(await response.arrayBuffer());
 
       const snapshotFile = path.join(
-        __dirname,
+        import.meta.dirname,
         "__image_snapshots__",
         `${member.slug}-og.jpg`,
       );

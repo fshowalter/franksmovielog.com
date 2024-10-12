@@ -22,10 +22,10 @@ import {
   trimToExcerpt,
 } from "./utils/markdown/trimToExcerpt";
 
-let cachedViewingsMarkdown: MarkdownViewing[] | null = null;
-let cachedMarkdownReviews: MarkdownReview[] | null = null;
-let cachedReviewedTitlesJson: null | ReviewedTitleJson[] = null;
-let cachedReviews: null | Reviews = null;
+let cachedViewingsMarkdown: MarkdownViewing[];
+let cachedMarkdownReviews: MarkdownReview[];
+let cachedReviewedTitlesJson: ReviewedTitleJson[];
+let cachedReviews: Reviews;
 
 if (import.meta.env.MODE !== "development") {
   cachedViewingsMarkdown = await allViewingsMarkdown();
@@ -34,9 +34,9 @@ if (import.meta.env.MODE !== "development") {
 }
 
 type ReviewViewing = {
-  mediumNotes: null | string;
-  venueNotes: null | string;
-  viewingNotes: null | string;
+  mediumNotes: string | undefined;
+  venueNotes: string | undefined;
+  viewingNotes: string | undefined;
 } & MarkdownViewing;
 
 export type Review = {} & MarkdownReview & ReviewedTitleJson;
@@ -53,11 +53,11 @@ function getMastProcessor() {
 }
 
 function getHtmlAsSpan(
-  content: null | string,
+  content: string | undefined,
   reviewedTitles: { imdbId: string; slug: string }[],
 ) {
   if (!content) {
-    return null;
+    return;
   }
 
   const html = getMastProcessor()
@@ -112,7 +112,7 @@ export async function loadExcerptHtml<T extends { slug: string }>(
 }
 
 export type ReviewContent = {
-  content: null | string;
+  content: string | undefined;
   excerptPlainText: string;
   viewings: ReviewViewing[];
 };
@@ -167,7 +167,7 @@ async function parseReviewedTitlesJson(
   const reviewsMarkdown = cachedMarkdownReviews || (await allReviewsMarkdown());
 
   const reviews = reviewedTitlesJson.map((title) => {
-    title.genres.forEach((genre) => distinctGenres.add(genre));
+    for (const genre of title.genres) distinctGenres.add(genre);
     distinctReleaseYears.add(title.year);
 
     const { date, grade, rawContent } = reviewsMarkdown.find(
@@ -192,9 +192,9 @@ async function parseReviewedTitlesJson(
   });
 
   return {
-    distinctGenres: Array.from(distinctGenres).toSorted(),
-    distinctReleaseYears: Array.from(distinctReleaseYears).toSorted(),
-    distinctReviewYears: Array.from(distinctReviewYears).toSorted(),
+    distinctGenres: [...distinctGenres].toSorted(),
+    distinctReleaseYears: [...distinctReleaseYears].toSorted(),
+    distinctReviewYears: [...distinctReviewYears].toSorted(),
     reviews,
   };
 }

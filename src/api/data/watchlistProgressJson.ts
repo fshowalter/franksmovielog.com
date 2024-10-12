@@ -2,18 +2,24 @@ import { promises as fs } from "node:fs";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
+import { nullableString } from "./utils/nullable";
 
 const watchlistProgressJsonFile = getContentPath(
   "data",
   "watchlist-progress.json",
 );
 
-const Detail = z.object({
-  name: z.string(),
-  reviewCount: z.number(),
-  slug: z.nullable(z.string()),
-  titleCount: z.number(),
-});
+const Detail = z
+  .object({
+    name: z.string(),
+    reviewCount: z.number(),
+    slug: nullableString(),
+    titleCount: z.number(),
+  })
+  .transform(({ name, reviewCount, slug, titleCount }) => {
+    // fix zod making anything with undefined optional
+    return { name, reviewCount, slug, titleCount };
+  });
 
 const WatchlistProgressJsonSchema = z.object({
   collectionDetails: z.array(Detail),

@@ -2,22 +2,54 @@ import { promises as fs } from "node:fs";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
+import { nullableString } from "./utils/nullable";
 
 const viewingsJsonFile = getContentPath("data", "viewings.json");
 
-const ViewingJsonSchema = z.object({
-  genres: z.array(z.string()),
-  medium: z.nullable(z.string()),
-  releaseSequence: z.string(),
-  sequence: z.number(),
-  slug: z.nullable(z.string()),
-  sortTitle: z.string(),
-  title: z.string(),
-  venue: z.nullable(z.string()),
-  viewingDate: z.string(),
-  viewingYear: z.string(),
-  year: z.string(),
-});
+const ViewingJsonSchema = z
+  .object({
+    genres: z.array(z.string()),
+    medium: nullableString(),
+    releaseSequence: z.string(),
+    sequence: z.number(),
+    slug: nullableString(),
+    sortTitle: z.string(),
+    title: z.string(),
+    venue: nullableString(),
+    viewingDate: z.string(),
+    viewingYear: z.string(),
+    year: z.string(),
+  })
+  .transform(
+    ({
+      genres,
+      medium,
+      releaseSequence,
+      sequence,
+      slug,
+      sortTitle,
+      title,
+      venue,
+      viewingDate,
+      viewingYear,
+      year,
+    }) => {
+      // fix zod making anything with undefined optional
+      return {
+        genres,
+        medium,
+        releaseSequence,
+        sequence,
+        slug,
+        sortTitle,
+        title,
+        venue,
+        viewingDate,
+        viewingYear,
+        year,
+      };
+    },
+  );
 
 export type ViewingJson = z.infer<typeof ViewingJsonSchema>;
 

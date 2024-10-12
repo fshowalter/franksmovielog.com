@@ -20,7 +20,7 @@ const testMembers = castAndCrew.filter((member) => {
 describe("/cast-and-crew/:slug", () => {
   it.for(testMembers)(
     "matches snapshot for slug $slug",
-    { timeout: 10000 },
+    { timeout: 10_000 },
     async (member, { expect }) => {
       const renderers = await loadRenderers([reactContainerRenderer()]);
       const container = await AstroContainer.create({ renderers });

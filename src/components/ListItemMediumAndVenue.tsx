@@ -2,9 +2,9 @@ export function ListItemMediumAndVenue({
   medium,
   venue,
 }: {
-  medium?: null | string;
-  venue?: null | string;
-}): JSX.Element | null {
+  medium?: string | undefined;
+  venue?: string | undefined;
+}): false | JSX.Element {
   if (medium && venue) {
     return (
       <>
@@ -31,5 +31,5 @@ export function ListItemMediumAndVenue({
     );
   }
 
-  return null;
+  return false;
 }

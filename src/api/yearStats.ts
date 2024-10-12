@@ -7,16 +7,16 @@ const statYears = new Set<string>();
 
 export async function allStatYears() {
   if (statYears.size > 0) {
-    return Array.from(statYears).toSorted();
+    return [...statYears].toSorted();
   }
 
   const yearStats = await allYearStatsJson();
 
-  yearStats.forEach((stats) => {
+  for (const stats of yearStats) {
     statYears.add(stats.year);
-  });
+  }
 
-  return Array.from(statYears).toSorted();
+  return [...statYears].toSorted();
 }
 
 export async function statsForYear(year: string): Promise<YearStats> {
@@ -26,10 +26,10 @@ export async function statsForYear(year: string): Promise<YearStats> {
 
   const yearStats = await allYearStatsJson();
 
-  yearStats.forEach((stats) => {
+  for (const stats of yearStats) {
     cache[stats.year] = stats;
     statYears.add(stats.year);
-  });
+  }
 
   return cache[year];
 }

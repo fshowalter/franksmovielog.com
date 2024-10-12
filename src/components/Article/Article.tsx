@@ -9,7 +9,7 @@ import { SubHeading } from "~/components/SubHeading";
 
 export type Props = {
   backdropImageProps: BackdropImageProps;
-  content: null | string;
+  content: string | undefined;
   deck: string;
   recentReviews: MoreReviewsValue[];
   title: string;

@@ -2,19 +2,45 @@ import { promises as fs } from "node:fs";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
+import { nullableNumber, nullableString } from "./utils/nullable";
 
 const collectionsJsonDirectory = getContentPath("data", "collections");
 
-const TitleSchema = z.object({
-  grade: z.nullable(z.string()),
-  gradeValue: z.nullable(z.number()),
-  imdbId: z.string(),
-  releaseSequence: z.string(),
-  slug: z.nullable(z.string()),
-  sortTitle: z.string(),
-  title: z.string(),
-  year: z.string(),
-});
+const TitleSchema = z
+  .object({
+    grade: nullableString(),
+    gradeValue: nullableNumber(),
+    imdbId: z.string(),
+    releaseSequence: z.string(),
+    slug: nullableString(),
+    sortTitle: z.string(),
+    title: z.string(),
+    year: z.string(),
+  })
+  .transform(
+    ({
+      grade,
+      gradeValue,
+      imdbId,
+      releaseSequence,
+      slug,
+      sortTitle,
+      title,
+      year,
+    }) => {
+      // fix zod making anything with undefined optional
+      return {
+        grade,
+        gradeValue,
+        imdbId,
+        releaseSequence,
+        slug,
+        sortTitle,
+        title,
+        year,
+      };
+    },
+  );
 
 const CollectionJsonSchema = z.object({
   description: z.string(),

@@ -22,7 +22,7 @@ export async function allViewings(): Promise<Viewings> {
   const distinctVenues = new Set<string>();
 
   const viewings = viewingsJson.map((title) => {
-    title.genres.forEach((genre) => distinctGenres.add(genre));
+    for (const genre of title.genres) distinctGenres.add(genre);
     distinctReleaseYears.add(title.year);
     distinctViewingYears.add(title.viewingYear);
     if (title.medium) {
@@ -38,11 +38,11 @@ export async function allViewings(): Promise<Viewings> {
   });
 
   return {
-    distinctGenres: Array.from(distinctGenres).toSorted(),
-    distinctMedia: Array.from(distinctMedia).toSorted(),
-    distinctReleaseYears: Array.from(distinctReleaseYears).toSorted(),
-    distinctVenues: Array.from(distinctVenues).toSorted(),
-    distinctViewingYears: Array.from(distinctViewingYears).toSorted(),
+    distinctGenres: [...distinctGenres].toSorted(),
+    distinctMedia: [...distinctMedia].toSorted(),
+    distinctReleaseYears: [...distinctReleaseYears].toSorted(),
+    distinctVenues: [...distinctVenues].toSorted(),
+    distinctViewingYears: [...distinctViewingYears].toSorted(),
     viewings: viewings,
   };
 }

@@ -129,7 +129,7 @@ function OriginalTitle({
   value,
 }: {
   className: string;
-  value: null | string;
+  value: string | undefined;
 }) {
   if (!value) {
     return <div className={className} />;
@@ -146,6 +146,23 @@ function Meta({
 }: {
   className?: string;
 } & Pick<Review, "countries" | "runtimeMinutes" | "year">) {
+  let allCountries;
+
+  for (const country of countries) {
+    if (!allCountries) {
+      allCountries = <>{country}</>;
+      continue;
+    }
+
+    allCountries = (
+      <>
+        {allCountries}
+        <span>&ndash;</span>
+        {country}
+      </>
+    );
+  }
+
   return (
     <div
       className={ccn(
@@ -153,21 +170,7 @@ function Meta({
         className,
       )}
     >
-      {year} <span>|</span>{" "}
-      {countries.reduce<JSX.Element | null>((acc, country) => {
-        if (acc === null) {
-          return <>{country}</>;
-        }
-
-        return (
-          <>
-            {acc}
-            <span>&ndash;</span>
-            {country}
-          </>
-        );
-      }, null)}{" "}
-      <span>|</span> {runtimeMinutes}
+      {year} <span>|</span> {allCountries} <span>|</span> {runtimeMinutes}
       &#x02009;min{" "}
       <span>
         <span>|</span> <a href="#credits">More...</a>

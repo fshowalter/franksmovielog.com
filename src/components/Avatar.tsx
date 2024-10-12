@@ -3,7 +3,7 @@ import type { AvatarImageProps } from "~/api/avatars";
 type AvatarProps = {
   className?: string;
   height: number;
-  imageProps: AvatarImageProps | null;
+  imageProps: AvatarImageProps | undefined;
   loading: "eager" | "lazy";
   name: string;
   width: number;

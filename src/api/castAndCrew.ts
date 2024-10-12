@@ -12,15 +12,15 @@ export async function allCastAndCrew(): Promise<{
   const castAndCrewJson = await allCastAndCrewJson();
   const releaseYears = new Set<string>();
 
-  castAndCrewJson.forEach((member) => {
-    member.titles.forEach((title) => {
+  for (const member of castAndCrewJson) {
+    for (const title of member.titles) {
       releaseYears.add(title.year);
-    });
-  });
+    }
+  }
 
   return {
     castAndCrew: castAndCrewJson,
-    distinctReleaseYears: Array.from(releaseYears).toSorted(),
+    distinctReleaseYears: [...releaseYears].toSorted(),
   };
 }
 
@@ -33,12 +33,12 @@ export async function castAndCrewMember(slug: string): Promise<{
 
   const releaseYears = new Set<string>();
 
-  member.titles.forEach((title) => {
+  for (const title of member.titles) {
     releaseYears.add(title.year);
-  });
+  }
 
   return {
-    distinctReleaseYears: Array.from(releaseYears).toSorted(),
+    distinctReleaseYears: [...releaseYears].toSorted(),
     member,
   };
 }

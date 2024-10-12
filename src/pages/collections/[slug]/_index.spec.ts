@@ -20,7 +20,7 @@ const testCollections = collections.filter((collection) => {
 describe("/collections/:slug", () => {
   it.for(testCollections)(
     "matches snapshot for slug $slug",
-    { timeout: 10000 },
+    { timeout: 10_000 },
     async (collection, { expect }) => {
       const renderers = await loadRenderers([reactContainerRenderer()]);
       const container = await AstroContainer.create({ renderers });

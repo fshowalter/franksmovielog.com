@@ -2,26 +2,66 @@ import { promises as fs } from "node:fs";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
+import { nullableNumber, nullableString } from "./utils/nullable";
 
 const castAndCrewJsonDirectory = getContentPath("data", "cast-and-crew");
 
-const TitleSchema = z.object({
-  collectionNames: z.array(z.string()),
-  creditedAs: z.array(z.string()),
-  grade: z.nullable(z.string()),
-  gradeValue: z.nullable(z.number()),
-  imdbId: z.string(),
-  releaseSequence: z.string(),
-  reviewDate: z.nullable(z.string()),
-  slug: z.nullable(z.string()),
-  sortTitle: z.string(),
-  title: z.string(),
-  viewingSequence: z.nullable(z.string()),
-  watchlistDirectorNames: z.array(z.string()),
-  watchlistPerformerNames: z.array(z.string()),
-  watchlistWriterNames: z.array(z.string()),
-  year: z.string(),
-});
+const TitleSchema = z
+  .object({
+    collectionNames: z.array(z.string()),
+    creditedAs: z.array(z.string()),
+    grade: nullableString(),
+    gradeValue: nullableNumber(),
+    imdbId: z.string(),
+    releaseSequence: z.string(),
+    reviewDate: nullableString(),
+    slug: nullableString(),
+    sortTitle: z.string(),
+    title: z.string(),
+    viewingSequence: nullableString(),
+    watchlistDirectorNames: z.array(z.string()),
+    watchlistPerformerNames: z.array(z.string()),
+    watchlistWriterNames: z.array(z.string()),
+    year: z.string(),
+  })
+  .transform(
+    ({
+      collectionNames,
+      creditedAs,
+      grade,
+      gradeValue,
+      imdbId,
+      releaseSequence,
+      reviewDate,
+      slug,
+      sortTitle,
+      title,
+      viewingSequence,
+      watchlistDirectorNames,
+      watchlistPerformerNames,
+      watchlistWriterNames,
+      year,
+    }) => {
+      // fix zod making anything with undefined optional
+      return {
+        collectionNames,
+        creditedAs,
+        grade,
+        gradeValue,
+        imdbId,
+        releaseSequence,
+        reviewDate,
+        slug,
+        sortTitle,
+        title,
+        viewingSequence,
+        watchlistDirectorNames,
+        watchlistPerformerNames,
+        watchlistWriterNames,
+        year,
+      };
+    },
+  );
 
 const CastAndCrewJsonSchema = z.object({
   creditedAs: z.array(z.string()),

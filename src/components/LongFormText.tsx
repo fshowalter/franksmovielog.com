@@ -7,7 +7,7 @@ export function LongFormText({
   text,
 }: {
   className?: string;
-  text: null | string;
+  text: string | undefined;
 }) {
   return (
     <RenderedMarkdown
