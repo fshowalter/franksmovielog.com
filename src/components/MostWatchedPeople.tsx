@@ -55,7 +55,7 @@ export function MostWatchedPeople({
                   <summary className="cursor-pointer px-4 py-1 font-sans text-sm text-subtle tablet:px-0">
                     Details
                   </summary>
-                  <ol className="py-1 tablet:px-4 tablet:pb-5 tablet:pt-2">
+                  <ol className="tablet:px-4 tablet:py-1 tablet:pb-5 tablet:pt-2">
                     {value.viewings.map((viewing) => {
                       return (
                         <MostWatchedPersonViewingListItem
