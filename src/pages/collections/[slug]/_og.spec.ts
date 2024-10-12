@@ -12,7 +12,7 @@ const { collections } = await allCollections();
 describe("/collections/:slug/og.jpg", () => {
   it.for(collections)(
     "matches file",
-    { timeout: 40000 },
+    { timeout: 40_000 },
     async (collection, { expect }) => {
       const container = await AstroContainer.create();
 
@@ -28,7 +28,7 @@ describe("/collections/:slug/og.jpg", () => {
       const result = Buffer.from(await response.arrayBuffer());
 
       const snapshotFile = path.join(
-        __dirname,
+        import.meta.dirname,
         "__image_snapshots__",
         `${collection.slug}-og.jpg`,
       );

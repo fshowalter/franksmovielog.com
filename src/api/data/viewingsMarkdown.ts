@@ -3,28 +3,36 @@ import { promises as fs } from "node:fs";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
+import { nullableString } from "./utils/nullable";
 
 const viewingsMarkdownDirectory = getContentPath("viewings");
 
-const DataSchema = z.object({
-  date: z.date(),
-  imdbId: z.string(),
-  medium: z.nullable(z.string()),
-  mediumNotes: z.nullable(z.string()),
-  sequence: z.number(),
-  venue: z.nullable(z.string()),
-  venueNotes: z.nullable(z.string()),
-});
+const DataSchema = z
+  .object({
+    date: z.date(),
+    imdbId: z.string(),
+    medium: nullableString(),
+    mediumNotes: nullableString(),
+    sequence: z.number(),
+    venue: nullableString(),
+    venueNotes: nullableString(),
+  })
+  .transform(
+    ({ date, imdbId, medium, mediumNotes, sequence, venue, venueNotes }) => {
+      // fix zod making anything with undefined optional
+      return { date, imdbId, medium, mediumNotes, sequence, venue, venueNotes };
+    },
+  );
 
 export type MarkdownViewing = {
   date: Date;
   imdbId: string;
-  medium: null | string;
-  mediumNotesRaw: null | string;
+  medium: string | undefined;
+  mediumNotesRaw: string | undefined;
   sequence: number;
-  venue: null | string;
-  venueNotesRaw: null | string;
-  viewingNotesRaw: null | string;
+  venue: string | undefined;
+  venueNotesRaw: string | undefined;
+  viewingNotesRaw: string | undefined;
 };
 
 async function parseAllViewingsMarkdown() {

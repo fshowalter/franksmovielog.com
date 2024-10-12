@@ -12,20 +12,15 @@ export function deck(value: Props["value"]) {
   const creditList =
     creditString.charAt(0).toUpperCase() + creditString.slice(1);
 
-  let watchlistTitleCount;
-  if (value.reviewCount === value.totalCount) {
-    watchlistTitleCount = "";
-  } else {
-    watchlistTitleCount = ` and ${value.totalCount - value.reviewCount} watchlist`;
-  }
+  const watchlistTitleCount =
+    value.reviewCount === value.totalCount
+      ? ""
+      : ` and ${value.totalCount - value.reviewCount} watchlist`;
 
-  let titles;
-
-  if (value.reviewCount === 1 && value.totalCount - value.reviewCount < 2) {
-    titles = "title";
-  } else {
-    titles = `titles`;
-  }
+  const titles =
+    value.reviewCount === 1 && value.totalCount - value.reviewCount < 2
+      ? "title"
+      : `titles`;
 
   return `${creditList} with ${value.reviewCount} reviewed${watchlistTitleCount} ${titles}.`;
 }

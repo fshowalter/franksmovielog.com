@@ -3,7 +3,7 @@ import { allReviewedTitlesJson } from "./data/reviewedTitlesJson";
 import { getHtml } from "./utils/markdown/getHtml";
 
 type MarkdownPage = {
-  content: null | string;
+  content: string | undefined;
   title: string;
 };
 

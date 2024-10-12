@@ -44,13 +44,13 @@ function groupForValue(value: ListItemValue, sortValue: Sort): string {
       return value.grade ?? "Unrated";
     }
     case "title": {
-      const letter = value.sortTitle.substring(0, 1);
+      const letter = value.sortTitle.slice(0, 1);
 
       if (letter.toLowerCase() == letter.toUpperCase()) {
         return "#";
       }
 
-      return value.sortTitle.substring(0, 1).toLocaleUpperCase();
+      return value.sortTitle.slice(0, 1).toLocaleUpperCase();
     }
     // no default
   }
@@ -176,7 +176,7 @@ export function reducer(state: State, action: ActionType): State {
         filters = {
           ...state.filters,
           reviewed: (value: ListItemValue) => {
-            return value.slug === null;
+            return !value.slug;
           },
         };
       }

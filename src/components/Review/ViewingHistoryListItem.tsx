@@ -25,7 +25,7 @@ function Date({ date }: { date: Date }) {
 
 function Medium({ value }: { value: Viewing["medium"] }) {
   if (!value) {
-    return null;
+    return false;
   }
   return (
     <span className="text-subtle">
@@ -37,7 +37,7 @@ function Medium({ value }: { value: Viewing["medium"] }) {
 
 function MediumNotes({ value }: { value: Viewing["mediumNotes"] }) {
   if (!value) {
-    return null;
+    return false;
   }
   return (
     <span className="font-light tracking-normal text-subtle">
@@ -49,7 +49,7 @@ function MediumNotes({ value }: { value: Viewing["mediumNotes"] }) {
 
 function VenueNotes({ value }: { value: Viewing["venueNotes"] }) {
   if (!value) {
-    return null;
+    return false;
   }
   return (
     <span className="font-light tracking-normal text-subtle">
@@ -61,7 +61,7 @@ function VenueNotes({ value }: { value: Viewing["venueNotes"] }) {
 
 function Venue({ value }: { value: Viewing["venue"] }) {
   if (!value) {
-    return null;
+    return false;
   }
   return (
     <span className="text-subtle">
@@ -73,7 +73,7 @@ function Venue({ value }: { value: Viewing["venue"] }) {
 
 function ViewingNotes({ value }: { value: Viewing["viewingNotes"] }) {
   if (!value) {
-    return null;
+    return false;
   }
   return (
     <div className="pb-6 text-sm font-light">

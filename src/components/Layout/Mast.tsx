@@ -65,9 +65,9 @@ function MenuItem({ value }: { value: NavItem }): JSX.Element {
   );
 }
 
-function SubMenu({ values }: { values: NavItem[] }): JSX.Element | null {
+function SubMenu({ values }: { values: NavItem[] }): false | JSX.Element {
   if (values.length === 0) {
-    return null;
+    return false;
   }
 
   return (

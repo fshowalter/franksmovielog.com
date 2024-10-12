@@ -28,7 +28,7 @@ export function ListWithFiltersLayout({
 
   return (
     <Layout
-      className={className ? className : "bg-subtle"}
+      className={className || "bg-subtle"}
       {...rest}
       addGradient={mastGradient}
     >

@@ -12,7 +12,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 );
 
 export async function getAvatarImageProps(
-  slug: null | string,
+  slug: string | undefined,
   {
     height,
     width,
@@ -20,13 +20,13 @@ export async function getAvatarImageProps(
     height: number;
     width: number;
   },
-): Promise<AvatarImageProps | null> {
+): Promise<AvatarImageProps | undefined> {
   const avatarFilePath = Object.keys(images).find((path) => {
     return path.endsWith(`${slug}.png`);
   });
 
   if (!avatarFilePath) {
-    return null;
+    return;
   }
 
   const avatarFile = await images[avatarFilePath]();

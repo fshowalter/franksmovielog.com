@@ -25,7 +25,7 @@ export type Props = {
 };
 
 export type ListItemValue = {
-  avatarImageProps: AvatarImageProps | null;
+  avatarImageProps: AvatarImageProps | undefined;
 } & Pick<
   CastAndCrewMember,
   "creditedAs" | "name" | "reviewCount" | "slug" | "totalCount"

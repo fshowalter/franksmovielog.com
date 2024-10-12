@@ -15,16 +15,16 @@ export type Props = {
   deck: string;
   progress: {
     collectionDetails: ({
-      avatarImageProps: AvatarImageProps | null;
+      avatarImageProps: AvatarImageProps | undefined;
     } & WatchlistProgress["collectionDetails"][number])[];
     directorDetails: ({
-      avatarImageProps: AvatarImageProps | null;
+      avatarImageProps: AvatarImageProps | undefined;
     } & WatchlistProgress["directorDetails"][number])[];
     performerDetails: ({
-      avatarImageProps: AvatarImageProps | null;
+      avatarImageProps: AvatarImageProps | undefined;
     } & WatchlistProgress["performerDetails"][number])[];
     writerDetails: ({
-      avatarImageProps: AvatarImageProps | null;
+      avatarImageProps: AvatarImageProps | undefined;
     } & WatchlistProgress["writerDetails"][number])[];
   } & CalloutsProps;
 };

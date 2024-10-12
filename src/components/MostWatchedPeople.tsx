@@ -6,19 +6,19 @@ import { ListItemTitle } from "./ListItemTitle";
 
 type ViewingSubListItemValue = {
   date: string;
-  medium: null | string;
+  medium: string | undefined;
   posterImageProps: PosterImageProps;
   sequence: number;
-  slug: null | string;
+  slug: string | undefined;
   title: string;
-  venue: null | string;
+  venue: string | undefined;
   year: string;
 };
 
 export type MostWatchedPeopleListItemValue = {
   count: number;
   name: string;
-  slug: null | string;
+  slug: string | undefined;
   viewings: ViewingSubListItemValue[];
 };
 
@@ -28,9 +28,9 @@ export function MostWatchedPeople({
 }: {
   header: string;
   values: readonly MostWatchedPeopleListItemValue[];
-}): JSX.Element | null {
-  if (values.length == 0) {
-    return null;
+}): false | JSX.Element {
+  if (values.length === 0) {
+    return false;
   }
 
   return (

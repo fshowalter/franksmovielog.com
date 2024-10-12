@@ -12,7 +12,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 );
 
 export async function getFluidWidthPosterImageProps(
-  slug: null | string,
+  slug: string | undefined = "default",
   {
     height,
     width,
@@ -21,10 +21,6 @@ export async function getFluidWidthPosterImageProps(
     width: number;
   },
 ): Promise<PosterImageProps> {
-  if (!slug) {
-    slug = "default";
-  }
-
   const posterFilePath = Object.keys(images).find((path) => {
     return path.endsWith(`${slug}.png`);
   })!;

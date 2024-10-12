@@ -7,10 +7,10 @@ import { ccn } from "~/utils/concatClassNames";
 type ValueType = "collection" | "director" | "performer" | "writer";
 
 type Value = {
-  avatarImageProps: AvatarImageProps | null;
+  avatarImageProps: AvatarImageProps | undefined;
   name: string;
   reviewCount: number;
-  slug: null | string;
+  slug: string | undefined;
   titleCount: number;
 };
 
@@ -68,13 +68,10 @@ export function Details({
 }
 
 function Name({ value, valueType }: { value: Value; valueType: ValueType }) {
-  let linkTarget;
-
-  if (valueType === "collection") {
-    linkTarget = `/collections/${value.slug}/`;
-  } else {
-    linkTarget = `/cast-and-crew/${value.slug}/`;
-  }
+  const linkTarget =
+    valueType === "collection"
+      ? `/collections/${value.slug}/`
+      : `/cast-and-crew/${value.slug}/`;
 
   if (value.slug)
     return (
@@ -104,7 +101,7 @@ function DetailsItemAvatar({
   name,
 }: {
   className?: string;
-  imageProps: AvatarImageProps | null;
+  imageProps: AvatarImageProps | undefined;
   name: string;
 }) {
   const avatar = (

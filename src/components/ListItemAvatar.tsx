@@ -14,7 +14,7 @@ export function ListItemAvatar({
   name,
 }: {
   className?: string;
-  imageProps: AvatarImageProps | null;
+  imageProps: AvatarImageProps | undefined;
   name: string;
 }) {
   const avatar = (

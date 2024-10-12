@@ -4,7 +4,7 @@ export function linkReviewedTitles(
 ) {
   let result = text;
 
-  const re = RegExp(/(<span data-imdb-id="(tt\d+)">)(.*?)(<\/span>)/, "g");
+  const re = new RegExp(/(<span data-imdb-id="(tt\d+)">)(.*?)(<\/span>)/, "g");
 
   const matches = [...text.matchAll(re)];
 
@@ -13,18 +13,18 @@ export function linkReviewedTitles(
       (title) => title.imdbId === match[2],
     );
 
-    if (!reviewedMovie) {
+    if (reviewedMovie) {
+      result = result.replace(
+        `<span data-imdb-id="${match[2]}">${match[3]}</span>`,
+        `<a href="/reviews/${reviewedMovie.slug}/">${match[3]}</a>`,
+      );
+    } else {
       if (match[3]) {
         result = result.replace(
           `<span data-imdb-id="${match[2]}">${match[3]}</span>`,
           match[3],
         );
       }
-    } else {
-      result = result.replace(
-        `<span data-imdb-id="${match[2]}">${match[3]}</span>`,
-        `<a href="/reviews/${reviewedMovie.slug}/">${match[3]}</a>`,
-      );
     }
   }
 

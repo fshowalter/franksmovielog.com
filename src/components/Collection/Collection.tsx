@@ -67,7 +67,7 @@ export function Collection({
               <span
                 dangerouslySetInnerHTML={{ __html: value.descriptionHtml }}
               />
-            ) : null
+            ) : undefined
           }
           imageProps={backdropImageProps}
           title={value.name}

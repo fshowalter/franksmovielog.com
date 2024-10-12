@@ -23,9 +23,9 @@ function Callout({
   total,
 }: {
   label: string;
-  reviewed: null | number;
+  reviewed: number;
   subLabel?: string;
-  total: null | number;
+  total: number;
 }): JSX.Element {
   return (
     <div className="flex flex-col items-center first:min-w-full tablet:first:min-w-0">

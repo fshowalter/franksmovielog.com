@@ -48,15 +48,15 @@ export async function allCollections(): Promise<{
   const collections = await allCollectionsJson();
   const releaseYears = new Set<string>();
 
-  collections.forEach((collection) => {
-    collection.titles.forEach((title) => {
+  for (const collection of collections) {
+    for (const title of collection.titles) {
       releaseYears.add(title.year);
-    });
-  });
+    }
+  }
 
   return {
     collections: collections,
-    distinctReleaseYears: Array.from(releaseYears).toSorted(),
+    distinctReleaseYears: [...releaseYears].toSorted(),
   };
 }
 
@@ -69,9 +69,9 @@ export async function collectionDetails(slug: string): Promise<{
 
   const releaseYears = new Set<string>();
 
-  collection.titles.forEach((title) => {
+  for (const title of collection.titles) {
     releaseYears.add(title.year);
-  });
+  }
 
   return {
     collection: {
@@ -79,6 +79,6 @@ export async function collectionDetails(slug: string): Promise<{
       description: descriptionToString(collection.description),
       descriptionHtml: descriptionToHtml(collection.description),
     },
-    distinctReleaseYears: Array.from(releaseYears).toSorted(),
+    distinctReleaseYears: [...releaseYears].toSorted(),
   };
 }

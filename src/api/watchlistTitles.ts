@@ -23,10 +23,10 @@ export async function allWatchlistTitles(): Promise<WatchlistTitles> {
   const distinctReleaseYears = new Set<string>();
 
   const watchlistTitles = watchlistTitlesJson.map((title) => {
-    title.directorNames.forEach((name) => distinctDirectors.add(name));
-    title.performerNames.forEach((name) => distinctPerformers.add(name));
-    title.writerNames.forEach((name) => distinctWriters.add(name));
-    title.collectionNames.forEach((name) => distinctCollections.add(name));
+    for (const name of title.directorNames) distinctDirectors.add(name);
+    for (const name of title.performerNames) distinctPerformers.add(name);
+    for (const name of title.writerNames) distinctWriters.add(name);
+    for (const name of title.collectionNames) distinctCollections.add(name);
     distinctReleaseYears.add(title.year);
 
     return {
@@ -35,11 +35,11 @@ export async function allWatchlistTitles(): Promise<WatchlistTitles> {
   });
 
   return {
-    distinctCollections: Array.from(distinctCollections).toSorted(),
-    distinctDirectors: Array.from(distinctDirectors).toSorted(),
-    distinctPerformers: Array.from(distinctPerformers).toSorted(),
-    distinctReleaseYears: Array.from(distinctReleaseYears).toSorted(),
-    distinctWriters: Array.from(distinctWriters).toSorted(),
+    distinctCollections: [...distinctCollections].toSorted(),
+    distinctDirectors: [...distinctDirectors].toSorted(),
+    distinctPerformers: [...distinctPerformers].toSorted(),
+    distinctReleaseYears: [...distinctReleaseYears].toSorted(),
+    distinctWriters: [...distinctWriters].toSorted(),
     watchlistTitles,
   };
 }

@@ -15,7 +15,7 @@ export type MostWatchedMoviesListItemValue = {
   count: number;
   imdbId: string;
   posterImageProps: PosterImageProps;
-  slug: null | string;
+  slug: string | undefined;
   title: string;
   year: string;
 };
@@ -26,9 +26,9 @@ export function MostWatchedMovies({
 }: {
   className?: string;
   values: readonly MostWatchedMoviesListItemValue[];
-}): JSX.Element | null {
+}): false | JSX.Element {
   if (values.length === 0) {
-    return null;
+    return false;
   }
 
   return (
@@ -83,7 +83,7 @@ function Title({
   title,
   year,
 }: {
-  slug?: null | string;
+  slug?: string | undefined;
   title: string;
   year: string;
 }) {
@@ -123,7 +123,7 @@ function FluidListItemPoster({
 }: {
   className?: string;
   imageProps: PosterImageProps;
-  slug: null | string;
+  slug: string | undefined;
   title: string;
   year: string;
 }) {

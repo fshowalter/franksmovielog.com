@@ -24,7 +24,7 @@ const testReviews = reviews.filter((review) => {
 describe("Review", () => {
   it.for(testReviews)(
     "matches snapshot for slug $slug",
-    { timeout: 10000 },
+    { timeout: 10_000 },
     async (review, { expect }) => {
       const props = await getProps(review.slug);
 
