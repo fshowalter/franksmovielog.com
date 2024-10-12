@@ -20,8 +20,6 @@ describe("/viewings/stats/", () => {
       },
     );
 
-    fs.writeFileSync("test.bob", result);
-
     void expect(
       await prettier.format(result, {
         parser: "html",
