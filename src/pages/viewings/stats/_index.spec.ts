@@ -3,6 +3,7 @@ import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 import { getContainerRenderer as reactContainerRenderer } from "@astrojs/react";
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import { loadRenderers } from "astro:container";
+import fs from "node:fs";
 import * as prettier from "prettier";
 import { describe, it } from "vitest";
 
@@ -19,8 +20,10 @@ describe("/viewings/stats/", () => {
       },
     );
 
+    fs.writeFileSync("test.html", result, { encoding: "utf8" });
+
     void expect(
-      await prettier.format(result, { parser: "html" }),
+      await prettier.format(result.trim(), { parser: "html" }),
     ).toMatchFileSnapshot(`__snapshots__/index.html`);
   });
 });
