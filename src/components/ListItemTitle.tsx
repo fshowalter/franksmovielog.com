@@ -3,7 +3,7 @@ export function ListItemTitle({
   title,
   year,
 }: {
-  slug?: null | string;
+  slug?: string;
   title: string;
   year: string;
 }) {
@@ -20,8 +20,8 @@ export function ListItemTitle({
         href={`/reviews/${slug}/`}
       >
         {title}
-        {"\u202F"}
-        {"\u202F"}
+        {/* {"\u202F"}
+        {"\u202F"} */}
         {yearBox}
       </a>
     );
@@ -30,8 +30,8 @@ export function ListItemTitle({
   return (
     <span className="block font-sans text-sm font-normal text-muted">
       {title}
-      {"\u202F"}
-      {"\u202F"}
+      {/* {"\u202F"}
+      {"\u202F"} */}
       {yearBox}
     </span>
   );

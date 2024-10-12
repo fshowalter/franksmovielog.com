@@ -20,12 +20,12 @@ describe("/viewings/stats/", () => {
       },
     );
 
-    console.log(result);
-
-    fs.writeFileSync("test.bob", result, { encoding: "utf8" });
+    fs.writeFileSync("test.bob", result);
 
     void expect(
-      await prettier.format(result.trim(), { parser: "html" }),
+      await prettier.format(result, {
+        parser: "html",
+      }),
     ).toMatchFileSnapshot(`__snapshots__/index.html`);
   });
 });
