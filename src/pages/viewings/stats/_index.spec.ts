@@ -20,7 +20,9 @@ describe("/viewings/stats/", () => {
       },
     );
 
-    fs.writeFileSync("test.html", result, { encoding: "utf8" });
+    console.log(result);
+
+    fs.writeFileSync("test.bob", result, { encoding: "utf8" });
 
     void expect(
       await prettier.format(result.trim(), { parser: "html" }),
