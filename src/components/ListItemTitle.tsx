@@ -20,7 +20,7 @@ export function ListItemTitle({
         href={`/reviews/${slug}/`}
       >
         {title}
-        &#8239;&#8239;
+        &#x202F;&#x202F;
         {yearBox}
       </a>
     );
@@ -29,7 +29,7 @@ export function ListItemTitle({
   return (
     <span className="block font-sans text-sm font-normal text-muted">
       {title}
-      &#8239;&#8239;
+      &#x202F;&#x202F;
       {yearBox}
     </span>
   );

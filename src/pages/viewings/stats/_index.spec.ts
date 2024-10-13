@@ -12,13 +12,14 @@ import Index from "./index.astro";
 describe("/viewings/stats/", () => {
   it("matches snapshot", { timeout: 10_000 }, async ({ expect }) => {
     const renderers = await loadRenderers([reactContainerRenderer()]);
-    const container = await AstroContainer.create({ renderers });
-    const result = await container.renderToString(
-      Index as AstroComponentFactory,
-      {
+    const container = await AstroContainer.create({
+      renderers,
+    });
+    const result = (
+      await container.renderToString(Index as AstroComponentFactory, {
         request: new Request(`https://www.franksmovielog.com/viewings/stats/`),
-      },
-    );
+      })
+    ).replace(/\0/g, "");
 
     void expect(
       await prettier.format(result, {
