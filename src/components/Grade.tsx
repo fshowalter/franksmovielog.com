@@ -28,7 +28,7 @@ export function Grade({
   className?: string;
   height: 16 | 18 | 24 | 32;
   value: string;
-}): JSX.Element | null {
+}) {
   const [src, alt] = gradeMap[value];
 
   const width = height * 5;
