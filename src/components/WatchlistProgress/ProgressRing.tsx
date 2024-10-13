@@ -13,7 +13,7 @@ export function ProgressRing({
   subLabel,
   total,
   ...rest
-}: Props): JSX.Element | null {
+}: Props) {
   const percent = Math.floor((complete / total) * 100);
 
   return (

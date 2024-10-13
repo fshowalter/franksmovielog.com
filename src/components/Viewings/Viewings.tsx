@@ -179,7 +179,7 @@ function ListItemTitle({
   title,
   year,
 }: {
-  slug?: null | string;
+  slug?: string;
   title: string;
   year: string;
 }) {
