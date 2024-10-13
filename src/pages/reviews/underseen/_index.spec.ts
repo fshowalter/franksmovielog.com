@@ -16,14 +16,13 @@ describe("/reviews/underseen/", () => {
       entrypoint: "@astrojs/react/client.js",
       name: "@astrojs/react",
     });
-    const result = await container.renderToString(
-      Index as AstroComponentFactory,
-      {
+    const result = (
+      await container.renderToString(Index as AstroComponentFactory, {
         request: new Request(
           `https://www.franksmovielog.com/reviews/underseen/`,
         ),
-      },
-    );
+      })
+    ).replace(/\0/g, "");
 
     void expect(
       await prettier.format(result, { parser: "html" }),
