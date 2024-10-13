@@ -23,7 +23,7 @@ function getMastProcessor() {
   return remark().use(remarkGfm).use(smartypants);
 }
 
-export function descriptionToString(description: string) {
+function descriptionToString(description: string) {
   return getMastProcessor()
     .use(emToQuotes)
     .use(strip)

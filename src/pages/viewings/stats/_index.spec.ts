@@ -11,7 +11,9 @@ import Index from "./index.astro";
 describe("/viewings/stats/", () => {
   it("matches snapshot", { timeout: 10_000 }, async ({ expect }) => {
     const renderers = await loadRenderers([reactContainerRenderer()]);
-    const container = await AstroContainer.create({ renderers });
+    const container = await AstroContainer.create({
+      renderers,
+    });
     const result = await container.renderToString(
       Index as AstroComponentFactory,
       {
@@ -19,8 +21,12 @@ describe("/viewings/stats/", () => {
       },
     );
 
+    const cleanResult = result.replaceAll("\0", "");
+
     void expect(
-      await prettier.format(result, { parser: "html" }),
+      await prettier.format(cleanResult, {
+        parser: "html",
+      }),
     ).toMatchFileSnapshot(`__snapshots__/index.html`);
   });
 });

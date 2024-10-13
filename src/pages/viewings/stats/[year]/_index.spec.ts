@@ -25,8 +25,10 @@ describe("/viewings/stats/:year", () => {
         },
       );
 
+      const cleanResult = result.replaceAll("\0", "");
+
       void expect(
-        await prettier.format(result, { parser: "html" }),
+        await prettier.format(cleanResult, { parser: "html" }),
       ).toMatchFileSnapshot(`__snapshots__/${year}.html`);
     },
   );

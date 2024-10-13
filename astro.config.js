@@ -44,9 +44,11 @@ function pagefind() {
           for (const e of createErrors) logger.error(e);
           return;
         }
+
         const { errors: addErrors, page_count } = await index.addDirectory({
           path: outDir,
         });
+
         if (addErrors.length > 0) {
           logger.error("Pagefind failed to index files");
           for (const e of addErrors) logger.error(e);
@@ -54,9 +56,11 @@ function pagefind() {
         } else {
           logger.info(`Pagefind indexed ${page_count} pages`);
         }
+
         const { errors: writeErrors, outputPath } = await index.writeFiles({
           outputPath: path.join(outDir, "pagefind"),
         });
+
         if (writeErrors.length > 0) {
           logger.error("Pagefind failed to write index");
           for (const e of writeErrors) logger.error(e);
