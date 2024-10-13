@@ -111,15 +111,13 @@ function ReviewsListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
     <ListItem>
       <ListItemPoster imageProps={value.posterImageProps} />
-      <div className="flex grow flex-col gap-2 tablet:w-full desktop:pr-4">
+      <div className="flex grow flex-col gap-y-2 tablet:w-full desktop:pr-4">
         <ListItemTitle
           slug={value.slug}
           title={value.title}
           year={value.year}
         />
-        <div className="mb-1 py-px">
-          <Grade className="-mt-1" height={18} value={value.grade} />
-        </div>
+        <Grade className="mb-1" height={18} value={value.grade} />
         <ListItemGenres values={value.genres} />
       </div>
     </ListItem>
