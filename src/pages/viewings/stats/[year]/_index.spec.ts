@@ -15,17 +15,20 @@ describe("/viewings/stats/:year", () => {
     async (year, { expect }) => {
       const renderers = await loadRenderers([reactContainerRenderer()]);
       const container = await AstroContainer.create({ renderers });
-      const result = (
-        await container.renderToString(YearStats as AstroComponentFactory, {
+      const result = await container.renderToString(
+        YearStats as AstroComponentFactory,
+        {
           props: { year: year },
           request: new Request(
             `https://www.franksmovielog.com/viewings/stats/${year}/`,
           ),
-        })
-      ).replace(/\0/g, "");
+        },
+      );
+
+      const cleanResult = result.replaceAll("\0", "");
 
       void expect(
-        await prettier.format(result, { parser: "html" }),
+        await prettier.format(cleanResult, { parser: "html" }),
       ).toMatchFileSnapshot(`__snapshots__/${year}.html`);
     },
   );

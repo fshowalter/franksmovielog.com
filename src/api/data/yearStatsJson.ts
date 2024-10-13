@@ -3,7 +3,7 @@ import { z } from "zod";
 
 import { DistributionSchema } from "./DistributionSchema";
 import { MostWatchedPersonSchema } from "./MostWatchedPersonSchema";
-import { MostWatchedTitleSchema } from "./mostWatchedTitleSchema";
+import { MostWatchedTitleSchema } from "./MostWatchedTitleSchema";
 import { getContentPath } from "./utils/getContentPath";
 
 const yearStatsJsonDirectory = getContentPath("data", "year-stats");

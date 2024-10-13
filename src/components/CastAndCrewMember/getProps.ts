@@ -6,7 +6,7 @@ import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
 
 import type { Props } from "./CastAndCrewMember";
 
-export function deck(value: Props["value"]) {
+function deck(value: Props["value"]) {
   const creditString = new Intl.ListFormat().format(value.creditedAs);
 
   const creditList =

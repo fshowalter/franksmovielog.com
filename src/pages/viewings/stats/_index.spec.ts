@@ -3,7 +3,6 @@ import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 import { getContainerRenderer as reactContainerRenderer } from "@astrojs/react";
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import { loadRenderers } from "astro:container";
-import fs from "node:fs";
 import * as prettier from "prettier";
 import { describe, it } from "vitest";
 
@@ -15,14 +14,17 @@ describe("/viewings/stats/", () => {
     const container = await AstroContainer.create({
       renderers,
     });
-    const result = (
-      await container.renderToString(Index as AstroComponentFactory, {
+    const result = await container.renderToString(
+      Index as AstroComponentFactory,
+      {
         request: new Request(`https://www.franksmovielog.com/viewings/stats/`),
-      })
-    ).replace(/\0/g, "");
+      },
+    );
+
+    const cleanResult = result.replaceAll("\0", "");
 
     void expect(
-      await prettier.format(result, {
+      await prettier.format(cleanResult, {
         parser: "html",
       }),
     ).toMatchFileSnapshot(`__snapshots__/index.html`);

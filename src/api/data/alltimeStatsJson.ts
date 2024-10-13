@@ -7,7 +7,7 @@ const alltimeStatsFile = getContentPath("data", "all-time-stats.json");
 
 import { DistributionSchema } from "./DistributionSchema";
 import { MostWatchedPersonSchema } from "./MostWatchedPersonSchema";
-import { MostWatchedTitleSchema } from "./mostWatchedTitleSchema";
+import { MostWatchedTitleSchema } from "./MostWatchedTitleSchema";
 
 const GradeDistributionSchema = DistributionSchema.extend({
   sortValue: z.number(),
