@@ -1,20 +1,15 @@
 import { useReducer } from "react";
 
 import type { BackdropImageProps } from "~/api/backdrops";
-import type { PosterImageProps } from "~/api/posters";
-import type { UnderseenGem } from "~/api/underseenGems";
+import type { ReviewListItemValue } from "~/components/ReviewListItem";
 
 import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
-import { Grade } from "~/components/Grade";
 import { GroupedList } from "~/components/GroupedList";
-import { ListItem } from "~/components/ListItem";
-import { ListItemGenres } from "~/components/ListItemGenres";
-import { ListItemPoster } from "~/components/ListItemPoster";
-import { ListItemTitle } from "~/components/ListItemTitle";
 import {
   ListWithFiltersLayout,
   SubNav,
 } from "~/components/ListWithFiltersLayout";
+import { ReviewListItem } from "~/components/ReviewListItem";
 
 import type { Sort } from "./Underseen.reducer";
 
@@ -30,20 +25,7 @@ export type Props = {
   values: ListItemValue[];
 };
 
-export type ListItemValue = {
-  posterImageProps: PosterImageProps;
-} & Pick<
-  UnderseenGem,
-  | "genres"
-  | "grade"
-  | "gradeValue"
-  | "imdbId"
-  | "releaseSequence"
-  | "slug"
-  | "sortTitle"
-  | "title"
-  | "year"
->;
+export type ListItemValue = {} & ReviewListItemValue;
 
 export function Underseen({
   backdropImageProps,
@@ -89,45 +71,20 @@ export function Underseen({
           totalCount={state.filteredValues.length}
           visibleCount={state.showCount}
         >
-          {(value) => (
-            <UnderseenGemsListItem key={value.imdbId} value={value} />
-          )}
+          {(value) => <ReviewListItem key={value.imdbId} value={value} />}
         </GroupedList>
       }
       mastGradient={false}
       subNav={
         <SubNav
           values={[
-            { href: "/reviews/", text: "all" },
-            { active: true, href: "/reviews/underseen/", text: "underseen" },
-            { href: "/reviews/overrated/", text: "overrated" },
+            { href: "/reviews/", text: "All" },
+            { active: true, href: "/reviews/underseen/", text: "Underseen" },
+            { href: "/reviews/overrated/", text: "Overrated" },
           ]}
         />
       }
       totalCount={state.filteredValues.length}
     />
-  );
-}
-
-function UnderseenGemsListItem({
-  value,
-}: {
-  value: ListItemValue;
-}): JSX.Element {
-  return (
-    <ListItem>
-      <ListItemPoster imageProps={value.posterImageProps} />
-      <div className="flex grow flex-col gap-2 tablet:w-full desktop:pr-4">
-        <ListItemTitle
-          slug={value.slug}
-          title={value.title}
-          year={value.year}
-        />
-        <div className="mb-1 py-px">
-          <Grade className="-mt-1" height={18} value={value.grade} />
-        </div>
-        <ListItemGenres values={value.genres} />
-      </div>
-    </ListItem>
   );
 }

@@ -142,18 +142,18 @@ type SubNavValue = {
 export function SubNav({ values }: { values: SubNavValue[] }) {
   return (
     <nav className="bg-footer">
-      <ul className="mx-auto flex justify-center text-nowrap px-container font-sans text-sm font-bold uppercase tracking-wider text-subtle">
+      <ul className="scrollbar-hidden mx-auto flex max-w-screen-max overflow-x-auto px-container font-sans text-sm font-medium uppercase tracking-wider desktop:justify-center">
         {values.map((value) => {
           return (
             <li
-              className={`w-full max-w-32 text-center ${value.active ? "text-inverse" : "text-inverse-subtle"}`}
+              className={`whitespace-nowrap text-center ${value.active ? "text-inverse" : "text-inverse-subtle"}`}
               key={value.href}
             >
               {value.active ? (
-                <div className="px-4 py-6">{value.text}</div>
+                <div className="p-4 desktop:py-4">{value.text}</div>
               ) : (
                 <a
-                  className="block px-4 py-6 hover:bg-default hover:text-default"
+                  className="block p-4 hover:bg-default hover:text-default"
                   href={value.href}
                 >
                   {value.text}
