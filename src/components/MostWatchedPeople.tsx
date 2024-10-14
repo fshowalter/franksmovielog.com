@@ -104,7 +104,7 @@ function MostWatchedPersonViewingListItem({
       className={`${value.slug ? "bg-default" : "bg-unreviewed"} relative mb-1 flex max-w-screen-max flex-row gap-x-4 py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6`}
     >
       <ListItemPoster imageProps={value.posterImageProps} />
-      <div className="flex grow flex-col gap-1">
+      <div className="flex grow flex-col gap-2">
         <ListItemTitle
           slug={value.slug}
           title={value.title}

@@ -1,20 +1,15 @@
 import { useReducer } from "react";
 
 import type { BackdropImageProps } from "~/api/backdrops";
-import type { PosterImageProps } from "~/api/posters";
-import type { Review } from "~/api/reviews";
+import type { ReviewListItemValue } from "~/components/ReviewListItem";
 
 import { Backdrop } from "~/components/Backdrop";
-import { Grade } from "~/components/Grade";
 import { GroupedList } from "~/components/GroupedList";
-import { ListItem } from "~/components/ListItem";
-import { ListItemGenres } from "~/components/ListItemGenres";
-import { ListItemPoster } from "~/components/ListItemPoster";
-import { ListItemTitle } from "~/components/ListItemTitle";
 import {
   ListWithFiltersLayout,
   SubNav,
 } from "~/components/ListWithFiltersLayout";
+import { ReviewListItem } from "~/components/ReviewListItem";
 
 import type { Sort } from "./Reviews.reducer";
 
@@ -22,22 +17,10 @@ import { Filters } from "./Filters";
 import { Actions, initState, reducer } from "./Reviews.reducer";
 
 export type ListItemValue = {
-  posterImageProps: PosterImageProps;
   reviewDate: string;
   reviewMonth: string;
   reviewYear: string;
-} & Pick<
-  Review,
-  | "genres"
-  | "grade"
-  | "gradeValue"
-  | "imdbId"
-  | "releaseSequence"
-  | "slug"
-  | "sortTitle"
-  | "title"
-  | "year"
->;
+} & ReviewListItemValue;
 
 export type Props = {
   backdropImageProps: BackdropImageProps;
@@ -90,7 +73,7 @@ export function Reviews({
           totalCount={state.filteredValues.length}
           visibleCount={state.showCount}
         >
-          {(value) => <ReviewsListItem key={value.imdbId} value={value} />}
+          {(value) => <ReviewListItem key={value.imdbId} value={value} />}
         </GroupedList>
       }
       subNav={
@@ -104,22 +87,5 @@ export function Reviews({
       }
       totalCount={state.filteredValues.length}
     />
-  );
-}
-
-function ReviewsListItem({ value }: { value: ListItemValue }): JSX.Element {
-  return (
-    <ListItem>
-      <ListItemPoster imageProps={value.posterImageProps} />
-      <div className="flex grow flex-col gap-y-2 tablet:w-full desktop:pr-4">
-        <ListItemTitle
-          slug={value.slug}
-          title={value.title}
-          year={value.year}
-        />
-        <Grade className="mb-1" height={18} value={value.grade} />
-        <ListItemGenres values={value.genres} />
-      </div>
-    </ListItem>
   );
 }
