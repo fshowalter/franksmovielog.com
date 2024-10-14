@@ -2,7 +2,7 @@ import type { OverratedDisappointmentsJson } from "./data/overratedDisappointmen
 
 import { allOverratedDisappointmentsJson } from "./data/overratedDisappointmentsJson";
 
-export type OverratedDisappointment = {} & OverratedDisappointmentsJson;
+type OverratedDisappointment = {} & OverratedDisappointmentsJson;
 
 type OverratedDisappointments = {
   distinctGenres: string[];
