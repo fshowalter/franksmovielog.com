@@ -2,7 +2,7 @@ import type { UnderseenGemsJson } from "./data/underseenGemsJson";
 
 import { allUnderseenGemsJson } from "./data/underseenGemsJson";
 
-export type UnderseenGem = {} & UnderseenGemsJson;
+type UnderseenGem = {} & UnderseenGemsJson;
 
 type UnderseenGems = {
   distinctGenres: string[];

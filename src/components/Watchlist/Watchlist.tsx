@@ -123,7 +123,7 @@ function WatchlistListItem({
   return (
     <li className="relative mb-1 flex max-w-screen-max flex-row items-center gap-x-4 bg-unreviewed px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6">
       <ListItemPoster imageProps={defaultPosterImageProps} />
-      <div className="flex flex-1 flex-col tablet:w-full">
+      <div className="flex flex-1 flex-col gap-y-1 tablet:w-full">
         <ListItemTitle title={value.title} year={value.year} />
         <WatchlistTitleSlug
           collectionNames={value.collectionNames}
