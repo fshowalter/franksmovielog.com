@@ -1,12 +1,12 @@
 {
   "year": "2024",
-  "newTitleCount": 66,
-  "viewingCount": 91,
-  "titleCount": 89,
+  "newTitleCount": 70,
+  "viewingCount": 96,
+  "titleCount": 94,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 44
+      "count": 48
     },
     {
       "name": "4k UHD Blu-ray",
@@ -14,7 +14,7 @@
     },
     {
       "name": "iTunes",
-      "count": 6
+      "count": 7
     },
     {
       "name": "DVD",
@@ -52,11 +52,11 @@
     },
     {
       "name": "1970s",
-      "count": 16
+      "count": 18
     },
     {
       "name": "1980s",
-      "count": 19
+      "count": 22
     },
     {
       "name": "1990s",
@@ -252,6 +252,31 @@
       ]
     },
     {
+      "name": "Larry Cohen",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1563,
+          "date": "2024-01-21",
+          "slug": null,
+          "title": "It's Alive",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1974"
+        },
+        {
+          "sequence": 1646,
+          "date": "2024-10-10",
+          "slug": null,
+          "title": "It Lives Again",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1978"
+        }
+      ]
+    },
+    {
       "name": "John Ford",
       "count": 2,
       "slug": "john-ford",
@@ -277,6 +302,31 @@
       ]
     },
     {
+      "name": "Lucio Fulci",
+      "count": 2,
+      "slug": "lucio-fulci",
+      "viewings": [
+        {
+          "sequence": 1581,
+          "date": "2024-04-10",
+          "slug": "city-of-the-living-dead-1980",
+          "title": "City of the Living Dead",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1980"
+        },
+        {
+          "sequence": 1649,
+          "date": "2024-10-12",
+          "slug": null,
+          "title": "Conquest",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1983"
+        }
+      ]
+    },
+    {
       "name": "Corey Yuen",
       "count": 2,
       "slug": null,
@@ -298,56 +348,6 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1986"
-        }
-      ]
-    },
-    {
-      "name": "Adam McKay",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1598,
-          "date": "2024-06-15",
-          "slug": null,
-          "title": "Anchorman 2: The Legend Continues",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "2013"
-        },
-        {
-          "sequence": 1636,
-          "date": "2024-09-24",
-          "slug": null,
-          "title": "Talladega Nights: The Ballad of Ricky Bobby",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "2006"
-        }
-      ]
-    },
-    {
-      "name": "Shawn Levy",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1615,
-          "date": "2024-07-25",
-          "slug": null,
-          "title": "Deadpool & Wolverine",
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2024"
-        },
-        {
-          "sequence": 1634,
-          "date": "2024-08-26",
-          "slug": null,
-          "title": "Deadpool & Wolverine",
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2024"
         }
       ]
     }
@@ -791,6 +791,56 @@
       ]
     },
     {
+      "name": "Larry Cohen",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1563,
+          "date": "2024-01-21",
+          "slug": null,
+          "title": "It's Alive",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1974"
+        },
+        {
+          "sequence": 1646,
+          "date": "2024-10-10",
+          "slug": null,
+          "title": "It Lives Again",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1978"
+        }
+      ]
+    },
+    {
+      "name": "Dick Randall",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1567,
+          "date": "2024-02-03",
+          "slug": null,
+          "title": "Pieces",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1982"
+        },
+        {
+          "sequence": 1647,
+          "date": "2024-10-11",
+          "slug": null,
+          "title": "The French Sex Murders",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1972"
+        }
+      ]
+    },
+    {
       "name": "Kuang Ni",
       "count": 2,
       "slug": null,
@@ -917,56 +967,6 @@
     },
     {
       "name": "Ryan Reynolds",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1615,
-          "date": "2024-07-25",
-          "slug": null,
-          "title": "Deadpool & Wolverine",
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2024"
-        },
-        {
-          "sequence": 1634,
-          "date": "2024-08-26",
-          "slug": null,
-          "title": "Deadpool & Wolverine",
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2024"
-        }
-      ]
-    },
-    {
-      "name": "Rhett Reese",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1615,
-          "date": "2024-07-25",
-          "slug": null,
-          "title": "Deadpool & Wolverine",
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2024"
-        },
-        {
-          "sequence": 1634,
-          "date": "2024-08-26",
-          "slug": null,
-          "title": "Deadpool & Wolverine",
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2024"
-        }
-      ]
-    },
-    {
-      "name": "Paul Wernick",
       "count": 2,
       "slug": null,
       "viewings": [
