@@ -78,9 +78,10 @@ export function Underseen({
       subNav={
         <SubNav
           values={[
-            { href: "/reviews/", text: "all" },
-            { active: true, href: "/reviews/underseen/", text: "underseen" },
-            { href: "/reviews/overrated/", text: "overrated" },
+            { href: "/reviews/", text: "All" },
+            { active: true, href: "/reviews/underseen/", text: "Underseen" },
+            { href: "/reviews/overrated/", text: "Overrated" },
+            { href: "/reviews/best-of-the-best/", text: "Best of the Best" },
           ]}
         />
       }

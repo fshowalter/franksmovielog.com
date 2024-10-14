@@ -11,23 +11,23 @@ import {
 } from "~/components/ListWithFiltersLayout";
 import { ReviewListItem } from "~/components/ReviewListItem";
 
-import type { Sort } from "./Overrated.reducer";
+import type { Sort } from "./BestOfTheBest.reducer";
 
+import { Actions, initState, reducer } from "./BestOfTheBest.reducer";
 import { Filters } from "./Filters";
-import { Actions, initState, reducer } from "./Overrated.reducer";
 
 export type Props = {
   backdropImageProps: BackdropImageProps;
   deck: string;
-  distinctGenres: string[];
-  distinctReleaseYears: string[];
+  distinctGenres: readonly string[];
+  distinctReleaseYears: readonly string[];
   initialSort: Sort;
   values: ListItemValue[];
 };
 
 export type ListItemValue = {} & ReviewListItemValue;
 
-export function Overrated({
+export function BestOfTheBest({
   backdropImageProps,
   deck,
   distinctGenres,
@@ -51,7 +51,7 @@ export function Overrated({
           breadcrumb={<BreadcrumbLink href="/reviews/">Reviews</BreadcrumbLink>}
           deck={deck}
           imageProps={backdropImageProps}
-          title="Overrated Disappointments"
+          title="Best of the Best"
         />
       }
       filters={
@@ -80,8 +80,12 @@ export function Overrated({
           values={[
             { href: "/reviews/", text: "All" },
             { href: "/reviews/underseen/", text: "Underseen" },
-            { active: true, href: "/reviews/overrated/", text: "Overrated" },
-            { href: "/reviews/best-of-the-best/", text: "Best of the Best" },
+            { href: "/reviews/overrated/", text: "Overrated" },
+            {
+              active: true,
+              href: "/reviews/best-of-the-best/",
+              text: "Best of the Best",
+            },
           ]}
         />
       }

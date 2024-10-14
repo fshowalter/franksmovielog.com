@@ -79,9 +79,10 @@ export function Reviews({
       subNav={
         <SubNav
           values={[
-            { active: true, href: "/reviews/", text: "all" },
-            { href: "/reviews/underseen/", text: "underseen" },
-            { href: "/reviews/overrated/", text: "overrated" },
+            { active: true, href: "/reviews/", text: "All" },
+            { href: "/reviews/underseen/", text: "Underseen" },
+            { href: "/reviews/overrated/", text: "Overrated" },
+            { href: "/reviews/best-of-the-best/", text: "Best of the Best" },
           ]}
         />
       }

@@ -1,0 +1,11 @@
+---
+import { BestOfTheBest } from "~/components/BestOfTheBest/BestOfTheBest";
+import { getProps } from "~/components/BestOfTheBest/getProps";
+import Layout from "~/layouts/Layout.astro";
+
+const props = await getProps();
+---
+
+<Layout description={props.deck} title="Best of the Best">
+  <BestOfTheBest client:load {...props} />
+</Layout>
