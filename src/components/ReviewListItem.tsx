@@ -23,13 +23,13 @@ export function ReviewListItem({ value }: { value: ReviewListItemValue }) {
   return (
     <ListItem>
       <ListItemPoster imageProps={value.posterImageProps} />
-      <div className="flex grow flex-col gap-y-2 tablet:w-full desktop:pr-4">
+      <div className="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4">
         <ListItemTitle
           slug={value.slug}
           title={value.title}
           year={value.year}
         />
-        <Grade className="mb-1" height={18} value={value.grade} />
+        <Grade className="mb-1" height={16} value={value.grade} />
         <ListItemGenres values={value.genres} />
       </div>
     </ListItem>

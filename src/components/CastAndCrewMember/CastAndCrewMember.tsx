@@ -120,18 +120,14 @@ function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
           title={value.title}
           year={value.year}
         />
-        {value.grade && (
-          <Grade className="py-px" height={18} value={value.grade} />
-        )}
+        {value.grade && <Grade height={16} value={value.grade} />}
         {!value.grade && (
-          <>
-            <WatchlistTitleSlug
-              collectionNames={value.collectionNames}
-              directorNames={value.watchlistDirectorNames}
-              performerNames={value.watchlistPerformerNames}
-              writerNames={value.watchlistWriterNames}
-            />
-          </>
+          <WatchlistTitleSlug
+            collectionNames={value.collectionNames}
+            directorNames={value.watchlistDirectorNames}
+            performerNames={value.watchlistPerformerNames}
+            writerNames={value.watchlistWriterNames}
+          />
         )}
       </div>
     </ListItem>

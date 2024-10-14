@@ -108,17 +108,15 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
       itemsCenter={true}
     >
       <ListItemPoster imageProps={value.posterImageProps} />
-      <div className="grow tablet:w-full">
-        <div>
-          <ListItemTitle
-            slug={value.slug}
-            title={value.title}
-            year={value.year}
-          />
-          {value.grade && (
-            <Grade className="mt-1 py-px" height={18} value={value.grade} />
-          )}
-        </div>
+      <div className="flex grow flex-col items-start tablet:w-full">
+        <ListItemTitle
+          slug={value.slug}
+          title={value.title}
+          year={value.year}
+        />
+        {value.grade && (
+          <Grade className="mt-1" height={16} value={value.grade} />
+        )}
       </div>
     </ListItem>
   );
