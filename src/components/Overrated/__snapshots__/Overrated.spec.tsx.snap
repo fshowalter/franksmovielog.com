@@ -31784,35 +31784,35 @@ exports[`Overrated > renders 1`] = `
           class="bg-footer"
         >
           <ul
-            class="mx-auto flex justify-center text-nowrap px-container font-sans text-sm font-bold uppercase tracking-wider text-subtle"
+            class="scrollbar-hidden mx-auto flex max-w-screen-max overflow-x-auto px-container font-sans text-sm font-medium uppercase tracking-wider desktop:justify-center"
           >
             <li
-              class="w-full max-w-32 text-center text-inverse-subtle"
+              class="whitespace-nowrap text-center text-inverse-subtle"
             >
               <a
-                class="block px-4 py-6 hover:bg-default hover:text-default"
+                class="block p-4 hover:bg-default hover:text-default"
                 href="/reviews/"
               >
-                all
+                All
               </a>
             </li>
             <li
-              class="w-full max-w-32 text-center text-inverse-subtle"
+              class="whitespace-nowrap text-center text-inverse-subtle"
             >
               <a
-                class="block px-4 py-6 hover:bg-default hover:text-default"
+                class="block p-4 hover:bg-default hover:text-default"
                 href="/reviews/underseen/"
               >
-                underseen
+                Underseen
               </a>
             </li>
             <li
-              class="w-full max-w-32 text-center text-inverse"
+              class="whitespace-nowrap text-center text-inverse"
             >
               <div
-                class="px-4 py-6"
+                class="p-4 desktop:py-4"
               >
-                overrated
+                Overrated
               </div>
             </li>
           </ul>

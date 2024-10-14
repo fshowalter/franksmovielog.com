@@ -78,9 +78,9 @@ export function Overrated({
       subNav={
         <SubNav
           values={[
-            { href: "/reviews/", text: "all" },
-            { href: "/reviews/underseen/", text: "underseen" },
-            { active: true, href: "/reviews/overrated/", text: "overrated" },
+            { href: "/reviews/", text: "All" },
+            { href: "/reviews/underseen/", text: "Underseen" },
+            { active: true, href: "/reviews/overrated/", text: "Overrated" },
           ]}
         />
       }
