@@ -38,13 +38,13 @@ function sortValues(values: ListItemValue[], sortOrder: Sort) {
 
 function groupForValue(value: ListItemValue, sortValue: Sort): string {
   switch (sortValue) {
-    case "release-date-asc":
-    case "release-date-desc": {
-      return value.year;
-    }
     case "grade-asc":
     case "grade-desc": {
       return value.grade ?? "Unrated";
+    }
+    case "release-date-asc":
+    case "release-date-desc": {
+      return value.year;
     }
     case "title": {
       const letter = value.sortTitle.slice(0, 1);

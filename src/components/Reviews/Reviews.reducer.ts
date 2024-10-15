@@ -40,6 +40,10 @@ function sortValues(values: ListItemValue[], sortOrder: Sort) {
 
 function groupForValue(value: ListItemValue, sortValue: Sort): string {
   switch (sortValue) {
+    case "grade-asc":
+    case "grade-desc": {
+      return value.grade;
+    }
     case "release-date-asc":
     case "release-date-desc": {
       return value.year;
@@ -47,10 +51,6 @@ function groupForValue(value: ListItemValue, sortValue: Sort): string {
     case "review-date-asc":
     case "review-date-desc": {
       return `${value.reviewMonth} ${value.reviewYear}`;
-    }
-    case "grade-asc":
-    case "grade-desc": {
-      return value.grade;
     }
     case "title-asc":
     case "title-desc": {
