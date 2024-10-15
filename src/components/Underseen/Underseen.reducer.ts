@@ -36,13 +36,13 @@ function sortValues(values: ListItemValue[], sortOrder: Sort) {
 
 function groupForValue(value: ListItemValue, sortValue: Sort): string {
   switch (sortValue) {
-    case "release-date-asc":
-    case "release-date-desc": {
-      return value.year.toString();
-    }
     case "grade-asc":
     case "grade-desc": {
       return value.grade;
+    }
+    case "release-date-asc":
+    case "release-date-desc": {
+      return value.year.toString();
     }
     case "title-asc":
     case "title-desc": {
