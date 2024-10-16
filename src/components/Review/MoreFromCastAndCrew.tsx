@@ -22,7 +22,7 @@ export function MoreFromCastAndCrew({ values }: Props) {
     <MoreReviews key={value.slug} values={value.titles}>
       <SubHeading as="h2">
         {leadTextForCreditKind(value.creditKind)}{" "}
-        <a className="text-accent" href={`/cast-and-crew/${value.slug}`}>
+        <a className="text-accent" href={`/cast-and-crew/${value.slug}/`}>
           {value.name}
         </a>
       </SubHeading>
