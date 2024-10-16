@@ -6,6 +6,10 @@ import Layout from "~/layouts/Layout.astro";
 const props = await getProps();
 ---
 
-<Layout description={props.deck} title="Overrated Disappointments">
+<Layout
+  canonical="/reviews/overrated/"
+  description={props.deck}
+  title="Overrated Disappointments"
+>
   <Overrated client:load {...props} />
 </Layout>

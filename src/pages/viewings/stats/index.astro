@@ -6,6 +6,10 @@ import Layout from "~/layouts/Layout.astro";
 const props = await getProps();
 ---
 
-<Layout description={props.deck} title="All-Time Stats">
+<Layout
+  canonical="/viewings/stats/"
+  description={props.deck}
+  title="All-Time Stats"
+>
   <AlltimeStats {...props} />
 </Layout>

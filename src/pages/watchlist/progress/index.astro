@@ -6,6 +6,10 @@ import Layout from "~/layouts/Layout.astro";
 const props = await getProps();
 ---
 
-<Layout description={props.deck} title="Watchlist Progress">
+<Layout
+  canonical="/watchlist/progress/"
+  description={props.deck}
+  title="Watchlist Progress"
+>
   <WatchlistProgress {...props} />
 </Layout>

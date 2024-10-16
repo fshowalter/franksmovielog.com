@@ -4,6 +4,7 @@ import "@pagefind/default-ui/css/ui.css";
 
 type Props = {
   article?: boolean;
+  canonical: string | undefined;
   description: string;
   noOpenGraph?: boolean;
   title: string;
@@ -12,11 +13,11 @@ type Props = {
 const siteMeta = {
   author: "Frank Showalter",
   title: "Frank's Movie Log",
-  url: "https://www.franksmovielog.com",
 };
 
 const {
   article = false,
+  canonical,
   description,
   noOpenGraph = false,
   title,
@@ -27,7 +28,7 @@ pageTitle = title.startsWith(siteMeta.title)
   ? title
   : `${title} | ${siteMeta.title}`;
 
-const pathname = new URL(Astro.request.url).pathname;
+const canonicalUrl = `${Astro.site?.toString().slice(0, -1)}${canonical}`;
 ---
 
 <!doctype html>
@@ -35,6 +36,7 @@ const pathname = new URL(Astro.request.url).pathname;
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width" name="viewport" />
+    {canonical && <link href={canonicalUrl} rel="canonical" />}
     <link href="/favicon.ico" rel="icon" sizes="48x48" />
     <link href="/favicon.svg" rel="icon" sizes="any" type="image/svg+xml" />
     <link href="/apple-touch-icon.png" rel="apple-touch-icon" />
@@ -44,8 +46,8 @@ const pathname = new URL(Astro.request.url).pathname;
     {
       !noOpenGraph && (
         <>
-          <meta content={`${siteMeta.url}${pathname}og.jpg`} name="og:image" />
-          <meta content={`${siteMeta.url}${pathname}`} property="og:url" />
+          <meta content={`${canonicalUrl}og.jpg`} name="og:image" />
+          <meta content={`${canonicalUrl}`} property="og:url" />
           <meta content={title} property="og:title" />
           <meta content={description} property="og:description" />
         </>
