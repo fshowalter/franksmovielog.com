@@ -13,6 +13,11 @@ const props = await getProps({
 });
 ---
 
-<Layout description={deck} noOpenGraph title="404: Not Found">
+<Layout
+  canonical={undefined}
+  description={deck}
+  noOpenGraph
+  title="404: Not Found"
+>
   <Article {...props} />
 </Layout>

@@ -27,6 +27,10 @@ const { slug } = Astro.props;
 const props = await getProps(slug);
 ---
 
-<Layout description={props.deck} title={props.value.name}>
+<Layout
+  canonical={`/cast-and-crew/${slug}/`}
+  description={props.deck}
+  title={props.value.name}
+>
   <CastAndCrewMember client:load {...props} />
 </Layout>

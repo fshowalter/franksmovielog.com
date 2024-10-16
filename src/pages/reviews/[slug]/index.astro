@@ -32,6 +32,7 @@ const props = await getProps(slug);
 
 <Layout
   article
+  canonical={`/reviews/${slug}/`}
   description={props.value.excerptPlainText}
   title={`${props.value.title} (${props.value.year})`}
 >

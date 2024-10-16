@@ -6,6 +6,10 @@ import Layout from "~/layouts/Layout.astro";
 const props = await getProps();
 ---
 
-<Layout description={props.deck} title="Underseen Gems">
+<Layout
+  canonical="/reviews/underseen/"
+  description={props.deck}
+  title="Underseen Gems"
+>
   <Underseen client:load {...props} />
 </Layout>
