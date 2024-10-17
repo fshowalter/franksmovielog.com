@@ -14,7 +14,10 @@ describe("/how-i-grade/", () => {
     const container = await AstroContainer.create({ renderers });
     const result = await container.renderToString(
       Page as AstroComponentFactory,
-      { request: new Request(`https://www.franksmovielog.com/how-i-grade/`) },
+      {
+        partial: false,
+        request: new Request(`https://www.franksmovielog.com/how-i-grade/`),
+      },
     );
 
     void expect(

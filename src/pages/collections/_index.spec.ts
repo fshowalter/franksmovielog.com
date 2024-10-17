@@ -18,7 +18,10 @@ describe("/collections/", () => {
     });
     const result = await container.renderToString(
       Index as AstroComponentFactory,
-      { request: new Request(`https://www.franksmovielog.com/collections/`) },
+      {
+        partial: false,
+        request: new Request(`https://www.franksmovielog.com/collections/`),
+      },
     );
 
     void expect(
