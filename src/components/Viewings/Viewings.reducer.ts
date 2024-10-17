@@ -140,18 +140,9 @@ export function reducer(state: State, action: ActionType): State {
   let filteredValues;
 
   switch (action.type) {
-    case Actions.FILTER_TITLE: {
-      const regex = new RegExp(action.value, "i");
-      return updateFilter(state, "title", (value) => {
-        return regex.test(value.title);
-      });
-    }
-    case Actions.FILTER_RELEASE_YEAR: {
-      return updateFilter(state, "releaseYear", (value) => {
-        const releaseYear = value.year;
-        return (
-          releaseYear >= action.values[0] && releaseYear <= action.values[1]
-        );
+    case Actions.FILTER_GENRES: {
+      return updateFilter(state, "genres", (value) => {
+        return action.values.every((genre) => value.genres.includes(genre));
       });
     }
     case Actions.FILTER_MEDIUM: {
@@ -162,6 +153,20 @@ export function reducer(state: State, action: ActionType): State {
         })
       );
     }
+    case Actions.FILTER_RELEASE_YEAR: {
+      return updateFilter(state, "releaseYear", (value) => {
+        const releaseYear = value.year;
+        return (
+          releaseYear >= action.values[0] && releaseYear <= action.values[1]
+        );
+      });
+    }
+    case Actions.FILTER_TITLE: {
+      const regex = new RegExp(action.value, "i");
+      return updateFilter(state, "title", (value) => {
+        return regex.test(value.title);
+      });
+    }
     case Actions.FILTER_VENUE: {
       return (
         clearFilter(action.value, state, "venue") ??
@@ -170,11 +175,6 @@ export function reducer(state: State, action: ActionType): State {
         })
       );
     }
-    case Actions.FILTER_GENRES: {
-      return updateFilter(state, "genres", (value) => {
-        return action.values.every((genre) => value.genres.includes(genre));
-      });
-    }
     case Actions.FILTER_VIEWING_YEAR: {
       return updateFilter(state, "viewingYear", (value) => {
         return (
@@ -182,16 +182,6 @@ export function reducer(state: State, action: ActionType): State {
           value.viewingYear <= action.values[1]
         );
       });
-    }
-    case Actions.SORT: {
-      filteredValues = sortValues(state.filteredValues, action.value);
-      groupedValues = groupValues(filteredValues.slice(0, state.showCount));
-      return {
-        ...state,
-        filteredValues,
-        groupedValues,
-        sortValue: action.value,
-      };
     }
     case Actions.SHOW_MORE: {
       const showCount = state.showCount + SHOW_COUNT_DEFAULT;
@@ -202,6 +192,16 @@ export function reducer(state: State, action: ActionType): State {
         ...state,
         groupedValues,
         showCount,
+      };
+    }
+    case Actions.SORT: {
+      filteredValues = sortValues(state.filteredValues, action.value);
+      groupedValues = groupValues(filteredValues.slice(0, state.showCount));
+      return {
+        ...state,
+        filteredValues,
+        groupedValues,
+        sortValue: action.value,
       };
     }
 
