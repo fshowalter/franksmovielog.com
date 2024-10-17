@@ -28,7 +28,8 @@ const props = await getProps(slug);
 ---
 
 <Layout
-  canonical={`/cast-and-crew/${slug}/`}
+  article={false}
+  canonical={true}
   description={props.deck}
   title={props.value.name}
 >
