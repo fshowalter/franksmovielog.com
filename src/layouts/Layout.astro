@@ -21,7 +21,7 @@ pageTitle = title.startsWith(siteMeta.title)
   ? title
   : `${title} | ${siteMeta.title}`;
 
-const canonicalUrl = `${Astro.site?.toString().slice(0, -1)}${new URL(Astro.request.url).pathname}`;
+const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathname}`;
 ---
 
 <!doctype html>
