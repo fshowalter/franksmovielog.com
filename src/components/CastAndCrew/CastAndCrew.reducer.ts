@@ -119,12 +119,6 @@ export function reducer(state: State, action: ActionType): State {
   let filteredValues;
 
   switch (action.type) {
-    case Actions.FILTER_NAME: {
-      const regex = new RegExp(action.value, "i");
-      return updateFilter(state, "name", (value) => {
-        return regex.test(value.name);
-      });
-    }
     case Actions.FILTER_CREDIT_KIND: {
       return (
         clearFilter(action.value, state, "credits") ??
@@ -132,6 +126,12 @@ export function reducer(state: State, action: ActionType): State {
           return value.creditedAs.includes(action.value);
         })
       );
+    }
+    case Actions.FILTER_NAME: {
+      const regex = new RegExp(action.value, "i");
+      return updateFilter(state, "name", (value) => {
+        return regex.test(value.name);
+      });
     }
     case Actions.SHOW_MORE: {
       const showCount = state.showCount + SHOW_COUNT_DEFAULT;

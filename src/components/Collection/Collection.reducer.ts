@@ -125,12 +125,6 @@ export function reducer(state: State, action: ActionType): State {
   let filters;
 
   switch (action.type) {
-    case Actions.FILTER_TITLE: {
-      const regex = new RegExp(action.value, "i");
-      return updateFilter(state, "title", (value) => {
-        return regex.test(value.title);
-      });
-    }
     case Actions.FILTER_RELEASE_YEAR: {
       return updateFilter(state, "releaseYear", (value) => {
         const releaseYear = value.year;
@@ -139,18 +133,11 @@ export function reducer(state: State, action: ActionType): State {
         );
       });
     }
-    case Actions.SORT: {
-      filteredValues = sortValues(state.filteredValues, action.value);
-      groupedValues = groupValues(
-        filteredValues.slice(0, state.showCount),
-        action.value,
-      );
-      return {
-        ...state,
-        filteredValues,
-        groupedValues,
-        sortValue: action.value,
-      };
+    case Actions.FILTER_TITLE: {
+      const regex = new RegExp(action.value, "i");
+      return updateFilter(state, "title", (value) => {
+        return regex.test(value.title);
+      });
     }
     case Actions.SHOW_MORE: {
       const showCount = state.showCount + SHOW_COUNT_DEFAULT;
@@ -164,6 +151,19 @@ export function reducer(state: State, action: ActionType): State {
         ...state,
         groupedValues,
         showCount,
+      };
+    }
+    case Actions.SORT: {
+      filteredValues = sortValues(state.filteredValues, action.value);
+      groupedValues = groupValues(
+        filteredValues.slice(0, state.showCount),
+        action.value,
+      );
+      return {
+        ...state,
+        filteredValues,
+        groupedValues,
+        sortValue: action.value,
       };
     }
     case Actions.TOGGLE_REVIEWED: {
