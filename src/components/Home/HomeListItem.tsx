@@ -51,11 +51,11 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
         />
       </div>
       <div className="flex grow flex-col px-[8%] pb-8 desktop:pl-[8.5%] desktop:pr-[10%]">
-        <div className="mb-1 font-sans text-xxs font-light uppercase leading-4 tracking-wider text-subtle desktop:tracking-wide">
+        <div className="mb-3 font-sans text-xxs font-light uppercase leading-4 tracking-wider text-subtle desktop:tracking-wide">
           {formatDate(value.date)}
         </div>
         <a
-          className="mb-2 block text-2.5xl font-medium text-default before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+          className="mb-3 block text-2.5xl font-medium leading-7 text-default before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
           href={`/reviews/${value.slug}/`}
         >
           {value.title}&nbsp;
