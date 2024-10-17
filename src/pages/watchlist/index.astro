@@ -6,6 +6,11 @@ import Layout from "~/layouts/Layout.astro";
 const props = await getProps();
 ---
 
-<Layout canonical="/watchlist/" description={props.deck} title="Watchlist">
+<Layout
+  article={false}
+  canonical={true}
+  description={props.deck}
+  title="Watchlist"
+>
   <Watchlist client:load {...props} />
 </Layout>

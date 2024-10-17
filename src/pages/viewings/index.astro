@@ -6,6 +6,11 @@ import Layout from "~/layouts/Layout.astro";
 const props = await getProps();
 ---
 
-<Layout canonical="/viewings/" description={props.deck} title="Viewing Log">
+<Layout
+  article={false}
+  canonical={true}
+  description={props.deck}
+  title="Viewing Log"
+>
   <Viewings client:load {...props} />
 </Layout>

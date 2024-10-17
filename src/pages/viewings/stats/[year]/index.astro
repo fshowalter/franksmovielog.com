@@ -29,7 +29,8 @@ const props = await getProps(year);
 ---
 
 <Layout
-  canonical={`/viewings/stats/${year}/`}
+  article={false}
+  canonical={true}
   description={props.deck}
   title={`${props.year} Stats`}
 >

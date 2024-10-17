@@ -3,10 +3,9 @@ import "./base.css";
 import "@pagefind/default-ui/css/ui.css";
 
 type Props = {
-  article?: boolean;
-  canonical: string | undefined;
+  article: boolean;
+  canonical: boolean;
   description: string;
-  noOpenGraph?: boolean;
   title: string;
 };
 
@@ -15,20 +14,14 @@ const siteMeta = {
   title: "Frank's Movie Log",
 };
 
-const {
-  article = false,
-  canonical,
-  description,
-  noOpenGraph = false,
-  title,
-} = Astro.props;
+const { article, canonical, description, title } = Astro.props;
 let pageTitle;
 
 pageTitle = title.startsWith(siteMeta.title)
   ? title
   : `${title} | ${siteMeta.title}`;
 
-const canonicalUrl = `${Astro.site?.toString().slice(0, -1)}${canonical}`;
+const canonicalUrl = `${Astro.site?.toString().slice(0, -1)}${new URL(Astro.request.url).pathname}`;
 ---
 
 <!doctype html>
@@ -44,7 +37,7 @@ const canonicalUrl = `${Astro.site?.toString().slice(0, -1)}${canonical}`;
     <link href="/sitemap-index.xml" rel="sitemap" />
     <meta content={description} name="description" />
     {
-      !noOpenGraph && (
+      canonical && (
         <>
           <meta content={`${canonicalUrl}og.jpg`} name="og:image" />
           <meta content={`${canonicalUrl}`} property="og:url" />
@@ -53,7 +46,7 @@ const canonicalUrl = `${Astro.site?.toString().slice(0, -1)}${canonical}`;
         </>
       )
     }
-    {!noOpenGraph && article && <meta content="article" property="og:type" />}
+    {canonical && article && <meta content="article" property="og:type" />}
     <title>{pageTitle}</title>
   </head>
   <body>
