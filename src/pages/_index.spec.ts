@@ -15,6 +15,7 @@ describe("/", () => {
     const result = await container.renderToString(
       Page as AstroComponentFactory,
       {
+        partial: false,
         request: new Request(`https://www.franksmovielog.com/`),
       },
     );

@@ -18,6 +18,7 @@ describe("/viewings/stats/:year", () => {
       const result = await container.renderToString(
         YearStats as AstroComponentFactory,
         {
+          partial: false,
           props: { year: year },
           request: new Request(
             `https://www.franksmovielog.com/viewings/stats/${year}/`,

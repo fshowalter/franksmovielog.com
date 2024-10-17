@@ -32,6 +32,7 @@ describe("/cast-and-crew/:slug", () => {
       const result = await container.renderToString(
         Review as AstroComponentFactory,
         {
+          partial: false,
           props: { slug: member.slug },
           request: new Request(
             `https://www.franksmovielog.com/cast-and-crew/${member.slug}/`,

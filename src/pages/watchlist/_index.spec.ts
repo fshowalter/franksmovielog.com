@@ -19,6 +19,7 @@ describe("/watchlist/", () => {
     const result = await container.renderToString(
       Index as AstroComponentFactory,
       {
+        partial: false,
         request: new Request(`https://www.franksmovielog.com/watchlist/`),
       },
     );

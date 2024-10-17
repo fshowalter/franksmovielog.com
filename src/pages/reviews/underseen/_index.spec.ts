@@ -19,6 +19,7 @@ describe("/reviews/underseen/", () => {
     const result = await container.renderToString(
       Index as AstroComponentFactory,
       {
+        partial: false,
         request: new Request(
           `https://www.franksmovielog.com/reviews/underseen/`,
         ),

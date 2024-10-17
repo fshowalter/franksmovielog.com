@@ -18,7 +18,10 @@ describe("/cast-and-crew/", () => {
     });
     const result = await container.renderToString(
       Index as AstroComponentFactory,
-      { request: new Request(`https://www.franksmovielog.com/cast-and-crew/`) },
+      {
+        partial: false,
+        request: new Request(`https://www.franksmovielog.com/cast-and-crew/`),
+      },
     );
 
     void expect(
