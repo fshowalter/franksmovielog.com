@@ -51,11 +51,11 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
         />
       </div>
       <div className="flex grow flex-col px-[8%] pb-8 desktop:pl-[8.5%] desktop:pr-[10%]">
-        <div className="mb-3 font-sans text-xxs font-light uppercase leading-4 tracking-wider text-subtle desktop:tracking-wide">
+        <div className="mb-5 font-sans text-xxs font-light uppercase leading-4 tracking-wider text-subtle tablet:mb-3 desktop:tracking-wide">
           {formatDate(value.date)}
         </div>
         <a
-          className="mb-3 block text-2.5xl font-medium leading-7 text-default before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+          className="mb-2 block text-2.5xl font-medium leading-7 text-default before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 hover:text-accent hover:before:opacity-0 tablet:mb-3 tablet:before:inset-x-0 tablet:before:top-0"
           href={`/reviews/${value.slug}/`}
         >
           {value.title}&nbsp;
@@ -63,7 +63,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
             {value.year}
           </span>
         </a>
-        <Grade className="mb-8" height={24} value={value.grade} />
+        <Grade className="mb-6 tablet:mb-8" height={24} value={value.grade} />
         <RenderedMarkdown
           className="mb-6 text-lg leading-normal tracking-prose text-muted"
           text={value.excerpt}
