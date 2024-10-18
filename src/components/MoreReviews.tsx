@@ -56,10 +56,10 @@ function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
       </div>
       <div className="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]">
         <a
-          className="mb-2 block text-xl font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
+          className="mb-3 block text-xl font-medium leading-6 text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video hover:text-accent"
           href={`/reviews/${value.slug}/`}
         >
-          {value.title}{" "}
+          {value.title}&nbsp;
           <span className="text-sm font-normal leading-none text-muted">
             {value.year}
           </span>
