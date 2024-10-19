@@ -51,7 +51,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
         />
       </div>
       <div className="flex grow flex-col px-[8%] pb-8 desktop:pl-[8.5%] desktop:pr-[10%]">
-        <div className="mb-5 font-sans text-xxs font-light uppercase leading-4 tracking-wider text-subtle tablet:mb-3 desktop:tracking-wide">
+        <div className="mb-3 font-sans text-xxs font-light uppercase leading-4 tracking-wider text-subtle desktop:tracking-wide">
           {formatDate(value.date)}
         </div>
         <a
