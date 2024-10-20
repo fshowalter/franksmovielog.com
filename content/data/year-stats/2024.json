@@ -1,12 +1,12 @@
 {
   "year": "2024",
-  "newTitleCount": 73,
-  "viewingCount": 99,
-  "titleCount": 97,
+  "newTitleCount": 74,
+  "viewingCount": 100,
+  "titleCount": 98,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 50
+      "count": 51
     },
     {
       "name": "4k UHD Blu-ray",
@@ -56,7 +56,7 @@
     },
     {
       "name": "1980s",
-      "count": 22
+      "count": 23
     },
     {
       "name": "1990s",
@@ -92,6 +92,40 @@
     }
   ],
   "mostWatchedDirectors": [
+    {
+      "name": "Lucio Fulci",
+      "count": 3,
+      "slug": "lucio-fulci",
+      "viewings": [
+        {
+          "sequence": 1581,
+          "date": "2024-04-10",
+          "slug": "city-of-the-living-dead-1980",
+          "title": "City of the Living Dead",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1980"
+        },
+        {
+          "sequence": 1649,
+          "date": "2024-10-12",
+          "slug": null,
+          "title": "Conquest",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1983"
+        },
+        {
+          "sequence": 1654,
+          "date": "2024-10-18",
+          "slug": "manhattan-baby-1982",
+          "title": "Manhattan Baby",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1982"
+        }
+      ]
+    },
     {
       "name": "Sergio Leone",
       "count": 3,
@@ -298,31 +332,6 @@
           "medium": "4k UHD Blu-ray",
           "venue": null,
           "year": "1962"
-        }
-      ]
-    },
-    {
-      "name": "Lucio Fulci",
-      "count": 2,
-      "slug": "lucio-fulci",
-      "viewings": [
-        {
-          "sequence": 1581,
-          "date": "2024-04-10",
-          "slug": "city-of-the-living-dead-1980",
-          "title": "City of the Living Dead",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1980"
-        },
-        {
-          "sequence": 1649,
-          "date": "2024-10-12",
-          "slug": null,
-          "title": "Conquest",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1983"
         }
       ]
     },
@@ -841,6 +850,31 @@
       ]
     },
     {
+      "name": "Dardano Sacchetti",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1581,
+          "date": "2024-04-10",
+          "slug": "city-of-the-living-dead-1980",
+          "title": "City of the Living Dead",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1980"
+        },
+        {
+          "sequence": 1654,
+          "date": "2024-10-18",
+          "slug": "manhattan-baby-1982",
+          "title": "Manhattan Baby",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1982"
+        }
+      ]
+    },
+    {
       "name": "Kuang Ni",
       "count": 2,
       "slug": null,
@@ -962,31 +996,6 @@
           "medium": "4k UHD Blu-ray",
           "venue": null,
           "year": "1966"
-        }
-      ]
-    },
-    {
-      "name": "Ryan Reynolds",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1615,
-          "date": "2024-07-25",
-          "slug": null,
-          "title": "Deadpool & Wolverine",
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2024"
-        },
-        {
-          "sequence": 1634,
-          "date": "2024-08-26",
-          "slug": null,
-          "title": "Deadpool & Wolverine",
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2024"
         }
       ]
     }

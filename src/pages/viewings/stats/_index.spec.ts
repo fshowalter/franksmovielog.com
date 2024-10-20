@@ -22,10 +22,8 @@ describe("/viewings/stats/", () => {
       },
     );
 
-    const cleanResult = result.replaceAll("\0", "");
-
     void expect(
-      await prettier.format(cleanResult, {
+      await prettier.format(result, {
         parser: "html",
       }),
     ).toMatchFileSnapshot(`__snapshots__/index.html`);

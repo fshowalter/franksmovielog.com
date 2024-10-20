@@ -1,8 +1,8 @@
 {
-  "viewingCount": 1653,
-  "titleCount": 1348,
-  "reviewCount": 722,
-  "watchlistTitlesReviewedCount": 398,
+  "viewingCount": 1654,
+  "titleCount": 1349,
+  "reviewCount": 723,
+  "watchlistTitlesReviewedCount": 399,
   "gradeDistribution": [
     {
       "name": "A+",
@@ -56,7 +56,7 @@
     },
     {
       "name": "D",
-      "count": 69,
+      "count": 70,
       "sortValue": 3
     },
     {
@@ -73,7 +73,7 @@
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 314
+      "count": 315
     },
     {
       "name": "Netflix",
@@ -139,7 +139,7 @@
     },
     {
       "name": "1980s",
-      "count": 270
+      "count": 271
     },
     {
       "name": "1990s",
@@ -688,7 +688,7 @@
     },
     {
       "name": "Lucio Fulci",
-      "count": 19,
+      "count": 20,
       "slug": "lucio-fulci",
       "viewings": [
         {
@@ -861,6 +861,15 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1983"
+        },
+        {
+          "sequence": 1654,
+          "date": "2024-10-18",
+          "slug": "manhattan-baby-1982",
+          "title": "Manhattan Baby",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1982"
         }
       ]
     },
@@ -6716,6 +6725,130 @@
       ]
     },
     {
+      "name": "Dardano Sacchetti",
+      "count": 13,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 175,
+          "date": "2012-05-04",
+          "slug": null,
+          "title": "The House by the Cemetery",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1981"
+        },
+        {
+          "sequence": 191,
+          "date": "2012-06-14",
+          "slug": "city-of-the-living-dead-1980",
+          "title": "City of the Living Dead",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1980"
+        },
+        {
+          "sequence": 229,
+          "date": "2012-10-20",
+          "slug": null,
+          "title": "A Bay of Blood",
+          "medium": "Netflix",
+          "venue": null,
+          "year": "1971"
+        },
+        {
+          "sequence": 503,
+          "date": "2015-06-23",
+          "slug": null,
+          "title": "The Beyond",
+          "medium": "35mm",
+          "venue": "Alamo Drafthouse Cinema - Winchester",
+          "year": "1981"
+        },
+        {
+          "sequence": 531,
+          "date": "2015-10-31",
+          "slug": null,
+          "title": "Demons",
+          "medium": "Shudder",
+          "venue": null,
+          "year": "1985"
+        },
+        {
+          "sequence": 532,
+          "date": "2015-11-05",
+          "slug": null,
+          "title": "The Beyond",
+          "medium": "35mm",
+          "venue": "AFI Silver",
+          "year": "1981"
+        },
+        {
+          "sequence": 609,
+          "date": "2017-10-11",
+          "slug": null,
+          "title": "Demons",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "1985"
+        },
+        {
+          "sequence": 789,
+          "date": "2019-10-19",
+          "slug": null,
+          "title": "Demons",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "1985"
+        },
+        {
+          "sequence": 1009,
+          "date": "2021-02-05",
+          "slug": "the-cat-o-nine-tails-1971",
+          "title": "The Cat o' Nine Tails",
+          "medium": "iTunes",
+          "venue": null,
+          "year": "1971"
+        },
+        {
+          "sequence": 1449,
+          "date": "2023-03-11",
+          "slug": "the-new-york-ripper-1982",
+          "title": "The New York Ripper",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1982"
+        },
+        {
+          "sequence": 1461,
+          "date": "2023-04-03",
+          "slug": "the-psychic-1977",
+          "title": "The Psychic",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1977"
+        },
+        {
+          "sequence": 1581,
+          "date": "2024-04-10",
+          "slug": "city-of-the-living-dead-1980",
+          "title": "City of the Living Dead",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1980"
+        },
+        {
+          "sequence": 1654,
+          "date": "2024-10-18",
+          "slug": "manhattan-baby-1982",
+          "title": "Manhattan Baby",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1982"
+        }
+      ]
+    },
+    {
       "name": "Lucio Fulci",
       "count": 13,
       "slug": null,
@@ -6951,121 +7084,6 @@
           "medium": "Watch TCM",
           "venue": null,
           "year": "1951"
-        }
-      ]
-    },
-    {
-      "name": "Dardano Sacchetti",
-      "count": 12,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 175,
-          "date": "2012-05-04",
-          "slug": null,
-          "title": "The House by the Cemetery",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1981"
-        },
-        {
-          "sequence": 191,
-          "date": "2012-06-14",
-          "slug": "city-of-the-living-dead-1980",
-          "title": "City of the Living Dead",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1980"
-        },
-        {
-          "sequence": 229,
-          "date": "2012-10-20",
-          "slug": null,
-          "title": "A Bay of Blood",
-          "medium": "Netflix",
-          "venue": null,
-          "year": "1971"
-        },
-        {
-          "sequence": 503,
-          "date": "2015-06-23",
-          "slug": null,
-          "title": "The Beyond",
-          "medium": "35mm",
-          "venue": "Alamo Drafthouse Cinema - Winchester",
-          "year": "1981"
-        },
-        {
-          "sequence": 531,
-          "date": "2015-10-31",
-          "slug": null,
-          "title": "Demons",
-          "medium": "Shudder",
-          "venue": null,
-          "year": "1985"
-        },
-        {
-          "sequence": 532,
-          "date": "2015-11-05",
-          "slug": null,
-          "title": "The Beyond",
-          "medium": "35mm",
-          "venue": "AFI Silver",
-          "year": "1981"
-        },
-        {
-          "sequence": 609,
-          "date": "2017-10-11",
-          "slug": null,
-          "title": "Demons",
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1985"
-        },
-        {
-          "sequence": 789,
-          "date": "2019-10-19",
-          "slug": null,
-          "title": "Demons",
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1985"
-        },
-        {
-          "sequence": 1009,
-          "date": "2021-02-05",
-          "slug": "the-cat-o-nine-tails-1971",
-          "title": "The Cat o' Nine Tails",
-          "medium": "iTunes",
-          "venue": null,
-          "year": "1971"
-        },
-        {
-          "sequence": 1449,
-          "date": "2023-03-11",
-          "slug": "the-new-york-ripper-1982",
-          "title": "The New York Ripper",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1982"
-        },
-        {
-          "sequence": 1461,
-          "date": "2023-04-03",
-          "slug": "the-psychic-1977",
-          "title": "The Psychic",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1977"
-        },
-        {
-          "sequence": 1581,
-          "date": "2024-04-10",
-          "slug": "city-of-the-living-dead-1980",
-          "title": "City of the Living Dead",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1980"
         }
       ]
     }
