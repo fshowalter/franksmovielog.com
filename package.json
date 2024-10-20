@@ -14,6 +14,7 @@
     "lint:fix": "eslint --fix .",
     "lint:spelling": "cspell . --no-progress --show-context --show-suggestions",
     "lint:spelling:fix": "rm -rf project-words.txt && echo \"# Project Words - DO NOT TOUCH - This is updated through CI\" >> project-words.txt && npm run -s lint:spelling -- --words-only --unique --no-exit-code --no-summary \"**\" | LC_ALL=en_US.UTF-8 sort --ignore-case >> project-words.txt",
+    "postinstall": "patch-package",
     "preview": "astro preview",
     "start": "astro dev",
     "sync": "./sync.js",
@@ -88,6 +89,5 @@
   "engines": {
     "node": "20.18.0",
     "npm": "10.9.0"
-  },
-  "postinstall": "patch-package"
+  }
 }
