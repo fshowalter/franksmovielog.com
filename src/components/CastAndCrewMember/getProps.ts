@@ -1,3 +1,6 @@
+import { ListItemAvatarImageConfig } from "src/components/ListItemAvatar";
+
+import { getAvatarImageProps } from "~/api/avatars";
 import { getBackdropImageProps } from "~/api/backdrops";
 import { castAndCrewMember } from "~/api/castAndCrew";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
@@ -33,6 +36,10 @@ export async function getProps(slug: string): Promise<Props> {
   );
 
   return {
+    avatarImageProps: await getAvatarImageProps(
+      member.slug,
+      ListItemAvatarImageConfig,
+    ),
     backdropImageProps: await getBackdropImageProps(
       member.slug,
       BackdropImageConfig,

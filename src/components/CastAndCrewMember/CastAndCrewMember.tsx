@@ -1,5 +1,6 @@
 import { useReducer } from "react";
 
+import type { AvatarImageProps } from "~/api/avatars";
 import type { BackdropImageProps } from "~/api/backdrops";
 import type { CastAndCrewMember } from "~/api/castAndCrew";
 import type { PosterImageProps } from "~/api/posters";
@@ -23,6 +24,7 @@ import {
 import { Filters } from "./Filters";
 
 export type Props = {
+  avatarImageProps: AvatarImageProps | undefined;
   backdropImageProps: BackdropImageProps;
   deck: string;
   distinctReleaseYears: readonly string[];
@@ -54,6 +56,7 @@ export type ListItemValue = {
 >;
 
 export function CastAndCrewMember({
+  avatarImageProps,
   backdropImageProps,
   deck,
   distinctReleaseYears,
@@ -82,6 +85,9 @@ export function CastAndCrewMember({
         />
       }
       data-pagefind-body
+      data-pagefind-meta={
+        avatarImageProps ? `image:${avatarImageProps.src}` : ""
+      }
       filters={
         <Filters
           creditedAs={value.creditedAs}

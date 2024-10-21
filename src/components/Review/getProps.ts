@@ -1,4 +1,9 @@
-import { getFixedWidthPosterImageProps } from "~/api/posters";
+import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
+
+import {
+  getFixedWidthPosterImageProps,
+  getFluidWidthPosterImageProps,
+} from "~/api/posters";
 import { allReviews, loadContent, loadExcerptHtml } from "~/api/reviews";
 import { getOpenGraphStillSrc, getStillImageProps } from "~/api/stills";
 import { MoreReviewsImageConfig } from "~/components/MoreReviews";
@@ -67,6 +72,10 @@ export async function getProps(slug: string): Promise<Props> {
     posterImageProps: await getFixedWidthPosterImageProps(
       slug,
       PosterImageConfig,
+    ),
+    searchPosterImageProps: await getFluidWidthPosterImageProps(
+      review.slug,
+      ListItemPosterImageConfig,
     ),
     seoImageSrc: await getOpenGraphStillSrc(slug),
     stillImageProps: await getStillImageProps(slug, StillImageConfig),
