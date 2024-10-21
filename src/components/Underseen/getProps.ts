@@ -1,5 +1,5 @@
 import { getBackdropImageProps } from "~/api/backdrops";
-import { getFixedWidthPosterImageProps } from "~/api/posters";
+import { getFluidWidthPosterImageProps } from "~/api/posters";
 import { allUnderseenGems } from "~/api/underseenGems";
 import { BackdropImageConfig } from "~/components/Backdrop";
 import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
@@ -22,7 +22,7 @@ export async function getProps(): Promise<Props> {
         grade: review.grade,
         gradeValue: review.gradeValue,
         imdbId: review.imdbId,
-        posterImageProps: await getFixedWidthPosterImageProps(
+        posterImageProps: await getFluidWidthPosterImageProps(
           review.slug,
           ListItemPosterImageConfig,
         ),

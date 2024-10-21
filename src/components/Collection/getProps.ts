@@ -1,3 +1,6 @@
+import { ListItemAvatarImageConfig } from "src/components/ListItemAvatar";
+
+import { getAvatarImageProps } from "~/api/avatars";
 import { getBackdropImageProps } from "~/api/backdrops";
 import { collectionDetails } from "~/api/collections";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
@@ -14,6 +17,10 @@ export async function getProps(slug: string): Promise<Props> {
   );
 
   return {
+    avatarImageProps: await getAvatarImageProps(
+      collection.slug,
+      ListItemAvatarImageConfig,
+    ),
     backdropImageProps: await getBackdropImageProps(
       collection.slug,
       BackdropImageConfig,

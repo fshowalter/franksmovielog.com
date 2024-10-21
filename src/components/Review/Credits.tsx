@@ -51,7 +51,6 @@ export function Credits({
           <div className="block">
             <Poster
               className="h-auto"
-              data-pagefind-meta="image[src], image_alt[alt]"
               decoding="async"
               height={PosterImageConfig.height}
               imageProps={posterImageProps}

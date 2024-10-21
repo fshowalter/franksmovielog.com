@@ -17,10 +17,7 @@ import { linkReviewedTitles } from "./utils/linkReviewedTitles";
 import { getHtml } from "./utils/markdown/getHtml";
 import { removeFootnotes } from "./utils/markdown/removeFootnotes";
 import { rootAsSpan } from "./utils/markdown/rootAsSpan";
-import {
-  EXCERPT_SEPARATOR,
-  trimToExcerpt,
-} from "./utils/markdown/trimToExcerpt";
+import { trimToExcerpt } from "./utils/markdown/trimToExcerpt";
 
 let cachedViewingsMarkdown: MarkdownViewing[];
 let cachedMarkdownReviews: MarkdownReview[];
@@ -95,15 +92,11 @@ export async function loadExcerptHtml<T extends { slug: string }>(
     .processSync(rawContent)
     .toString();
 
-  const hasExcerptBreak = rawContent.includes(EXCERPT_SEPARATOR);
-
-  if (hasExcerptBreak) {
-    excerptHtml = excerptHtml.replace(/\n+$/, "");
-    excerptHtml = excerptHtml.replace(
-      /<\/p>$/,
-      ` <a class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline" href="/reviews/${review.slug}/">Continue reading...</a></p>`,
-    );
-  }
+  excerptHtml = excerptHtml.replace(/\n+$/, "");
+  excerptHtml = excerptHtml.replace(
+    /<\/p>$/,
+    ` <a class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline" href="/reviews/${review.slug}/">Continue reading...</a></p>`,
+  );
 
   return {
     ...review,

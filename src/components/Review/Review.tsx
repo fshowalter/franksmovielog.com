@@ -30,6 +30,7 @@ export type Props = {
   moreInCollections: React.ComponentProps<typeof MoreInCollections>["values"];
   moreReviews: React.ComponentProps<typeof MoreReviews>["values"];
   posterImageProps: PosterImageProps;
+  searchPosterImageProps: PosterImageProps;
   seoImageSrc: string;
   stillImageProps: StillImageProps;
   value: Review & ReviewContent;
@@ -40,12 +41,18 @@ export function Review({
   moreInCollections,
   moreReviews,
   posterImageProps,
+  searchPosterImageProps,
   seoImageSrc,
   stillImageProps,
   value,
 }: Props): JSX.Element {
   return (
-    <Layout className="flex flex-col" data-pagefind-body hasBackdrop={false}>
+    <Layout
+      className="flex flex-col"
+      data-pagefind-body
+      data-pagefind-meta={`image:${searchPosterImageProps.src}`}
+      hasBackdrop={false}
+    >
       <header className="mb-12 flex flex-col items-center px-[8%] pt-10">
         <h1
           className="text-center text-4xl desktop:text-7xl"

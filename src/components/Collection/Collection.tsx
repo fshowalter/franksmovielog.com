@@ -1,5 +1,6 @@
 import { useReducer } from "react";
 
+import type { AvatarImageProps } from "~/api/avatars";
 import type { BackdropImageProps } from "~/api/backdrops";
 import type { Collection, CollectionWithDetails } from "~/api/collections";
 import type { PosterImageProps } from "~/api/posters";
@@ -30,6 +31,7 @@ export type ListItemValue = {
 >;
 
 export type Props = {
+  avatarImageProps: AvatarImageProps | undefined;
   backdropImageProps: BackdropImageProps;
   distinctReleaseYears: readonly string[];
   initialSort: Sort;
@@ -41,6 +43,7 @@ export type Props = {
 };
 
 export function Collection({
+  avatarImageProps,
   backdropImageProps,
   distinctReleaseYears,
   initialSort,
@@ -74,6 +77,9 @@ export function Collection({
         />
       }
       data-pagefind-body
+      data-pagefind-meta={
+        avatarImageProps ? `image:${avatarImageProps.src}` : ""
+      }
       filters={
         <Filters
           dispatch={dispatch}
