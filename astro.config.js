@@ -7,6 +7,10 @@ import { fileURLToPath } from "node:url";
 import { createIndex } from "pagefind";
 import sirv from "sirv";
 
+const ReactCompilerConfig = {
+  target: "18",
+};
+
 function contentHmr() {
   return {
     enforce: "post",
@@ -122,6 +126,13 @@ export default defineConfig({
     optimizeDeps: {
       exclude: ["fsevents"],
     },
-    plugins: [contentHmr()],
+    plugins: [
+      contentHmr(),
+      react({
+        babel: {
+          plugins: [["babel-plugin-react-compiler", ReactCompilerConfig]],
+        },
+      }),
+    ],
   },
 });
