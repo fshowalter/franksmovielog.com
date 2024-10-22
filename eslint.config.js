@@ -3,6 +3,7 @@ import vitest from "@vitest/eslint-plugin";
 import eslintPluginAstro from "eslint-plugin-astro";
 import perfectionist from "eslint-plugin-perfectionist";
 import react from "eslint-plugin-react";
+import reactCompiler from "eslint-plugin-react-compiler";
 import tailwind from "eslint-plugin-tailwindcss";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import globals from "globals";
@@ -41,6 +42,9 @@ export default tsEslint.config(
         warnOnUnsupportedTypeScriptVersion: false,
       },
     },
+    plugins: {
+      "react-compiler": reactCompiler,
+    },
     rules: {
       "@typescript-eslint/array-type": "error",
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
@@ -56,6 +60,7 @@ export default tsEslint.config(
           ],
         },
       ],
+      "react-compiler/react-compiler": "error",
     },
   },
   {
