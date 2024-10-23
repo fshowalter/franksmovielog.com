@@ -5097,7 +5097,15 @@
         "venueNotes": null
       }
     ],
-    "castAndCrew": [],
+    "castAndCrew": [
+      {
+        "name": "Tom Atkins",
+        "slug": "tom-atkins",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
     "collections": [],
     "moreCastAndCrew": [],
     "moreCollections": [],
@@ -67088,6 +67096,13 @@
         "creditedAs": [
           "director",
           "writer"
+        ]
+      },
+      {
+        "name": "Tom Atkins",
+        "slug": "tom-atkins",
+        "creditedAs": [
+          "performer"
         ]
       }
     ],
