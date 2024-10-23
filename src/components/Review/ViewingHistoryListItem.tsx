@@ -76,7 +76,7 @@ function ViewingNotes({ value }: { value: Viewing["viewingNotes"] }) {
     return false;
   }
   return (
-    <div className="pb-6 text-sm font-light">
+    <div className="pb-6 text-sm font-light tablet:mx-8">
       <RenderedMarkdown className="leading-normal text-muted" text={value} />
     </div>
   );
