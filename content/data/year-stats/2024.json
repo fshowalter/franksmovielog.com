@@ -1,20 +1,20 @@
 {
   "year": "2024",
-  "newTitleCount": 79,
-  "viewingCount": 106,
-  "titleCount": 104,
+  "newTitleCount": 83,
+  "viewingCount": 111,
+  "titleCount": 108,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 57
+      "count": 58
     },
     {
       "name": "4k UHD Blu-ray",
-      "count": 18
+      "count": 21
     },
     {
       "name": "iTunes",
-      "count": 7
+      "count": 8
     },
     {
       "name": "DVD",
@@ -48,7 +48,7 @@
     },
     {
       "name": "1960s",
-      "count": 12
+      "count": 13
     },
     {
       "name": "1970s",
@@ -60,7 +60,7 @@
     },
     {
       "name": "1990s",
-      "count": 12
+      "count": 15
     },
     {
       "name": "2000s",
@@ -72,7 +72,7 @@
     },
     {
       "name": "2020s",
-      "count": 13
+      "count": 14
     }
   ],
   "mostWatchedTitles": [
@@ -82,6 +82,13 @@
       "year": "1985",
       "count": 2,
       "slug": "night-train-to-terror-1985"
+    },
+    {
+      "title": "Late Night with the Devil",
+      "imdbId": "tt14966898",
+      "year": "2023",
+      "count": 2,
+      "slug": null
     },
     {
       "title": "Deadpool & Wolverine",
@@ -336,27 +343,27 @@
       ]
     },
     {
-      "name": "Corey Yuen",
+      "name": "Cameron Cairnes",
       "count": 2,
       "slug": null,
       "viewings": [
         {
-          "sequence": 1584,
-          "date": "2024-04-24",
-          "slug": "ninja-in-the-dragons-den-1982",
-          "title": "Ninja in the Dragon's Den",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1982"
+          "sequence": 1578,
+          "date": "2024-03-25",
+          "slug": null,
+          "title": "Late Night with the Devil",
+          "medium": null,
+          "venue": "Prince Charles Cinema",
+          "year": "2023"
         },
         {
-          "sequence": 1604,
-          "date": "2024-06-20",
+          "sequence": 1665,
+          "date": "2024-10-26",
           "slug": null,
-          "title": "Righting Wrongs",
-          "medium": "Blu-ray",
+          "title": "Late Night with the Devil",
+          "medium": "iTunes",
           "venue": null,
-          "year": "1986"
+          "year": "2023"
         }
       ]
     }
@@ -859,6 +866,56 @@
       ]
     },
     {
+      "name": "Colin Cairnes",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1578,
+          "date": "2024-03-25",
+          "slug": null,
+          "title": "Late Night with the Devil",
+          "medium": null,
+          "venue": "Prince Charles Cinema",
+          "year": "2023"
+        },
+        {
+          "sequence": 1665,
+          "date": "2024-10-26",
+          "slug": null,
+          "title": "Late Night with the Devil",
+          "medium": "iTunes",
+          "venue": null,
+          "year": "2023"
+        }
+      ]
+    },
+    {
+      "name": "Cameron Cairnes",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1578,
+          "date": "2024-03-25",
+          "slug": null,
+          "title": "Late Night with the Devil",
+          "medium": null,
+          "venue": "Prince Charles Cinema",
+          "year": "2023"
+        },
+        {
+          "sequence": 1665,
+          "date": "2024-10-26",
+          "slug": null,
+          "title": "Late Night with the Devil",
+          "medium": "iTunes",
+          "venue": null,
+          "year": "2023"
+        }
+      ]
+    },
+    {
       "name": "Dardano Sacchetti",
       "count": 2,
       "slug": null,
@@ -955,56 +1012,6 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "2006"
-        }
-      ]
-    },
-    {
-      "name": "Adam McKay",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1598,
-          "date": "2024-06-15",
-          "slug": null,
-          "title": "Anchorman 2: The Legend Continues",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "2013"
-        },
-        {
-          "sequence": 1636,
-          "date": "2024-09-24",
-          "slug": null,
-          "title": "Talladega Nights: The Ballad of Ricky Bobby",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "2006"
-        }
-      ]
-    },
-    {
-      "name": "Luciano Vincenzoni",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1601,
-          "date": "2024-06-16",
-          "slug": null,
-          "title": "For a Few Dollars More",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1965"
-        },
-        {
-          "sequence": 1602,
-          "date": "2024-06-16",
-          "slug": null,
-          "title": "The Good, the Bad and the Ugly",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1966"
         }
       ]
     }
