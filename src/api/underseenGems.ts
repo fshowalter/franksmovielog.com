@@ -1,8 +1,8 @@
-import type { UnderseenGemsJson } from "./data/underseenGemsJson";
+import type { UnderseenJson } from "./data/underseenJson";
 
-import { allUnderseenGemsJson } from "./data/underseenGemsJson";
+import { allUnderseenJson } from "./data/underseenJson";
 
-type UnderseenGem = {} & UnderseenGemsJson;
+type UnderseenGem = {} & UnderseenJson;
 
 type UnderseenGems = {
   distinctGenres: string[];
@@ -11,7 +11,7 @@ type UnderseenGems = {
 };
 
 export async function allUnderseenGems(): Promise<UnderseenGems> {
-  const underseenGemsJson = await allUnderseenGemsJson();
+  const underseenGemsJson = await allUnderseenJson();
   const distinctReleaseYears = new Set<string>();
   const distinctGenres = new Set<string>();
 
