@@ -31656,18 +31656,27 @@ exports[`Overrated > renders 1`] = `
                   class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
                 >
                   <a
-                    href="/reviews/underseen/"
+                    href="/reviews/overrated/"
                   >
-                    Underseen Gems
+                    Overrated Disappointments
                   </a>
                 </li>
                 <li
                   class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
                 >
                   <a
-                    href="/reviews/overrated/"
+                    href="/reviews/underrated/"
                   >
-                    Overrated Disappointments
+                    Underrated Surprises
+                  </a>
+                </li>
+                <li
+                  class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
+                >
+                  <a
+                    href="/reviews/underseen/"
+                  >
+                    Underseen Gems
                   </a>
                 </li>
               </ol>
@@ -31790,7 +31799,7 @@ exports[`Overrated > renders 1`] = `
               class="whitespace-nowrap text-center text-inverse-subtle"
             >
               <a
-                class="block p-4 hover:bg-default hover:text-default tablet:py-8"
+                class="block p-6 hover:bg-default hover:text-default tablet:py-8"
                 href="/reviews/"
               >
                 All Reviews
@@ -31800,7 +31809,7 @@ exports[`Overrated > renders 1`] = `
               class="whitespace-nowrap text-center text-inverse"
             >
               <div
-                class="p-4 tablet:py-8"
+                class="p-6 tablet:py-8"
               >
                 Overrated
               </div>
@@ -31809,7 +31818,7 @@ exports[`Overrated > renders 1`] = `
               class="whitespace-nowrap text-center text-inverse-subtle"
             >
               <a
-                class="block p-4 hover:bg-default hover:text-default tablet:py-8"
+                class="block p-6 hover:bg-default hover:text-default tablet:py-8"
                 href="/reviews/underrated/"
               >
                 Underrated
@@ -31819,7 +31828,7 @@ exports[`Overrated > renders 1`] = `
               class="whitespace-nowrap text-center text-inverse-subtle"
             >
               <a
-                class="block p-4 hover:bg-default hover:text-default tablet:py-8"
+                class="block p-6 hover:bg-default hover:text-default tablet:py-8"
                 href="/reviews/underseen/"
               >
                 Underseen
@@ -37225,9 +37234,9 @@ exports[`Overrated > renders 1`] = `
                 >
                   <a
                     class="hover:text-inverse"
-                    href="/reviews/underseen/"
+                    href="/reviews/overrated/"
                   >
-                    Underseen Gems
+                    Overrated Disappointments
                   </a>
                 </li>
                 <li
@@ -37235,9 +37244,19 @@ exports[`Overrated > renders 1`] = `
                 >
                   <a
                     class="hover:text-inverse"
-                    href="/reviews/overrated/"
+                    href="/reviews/underrated/"
                   >
-                    Overrated Disappointments
+                    Underrated Surprises
+                  </a>
+                </li>
+                <li
+                  class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
+                >
+                  <a
+                    class="hover:text-inverse"
+                    href="/reviews/underseen/"
+                  >
+                    Underseen Gems
                   </a>
                 </li>
               </ol>
