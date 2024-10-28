@@ -183,18 +183,27 @@ exports[`Home > matches snapshot 1`] = `
                   class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
                 >
                   <a
-                    href="/reviews/underseen/"
+                    href="/reviews/overrated/"
                   >
-                    Underseen Gems
+                    Overrated Disappointments
                   </a>
                 </li>
                 <li
                   class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
                 >
                   <a
-                    href="/reviews/overrated/"
+                    href="/reviews/underrated/"
                   >
-                    Overrated Disappointments
+                    Underrated Surprises
+                  </a>
+                </li>
+                <li
+                  class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
+                >
+                  <a
+                    href="/reviews/underseen/"
+                  >
+                    Underseen Gems
                   </a>
                 </li>
               </ol>
@@ -1384,9 +1393,9 @@ exports[`Home > matches snapshot 1`] = `
                 >
                   <a
                     class="hover:text-inverse"
-                    href="/reviews/underseen/"
+                    href="/reviews/overrated/"
                   >
-                    Underseen Gems
+                    Overrated Disappointments
                   </a>
                 </li>
                 <li
@@ -1394,9 +1403,19 @@ exports[`Home > matches snapshot 1`] = `
                 >
                   <a
                     class="hover:text-inverse"
-                    href="/reviews/overrated/"
+                    href="/reviews/underrated/"
                   >
-                    Overrated Disappointments
+                    Underrated Surprises
+                  </a>
+                </li>
+                <li
+                  class="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
+                >
+                  <a
+                    class="hover:text-inverse"
+                    href="/reviews/underseen/"
+                  >
+                    Underseen Gems
                   </a>
                 </li>
               </ol>
