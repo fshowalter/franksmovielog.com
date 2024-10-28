@@ -42,7 +42,7 @@ export async function getProps(): Promise<Props> {
       "overrated",
       BackdropImageConfig,
     ),
-    deck: "One and two star movies with an above-average IMDb rating and vote count.",
+    deck: "One and two star movies with an above-average IMDb rating.",
     distinctGenres,
     distinctReleaseYears,
     initialSort: "release-date-desc",

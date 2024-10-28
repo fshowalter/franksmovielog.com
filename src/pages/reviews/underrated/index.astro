@@ -1,0 +1,16 @@
+---
+import { getProps } from "~/components/Underrated/getProps";
+import { Underrated } from "~/components/Underrated/Underrated";
+import Layout from "~/layouts/Layout.astro";
+
+const props = await getProps();
+---
+
+<Layout
+  article={false}
+  canonical={true}
+  description={props.deck}
+  title="Underrated Surprises"
+>
+  <Underrated client:load {...props} />
+</Layout>

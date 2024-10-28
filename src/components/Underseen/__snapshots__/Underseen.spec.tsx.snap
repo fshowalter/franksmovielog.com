@@ -15383,6 +15383,16 @@ exports[`Underseen > renders 1`] = `
               </a>
             </li>
             <li
+              class="whitespace-nowrap text-center text-inverse-subtle"
+            >
+              <a
+                class="block p-4 hover:bg-default hover:text-default tablet:py-8"
+                href="/reviews/underrated/"
+              >
+                Underrated
+              </a>
+            </li>
+            <li
               class="whitespace-nowrap text-center text-inverse"
             >
               <div

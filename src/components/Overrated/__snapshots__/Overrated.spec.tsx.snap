@@ -31776,7 +31776,7 @@ exports[`Overrated > renders 1`] = `
             <p
               class="mt-1 text-base desktop:my-4 desktop:text-xl [text-shadow:1px_1px_2px_black] "
             >
-              One and two star movies with an above-average IMDb rating and vote count.
+              One and two star movies with an above-average IMDb rating.
             </p>
           </div>
         </header>
@@ -31804,6 +31804,16 @@ exports[`Overrated > renders 1`] = `
               >
                 Overrated
               </div>
+            </li>
+            <li
+              class="whitespace-nowrap text-center text-inverse-subtle"
+            >
+              <a
+                class="block p-4 hover:bg-default hover:text-default tablet:py-8"
+                href="/reviews/underrated/"
+              >
+                Underrated
+              </a>
             </li>
             <li
               class="whitespace-nowrap text-center text-inverse-subtle"

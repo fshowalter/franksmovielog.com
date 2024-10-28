@@ -1,8 +1,8 @@
-import type { OverratedDisappointmentsJson } from "./data/overratedDisappointmentsJson";
+import type { OverratedJson } from "./data/overratedJson";
 
-import { allOverratedDisappointmentsJson } from "./data/overratedDisappointmentsJson";
+import { allOverratedJson } from "./data/overratedJson";
 
-type OverratedDisappointment = {} & OverratedDisappointmentsJson;
+type OverratedDisappointment = {} & OverratedJson;
 
 type OverratedDisappointments = {
   distinctGenres: string[];
@@ -11,7 +11,7 @@ type OverratedDisappointments = {
 };
 
 export async function allOverratedDisappointments(): Promise<OverratedDisappointments> {
-  const overratedJson = await allOverratedDisappointmentsJson();
+  const overratedJson = await allOverratedJson();
   const distinctReleaseYears = new Set<string>();
   const distinctGenres = new Set<string>();
 
