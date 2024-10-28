@@ -132,37 +132,3 @@ export function ListHeaderButton({
     </div>
   );
 }
-
-type SubNavValue = {
-  active?: boolean;
-  href: string;
-  text: string;
-};
-
-export function SubNav({ values }: { values: SubNavValue[] }) {
-  return (
-    <nav className="bg-footer">
-      <ul className="scrollbar-hidden mx-auto flex max-w-screen-max overflow-x-auto px-container font-sans text-sm font-medium uppercase tracking-wider desktop:justify-center">
-        {values.map((value) => {
-          return (
-            <li
-              className={`whitespace-nowrap text-center ${value.active ? "text-inverse" : "text-inverse-subtle"}`}
-              key={value.href}
-            >
-              {value.active ? (
-                <div className="p-4 desktop:py-4">{value.text}</div>
-              ) : (
-                <a
-                  className="block p-4 hover:bg-default hover:text-default"
-                  href={value.href}
-                >
-                  {value.text}
-                </a>
-              )}
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
-  );
-}

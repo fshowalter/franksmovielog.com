@@ -5,11 +5,9 @@ import type { ReviewListItemValue } from "~/components/ReviewListItem";
 
 import { Backdrop } from "~/components/Backdrop";
 import { GroupedList } from "~/components/GroupedList";
-import {
-  ListWithFiltersLayout,
-  SubNav,
-} from "~/components/ListWithFiltersLayout";
+import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 import { ReviewListItem } from "~/components/ReviewListItem";
+import { ReviewsSubNav } from "~/components/ReviewsSubNav";
 
 import type { Sort } from "./Reviews.reducer";
 
@@ -76,15 +74,7 @@ export function Reviews({
           {(value) => <ReviewListItem key={value.imdbId} value={value} />}
         </GroupedList>
       }
-      subNav={
-        <SubNav
-          values={[
-            { active: true, href: "/reviews/", text: "All" },
-            { href: "/reviews/underseen/", text: "Underseen" },
-            { href: "/reviews/overrated/", text: "Overrated" },
-          ]}
-        />
-      }
+      subNav={<ReviewsSubNav active="all" />}
       totalCount={state.filteredValues.length}
     />
   );

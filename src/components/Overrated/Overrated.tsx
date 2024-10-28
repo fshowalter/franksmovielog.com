@@ -5,11 +5,9 @@ import type { ReviewListItemValue } from "~/components/ReviewListItem";
 
 import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
 import { GroupedList } from "~/components/GroupedList";
-import {
-  ListWithFiltersLayout,
-  SubNav,
-} from "~/components/ListWithFiltersLayout";
+import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 import { ReviewListItem } from "~/components/ReviewListItem";
+import { ReviewsSubNav } from "~/components/ReviewsSubNav";
 
 import type { Sort } from "./Overrated.reducer";
 
@@ -75,15 +73,7 @@ export function Overrated({
         </GroupedList>
       }
       mastGradient={false}
-      subNav={
-        <SubNav
-          values={[
-            { href: "/reviews/", text: "All" },
-            { href: "/reviews/underseen/", text: "Underseen" },
-            { active: true, href: "/reviews/overrated/", text: "Overrated" },
-          ]}
-        />
-      }
+      subNav={<ReviewsSubNav active="overrated" />}
       totalCount={state.filteredValues.length}
     />
   );
