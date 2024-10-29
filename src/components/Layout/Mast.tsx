@@ -75,7 +75,7 @@ function SubMenu({ values }: { values: NavItem[] }): false | JSX.Element {
       {values.map((value) => {
         return (
           <li
-            className="mb-2 font-sans text-xs uppercase tracking-wide text-inverse-subtle"
+            className="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
             key={value.target}
           >
             <a href={value.target}>{value.text}</a>

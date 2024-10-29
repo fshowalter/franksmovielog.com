@@ -20,17 +20,17 @@ export const navItems: NavItem[] = [
       {
         subItems: [],
         target: "/reviews/overrated/",
-        text: "Overrated Disappointments",
+        text: "Overrated",
       },
       {
         subItems: [],
         target: "/reviews/underrated/",
-        text: "Underrated Surprises",
+        text: "Underrated",
       },
       {
         subItems: [],
         target: "/reviews/underseen/",
-        text: "Underseen Gems",
+        text: "Underseen",
       },
     ],
     target: "/reviews/",
