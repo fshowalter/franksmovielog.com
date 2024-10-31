@@ -266,13 +266,18 @@
   .rendered-markdown {
     a {
       text-decoration-line: underline;
-      text-underline-offset: 4px;
+      padding-right: 1px;
+      text-decoration-color: var(--fg-subtle);
+      transition: all 150ms ease-out;
     }
 
     a:hover {
-      color: var(--fg-inverse);
-      background-color: var(--bg-accent);
+      color: #000;
       text-decoration-color: var(--fg-inverse);
+      text-decoration-color: var(--bg-accent);
+      background-color: var(--bg-accent);
+      color: var(--fg-inverse);
+      transition: all 80ms ease-in;
     }
 
     sup a,
