@@ -1,8 +1,8 @@
 {
   "year": "2024",
-  "newTitleCount": 86,
-  "viewingCount": 114,
-  "titleCount": 111,
+  "newTitleCount": 87,
+  "viewingCount": 115,
+  "titleCount": 112,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -14,7 +14,7 @@
     },
     {
       "name": "iTunes",
-      "count": 8
+      "count": 9
     },
     {
       "name": "DVD",
@@ -68,7 +68,7 @@
     },
     {
       "name": "2010s",
-      "count": 5
+      "count": 6
     },
     {
       "name": "2020s",
@@ -941,6 +941,31 @@
       ]
     },
     {
+      "name": "Panos Cosmatos",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1582,
+          "date": "2024-04-13",
+          "slug": "mandy-2018",
+          "title": "Mandy",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "2018"
+        },
+        {
+          "sequence": 1669,
+          "date": "2024-10-31",
+          "slug": "beyond-the-black-rainbow-2010",
+          "title": "Beyond the Black Rainbow",
+          "medium": "iTunes",
+          "venue": null,
+          "year": "2010"
+        }
+      ]
+    },
+    {
       "name": "Kuang Ni",
       "count": 2,
       "slug": null,
@@ -987,31 +1012,6 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1972"
-        }
-      ]
-    },
-    {
-      "name": "Will Ferrell",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1598,
-          "date": "2024-06-15",
-          "slug": null,
-          "title": "Anchorman 2: The Legend Continues",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "2013"
-        },
-        {
-          "sequence": 1636,
-          "date": "2024-09-24",
-          "slug": null,
-          "title": "Talladega Nights: The Ballad of Ricky Bobby",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "2006"
         }
       ]
     }
