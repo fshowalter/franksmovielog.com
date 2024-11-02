@@ -12663,7 +12663,7 @@ exports[`Underrated > renders 1`] = `
               class="whitespace-nowrap text-center text-inverse-subtle"
             >
               <a
-                class="block p-6 hover:bg-default hover:text-default tablet:py-8"
+                class="block p-6 hover:bg-accent hover:text-inverse tablet:py-8"
                 href="/reviews/"
               >
                 All Reviews
@@ -12673,7 +12673,7 @@ exports[`Underrated > renders 1`] = `
               class="whitespace-nowrap text-center text-inverse-subtle"
             >
               <a
-                class="block p-6 hover:bg-default hover:text-default tablet:py-8"
+                class="block p-6 hover:bg-accent hover:text-inverse tablet:py-8"
                 href="/reviews/overrated/"
               >
                 Overrated
@@ -12683,7 +12683,7 @@ exports[`Underrated > renders 1`] = `
               class="whitespace-nowrap text-center text-inverse"
             >
               <div
-                class="p-6 tablet:py-8"
+                class="bg-default p-6 text-default tablet:py-8"
               >
                 Underrated
               </div>
@@ -12692,7 +12692,7 @@ exports[`Underrated > renders 1`] = `
               class="whitespace-nowrap text-center text-inverse-subtle"
             >
               <a
-                class="block p-6 hover:bg-default hover:text-default tablet:py-8"
+                class="block p-6 hover:bg-accent hover:text-inverse tablet:py-8"
                 href="/reviews/underseen/"
               >
                 Underseen
