@@ -21,10 +21,12 @@ export function ReviewsSubNav({ active }: { active: keyof typeof items }) {
               key={value.href}
             >
               {active === key ? (
-                <div className="p-6 tablet:py-8">{value.text}</div>
+                <div className="bg-default p-6 text-default tablet:py-8">
+                  {value.text}
+                </div>
               ) : (
                 <a
-                  className="block p-6 hover:bg-default hover:text-default tablet:py-8"
+                  className="block p-6 hover:bg-accent hover:text-inverse tablet:py-8"
                   href={value.href}
                 >
                   {value.text}

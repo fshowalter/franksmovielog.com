@@ -12,10 +12,12 @@ function AllTimeLink({
       className={`text-center ${"all" === currentYear ? "text-inverse" : "text-inverse-subtle"}`}
     >
       {"all" === currentYear ? (
-        <div className="whitespace-nowrap p-4 desktop:py-4">All-Time</div>
+        <div className="whitespace-nowrap bg-subtle p-4 text-default desktop:py-4">
+          All-Time
+        </div>
       ) : (
         <a
-          className="block whitespace-nowrap p-4 hover:bg-subtle hover:text-default desktop:py-4"
+          className="block whitespace-nowrap p-4 hover:bg-accent hover:text-inverse desktop:py-4"
           href={linkFunc("all")}
         >
           All-Time
@@ -39,10 +41,10 @@ function YearLink({
       className={`text-center ${year === currentYear ? "text-inverse" : "text-inverse-subtle"}`}
     >
       {year === currentYear ? (
-        <div className="p-4 desktop:py-4">{year}</div>
+        <div className="bg-subtle p-4 text-default desktop:py-4">{year}</div>
       ) : (
         <a
-          className="block p-4 hover:bg-subtle hover:text-default"
+          className="block p-4 hover:bg-accent hover:text-inverse"
           href={linkFunc(year)}
         >
           {year}
