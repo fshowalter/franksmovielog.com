@@ -1,12 +1,12 @@
 {
   "year": "2024",
-  "newTitleCount": 87,
-  "viewingCount": 115,
-  "titleCount": 112,
+  "newTitleCount": 88,
+  "viewingCount": 116,
+  "titleCount": 113,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 60
+      "count": 61
     },
     {
       "name": "4k UHD Blu-ray",
@@ -36,7 +36,7 @@
   "decadeDistribution": [
     {
       "name": "1930s",
-      "count": 6
+      "count": 7
     },
     {
       "name": "1940s",
@@ -508,6 +508,49 @@
       ]
     },
     {
+      "name": "Boris Karloff",
+      "count": 4,
+      "slug": "boris-karloff",
+      "viewings": [
+        {
+          "sequence": 1596,
+          "date": "2024-06-08",
+          "slug": "the-man-with-nine-lives-1940",
+          "title": "The Man with Nine Lives",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1940"
+        },
+        {
+          "sequence": 1619,
+          "date": "2024-08-04",
+          "slug": null,
+          "title": "Bride of Frankenstein",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1935"
+        },
+        {
+          "sequence": 1657,
+          "date": "2024-10-21",
+          "slug": "the-black-room-1935",
+          "title": "The Black Room",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1935"
+        },
+        {
+          "sequence": 1670,
+          "date": "2024-11-01",
+          "slug": "mr-wong-detective-1938",
+          "title": "Mr. Wong, Detective",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1938"
+        }
+      ]
+    },
+    {
       "name": "Clint Eastwood",
       "count": 4,
       "slug": null,
@@ -688,40 +731,6 @@
     },
     {
       "name": "Lao Shen",
-      "count": 3,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1585,
-          "date": "2024-04-24",
-          "slug": "human-lanterns-1982",
-          "title": "Human Lanterns",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1982"
-        },
-        {
-          "sequence": 1610,
-          "date": "2024-07-01",
-          "slug": null,
-          "title": "Abbot of Shaolin",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1979"
-        },
-        {
-          "sequence": 1627,
-          "date": "2024-08-17",
-          "slug": null,
-          "title": "Lightning Fists of Shaolin",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1984"
-        }
-      ]
-    },
-    {
-      "name": "Ching-Ho Wang",
       "count": 3,
       "slug": null,
       "viewings": [
