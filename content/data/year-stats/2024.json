@@ -1,12 +1,12 @@
 {
   "year": "2024",
-  "newTitleCount": 89,
-  "viewingCount": 118,
-  "titleCount": 115,
+  "newTitleCount": 90,
+  "viewingCount": 119,
+  "titleCount": 116,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 62
+      "count": 63
     },
     {
       "name": "4k UHD Blu-ray",
@@ -52,7 +52,7 @@
     },
     {
       "name": "1970s",
-      "count": 21
+      "count": 22
     },
     {
       "name": "1980s",
@@ -766,6 +766,40 @@
   ],
   "mostWatchedWriters": [
     {
+      "name": "Kuang Ni",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1585,
+          "date": "2024-04-24",
+          "slug": "human-lanterns-1982",
+          "title": "Human Lanterns",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1982"
+        },
+        {
+          "sequence": 1610,
+          "date": "2024-07-01",
+          "slug": null,
+          "title": "Abbot of Shaolin",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1979"
+        },
+        {
+          "sequence": 1673,
+          "date": "2024-11-05",
+          "slug": "disciples-of-shaolin-1975",
+          "title": "Disciples of Shaolin",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1975"
+        }
+      ]
+    },
+    {
       "name": "Sergio Leone",
       "count": 3,
       "slug": null,
@@ -971,31 +1005,6 @@
           "medium": "iTunes",
           "venue": null,
           "year": "2010"
-        }
-      ]
-    },
-    {
-      "name": "Kuang Ni",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1585,
-          "date": "2024-04-24",
-          "slug": "human-lanterns-1982",
-          "title": "Human Lanterns",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1982"
-        },
-        {
-          "sequence": 1610,
-          "date": "2024-07-01",
-          "slug": null,
-          "title": "Abbot of Shaolin",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1979"
         }
       ]
     },
