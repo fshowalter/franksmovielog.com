@@ -24,14 +24,16 @@
 /watchlist/writers/* /cast-and-crew/:splat 301
 /watchlist/collections/* /collections/:splat 301
 
+# old cast-and-crew to new
+/cast-and-crew/christopher-lee-i/ /cast-and-crew/christopher-lee/ 301
+
 # misc spam
+*.php /gone 410
 */wlwmanifest.xml /gone 410
 /.aws/credentials /gone 410
 /.env /gone 410
 //* /gone 410
 // /gone 410
-//upl.php /gone 410
-//rxr.php /gone 410
 //upload.php /gone 410
 /admin /gone 410
 /admin/* /gone 410
@@ -65,7 +67,6 @@
 /wp-includes/* /gone 410
 /wp-login.php /gone 410
 /wp/* /gone 410
-/xmlrpc.php /gone 410
 
 
 # old favicons
