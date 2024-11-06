@@ -1,19 +1,26 @@
 import rss from "@astrojs/rss";
 
-import type { Review } from "~/api/reviews";
-
 import { loadExcerptHtml, mostRecentReviews } from "~/api/reviews";
 import { getOpenGraphStillSrc } from "~/api/stills";
-import { textStarsForGrade } from "~/utils/textStarsForGrade";
 
-function addMetaToExcerpt(excerpt: string, review: Review) {
-  const meta = `${textStarsForGrade(
-    review.grade,
-  )} D: ${review.directorNames.join(
-    ", ",
-  )}. ${review.principalCastNames.join(", ")}.`;
+const gradeMap: Record<string, string> = {
+  A: "&#9733;&#9733;&#9733;&#9733;&#9733;",
+  "A+": "&#9733;&#9733;&#9733;&#9733;&#9733;",
+  "A-": "&#9733;&#9733;&#9733;&#9733;&#189;",
+  B: "&#9733;&#9733;&#9733;&#9733;",
+  "B+": "&#9733;&#9733;&#9733;&#9733;",
+  "B-": "&#9733;&#9733;&#9733;&#189;",
+  C: "&#9733;&#9733;&#9733;",
+  "C+": "&#9733;&#9733;&#9733;",
+  "C-": "&#9733;&#9733;&#189;",
+  D: "&#9733;&#9733;",
+  "D+": "&#9733;&#9733;",
+  "D-": "&#9733;&#189;",
+  F: "&#9733;",
+};
 
-  return `<p>${meta}</p>${excerpt}`;
+export function textStarsForGrade(grade: string) {
+  return gradeMap[grade];
 }
 
 export async function GET() {
@@ -37,10 +44,9 @@ export async function GET() {
         const stillSrc = await getOpenGraphStillSrc(item.slug);
 
         return {
-          content: `<img src="${stillSrc}" alt="">${addMetaToExcerpt(
-            item.excerpt,
-            item,
-          )}`,
+          content: `<img src="${stillSrc}" alt=""><p>${textStarsForGrade(
+            item.grade,
+          )}</p>${item.excerpt}`,
           link: `https://www.franksmovielog.com/reviews/${item.slug}/`,
           pubDate: item.date,
           title: `${item.title} (${item.year})`,
