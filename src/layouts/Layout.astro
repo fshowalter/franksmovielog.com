@@ -39,7 +39,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
     {
       canonical && (
         <>
-          <meta content={`${canonicalUrl}og.jpg`} name="og:image" />
+          <meta content={`${canonicalUrl}og.jpg`} property="og:image" />
           <meta content={`${canonicalUrl}`} property="og:url" />
           <meta content={title} property="og:title" />
           <meta content={description} property="og:description" />
