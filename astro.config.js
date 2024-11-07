@@ -117,7 +117,9 @@ export default defineConfig({
       // Useful if you need to define and/or import your own custom `base.css`.
       applyBaseStyles: false,
     }),
-    sitemap(),
+    sitemap({
+      filter: (page) => page !== "https://www.franksmovielog.com/gone/",
+    }),
     pagefind(),
   ],
   site: "https://www.franksmovielog.com",
