@@ -1,12 +1,12 @@
 {
   "year": "2024",
-  "newTitleCount": 92,
-  "viewingCount": 122,
-  "titleCount": 119,
+  "newTitleCount": 93,
+  "viewingCount": 123,
+  "titleCount": 120,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 63
+      "count": 64
     },
     {
       "name": "4k UHD Blu-ray",
@@ -48,7 +48,7 @@
     },
     {
       "name": "1960s",
-      "count": 14
+      "count": 15
     },
     {
       "name": "1970s",
@@ -422,6 +422,58 @@
       ]
     },
     {
+      "name": "Christopher Lee",
+      "count": 5,
+      "slug": "christopher-lee",
+      "viewings": [
+        {
+          "sequence": 1587,
+          "date": "2024-04-27",
+          "slug": "horror-express-1972",
+          "title": "Horror Express",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "1972"
+        },
+        {
+          "sequence": 1628,
+          "date": "2024-08-19",
+          "slug": null,
+          "title": "The Face of Fu Manchu",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1965"
+        },
+        {
+          "sequence": 1652,
+          "date": "2024-10-16",
+          "slug": "scream-and-scream-again-1970",
+          "title": "Scream and Scream Again",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1970"
+        },
+        {
+          "sequence": 1659,
+          "date": "2024-10-23",
+          "slug": "the-oblong-box-1969",
+          "title": "The Oblong Box",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1969"
+        },
+        {
+          "sequence": 1677,
+          "date": "2024-11-09",
+          "slug": "the-castle-of-the-living-dead-1964",
+          "title": "The Castle of the Living Dead",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1964"
+        }
+      ]
+    },
+    {
       "name": "Nicolas Cage",
       "count": 4,
       "slug": null,
@@ -461,49 +513,6 @@
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
           "year": "2024"
-        }
-      ]
-    },
-    {
-      "name": "Christopher Lee",
-      "count": 4,
-      "slug": "christopher-lee",
-      "viewings": [
-        {
-          "sequence": 1587,
-          "date": "2024-04-27",
-          "slug": "horror-express-1972",
-          "title": "Horror Express",
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1972"
-        },
-        {
-          "sequence": 1628,
-          "date": "2024-08-19",
-          "slug": null,
-          "title": "The Face of Fu Manchu",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1965"
-        },
-        {
-          "sequence": 1652,
-          "date": "2024-10-16",
-          "slug": "scream-and-scream-again-1970",
-          "title": "Scream and Scream Again",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1970"
-        },
-        {
-          "sequence": 1659,
-          "date": "2024-10-23",
-          "slug": "the-oblong-box-1969",
-          "title": "The Oblong Box",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1969"
         }
       ]
     },
