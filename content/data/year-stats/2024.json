@@ -1,12 +1,12 @@
 {
   "year": "2024",
-  "newTitleCount": 97,
-  "viewingCount": 128,
-  "titleCount": 125,
+  "newTitleCount": 98,
+  "viewingCount": 129,
+  "titleCount": 126,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 68
+      "count": 69
     },
     {
       "name": "4k UHD Blu-ray",
@@ -56,7 +56,7 @@
     },
     {
       "name": "1980s",
-      "count": 25
+      "count": 26
     },
     {
       "name": "1990s",
@@ -101,7 +101,7 @@
   "mostWatchedDirectors": [
     {
       "name": "Lucio Fulci",
-      "count": 3,
+      "count": 4,
       "slug": "lucio-fulci",
       "viewings": [
         {
@@ -130,6 +130,15 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1982"
+        },
+        {
+          "sequence": 1683,
+          "date": "2024-11-14",
+          "slug": "the-devils-honey-1986",
+          "title": "The Devil's Honey",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1986"
         }
       ]
     },
@@ -968,6 +977,31 @@
       ]
     },
     {
+      "name": "Lucio Fulci",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1581,
+          "date": "2024-04-10",
+          "slug": "city-of-the-living-dead-1980",
+          "title": "City of the Living Dead",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1980"
+        },
+        {
+          "sequence": 1683,
+          "date": "2024-11-14",
+          "slug": "the-devils-honey-1986",
+          "title": "The Devil's Honey",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1986"
+        }
+      ]
+    },
+    {
       "name": "Dardano Sacchetti",
       "count": 2,
       "slug": null,
@@ -1014,31 +1048,6 @@
           "medium": "iTunes",
           "venue": null,
           "year": "2010"
-        }
-      ]
-    },
-    {
-      "name": "Sheridan Le Fanu",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1592,
-          "date": "2024-05-23",
-          "slug": null,
-          "title": "Alucarda",
-          "medium": "DVD",
-          "venue": null,
-          "year": "1977"
-        },
-        {
-          "sequence": 1593,
-          "date": "2024-06-01",
-          "slug": null,
-          "title": "The Blood Spattered Bride",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1972"
         }
       ]
     }
