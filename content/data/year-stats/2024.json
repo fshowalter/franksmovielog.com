@@ -1,12 +1,12 @@
 {
   "year": "2024",
   "newTitleCount": 98,
-  "viewingCount": 129,
-  "titleCount": 126,
+  "viewingCount": 130,
+  "titleCount": 127,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 69
+      "count": 70
     },
     {
       "name": "4k UHD Blu-ray",
@@ -48,7 +48,7 @@
     },
     {
       "name": "1960s",
-      "count": 17
+      "count": 18
     },
     {
       "name": "1970s",
@@ -101,7 +101,7 @@
   "mostWatchedDirectors": [
     {
       "name": "Lucio Fulci",
-      "count": 4,
+      "count": 5,
       "slug": "lucio-fulci",
       "viewings": [
         {
@@ -139,6 +139,15 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1986"
+        },
+        {
+          "sequence": 1684,
+          "date": "2024-11-15",
+          "slug": "the-conspiracy-of-torture-1969",
+          "title": "The Conspiracy of Torture",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1969"
         }
       ]
     },
@@ -784,6 +793,40 @@
   ],
   "mostWatchedWriters": [
     {
+      "name": "Lucio Fulci",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1581,
+          "date": "2024-04-10",
+          "slug": "city-of-the-living-dead-1980",
+          "title": "City of the Living Dead",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1980"
+        },
+        {
+          "sequence": 1683,
+          "date": "2024-11-14",
+          "slug": "the-devils-honey-1986",
+          "title": "The Devil's Honey",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1986"
+        },
+        {
+          "sequence": 1684,
+          "date": "2024-11-15",
+          "slug": "the-conspiracy-of-torture-1969",
+          "title": "The Conspiracy of Torture",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1969"
+        }
+      ]
+    },
+    {
       "name": "Kuang Ni",
       "count": 3,
       "slug": null,
@@ -973,31 +1016,6 @@
           "medium": "iTunes",
           "venue": null,
           "year": "2023"
-        }
-      ]
-    },
-    {
-      "name": "Lucio Fulci",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1581,
-          "date": "2024-04-10",
-          "slug": "city-of-the-living-dead-1980",
-          "title": "City of the Living Dead",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1980"
-        },
-        {
-          "sequence": 1683,
-          "date": "2024-11-14",
-          "slug": "the-devils-honey-1986",
-          "title": "The Devil's Honey",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1986"
         }
       ]
     },
