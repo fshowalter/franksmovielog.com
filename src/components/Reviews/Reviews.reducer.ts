@@ -177,7 +177,10 @@ export function reducer(state: State, action: ActionType): State {
       });
     }
     case Actions.FILTER_TITLE: {
-      const regex = new RegExp(action.value, "i");
+      const regex = new RegExp(
+        action.value.replaceAll(/[-[\]{}()*+?.,\\^$|#\s]/g, String.raw`\$&`),
+        "i",
+      );
       return updateFilter(state, "title", (value) => {
         return regex.test(value.title);
       });
