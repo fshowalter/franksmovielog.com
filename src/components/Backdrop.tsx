@@ -97,6 +97,7 @@ function Title({
         className ||
         `font-sans ${center ? "text-center" : ""} text-2xl font-bold uppercase tracking-widest desktop:text-7xl`
       }
+      data-pagefind-weight="8"
     >
       {value}
     </h1>
