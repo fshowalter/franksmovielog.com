@@ -57,7 +57,7 @@ export function Review({
         <h1
           className="text-center text-4xl desktop:text-7xl"
           data-pagefind-meta="title"
-          data-pagefind-weight="8"
+          data-pagefind-weight="9"
         >
           {value.title}
         </h1>
