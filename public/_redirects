@@ -90,30 +90,5 @@
 /sitemap/* /sitemap-index.xml 301
 
 
-# resized images
-/static/:contenthash/0e001/* /gone 410
-/static/:contenthash/1015f/* /gone 410
-/static/:contenthash/10b75/* /gone 410
-/static/:contenthash/10e3d/* /gone 410
-/static/:contenthash/141a0/* /gone 410
-/static/:contenthash/22a6f/* /gone 410
-/static/:contenthash/4006c/* /gone 410
-/static/:contenthash/467f6/* /gone 410
-/static/:contenthash/5dbd5/* /gone 410
-/static/:contenthash/7de85/* /gone 410
-/static/:contenthash/894b0/* /gone 410
-/static/:contenthash/8a152/* /gone 410
-/static/:contenthash/8ab54/* /gone 410
-/static/:contenthash/9025e/* /gone 410
-/static/:contenthash/936aa/* /gone 410
-/static/:contenthash/992e1/* /gone 410
-/static/:contenthash/ad189/* /gone 410
-/static/:contenthash/ad875/* /gone 410
-/static/:contenthash/c3c10/* /gone 410
-/static/:contenthash/ced04/* /gone 410
-/static/:contenthash/d5f84/* /gone 410
-/static/:contenthash/e34c3/* /gone 410
-/static/:contenthash/f249d/* /gone 410
-/static/:contenthash/f2565/* /gone 410
-/static/:contenthash/f4320/* /gone 410
-/static/231bfbacc3282741d84e44ddb751b11c/31a81/high-pressure-1932.avif /gone 410
+# old images
+/static/* /gone 410
