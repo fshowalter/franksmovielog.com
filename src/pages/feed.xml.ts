@@ -19,10 +19,6 @@ const gradeMap: Record<string, string> = {
   F: "&#9733;",
 };
 
-export function textStarsForGrade(grade: string) {
-  return gradeMap[grade];
-}
-
 export async function GET() {
   const reviews = await mostRecentReviews(10);
 
@@ -59,4 +55,8 @@ export async function GET() {
     // `<title>` field in output xml
     title: "Frank's Movie Log",
   });
+}
+
+export function textStarsForGrade(grade: string) {
+  return gradeMap[grade];
 }

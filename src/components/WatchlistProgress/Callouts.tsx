@@ -16,36 +16,6 @@ export type Props = Pick<
   | "writerTotal"
 >;
 
-function Callout({
-  label,
-  reviewed,
-  subLabel,
-  total,
-}: {
-  label: string;
-  reviewed: number;
-  subLabel?: string;
-  total: number;
-}): JSX.Element {
-  return (
-    <div className="flex flex-col items-center first:min-w-full tablet:first:min-w-0">
-      <ProgressRing
-        className="h-auto w-32 tablet:w-36"
-        complete={reviewed ?? 0}
-        height={144}
-        label={label}
-        subLabel={subLabel}
-        total={total ?? 0}
-        width={144}
-      />
-      <div className="pt-2 text-center font-sans text-base font-semibold text-muted">
-        {reviewed?.toLocaleString()} / {total?.toLocaleString()}
-        <div className="font-sans text-sm font-light leading-4">Reviewed</div>
-      </div>
-    </div>
-  );
-}
-
 export function Callouts({
   collectionReviewed,
   collectionTotal,
@@ -86,6 +56,36 @@ export function Callouts({
           subLabel="Titles"
           total={collectionTotal}
         />
+      </div>
+    </div>
+  );
+}
+
+function Callout({
+  label,
+  reviewed,
+  subLabel,
+  total,
+}: {
+  label: string;
+  reviewed: number;
+  subLabel?: string;
+  total: number;
+}): JSX.Element {
+  return (
+    <div className="flex flex-col items-center first:min-w-full tablet:first:min-w-0">
+      <ProgressRing
+        className="h-auto w-32 tablet:w-36"
+        complete={reviewed ?? 0}
+        height={144}
+        label={label}
+        subLabel={subLabel}
+        total={total ?? 0}
+        width={144}
+      />
+      <div className="pt-2 text-center font-sans text-base font-semibold text-muted">
+        {reviewed?.toLocaleString()} / {total?.toLocaleString()}
+        <div className="font-sans text-sm font-light leading-4">Reviewed</div>
       </div>
     </div>
   );

@@ -28,6 +28,16 @@ export function WatchlistTitleSlug({
   );
 }
 
+function formatCollectionNames(names: readonly string[]): string | string[] {
+  if (names.length === 0) {
+    return "";
+  }
+
+  const suffix = names.length > 1 ? "collections" : "collection";
+
+  return [`it's in the ${toSentence(names)} ${suffix}`];
+}
+
 function formatPeopleNames(
   names: readonly string[],
   suffix: string | string[],
@@ -45,14 +55,4 @@ function formatPeopleNames(
   }
 
   return [`${toSentence(names)} ${append}`];
-}
-
-function formatCollectionNames(names: readonly string[]): string | string[] {
-  if (names.length === 0) {
-    return "";
-  }
-
-  const suffix = names.length > 1 ? "collections" : "collection";
-
-  return [`it's in the ${toSentence(names)} ${suffix}`];
 }

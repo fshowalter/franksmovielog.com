@@ -13,33 +13,11 @@ import {
 import { emToQuotes } from "./utils/markdown/emToQuotes";
 import { rootAsSpan } from "./utils/markdown/rootAsSpan";
 
-export type Collection = {} & CollectionJson;
+export type Collection = CollectionJson & {};
 
-export type CollectionWithDetails = {
+export type CollectionWithDetails = Collection & {
   descriptionHtml: null | string;
-} & Collection;
-
-function getMastProcessor() {
-  return remark().use(remarkGfm).use(smartypants);
-}
-
-function descriptionToString(description: string) {
-  return getMastProcessor()
-    .use(emToQuotes)
-    .use(strip)
-    .processSync(description)
-    .toString();
-}
-
-function descriptionToHtml(description: string) {
-  return getMastProcessor()
-    .use(remarkRehype, { allowDangerousHtml: true })
-    .use(rehypeRaw)
-    .use(rootAsSpan)
-    .use(rehypeStringify)
-    .processSync(description)
-    .toString();
-}
+};
 
 export async function allCollections(): Promise<{
   collections: Collection[];
@@ -81,4 +59,26 @@ export async function collectionDetails(slug: string): Promise<{
     },
     distinctReleaseYears: [...releaseYears].toSorted(),
   };
+}
+
+function descriptionToHtml(description: string) {
+  return getMastProcessor()
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    .use(rootAsSpan)
+    .use(rehypeStringify)
+    .processSync(description)
+    .toString();
+}
+
+function descriptionToString(description: string) {
+  return getMastProcessor()
+    .use(emToQuotes)
+    .use(strip)
+    .processSync(description)
+    .toString();
+}
+
+function getMastProcessor() {
+  return remark().use(remarkGfm).use(smartypants);
 }

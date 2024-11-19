@@ -8,6 +8,8 @@ export enum Actions {
   SORT = "SORT",
 }
 
+export type ActionType = FilterNameAction | SortAction;
+
 export type Sort =
   | "name-asc"
   | "name-desc"
@@ -16,22 +18,15 @@ export type Sort =
   | "title-count-asc"
   | "title-count-desc";
 
-function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
-  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
-    {
-      "name-asc": (a, b) => sortString(a.name, b.name),
-      "name-desc": (a, b) => sortString(a.name, b.name) * -1,
-      "review-count-asc": (a, b) => sortNumber(a.reviewCount, b.reviewCount),
-      "review-count-desc": (a, b) =>
-        sortNumber(a.reviewCount, b.reviewCount) * -1,
-      "title-count-asc": (a, b) => sortNumber(a.titleCount, b.titleCount),
-      "title-count-desc": (a, b) => sortNumber(a.titleCount, b.titleCount) * -1,
-    };
+type FilterNameAction = {
+  type: Actions.FILTER_NAME;
+  value: string;
+};
 
-  const comparer = sortMap[sortOrder];
-
-  return values.sort(comparer);
-}
+type SortAction = {
+  type: Actions.SORT;
+  value: Sort;
+};
 
 type State = {
   allValues: ListItemValue[];
@@ -54,18 +49,6 @@ export function initState({
     sortValue: initialSort,
   };
 }
-
-type FilterNameAction = {
-  type: Actions.FILTER_NAME;
-  value: string;
-};
-
-type SortAction = {
-  type: Actions.SORT;
-  value: Sort;
-};
-
-export type ActionType = FilterNameAction | SortAction;
 
 export function reducer(state: State, action: ActionType): State {
   let filters;
@@ -104,4 +87,21 @@ export function reducer(state: State, action: ActionType): State {
 
     // no default
   }
+}
+
+function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
+  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
+    {
+      "name-asc": (a, b) => sortString(a.name, b.name),
+      "name-desc": (a, b) => sortString(a.name, b.name) * -1,
+      "review-count-asc": (a, b) => sortNumber(a.reviewCount, b.reviewCount),
+      "review-count-desc": (a, b) =>
+        sortNumber(a.reviewCount, b.reviewCount) * -1,
+      "title-count-asc": (a, b) => sortNumber(a.titleCount, b.titleCount),
+      "title-count-desc": (a, b) => sortNumber(a.titleCount, b.titleCount) * -1,
+    };
+
+  const comparer = sortMap[sortOrder];
+
+  return values.sort(comparer);
 }

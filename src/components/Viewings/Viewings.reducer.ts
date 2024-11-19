@@ -11,46 +11,65 @@ export type Sort = "viewing-date-asc" | "viewing-date-desc";
 
 const { clearFilter, updateFilter } = filterTools(sortValues, groupValues);
 
-function sortValues(values: ListItemValue[], sortOrder: Sort) {
-  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
-    {
-      "viewing-date-asc": (a, b) => sortNumber(a.sequence, b.sequence),
-      "viewing-date-desc": (a, b) => sortNumber(a.sequence, b.sequence) * -1,
-    };
-
-  const comparer = sortMap[sortOrder];
-  return values.sort(comparer);
+export enum Actions {
+  FILTER_GENRES = "FILTER_GENRES",
+  FILTER_MEDIUM = "FILTER_MEDIUM",
+  FILTER_RELEASE_YEAR = "FILTER_RELEASE_YEAR",
+  FILTER_TITLE = "FILTER_TITLE",
+  FILTER_VENUE = "FILTER_VENUE",
+  FILTER_VIEWING_YEAR = "FILTER_VIEWING_YEAR",
+  SHOW_MORE = "SHOW_MORE",
+  SORT = "SORT",
 }
 
-function groupValues(
-  values: ListItemValue[],
-): Map<string, Map<string, ListItemValue[]>> {
-  const groupedValues = new Map<string, Map<string, ListItemValue[]>>();
+export type ActionType =
+  | FilterGenresAction
+  | FilterMediumAction
+  | FilterReleaseYearAction
+  | FilterTitleAction
+  | FilterVenueAction
+  | FilterViewingYearAction
+  | ShowMoreAction
+  | SortAction;
 
-  values.map((value) => {
-    const monthYearGroup = `${value.viewingMonth} ${value.viewingYear}`;
+type FilterGenresAction = {
+  type: Actions.FILTER_GENRES;
+  values: string[];
+};
 
-    let groupValue = groupedValues.get(monthYearGroup);
+type FilterMediumAction = {
+  type: Actions.FILTER_MEDIUM;
+  value: string;
+};
 
-    if (!groupValue) {
-      groupValue = new Map<string, ListItemValue[]>();
-      groupedValues.set(monthYearGroup, groupValue);
-    }
+type FilterReleaseYearAction = {
+  type: Actions.FILTER_RELEASE_YEAR;
+  values: [string, string];
+};
 
-    const dayGroup = `${value.viewingDay}-${value.viewingDate}`;
+type FilterTitleAction = {
+  type: Actions.FILTER_TITLE;
+  value: string;
+};
 
-    let dayGroupValue = groupValue.get(dayGroup);
+type FilterVenueAction = {
+  type: Actions.FILTER_VENUE;
+  value: string;
+};
 
-    if (!dayGroupValue) {
-      dayGroupValue = [];
-      groupValue.set(dayGroup, dayGroupValue);
-    }
+type FilterViewingYearAction = {
+  type: Actions.FILTER_VIEWING_YEAR;
+  values: [string, string];
+};
 
-    dayGroupValue.push(value);
-  });
+type ShowMoreAction = {
+  type: Actions.SHOW_MORE;
+};
 
-  return groupedValues;
-}
+type SortAction = {
+  type: Actions.SORT;
+  value: Sort;
+};
 
 type State = FilterableState<
   ListItemValue,
@@ -74,66 +93,6 @@ export function initState({
     sortValue: initialSort,
   };
 }
-
-export enum Actions {
-  FILTER_GENRES = "FILTER_GENRES",
-  FILTER_MEDIUM = "FILTER_MEDIUM",
-  FILTER_RELEASE_YEAR = "FILTER_RELEASE_YEAR",
-  FILTER_TITLE = "FILTER_TITLE",
-  FILTER_VENUE = "FILTER_VENUE",
-  FILTER_VIEWING_YEAR = "FILTER_VIEWING_YEAR",
-  SHOW_MORE = "SHOW_MORE",
-  SORT = "SORT",
-}
-
-type FilterTitleAction = {
-  type: Actions.FILTER_TITLE;
-  value: string;
-};
-
-type FilterMediumAction = {
-  type: Actions.FILTER_MEDIUM;
-  value: string;
-};
-
-type FilterVenueAction = {
-  type: Actions.FILTER_VENUE;
-  value: string;
-};
-
-type FilterGenresAction = {
-  type: Actions.FILTER_GENRES;
-  values: string[];
-};
-
-type FilterReleaseYearAction = {
-  type: Actions.FILTER_RELEASE_YEAR;
-  values: [string, string];
-};
-
-type FilterViewingYearAction = {
-  type: Actions.FILTER_VIEWING_YEAR;
-  values: [string, string];
-};
-
-type SortAction = {
-  type: Actions.SORT;
-  value: Sort;
-};
-
-type ShowMoreAction = {
-  type: Actions.SHOW_MORE;
-};
-
-export type ActionType =
-  | FilterGenresAction
-  | FilterMediumAction
-  | FilterReleaseYearAction
-  | FilterTitleAction
-  | FilterVenueAction
-  | FilterViewingYearAction
-  | ShowMoreAction
-  | SortAction;
 
 export function reducer(state: State, action: ActionType): State {
   let groupedValues;
@@ -207,4 +166,45 @@ export function reducer(state: State, action: ActionType): State {
 
     // no default
   }
+}
+
+function groupValues(
+  values: ListItemValue[],
+): Map<string, Map<string, ListItemValue[]>> {
+  const groupedValues = new Map<string, Map<string, ListItemValue[]>>();
+
+  values.map((value) => {
+    const monthYearGroup = `${value.viewingMonth} ${value.viewingYear}`;
+
+    let groupValue = groupedValues.get(monthYearGroup);
+
+    if (!groupValue) {
+      groupValue = new Map<string, ListItemValue[]>();
+      groupedValues.set(monthYearGroup, groupValue);
+    }
+
+    const dayGroup = `${value.viewingDay}-${value.viewingDate}`;
+
+    let dayGroupValue = groupValue.get(dayGroup);
+
+    if (!dayGroupValue) {
+      dayGroupValue = [];
+      groupValue.set(dayGroup, dayGroupValue);
+    }
+
+    dayGroupValue.push(value);
+  });
+
+  return groupedValues;
+}
+
+function sortValues(values: ListItemValue[], sortOrder: Sort) {
+  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
+    {
+      "viewing-date-asc": (a, b) => sortNumber(a.sequence, b.sequence),
+      "viewing-date-desc": (a, b) => sortNumber(a.sequence, b.sequence) * -1,
+    };
+
+  const comparer = sortMap[sortOrder];
+  return values.sort(comparer);
 }

@@ -5,6 +5,8 @@ import { allCollections } from "~/api/collections";
 import { OpenGraphImage } from "~/components/OpenGraphImage";
 import { componentToImage } from "~/utils/componentToImage";
 
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
 export async function getStaticPaths() {
   const { collections } = await allCollections();
 
@@ -20,8 +22,6 @@ export async function getStaticPaths() {
     };
   });
 }
-
-type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 export const GET: APIRoute = async function get({ props }) {
   const { name, slug } = props as Props;

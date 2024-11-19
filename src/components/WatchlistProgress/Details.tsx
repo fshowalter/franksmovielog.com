@@ -4,8 +4,6 @@ import { Avatar } from "~/components/Avatar";
 import { BarGradient } from "~/components/BarGradient";
 import { ccn } from "~/utils/concatClassNames";
 
-type ValueType = "collection" | "director" | "performer" | "writer";
-
 type Value = {
   avatarImageProps: AvatarImageProps | undefined;
   name: string;
@@ -13,6 +11,8 @@ type Value = {
   slug: string | undefined;
   titleCount: number;
 };
+
+type ValueType = "collection" | "director" | "performer" | "writer";
 
 export function Details({
   className,

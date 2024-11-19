@@ -51,6 +51,12 @@ const CollectionJsonSchema = z.object({
   titles: z.array(TitleSchema),
 });
 
+export type CollectionJson = z.infer<typeof CollectionJsonSchema>;
+
+export async function allCollectionsJson(): Promise<CollectionJson[]> {
+  return await parseAllCollectionsJson();
+}
+
 async function parseAllCollectionsJson() {
   const dirents = await fs.readdir(collectionsJsonDirectory, {
     withFileTypes: true,
@@ -69,10 +75,4 @@ async function parseAllCollectionsJson() {
         return CollectionJsonSchema.parse(json);
       }),
   );
-}
-
-export type CollectionJson = z.infer<typeof CollectionJsonSchema>;
-
-export async function allCollectionsJson(): Promise<CollectionJson[]> {
-  return await parseAllCollectionsJson();
 }

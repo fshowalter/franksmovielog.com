@@ -35,6 +35,10 @@ export type MarkdownViewing = {
   viewingNotesRaw: string | undefined;
 };
 
+export async function allViewingsMarkdown(): Promise<MarkdownViewing[]> {
+  return await parseAllViewingsMarkdown();
+}
+
 async function parseAllViewingsMarkdown() {
   const dirents = await fs.readdir(viewingsMarkdownDirectory, {
     withFileTypes: true,
@@ -66,8 +70,4 @@ async function parseAllViewingsMarkdown() {
         return markdownViewing;
       }),
   );
-}
-
-export async function allViewingsMarkdown(): Promise<MarkdownViewing[]> {
-  return await parseAllViewingsMarkdown();
 }

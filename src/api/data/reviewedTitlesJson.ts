@@ -115,6 +115,10 @@ const ReviewedTitleJsonSchema = z
 
 export type ReviewedTitleJson = z.infer<typeof ReviewedTitleJsonSchema>;
 
+export async function allReviewedTitlesJson(): Promise<ReviewedTitleJson[]> {
+  return await parseAllReviewedTitlesJson();
+}
+
 async function parseAllReviewedTitlesJson() {
   const json = await fs.readFile(reviewedTitlesJsonFile, "utf8");
   const data = JSON.parse(json) as unknown[];
@@ -122,8 +126,4 @@ async function parseAllReviewedTitlesJson() {
   return data.map((item) => {
     return ReviewedTitleJsonSchema.parse(item);
   });
-}
-
-export async function allReviewedTitlesJson(): Promise<ReviewedTitleJson[]> {
-  return await parseAllReviewedTitlesJson();
 }

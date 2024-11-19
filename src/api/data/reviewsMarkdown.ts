@@ -21,6 +21,10 @@ const DataSchema = z.object({
   slug: z.string(),
 });
 
+export async function allReviewsMarkdown(): Promise<MarkdownReview[]> {
+  return await parseAllReviewsMarkdown();
+}
+
 async function parseAllReviewsMarkdown(): Promise<MarkdownReview[]> {
   const dirents = await fs.readdir(reviewsMarkdownDirectory, {
     withFileTypes: true,
@@ -47,8 +51,4 @@ async function parseAllReviewsMarkdown(): Promise<MarkdownReview[]> {
         };
       }),
   );
-}
-
-export async function allReviewsMarkdown(): Promise<MarkdownReview[]> {
-  return await parseAllReviewsMarkdown();
 }

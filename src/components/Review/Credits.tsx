@@ -10,10 +10,7 @@ export const PosterImageConfig = {
   width: 248,
 };
 
-type Props = {
-  className?: string;
-  posterImageProps: PosterImageProps;
-} & Pick<
+type Props = Pick<
   Review,
   | "countries"
   | "directorNames"
@@ -23,7 +20,10 @@ type Props = {
   | "title"
   | "writerNames"
   | "year"
->;
+> & {
+  className?: string;
+  posterImageProps: PosterImageProps;
+};
 
 export function Credits({
   className,

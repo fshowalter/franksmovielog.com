@@ -11,42 +11,69 @@ const SHOW_COUNT_DEFAULT = 100;
 const groupValues = buildGroupValues(groupForValue);
 const { applyFilters, updateFilter } = filterTools(sortValues, groupValues);
 
-function sortValues(values: ListItemValue[], sortOrder: Sort) {
-  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
-    {
-      "release-date-asc": (a, b) =>
-        sortString(a.releaseSequence, b.releaseSequence),
-      "release-date-desc": (a, b) =>
-        sortString(a.releaseSequence, b.releaseSequence) * -1,
-      title: (a, b) => collator.compare(a.sortTitle, b.sortTitle),
-    };
-
-  const comparer = sortMap[sortOrder];
-  return values.sort(comparer);
+export enum Actions {
+  FILTER_COLLECTION = "FILTER_COLLECTION",
+  FILTER_DIRECTOR = "FILTER_DIRECTOR",
+  FILTER_PERFORMER = "FILTER_PERFORMER",
+  FILTER_RELEASE_YEAR = "FILTER_RELEASE_YEAR",
+  FILTER_TITLE = "FILTER_TITLE",
+  FILTER_WRITER = "FILTER_WRITER",
+  SHOW_MORE = "SHOW_MORE",
+  SORT = "SORT",
 }
 
-function groupForValue(value: ListItemValue, sortValue: Sort): string {
-  switch (sortValue) {
-    case "release-date-asc":
-    case "release-date-desc": {
-      return value.year;
-    }
-    case "title": {
-      const letter = value.sortTitle.slice(0, 1);
+export type ActionType =
+  | FilterCollectionAction
+  | FilterDirectorAction
+  | FilterPerformerAction
+  | FilterReleaseYearAction
+  | FilterTitleAction
+  | FilterWriterAction
+  | ShowMoreAction
+  | SortAction;
 
-      if (letter.toLowerCase() == letter.toUpperCase()) {
-        return "#";
-      }
+type FilterCollectionAction = {
+  type: Actions.FILTER_COLLECTION;
+  value: string;
+};
 
-      return value.sortTitle.slice(0, 1).toLocaleUpperCase();
-    }
-    // no default
-  }
-}
+type FilterDirectorAction = {
+  type: Actions.FILTER_DIRECTOR;
+  value: string;
+};
 
-type State = {
+type FilterPerformerAction = {
+  type: Actions.FILTER_PERFORMER;
+  value: string;
+};
+
+type FilterReleaseYearAction = {
+  type: Actions.FILTER_RELEASE_YEAR;
+  values: [string, string];
+};
+
+type FilterTitleAction = {
+  type: Actions.FILTER_TITLE;
+  value: string;
+};
+
+type FilterWriterAction = {
+  type: Actions.FILTER_WRITER;
+  value: string;
+};
+
+type ShowMoreAction = {
+  type: Actions.SHOW_MORE;
+};
+
+type SortAction = {
+  type: Actions.SORT;
+  value: Sort;
+};
+
+type State = FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>> & {
   hideReviewed: boolean;
-} & FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>>;
+};
 
 export function initState({
   initialSort,
@@ -67,84 +94,6 @@ export function initState({
     showCount: SHOW_COUNT_DEFAULT,
     sortValue: initialSort,
   };
-}
-
-export enum Actions {
-  FILTER_COLLECTION = "FILTER_COLLECTION",
-  FILTER_DIRECTOR = "FILTER_DIRECTOR",
-  FILTER_PERFORMER = "FILTER_PERFORMER",
-  FILTER_RELEASE_YEAR = "FILTER_RELEASE_YEAR",
-  FILTER_TITLE = "FILTER_TITLE",
-  FILTER_WRITER = "FILTER_WRITER",
-  SHOW_MORE = "SHOW_MORE",
-  SORT = "SORT",
-}
-
-type FilterTitleAction = {
-  type: Actions.FILTER_TITLE;
-  value: string;
-};
-
-type FilterCollectionAction = {
-  type: Actions.FILTER_COLLECTION;
-  value: string;
-};
-
-type FilterDirectorAction = {
-  type: Actions.FILTER_DIRECTOR;
-  value: string;
-};
-
-type FilterPerformerAction = {
-  type: Actions.FILTER_PERFORMER;
-  value: string;
-};
-
-type FilterWriterAction = {
-  type: Actions.FILTER_WRITER;
-  value: string;
-};
-
-type FilterReleaseYearAction = {
-  type: Actions.FILTER_RELEASE_YEAR;
-  values: [string, string];
-};
-
-type SortAction = {
-  type: Actions.SORT;
-  value: Sort;
-};
-
-type ShowMoreAction = {
-  type: Actions.SHOW_MORE;
-};
-
-export type ActionType =
-  | FilterCollectionAction
-  | FilterDirectorAction
-  | FilterPerformerAction
-  | FilterReleaseYearAction
-  | FilterTitleAction
-  | FilterWriterAction
-  | ShowMoreAction
-  | SortAction;
-
-function clearFilter(
-  value: string,
-  currentState: State,
-  key: string,
-): State | undefined {
-  if (value != "All") {
-    return undefined;
-  }
-
-  const filters = {
-    ...currentState.filters,
-  };
-
-  delete filters[key];
-
-  return applyFilters(filters, currentState);
 }
 
 export function reducer(state: State, action: ActionType): State {
@@ -228,4 +177,55 @@ export function reducer(state: State, action: ActionType): State {
 
     // no default
   }
+}
+
+function clearFilter(
+  value: string,
+  currentState: State,
+  key: string,
+): State | undefined {
+  if (value != "All") {
+    return undefined;
+  }
+
+  const filters = {
+    ...currentState.filters,
+  };
+
+  delete filters[key];
+
+  return applyFilters(filters, currentState);
+}
+
+function groupForValue(value: ListItemValue, sortValue: Sort): string {
+  switch (sortValue) {
+    case "release-date-asc":
+    case "release-date-desc": {
+      return value.year;
+    }
+    case "title": {
+      const letter = value.sortTitle.slice(0, 1);
+
+      if (letter.toLowerCase() == letter.toUpperCase()) {
+        return "#";
+      }
+
+      return value.sortTitle.slice(0, 1).toLocaleUpperCase();
+    }
+    // no default
+  }
+}
+
+function sortValues(values: ListItemValue[], sortOrder: Sort) {
+  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
+    {
+      "release-date-asc": (a, b) =>
+        sortString(a.releaseSequence, b.releaseSequence),
+      "release-date-desc": (a, b) =>
+        sortString(a.releaseSequence, b.releaseSequence) * -1,
+      title: (a, b) => collator.compare(a.sortTitle, b.sortTitle),
+    };
+
+  const comparer = sortMap[sortOrder];
+  return values.sort(comparer);
 }

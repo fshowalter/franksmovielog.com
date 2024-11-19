@@ -17,46 +17,44 @@ export type Sort =
 const groupValues = buildGroupValues(groupForValue);
 const { updateFilter } = filterTools(sortValues, groupValues);
 
-function sortValues(values: ListItemValue[], sortOrder: Sort) {
-  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
-    {
-      "grade-asc": (a, b) => sortNumber(a.gradeValue, b.gradeValue),
-      "grade-desc": (a, b) => sortNumber(a.gradeValue, b.gradeValue) * -1,
-      "release-date-asc": (a, b) =>
-        sortString(a.releaseSequence, b.releaseSequence),
-      "release-date-desc": (a, b) =>
-        sortString(a.releaseSequence, b.releaseSequence) * -1,
-      "title-asc": (a, b) => collator.compare(a.sortTitle, b.sortTitle),
-      "title-desc": (a, b) => collator.compare(a.sortTitle, b.sortTitle) * -1,
-    };
-
-  const comparer = sortMap[sortOrder];
-  return values.sort(comparer);
+export enum Actions {
+  FILTER_GENRES = "FILTER_GENRES",
+  FILTER_RELEASE_YEAR = "FILTER_RELEASE_YEAR",
+  FILTER_TITLE = "FILTER_TITLE",
+  SHOW_MORE = "SHOW_MORE",
+  SORT = "SORT",
 }
 
-function groupForValue(value: ListItemValue, sortValue: Sort): string {
-  switch (sortValue) {
-    case "grade-asc":
-    case "grade-desc": {
-      return value.grade;
-    }
-    case "release-date-asc":
-    case "release-date-desc": {
-      return value.year.toString();
-    }
-    case "title-asc":
-    case "title-desc": {
-      const letter = value.sortTitle.slice(0, 1);
+export type ActionType =
+  | FilterGenresAction
+  | FilterReleaseYearAction
+  | FilterTitleAction
+  | ShowMoreAction
+  | SortAction;
 
-      if (letter.toLowerCase() == letter.toUpperCase()) {
-        return "#";
-      }
+type FilterGenresAction = {
+  type: Actions.FILTER_GENRES;
+  values: string[];
+};
 
-      return value.sortTitle.slice(0, 1).toLocaleUpperCase();
-    }
-    // no default
-  }
-}
+type FilterReleaseYearAction = {
+  type: Actions.FILTER_RELEASE_YEAR;
+  values: [string, string];
+};
+
+type FilterTitleAction = {
+  type: Actions.FILTER_TITLE;
+  value: string;
+};
+
+type ShowMoreAction = {
+  type: Actions.SHOW_MORE;
+};
+
+type SortAction = {
+  type: Actions.SORT;
+  value: Sort;
+};
 
 type State = FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>>;
 
@@ -79,45 +77,6 @@ export function initState({
     sortValue: initialSort,
   };
 }
-
-export enum Actions {
-  FILTER_GENRES = "FILTER_GENRES",
-  FILTER_RELEASE_YEAR = "FILTER_RELEASE_YEAR",
-  FILTER_TITLE = "FILTER_TITLE",
-  SHOW_MORE = "SHOW_MORE",
-  SORT = "SORT",
-}
-
-type FilterTitleAction = {
-  type: Actions.FILTER_TITLE;
-  value: string;
-};
-
-type FilterGenresAction = {
-  type: Actions.FILTER_GENRES;
-  values: string[];
-};
-
-type FilterReleaseYearAction = {
-  type: Actions.FILTER_RELEASE_YEAR;
-  values: [string, string];
-};
-
-type SortAction = {
-  type: Actions.SORT;
-  value: Sort;
-};
-
-type ShowMoreAction = {
-  type: Actions.SHOW_MORE;
-};
-
-export type ActionType =
-  | FilterGenresAction
-  | FilterReleaseYearAction
-  | FilterTitleAction
-  | ShowMoreAction
-  | SortAction;
 
 export function reducer(state: State, action: ActionType): State {
   let filteredValues;
@@ -173,4 +132,45 @@ export function reducer(state: State, action: ActionType): State {
 
     // no default
   }
+}
+
+function groupForValue(value: ListItemValue, sortValue: Sort): string {
+  switch (sortValue) {
+    case "grade-asc":
+    case "grade-desc": {
+      return value.grade;
+    }
+    case "release-date-asc":
+    case "release-date-desc": {
+      return value.year.toString();
+    }
+    case "title-asc":
+    case "title-desc": {
+      const letter = value.sortTitle.slice(0, 1);
+
+      if (letter.toLowerCase() == letter.toUpperCase()) {
+        return "#";
+      }
+
+      return value.sortTitle.slice(0, 1).toLocaleUpperCase();
+    }
+    // no default
+  }
+}
+
+function sortValues(values: ListItemValue[], sortOrder: Sort) {
+  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
+    {
+      "grade-asc": (a, b) => sortNumber(a.gradeValue, b.gradeValue),
+      "grade-desc": (a, b) => sortNumber(a.gradeValue, b.gradeValue) * -1,
+      "release-date-asc": (a, b) =>
+        sortString(a.releaseSequence, b.releaseSequence),
+      "release-date-desc": (a, b) =>
+        sortString(a.releaseSequence, b.releaseSequence) * -1,
+      "title-asc": (a, b) => collator.compare(a.sortTitle, b.sortTitle),
+      "title-desc": (a, b) => collator.compare(a.sortTitle, b.sortTitle) * -1,
+    };
+
+  const comparer = sortMap[sortOrder];
+  return values.sort(comparer);
 }
