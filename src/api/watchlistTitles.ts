@@ -3,7 +3,7 @@ import {
   type WatchlistTitleJson,
 } from "./data/watchlistTitlesJson";
 
-export type WatchlistTitle = {} & WatchlistTitleJson;
+export type WatchlistTitle = WatchlistTitleJson & {};
 
 type WatchlistTitles = {
   distinctCollections: string[];

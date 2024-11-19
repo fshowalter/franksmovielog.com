@@ -72,11 +72,11 @@ type SortAction = {
   value: Sort;
 };
 
-type State = { showFilters: boolean } & FilterableState<
+type State = FilterableState<
   ListItemValue,
   Sort,
   Map<string, ListItemValue[]>
->;
+> & { showFilters: boolean };
 
 export function initState({
   initialSort,

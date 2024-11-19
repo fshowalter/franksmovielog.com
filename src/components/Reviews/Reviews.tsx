@@ -14,11 +14,11 @@ import type { Sort } from "./Reviews.reducer";
 import { Filters } from "./Filters";
 import { Actions, initState, reducer } from "./Reviews.reducer";
 
-export type ListItemValue = {
+export type ListItemValue = ReviewListItemValue & {
   reviewDate: string;
   reviewMonth: string;
   reviewYear: string;
-} & ReviewListItemValue;
+};
 
 export type Props = {
   backdropImageProps: BackdropImageProps;

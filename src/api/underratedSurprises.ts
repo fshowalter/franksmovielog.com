@@ -2,7 +2,7 @@ import type { UnderratedJson } from "./data/underratedJson";
 
 import { allUnderratedJson } from "./data/underratedJson";
 
-type UnderratedSurprise = {} & UnderratedJson;
+type UnderratedSurprise = UnderratedJson & {};
 
 type UnderratedSurprises = {
   distinctGenres: string[];

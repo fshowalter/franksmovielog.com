@@ -4,14 +4,14 @@ import type { StillImageProps } from "~/api/stills";
 import { MoreReviews } from "~/components/MoreReviews";
 import { SubHeading } from "~/components/SubHeading";
 
-type Collection = {
+type Collection = Omit<Review["moreCollections"][number], "titles"> & {
   titles: CollectionTitle[];
-} & Omit<Review["moreCollections"][number], "titles">;
+};
 
-type CollectionTitle = {
+type CollectionTitle = Review["moreCollections"][number]["titles"][number] & {
   excerpt: string;
   stillImageProps: StillImageProps;
-} & Review["moreCollections"][number]["titles"][number];
+};
 
 type Props = {
   values: Collection[];

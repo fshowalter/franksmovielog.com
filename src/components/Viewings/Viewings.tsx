@@ -18,11 +18,7 @@ import type { Sort } from "./Viewings.reducer";
 import { Filters } from "./Filters";
 import { Actions, initState, reducer } from "./Viewings.reducer";
 
-export type ListItemValue = {
-  posterImageProps: PosterImageProps;
-  viewingDay: string;
-  viewingMonth: string;
-} & Pick<
+export type ListItemValue = Pick<
   Viewing,
   | "genres"
   | "medium"
@@ -35,7 +31,11 @@ export type ListItemValue = {
   | "viewingDate"
   | "viewingYear"
   | "year"
->;
+> & {
+  posterImageProps: PosterImageProps;
+  viewingDay: string;
+  viewingMonth: string;
+};
 
 export type Props = {
   backdropImageProps: BackdropImageProps;

@@ -50,9 +50,9 @@ type SortAction = {
   value: Sort;
 };
 
-type State = {
+type State = FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>> & {
   hideReviewed: boolean;
-} & FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>>;
+};
 
 type ToggleReviewedAction = {
   type: Actions.TOGGLE_REVIEWED;

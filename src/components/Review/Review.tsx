@@ -137,9 +137,9 @@ function Meta({
   countries,
   runtimeMinutes,
   year,
-}: {
+}: Pick<Review, "countries" | "runtimeMinutes" | "year"> & {
   className?: string;
-} & Pick<Review, "countries" | "runtimeMinutes" | "year">) {
+}) {
   let allCountries;
 
   for (const country of countries) {

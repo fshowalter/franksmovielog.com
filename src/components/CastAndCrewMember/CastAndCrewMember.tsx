@@ -23,9 +23,7 @@ import {
 } from "./CastAndCrewMember.reducer";
 import { Filters } from "./Filters";
 
-export type ListItemValue = {
-  posterImageProps: PosterImageProps;
-} & Pick<
+export type ListItemValue = Pick<
   CastAndCrewMember["titles"][0],
   | "collectionNames"
   | "creditedAs"
@@ -40,7 +38,9 @@ export type ListItemValue = {
   | "watchlistPerformerNames"
   | "watchlistWriterNames"
   | "year"
->;
+> & {
+  posterImageProps: PosterImageProps;
+};
 
 export type Props = {
   avatarImageProps: AvatarImageProps | undefined;

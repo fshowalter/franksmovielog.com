@@ -2,9 +2,9 @@ import type { ReviewContent } from "~/api/reviews";
 
 import { LongFormText } from "~/components/LongFormText";
 
-type Props = {
+type Props = Pick<ReviewContent, "content"> & {
   className?: string;
-} & Pick<ReviewContent, "content">;
+};
 
 export function Content({ className, content }: Props) {
   return (

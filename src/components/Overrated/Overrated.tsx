@@ -14,7 +14,7 @@ import type { Sort } from "./Overrated.reducer";
 import { Filters } from "./Filters";
 import { Actions, initState, reducer } from "./Overrated.reducer";
 
-export type ListItemValue = {} & ReviewListItemValue;
+export type ListItemValue = ReviewListItemValue & {};
 
 export type Props = {
   backdropImageProps: BackdropImageProps;

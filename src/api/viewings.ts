@@ -2,7 +2,7 @@ import type { ViewingJson } from "./data/viewingsJson";
 
 import { allViewingsJson } from "./data/viewingsJson";
 
-export type Viewing = {} & ViewingJson;
+export type Viewing = ViewingJson & {};
 
 type Viewings = {
   distinctGenres: string[];
