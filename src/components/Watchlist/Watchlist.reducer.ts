@@ -71,7 +71,11 @@ type SortAction = {
   value: Sort;
 };
 
-type State = FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>> & {
+type State = FilterableState<
+  ListItemValue,
+  Sort,
+  Map<string, ListItemValue[]>
+> & {
   hideReviewed: boolean;
 };
 

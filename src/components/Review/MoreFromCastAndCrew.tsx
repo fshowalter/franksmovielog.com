@@ -8,10 +8,11 @@ type CastAndCrewMember = Omit<Review["moreCastAndCrew"][number], "titles"> & {
   titles: CastAndCrewMemberTitle[];
 };
 
-type CastAndCrewMemberTitle = Review["moreCastAndCrew"][number]["titles"][number] & {
-  excerpt: string;
-  stillImageProps: StillImageProps;
-};
+type CastAndCrewMemberTitle =
+  Review["moreCastAndCrew"][number]["titles"][number] & {
+    excerpt: string;
+    stillImageProps: StillImageProps;
+  };
 
 type Props = {
   values: CastAndCrewMember[];

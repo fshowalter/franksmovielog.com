@@ -24,10 +24,10 @@ export type ListItemValue = Pick<
   | "slug"
   | "title"
   | "year"
-> & ReviewExcerpt &
-  {
-  stillImageProps: StillImageProps;
-};
+> &
+  ReviewExcerpt & {
+    stillImageProps: StillImageProps;
+  };
 
 export function HomeListItem({ value }: { value: ListItemValue }) {
   return (

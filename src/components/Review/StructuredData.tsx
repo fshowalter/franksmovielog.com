@@ -1,6 +1,9 @@
 import type { Review } from "~/api/reviews";
 
-type Props = Pick<Review, "directorNames" | "grade" | "imdbId" | "title" | "year"> & {
+type Props = Pick<
+  Review,
+  "directorNames" | "grade" | "imdbId" | "title" | "year"
+> & {
   seoImageSrc: string;
 };
 
