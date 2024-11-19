@@ -1,13 +1,13 @@
 import type { AvatarImageProps } from "~/api/avatars";
 
-type AvatarProps = {
+type AvatarProps = React.ImgHTMLAttributes<HTMLImageElement> & {
   className?: string;
   height: number;
   imageProps: AvatarImageProps | undefined;
   loading: "eager" | "lazy";
   name: string;
   width: number;
-} & React.ImgHTMLAttributes<HTMLImageElement>;
+};
 
 export function Avatar({
   className,

@@ -43,6 +43,75 @@ export function Backdrop({
   );
 }
 
+export function BreadcrumbLink({
+  children,
+  href,
+}: {
+  children: React.ReactNode;
+  href: string;
+}) {
+  return (
+    <a
+      className="font-sans text-sm uppercase tracking-wide decoration-inverse-subtle decoration-2 underline-offset-8 hover:underline"
+      href={href}
+    >
+      {children}
+    </a>
+  );
+}
+
+function Breadcrumb({ value }: { value?: React.ReactNode }) {
+  if (!value) {
+    return false;
+  }
+
+  return <p className="mb-2">{value}</p>;
+}
+
+function Deck({
+  center,
+  shadow,
+  value,
+}: {
+  center?: boolean;
+  shadow: boolean;
+  value?: React.ReactNode;
+}) {
+  if (!value) {
+    return false;
+  }
+
+  return (
+    <p
+      className={`mt-1 text-base desktop:my-4 desktop:text-xl ${shadow ? "[text-shadow:1px_1px_2px_black]" : ""} ${center ? "text-center" : ""}`}
+    >
+      {value}
+    </p>
+  );
+}
+
+function Title({
+  center,
+  className,
+  value,
+}: {
+  center?: boolean;
+  className?: string;
+  value: string;
+}) {
+  return (
+    <h1
+      className={
+        className ||
+        `font-sans ${center ? "text-center" : ""} text-2xl font-bold uppercase tracking-widest desktop:text-7xl`
+      }
+      data-pagefind-weight="10"
+    >
+      {value}
+    </h1>
+  );
+}
+
 function Wrapper({
   centerText = false,
   children,
@@ -79,74 +148,5 @@ function Wrapper({
         {children}
       </div>
     </header>
-  );
-}
-
-function Title({
-  center,
-  className,
-  value,
-}: {
-  center?: boolean;
-  className?: string;
-  value: string;
-}) {
-  return (
-    <h1
-      className={
-        className ||
-        `font-sans ${center ? "text-center" : ""} text-2xl font-bold uppercase tracking-widest desktop:text-7xl`
-      }
-      data-pagefind-weight="10"
-    >
-      {value}
-    </h1>
-  );
-}
-
-function Breadcrumb({ value }: { value?: React.ReactNode }) {
-  if (!value) {
-    return false;
-  }
-
-  return <p className="mb-2">{value}</p>;
-}
-
-export function BreadcrumbLink({
-  children,
-  href,
-}: {
-  children: React.ReactNode;
-  href: string;
-}) {
-  return (
-    <a
-      className="font-sans text-sm uppercase tracking-wide decoration-inverse-subtle decoration-2 underline-offset-8 hover:underline"
-      href={href}
-    >
-      {children}
-    </a>
-  );
-}
-
-function Deck({
-  center,
-  shadow,
-  value,
-}: {
-  center?: boolean;
-  shadow: boolean;
-  value?: React.ReactNode;
-}) {
-  if (!value) {
-    return false;
-  }
-
-  return (
-    <p
-      className={`mt-1 text-base desktop:my-4 desktop:text-xl ${shadow ? "[text-shadow:1px_1px_2px_black]" : ""} ${center ? "text-center" : ""}`}
-    >
-      {value}
-    </p>
   );
 }

@@ -23,22 +23,7 @@ import {
 } from "./CastAndCrewMember.reducer";
 import { Filters } from "./Filters";
 
-export type Props = {
-  avatarImageProps: AvatarImageProps | undefined;
-  backdropImageProps: BackdropImageProps;
-  deck: string;
-  distinctReleaseYears: readonly string[];
-  initialSort: Sort;
-  titles: ListItemValue[];
-  value: Pick<
-    CastAndCrewMember,
-    "creditedAs" | "name" | "reviewCount" | "totalCount"
-  >;
-};
-
-export type ListItemValue = {
-  posterImageProps: PosterImageProps;
-} & Pick<
+export type ListItemValue = Pick<
   CastAndCrewMember["titles"][0],
   | "collectionNames"
   | "creditedAs"
@@ -53,7 +38,22 @@ export type ListItemValue = {
   | "watchlistPerformerNames"
   | "watchlistWriterNames"
   | "year"
->;
+> & {
+  posterImageProps: PosterImageProps;
+};
+
+export type Props = {
+  avatarImageProps: AvatarImageProps | undefined;
+  backdropImageProps: BackdropImageProps;
+  deck: string;
+  distinctReleaseYears: readonly string[];
+  initialSort: Sort;
+  titles: ListItemValue[];
+  value: Pick<
+    CastAndCrewMember,
+    "creditedAs" | "name" | "reviewCount" | "totalCount"
+  >;
+};
 
 export function CastAndCrewMember({
   avatarImageProps,

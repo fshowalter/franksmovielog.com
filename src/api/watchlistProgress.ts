@@ -3,7 +3,7 @@ import {
   watchlistProgressJson,
 } from "./data/watchlistProgressJson";
 
-export type WatchlistProgress = {} & WatchlistProgressJson;
+export type WatchlistProgress = WatchlistProgressJson & {};
 
 export async function watchlistProgress(): Promise<WatchlistProgress> {
   return await watchlistProgressJson();

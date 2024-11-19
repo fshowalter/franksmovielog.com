@@ -14,6 +14,8 @@ import type { Sort } from "./Underrated.reducer";
 import { Filters } from "./Filters";
 import { Actions, initState, reducer } from "./Underrated.reducer";
 
+export type ListItemValue = ReviewListItemValue & {};
+
 export type Props = {
   backdropImageProps: BackdropImageProps;
   deck: string;
@@ -22,8 +24,6 @@ export type Props = {
   initialSort: Sort;
   values: ListItemValue[];
 };
-
-export type ListItemValue = {} & ReviewListItemValue;
 
 export function Underrated({
   backdropImageProps,

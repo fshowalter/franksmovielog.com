@@ -47,6 +47,20 @@ export function filterTools<T, S, G>(
   };
 }
 
+export function filterValues<T>({
+  filters,
+  values,
+}: {
+  filters: Record<string, (arg0: T) => boolean>;
+  values: readonly T[];
+}): T[] {
+  return values.filter((item) => {
+    return Object.values(filters).every((filter) => {
+      return filter(item);
+    });
+  });
+}
+
 function buildApplyFilters<T, S, G>(
   sorter: (values: T[], sortOrder: S) => T[],
   grouper: (values: T[], sortOrder: S) => G,
@@ -75,18 +89,4 @@ function buildApplyFilters<T, S, G>(
       groupedValues,
     };
   };
-}
-
-export function filterValues<T>({
-  filters,
-  values,
-}: {
-  filters: Record<string, (arg0: T) => boolean>;
-  values: readonly T[];
-}): T[] {
-  return values.filter((item) => {
-    return Object.values(filters).every((filter) => {
-      return filter(item);
-    });
-  });
 }

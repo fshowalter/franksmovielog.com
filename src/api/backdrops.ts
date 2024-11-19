@@ -13,31 +13,6 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   "/content/assets/backdrops/*.png",
 );
 
-async function getBackdropFile(slug: string) {
-  let backdropFilePath = Object.keys(images).find((path) => {
-    return path.endsWith(`${slug}.png`);
-  })!;
-
-  backdropFilePath =
-    backdropFilePath ||
-    Object.keys(images).find((path) => {
-      return path.endsWith(`default.png`);
-    })!;
-
-  return await images[backdropFilePath]();
-}
-
-export async function getOpenGraphBackdropAsBase64String(slug: string) {
-  const imageBuffer = await sharp(
-    path.resolve(`./content/assets/backdrops/${slug}.png`),
-  )
-    .resize(1200)
-    .toFormat("png")
-    .toBuffer();
-
-  return `data:${"image/png"};base64,${imageBuffer.toString("base64")}`;
-}
-
 export async function getBackdropImageProps(
   slug: string,
   {
@@ -63,4 +38,29 @@ export async function getBackdropImageProps(
     src: normalizeSources(optimizedImage.src),
     srcSet: normalizeSources(optimizedImage.srcSet.attribute),
   };
+}
+
+export async function getOpenGraphBackdropAsBase64String(slug: string) {
+  const imageBuffer = await sharp(
+    path.resolve(`./content/assets/backdrops/${slug}.png`),
+  )
+    .resize(1200)
+    .toFormat("png")
+    .toBuffer();
+
+  return `data:${"image/png"};base64,${imageBuffer.toString("base64")}`;
+}
+
+async function getBackdropFile(slug: string) {
+  let backdropFilePath = Object.keys(images).find((path) => {
+    return path.endsWith(`${slug}.png`);
+  })!;
+
+  backdropFilePath =
+    backdropFilePath ||
+    Object.keys(images).find((path) => {
+      return path.endsWith(`default.png`);
+    })!;
+
+  return await images[backdropFilePath]();
 }

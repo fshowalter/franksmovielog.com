@@ -72,6 +72,12 @@ const CastAndCrewJsonSchema = z.object({
   totalCount: z.number(),
 });
 
+export type CastAndCrewMemberJson = z.infer<typeof CastAndCrewJsonSchema>;
+
+export async function allCastAndCrewJson(): Promise<CastAndCrewMemberJson[]> {
+  return await parseAllCastAndCrewJson();
+}
+
 async function parseAllCastAndCrewJson() {
   const dirents = await fs.readdir(castAndCrewJsonDirectory, {
     withFileTypes: true,
@@ -90,10 +96,4 @@ async function parseAllCastAndCrewJson() {
         return CastAndCrewJsonSchema.parse(json);
       }),
   );
-}
-
-export type CastAndCrewMemberJson = z.infer<typeof CastAndCrewJsonSchema>;
-
-export async function allCastAndCrewJson(): Promise<CastAndCrewMemberJson[]> {
-  return await parseAllCastAndCrewJson();
 }

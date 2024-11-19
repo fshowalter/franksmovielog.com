@@ -13,6 +13,25 @@ type Props = {
   totalCount: number;
 };
 
+export function ListHeaderButton({
+  href,
+  text,
+}: {
+  href: string;
+  text: string;
+}) {
+  return (
+    <div className="flex items-start gap-x-4 text-nowrap bg-default uppercase text-accent">
+      <a
+        className="block px-4 py-2 hover:bg-accent hover:text-inverse"
+        href={href}
+      >
+        {text}
+      </a>
+    </div>
+  );
+}
+
 export function ListWithFiltersLayout({
   backdrop,
   className,
@@ -112,25 +131,6 @@ function ListHeader({
       >
         Filter & Sort
       </button>
-    </div>
-  );
-}
-
-export function ListHeaderButton({
-  href,
-  text,
-}: {
-  href: string;
-  text: string;
-}) {
-  return (
-    <div className="flex items-start gap-x-4 text-nowrap bg-default uppercase text-accent">
-      <a
-        className="block px-4 py-2 hover:bg-accent hover:text-inverse"
-        href={href}
-      >
-        {text}
-      </a>
     </div>
   );
 }

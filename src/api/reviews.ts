@@ -30,13 +30,17 @@ if (import.meta.env.MODE !== "development") {
   cachedMarkdownReviews = await allReviewsMarkdown();
 }
 
-type ReviewViewing = {
-  mediumNotes: string | undefined;
-  venueNotes: string | undefined;
-  viewingNotes: string | undefined;
-} & MarkdownViewing;
+export type Review = MarkdownReview & ReviewedTitleJson & {};
 
-export type Review = {} & MarkdownReview & ReviewedTitleJson;
+export type ReviewContent = {
+  content: string | undefined;
+  excerptPlainText: string;
+  viewings: ReviewViewing[];
+};
+
+export type ReviewExcerpt = {
+  excerpt: string;
+};
 
 type Reviews = {
   distinctGenres: string[];
@@ -45,70 +49,26 @@ type Reviews = {
   reviews: Review[];
 };
 
-function getMastProcessor() {
-  return remark().use(remarkGfm).use(smartypants);
-}
-
-function getHtmlAsSpan(
-  content: string | undefined,
-  reviewedTitles: { imdbId: string; slug: string }[],
-) {
-  if (!content) {
-    return;
-  }
-
-  const html = getMastProcessor()
-    .use(remarkRehype, { allowDangerousHtml: true })
-    .use(rehypeRaw)
-    .use(rootAsSpan)
-    .use(rehypeStringify)
-    .processSync(content)
-    .toString();
-
-  return linkReviewedTitles(html, reviewedTitles);
-}
-
-export type ReviewExcerpt = {
-  excerpt: string;
+type ReviewViewing = MarkdownViewing & {
+  mediumNotes: string | undefined;
+  venueNotes: string | undefined;
+  viewingNotes: string | undefined;
 };
 
-export async function loadExcerptHtml<T extends { slug: string }>(
-  review: T,
-): Promise<ReviewExcerpt & T> {
-  const reviewsMarkdown = cachedMarkdownReviews || (await allReviewsMarkdown());
+export async function allReviews(): Promise<Reviews> {
+  if (cachedReviews) {
+    return cachedReviews;
+  }
   const reviewedTitlesJson =
     cachedReviewedTitlesJson || (await allReviewedTitlesJson());
+  const reviews = await parseReviewedTitlesJson(reviewedTitlesJson);
 
-  const { rawContent } = reviewsMarkdown.find((markdown) => {
-    return markdown.slug === review.slug;
-  })!;
+  if (!import.meta.env.DEV) {
+    cachedReviews = reviews;
+  }
 
-  let excerptHtml = getMastProcessor()
-    .use(removeFootnotes)
-    .use(trimToExcerpt)
-    .use(remarkRehype, { allowDangerousHtml: true })
-    .use(rehypeRaw)
-    .use(rehypeStringify)
-    .processSync(rawContent)
-    .toString();
-
-  excerptHtml = excerptHtml.replace(/\n+$/, "");
-  excerptHtml = excerptHtml.replace(
-    /<\/p>$/,
-    ` <a class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline" href="/reviews/${review.slug}/">Continue reading...</a></p>`,
-  );
-
-  return {
-    ...review,
-    excerpt: linkReviewedTitles(excerptHtml, reviewedTitlesJson),
-  };
+  return reviews;
 }
-
-export type ReviewContent = {
-  content: string | undefined;
-  excerptPlainText: string;
-  viewings: ReviewViewing[];
-};
 
 export async function loadContent<
   T extends { imdbId: string; rawContent: string; title: string },
@@ -151,6 +111,73 @@ export async function loadContent<
   };
 }
 
+export async function loadExcerptHtml<T extends { slug: string }>(
+  review: T,
+): Promise<ReviewExcerpt & T> {
+  const reviewsMarkdown = cachedMarkdownReviews || (await allReviewsMarkdown());
+  const reviewedTitlesJson =
+    cachedReviewedTitlesJson || (await allReviewedTitlesJson());
+
+  const { rawContent } = reviewsMarkdown.find((markdown) => {
+    return markdown.slug === review.slug;
+  })!;
+
+  let excerptHtml = getMastProcessor()
+    .use(removeFootnotes)
+    .use(trimToExcerpt)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    .use(rehypeStringify)
+    .processSync(rawContent)
+    .toString();
+
+  excerptHtml = excerptHtml.replace(/\n+$/, "");
+  excerptHtml = excerptHtml.replace(
+    /<\/p>$/,
+    ` <a class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline" href="/reviews/${review.slug}/">Continue reading...</a></p>`,
+  );
+
+  return {
+    ...review,
+    excerpt: linkReviewedTitles(excerptHtml, reviewedTitlesJson),
+  };
+}
+
+export async function mostRecentReviews(limit: number) {
+  const reviewedTitlesJson =
+    cachedReviewedTitlesJson || (await allReviewedTitlesJson());
+
+  reviewedTitlesJson.sort((a, b) => b.sequence.localeCompare(a.sequence));
+  const slicedTitles = reviewedTitlesJson.slice(0, limit);
+
+  const { reviews } = await parseReviewedTitlesJson(slicedTitles);
+
+  return reviews;
+}
+
+function getHtmlAsSpan(
+  content: string | undefined,
+  reviewedTitles: { imdbId: string; slug: string }[],
+) {
+  if (!content) {
+    return;
+  }
+
+  const html = getMastProcessor()
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    .use(rootAsSpan)
+    .use(rehypeStringify)
+    .processSync(content)
+    .toString();
+
+  return linkReviewedTitles(html, reviewedTitles);
+}
+
+function getMastProcessor() {
+  return remark().use(remarkGfm).use(smartypants);
+}
+
 async function parseReviewedTitlesJson(
   reviewedTitlesJson: ReviewedTitleJson[],
 ): Promise<Reviews> {
@@ -190,31 +217,4 @@ async function parseReviewedTitlesJson(
     distinctReviewYears: [...distinctReviewYears].toSorted(),
     reviews,
   };
-}
-
-export async function mostRecentReviews(limit: number) {
-  const reviewedTitlesJson =
-    cachedReviewedTitlesJson || (await allReviewedTitlesJson());
-
-  reviewedTitlesJson.sort((a, b) => b.sequence.localeCompare(a.sequence));
-  const slicedTitles = reviewedTitlesJson.slice(0, limit);
-
-  const { reviews } = await parseReviewedTitlesJson(slicedTitles);
-
-  return reviews;
-}
-
-export async function allReviews(): Promise<Reviews> {
-  if (cachedReviews) {
-    return cachedReviews;
-  }
-  const reviewedTitlesJson =
-    cachedReviewedTitlesJson || (await allReviewedTitlesJson());
-  const reviews = await parseReviewedTitlesJson(reviewedTitlesJson);
-
-  if (!import.meta.env.DEV) {
-    cachedReviews = reviews;
-  }
-
-  return reviews;
 }

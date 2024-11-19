@@ -65,27 +65,6 @@ function MenuItem({ value }: { value: NavItem }): JSX.Element {
   );
 }
 
-function SubMenu({ values }: { values: NavItem[] }): false | JSX.Element {
-  if (values.length === 0) {
-    return false;
-  }
-
-  return (
-    <ol className="mt-4">
-      {values.map((value) => {
-        return (
-          <li
-            className="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
-            key={value.target}
-          >
-            <a href={value.target}>{value.text}</a>
-          </li>
-        );
-      })}
-    </ol>
-  );
-}
-
 function NavListItem({
   hasBackdrop,
   value,
@@ -137,5 +116,26 @@ function SearchButton() {
         </svg>
       </button>
     </div>
+  );
+}
+
+function SubMenu({ values }: { values: NavItem[] }): false | JSX.Element {
+  if (values.length === 0) {
+    return false;
+  }
+
+  return (
+    <ol className="mt-4">
+      {values.map((value) => {
+        return (
+          <li
+            className="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
+            key={value.target}
+          >
+            <a href={value.target}>{value.text}</a>
+          </li>
+        );
+      })}
+    </ol>
   );
 }

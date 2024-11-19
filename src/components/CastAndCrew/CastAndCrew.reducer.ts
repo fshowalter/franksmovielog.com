@@ -24,22 +24,7 @@ export type Sort =
 const groupValues = buildGroupValues(groupForValue);
 const { clearFilter, updateFilter } = filterTools(sortValues, groupValues);
 
-function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
-  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
-    {
-      "name-asc": (a, b) => sortString(a.name, b.name),
-      "name-desc": (a, b) => sortString(a.name, b.name) * -1,
-      "review-count-asc": (a, b) => sortNumber(a.reviewCount, b.reviewCount),
-      "review-count-desc": (a, b) =>
-        sortNumber(a.reviewCount, b.reviewCount) * -1,
-      "title-count-asc": (a, b) => sortNumber(a.totalCount, b.totalCount),
-      "title-count-desc": (a, b) => sortNumber(a.totalCount, b.totalCount) * -1,
-    };
-
-  const comparer = sortMap[sortOrder];
-
-  return values.sort(comparer);
-}
+type State = FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>>;
 
 function groupForValue(item: ListItemValue, sortValue: Sort): string {
   switch (sortValue) {
@@ -65,9 +50,49 @@ function groupForValue(item: ListItemValue, sortValue: Sort): string {
   }
 }
 
-type State = FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>>;
+function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
+  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
+    {
+      "name-asc": (a, b) => sortString(a.name, b.name),
+      "name-desc": (a, b) => sortString(a.name, b.name) * -1,
+      "review-count-asc": (a, b) => sortNumber(a.reviewCount, b.reviewCount),
+      "review-count-desc": (a, b) =>
+        sortNumber(a.reviewCount, b.reviewCount) * -1,
+      "title-count-asc": (a, b) => sortNumber(a.totalCount, b.totalCount),
+      "title-count-desc": (a, b) => sortNumber(a.totalCount, b.totalCount) * -1,
+    };
+
+  const comparer = sortMap[sortOrder];
+
+  return values.sort(comparer);
+}
 
 const SHOW_COUNT_DEFAULT = 100;
+
+export type ActionType =
+  | FilterCreditKindAction
+  | FilterNameAction
+  | ShowMoreAction
+  | SortAction;
+
+type FilterCreditKindAction = {
+  type: Actions.FILTER_CREDIT_KIND;
+  value: string;
+};
+
+type FilterNameAction = {
+  type: Actions.FILTER_NAME;
+  value: string;
+};
+
+type ShowMoreAction = {
+  type: Actions.SHOW_MORE;
+};
+
+type SortAction = {
+  type: Actions.SORT;
+  value: Sort;
+};
 
 export function initState({
   initialSort,
@@ -88,31 +113,6 @@ export function initState({
     sortValue: initialSort,
   };
 }
-
-type FilterNameAction = {
-  type: Actions.FILTER_NAME;
-  value: string;
-};
-
-type FilterCreditKindAction = {
-  type: Actions.FILTER_CREDIT_KIND;
-  value: string;
-};
-
-type SortAction = {
-  type: Actions.SORT;
-  value: Sort;
-};
-
-type ShowMoreAction = {
-  type: Actions.SHOW_MORE;
-};
-
-export type ActionType =
-  | FilterCreditKindAction
-  | FilterNameAction
-  | ShowMoreAction
-  | SortAction;
 
 export function reducer(state: State, action: ActionType): State {
   let groupedValues;

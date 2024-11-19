@@ -2,10 +2,10 @@ import type { AlltimeStats } from "~/api/alltimeStats";
 
 import { StatsCallout } from "~/components/StatsCallout";
 
-type Props = {} & Pick<
+type Props = Pick<
   AlltimeStats,
   "reviewCount" | "titleCount" | "viewingCount" | "watchlistTitlesReviewedCount"
->;
+> & {};
 
 export function Callouts({
   reviewCount,

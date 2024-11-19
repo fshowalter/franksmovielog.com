@@ -47,6 +47,31 @@ export function MostWatchedMovies({
   );
 }
 
+function FluidListItemPoster({
+  className,
+  imageProps,
+}: {
+  className?: string;
+  imageProps: PosterImageProps;
+  slug: string | undefined;
+  title: string;
+  year: string;
+}) {
+  return (
+    <div className={ccn("w-16 tablet:w-auto tablet:max-w-[248px]", className)}>
+      <Poster
+        className="h-auto"
+        decoding="async"
+        height={MostWatchedMoviesPosterConfig.height}
+        imageProps={imageProps}
+        loading="lazy"
+        sizes={MostWatchedMoviesPosterConfig.sizes}
+        width={MostWatchedMoviesPosterConfig.width}
+      />
+    </div>
+  );
+}
+
 function List({ children }: { children: React.ReactNode }): JSX.Element {
   return (
     <ol className="grid-cols-[repeat(auto-fit,_minmax(128px,248px))] items-center justify-center gap-x-6 gap-y-8 bg-subtle tablet:grid tablet:items-start tablet:bg-default">
@@ -114,30 +139,5 @@ function Title({
       {"\u202F"}
       {yearBox}
     </span>
-  );
-}
-
-function FluidListItemPoster({
-  className,
-  imageProps,
-}: {
-  className?: string;
-  imageProps: PosterImageProps;
-  slug: string | undefined;
-  title: string;
-  year: string;
-}) {
-  return (
-    <div className={ccn("w-16 tablet:w-auto tablet:max-w-[248px]", className)}>
-      <Poster
-        className="h-auto"
-        decoding="async"
-        height={MostWatchedMoviesPosterConfig.height}
-        imageProps={imageProps}
-        loading="lazy"
-        sizes={MostWatchedMoviesPosterConfig.sizes}
-        width={MostWatchedMoviesPosterConfig.width}
-      />
-    </div>
   );
 }

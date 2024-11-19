@@ -17,19 +17,19 @@ import type { Sort } from "./CastAndCrew.reducer";
 import { Actions, initState, reducer } from "./CastAndCrew.reducer";
 import { Filters } from "./Filters";
 
+export type ListItemValue = Pick<
+  CastAndCrewMember,
+  "creditedAs" | "name" | "reviewCount" | "slug" | "totalCount"
+> & {
+  avatarImageProps: AvatarImageProps | undefined;
+};
+
 export type Props = {
   backdropImageProps: BackdropImageProps;
   deck: string;
   initialSort: Sort;
   values: ListItemValue[];
 };
-
-export type ListItemValue = {
-  avatarImageProps: AvatarImageProps | undefined;
-} & Pick<
-  CastAndCrewMember,
-  "creditedAs" | "name" | "reviewCount" | "slug" | "totalCount"
->;
 
 export function CastAndCrew({
   backdropImageProps,

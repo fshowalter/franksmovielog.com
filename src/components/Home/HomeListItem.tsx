@@ -12,18 +12,7 @@ export const StillImageConfig = {
   width: 640,
 };
 
-function formatDate(reviewDate: Date) {
-  return reviewDate.toLocaleString("en-GB", {
-    day: "2-digit",
-    month: "short",
-    timeZone: "UTC",
-    year: "numeric",
-  });
-}
-
-export type ListItemValue = {
-  stillImageProps: StillImageProps;
-} & Pick<
+export type ListItemValue = Pick<
   Review,
   | "date"
   | "directorNames"
@@ -36,7 +25,9 @@ export type ListItemValue = {
   | "title"
   | "year"
 > &
-  ReviewExcerpt;
+  ReviewExcerpt & {
+    stillImageProps: StillImageProps;
+  };
 
 export function HomeListItem({ value }: { value: ListItemValue }) {
   return (
@@ -80,4 +71,13 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
       </div>
     </li>
   );
+}
+
+function formatDate(reviewDate: Date) {
+  return reviewDate.toLocaleString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    timeZone: "UTC",
+    year: "numeric",
+  });
 }

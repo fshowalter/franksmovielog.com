@@ -132,28 +132,14 @@ export function Review({
   );
 }
 
-function OriginalTitle({
-  className,
-  value,
-}: {
-  className: string;
-  value: string | undefined;
-}) {
-  if (!value) {
-    return <div className={className} />;
-  }
-
-  return <div className={className}>({value})</div>;
-}
-
 function Meta({
   className,
   countries,
   runtimeMinutes,
   year,
-}: {
+}: Pick<Review, "countries" | "runtimeMinutes" | "year"> & {
   className?: string;
-} & Pick<Review, "countries" | "runtimeMinutes" | "year">) {
+}) {
   let allCountries;
 
   for (const country of countries) {
@@ -185,4 +171,18 @@ function Meta({
       </span>
     </div>
   );
+}
+
+function OriginalTitle({
+  className,
+  value,
+}: {
+  className: string;
+  value: string | undefined;
+}) {
+  if (!value) {
+    return <div className={className} />;
+  }
+
+  return <div className={className}>({value})</div>;
 }

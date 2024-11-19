@@ -4,6 +4,13 @@ import { ListItemMediumAndVenue } from "./ListItemMediumAndVenue";
 import { ListItemPoster } from "./ListItemPoster";
 import { ListItemTitle } from "./ListItemTitle";
 
+export type MostWatchedPeopleListItemValue = {
+  count: number;
+  name: string;
+  slug: string | undefined;
+  viewings: ViewingSubListItemValue[];
+};
+
 type ViewingSubListItemValue = {
   date: string;
   medium: string | undefined;
@@ -13,13 +20,6 @@ type ViewingSubListItemValue = {
   title: string;
   venue: string | undefined;
   year: string;
-};
-
-export type MostWatchedPeopleListItemValue = {
-  count: number;
-  name: string;
-  slug: string | undefined;
-  viewings: ViewingSubListItemValue[];
 };
 
 export function MostWatchedPeople({
@@ -75,25 +75,6 @@ export function MostWatchedPeople({
   );
 }
 
-function Name({
-  value,
-}: {
-  value: MostWatchedPeopleListItemValue;
-}): JSX.Element {
-  if (value.slug) {
-    return (
-      <a
-        className="inline-block font-normal leading-6 text-accent"
-        href={`/cast-and-crew/${value.slug}/`}
-      >
-        {value.name}
-      </a>
-    );
-  }
-
-  return <span className="font-normal">{value.name}</span>;
-}
-
 function MostWatchedPersonViewingListItem({
   value,
 }: {
@@ -117,4 +98,23 @@ function MostWatchedPersonViewingListItem({
       </div>
     </li>
   );
+}
+
+function Name({
+  value,
+}: {
+  value: MostWatchedPeopleListItemValue;
+}): JSX.Element {
+  if (value.slug) {
+    return (
+      <a
+        className="inline-block font-normal leading-6 text-accent"
+        href={`/cast-and-crew/${value.slug}/`}
+      >
+        {value.name}
+      </a>
+    );
+  }
+
+  return <span className="font-normal">{value.name}</span>;
 }

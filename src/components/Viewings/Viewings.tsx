@@ -18,23 +18,7 @@ import type { Sort } from "./Viewings.reducer";
 import { Filters } from "./Filters";
 import { Actions, initState, reducer } from "./Viewings.reducer";
 
-export type Props = {
-  backdropImageProps: BackdropImageProps;
-  deck: string;
-  distinctGenres: readonly string[];
-  distinctMedia: readonly string[];
-  distinctReleaseYears: readonly string[];
-  distinctVenues: readonly string[];
-  distinctViewingYears: readonly string[];
-  initialSort: Sort;
-  values: ListItemValue[];
-};
-
-export type ListItemValue = {
-  posterImageProps: PosterImageProps;
-  viewingDay: string;
-  viewingMonth: string;
-} & Pick<
+export type ListItemValue = Pick<
   Viewing,
   | "genres"
   | "medium"
@@ -47,7 +31,23 @@ export type ListItemValue = {
   | "viewingDate"
   | "viewingYear"
   | "year"
->;
+> & {
+  posterImageProps: PosterImageProps;
+  viewingDay: string;
+  viewingMonth: string;
+};
+
+export type Props = {
+  backdropImageProps: BackdropImageProps;
+  deck: string;
+  distinctGenres: readonly string[];
+  distinctMedia: readonly string[];
+  distinctReleaseYears: readonly string[];
+  distinctVenues: readonly string[];
+  distinctViewingYears: readonly string[];
+  initialSort: Sort;
+  values: ListItemValue[];
+};
 
 export function Viewings({
   backdropImageProps,
@@ -147,33 +147,6 @@ function DateListItem({
   );
 }
 
-function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
-  let rest = {};
-  if (value.slug) {
-    rest = { "data-has-review": true };
-  }
-
-  return (
-    <li
-      className="relative mb-1 flex flex-row items-center gap-x-4 bg-default px-container py-4 last-of-type:mb-0 tablet:gap-x-6 tablet:pl-4"
-      style={{
-        background: value.slug ? "var(--bg-default)" : "var(--bg-unreviewed)",
-      }}
-      {...rest}
-    >
-      <ListItemPoster imageProps={value.posterImageProps} />
-      <div className="flex grow flex-col gap-1">
-        <ListItemTitle
-          slug={value.slug}
-          title={value.title}
-          year={value.year}
-        />
-        <ListItemMediumAndVenue medium={value.medium} venue={value.venue} />
-      </div>
-    </li>
-  );
-}
-
 function ListItemTitle({
   slug,
   title,
@@ -210,5 +183,32 @@ function ListItemTitle({
       {"\u202F"}
       {yearBox}
     </span>
+  );
+}
+
+function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
+  let rest = {};
+  if (value.slug) {
+    rest = { "data-has-review": true };
+  }
+
+  return (
+    <li
+      className="relative mb-1 flex flex-row items-center gap-x-4 bg-default px-container py-4 last-of-type:mb-0 tablet:gap-x-6 tablet:pl-4"
+      style={{
+        background: value.slug ? "var(--bg-default)" : "var(--bg-unreviewed)",
+      }}
+      {...rest}
+    >
+      <ListItemPoster imageProps={value.posterImageProps} />
+      <div className="flex grow flex-col gap-1">
+        <ListItemTitle
+          slug={value.slug}
+          title={value.title}
+          year={value.year}
+        />
+        <ListItemMediumAndVenue medium={value.medium} venue={value.venue} />
+      </div>
+    </li>
   );
 }

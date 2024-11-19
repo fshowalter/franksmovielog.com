@@ -9,25 +9,6 @@ import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
 
 import type { Props } from "./CastAndCrewMember";
 
-function deck(value: Props["value"]) {
-  const creditString = new Intl.ListFormat().format(value.creditedAs);
-
-  const creditList =
-    creditString.charAt(0).toUpperCase() + creditString.slice(1);
-
-  const watchlistTitleCount =
-    value.reviewCount === value.totalCount
-      ? ""
-      : ` and ${value.totalCount - value.reviewCount} watchlist`;
-
-  const titles =
-    value.reviewCount === 1 && value.totalCount - value.reviewCount < 2
-      ? "title"
-      : `titles`;
-
-  return `${creditList} with ${value.reviewCount} reviewed${watchlistTitleCount} ${titles}.`;
-}
-
 export async function getProps(slug: string): Promise<Props> {
   const { distinctReleaseYears, member } = await castAndCrewMember(slug);
 
@@ -60,4 +41,23 @@ export async function getProps(slug: string): Promise<Props> {
     ),
     value: member,
   };
+}
+
+function deck(value: Props["value"]) {
+  const creditString = new Intl.ListFormat().format(value.creditedAs);
+
+  const creditList =
+    creditString.charAt(0).toUpperCase() + creditString.slice(1);
+
+  const watchlistTitleCount =
+    value.reviewCount === value.totalCount
+      ? ""
+      : ` and ${value.totalCount - value.reviewCount} watchlist`;
+
+  const titles =
+    value.reviewCount === 1 && value.totalCount - value.reviewCount < 2
+      ? "title"
+      : `titles`;
+
+  return `${creditList} with ${value.reviewCount} reviewed${watchlistTitleCount} ${titles}.`;
 }
