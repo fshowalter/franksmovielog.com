@@ -15,9 +15,9 @@ import type { Sort } from "./Collections.reducer";
 import { initState, reducer } from "./Collections.reducer";
 import { Filters } from "./Filters";
 
-export type ListItemValue = Pick<Collection, "name" | "reviewCount" | "slug" | "titleCount"> & {
+export type ListItemValue = {
   avatarImageProps: AvatarImageProps | undefined;
-};
+} & Pick<Collection, "name" | "reviewCount" | "slug" | "titleCount">;
 
 export type Props = {
   backdropImageProps: BackdropImageProps;

@@ -30,7 +30,7 @@ if (import.meta.env.MODE !== "development") {
   cachedMarkdownReviews = await allReviewsMarkdown();
 }
 
-export type Review = MarkdownReview & ReviewedTitleJson & {};
+export type Review = {} & MarkdownReview & ReviewedTitleJson;
 
 export type ReviewContent = {
   content: string | undefined;
@@ -49,11 +49,11 @@ type Reviews = {
   reviews: Review[];
 };
 
-type ReviewViewing = MarkdownViewing & {
+type ReviewViewing = {
   mediumNotes: string | undefined;
   venueNotes: string | undefined;
   viewingNotes: string | undefined;
-};
+} & MarkdownViewing;
 
 export async function allReviews(): Promise<Reviews> {
   if (cachedReviews) {

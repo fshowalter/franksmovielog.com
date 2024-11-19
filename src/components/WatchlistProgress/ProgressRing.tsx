@@ -1,10 +1,10 @@
-type Props = React.SVGProps<SVGSVGElement> & {
+type Props = {
   className?: string;
   complete: number;
   label: string;
   subLabel?: string | undefined;
   total: number;
-};
+} & React.SVGProps<SVGSVGElement>;
 
 export function ProgressRing({
   className,

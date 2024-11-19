@@ -13,20 +13,20 @@ import { Details } from "./Details";
 export type Props = {
   backdropImageProps: BackdropImageProps;
   deck: string;
-  progress: CalloutsProps & {
-    collectionDetails: (WatchlistProgress["collectionDetails"][number] & {
+  progress: {
+    collectionDetails: ({
       avatarImageProps: AvatarImageProps | undefined;
-    })[];
-    directorDetails: (WatchlistProgress["directorDetails"][number] & {
+    } & WatchlistProgress["collectionDetails"][number])[];
+    directorDetails: ({
       avatarImageProps: AvatarImageProps | undefined;
-    })[];
-    performerDetails: (WatchlistProgress["performerDetails"][number] & {
+    } & WatchlistProgress["directorDetails"][number])[];
+    performerDetails: ({
       avatarImageProps: AvatarImageProps | undefined;
-    })[];
-    writerDetails: (WatchlistProgress["writerDetails"][number] & {
+    } & WatchlistProgress["performerDetails"][number])[];
+    writerDetails: ({
       avatarImageProps: AvatarImageProps | undefined;
-    })[];
-  };
+    } & WatchlistProgress["writerDetails"][number])[];
+  } & CalloutsProps;
 };
 
 export function WatchlistProgress({

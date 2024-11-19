@@ -12,7 +12,9 @@ export const StillImageConfig = {
   width: 640,
 };
 
-export type ListItemValue = Pick<
+export type ListItemValue = {
+  stillImageProps: StillImageProps;
+} & Pick<
   Review,
   | "date"
   | "directorNames"
@@ -24,10 +26,8 @@ export type ListItemValue = Pick<
   | "slug"
   | "title"
   | "year"
-> & ReviewExcerpt &
-  {
-  stillImageProps: StillImageProps;
-};
+> &
+  ReviewExcerpt;
 
 export function HomeListItem({ value }: { value: ListItemValue }) {
   return (

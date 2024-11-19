@@ -16,7 +16,9 @@ import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 import { Actions, initState, reducer, type Sort } from "./Collection.reducer";
 import { Filters } from "./Filters";
 
-export type ListItemValue = Pick<
+export type ListItemValue = {
+  posterImageProps: PosterImageProps;
+} & Pick<
   Collection["titles"][0],
   | "grade"
   | "gradeValue"
@@ -26,9 +28,7 @@ export type ListItemValue = Pick<
   | "sortTitle"
   | "title"
   | "year"
-> & {
-  posterImageProps: PosterImageProps;
-};
+>;
 
 export type Props = {
   avatarImageProps: AvatarImageProps | undefined;

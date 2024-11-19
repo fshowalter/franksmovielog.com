@@ -4,14 +4,14 @@ import type { StillImageProps } from "~/api/stills";
 import { MoreReviews } from "~/components/MoreReviews";
 import { SubHeading } from "~/components/SubHeading";
 
-type CastAndCrewMember = Omit<Review["moreCastAndCrew"][number], "titles"> & {
+type CastAndCrewMember = {
   titles: CastAndCrewMemberTitle[];
-};
+} & Omit<Review["moreCastAndCrew"][number], "titles">;
 
-type CastAndCrewMemberTitle = Review["moreCastAndCrew"][number]["titles"][number] & {
+type CastAndCrewMemberTitle = {
   excerpt: string;
   stillImageProps: StillImageProps;
-};
+} & Review["moreCastAndCrew"][number]["titles"][number];
 
 type Props = {
   values: CastAndCrewMember[];

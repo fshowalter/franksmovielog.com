@@ -13,11 +13,11 @@ import {
 import { emToQuotes } from "./utils/markdown/emToQuotes";
 import { rootAsSpan } from "./utils/markdown/rootAsSpan";
 
-export type Collection = CollectionJson & {};
+export type Collection = {} & CollectionJson;
 
-export type CollectionWithDetails = Collection & {
+export type CollectionWithDetails = {
   descriptionHtml: null | string;
-};
+} & Collection;
 
 export async function allCollections(): Promise<{
   collections: Collection[];

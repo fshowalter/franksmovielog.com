@@ -2,14 +2,14 @@ import type { PosterImageProps } from "~/api/posters";
 
 import { ccn } from "~/utils/concatClassNames";
 
-type PosterProps = React.ImgHTMLAttributes<HTMLImageElement> & {
+type PosterProps = {
   className?: string;
   decoding: "async" | "auto" | "sync";
   height: number;
   imageProps: PosterImageProps | undefined;
   loading: "eager" | "lazy";
   width: number;
-};
+} & React.ImgHTMLAttributes<HTMLImageElement>;
 
 export function Poster({
   className,

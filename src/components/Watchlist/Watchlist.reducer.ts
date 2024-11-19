@@ -71,9 +71,9 @@ type SortAction = {
   value: Sort;
 };
 
-type State = FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>> & {
+type State = {
   hideReviewed: boolean;
-};
+} & FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>>;
 
 export function initState({
   initialSort,
