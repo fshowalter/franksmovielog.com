@@ -26,7 +26,7 @@ export function Footer(): JSX.Element {
           To the top
         </a>
         <p className="w-full font-normal leading-4 text-inverse-subtle">
-          All stills used in accordance with the{" "}
+          All reviews by Frank Showalter. All images used in accordance with the{" "}
           <a
             className="text-inherit underline decoration-2 underline-offset-4 hover:bg-default hover:text-default"
             href="http://www.copyright.gov/title17/92chap1.html#107"
