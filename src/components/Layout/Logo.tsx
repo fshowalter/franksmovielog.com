@@ -10,7 +10,7 @@ export function Logo({ className }: { className?: string }) {
         <a href="/">Frank&apos;s Movie Log</a>
       </div>
       <p className={"w-full pl-px text-sm italic leading-4 opacity-85"}>
-        My life at the movies.
+        by Frank Showalter
       </p>
     </div>
   );
