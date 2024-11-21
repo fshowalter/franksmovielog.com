@@ -1,8 +1,8 @@
 {
   "year": "2024",
-  "newTitleCount": 102,
-  "viewingCount": 134,
-  "titleCount": 131,
+  "newTitleCount": 103,
+  "viewingCount": 135,
+  "titleCount": 132,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -18,7 +18,7 @@
     },
     {
       "name": "DVD",
-      "count": 5
+      "count": 6
     },
     {
       "name": "Watch TCM",
@@ -36,7 +36,7 @@
   "decadeDistribution": [
     {
       "name": "1930s",
-      "count": 10
+      "count": 11
     },
     {
       "name": "1940s",
@@ -389,7 +389,7 @@
   "mostWatchedPerformers": [
     {
       "name": "John Wayne",
-      "count": 5,
+      "count": 6,
       "slug": "john-wayne",
       "viewings": [
         {
@@ -436,6 +436,15 @@
           "medium": "Watch TCM",
           "venue": null,
           "year": "1944"
+        },
+        {
+          "sequence": 1689,
+          "date": "2024-11-20",
+          "slug": "winds-of-the-wasteland-1936",
+          "title": "Winds of the Wasteland",
+          "medium": "DVD",
+          "venue": null,
+          "year": "1936"
         }
       ]
     },
