@@ -25,6 +25,20 @@
       "count": 1
     }
   ],
+  "venueDistribution": [
+    {
+      "name": "Alamo Drafthouse Cinema - One Loudoun",
+      "count": 8
+    },
+    {
+      "name": "AMC Tysons Corner 16",
+      "count": 6
+    },
+    {
+      "name": "Angelika Film Center Mosaic",
+      "count": 1
+    }
+  ],
   "decadeDistribution": [
     {
       "name": "1940s",
@@ -772,6 +786,31 @@
           "medium": "HBO HD",
           "venue": null,
           "year": "2001"
+        }
+      ]
+    },
+    {
+      "name": "Larry Lieber",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 299,
+          "date": "2013-05-02",
+          "slug": null,
+          "title": "Iron Man 3",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "2013"
+        },
+        {
+          "sequence": 342,
+          "date": "2013-11-25",
+          "slug": null,
+          "title": "Thor: The Dark World",
+          "medium": null,
+          "venue": "AMC Tysons Corner 16",
+          "year": "2013"
         }
       ]
     },

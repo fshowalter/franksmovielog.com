@@ -17,6 +17,7 @@ const YearStatsJsonSchema = z.object({
   mostWatchedWriters: z.array(MostWatchedPersonSchema),
   newTitleCount: z.number(),
   titleCount: z.number(),
+  venueDistribution: z.array(DistributionSchema),
   viewingCount: z.number(),
   year: z.string(),
 });
