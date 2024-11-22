@@ -12,6 +12,7 @@ import { MostWatchedMovies } from "~/components/MostWatchedMovies";
 import { MostWatchedPerformers } from "~/components/MostWatchedPerformers";
 import { MostWatchedWriters } from "~/components/MostWatchedWriters";
 import { StatsNavigation } from "~/components/StatsNavigation";
+import { VenueDistribution } from "~/components/VenueDistribution";
 
 import { Callouts } from "./Callouts";
 import { GradeDistribution } from "./GradeDistribution";
@@ -31,6 +32,7 @@ export type Props = {
     | "mediaDistribution"
     | "reviewCount"
     | "titleCount"
+    | "venueDistribution"
     | "viewingCount"
     | "watchlistTitlesReviewedCount"
   >;
@@ -81,6 +83,7 @@ export function AlltimeStats({
         <div className="flex flex-col items-start gap-y-8 desktop:flex-row desktop:gap-x-8">
           <DecadeDistribution values={stats.decadeDistribution} />
           <MediaDistribution values={stats.mediaDistribution} />
+          <VenueDistribution values={stats.venueDistribution} />
           <GradeDistribution values={stats.gradeDistribution} />
         </div>
         <div className="mx-auto flex w-full flex-col gap-y-8 desktop:max-w-[calc(66%_+_24px)]">

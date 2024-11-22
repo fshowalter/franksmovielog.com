@@ -29,6 +29,24 @@
       "count": 1
     }
   ],
+  "venueDistribution": [
+    {
+      "name": "AMC Tysons Corner 16",
+      "count": 27
+    },
+    {
+      "name": "Landmark E Street Cinema",
+      "count": 9
+    },
+    {
+      "name": "The Black Cat",
+      "count": 7
+    },
+    {
+      "name": "AFI Silver",
+      "count": 4
+    }
+  ],
   "decadeDistribution": [
     {
       "name": "1930s",
@@ -586,7 +604,7 @@
     {
       "name": "John Huston",
       "count": 5,
-      "slug": "john-huston",
+      "slug": null,
       "viewings": [
         {
           "sequence": 61,

@@ -12,6 +12,7 @@ import { MostWatchedMovies } from "~/components/MostWatchedMovies";
 import { MostWatchedPerformers } from "~/components/MostWatchedPerformers";
 import { MostWatchedWriters } from "~/components/MostWatchedWriters";
 import { StatsNavigation } from "~/components/StatsNavigation";
+import { VenueDistribution } from "~/components/VenueDistribution";
 
 import { Callouts } from "./Callouts";
 
@@ -75,6 +76,7 @@ export function YearStats({
           <MediaDistribution values={stats.mediaDistribution} />
         </div>
         <div className="mx-auto flex w-full flex-col gap-y-8 desktop:max-w-[calc(66%_+_24px)]">
+          <VenueDistribution values={stats.venueDistribution} />
           <MostWatchedDirectors values={mostWatchedDirectors} />
           <MostWatchedPerformers values={mostWatchedPerformers} />
           <MostWatchedWriters values={mostWatchedWriters} />

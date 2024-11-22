@@ -23,6 +23,7 @@ const AlltimeStatsJsonSchema = z.object({
   mostWatchedWriters: z.array(MostWatchedPersonSchema),
   reviewCount: z.number(),
   titleCount: z.number(),
+  venueDistribution: z.array(DistributionSchema),
   viewingCount: z.number(),
   watchlistTitlesReviewedCount: z.number(),
 });

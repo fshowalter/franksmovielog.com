@@ -1,23 +1,27 @@
 {
   "year": "2024",
-  "newTitleCount": 38,
-  "viewingCount": 55,
-  "titleCount": 54,
+  "newTitleCount": 105,
+  "viewingCount": 137,
+  "titleCount": 134,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 25
+      "count": 74
     },
     {
       "name": "4k UHD Blu-ray",
-      "count": 11
+      "count": 26
     },
     {
       "name": "iTunes",
-      "count": 5
+      "count": 11
     },
     {
       "name": "DVD",
+      "count": 6
+    },
+    {
+      "name": "Watch TCM",
       "count": 3
     },
     {
@@ -29,42 +33,56 @@
       "count": 1
     }
   ],
+  "venueDistribution": [
+    {
+      "name": "Alamo Drafthouse Cinema - One Loudoun",
+      "count": 14
+    },
+    {
+      "name": "Prince Charles Cinema",
+      "count": 2
+    }
+  ],
   "decadeDistribution": [
     {
       "name": "1930s",
-      "count": 1
+      "count": 11
     },
     {
       "name": "1940s",
-      "count": 1
+      "count": 2
+    },
+    {
+      "name": "1950s",
+      "count": 5
     },
     {
       "name": "1960s",
-      "count": 7
+      "count": 18
     },
     {
       "name": "1970s",
-      "count": 10
+      "count": 27
     },
     {
       "name": "1980s",
-      "count": 16
+      "count": 26
     },
     {
       "name": "1990s",
-      "count": 7
+      "count": 17
     },
     {
       "name": "2000s",
-      "count": 3
+      "count": 9
     },
     {
       "name": "2010s",
-      "count": 3
+      "count": 6
     },
     {
       "name": "2020s",
-      "count": 7
+      "count": 16
     }
   ],
   "mostWatchedTitles": [
@@ -74,13 +92,79 @@
       "year": "1985",
       "count": 2,
       "slug": "night-train-to-terror-1985"
+    },
+    {
+      "title": "Late Night with the Devil",
+      "imdbId": "tt14966898",
+      "year": "2023",
+      "count": 2,
+      "slug": null
+    },
+    {
+      "title": "Deadpool & Wolverine",
+      "imdbId": "tt6263850",
+      "year": "2024",
+      "count": 2,
+      "slug": null
     }
   ],
   "mostWatchedDirectors": [
     {
+      "name": "Lucio Fulci",
+      "count": 5,
+      "slug": "lucio-fulci",
+      "viewings": [
+        {
+          "sequence": 1581,
+          "date": "2024-04-10",
+          "slug": "city-of-the-living-dead-1980",
+          "title": "City of the Living Dead",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1980"
+        },
+        {
+          "sequence": 1649,
+          "date": "2024-10-12",
+          "slug": null,
+          "title": "Conquest",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1983"
+        },
+        {
+          "sequence": 1654,
+          "date": "2024-10-18",
+          "slug": "manhattan-baby-1982",
+          "title": "Manhattan Baby",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1982"
+        },
+        {
+          "sequence": 1683,
+          "date": "2024-11-14",
+          "slug": "the-devils-honey-1986",
+          "title": "The Devil's Honey",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1986"
+        },
+        {
+          "sequence": 1684,
+          "date": "2024-11-15",
+          "slug": "the-conspiracy-of-torture-1969",
+          "title": "The Conspiracy of Torture",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1969"
+        }
+      ]
+    },
+    {
       "name": "Sergio Leone",
       "count": 3,
-      "slug": "sergio-leone",
+      "slug": null,
       "viewings": [
         {
           "sequence": 1600,
@@ -237,6 +321,31 @@
       ]
     },
     {
+      "name": "Larry Cohen",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1563,
+          "date": "2024-01-21",
+          "slug": null,
+          "title": "It's Alive",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1974"
+        },
+        {
+          "sequence": 1646,
+          "date": "2024-10-10",
+          "slug": null,
+          "title": "It Lives Again",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1978"
+        }
+      ]
+    },
+    {
       "name": "John Ford",
       "count": 2,
       "slug": "john-ford",
@@ -262,32 +371,274 @@
       ]
     },
     {
-      "name": "Corey Yuen",
+      "name": "Cameron Cairnes",
       "count": 2,
       "slug": null,
       "viewings": [
         {
-          "sequence": 1584,
-          "date": "2024-04-24",
-          "slug": "ninja-in-the-dragons-den-1982",
-          "title": "Ninja in the Dragon's Den",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1982"
+          "sequence": 1578,
+          "date": "2024-03-25",
+          "slug": null,
+          "title": "Late Night with the Devil",
+          "medium": null,
+          "venue": "Prince Charles Cinema",
+          "year": "2023"
         },
         {
-          "sequence": 1604,
-          "date": "2024-06-20",
+          "sequence": 1665,
+          "date": "2024-10-26",
           "slug": null,
-          "title": "Righting Wrongs",
-          "medium": "Blu-ray",
+          "title": "Late Night with the Devil",
+          "medium": "iTunes",
           "venue": null,
-          "year": "1986"
+          "year": "2023"
         }
       ]
     }
   ],
   "mostWatchedPerformers": [
+    {
+      "name": "John Wayne",
+      "count": 6,
+      "slug": "john-wayne",
+      "viewings": [
+        {
+          "sequence": 1576,
+          "date": "2024-03-12",
+          "slug": null,
+          "title": "Stagecoach",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1939"
+        },
+        {
+          "sequence": 1577,
+          "date": "2024-03-12",
+          "slug": null,
+          "title": "The Man Who Shot Liberty Valance",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1962"
+        },
+        {
+          "sequence": 1620,
+          "date": "2024-08-05",
+          "slug": "the-telegraph-trail-1933",
+          "title": "The Telegraph Trail",
+          "medium": "Watch TCM",
+          "venue": null,
+          "year": "1933"
+        },
+        {
+          "sequence": 1621,
+          "date": "2024-08-05",
+          "slug": "the-man-from-monterey-1933",
+          "title": "The Man from Monterey",
+          "medium": "Watch TCM",
+          "venue": null,
+          "year": "1933"
+        },
+        {
+          "sequence": 1622,
+          "date": "2024-08-06",
+          "slug": "tall-in-the-saddle-1944",
+          "title": "Tall in the Saddle",
+          "medium": "Watch TCM",
+          "venue": null,
+          "year": "1944"
+        },
+        {
+          "sequence": 1689,
+          "date": "2024-11-20",
+          "slug": "winds-of-the-wasteland-1936",
+          "title": "Winds of the Wasteland",
+          "medium": "DVD",
+          "venue": null,
+          "year": "1936"
+        }
+      ]
+    },
+    {
+      "name": "Christopher Lee",
+      "count": 5,
+      "slug": "christopher-lee",
+      "viewings": [
+        {
+          "sequence": 1587,
+          "date": "2024-04-27",
+          "slug": "horror-express-1972",
+          "title": "Horror Express",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "1972"
+        },
+        {
+          "sequence": 1628,
+          "date": "2024-08-19",
+          "slug": null,
+          "title": "The Face of Fu Manchu",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1965"
+        },
+        {
+          "sequence": 1652,
+          "date": "2024-10-16",
+          "slug": "scream-and-scream-again-1970",
+          "title": "Scream and Scream Again",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1970"
+        },
+        {
+          "sequence": 1659,
+          "date": "2024-10-23",
+          "slug": "the-oblong-box-1969",
+          "title": "The Oblong Box",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1969"
+        },
+        {
+          "sequence": 1677,
+          "date": "2024-11-09",
+          "slug": "the-castle-of-the-living-dead-1964",
+          "title": "The Castle of the Living Dead",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1964"
+        }
+      ]
+    },
+    {
+      "name": "Nicolas Cage",
+      "count": 4,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1582,
+          "date": "2024-04-13",
+          "slug": "mandy-2018",
+          "title": "Mandy",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "2018"
+        },
+        {
+          "sequence": 1595,
+          "date": "2024-06-06",
+          "slug": null,
+          "title": "Red Rock West",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1993"
+        },
+        {
+          "sequence": 1607,
+          "date": "2024-06-24",
+          "slug": null,
+          "title": "Vampire's Kiss",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "1988"
+        },
+        {
+          "sequence": 1616,
+          "date": "2024-07-31",
+          "slug": null,
+          "title": "Longlegs",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "2024"
+        }
+      ]
+    },
+    {
+      "name": "Boris Karloff",
+      "count": 4,
+      "slug": "boris-karloff",
+      "viewings": [
+        {
+          "sequence": 1596,
+          "date": "2024-06-08",
+          "slug": "the-man-with-nine-lives-1940",
+          "title": "The Man with Nine Lives",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1940"
+        },
+        {
+          "sequence": 1619,
+          "date": "2024-08-04",
+          "slug": null,
+          "title": "Bride of Frankenstein",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1935"
+        },
+        {
+          "sequence": 1657,
+          "date": "2024-10-21",
+          "slug": "the-black-room-1935",
+          "title": "The Black Room",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1935"
+        },
+        {
+          "sequence": 1670,
+          "date": "2024-11-01",
+          "slug": "mr-wong-detective-1938",
+          "title": "Mr. Wong, Detective",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1938"
+        }
+      ]
+    },
+    {
+      "name": "Clint Eastwood",
+      "count": 4,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1600,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "A Fistful of Dollars",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1964"
+        },
+        {
+          "sequence": 1601,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "For a Few Dollars More",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1965"
+        },
+        {
+          "sequence": 1602,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "The Good, the Bad and the Ugly",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1966"
+        },
+        {
+          "sequence": 1611,
+          "date": "2024-07-02",
+          "slug": null,
+          "title": "Dirty Harry",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1971"
+        }
+      ]
+    },
     {
       "name": "Faith Clift",
       "count": 3,
@@ -357,6 +708,40 @@
       ]
     },
     {
+      "name": "Luis Barboo",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1565,
+          "date": "2024-02-01",
+          "slug": null,
+          "title": "Conan the Barbarian",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1982"
+        },
+        {
+          "sequence": 1573,
+          "date": "2024-02-24",
+          "slug": null,
+          "title": "Satan's Blood",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1978"
+        },
+        {
+          "sequence": 1688,
+          "date": "2024-11-19",
+          "slug": "the-case-of-the-scorpions-tail-1971",
+          "title": "The Case of the Scorpion's Tail",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1971"
+        }
+      ]
+    },
+    {
       "name": "Lee Van Cleef",
       "count": 3,
       "slug": null,
@@ -391,227 +776,109 @@
       ]
     },
     {
-      "name": "Nicolas Cage",
+      "name": "Miao Ching",
       "count": 3,
       "slug": null,
       "viewings": [
         {
-          "sequence": 1582,
-          "date": "2024-04-13",
-          "slug": "mandy-2018",
-          "title": "Mandy",
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
-        },
-        {
-          "sequence": 1595,
-          "date": "2024-06-06",
-          "slug": null,
-          "title": "Red Rock West",
+          "sequence": 1585,
+          "date": "2024-04-24",
+          "slug": "human-lanterns-1982",
+          "title": "Human Lanterns",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "1993"
+          "year": "1982"
         },
         {
-          "sequence": 1607,
-          "date": "2024-06-24",
+          "sequence": 1610,
+          "date": "2024-07-01",
           "slug": null,
-          "title": "Vampire's Kiss",
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1988"
-        }
-      ]
-    },
-    {
-      "name": "Clint Eastwood",
-      "count": 3,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1600,
-          "date": "2024-06-16",
-          "slug": null,
-          "title": "A Fistful of Dollars",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1964"
-        },
-        {
-          "sequence": 1601,
-          "date": "2024-06-16",
-          "slug": null,
-          "title": "For a Few Dollars More",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1965"
-        },
-        {
-          "sequence": 1602,
-          "date": "2024-06-16",
-          "slug": null,
-          "title": "The Good, the Bad and the Ugly",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1966"
-        }
-      ]
-    },
-    {
-      "name": "Benito Stefanelli",
-      "count": 3,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1600,
-          "date": "2024-06-16",
-          "slug": null,
-          "title": "A Fistful of Dollars",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1964"
-        },
-        {
-          "sequence": 1601,
-          "date": "2024-06-16",
-          "slug": null,
-          "title": "For a Few Dollars More",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1965"
-        },
-        {
-          "sequence": 1602,
-          "date": "2024-06-16",
-          "slug": null,
-          "title": "The Good, the Bad and the Ugly",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1966"
-        }
-      ]
-    },
-    {
-      "name": "Mario Brega",
-      "count": 3,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1600,
-          "date": "2024-06-16",
-          "slug": null,
-          "title": "A Fistful of Dollars",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1964"
-        },
-        {
-          "sequence": 1601,
-          "date": "2024-06-16",
-          "slug": null,
-          "title": "For a Few Dollars More",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1965"
-        },
-        {
-          "sequence": 1602,
-          "date": "2024-06-16",
-          "slug": null,
-          "title": "The Good, the Bad and the Ugly",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1966"
-        }
-      ]
-    },
-    {
-      "name": "Aldo Sambrell",
-      "count": 3,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1600,
-          "date": "2024-06-16",
-          "slug": null,
-          "title": "A Fistful of Dollars",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1964"
-        },
-        {
-          "sequence": 1601,
-          "date": "2024-06-16",
-          "slug": null,
-          "title": "For a Few Dollars More",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1965"
-        },
-        {
-          "sequence": 1602,
-          "date": "2024-06-16",
-          "slug": null,
-          "title": "The Good, the Bad and the Ugly",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1966"
-        }
-      ]
-    },
-    {
-      "name": "Barbara Wyler",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1556,
-          "date": "2024-01-04",
-          "slug": "night-train-to-terror-1985",
-          "title": "Night Train to Terror",
+          "title": "Abbot of Shaolin",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "1985"
+          "year": "1979"
         },
         {
-          "sequence": 1586,
-          "date": "2024-04-27",
-          "slug": "night-train-to-terror-1985",
-          "title": "Night Train to Terror",
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1985"
-        }
-      ]
-    },
-    {
-      "name": "Jamie Scoggin",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1556,
-          "date": "2024-01-04",
-          "slug": "night-train-to-terror-1985",
-          "title": "Night Train to Terror",
+          "sequence": 1627,
+          "date": "2024-08-17",
+          "slug": null,
+          "title": "Lightning Fists of Shaolin",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "1985"
-        },
-        {
-          "sequence": 1586,
-          "date": "2024-04-27",
-          "slug": "night-train-to-terror-1985",
-          "title": "Night Train to Terror",
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1985"
+          "year": "1984"
         }
       ]
     }
   ],
   "mostWatchedWriters": [
+    {
+      "name": "Lucio Fulci",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1581,
+          "date": "2024-04-10",
+          "slug": "city-of-the-living-dead-1980",
+          "title": "City of the Living Dead",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1980"
+        },
+        {
+          "sequence": 1683,
+          "date": "2024-11-14",
+          "slug": "the-devils-honey-1986",
+          "title": "The Devil's Honey",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1986"
+        },
+        {
+          "sequence": 1684,
+          "date": "2024-11-15",
+          "slug": "the-conspiracy-of-torture-1969",
+          "title": "The Conspiracy of Torture",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1969"
+        }
+      ]
+    },
+    {
+      "name": "Kuang Ni",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1585,
+          "date": "2024-04-24",
+          "slug": "human-lanterns-1982",
+          "title": "Human Lanterns",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1982"
+        },
+        {
+          "sequence": 1610,
+          "date": "2024-07-01",
+          "slug": null,
+          "title": "Abbot of Shaolin",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1979"
+        },
+        {
+          "sequence": 1673,
+          "date": "2024-11-05",
+          "slug": "disciples-of-shaolin-1975",
+          "title": "Disciples of Shaolin",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1975"
+        }
+      ]
+    },
     {
       "name": "Sergio Leone",
       "count": 3,
@@ -672,24 +939,49 @@
       ]
     },
     {
-      "name": "Sheridan Le Fanu",
+      "name": "Larry Cohen",
       "count": 2,
       "slug": null,
       "viewings": [
         {
-          "sequence": 1592,
-          "date": "2024-05-23",
+          "sequence": 1563,
+          "date": "2024-01-21",
           "slug": null,
-          "title": "Alucarda",
-          "medium": "DVD",
+          "title": "It's Alive",
+          "medium": "Blu-ray",
           "venue": null,
-          "year": "1977"
+          "year": "1974"
         },
         {
-          "sequence": 1593,
-          "date": "2024-06-01",
+          "sequence": 1646,
+          "date": "2024-10-10",
           "slug": null,
-          "title": "The Blood Spattered Bride",
+          "title": "It Lives Again",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1978"
+        }
+      ]
+    },
+    {
+      "name": "Dick Randall",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1567,
+          "date": "2024-02-03",
+          "slug": null,
+          "title": "Pieces",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1982"
+        },
+        {
+          "sequence": 1647,
+          "date": "2024-10-11",
+          "slug": null,
+          "title": "The French Sex Murders",
           "medium": "Blu-ray",
           "venue": null,
           "year": "1972"
@@ -697,27 +989,102 @@
       ]
     },
     {
-      "name": "Luciano Vincenzoni",
+      "name": "Colin Cairnes",
       "count": 2,
       "slug": null,
       "viewings": [
         {
-          "sequence": 1601,
-          "date": "2024-06-16",
+          "sequence": 1578,
+          "date": "2024-03-25",
           "slug": null,
-          "title": "For a Few Dollars More",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1965"
+          "title": "Late Night with the Devil",
+          "medium": null,
+          "venue": "Prince Charles Cinema",
+          "year": "2023"
         },
         {
-          "sequence": 1602,
-          "date": "2024-06-16",
+          "sequence": 1665,
+          "date": "2024-10-26",
           "slug": null,
-          "title": "The Good, the Bad and the Ugly",
+          "title": "Late Night with the Devil",
+          "medium": "iTunes",
+          "venue": null,
+          "year": "2023"
+        }
+      ]
+    },
+    {
+      "name": "Cameron Cairnes",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1578,
+          "date": "2024-03-25",
+          "slug": null,
+          "title": "Late Night with the Devil",
+          "medium": null,
+          "venue": "Prince Charles Cinema",
+          "year": "2023"
+        },
+        {
+          "sequence": 1665,
+          "date": "2024-10-26",
+          "slug": null,
+          "title": "Late Night with the Devil",
+          "medium": "iTunes",
+          "venue": null,
+          "year": "2023"
+        }
+      ]
+    },
+    {
+      "name": "Dardano Sacchetti",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1581,
+          "date": "2024-04-10",
+          "slug": "city-of-the-living-dead-1980",
+          "title": "City of the Living Dead",
           "medium": "4k UHD Blu-ray",
           "venue": null,
-          "year": "1966"
+          "year": "1980"
+        },
+        {
+          "sequence": 1654,
+          "date": "2024-10-18",
+          "slug": "manhattan-baby-1982",
+          "title": "Manhattan Baby",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1982"
+        }
+      ]
+    },
+    {
+      "name": "Panos Cosmatos",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1582,
+          "date": "2024-04-13",
+          "slug": "mandy-2018",
+          "title": "Mandy",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "2018"
+        },
+        {
+          "sequence": 1669,
+          "date": "2024-10-31",
+          "slug": "beyond-the-black-rainbow-2010",
+          "title": "Beyond the Black Rainbow",
+          "medium": "iTunes",
+          "venue": null,
+          "year": "2010"
         }
       ]
     }
