@@ -81,12 +81,12 @@ export function AlltimeStats({
           values={mostWatchedMovies}
         />
         <div className="flex flex-col items-start gap-y-8 desktop:flex-row desktop:gap-x-8">
-          <DecadeDistribution values={stats.decadeDistribution} />
-          <MediaDistribution values={stats.mediaDistribution} />
-          <VenueDistribution values={stats.venueDistribution} />
           <GradeDistribution values={stats.gradeDistribution} />
+          <DecadeDistribution values={stats.decadeDistribution} />
         </div>
         <div className="mx-auto flex w-full flex-col gap-y-8 desktop:max-w-[calc(66%_+_24px)]">
+          <MediaDistribution values={stats.mediaDistribution} />
+          <VenueDistribution values={stats.venueDistribution} />
           <MostWatchedDirectors values={mostWatchedDirectors} />
           <MostWatchedPerformers values={mostWatchedPerformers} />
           <MostWatchedWriters values={mostWatchedWriters} />
