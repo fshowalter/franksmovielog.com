@@ -1,12 +1,12 @@
 {
   "year": "2024",
-  "newTitleCount": 105,
-  "viewingCount": 137,
-  "titleCount": 134,
+  "newTitleCount": 107,
+  "viewingCount": 139,
+  "titleCount": 136,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 74
+      "count": 75
     },
     {
       "name": "4k UHD Blu-ray",
@@ -18,7 +18,7 @@
     },
     {
       "name": "DVD",
-      "count": 6
+      "count": 7
     },
     {
       "name": "Watch TCM",
@@ -46,7 +46,7 @@
   "decadeDistribution": [
     {
       "name": "1930s",
-      "count": 11
+      "count": 12
     },
     {
       "name": "1940s",
@@ -62,7 +62,7 @@
     },
     {
       "name": "1970s",
-      "count": 27
+      "count": 28
     },
     {
       "name": "1980s",
@@ -640,6 +640,49 @@
       ]
     },
     {
+      "name": "Luigi Pistilli",
+      "count": 4,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1601,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "For a Few Dollars More",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1965"
+        },
+        {
+          "sequence": 1602,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "The Good, the Bad and the Ugly",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1966"
+        },
+        {
+          "sequence": 1688,
+          "date": "2024-11-19",
+          "slug": "the-case-of-the-scorpions-tail-1971",
+          "title": "The Case of the Scorpion's Tail",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1971"
+        },
+        {
+          "sequence": 1692,
+          "date": "2024-11-22",
+          "slug": "your-vice-is-a-locked-room-and-only-i-have-the-key-1972",
+          "title": "Your Vice Is a Locked Room and Only I Have the Key",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1972"
+        }
+      ]
+    },
+    {
       "name": "Faith Clift",
       "count": 3,
       "slug": null,
@@ -772,40 +815,6 @@
           "medium": "4k UHD Blu-ray",
           "venue": null,
           "year": "1966"
-        }
-      ]
-    },
-    {
-      "name": "Miao Ching",
-      "count": 3,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1585,
-          "date": "2024-04-24",
-          "slug": "human-lanterns-1982",
-          "title": "Human Lanterns",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1982"
-        },
-        {
-          "sequence": 1610,
-          "date": "2024-07-01",
-          "slug": null,
-          "title": "Abbot of Shaolin",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1979"
-        },
-        {
-          "sequence": 1627,
-          "date": "2024-08-17",
-          "slug": null,
-          "title": "Lightning Fists of Shaolin",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1984"
         }
       ]
     }
