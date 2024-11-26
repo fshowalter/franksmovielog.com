@@ -28,6 +28,6 @@ describe("/og.jpg", () => {
 
     const snapshot = fs.readFileSync(snapshotFile);
 
-    void expect(result.compare(snapshot)).toBe(0);
+    expect(result.compare(snapshot)).toBe(0);
   });
 });
