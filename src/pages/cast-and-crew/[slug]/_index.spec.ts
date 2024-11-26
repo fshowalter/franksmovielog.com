@@ -40,8 +40,8 @@ describe("/cast-and-crew/:slug", () => {
         },
       );
 
-      void expect(
-        await prettier.format(result, { parser: "html" }),
+      await expect(
+        await prettier.format(result, { filepath: "member.html" }),
       ).toMatchFileSnapshot(`__snapshots__/${member.slug}.html`);
     },
   );

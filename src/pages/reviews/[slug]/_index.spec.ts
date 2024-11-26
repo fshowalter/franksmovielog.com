@@ -42,8 +42,8 @@ describe("/reviews/:slug", () => {
         },
       );
 
-      void expect(
-        await prettier.format(result, { parser: "html" }),
+      await expect(
+        await prettier.format(result, { filepath: "review.html" }),
       ).toMatchFileSnapshot(`__snapshots__/${review.slug}.html`);
     },
   );

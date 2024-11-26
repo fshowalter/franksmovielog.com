@@ -39,7 +39,7 @@ describe("/collections/:slug/og.jpg", () => {
 
       const snapshot = fs.readFileSync(snapshotFile);
 
-      void expect(result.compare(snapshot)).toBe(0);
+      await expect(result.compare(snapshot)).toBe(0);
     },
   );
 });

@@ -40,8 +40,8 @@ describe("/collections/:slug", () => {
         },
       );
 
-      void expect(
-        await prettier.format(result, { parser: "html" }),
+      await expect(
+        await prettier.format(result, { filepath: "collection.html" }),
       ).toMatchFileSnapshot(`__snapshots__/${collection.slug}.html`);
     },
   );

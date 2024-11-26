@@ -22,10 +22,8 @@ describe("/viewings/stats/", () => {
       },
     );
 
-    void expect(
-      await prettier.format(result, {
-        parser: "html",
-      }),
+    await expect(
+      await prettier.format(result, { filepath: "index.html" }),
     ).toMatchFileSnapshot(`__snapshots__/index.html`);
   });
 });
