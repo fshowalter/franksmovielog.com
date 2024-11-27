@@ -97,12 +97,6 @@ export async function loadContent<
       };
     });
 
-  if (viewings.length === 0) {
-    throw new Error(
-      `No markdown viewings found with imdb_id ${review.imdbId} for title "${review.title}"`,
-    );
-  }
-
   return {
     ...review,
     content: getHtml(review.rawContent, reviewedTitlesJson),

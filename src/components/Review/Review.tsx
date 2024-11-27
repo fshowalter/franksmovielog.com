@@ -82,16 +82,7 @@ export function Review({
       </header>
       <div className="flex flex-col items-center gap-16 px-container pb-20 desktop:gap-20 desktop:pb-32">
         <Content content={value.content} />
-        <div className="w-full max-w-popout">
-          <SubHeading as="h2" className="shadow-bottom">
-            Viewing History
-          </SubHeading>
-          <ul>
-            {value.viewings.map((viewing) => (
-              <ViewingHistoryListItem key={viewing.sequence} value={viewing} />
-            ))}
-          </ul>
-        </div>
+        <ViewingHistory value={value} />
         <Credits
           className="w-full max-w-popout"
           countries={value.countries}
@@ -185,4 +176,23 @@ function OriginalTitle({
   }
 
   return <div className={className}>({value})</div>;
+}
+
+function ViewingHistory({ value }: Pick<Props, "value">) {
+  if (value.viewings.length === 0) {
+    return false;
+  }
+
+  return (
+    <div className="w-full max-w-popout">
+      <SubHeading as="h2" className="shadow-bottom">
+        Viewing History
+      </SubHeading>
+      <ul>
+        {value.viewings.map((viewing) => (
+          <ViewingHistoryListItem key={viewing.sequence} value={viewing} />
+        ))}
+      </ul>
+    </div>
+  );
 }
