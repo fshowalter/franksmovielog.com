@@ -12431,6 +12431,60 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Steve McQueen",
+        "slug": "steve-mcqueen",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Getaway",
+            "imdbId": "tt0068638",
+            "year": "1972",
+            "slug": "the-getaway-1972",
+            "grade": "B+",
+            "genres": [
+              "Action",
+              "Crime",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Magnificent Seven",
+            "imdbId": "tt0054047",
+            "year": "1960",
+            "slug": "the-magnificent-seven-1960",
+            "grade": "B",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "Western"
+            ]
+          },
+          {
+            "title": "Soldier in the Rain",
+            "imdbId": "tt0057517",
+            "year": "1963",
+            "slug": "soldier-in-the-rain-1963",
+            "grade": "B",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Baby the Rain Must Fall",
+            "imdbId": "tt0058930",
+            "year": "1965",
+            "slug": "baby-the-rain-must-fall-1965",
+            "grade": "D",
+            "genres": [
+              "Drama"
+            ]
+          }
+        ]
       }
     ],
     "moreCollections": [],
@@ -16610,6 +16664,18 @@
         ]
       },
       {
+        "title": "Soldier in the Rain",
+        "imdbId": "tt0057517",
+        "year": "1963",
+        "slug": "soldier-in-the-rain-1963",
+        "grade": "B",
+        "genres": [
+          "Comedy",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
         "title": "Sorority House Massacre",
         "imdbId": "tt0091990",
         "year": "1986",
@@ -16617,20 +16683,6 @@
         "grade": "B-",
         "genres": [
           "Horror"
-        ]
-      },
-      {
-        "title": "Spider-Man: Far from Home",
-        "imdbId": "tt6320628",
-        "year": "2019",
-        "slug": "spider-man-far-from-home-2019",
-        "grade": "D+",
-        "genres": [
-          "Action",
-          "Adventure",
-          "Comedy",
-          "Fantasy",
-          "Sci-Fi"
         ]
       }
     ]
@@ -36414,7 +36466,61 @@
       }
     ],
     "collections": [],
-    "moreCastAndCrew": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Steve McQueen",
+        "slug": "steve-mcqueen",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Soldier in the Rain",
+            "imdbId": "tt0057517",
+            "year": "1963",
+            "slug": "soldier-in-the-rain-1963",
+            "grade": "B",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Baby the Rain Must Fall",
+            "imdbId": "tt0058930",
+            "year": "1965",
+            "slug": "baby-the-rain-must-fall-1965",
+            "grade": "D",
+            "genres": [
+              "Drama"
+            ]
+          },
+          {
+            "title": "The Magnificent Seven",
+            "imdbId": "tt0054047",
+            "year": "1960",
+            "slug": "the-magnificent-seven-1960",
+            "grade": "B",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "Western"
+            ]
+          },
+          {
+            "title": "Hell Is for Heroes",
+            "imdbId": "tt0056062",
+            "year": "1962",
+            "slug": "hell-is-for-heroes-1962",
+            "grade": "B",
+            "genres": [
+              "Drama",
+              "War"
+            ]
+          }
+        ]
+      }
+    ],
     "moreCollections": [],
     "moreReviews": [
       {
@@ -36945,17 +37051,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Society",
-        "imdbId": "tt0098354",
-        "year": "1989",
-        "slug": "society-1989",
-        "grade": "B-",
-        "genres": [
-          "Comedy",
-          "Horror"
-        ]
-      },
-      {
         "title": "Soft & Quiet",
         "imdbId": "tt14557188",
         "year": "2022",
@@ -36965,6 +37060,18 @@
           "Drama",
           "Horror",
           "Thriller"
+        ]
+      },
+      {
+        "title": "Soldier in the Rain",
+        "imdbId": "tt0057517",
+        "year": "1963",
+        "slug": "soldier-in-the-rain-1963",
+        "grade": "B",
+        "genres": [
+          "Comedy",
+          "Drama",
+          "Romance"
         ]
       },
       {
@@ -38500,13 +38607,15 @@
         ]
       },
       {
-        "title": "Sorority House Massacre",
-        "imdbId": "tt0091990",
-        "year": "1986",
-        "slug": "sorority-house-massacre-1986",
-        "grade": "B-",
+        "title": "Soldier in the Rain",
+        "imdbId": "tt0057517",
+        "year": "1963",
+        "slug": "soldier-in-the-rain-1963",
+        "grade": "B",
         "genres": [
-          "Horror"
+          "Comedy",
+          "Drama",
+          "Romance"
         ]
       }
     ]
@@ -39025,6 +39134,168 @@
           "Horror",
           "Mystery",
           "Thriller"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0057517",
+    "title": "Soldier in the Rain",
+    "year": "1963",
+    "slug": "soldier-in-the-rain-1963",
+    "grade": "B",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "sortTitle": "Soldier in the Rain (1963)",
+    "originalTitle": null,
+    "gradeValue": 9,
+    "runtimeMinutes": 88,
+    "releaseSequence": "1963-11-27tt0057517",
+    "directorNames": [
+      "Ralph Nelson"
+    ],
+    "writerNames": [
+      "Maurice Richlin",
+      "Blake Edwards",
+      "William Goldman"
+    ],
+    "principalCastNames": [
+      "Jackie Gleason",
+      "Steve McQueen",
+      "Tuesday Weld",
+      "Tony Bill"
+    ],
+    "reviewDate": "2014-05-20",
+    "reviewYear": "2014",
+    "sequence": "2014-05-20-190",
+    "viewings": [
+      {
+        "sequence": 190,
+        "medium": "TCM HD",
+        "mediumNotes": null,
+        "date": "2012-06-14",
+        "venue": null,
+        "venueNotes": null
+      }
+    ],
+    "castAndCrew": [
+      {
+        "name": "Steve McQueen",
+        "slug": "steve-mcqueen",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Steve McQueen",
+        "slug": "steve-mcqueen",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Magnificent Seven",
+            "imdbId": "tt0054047",
+            "year": "1960",
+            "slug": "the-magnificent-seven-1960",
+            "grade": "B",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "Western"
+            ]
+          },
+          {
+            "title": "Hell Is for Heroes",
+            "imdbId": "tt0056062",
+            "year": "1962",
+            "slug": "hell-is-for-heroes-1962",
+            "grade": "B",
+            "genres": [
+              "Drama",
+              "War"
+            ]
+          },
+          {
+            "title": "Baby the Rain Must Fall",
+            "imdbId": "tt0058930",
+            "year": "1965",
+            "slug": "baby-the-rain-must-fall-1965",
+            "grade": "D",
+            "genres": [
+              "Drama"
+            ]
+          },
+          {
+            "title": "The Getaway",
+            "imdbId": "tt0068638",
+            "year": "1972",
+            "slug": "the-getaway-1972",
+            "grade": "B+",
+            "genres": [
+              "Action",
+              "Crime",
+              "Thriller"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Society",
+        "imdbId": "tt0098354",
+        "year": "1989",
+        "slug": "society-1989",
+        "grade": "B-",
+        "genres": [
+          "Comedy",
+          "Horror"
+        ]
+      },
+      {
+        "title": "Soft & Quiet",
+        "imdbId": "tt14557188",
+        "year": "2022",
+        "slug": "soft-and-quiet-2022",
+        "grade": "C+",
+        "genres": [
+          "Drama",
+          "Horror",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "Sorority House Massacre",
+        "imdbId": "tt0091990",
+        "year": "1986",
+        "slug": "sorority-house-massacre-1986",
+        "grade": "B-",
+        "genres": [
+          "Horror"
+        ]
+      },
+      {
+        "title": "Spider-Man: Far from Home",
+        "imdbId": "tt6320628",
+        "year": "2019",
+        "slug": "spider-man-far-from-home-2019",
+        "grade": "D+",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Comedy",
+          "Fantasy",
+          "Sci-Fi"
         ]
       }
     ]
@@ -56628,7 +56899,63 @@
       }
     ],
     "collections": [],
-    "moreCastAndCrew": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Steve McQueen",
+        "slug": "steve-mcqueen",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Hell Is for Heroes",
+            "imdbId": "tt0056062",
+            "year": "1962",
+            "slug": "hell-is-for-heroes-1962",
+            "grade": "B",
+            "genres": [
+              "Drama",
+              "War"
+            ]
+          },
+          {
+            "title": "Soldier in the Rain",
+            "imdbId": "tt0057517",
+            "year": "1963",
+            "slug": "soldier-in-the-rain-1963",
+            "grade": "B",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Getaway",
+            "imdbId": "tt0068638",
+            "year": "1972",
+            "slug": "the-getaway-1972",
+            "grade": "B+",
+            "genres": [
+              "Action",
+              "Crime",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Magnificent Seven",
+            "imdbId": "tt0054047",
+            "year": "1960",
+            "slug": "the-magnificent-seven-1960",
+            "grade": "B",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "Western"
+            ]
+          }
+        ]
+      }
+    ],
     "moreCollections": [],
     "moreReviews": [
       {
@@ -72797,6 +73124,58 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Steve McQueen",
+        "slug": "steve-mcqueen",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Baby the Rain Must Fall",
+            "imdbId": "tt0058930",
+            "year": "1965",
+            "slug": "baby-the-rain-must-fall-1965",
+            "grade": "D",
+            "genres": [
+              "Drama"
+            ]
+          },
+          {
+            "title": "The Getaway",
+            "imdbId": "tt0068638",
+            "year": "1972",
+            "slug": "the-getaway-1972",
+            "grade": "B+",
+            "genres": [
+              "Action",
+              "Crime",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Hell Is for Heroes",
+            "imdbId": "tt0056062",
+            "year": "1962",
+            "slug": "hell-is-for-heroes-1962",
+            "grade": "B",
+            "genres": [
+              "Drama",
+              "War"
+            ]
+          },
+          {
+            "title": "Soldier in the Rain",
+            "imdbId": "tt0057517",
+            "year": "1963",
+            "slug": "soldier-in-the-rain-1963",
+            "grade": "B",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          }
+        ]
       }
     ],
     "moreCollections": [],
@@ -78113,15 +78492,15 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Soft & Quiet",
-        "imdbId": "tt14557188",
-        "year": "2022",
-        "slug": "soft-and-quiet-2022",
-        "grade": "C+",
+        "title": "Soldier in the Rain",
+        "imdbId": "tt0057517",
+        "year": "1963",
+        "slug": "soldier-in-the-rain-1963",
+        "grade": "B",
         "genres": [
+          "Comedy",
           "Drama",
-          "Horror",
-          "Thriller"
+          "Romance"
         ]
       },
       {
