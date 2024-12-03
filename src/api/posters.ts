@@ -26,7 +26,7 @@ export async function getFixedWidthPosterImageProps(
   }
 
   const posterFilePath = Object.keys(images).find((path) => {
-    return path.endsWith(`${slug}.png`);
+    return path.endsWith(`/${slug}.png`);
   })!;
 
   const posterFile = await images[posterFilePath]();
@@ -57,7 +57,7 @@ export async function getFluidWidthPosterImageProps(
   },
 ): Promise<PosterImageProps> {
   const posterFilePath = Object.keys(images).find((path) => {
-    return path.endsWith(`${slug}.png`);
+    return path.endsWith(`/${slug}.png`);
   })!;
 
   const posterFile = await images[posterFilePath]();

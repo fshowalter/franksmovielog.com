@@ -13,7 +13,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 
 export async function getOpenGraphStillSrc(slug: string) {
   const stillFilePath = Object.keys(images).find((path) => {
-    return path.endsWith(`${slug}.png`);
+    return path.endsWith(`/${slug}.png`);
   })!;
 
   const stillFile = await images[stillFilePath]();
@@ -40,7 +40,7 @@ export async function getStillImageProps(
   },
 ): Promise<StillImageProps> {
   const stillFilePath = Object.keys(images).find((path) => {
-    return path.endsWith(`${slug}.png`);
+    return path.endsWith(`/${slug}.png`);
   })!;
 
   const stillFile = await images[stillFilePath]();
