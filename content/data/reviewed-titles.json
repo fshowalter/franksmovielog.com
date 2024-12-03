@@ -26819,24 +26819,22 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Assault on a Queen",
-            "imdbId": "tt0060135",
-            "year": "1966",
-            "slug": "assault-on-a-queen-1966",
-            "grade": "D-",
-            "genres": [
-              "Adventure",
-              "Crime",
-              "Thriller",
-              "Action",
-              "Drama"
-            ]
-          },
-          {
             "title": "Higher and Higher",
             "imdbId": "tt0036919",
             "year": "1943",
             "slug": "higher-and-higher-1943",
+            "grade": "F",
+            "genres": [
+              "Comedy",
+              "Musical",
+              "Romance"
+            ]
+          },
+          {
+            "title": "It Happened in Brooklyn",
+            "imdbId": "tt0039501",
+            "year": "1947",
+            "slug": "it-happened-in-brooklyn-1947",
             "grade": "F",
             "genres": [
               "Comedy",
@@ -28460,24 +28458,24 @@
         ]
       },
       {
+        "title": "It Happened in Brooklyn",
+        "imdbId": "tt0039501",
+        "year": "1947",
+        "slug": "it-happened-in-brooklyn-1947",
+        "grade": "F",
+        "genres": [
+          "Comedy",
+          "Musical",
+          "Romance"
+        ]
+      },
+      {
         "title": "It Rains on Our Love",
         "imdbId": "tt0038468",
         "year": "1946",
         "slug": "it-rains-on-our-love-1946",
         "grade": "B",
         "genres": [
-          "Drama",
-          "Romance"
-        ]
-      },
-      {
-        "title": "It Should Happen to You",
-        "imdbId": "tt0047123",
-        "year": "1954",
-        "slug": "it-should-happen-to-you-1954",
-        "grade": "F",
-        "genres": [
-          "Comedy",
           "Drama",
           "Romance"
         ]
@@ -30666,15 +30664,15 @@
             ]
           },
           {
-            "title": "The Kissing Bandit",
-            "imdbId": "tt0040513",
-            "year": "1948",
-            "slug": "the-kissing-bandit-1948",
+            "title": "It Happened in Brooklyn",
+            "imdbId": "tt0039501",
+            "year": "1947",
+            "slug": "it-happened-in-brooklyn-1947",
             "grade": "F",
             "genres": [
               "Comedy",
               "Musical",
-              "Western"
+              "Romance"
             ]
           }
         ]
@@ -33311,15 +33309,15 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "It Follows",
-        "imdbId": "tt3235888",
-        "year": "2014",
-        "slug": "it-follows-2014",
-        "grade": "D",
+        "title": "It Happened in Brooklyn",
+        "imdbId": "tt0039501",
+        "year": "1947",
+        "slug": "it-happened-in-brooklyn-1947",
+        "grade": "F",
         "genres": [
-          "Horror",
-          "Mystery",
-          "Thriller"
+          "Comedy",
+          "Musical",
+          "Romance"
         ]
       },
       {
@@ -38918,13 +38916,14 @@
         ]
       },
       {
-        "title": "It Rains on Our Love",
-        "imdbId": "tt0038468",
-        "year": "1946",
-        "slug": "it-rains-on-our-love-1946",
-        "grade": "B",
+        "title": "It Happened in Brooklyn",
+        "imdbId": "tt0039501",
+        "year": "1947",
+        "slug": "it-happened-in-brooklyn-1947",
+        "grade": "F",
         "genres": [
-          "Drama",
+          "Comedy",
+          "Musical",
           "Romance"
         ]
       }
@@ -40392,6 +40391,160 @@
           "Horror",
           "Mystery",
           "Thriller"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0039501",
+    "title": "It Happened in Brooklyn",
+    "year": "1947",
+    "slug": "it-happened-in-brooklyn-1947",
+    "grade": "F",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Comedy",
+      "Musical",
+      "Romance"
+    ],
+    "sortTitle": "It Happened in Brooklyn (1947)",
+    "originalTitle": null,
+    "gradeValue": 1,
+    "runtimeMinutes": 104,
+    "releaseSequence": "1947-03-13tt0039501",
+    "directorNames": [
+      "Richard Whorf"
+    ],
+    "writerNames": [
+      "Isobel Lennart",
+      "Jack McGowan"
+    ],
+    "principalCastNames": [
+      "Frank Sinatra",
+      "Kathryn Grayson",
+      "Peter Lawford",
+      "Jimmy Durante"
+    ],
+    "reviewDate": "2009-01-19",
+    "reviewYear": "2009",
+    "sequence": "2009-01-19-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "Frank Sinatra",
+        "slug": "frank-sinatra",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Frank Sinatra",
+        "slug": "frank-sinatra",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Assault on a Queen",
+            "imdbId": "tt0060135",
+            "year": "1966",
+            "slug": "assault-on-a-queen-1966",
+            "grade": "D-",
+            "genres": [
+              "Adventure",
+              "Crime",
+              "Thriller",
+              "Action",
+              "Drama"
+            ]
+          },
+          {
+            "title": "Higher and Higher",
+            "imdbId": "tt0036919",
+            "year": "1943",
+            "slug": "higher-and-higher-1943",
+            "grade": "F",
+            "genres": [
+              "Comedy",
+              "Musical",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Kissing Bandit",
+            "imdbId": "tt0040513",
+            "year": "1948",
+            "slug": "the-kissing-bandit-1948",
+            "grade": "F",
+            "genres": [
+              "Comedy",
+              "Musical",
+              "Western"
+            ]
+          },
+          {
+            "title": "Meet Danny Wilson",
+            "imdbId": "tt0044893",
+            "year": "1952",
+            "slug": "meet-danny-wilson-1952",
+            "grade": "F",
+            "genres": [
+              "Drama",
+              "Musical"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Isle of Fury",
+        "imdbId": "tt0027805",
+        "year": "1936",
+        "slug": "isle-of-fury-1936",
+        "grade": "D+",
+        "genres": [
+          "Adventure",
+          "Romance"
+        ]
+      },
+      {
+        "title": "It Follows",
+        "imdbId": "tt3235888",
+        "year": "2014",
+        "slug": "it-follows-2014",
+        "grade": "D",
+        "genres": [
+          "Horror",
+          "Mystery",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "It Rains on Our Love",
+        "imdbId": "tt0038468",
+        "year": "1946",
+        "slug": "it-rains-on-our-love-1946",
+        "grade": "B",
+        "genres": [
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "title": "It Should Happen to You",
+        "imdbId": "tt0047123",
+        "year": "1954",
+        "slug": "it-should-happen-to-you-1954",
+        "grade": "F",
+        "genres": [
+          "Comedy",
+          "Drama",
+          "Romance"
         ]
       }
     ]
@@ -55947,6 +56100,18 @@
             ]
           },
           {
+            "title": "It Happened in Brooklyn",
+            "imdbId": "tt0039501",
+            "year": "1947",
+            "slug": "it-happened-in-brooklyn-1947",
+            "grade": "F",
+            "genres": [
+              "Comedy",
+              "Musical",
+              "Romance"
+            ]
+          },
+          {
             "title": "The Kissing Bandit",
             "imdbId": "tt0040513",
             "year": "1948",
@@ -55956,17 +56121,6 @@
               "Comedy",
               "Musical",
               "Western"
-            ]
-          },
-          {
-            "title": "Meet Danny Wilson",
-            "imdbId": "tt0044893",
-            "year": "1952",
-            "slug": "meet-danny-wilson-1952",
-            "grade": "F",
-            "genres": [
-              "Drama",
-              "Musical"
             ]
           }
         ]
@@ -70830,17 +70984,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Isle of Fury",
-        "imdbId": "tt0027805",
-        "year": "1936",
-        "slug": "isle-of-fury-1936",
-        "grade": "D+",
-        "genres": [
-          "Adventure",
-          "Romance"
-        ]
-      },
-      {
         "title": "It Follows",
         "imdbId": "tt3235888",
         "year": "2014",
@@ -70850,6 +70993,18 @@
           "Horror",
           "Mystery",
           "Thriller"
+        ]
+      },
+      {
+        "title": "It Happened in Brooklyn",
+        "imdbId": "tt0039501",
+        "year": "1947",
+        "slug": "it-happened-in-brooklyn-1947",
+        "grade": "F",
+        "genres": [
+          "Comedy",
+          "Musical",
+          "Romance"
         ]
       },
       {
@@ -101309,10 +101464,10 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Higher and Higher",
-            "imdbId": "tt0036919",
-            "year": "1943",
-            "slug": "higher-and-higher-1943",
+            "title": "It Happened in Brooklyn",
+            "imdbId": "tt0039501",
+            "year": "1947",
+            "slug": "it-happened-in-brooklyn-1947",
             "grade": "F",
             "genres": [
               "Comedy",
