@@ -16422,14 +16422,15 @@
         ]
       },
       {
-        "title": "Knife in the Water",
-        "imdbId": "tt0056291",
-        "year": "1962",
-        "slug": "knife-in-the-water-1962",
-        "grade": "B",
+        "title": "The Kissing Bandit",
+        "imdbId": "tt0040513",
+        "year": "1948",
+        "slug": "the-kissing-bandit-1948",
+        "grade": "F",
         "genres": [
-          "Drama",
-          "Thriller"
+          "Comedy",
+          "Musical",
+          "Western"
         ]
       }
     ]
@@ -17948,6 +17949,17 @@
         ]
       },
       {
+        "title": "Bandolero!",
+        "imdbId": "tt0062708",
+        "year": "1968",
+        "slug": "bandolero-1968",
+        "grade": "D-",
+        "genres": [
+          "Drama",
+          "Western"
+        ]
+      },
+      {
         "title": "Basket Case",
         "imdbId": "tt0083624",
         "year": "1982",
@@ -17956,17 +17968,6 @@
         "genres": [
           "Comedy",
           "Horror"
-        ]
-      },
-      {
-        "title": "Batman",
-        "imdbId": "tt0096895",
-        "year": "1989",
-        "slug": "batman-1989",
-        "grade": "A-",
-        "genres": [
-          "Action",
-          "Adventure"
         ]
       }
     ]
@@ -26766,6 +26767,163 @@
     ]
   },
   {
+    "imdbId": "tt0040513",
+    "title": "The Kissing Bandit",
+    "year": "1948",
+    "slug": "the-kissing-bandit-1948",
+    "grade": "F",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Comedy",
+      "Musical",
+      "Western"
+    ],
+    "sortTitle": "Kissing Bandit (1948)",
+    "originalTitle": null,
+    "gradeValue": 1,
+    "runtimeMinutes": 100,
+    "releaseSequence": "1948-11-18tt0040513",
+    "directorNames": [
+      "Laslo Benedek"
+    ],
+    "writerNames": [
+      "John Briard Harding",
+      "Isobel Lennart"
+    ],
+    "principalCastNames": [
+      "Frank Sinatra",
+      "Kathryn Grayson",
+      "J. Carrol Naish",
+      "Mildred Natwick"
+    ],
+    "reviewDate": "2009-01-22",
+    "reviewYear": "2009",
+    "sequence": "2009-01-22-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "Frank Sinatra",
+        "slug": "frank-sinatra",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Frank Sinatra",
+        "slug": "frank-sinatra",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Assault on a Queen",
+            "imdbId": "tt0060135",
+            "year": "1966",
+            "slug": "assault-on-a-queen-1966",
+            "grade": "D-",
+            "genres": [
+              "Adventure",
+              "Crime",
+              "Thriller",
+              "Action",
+              "Drama"
+            ]
+          },
+          {
+            "title": "Higher and Higher",
+            "imdbId": "tt0036919",
+            "year": "1943",
+            "slug": "higher-and-higher-1943",
+            "grade": "F",
+            "genres": [
+              "Comedy",
+              "Musical",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Meet Danny Wilson",
+            "imdbId": "tt0044893",
+            "year": "1952",
+            "slug": "meet-danny-wilson-1952",
+            "grade": "F",
+            "genres": [
+              "Drama",
+              "Musical"
+            ]
+          },
+          {
+            "title": "The Joker Is Wild",
+            "imdbId": "tt0050569",
+            "year": "1957",
+            "slug": "the-joker-is-wild-1957",
+            "grade": "B+",
+            "genres": [
+              "Biography",
+              "Drama",
+              "Musical"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "King of the Underworld",
+        "imdbId": "tt0031536",
+        "year": "1939",
+        "slug": "king-of-the-underworld-1939",
+        "grade": "D+",
+        "genres": [
+          "Crime",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "title": "Kingsman: The Secret Service",
+        "imdbId": "tt2802144",
+        "year": "2014",
+        "slug": "kingsman-the-secret-service-2014",
+        "grade": "C+",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Comedy",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "Knife in the Water",
+        "imdbId": "tt0056291",
+        "year": "1962",
+        "slug": "knife-in-the-water-1962",
+        "grade": "B",
+        "genres": [
+          "Drama",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "Koko-di Koko-da",
+        "imdbId": "tt9355200",
+        "year": "2019",
+        "slug": "koko-di-koko-da-2019",
+        "grade": "D+",
+        "genres": [
+          "Drama",
+          "Fantasy",
+          "Horror",
+          "Mystery"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt0814685",
     "title": "Frontier(s)",
     "year": "2007",
@@ -30466,7 +30624,62 @@
       }
     ],
     "collections": [],
-    "moreCastAndCrew": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Frank Sinatra",
+        "slug": "frank-sinatra",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Meet Danny Wilson",
+            "imdbId": "tt0044893",
+            "year": "1952",
+            "slug": "meet-danny-wilson-1952",
+            "grade": "F",
+            "genres": [
+              "Drama",
+              "Musical"
+            ]
+          },
+          {
+            "title": "The Joker Is Wild",
+            "imdbId": "tt0050569",
+            "year": "1957",
+            "slug": "the-joker-is-wild-1957",
+            "grade": "B+",
+            "genres": [
+              "Biography",
+              "Drama",
+              "Musical"
+            ]
+          },
+          {
+            "title": "Higher and Higher",
+            "imdbId": "tt0036919",
+            "year": "1943",
+            "slug": "higher-and-higher-1943",
+            "grade": "F",
+            "genres": [
+              "Comedy",
+              "Musical",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Kissing Bandit",
+            "imdbId": "tt0040513",
+            "year": "1948",
+            "slug": "the-kissing-bandit-1948",
+            "grade": "F",
+            "genres": [
+              "Comedy",
+              "Musical",
+              "Western"
+            ]
+          }
+        ]
+      }
+    ],
     "moreCollections": [],
     "moreReviews": [
       {
@@ -30835,16 +31048,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Bad Sister",
-        "imdbId": "tt0021636",
-        "year": "1931",
-        "slug": "the-bad-sister-1931",
-        "grade": "D+",
-        "genres": [
-          "Drama"
-        ]
-      },
-      {
         "title": "Bandido!",
         "imdbId": "tt0048983",
         "year": "1956",
@@ -30855,6 +31058,17 @@
           "Adventure",
           "Drama",
           "War",
+          "Western"
+        ]
+      },
+      {
+        "title": "Bandolero!",
+        "imdbId": "tt0062708",
+        "year": "1968",
+        "slug": "bandolero-1968",
+        "grade": "D-",
+        "genres": [
+          "Drama",
           "Western"
         ]
       },
@@ -31187,6 +31401,18 @@
         ]
       },
       {
+        "title": "The Kissing Bandit",
+        "imdbId": "tt0040513",
+        "year": "1948",
+        "slug": "the-kissing-bandit-1948",
+        "grade": "F",
+        "genres": [
+          "Comedy",
+          "Musical",
+          "Western"
+        ]
+      },
+      {
         "title": "Knife in the Water",
         "imdbId": "tt0056291",
         "year": "1962",
@@ -31195,19 +31421,6 @@
         "genres": [
           "Drama",
           "Thriller"
-        ]
-      },
-      {
-        "title": "Koko-di Koko-da",
-        "imdbId": "tt9355200",
-        "year": "2019",
-        "slug": "koko-di-koko-da-2019",
-        "grade": "D+",
-        "genres": [
-          "Drama",
-          "Fantasy",
-          "Horror",
-          "Mystery"
         ]
       }
     ]
@@ -35777,18 +35990,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "King of the Underworld",
-        "imdbId": "tt0031536",
-        "year": "1939",
-        "slug": "king-of-the-underworld-1939",
-        "grade": "D+",
-        "genres": [
-          "Crime",
-          "Drama",
-          "Romance"
-        ]
-      },
-      {
         "title": "Kingsman: The Secret Service",
         "imdbId": "tt2802144",
         "year": "2014",
@@ -35799,6 +36000,18 @@
           "Adventure",
           "Comedy",
           "Thriller"
+        ]
+      },
+      {
+        "title": "The Kissing Bandit",
+        "imdbId": "tt0040513",
+        "year": "1948",
+        "slug": "the-kissing-bandit-1948",
+        "grade": "F",
+        "genres": [
+          "Comedy",
+          "Musical",
+          "Western"
         ]
       },
       {
@@ -47739,7 +47952,64 @@
       }
     ],
     "collections": [],
-    "moreCastAndCrew": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Frank Sinatra",
+        "slug": "frank-sinatra",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Kissing Bandit",
+            "imdbId": "tt0040513",
+            "year": "1948",
+            "slug": "the-kissing-bandit-1948",
+            "grade": "F",
+            "genres": [
+              "Comedy",
+              "Musical",
+              "Western"
+            ]
+          },
+          {
+            "title": "Meet Danny Wilson",
+            "imdbId": "tt0044893",
+            "year": "1952",
+            "slug": "meet-danny-wilson-1952",
+            "grade": "F",
+            "genres": [
+              "Drama",
+              "Musical"
+            ]
+          },
+          {
+            "title": "Assault on a Queen",
+            "imdbId": "tt0060135",
+            "year": "1966",
+            "slug": "assault-on-a-queen-1966",
+            "grade": "D-",
+            "genres": [
+              "Adventure",
+              "Crime",
+              "Thriller",
+              "Action",
+              "Drama"
+            ]
+          },
+          {
+            "title": "Higher and Higher",
+            "imdbId": "tt0036919",
+            "year": "1943",
+            "slug": "higher-and-higher-1943",
+            "grade": "F",
+            "genres": [
+              "Comedy",
+              "Musical",
+              "Romance"
+            ]
+          }
+        ]
+      }
+    ],
     "moreCollections": [],
     "moreReviews": [
       {
@@ -55644,7 +55914,64 @@
       }
     ],
     "collections": [],
-    "moreCastAndCrew": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Frank Sinatra",
+        "slug": "frank-sinatra",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Joker Is Wild",
+            "imdbId": "tt0050569",
+            "year": "1957",
+            "slug": "the-joker-is-wild-1957",
+            "grade": "B+",
+            "genres": [
+              "Biography",
+              "Drama",
+              "Musical"
+            ]
+          },
+          {
+            "title": "Assault on a Queen",
+            "imdbId": "tt0060135",
+            "year": "1966",
+            "slug": "assault-on-a-queen-1966",
+            "grade": "D-",
+            "genres": [
+              "Adventure",
+              "Crime",
+              "Thriller",
+              "Action",
+              "Drama"
+            ]
+          },
+          {
+            "title": "The Kissing Bandit",
+            "imdbId": "tt0040513",
+            "year": "1948",
+            "slug": "the-kissing-bandit-1948",
+            "grade": "F",
+            "genres": [
+              "Comedy",
+              "Musical",
+              "Western"
+            ]
+          },
+          {
+            "title": "Meet Danny Wilson",
+            "imdbId": "tt0044893",
+            "year": "1952",
+            "slug": "meet-danny-wilson-1952",
+            "grade": "F",
+            "genres": [
+              "Drama",
+              "Musical"
+            ]
+          }
+        ]
+      }
+    ],
     "moreCollections": [],
     "moreReviews": [
       {
@@ -76493,6 +76820,109 @@
     ]
   },
   {
+    "imdbId": "tt0062708",
+    "title": "Bandolero!",
+    "year": "1968",
+    "slug": "bandolero-1968",
+    "grade": "D-",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Drama",
+      "Western"
+    ],
+    "sortTitle": "Bandolero! (1968)",
+    "originalTitle": null,
+    "gradeValue": 2,
+    "runtimeMinutes": 106,
+    "releaseSequence": "1968-06-18tt0062708",
+    "directorNames": [
+      "Andrew V. McLaglen"
+    ],
+    "writerNames": [
+      "James Lee Barrett",
+      "Stan Hough"
+    ],
+    "principalCastNames": [
+      "James Stewart",
+      "Dean Martin",
+      "Raquel Welch",
+      "George Kennedy"
+    ],
+    "reviewDate": "2009-03-06",
+    "reviewYear": "2009",
+    "sequence": "2009-03-06-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "James Stewart",
+        "slug": "james-stewart",
+        "creditedAs": [
+          "performer"
+        ]
+      },
+      {
+        "name": "Dean Martin",
+        "slug": "dean-martin",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Bad Sister",
+        "imdbId": "tt0021636",
+        "year": "1931",
+        "slug": "the-bad-sister-1931",
+        "grade": "D+",
+        "genres": [
+          "Drama"
+        ]
+      },
+      {
+        "title": "Bandido!",
+        "imdbId": "tt0048983",
+        "year": "1956",
+        "slug": "bandido-1956",
+        "grade": "B-",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Drama",
+          "War",
+          "Western"
+        ]
+      },
+      {
+        "title": "Basket Case",
+        "imdbId": "tt0083624",
+        "year": "1982",
+        "slug": "basket-case-1982",
+        "grade": "D+",
+        "genres": [
+          "Comedy",
+          "Horror"
+        ]
+      },
+      {
+        "title": "Batman",
+        "imdbId": "tt0096895",
+        "year": "1989",
+        "slug": "batman-1989",
+        "grade": "A-",
+        "genres": [
+          "Action",
+          "Adventure"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt0065036",
     "title": "Stereo (Tile 3B of a CAEE Educational Mosaic)",
     "year": "1969",
@@ -80440,16 +80870,13 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Bandido!",
-        "imdbId": "tt0048983",
-        "year": "1956",
-        "slug": "bandido-1956",
-        "grade": "B-",
+        "title": "Bandolero!",
+        "imdbId": "tt0062708",
+        "year": "1968",
+        "slug": "bandolero-1968",
+        "grade": "D-",
         "genres": [
-          "Action",
-          "Adventure",
           "Drama",
-          "War",
           "Western"
         ]
       },
@@ -82059,14 +82486,14 @@
         ]
       },
       {
-        "title": "Basket Case",
-        "imdbId": "tt0083624",
-        "year": "1982",
-        "slug": "basket-case-1982",
-        "grade": "D+",
+        "title": "Bandolero!",
+        "imdbId": "tt0062708",
+        "year": "1968",
+        "slug": "bandolero-1968",
+        "grade": "D-",
         "genres": [
-          "Comedy",
-          "Horror"
+          "Drama",
+          "Western"
         ]
       }
     ]
@@ -82848,16 +83275,15 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Kingsman: The Secret Service",
-        "imdbId": "tt2802144",
-        "year": "2014",
-        "slug": "kingsman-the-secret-service-2014",
-        "grade": "C+",
+        "title": "The Kissing Bandit",
+        "imdbId": "tt0040513",
+        "year": "1948",
+        "slug": "the-kissing-bandit-1948",
+        "grade": "F",
         "genres": [
-          "Action",
-          "Adventure",
           "Comedy",
-          "Thriller"
+          "Musical",
+          "Western"
         ]
       },
       {
@@ -100876,7 +101302,65 @@
       }
     ],
     "collections": [],
-    "moreCastAndCrew": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Frank Sinatra",
+        "slug": "frank-sinatra",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Higher and Higher",
+            "imdbId": "tt0036919",
+            "year": "1943",
+            "slug": "higher-and-higher-1943",
+            "grade": "F",
+            "genres": [
+              "Comedy",
+              "Musical",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Kissing Bandit",
+            "imdbId": "tt0040513",
+            "year": "1948",
+            "slug": "the-kissing-bandit-1948",
+            "grade": "F",
+            "genres": [
+              "Comedy",
+              "Musical",
+              "Western"
+            ]
+          },
+          {
+            "title": "The Joker Is Wild",
+            "imdbId": "tt0050569",
+            "year": "1957",
+            "slug": "the-joker-is-wild-1957",
+            "grade": "B+",
+            "genres": [
+              "Biography",
+              "Drama",
+              "Musical"
+            ]
+          },
+          {
+            "title": "Assault on a Queen",
+            "imdbId": "tt0060135",
+            "year": "1966",
+            "slug": "assault-on-a-queen-1966",
+            "grade": "D-",
+            "genres": [
+              "Adventure",
+              "Crime",
+              "Thriller",
+              "Action",
+              "Drama"
+            ]
+          }
+        ]
+      }
+    ],
     "moreCollections": [],
     "moreReviews": [
       {
