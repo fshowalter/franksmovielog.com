@@ -7264,6 +7264,170 @@
     ]
   },
   {
+    "imdbId": "tt0034428",
+    "title": "Across the Pacific",
+    "year": "1942",
+    "slug": "across-the-pacific-1942",
+    "grade": "C-",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Romance",
+      "War"
+    ],
+    "sortTitle": "Across the Pacific (1942)",
+    "originalTitle": null,
+    "gradeValue": 5,
+    "runtimeMinutes": 97,
+    "releaseSequence": "1942-09-04tt0034428",
+    "directorNames": [
+      "John Huston"
+    ],
+    "writerNames": [
+      "Richard Macaulay",
+      "Robert Carson"
+    ],
+    "principalCastNames": [
+      "Humphrey Bogart",
+      "Mary Astor",
+      "Sydney Greenstreet",
+      "Charles Halton"
+    ],
+    "reviewDate": "2007-09-24",
+    "reviewYear": "2007",
+    "sequence": "2007-09-24-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "John Huston",
+        "slug": "john-huston",
+        "creditedAs": [
+          "director"
+        ]
+      },
+      {
+        "name": "Humphrey Bogart",
+        "slug": "humphrey-bogart",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Humphrey Bogart",
+        "slug": "humphrey-bogart",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "High Sierra",
+            "imdbId": "tt0033717",
+            "year": "1940",
+            "slug": "high-sierra-1941",
+            "grade": "B-",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "Film-Noir",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Big Shot",
+            "imdbId": "tt0034513",
+            "year": "1942",
+            "slug": "the-big-shot-1942",
+            "grade": "C",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Film-Noir",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Casablanca",
+            "imdbId": "tt0034583",
+            "year": "1942",
+            "slug": "casablanca-1942",
+            "grade": "A+",
+            "genres": [
+              "Drama",
+              "Romance",
+              "War"
+            ]
+          },
+          {
+            "title": "Sahara",
+            "imdbId": "tt0036323",
+            "year": "1943",
+            "slug": "sahara-1943",
+            "grade": "C+",
+            "genres": [
+              "Action",
+              "Drama",
+              "War"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "8-Bit Christmas",
+        "imdbId": "tt11540284",
+        "year": "2021",
+        "slug": "8-bit-christmas-2021",
+        "grade": "D-",
+        "genres": [
+          "Comedy",
+          "Family"
+        ]
+      },
+      {
+        "title": "The Abominable Snowman",
+        "imdbId": "tt0050095",
+        "year": "1957",
+        "slug": "the-abominable-snowman-1957",
+        "grade": "D+",
+        "genres": [
+          "Adventure",
+          "Horror"
+        ]
+      },
+      {
+        "title": "Alice in Wonderland",
+        "imdbId": "tt0023753",
+        "year": "1933",
+        "slug": "alice-in-wonderland-1933",
+        "grade": "F",
+        "genres": [
+          "Adventure",
+          "Family",
+          "Fantasy"
+        ]
+      },
+      {
+        "title": "All Jacked Up and Full of Worms",
+        "imdbId": "tt12264824",
+        "year": "2022",
+        "slug": "all-jacked-up-and-full-of-worms-2022",
+        "grade": "D-",
+        "genres": [
+          "Comedy",
+          "Horror"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt0020815",
     "title": "The Dawn Patrol",
     "year": "1930",
@@ -22190,16 +22354,17 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Big Shot",
-            "imdbId": "tt0034513",
+            "title": "Across the Pacific",
+            "imdbId": "tt0034428",
             "year": "1942",
-            "slug": "the-big-shot-1942",
-            "grade": "C",
+            "slug": "across-the-pacific-1942",
+            "grade": "C-",
             "genres": [
-              "Crime",
+              "Action",
+              "Adventure",
               "Drama",
-              "Film-Noir",
-              "Romance"
+              "Romance",
+              "War"
             ]
           },
           {
@@ -23947,20 +24112,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "High Sierra",
-            "imdbId": "tt0033717",
-            "year": "1940",
-            "slug": "high-sierra-1941",
-            "grade": "B-",
-            "genres": [
-              "Action",
-              "Adventure",
-              "Drama",
-              "Film-Noir",
-              "Thriller"
-            ]
-          },
-          {
             "title": "The Big Shot",
             "imdbId": "tt0034513",
             "year": "1942",
@@ -23971,6 +24122,20 @@
               "Drama",
               "Film-Noir",
               "Romance"
+            ]
+          },
+          {
+            "title": "Across the Pacific",
+            "imdbId": "tt0034428",
+            "year": "1942",
+            "slug": "across-the-pacific-1942",
+            "grade": "C-",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "Romance",
+              "War"
             ]
           },
           {
@@ -51776,12 +51941,14 @@
             ]
           },
           {
-            "title": "Casablanca",
-            "imdbId": "tt0034583",
+            "title": "Across the Pacific",
+            "imdbId": "tt0034428",
             "year": "1942",
-            "slug": "casablanca-1942",
-            "grade": "A+",
+            "slug": "across-the-pacific-1942",
+            "grade": "C-",
             "genres": [
+              "Action",
+              "Adventure",
               "Drama",
               "Romance",
               "War"
@@ -79298,6 +79465,20 @@
             ]
           },
           {
+            "title": "Across the Pacific",
+            "imdbId": "tt0034428",
+            "year": "1942",
+            "slug": "across-the-pacific-1942",
+            "grade": "C-",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "Romance",
+              "War"
+            ]
+          },
+          {
             "title": "Casablanca",
             "imdbId": "tt0034583",
             "year": "1942",
@@ -79306,18 +79487,6 @@
             "genres": [
               "Drama",
               "Romance",
-              "War"
-            ]
-          },
-          {
-            "title": "Sahara",
-            "imdbId": "tt0036323",
-            "year": "1943",
-            "slug": "sahara-1943",
-            "grade": "C+",
-            "genres": [
-              "Action",
-              "Drama",
               "War"
             ]
           }
@@ -90787,17 +90956,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "8-Bit Christmas",
-        "imdbId": "tt11540284",
-        "year": "2021",
-        "slug": "8-bit-christmas-2021",
-        "grade": "D-",
-        "genres": [
-          "Comedy",
-          "Family"
-        ]
-      },
-      {
         "title": "The Abominable Snowman",
         "imdbId": "tt0050095",
         "year": "1957",
@@ -90806,6 +90964,20 @@
         "genres": [
           "Adventure",
           "Horror"
+        ]
+      },
+      {
+        "title": "Across the Pacific",
+        "imdbId": "tt0034428",
+        "year": "1942",
+        "slug": "across-the-pacific-1942",
+        "grade": "C-",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Drama",
+          "Romance",
+          "War"
         ]
       },
       {
@@ -96671,14 +96843,17 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Abominable Snowman",
-        "imdbId": "tt0050095",
-        "year": "1957",
-        "slug": "the-abominable-snowman-1957",
-        "grade": "D+",
+        "title": "Across the Pacific",
+        "imdbId": "tt0034428",
+        "year": "1942",
+        "slug": "across-the-pacific-1942",
+        "grade": "C-",
         "genres": [
+          "Action",
           "Adventure",
-          "Horror"
+          "Drama",
+          "Romance",
+          "War"
         ]
       },
       {
@@ -97755,6 +97930,20 @@
         ]
       },
       {
+        "title": "Across the Pacific",
+        "imdbId": "tt0034428",
+        "year": "1942",
+        "slug": "across-the-pacific-1942",
+        "grade": "C-",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Drama",
+          "Romance",
+          "War"
+        ]
+      },
+      {
         "title": "Alice in Wonderland",
         "imdbId": "tt0023753",
         "year": "1933",
@@ -97764,17 +97953,6 @@
           "Adventure",
           "Family",
           "Fantasy"
-        ]
-      },
-      {
-        "title": "All Jacked Up and Full of Worms",
-        "imdbId": "tt12264824",
-        "year": "2022",
-        "slug": "all-jacked-up-and-full-of-worms-2022",
-        "grade": "D-",
-        "genres": [
-          "Comedy",
-          "Horror"
         ]
       }
     ]
@@ -101909,15 +102087,17 @@
         ]
       },
       {
-        "title": "Alice in Wonderland",
-        "imdbId": "tt0023753",
-        "year": "1933",
-        "slug": "alice-in-wonderland-1933",
-        "grade": "F",
+        "title": "Across the Pacific",
+        "imdbId": "tt0034428",
+        "year": "1942",
+        "slug": "across-the-pacific-1942",
+        "grade": "C-",
         "genres": [
+          "Action",
           "Adventure",
-          "Family",
-          "Fantasy"
+          "Drama",
+          "Romance",
+          "War"
         ]
       }
     ]
