@@ -13009,18 +13009,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Utah Kid",
-        "imdbId": "tt0021509",
-        "year": "1930",
-        "slug": "the-utah-kid-1930",
-        "grade": "C-",
-        "genres": [
-          "Action",
-          "Romance",
-          "Western"
-        ]
-      },
-      {
         "title": "Valentine",
         "imdbId": "tt0242998",
         "year": "2001",
@@ -13029,6 +13017,18 @@
         "genres": [
           "Horror",
           "Mystery",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Vampire",
+        "imdbId": "tt0051150",
+        "year": "1957",
+        "slug": "the-vampire-1957",
+        "grade": "F+",
+        "genres": [
+          "Horror",
+          "Sci-Fi",
           "Thriller"
         ]
       },
@@ -44340,14 +44340,14 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Valentine",
-        "imdbId": "tt0242998",
-        "year": "2001",
-        "slug": "valentine-2001",
-        "grade": "C-",
+        "title": "The Vampire",
+        "imdbId": "tt0051150",
+        "year": "1957",
+        "slug": "the-vampire-1957",
+        "grade": "F+",
         "genres": [
           "Horror",
-          "Mystery",
+          "Sci-Fi",
           "Thriller"
         ]
       },
@@ -53606,14 +53606,13 @@
         ]
       },
       {
-        "title": "The Vast of Night",
-        "imdbId": "tt6803046",
-        "year": "2019",
-        "slug": "the-vast-of-night-2019",
-        "grade": "C+",
+        "title": "The Vampire",
+        "imdbId": "tt0051150",
+        "year": "1957",
+        "slug": "the-vampire-1957",
+        "grade": "F+",
         "genres": [
-          "Drama",
-          "Mystery",
+          "Horror",
           "Sci-Fi",
           "Thriller"
         ]
@@ -68640,6 +68639,18 @@
         ]
       },
       {
+        "title": "The Vampire",
+        "imdbId": "tt0051150",
+        "year": "1957",
+        "slug": "the-vampire-1957",
+        "grade": "F+",
+        "genres": [
+          "Horror",
+          "Sci-Fi",
+          "Thriller"
+        ]
+      },
+      {
         "title": "The Vast of Night",
         "imdbId": "tt6803046",
         "year": "2019",
@@ -68649,18 +68660,6 @@
           "Drama",
           "Mystery",
           "Sci-Fi",
-          "Thriller"
-        ]
-      },
-      {
-        "title": "Velvet Buzzsaw",
-        "imdbId": "tt7043012",
-        "year": "2019",
-        "slug": "velvet-buzzsaw-2019",
-        "grade": "D+",
-        "genres": [
-          "Horror",
-          "Mystery",
           "Thriller"
         ]
       }
@@ -104852,6 +104851,97 @@
           "Fantasy",
           "Horror",
           "Sci-Fi"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0051150",
+    "title": "The Vampire",
+    "year": "1957",
+    "slug": "the-vampire-1957",
+    "grade": "F+",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Horror",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "sortTitle": "Vampire (1957)",
+    "originalTitle": null,
+    "gradeValue": 2,
+    "runtimeMinutes": 75,
+    "releaseSequence": "1957-06-14tt0051150",
+    "directorNames": [
+      "Paul Landres"
+    ],
+    "writerNames": [
+      "Pat Fielder"
+    ],
+    "principalCastNames": [
+      "John Beal",
+      "Coleen Gray",
+      "Kenneth Tobey",
+      "Lydia Reed"
+    ],
+    "reviewDate": "2008-01-06",
+    "reviewYear": "2008",
+    "sequence": "2008-01-06-",
+    "viewings": [],
+    "castAndCrew": [],
+    "collections": [],
+    "moreCastAndCrew": [],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The Utah Kid",
+        "imdbId": "tt0021509",
+        "year": "1930",
+        "slug": "the-utah-kid-1930",
+        "grade": "C-",
+        "genres": [
+          "Action",
+          "Romance",
+          "Western"
+        ]
+      },
+      {
+        "title": "Valentine",
+        "imdbId": "tt0242998",
+        "year": "2001",
+        "slug": "valentine-2001",
+        "grade": "C-",
+        "genres": [
+          "Horror",
+          "Mystery",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Vast of Night",
+        "imdbId": "tt6803046",
+        "year": "2019",
+        "slug": "the-vast-of-night-2019",
+        "grade": "C+",
+        "genres": [
+          "Drama",
+          "Mystery",
+          "Sci-Fi",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "Velvet Buzzsaw",
+        "imdbId": "tt7043012",
+        "year": "2019",
+        "slug": "velvet-buzzsaw-2019",
+        "grade": "D+",
+        "genres": [
+          "Horror",
+          "Mystery",
+          "Thriller"
         ]
       }
     ]
