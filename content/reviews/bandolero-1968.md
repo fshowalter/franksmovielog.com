@@ -5,7 +5,7 @@ grade: D+
 slug: bandolero-1968
 ---
 
-Despite teaming James Stewart and Dean Martin, _Bandolero_ may be one of the reasons the Western died as a genre.
+Despite teaming James Stewart and Dean Martin, _Bandolero_ may be one of the reasons the Western died.
 
 The plot sees George Kennedy as a sheriff purusing outlaw brothers Stewart and Martin into bandit country after they kidnapp a wealthy widow, played by Raquel Welch.
 
