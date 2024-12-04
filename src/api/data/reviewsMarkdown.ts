@@ -1,5 +1,5 @@
 import matter from "gray-matter";
-import { promises as fs } from "node:fs";
+import fs from "node:fs";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
@@ -26,15 +26,15 @@ export async function allReviewsMarkdown(): Promise<MarkdownReview[]> {
 }
 
 async function parseAllReviewsMarkdown(): Promise<MarkdownReview[]> {
-  const dirents = await fs.readdir(reviewsMarkdownDirectory, {
+  const dirents = fs.readdirSync(reviewsMarkdownDirectory, {
     withFileTypes: true,
   });
 
   return Promise.all(
     dirents
       .filter((item) => !item.isDirectory() && item.name.endsWith(".md"))
-      .map(async (item) => {
-        const fileContents = await fs.readFile(
+      .map((item) => {
+        const fileContents = fs.readFileSync(
           `${reviewsMarkdownDirectory}/${item.name}`,
           "utf8",
         );
