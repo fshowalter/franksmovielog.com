@@ -7971,13 +7971,15 @@
     ],
     "moreReviews": [
       {
-        "title": "The Brat",
-        "imdbId": "tt0021695",
-        "year": "1931",
-        "slug": "the-brat-1931",
-        "grade": "D-",
+        "title": "Brazil",
+        "imdbId": "tt0088846",
+        "year": "1985",
+        "slug": "brazil-1985",
+        "grade": "B-",
         "genres": [
-          "Comedy"
+          "Drama",
+          "Sci-Fi",
+          "Thriller"
         ]
       },
       {
@@ -24386,6 +24388,18 @@
         ]
       },
       {
+        "title": "Brazil",
+        "imdbId": "tt0088846",
+        "year": "1985",
+        "slug": "brazil-1985",
+        "grade": "B-",
+        "genres": [
+          "Drama",
+          "Sci-Fi",
+          "Thriller"
+        ]
+      },
+      {
         "title": "Breakfast at Tiffany's",
         "imdbId": "tt0054698",
         "year": "1961",
@@ -24395,18 +24409,6 @@
           "Comedy",
           "Drama",
           "Romance"
-        ]
-      },
-      {
-        "title": "Bride of Chucky",
-        "imdbId": "tt0144120",
-        "year": "1998",
-        "slug": "bride-of-chucky-1998",
-        "grade": "C-",
-        "genres": [
-          "Comedy",
-          "Horror",
-          "Thriller"
         ]
       }
     ]
@@ -33530,18 +33532,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Bram Stoker's Dracula",
-        "imdbId": "tt0103874",
-        "year": "1992",
-        "slug": "bram-stokers-dracula-1992",
-        "grade": "C+",
-        "genres": [
-          "Fantasy",
-          "Horror",
-          "Romance"
-        ]
-      },
-      {
         "title": "The Brat",
         "imdbId": "tt0021695",
         "year": "1931",
@@ -33549,6 +33539,18 @@
         "grade": "D-",
         "genres": [
           "Comedy"
+        ]
+      },
+      {
+        "title": "Brazil",
+        "imdbId": "tt0088846",
+        "year": "1985",
+        "slug": "brazil-1985",
+        "grade": "B-",
+        "genres": [
+          "Drama",
+          "Sci-Fi",
+          "Thriller"
         ]
       },
       {
@@ -98154,15 +98156,15 @@
         ]
       },
       {
-        "title": "Breakfast at Tiffany's",
-        "imdbId": "tt0054698",
-        "year": "1961",
-        "slug": "breakfast-at-tiffanys-1961",
-        "grade": "B+",
+        "title": "Brazil",
+        "imdbId": "tt0088846",
+        "year": "1985",
+        "slug": "brazil-1985",
+        "grade": "B-",
         "genres": [
-          "Comedy",
           "Drama",
-          "Romance"
+          "Sci-Fi",
+          "Thriller"
         ]
       }
     ]
@@ -101526,6 +101528,97 @@
           "Comedy",
           "Fantasy",
           "Horror"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0088846",
+    "title": "Brazil",
+    "year": "1985",
+    "slug": "brazil-1985",
+    "grade": "B-",
+    "countries": [
+      "United Kingdom",
+      "United States"
+    ],
+    "genres": [
+      "Drama",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "sortTitle": "Brazil (1985)",
+    "originalTitle": null,
+    "gradeValue": 8,
+    "runtimeMinutes": 132,
+    "releaseSequence": "1985-02-01tt0088846",
+    "directorNames": [
+      "Terry Gilliam"
+    ],
+    "writerNames": [
+      "Terry Gilliam",
+      "Tom Stoppard",
+      "Charles McKeown"
+    ],
+    "principalCastNames": [
+      "Jonathan Pryce",
+      "Robert De Niro",
+      "Katherine Helmond",
+      "Ian Holm"
+    ],
+    "reviewDate": "2007-08-23",
+    "reviewYear": "2007",
+    "sequence": "2007-08-23-",
+    "viewings": [],
+    "castAndCrew": [],
+    "collections": [],
+    "moreCastAndCrew": [],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Bram Stoker's Dracula",
+        "imdbId": "tt0103874",
+        "year": "1992",
+        "slug": "bram-stokers-dracula-1992",
+        "grade": "C+",
+        "genres": [
+          "Fantasy",
+          "Horror",
+          "Romance"
+        ]
+      },
+      {
+        "title": "The Brat",
+        "imdbId": "tt0021695",
+        "year": "1931",
+        "slug": "the-brat-1931",
+        "grade": "D-",
+        "genres": [
+          "Comedy"
+        ]
+      },
+      {
+        "title": "Breakfast at Tiffany's",
+        "imdbId": "tt0054698",
+        "year": "1961",
+        "slug": "breakfast-at-tiffanys-1961",
+        "grade": "B+",
+        "genres": [
+          "Comedy",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "title": "Bride of Chucky",
+        "imdbId": "tt0144120",
+        "year": "1998",
+        "slug": "bride-of-chucky-1998",
+        "grade": "C-",
+        "genres": [
+          "Comedy",
+          "Horror",
+          "Thriller"
         ]
       }
     ]
