@@ -14585,20 +14585,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Lucky Texan",
-        "imdbId": "tt0025440",
-        "year": "1934",
-        "slug": "the-lucky-texan-1934",
-        "grade": "D",
-        "genres": [
-          "Action",
-          "Adventure",
-          "Drama",
-          "Romance",
-          "Western"
-        ]
-      },
-      {
         "title": "Lust of the Vampire",
         "imdbId": "tt0049429",
         "year": "1957",
@@ -14606,6 +14592,19 @@
         "grade": "C+",
         "genres": [
           "Horror"
+        ]
+      },
+      {
+        "title": "The Lusty Men",
+        "imdbId": "tt0044860",
+        "year": "1952",
+        "slug": "the-lusty-men-1952",
+        "grade": "C-",
+        "genres": [
+          "Action",
+          "Drama",
+          "Sport",
+          "Western"
         ]
       },
       {
@@ -18705,16 +18704,16 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Racket",
-            "imdbId": "tt0043955",
-            "year": "1951",
-            "slug": "the-racket-1951",
-            "grade": "B-",
+            "title": "The Lusty Men",
+            "imdbId": "tt0044860",
+            "year": "1952",
+            "slug": "the-lusty-men-1952",
+            "grade": "C-",
             "genres": [
-              "Crime",
+              "Action",
               "Drama",
-              "Film-Noir",
-              "Thriller"
+              "Sport",
+              "Western"
             ]
           },
           {
@@ -34603,13 +34602,16 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Lust of the Vampire",
-        "imdbId": "tt0049429",
-        "year": "1957",
-        "slug": "lust-of-the-vampire-1957",
-        "grade": "C+",
+        "title": "The Lusty Men",
+        "imdbId": "tt0044860",
+        "year": "1952",
+        "slug": "the-lusty-men-1952",
+        "grade": "C-",
         "genres": [
-          "Horror"
+          "Action",
+          "Drama",
+          "Sport",
+          "Western"
         ]
       },
       {
@@ -56768,15 +56770,16 @@
         ]
       },
       {
-        "title": "M",
-        "imdbId": "tt0022100",
-        "year": "1931",
-        "slug": "m-1931",
-        "grade": "C+",
+        "title": "The Lusty Men",
+        "imdbId": "tt0044860",
+        "year": "1952",
+        "slug": "the-lusty-men-1952",
+        "grade": "C-",
         "genres": [
-          "Crime",
-          "Mystery",
-          "Thriller"
+          "Action",
+          "Drama",
+          "Sport",
+          "Western"
         ]
       }
     ]
@@ -78327,6 +78330,165 @@
     ]
   },
   {
+    "imdbId": "tt0044860",
+    "title": "The Lusty Men",
+    "year": "1952",
+    "slug": "the-lusty-men-1952",
+    "grade": "C-",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Action",
+      "Drama",
+      "Sport",
+      "Western"
+    ],
+    "sortTitle": "Lusty Men (1952)",
+    "originalTitle": null,
+    "gradeValue": 5,
+    "runtimeMinutes": 113,
+    "releaseSequence": "1952-09-30tt0044860",
+    "directorNames": [
+      "Nicholas Ray"
+    ],
+    "writerNames": [
+      "Horace McCoy",
+      "David Dortort",
+      "Claude Stanush"
+    ],
+    "principalCastNames": [
+      "Susan Hayward",
+      "Robert Mitchum",
+      "Arthur Kennedy",
+      "Arthur Hunnicutt"
+    ],
+    "reviewDate": "2008-03-30",
+    "reviewYear": "2008",
+    "sequence": "2008-03-30-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "Robert Mitchum",
+        "slug": "robert-mitchum",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Robert Mitchum",
+        "slug": "robert-mitchum",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Where Danger Lives",
+            "imdbId": "tt0043131",
+            "year": "1950",
+            "slug": "where-danger-lives-1950",
+            "grade": "F",
+            "genres": [
+              "Crime",
+              "Film-Noir",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Racket",
+            "imdbId": "tt0043955",
+            "year": "1951",
+            "slug": "the-racket-1951",
+            "grade": "B-",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Film-Noir",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "She Couldn't Say No",
+            "imdbId": "tt0047476",
+            "year": "1953",
+            "slug": "she-couldnt-say-no-1953",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Drama"
+            ]
+          },
+          {
+            "title": "Bandido!",
+            "imdbId": "tt0048983",
+            "year": "1956",
+            "slug": "bandido-1956",
+            "grade": "B-",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "War",
+              "Western"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The Lucky Texan",
+        "imdbId": "tt0025440",
+        "year": "1934",
+        "slug": "the-lucky-texan-1934",
+        "grade": "D",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Drama",
+          "Romance",
+          "Western"
+        ]
+      },
+      {
+        "title": "Lust of the Vampire",
+        "imdbId": "tt0049429",
+        "year": "1957",
+        "slug": "lust-of-the-vampire-1957",
+        "grade": "C+",
+        "genres": [
+          "Horror"
+        ]
+      },
+      {
+        "title": "M",
+        "imdbId": "tt0022100",
+        "year": "1931",
+        "slug": "m-1931",
+        "grade": "C+",
+        "genres": [
+          "Crime",
+          "Mystery",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Mad Genius",
+        "imdbId": "tt0022103",
+        "year": "1931",
+        "slug": "the-mad-genius-1931",
+        "grade": "C-",
+        "genres": [
+          "Drama",
+          "Horror",
+          "Romance"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt0023899",
     "title": "College Coach",
     "year": "1933",
@@ -86749,18 +86911,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Where Danger Lives",
-            "imdbId": "tt0043131",
-            "year": "1950",
-            "slug": "where-danger-lives-1950",
-            "grade": "F",
-            "genres": [
-              "Crime",
-              "Film-Noir",
-              "Thriller"
-            ]
-          },
-          {
             "title": "The Racket",
             "imdbId": "tt0043955",
             "year": "1951",
@@ -86771,6 +86921,19 @@
               "Drama",
               "Film-Noir",
               "Thriller"
+            ]
+          },
+          {
+            "title": "The Lusty Men",
+            "imdbId": "tt0044860",
+            "year": "1952",
+            "slug": "the-lusty-men-1952",
+            "grade": "C-",
+            "genres": [
+              "Action",
+              "Drama",
+              "Sport",
+              "Western"
             ]
           },
           {
@@ -87471,14 +87634,16 @@
             ]
           },
           {
-            "title": "She Couldn't Say No",
-            "imdbId": "tt0047476",
-            "year": "1953",
-            "slug": "she-couldnt-say-no-1953",
+            "title": "The Lusty Men",
+            "imdbId": "tt0044860",
+            "year": "1952",
+            "slug": "the-lusty-men-1952",
             "grade": "C-",
             "genres": [
-              "Comedy",
-              "Drama"
+              "Action",
+              "Drama",
+              "Sport",
+              "Western"
             ]
           }
         ]
@@ -102332,6 +102497,19 @@
         ]
       },
       {
+        "title": "The Lusty Men",
+        "imdbId": "tt0044860",
+        "year": "1952",
+        "slug": "the-lusty-men-1952",
+        "grade": "C-",
+        "genres": [
+          "Action",
+          "Drama",
+          "Sport",
+          "Western"
+        ]
+      },
+      {
         "title": "M",
         "imdbId": "tt0022100",
         "year": "1931",
@@ -102341,18 +102519,6 @@
           "Crime",
           "Mystery",
           "Thriller"
-        ]
-      },
-      {
-        "title": "The Mad Genius",
-        "imdbId": "tt0022103",
-        "year": "1931",
-        "slug": "the-mad-genius-1931",
-        "grade": "C-",
-        "genres": [
-          "Drama",
-          "Horror",
-          "Romance"
         ]
       }
     ]
@@ -103595,6 +103761,19 @@
             ]
           },
           {
+            "title": "The Lusty Men",
+            "imdbId": "tt0044860",
+            "year": "1952",
+            "slug": "the-lusty-men-1952",
+            "grade": "C-",
+            "genres": [
+              "Action",
+              "Drama",
+              "Sport",
+              "Western"
+            ]
+          },
+          {
             "title": "She Couldn't Say No",
             "imdbId": "tt0047476",
             "year": "1953",
@@ -103603,20 +103782,6 @@
             "genres": [
               "Comedy",
               "Drama"
-            ]
-          },
-          {
-            "title": "Bandido!",
-            "imdbId": "tt0048983",
-            "year": "1956",
-            "slug": "bandido-1956",
-            "grade": "B-",
-            "genres": [
-              "Action",
-              "Adventure",
-              "Drama",
-              "War",
-              "Western"
             ]
           }
         ]
