@@ -362,6 +362,10 @@
       padding-top: 2rem;
       font-size: 1rem;
 
+      h2 {
+        margin-bottom: 1.5rem;
+      }
+
       ol {
         list-style-type: none;
         position: relative;
