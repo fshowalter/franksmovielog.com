@@ -58,7 +58,60 @@
       }
     ],
     "collections": [],
-    "moreCastAndCrew": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Billy Wilder",
+        "slug": "billy-wilder",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "Avanti!",
+            "imdbId": "tt0068240",
+            "year": "1972",
+            "slug": "avanti-1972",
+            "grade": "B-",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Front Page",
+            "imdbId": "tt0071524",
+            "year": "1974",
+            "slug": "the-front-page-1974",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Irma la Douce",
+            "imdbId": "tt0057187",
+            "year": "1963",
+            "slug": "irma-la-douce-1963",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Fortune Cookie",
+            "imdbId": "tt0060424",
+            "year": "1966",
+            "slug": "the-fortune-cookie-1966",
+            "grade": "C",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          }
+        ]
+      }
+    ],
     "moreCollections": [],
     "moreReviews": [
       {
@@ -1188,6 +1241,18 @@
         ]
       },
       {
+        "title": "The Front Page",
+        "imdbId": "tt0071524",
+        "year": "1974",
+        "slug": "the-front-page-1974",
+        "grade": "C-",
+        "genres": [
+          "Comedy",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
         "title": "Frontier(s)",
         "imdbId": "tt0814685",
         "year": "2007",
@@ -1195,17 +1260,6 @@
         "grade": "C-",
         "genres": [
           "Horror"
-        ]
-      },
-      {
-        "title": "Frozen",
-        "imdbId": "tt1323045",
-        "year": "2010",
-        "slug": "frozen-2010",
-        "grade": "C-",
-        "genres": [
-          "Adventure",
-          "Thriller"
         ]
       }
     ]
@@ -22150,13 +22204,15 @@
         ]
       },
       {
-        "title": "Frontier(s)",
-        "imdbId": "tt0814685",
-        "year": "2007",
-        "slug": "frontiers-2007",
+        "title": "The Front Page",
+        "imdbId": "tt0071524",
+        "year": "1974",
+        "slug": "the-front-page-1974",
         "grade": "C-",
         "genres": [
-          "Horror"
+          "Comedy",
+          "Drama",
+          "Romance"
         ]
       }
     ]
@@ -29274,16 +29330,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Fright Night",
-        "imdbId": "tt0089175",
-        "year": "1985",
-        "slug": "fright-night-1985",
-        "grade": "A+",
-        "genres": [
-          "Horror"
-        ]
-      },
-      {
         "title": "From Beyond",
         "imdbId": "tt0091083",
         "year": "1986",
@@ -29292,6 +29338,18 @@
         "genres": [
           "Horror",
           "Sci-Fi"
+        ]
+      },
+      {
+        "title": "The Front Page",
+        "imdbId": "tt0071524",
+        "year": "1974",
+        "slug": "the-front-page-1974",
+        "grade": "C-",
+        "genres": [
+          "Comedy",
+          "Drama",
+          "Romance"
         ]
       },
       {
@@ -35975,17 +36033,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Fortune Cookie",
-            "imdbId": "tt0060424",
-            "year": "1966",
-            "slug": "the-fortune-cookie-1966",
-            "grade": "C",
-            "genres": [
-              "Comedy",
-              "Romance"
-            ]
-          },
-          {
             "title": "Avanti!",
             "imdbId": "tt0068240",
             "year": "1972",
@@ -35993,6 +36040,18 @@
             "grade": "B-",
             "genres": [
               "Comedy",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Front Page",
+            "imdbId": "tt0071524",
+            "year": "1974",
+            "slug": "the-front-page-1974",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Drama",
               "Romance"
             ]
           },
@@ -54830,6 +54889,59 @@
     "collections": [],
     "moreCastAndCrew": [
       {
+        "name": "Billy Wilder",
+        "slug": "billy-wilder",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "Irma la Douce",
+            "imdbId": "tt0057187",
+            "year": "1963",
+            "slug": "irma-la-douce-1963",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Fortune Cookie",
+            "imdbId": "tt0060424",
+            "year": "1966",
+            "slug": "the-fortune-cookie-1966",
+            "grade": "C",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Front Page",
+            "imdbId": "tt0071524",
+            "year": "1974",
+            "slug": "the-front-page-1974",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Bad Seed",
+            "imdbId": "tt0025480",
+            "year": "1934",
+            "slug": "bad-seed-1934",
+            "grade": "C",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          }
+        ]
+      },
+      {
         "name": "Jack Lemmon",
         "slug": "jack-lemmon",
         "creditKind": "performer",
@@ -54857,6 +54969,18 @@
             ]
           },
           {
+            "title": "The Front Page",
+            "imdbId": "tt0071524",
+            "year": "1974",
+            "slug": "the-front-page-1974",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
             "title": "It Should Happen to You",
             "imdbId": "tt0047123",
             "year": "1954",
@@ -54865,17 +54989,6 @@
             "genres": [
               "Comedy",
               "Drama",
-              "Romance"
-            ]
-          },
-          {
-            "title": "Phffft",
-            "imdbId": "tt0047349",
-            "year": "1954",
-            "slug": "phffft-1954",
-            "grade": "C+",
-            "genres": [
-              "Comedy",
               "Romance"
             ]
           }
@@ -73254,13 +73367,14 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Avanti!",
-            "imdbId": "tt0068240",
-            "year": "1972",
-            "slug": "avanti-1972",
-            "grade": "B-",
+            "title": "The Front Page",
+            "imdbId": "tt0071524",
+            "year": "1974",
+            "slug": "the-front-page-1974",
+            "grade": "C-",
             "genres": [
               "Comedy",
+              "Drama",
               "Romance"
             ]
           },
@@ -79998,6 +80112,59 @@
     "collections": [],
     "moreCastAndCrew": [
       {
+        "name": "Billy Wilder",
+        "slug": "billy-wilder",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "Bad Seed",
+            "imdbId": "tt0025480",
+            "year": "1934",
+            "slug": "bad-seed-1934",
+            "grade": "C",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Irma la Douce",
+            "imdbId": "tt0057187",
+            "year": "1963",
+            "slug": "irma-la-douce-1963",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Avanti!",
+            "imdbId": "tt0068240",
+            "year": "1972",
+            "slug": "avanti-1972",
+            "grade": "B-",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Front Page",
+            "imdbId": "tt0071524",
+            "year": "1974",
+            "slug": "the-front-page-1974",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          }
+        ]
+      },
+      {
         "name": "Jack Lemmon",
         "slug": "jack-lemmon",
         "creditKind": "performer",
@@ -80037,11 +80204,11 @@
             ]
           },
           {
-            "title": "It Should Happen to You",
-            "imdbId": "tt0047123",
-            "year": "1954",
-            "slug": "it-should-happen-to-you-1954",
-            "grade": "F",
+            "title": "The Front Page",
+            "imdbId": "tt0071524",
+            "year": "1974",
+            "slug": "the-front-page-1974",
+            "grade": "C-",
             "genres": [
               "Comedy",
               "Drama",
@@ -85990,6 +86157,214 @@
         "grade": "C",
         "genres": [
           "Drama"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0071524",
+    "title": "The Front Page",
+    "year": "1974",
+    "slug": "the-front-page-1974",
+    "grade": "C-",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "sortTitle": "Front Page (1974)",
+    "originalTitle": null,
+    "gradeValue": 5,
+    "runtimeMinutes": 105,
+    "releaseSequence": "1974-12-18tt0071524",
+    "directorNames": [
+      "Billy Wilder"
+    ],
+    "writerNames": [
+      "Ben Hecht",
+      "Charles MacArthur",
+      "Billy Wilder",
+      "I.A.L. Diamond"
+    ],
+    "principalCastNames": [
+      "Jack Lemmon",
+      "Walter Matthau",
+      "Susan Sarandon",
+      "Vincent Gardenia"
+    ],
+    "reviewDate": "2008-12-26",
+    "reviewYear": "2008",
+    "sequence": "2008-12-26-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "Billy Wilder",
+        "slug": "billy-wilder",
+        "creditedAs": [
+          "director",
+          "writer"
+        ]
+      },
+      {
+        "name": "Jack Lemmon",
+        "slug": "jack-lemmon",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Billy Wilder",
+        "slug": "billy-wilder",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "The Fortune Cookie",
+            "imdbId": "tt0060424",
+            "year": "1966",
+            "slug": "the-fortune-cookie-1966",
+            "grade": "C",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Avanti!",
+            "imdbId": "tt0068240",
+            "year": "1972",
+            "slug": "avanti-1972",
+            "grade": "B-",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Bad Seed",
+            "imdbId": "tt0025480",
+            "year": "1934",
+            "slug": "bad-seed-1934",
+            "grade": "C",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Irma la Douce",
+            "imdbId": "tt0057187",
+            "year": "1963",
+            "slug": "irma-la-douce-1963",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jack Lemmon",
+        "slug": "jack-lemmon",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Fortune Cookie",
+            "imdbId": "tt0060424",
+            "year": "1966",
+            "slug": "the-fortune-cookie-1966",
+            "grade": "C",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Avanti!",
+            "imdbId": "tt0068240",
+            "year": "1972",
+            "slug": "avanti-1972",
+            "grade": "B-",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          },
+          {
+            "title": "It Should Happen to You",
+            "imdbId": "tt0047123",
+            "year": "1954",
+            "slug": "it-should-happen-to-you-1954",
+            "grade": "F",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Phffft",
+            "imdbId": "tt0047349",
+            "year": "1954",
+            "slug": "phffft-1954",
+            "grade": "C+",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Fright Night",
+        "imdbId": "tt0089175",
+        "year": "1985",
+        "slug": "fright-night-1985",
+        "grade": "A+",
+        "genres": [
+          "Horror"
+        ]
+      },
+      {
+        "title": "From Beyond",
+        "imdbId": "tt0091083",
+        "year": "1986",
+        "slug": "from-beyond-1986",
+        "grade": "B+",
+        "genres": [
+          "Horror",
+          "Sci-Fi"
+        ]
+      },
+      {
+        "title": "Frontier(s)",
+        "imdbId": "tt0814685",
+        "year": "2007",
+        "slug": "frontiers-2007",
+        "grade": "C-",
+        "genres": [
+          "Horror"
+        ]
+      },
+      {
+        "title": "Frozen",
+        "imdbId": "tt1323045",
+        "year": "2010",
+        "slug": "frozen-2010",
+        "grade": "C-",
+        "genres": [
+          "Adventure",
+          "Thriller"
         ]
       }
     ]
@@ -92833,14 +93208,15 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "From Beyond",
-        "imdbId": "tt0091083",
-        "year": "1986",
-        "slug": "from-beyond-1986",
-        "grade": "B+",
+        "title": "The Front Page",
+        "imdbId": "tt0071524",
+        "year": "1974",
+        "slug": "the-front-page-1974",
+        "grade": "C-",
         "genres": [
-          "Horror",
-          "Sci-Fi"
+          "Comedy",
+          "Drama",
+          "Romance"
         ]
       },
       {
@@ -107633,6 +108009,59 @@
     ],
     "collections": [],
     "moreCastAndCrew": [
+      {
+        "name": "Billy Wilder",
+        "slug": "billy-wilder",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "The Front Page",
+            "imdbId": "tt0071524",
+            "year": "1974",
+            "slug": "the-front-page-1974",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Bad Seed",
+            "imdbId": "tt0025480",
+            "year": "1934",
+            "slug": "bad-seed-1934",
+            "grade": "C",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Fortune Cookie",
+            "imdbId": "tt0060424",
+            "year": "1966",
+            "slug": "the-fortune-cookie-1966",
+            "grade": "C",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Avanti!",
+            "imdbId": "tt0068240",
+            "year": "1972",
+            "slug": "avanti-1972",
+            "grade": "B-",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          }
+        ]
+      },
       {
         "name": "Jack Lemmon",
         "slug": "jack-lemmon",
