@@ -25301,7 +25301,62 @@
       }
     ],
     "collections": [],
-    "moreCastAndCrew": [],
+    "moreCastAndCrew": [
+      {
+        "name": "John Sturges",
+        "slug": "john-sturges",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "Hour of the Gun",
+            "imdbId": "tt0061787",
+            "year": "1967",
+            "slug": "hour-of-the-gun-1967",
+            "grade": "C+",
+            "genres": [
+              "Drama",
+              "Western"
+            ]
+          },
+          {
+            "title": "The Man Who Dared",
+            "imdbId": "tt0038722",
+            "year": "1946",
+            "slug": "the-man-who-dared-1946",
+            "grade": "D",
+            "genres": [
+              "Adventure",
+              "Crime",
+              "Drama"
+            ]
+          },
+          {
+            "title": "It's a Big Country: An American Anthology",
+            "imdbId": "tt0043680",
+            "year": "1951",
+            "slug": "its-a-big-country-an-american-anthology-1951",
+            "grade": "D",
+            "genres": [
+              "Comedy",
+              "Drama"
+            ]
+          },
+          {
+            "title": "The Magnificent Seven",
+            "imdbId": "tt0054047",
+            "year": "1960",
+            "slug": "the-magnificent-seven-1960",
+            "grade": "B",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "Western"
+            ]
+          }
+        ]
+      }
+    ],
     "moreCollections": [],
     "moreReviews": [
       {
@@ -26843,7 +26898,61 @@
       }
     ],
     "collections": [],
-    "moreCastAndCrew": [],
+    "moreCastAndCrew": [
+      {
+        "name": "John Sturges",
+        "slug": "john-sturges",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "The Magnificent Seven",
+            "imdbId": "tt0054047",
+            "year": "1960",
+            "slug": "the-magnificent-seven-1960",
+            "grade": "B",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "Western"
+            ]
+          },
+          {
+            "title": "Hour of the Gun",
+            "imdbId": "tt0061787",
+            "year": "1967",
+            "slug": "hour-of-the-gun-1967",
+            "grade": "C+",
+            "genres": [
+              "Drama",
+              "Western"
+            ]
+          },
+          {
+            "title": "Right Cross",
+            "imdbId": "tt0042894",
+            "year": "1950",
+            "slug": "right-cross-1950",
+            "grade": "D+",
+            "genres": [
+              "Drama",
+              "Sport"
+            ]
+          },
+          {
+            "title": "It's a Big Country: An American Anthology",
+            "imdbId": "tt0043680",
+            "year": "1951",
+            "slug": "its-a-big-country-an-american-anthology-1951",
+            "grade": "D",
+            "genres": [
+              "Comedy",
+              "Drama"
+            ]
+          }
+        ]
+      }
+    ],
     "moreCollections": [],
     "moreReviews": [
       {
@@ -27991,6 +28100,95 @@
           "Drama",
           "Mystery",
           "Thriller"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0480025",
+    "title": "This Is England",
+    "year": "2006",
+    "slug": "this-is-england-2006",
+    "grade": "B",
+    "countries": [
+      "United Kingdom"
+    ],
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "sortTitle": "This Is England (2006)",
+    "originalTitle": null,
+    "gradeValue": 9,
+    "runtimeMinutes": 101,
+    "releaseSequence": "2006-09-12tt0480025",
+    "directorNames": [
+      "Shane Meadows"
+    ],
+    "writerNames": [
+      "Shane Meadows"
+    ],
+    "principalCastNames": [
+      "Thomas Turgoose",
+      "Stephen Graham",
+      "Jo Hartley",
+      "Andrew Shim"
+    ],
+    "reviewDate": "2009-02-05",
+    "reviewYear": "2009",
+    "sequence": "2009-02-05-",
+    "viewings": [],
+    "castAndCrew": [],
+    "collections": [],
+    "moreCastAndCrew": [],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The Thirteenth Chair",
+        "imdbId": "tt0020492",
+        "year": "1929",
+        "slug": "the-thirteenth-chair-1929",
+        "grade": "D+",
+        "genres": [
+          "Drama",
+          "Mystery"
+        ]
+      },
+      {
+        "title": "This Can't Happen Here",
+        "imdbId": "tt0043019",
+        "year": "1950",
+        "slug": "this-cant-happen-here-1950",
+        "grade": "F",
+        "genres": [
+          "Drama",
+          "Mystery",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "This Is the Night",
+        "imdbId": "tt0023584",
+        "year": "1932",
+        "slug": "this-is-the-night-1932",
+        "grade": "C",
+        "genres": [
+          "Comedy"
+        ]
+      },
+      {
+        "title": "Thor: Love and Thunder",
+        "imdbId": "tt10648342",
+        "year": "2022",
+        "slug": "thor-love-and-thunder-2022",
+        "grade": "D+",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Comedy",
+          "Fantasy",
+          "Romance",
+          "Sci-Fi"
         ]
       }
     ]
@@ -31696,6 +31894,165 @@
         "genres": [
           "Horror",
           "Sci-Fi"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0061787",
+    "title": "Hour of the Gun",
+    "year": "1967",
+    "slug": "hour-of-the-gun-1967",
+    "grade": "C+",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Drama",
+      "Western"
+    ],
+    "sortTitle": "Hour of the Gun (1967)",
+    "originalTitle": null,
+    "gradeValue": 7,
+    "runtimeMinutes": 100,
+    "releaseSequence": "1967-??-??tt0061787",
+    "directorNames": [
+      "John Sturges"
+    ],
+    "writerNames": [
+      "Edward Anhalt"
+    ],
+    "principalCastNames": [
+      "James Garner",
+      "Jason Robards",
+      "Robert Ryan",
+      "Albert Salmi"
+    ],
+    "reviewDate": "2008-11-08",
+    "reviewYear": "2008",
+    "sequence": "2008-11-08-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "John Sturges",
+        "slug": "john-sturges",
+        "creditedAs": [
+          "director"
+        ]
+      },
+      {
+        "name": "James Garner",
+        "slug": "james-garner",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "John Sturges",
+        "slug": "john-sturges",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "It's a Big Country: An American Anthology",
+            "imdbId": "tt0043680",
+            "year": "1951",
+            "slug": "its-a-big-country-an-american-anthology-1951",
+            "grade": "D",
+            "genres": [
+              "Comedy",
+              "Drama"
+            ]
+          },
+          {
+            "title": "The Magnificent Seven",
+            "imdbId": "tt0054047",
+            "year": "1960",
+            "slug": "the-magnificent-seven-1960",
+            "grade": "B",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "Western"
+            ]
+          },
+          {
+            "title": "The Man Who Dared",
+            "imdbId": "tt0038722",
+            "year": "1946",
+            "slug": "the-man-who-dared-1946",
+            "grade": "D",
+            "genres": [
+              "Adventure",
+              "Crime",
+              "Drama"
+            ]
+          },
+          {
+            "title": "Right Cross",
+            "imdbId": "tt0042894",
+            "year": "1950",
+            "slug": "right-cross-1950",
+            "grade": "D+",
+            "genres": [
+              "Drama",
+              "Sport"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Horror Express",
+        "imdbId": "tt0068713",
+        "year": "1972",
+        "slug": "horror-express-1972",
+        "grade": "D+",
+        "genres": [
+          "Adventure",
+          "Horror",
+          "Sci-Fi",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "Horror of Dracula",
+        "imdbId": "tt0051554",
+        "year": "1958",
+        "slug": "horror-of-dracula-1958",
+        "grade": "A-",
+        "genres": [
+          "Drama",
+          "Horror"
+        ]
+      },
+      {
+        "title": "The House That Dripped Blood",
+        "imdbId": "tt0065854",
+        "year": "1971",
+        "slug": "the-house-that-dripped-blood-1971",
+        "grade": "C+",
+        "genres": [
+          "Drama",
+          "Fantasy",
+          "Horror",
+          "Mystery",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "House of 1000 Corpses",
+        "imdbId": "tt0251736",
+        "year": "2003",
+        "slug": "house-of-1000-corpses-2003",
+        "grade": "C-",
+        "genres": [
+          "Horror"
         ]
       }
     ]
@@ -39616,14 +39973,14 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Horror of Dracula",
-        "imdbId": "tt0051554",
-        "year": "1958",
-        "slug": "horror-of-dracula-1958",
-        "grade": "A-",
+        "title": "Hour of the Gun",
+        "imdbId": "tt0061787",
+        "year": "1967",
+        "slug": "hour-of-the-gun-1967",
+        "grade": "C+",
         "genres": [
           "Drama",
-          "Horror"
+          "Western"
         ]
       },
       {
@@ -39641,6 +39998,17 @@
         ]
       },
       {
+        "title": "House of Games",
+        "imdbId": "tt0093223",
+        "year": "1987",
+        "slug": "house-of-games-1987",
+        "grade": "C-",
+        "genres": [
+          "Crime",
+          "Thriller"
+        ]
+      },
+      {
         "title": "The House on Sorority Row",
         "imdbId": "tt0085694",
         "year": "1982",
@@ -39650,16 +40018,6 @@
           "Horror",
           "Mystery",
           "Thriller"
-        ]
-      },
-      {
-        "title": "The Howling",
-        "imdbId": "tt0082533",
-        "year": "1981",
-        "slug": "the-howling-1981",
-        "grade": "B",
-        "genres": [
-          "Horror"
         ]
       }
     ]
@@ -44818,17 +45176,14 @@
         ]
       },
       {
-        "title": "The House That Dripped Blood",
-        "imdbId": "tt0065854",
-        "year": "1971",
-        "slug": "the-house-that-dripped-blood-1971",
+        "title": "Hour of the Gun",
+        "imdbId": "tt0061787",
+        "year": "1967",
+        "slug": "hour-of-the-gun-1967",
         "grade": "C+",
         "genres": [
           "Drama",
-          "Fantasy",
-          "Horror",
-          "Mystery",
-          "Thriller"
+          "Western"
         ]
       }
     ]
@@ -46845,13 +47200,14 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "House of 1000 Corpses",
-        "imdbId": "tt0251736",
-        "year": "2003",
-        "slug": "house-of-1000-corpses-2003",
+        "title": "House of Games",
+        "imdbId": "tt0093223",
+        "year": "1987",
+        "slug": "house-of-games-1987",
         "grade": "C-",
         "genres": [
-          "Horror"
+          "Crime",
+          "Thriller"
         ]
       },
       {
@@ -59252,6 +59608,17 @@
         ]
       },
       {
+        "title": "This Is England",
+        "imdbId": "tt0480025",
+        "year": "2006",
+        "slug": "this-is-england-2006",
+        "grade": "B",
+        "genres": [
+          "Crime",
+          "Drama"
+        ]
+      },
+      {
         "title": "This Is the Night",
         "imdbId": "tt0023584",
         "year": "1932",
@@ -59259,21 +59626,6 @@
         "grade": "C",
         "genres": [
           "Comedy"
-        ]
-      },
-      {
-        "title": "Thor: Love and Thunder",
-        "imdbId": "tt10648342",
-        "year": "2022",
-        "slug": "thor-love-and-thunder-2022",
-        "grade": "D+",
-        "genres": [
-          "Action",
-          "Adventure",
-          "Comedy",
-          "Fantasy",
-          "Romance",
-          "Sci-Fi"
         ]
       }
     ]
@@ -67366,6 +67718,103 @@
     ]
   },
   {
+    "imdbId": "tt0093223",
+    "title": "House of Games",
+    "year": "1987",
+    "slug": "house-of-games-1987",
+    "grade": "C-",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Crime",
+      "Thriller"
+    ],
+    "sortTitle": "House of Games (1987)",
+    "originalTitle": null,
+    "gradeValue": 5,
+    "runtimeMinutes": 102,
+    "releaseSequence": "1987-09-04tt0093223",
+    "directorNames": [
+      "David Mamet"
+    ],
+    "writerNames": [
+      "David Mamet",
+      "Jonathan Katz"
+    ],
+    "principalCastNames": [
+      "Lindsay Crouse",
+      "Joe Mantegna",
+      "Mike Nussbaum",
+      "Lilia Skala"
+    ],
+    "reviewDate": "2007-12-21",
+    "reviewYear": "2007",
+    "sequence": "2007-12-21-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "David Mamet",
+        "slug": "david-mamet",
+        "creditedAs": [
+          "director",
+          "writer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The House That Dripped Blood",
+        "imdbId": "tt0065854",
+        "year": "1971",
+        "slug": "the-house-that-dripped-blood-1971",
+        "grade": "C+",
+        "genres": [
+          "Drama",
+          "Fantasy",
+          "Horror",
+          "Mystery",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "House of 1000 Corpses",
+        "imdbId": "tt0251736",
+        "year": "2003",
+        "slug": "house-of-1000-corpses-2003",
+        "grade": "C-",
+        "genres": [
+          "Horror"
+        ]
+      },
+      {
+        "title": "The House on Sorority Row",
+        "imdbId": "tt0085694",
+        "year": "1982",
+        "slug": "the-house-on-sorority-row-1982",
+        "grade": "C-",
+        "genres": [
+          "Horror",
+          "Mystery",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Howling",
+        "imdbId": "tt0082533",
+        "year": "1981",
+        "slug": "the-howling-1981",
+        "grade": "B",
+        "genres": [
+          "Horror"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt0046911",
     "title": "Diabolique",
     "year": "1955",
@@ -70728,6 +71177,17 @@
         ]
       },
       {
+        "title": "Hour of the Gun",
+        "imdbId": "tt0061787",
+        "year": "1967",
+        "slug": "hour-of-the-gun-1967",
+        "grade": "C+",
+        "genres": [
+          "Drama",
+          "Western"
+        ]
+      },
+      {
         "title": "The House That Dripped Blood",
         "imdbId": "tt0065854",
         "year": "1971",
@@ -70739,16 +71199,6 @@
           "Horror",
           "Mystery",
           "Thriller"
-        ]
-      },
-      {
-        "title": "House of 1000 Corpses",
-        "imdbId": "tt0251736",
-        "year": "2003",
-        "slug": "house-of-1000-corpses-2003",
-        "grade": "C-",
-        "genres": [
-          "Horror"
         ]
       }
     ]
@@ -71443,13 +71893,14 @@
         ]
       },
       {
-        "title": "This Is the Night",
-        "imdbId": "tt0023584",
-        "year": "1932",
-        "slug": "this-is-the-night-1932",
-        "grade": "C",
+        "title": "This Is England",
+        "imdbId": "tt0480025",
+        "year": "2006",
+        "slug": "this-is-england-2006",
+        "grade": "B",
         "genres": [
-          "Comedy"
+          "Crime",
+          "Drama"
         ]
       }
     ]
@@ -81315,6 +81766,58 @@
     "collections": [],
     "moreCastAndCrew": [
       {
+        "name": "John Sturges",
+        "slug": "john-sturges",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "Right Cross",
+            "imdbId": "tt0042894",
+            "year": "1950",
+            "slug": "right-cross-1950",
+            "grade": "D+",
+            "genres": [
+              "Drama",
+              "Sport"
+            ]
+          },
+          {
+            "title": "It's a Big Country: An American Anthology",
+            "imdbId": "tt0043680",
+            "year": "1951",
+            "slug": "its-a-big-country-an-american-anthology-1951",
+            "grade": "D",
+            "genres": [
+              "Comedy",
+              "Drama"
+            ]
+          },
+          {
+            "title": "Hour of the Gun",
+            "imdbId": "tt0061787",
+            "year": "1967",
+            "slug": "hour-of-the-gun-1967",
+            "grade": "C+",
+            "genres": [
+              "Drama",
+              "Western"
+            ]
+          },
+          {
+            "title": "The Man Who Dared",
+            "imdbId": "tt0038722",
+            "year": "1946",
+            "slug": "the-man-who-dared-1946",
+            "grade": "D",
+            "genres": [
+              "Adventure",
+              "Crime",
+              "Drama"
+            ]
+          }
+        ]
+      },
+      {
         "name": "James Coburn",
         "slug": "james-coburn",
         "creditKind": "performer",
@@ -84740,6 +85243,60 @@
     ],
     "collections": [],
     "moreCastAndCrew": [
+      {
+        "name": "John Sturges",
+        "slug": "john-sturges",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "The Man Who Dared",
+            "imdbId": "tt0038722",
+            "year": "1946",
+            "slug": "the-man-who-dared-1946",
+            "grade": "D",
+            "genres": [
+              "Adventure",
+              "Crime",
+              "Drama"
+            ]
+          },
+          {
+            "title": "Right Cross",
+            "imdbId": "tt0042894",
+            "year": "1950",
+            "slug": "right-cross-1950",
+            "grade": "D+",
+            "genres": [
+              "Drama",
+              "Sport"
+            ]
+          },
+          {
+            "title": "The Magnificent Seven",
+            "imdbId": "tt0054047",
+            "year": "1960",
+            "slug": "the-magnificent-seven-1960",
+            "grade": "B",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "Western"
+            ]
+          },
+          {
+            "title": "Hour of the Gun",
+            "imdbId": "tt0061787",
+            "year": "1967",
+            "slug": "hour-of-the-gun-1967",
+            "grade": "C+",
+            "genres": [
+              "Drama",
+              "Western"
+            ]
+          }
+        ]
+      },
       {
         "name": "William Powell",
         "slug": "william-powell",
@@ -89277,19 +89834,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Horror Express",
-        "imdbId": "tt0068713",
-        "year": "1972",
-        "slug": "horror-express-1972",
-        "grade": "D+",
-        "genres": [
-          "Adventure",
-          "Horror",
-          "Sci-Fi",
-          "Thriller"
-        ]
-      },
-      {
         "title": "Horror of Dracula",
         "imdbId": "tt0051554",
         "year": "1958",
@@ -89298,6 +89842,17 @@
         "genres": [
           "Drama",
           "Horror"
+        ]
+      },
+      {
+        "title": "Hour of the Gun",
+        "imdbId": "tt0061787",
+        "year": "1967",
+        "slug": "hour-of-the-gun-1967",
+        "grade": "C+",
+        "genres": [
+          "Drama",
+          "Western"
         ]
       },
       {
@@ -89311,14 +89866,13 @@
         ]
       },
       {
-        "title": "The House on Sorority Row",
-        "imdbId": "tt0085694",
-        "year": "1982",
-        "slug": "the-house-on-sorority-row-1982",
+        "title": "House of Games",
+        "imdbId": "tt0093223",
+        "year": "1987",
+        "slug": "house-of-games-1987",
         "grade": "C-",
         "genres": [
-          "Horror",
-          "Mystery",
+          "Crime",
           "Thriller"
         ]
       }
@@ -91777,20 +92331,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The House That Dripped Blood",
-        "imdbId": "tt0065854",
-        "year": "1971",
-        "slug": "the-house-that-dripped-blood-1971",
-        "grade": "C+",
-        "genres": [
-          "Drama",
-          "Fantasy",
-          "Horror",
-          "Mystery",
-          "Thriller"
-        ]
-      },
-      {
         "title": "House of 1000 Corpses",
         "imdbId": "tt0251736",
         "year": "2003",
@@ -91798,6 +92338,17 @@
         "grade": "C-",
         "genres": [
           "Horror"
+        ]
+      },
+      {
+        "title": "House of Games",
+        "imdbId": "tt0093223",
+        "year": "1987",
+        "slug": "house-of-games-1987",
+        "grade": "C-",
+        "genres": [
+          "Crime",
+          "Thriller"
         ]
       },
       {
@@ -108648,15 +109199,14 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "This Can't Happen Here",
-        "imdbId": "tt0043019",
-        "year": "1950",
-        "slug": "this-cant-happen-here-1950",
-        "grade": "F",
+        "title": "This Is England",
+        "imdbId": "tt0480025",
+        "year": "2006",
+        "slug": "this-is-england-2006",
+        "grade": "B",
         "genres": [
-          "Drama",
-          "Mystery",
-          "Thriller"
+          "Crime",
+          "Drama"
         ]
       },
       {
@@ -110459,17 +111009,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Thirteenth Chair",
-        "imdbId": "tt0020492",
-        "year": "1929",
-        "slug": "the-thirteenth-chair-1929",
-        "grade": "D+",
-        "genres": [
-          "Drama",
-          "Mystery"
-        ]
-      },
-      {
         "title": "This Can't Happen Here",
         "imdbId": "tt0043019",
         "year": "1950",
@@ -110479,6 +111018,17 @@
           "Drama",
           "Mystery",
           "Thriller"
+        ]
+      },
+      {
+        "title": "This Is England",
+        "imdbId": "tt0480025",
+        "year": "2006",
+        "slug": "this-is-england-2006",
+        "grade": "B",
+        "genres": [
+          "Crime",
+          "Drama"
         ]
       },
       {
