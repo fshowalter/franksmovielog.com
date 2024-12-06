@@ -82,7 +82,7 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
 function CollectionName({ value }: { value: ListItemValue }) {
   return (
     <a
-      className="font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 hover:underline tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      className="font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 hover:underline hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href={`/collections/${value.slug}/`}
     >
       <div className="leading-normal">{value.name}</div>
