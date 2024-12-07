@@ -54,6 +54,14 @@ export function Review({
       hasBackdrop={false}
     >
       <header className="mb-12 flex flex-col items-center px-[8%] pt-10">
+        <nav className="pb-4">
+          <a
+            className="font-sans text-xs font-light uppercase tracking-wider text-subtle hover:text-accent"
+            href="/reviews/"
+          >
+            Reviews
+          </a>
+        </nav>
         <h1
           className="text-center text-4xl desktop:text-7xl"
           data-pagefind-meta="title"
