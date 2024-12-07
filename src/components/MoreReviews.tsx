@@ -7,7 +7,7 @@ import { Still } from "./Still";
 export const MoreReviewsImageConfig = {
   height: 360,
   sizes:
-    "(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160vw) * .22735), 350px",
+    "(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160px) * .22735), 350px",
   width: 640,
 };
 
