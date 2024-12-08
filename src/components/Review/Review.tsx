@@ -23,6 +23,13 @@ export const StillImageConfig = {
   width: 1536,
 };
 
+const dateFormat = new Intl.DateTimeFormat("en-US", {
+  day: "numeric",
+  month: "short",
+  timeZone: "UTC",
+  year: "numeric",
+});
+
 export type Props = {
   moreFromCastAndCrew: React.ComponentProps<
     typeof MoreFromCastAndCrew
@@ -87,6 +94,9 @@ export function Review({
           imageProps={stillImageProps}
           loading="eager"
         />
+        <div className="pt-8 font-sans text-xxs font-light uppercase tracking-wider">
+          Reviewed {dateFormat.format(value.date)}
+        </div>
       </header>
       <div className="flex flex-col items-center gap-16 px-container pb-20 desktop:gap-20 desktop:pb-32">
         <Content content={value.content} />
