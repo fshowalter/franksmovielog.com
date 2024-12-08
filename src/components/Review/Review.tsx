@@ -23,6 +23,13 @@ export const StillImageConfig = {
   width: 1536,
 };
 
+const dateFormat = new Intl.DateTimeFormat("en-US", {
+  day: "numeric",
+  month: "short",
+  timeZone: "UTC",
+  year: "numeric",
+});
+
 export type Props = {
   moreFromCastAndCrew: React.ComponentProps<
     typeof MoreFromCastAndCrew
@@ -53,7 +60,7 @@ export function Review({
       data-pagefind-meta={`image:${searchPosterImageProps.src}`}
       hasBackdrop={false}
     >
-      <header className="mb-12 flex flex-col items-center px-[8%] pt-10">
+      <header className="mb-8 flex flex-col items-center px-[8%] pt-10">
         <nav className="pb-4">
           <a
             className="font-sans text-xs font-light uppercase tracking-wider text-subtle hover:text-accent"
@@ -87,6 +94,9 @@ export function Review({
           imageProps={stillImageProps}
           loading="eager"
         />
+        <div className="pt-8 font-sans text-xxs font-light uppercase tracking-wider">
+          Reviewed {dateFormat.format(value.date)}
+        </div>
       </header>
       <div className="flex flex-col items-center gap-16 px-container pb-20 desktop:gap-20 desktop:pb-32">
         <Content content={value.content} />
