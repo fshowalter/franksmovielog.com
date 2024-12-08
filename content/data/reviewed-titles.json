@@ -956,17 +956,15 @@
         ]
       },
       {
-        "title": "Play Motel",
-        "imdbId": "tt0148615",
-        "year": "1979",
-        "slug": "play-motel-1979",
-        "grade": "D+",
+        "title": "The Pit and the Pendulum",
+        "imdbId": "tt0055304",
+        "year": "1961",
+        "slug": "pit-and-the-pendulum-1961",
+        "grade": "B",
         "genres": [
-          "Crime",
+          "Drama",
           "Horror",
-          "Mystery",
-          "Romance",
-          "Thriller"
+          "Mystery"
         ]
       }
     ]
@@ -1604,18 +1602,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "21 Jump Street",
-        "imdbId": "tt1232829",
-        "year": "2012",
-        "slug": "21-jump-street-2012",
-        "grade": "C+",
-        "genres": [
-          "Action",
-          "Comedy",
-          "Crime"
-        ]
-      },
-      {
         "title": "24 Hour Party People",
         "imdbId": "tt0274309",
         "year": "2002",
@@ -1626,6 +1612,17 @@
           "Comedy",
           "Drama",
           "Music"
+        ]
+      },
+      {
+        "title": "3 Godfathers",
+        "imdbId": "tt0040064",
+        "year": "1948",
+        "slug": "3-godfathers-1948",
+        "grade": "C",
+        "genres": [
+          "Drama",
+          "Western"
         ]
       },
       {
@@ -1642,13 +1639,14 @@
         ]
       },
       {
-        "title": "7 Women",
-        "imdbId": "tt0060050",
-        "year": "1965",
-        "slug": "7-women-1965",
+        "title": "4 for Texas",
+        "imdbId": "tt0057071",
+        "year": "1963",
+        "slug": "4-for-texas-1963",
         "grade": "C+",
         "genres": [
-          "Drama"
+          "Comedy",
+          "Western"
         ]
       }
     ]
@@ -2606,6 +2604,18 @@
             ]
           },
           {
+            "title": "The Pit and the Pendulum",
+            "imdbId": "tt0055304",
+            "year": "1961",
+            "slug": "pit-and-the-pendulum-1961",
+            "grade": "B",
+            "genres": [
+              "Drama",
+              "Horror",
+              "Mystery"
+            ]
+          },
+          {
             "title": "Master of the World",
             "imdbId": "tt0055152",
             "year": "1961",
@@ -2614,16 +2624,6 @@
             "genres": [
               "Adventure",
               "Sci-Fi"
-            ]
-          },
-          {
-            "title": "The Oblong Box",
-            "imdbId": "tt0064747",
-            "year": "1969",
-            "slug": "the-oblong-box-1969",
-            "grade": "D+",
-            "genres": [
-              "Horror"
             ]
           }
         ]
@@ -4725,6 +4725,291 @@
     ]
   },
   {
+    "imdbId": "tt0040064",
+    "title": "3 Godfathers",
+    "year": "1948",
+    "slug": "3-godfathers-1948",
+    "grade": "C",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Drama",
+      "Western"
+    ],
+    "sortTitle": "3 Godfathers (1948)",
+    "originalTitle": null,
+    "gradeValue": 6,
+    "runtimeMinutes": 106,
+    "releaseSequence": "1948-11-25tt0040064",
+    "directorNames": [
+      "John Ford"
+    ],
+    "writerNames": [
+      "Laurence Stallings",
+      "Frank S. Nugent",
+      "Peter B. Kyne"
+    ],
+    "principalCastNames": [
+      "John Wayne",
+      "Pedro Armend\u00e1riz",
+      "Harry Carey Jr.",
+      "Ward Bond"
+    ],
+    "reviewDate": "2008-03-23",
+    "reviewYear": "2008",
+    "sequence": "2008-03-23-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "John Ford",
+        "slug": "john-ford",
+        "creditedAs": [
+          "director"
+        ]
+      },
+      {
+        "name": "Ward Bond",
+        "slug": "ward-bond",
+        "creditedAs": [
+          "performer"
+        ]
+      },
+      {
+        "name": "John Wayne",
+        "slug": "john-wayne",
+        "creditedAs": [
+          "performer"
+        ]
+      },
+      {
+        "name": "Ben Johnson",
+        "slug": "ben-johnson",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "John Ford",
+        "slug": "john-ford",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "Stagecoach",
+            "imdbId": "tt0031971",
+            "year": "1939",
+            "slug": "stagecoach-1939",
+            "grade": "A+",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "Western"
+            ]
+          },
+          {
+            "title": "How Green Was My Valley",
+            "imdbId": "tt0033729",
+            "year": "1941",
+            "slug": "how-green-was-my-valley-1941",
+            "grade": "B-",
+            "genres": [
+              "Drama",
+              "Family"
+            ]
+          },
+          {
+            "title": "The Long Gray Line",
+            "imdbId": "tt0048312",
+            "year": "1955",
+            "slug": "the-long-gray-line-1955",
+            "grade": "B-",
+            "genres": [
+              "Biography",
+              "Comedy",
+              "Drama",
+              "Sport"
+            ]
+          },
+          {
+            "title": "Mister Roberts",
+            "imdbId": "tt0048380",
+            "year": "1955",
+            "slug": "mister-roberts-1955",
+            "grade": "B",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "War"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ward Bond",
+        "slug": "ward-bond",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Young Mr. Lincoln",
+            "imdbId": "tt0032155",
+            "year": "1939",
+            "slug": "young-mr-lincoln-1939",
+            "grade": "C",
+            "genres": [
+              "Biography",
+              "Drama"
+            ]
+          },
+          {
+            "title": "Tall in the Saddle",
+            "imdbId": "tt0037343",
+            "year": "1944",
+            "slug": "tall-in-the-saddle-1944",
+            "grade": "B-",
+            "genres": [
+              "Western"
+            ]
+          },
+          {
+            "title": "The Long Gray Line",
+            "imdbId": "tt0048312",
+            "year": "1955",
+            "slug": "the-long-gray-line-1955",
+            "grade": "B-",
+            "genres": [
+              "Biography",
+              "Comedy",
+              "Drama",
+              "Sport"
+            ]
+          },
+          {
+            "title": "Mister Roberts",
+            "imdbId": "tt0048380",
+            "year": "1955",
+            "slug": "mister-roberts-1955",
+            "grade": "B",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "War"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "John Wayne",
+        "slug": "john-wayne",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Tall in the Saddle",
+            "imdbId": "tt0037343",
+            "year": "1944",
+            "slug": "tall-in-the-saddle-1944",
+            "grade": "B-",
+            "genres": [
+              "Western"
+            ]
+          },
+          {
+            "title": "Angel and the Badman",
+            "imdbId": "tt0039152",
+            "year": "1947",
+            "slug": "angel-and-the-badman-1947",
+            "grade": "C",
+            "genres": [
+              "Drama",
+              "Romance",
+              "Western"
+            ]
+          },
+          {
+            "title": "Big Jim McLain",
+            "imdbId": "tt0044418",
+            "year": "1952",
+            "slug": "big-jim-mclain-1952",
+            "grade": "C",
+            "genres": [
+              "Crime",
+              "Drama",
+              "History",
+              "Romance",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Searchers",
+            "imdbId": "tt0049730",
+            "year": "1956",
+            "slug": "the-searchers-1956",
+            "grade": "A-",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "Western"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "21 Jump Street",
+        "imdbId": "tt1232829",
+        "year": "2012",
+        "slug": "21-jump-street-2012",
+        "grade": "C+",
+        "genres": [
+          "Action",
+          "Comedy",
+          "Crime"
+        ]
+      },
+      {
+        "title": "24 Hour Party People",
+        "imdbId": "tt0274309",
+        "year": "2002",
+        "slug": "24-hour-party-people-2002",
+        "grade": "B+",
+        "genres": [
+          "Biography",
+          "Comedy",
+          "Drama",
+          "Music"
+        ]
+      },
+      {
+        "title": "3 from Hell",
+        "imdbId": "tt8134742",
+        "year": "2019",
+        "slug": "3-from-hell-2019",
+        "grade": "D+",
+        "genres": [
+          "Action",
+          "Horror"
+        ]
+      },
+      {
+        "title": "3:10 to Yuma",
+        "imdbId": "tt0381849",
+        "year": "2007",
+        "slug": "3-10-to-yuma-2007",
+        "grade": "C+",
+        "genres": [
+          "Action",
+          "Crime",
+          "Drama",
+          "Western"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt2166834",
     "title": "Batman: The Dark Knight Returns",
     "year": "2013",
@@ -5089,16 +5374,14 @@
             ]
           },
           {
-            "title": "The Long Gray Line",
-            "imdbId": "tt0048312",
-            "year": "1955",
-            "slug": "the-long-gray-line-1955",
-            "grade": "B-",
+            "title": "3 Godfathers",
+            "imdbId": "tt0040064",
+            "year": "1948",
+            "slug": "3-godfathers-1948",
+            "grade": "C",
             "genres": [
-              "Biography",
-              "Comedy",
               "Drama",
-              "Sport"
+              "Western"
             ]
           }
         ]
@@ -8074,16 +8357,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Tall in the Saddle",
-            "imdbId": "tt0037343",
-            "year": "1944",
-            "slug": "tall-in-the-saddle-1944",
-            "grade": "B-",
-            "genres": [
-              "Western"
-            ]
-          },
-          {
             "title": "Angel and the Badman",
             "imdbId": "tt0039152",
             "year": "1947",
@@ -8092,6 +8365,17 @@
             "genres": [
               "Drama",
               "Romance",
+              "Western"
+            ]
+          },
+          {
+            "title": "3 Godfathers",
+            "imdbId": "tt0040064",
+            "year": "1948",
+            "slug": "3-godfathers-1948",
+            "grade": "C",
+            "genres": [
+              "Drama",
               "Western"
             ]
           },
@@ -9962,17 +10246,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Kiss Them for Me",
-            "imdbId": "tt0050599",
-            "year": "1957",
-            "slug": "kiss-them-for-me-1957",
-            "grade": "D+",
-            "genres": [
-              "Comedy",
-              "Romance"
-            ]
-          },
-          {
             "title": "Operation Petticoat",
             "imdbId": "tt0053143",
             "year": "1959",
@@ -9982,6 +10255,17 @@
               "Comedy",
               "Romance",
               "War"
+            ]
+          },
+          {
+            "title": "That Touch of Mink",
+            "imdbId": "tt0056575",
+            "year": "1962",
+            "slug": "that-touch-of-mink-1962",
+            "grade": "C+",
+            "genres": [
+              "Comedy",
+              "Romance"
             ]
           },
           {
@@ -17362,6 +17646,17 @@
             ]
           },
           {
+            "title": "3 Godfathers",
+            "imdbId": "tt0040064",
+            "year": "1948",
+            "slug": "3-godfathers-1948",
+            "grade": "C",
+            "genres": [
+              "Drama",
+              "Western"
+            ]
+          },
+          {
             "title": "The Long Gray Line",
             "imdbId": "tt0048312",
             "year": "1955",
@@ -17372,18 +17667,6 @@
               "Comedy",
               "Drama",
               "Sport"
-            ]
-          },
-          {
-            "title": "Mister Roberts",
-            "imdbId": "tt0048380",
-            "year": "1955",
-            "slug": "mister-roberts-1955",
-            "grade": "B",
-            "genres": [
-              "Comedy",
-              "Drama",
-              "War"
             ]
           }
         ]
@@ -17956,6 +18239,17 @@
         ]
       },
       {
+        "title": "That Touch of Mink",
+        "imdbId": "tt0056575",
+        "year": "1962",
+        "slug": "that-touch-of-mink-1962",
+        "grade": "C+",
+        "genres": [
+          "Comedy",
+          "Romance"
+        ]
+      },
+      {
         "title": "Them",
         "imdbId": "tt0465203",
         "year": "2006",
@@ -17963,19 +18257,6 @@
         "grade": "C",
         "genres": [
           "Horror",
-          "Thriller"
-        ]
-      },
-      {
-        "title": "They Drive by Night",
-        "imdbId": "tt0033149",
-        "year": "1940",
-        "slug": "they-drive-by-night-1940",
-        "grade": "C+",
-        "genres": [
-          "Crime",
-          "Drama",
-          "Film-Noir",
           "Thriller"
         ]
       }
@@ -18557,6 +18838,215 @@
         "genres": [
           "Drama",
           "Sport"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0057071",
+    "title": "4 for Texas",
+    "year": "1963",
+    "slug": "4-for-texas-1963",
+    "grade": "C+",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Comedy",
+      "Western"
+    ],
+    "sortTitle": "4 for Texas (1963)",
+    "originalTitle": null,
+    "gradeValue": 7,
+    "runtimeMinutes": 124,
+    "releaseSequence": "1963-12-18tt0057071",
+    "directorNames": [
+      "Robert Aldrich"
+    ],
+    "writerNames": [
+      "Teddi Sherman",
+      "Robert Aldrich"
+    ],
+    "principalCastNames": [
+      "Frank Sinatra",
+      "Dean Martin",
+      "Anita Ekberg",
+      "Ursula Andress"
+    ],
+    "reviewDate": "2008-10-24",
+    "reviewYear": "2008",
+    "sequence": "2008-10-24-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "Frank Sinatra",
+        "slug": "frank-sinatra",
+        "creditedAs": [
+          "performer"
+        ]
+      },
+      {
+        "name": "Dean Martin",
+        "slug": "dean-martin",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Frank Sinatra",
+        "slug": "frank-sinatra",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Kings Go Forth",
+            "imdbId": "tt0051819",
+            "year": "1958",
+            "slug": "kings-go-forth-1958",
+            "grade": "C+",
+            "genres": [
+              "Action",
+              "Drama",
+              "Romance",
+              "War"
+            ]
+          },
+          {
+            "title": "Never So Few",
+            "imdbId": "tt0053108",
+            "year": "1959",
+            "slug": "never-so-few-1959",
+            "grade": "D+",
+            "genres": [
+              "Drama",
+              "War"
+            ]
+          },
+          {
+            "title": "None But the Brave",
+            "imdbId": "tt0059518",
+            "year": "1965",
+            "slug": "none-but-the-brave-1965",
+            "grade": "C",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "War"
+            ]
+          },
+          {
+            "title": "Assault on a Queen",
+            "imdbId": "tt0060135",
+            "year": "1966",
+            "slug": "assault-on-a-queen-1966",
+            "grade": "D-",
+            "genres": [
+              "Adventure",
+              "Crime",
+              "Thriller",
+              "Action",
+              "Drama"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dean Martin",
+        "slug": "dean-martin",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Who Was That Lady?",
+            "imdbId": "tt0054473",
+            "year": "1960",
+            "slug": "who-was-that-lady-1960",
+            "grade": "C",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Ada",
+            "imdbId": "tt0054601",
+            "year": "1961",
+            "slug": "ada-1961",
+            "grade": "D+",
+            "genres": [
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Who's Been Sleeping in My Bed?",
+            "imdbId": "tt0057682",
+            "year": "1963",
+            "slug": "whos-been-sleeping-in-my-bed-1963",
+            "grade": "D",
+            "genres": [
+              "Comedy"
+            ]
+          },
+          {
+            "title": "Bandolero!",
+            "imdbId": "tt0062708",
+            "year": "1968",
+            "slug": "bandolero-1968",
+            "grade": "D-",
+            "genres": [
+              "Drama",
+              "Western"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "3 from Hell",
+        "imdbId": "tt8134742",
+        "year": "2019",
+        "slug": "3-from-hell-2019",
+        "grade": "D+",
+        "genres": [
+          "Action",
+          "Horror"
+        ]
+      },
+      {
+        "title": "3:10 to Yuma",
+        "imdbId": "tt0381849",
+        "year": "2007",
+        "slug": "3-10-to-yuma-2007",
+        "grade": "C+",
+        "genres": [
+          "Action",
+          "Crime",
+          "Drama",
+          "Western"
+        ]
+      },
+      {
+        "title": "7 Women",
+        "imdbId": "tt0060050",
+        "year": "1965",
+        "slug": "7-women-1965",
+        "grade": "C+",
+        "genres": [
+          "Drama"
+        ]
+      },
+      {
+        "title": "71 Fragments of a Chronology of Chance",
+        "imdbId": "tt0109020",
+        "year": "1994",
+        "slug": "71-fragments-of-a-chronology-of-chance-1994",
+        "grade": "C+",
+        "genres": [
+          "Drama"
         ]
       }
     ]
@@ -21055,15 +21545,14 @@
             ]
           },
           {
-            "title": "None But the Brave",
-            "imdbId": "tt0059518",
-            "year": "1965",
-            "slug": "none-but-the-brave-1965",
-            "grade": "C",
+            "title": "4 for Texas",
+            "imdbId": "tt0057071",
+            "year": "1963",
+            "slug": "4-for-texas-1963",
+            "grade": "C+",
             "genres": [
-              "Adventure",
-              "Drama",
-              "War"
+              "Comedy",
+              "Western"
             ]
           }
         ]
@@ -22090,15 +22579,13 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "3:10 to Yuma",
-        "imdbId": "tt0381849",
-        "year": "2007",
-        "slug": "3-10-to-yuma-2007",
+        "title": "4 for Texas",
+        "imdbId": "tt0057071",
+        "year": "1963",
+        "slug": "4-for-texas-1963",
         "grade": "C+",
         "genres": [
-          "Action",
-          "Crime",
-          "Drama",
+          "Comedy",
           "Western"
         ]
       },
@@ -26936,6 +27423,170 @@
     ]
   },
   {
+    "imdbId": "tt0055304",
+    "title": "The Pit and the Pendulum",
+    "year": "1961",
+    "slug": "pit-and-the-pendulum-1961",
+    "grade": "B",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Drama",
+      "Horror",
+      "Mystery"
+    ],
+    "sortTitle": "Pit and the Pendulum (1961)",
+    "originalTitle": "Pit and the Pendulum",
+    "gradeValue": 9,
+    "runtimeMinutes": 80,
+    "releaseSequence": "1961-08-23tt0055304",
+    "directorNames": [
+      "Roger Corman"
+    ],
+    "writerNames": [
+      "Richard Matheson",
+      "Edgar Allan Poe"
+    ],
+    "principalCastNames": [
+      "Vincent Price",
+      "John Kerr",
+      "Barbara Steele",
+      "Luana Anders"
+    ],
+    "reviewDate": "2007-07-23",
+    "reviewYear": "2007",
+    "sequence": "2007-07-23-6",
+    "viewings": [
+      {
+        "sequence": 6,
+        "medium": "TCM HD",
+        "mediumNotes": null,
+        "date": "2012-01-12",
+        "venue": null,
+        "venueNotes": null
+      }
+    ],
+    "castAndCrew": [
+      {
+        "name": "Roger Corman",
+        "slug": "roger-corman",
+        "creditedAs": [
+          "director"
+        ]
+      },
+      {
+        "name": "Vincent Price",
+        "slug": "vincent-price",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Vincent Price",
+        "slug": "vincent-price",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Fly",
+            "imdbId": "tt0051622",
+            "year": "1958",
+            "slug": "the-fly-1958",
+            "grade": "B-",
+            "genres": [
+              "Drama",
+              "Horror",
+              "Sci-Fi"
+            ]
+          },
+          {
+            "title": "The Tingler",
+            "imdbId": "tt0053363",
+            "year": "1959",
+            "slug": "the-tingler-1959",
+            "grade": "C+",
+            "genres": [
+              "Horror",
+              "Sci-Fi"
+            ]
+          },
+          {
+            "title": "Master of the World",
+            "imdbId": "tt0055152",
+            "year": "1961",
+            "slug": "master-of-the-world-1961",
+            "grade": "D+",
+            "genres": [
+              "Adventure",
+              "Sci-Fi"
+            ]
+          },
+          {
+            "title": "The Oblong Box",
+            "imdbId": "tt0064747",
+            "year": "1969",
+            "slug": "the-oblong-box-1969",
+            "grade": "D+",
+            "genres": [
+              "Horror"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Pilgrimage",
+        "imdbId": "tt0024453",
+        "year": "1933",
+        "slug": "pilgrimage-1933",
+        "grade": "C",
+        "genres": [
+          "Drama"
+        ]
+      },
+      {
+        "title": "The Pit",
+        "imdbId": "tt0086113",
+        "year": "1981",
+        "slug": "the-pit-1981",
+        "grade": "C+",
+        "genres": [
+          "Horror",
+          "Mystery"
+        ]
+      },
+      {
+        "title": "Play Motel",
+        "imdbId": "tt0148615",
+        "year": "1979",
+        "slug": "play-motel-1979",
+        "grade": "D+",
+        "genres": [
+          "Crime",
+          "Horror",
+          "Mystery",
+          "Romance",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Plough and the Stars",
+        "imdbId": "tt0028112",
+        "year": "1936",
+        "slug": "the-plough-and-the-stars-1936",
+        "grade": "F",
+        "genres": [
+          "Drama"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt13560574",
     "title": "X",
     "year": "2022",
@@ -31490,17 +32141,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "3 from Hell",
-        "imdbId": "tt8134742",
-        "year": "2019",
-        "slug": "3-from-hell-2019",
-        "grade": "D+",
-        "genres": [
-          "Action",
-          "Horror"
-        ]
-      },
-      {
         "title": "3:10 to Yuma",
         "imdbId": "tt0381849",
         "year": "2007",
@@ -31510,6 +32150,17 @@
           "Action",
           "Crime",
           "Drama",
+          "Western"
+        ]
+      },
+      {
+        "title": "4 for Texas",
+        "imdbId": "tt0057071",
+        "year": "1963",
+        "slug": "4-for-texas-1963",
+        "grade": "C+",
+        "genres": [
+          "Comedy",
           "Western"
         ]
       },
@@ -35491,6 +36142,18 @@
         ]
       },
       {
+        "title": "The Pit and the Pendulum",
+        "imdbId": "tt0055304",
+        "year": "1961",
+        "slug": "pit-and-the-pendulum-1961",
+        "grade": "B",
+        "genres": [
+          "Drama",
+          "Horror",
+          "Mystery"
+        ]
+      },
+      {
         "title": "Play Motel",
         "imdbId": "tt0148615",
         "year": "1979",
@@ -35502,16 +36165,6 @@
           "Mystery",
           "Romance",
           "Thriller"
-        ]
-      },
-      {
-        "title": "The Plough and the Stars",
-        "imdbId": "tt0028112",
-        "year": "1936",
-        "slug": "the-plough-and-the-stars-1936",
-        "grade": "F",
-        "genres": [
-          "Drama"
         ]
       }
     ]
@@ -36119,14 +36772,14 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Texas Cyclone",
-        "imdbId": "tt0023567",
-        "year": "1932",
-        "slug": "texas-cyclone-1932",
-        "grade": "C-",
+        "title": "That Touch of Mink",
+        "imdbId": "tt0056575",
+        "year": "1962",
+        "slug": "that-touch-of-mink-1962",
+        "grade": "C+",
         "genres": [
-          "Drama",
-          "Western"
+          "Comedy",
+          "Romance"
         ]
       },
       {
@@ -36256,14 +36909,14 @@
         ]
       },
       {
-        "title": "3 from Hell",
-        "imdbId": "tt8134742",
-        "year": "2019",
-        "slug": "3-from-hell-2019",
-        "grade": "D+",
+        "title": "3 Godfathers",
+        "imdbId": "tt0040064",
+        "year": "1948",
+        "slug": "3-godfathers-1948",
+        "grade": "C",
         "genres": [
-          "Action",
-          "Horror"
+          "Drama",
+          "Western"
         ]
       }
     ]
@@ -38331,14 +38984,14 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Never So Few",
-            "imdbId": "tt0053108",
-            "year": "1959",
-            "slug": "never-so-few-1959",
-            "grade": "D+",
+            "title": "4 for Texas",
+            "imdbId": "tt0057071",
+            "year": "1963",
+            "slug": "4-for-texas-1963",
+            "grade": "C+",
             "genres": [
-              "Drama",
-              "War"
+              "Comedy",
+              "Western"
             ]
           },
           {
@@ -43825,18 +44478,6 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "Stagecoach",
-            "imdbId": "tt0031971",
-            "year": "1939",
-            "slug": "stagecoach-1939",
-            "grade": "A+",
-            "genres": [
-              "Adventure",
-              "Drama",
-              "Western"
-            ]
-          },
-          {
             "title": "How Green Was My Valley",
             "imdbId": "tt0033729",
             "year": "1941",
@@ -43845,6 +44486,17 @@
             "genres": [
               "Drama",
               "Family"
+            ]
+          },
+          {
+            "title": "3 Godfathers",
+            "imdbId": "tt0040064",
+            "year": "1948",
+            "slug": "3-godfathers-1948",
+            "grade": "C",
+            "genres": [
+              "Drama",
+              "Western"
             ]
           },
           {
@@ -43879,23 +44531,23 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Young Mr. Lincoln",
-            "imdbId": "tt0032155",
-            "year": "1939",
-            "slug": "young-mr-lincoln-1939",
-            "grade": "C",
-            "genres": [
-              "Biography",
-              "Drama"
-            ]
-          },
-          {
             "title": "Tall in the Saddle",
             "imdbId": "tt0037343",
             "year": "1944",
             "slug": "tall-in-the-saddle-1944",
             "grade": "B-",
             "genres": [
+              "Western"
+            ]
+          },
+          {
+            "title": "3 Godfathers",
+            "imdbId": "tt0040064",
+            "year": "1948",
+            "slug": "3-godfathers-1948",
+            "grade": "C",
+            "genres": [
+              "Drama",
               "Western"
             ]
           },
@@ -45429,6 +46081,17 @@
             ]
           },
           {
+            "title": "4 for Texas",
+            "imdbId": "tt0057071",
+            "year": "1963",
+            "slug": "4-for-texas-1963",
+            "grade": "C+",
+            "genres": [
+              "Comedy",
+              "Western"
+            ]
+          },
+          {
             "title": "Who's Been Sleeping in My Bed?",
             "imdbId": "tt0057682",
             "year": "1963",
@@ -45436,17 +46099,6 @@
             "grade": "D",
             "genres": [
               "Comedy"
-            ]
-          },
-          {
-            "title": "Bandolero!",
-            "imdbId": "tt0062708",
-            "year": "1968",
-            "slug": "bandolero-1968",
-            "grade": "D-",
-            "genres": [
-              "Drama",
-              "Western"
             ]
           }
         ]
@@ -47724,15 +48376,15 @@
         ]
       },
       {
-        "name": "Steve McQueen",
-        "slug": "steve-mcqueen",
+        "name": "Ben Johnson",
+        "slug": "ben-johnson",
         "creditedAs": [
           "performer"
         ]
       },
       {
-        "name": "Ben Johnson",
-        "slug": "ben-johnson",
+        "name": "Steve McQueen",
+        "slug": "steve-mcqueen",
         "creditedAs": [
           "performer"
         ]
@@ -49116,14 +49768,15 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Tingler",
-            "imdbId": "tt0053363",
-            "year": "1959",
-            "slug": "the-tingler-1959",
-            "grade": "C+",
+            "title": "The Pit and the Pendulum",
+            "imdbId": "tt0055304",
+            "year": "1961",
+            "slug": "pit-and-the-pendulum-1961",
+            "grade": "B",
             "genres": [
+              "Drama",
               "Horror",
-              "Sci-Fi"
+              "Mystery"
             ]
           },
           {
@@ -49446,6 +50099,17 @@
         ]
       },
       {
+        "title": "3 Godfathers",
+        "imdbId": "tt0040064",
+        "year": "1948",
+        "slug": "3-godfathers-1948",
+        "grade": "C",
+        "genres": [
+          "Drama",
+          "Western"
+        ]
+      },
+      {
         "title": "3 from Hell",
         "imdbId": "tt8134742",
         "year": "2019",
@@ -49454,19 +50118,6 @@
         "genres": [
           "Action",
           "Horror"
-        ]
-      },
-      {
-        "title": "3:10 to Yuma",
-        "imdbId": "tt0381849",
-        "year": "2007",
-        "slug": "3-10-to-yuma-2007",
-        "grade": "C+",
-        "genres": [
-          "Action",
-          "Crime",
-          "Drama",
-          "Western"
         ]
       }
     ]
@@ -55315,13 +55966,14 @@
             ]
           },
           {
-            "title": "Who's Been Sleeping in My Bed?",
-            "imdbId": "tt0057682",
+            "title": "4 for Texas",
+            "imdbId": "tt0057071",
             "year": "1963",
-            "slug": "whos-been-sleeping-in-my-bed-1963",
-            "grade": "D",
+            "slug": "4-for-texas-1963",
+            "grade": "C+",
             "genres": [
-              "Comedy"
+              "Comedy",
+              "Western"
             ]
           }
         ]
@@ -58519,16 +59171,14 @@
             ]
           },
           {
-            "title": "The Long Gray Line",
-            "imdbId": "tt0048312",
-            "year": "1955",
-            "slug": "the-long-gray-line-1955",
-            "grade": "B-",
+            "title": "3 Godfathers",
+            "imdbId": "tt0040064",
+            "year": "1948",
+            "slug": "3-godfathers-1948",
+            "grade": "C",
             "genres": [
-              "Biography",
-              "Comedy",
               "Drama",
-              "Sport"
+              "Western"
             ]
           }
         ]
@@ -60835,16 +61485,14 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "24 Hour Party People",
-        "imdbId": "tt0274309",
-        "year": "2002",
-        "slug": "24-hour-party-people-2002",
-        "grade": "B+",
+        "title": "3 Godfathers",
+        "imdbId": "tt0040064",
+        "year": "1948",
+        "slug": "3-godfathers-1948",
+        "grade": "C",
         "genres": [
-          "Biography",
-          "Comedy",
           "Drama",
-          "Music"
+          "Western"
         ]
       },
       {
@@ -60859,20 +61507,21 @@
         ]
       },
       {
+        "title": "4 for Texas",
+        "imdbId": "tt0057071",
+        "year": "1963",
+        "slug": "4-for-texas-1963",
+        "grade": "C+",
+        "genres": [
+          "Comedy",
+          "Western"
+        ]
+      },
+      {
         "title": "7 Women",
         "imdbId": "tt0060050",
         "year": "1965",
         "slug": "7-women-1965",
-        "grade": "C+",
-        "genres": [
-          "Drama"
-        ]
-      },
-      {
-        "title": "71 Fragments of a Chronology of Chance",
-        "imdbId": "tt0109020",
-        "year": "1994",
-        "slug": "71-fragments-of-a-chronology-of-chance-1994",
         "grade": "C+",
         "genres": [
           "Drama"
@@ -66098,17 +66747,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Tetsuo: The Iron Man",
-        "imdbId": "tt0096251",
-        "year": "1989",
-        "slug": "tetsuo-the-iron-man-1989",
-        "grade": "B-",
-        "genres": [
-          "Horror",
-          "Sci-Fi"
-        ]
-      },
-      {
         "title": "Texas Cyclone",
         "imdbId": "tt0023567",
         "year": "1932",
@@ -66117,6 +66755,17 @@
         "genres": [
           "Drama",
           "Western"
+        ]
+      },
+      {
+        "title": "That Touch of Mink",
+        "imdbId": "tt0056575",
+        "year": "1962",
+        "slug": "that-touch-of-mink-1962",
+        "grade": "C+",
+        "genres": [
+          "Comedy",
+          "Romance"
         ]
       },
       {
@@ -66819,6 +67468,165 @@
         "genres": [
           "Drama",
           "Sport"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0056575",
+    "title": "That Touch of Mink",
+    "year": "1962",
+    "slug": "that-touch-of-mink-1962",
+    "grade": "C+",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "sortTitle": "That Touch of Mink (1962)",
+    "originalTitle": null,
+    "gradeValue": 7,
+    "runtimeMinutes": 99,
+    "releaseSequence": "1962-05-31tt0056575",
+    "directorNames": [
+      "Delbert Mann"
+    ],
+    "writerNames": [
+      "Stanley Shapiro",
+      "Nate Monaster"
+    ],
+    "principalCastNames": [
+      "Cary Grant",
+      "Doris Day",
+      "Gig Young",
+      "Audrey Meadows"
+    ],
+    "reviewDate": "2007-09-17",
+    "reviewYear": "2007",
+    "sequence": "2007-09-17-146",
+    "viewings": [
+      {
+        "sequence": 146,
+        "medium": "TCM HD",
+        "mediumNotes": null,
+        "date": "2012-04-07",
+        "venue": null,
+        "venueNotes": null
+      }
+    ],
+    "castAndCrew": [
+      {
+        "name": "Cary Grant",
+        "slug": "cary-grant",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Cary Grant",
+        "slug": "cary-grant",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Kiss Them for Me",
+            "imdbId": "tt0050599",
+            "year": "1957",
+            "slug": "kiss-them-for-me-1957",
+            "grade": "D+",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Operation Petticoat",
+            "imdbId": "tt0053143",
+            "year": "1959",
+            "slug": "operation-petticoat-1959",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Romance",
+              "War"
+            ]
+          },
+          {
+            "title": "Father Goose",
+            "imdbId": "tt0058092",
+            "year": "1964",
+            "slug": "father-goose-1964",
+            "grade": "C+",
+            "genres": [
+              "Adventure",
+              "Comedy",
+              "Romance",
+              "War"
+            ]
+          },
+          {
+            "title": "This Is the Night",
+            "imdbId": "tt0023584",
+            "year": "1932",
+            "slug": "this-is-the-night-1932",
+            "grade": "C",
+            "genres": [
+              "Comedy"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Tetsuo: The Iron Man",
+        "imdbId": "tt0096251",
+        "year": "1989",
+        "slug": "tetsuo-the-iron-man-1989",
+        "grade": "B-",
+        "genres": [
+          "Horror",
+          "Sci-Fi"
+        ]
+      },
+      {
+        "title": "Texas Cyclone",
+        "imdbId": "tt0023567",
+        "year": "1932",
+        "slug": "texas-cyclone-1932",
+        "grade": "C-",
+        "genres": [
+          "Drama",
+          "Western"
+        ]
+      },
+      {
+        "title": "Them",
+        "imdbId": "tt0465203",
+        "year": "2006",
+        "slug": "them-2006",
+        "grade": "C",
+        "genres": [
+          "Horror",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "They Drive by Night",
+        "imdbId": "tt0033149",
+        "year": "1940",
+        "slug": "they-drive-by-night-1940",
+        "grade": "C+",
+        "genres": [
+          "Crime",
+          "Drama",
+          "Film-Noir",
+          "Thriller"
         ]
       }
     ]
@@ -70209,6 +71017,17 @@
             ]
           },
           {
+            "title": "4 for Texas",
+            "imdbId": "tt0057071",
+            "year": "1963",
+            "slug": "4-for-texas-1963",
+            "grade": "C+",
+            "genres": [
+              "Comedy",
+              "Western"
+            ]
+          },
+          {
             "title": "None But the Brave",
             "imdbId": "tt0059518",
             "year": "1965",
@@ -70218,20 +71037,6 @@
               "Adventure",
               "Drama",
               "War"
-            ]
-          },
-          {
-            "title": "Assault on a Queen",
-            "imdbId": "tt0060135",
-            "year": "1966",
-            "slug": "assault-on-a-queen-1966",
-            "grade": "D-",
-            "genres": [
-              "Adventure",
-              "Crime",
-              "Thriller",
-              "Action",
-              "Drama"
             ]
           }
         ]
@@ -79531,12 +80336,13 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Pit",
-        "imdbId": "tt0086113",
-        "year": "1981",
-        "slug": "the-pit-1981",
-        "grade": "C+",
+        "title": "The Pit and the Pendulum",
+        "imdbId": "tt0055304",
+        "year": "1961",
+        "slug": "pit-and-the-pendulum-1961",
+        "grade": "B",
         "genres": [
+          "Drama",
           "Horror",
           "Mystery"
         ]
@@ -82139,14 +82945,13 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Angel and the Badman",
-            "imdbId": "tt0039152",
-            "year": "1947",
-            "slug": "angel-and-the-badman-1947",
+            "title": "3 Godfathers",
+            "imdbId": "tt0040064",
+            "year": "1948",
+            "slug": "3-godfathers-1948",
             "grade": "C",
             "genres": [
               "Drama",
-              "Romance",
               "Western"
             ]
           },
@@ -84701,6 +85506,17 @@
             ]
           },
           {
+            "title": "That Touch of Mink",
+            "imdbId": "tt0056575",
+            "year": "1962",
+            "slug": "that-touch-of-mink-1962",
+            "grade": "C+",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          },
+          {
             "title": "Father Goose",
             "imdbId": "tt0058092",
             "year": "1964",
@@ -84711,16 +85527,6 @@
               "Comedy",
               "Romance",
               "War"
-            ]
-          },
-          {
-            "title": "This Is the Night",
-            "imdbId": "tt0023584",
-            "year": "1932",
-            "slug": "this-is-the-night-1932",
-            "grade": "C",
-            "genres": [
-              "Comedy"
             ]
           }
         ]
@@ -88595,19 +89401,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Kings Go Forth",
-            "imdbId": "tt0051819",
-            "year": "1958",
-            "slug": "kings-go-forth-1958",
-            "grade": "C+",
-            "genres": [
-              "Action",
-              "Drama",
-              "Romance",
-              "War"
-            ]
-          },
-          {
             "title": "Never So Few",
             "imdbId": "tt0053108",
             "year": "1959",
@@ -88616,6 +89409,17 @@
             "genres": [
               "Drama",
               "War"
+            ]
+          },
+          {
+            "title": "4 for Texas",
+            "imdbId": "tt0057071",
+            "year": "1963",
+            "slug": "4-for-texas-1963",
+            "grade": "C+",
+            "genres": [
+              "Comedy",
+              "Western"
             ]
           },
           {
@@ -94545,15 +95349,15 @@
     "viewings": [],
     "castAndCrew": [
       {
-        "name": "James Stewart",
-        "slug": "james-stewart",
+        "name": "Dean Martin",
+        "slug": "dean-martin",
         "creditedAs": [
           "performer"
         ]
       },
       {
-        "name": "Dean Martin",
-        "slug": "dean-martin",
+        "name": "James Stewart",
+        "slug": "james-stewart",
         "creditedAs": [
           "performer"
         ]
@@ -94561,6 +95365,55 @@
     ],
     "collections": [],
     "moreCastAndCrew": [
+      {
+        "name": "Dean Martin",
+        "slug": "dean-martin",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "4 for Texas",
+            "imdbId": "tt0057071",
+            "year": "1963",
+            "slug": "4-for-texas-1963",
+            "grade": "C+",
+            "genres": [
+              "Comedy",
+              "Western"
+            ]
+          },
+          {
+            "title": "Who's Been Sleeping in My Bed?",
+            "imdbId": "tt0057682",
+            "year": "1963",
+            "slug": "whos-been-sleeping-in-my-bed-1963",
+            "grade": "D",
+            "genres": [
+              "Comedy"
+            ]
+          },
+          {
+            "title": "Rio Bravo",
+            "imdbId": "tt0053221",
+            "year": "1959",
+            "slug": "rio-bravo-1959",
+            "grade": "A+",
+            "genres": [
+              "Western"
+            ]
+          },
+          {
+            "title": "Who Was That Lady?",
+            "imdbId": "tt0054473",
+            "year": "1960",
+            "slug": "who-was-that-lady-1960",
+            "grade": "C",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          }
+        ]
+      },
       {
         "name": "James Stewart",
         "slug": "james-stewart",
@@ -94612,55 +95465,6 @@
             "genres": [
               "Comedy",
               "Musical",
-              "Romance"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Dean Martin",
-        "slug": "dean-martin",
-        "creditKind": "performer",
-        "titles": [
-          {
-            "title": "Ada",
-            "imdbId": "tt0054601",
-            "year": "1961",
-            "slug": "ada-1961",
-            "grade": "D+",
-            "genres": [
-              "Drama",
-              "Romance"
-            ]
-          },
-          {
-            "title": "Who's Been Sleeping in My Bed?",
-            "imdbId": "tt0057682",
-            "year": "1963",
-            "slug": "whos-been-sleeping-in-my-bed-1963",
-            "grade": "D",
-            "genres": [
-              "Comedy"
-            ]
-          },
-          {
-            "title": "Rio Bravo",
-            "imdbId": "tt0053221",
-            "year": "1959",
-            "slug": "rio-bravo-1959",
-            "grade": "A+",
-            "genres": [
-              "Western"
-            ]
-          },
-          {
-            "title": "Who Was That Lady?",
-            "imdbId": "tt0054473",
-            "year": "1960",
-            "slug": "who-was-that-lady-1960",
-            "grade": "C",
-            "genres": [
-              "Comedy",
               "Romance"
             ]
           }
@@ -97898,17 +98702,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Who Was That Lady?",
-            "imdbId": "tt0054473",
-            "year": "1960",
-            "slug": "who-was-that-lady-1960",
-            "grade": "C",
-            "genres": [
-              "Comedy",
-              "Romance"
-            ]
-          },
-          {
             "title": "Ada",
             "imdbId": "tt0054601",
             "year": "1961",
@@ -97917,6 +98710,17 @@
             "genres": [
               "Drama",
               "Romance"
+            ]
+          },
+          {
+            "title": "4 for Texas",
+            "imdbId": "tt0057071",
+            "year": "1963",
+            "slug": "4-for-texas-1963",
+            "grade": "C+",
+            "genres": [
+              "Comedy",
+              "Western"
             ]
           },
           {
@@ -98244,14 +99048,14 @@
         ]
       },
       {
-        "title": "Them",
-        "imdbId": "tt0465203",
-        "year": "2006",
-        "slug": "them-2006",
-        "grade": "C",
+        "title": "That Touch of Mink",
+        "imdbId": "tt0056575",
+        "year": "1962",
+        "slug": "that-touch-of-mink-1962",
+        "grade": "C+",
         "genres": [
-          "Horror",
-          "Thriller"
+          "Comedy",
+          "Romance"
         ]
       }
     ]
@@ -99445,16 +100249,14 @@
             ]
           },
           {
-            "title": "Father Goose",
-            "imdbId": "tt0058092",
-            "year": "1964",
-            "slug": "father-goose-1964",
+            "title": "That Touch of Mink",
+            "imdbId": "tt0056575",
+            "year": "1962",
+            "slug": "that-touch-of-mink-1962",
             "grade": "C+",
             "genres": [
-              "Adventure",
               "Comedy",
-              "Romance",
-              "War"
+              "Romance"
             ]
           }
         ]
@@ -100434,18 +101236,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Fly",
-            "imdbId": "tt0051622",
-            "year": "1958",
-            "slug": "the-fly-1958",
-            "grade": "B-",
-            "genres": [
-              "Drama",
-              "Horror",
-              "Sci-Fi"
-            ]
-          },
-          {
             "title": "The Tingler",
             "imdbId": "tt0053363",
             "year": "1959",
@@ -100454,6 +101244,18 @@
             "genres": [
               "Horror",
               "Sci-Fi"
+            ]
+          },
+          {
+            "title": "The Pit and the Pendulum",
+            "imdbId": "tt0055304",
+            "year": "1961",
+            "slug": "pit-and-the-pendulum-1961",
+            "grade": "B",
+            "genres": [
+              "Drama",
+              "Horror",
+              "Mystery"
             ]
           },
           {
@@ -100609,14 +101411,14 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "How Green Was My Valley",
-            "imdbId": "tt0033729",
-            "year": "1941",
-            "slug": "how-green-was-my-valley-1941",
-            "grade": "B-",
+            "title": "3 Godfathers",
+            "imdbId": "tt0040064",
+            "year": "1948",
+            "slug": "3-godfathers-1948",
+            "grade": "C",
             "genres": [
               "Drama",
-              "Family"
+              "Western"
             ]
           },
           {
@@ -100662,12 +101464,13 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Tall in the Saddle",
-            "imdbId": "tt0037343",
-            "year": "1944",
-            "slug": "tall-in-the-saddle-1944",
-            "grade": "B-",
+            "title": "3 Godfathers",
+            "imdbId": "tt0040064",
+            "year": "1948",
+            "slug": "3-godfathers-1948",
+            "grade": "C",
             "genres": [
+              "Drama",
               "Western"
             ]
           },
@@ -108707,14 +109510,15 @@
             ]
           },
           {
-            "title": "Master of the World",
-            "imdbId": "tt0055152",
+            "title": "The Pit and the Pendulum",
+            "imdbId": "tt0055304",
             "year": "1961",
-            "slug": "master-of-the-world-1961",
-            "grade": "D+",
+            "slug": "pit-and-the-pendulum-1961",
+            "grade": "B",
             "genres": [
-              "Adventure",
-              "Sci-Fi"
+              "Drama",
+              "Horror",
+              "Mystery"
             ]
           }
         ]
@@ -116821,6 +117625,17 @@
             ]
           },
           {
+            "title": "3 Godfathers",
+            "imdbId": "tt0040064",
+            "year": "1948",
+            "slug": "3-godfathers-1948",
+            "grade": "C",
+            "genres": [
+              "Drama",
+              "Western"
+            ]
+          },
+          {
             "title": "Big Jim McLain",
             "imdbId": "tt0044418",
             "year": "1952",
@@ -116832,18 +117647,6 @@
               "History",
               "Romance",
               "Thriller"
-            ]
-          },
-          {
-            "title": "The Searchers",
-            "imdbId": "tt0049730",
-            "year": "1956",
-            "slug": "the-searchers-1956",
-            "grade": "A-",
-            "genres": [
-              "Adventure",
-              "Drama",
-              "Western"
             ]
           }
         ]
@@ -117096,6 +117899,17 @@
             ]
           },
           {
+            "title": "3 Godfathers",
+            "imdbId": "tt0040064",
+            "year": "1948",
+            "slug": "3-godfathers-1948",
+            "grade": "C",
+            "genres": [
+              "Drama",
+              "Western"
+            ]
+          },
+          {
             "title": "The Long Gray Line",
             "imdbId": "tt0048312",
             "year": "1955",
@@ -117106,18 +117920,6 @@
               "Comedy",
               "Drama",
               "Sport"
-            ]
-          },
-          {
-            "title": "Mister Roberts",
-            "imdbId": "tt0048380",
-            "year": "1955",
-            "slug": "mister-roberts-1955",
-            "grade": "B",
-            "genres": [
-              "Comedy",
-              "Drama",
-              "War"
             ]
           }
         ]
@@ -117164,17 +117966,14 @@
             ]
           },
           {
-            "title": "Big Jim McLain",
-            "imdbId": "tt0044418",
-            "year": "1952",
-            "slug": "big-jim-mclain-1952",
+            "title": "3 Godfathers",
+            "imdbId": "tt0040064",
+            "year": "1948",
+            "slug": "3-godfathers-1948",
             "grade": "C",
             "genres": [
-              "Crime",
               "Drama",
-              "History",
-              "Romance",
-              "Thriller"
+              "Western"
             ]
           }
         ]
@@ -117706,22 +118505,24 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Pilgrimage",
-        "imdbId": "tt0024453",
-        "year": "1933",
-        "slug": "pilgrimage-1933",
-        "grade": "C",
-        "genres": [
-          "Drama"
-        ]
-      },
-      {
         "title": "The Pit",
         "imdbId": "tt0086113",
         "year": "1981",
         "slug": "the-pit-1981",
         "grade": "C+",
         "genres": [
+          "Horror",
+          "Mystery"
+        ]
+      },
+      {
+        "title": "The Pit and the Pendulum",
+        "imdbId": "tt0055304",
+        "year": "1961",
+        "slug": "pit-and-the-pendulum-1961",
+        "grade": "B",
+        "genres": [
+          "Drama",
           "Horror",
           "Mystery"
         ]
@@ -124884,15 +125685,14 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Operation Petticoat",
-            "imdbId": "tt0053143",
-            "year": "1959",
-            "slug": "operation-petticoat-1959",
-            "grade": "C-",
+            "title": "That Touch of Mink",
+            "imdbId": "tt0056575",
+            "year": "1962",
+            "slug": "that-touch-of-mink-1962",
+            "grade": "C+",
             "genres": [
               "Comedy",
-              "Romance",
-              "War"
+              "Romance"
             ]
           },
           {
