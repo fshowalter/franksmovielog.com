@@ -70,6 +70,14 @@ export async function allReviews(): Promise<Reviews> {
   return reviews;
 }
 
+export function getContentPlainText(rawContent: string): string {
+  return getMastProcessor()
+    .use(removeFootnotes)
+    .use(strip)
+    .processSync(rawContent)
+    .toString();
+}
+
 export async function loadContent<
   T extends { imdbId: string; rawContent: string; title: string },
 >(review: T): Promise<ReviewContent & T> {
