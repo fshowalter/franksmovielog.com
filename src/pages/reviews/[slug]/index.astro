@@ -41,13 +41,16 @@ description = description.slice(
   0,
   Math.max(0, Math.min(description.length, description.lastIndexOf(" "))),
 );
+
+let title = `${props.value.title} movie review`;
+
+if (props.value.title.length <= 10) {
+  title = `${title} & summary`;
+}
+
+title = `${title} (${props.value.year})`;
 ---
 
-<Layout
-  article={true}
-  canonical={true}
-  description={description}
-  title={`${props.value.title} (${props.value.year})`}
->
+<Layout article={true} canonical={true} description={description} title={title}>
   <Review {...props} />
 </Layout>
