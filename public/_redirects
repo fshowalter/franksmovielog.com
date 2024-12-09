@@ -13,21 +13,22 @@
 /browse/reviews /reviews 301
 /browse/reviews/* /reviews/:splat 301
 /movies/* /reviews/:splat 301
-/reviews/murder-to-the-tune-of-the-seven-black-notes-1977 /reviews/the-psychic-1977 301
-/reviews/dune-2021 /reviews/dune-part-one-2021 301
-/reviews/ganja-hess-1973 /reviews/ganja-and-hess-1973 301
-/reviews/straight-jacket-1964 /reviews/strait-jacket-1964 301
 /reviews/310-to-yuma-2007 /reviews/3-10-to-yuma-2007 301
-/reviews/the-visitor-1980 /reviews/the-visitor-1979 301
-/reviews/l-age-d-or-1930 /reviews/lage-dor-1930 301
-/reviews/curse-of-the-demon-1958 /reviews/curse-of-the-demon-1957 301
 /reviews/7-women-1966 /reviews/7-women-1965 301
 /reviews/awakening-of-the-beast-1970 /reviews/the-awakening-of-the-beast-1970 301
-/reviews/the-brute-and-the-beast-1966 /reviews/massacre-time-1966 301
 /reviews/bill-ted-face-the-music-2020 /reviews/bill-and-ted-face-the-music-2020 301
+/reviews/curse-of-the-demon-1958 /reviews/curse-of-the-demon-1957 301
+/reviews/dune-2021 /reviews/dune-part-one-2021 301
+/reviews/ganja-hess-1973 /reviews/ganja-and-hess-1973 301
 /reviews/gunfight-at-the-ok-corral-1957 /reviews/gunfight-at-the-o-k-corral-1957 301
-/reviews/mother-riley-meets-the-vampire-1952 /reviews/vampire-over-london-1952 301
+/reviews/l-age-d-or-1930 /reviews/lage-dor-1930 301
 /reviews/madman-1982 /reviews/madman-1981 301
+/reviews/mother-riley-meets-the-vampire-1952 /reviews/vampire-over-london-1952 301
+/reviews/murder-to-the-tune-of-the-seven-black-notes-1977 /reviews/the-psychic-1977 301
+/reviews/straight-jacket-1964 /reviews/strait-jacket-1964 301
+/reviews/the-brute-and-the-beast-1966 /reviews/massacre-time-1966 301
+/reviews/the-visitor-1980 /reviews/the-visitor-1979 301
+/reviews/vegas-vampires-2003 /reviews/vegas-vampires-2007 301
 /reviews/zombi-2-1979 /reviews/zombie-1979 301
 
 # watchlist to cast-and-crew
@@ -39,17 +40,17 @@
 /watchlist/collections/* /collections/:splat 301
 
 # old cast-and-crew to new
-/cast-and-crew/christopher-lee-i/ /cast-and-crew/christopher-lee/ 301
-/cast-and-crew/john-wayne-i/ /cast-and-crew/john-wayne/ 301
 /cast-and-crew/boris-karloff-i/ /cast-and-crew/boris-karloff/ 301
-/cast-and-crew/michael-caine-i/ /cast-and-crew/michael-caine/ 301
-/cast-and-crew/shaw-brothers /collections/shaw-brothers 301
-/cast-and-crew/hammer-films /collections/hammer-films 301
-/cast-and-crew/halloween /collections/halloween 301
-/cast-and-crew/james-bond /collections/james-bond 301
-/cast-and-crew/universal-monsters /collections/universal-monsters 301
-/cast-and-crew/saw /collections/saw 301
+/cast-and-crew/christopher-lee-i/ /cast-and-crew/christopher-lee/ 301
 /cast-and-crew/friday-the-13th /collections/friday-the-13th 301
+/cast-and-crew/halloween /collections/halloween 301
+/cast-and-crew/hammer-films /collections/hammer-films 301
+/cast-and-crew/james-bond /collections/james-bond 301
+/cast-and-crew/john-wayne-i/ /cast-and-crew/john-wayne/ 301
+/cast-and-crew/michael-caine-i/ /cast-and-crew/michael-caine/ 301
+/cast-and-crew/saw /collections/saw 301
+/cast-and-crew/shaw-brothers /collections/shaw-brothers 301
+/cast-and-crew/universal-monsters /collections/universal-monsters 301
 /cast-and-crew/null /gone 410
 
 # old pages
