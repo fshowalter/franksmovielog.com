@@ -61,7 +61,7 @@ export function Review({
       hasBackdrop={false}
     >
       <header className="mb-8 flex flex-col items-center px-[8%] pt-10">
-        <nav className="pb-4">
+        <nav className="pb-3">
           <a
             className="font-sans text-xs font-light uppercase tracking-wider text-subtle hover:text-accent"
             href="/reviews/"
