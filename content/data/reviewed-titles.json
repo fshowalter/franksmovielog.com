@@ -408,13 +408,14 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Tall in the Saddle",
-            "imdbId": "tt0037343",
-            "year": "1944",
-            "slug": "tall-in-the-saddle-1944",
+            "title": "They Were Expendable",
+            "imdbId": "tt0038160",
+            "year": "1945",
+            "slug": "they-were-expendable-1945",
             "grade": "B-",
             "genres": [
-              "Western"
+              "Drama",
+              "War"
             ]
           },
           {
@@ -5701,18 +5702,6 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "Stagecoach",
-            "imdbId": "tt0031971",
-            "year": "1939",
-            "slug": "stagecoach-1939",
-            "grade": "A+",
-            "genres": [
-              "Adventure",
-              "Drama",
-              "Western"
-            ]
-          },
-          {
             "title": "How Green Was My Valley",
             "imdbId": "tt0033729",
             "year": "1941",
@@ -5721,6 +5710,17 @@
             "genres": [
               "Drama",
               "Family"
+            ]
+          },
+          {
+            "title": "They Were Expendable",
+            "imdbId": "tt0038160",
+            "year": "1945",
+            "slug": "they-were-expendable-1945",
+            "grade": "B-",
+            "genres": [
+              "Drama",
+              "War"
             ]
           },
           {
@@ -5753,17 +5753,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Young Mr. Lincoln",
-            "imdbId": "tt0032155",
-            "year": "1939",
-            "slug": "young-mr-lincoln-1939",
-            "grade": "C",
-            "genres": [
-              "Biography",
-              "Drama"
-            ]
-          },
-          {
             "title": "Tall in the Saddle",
             "imdbId": "tt0037343",
             "year": "1944",
@@ -5771,6 +5760,17 @@
             "grade": "B-",
             "genres": [
               "Western"
+            ]
+          },
+          {
+            "title": "They Were Expendable",
+            "imdbId": "tt0038160",
+            "year": "1945",
+            "slug": "they-were-expendable-1945",
+            "grade": "B-",
+            "genres": [
+              "Drama",
+              "War"
             ]
           },
           {
@@ -6274,14 +6274,14 @@
             ]
           },
           {
-            "title": "3 Godfathers",
-            "imdbId": "tt0040064",
-            "year": "1948",
-            "slug": "3-godfathers-1948",
-            "grade": "C",
+            "title": "They Were Expendable",
+            "imdbId": "tt0038160",
+            "year": "1945",
+            "slug": "they-were-expendable-1945",
+            "grade": "B-",
             "genres": [
               "Drama",
-              "Western"
+              "War"
             ]
           }
         ]
@@ -9086,14 +9086,14 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "How Green Was My Valley",
-            "imdbId": "tt0033729",
-            "year": "1941",
-            "slug": "how-green-was-my-valley-1941",
+            "title": "They Were Expendable",
+            "imdbId": "tt0038160",
+            "year": "1945",
+            "slug": "they-were-expendable-1945",
             "grade": "B-",
             "genres": [
               "Drama",
-              "Family"
+              "War"
             ]
           },
           {
@@ -10927,6 +10927,107 @@
     ]
   },
   {
+    "imdbId": "tt0083190",
+    "title": "Thief",
+    "year": "1981",
+    "slug": "thief-1981",
+    "grade": "A-",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "sortTitle": "Thief (1981)",
+    "originalTitle": null,
+    "gradeValue": 11,
+    "runtimeMinutes": 123,
+    "releaseSequence": "1981-03-27tt0083190",
+    "directorNames": [
+      "Michael Mann"
+    ],
+    "writerNames": [
+      "Michael Mann",
+      "Frank Hohimer"
+    ],
+    "principalCastNames": [
+      "James Caan",
+      "Tuesday Weld",
+      "Willie Nelson",
+      "Jim Belushi"
+    ],
+    "reviewDate": "2012-06-13",
+    "reviewYear": "2012",
+    "sequence": "2012-06-13-187",
+    "viewings": [
+      {
+        "sequence": 187,
+        "medium": "Netflix",
+        "mediumNotes": null,
+        "date": "2012-06-13",
+        "venue": null,
+        "venueNotes": null
+      }
+    ],
+    "castAndCrew": [],
+    "collections": [],
+    "moreCastAndCrew": [],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "They Live",
+        "imdbId": "tt0096256",
+        "year": "1988",
+        "slug": "they-live-1988",
+        "grade": "C",
+        "genres": [
+          "Action",
+          "Horror",
+          "Sci-Fi",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "They Were Expendable",
+        "imdbId": "tt0038160",
+        "year": "1945",
+        "slug": "they-were-expendable-1945",
+        "grade": "B-",
+        "genres": [
+          "Drama",
+          "War"
+        ]
+      },
+      {
+        "title": "The Thief Who Came to Dinner",
+        "imdbId": "tt0070794",
+        "year": "1973",
+        "slug": "the-thief-who-came-to-dinner-1973",
+        "grade": "B+",
+        "genres": [
+          "Comedy",
+          "Romance"
+        ]
+      },
+      {
+        "title": "The Thin Man",
+        "imdbId": "tt0025878",
+        "year": "1934",
+        "slug": "the-thin-man-1934",
+        "grade": "B+",
+        "genres": [
+          "Comedy",
+          "Crime",
+          "Mystery",
+          "Romance"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt0072409",
     "title": "Willie Dynamite",
     "year": "1974",
@@ -12012,20 +12113,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Scarface",
-            "imdbId": "tt0023427",
-            "year": "1932",
-            "slug": "scarface-1932",
-            "grade": "B-",
-            "genres": [
-              "Action",
-              "Crime",
-              "Drama",
-              "Film-Noir",
-              "Thriller"
-            ]
-          },
-          {
             "title": "The Ghoul",
             "imdbId": "tt0024055",
             "year": "1933",
@@ -12037,6 +12124,19 @@
               "Horror",
               "Mystery",
               "Romance"
+            ]
+          },
+          {
+            "title": "The Black Cat",
+            "imdbId": "tt0024894",
+            "year": "1934",
+            "slug": "the-black-cat-1934",
+            "grade": "B-",
+            "genres": [
+              "Crime",
+              "Horror",
+              "Romance",
+              "Thriller"
             ]
           },
           {
@@ -14518,14 +14618,14 @@
             ]
           },
           {
-            "title": "Without Reservations",
-            "imdbId": "tt0039110",
-            "year": "1946",
-            "slug": "without-reservations-1946",
-            "grade": "C-",
+            "title": "They Were Expendable",
+            "imdbId": "tt0038160",
+            "year": "1945",
+            "slug": "they-were-expendable-1945",
+            "grade": "B-",
             "genres": [
-              "Comedy",
-              "Romance"
+              "Drama",
+              "War"
             ]
           }
         ]
@@ -19229,6 +19329,17 @@
             ]
           },
           {
+            "title": "They Were Expendable",
+            "imdbId": "tt0038160",
+            "year": "1945",
+            "slug": "they-were-expendable-1945",
+            "grade": "B-",
+            "genres": [
+              "Drama",
+              "War"
+            ]
+          },
+          {
             "title": "3 Godfathers",
             "imdbId": "tt0040064",
             "year": "1948",
@@ -19237,17 +19348,6 @@
             "genres": [
               "Drama",
               "Western"
-            ]
-          },
-          {
-            "title": "When Willie Comes Marching Home",
-            "imdbId": "tt0043129",
-            "year": "1950",
-            "slug": "when-willie-comes-marching-home-1950",
-            "grade": "C-",
-            "genres": [
-              "Comedy",
-              "War"
             ]
           }
         ]
@@ -29269,7 +29369,60 @@
       }
     ],
     "collections": [],
-    "moreCastAndCrew": [],
+    "moreCastAndCrew": [
+      {
+        "name": "John Carpenter",
+        "slug": "john-carpenter",
+        "creditKind": "writer",
+        "titles": [
+          {
+            "title": "Halloween",
+            "imdbId": "tt0373883",
+            "year": "2007",
+            "slug": "halloween-2007",
+            "grade": "C-",
+            "genres": [
+              "Horror"
+            ]
+          },
+          {
+            "title": "Dark Star",
+            "imdbId": "tt0069945",
+            "year": "1974",
+            "slug": "dark-star-1974",
+            "grade": "C+",
+            "genres": [
+              "Comedy",
+              "Sci-Fi"
+            ]
+          },
+          {
+            "title": "Halloween",
+            "imdbId": "tt0077651",
+            "year": "1978",
+            "slug": "halloween-1978",
+            "grade": "A",
+            "genres": [
+              "Horror",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "They Live",
+            "imdbId": "tt0096256",
+            "year": "1988",
+            "slug": "they-live-1988",
+            "grade": "C",
+            "genres": [
+              "Action",
+              "Horror",
+              "Sci-Fi",
+              "Thriller"
+            ]
+          }
+        ]
+      }
+    ],
     "moreCollections": [],
     "moreReviews": [
       {
@@ -30535,6 +30688,240 @@
           "Action",
           "Adventure",
           "Sci-Fi"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0024894",
+    "title": "The Black Cat",
+    "year": "1934",
+    "slug": "the-black-cat-1934",
+    "grade": "B-",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Crime",
+      "Horror",
+      "Romance",
+      "Thriller"
+    ],
+    "sortTitle": "Black Cat (1934)",
+    "originalTitle": null,
+    "gradeValue": 8,
+    "runtimeMinutes": 65,
+    "releaseSequence": "1934-05-03tt0024894",
+    "directorNames": [
+      "Edgar G. Ulmer"
+    ],
+    "writerNames": [
+      "Edgar Allan Poe",
+      "Peter Ruric",
+      "Edgar G. Ulmer"
+    ],
+    "principalCastNames": [
+      "Boris Karloff",
+      "Bela Lugosi",
+      "David Manners",
+      "Julie Bishop"
+    ],
+    "reviewDate": "2012-01-26",
+    "reviewYear": "2012",
+    "sequence": "2012-01-26-35",
+    "viewings": [
+      {
+        "sequence": 35,
+        "medium": "TCM HD",
+        "mediumNotes": null,
+        "date": "2012-01-26",
+        "venue": null,
+        "venueNotes": null
+      }
+    ],
+    "castAndCrew": [
+      {
+        "name": "Boris Karloff",
+        "slug": "boris-karloff",
+        "creditedAs": [
+          "performer"
+        ]
+      },
+      {
+        "name": "Bela Lugosi",
+        "slug": "bela-lugosi",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Boris Karloff",
+        "slug": "boris-karloff",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Scarface",
+            "imdbId": "tt0023427",
+            "year": "1932",
+            "slug": "scarface-1932",
+            "grade": "B-",
+            "genres": [
+              "Action",
+              "Crime",
+              "Drama",
+              "Film-Noir",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Ghoul",
+            "imdbId": "tt0024055",
+            "year": "1933",
+            "slug": "the-ghoul-1933",
+            "grade": "F",
+            "genres": [
+              "Action",
+              "Drama",
+              "Horror",
+              "Mystery",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Black Room",
+            "imdbId": "tt0026123",
+            "year": "1935",
+            "slug": "the-black-room-1935",
+            "grade": "D+",
+            "genres": [
+              "Horror"
+            ]
+          },
+          {
+            "title": "West of Shanghai",
+            "imdbId": "tt0029754",
+            "year": "1937",
+            "slug": "west-of-shanghai-1937",
+            "grade": "B",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "War"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bela Lugosi",
+        "slug": "bela-lugosi",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Chandu the Magician",
+            "imdbId": "tt0022753",
+            "year": "1932",
+            "slug": "chandu-the-magician-1932",
+            "grade": "D",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Comedy",
+              "Fantasy",
+              "Horror",
+              "Sci-Fi"
+            ]
+          },
+          {
+            "title": "The Death Kiss",
+            "imdbId": "tt0023935",
+            "year": "1932",
+            "slug": "the-death-kiss-1932",
+            "grade": "D",
+            "genres": [
+              "Comedy",
+              "Crime",
+              "Drama",
+              "Mystery",
+              "Romance",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Mark of the Vampire",
+            "imdbId": "tt0026685",
+            "year": "1935",
+            "slug": "mark-of-the-vampire-1935",
+            "grade": "F",
+            "genres": [
+              "Horror",
+              "Mystery"
+            ]
+          },
+          {
+            "title": "The Body Snatcher",
+            "imdbId": "tt0037549",
+            "year": "1945",
+            "slug": "the-body-snatcher-1945",
+            "grade": "D+",
+            "genres": [
+              "Horror",
+              "Thriller"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The Birthday Party",
+        "imdbId": "tt0062732",
+        "year": "1968",
+        "slug": "the-birthday-party-1968",
+        "grade": "C+",
+        "genres": [
+          "Drama",
+          "Mystery",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Black Camel",
+        "imdbId": "tt0021668",
+        "year": "1931",
+        "slug": "the-black-camel-1931",
+        "grade": "C+",
+        "genres": [
+          "Crime",
+          "Mystery",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "Black Christmas",
+        "imdbId": "tt0071222",
+        "year": "1974",
+        "slug": "black-christmas-1974",
+        "grade": "B+",
+        "genres": [
+          "Horror",
+          "Mystery",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "Black Legion",
+        "imdbId": "tt0027367",
+        "year": "1937",
+        "slug": "black-legion-1937",
+        "grade": "C+",
+        "genres": [
+          "Crime",
+          "Drama",
+          "Film-Noir"
         ]
       }
     ]
@@ -35528,7 +35915,62 @@
         "slug": "halloween"
       }
     ],
-    "moreCastAndCrew": [],
+    "moreCastAndCrew": [
+      {
+        "name": "John Carpenter",
+        "slug": "john-carpenter",
+        "creditKind": "writer",
+        "titles": [
+          {
+            "title": "Halloween",
+            "imdbId": "tt0077651",
+            "year": "1978",
+            "slug": "halloween-1978",
+            "grade": "A",
+            "genres": [
+              "Horror",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "They Live",
+            "imdbId": "tt0096256",
+            "year": "1988",
+            "slug": "they-live-1988",
+            "grade": "C",
+            "genres": [
+              "Action",
+              "Horror",
+              "Sci-Fi",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Dark Star",
+            "imdbId": "tt0069945",
+            "year": "1974",
+            "slug": "dark-star-1974",
+            "grade": "C+",
+            "genres": [
+              "Comedy",
+              "Sci-Fi"
+            ]
+          },
+          {
+            "title": "Assault on Precinct 13",
+            "imdbId": "tt0074156",
+            "year": "1976",
+            "slug": "assault-on-precinct-13-1976",
+            "grade": "A-",
+            "genres": [
+              "Action",
+              "Crime",
+              "Thriller"
+            ]
+          }
+        ]
+      }
+    ],
     "moreCollections": [
       {
         "name": "Halloween",
@@ -38871,18 +39313,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Birthday Party",
-        "imdbId": "tt0062732",
-        "year": "1968",
-        "slug": "the-birthday-party-1968",
-        "grade": "C+",
-        "genres": [
-          "Drama",
-          "Mystery",
-          "Thriller"
-        ]
-      },
-      {
         "title": "The Black Camel",
         "imdbId": "tt0021668",
         "year": "1931",
@@ -38891,6 +39321,19 @@
         "genres": [
           "Crime",
           "Mystery",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Black Cat",
+        "imdbId": "tt0024894",
+        "year": "1934",
+        "slug": "the-black-cat-1934",
+        "grade": "B-",
+        "genres": [
+          "Crime",
+          "Horror",
+          "Romance",
           "Thriller"
         ]
       },
@@ -40232,27 +40675,27 @@
         ]
       },
       {
-        "title": "The Thief Who Came to Dinner",
-        "imdbId": "tt0070794",
-        "year": "1973",
-        "slug": "the-thief-who-came-to-dinner-1973",
-        "grade": "B+",
+        "title": "They Live",
+        "imdbId": "tt0096256",
+        "year": "1988",
+        "slug": "they-live-1988",
+        "grade": "C",
         "genres": [
-          "Comedy",
-          "Romance"
+          "Action",
+          "Horror",
+          "Sci-Fi",
+          "Thriller"
         ]
       },
       {
-        "title": "The Thin Man",
-        "imdbId": "tt0025878",
-        "year": "1934",
-        "slug": "the-thin-man-1934",
-        "grade": "B+",
+        "title": "They Were Expendable",
+        "imdbId": "tt0038160",
+        "year": "1945",
+        "slug": "they-were-expendable-1945",
+        "grade": "B-",
         "genres": [
-          "Comedy",
-          "Crime",
-          "Mystery",
-          "Romance"
+          "Drama",
+          "War"
         ]
       }
     ]
@@ -46363,6 +46806,176 @@
           "Comedy",
           "Fantasy",
           "Horror"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0096256",
+    "title": "They Live",
+    "year": "1988",
+    "slug": "they-live-1988",
+    "grade": "C",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Action",
+      "Horror",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "sortTitle": "They Live (1988)",
+    "originalTitle": null,
+    "gradeValue": 6,
+    "runtimeMinutes": 94,
+    "releaseSequence": "1988-11-04tt0096256",
+    "directorNames": [
+      "John Carpenter"
+    ],
+    "writerNames": [
+      "Ray Nelson",
+      "John Carpenter"
+    ],
+    "principalCastNames": [
+      "Roddy Piper",
+      "Keith David",
+      "Meg Foster",
+      "George 'Buck' Flower"
+    ],
+    "reviewDate": "2008-08-02",
+    "reviewYear": "2008",
+    "sequence": "2008-08-02-696",
+    "viewings": [
+      {
+        "sequence": 696,
+        "medium": null,
+        "mediumNotes": null,
+        "date": "2018-08-13",
+        "venue": "Alamo Drafthouse Cinema - One Loudoun",
+        "venueNotes": null
+      },
+      {
+        "sequence": 23,
+        "medium": "TCM HD",
+        "mediumNotes": null,
+        "date": "2012-01-20",
+        "venue": null,
+        "venueNotes": null
+      }
+    ],
+    "castAndCrew": [
+      {
+        "name": "John Carpenter",
+        "slug": "john-carpenter",
+        "creditedAs": [
+          "director",
+          "writer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "John Carpenter",
+        "slug": "john-carpenter",
+        "creditKind": "writer",
+        "titles": [
+          {
+            "title": "Assault on Precinct 13",
+            "imdbId": "tt0074156",
+            "year": "1976",
+            "slug": "assault-on-precinct-13-1976",
+            "grade": "A-",
+            "genres": [
+              "Action",
+              "Crime",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Halloween",
+            "imdbId": "tt0077651",
+            "year": "1978",
+            "slug": "halloween-1978",
+            "grade": "A",
+            "genres": [
+              "Horror",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Halloween",
+            "imdbId": "tt0373883",
+            "year": "2007",
+            "slug": "halloween-2007",
+            "grade": "C-",
+            "genres": [
+              "Horror"
+            ]
+          },
+          {
+            "title": "Dark Star",
+            "imdbId": "tt0069945",
+            "year": "1974",
+            "slug": "dark-star-1974",
+            "grade": "C+",
+            "genres": [
+              "Comedy",
+              "Sci-Fi"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Them",
+        "imdbId": "tt0465203",
+        "year": "2006",
+        "slug": "them-2006",
+        "grade": "C",
+        "genres": [
+          "Horror",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "They Drive by Night",
+        "imdbId": "tt0033149",
+        "year": "1940",
+        "slug": "they-drive-by-night-1940",
+        "grade": "C+",
+        "genres": [
+          "Crime",
+          "Drama",
+          "Film-Noir",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "They Were Expendable",
+        "imdbId": "tt0038160",
+        "year": "1945",
+        "slug": "they-were-expendable-1945",
+        "grade": "B-",
+        "genres": [
+          "Drama",
+          "War"
+        ]
+      },
+      {
+        "title": "Thief",
+        "imdbId": "tt0083190",
+        "year": "1981",
+        "slug": "thief-1981",
+        "grade": "A-",
+        "genres": [
+          "Action",
+          "Crime",
+          "Drama",
+          "Thriller"
         ]
       }
     ]
@@ -63833,14 +64446,14 @@
             ]
           },
           {
-            "title": "3 Godfathers",
-            "imdbId": "tt0040064",
-            "year": "1948",
-            "slug": "3-godfathers-1948",
-            "grade": "C",
+            "title": "They Were Expendable",
+            "imdbId": "tt0038160",
+            "year": "1945",
+            "slug": "they-were-expendable-1945",
+            "grade": "B-",
             "genres": [
               "Drama",
-              "Western"
+              "War"
             ]
           }
         ]
@@ -68115,14 +68728,15 @@
         ]
       },
       {
-        "title": "Black Christmas",
-        "imdbId": "tt0071222",
-        "year": "1974",
-        "slug": "black-christmas-1974",
-        "grade": "B+",
+        "title": "The Black Cat",
+        "imdbId": "tt0024894",
+        "year": "1934",
+        "slug": "the-black-cat-1934",
+        "grade": "B-",
         "genres": [
+          "Crime",
           "Horror",
-          "Mystery",
+          "Romance",
           "Thriller"
         ]
       }
@@ -72226,14 +72840,16 @@
         ]
       },
       {
-        "title": "The Thief Who Came to Dinner",
-        "imdbId": "tt0070794",
-        "year": "1973",
-        "slug": "the-thief-who-came-to-dinner-1973",
-        "grade": "B+",
+        "title": "They Live",
+        "imdbId": "tt0096256",
+        "year": "1988",
+        "slug": "they-live-1988",
+        "grade": "C",
         "genres": [
-          "Comedy",
-          "Romance"
+          "Action",
+          "Horror",
+          "Sci-Fi",
+          "Thriller"
         ]
       }
     ]
@@ -76872,7 +77488,61 @@
         "slug": "halloween"
       }
     ],
-    "moreCastAndCrew": [],
+    "moreCastAndCrew": [
+      {
+        "name": "John Carpenter",
+        "slug": "john-carpenter",
+        "creditKind": "writer",
+        "titles": [
+          {
+            "title": "Dark Star",
+            "imdbId": "tt0069945",
+            "year": "1974",
+            "slug": "dark-star-1974",
+            "grade": "C+",
+            "genres": [
+              "Comedy",
+              "Sci-Fi"
+            ]
+          },
+          {
+            "title": "Assault on Precinct 13",
+            "imdbId": "tt0074156",
+            "year": "1976",
+            "slug": "assault-on-precinct-13-1976",
+            "grade": "A-",
+            "genres": [
+              "Action",
+              "Crime",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "They Live",
+            "imdbId": "tt0096256",
+            "year": "1988",
+            "slug": "they-live-1988",
+            "grade": "C",
+            "genres": [
+              "Action",
+              "Horror",
+              "Sci-Fi",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Halloween",
+            "imdbId": "tt0373883",
+            "year": "2007",
+            "slug": "halloween-2007",
+            "grade": "C-",
+            "genres": [
+              "Horror"
+            ]
+          }
+        ]
+      }
+    ],
     "moreCollections": [
       {
         "name": "Halloween",
@@ -77844,14 +78514,15 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Black Camel",
-        "imdbId": "tt0021668",
-        "year": "1931",
-        "slug": "the-black-camel-1931",
-        "grade": "C+",
+        "title": "The Black Cat",
+        "imdbId": "tt0024894",
+        "year": "1934",
+        "slug": "the-black-cat-1934",
+        "grade": "B-",
         "genres": [
           "Crime",
-          "Mystery",
+          "Horror",
+          "Romance",
           "Thriller"
         ]
       },
@@ -80349,18 +81020,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Fighting Seabees",
-            "imdbId": "tt0036824",
-            "year": "1944",
-            "slug": "the-fighting-seabees-1944",
-            "grade": "C+",
-            "genres": [
-              "Drama",
-              "Romance",
-              "War"
-            ]
-          },
-          {
             "title": "Tall in the Saddle",
             "imdbId": "tt0037343",
             "year": "1944",
@@ -80368,6 +81027,17 @@
             "grade": "B-",
             "genres": [
               "Western"
+            ]
+          },
+          {
+            "title": "They Were Expendable",
+            "imdbId": "tt0038160",
+            "year": "1945",
+            "slug": "they-were-expendable-1945",
+            "grade": "B-",
+            "genres": [
+              "Drama",
+              "War"
             ]
           },
           {
@@ -81548,17 +82218,16 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Ghoul",
-            "imdbId": "tt0024055",
-            "year": "1933",
-            "slug": "the-ghoul-1933",
-            "grade": "F",
+            "title": "The Black Cat",
+            "imdbId": "tt0024894",
+            "year": "1934",
+            "slug": "the-black-cat-1934",
+            "grade": "B-",
             "genres": [
-              "Action",
-              "Drama",
+              "Crime",
               "Horror",
-              "Mystery",
-              "Romance"
+              "Romance",
+              "Thriller"
             ]
           },
           {
@@ -90471,13 +91140,16 @@
             ]
           },
           {
-            "title": "The Black Room",
-            "imdbId": "tt0026123",
-            "year": "1935",
-            "slug": "the-black-room-1935",
-            "grade": "D+",
+            "title": "The Black Cat",
+            "imdbId": "tt0024894",
+            "year": "1934",
+            "slug": "the-black-cat-1934",
+            "grade": "B-",
             "genres": [
-              "Horror"
+              "Crime",
+              "Horror",
+              "Romance",
+              "Thriller"
             ]
           }
         ]
@@ -95074,6 +95746,19 @@
             ]
           },
           {
+            "title": "The Black Cat",
+            "imdbId": "tt0024894",
+            "year": "1934",
+            "slug": "the-black-cat-1934",
+            "grade": "B-",
+            "genres": [
+              "Crime",
+              "Horror",
+              "Romance",
+              "Thriller"
+            ]
+          },
+          {
             "title": "Mark of the Vampire",
             "imdbId": "tt0026685",
             "year": "1935",
@@ -95082,17 +95767,6 @@
             "genres": [
               "Horror",
               "Mystery"
-            ]
-          },
-          {
-            "title": "The Body Snatcher",
-            "imdbId": "tt0037549",
-            "year": "1945",
-            "slug": "the-body-snatcher-1945",
-            "grade": "D+",
-            "genres": [
-              "Horror",
-              "Thriller"
             ]
           }
         ]
@@ -96915,21 +97589,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Chandu the Magician",
-            "imdbId": "tt0022753",
-            "year": "1932",
-            "slug": "chandu-the-magician-1932",
-            "grade": "D",
-            "genres": [
-              "Action",
-              "Adventure",
-              "Comedy",
-              "Fantasy",
-              "Horror",
-              "Sci-Fi"
-            ]
-          },
-          {
             "title": "The Death Kiss",
             "imdbId": "tt0023935",
             "year": "1932",
@@ -96940,6 +97599,19 @@
               "Crime",
               "Drama",
               "Mystery",
+              "Romance",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Black Cat",
+            "imdbId": "tt0024894",
+            "year": "1934",
+            "slug": "the-black-cat-1934",
+            "grade": "B-",
+            "genres": [
+              "Crime",
+              "Horror",
               "Romance",
               "Thriller"
             ]
@@ -100297,26 +100969,26 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Them",
-        "imdbId": "tt0465203",
-        "year": "2006",
-        "slug": "them-2006",
-        "grade": "C",
+        "title": "They Were Expendable",
+        "imdbId": "tt0038160",
+        "year": "1945",
+        "slug": "they-were-expendable-1945",
+        "grade": "B-",
         "genres": [
-          "Horror",
-          "Thriller"
+          "Drama",
+          "War"
         ]
       },
       {
-        "title": "They Drive by Night",
-        "imdbId": "tt0033149",
-        "year": "1940",
-        "slug": "they-drive-by-night-1940",
-        "grade": "C+",
+        "title": "Thief",
+        "imdbId": "tt0083190",
+        "year": "1981",
+        "slug": "thief-1981",
+        "grade": "A-",
         "genres": [
+          "Action",
           "Crime",
           "Drama",
-          "Film-Noir",
           "Thriller"
         ]
       },
@@ -112135,6 +112807,19 @@
             ]
           },
           {
+            "title": "The Black Cat",
+            "imdbId": "tt0024894",
+            "year": "1934",
+            "slug": "the-black-cat-1934",
+            "grade": "B-",
+            "genres": [
+              "Crime",
+              "Horror",
+              "Romance",
+              "Thriller"
+            ]
+          },
+          {
             "title": "The Black Room",
             "imdbId": "tt0026123",
             "year": "1935",
@@ -112142,18 +112827,6 @@
             "grade": "D+",
             "genres": [
               "Horror"
-            ]
-          },
-          {
-            "title": "West of Shanghai",
-            "imdbId": "tt0029754",
-            "year": "1937",
-            "slug": "west-of-shanghai-1937",
-            "grade": "B",
-            "genres": [
-              "Adventure",
-              "Drama",
-              "War"
             ]
           }
         ]
@@ -120621,16 +121294,14 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Death Kiss",
-            "imdbId": "tt0023935",
-            "year": "1932",
-            "slug": "the-death-kiss-1932",
-            "grade": "D",
+            "title": "The Black Cat",
+            "imdbId": "tt0024894",
+            "year": "1934",
+            "slug": "the-black-cat-1934",
+            "grade": "B-",
             "genres": [
-              "Comedy",
               "Crime",
-              "Drama",
-              "Mystery",
+              "Horror",
               "Romance",
               "Thriller"
             ]
@@ -122920,6 +123591,19 @@
         ]
       },
       {
+        "title": "The Black Cat",
+        "imdbId": "tt0024894",
+        "year": "1934",
+        "slug": "the-black-cat-1934",
+        "grade": "B-",
+        "genres": [
+          "Crime",
+          "Horror",
+          "Romance",
+          "Thriller"
+        ]
+      },
+      {
         "title": "Black Christmas",
         "imdbId": "tt0071222",
         "year": "1974",
@@ -122929,18 +123613,6 @@
           "Horror",
           "Mystery",
           "Thriller"
-        ]
-      },
-      {
-        "title": "Black Legion",
-        "imdbId": "tt0027367",
-        "year": "1937",
-        "slug": "black-legion-1937",
-        "grade": "C+",
-        "genres": [
-          "Crime",
-          "Drama",
-          "Film-Noir"
         ]
       }
     ]
@@ -124936,15 +125608,15 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "They Drive by Night",
-        "imdbId": "tt0033149",
-        "year": "1940",
-        "slug": "they-drive-by-night-1940",
-        "grade": "C+",
+        "title": "Thief",
+        "imdbId": "tt0083190",
+        "year": "1981",
+        "slug": "thief-1981",
+        "grade": "A-",
         "genres": [
+          "Action",
           "Crime",
           "Drama",
-          "Film-Noir",
           "Thriller"
         ]
       },
@@ -126022,13 +126694,14 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Tall in the Saddle",
-            "imdbId": "tt0037343",
-            "year": "1944",
-            "slug": "tall-in-the-saddle-1944",
+            "title": "They Were Expendable",
+            "imdbId": "tt0038160",
+            "year": "1945",
+            "slug": "they-were-expendable-1945",
             "grade": "B-",
             "genres": [
-              "Western"
+              "Drama",
+              "War"
             ]
           },
           {
@@ -126315,22 +126988,22 @@
             ]
           },
           {
+            "title": "They Were Expendable",
+            "imdbId": "tt0038160",
+            "year": "1945",
+            "slug": "they-were-expendable-1945",
+            "grade": "B-",
+            "genres": [
+              "Drama",
+              "War"
+            ]
+          },
+          {
             "title": "3 Godfathers",
             "imdbId": "tt0040064",
             "year": "1948",
             "slug": "3-godfathers-1948",
             "grade": "C",
-            "genres": [
-              "Drama",
-              "Western"
-            ]
-          },
-          {
-            "title": "Wagon Master",
-            "imdbId": "tt0043117",
-            "year": "1950",
-            "slug": "wagon-master-1950",
-            "grade": "C+",
             "genres": [
               "Drama",
               "Western"
@@ -126368,6 +127041,17 @@
             ]
           },
           {
+            "title": "They Were Expendable",
+            "imdbId": "tt0038160",
+            "year": "1945",
+            "slug": "they-were-expendable-1945",
+            "grade": "B-",
+            "genres": [
+              "Drama",
+              "War"
+            ]
+          },
+          {
             "title": "Without Reservations",
             "imdbId": "tt0039110",
             "year": "1946",
@@ -126376,18 +127060,6 @@
             "genres": [
               "Comedy",
               "Romance"
-            ]
-          },
-          {
-            "title": "Angel and the Badman",
-            "imdbId": "tt0039152",
-            "year": "1947",
-            "slug": "angel-and-the-badman-1947",
-            "grade": "C",
-            "genres": [
-              "Drama",
-              "Romance",
-              "Western"
             ]
           }
         ]
@@ -132185,14 +132857,16 @@
             ]
           },
           {
-            "title": "Mark of the Vampire",
-            "imdbId": "tt0026685",
-            "year": "1935",
-            "slug": "mark-of-the-vampire-1935",
-            "grade": "F",
+            "title": "The Black Cat",
+            "imdbId": "tt0024894",
+            "year": "1934",
+            "slug": "the-black-cat-1934",
+            "grade": "B-",
             "genres": [
+              "Crime",
               "Horror",
-              "Mystery"
+              "Romance",
+              "Thriller"
             ]
           }
         ]
@@ -136062,6 +136736,284 @@
     ]
   },
   {
+    "imdbId": "tt0038160",
+    "title": "They Were Expendable",
+    "year": "1945",
+    "slug": "they-were-expendable-1945",
+    "grade": "B-",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Drama",
+      "War"
+    ],
+    "sortTitle": "They Were Expendable (1945)",
+    "originalTitle": null,
+    "gradeValue": 8,
+    "runtimeMinutes": 135,
+    "releaseSequence": "1945-12-07tt0038160",
+    "directorNames": [
+      "John Ford"
+    ],
+    "writerNames": [
+      "William L. White",
+      "Frank Wead"
+    ],
+    "principalCastNames": [
+      "Robert Montgomery",
+      "John Wayne",
+      "Donna Reed",
+      "Jack Holt"
+    ],
+    "reviewDate": "2008-06-13",
+    "reviewYear": "2008",
+    "sequence": "2008-06-13-76",
+    "viewings": [
+      {
+        "sequence": 76,
+        "medium": "TCM HD",
+        "mediumNotes": null,
+        "date": "2012-02-15",
+        "venue": null,
+        "venueNotes": null
+      }
+    ],
+    "castAndCrew": [
+      {
+        "name": "John Ford",
+        "slug": "john-ford",
+        "creditedAs": [
+          "director"
+        ]
+      },
+      {
+        "name": "Ward Bond",
+        "slug": "ward-bond",
+        "creditedAs": [
+          "performer"
+        ]
+      },
+      {
+        "name": "John Wayne",
+        "slug": "john-wayne",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "John Ford",
+        "slug": "john-ford",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "Stagecoach",
+            "imdbId": "tt0031971",
+            "year": "1939",
+            "slug": "stagecoach-1939",
+            "grade": "A+",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "Western"
+            ]
+          },
+          {
+            "title": "How Green Was My Valley",
+            "imdbId": "tt0033729",
+            "year": "1941",
+            "slug": "how-green-was-my-valley-1941",
+            "grade": "B-",
+            "genres": [
+              "Drama",
+              "Family"
+            ]
+          },
+          {
+            "title": "3 Godfathers",
+            "imdbId": "tt0040064",
+            "year": "1948",
+            "slug": "3-godfathers-1948",
+            "grade": "C",
+            "genres": [
+              "Drama",
+              "Western"
+            ]
+          },
+          {
+            "title": "When Willie Comes Marching Home",
+            "imdbId": "tt0043129",
+            "year": "1950",
+            "slug": "when-willie-comes-marching-home-1950",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "War"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ward Bond",
+        "slug": "ward-bond",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Young Mr. Lincoln",
+            "imdbId": "tt0032155",
+            "year": "1939",
+            "slug": "young-mr-lincoln-1939",
+            "grade": "C",
+            "genres": [
+              "Biography",
+              "Drama"
+            ]
+          },
+          {
+            "title": "Tall in the Saddle",
+            "imdbId": "tt0037343",
+            "year": "1944",
+            "slug": "tall-in-the-saddle-1944",
+            "grade": "B-",
+            "genres": [
+              "Western"
+            ]
+          },
+          {
+            "title": "3 Godfathers",
+            "imdbId": "tt0040064",
+            "year": "1948",
+            "slug": "3-godfathers-1948",
+            "grade": "C",
+            "genres": [
+              "Drama",
+              "Western"
+            ]
+          },
+          {
+            "title": "Wagon Master",
+            "imdbId": "tt0043117",
+            "year": "1950",
+            "slug": "wagon-master-1950",
+            "grade": "C+",
+            "genres": [
+              "Drama",
+              "Western"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "John Wayne",
+        "slug": "john-wayne",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Fighting Seabees",
+            "imdbId": "tt0036824",
+            "year": "1944",
+            "slug": "the-fighting-seabees-1944",
+            "grade": "C+",
+            "genres": [
+              "Drama",
+              "Romance",
+              "War"
+            ]
+          },
+          {
+            "title": "Tall in the Saddle",
+            "imdbId": "tt0037343",
+            "year": "1944",
+            "slug": "tall-in-the-saddle-1944",
+            "grade": "B-",
+            "genres": [
+              "Western"
+            ]
+          },
+          {
+            "title": "Without Reservations",
+            "imdbId": "tt0039110",
+            "year": "1946",
+            "slug": "without-reservations-1946",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Angel and the Badman",
+            "imdbId": "tt0039152",
+            "year": "1947",
+            "slug": "angel-and-the-badman-1947",
+            "grade": "C",
+            "genres": [
+              "Drama",
+              "Romance",
+              "Western"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "They Drive by Night",
+        "imdbId": "tt0033149",
+        "year": "1940",
+        "slug": "they-drive-by-night-1940",
+        "grade": "C+",
+        "genres": [
+          "Crime",
+          "Drama",
+          "Film-Noir",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "They Live",
+        "imdbId": "tt0096256",
+        "year": "1988",
+        "slug": "they-live-1988",
+        "grade": "C",
+        "genres": [
+          "Action",
+          "Horror",
+          "Sci-Fi",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "Thief",
+        "imdbId": "tt0083190",
+        "year": "1981",
+        "slug": "thief-1981",
+        "grade": "A-",
+        "genres": [
+          "Action",
+          "Crime",
+          "Drama",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Thief Who Came to Dinner",
+        "imdbId": "tt0070794",
+        "year": "1973",
+        "slug": "the-thief-who-came-to-dinner-1973",
+        "grade": "B+",
+        "genres": [
+          "Comedy",
+          "Romance"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt0068457",
     "title": "Dead of Night",
     "year": "1974",
@@ -138265,7 +139217,61 @@
       }
     ],
     "collections": [],
-    "moreCastAndCrew": [],
+    "moreCastAndCrew": [
+      {
+        "name": "John Carpenter",
+        "slug": "john-carpenter",
+        "creditKind": "writer",
+        "titles": [
+          {
+            "title": "They Live",
+            "imdbId": "tt0096256",
+            "year": "1988",
+            "slug": "they-live-1988",
+            "grade": "C",
+            "genres": [
+              "Action",
+              "Horror",
+              "Sci-Fi",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Halloween",
+            "imdbId": "tt0373883",
+            "year": "2007",
+            "slug": "halloween-2007",
+            "grade": "C-",
+            "genres": [
+              "Horror"
+            ]
+          },
+          {
+            "title": "Assault on Precinct 13",
+            "imdbId": "tt0074156",
+            "year": "1976",
+            "slug": "assault-on-precinct-13-1976",
+            "grade": "A-",
+            "genres": [
+              "Action",
+              "Crime",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Halloween",
+            "imdbId": "tt0077651",
+            "year": "1978",
+            "slug": "halloween-1978",
+            "grade": "A",
+            "genres": [
+              "Horror",
+              "Thriller"
+            ]
+          }
+        ]
+      }
+    ],
     "moreCollections": [],
     "moreReviews": [
       {
