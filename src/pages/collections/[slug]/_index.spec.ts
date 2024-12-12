@@ -7,9 +7,9 @@ import * as prettier from "prettier";
 import { describe, it } from "vitest";
 
 import { allCollections } from "~/api/collections";
+import { normalizeScriptSrc } from "~/utils/normalizeScriptSrc";
 
 import Review from "./index.astro";
-
 const { collections } = await allCollections();
 const testSlugs = new Set(["friday-the-13th", "hatchet", "james-bond"]);
 
@@ -41,7 +41,9 @@ describe("/collections/:slug", () => {
       );
 
       await expect(
-        await prettier.format(result, { filepath: "collection.html" }),
+        await prettier.format(normalizeScriptSrc(result), {
+          filepath: "collection.html",
+        }),
       ).toMatchFileSnapshot(`__snapshots__/${collection.slug}.html`);
     },
   );

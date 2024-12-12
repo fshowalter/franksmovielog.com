@@ -6,6 +6,8 @@ import { loadRenderers } from "astro:container";
 import * as prettier from "prettier";
 import { describe, it } from "vitest";
 
+import { normalizeScriptSrc } from "~/utils/normalizeScriptSrc";
+
 import YearStats from "./index.astro";
 
 describe("/viewings/stats/:year", () => {
@@ -27,7 +29,9 @@ describe("/viewings/stats/:year", () => {
       );
 
       await expect(
-        await prettier.format(result, { filepath: "index.html" }),
+        await prettier.format(normalizeScriptSrc(result), {
+          filepath: "index.html",
+        }),
       ).toMatchFileSnapshot(`__snapshots__/${year}.html`);
     },
   );

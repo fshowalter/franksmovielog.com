@@ -7,6 +7,7 @@ import * as prettier from "prettier";
 import { describe, it } from "vitest";
 
 import { allCastAndCrew } from "~/api/castAndCrew";
+import { normalizeScriptSrc } from "~/utils/normalizeScriptSrc";
 
 import Review from "./index.astro";
 
@@ -41,7 +42,9 @@ describe("/cast-and-crew/:slug", () => {
       );
 
       await expect(
-        await prettier.format(result, { filepath: "member.html" }),
+        await prettier.format(normalizeScriptSrc(result), {
+          filepath: "member.html",
+        }),
       ).toMatchFileSnapshot(`__snapshots__/${member.slug}.html`);
     },
   );
