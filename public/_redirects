@@ -57,14 +57,23 @@
 /cast-and-crew/shaw-brothers /collections/shaw-brothers 301
 /cast-and-crew/steve-mcqueen-i/ /cast-and-crew/steve-mcqueen/ 301
 /cast-and-crew/universal-monsters /collections/universal-monsters 301
+
+
+# cast and crew not coming back
+/cast-and-crew/charles-bennett-i /gone 410
+/cast-and-crew/duke-ii /gone 410
+/cast-and-crew/geoffrey-bayldon /gone 410
+/cast-and-crew/john-llewellyn-moxey /gone 410
+/cast-and-crew/otis-harlan /gone 410
+/cast-and-crew/sheila-terry /gone 410
+
 /cast-and-crew/null /gone 410
 
 # old pages
 /about /gone 410
 
 # misc spam
-*.php /gone 410
-*/wlwmanifest.xml /gone 410
+/xmlrpc.php /gone 410
 /.aws/credentials /gone 410
 /.env /gone 410
 //* /gone 410
