@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import { Button } from "~/components/Button";
 import { DebouncedInput } from "~/components/DebouncedInput";
 import { SelectField } from "~/components/SelectField";

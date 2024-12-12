@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import type { BackdropImageProps } from "~/api/backdrops";
 import type { MoreReviewsValue } from "~/components/MoreReviews";
 

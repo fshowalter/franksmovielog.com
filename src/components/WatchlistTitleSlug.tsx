@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import { toSentence } from "~/utils/toSentence";
 
 export function WatchlistTitleSlug({

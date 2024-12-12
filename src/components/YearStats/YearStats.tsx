@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import type { BackdropImageProps } from "~/api/backdrops";
 import type { YearStats } from "~/api/yearStats";
 import type { MostWatchedMoviesListItemValue } from "~/components/MostWatchedMovies";

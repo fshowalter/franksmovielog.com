@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import type { WatchlistProgress } from "~/api/watchlistProgress";
 
 import { ProgressRing } from "./ProgressRing";
