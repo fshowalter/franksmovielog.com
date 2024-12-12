@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import type { PosterImageProps } from "~/api/posters";
 
 import { ListItemMediumAndVenue } from "./ListItemMediumAndVenue";

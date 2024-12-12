@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import type { StillImageProps } from "~/api/stills";
 
 import { ccn } from "~/utils/concatClassNames";

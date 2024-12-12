@@ -8,7 +8,7 @@ import { createIndex } from "pagefind";
 import sirv from "sirv";
 
 const ReactCompilerConfig = {
-  target: "18",
+  target: "19",
 };
 
 function contentHmr() {

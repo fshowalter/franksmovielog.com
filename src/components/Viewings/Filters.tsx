@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import { DebouncedInput } from "~/components/DebouncedInput";
 import { MultiSelectField } from "~/components/MultiSelectField";
 import { SelectField } from "~/components/SelectField";

@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import type { AvatarImageProps } from "~/api/avatars";
 import type { BackdropImageProps } from "~/api/backdrops";
 import type { WatchlistProgress } from "~/api/watchlistProgress";
