@@ -5388,7 +5388,62 @@
       }
     ],
     "collections": [],
-    "moreCastAndCrew": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Jack Nicholson",
+        "slug": "jack-nicholson",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Postman Always Rings Twice",
+            "imdbId": "tt0082934",
+            "year": "1981",
+            "slug": "the-postman-always-rings-twice-1981",
+            "grade": "D",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Romance",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Batman",
+            "imdbId": "tt0096895",
+            "year": "1989",
+            "slug": "batman-1989",
+            "grade": "A-",
+            "genres": [
+              "Action",
+              "Adventure"
+            ]
+          },
+          {
+            "title": "The Cry Baby Killer",
+            "imdbId": "tt0051500",
+            "year": "1958",
+            "slug": "the-cry-baby-killer-1958",
+            "grade": "C-",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Terror",
+            "imdbId": "tt0057569",
+            "year": "1963",
+            "slug": "the-terror-1963",
+            "grade": "C-",
+            "genres": [
+              "Horror",
+              "Thriller"
+            ]
+          }
+        ]
+      }
+    ],
     "moreCollections": [],
     "moreReviews": [
       {
@@ -15783,6 +15838,118 @@
     ]
   },
   {
+    "imdbId": "tt0072271",
+    "title": "The Texas Chain Saw Massacre",
+    "year": "1974",
+    "slug": "the-texas-chain-saw-massacre-1974",
+    "grade": "B+",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Horror"
+    ],
+    "sortTitle": "Texas Chain Saw Massacre (1974)",
+    "originalTitle": null,
+    "gradeValue": 10,
+    "runtimeMinutes": 83,
+    "releaseSequence": "1974-10-01tt0072271",
+    "directorNames": [
+      "Tobe Hooper"
+    ],
+    "writerNames": [
+      "Kim Henkel",
+      "Tobe Hooper"
+    ],
+    "principalCastNames": [
+      "Marilyn Burns",
+      "Allen Danziger",
+      "Paul A. Partain",
+      "William Vail"
+    ],
+    "reviewDate": "2007-10-28",
+    "reviewYear": "2007",
+    "sequence": "2007-10-28-776",
+    "viewings": [
+      {
+        "sequence": 776,
+        "medium": null,
+        "mediumNotes": null,
+        "date": "2019-08-27",
+        "venue": "Alamo Drafthouse Cinema - One Loudoun",
+        "venueNotes": null
+      },
+      {
+        "sequence": 410,
+        "medium": null,
+        "mediumNotes": null,
+        "date": "2014-07-11",
+        "venue": "Alamo Drafthouse Cinema - One Loudoun",
+        "venueNotes": null
+      }
+    ],
+    "castAndCrew": [
+      {
+        "name": "Tobe Hooper",
+        "slug": "tobe-hooper",
+        "creditedAs": [
+          "director",
+          "writer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The Terror of the Tongs",
+        "imdbId": "tt0055516",
+        "year": "1961",
+        "slug": "the-terror-of-the-tongs-1961",
+        "grade": "D+",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Crime"
+        ]
+      },
+      {
+        "title": "Tetsuo: The Iron Man",
+        "imdbId": "tt0096251",
+        "year": "1989",
+        "slug": "tetsuo-the-iron-man-1989",
+        "grade": "B-",
+        "genres": [
+          "Horror",
+          "Sci-Fi"
+        ]
+      },
+      {
+        "title": "Texas Cyclone",
+        "imdbId": "tt0023567",
+        "year": "1932",
+        "slug": "texas-cyclone-1932",
+        "grade": "C-",
+        "genres": [
+          "Drama",
+          "Western"
+        ]
+      },
+      {
+        "title": "That Touch of Mink",
+        "imdbId": "tt0056575",
+        "year": "1962",
+        "slug": "that-touch-of-mink-1962",
+        "grade": "C+",
+        "genres": [
+          "Comedy",
+          "Romance"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt0082782",
     "title": "My Bloody Valentine",
     "year": "1981",
@@ -18725,6 +18892,291 @@
     ]
   },
   {
+    "imdbId": "tt0057569",
+    "title": "The Terror",
+    "year": "1963",
+    "slug": "the-terror-1963",
+    "grade": "C-",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "sortTitle": "Terror (1963)",
+    "originalTitle": null,
+    "gradeValue": 5,
+    "runtimeMinutes": 81,
+    "releaseSequence": "1963-05-30tt0057569",
+    "directorNames": [
+      "Roger Corman"
+    ],
+    "writerNames": [
+      "Leo Gordon",
+      "Jack Hill"
+    ],
+    "principalCastNames": [
+      "Boris Karloff",
+      "Jack Nicholson",
+      "Sandra Knight",
+      "Dick Miller"
+    ],
+    "reviewDate": "2007-06-15",
+    "reviewYear": "2007",
+    "sequence": "2007-06-15-288",
+    "viewings": [
+      {
+        "sequence": 288,
+        "medium": "TCM HD",
+        "mediumNotes": null,
+        "date": "2013-03-05",
+        "venue": null,
+        "venueNotes": null
+      }
+    ],
+    "castAndCrew": [
+      {
+        "name": "Roger Corman",
+        "slug": "roger-corman",
+        "creditedAs": [
+          "director"
+        ]
+      },
+      {
+        "name": "Boris Karloff",
+        "slug": "boris-karloff",
+        "creditedAs": [
+          "performer"
+        ]
+      },
+      {
+        "name": "Jack Nicholson",
+        "slug": "jack-nicholson",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Roger Corman",
+        "slug": "roger-corman",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "The Pit and the Pendulum",
+            "imdbId": "tt0055304",
+            "year": "1961",
+            "slug": "pit-and-the-pendulum-1961",
+            "grade": "B",
+            "genres": [
+              "Drama",
+              "Horror",
+              "Mystery"
+            ]
+          },
+          {
+            "title": "Tower of London",
+            "imdbId": "tt0056606",
+            "year": "1962",
+            "slug": "tower-of-london-1962",
+            "grade": "C",
+            "genres": [
+              "Drama",
+              "History",
+              "Horror",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Tomb of Ligeia",
+            "imdbId": "tt0059821",
+            "year": "1964",
+            "slug": "the-tomb-of-ligeia-1964",
+            "grade": "D+",
+            "genres": [
+              "Drama",
+              "Horror",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Wild Angels",
+            "imdbId": "tt0061189",
+            "year": "1966",
+            "slug": "the-wild-angels-1966",
+            "grade": "C",
+            "genres": [
+              "Action",
+              "Drama",
+              "Thriller"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Boris Karloff",
+        "slug": "boris-karloff",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Body Snatcher",
+            "imdbId": "tt0037549",
+            "year": "1945",
+            "slug": "the-body-snatcher-1945",
+            "grade": "D+",
+            "genres": [
+              "Horror",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Isle of the Dead",
+            "imdbId": "tt0037820",
+            "year": "1945",
+            "slug": "isle-of-the-dead-1945",
+            "grade": "C+",
+            "genres": [
+              "Drama",
+              "Horror",
+              "Mystery",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Crimson Cult",
+            "imdbId": "tt0062833",
+            "year": "1968",
+            "slug": "the-crimson-cult-1968",
+            "grade": "D+",
+            "genres": [
+              "Horror"
+            ]
+          },
+          {
+            "title": "Behind That Curtain",
+            "imdbId": "tt0019684",
+            "year": "1929",
+            "slug": "behind-that-curtain-1929",
+            "grade": "D+",
+            "genres": [
+              "Adventure",
+              "Crime",
+              "Mystery",
+              "Romance"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jack Nicholson",
+        "slug": "jack-nicholson",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Mars Attacks!",
+            "imdbId": "tt0116996",
+            "year": "1996",
+            "slug": "mars-attacks-1996",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Sci-Fi"
+            ]
+          },
+          {
+            "title": "The Cry Baby Killer",
+            "imdbId": "tt0051500",
+            "year": "1958",
+            "slug": "the-cry-baby-killer-1958",
+            "grade": "C-",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Postman Always Rings Twice",
+            "imdbId": "tt0082934",
+            "year": "1981",
+            "slug": "the-postman-always-rings-twice-1981",
+            "grade": "D",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Romance",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Batman",
+            "imdbId": "tt0096895",
+            "year": "1989",
+            "slug": "batman-1989",
+            "grade": "A-",
+            "genres": [
+              "Action",
+              "Adventure"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The Tender Trap",
+        "imdbId": "tt0048705",
+        "year": "1955",
+        "slug": "the-tender-trap-1955",
+        "grade": "C",
+        "genres": [
+          "Comedy",
+          "Musical",
+          "Romance"
+        ]
+      },
+      {
+        "title": "The Terminator",
+        "imdbId": "tt0088247",
+        "year": "1984",
+        "slug": "the-terminator-1984",
+        "grade": "B+",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Sci-Fi"
+        ]
+      },
+      {
+        "title": "The Terror of the Tongs",
+        "imdbId": "tt0055516",
+        "year": "1961",
+        "slug": "the-terror-of-the-tongs-1961",
+        "grade": "D+",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Crime"
+        ]
+      },
+      {
+        "title": "Tetsuo: The Iron Man",
+        "imdbId": "tt0096251",
+        "year": "1989",
+        "slug": "tetsuo-the-iron-man-1989",
+        "grade": "B-",
+        "genres": [
+          "Horror",
+          "Sci-Fi"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt0079207",
     "title": "Giallo in Venice",
     "year": "1979",
@@ -20602,19 +21054,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Telegraph Trail",
-        "imdbId": "tt0024647",
-        "year": "1933",
-        "slug": "the-telegraph-trail-1933",
-        "grade": "D-",
-        "genres": [
-          "Action",
-          "Adventure",
-          "Drama",
-          "Western"
-        ]
-      },
-      {
         "title": "Tetsuo: The Iron Man",
         "imdbId": "tt0096251",
         "year": "1989",
@@ -20623,6 +21062,16 @@
         "genres": [
           "Horror",
           "Sci-Fi"
+        ]
+      },
+      {
+        "title": "The Texas Chain Saw Massacre",
+        "imdbId": "tt0072271",
+        "year": "1974",
+        "slug": "the-texas-chain-saw-massacre-1974",
+        "grade": "B+",
+        "genres": [
+          "Horror"
         ]
       },
       {
@@ -23155,6 +23604,17 @@
             ]
           },
           {
+            "title": "The Terror",
+            "imdbId": "tt0057569",
+            "year": "1963",
+            "slug": "the-terror-1963",
+            "grade": "C-",
+            "genres": [
+              "Horror",
+              "Thriller"
+            ]
+          },
+          {
             "title": "The Crimson Cult",
             "imdbId": "tt0062833",
             "year": "1968",
@@ -23162,19 +23622,6 @@
             "grade": "D+",
             "genres": [
               "Horror"
-            ]
-          },
-          {
-            "title": "Behind That Curtain",
-            "imdbId": "tt0019684",
-            "year": "1929",
-            "slug": "behind-that-curtain-1929",
-            "grade": "D+",
-            "genres": [
-              "Adventure",
-              "Crime",
-              "Mystery",
-              "Romance"
             ]
           }
         ]
@@ -25264,16 +25711,15 @@
         "slug": "hammer-films",
         "titles": [
           {
-            "title": "The Snorkel",
-            "imdbId": "tt0052207",
-            "year": "1958",
-            "slug": "the-snorkel-1958",
+            "title": "The Terror of the Tongs",
+            "imdbId": "tt0055516",
+            "year": "1961",
+            "slug": "the-terror-of-the-tongs-1961",
             "grade": "D+",
             "genres": [
-              "Crime",
-              "Horror",
-              "Mystery",
-              "Thriller"
+              "Action",
+              "Adventure",
+              "Crime"
             ]
           },
           {
@@ -31344,13 +31790,12 @@
             ]
           },
           {
-            "title": "The Tomb of Ligeia",
-            "imdbId": "tt0059821",
-            "year": "1964",
-            "slug": "the-tomb-of-ligeia-1964",
-            "grade": "D+",
+            "title": "The Terror",
+            "imdbId": "tt0057569",
+            "year": "1963",
+            "slug": "the-terror-1963",
+            "grade": "C-",
             "genres": [
-              "Drama",
               "Horror",
               "Thriller"
             ]
@@ -35541,15 +35986,15 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The City of the Dead",
-            "imdbId": "tt0053719",
-            "year": "1960",
-            "slug": "the-city-of-the-dead-1960",
-            "grade": "B",
+            "title": "The Terror of the Tongs",
+            "imdbId": "tt0055516",
+            "year": "1961",
+            "slug": "the-terror-of-the-tongs-1961",
+            "grade": "D+",
             "genres": [
-              "Horror",
-              "Mystery",
-              "Thriller"
+              "Action",
+              "Adventure",
+              "Crime"
             ]
           },
           {
@@ -41567,6 +42012,160 @@
     ]
   },
   {
+    "imdbId": "tt0048705",
+    "title": "The Tender Trap",
+    "year": "1955",
+    "slug": "the-tender-trap-1955",
+    "grade": "C",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Comedy",
+      "Musical",
+      "Romance"
+    ],
+    "sortTitle": "Tender Trap (1955)",
+    "originalTitle": null,
+    "gradeValue": 6,
+    "runtimeMinutes": 111,
+    "releaseSequence": "1955-10-28tt0048705",
+    "directorNames": [
+      "Charles Walters"
+    ],
+    "writerNames": [
+      "Julius J. Epstein",
+      "Max Shulman",
+      "Robert Paul Smith"
+    ],
+    "principalCastNames": [
+      "Frank Sinatra",
+      "Debbie Reynolds",
+      "David Wayne",
+      "Celeste Holm"
+    ],
+    "reviewDate": "2007-10-22",
+    "reviewYear": "2007",
+    "sequence": "2007-10-22-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "Frank Sinatra",
+        "slug": "frank-sinatra",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Frank Sinatra",
+        "slug": "frank-sinatra",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Meet Danny Wilson",
+            "imdbId": "tt0044893",
+            "year": "1952",
+            "slug": "meet-danny-wilson-1952",
+            "grade": "F",
+            "genres": [
+              "Drama",
+              "Musical"
+            ]
+          },
+          {
+            "title": "Young at Heart",
+            "imdbId": "tt0047688",
+            "year": "1954",
+            "slug": "young-at-heart-1954",
+            "grade": "C+",
+            "genres": [
+              "Drama",
+              "Music",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Guys and Dolls",
+            "imdbId": "tt0048140",
+            "year": "1955",
+            "slug": "guys-and-dolls-1955",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Crime",
+              "Musical",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Joker Is Wild",
+            "imdbId": "tt0050569",
+            "year": "1957",
+            "slug": "the-joker-is-wild-1957",
+            "grade": "B+",
+            "genres": [
+              "Biography",
+              "Drama",
+              "Musical"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Tall in the Saddle",
+        "imdbId": "tt0037343",
+        "year": "1944",
+        "slug": "tall-in-the-saddle-1944",
+        "grade": "B-",
+        "genres": [
+          "Western"
+        ]
+      },
+      {
+        "title": "The Telegraph Trail",
+        "imdbId": "tt0024647",
+        "year": "1933",
+        "slug": "the-telegraph-trail-1933",
+        "grade": "D-",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Drama",
+          "Western"
+        ]
+      },
+      {
+        "title": "The Terminator",
+        "imdbId": "tt0088247",
+        "year": "1984",
+        "slug": "the-terminator-1984",
+        "grade": "B+",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Sci-Fi"
+        ]
+      },
+      {
+        "title": "The Terror",
+        "imdbId": "tt0057569",
+        "year": "1963",
+        "slug": "the-terror-1963",
+        "grade": "C-",
+        "genres": [
+          "Horror",
+          "Thriller"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt0076630",
     "title": "Rituals",
     "year": "1977",
@@ -47203,6 +47802,99 @@
     ]
   },
   {
+    "imdbId": "tt0088247",
+    "title": "The Terminator",
+    "year": "1984",
+    "slug": "the-terminator-1984",
+    "grade": "B+",
+    "countries": [
+      "United Kingdom",
+      "United States"
+    ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "sortTitle": "Terminator (1984)",
+    "originalTitle": null,
+    "gradeValue": 10,
+    "runtimeMinutes": 107,
+    "releaseSequence": "1984-10-26tt0088247",
+    "directorNames": [
+      "James Cameron"
+    ],
+    "writerNames": [
+      "James Cameron",
+      "Gale Anne Hurd",
+      "William Wisher"
+    ],
+    "principalCastNames": [
+      "Arnold Schwarzenegger",
+      "Michael Biehn",
+      "Linda Hamilton",
+      "Paul Winfield"
+    ],
+    "reviewDate": "2007-08-10",
+    "reviewYear": "2007",
+    "sequence": "2007-08-10-",
+    "viewings": [],
+    "castAndCrew": [],
+    "collections": [],
+    "moreCastAndCrew": [],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The Telegraph Trail",
+        "imdbId": "tt0024647",
+        "year": "1933",
+        "slug": "the-telegraph-trail-1933",
+        "grade": "D-",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Drama",
+          "Western"
+        ]
+      },
+      {
+        "title": "The Tender Trap",
+        "imdbId": "tt0048705",
+        "year": "1955",
+        "slug": "the-tender-trap-1955",
+        "grade": "C",
+        "genres": [
+          "Comedy",
+          "Musical",
+          "Romance"
+        ]
+      },
+      {
+        "title": "The Terror",
+        "imdbId": "tt0057569",
+        "year": "1963",
+        "slug": "the-terror-1963",
+        "grade": "C-",
+        "genres": [
+          "Horror",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Terror of the Tongs",
+        "imdbId": "tt0055516",
+        "year": "1961",
+        "slug": "the-terror-of-the-tongs-1961",
+        "grade": "D+",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Crime"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt0050468",
     "title": "Gunfight at the O.K. Corral",
     "year": "1957",
@@ -47412,17 +48104,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Meet Danny Wilson",
-            "imdbId": "tt0044893",
-            "year": "1952",
-            "slug": "meet-danny-wilson-1952",
-            "grade": "F",
-            "genres": [
-              "Drama",
-              "Musical"
-            ]
-          },
-          {
             "title": "Young at Heart",
             "imdbId": "tt0047688",
             "year": "1954",
@@ -47431,6 +48112,18 @@
             "genres": [
               "Drama",
               "Music",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Tender Trap",
+            "imdbId": "tt0048705",
+            "year": "1955",
+            "slug": "the-tender-trap-1955",
+            "grade": "C",
+            "genres": [
+              "Comedy",
+              "Musical",
               "Romance"
             ]
           },
@@ -58729,6 +59422,17 @@
             ]
           },
           {
+            "title": "The Terror",
+            "imdbId": "tt0057569",
+            "year": "1963",
+            "slug": "the-terror-1963",
+            "grade": "C-",
+            "genres": [
+              "Horror",
+              "Thriller"
+            ]
+          },
+          {
             "title": "The Tomb of Ligeia",
             "imdbId": "tt0059821",
             "year": "1964",
@@ -58737,18 +59441,6 @@
             "genres": [
               "Drama",
               "Horror",
-              "Thriller"
-            ]
-          },
-          {
-            "title": "The Wild Angels",
-            "imdbId": "tt0061189",
-            "year": "1966",
-            "slug": "the-wild-angels-1966",
-            "grade": "C",
-            "genres": [
-              "Action",
-              "Drama",
               "Thriller"
             ]
           }
@@ -59385,17 +60077,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Body Snatcher",
-            "imdbId": "tt0037549",
-            "year": "1945",
-            "slug": "the-body-snatcher-1945",
-            "grade": "D+",
-            "genres": [
-              "Horror",
-              "Thriller"
-            ]
-          },
-          {
             "title": "Isle of the Dead",
             "imdbId": "tt0037820",
             "year": "1945",
@@ -59405,6 +60086,17 @@
               "Drama",
               "Horror",
               "Mystery",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Terror",
+            "imdbId": "tt0057569",
+            "year": "1963",
+            "slug": "the-terror-1963",
+            "grade": "C-",
+            "genres": [
+              "Horror",
               "Thriller"
             ]
           },
@@ -61790,6 +62482,18 @@
             ]
           },
           {
+            "title": "The Terror of the Tongs",
+            "imdbId": "tt0055516",
+            "year": "1961",
+            "slug": "the-terror-of-the-tongs-1961",
+            "grade": "D+",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Crime"
+            ]
+          },
+          {
             "title": "Rasputin: The Mad Monk",
             "imdbId": "tt0059635",
             "year": "1966",
@@ -61798,16 +62502,6 @@
             "genres": [
               "Biography",
               "Drama",
-              "Horror"
-            ]
-          },
-          {
-            "title": "The Devil Rides Out",
-            "imdbId": "tt0062885",
-            "year": "1968",
-            "slug": "the-devil-rides-out-1968",
-            "grade": "B",
-            "genres": [
               "Horror"
             ]
           }
@@ -67517,14 +68211,12 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "Tower of London",
-            "imdbId": "tt0056606",
-            "year": "1962",
-            "slug": "tower-of-london-1962",
-            "grade": "C",
+            "title": "The Terror",
+            "imdbId": "tt0057569",
+            "year": "1963",
+            "slug": "the-terror-1963",
+            "grade": "C-",
             "genres": [
-              "Drama",
-              "History",
               "Horror",
               "Thriller"
             ]
@@ -68209,14 +68901,14 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Young at Heart",
-            "imdbId": "tt0047688",
-            "year": "1954",
-            "slug": "young-at-heart-1954",
-            "grade": "C+",
+            "title": "The Tender Trap",
+            "imdbId": "tt0048705",
+            "year": "1955",
+            "slug": "the-tender-trap-1955",
+            "grade": "C",
             "genres": [
-              "Drama",
-              "Music",
+              "Comedy",
+              "Musical",
               "Romance"
             ]
           },
@@ -73350,18 +74042,6 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "The Pit and the Pendulum",
-            "imdbId": "tt0055304",
-            "year": "1961",
-            "slug": "pit-and-the-pendulum-1961",
-            "grade": "B",
-            "genres": [
-              "Drama",
-              "Horror",
-              "Mystery"
-            ]
-          },
-          {
             "title": "Tower of London",
             "imdbId": "tt0056606",
             "year": "1962",
@@ -73370,6 +74050,17 @@
             "genres": [
               "Drama",
               "History",
+              "Horror",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Terror",
+            "imdbId": "tt0057569",
+            "year": "1963",
+            "slug": "the-terror-1963",
+            "grade": "C-",
+            "genres": [
               "Horror",
               "Thriller"
             ]
@@ -76105,14 +76796,13 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Tetsuo: The Iron Man",
-        "imdbId": "tt0096251",
-        "year": "1989",
-        "slug": "tetsuo-the-iron-man-1989",
-        "grade": "B-",
+        "title": "The Texas Chain Saw Massacre",
+        "imdbId": "tt0072271",
+        "year": "1974",
+        "slug": "the-texas-chain-saw-massacre-1974",
+        "grade": "B+",
         "genres": [
-          "Horror",
-          "Sci-Fi"
+          "Horror"
         ]
       },
       {
@@ -77981,17 +78671,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Horror of Dracula",
-            "imdbId": "tt0051554",
-            "year": "1958",
-            "slug": "horror-of-dracula-1958",
-            "grade": "A-",
-            "genres": [
-              "Drama",
-              "Horror"
-            ]
-          },
-          {
             "title": "The City of the Dead",
             "imdbId": "tt0053719",
             "year": "1960",
@@ -78001,6 +78680,18 @@
               "Horror",
               "Mystery",
               "Thriller"
+            ]
+          },
+          {
+            "title": "The Terror of the Tongs",
+            "imdbId": "tt0055516",
+            "year": "1961",
+            "slug": "the-terror-of-the-tongs-1961",
+            "grade": "D+",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Crime"
             ]
           },
           {
@@ -92677,13 +93368,15 @@
             ]
           },
           {
-            "title": "Horror Castle",
-            "imdbId": "tt0057646",
-            "year": "1963",
-            "slug": "horror-castle-1963",
+            "title": "The Terror of the Tongs",
+            "imdbId": "tt0055516",
+            "year": "1961",
+            "slug": "the-terror-of-the-tongs-1961",
             "grade": "D+",
             "genres": [
-              "Horror"
+              "Action",
+              "Adventure",
+              "Crime"
             ]
           }
         ]
@@ -92783,15 +93476,15 @@
             ]
           },
           {
-            "title": "Rasputin: The Mad Monk",
-            "imdbId": "tt0059635",
-            "year": "1966",
-            "slug": "rasputin-the-mad-monk-1966",
+            "title": "The Terror of the Tongs",
+            "imdbId": "tt0055516",
+            "year": "1961",
+            "slug": "the-terror-of-the-tongs-1961",
             "grade": "D+",
             "genres": [
-              "Biography",
-              "Drama",
-              "Horror"
+              "Action",
+              "Adventure",
+              "Crime"
             ]
           }
         ]
@@ -101918,15 +102611,13 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Isle of the Dead",
-            "imdbId": "tt0037820",
-            "year": "1945",
-            "slug": "isle-of-the-dead-1945",
-            "grade": "C+",
+            "title": "The Terror",
+            "imdbId": "tt0057569",
+            "year": "1963",
+            "slug": "the-terror-1963",
+            "grade": "C-",
             "genres": [
-              "Drama",
               "Horror",
-              "Mystery",
               "Thriller"
             ]
           },
@@ -104358,6 +105049,96 @@
     ]
   },
   {
+    "imdbId": "tt0120863",
+    "title": "The Thin Red Line",
+    "year": "1998",
+    "slug": "the-thin-red-line-1998",
+    "grade": "B",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Drama",
+      "History",
+      "War"
+    ],
+    "sortTitle": "Thin Red Line (1998)",
+    "originalTitle": null,
+    "gradeValue": 9,
+    "runtimeMinutes": 170,
+    "releaseSequence": "1998-12-22tt0120863",
+    "directorNames": [
+      "Terrence Malick"
+    ],
+    "writerNames": [
+      "James Jones",
+      "Terrence Malick"
+    ],
+    "principalCastNames": [
+      "Kirk Acevedo",
+      "Penelope Allen",
+      "Benjamin Green",
+      "Simon Billig"
+    ],
+    "reviewDate": "2008-10-01",
+    "reviewYear": "2008",
+    "sequence": "2008-10-01-",
+    "viewings": [],
+    "castAndCrew": [],
+    "collections": [],
+    "moreCastAndCrew": [],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The Thief Who Came to Dinner",
+        "imdbId": "tt0070794",
+        "year": "1973",
+        "slug": "the-thief-who-came-to-dinner-1973",
+        "grade": "B+",
+        "genres": [
+          "Comedy",
+          "Romance"
+        ]
+      },
+      {
+        "title": "The Thin Man",
+        "imdbId": "tt0025878",
+        "year": "1934",
+        "slug": "the-thin-man-1934",
+        "grade": "B+",
+        "genres": [
+          "Comedy",
+          "Crime",
+          "Mystery",
+          "Romance"
+        ]
+      },
+      {
+        "title": "The Thing",
+        "imdbId": "tt0084787",
+        "year": "1982",
+        "slug": "the-thing-1982",
+        "grade": "A-",
+        "genres": [
+          "Horror",
+          "Mystery",
+          "Sci-Fi"
+        ]
+      },
+      {
+        "title": "The Thing from Another World",
+        "imdbId": "tt0044121",
+        "year": "1951",
+        "slug": "the-thing-from-another-world-1951",
+        "grade": "C+",
+        "genres": [
+          "Horror",
+          "Sci-Fi"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt0060424",
     "title": "The Fortune Cookie",
     "year": "1966",
@@ -105006,15 +105787,15 @@
         ]
       },
       {
-        "title": "The Thing",
-        "imdbId": "tt0084787",
-        "year": "1982",
-        "slug": "the-thing-1982",
-        "grade": "A-",
+        "title": "The Thin Red Line",
+        "imdbId": "tt0120863",
+        "year": "1998",
+        "slug": "the-thin-red-line-1998",
+        "grade": "B",
         "genres": [
-          "Horror",
-          "Mystery",
-          "Sci-Fi"
+          "Drama",
+          "History",
+          "War"
         ]
       }
     ]
@@ -105898,17 +106679,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Thief Who Came to Dinner",
-        "imdbId": "tt0070794",
-        "year": "1973",
-        "slug": "the-thief-who-came-to-dinner-1973",
-        "grade": "B+",
-        "genres": [
-          "Comedy",
-          "Romance"
-        ]
-      },
-      {
         "title": "The Thin Man",
         "imdbId": "tt0025878",
         "year": "1934",
@@ -105919,6 +106689,18 @@
           "Crime",
           "Mystery",
           "Romance"
+        ]
+      },
+      {
+        "title": "The Thin Red Line",
+        "imdbId": "tt0120863",
+        "year": "1998",
+        "slug": "the-thin-red-line-1998",
+        "grade": "B",
+        "genres": [
+          "Drama",
+          "History",
+          "War"
         ]
       },
       {
@@ -109978,25 +110760,27 @@
         ]
       },
       {
-        "title": "Tetsuo: The Iron Man",
-        "imdbId": "tt0096251",
-        "year": "1989",
-        "slug": "tetsuo-the-iron-man-1989",
-        "grade": "B-",
+        "title": "The Tender Trap",
+        "imdbId": "tt0048705",
+        "year": "1955",
+        "slug": "the-tender-trap-1955",
+        "grade": "C",
         "genres": [
-          "Horror",
-          "Sci-Fi"
+          "Comedy",
+          "Musical",
+          "Romance"
         ]
       },
       {
-        "title": "Texas Cyclone",
-        "imdbId": "tt0023567",
-        "year": "1932",
-        "slug": "texas-cyclone-1932",
-        "grade": "C-",
+        "title": "The Terminator",
+        "imdbId": "tt0088247",
+        "year": "1984",
+        "slug": "the-terminator-1984",
+        "grade": "B+",
         "genres": [
-          "Drama",
-          "Western"
+          "Action",
+          "Adventure",
+          "Sci-Fi"
         ]
       }
     ]
@@ -111391,26 +112175,36 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Tall in the Saddle",
-        "imdbId": "tt0037343",
-        "year": "1944",
-        "slug": "tall-in-the-saddle-1944",
-        "grade": "B-",
+        "title": "The Terror",
+        "imdbId": "tt0057569",
+        "year": "1963",
+        "slug": "the-terror-1963",
+        "grade": "C-",
         "genres": [
-          "Western"
+          "Horror",
+          "Thriller"
         ]
       },
       {
-        "title": "The Telegraph Trail",
-        "imdbId": "tt0024647",
-        "year": "1933",
-        "slug": "the-telegraph-trail-1933",
-        "grade": "D-",
+        "title": "The Terror of the Tongs",
+        "imdbId": "tt0055516",
+        "year": "1961",
+        "slug": "the-terror-of-the-tongs-1961",
+        "grade": "D+",
         "genres": [
           "Action",
           "Adventure",
-          "Drama",
-          "Western"
+          "Crime"
+        ]
+      },
+      {
+        "title": "The Texas Chain Saw Massacre",
+        "imdbId": "tt0072271",
+        "year": "1974",
+        "slug": "the-texas-chain-saw-massacre-1974",
+        "grade": "B+",
+        "genres": [
+          "Horror"
         ]
       },
       {
@@ -111422,17 +112216,6 @@
         "genres": [
           "Drama",
           "Western"
-        ]
-      },
-      {
-        "title": "That Touch of Mink",
-        "imdbId": "tt0056575",
-        "year": "1962",
-        "slug": "that-touch-of-mink-1962",
-        "grade": "C+",
-        "genres": [
-          "Comedy",
-          "Romance"
         ]
       }
     ]
@@ -113074,7 +113857,62 @@
       }
     ],
     "collections": [],
-    "moreCastAndCrew": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Jack Nicholson",
+        "slug": "jack-nicholson",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Terror",
+            "imdbId": "tt0057569",
+            "year": "1963",
+            "slug": "the-terror-1963",
+            "grade": "C-",
+            "genres": [
+              "Horror",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Postman Always Rings Twice",
+            "imdbId": "tt0082934",
+            "year": "1981",
+            "slug": "the-postman-always-rings-twice-1981",
+            "grade": "D",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Romance",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Mars Attacks!",
+            "imdbId": "tt0116996",
+            "year": "1996",
+            "slug": "mars-attacks-1996",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Sci-Fi"
+            ]
+          },
+          {
+            "title": "The Cry Baby Killer",
+            "imdbId": "tt0051500",
+            "year": "1958",
+            "slug": "the-cry-baby-killer-1958",
+            "grade": "C-",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Thriller"
+            ]
+          }
+        ]
+      }
+    ],
     "moreCollections": [],
     "moreReviews": [
       {
@@ -120669,6 +121507,18 @@
             ]
           },
           {
+            "title": "The Tender Trap",
+            "imdbId": "tt0048705",
+            "year": "1955",
+            "slug": "the-tender-trap-1955",
+            "grade": "C",
+            "genres": [
+              "Comedy",
+              "Musical",
+              "Romance"
+            ]
+          },
+          {
             "title": "Guys and Dolls",
             "imdbId": "tt0048140",
             "year": "1955",
@@ -120679,18 +121529,6 @@
               "Crime",
               "Musical",
               "Romance"
-            ]
-          },
-          {
-            "title": "The Joker Is Wild",
-            "imdbId": "tt0050569",
-            "year": "1957",
-            "slug": "the-joker-is-wild-1957",
-            "grade": "B+",
-            "genres": [
-              "Biography",
-              "Drama",
-              "Musical"
             ]
           }
         ]
@@ -123472,6 +124310,18 @@
             ]
           },
           {
+            "title": "The Terror of the Tongs",
+            "imdbId": "tt0055516",
+            "year": "1961",
+            "slug": "the-terror-of-the-tongs-1961",
+            "grade": "D+",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Crime"
+            ]
+          },
+          {
             "title": "Horror Castle",
             "imdbId": "tt0057646",
             "year": "1963",
@@ -123479,17 +124329,6 @@
             "grade": "D+",
             "genres": [
               "Horror"
-            ]
-          },
-          {
-            "title": "The Whip and the Body",
-            "imdbId": "tt0057078",
-            "year": "1963",
-            "slug": "the-whip-and-the-body-1963",
-            "grade": "C+",
-            "genres": [
-              "Horror",
-              "Romance"
             ]
           }
         ]
@@ -123663,17 +124502,6 @@
         "slug": "hammer-films",
         "titles": [
           {
-            "title": "Horror of Dracula",
-            "imdbId": "tt0051554",
-            "year": "1958",
-            "slug": "horror-of-dracula-1958",
-            "grade": "A-",
-            "genres": [
-              "Drama",
-              "Horror"
-            ]
-          },
-          {
             "title": "The Snorkel",
             "imdbId": "tt0052207",
             "year": "1958",
@@ -123684,6 +124512,18 @@
               "Horror",
               "Mystery",
               "Thriller"
+            ]
+          },
+          {
+            "title": "The Terror of the Tongs",
+            "imdbId": "tt0055516",
+            "year": "1961",
+            "slug": "the-terror-of-the-tongs-1961",
+            "grade": "D+",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Crime"
             ]
           },
           {
@@ -126239,13 +127079,14 @@
             ]
           },
           {
-            "title": "The Crimson Cult",
-            "imdbId": "tt0062833",
-            "year": "1968",
-            "slug": "the-crimson-cult-1968",
-            "grade": "D+",
+            "title": "The Terror",
+            "imdbId": "tt0057569",
+            "year": "1963",
+            "slug": "the-terror-1963",
+            "grade": "C-",
             "genres": [
-              "Horror"
+              "Horror",
+              "Thriller"
             ]
           }
         ]
@@ -127927,16 +128768,15 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Thin Man",
-        "imdbId": "tt0025878",
-        "year": "1934",
-        "slug": "the-thin-man-1934",
-        "grade": "B+",
+        "title": "The Thin Red Line",
+        "imdbId": "tt0120863",
+        "year": "1998",
+        "slug": "the-thin-red-line-1998",
+        "grade": "B",
         "genres": [
-          "Comedy",
-          "Crime",
-          "Mystery",
-          "Romance"
+          "Drama",
+          "History",
+          "War"
         ]
       },
       {
@@ -130900,6 +131740,18 @@
         ]
       },
       {
+        "title": "The Thin Red Line",
+        "imdbId": "tt0120863",
+        "year": "1998",
+        "slug": "the-thin-red-line-1998",
+        "grade": "B",
+        "genres": [
+          "Drama",
+          "History",
+          "War"
+        ]
+      },
+      {
         "title": "The Thing",
         "imdbId": "tt0084787",
         "year": "1982",
@@ -130908,17 +131760,6 @@
         "genres": [
           "Horror",
           "Mystery",
-          "Sci-Fi"
-        ]
-      },
-      {
-        "title": "The Thing from Another World",
-        "imdbId": "tt0044121",
-        "year": "1951",
-        "slug": "the-thing-from-another-world-1951",
-        "grade": "C+",
-        "genres": [
-          "Horror",
           "Sci-Fi"
         ]
       }
@@ -132116,7 +132957,61 @@
       }
     ],
     "collections": [],
-    "moreCastAndCrew": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Jack Nicholson",
+        "slug": "jack-nicholson",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Batman",
+            "imdbId": "tt0096895",
+            "year": "1989",
+            "slug": "batman-1989",
+            "grade": "A-",
+            "genres": [
+              "Action",
+              "Adventure"
+            ]
+          },
+          {
+            "title": "Mars Attacks!",
+            "imdbId": "tt0116996",
+            "year": "1996",
+            "slug": "mars-attacks-1996",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Sci-Fi"
+            ]
+          },
+          {
+            "title": "The Terror",
+            "imdbId": "tt0057569",
+            "year": "1963",
+            "slug": "the-terror-1963",
+            "grade": "C-",
+            "genres": [
+              "Horror",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Postman Always Rings Twice",
+            "imdbId": "tt0082934",
+            "year": "1981",
+            "slug": "the-postman-always-rings-twice-1981",
+            "grade": "D",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Romance",
+              "Thriller"
+            ]
+          }
+        ]
+      }
+    ],
     "moreCollections": [],
     "moreReviews": [
       {
@@ -132376,14 +133271,15 @@
         ]
       },
       {
-        "title": "Tetsuo: The Iron Man",
-        "imdbId": "tt0096251",
-        "year": "1989",
-        "slug": "tetsuo-the-iron-man-1989",
-        "grade": "B-",
+        "title": "The Tender Trap",
+        "imdbId": "tt0048705",
+        "year": "1955",
+        "slug": "the-tender-trap-1955",
+        "grade": "C",
         "genres": [
-          "Horror",
-          "Sci-Fi"
+          "Comedy",
+          "Musical",
+          "Romance"
         ]
       }
     ]
@@ -140256,14 +141152,13 @@
             ]
           },
           {
-            "title": "Guys and Dolls",
-            "imdbId": "tt0048140",
+            "title": "The Tender Trap",
+            "imdbId": "tt0048705",
             "year": "1955",
-            "slug": "guys-and-dolls-1955",
-            "grade": "C-",
+            "slug": "the-tender-trap-1955",
+            "grade": "C",
             "genres": [
               "Comedy",
-              "Crime",
               "Musical",
               "Romance"
             ]
@@ -140482,7 +141377,60 @@
       }
     ],
     "collections": [],
-    "moreCastAndCrew": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Jack Nicholson",
+        "slug": "jack-nicholson",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Cry Baby Killer",
+            "imdbId": "tt0051500",
+            "year": "1958",
+            "slug": "the-cry-baby-killer-1958",
+            "grade": "C-",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Terror",
+            "imdbId": "tt0057569",
+            "year": "1963",
+            "slug": "the-terror-1963",
+            "grade": "C-",
+            "genres": [
+              "Horror",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Batman",
+            "imdbId": "tt0096895",
+            "year": "1989",
+            "slug": "batman-1989",
+            "grade": "A-",
+            "genres": [
+              "Action",
+              "Adventure"
+            ]
+          },
+          {
+            "title": "Mars Attacks!",
+            "imdbId": "tt0116996",
+            "year": "1996",
+            "slug": "mars-attacks-1996",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Sci-Fi"
+            ]
+          }
+        ]
+      }
+    ],
     "moreCollections": [],
     "moreReviews": [
       {
@@ -145402,6 +146350,210 @@
           "Mystery",
           "Romance",
           "Western"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0055516",
+    "title": "The Terror of the Tongs",
+    "year": "1961",
+    "slug": "the-terror-of-the-tongs-1961",
+    "grade": "D+",
+    "countries": [
+      "United Kingdom"
+    ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Crime"
+    ],
+    "sortTitle": "Terror of the Tongs (1961)",
+    "originalTitle": null,
+    "gradeValue": 4,
+    "runtimeMinutes": 76,
+    "releaseSequence": "1961-03-15tt0055516",
+    "directorNames": [
+      "Anthony Bushell"
+    ],
+    "writerNames": [
+      "Jimmy Sangster"
+    ],
+    "principalCastNames": [
+      "Christopher Lee",
+      "Yvonne Monlaur",
+      "Geoffrey Toone",
+      "Marne Maitland"
+    ],
+    "reviewDate": "2008-10-02",
+    "reviewYear": "2008",
+    "sequence": "2008-10-02-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "Christopher Lee",
+        "slug": "christopher-lee",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [
+      {
+        "name": "Hammer Films",
+        "slug": "hammer-films"
+      }
+    ],
+    "moreCastAndCrew": [
+      {
+        "name": "Christopher Lee",
+        "slug": "christopher-lee",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Horror of Dracula",
+            "imdbId": "tt0051554",
+            "year": "1958",
+            "slug": "horror-of-dracula-1958",
+            "grade": "A-",
+            "genres": [
+              "Drama",
+              "Horror"
+            ]
+          },
+          {
+            "title": "The City of the Dead",
+            "imdbId": "tt0053719",
+            "year": "1960",
+            "slug": "the-city-of-the-dead-1960",
+            "grade": "B",
+            "genres": [
+              "Horror",
+              "Mystery",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Horror Castle",
+            "imdbId": "tt0057646",
+            "year": "1963",
+            "slug": "horror-castle-1963",
+            "grade": "D+",
+            "genres": [
+              "Horror"
+            ]
+          },
+          {
+            "title": "The Whip and the Body",
+            "imdbId": "tt0057078",
+            "year": "1963",
+            "slug": "the-whip-and-the-body-1963",
+            "grade": "C+",
+            "genres": [
+              "Horror",
+              "Romance"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [
+      {
+        "name": "Hammer Films",
+        "slug": "hammer-films",
+        "titles": [
+          {
+            "title": "Horror of Dracula",
+            "imdbId": "tt0051554",
+            "year": "1958",
+            "slug": "horror-of-dracula-1958",
+            "grade": "A-",
+            "genres": [
+              "Drama",
+              "Horror"
+            ]
+          },
+          {
+            "title": "The Snorkel",
+            "imdbId": "tt0052207",
+            "year": "1958",
+            "slug": "the-snorkel-1958",
+            "grade": "D+",
+            "genres": [
+              "Crime",
+              "Horror",
+              "Mystery",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Rasputin: The Mad Monk",
+            "imdbId": "tt0059635",
+            "year": "1966",
+            "slug": "rasputin-the-mad-monk-1966",
+            "grade": "D+",
+            "genres": [
+              "Biography",
+              "Drama",
+              "Horror"
+            ]
+          },
+          {
+            "title": "The Devil Rides Out",
+            "imdbId": "tt0062885",
+            "year": "1968",
+            "slug": "the-devil-rides-out-1968",
+            "grade": "B",
+            "genres": [
+              "Horror"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreReviews": [
+      {
+        "title": "The Terminator",
+        "imdbId": "tt0088247",
+        "year": "1984",
+        "slug": "the-terminator-1984",
+        "grade": "B+",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Sci-Fi"
+        ]
+      },
+      {
+        "title": "The Terror",
+        "imdbId": "tt0057569",
+        "year": "1963",
+        "slug": "the-terror-1963",
+        "grade": "C-",
+        "genres": [
+          "Horror",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "Tetsuo: The Iron Man",
+        "imdbId": "tt0096251",
+        "year": "1989",
+        "slug": "tetsuo-the-iron-man-1989",
+        "grade": "B-",
+        "genres": [
+          "Horror",
+          "Sci-Fi"
+        ]
+      },
+      {
+        "title": "The Texas Chain Saw Massacre",
+        "imdbId": "tt0072271",
+        "year": "1974",
+        "slug": "the-texas-chain-saw-massacre-1974",
+        "grade": "B+",
+        "genres": [
+          "Horror"
         ]
       }
     ]
