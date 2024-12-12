@@ -7,6 +7,7 @@ import * as prettier from "prettier";
 import { describe, it } from "vitest";
 
 import { allReviews, getContentPlainText } from "~/api/reviews";
+import { normalizeScriptSrc } from "~/utils/normalizeScriptSrc";
 
 import Review from "./index.astro";
 
@@ -46,7 +47,9 @@ describe("/reviews/:slug", () => {
       );
 
       await expect(
-        await prettier.format(result, { filepath: "review.html" }),
+        await prettier.format(normalizeScriptSrc(result), {
+          filepath: "review.html",
+        }),
       ).toMatchFileSnapshot(`__snapshots__/${review.slug}.html`);
     },
   );
