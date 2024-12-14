@@ -4762,18 +4762,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Raven",
-            "imdbId": "tt0057449",
-            "year": "1963",
-            "slug": "the-raven-1963",
-            "grade": "D+",
-            "genres": [
-              "Comedy",
-              "Fantasy",
-              "Horror"
-            ]
-          },
-          {
             "title": "Twice-Told Tales",
             "imdbId": "tt0057608",
             "year": "1963",
@@ -4783,6 +4771,18 @@
               "Horror",
               "Mystery",
               "Romance",
+              "Sci-Fi"
+            ]
+          },
+          {
+            "title": "The Last Man on Earth",
+            "imdbId": "tt0058700",
+            "year": "1964",
+            "slug": "the-last-man-on-earth-1964",
+            "grade": "C",
+            "genres": [
+              "Drama",
+              "Horror",
               "Sci-Fi"
             ]
           },
@@ -20435,6 +20435,20 @@
         ]
       },
       {
+        "title": "The Letter",
+        "imdbId": "tt0032701",
+        "year": "1940",
+        "slug": "the-letter-1940",
+        "grade": "C-",
+        "genres": [
+          "Crime",
+          "Drama",
+          "Film-Noir",
+          "Mystery",
+          "Romance"
+        ]
+      },
+      {
         "title": "The Life of Jimmy Dolan",
         "imdbId": "tt0024257",
         "year": "1933",
@@ -20443,17 +20457,6 @@
         "genres": [
           "Drama",
           "Romance"
-        ]
-      },
-      {
-        "title": "Life with Father",
-        "imdbId": "tt0039566",
-        "year": "1947",
-        "slug": "life-with-father-1947",
-        "grade": "F",
-        "genres": [
-          "Comedy",
-          "Family"
         ]
       }
     ]
@@ -22587,18 +22590,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Last House on the Left",
-        "imdbId": "tt0068833",
-        "year": "1972",
-        "slug": "the-last-house-on-the-left-1972",
-        "grade": "D+",
-        "genres": [
-          "Crime",
-          "Horror",
-          "Thriller"
-        ]
-      },
-      {
         "title": "The Last Hurrah",
         "imdbId": "tt0051845",
         "year": "1958",
@@ -22606,6 +22597,18 @@
         "grade": "B",
         "genres": [
           "Drama"
+        ]
+      },
+      {
+        "title": "The Last Man on Earth",
+        "imdbId": "tt0058700",
+        "year": "1964",
+        "slug": "the-last-man-on-earth-1964",
+        "grade": "C",
+        "genres": [
+          "Drama",
+          "Horror",
+          "Sci-Fi"
         ]
       },
       {
@@ -28221,13 +28224,16 @@
         ]
       },
       {
-        "title": "The Life of Jimmy Dolan",
-        "imdbId": "tt0024257",
-        "year": "1933",
-        "slug": "the-life-of-jimmy-dolan-1933",
-        "grade": "C+",
+        "title": "The Letter",
+        "imdbId": "tt0032701",
+        "year": "1940",
+        "slug": "the-letter-1940",
+        "grade": "C-",
         "genres": [
+          "Crime",
           "Drama",
+          "Film-Noir",
+          "Mystery",
           "Romance"
         ]
       }
@@ -29435,17 +29441,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Petrified Forest",
-            "imdbId": "tt0028096",
-            "year": "1936",
-            "slug": "the-petrified-forest-1936",
-            "grade": "B+",
-            "genres": [
-              "Drama",
-              "Thriller"
-            ]
-          },
-          {
             "title": "Marked Woman",
             "imdbId": "tt0029217",
             "year": "1937",
@@ -29455,6 +29450,20 @@
               "Crime",
               "Film-Noir",
               "Thriller"
+            ]
+          },
+          {
+            "title": "The Letter",
+            "imdbId": "tt0032701",
+            "year": "1940",
+            "slug": "the-letter-1940",
+            "grade": "C-",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Film-Noir",
+              "Mystery",
+              "Romance"
             ]
           },
           {
@@ -30152,6 +30161,156 @@
     ]
   },
   {
+    "imdbId": "tt0032701",
+    "title": "The Letter",
+    "year": "1940",
+    "slug": "the-letter-1940",
+    "grade": "C-",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Crime",
+      "Drama",
+      "Film-Noir",
+      "Mystery",
+      "Romance"
+    ],
+    "sortTitle": "Letter (1940)",
+    "originalTitle": null,
+    "gradeValue": 5,
+    "runtimeMinutes": 95,
+    "releaseSequence": "1940-11-14tt0032701",
+    "directorNames": [
+      "William Wyler"
+    ],
+    "writerNames": [
+      "W. Somerset Maugham",
+      "Howard Koch"
+    ],
+    "principalCastNames": [
+      "Bette Davis",
+      "Herbert Marshall",
+      "James Stephenson",
+      "Frieda Inescort"
+    ],
+    "reviewDate": "2008-08-13",
+    "reviewYear": "2008",
+    "sequence": "2008-08-13-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "Bette Davis",
+        "slug": "bette-davis",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Bette Davis",
+        "slug": "bette-davis",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Petrified Forest",
+            "imdbId": "tt0028096",
+            "year": "1936",
+            "slug": "the-petrified-forest-1936",
+            "grade": "B+",
+            "genres": [
+              "Drama",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Marked Woman",
+            "imdbId": "tt0029217",
+            "year": "1937",
+            "slug": "marked-woman-1937",
+            "grade": "C-",
+            "genres": [
+              "Crime",
+              "Film-Noir",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Now, Voyager",
+            "imdbId": "tt0035140",
+            "year": "1942",
+            "slug": "now-voyager-1942",
+            "grade": "B",
+            "genres": [
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Corn Is Green",
+            "imdbId": "tt0037614",
+            "year": "1945",
+            "slug": "the-corn-is-green-1945",
+            "grade": "B-",
+            "genres": [
+              "Drama"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Let Sleeping Corpses Lie",
+        "imdbId": "tt0071431",
+        "year": "1974",
+        "slug": "let-sleeping-corpses-lie-1974",
+        "grade": "B-",
+        "genres": [
+          "Horror"
+        ]
+      },
+      {
+        "title": "Let the Right One In",
+        "imdbId": "tt1139797",
+        "year": "2008",
+        "slug": "let-the-right-one-in-2008",
+        "grade": "A",
+        "genres": [
+          "Drama",
+          "Fantasy",
+          "Horror",
+          "Romance"
+        ]
+      },
+      {
+        "title": "The Life of Jimmy Dolan",
+        "imdbId": "tt0024257",
+        "year": "1933",
+        "slug": "the-life-of-jimmy-dolan-1933",
+        "grade": "C+",
+        "genres": [
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "title": "Life with Father",
+        "imdbId": "tt0039566",
+        "year": "1947",
+        "slug": "life-with-father-1947",
+        "grade": "F",
+        "genres": [
+          "Comedy",
+          "Family"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt0068619",
     "title": "Ganja & Hess",
     "year": "1973",
@@ -30804,16 +30963,15 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Lake Mungo",
-        "imdbId": "tt0816556",
-        "year": "2008",
-        "slug": "lake-mungo-2008",
-        "grade": "C+",
+        "title": "The Las Vegas Story",
+        "imdbId": "tt0044825",
+        "year": "1952",
+        "slug": "the-las-vegas-story-1952",
+        "grade": "C-",
         "genres": [
+          "Crime",
           "Drama",
-          "Horror",
-          "Mystery",
-          "Thriller"
+          "Film-Noir"
         ]
       },
       {
@@ -30829,6 +30987,18 @@
         ]
       },
       {
+        "title": "The Last Man on Earth",
+        "imdbId": "tt0058700",
+        "year": "1964",
+        "slug": "the-last-man-on-earth-1964",
+        "grade": "C",
+        "genres": [
+          "Drama",
+          "Horror",
+          "Sci-Fi"
+        ]
+      },
+      {
         "title": "The Last of Mrs. Cheyney",
         "imdbId": "tt0029120",
         "year": "1937",
@@ -30838,19 +31008,6 @@
           "Comedy",
           "Drama",
           "Romance"
-        ]
-      },
-      {
-        "title": "The Last of Sheila",
-        "imdbId": "tt0070291",
-        "year": "1973",
-        "slug": "the-last-of-sheila-1973",
-        "grade": "B",
-        "genres": [
-          "Crime",
-          "Drama",
-          "Mystery",
-          "Thriller"
         ]
       }
     ]
@@ -34882,16 +35039,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Let Sleeping Corpses Lie",
-        "imdbId": "tt0071431",
-        "year": "1974",
-        "slug": "let-sleeping-corpses-lie-1974",
-        "grade": "B-",
-        "genres": [
-          "Horror"
-        ]
-      },
-      {
         "title": "Let the Right One In",
         "imdbId": "tt1139797",
         "year": "2008",
@@ -34901,6 +35048,20 @@
           "Drama",
           "Fantasy",
           "Horror",
+          "Romance"
+        ]
+      },
+      {
+        "title": "The Letter",
+        "imdbId": "tt0032701",
+        "year": "1940",
+        "slug": "the-letter-1940",
+        "grade": "C-",
+        "genres": [
+          "Crime",
+          "Drama",
+          "Film-Noir",
+          "Mystery",
           "Romance"
         ]
       },
@@ -45496,6 +45657,16 @@
         ]
       },
       {
+        "title": "The Law and Jake Wade",
+        "imdbId": "tt0051848",
+        "year": "1958",
+        "slug": "the-law-and-jake-wade-1958",
+        "grade": "C",
+        "genres": [
+          "Western"
+        ]
+      },
+      {
         "title": "The Lawless Frontier",
         "imdbId": "tt0025373",
         "year": "1934",
@@ -45504,17 +45675,6 @@
         "genres": [
           "Drama",
           "Western"
-        ]
-      },
-      {
-        "title": "Lawyer Man",
-        "imdbId": "tt0023125",
-        "year": "1932",
-        "slug": "lawyer-man-1932",
-        "grade": "D",
-        "genres": [
-          "Drama",
-          "Romance"
         ]
       }
     ]
@@ -51014,6 +51174,16 @@
             ]
           },
           {
+            "title": "The Law and Jake Wade",
+            "imdbId": "tt0051848",
+            "year": "1958",
+            "slug": "the-law-and-jake-wade-1958",
+            "grade": "C",
+            "genres": [
+              "Western"
+            ]
+          },
+          {
             "title": "Never So Few",
             "imdbId": "tt0053108",
             "year": "1959",
@@ -51022,19 +51192,6 @@
             "genres": [
               "Drama",
               "War"
-            ]
-          },
-          {
-            "title": "The Magnificent Seven",
-            "imdbId": "tt0054047",
-            "year": "1960",
-            "slug": "the-magnificent-seven-1960",
-            "grade": "B",
-            "genres": [
-              "Action",
-              "Adventure",
-              "Drama",
-              "Western"
             ]
           }
         ]
@@ -55421,18 +55578,15 @@
             ]
           },
           {
-            "title": "Dangerous Mission",
-            "imdbId": "tt0046891",
-            "year": "1954",
-            "slug": "dangerous-mission-1954",
-            "grade": "D",
+            "title": "The Las Vegas Story",
+            "imdbId": "tt0044825",
+            "year": "1952",
+            "slug": "the-las-vegas-story-1952",
+            "grade": "C-",
             "genres": [
-              "Action",
               "Crime",
-              "Film-Noir",
-              "Mystery",
-              "Romance",
-              "Thriller"
+              "Drama",
+              "Film-Noir"
             ]
           }
         ]
@@ -63615,15 +63769,17 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Marked Woman",
-            "imdbId": "tt0029217",
-            "year": "1937",
-            "slug": "marked-woman-1937",
+            "title": "The Letter",
+            "imdbId": "tt0032701",
+            "year": "1940",
+            "slug": "the-letter-1940",
             "grade": "C-",
             "genres": [
               "Crime",
+              "Drama",
               "Film-Noir",
-              "Thriller"
+              "Mystery",
+              "Romance"
             ]
           },
           {
@@ -70615,6 +70771,20 @@
             ]
           },
           {
+            "title": "The Letter",
+            "imdbId": "tt0032701",
+            "year": "1940",
+            "slug": "the-letter-1940",
+            "grade": "C-",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Film-Noir",
+              "Mystery",
+              "Romance"
+            ]
+          },
+          {
             "title": "Now, Voyager",
             "imdbId": "tt0035140",
             "year": "1942",
@@ -70623,16 +70793,6 @@
             "genres": [
               "Drama",
               "Romance"
-            ]
-          },
-          {
-            "title": "The Corn Is Green",
-            "imdbId": "tt0037614",
-            "year": "1945",
-            "slug": "the-corn-is-green-1945",
-            "grade": "B-",
-            "genres": [
-              "Drama"
             ]
           }
         ]
@@ -75596,13 +75756,12 @@
         ]
       },
       {
-        "title": "The Lawless Frontier",
-        "imdbId": "tt0025373",
-        "year": "1934",
-        "slug": "the-lawless-frontier-1934",
-        "grade": "D",
+        "title": "The Law and Jake Wade",
+        "imdbId": "tt0051848",
+        "year": "1958",
+        "slug": "the-law-and-jake-wade-1958",
+        "grade": "C",
         "genres": [
-          "Drama",
           "Western"
         ]
       }
@@ -77129,13 +77288,16 @@
             ]
           },
           {
-            "title": "Now, Voyager",
-            "imdbId": "tt0035140",
-            "year": "1942",
-            "slug": "now-voyager-1942",
-            "grade": "B",
+            "title": "The Letter",
+            "imdbId": "tt0032701",
+            "year": "1940",
+            "slug": "the-letter-1940",
+            "grade": "C-",
             "genres": [
+              "Crime",
               "Drama",
+              "Film-Noir",
+              "Mystery",
               "Romance"
             ]
           }
@@ -78829,15 +78991,14 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Twice-Told Tales",
-            "imdbId": "tt0057608",
-            "year": "1963",
-            "slug": "twice-told-tales-1963",
-            "grade": "C+",
+            "title": "The Last Man on Earth",
+            "imdbId": "tt0058700",
+            "year": "1964",
+            "slug": "the-last-man-on-earth-1964",
+            "grade": "C",
             "genres": [
+              "Drama",
               "Horror",
-              "Mystery",
-              "Romance",
               "Sci-Fi"
             ]
           },
@@ -82151,19 +82312,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Three Musketeers",
-            "imdbId": "tt0040876",
-            "year": "1948",
-            "slug": "the-three-musketeers-1948",
-            "grade": "D",
-            "genres": [
-              "Action",
-              "Adventure",
-              "Drama",
-              "Romance"
-            ]
-          },
-          {
             "title": "The Bribe",
             "imdbId": "tt0041207",
             "year": "1949",
@@ -82174,6 +82322,18 @@
               "Drama",
               "Film-Noir",
               "Thriller"
+            ]
+          },
+          {
+            "title": "The Las Vegas Story",
+            "imdbId": "tt0044825",
+            "year": "1952",
+            "slug": "the-las-vegas-story-1952",
+            "grade": "C-",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Film-Noir"
             ]
           },
           {
@@ -85754,17 +85914,6 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "It's a Big Country: An American Anthology",
-            "imdbId": "tt0043680",
-            "year": "1951",
-            "slug": "its-a-big-country-an-american-anthology-1951",
-            "grade": "D",
-            "genres": [
-              "Comedy",
-              "Drama"
-            ]
-          },
-          {
             "title": "Gunfight at the O.K. Corral",
             "imdbId": "tt0050468",
             "year": "1957",
@@ -85773,6 +85922,16 @@
             "genres": [
               "Biography",
               "Drama",
+              "Western"
+            ]
+          },
+          {
+            "title": "The Law and Jake Wade",
+            "imdbId": "tt0051848",
+            "year": "1958",
+            "slug": "the-law-and-jake-wade-1958",
+            "grade": "C",
+            "genres": [
               "Western"
             ]
           },
@@ -90127,6 +90286,164 @@
         "grade": "B",
         "genres": [
           "Horror"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0058700",
+    "title": "The Last Man on Earth",
+    "year": "1964",
+    "slug": "the-last-man-on-earth-1964",
+    "grade": "C",
+    "countries": [
+      "Italy",
+      "United States"
+    ],
+    "genres": [
+      "Drama",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "sortTitle": "Last Man on Earth (1964)",
+    "originalTitle": null,
+    "gradeValue": 6,
+    "runtimeMinutes": 86,
+    "releaseSequence": "1964-05-06tt0058700",
+    "directorNames": [
+      "Ubaldo Ragona",
+      "Sidney Salkow"
+    ],
+    "writerNames": [
+      "Richard Matheson",
+      "William F. Leicester",
+      "Furio M. Monetti",
+      "Ubaldo Ragona"
+    ],
+    "principalCastNames": [
+      "Vincent Price",
+      "Franca Bettoia",
+      "Emma Danieli",
+      "Giacomo Rossi Stuart"
+    ],
+    "reviewDate": "2007-11-11",
+    "reviewYear": "2007",
+    "sequence": "2007-11-11-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "Vincent Price",
+        "slug": "vincent-price",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Vincent Price",
+        "slug": "vincent-price",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Raven",
+            "imdbId": "tt0057449",
+            "year": "1963",
+            "slug": "the-raven-1963",
+            "grade": "D+",
+            "genres": [
+              "Comedy",
+              "Fantasy",
+              "Horror"
+            ]
+          },
+          {
+            "title": "Twice-Told Tales",
+            "imdbId": "tt0057608",
+            "year": "1963",
+            "slug": "twice-told-tales-1963",
+            "grade": "C+",
+            "genres": [
+              "Horror",
+              "Mystery",
+              "Romance",
+              "Sci-Fi"
+            ]
+          },
+          {
+            "title": "The Masque of the Red Death",
+            "imdbId": "tt0058333",
+            "year": "1964",
+            "slug": "the-masque-of-the-red-death-1964",
+            "grade": "B+",
+            "genres": [
+              "Drama",
+              "Horror"
+            ]
+          },
+          {
+            "title": "The Tomb of Ligeia",
+            "imdbId": "tt0059821",
+            "year": "1964",
+            "slug": "the-tomb-of-ligeia-1964",
+            "grade": "D+",
+            "genres": [
+              "Drama",
+              "Horror",
+              "Thriller"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The Last House on the Left",
+        "imdbId": "tt0068833",
+        "year": "1972",
+        "slug": "the-last-house-on-the-left-1972",
+        "grade": "D+",
+        "genres": [
+          "Crime",
+          "Horror",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Last Hurrah",
+        "imdbId": "tt0051845",
+        "year": "1958",
+        "slug": "the-last-hurrah-1958",
+        "grade": "B",
+        "genres": [
+          "Drama"
+        ]
+      },
+      {
+        "title": "The Last of Mrs. Cheyney",
+        "imdbId": "tt0029120",
+        "year": "1937",
+        "slug": "the-last-of-mrs-cheyney-1937",
+        "grade": "C-",
+        "genres": [
+          "Comedy",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "title": "The Last of Sheila",
+        "imdbId": "tt0070291",
+        "year": "1973",
+        "slug": "the-last-of-sheila-1973",
+        "grade": "B",
+        "genres": [
+          "Crime",
+          "Drama",
+          "Mystery",
+          "Thriller"
         ]
       }
     ]
@@ -105144,19 +105461,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Last Seduction",
-        "imdbId": "tt0110308",
-        "year": "1994",
-        "slug": "the-last-seduction-1994",
-        "grade": "C-",
-        "genres": [
-          "Crime",
-          "Drama",
-          "Romance",
-          "Thriller"
-        ]
-      },
-      {
         "title": "Last Stop on the Night Train",
         "imdbId": "tt0073836",
         "year": "1975",
@@ -105165,6 +105469,16 @@
         "genres": [
           "Horror",
           "Thriller"
+        ]
+      },
+      {
+        "title": "The Law and Jake Wade",
+        "imdbId": "tt0051848",
+        "year": "1958",
+        "slug": "the-law-and-jake-wade-1958",
+        "grade": "C",
+        "genres": [
+          "Western"
         ]
       },
       {
@@ -105279,6 +105593,18 @@
             ]
           },
           {
+            "title": "The Las Vegas Story",
+            "imdbId": "tt0044825",
+            "year": "1952",
+            "slug": "the-las-vegas-story-1952",
+            "grade": "C-",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Film-Noir"
+            ]
+          },
+          {
             "title": "Dangerous Mission",
             "imdbId": "tt0046891",
             "year": "1954",
@@ -105291,17 +105617,6 @@
               "Mystery",
               "Romance",
               "Thriller"
-            ]
-          },
-          {
-            "title": "The Mad Magician",
-            "imdbId": "tt0047200",
-            "year": "1954",
-            "slug": "the-mad-magician-1954",
-            "grade": "C-",
-            "genres": [
-              "Drama",
-              "Horror"
             ]
           }
         ]
@@ -108210,15 +108525,15 @@
         ]
       },
       {
-        "title": "The Last House on the Left",
-        "imdbId": "tt0068833",
-        "year": "1972",
-        "slug": "the-last-house-on-the-left-1972",
-        "grade": "D+",
+        "title": "The Las Vegas Story",
+        "imdbId": "tt0044825",
+        "year": "1952",
+        "slug": "the-las-vegas-story-1952",
+        "grade": "C-",
         "genres": [
           "Crime",
-          "Horror",
-          "Thriller"
+          "Drama",
+          "Film-Noir"
         ]
       }
     ]
@@ -111888,14 +112203,12 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "Gunfight at the O.K. Corral",
-            "imdbId": "tt0050468",
-            "year": "1957",
-            "slug": "gunfight-at-the-o-k-corral-1957",
-            "grade": "C+",
+            "title": "The Law and Jake Wade",
+            "imdbId": "tt0051848",
+            "year": "1958",
+            "slug": "the-law-and-jake-wade-1958",
+            "grade": "C",
             "genres": [
-              "Biography",
-              "Drama",
               "Western"
             ]
           },
@@ -112345,6 +112658,172 @@
         "grade": "B",
         "genres": [
           "Horror"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0044825",
+    "title": "The Las Vegas Story",
+    "year": "1952",
+    "slug": "the-las-vegas-story-1952",
+    "grade": "C-",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Crime",
+      "Drama",
+      "Film-Noir"
+    ],
+    "sortTitle": "Las Vegas Story (1952)",
+    "originalTitle": null,
+    "gradeValue": 5,
+    "runtimeMinutes": 88,
+    "releaseSequence": "1952-01-27tt0044825",
+    "directorNames": [
+      "Robert Stevenson"
+    ],
+    "writerNames": [
+      "Jay Dratler",
+      "Earl Felton",
+      "Harry Essex"
+    ],
+    "principalCastNames": [
+      "Jane Russell",
+      "Victor Mature",
+      "Vincent Price",
+      "Hoagy Carmichael"
+    ],
+    "reviewDate": "2007-10-11",
+    "reviewYear": "2007",
+    "sequence": "2007-10-11-57",
+    "viewings": [
+      {
+        "sequence": 57,
+        "medium": "TCM HD",
+        "mediumNotes": null,
+        "date": "2012-01-30",
+        "venue": null,
+        "venueNotes": null
+      }
+    ],
+    "castAndCrew": [
+      {
+        "name": "Vincent Price",
+        "slug": "vincent-price",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Vincent Price",
+        "slug": "vincent-price",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Three Musketeers",
+            "imdbId": "tt0040876",
+            "year": "1948",
+            "slug": "the-three-musketeers-1948",
+            "grade": "D",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Bribe",
+            "imdbId": "tt0041207",
+            "year": "1949",
+            "slug": "the-bribe-1949",
+            "grade": "B+",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Film-Noir",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Dangerous Mission",
+            "imdbId": "tt0046891",
+            "year": "1954",
+            "slug": "dangerous-mission-1954",
+            "grade": "D",
+            "genres": [
+              "Action",
+              "Crime",
+              "Film-Noir",
+              "Mystery",
+              "Romance",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Mad Magician",
+            "imdbId": "tt0047200",
+            "year": "1954",
+            "slug": "the-mad-magician-1954",
+            "grade": "C-",
+            "genres": [
+              "Drama",
+              "Horror"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Ladies' Man",
+        "imdbId": "tt0022043",
+        "year": "1931",
+        "slug": "ladies-man-1931",
+        "grade": "C",
+        "genres": [
+          "Drama"
+        ]
+      },
+      {
+        "title": "Lake Mungo",
+        "imdbId": "tt0816556",
+        "year": "2008",
+        "slug": "lake-mungo-2008",
+        "grade": "C+",
+        "genres": [
+          "Drama",
+          "Horror",
+          "Mystery",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Last House on the Left",
+        "imdbId": "tt0068833",
+        "year": "1972",
+        "slug": "the-last-house-on-the-left-1972",
+        "grade": "D+",
+        "genres": [
+          "Crime",
+          "Horror",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Last Hurrah",
+        "imdbId": "tt0051845",
+        "year": "1958",
+        "slug": "the-last-hurrah-1958",
+        "grade": "B",
+        "genres": [
+          "Drama"
         ]
       }
     ]
@@ -112922,6 +113401,156 @@
         "grade": "D",
         "genres": [
           "Western"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0051848",
+    "title": "The Law and Jake Wade",
+    "year": "1958",
+    "slug": "the-law-and-jake-wade-1958",
+    "grade": "C",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Western"
+    ],
+    "sortTitle": "Law and Jake Wade (1958)",
+    "originalTitle": null,
+    "gradeValue": 6,
+    "runtimeMinutes": 86,
+    "releaseSequence": "1958-06-06tt0051848",
+    "directorNames": [
+      "John Sturges"
+    ],
+    "writerNames": [
+      "William Bowers",
+      "Marvin H. Albert"
+    ],
+    "principalCastNames": [
+      "Robert Taylor",
+      "Richard Widmark",
+      "Patricia Owens",
+      "Robert Middleton"
+    ],
+    "reviewDate": "2008-12-08",
+    "reviewYear": "2008",
+    "sequence": "2008-12-08-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "John Sturges",
+        "slug": "john-sturges",
+        "creditedAs": [
+          "director"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "John Sturges",
+        "slug": "john-sturges",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "It's a Big Country: An American Anthology",
+            "imdbId": "tt0043680",
+            "year": "1951",
+            "slug": "its-a-big-country-an-american-anthology-1951",
+            "grade": "D",
+            "genres": [
+              "Comedy",
+              "Drama"
+            ]
+          },
+          {
+            "title": "Gunfight at the O.K. Corral",
+            "imdbId": "tt0050468",
+            "year": "1957",
+            "slug": "gunfight-at-the-o-k-corral-1957",
+            "grade": "C+",
+            "genres": [
+              "Biography",
+              "Drama",
+              "Western"
+            ]
+          },
+          {
+            "title": "Never So Few",
+            "imdbId": "tt0053108",
+            "year": "1959",
+            "slug": "never-so-few-1959",
+            "grade": "D+",
+            "genres": [
+              "Drama",
+              "War"
+            ]
+          },
+          {
+            "title": "The Magnificent Seven",
+            "imdbId": "tt0054047",
+            "year": "1960",
+            "slug": "the-magnificent-seven-1960",
+            "grade": "B",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "Western"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The Last Seduction",
+        "imdbId": "tt0110308",
+        "year": "1994",
+        "slug": "the-last-seduction-1994",
+        "grade": "C-",
+        "genres": [
+          "Crime",
+          "Drama",
+          "Romance",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "Last Stop on the Night Train",
+        "imdbId": "tt0073836",
+        "year": "1975",
+        "slug": "last-stop-on-the-night-train-1975",
+        "grade": "B-",
+        "genres": [
+          "Horror",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Lawless Frontier",
+        "imdbId": "tt0025373",
+        "year": "1934",
+        "slug": "the-lawless-frontier-1934",
+        "grade": "D",
+        "genres": [
+          "Drama",
+          "Western"
+        ]
+      },
+      {
+        "title": "Lawyer Man",
+        "imdbId": "tt0023125",
+        "year": "1932",
+        "slug": "lawyer-man-1932",
+        "grade": "D",
+        "genres": [
+          "Drama",
+          "Romance"
         ]
       }
     ]
@@ -116496,14 +117125,13 @@
             ]
           },
           {
-            "title": "Never So Few",
-            "imdbId": "tt0053108",
-            "year": "1959",
-            "slug": "never-so-few-1959",
-            "grade": "D+",
+            "title": "The Law and Jake Wade",
+            "imdbId": "tt0051848",
+            "year": "1958",
+            "slug": "the-law-and-jake-wade-1958",
+            "grade": "C",
             "genres": [
-              "Drama",
-              "War"
+              "Western"
             ]
           }
         ]
@@ -127079,16 +127707,15 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Bribe",
-            "imdbId": "tt0041207",
-            "year": "1949",
-            "slug": "the-bribe-1949",
-            "grade": "B+",
+            "title": "The Las Vegas Story",
+            "imdbId": "tt0044825",
+            "year": "1952",
+            "slug": "the-las-vegas-story-1952",
+            "grade": "C-",
             "genres": [
               "Crime",
               "Drama",
-              "Film-Noir",
-              "Thriller"
+              "Film-Noir"
             ]
           },
           {
@@ -129194,13 +129821,15 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Last Hurrah",
-        "imdbId": "tt0051845",
-        "year": "1958",
-        "slug": "the-last-hurrah-1958",
-        "grade": "B",
+        "title": "The Last Man on Earth",
+        "imdbId": "tt0058700",
+        "year": "1964",
+        "slug": "the-last-man-on-earth-1964",
+        "grade": "C",
         "genres": [
-          "Drama"
+          "Drama",
+          "Horror",
+          "Sci-Fi"
         ]
       },
       {
@@ -130364,6 +130993,18 @@
         ]
       },
       {
+        "title": "The Las Vegas Story",
+        "imdbId": "tt0044825",
+        "year": "1952",
+        "slug": "the-las-vegas-story-1952",
+        "grade": "C-",
+        "genres": [
+          "Crime",
+          "Drama",
+          "Film-Noir"
+        ]
+      },
+      {
         "title": "The Last House on the Left",
         "imdbId": "tt0068833",
         "year": "1972",
@@ -130373,16 +131014,6 @@
           "Crime",
           "Horror",
           "Thriller"
-        ]
-      },
-      {
-        "title": "The Last Hurrah",
-        "imdbId": "tt0051845",
-        "year": "1958",
-        "slug": "the-last-hurrah-1958",
-        "grade": "B",
-        "genres": [
-          "Drama"
         ]
       }
     ]
@@ -132993,6 +133624,18 @@
             ]
           },
           {
+            "title": "The Last Man on Earth",
+            "imdbId": "tt0058700",
+            "year": "1964",
+            "slug": "the-last-man-on-earth-1964",
+            "grade": "C",
+            "genres": [
+              "Drama",
+              "Horror",
+              "Sci-Fi"
+            ]
+          },
+          {
             "title": "The Masque of the Red Death",
             "imdbId": "tt0058333",
             "year": "1964",
@@ -133001,18 +133644,6 @@
             "genres": [
               "Drama",
               "Horror"
-            ]
-          },
-          {
-            "title": "The Tomb of Ligeia",
-            "imdbId": "tt0059821",
-            "year": "1964",
-            "slug": "the-tomb-of-ligeia-1964",
-            "grade": "D+",
-            "genres": [
-              "Drama",
-              "Horror",
-              "Thriller"
             ]
           }
         ]
@@ -137361,14 +137992,15 @@
             ]
           },
           {
-            "title": "The Masque of the Red Death",
-            "imdbId": "tt0058333",
+            "title": "The Last Man on Earth",
+            "imdbId": "tt0058700",
             "year": "1964",
-            "slug": "the-masque-of-the-red-death-1964",
-            "grade": "B+",
+            "slug": "the-last-man-on-earth-1964",
+            "grade": "C",
             "genres": [
               "Drama",
-              "Horror"
+              "Horror",
+              "Sci-Fi"
             ]
           }
         ]
@@ -141456,15 +142088,16 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Let the Right One In",
-        "imdbId": "tt1139797",
-        "year": "2008",
-        "slug": "let-the-right-one-in-2008",
-        "grade": "A",
+        "title": "The Letter",
+        "imdbId": "tt0032701",
+        "year": "1940",
+        "slug": "the-letter-1940",
+        "grade": "C-",
         "genres": [
+          "Crime",
           "Drama",
-          "Fantasy",
-          "Horror",
+          "Film-Noir",
+          "Mystery",
           "Romance"
         ]
       },
@@ -150344,14 +150977,13 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Last Stop on the Night Train",
-        "imdbId": "tt0073836",
-        "year": "1975",
-        "slug": "last-stop-on-the-night-train-1975",
-        "grade": "B-",
+        "title": "The Law and Jake Wade",
+        "imdbId": "tt0051848",
+        "year": "1958",
+        "slug": "the-law-and-jake-wade-1958",
+        "grade": "C",
         "genres": [
-          "Horror",
-          "Thriller"
+          "Western"
         ]
       },
       {
@@ -155521,16 +156153,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Ladies' Man",
-        "imdbId": "tt0022043",
-        "year": "1931",
-        "slug": "ladies-man-1931",
-        "grade": "C",
-        "genres": [
-          "Drama"
-        ]
-      },
-      {
         "title": "Lake Mungo",
         "imdbId": "tt0816556",
         "year": "2008",
@@ -155544,6 +156166,18 @@
         ]
       },
       {
+        "title": "The Las Vegas Story",
+        "imdbId": "tt0044825",
+        "year": "1952",
+        "slug": "the-las-vegas-story-1952",
+        "grade": "C-",
+        "genres": [
+          "Crime",
+          "Drama",
+          "Film-Noir"
+        ]
+      },
+      {
         "title": "The Last Hurrah",
         "imdbId": "tt0051845",
         "year": "1958",
@@ -155554,15 +156188,15 @@
         ]
       },
       {
-        "title": "The Last of Mrs. Cheyney",
-        "imdbId": "tt0029120",
-        "year": "1937",
-        "slug": "the-last-of-mrs-cheyney-1937",
-        "grade": "C-",
+        "title": "The Last Man on Earth",
+        "imdbId": "tt0058700",
+        "year": "1964",
+        "slug": "the-last-man-on-earth-1964",
+        "grade": "C",
         "genres": [
-          "Comedy",
           "Drama",
-          "Romance"
+          "Horror",
+          "Sci-Fi"
         ]
       }
     ]
