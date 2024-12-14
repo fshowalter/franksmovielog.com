@@ -2370,23 +2370,24 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Friends of Eddie Coyle",
-        "imdbId": "tt0070077",
-        "year": "1973",
-        "slug": "the-friends-of-eddie-coyle-1973",
-        "grade": "C-",
-        "genres": [
-          "Crime",
-          "Drama"
-        ]
-      },
-      {
         "title": "Fright Night",
         "imdbId": "tt0089175",
         "year": "1985",
         "slug": "fright-night-1985",
         "grade": "A+",
         "genres": [
+          "Horror"
+        ]
+      },
+      {
+        "title": "The Frighteners",
+        "imdbId": "tt0116365",
+        "year": "1996",
+        "slug": "the-frighteners-1996",
+        "grade": "C+",
+        "genres": [
+          "Comedy",
+          "Fantasy",
           "Horror"
         ]
       },
@@ -2595,26 +2596,27 @@
             ]
           },
           {
-            "title": "The Last of Mrs. Cheyney",
-            "imdbId": "tt0029120",
-            "year": "1937",
-            "slug": "the-last-of-mrs-cheyney-1937",
-            "grade": "C-",
+            "title": "The Ex-Mrs. Bradford",
+            "imdbId": "tt0027593",
+            "year": "1936",
+            "slug": "the-ex-mrs-bradford-1936",
+            "grade": "D+",
             "genres": [
               "Comedy",
-              "Drama",
-              "Romance"
+              "Mystery"
             ]
           },
           {
-            "title": "The Heavenly Body",
-            "imdbId": "tt0035980",
-            "year": "1944",
-            "slug": "the-heavenly-body-1944",
+            "title": "The Emperor's Candlesticks",
+            "imdbId": "tt0028829",
+            "year": "1937",
+            "slug": "the-emperors-candlesticks-1937",
             "grade": "D-",
             "genres": [
-              "Comedy",
-              "Romance"
+              "Drama",
+              "History",
+              "Romance",
+              "Thriller"
             ]
           }
         ]
@@ -2622,16 +2624,6 @@
     ],
     "moreCollections": [],
     "moreReviews": [
-      {
-        "title": "The Great Outdoors",
-        "imdbId": "tt0095253",
-        "year": "1988",
-        "slug": "the-great-outdoors-1988",
-        "grade": "C",
-        "genres": [
-          "Comedy"
-        ]
-      },
       {
         "title": "The Great Silence",
         "imdbId": "tt0063032",
@@ -2641,6 +2633,19 @@
         "genres": [
           "Drama",
           "Western"
+        ]
+      },
+      {
+        "title": "The Great Train Robbery",
+        "imdbId": "tt0079240",
+        "year": "1978",
+        "slug": "the-great-train-robbery-1978",
+        "grade": "C",
+        "genres": [
+          "Adventure",
+          "Crime",
+          "Drama",
+          "Thriller"
         ]
       },
       {
@@ -5152,15 +5157,16 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "A Bridge Too Far",
-            "imdbId": "tt0075784",
-            "year": "1977",
-            "slug": "a-bridge-too-far-1977",
-            "grade": "C+",
+            "title": "The Great Train Robbery",
+            "imdbId": "tt0079240",
+            "year": "1978",
+            "slug": "the-great-train-robbery-1978",
+            "grade": "C",
             "genres": [
+              "Adventure",
+              "Crime",
               "Drama",
-              "History",
-              "War"
+              "Thriller"
             ]
           },
           {
@@ -6809,15 +6815,17 @@
             ]
           },
           {
-            "title": "The Quiet Man",
-            "imdbId": "tt0045061",
-            "year": "1952",
-            "slug": "the-quiet-man-1952",
-            "grade": "B",
+            "title": "The Fighting Kentuckian",
+            "imdbId": "tt0041361",
+            "year": "1949",
+            "slug": "the-fighting-kentuckian-1949",
+            "grade": "D-",
             "genres": [
-              "Comedy",
+              "Adventure",
               "Drama",
-              "Romance"
+              "Romance",
+              "War",
+              "Western"
             ]
           }
         ]
@@ -7141,15 +7149,17 @@
         ]
       },
       {
-        "title": "The Fighting Seabees",
-        "imdbId": "tt0036824",
-        "year": "1944",
-        "slug": "the-fighting-seabees-1944",
-        "grade": "C+",
+        "title": "The Fighting Kentuckian",
+        "imdbId": "tt0041361",
+        "year": "1949",
+        "slug": "the-fighting-kentuckian-1949",
+        "grade": "D-",
         "genres": [
+          "Adventure",
           "Drama",
           "Romance",
-          "War"
+          "War",
+          "Western"
         ]
       }
     ]
@@ -10589,15 +10599,17 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Wake of the Red Witch",
-            "imdbId": "tt0040946",
-            "year": "1948",
-            "slug": "wake-of-the-red-witch-1948",
-            "grade": "D+",
+            "title": "The Fighting Kentuckian",
+            "imdbId": "tt0041361",
+            "year": "1949",
+            "slug": "the-fighting-kentuckian-1949",
+            "grade": "D-",
             "genres": [
-              "Action",
               "Adventure",
-              "Romance"
+              "Drama",
+              "Romance",
+              "War",
+              "Western"
             ]
           },
           {
@@ -11641,14 +11653,16 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Great Ziegfeld",
-            "imdbId": "tt0027698",
-            "year": "1936",
-            "slug": "the-great-ziegfeld-1936",
-            "grade": "D",
+            "title": "The Emperor's Candlesticks",
+            "imdbId": "tt0028829",
+            "year": "1937",
+            "slug": "the-emperors-candlesticks-1937",
+            "grade": "D-",
             "genres": [
               "Drama",
-              "Musical"
+              "History",
+              "Romance",
+              "Thriller"
             ]
           },
           {
@@ -16456,18 +16470,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Fear and Desire",
-        "imdbId": "tt0045758",
-        "year": "1952",
-        "slug": "fear-and-desire-1953",
-        "grade": "D+",
-        "genres": [
-          "Drama",
-          "Thriller",
-          "War"
-        ]
-      },
-      {
         "title": "Ferris Bueller's Day Off",
         "imdbId": "tt0091042",
         "year": "1986",
@@ -16475,6 +16477,20 @@
         "grade": "B+",
         "genres": [
           "Comedy"
+        ]
+      },
+      {
+        "title": "The Fighting Kentuckian",
+        "imdbId": "tt0041361",
+        "year": "1949",
+        "slug": "the-fighting-kentuckian-1949",
+        "grade": "D-",
+        "genres": [
+          "Adventure",
+          "Drama",
+          "Romance",
+          "War",
+          "Western"
         ]
       },
       {
@@ -19172,6 +19188,161 @@
     ]
   },
   {
+    "imdbId": "tt0041361",
+    "title": "The Fighting Kentuckian",
+    "year": "1949",
+    "slug": "the-fighting-kentuckian-1949",
+    "grade": "D-",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Romance",
+      "War",
+      "Western"
+    ],
+    "sortTitle": "Fighting Kentuckian (1949)",
+    "originalTitle": null,
+    "gradeValue": 2,
+    "runtimeMinutes": 100,
+    "releaseSequence": "1949-09-15tt0041361",
+    "directorNames": [
+      "George Waggner"
+    ],
+    "writerNames": [
+      "George Waggner"
+    ],
+    "principalCastNames": [
+      "John Wayne",
+      "Vera Ralston",
+      "Philip Dorn",
+      "Oliver Hardy"
+    ],
+    "reviewDate": "2008-05-27",
+    "reviewYear": "2008",
+    "sequence": "2008-05-27-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "John Wayne",
+        "slug": "john-wayne",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "John Wayne",
+        "slug": "john-wayne",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "3 Godfathers",
+            "imdbId": "tt0040064",
+            "year": "1948",
+            "slug": "3-godfathers-1948",
+            "grade": "C",
+            "genres": [
+              "Drama",
+              "Western"
+            ]
+          },
+          {
+            "title": "Wake of the Red Witch",
+            "imdbId": "tt0040946",
+            "year": "1948",
+            "slug": "wake-of-the-red-witch-1948",
+            "grade": "D+",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Quiet Man",
+            "imdbId": "tt0045061",
+            "year": "1952",
+            "slug": "the-quiet-man-1952",
+            "grade": "B",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Big Jim McLain",
+            "imdbId": "tt0044418",
+            "year": "1952",
+            "slug": "big-jim-mclain-1952",
+            "grade": "C",
+            "genres": [
+              "Crime",
+              "Drama",
+              "History",
+              "Romance",
+              "Thriller"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Fear and Desire",
+        "imdbId": "tt0045758",
+        "year": "1952",
+        "slug": "fear-and-desire-1953",
+        "grade": "D+",
+        "genres": [
+          "Drama",
+          "Thriller",
+          "War"
+        ]
+      },
+      {
+        "title": "Ferris Bueller's Day Off",
+        "imdbId": "tt0091042",
+        "year": "1986",
+        "slug": "ferris-buellers-day-off-1986",
+        "grade": "B+",
+        "genres": [
+          "Comedy"
+        ]
+      },
+      {
+        "title": "The Fighting Seabees",
+        "imdbId": "tt0036824",
+        "year": "1944",
+        "slug": "the-fighting-seabees-1944",
+        "grade": "C+",
+        "genres": [
+          "Drama",
+          "Romance",
+          "War"
+        ]
+      },
+      {
+        "title": "The Five Days",
+        "imdbId": "tt0069884",
+        "year": "1973",
+        "slug": "the-five-days-1973",
+        "grade": "D+",
+        "genres": [
+          "Comedy",
+          "Drama",
+          "History"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt0196229",
     "title": "Zoolander",
     "year": "2001",
@@ -20422,6 +20593,18 @@
             ]
           },
           {
+            "title": "The Fortune",
+            "imdbId": "tt0073008",
+            "year": "1975",
+            "slug": "the-fortune-1975",
+            "grade": "C+",
+            "genres": [
+              "Comedy",
+              "Crime",
+              "Romance"
+            ]
+          },
+          {
             "title": "The Postman Always Rings Twice",
             "imdbId": "tt0082934",
             "year": "1981",
@@ -20432,17 +20615,6 @@
               "Drama",
               "Romance",
               "Thriller"
-            ]
-          },
-          {
-            "title": "Batman",
-            "imdbId": "tt0096895",
-            "year": "1989",
-            "slug": "batman-1989",
-            "grade": "A-",
-            "genres": [
-              "Action",
-              "Adventure"
             ]
           }
         ]
@@ -22941,26 +23113,27 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Fashions of 1934",
-            "imdbId": "tt0025101",
-            "year": "1934",
-            "slug": "fashions-of-1934-1934",
-            "grade": "D",
+            "title": "The Ex-Mrs. Bradford",
+            "imdbId": "tt0027593",
+            "year": "1936",
+            "slug": "the-ex-mrs-bradford-1936",
+            "grade": "D+",
             "genres": [
               "Comedy",
-              "Drama",
-              "Musical"
+              "Mystery"
             ]
           },
           {
-            "title": "The Great Ziegfeld",
-            "imdbId": "tt0027698",
-            "year": "1936",
-            "slug": "the-great-ziegfeld-1936",
-            "grade": "D",
+            "title": "The Emperor's Candlesticks",
+            "imdbId": "tt0028829",
+            "year": "1937",
+            "slug": "the-emperors-candlesticks-1937",
+            "grade": "D-",
             "genres": [
               "Drama",
-              "Musical"
+              "History",
+              "Romance",
+              "Thriller"
             ]
           },
           {
@@ -25039,6 +25212,98 @@
         "genres": [
           "Adventure",
           "Horror",
+          "Thriller"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0072926",
+    "title": "The Eiger Sanction",
+    "year": "1975",
+    "slug": "the-eiger-sanction-1975",
+    "grade": "D",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Action",
+      "Crime",
+      "Thriller"
+    ],
+    "sortTitle": "Eiger Sanction (1975)",
+    "originalTitle": null,
+    "gradeValue": 3,
+    "runtimeMinutes": 129,
+    "releaseSequence": "1975-05-21tt0072926",
+    "directorNames": [
+      "Clint Eastwood"
+    ],
+    "writerNames": [
+      "Hal Dresner",
+      "Warren Murphy",
+      "Rod Whitaker"
+    ],
+    "principalCastNames": [
+      "Clint Eastwood",
+      "George Kennedy",
+      "Vonetta McGee",
+      "Jack Cassidy"
+    ],
+    "reviewDate": "2007-11-09",
+    "reviewYear": "2007",
+    "sequence": "2007-11-09-",
+    "viewings": [],
+    "castAndCrew": [],
+    "collections": [],
+    "moreCastAndCrew": [],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The Edge",
+        "imdbId": "tt0119051",
+        "year": "1997",
+        "slug": "the-edge-1997",
+        "grade": "B-",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Drama",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "Eggshells",
+        "imdbId": "tt0404011",
+        "year": "1969",
+        "slug": "eggshells-1969",
+        "grade": "D+",
+        "genres": [
+          "Drama",
+          "Fantasy"
+        ]
+      },
+      {
+        "title": "The Eight Diagram Pole Fighter",
+        "imdbId": "tt0086606",
+        "year": "1984",
+        "slug": "the-eight-diagram-pole-fighter-1984",
+        "grade": "D+",
+        "genres": [
+          "Action",
+          "Drama"
+        ]
+      },
+      {
+        "title": "The Emperor's Candlesticks",
+        "imdbId": "tt0028829",
+        "year": "1937",
+        "slug": "the-emperors-candlesticks-1937",
+        "grade": "D-",
+        "genres": [
+          "Drama",
+          "History",
+          "Romance",
           "Thriller"
         ]
       }
@@ -30918,6 +31183,94 @@
     ]
   },
   {
+    "imdbId": "tt0116365",
+    "title": "The Frighteners",
+    "year": "1996",
+    "slug": "the-frighteners-1996",
+    "grade": "C+",
+    "countries": [
+      "New Zealand",
+      "United States"
+    ],
+    "genres": [
+      "Comedy",
+      "Fantasy",
+      "Horror"
+    ],
+    "sortTitle": "Frighteners (1996)",
+    "originalTitle": null,
+    "gradeValue": 7,
+    "runtimeMinutes": 110,
+    "releaseSequence": "1996-07-17tt0116365",
+    "directorNames": [
+      "Peter Jackson"
+    ],
+    "writerNames": [
+      "Fran Walsh",
+      "Peter Jackson"
+    ],
+    "principalCastNames": [
+      "Michael J. Fox",
+      "Trini Alvarado",
+      "Peter Dobson",
+      "John Astin"
+    ],
+    "reviewDate": "2008-03-28",
+    "reviewYear": "2008",
+    "sequence": "2008-03-28-",
+    "viewings": [],
+    "castAndCrew": [],
+    "collections": [],
+    "moreCastAndCrew": [],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The Friends of Eddie Coyle",
+        "imdbId": "tt0070077",
+        "year": "1973",
+        "slug": "the-friends-of-eddie-coyle-1973",
+        "grade": "C-",
+        "genres": [
+          "Crime",
+          "Drama"
+        ]
+      },
+      {
+        "title": "Fright Night",
+        "imdbId": "tt0089175",
+        "year": "1985",
+        "slug": "fright-night-1985",
+        "grade": "A+",
+        "genres": [
+          "Horror"
+        ]
+      },
+      {
+        "title": "From Beyond",
+        "imdbId": "tt0091083",
+        "year": "1986",
+        "slug": "from-beyond-1986",
+        "grade": "B+",
+        "genres": [
+          "Horror",
+          "Sci-Fi"
+        ]
+      },
+      {
+        "title": "The Front Page",
+        "imdbId": "tt0071524",
+        "year": "1974",
+        "slug": "the-front-page-1974",
+        "grade": "C-",
+        "genres": [
+          "Comedy",
+          "Drama",
+          "Romance"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt1355683",
     "title": "Black Mass",
     "year": "2015",
@@ -32035,15 +32388,14 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Every Girl Should Be Married",
-        "imdbId": "tt0040331",
-        "year": "1948",
-        "slug": "every-girl-should-be-married-1948",
-        "grade": "F",
+        "title": "The Ex-Mrs. Bradford",
+        "imdbId": "tt0027593",
+        "year": "1936",
+        "slug": "the-ex-mrs-bradford-1936",
+        "grade": "D+",
         "genres": [
           "Comedy",
-          "Drama",
-          "Romance"
+          "Mystery"
         ]
       },
       {
@@ -33243,6 +33595,18 @@
         ]
       },
       {
+        "title": "The Frighteners",
+        "imdbId": "tt0116365",
+        "year": "1996",
+        "slug": "the-frighteners-1996",
+        "grade": "C+",
+        "genres": [
+          "Comedy",
+          "Fantasy",
+          "Horror"
+        ]
+      },
+      {
         "title": "From Beyond",
         "imdbId": "tt0091083",
         "year": "1986",
@@ -33251,18 +33615,6 @@
         "genres": [
           "Horror",
           "Sci-Fi"
-        ]
-      },
-      {
-        "title": "The Front Page",
-        "imdbId": "tt0071524",
-        "year": "1974",
-        "slug": "the-front-page-1974",
-        "grade": "C-",
-        "genres": [
-          "Comedy",
-          "Drama",
-          "Romance"
         ]
       }
     ]
@@ -33486,15 +33838,14 @@
             ]
           },
           {
-            "title": "The Thing",
-            "imdbId": "tt0084787",
-            "year": "1982",
-            "slug": "the-thing-1982",
-            "grade": "A-",
+            "title": "The Fog",
+            "imdbId": "tt0080749",
+            "year": "1980",
+            "slug": "the-fog-1980",
+            "grade": "C-",
             "genres": [
               "Horror",
-              "Mystery",
-              "Sci-Fi"
+              "Thriller"
             ]
           }
         ]
@@ -35449,6 +35800,19 @@
         ]
       },
       {
+        "title": "The Great Train Robbery",
+        "imdbId": "tt0079240",
+        "year": "1978",
+        "slug": "the-great-train-robbery-1978",
+        "grade": "C",
+        "genres": [
+          "Adventure",
+          "Crime",
+          "Drama",
+          "Thriller"
+        ]
+      },
+      {
         "title": "The Great Ziegfeld",
         "imdbId": "tt0027698",
         "year": "1936",
@@ -35457,19 +35821,6 @@
         "genres": [
           "Drama",
           "Musical"
-        ]
-      },
-      {
-        "title": "Green Room",
-        "imdbId": "tt4062536",
-        "year": "2015",
-        "slug": "green-room-2015",
-        "grade": "A",
-        "genres": [
-          "Crime",
-          "Horror",
-          "Music",
-          "Thriller"
         ]
       }
     ]
@@ -37319,14 +37670,16 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Great Silence",
-        "imdbId": "tt0063032",
-        "year": "1968",
-        "slug": "the-great-silence-1968",
-        "grade": "B",
+        "title": "The Great Train Robbery",
+        "imdbId": "tt0079240",
+        "year": "1978",
+        "slug": "the-great-train-robbery-1978",
+        "grade": "C",
         "genres": [
+          "Adventure",
+          "Crime",
           "Drama",
-          "Western"
+          "Thriller"
         ]
       },
       {
@@ -38017,17 +38370,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Eggshells",
-        "imdbId": "tt0404011",
-        "year": "1969",
-        "slug": "eggshells-1969",
-        "grade": "D+",
-        "genres": [
-          "Drama",
-          "Fantasy"
-        ]
-      },
-      {
         "title": "The Eight Diagram Pole Fighter",
         "imdbId": "tt0086606",
         "year": "1984",
@@ -38036,6 +38378,19 @@
         "genres": [
           "Action",
           "Drama"
+        ]
+      },
+      {
+        "title": "The Emperor's Candlesticks",
+        "imdbId": "tt0028829",
+        "year": "1937",
+        "slug": "the-emperors-candlesticks-1937",
+        "grade": "D-",
+        "genres": [
+          "Drama",
+          "History",
+          "Romance",
+          "Thriller"
         ]
       },
       {
@@ -38489,6 +38844,105 @@
           "Crime",
           "Drama",
           "Mystery",
+          "Thriller"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0119051",
+    "title": "The Edge",
+    "year": "1997",
+    "slug": "the-edge-1997",
+    "grade": "B-",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Thriller"
+    ],
+    "sortTitle": "Edge (1997)",
+    "originalTitle": null,
+    "gradeValue": 8,
+    "runtimeMinutes": 117,
+    "releaseSequence": "1997-09-06tt0119051",
+    "directorNames": [
+      "Lee Tamahori"
+    ],
+    "writerNames": [
+      "David Mamet"
+    ],
+    "principalCastNames": [
+      "Anthony Hopkins",
+      "Alec Baldwin",
+      "Elle Macpherson",
+      "Harold Perrineau"
+    ],
+    "reviewDate": "2008-12-30",
+    "reviewYear": "2008",
+    "sequence": "2008-12-30-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "David Mamet",
+        "slug": "david-mamet",
+        "creditedAs": [
+          "writer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The Eagle Has Landed",
+        "imdbId": "tt0074452",
+        "year": "1976",
+        "slug": "the-eagle-has-landed-1976",
+        "grade": "C",
+        "genres": [
+          "Adventure",
+          "Drama",
+          "Thriller",
+          "War"
+        ]
+      },
+      {
+        "title": "East of Shanghai",
+        "imdbId": "tt0023395",
+        "year": "1931",
+        "slug": "east-of-shanghai-1931",
+        "grade": "D",
+        "genres": [
+          "Comedy",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "title": "Eggshells",
+        "imdbId": "tt0404011",
+        "year": "1969",
+        "slug": "eggshells-1969",
+        "grade": "D+",
+        "genres": [
+          "Drama",
+          "Fantasy"
+        ]
+      },
+      {
+        "title": "The Eiger Sanction",
+        "imdbId": "tt0072926",
+        "year": "1975",
+        "slug": "the-eiger-sanction-1975",
+        "grade": "D",
+        "genres": [
+          "Action",
+          "Crime",
           "Thriller"
         ]
       }
@@ -39909,19 +40363,6 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "The Satan Bug",
-            "imdbId": "tt0059678",
-            "year": "1965",
-            "slug": "the-satan-bug-1965",
-            "grade": "D",
-            "genres": [
-              "Crime",
-              "Mystery",
-              "Sci-Fi",
-              "Thriller"
-            ]
-          },
-          {
             "title": "Hour of the Gun",
             "imdbId": "tt0061787",
             "year": "1967",
@@ -39930,6 +40371,19 @@
             "genres": [
               "Drama",
               "Western"
+            ]
+          },
+          {
+            "title": "The Eagle Has Landed",
+            "imdbId": "tt0074452",
+            "year": "1976",
+            "slug": "the-eagle-has-landed-1976",
+            "grade": "C",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "Thriller",
+              "War"
             ]
           },
           {
@@ -40841,11 +41295,11 @@
         "creditKind": "writer",
         "titles": [
           {
-            "title": "Halloween",
-            "imdbId": "tt0077651",
-            "year": "1978",
-            "slug": "halloween-1978",
-            "grade": "A",
+            "title": "The Fog",
+            "imdbId": "tt0080749",
+            "year": "1980",
+            "slug": "the-fog-1980",
+            "grade": "C-",
             "genres": [
               "Horror",
               "Thriller"
@@ -46860,6 +47314,19 @@
             ]
           },
           {
+            "title": "The Eagle Has Landed",
+            "imdbId": "tt0074452",
+            "year": "1976",
+            "slug": "the-eagle-has-landed-1976",
+            "grade": "C",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "Thriller",
+              "War"
+            ]
+          },
+          {
             "title": "The Man Who Dared",
             "imdbId": "tt0038722",
             "year": "1946",
@@ -46869,20 +47336,6 @@
               "Adventure",
               "Crime",
               "Drama"
-            ]
-          },
-          {
-            "title": "Mystery Street",
-            "imdbId": "tt0042771",
-            "year": "1950",
-            "slug": "mystery-street-1950",
-            "grade": "C+",
-            "genres": [
-              "Crime",
-              "Drama",
-              "Film-Noir",
-              "Mystery",
-              "Thriller"
             ]
           }
         ]
@@ -48281,15 +48734,14 @@
         ]
       },
       {
-        "title": "For the Defense",
-        "imdbId": "tt0020896",
-        "year": "1930",
-        "slug": "for-the-defense-1930",
-        "grade": "C",
+        "title": "The Fog",
+        "imdbId": "tt0080749",
+        "year": "1980",
+        "slug": "the-fog-1980",
+        "grade": "C-",
         "genres": [
-          "Crime",
-          "Drama",
-          "Romance"
+          "Horror",
+          "Thriller"
         ]
       }
     ]
@@ -53276,11 +53728,11 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "Halloween",
-            "imdbId": "tt0077651",
-            "year": "1978",
-            "slug": "halloween-1978",
-            "grade": "A",
+            "title": "The Fog",
+            "imdbId": "tt0080749",
+            "year": "1980",
+            "slug": "the-fog-1980",
+            "grade": "C-",
             "genres": [
               "Horror",
               "Thriller"
@@ -62522,18 +62974,6 @@
     ],
     "moreReviews": [
       {
-        "title": "East of Shanghai",
-        "imdbId": "tt0023395",
-        "year": "1931",
-        "slug": "east-of-shanghai-1931",
-        "grade": "D",
-        "genres": [
-          "Comedy",
-          "Drama",
-          "Romance"
-        ]
-      },
-      {
         "title": "Eggshells",
         "imdbId": "tt0404011",
         "year": "1969",
@@ -62542,6 +62982,31 @@
         "genres": [
           "Drama",
           "Fantasy"
+        ]
+      },
+      {
+        "title": "The Eiger Sanction",
+        "imdbId": "tt0072926",
+        "year": "1975",
+        "slug": "the-eiger-sanction-1975",
+        "grade": "D",
+        "genres": [
+          "Action",
+          "Crime",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Emperor's Candlesticks",
+        "imdbId": "tt0028829",
+        "year": "1937",
+        "slug": "the-emperors-candlesticks-1937",
+        "grade": "D-",
+        "genres": [
+          "Drama",
+          "History",
+          "Romance",
+          "Thriller"
         ]
       },
       {
@@ -62557,20 +63022,6 @@
           "Mystery",
           "Sci-Fi",
           "Thriller"
-        ]
-      },
-      {
-        "title": "The Enemy Below",
-        "imdbId": "tt0050356",
-        "year": "1957",
-        "slug": "the-enemy-below-1957",
-        "grade": "B",
-        "genres": [
-          "Action",
-          "Adventure",
-          "Drama",
-          "Thriller",
-          "War"
         ]
       }
     ]
@@ -63426,15 +63877,14 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Fly",
-        "imdbId": "tt0051622",
-        "year": "1958",
-        "slug": "the-fly-1958",
-        "grade": "B-",
+        "title": "The Fog",
+        "imdbId": "tt0080749",
+        "year": "1980",
+        "slug": "the-fog-1980",
+        "grade": "C-",
         "genres": [
-          "Drama",
           "Horror",
-          "Sci-Fi"
+          "Thriller"
         ]
       },
       {
@@ -63450,6 +63900,18 @@
         ]
       },
       {
+        "title": "The Fortune",
+        "imdbId": "tt0073008",
+        "year": "1975",
+        "slug": "the-fortune-1975",
+        "grade": "C+",
+        "genres": [
+          "Comedy",
+          "Crime",
+          "Romance"
+        ]
+      },
+      {
         "title": "The Fortune Cookie",
         "imdbId": "tt0060424",
         "year": "1966",
@@ -63458,18 +63920,6 @@
         "genres": [
           "Comedy",
           "Romance"
-        ]
-      },
-      {
-        "title": "Four Flies on Grey Velvet",
-        "imdbId": "tt0066735",
-        "year": "1971",
-        "slug": "four-flies-on-grey-velvet-1971",
-        "grade": "D+",
-        "genres": [
-          "Crime",
-          "Mystery",
-          "Thriller"
         ]
       }
     ]
@@ -64384,14 +64834,16 @@
         ]
       },
       {
-        "title": "The Great Ziegfeld",
-        "imdbId": "tt0027698",
-        "year": "1936",
-        "slug": "the-great-ziegfeld-1936",
-        "grade": "D",
+        "title": "The Great Train Robbery",
+        "imdbId": "tt0079240",
+        "year": "1978",
+        "slug": "the-great-train-robbery-1978",
+        "grade": "C",
         "genres": [
+          "Adventure",
+          "Crime",
           "Drama",
-          "Musical"
+          "Thriller"
         ]
       }
     ]
@@ -71698,18 +72150,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Event Horizon",
-        "imdbId": "tt0119081",
-        "year": "1997",
-        "slug": "event-horizon-1997",
-        "grade": "B",
-        "genres": [
-          "Horror",
-          "Sci-Fi",
-          "Thriller"
-        ]
-      },
-      {
         "title": "Every Girl Should Be Married",
         "imdbId": "tt0040331",
         "year": "1948",
@@ -71719,6 +72159,17 @@
           "Comedy",
           "Drama",
           "Romance"
+        ]
+      },
+      {
+        "title": "The Ex-Mrs. Bradford",
+        "imdbId": "tt0027593",
+        "year": "1936",
+        "slug": "the-ex-mrs-bradford-1936",
+        "grade": "D+",
+        "genres": [
+          "Comedy",
+          "Mystery"
         ]
       },
       {
@@ -74040,6 +74491,168 @@
     ]
   },
   {
+    "imdbId": "tt0027593",
+    "title": "The Ex-Mrs. Bradford",
+    "year": "1936",
+    "slug": "the-ex-mrs-bradford-1936",
+    "grade": "D+",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Comedy",
+      "Mystery"
+    ],
+    "sortTitle": "Ex-Mrs. Bradford (1936)",
+    "originalTitle": null,
+    "gradeValue": 4,
+    "runtimeMinutes": 82,
+    "releaseSequence": "1936-04-23tt0027593",
+    "directorNames": [
+      "Stephen Roberts"
+    ],
+    "writerNames": [
+      "Anthony Veiller",
+      "James Edward Grant"
+    ],
+    "principalCastNames": [
+      "William Powell",
+      "Jean Arthur",
+      "James Gleason",
+      "Eric Blore"
+    ],
+    "reviewDate": "2008-05-11",
+    "reviewYear": "2008",
+    "sequence": "2008-05-11-145",
+    "viewings": [
+      {
+        "sequence": 145,
+        "medium": "TCM HD",
+        "mediumNotes": null,
+        "date": "2012-04-07",
+        "venue": null,
+        "venueNotes": null
+      }
+    ],
+    "castAndCrew": [
+      {
+        "name": "William Powell",
+        "slug": "william-powell",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "William Powell",
+        "slug": "william-powell",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Fashions of 1934",
+            "imdbId": "tt0025101",
+            "year": "1934",
+            "slug": "fashions-of-1934-1934",
+            "grade": "D",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Musical"
+            ]
+          },
+          {
+            "title": "The Great Ziegfeld",
+            "imdbId": "tt0027698",
+            "year": "1936",
+            "slug": "the-great-ziegfeld-1936",
+            "grade": "D",
+            "genres": [
+              "Drama",
+              "Musical"
+            ]
+          },
+          {
+            "title": "The Emperor's Candlesticks",
+            "imdbId": "tt0028829",
+            "year": "1937",
+            "slug": "the-emperors-candlesticks-1937",
+            "grade": "D-",
+            "genres": [
+              "Drama",
+              "History",
+              "Romance",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Last of Mrs. Cheyney",
+            "imdbId": "tt0029120",
+            "year": "1937",
+            "slug": "the-last-of-mrs-cheyney-1937",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Event Horizon",
+        "imdbId": "tt0119081",
+        "year": "1997",
+        "slug": "event-horizon-1997",
+        "grade": "B",
+        "genres": [
+          "Horror",
+          "Sci-Fi",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "Every Girl Should Be Married",
+        "imdbId": "tt0040331",
+        "year": "1948",
+        "slug": "every-girl-should-be-married-1948",
+        "grade": "F",
+        "genres": [
+          "Comedy",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "title": "Executive Suite",
+        "imdbId": "tt0046963",
+        "year": "1954",
+        "slug": "executive-suite-1954",
+        "grade": "B",
+        "genres": [
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "title": "Factotum",
+        "imdbId": "tt0417658",
+        "year": "2005",
+        "slug": "factotum-2005",
+        "grade": "B-",
+        "genres": [
+          "Comedy",
+          "Drama",
+          "Romance"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt0052357",
     "title": "Vertigo",
     "year": "1958",
@@ -74571,6 +75184,167 @@
         "genres": [
           "Crime",
           "Drama"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0080749",
+    "title": "The Fog",
+    "year": "1980",
+    "slug": "the-fog-1980",
+    "grade": "C-",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "sortTitle": "Fog (1980)",
+    "originalTitle": null,
+    "gradeValue": 5,
+    "runtimeMinutes": 89,
+    "releaseSequence": "1980-01-01tt0080749",
+    "directorNames": [
+      "John Carpenter"
+    ],
+    "writerNames": [
+      "John Carpenter",
+      "Debra Hill"
+    ],
+    "principalCastNames": [
+      "Adrienne Barbeau",
+      "Jamie Lee Curtis",
+      "Janet Leigh",
+      "John Houseman"
+    ],
+    "reviewDate": "2008-07-12",
+    "reviewYear": "2008",
+    "sequence": "2008-07-12-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "John Carpenter",
+        "slug": "john-carpenter",
+        "creditedAs": [
+          "director",
+          "writer"
+        ]
+      },
+      {
+        "name": "Tom Atkins",
+        "slug": "tom-atkins",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "John Carpenter",
+        "slug": "john-carpenter",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "Assault on Precinct 13",
+            "imdbId": "tt0074156",
+            "year": "1976",
+            "slug": "assault-on-precinct-13-1976",
+            "grade": "A-",
+            "genres": [
+              "Action",
+              "Crime",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Halloween",
+            "imdbId": "tt0077651",
+            "year": "1978",
+            "slug": "halloween-1978",
+            "grade": "A",
+            "genres": [
+              "Horror",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Thing",
+            "imdbId": "tt0084787",
+            "year": "1982",
+            "slug": "the-thing-1982",
+            "grade": "A-",
+            "genres": [
+              "Horror",
+              "Mystery",
+              "Sci-Fi"
+            ]
+          },
+          {
+            "title": "They Live",
+            "imdbId": "tt0096256",
+            "year": "1988",
+            "slug": "they-live-1988",
+            "grade": "C",
+            "genres": [
+              "Action",
+              "Horror",
+              "Sci-Fi",
+              "Thriller"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Five Star Final",
+        "imdbId": "tt0021873",
+        "year": "1931",
+        "slug": "five-star-final-1931",
+        "grade": "D+",
+        "genres": [
+          "Crime",
+          "Drama"
+        ]
+      },
+      {
+        "title": "The Fly",
+        "imdbId": "tt0051622",
+        "year": "1958",
+        "slug": "the-fly-1958",
+        "grade": "B-",
+        "genres": [
+          "Drama",
+          "Horror",
+          "Sci-Fi"
+        ]
+      },
+      {
+        "title": "For the Defense",
+        "imdbId": "tt0020896",
+        "year": "1930",
+        "slug": "for-the-defense-1930",
+        "grade": "C",
+        "genres": [
+          "Crime",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "title": "Force of Arms",
+        "imdbId": "tt0043553",
+        "year": "1951",
+        "slug": "force-of-arms-1951",
+        "grade": "C-",
+        "genres": [
+          "Drama",
+          "Romance",
+          "War"
         ]
       }
     ]
@@ -75510,6 +76284,20 @@
             ]
           },
           {
+            "title": "The Fighting Kentuckian",
+            "imdbId": "tt0041361",
+            "year": "1949",
+            "slug": "the-fighting-kentuckian-1949",
+            "grade": "D-",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "Romance",
+              "War",
+              "Western"
+            ]
+          },
+          {
             "title": "The Quiet Man",
             "imdbId": "tt0045061",
             "year": "1952",
@@ -75519,20 +76307,6 @@
               "Comedy",
               "Drama",
               "Romance"
-            ]
-          },
-          {
-            "title": "Big Jim McLain",
-            "imdbId": "tt0044418",
-            "year": "1952",
-            "slug": "big-jim-mclain-1952",
-            "grade": "C",
-            "genres": [
-              "Crime",
-              "Drama",
-              "History",
-              "Romance",
-              "Thriller"
             ]
           }
         ]
@@ -76520,6 +77294,232 @@
         ]
       },
       {
+        "title": "The Eagle Has Landed",
+        "imdbId": "tt0074452",
+        "year": "1976",
+        "slug": "the-eagle-has-landed-1976",
+        "grade": "C",
+        "genres": [
+          "Adventure",
+          "Drama",
+          "Thriller",
+          "War"
+        ]
+      },
+      {
+        "title": "East of Shanghai",
+        "imdbId": "tt0023395",
+        "year": "1931",
+        "slug": "east-of-shanghai-1931",
+        "grade": "D",
+        "genres": [
+          "Comedy",
+          "Drama",
+          "Romance"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0074452",
+    "title": "The Eagle Has Landed",
+    "year": "1976",
+    "slug": "the-eagle-has-landed-1976",
+    "grade": "C",
+    "countries": [
+      "United Kingdom",
+      "United States"
+    ],
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Thriller",
+      "War"
+    ],
+    "sortTitle": "Eagle Has Landed (1976)",
+    "originalTitle": null,
+    "gradeValue": 6,
+    "runtimeMinutes": 123,
+    "releaseSequence": "1976-12-25tt0074452",
+    "directorNames": [
+      "John Sturges"
+    ],
+    "writerNames": [
+      "Tom Mankiewicz",
+      "Jack Higgins"
+    ],
+    "principalCastNames": [
+      "Michael Caine",
+      "Donald Sutherland",
+      "Robert Duvall",
+      "Jenny Agutter"
+    ],
+    "reviewDate": "2008-11-28",
+    "reviewYear": "2008",
+    "sequence": "2008-11-28-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "John Sturges",
+        "slug": "john-sturges",
+        "creditedAs": [
+          "director"
+        ]
+      },
+      {
+        "name": "Michael Caine",
+        "slug": "michael-caine",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "John Sturges",
+        "slug": "john-sturges",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "The Satan Bug",
+            "imdbId": "tt0059678",
+            "year": "1965",
+            "slug": "the-satan-bug-1965",
+            "grade": "D",
+            "genres": [
+              "Crime",
+              "Mystery",
+              "Sci-Fi",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Hour of the Gun",
+            "imdbId": "tt0061787",
+            "year": "1967",
+            "slug": "hour-of-the-gun-1967",
+            "grade": "C+",
+            "genres": [
+              "Drama",
+              "Western"
+            ]
+          },
+          {
+            "title": "The Man Who Dared",
+            "imdbId": "tt0038722",
+            "year": "1946",
+            "slug": "the-man-who-dared-1946",
+            "grade": "D",
+            "genres": [
+              "Adventure",
+              "Crime",
+              "Drama"
+            ]
+          },
+          {
+            "title": "Mystery Street",
+            "imdbId": "tt0042771",
+            "year": "1950",
+            "slug": "mystery-street-1950",
+            "grade": "C+",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Film-Noir",
+              "Mystery",
+              "Thriller"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Michael Caine",
+        "slug": "michael-caine",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Pulp",
+            "imdbId": "tt0069134",
+            "year": "1972",
+            "slug": "pulp-1972",
+            "grade": "C",
+            "genres": [
+              "Comedy",
+              "Crime",
+              "Drama",
+              "Mystery",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Man Who Would Be King",
+            "imdbId": "tt0073341",
+            "year": "1975",
+            "slug": "the-man-who-would-be-king-1975",
+            "grade": "B",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "War"
+            ]
+          },
+          {
+            "title": "A Bridge Too Far",
+            "imdbId": "tt0075784",
+            "year": "1977",
+            "slug": "a-bridge-too-far-1977",
+            "grade": "C+",
+            "genres": [
+              "Drama",
+              "History",
+              "War"
+            ]
+          },
+          {
+            "title": "Dressed to Kill",
+            "imdbId": "tt0080661",
+            "year": "1980",
+            "slug": "dressed-to-kill-1980",
+            "grade": "C+",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Mystery",
+              "Thriller"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Dune: Part One",
+        "imdbId": "tt1160419",
+        "year": "2021",
+        "slug": "dune-part-one-2021",
+        "grade": "C",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Drama",
+          "Sci-Fi"
+        ]
+      },
+      {
+        "title": "The Eagle and the Hawk",
+        "imdbId": "tt0023973",
+        "year": "1933",
+        "slug": "the-eagle-and-the-hawk-1933",
+        "grade": "C+",
+        "genres": [
+          "Action",
+          "Drama",
+          "War"
+        ]
+      },
+      {
         "title": "East of Shanghai",
         "imdbId": "tt0023395",
         "year": "1931",
@@ -76532,14 +77532,16 @@
         ]
       },
       {
-        "title": "Eggshells",
-        "imdbId": "tt0404011",
-        "year": "1969",
-        "slug": "eggshells-1969",
-        "grade": "D+",
+        "title": "The Edge",
+        "imdbId": "tt0119051",
+        "year": "1997",
+        "slug": "the-edge-1997",
+        "grade": "B-",
         "genres": [
+          "Action",
+          "Adventure",
           "Drama",
-          "Fantasy"
+          "Thriller"
         ]
       }
     ]
@@ -80389,15 +81391,15 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Force of Arms",
-        "imdbId": "tt0043553",
-        "year": "1951",
-        "slug": "force-of-arms-1951",
-        "grade": "C-",
+        "title": "The Fortune",
+        "imdbId": "tt0073008",
+        "year": "1975",
+        "slug": "the-fortune-1975",
+        "grade": "C+",
         "genres": [
-          "Drama",
-          "Romance",
-          "War"
+          "Comedy",
+          "Crime",
+          "Romance"
         ]
       },
       {
@@ -82367,6 +83369,19 @@
             ]
           },
           {
+            "title": "The Great Train Robbery",
+            "imdbId": "tt0079240",
+            "year": "1978",
+            "slug": "the-great-train-robbery-1978",
+            "grade": "C",
+            "genres": [
+              "Adventure",
+              "Crime",
+              "Drama",
+              "Thriller"
+            ]
+          },
+          {
             "title": "Dr. No",
             "imdbId": "tt0055928",
             "year": "1962",
@@ -82377,17 +83392,6 @@
               "Adventure",
               "Thriller"
             ]
-          },
-          {
-            "title": "The Hill",
-            "imdbId": "tt0059274",
-            "year": "1965",
-            "slug": "the-hill-1965",
-            "grade": "B-",
-            "genres": [
-              "Drama",
-              "War"
-            ]
           }
         ]
       },
@@ -82397,20 +83401,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Pulp",
-            "imdbId": "tt0069134",
-            "year": "1972",
-            "slug": "pulp-1972",
-            "grade": "C",
-            "genres": [
-              "Comedy",
-              "Crime",
-              "Drama",
-              "Mystery",
-              "Thriller"
-            ]
-          },
-          {
             "title": "The Man Who Would Be King",
             "imdbId": "tt0073341",
             "year": "1975",
@@ -82419,6 +83409,19 @@
             "genres": [
               "Adventure",
               "Drama",
+              "War"
+            ]
+          },
+          {
+            "title": "The Eagle Has Landed",
+            "imdbId": "tt0074452",
+            "year": "1976",
+            "slug": "the-eagle-has-landed-1976",
+            "grade": "C",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "Thriller",
               "War"
             ]
           },
@@ -84457,17 +85460,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Five Star Final",
-        "imdbId": "tt0021873",
-        "year": "1931",
-        "slug": "five-star-final-1931",
-        "grade": "D+",
-        "genres": [
-          "Crime",
-          "Drama"
-        ]
-      },
-      {
         "title": "The Fly",
         "imdbId": "tt0051622",
         "year": "1958",
@@ -84477,6 +85469,17 @@
           "Drama",
           "Horror",
           "Sci-Fi"
+        ]
+      },
+      {
+        "title": "The Fog",
+        "imdbId": "tt0080749",
+        "year": "1980",
+        "slug": "the-fog-1980",
+        "grade": "C-",
+        "genres": [
+          "Horror",
+          "Thriller"
         ]
       },
       {
@@ -84492,13 +85495,14 @@
         ]
       },
       {
-        "title": "The Fortune Cookie",
-        "imdbId": "tt0060424",
-        "year": "1966",
-        "slug": "the-fortune-cookie-1966",
-        "grade": "C",
+        "title": "The Fortune",
+        "imdbId": "tt0073008",
+        "year": "1975",
+        "slug": "the-fortune-1975",
+        "grade": "C+",
         "genres": [
           "Comedy",
+          "Crime",
           "Romance"
         ]
       }
@@ -88829,6 +89833,17 @@
             ]
           },
           {
+            "title": "The Fog",
+            "imdbId": "tt0080749",
+            "year": "1980",
+            "slug": "the-fog-1980",
+            "grade": "C-",
+            "genres": [
+              "Horror",
+              "Thriller"
+            ]
+          },
+          {
             "title": "The Thing",
             "imdbId": "tt0084787",
             "year": "1982",
@@ -88838,19 +89853,6 @@
               "Horror",
               "Mystery",
               "Sci-Fi"
-            ]
-          },
-          {
-            "title": "They Live",
-            "imdbId": "tt0096256",
-            "year": "1988",
-            "slug": "they-live-1988",
-            "grade": "C",
-            "genres": [
-              "Action",
-              "Horror",
-              "Sci-Fi",
-              "Thriller"
             ]
           }
         ]
@@ -91082,14 +92084,14 @@
         ]
       },
       {
-        "title": "Executive Suite",
-        "imdbId": "tt0046963",
-        "year": "1954",
-        "slug": "executive-suite-1954",
-        "grade": "B",
+        "title": "The Ex-Mrs. Bradford",
+        "imdbId": "tt0027593",
+        "year": "1936",
+        "slug": "the-ex-mrs-bradford-1936",
+        "grade": "D+",
         "genres": [
-          "Drama",
-          "Romance"
+          "Comedy",
+          "Mystery"
         ]
       }
     ]
@@ -91990,14 +92992,16 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Eight Diagram Pole Fighter",
-        "imdbId": "tt0086606",
-        "year": "1984",
-        "slug": "the-eight-diagram-pole-fighter-1984",
-        "grade": "D+",
+        "title": "The Emperor's Candlesticks",
+        "imdbId": "tt0028829",
+        "year": "1937",
+        "slug": "the-emperors-candlesticks-1937",
+        "grade": "D-",
         "genres": [
-          "Action",
-          "Drama"
+          "Drama",
+          "History",
+          "Romance",
+          "Thriller"
         ]
       },
       {
@@ -92506,14 +93510,16 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "Hour of the Gun",
-            "imdbId": "tt0061787",
-            "year": "1967",
-            "slug": "hour-of-the-gun-1967",
-            "grade": "C+",
+            "title": "The Eagle Has Landed",
+            "imdbId": "tt0074452",
+            "year": "1976",
+            "slug": "the-eagle-has-landed-1976",
+            "grade": "C",
             "genres": [
+              "Adventure",
               "Drama",
-              "Western"
+              "Thriller",
+              "War"
             ]
           },
           {
@@ -98719,13 +99725,17 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Ferris Bueller's Day Off",
-        "imdbId": "tt0091042",
-        "year": "1986",
-        "slug": "ferris-buellers-day-off-1986",
-        "grade": "B+",
+        "title": "The Fighting Kentuckian",
+        "imdbId": "tt0041361",
+        "year": "1949",
+        "slug": "the-fighting-kentuckian-1949",
+        "grade": "D-",
         "genres": [
-          "Comedy"
+          "Adventure",
+          "Drama",
+          "Romance",
+          "War",
+          "Western"
         ]
       },
       {
@@ -99847,14 +100857,15 @@
         ]
       },
       {
-        "title": "From Beyond",
-        "imdbId": "tt0091083",
-        "year": "1986",
-        "slug": "from-beyond-1986",
-        "grade": "B+",
+        "title": "The Frighteners",
+        "imdbId": "tt0116365",
+        "year": "1996",
+        "slug": "the-frighteners-1996",
+        "grade": "C+",
         "genres": [
-          "Horror",
-          "Sci-Fi"
+          "Comedy",
+          "Fantasy",
+          "Horror"
         ]
       }
     ]
@@ -107221,6 +108232,157 @@
     ]
   },
   {
+    "imdbId": "tt0079240",
+    "title": "The Great Train Robbery",
+    "year": "1978",
+    "slug": "the-great-train-robbery-1978",
+    "grade": "C",
+    "countries": [
+      "United Kingdom"
+    ],
+    "genres": [
+      "Adventure",
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "sortTitle": "Great Train Robbery (1978)",
+    "originalTitle": "The First Great Train Robbery",
+    "gradeValue": 6,
+    "runtimeMinutes": 110,
+    "releaseSequence": "1978-12-14tt0079240",
+    "directorNames": [
+      "Michael Crichton"
+    ],
+    "writerNames": [
+      "Michael Crichton"
+    ],
+    "principalCastNames": [
+      "Sean Connery",
+      "Donald Sutherland",
+      "Lesley-Anne Down",
+      "Alan Webb"
+    ],
+    "reviewDate": "2008-01-02",
+    "reviewYear": "2008",
+    "sequence": "2008-01-02-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "Sean Connery",
+        "slug": "sean-connery",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Sean Connery",
+        "slug": "sean-connery",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Man Who Would Be King",
+            "imdbId": "tt0073341",
+            "year": "1975",
+            "slug": "the-man-who-would-be-king-1975",
+            "grade": "B",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "War"
+            ]
+          },
+          {
+            "title": "A Bridge Too Far",
+            "imdbId": "tt0075784",
+            "year": "1977",
+            "slug": "a-bridge-too-far-1977",
+            "grade": "C+",
+            "genres": [
+              "Drama",
+              "History",
+              "War"
+            ]
+          },
+          {
+            "title": "Dr. No",
+            "imdbId": "tt0055928",
+            "year": "1962",
+            "slug": "dr-no-1962",
+            "grade": "B-",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Hill",
+            "imdbId": "tt0059274",
+            "year": "1965",
+            "slug": "the-hill-1965",
+            "grade": "B-",
+            "genres": [
+              "Drama",
+              "War"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The Great Outdoors",
+        "imdbId": "tt0095253",
+        "year": "1988",
+        "slug": "the-great-outdoors-1988",
+        "grade": "C",
+        "genres": [
+          "Comedy"
+        ]
+      },
+      {
+        "title": "The Great Silence",
+        "imdbId": "tt0063032",
+        "year": "1968",
+        "slug": "the-great-silence-1968",
+        "grade": "B",
+        "genres": [
+          "Drama",
+          "Western"
+        ]
+      },
+      {
+        "title": "The Great Ziegfeld",
+        "imdbId": "tt0027698",
+        "year": "1936",
+        "slug": "the-great-ziegfeld-1936",
+        "grade": "D",
+        "genres": [
+          "Drama",
+          "Musical"
+        ]
+      },
+      {
+        "title": "Green Room",
+        "imdbId": "tt4062536",
+        "year": "2015",
+        "slug": "green-room-2015",
+        "grade": "A",
+        "genres": [
+          "Crime",
+          "Horror",
+          "Music",
+          "Thriller"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt0034333",
     "title": "Uma",
     "year": "1941",
@@ -108443,14 +109605,15 @@
             ]
           },
           {
-            "title": "A Bridge Too Far",
-            "imdbId": "tt0075784",
-            "year": "1977",
-            "slug": "a-bridge-too-far-1977",
-            "grade": "C+",
+            "title": "The Eagle Has Landed",
+            "imdbId": "tt0074452",
+            "year": "1976",
+            "slug": "the-eagle-has-landed-1976",
+            "grade": "C",
             "genres": [
+              "Adventure",
               "Drama",
-              "History",
+              "Thriller",
               "War"
             ]
           }
@@ -111030,15 +112193,16 @@
         ]
       },
       {
-        "title": "East of Shanghai",
-        "imdbId": "tt0023395",
-        "year": "1931",
-        "slug": "east-of-shanghai-1931",
-        "grade": "D",
+        "title": "The Eagle Has Landed",
+        "imdbId": "tt0074452",
+        "year": "1976",
+        "slug": "the-eagle-has-landed-1976",
+        "grade": "C",
         "genres": [
-          "Comedy",
+          "Adventure",
           "Drama",
-          "Romance"
+          "Thriller",
+          "War"
         ]
       }
     ]
@@ -112389,18 +113553,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Eagle and the Hawk",
-        "imdbId": "tt0023973",
-        "year": "1933",
-        "slug": "the-eagle-and-the-hawk-1933",
-        "grade": "C+",
-        "genres": [
-          "Action",
-          "Drama",
-          "War"
-        ]
-      },
-      {
         "title": "East of Shanghai",
         "imdbId": "tt0023395",
         "year": "1931",
@@ -112413,6 +113565,31 @@
         ]
       },
       {
+        "title": "The Edge",
+        "imdbId": "tt0119051",
+        "year": "1997",
+        "slug": "the-edge-1997",
+        "grade": "B-",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Drama",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Eiger Sanction",
+        "imdbId": "tt0072926",
+        "year": "1975",
+        "slug": "the-eiger-sanction-1975",
+        "grade": "D",
+        "genres": [
+          "Action",
+          "Crime",
+          "Thriller"
+        ]
+      },
+      {
         "title": "The Eight Diagram Pole Fighter",
         "imdbId": "tt0086606",
         "year": "1984",
@@ -112421,21 +113598,6 @@
         "genres": [
           "Action",
           "Drama"
-        ]
-      },
-      {
-        "title": "The Endless",
-        "imdbId": "tt3986820",
-        "year": "2017",
-        "slug": "the-endless-2017",
-        "grade": "B+",
-        "genres": [
-          "Drama",
-          "Fantasy",
-          "Horror",
-          "Mystery",
-          "Sci-Fi",
-          "Thriller"
         ]
       }
     ]
@@ -114381,14 +115543,15 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Man Who Would Be King",
-            "imdbId": "tt0073341",
-            "year": "1975",
-            "slug": "the-man-who-would-be-king-1975",
-            "grade": "B",
+            "title": "The Eagle Has Landed",
+            "imdbId": "tt0074452",
+            "year": "1976",
+            "slug": "the-eagle-has-landed-1976",
+            "grade": "C",
             "genres": [
               "Adventure",
               "Drama",
+              "Thriller",
               "War"
             ]
           },
@@ -114746,18 +115909,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "For the Defense",
-        "imdbId": "tt0020896",
-        "year": "1930",
-        "slug": "for-the-defense-1930",
-        "grade": "C",
-        "genres": [
-          "Crime",
-          "Drama",
-          "Romance"
-        ]
-      },
-      {
         "title": "Force of Arms",
         "imdbId": "tt0043553",
         "year": "1951",
@@ -114767,6 +115918,18 @@
           "Drama",
           "Romance",
           "War"
+        ]
+      },
+      {
+        "title": "The Fortune",
+        "imdbId": "tt0073008",
+        "year": "1975",
+        "slug": "the-fortune-1975",
+        "grade": "C+",
+        "genres": [
+          "Comedy",
+          "Crime",
+          "Romance"
         ]
       },
       {
@@ -116537,23 +117700,22 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "Assault on Precinct 13",
-            "imdbId": "tt0074156",
-            "year": "1976",
-            "slug": "assault-on-precinct-13-1976",
-            "grade": "A-",
-            "genres": [
-              "Action",
-              "Crime",
-              "Thriller"
-            ]
-          },
-          {
             "title": "Halloween",
             "imdbId": "tt0077651",
             "year": "1978",
             "slug": "halloween-1978",
             "grade": "A",
+            "genres": [
+              "Horror",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Fog",
+            "imdbId": "tt0080749",
+            "year": "1980",
+            "slug": "the-fog-1980",
+            "grade": "C-",
             "genres": [
               "Horror",
               "Thriller"
@@ -123061,18 +124223,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Man Who Would Be King",
-            "imdbId": "tt0073341",
-            "year": "1975",
-            "slug": "the-man-who-would-be-king-1975",
-            "grade": "B",
-            "genres": [
-              "Adventure",
-              "Drama",
-              "War"
-            ]
-          },
-          {
             "title": "A Bridge Too Far",
             "imdbId": "tt0075784",
             "year": "1977",
@@ -123082,6 +124232,19 @@
               "Drama",
               "History",
               "War"
+            ]
+          },
+          {
+            "title": "The Great Train Robbery",
+            "imdbId": "tt0079240",
+            "year": "1978",
+            "slug": "the-great-train-robbery-1978",
+            "grade": "C",
+            "genres": [
+              "Adventure",
+              "Crime",
+              "Drama",
+              "Thriller"
             ]
           },
           {
@@ -124393,12 +125556,14 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Fright Night",
-        "imdbId": "tt0089175",
-        "year": "1985",
-        "slug": "fright-night-1985",
-        "grade": "A+",
+        "title": "The Frighteners",
+        "imdbId": "tt0116365",
+        "year": "1996",
+        "slug": "the-frighteners-1996",
+        "grade": "C+",
         "genres": [
+          "Comedy",
+          "Fantasy",
           "Horror"
         ]
       },
@@ -125080,14 +126245,15 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Terror",
-            "imdbId": "tt0057569",
-            "year": "1963",
-            "slug": "the-terror-1963",
-            "grade": "C-",
+            "title": "The Fortune",
+            "imdbId": "tt0073008",
+            "year": "1975",
+            "slug": "the-fortune-1975",
+            "grade": "C+",
             "genres": [
-              "Horror",
-              "Thriller"
+              "Comedy",
+              "Crime",
+              "Romance"
             ]
           },
           {
@@ -130733,15 +131899,16 @@
             ]
           },
           {
-            "title": "The Man Who Dared",
-            "imdbId": "tt0038722",
-            "year": "1946",
-            "slug": "the-man-who-dared-1946",
-            "grade": "D",
+            "title": "The Eagle Has Landed",
+            "imdbId": "tt0074452",
+            "year": "1976",
+            "slug": "the-eagle-has-landed-1976",
+            "grade": "C",
             "genres": [
               "Adventure",
-              "Crime",
-              "Drama"
+              "Drama",
+              "Thriller",
+              "War"
             ]
           }
         ]
@@ -134183,24 +135350,23 @@
         ]
       },
       {
+        "title": "The Ex-Mrs. Bradford",
+        "imdbId": "tt0027593",
+        "year": "1936",
+        "slug": "the-ex-mrs-bradford-1936",
+        "grade": "D+",
+        "genres": [
+          "Comedy",
+          "Mystery"
+        ]
+      },
+      {
         "title": "Executive Suite",
         "imdbId": "tt0046963",
         "year": "1954",
         "slug": "executive-suite-1954",
         "grade": "B",
         "genres": [
-          "Drama",
-          "Romance"
-        ]
-      },
-      {
-        "title": "Factotum",
-        "imdbId": "tt0417658",
-        "year": "2005",
-        "slug": "factotum-2005",
-        "grade": "B-",
-        "genres": [
-          "Comedy",
           "Drama",
           "Romance"
         ]
@@ -134537,6 +135703,159 @@
         "grade": "D-",
         "genres": [
           "Horror"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0073008",
+    "title": "The Fortune",
+    "year": "1975",
+    "slug": "the-fortune-1975",
+    "grade": "C+",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Romance"
+    ],
+    "sortTitle": "Fortune (1975)",
+    "originalTitle": null,
+    "gradeValue": 7,
+    "runtimeMinutes": 88,
+    "releaseSequence": "1975-05-20tt0073008",
+    "directorNames": [
+      "Mike Nichols"
+    ],
+    "writerNames": [
+      "Carole Eastman",
+      "Selene Elizabeth Bryce"
+    ],
+    "principalCastNames": [
+      "Jack Nicholson",
+      "Warren Beatty",
+      "Stockard Channing",
+      "Florence Stanley"
+    ],
+    "reviewDate": "2009-03-30",
+    "reviewYear": "2009",
+    "sequence": "2009-03-30-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "Jack Nicholson",
+        "slug": "jack-nicholson",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Jack Nicholson",
+        "slug": "jack-nicholson",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Raven",
+            "imdbId": "tt0057449",
+            "year": "1963",
+            "slug": "the-raven-1963",
+            "grade": "D+",
+            "genres": [
+              "Comedy",
+              "Fantasy",
+              "Horror"
+            ]
+          },
+          {
+            "title": "The Terror",
+            "imdbId": "tt0057569",
+            "year": "1963",
+            "slug": "the-terror-1963",
+            "grade": "C-",
+            "genres": [
+              "Horror",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Postman Always Rings Twice",
+            "imdbId": "tt0082934",
+            "year": "1981",
+            "slug": "the-postman-always-rings-twice-1981",
+            "grade": "D",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Romance",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Batman",
+            "imdbId": "tt0096895",
+            "year": "1989",
+            "slug": "batman-1989",
+            "grade": "A-",
+            "genres": [
+              "Action",
+              "Adventure"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "For the Defense",
+        "imdbId": "tt0020896",
+        "year": "1930",
+        "slug": "for-the-defense-1930",
+        "grade": "C",
+        "genres": [
+          "Crime",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "title": "Force of Arms",
+        "imdbId": "tt0043553",
+        "year": "1951",
+        "slug": "force-of-arms-1951",
+        "grade": "C-",
+        "genres": [
+          "Drama",
+          "Romance",
+          "War"
+        ]
+      },
+      {
+        "title": "The Fortune Cookie",
+        "imdbId": "tt0060424",
+        "year": "1966",
+        "slug": "the-fortune-cookie-1966",
+        "grade": "C",
+        "genres": [
+          "Comedy",
+          "Romance"
+        ]
+      },
+      {
+        "title": "Four Flies on Grey Velvet",
+        "imdbId": "tt0066735",
+        "year": "1971",
+        "slug": "four-flies-on-grey-velvet-1971",
+        "grade": "D+",
+        "genres": [
+          "Crime",
+          "Mystery",
+          "Thriller"
         ]
       }
     ]
@@ -135469,19 +136788,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Dune: Part One",
-        "imdbId": "tt1160419",
-        "year": "2021",
-        "slug": "dune-part-one-2021",
-        "grade": "C",
-        "genres": [
-          "Action",
-          "Adventure",
-          "Drama",
-          "Sci-Fi"
-        ]
-      },
-      {
         "title": "The Eagle and the Hawk",
         "imdbId": "tt0023973",
         "year": "1933",
@@ -135494,6 +136800,32 @@
         ]
       },
       {
+        "title": "The Eagle Has Landed",
+        "imdbId": "tt0074452",
+        "year": "1976",
+        "slug": "the-eagle-has-landed-1976",
+        "grade": "C",
+        "genres": [
+          "Adventure",
+          "Drama",
+          "Thriller",
+          "War"
+        ]
+      },
+      {
+        "title": "The Edge",
+        "imdbId": "tt0119051",
+        "year": "1997",
+        "slug": "the-edge-1997",
+        "grade": "B-",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Drama",
+          "Thriller"
+        ]
+      },
+      {
         "title": "Eggshells",
         "imdbId": "tt0404011",
         "year": "1969",
@@ -135502,17 +136834,6 @@
         "genres": [
           "Drama",
           "Fantasy"
-        ]
-      },
-      {
-        "title": "The Eight Diagram Pole Fighter",
-        "imdbId": "tt0086606",
-        "year": "1984",
-        "slug": "the-eight-diagram-pole-fighter-1984",
-        "grade": "D+",
-        "genres": [
-          "Action",
-          "Drama"
         ]
       }
     ]
@@ -136154,6 +137475,17 @@
         ]
       },
       {
+        "title": "The Fog",
+        "imdbId": "tt0080749",
+        "year": "1980",
+        "slug": "the-fog-1980",
+        "grade": "C-",
+        "genres": [
+          "Horror",
+          "Thriller"
+        ]
+      },
+      {
         "title": "For the Defense",
         "imdbId": "tt0020896",
         "year": "1930",
@@ -136163,18 +137495,6 @@
           "Crime",
           "Drama",
           "Romance"
-        ]
-      },
-      {
-        "title": "Force of Arms",
-        "imdbId": "tt0043553",
-        "year": "1951",
-        "slug": "force-of-arms-1951",
-        "grade": "C-",
-        "genres": [
-          "Drama",
-          "Romance",
-          "War"
         ]
       }
     ]
@@ -141247,15 +142567,14 @@
             ]
           },
           {
-            "title": "The Last of Mrs. Cheyney",
-            "imdbId": "tt0029120",
-            "year": "1937",
-            "slug": "the-last-of-mrs-cheyney-1937",
-            "grade": "C-",
+            "title": "The Ex-Mrs. Bradford",
+            "imdbId": "tt0027593",
+            "year": "1936",
+            "slug": "the-ex-mrs-bradford-1936",
+            "grade": "D+",
             "genres": [
               "Comedy",
-              "Drama",
-              "Romance"
+              "Mystery"
             ]
           }
         ]
@@ -141900,16 +143219,15 @@
             ]
           },
           {
-            "title": "The Postman Always Rings Twice",
-            "imdbId": "tt0082934",
-            "year": "1981",
-            "slug": "the-postman-always-rings-twice-1981",
-            "grade": "D",
+            "title": "The Fortune",
+            "imdbId": "tt0073008",
+            "year": "1975",
+            "slug": "the-fortune-1975",
+            "grade": "C+",
             "genres": [
+              "Comedy",
               "Crime",
-              "Drama",
-              "Romance",
-              "Thriller"
+              "Romance"
             ]
           }
         ]
@@ -145990,6 +147308,164 @@
           "Mystery",
           "Sci-Fi",
           "Thriller"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0028829",
+    "title": "The Emperor's Candlesticks",
+    "year": "1937",
+    "slug": "the-emperors-candlesticks-1937",
+    "grade": "D-",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Drama",
+      "History",
+      "Romance",
+      "Thriller"
+    ],
+    "sortTitle": "Emperor's Candlesticks (1937)",
+    "originalTitle": null,
+    "gradeValue": 2,
+    "runtimeMinutes": 89,
+    "releaseSequence": "1937-07-02tt0028829",
+    "directorNames": [
+      "George Fitzmaurice"
+    ],
+    "writerNames": [
+      "Baroness Emmuska Orczy",
+      "Harold Goldman",
+      "Monckton Hoffe"
+    ],
+    "principalCastNames": [
+      "William Powell",
+      "Luise Rainer",
+      "Robert Young",
+      "Maureen O'Sullivan"
+    ],
+    "reviewDate": "2009-02-12",
+    "reviewYear": "2009",
+    "sequence": "2009-02-12-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "William Powell",
+        "slug": "william-powell",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "William Powell",
+        "slug": "william-powell",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Great Ziegfeld",
+            "imdbId": "tt0027698",
+            "year": "1936",
+            "slug": "the-great-ziegfeld-1936",
+            "grade": "D",
+            "genres": [
+              "Drama",
+              "Musical"
+            ]
+          },
+          {
+            "title": "The Ex-Mrs. Bradford",
+            "imdbId": "tt0027593",
+            "year": "1936",
+            "slug": "the-ex-mrs-bradford-1936",
+            "grade": "D+",
+            "genres": [
+              "Comedy",
+              "Mystery"
+            ]
+          },
+          {
+            "title": "The Last of Mrs. Cheyney",
+            "imdbId": "tt0029120",
+            "year": "1937",
+            "slug": "the-last-of-mrs-cheyney-1937",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Heavenly Body",
+            "imdbId": "tt0035980",
+            "year": "1944",
+            "slug": "the-heavenly-body-1944",
+            "grade": "D-",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The Eiger Sanction",
+        "imdbId": "tt0072926",
+        "year": "1975",
+        "slug": "the-eiger-sanction-1975",
+        "grade": "D",
+        "genres": [
+          "Action",
+          "Crime",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Eight Diagram Pole Fighter",
+        "imdbId": "tt0086606",
+        "year": "1984",
+        "slug": "the-eight-diagram-pole-fighter-1984",
+        "grade": "D+",
+        "genres": [
+          "Action",
+          "Drama"
+        ]
+      },
+      {
+        "title": "The Endless",
+        "imdbId": "tt3986820",
+        "year": "2017",
+        "slug": "the-endless-2017",
+        "grade": "B+",
+        "genres": [
+          "Drama",
+          "Fantasy",
+          "Horror",
+          "Mystery",
+          "Sci-Fi",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Enemy Below",
+        "imdbId": "tt0050356",
+        "year": "1957",
+        "slug": "the-enemy-below-1957",
+        "grade": "B",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Drama",
+          "Thriller",
+          "War"
         ]
       }
     ]
@@ -155869,18 +157345,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Raven",
-            "imdbId": "tt0057449",
-            "year": "1963",
-            "slug": "the-raven-1963",
-            "grade": "D+",
-            "genres": [
-              "Comedy",
-              "Fantasy",
-              "Horror"
-            ]
-          },
-          {
             "title": "The Terror",
             "imdbId": "tt0057569",
             "year": "1963",
@@ -155889,6 +157353,18 @@
             "genres": [
               "Horror",
               "Thriller"
+            ]
+          },
+          {
+            "title": "The Fortune",
+            "imdbId": "tt0073008",
+            "year": "1975",
+            "slug": "the-fortune-1975",
+            "grade": "C+",
+            "genres": [
+              "Comedy",
+              "Crime",
+              "Romance"
             ]
           },
           {
@@ -158923,17 +160399,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "3 Godfathers",
-            "imdbId": "tt0040064",
-            "year": "1948",
-            "slug": "3-godfathers-1948",
-            "grade": "C",
-            "genres": [
-              "Drama",
-              "Western"
-            ]
-          },
-          {
             "title": "Wake of the Red Witch",
             "imdbId": "tt0040946",
             "year": "1948",
@@ -158943,6 +160408,20 @@
               "Action",
               "Adventure",
               "Romance"
+            ]
+          },
+          {
+            "title": "The Fighting Kentuckian",
+            "imdbId": "tt0041361",
+            "year": "1949",
+            "slug": "the-fighting-kentuckian-1949",
+            "grade": "D-",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "Romance",
+              "War",
+              "Western"
             ]
           },
           {
@@ -159088,6 +160567,20 @@
         ]
       },
       {
+        "title": "The Fighting Kentuckian",
+        "imdbId": "tt0041361",
+        "year": "1949",
+        "slug": "the-fighting-kentuckian-1949",
+        "grade": "D-",
+        "genres": [
+          "Adventure",
+          "Drama",
+          "Romance",
+          "War",
+          "Western"
+        ]
+      },
+      {
         "title": "The Fighting Seabees",
         "imdbId": "tt0036824",
         "year": "1944",
@@ -159097,18 +160590,6 @@
           "Drama",
           "Romance",
           "War"
-        ]
-      },
-      {
-        "title": "The Five Days",
-        "imdbId": "tt0069884",
-        "year": "1973",
-        "slug": "the-five-days-1973",
-        "grade": "D+",
-        "genres": [
-          "Comedy",
-          "Drama",
-          "History"
         ]
       }
     ]
@@ -161545,14 +163026,15 @@
             ]
           },
           {
-            "title": "Dr. No",
-            "imdbId": "tt0055928",
-            "year": "1962",
-            "slug": "dr-no-1962",
-            "grade": "B-",
+            "title": "The Great Train Robbery",
+            "imdbId": "tt0079240",
+            "year": "1978",
+            "slug": "the-great-train-robbery-1978",
+            "grade": "C",
             "genres": [
-              "Action",
               "Adventure",
+              "Crime",
+              "Drama",
               "Thriller"
             ]
           }
@@ -161589,6 +163071,19 @@
             ]
           },
           {
+            "title": "The Eagle Has Landed",
+            "imdbId": "tt0074452",
+            "year": "1976",
+            "slug": "the-eagle-has-landed-1976",
+            "grade": "C",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "Thriller",
+              "War"
+            ]
+          },
+          {
             "title": "A Bridge Too Far",
             "imdbId": "tt0075784",
             "year": "1977",
@@ -161598,19 +163093,6 @@
               "Drama",
               "History",
               "War"
-            ]
-          },
-          {
-            "title": "Dressed to Kill",
-            "imdbId": "tt0080661",
-            "year": "1980",
-            "slug": "dressed-to-kill-1980",
-            "grade": "C+",
-            "genres": [
-              "Crime",
-              "Drama",
-              "Mystery",
-              "Thriller"
             ]
           }
         ]
