@@ -1525,18 +1525,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "A Bridge Too Far",
-            "imdbId": "tt0075784",
-            "year": "1977",
-            "slug": "a-bridge-too-far-1977",
-            "grade": "C+",
-            "genres": [
-              "Drama",
-              "History",
-              "War"
-            ]
-          },
-          {
             "title": "Dr. No",
             "imdbId": "tt0055928",
             "year": "1962",
@@ -1546,6 +1534,17 @@
               "Action",
               "Adventure",
               "Thriller"
+            ]
+          },
+          {
+            "title": "The Hill",
+            "imdbId": "tt0059274",
+            "year": "1965",
+            "slug": "the-hill-1965",
+            "grade": "B-",
+            "genres": [
+              "Drama",
+              "War"
             ]
           },
           {
@@ -4798,18 +4797,6 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "The Raven",
-            "imdbId": "tt0057449",
-            "year": "1963",
-            "slug": "the-raven-1963",
-            "grade": "D+",
-            "genres": [
-              "Comedy",
-              "Fantasy",
-              "Horror"
-            ]
-          },
-          {
             "title": "The Terror",
             "imdbId": "tt0057569",
             "year": "1963",
@@ -4818,6 +4805,16 @@
             "genres": [
               "Horror",
               "Thriller"
+            ]
+          },
+          {
+            "title": "The Haunted Palace",
+            "imdbId": "tt0057128",
+            "year": "1963",
+            "slug": "the-haunted-palace-1963",
+            "grade": "C+",
+            "genres": [
+              "Horror"
             ]
           },
           {
@@ -5093,6 +5090,167 @@
         "genres": [
           "Adventure",
           "War"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0059274",
+    "title": "The Hill",
+    "year": "1965",
+    "slug": "the-hill-1965",
+    "grade": "B-",
+    "countries": [
+      "United Kingdom"
+    ],
+    "genres": [
+      "Drama",
+      "War"
+    ],
+    "sortTitle": "Hill (1965)",
+    "originalTitle": null,
+    "gradeValue": 8,
+    "runtimeMinutes": 123,
+    "releaseSequence": "1965-05-22tt0059274",
+    "directorNames": [
+      "Sidney Lumet"
+    ],
+    "writerNames": [
+      "Ray Rigby",
+      "R.S. Allen"
+    ],
+    "principalCastNames": [
+      "Sean Connery",
+      "Harry Andrews",
+      "Ian Bannen",
+      "Alfred Lynch"
+    ],
+    "reviewDate": "2008-05-05",
+    "reviewYear": "2008",
+    "sequence": "2008-05-05-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "Sidney Lumet",
+        "slug": "sidney-lumet",
+        "creditedAs": [
+          "director"
+        ]
+      },
+      {
+        "name": "Sean Connery",
+        "slug": "sean-connery",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Sean Connery",
+        "slug": "sean-connery",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "A Bridge Too Far",
+            "imdbId": "tt0075784",
+            "year": "1977",
+            "slug": "a-bridge-too-far-1977",
+            "grade": "C+",
+            "genres": [
+              "Drama",
+              "History",
+              "War"
+            ]
+          },
+          {
+            "title": "Dr. No",
+            "imdbId": "tt0055928",
+            "year": "1962",
+            "slug": "dr-no-1962",
+            "grade": "B-",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Thunderball",
+            "imdbId": "tt0059800",
+            "year": "1965",
+            "slug": "thunderball-1965",
+            "grade": "C+",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "You Only Live Twice",
+            "imdbId": "tt0062512",
+            "year": "1967",
+            "slug": "you-only-live-twice-1967",
+            "grade": "C+",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Thriller"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "High Sierra",
+        "imdbId": "tt0033717",
+        "year": "1940",
+        "slug": "high-sierra-1941",
+        "grade": "B-",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Drama",
+          "Film-Noir",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "Higher and Higher",
+        "imdbId": "tt0036919",
+        "year": "1943",
+        "slug": "higher-and-higher-1943",
+        "grade": "F",
+        "genres": [
+          "Comedy",
+          "Musical",
+          "Romance"
+        ]
+      },
+      {
+        "title": "The Hills Have Eyes",
+        "imdbId": "tt0077681",
+        "year": "1977",
+        "slug": "the-hills-have-eyes-1977",
+        "grade": "C-",
+        "genres": [
+          "Horror",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Hills Have Eyes Part II",
+        "imdbId": "tt0089274",
+        "year": "1984",
+        "slug": "the-hills-have-eyes-part-ii-1984",
+        "grade": "F",
+        "genres": [
+          "Horror",
+          "Thriller"
         ]
       }
     ]
@@ -7056,18 +7214,6 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "The Prisoner of Shark Island",
-            "imdbId": "tt0028141",
-            "year": "1936",
-            "slug": "the-prisoner-of-shark-island-1936",
-            "grade": "C-",
-            "genres": [
-              "Biography",
-              "Drama",
-              "History"
-            ]
-          },
-          {
             "title": "Wee Willie Winkie",
             "imdbId": "tt0029751",
             "year": "1937",
@@ -7076,6 +7222,19 @@
             "genres": [
               "Adventure",
               "Family"
+            ]
+          },
+          {
+            "title": "The Hurricane",
+            "imdbId": "tt0029030",
+            "year": "1937",
+            "slug": "the-hurricane-1937",
+            "grade": "B-",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "Romance"
             ]
           },
           {
@@ -10459,6 +10618,19 @@
             ]
           },
           {
+            "title": "The High and the Mighty",
+            "imdbId": "tt0047086",
+            "year": "1954",
+            "slug": "the-high-and-the-mighty-1954",
+            "grade": "B-",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "Thriller"
+            ]
+          },
+          {
             "title": "The Searchers",
             "imdbId": "tt0049730",
             "year": "1956",
@@ -10468,18 +10640,6 @@
               "Adventure",
               "Drama",
               "Western"
-            ]
-          },
-          {
-            "title": "The Wings of Eagles",
-            "imdbId": "tt0051198",
-            "year": "1957",
-            "slug": "the-wings-of-eagles-1957",
-            "grade": "C+",
-            "genres": [
-              "Biography",
-              "Drama",
-              "War"
             ]
           }
         ]
@@ -15815,15 +15975,13 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Haunted Gold",
-        "imdbId": "tt0022981",
-        "year": "1932",
-        "slug": "haunted-gold-1932",
-        "grade": "F",
+        "title": "The Haunted Palace",
+        "imdbId": "tt0057128",
+        "year": "1963",
+        "slug": "the-haunted-palace-1963",
+        "grade": "C+",
         "genres": [
-          "Drama",
-          "Mystery",
-          "Western"
+          "Horror"
         ]
       },
       {
@@ -17440,6 +17598,105 @@
         "genres": [
           "Horror",
           "Mystery",
+          "Thriller"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0085701",
+    "title": "The Hunger",
+    "year": "1983",
+    "slug": "the-hunger-1983",
+    "grade": "D",
+    "countries": [
+      "United Kingdom"
+    ],
+    "genres": [
+      "Drama",
+      "Horror"
+    ],
+    "sortTitle": "Hunger (1983)",
+    "originalTitle": null,
+    "gradeValue": 3,
+    "runtimeMinutes": 97,
+    "releaseSequence": "1983-04-29tt0085701",
+    "directorNames": [
+      "Tony Scott"
+    ],
+    "writerNames": [
+      "James Costigan",
+      "Michael Thomas",
+      "Whitley Strieber"
+    ],
+    "principalCastNames": [
+      "Catherine Deneuve",
+      "David Bowie",
+      "Susan Sarandon",
+      "Cliff De Young"
+    ],
+    "reviewDate": "2007-11-10",
+    "reviewYear": "2007",
+    "sequence": "2007-11-10-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "Tony Scott",
+        "slug": "tony-scott",
+        "creditedAs": [
+          "director"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The Human Tornado",
+        "imdbId": "tt0074653",
+        "year": "1976",
+        "slug": "the-human-tornado-1976",
+        "grade": "C",
+        "genres": [
+          "Action",
+          "Comedy",
+          "Drama"
+        ]
+      },
+      {
+        "title": "Humanoids from the Deep",
+        "imdbId": "tt0080904",
+        "year": "1980",
+        "slug": "humanoids-from-the-deep-1980",
+        "grade": "B-",
+        "genres": [
+          "Horror",
+          "Sci-Fi"
+        ]
+      },
+      {
+        "title": "The Hunger Games: Mockingjay - Part 1",
+        "imdbId": "tt1951265",
+        "year": "2014",
+        "slug": "the-hunger-games-mockingjay-part-1-2014",
+        "grade": "F",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Sci-Fi",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Hunt",
+        "imdbId": "tt8244784",
+        "year": "2020",
+        "slug": "the-hunt-2020",
+        "grade": "B",
+        "genres": [
+          "Action",
+          "Horror",
           "Thriller"
         ]
       }
@@ -20057,6 +20314,16 @@
             ]
           },
           {
+            "title": "The Haunted Palace",
+            "imdbId": "tt0057128",
+            "year": "1963",
+            "slug": "the-haunted-palace-1963",
+            "grade": "C+",
+            "genres": [
+              "Horror"
+            ]
+          },
+          {
             "title": "The Masque of the Red Death",
             "imdbId": "tt0058333",
             "year": "1964",
@@ -20065,18 +20332,6 @@
             "genres": [
               "Drama",
               "Horror"
-            ]
-          },
-          {
-            "title": "The Tomb of Ligeia",
-            "imdbId": "tt0059821",
-            "year": "1964",
-            "slug": "the-tomb-of-ligeia-1964",
-            "grade": "D+",
-            "genres": [
-              "Drama",
-              "Horror",
-              "Thriller"
             ]
           }
         ]
@@ -21909,6 +22164,18 @@
         ]
       },
       {
+        "title": "The Howards of Virginia",
+        "imdbId": "tt0032612",
+        "year": "1940",
+        "slug": "the-howards-of-virginia-1940",
+        "grade": "D-",
+        "genres": [
+          "Drama",
+          "History",
+          "War"
+        ]
+      },
+      {
         "title": "The Howling",
         "imdbId": "tt0082533",
         "year": "1981",
@@ -21916,17 +22183,6 @@
         "grade": "B",
         "genres": [
           "Horror"
-        ]
-      },
-      {
-        "title": "Howling II: ... Your Sister Is a Werewolf",
-        "imdbId": "tt0089308",
-        "year": "1985",
-        "slug": "howling-ii-your-sister-is-a-werewolf-1985",
-        "grade": "F",
-        "genres": [
-          "Horror",
-          "Thriller"
         ]
       }
     ]
@@ -23950,14 +24206,14 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Horror of Dracula",
-            "imdbId": "tt0051554",
-            "year": "1958",
-            "slug": "horror-of-dracula-1958",
-            "grade": "A-",
+            "title": "The Hound of the Baskervilles",
+            "imdbId": "tt0052905",
+            "year": "1959",
+            "slug": "the-hound-of-the-baskervilles-1959",
+            "grade": "B+",
             "genres": [
-              "Drama",
-              "Horror"
+              "Horror",
+              "Mystery"
             ]
           },
           {
@@ -24270,18 +24526,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "His House",
-        "imdbId": "tt8508734",
-        "year": "2020",
-        "slug": "his-house-2020",
-        "grade": "C",
-        "genres": [
-          "Drama",
-          "Horror",
-          "Thriller"
-        ]
-      },
-      {
         "title": "His Private Secretary",
         "imdbId": "tt0024124",
         "year": "1933",
@@ -24290,6 +24534,19 @@
         "genres": [
           "Comedy",
           "Romance"
+        ]
+      },
+      {
+        "title": "The Hoax",
+        "imdbId": "tt0462338",
+        "year": "2006",
+        "slug": "the-hoax-2006",
+        "grade": "C",
+        "genres": [
+          "Biography",
+          "Comedy",
+          "Drama",
+          "History"
         ]
       },
       {
@@ -26800,19 +27057,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Hatchet III",
-        "imdbId": "tt1870419",
-        "year": "2013",
-        "slug": "hatchet-iii-2013",
-        "grade": "C+",
-        "genres": [
-          "Action",
-          "Comedy",
-          "Horror",
-          "Thriller"
-        ]
-      },
-      {
         "title": "Haunted Gold",
         "imdbId": "tt0022981",
         "year": "1932",
@@ -26822,6 +27066,16 @@
           "Drama",
           "Mystery",
           "Western"
+        ]
+      },
+      {
+        "title": "The Haunted Palace",
+        "imdbId": "tt0057128",
+        "year": "1963",
+        "slug": "the-haunted-palace-1963",
+        "grade": "C+",
+        "genres": [
+          "Horror"
         ]
       },
       {
@@ -27366,14 +27620,16 @@
             ]
           },
           {
-            "title": "Young Mr. Lincoln",
-            "imdbId": "tt0032155",
-            "year": "1939",
-            "slug": "young-mr-lincoln-1939",
-            "grade": "C",
+            "title": "The Hurricane",
+            "imdbId": "tt0029030",
+            "year": "1937",
+            "slug": "the-hurricane-1937",
+            "grade": "B-",
             "genres": [
-              "Biography",
-              "Drama"
+              "Action",
+              "Adventure",
+              "Drama",
+              "Romance"
             ]
           }
         ]
@@ -30913,6 +31169,156 @@
         "grade": "A-",
         "genres": [
           "Crime",
+          "Thriller"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0032612",
+    "title": "The Howards of Virginia",
+    "year": "1940",
+    "slug": "the-howards-of-virginia-1940",
+    "grade": "D-",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Drama",
+      "History",
+      "War"
+    ],
+    "sortTitle": "Howards of Virginia (1940)",
+    "originalTitle": null,
+    "gradeValue": 2,
+    "runtimeMinutes": 116,
+    "releaseSequence": "1940-09-19tt0032612",
+    "directorNames": [
+      "Frank Lloyd"
+    ],
+    "writerNames": [
+      "Sidney Buchman",
+      "Elizabeth Page"
+    ],
+    "principalCastNames": [
+      "Cary Grant",
+      "Martha Scott",
+      "Cedric Hardwicke",
+      "Alan Marshal"
+    ],
+    "reviewDate": "2007-09-19",
+    "reviewYear": "2007",
+    "sequence": "2007-09-19-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "Cary Grant",
+        "slug": "cary-grant",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Cary Grant",
+        "slug": "cary-grant",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "His Girl Friday",
+            "imdbId": "tt0032599",
+            "year": "1940",
+            "slug": "his-girl-friday-1940",
+            "grade": "A",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
+            "title": "My Favorite Wife",
+            "imdbId": "tt0029284",
+            "year": "1940",
+            "slug": "my-favorite-wife-1940",
+            "grade": "C",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Philadelphia Story",
+            "imdbId": "tt0032904",
+            "year": "1940",
+            "slug": "the-philadelphia-story-1940",
+            "grade": "B+",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Penny Serenade",
+            "imdbId": "tt0034012",
+            "year": "1941",
+            "slug": "penny-serenade-1941",
+            "grade": "F",
+            "genres": [
+              "Drama",
+              "Romance"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The House That Dripped Blood",
+        "imdbId": "tt0065854",
+        "year": "1971",
+        "slug": "the-house-that-dripped-blood-1971",
+        "grade": "C+",
+        "genres": [
+          "Drama",
+          "Fantasy",
+          "Horror",
+          "Mystery",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "How Green Was My Valley",
+        "imdbId": "tt0033729",
+        "year": "1941",
+        "slug": "how-green-was-my-valley-1941",
+        "grade": "B-",
+        "genres": [
+          "Drama",
+          "Family"
+        ]
+      },
+      {
+        "title": "The Howling",
+        "imdbId": "tt0082533",
+        "year": "1981",
+        "slug": "the-howling-1981",
+        "grade": "B",
+        "genres": [
+          "Horror"
+        ]
+      },
+      {
+        "title": "Howling II: ... Your Sister Is a Werewolf",
+        "imdbId": "tt0089308",
+        "year": "1985",
+        "slug": "howling-ii-your-sister-is-a-werewolf-1985",
+        "grade": "F",
+        "genres": [
+          "Horror",
           "Thriller"
         ]
       }
@@ -38896,14 +39302,14 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Humanoids from the Deep",
-        "imdbId": "tt0080904",
-        "year": "1980",
-        "slug": "humanoids-from-the-deep-1980",
-        "grade": "B-",
+        "title": "The Hunger",
+        "imdbId": "tt0085701",
+        "year": "1983",
+        "slug": "the-hunger-1983",
+        "grade": "D",
         "genres": [
-          "Horror",
-          "Sci-Fi"
+          "Drama",
+          "Horror"
         ]
       },
       {
@@ -38920,24 +39326,27 @@
         ]
       },
       {
-        "title": "I Like Your Nerve",
-        "imdbId": "tt0021986",
-        "year": "1931",
-        "slug": "i-like-your-nerve-1931",
-        "grade": "F",
+        "title": "The Hurricane",
+        "imdbId": "tt0029030",
+        "year": "1937",
+        "slug": "the-hurricane-1937",
+        "grade": "B-",
         "genres": [
-          "Comedy",
+          "Action",
+          "Adventure",
+          "Drama",
           "Romance"
         ]
       },
       {
-        "title": "I, Monster",
-        "imdbId": "tt0068727",
-        "year": "1971",
-        "slug": "i-monster-1971",
-        "grade": "D+",
+        "title": "The Hustler",
+        "imdbId": "tt0054997",
+        "year": "1961",
+        "slug": "the-hustler-1961",
+        "grade": "B+",
         "genres": [
-          "Horror"
+          "Drama",
+          "Sport"
         ]
       }
     ]
@@ -40220,20 +40629,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "High Sierra",
-        "imdbId": "tt0033717",
-        "year": "1940",
-        "slug": "high-sierra-1941",
-        "grade": "B-",
-        "genres": [
-          "Action",
-          "Adventure",
-          "Drama",
-          "Film-Noir",
-          "Thriller"
-        ]
-      },
-      {
         "title": "Higher and Higher",
         "imdbId": "tt0036919",
         "year": "1943",
@@ -40243,6 +40638,17 @@
           "Comedy",
           "Musical",
           "Romance"
+        ]
+      },
+      {
+        "title": "The Hill",
+        "imdbId": "tt0059274",
+        "year": "1965",
+        "slug": "the-hill-1965",
+        "grade": "B-",
+        "genres": [
+          "Drama",
+          "War"
         ]
       },
       {
@@ -40753,6 +41159,163 @@
           "Crime",
           "Drama",
           "Mystery",
+          "Thriller"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0047086",
+    "title": "The High and the Mighty",
+    "year": "1954",
+    "slug": "the-high-and-the-mighty-1954",
+    "grade": "B-",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Thriller"
+    ],
+    "sortTitle": "High and the Mighty (1954)",
+    "originalTitle": null,
+    "gradeValue": 8,
+    "runtimeMinutes": 147,
+    "releaseSequence": "1954-05-27tt0047086",
+    "directorNames": [
+      "William A. Wellman"
+    ],
+    "writerNames": [
+      "Ernest K. Gann"
+    ],
+    "principalCastNames": [
+      "John Wayne",
+      "Claire Trevor",
+      "Laraine Day",
+      "Robert Stack"
+    ],
+    "reviewDate": "2007-09-16",
+    "reviewYear": "2007",
+    "sequence": "2007-09-16-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "John Wayne",
+        "slug": "john-wayne",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "John Wayne",
+        "slug": "john-wayne",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Quiet Man",
+            "imdbId": "tt0045061",
+            "year": "1952",
+            "slug": "the-quiet-man-1952",
+            "grade": "B",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Big Jim McLain",
+            "imdbId": "tt0044418",
+            "year": "1952",
+            "slug": "big-jim-mclain-1952",
+            "grade": "C",
+            "genres": [
+              "Crime",
+              "Drama",
+              "History",
+              "Romance",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Searchers",
+            "imdbId": "tt0049730",
+            "year": "1956",
+            "slug": "the-searchers-1956",
+            "grade": "A-",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "Western"
+            ]
+          },
+          {
+            "title": "The Wings of Eagles",
+            "imdbId": "tt0051198",
+            "year": "1957",
+            "slug": "the-wings-of-eagles-1957",
+            "grade": "C+",
+            "genres": [
+              "Biography",
+              "Drama",
+              "War"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Hereditary",
+        "imdbId": "tt7784604",
+        "year": "2018",
+        "slug": "hereditary-2018",
+        "grade": "A-",
+        "genres": [
+          "Drama",
+          "Horror",
+          "Mystery",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "Hi, Mom!",
+        "imdbId": "tt0065836",
+        "year": "1970",
+        "slug": "hi-mom-1970",
+        "grade": "D+",
+        "genres": [
+          "Comedy",
+          "Drama"
+        ]
+      },
+      {
+        "title": "High Pressure",
+        "imdbId": "tt0023007",
+        "year": "1932",
+        "slug": "high-pressure-1932",
+        "grade": "C-",
+        "genres": [
+          "Comedy"
+        ]
+      },
+      {
+        "title": "High Sierra",
+        "imdbId": "tt0033717",
+        "year": "1940",
+        "slug": "high-sierra-1941",
+        "grade": "B-",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Drama",
+          "Film-Noir",
           "Thriller"
         ]
       }
@@ -41983,16 +42546,16 @@
         ]
       },
       {
-        "title": "Hocus Pocus",
-        "imdbId": "tt0107120",
-        "year": "1993",
-        "slug": "hocus-pocus-1993",
-        "grade": "F",
+        "title": "The Hoax",
+        "imdbId": "tt0462338",
+        "year": "2006",
+        "slug": "the-hoax-2006",
+        "grade": "C",
         "genres": [
+          "Biography",
           "Comedy",
-          "Family",
-          "Fantasy",
-          "Horror"
+          "Drama",
+          "History"
         ]
       }
     ]
@@ -42163,6 +42726,18 @@
             ]
           },
           {
+            "title": "The Howards of Virginia",
+            "imdbId": "tt0032612",
+            "year": "1940",
+            "slug": "the-howards-of-virginia-1940",
+            "grade": "D-",
+            "genres": [
+              "Drama",
+              "History",
+              "War"
+            ]
+          },
+          {
             "title": "The Philadelphia Story",
             "imdbId": "tt0032904",
             "year": "1940",
@@ -42170,17 +42745,6 @@
             "grade": "B+",
             "genres": [
               "Comedy",
-              "Romance"
-            ]
-          },
-          {
-            "title": "Penny Serenade",
-            "imdbId": "tt0034012",
-            "year": "1941",
-            "slug": "penny-serenade-1941",
-            "grade": "F",
-            "genres": [
-              "Drama",
               "Romance"
             ]
           }
@@ -46332,17 +46896,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Horror of Dracula",
-        "imdbId": "tt0051554",
-        "year": "1958",
-        "slug": "horror-of-dracula-1958",
-        "grade": "A-",
-        "genres": [
-          "Drama",
-          "Horror"
-        ]
-      },
-      {
         "title": "The Horse Soldiers",
         "imdbId": "tt0052902",
         "year": "1959",
@@ -46354,6 +46907,17 @@
           "Romance",
           "War",
           "Western"
+        ]
+      },
+      {
+        "title": "The Hound of the Baskervilles",
+        "imdbId": "tt0052905",
+        "year": "1959",
+        "slug": "the-hound-of-the-baskervilles-1959",
+        "grade": "B+",
+        "genres": [
+          "Horror",
+          "Mystery"
         ]
       },
       {
@@ -49535,19 +50099,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Hereditary",
-        "imdbId": "tt7784604",
-        "year": "2018",
-        "slug": "hereditary-2018",
-        "grade": "A-",
-        "genres": [
-          "Drama",
-          "Horror",
-          "Mystery",
-          "Thriller"
-        ]
-      },
-      {
         "title": "Hi, Mom!",
         "imdbId": "tt0065836",
         "year": "1970",
@@ -49556,6 +50107,19 @@
         "genres": [
           "Comedy",
           "Drama"
+        ]
+      },
+      {
+        "title": "The High and the Mighty",
+        "imdbId": "tt0047086",
+        "year": "1954",
+        "slug": "the-high-and-the-mighty-1954",
+        "grade": "B-",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Drama",
+          "Thriller"
         ]
       },
       {
@@ -55525,6 +56089,97 @@
     ]
   },
   {
+    "imdbId": "tt0462338",
+    "title": "The Hoax",
+    "year": "2006",
+    "slug": "the-hoax-2006",
+    "grade": "C",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Biography",
+      "Comedy",
+      "Drama",
+      "History"
+    ],
+    "sortTitle": "Hoax (2006)",
+    "originalTitle": null,
+    "gradeValue": 6,
+    "runtimeMinutes": 116,
+    "releaseSequence": "2006-10-15tt0462338",
+    "directorNames": [
+      "Lasse Hallstr\u00f6m"
+    ],
+    "writerNames": [
+      "William Wheeler",
+      "Clifford Irving"
+    ],
+    "principalCastNames": [
+      "David Aaron Baker",
+      "John Carter",
+      "Judi Barton",
+      "Raul S. Julia"
+    ],
+    "reviewDate": "2008-03-19",
+    "reviewYear": "2008",
+    "sequence": "2008-03-19-",
+    "viewings": [],
+    "castAndCrew": [],
+    "collections": [],
+    "moreCastAndCrew": [],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "His House",
+        "imdbId": "tt8508734",
+        "year": "2020",
+        "slug": "his-house-2020",
+        "grade": "C",
+        "genres": [
+          "Drama",
+          "Horror",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "His Private Secretary",
+        "imdbId": "tt0024124",
+        "year": "1933",
+        "slug": "his-private-secretary-1933",
+        "grade": "D+",
+        "genres": [
+          "Comedy",
+          "Romance"
+        ]
+      },
+      {
+        "title": "Hocus Pocus",
+        "imdbId": "tt0107120",
+        "year": "1993",
+        "slug": "hocus-pocus-1993",
+        "grade": "F",
+        "genres": [
+          "Comedy",
+          "Family",
+          "Fantasy",
+          "Horror"
+        ]
+      },
+      {
+        "title": "Holiday",
+        "imdbId": "tt0030241",
+        "year": "1938",
+        "slug": "holiday-1938",
+        "grade": "B",
+        "genres": [
+          "Comedy",
+          "Romance"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt0079082",
     "title": "The Driller Killer",
     "year": "1979",
@@ -57171,17 +57826,14 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Horse Soldiers",
-        "imdbId": "tt0052902",
+        "title": "The Hound of the Baskervilles",
+        "imdbId": "tt0052905",
         "year": "1959",
-        "slug": "the-horse-soldiers-1959",
-        "grade": "C-",
+        "slug": "the-hound-of-the-baskervilles-1959",
+        "grade": "B+",
         "genres": [
-          "Adventure",
-          "Drama",
-          "Romance",
-          "War",
-          "Western"
+          "Horror",
+          "Mystery"
         ]
       },
       {
@@ -62165,13 +62817,16 @@
         ]
       },
       {
-        "title": "High Pressure",
-        "imdbId": "tt0023007",
-        "year": "1932",
-        "slug": "high-pressure-1932",
-        "grade": "C-",
+        "title": "The High and the Mighty",
+        "imdbId": "tt0047086",
+        "year": "1954",
+        "slug": "the-high-and-the-mighty-1954",
+        "grade": "B-",
         "genres": [
-          "Comedy"
+          "Action",
+          "Adventure",
+          "Drama",
+          "Thriller"
         ]
       }
     ]
@@ -63849,16 +64504,13 @@
             ]
           },
           {
-            "title": "Twice-Told Tales",
-            "imdbId": "tt0057608",
+            "title": "The Haunted Palace",
+            "imdbId": "tt0057128",
             "year": "1963",
-            "slug": "twice-told-tales-1963",
+            "slug": "the-haunted-palace-1963",
             "grade": "C+",
             "genres": [
-              "Horror",
-              "Mystery",
-              "Romance",
-              "Sci-Fi"
+              "Horror"
             ]
           }
         ]
@@ -65403,6 +66055,16 @@
         ]
       },
       {
+        "title": "The Haunted Palace",
+        "imdbId": "tt0057128",
+        "year": "1963",
+        "slug": "the-haunted-palace-1963",
+        "grade": "C+",
+        "genres": [
+          "Horror"
+        ]
+      },
+      {
         "title": "Having a Wild Weekend",
         "imdbId": "tt0059258",
         "year": "1965",
@@ -65411,18 +66073,6 @@
         "genres": [
           "Comedy",
           "Music"
-        ]
-      },
-      {
-        "title": "He's Just Not That Into You",
-        "imdbId": "tt1001508",
-        "year": "2009",
-        "slug": "hes-just-not-that-into-you-2009",
-        "grade": "B-",
-        "genres": [
-          "Comedy",
-          "Drama",
-          "Romance"
         ]
       }
     ]
@@ -65935,20 +66585,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The House That Dripped Blood",
-        "imdbId": "tt0065854",
-        "year": "1971",
-        "slug": "the-house-that-dripped-blood-1971",
-        "grade": "C+",
-        "genres": [
-          "Drama",
-          "Fantasy",
-          "Horror",
-          "Mystery",
-          "Thriller"
-        ]
-      },
-      {
         "title": "How Green Was My Valley",
         "imdbId": "tt0033729",
         "year": "1941",
@@ -65957,6 +66593,18 @@
         "genres": [
           "Drama",
           "Family"
+        ]
+      },
+      {
+        "title": "The Howards of Virginia",
+        "imdbId": "tt0032612",
+        "year": "1940",
+        "slug": "the-howards-of-virginia-1940",
+        "grade": "D-",
+        "genres": [
+          "Drama",
+          "History",
+          "War"
         ]
       },
       {
@@ -66964,17 +67612,6 @@
         "slug": "hammer-films",
         "titles": [
           {
-            "title": "Horror of Dracula",
-            "imdbId": "tt0051554",
-            "year": "1958",
-            "slug": "horror-of-dracula-1958",
-            "grade": "A-",
-            "genres": [
-              "Drama",
-              "Horror"
-            ]
-          },
-          {
             "title": "The Snorkel",
             "imdbId": "tt0052207",
             "year": "1958",
@@ -66985,6 +67622,17 @@
               "Horror",
               "Mystery",
               "Thriller"
+            ]
+          },
+          {
+            "title": "The Hound of the Baskervilles",
+            "imdbId": "tt0052905",
+            "year": "1959",
+            "slug": "the-hound-of-the-baskervilles-1959",
+            "grade": "B+",
+            "genres": [
+              "Horror",
+              "Mystery"
             ]
           },
           {
@@ -67151,6 +67799,17 @@
             ]
           },
           {
+            "title": "The Hound of the Baskervilles",
+            "imdbId": "tt0052905",
+            "year": "1959",
+            "slug": "the-hound-of-the-baskervilles-1959",
+            "grade": "B+",
+            "genres": [
+              "Horror",
+              "Mystery"
+            ]
+          },
+          {
             "title": "The Stranglers of Bombay",
             "imdbId": "tt0054346",
             "year": "1959",
@@ -67161,18 +67820,6 @@
               "Adventure",
               "History",
               "Horror"
-            ]
-          },
-          {
-            "title": "The Terror of the Tongs",
-            "imdbId": "tt0055516",
-            "year": "1961",
-            "slug": "the-terror-of-the-tongs-1961",
-            "grade": "D+",
-            "genres": [
-              "Action",
-              "Adventure",
-              "Crime"
             ]
           }
         ]
@@ -71985,14 +72632,16 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "Wee Willie Winkie",
-            "imdbId": "tt0029751",
+            "title": "The Hurricane",
+            "imdbId": "tt0029030",
             "year": "1937",
-            "slug": "wee-willie-winkie-1937",
-            "grade": "D",
+            "slug": "the-hurricane-1937",
+            "grade": "B-",
             "genres": [
+              "Action",
               "Adventure",
-              "Family"
+              "Drama",
+              "Romance"
             ]
           },
           {
@@ -73464,15 +74113,14 @@
             ]
           },
           {
-            "title": "The City of the Dead",
-            "imdbId": "tt0053719",
-            "year": "1960",
-            "slug": "the-city-of-the-dead-1960",
-            "grade": "B",
+            "title": "The Hound of the Baskervilles",
+            "imdbId": "tt0052905",
+            "year": "1959",
+            "slug": "the-hound-of-the-baskervilles-1959",
+            "grade": "B+",
             "genres": [
               "Horror",
-              "Mystery",
-              "Thriller"
+              "Mystery"
             ]
           }
         ]
@@ -77068,6 +77716,19 @@
             ]
           },
           {
+            "title": "The Hurricane",
+            "imdbId": "tt0029030",
+            "year": "1937",
+            "slug": "the-hurricane-1937",
+            "grade": "B-",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
             "title": "Young Mr. Lincoln",
             "imdbId": "tt0032155",
             "year": "1939",
@@ -77076,18 +77737,6 @@
             "genres": [
               "Biography",
               "Drama"
-            ]
-          },
-          {
-            "title": "Stagecoach",
-            "imdbId": "tt0031971",
-            "year": "1939",
-            "slug": "stagecoach-1939",
-            "grade": "A+",
-            "genres": [
-              "Adventure",
-              "Drama",
-              "Western"
             ]
           }
         ]
@@ -77138,6 +77787,170 @@
           "Action",
           "Drama",
           "Horror"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0029030",
+    "title": "The Hurricane",
+    "year": "1937",
+    "slug": "the-hurricane-1937",
+    "grade": "B-",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Romance"
+    ],
+    "sortTitle": "Hurricane (1937)",
+    "originalTitle": null,
+    "gradeValue": 8,
+    "runtimeMinutes": 104,
+    "releaseSequence": "1937-11-05tt0029030",
+    "directorNames": [
+      "John Ford"
+    ],
+    "writerNames": [
+      "Dudley Nichols",
+      "Oliver H.P. Garrett",
+      "Charles Nordhoff",
+      "James Norman Hall"
+    ],
+    "principalCastNames": [
+      "Dorothy Lamour",
+      "Jon Hall",
+      "Mary Astor",
+      "C. Aubrey Smith"
+    ],
+    "reviewDate": "2008-11-22",
+    "reviewYear": "2008",
+    "sequence": "2008-11-22-113",
+    "viewings": [
+      {
+        "sequence": 113,
+        "medium": "TCM HD",
+        "mediumNotes": null,
+        "date": "2012-03-12",
+        "venue": null,
+        "venueNotes": null
+      }
+    ],
+    "castAndCrew": [
+      {
+        "name": "John Ford",
+        "slug": "john-ford",
+        "creditedAs": [
+          "director"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "John Ford",
+        "slug": "john-ford",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "The Prisoner of Shark Island",
+            "imdbId": "tt0028141",
+            "year": "1936",
+            "slug": "the-prisoner-of-shark-island-1936",
+            "grade": "C-",
+            "genres": [
+              "Biography",
+              "Drama",
+              "History"
+            ]
+          },
+          {
+            "title": "Wee Willie Winkie",
+            "imdbId": "tt0029751",
+            "year": "1937",
+            "slug": "wee-willie-winkie-1937",
+            "grade": "D",
+            "genres": [
+              "Adventure",
+              "Family"
+            ]
+          },
+          {
+            "title": "Young Mr. Lincoln",
+            "imdbId": "tt0032155",
+            "year": "1939",
+            "slug": "young-mr-lincoln-1939",
+            "grade": "C",
+            "genres": [
+              "Biography",
+              "Drama"
+            ]
+          },
+          {
+            "title": "Stagecoach",
+            "imdbId": "tt0031971",
+            "year": "1939",
+            "slug": "stagecoach-1939",
+            "grade": "A+",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "Western"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The Hunger Games: Mockingjay - Part 1",
+        "imdbId": "tt1951265",
+        "year": "2014",
+        "slug": "the-hunger-games-mockingjay-part-1-2014",
+        "grade": "F",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Sci-Fi",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Hunt",
+        "imdbId": "tt8244784",
+        "year": "2020",
+        "slug": "the-hunt-2020",
+        "grade": "B",
+        "genres": [
+          "Action",
+          "Horror",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Hustler",
+        "imdbId": "tt0054997",
+        "year": "1961",
+        "slug": "the-hustler-1961",
+        "grade": "B+",
+        "genres": [
+          "Drama",
+          "Sport"
+        ]
+      },
+      {
+        "title": "I Like Your Nerve",
+        "imdbId": "tt0021986",
+        "year": "1931",
+        "slug": "i-like-your-nerve-1931",
+        "grade": "F",
+        "genres": [
+          "Comedy",
+          "Romance"
         ]
       }
     ]
@@ -79984,14 +80797,13 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "The Terror",
-            "imdbId": "tt0057569",
+            "title": "The Haunted Palace",
+            "imdbId": "tt0057128",
             "year": "1963",
-            "slug": "the-terror-1963",
-            "grade": "C-",
+            "slug": "the-haunted-palace-1963",
+            "grade": "C+",
             "genres": [
-              "Horror",
-              "Thriller"
+              "Horror"
             ]
           },
           {
@@ -80670,14 +81482,16 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Hi, Mom!",
-        "imdbId": "tt0065836",
-        "year": "1970",
-        "slug": "hi-mom-1970",
-        "grade": "D+",
+        "title": "The High and the Mighty",
+        "imdbId": "tt0047086",
+        "year": "1954",
+        "slug": "the-high-and-the-mighty-1954",
+        "grade": "B-",
         "genres": [
-          "Comedy",
-          "Drama"
+          "Action",
+          "Adventure",
+          "Drama",
+          "Thriller"
         ]
       },
       {
@@ -80703,14 +81517,14 @@
         ]
       },
       {
-        "title": "The Hills Have Eyes",
-        "imdbId": "tt0077681",
-        "year": "1977",
-        "slug": "the-hills-have-eyes-1977",
-        "grade": "C-",
+        "title": "The Hill",
+        "imdbId": "tt0059274",
+        "year": "1965",
+        "slug": "the-hill-1965",
+        "grade": "B-",
         "genres": [
-          "Horror",
-          "Thriller"
+          "Drama",
+          "War"
         ]
       }
     ]
@@ -80985,15 +81799,14 @@
             ]
           },
           {
-            "title": "Thunderball",
-            "imdbId": "tt0059800",
+            "title": "The Hill",
+            "imdbId": "tt0059274",
             "year": "1965",
-            "slug": "thunderball-1965",
-            "grade": "C+",
+            "slug": "the-hill-1965",
+            "grade": "B-",
             "genres": [
-              "Action",
-              "Adventure",
-              "Thriller"
+              "Drama",
+              "War"
             ]
           }
         ]
@@ -81283,6 +82096,17 @@
         ]
       },
       {
+        "title": "The Hunger",
+        "imdbId": "tt0085701",
+        "year": "1983",
+        "slug": "the-hunger-1983",
+        "grade": "D",
+        "genres": [
+          "Drama",
+          "Horror"
+        ]
+      },
+      {
         "title": "The Hunger Games: Mockingjay - Part 1",
         "imdbId": "tt1951265",
         "year": "2014",
@@ -81292,18 +82116,6 @@
           "Action",
           "Adventure",
           "Sci-Fi",
-          "Thriller"
-        ]
-      },
-      {
-        "title": "The Hunt",
-        "imdbId": "tt8244784",
-        "year": "2020",
-        "slug": "the-hunt-2020",
-        "grade": "B",
-        "genres": [
-          "Action",
-          "Horror",
           "Thriller"
         ]
       }
@@ -86343,22 +87155,22 @@
         ]
       },
       {
+        "title": "The Hill",
+        "imdbId": "tt0059274",
+        "year": "1965",
+        "slug": "the-hill-1965",
+        "grade": "B-",
+        "genres": [
+          "Drama",
+          "War"
+        ]
+      },
+      {
         "title": "The Hills Have Eyes",
         "imdbId": "tt0077681",
         "year": "1977",
         "slug": "the-hills-have-eyes-1977",
         "grade": "C-",
-        "genres": [
-          "Horror",
-          "Thriller"
-        ]
-      },
-      {
-        "title": "The Hills Have Eyes Part II",
-        "imdbId": "tt0089274",
-        "year": "1984",
-        "slug": "the-hills-have-eyes-part-ii-1984",
-        "grade": "F",
         "genres": [
           "Horror",
           "Thriller"
@@ -88794,16 +89606,14 @@
         ]
       },
       {
-        "title": "The Hunger Games: Mockingjay - Part 1",
-        "imdbId": "tt1951265",
-        "year": "2014",
-        "slug": "the-hunger-games-mockingjay-part-1-2014",
-        "grade": "F",
+        "title": "The Hunger",
+        "imdbId": "tt0085701",
+        "year": "1983",
+        "slug": "the-hunger-1983",
+        "grade": "D",
         "genres": [
-          "Action",
-          "Adventure",
-          "Sci-Fi",
-          "Thriller"
+          "Drama",
+          "Horror"
         ]
       }
     ]
@@ -91548,14 +92358,12 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Raven",
-            "imdbId": "tt0057449",
+            "title": "The Haunted Palace",
+            "imdbId": "tt0057128",
             "year": "1963",
-            "slug": "the-raven-1963",
-            "grade": "D+",
+            "slug": "the-haunted-palace-1963",
+            "grade": "C+",
             "genres": [
-              "Comedy",
-              "Fantasy",
               "Horror"
             ]
           },
@@ -93267,28 +94075,27 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Hunger Games: Mockingjay - Part 1",
-        "imdbId": "tt1951265",
-        "year": "2014",
-        "slug": "the-hunger-games-mockingjay-part-1-2014",
-        "grade": "F",
+        "title": "The Hurricane",
+        "imdbId": "tt0029030",
+        "year": "1937",
+        "slug": "the-hurricane-1937",
+        "grade": "B-",
         "genres": [
           "Action",
           "Adventure",
-          "Sci-Fi",
-          "Thriller"
+          "Drama",
+          "Romance"
         ]
       },
       {
-        "title": "The Hunt",
-        "imdbId": "tt8244784",
-        "year": "2020",
-        "slug": "the-hunt-2020",
-        "grade": "B",
+        "title": "The Hustler",
+        "imdbId": "tt0054997",
+        "year": "1961",
+        "slug": "the-hustler-1961",
+        "grade": "B+",
         "genres": [
-          "Action",
-          "Horror",
-          "Thriller"
+          "Drama",
+          "Sport"
         ]
       },
       {
@@ -93886,6 +94693,17 @@
         ]
       },
       {
+        "title": "The Hound of the Baskervilles",
+        "imdbId": "tt0052905",
+        "year": "1959",
+        "slug": "the-hound-of-the-baskervilles-1959",
+        "grade": "B+",
+        "genres": [
+          "Horror",
+          "Mystery"
+        ]
+      },
+      {
         "title": "Hour of the Gun",
         "imdbId": "tt0061787",
         "year": "1967",
@@ -93894,16 +94712,6 @@
         "genres": [
           "Drama",
           "Western"
-        ]
-      },
-      {
-        "title": "House of 1000 Corpses",
-        "imdbId": "tt0251736",
-        "year": "2003",
-        "slug": "house-of-1000-corpses-2003",
-        "grade": "C-",
-        "genres": [
-          "Horror"
         ]
       }
     ]
@@ -94267,6 +95075,19 @@
         ]
       },
       {
+        "title": "The Hoax",
+        "imdbId": "tt0462338",
+        "year": "2006",
+        "slug": "the-hoax-2006",
+        "grade": "C",
+        "genres": [
+          "Biography",
+          "Comedy",
+          "Drama",
+          "History"
+        ]
+      },
+      {
         "title": "Hocus Pocus",
         "imdbId": "tt0107120",
         "year": "1993",
@@ -94277,17 +95098,6 @@
           "Family",
           "Fantasy",
           "Horror"
-        ]
-      },
-      {
-        "title": "Holiday",
-        "imdbId": "tt0030241",
-        "year": "1938",
-        "slug": "holiday-1938",
-        "grade": "B",
-        "genres": [
-          "Comedy",
-          "Romance"
         ]
       }
     ]
@@ -100622,6 +101432,17 @@
             ]
           },
           {
+            "title": "The Hound of the Baskervilles",
+            "imdbId": "tt0052905",
+            "year": "1959",
+            "slug": "the-hound-of-the-baskervilles-1959",
+            "grade": "B+",
+            "genres": [
+              "Horror",
+              "Mystery"
+            ]
+          },
+          {
             "title": "The City of the Dead",
             "imdbId": "tt0053719",
             "year": "1960",
@@ -100631,18 +101452,6 @@
               "Horror",
               "Mystery",
               "Thriller"
-            ]
-          },
-          {
-            "title": "The Terror of the Tongs",
-            "imdbId": "tt0055516",
-            "year": "1961",
-            "slug": "the-terror-of-the-tongs-1961",
-            "grade": "D+",
-            "genres": [
-              "Action",
-              "Adventure",
-              "Crime"
             ]
           }
         ]
@@ -100675,6 +101484,17 @@
             ]
           },
           {
+            "title": "The Hound of the Baskervilles",
+            "imdbId": "tt0052905",
+            "year": "1959",
+            "slug": "the-hound-of-the-baskervilles-1959",
+            "grade": "B+",
+            "genres": [
+              "Horror",
+              "Mystery"
+            ]
+          },
+          {
             "title": "Island of Terror",
             "imdbId": "tt0060548",
             "year": "1966",
@@ -100683,17 +101503,6 @@
             "genres": [
               "Horror",
               "Sci-Fi"
-            ]
-          },
-          {
-            "title": "Torture Garden",
-            "imdbId": "tt0062384",
-            "year": "1967",
-            "slug": "torture-garden-1967",
-            "grade": "C",
-            "genres": [
-              "Fantasy",
-              "Horror"
             ]
           }
         ]
@@ -100742,16 +101551,14 @@
             ]
           },
           {
-            "title": "The Stranglers of Bombay",
-            "imdbId": "tt0054346",
+            "title": "The Hound of the Baskervilles",
+            "imdbId": "tt0052905",
             "year": "1959",
-            "slug": "the-stranglers-of-bombay-1959",
-            "grade": "B",
+            "slug": "the-hound-of-the-baskervilles-1959",
+            "grade": "B+",
             "genres": [
-              "Action",
-              "Adventure",
-              "History",
-              "Horror"
+              "Horror",
+              "Mystery"
             ]
           }
         ]
@@ -100796,14 +101603,14 @@
         ]
       },
       {
-        "title": "Hour of the Gun",
-        "imdbId": "tt0061787",
-        "year": "1967",
-        "slug": "hour-of-the-gun-1967",
-        "grade": "C+",
+        "title": "The Hound of the Baskervilles",
+        "imdbId": "tt0052905",
+        "year": "1959",
+        "slug": "the-hound-of-the-baskervilles-1959",
+        "grade": "B+",
         "genres": [
-          "Drama",
-          "Western"
+          "Horror",
+          "Mystery"
         ]
       }
     ]
@@ -101960,18 +102767,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Quiet Man",
-            "imdbId": "tt0045061",
-            "year": "1952",
-            "slug": "the-quiet-man-1952",
-            "grade": "B",
-            "genres": [
-              "Comedy",
-              "Drama",
-              "Romance"
-            ]
-          },
-          {
             "title": "Big Jim McLain",
             "imdbId": "tt0044418",
             "year": "1952",
@@ -101982,6 +102777,19 @@
               "Drama",
               "History",
               "Romance",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The High and the Mighty",
+            "imdbId": "tt0047086",
+            "year": "1954",
+            "slug": "the-high-and-the-mighty-1954",
+            "grade": "B-",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
               "Thriller"
             ]
           },
@@ -103550,15 +104358,14 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Hunt",
-        "imdbId": "tt8244784",
-        "year": "2020",
-        "slug": "the-hunt-2020",
-        "grade": "B",
+        "title": "The Hustler",
+        "imdbId": "tt0054997",
+        "year": "1961",
+        "slug": "the-hustler-1961",
+        "grade": "B+",
         "genres": [
-          "Action",
-          "Horror",
-          "Thriller"
+          "Drama",
+          "Sport"
         ]
       },
       {
@@ -104018,15 +104825,14 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Higher and Higher",
-        "imdbId": "tt0036919",
-        "year": "1943",
-        "slug": "higher-and-higher-1943",
-        "grade": "F",
+        "title": "The Hill",
+        "imdbId": "tt0059274",
+        "year": "1965",
+        "slug": "the-hill-1965",
+        "grade": "B-",
         "genres": [
-          "Comedy",
-          "Musical",
-          "Romance"
+          "Drama",
+          "War"
         ]
       },
       {
@@ -105034,18 +105840,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "His Girl Friday",
-            "imdbId": "tt0032599",
-            "year": "1940",
-            "slug": "his-girl-friday-1940",
-            "grade": "A",
-            "genres": [
-              "Comedy",
-              "Drama",
-              "Romance"
-            ]
-          },
-          {
             "title": "My Favorite Wife",
             "imdbId": "tt0029284",
             "year": "1940",
@@ -105054,6 +105848,18 @@
             "genres": [
               "Comedy",
               "Romance"
+            ]
+          },
+          {
+            "title": "The Howards of Virginia",
+            "imdbId": "tt0032612",
+            "year": "1940",
+            "slug": "the-howards-of-virginia-1940",
+            "grade": "D-",
+            "genres": [
+              "Drama",
+              "History",
+              "War"
             ]
           },
           {
@@ -111158,14 +111964,13 @@
         ]
       },
       {
-        "title": "Having a Wild Weekend",
-        "imdbId": "tt0059258",
-        "year": "1965",
-        "slug": "having-a-wild-weekend-1965",
-        "grade": "B-",
+        "title": "The Haunted Palace",
+        "imdbId": "tt0057128",
+        "year": "1963",
+        "slug": "the-haunted-palace-1963",
+        "grade": "C+",
         "genres": [
-          "Comedy",
-          "Music"
+          "Horror"
         ]
       }
     ]
@@ -112161,16 +112966,15 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Big Jim McLain",
-            "imdbId": "tt0044418",
-            "year": "1952",
-            "slug": "big-jim-mclain-1952",
-            "grade": "C",
+            "title": "The High and the Mighty",
+            "imdbId": "tt0047086",
+            "year": "1954",
+            "slug": "the-high-and-the-mighty-1954",
+            "grade": "B-",
             "genres": [
-              "Crime",
+              "Action",
+              "Adventure",
               "Drama",
-              "History",
-              "Romance",
               "Thriller"
             ]
           },
@@ -115157,6 +115961,285 @@
     ]
   },
   {
+    "imdbId": "tt0052905",
+    "title": "The Hound of the Baskervilles",
+    "year": "1959",
+    "slug": "the-hound-of-the-baskervilles-1959",
+    "grade": "B+",
+    "countries": [
+      "United Kingdom"
+    ],
+    "genres": [
+      "Horror",
+      "Mystery"
+    ],
+    "sortTitle": "Hound of the Baskervilles (1959)",
+    "originalTitle": null,
+    "gradeValue": 10,
+    "runtimeMinutes": 87,
+    "releaseSequence": "1959-03-28tt0052905",
+    "directorNames": [
+      "Terence Fisher"
+    ],
+    "writerNames": [
+      "Arthur Conan Doyle",
+      "Peter Bryan"
+    ],
+    "principalCastNames": [
+      "Peter Cushing",
+      "Andr\u00e9 Morell",
+      "Christopher Lee",
+      "Marla Landi"
+    ],
+    "reviewDate": "2007-09-20",
+    "reviewYear": "2007",
+    "sequence": "2007-09-20-233",
+    "viewings": [
+      {
+        "sequence": 233,
+        "medium": "TCM HD",
+        "mediumNotes": null,
+        "date": "2012-10-28",
+        "venue": null,
+        "venueNotes": null
+      }
+    ],
+    "castAndCrew": [
+      {
+        "name": "Christopher Lee",
+        "slug": "christopher-lee",
+        "creditedAs": [
+          "performer"
+        ]
+      },
+      {
+        "name": "Peter Cushing",
+        "slug": "peter-cushing",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [
+      {
+        "name": "Hammer Films",
+        "slug": "hammer-films"
+      }
+    ],
+    "moreCastAndCrew": [
+      {
+        "name": "Christopher Lee",
+        "slug": "christopher-lee",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Curse of Frankenstein",
+            "imdbId": "tt0050280",
+            "year": "1957",
+            "slug": "the-curse-of-frankenstein-1957",
+            "grade": "A",
+            "genres": [
+              "Horror",
+              "Sci-Fi",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Horror of Dracula",
+            "imdbId": "tt0051554",
+            "year": "1958",
+            "slug": "horror-of-dracula-1958",
+            "grade": "A-",
+            "genres": [
+              "Drama",
+              "Horror"
+            ]
+          },
+          {
+            "title": "The City of the Dead",
+            "imdbId": "tt0053719",
+            "year": "1960",
+            "slug": "the-city-of-the-dead-1960",
+            "grade": "B",
+            "genres": [
+              "Horror",
+              "Mystery",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Terror of the Tongs",
+            "imdbId": "tt0055516",
+            "year": "1961",
+            "slug": "the-terror-of-the-tongs-1961",
+            "grade": "D+",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Crime"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Peter Cushing",
+        "slug": "peter-cushing",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Violent Playground",
+            "imdbId": "tt0052367",
+            "year": "1958",
+            "slug": "violent-playground-1958",
+            "grade": "B-",
+            "genres": [
+              "Drama",
+              "Crime"
+            ]
+          },
+          {
+            "title": "Horror of Dracula",
+            "imdbId": "tt0051554",
+            "year": "1958",
+            "slug": "horror-of-dracula-1958",
+            "grade": "A-",
+            "genres": [
+              "Drama",
+              "Horror"
+            ]
+          },
+          {
+            "title": "Island of Terror",
+            "imdbId": "tt0060548",
+            "year": "1966",
+            "slug": "island-of-terror-1966",
+            "grade": "B-",
+            "genres": [
+              "Horror",
+              "Sci-Fi"
+            ]
+          },
+          {
+            "title": "Torture Garden",
+            "imdbId": "tt0062384",
+            "year": "1967",
+            "slug": "torture-garden-1967",
+            "grade": "C",
+            "genres": [
+              "Fantasy",
+              "Horror"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [
+      {
+        "name": "Hammer Films",
+        "slug": "hammer-films",
+        "titles": [
+          {
+            "title": "Horror of Dracula",
+            "imdbId": "tt0051554",
+            "year": "1958",
+            "slug": "horror-of-dracula-1958",
+            "grade": "A-",
+            "genres": [
+              "Drama",
+              "Horror"
+            ]
+          },
+          {
+            "title": "The Snorkel",
+            "imdbId": "tt0052207",
+            "year": "1958",
+            "slug": "the-snorkel-1958",
+            "grade": "D+",
+            "genres": [
+              "Crime",
+              "Horror",
+              "Mystery",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Stranglers of Bombay",
+            "imdbId": "tt0054346",
+            "year": "1959",
+            "slug": "the-stranglers-of-bombay-1959",
+            "grade": "B",
+            "genres": [
+              "Action",
+              "Adventure",
+              "History",
+              "Horror"
+            ]
+          },
+          {
+            "title": "The Terror of the Tongs",
+            "imdbId": "tt0055516",
+            "year": "1961",
+            "slug": "the-terror-of-the-tongs-1961",
+            "grade": "D+",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Crime"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreReviews": [
+      {
+        "title": "Horror of Dracula",
+        "imdbId": "tt0051554",
+        "year": "1958",
+        "slug": "horror-of-dracula-1958",
+        "grade": "A-",
+        "genres": [
+          "Drama",
+          "Horror"
+        ]
+      },
+      {
+        "title": "The Horse Soldiers",
+        "imdbId": "tt0052902",
+        "year": "1959",
+        "slug": "the-horse-soldiers-1959",
+        "grade": "C-",
+        "genres": [
+          "Adventure",
+          "Drama",
+          "Romance",
+          "War",
+          "Western"
+        ]
+      },
+      {
+        "title": "Hour of the Gun",
+        "imdbId": "tt0061787",
+        "year": "1967",
+        "slug": "hour-of-the-gun-1967",
+        "grade": "C+",
+        "genres": [
+          "Drama",
+          "Western"
+        ]
+      },
+      {
+        "title": "House of 1000 Corpses",
+        "imdbId": "tt0251736",
+        "year": "2003",
+        "slug": "house-of-1000-corpses-2003",
+        "grade": "C-",
+        "genres": [
+          "Horror"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt0065836",
     "title": "Hi, Mom!",
     "year": "1970",
@@ -115289,6 +116372,19 @@
         ]
       },
       {
+        "title": "The High and the Mighty",
+        "imdbId": "tt0047086",
+        "year": "1954",
+        "slug": "the-high-and-the-mighty-1954",
+        "grade": "B-",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Drama",
+          "Thriller"
+        ]
+      },
+      {
         "title": "High Pressure",
         "imdbId": "tt0023007",
         "year": "1932",
@@ -115296,20 +116392,6 @@
         "grade": "C-",
         "genres": [
           "Comedy"
-        ]
-      },
-      {
-        "title": "High Sierra",
-        "imdbId": "tt0033717",
-        "year": "1940",
-        "slug": "high-sierra-1941",
-        "grade": "B-",
-        "genres": [
-          "Action",
-          "Adventure",
-          "Drama",
-          "Film-Noir",
-          "Thriller"
         ]
       }
     ]
@@ -118029,17 +119111,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Violent Playground",
-            "imdbId": "tt0052367",
-            "year": "1958",
-            "slug": "violent-playground-1958",
-            "grade": "B-",
-            "genres": [
-              "Drama",
-              "Crime"
-            ]
-          },
-          {
             "title": "Horror of Dracula",
             "imdbId": "tt0051554",
             "year": "1958",
@@ -118048,6 +119119,17 @@
             "genres": [
               "Drama",
               "Horror"
+            ]
+          },
+          {
+            "title": "The Hound of the Baskervilles",
+            "imdbId": "tt0052905",
+            "year": "1959",
+            "slug": "the-hound-of-the-baskervilles-1959",
+            "grade": "B+",
+            "genres": [
+              "Horror",
+              "Mystery"
             ]
           },
           {
@@ -121080,15 +122162,14 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Dr. No",
-            "imdbId": "tt0055928",
-            "year": "1962",
-            "slug": "dr-no-1962",
+            "title": "The Hill",
+            "imdbId": "tt0059274",
+            "year": "1965",
+            "slug": "the-hill-1965",
             "grade": "B-",
             "genres": [
-              "Action",
-              "Adventure",
-              "Thriller"
+              "Drama",
+              "War"
             ]
           },
           {
@@ -121332,22 +122413,21 @@
             ]
           },
           {
+            "title": "The Hill",
+            "imdbId": "tt0059274",
+            "year": "1965",
+            "slug": "the-hill-1965",
+            "grade": "B-",
+            "genres": [
+              "Drama",
+              "War"
+            ]
+          },
+          {
             "title": "Thunderball",
             "imdbId": "tt0059800",
             "year": "1965",
             "slug": "thunderball-1965",
-            "grade": "C+",
-            "genres": [
-              "Action",
-              "Adventure",
-              "Thriller"
-            ]
-          },
-          {
-            "title": "You Only Live Twice",
-            "imdbId": "tt0062512",
-            "year": "1967",
-            "slug": "you-only-live-twice-1967",
             "grade": "C+",
             "genres": [
               "Action",
@@ -121716,6 +122796,223 @@
         "grade": "C-",
         "genres": [
           "Horror"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0057128",
+    "title": "The Haunted Palace",
+    "year": "1963",
+    "slug": "the-haunted-palace-1963",
+    "grade": "C+",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Horror"
+    ],
+    "sortTitle": "Haunted Palace (1963)",
+    "originalTitle": null,
+    "gradeValue": 7,
+    "runtimeMinutes": 87,
+    "releaseSequence": "1963-08-28tt0057128",
+    "directorNames": [
+      "Roger Corman"
+    ],
+    "writerNames": [
+      "Charles Beaumont",
+      "Edgar Allan Poe",
+      "H.P. Lovecraft",
+      "Francis Ford Coppola"
+    ],
+    "principalCastNames": [
+      "Vincent Price",
+      "Debra Paget",
+      "Lon Chaney Jr.",
+      "Frank Maxwell"
+    ],
+    "reviewDate": "2009-01-09",
+    "reviewYear": "2009",
+    "sequence": "2009-01-09-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "Roger Corman",
+        "slug": "roger-corman",
+        "creditedAs": [
+          "director"
+        ]
+      },
+      {
+        "name": "Vincent Price",
+        "slug": "vincent-price",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Roger Corman",
+        "slug": "roger-corman",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "The Raven",
+            "imdbId": "tt0057449",
+            "year": "1963",
+            "slug": "the-raven-1963",
+            "grade": "D+",
+            "genres": [
+              "Comedy",
+              "Fantasy",
+              "Horror"
+            ]
+          },
+          {
+            "title": "The Terror",
+            "imdbId": "tt0057569",
+            "year": "1963",
+            "slug": "the-terror-1963",
+            "grade": "C-",
+            "genres": [
+              "Horror",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Masque of the Red Death",
+            "imdbId": "tt0058333",
+            "year": "1964",
+            "slug": "the-masque-of-the-red-death-1964",
+            "grade": "B+",
+            "genres": [
+              "Drama",
+              "Horror"
+            ]
+          },
+          {
+            "title": "The Tomb of Ligeia",
+            "imdbId": "tt0059821",
+            "year": "1964",
+            "slug": "the-tomb-of-ligeia-1964",
+            "grade": "D+",
+            "genres": [
+              "Drama",
+              "Horror",
+              "Thriller"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Vincent Price",
+        "slug": "vincent-price",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Tower of London",
+            "imdbId": "tt0056606",
+            "year": "1962",
+            "slug": "tower-of-london-1962",
+            "grade": "C",
+            "genres": [
+              "Drama",
+              "History",
+              "Horror",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Raven",
+            "imdbId": "tt0057449",
+            "year": "1963",
+            "slug": "the-raven-1963",
+            "grade": "D+",
+            "genres": [
+              "Comedy",
+              "Fantasy",
+              "Horror"
+            ]
+          },
+          {
+            "title": "Twice-Told Tales",
+            "imdbId": "tt0057608",
+            "year": "1963",
+            "slug": "twice-told-tales-1963",
+            "grade": "C+",
+            "genres": [
+              "Horror",
+              "Mystery",
+              "Romance",
+              "Sci-Fi"
+            ]
+          },
+          {
+            "title": "The Last Man on Earth",
+            "imdbId": "tt0058700",
+            "year": "1964",
+            "slug": "the-last-man-on-earth-1964",
+            "grade": "C",
+            "genres": [
+              "Drama",
+              "Horror",
+              "Sci-Fi"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Hatchet III",
+        "imdbId": "tt1870419",
+        "year": "2013",
+        "slug": "hatchet-iii-2013",
+        "grade": "C+",
+        "genres": [
+          "Action",
+          "Comedy",
+          "Horror",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "Haunted Gold",
+        "imdbId": "tt0022981",
+        "year": "1932",
+        "slug": "haunted-gold-1932",
+        "grade": "F",
+        "genres": [
+          "Drama",
+          "Mystery",
+          "Western"
+        ]
+      },
+      {
+        "title": "Having a Wild Weekend",
+        "imdbId": "tt0059258",
+        "year": "1965",
+        "slug": "having-a-wild-weekend-1965",
+        "grade": "B-",
+        "genres": [
+          "Comedy",
+          "Music"
+        ]
+      },
+      {
+        "title": "He's Just Not That Into You",
+        "imdbId": "tt1001508",
+        "year": "2009",
+        "slug": "hes-just-not-that-into-you-2009",
+        "grade": "B-",
+        "genres": [
+          "Comedy",
+          "Drama",
+          "Romance"
         ]
       }
     ]
@@ -123835,14 +125132,15 @@
             ]
           },
           {
-            "title": "The Philadelphia Story",
-            "imdbId": "tt0032904",
+            "title": "The Howards of Virginia",
+            "imdbId": "tt0032612",
             "year": "1940",
-            "slug": "the-philadelphia-story-1940",
-            "grade": "B+",
+            "slug": "the-howards-of-virginia-1940",
+            "grade": "D-",
             "genres": [
-              "Comedy",
-              "Romance"
+              "Drama",
+              "History",
+              "War"
             ]
           }
         ]
@@ -125324,13 +126622,15 @@
         ]
       },
       {
-        "title": "The Howling",
-        "imdbId": "tt0082533",
-        "year": "1981",
-        "slug": "the-howling-1981",
-        "grade": "B",
+        "title": "The Howards of Virginia",
+        "imdbId": "tt0032612",
+        "year": "1940",
+        "slug": "the-howards-of-virginia-1940",
+        "grade": "D-",
         "genres": [
-          "Horror"
+          "Drama",
+          "History",
+          "War"
         ]
       }
     ]
@@ -133128,14 +134428,16 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "His Private Secretary",
-        "imdbId": "tt0024124",
-        "year": "1933",
-        "slug": "his-private-secretary-1933",
-        "grade": "D+",
+        "title": "The Hoax",
+        "imdbId": "tt0462338",
+        "year": "2006",
+        "slug": "the-hoax-2006",
+        "grade": "C",
         "genres": [
+          "Biography",
           "Comedy",
-          "Romance"
+          "Drama",
+          "History"
         ]
       },
       {
@@ -134463,18 +135765,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Curse of Frankenstein",
-            "imdbId": "tt0050280",
-            "year": "1957",
-            "slug": "the-curse-of-frankenstein-1957",
-            "grade": "A",
-            "genres": [
-              "Horror",
-              "Sci-Fi",
-              "Thriller"
-            ]
-          },
-          {
             "title": "Horror of Dracula",
             "imdbId": "tt0051554",
             "year": "1958",
@@ -134483,6 +135773,17 @@
             "genres": [
               "Drama",
               "Horror"
+            ]
+          },
+          {
+            "title": "The Hound of the Baskervilles",
+            "imdbId": "tt0052905",
+            "year": "1959",
+            "slug": "the-hound-of-the-baskervilles-1959",
+            "grade": "B+",
+            "genres": [
+              "Horror",
+              "Mystery"
             ]
           },
           {
@@ -135242,19 +136543,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Tower of London",
-            "imdbId": "tt0056606",
-            "year": "1962",
-            "slug": "tower-of-london-1962",
-            "grade": "C",
-            "genres": [
-              "Drama",
-              "History",
-              "Horror",
-              "Thriller"
-            ]
-          },
-          {
             "title": "The Raven",
             "imdbId": "tt0057449",
             "year": "1963",
@@ -135263,6 +136551,16 @@
             "genres": [
               "Comedy",
               "Fantasy",
+              "Horror"
+            ]
+          },
+          {
+            "title": "The Haunted Palace",
+            "imdbId": "tt0057128",
+            "year": "1963",
+            "slug": "the-haunted-palace-1963",
+            "grade": "C+",
+            "genres": [
               "Horror"
             ]
           },
@@ -139064,6 +140362,112 @@
     ]
   },
   {
+    "imdbId": "tt0054997",
+    "title": "The Hustler",
+    "year": "1961",
+    "slug": "the-hustler-1961",
+    "grade": "B+",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Drama",
+      "Sport"
+    ],
+    "sortTitle": "Hustler (1961)",
+    "originalTitle": null,
+    "gradeValue": 10,
+    "runtimeMinutes": 134,
+    "releaseSequence": "1961-09-24tt0054997",
+    "directorNames": [
+      "Robert Rossen"
+    ],
+    "writerNames": [
+      "Sidney Carroll",
+      "Robert Rossen",
+      "Walter Tevis"
+    ],
+    "principalCastNames": [
+      "Paul Newman",
+      "Jackie Gleason",
+      "Piper Laurie",
+      "George C. Scott"
+    ],
+    "reviewDate": "2008-04-14",
+    "reviewYear": "2008",
+    "sequence": "2008-04-14-160",
+    "viewings": [
+      {
+        "sequence": 160,
+        "medium": null,
+        "mediumNotes": null,
+        "date": "2012-04-13",
+        "venue": "Landmark E Street Cinema",
+        "venueNotes": null
+      }
+    ],
+    "castAndCrew": [
+      {
+        "name": "Paul Newman",
+        "slug": "paul-newman",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The Hunt",
+        "imdbId": "tt8244784",
+        "year": "2020",
+        "slug": "the-hunt-2020",
+        "grade": "B",
+        "genres": [
+          "Action",
+          "Horror",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "The Hurricane",
+        "imdbId": "tt0029030",
+        "year": "1937",
+        "slug": "the-hurricane-1937",
+        "grade": "B-",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "title": "I Like Your Nerve",
+        "imdbId": "tt0021986",
+        "year": "1931",
+        "slug": "i-like-your-nerve-1931",
+        "grade": "F",
+        "genres": [
+          "Comedy",
+          "Romance"
+        ]
+      },
+      {
+        "title": "I, Monster",
+        "imdbId": "tt0068727",
+        "year": "1971",
+        "slug": "i-monster-1971",
+        "grade": "D+",
+        "genres": [
+          "Horror"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt0025101",
     "title": "Fashions of 1934",
     "year": "1934",
@@ -139456,14 +140860,15 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "My Favorite Wife",
-            "imdbId": "tt0029284",
+            "title": "The Howards of Virginia",
+            "imdbId": "tt0032612",
             "year": "1940",
-            "slug": "my-favorite-wife-1940",
-            "grade": "C",
+            "slug": "the-howards-of-virginia-1940",
+            "grade": "D-",
             "genres": [
-              "Comedy",
-              "Romance"
+              "Drama",
+              "History",
+              "War"
             ]
           },
           {
@@ -139670,13 +141075,12 @@
             ]
           },
           {
-            "title": "The Masque of the Red Death",
-            "imdbId": "tt0058333",
-            "year": "1964",
-            "slug": "the-masque-of-the-red-death-1964",
-            "grade": "B+",
+            "title": "The Haunted Palace",
+            "imdbId": "tt0057128",
+            "year": "1963",
+            "slug": "the-haunted-palace-1963",
+            "grade": "C+",
             "genres": [
-              "Drama",
               "Horror"
             ]
           }
@@ -139765,6 +141169,16 @@
             ]
           },
           {
+            "title": "The Haunted Palace",
+            "imdbId": "tt0057128",
+            "year": "1963",
+            "slug": "the-haunted-palace-1963",
+            "grade": "C+",
+            "genres": [
+              "Horror"
+            ]
+          },
+          {
             "title": "Twice-Told Tales",
             "imdbId": "tt0057608",
             "year": "1963",
@@ -139774,18 +141188,6 @@
               "Horror",
               "Mystery",
               "Romance",
-              "Sci-Fi"
-            ]
-          },
-          {
-            "title": "The Last Man on Earth",
-            "imdbId": "tt0058700",
-            "year": "1964",
-            "slug": "the-last-man-on-earth-1964",
-            "grade": "C",
-            "genres": [
-              "Drama",
-              "Horror",
               "Sci-Fi"
             ]
           }
@@ -144975,14 +146377,15 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "How Green Was My Valley",
-        "imdbId": "tt0033729",
-        "year": "1941",
-        "slug": "how-green-was-my-valley-1941",
-        "grade": "B-",
+        "title": "The Howards of Virginia",
+        "imdbId": "tt0032612",
+        "year": "1940",
+        "slug": "the-howards-of-virginia-1940",
+        "grade": "D-",
         "genres": [
           "Drama",
-          "Family"
+          "History",
+          "War"
         ]
       },
       {
@@ -150118,14 +151521,14 @@
             ]
           },
           {
-            "title": "Island of Terror",
-            "imdbId": "tt0060548",
-            "year": "1966",
-            "slug": "island-of-terror-1966",
-            "grade": "B-",
+            "title": "The Hound of the Baskervilles",
+            "imdbId": "tt0052905",
+            "year": "1959",
+            "slug": "the-hound-of-the-baskervilles-1959",
+            "grade": "B+",
             "genres": [
               "Horror",
-              "Sci-Fi"
+              "Mystery"
             ]
           }
         ]
@@ -154598,18 +156001,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Human Tornado",
-        "imdbId": "tt0074653",
-        "year": "1976",
-        "slug": "the-human-tornado-1976",
-        "grade": "C",
-        "genres": [
-          "Action",
-          "Comedy",
-          "Drama"
-        ]
-      },
-      {
         "title": "Humanoids from the Deep",
         "imdbId": "tt0080904",
         "year": "1980",
@@ -154618,6 +156009,17 @@
         "genres": [
           "Horror",
           "Sci-Fi"
+        ]
+      },
+      {
+        "title": "The Hunger",
+        "imdbId": "tt0085701",
+        "year": "1983",
+        "slug": "the-hunger-1983",
+        "grade": "D",
+        "genres": [
+          "Drama",
+          "Horror"
         ]
       },
       {
@@ -154633,13 +156035,15 @@
         ]
       },
       {
-        "title": "I Like Your Nerve",
-        "imdbId": "tt0021986",
-        "year": "1931",
-        "slug": "i-like-your-nerve-1931",
-        "grade": "F",
+        "title": "The Hurricane",
+        "imdbId": "tt0029030",
+        "year": "1937",
+        "slug": "the-hurricane-1937",
+        "grade": "B-",
         "genres": [
-          "Comedy",
+          "Action",
+          "Adventure",
+          "Drama",
           "Romance"
         ]
       }
@@ -156609,15 +158013,16 @@
             ]
           },
           {
-            "title": "The Searchers",
-            "imdbId": "tt0049730",
-            "year": "1956",
-            "slug": "the-searchers-1956",
-            "grade": "A-",
+            "title": "The High and the Mighty",
+            "imdbId": "tt0047086",
+            "year": "1954",
+            "slug": "the-high-and-the-mighty-1954",
+            "grade": "B-",
             "genres": [
+              "Action",
               "Adventure",
               "Drama",
-              "Western"
+              "Thriller"
             ]
           }
         ]
@@ -159800,14 +161205,14 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Horror of Dracula",
-            "imdbId": "tt0051554",
-            "year": "1958",
-            "slug": "horror-of-dracula-1958",
-            "grade": "A-",
+            "title": "The Hound of the Baskervilles",
+            "imdbId": "tt0052905",
+            "year": "1959",
+            "slug": "the-hound-of-the-baskervilles-1959",
+            "grade": "B+",
             "genres": [
-              "Drama",
-              "Horror"
+              "Horror",
+              "Mystery"
             ]
           },
           {
@@ -159852,16 +161257,14 @@
         "slug": "hammer-films",
         "titles": [
           {
-            "title": "The Snorkel",
-            "imdbId": "tt0052207",
-            "year": "1958",
-            "slug": "the-snorkel-1958",
-            "grade": "D+",
+            "title": "The Hound of the Baskervilles",
+            "imdbId": "tt0052905",
+            "year": "1959",
+            "slug": "the-hound-of-the-baskervilles-1959",
+            "grade": "B+",
             "genres": [
-              "Crime",
               "Horror",
-              "Mystery",
-              "Thriller"
+              "Mystery"
             ]
           },
           {
