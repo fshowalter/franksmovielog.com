@@ -1099,18 +1099,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Ant-Man",
-        "imdbId": "tt0478970",
-        "year": "2015",
-        "slug": "ant-man-2015",
-        "grade": "D+",
-        "genres": [
-          "Action",
-          "Comedy",
-          "Sci-Fi"
-        ]
-      },
-      {
         "title": "Ant-Man and the Wasp",
         "imdbId": "tt5095030",
         "year": "2018",
@@ -1121,6 +1109,18 @@
           "Adventure",
           "Comedy",
           "Sci-Fi"
+        ]
+      },
+      {
+        "title": "The Apartment",
+        "imdbId": "tt0053604",
+        "year": "1960",
+        "slug": "the-apartment-1960",
+        "grade": "A+",
+        "genres": [
+          "Comedy",
+          "Drama",
+          "Romance"
         ]
       },
       {
@@ -2654,16 +2654,15 @@
         ]
       },
       {
-        "title": "3:10 to Yuma",
-        "imdbId": "tt0381849",
-        "year": "2007",
-        "slug": "3-10-to-yuma-2007",
-        "grade": "C+",
+        "title": "The 39 Steps",
+        "imdbId": "tt0026029",
+        "year": "1935",
+        "slug": "the-39-steps-1935",
+        "grade": "B+",
         "genres": [
-          "Action",
           "Crime",
-          "Drama",
-          "Western"
+          "Mystery",
+          "Thriller"
         ]
       }
     ]
@@ -3618,6 +3617,18 @@
             ]
           },
           {
+            "title": "The 7th Dawn",
+            "imdbId": "tt0057813",
+            "year": "1964",
+            "slug": "the-7th-dawn-1964",
+            "grade": "D+",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "War"
+            ]
+          },
+          {
             "title": "The Devil's Brigade",
             "imdbId": "tt0062886",
             "year": "1968",
@@ -3627,19 +3638,6 @@
               "Action",
               "Drama",
               "War"
-            ]
-          },
-          {
-            "title": "The Wild Bunch",
-            "imdbId": "tt0065214",
-            "year": "1969",
-            "slug": "the-wild-bunch-1969",
-            "grade": "A+",
-            "genres": [
-              "Action",
-              "Adventure",
-              "Drama",
-              "Western"
             ]
           }
         ]
@@ -5692,13 +5690,14 @@
         ]
       },
       {
-        "title": "Baby the Rain Must Fall",
-        "imdbId": "tt0058930",
-        "year": "1965",
-        "slug": "baby-the-rain-must-fall-1965",
-        "grade": "D",
+        "title": "The Awful Truth",
+        "imdbId": "tt0028597",
+        "year": "1937",
+        "slug": "the-awful-truth-1937",
+        "grade": "D+",
         "genres": [
-          "Drama"
+          "Comedy",
+          "Romance"
         ]
       }
     ]
@@ -7161,6 +7160,18 @@
         ]
       },
       {
+        "title": "The 39 Steps",
+        "imdbId": "tt0026029",
+        "year": "1935",
+        "slug": "the-39-steps-1935",
+        "grade": "B+",
+        "genres": [
+          "Crime",
+          "Mystery",
+          "Thriller"
+        ]
+      },
+      {
         "title": "3:10 to Yuma",
         "imdbId": "tt0381849",
         "year": "2007",
@@ -7170,17 +7181,6 @@
           "Action",
           "Crime",
           "Drama",
-          "Western"
-        ]
-      },
-      {
-        "title": "4 for Texas",
-        "imdbId": "tt0057071",
-        "year": "1963",
-        "slug": "4-for-texas-1963",
-        "grade": "C+",
-        "genres": [
-          "Comedy",
           "Western"
         ]
       }
@@ -8239,6 +8239,223 @@
           "Horror",
           "Mystery",
           "Thriller"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0053604",
+    "title": "The Apartment",
+    "year": "1960",
+    "slug": "the-apartment-1960",
+    "grade": "A+",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "sortTitle": "Apartment (1960)",
+    "originalTitle": null,
+    "gradeValue": 13,
+    "runtimeMinutes": 125,
+    "releaseSequence": "1960-06-15tt0053604",
+    "directorNames": [
+      "Billy Wilder"
+    ],
+    "writerNames": [
+      "Billy Wilder",
+      "I.A.L. Diamond"
+    ],
+    "principalCastNames": [
+      "Jack Lemmon",
+      "Shirley MacLaine",
+      "Fred MacMurray",
+      "Ray Walston"
+    ],
+    "reviewDate": "2008-03-07",
+    "reviewYear": "2008",
+    "sequence": "2008-03-07-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "Billy Wilder",
+        "slug": "billy-wilder",
+        "creditedAs": [
+          "director",
+          "writer"
+        ]
+      },
+      {
+        "name": "Jack Lemmon",
+        "slug": "jack-lemmon",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Billy Wilder",
+        "slug": "billy-wilder",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "Witness for the Prosecution",
+            "imdbId": "tt0051201",
+            "year": "1957",
+            "slug": "witness-for-the-prosecution-1957",
+            "grade": "A",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Mystery",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Some Like It Hot",
+            "imdbId": "tt0053291",
+            "year": "1959",
+            "slug": "some-like-it-hot-1959",
+            "grade": "A+",
+            "genres": [
+              "Comedy",
+              "Music",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Irma la Douce",
+            "imdbId": "tt0057187",
+            "year": "1963",
+            "slug": "irma-la-douce-1963",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Fortune Cookie",
+            "imdbId": "tt0060424",
+            "year": "1966",
+            "slug": "the-fortune-cookie-1966",
+            "grade": "C",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jack Lemmon",
+        "slug": "jack-lemmon",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Mister Roberts",
+            "imdbId": "tt0048380",
+            "year": "1955",
+            "slug": "mister-roberts-1955",
+            "grade": "B",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "War"
+            ]
+          },
+          {
+            "title": "Some Like It Hot",
+            "imdbId": "tt0053291",
+            "year": "1959",
+            "slug": "some-like-it-hot-1959",
+            "grade": "A+",
+            "genres": [
+              "Comedy",
+              "Music",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Irma la Douce",
+            "imdbId": "tt0057187",
+            "year": "1963",
+            "slug": "irma-la-douce-1963",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Fortune Cookie",
+            "imdbId": "tt0060424",
+            "year": "1966",
+            "slug": "the-fortune-cookie-1966",
+            "grade": "C",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Ant-Man",
+        "imdbId": "tt0478970",
+        "year": "2015",
+        "slug": "ant-man-2015",
+        "grade": "D+",
+        "genres": [
+          "Action",
+          "Comedy",
+          "Sci-Fi"
+        ]
+      },
+      {
+        "title": "Ant-Man and the Wasp",
+        "imdbId": "tt5095030",
+        "year": "2018",
+        "slug": "ant-man-and-the-wasp-2018",
+        "grade": "D",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Comedy",
+          "Sci-Fi"
+        ]
+      },
+      {
+        "title": "Apostle",
+        "imdbId": "tt6217306",
+        "year": "2018",
+        "slug": "apostle-2018",
+        "grade": "C+",
+        "genres": [
+          "Drama",
+          "Fantasy",
+          "Horror",
+          "Mystery",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "April Fool's Day",
+        "imdbId": "tt0090655",
+        "year": "1986",
+        "slug": "april-fools-day-1986",
+        "grade": "D+",
+        "genres": [
+          "Horror",
+          "Mystery"
         ]
       }
     ]
@@ -9949,29 +10166,28 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Ada",
-        "imdbId": "tt0054601",
-        "year": "1961",
-        "slug": "ada-1961",
-        "grade": "D+",
+        "title": "The Adventures of Robin Hood",
+        "imdbId": "tt0029843",
+        "year": "1938",
+        "slug": "the-adventures-of-robin-hood-1938",
+        "grade": "A",
         "genres": [
-          "Drama",
+          "Action",
+          "Adventure",
           "Romance"
         ]
       },
       {
-        "title": "The Adventures of Ford Fairlane",
-        "imdbId": "tt0098987",
-        "year": "1990",
-        "slug": "the-adventures-of-ford-fairlane-1990",
-        "grade": "C+",
+        "title": "The African Queen",
+        "imdbId": "tt0043265",
+        "year": "1951",
+        "slug": "the-african-queen-1951",
+        "grade": "B+",
         "genres": [
-          "Action",
           "Adventure",
-          "Comedy",
-          "Crime",
-          "Music",
-          "Mystery"
+          "Drama",
+          "Romance",
+          "War"
         ]
       },
       {
@@ -10089,15 +10305,14 @@
             ]
           },
           {
-            "title": "Young and Innocent",
-            "imdbId": "tt0029811",
-            "year": "1937",
-            "slug": "young-and-innocent-1937",
-            "grade": "B-",
+            "title": "The 39 Steps",
+            "imdbId": "tt0026029",
+            "year": "1935",
+            "slug": "the-39-steps-1935",
+            "grade": "B+",
             "genres": [
               "Crime",
               "Mystery",
-              "Romance",
               "Thriller"
             ]
           }
@@ -12582,14 +12797,14 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "8-Bit Christmas",
-        "imdbId": "tt11540284",
-        "year": "2021",
-        "slug": "8-bit-christmas-2021",
-        "grade": "D-",
+        "title": "The Abominable Dr. Phibes",
+        "imdbId": "tt0066740",
+        "year": "1971",
+        "slug": "the-abominable-dr-phibes-1971",
+        "grade": "B-",
         "genres": [
           "Comedy",
-          "Family"
+          "Horror"
         ]
       },
       {
@@ -14090,6 +14305,17 @@
             ]
           },
           {
+            "title": "The Abominable Dr. Phibes",
+            "imdbId": "tt0066740",
+            "year": "1971",
+            "slug": "the-abominable-dr-phibes-1971",
+            "grade": "B-",
+            "genres": [
+              "Comedy",
+              "Horror"
+            ]
+          },
+          {
             "title": "Theater of Blood",
             "imdbId": "tt0070791",
             "year": "1973",
@@ -14099,17 +14325,6 @@
               "Comedy",
               "Drama",
               "Horror"
-            ]
-          },
-          {
-            "title": "Service de Luxe",
-            "imdbId": "tt0030732",
-            "year": "1938",
-            "slug": "service-de-luxe-1938",
-            "grade": "C-",
-            "genres": [
-              "Comedy",
-              "Romance"
             ]
           }
         ]
@@ -15631,15 +15846,16 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Chain Lightning",
-            "imdbId": "tt0042324",
-            "year": "1950",
-            "slug": "chain-lightning-1950",
-            "grade": "D+",
+            "title": "The African Queen",
+            "imdbId": "tt0043265",
+            "year": "1951",
+            "slug": "the-african-queen-1951",
+            "grade": "B+",
             "genres": [
-              "Action",
               "Adventure",
-              "Drama"
+              "Drama",
+              "Romance",
+              "War"
             ]
           },
           {
@@ -21373,20 +21589,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Assault on a Queen",
-        "imdbId": "tt0060135",
-        "year": "1966",
-        "slug": "assault-on-a-queen-1966",
-        "grade": "D-",
-        "genres": [
-          "Adventure",
-          "Crime",
-          "Thriller",
-          "Action",
-          "Drama"
-        ]
-      },
-      {
         "title": "Assault on Precinct 13",
         "imdbId": "tt0074156",
         "year": "1976",
@@ -21396,6 +21598,17 @@
           "Action",
           "Crime",
           "Thriller"
+        ]
+      },
+      {
+        "title": "The Astonished Heart",
+        "imdbId": "tt0041134",
+        "year": "1950",
+        "slug": "the-astonished-heart-1950",
+        "grade": "C+",
+        "genres": [
+          "Drama",
+          "Romance"
         ]
       },
       {
@@ -21420,6 +21633,158 @@
           "Horror",
           "Mystery",
           "Thriller"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0057813",
+    "title": "The 7th Dawn",
+    "year": "1964",
+    "slug": "the-7th-dawn-1964",
+    "grade": "D+",
+    "countries": [
+      "United Kingdom",
+      "United States"
+    ],
+    "genres": [
+      "Adventure",
+      "Drama",
+      "War"
+    ],
+    "sortTitle": "7th Dawn (1964)",
+    "originalTitle": null,
+    "gradeValue": 4,
+    "runtimeMinutes": 123,
+    "releaseSequence": "1964-08-13tt0057813",
+    "directorNames": [
+      "Lewis Gilbert"
+    ],
+    "writerNames": [
+      "Michael Keon",
+      "Karl Tunberg"
+    ],
+    "principalCastNames": [
+      "William Holden",
+      "Susannah York",
+      "Capucine",
+      "Tetsur\u00f4 Tanba"
+    ],
+    "reviewDate": "2007-10-09",
+    "reviewYear": "2007",
+    "sequence": "2007-10-09-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "William Holden",
+        "slug": "william-holden",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "William Holden",
+        "slug": "william-holden",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Horse Soldiers",
+            "imdbId": "tt0052902",
+            "year": "1959",
+            "slug": "the-horse-soldiers-1959",
+            "grade": "C-",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "Romance",
+              "War",
+              "Western"
+            ]
+          },
+          {
+            "title": "The World of Suzie Wong",
+            "imdbId": "tt0054483",
+            "year": "1960",
+            "slug": "the-world-of-suzie-wong-1960",
+            "grade": "D+",
+            "genres": [
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Devil's Brigade",
+            "imdbId": "tt0062886",
+            "year": "1968",
+            "slug": "the-devils-brigade-1968",
+            "grade": "C",
+            "genres": [
+              "Action",
+              "Drama",
+              "War"
+            ]
+          },
+          {
+            "title": "The Wild Bunch",
+            "imdbId": "tt0065214",
+            "year": "1969",
+            "slug": "the-wild-bunch-1969",
+            "grade": "A+",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "Western"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "7 Women",
+        "imdbId": "tt0060050",
+        "year": "1965",
+        "slug": "7-women-1965",
+        "grade": "C+",
+        "genres": [
+          "Drama"
+        ]
+      },
+      {
+        "title": "71 Fragments of a Chronology of Chance",
+        "imdbId": "tt0109020",
+        "year": "1994",
+        "slug": "71-fragments-of-a-chronology-of-chance-1994",
+        "grade": "C+",
+        "genres": [
+          "Drama"
+        ]
+      },
+      {
+        "title": "8-Bit Christmas",
+        "imdbId": "tt11540284",
+        "year": "2021",
+        "slug": "8-bit-christmas-2021",
+        "grade": "D-",
+        "genres": [
+          "Comedy",
+          "Family"
+        ]
+      },
+      {
+        "title": "The Abominable Dr. Phibes",
+        "imdbId": "tt0066740",
+        "year": "1971",
+        "slug": "the-abominable-dr-phibes-1971",
+        "grade": "B-",
+        "genres": [
+          "Comedy",
+          "Horror"
         ]
       }
     ]
@@ -23704,6 +24069,19 @@
             ]
           },
           {
+            "title": "The African Queen",
+            "imdbId": "tt0043265",
+            "year": "1951",
+            "slug": "the-african-queen-1951",
+            "grade": "B+",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "Romance",
+              "War"
+            ]
+          },
+          {
             "title": "Deadline - U.S.A.",
             "imdbId": "tt0044533",
             "year": "1952",
@@ -23713,17 +24091,6 @@
               "Crime",
               "Drama",
               "Film-Noir"
-            ]
-          },
-          {
-            "title": "The Caine Mutiny",
-            "imdbId": "tt0046816",
-            "year": "1954",
-            "slug": "the-caine-mutiny-1954",
-            "grade": "B+",
-            "genres": [
-              "Drama",
-              "War"
             ]
           }
         ]
@@ -24834,14 +25201,15 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "3 Godfathers",
-        "imdbId": "tt0040064",
-        "year": "1948",
-        "slug": "3-godfathers-1948",
-        "grade": "C",
+        "title": "The 39 Steps",
+        "imdbId": "tt0026029",
+        "year": "1935",
+        "slug": "the-39-steps-1935",
+        "grade": "B+",
         "genres": [
-          "Drama",
-          "Western"
+          "Crime",
+          "Mystery",
+          "Thriller"
         ]
       },
       {
@@ -29791,6 +30159,18 @@
         ]
       },
       {
+        "title": "The 7th Dawn",
+        "imdbId": "tt0057813",
+        "year": "1964",
+        "slug": "the-7th-dawn-1964",
+        "grade": "D+",
+        "genres": [
+          "Adventure",
+          "Drama",
+          "War"
+        ]
+      },
+      {
         "title": "8-Bit Christmas",
         "imdbId": "tt11540284",
         "year": "2021",
@@ -29799,17 +30179,6 @@
         "genres": [
           "Comedy",
           "Family"
-        ]
-      },
-      {
-        "title": "The Abominable Snowman",
-        "imdbId": "tt0050095",
-        "year": "1957",
-        "slug": "the-abominable-snowman-1957",
-        "grade": "D+",
-        "genres": [
-          "Adventure",
-          "Horror"
         ]
       }
     ]
@@ -31846,13 +32215,14 @@
             ]
           },
           {
-            "title": "Irma la Douce",
-            "imdbId": "tt0057187",
-            "year": "1963",
-            "slug": "irma-la-douce-1963",
-            "grade": "C-",
+            "title": "The Apartment",
+            "imdbId": "tt0053604",
+            "year": "1960",
+            "slug": "the-apartment-1960",
+            "grade": "A+",
             "genres": [
               "Comedy",
+              "Drama",
               "Romance"
             ]
           }
@@ -35503,13 +35873,16 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Arrowsmith",
-        "imdbId": "tt0021622",
-        "year": "1931",
-        "slug": "arrowsmith-1931",
-        "grade": "D+",
+        "title": "The Asphalt Jungle",
+        "imdbId": "tt0042208",
+        "year": "1950",
+        "slug": "the-asphalt-jungle-1950",
+        "grade": "B",
         "genres": [
-          "Drama"
+          "Crime",
+          "Drama",
+          "Film-Noir",
+          "Thriller"
         ]
       },
       {
@@ -35527,6 +35900,17 @@
         ]
       },
       {
+        "title": "The Astonished Heart",
+        "imdbId": "tt0041134",
+        "year": "1950",
+        "slug": "the-astonished-heart-1950",
+        "grade": "C+",
+        "genres": [
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
         "title": "Asylum",
         "imdbId": "tt0068230",
         "year": "1972",
@@ -35534,18 +35918,6 @@
         "grade": "D+",
         "genres": [
           "Horror"
-        ]
-      },
-      {
-        "title": "Audition",
-        "imdbId": "tt0235198",
-        "year": "1999",
-        "slug": "audition-1999",
-        "grade": "B+",
-        "genres": [
-          "Drama",
-          "Horror",
-          "Mystery"
         ]
       }
     ]
@@ -38311,18 +38683,6 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "The Treasure of the Sierra Madre",
-            "imdbId": "tt0040897",
-            "year": "1948",
-            "slug": "the-treasure-of-the-sierra-madre-1948",
-            "grade": "A",
-            "genres": [
-              "Adventure",
-              "Drama",
-              "Western"
-            ]
-          },
-          {
             "title": "We Were Strangers",
             "imdbId": "tt0042035",
             "year": "1949",
@@ -38336,6 +38696,32 @@
             ]
           },
           {
+            "title": "The Asphalt Jungle",
+            "imdbId": "tt0042208",
+            "year": "1950",
+            "slug": "the-asphalt-jungle-1950",
+            "grade": "B",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Film-Noir",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The African Queen",
+            "imdbId": "tt0043265",
+            "year": "1951",
+            "slug": "the-african-queen-1951",
+            "grade": "B+",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "Romance",
+              "War"
+            ]
+          },
+          {
             "title": "Moby Dick",
             "imdbId": "tt0049513",
             "year": "1956",
@@ -38344,18 +38730,6 @@
             "genres": [
               "Adventure",
               "Drama"
-            ]
-          },
-          {
-            "title": "Heaven Knows, Mr. Allison",
-            "imdbId": "tt0050490",
-            "year": "1957",
-            "slug": "heaven-knows-mr-allison-1957",
-            "grade": "B-",
-            "genres": [
-              "Adventure",
-              "Drama",
-              "War"
             ]
           }
         ]
@@ -41517,6 +41891,160 @@
     ]
   },
   {
+    "imdbId": "tt0026029",
+    "title": "The 39 Steps",
+    "year": "1935",
+    "slug": "the-39-steps-1935",
+    "grade": "B+",
+    "countries": [
+      "United Kingdom"
+    ],
+    "genres": [
+      "Crime",
+      "Mystery",
+      "Thriller"
+    ],
+    "sortTitle": "39 Steps (1935)",
+    "originalTitle": null,
+    "gradeValue": 10,
+    "runtimeMinutes": 86,
+    "releaseSequence": "1935-06-06tt0026029",
+    "directorNames": [
+      "Alfred Hitchcock"
+    ],
+    "writerNames": [
+      "John Buchan",
+      "Charles Bennett",
+      "Ian Hay"
+    ],
+    "principalCastNames": [
+      "Robert Donat",
+      "Madeleine Carroll",
+      "Lucie Mannheim",
+      "Godfrey Tearle"
+    ],
+    "reviewDate": "2008-05-26",
+    "reviewYear": "2008",
+    "sequence": "2008-05-26-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "Alfred Hitchcock",
+        "slug": "alfred-hitchcock",
+        "creditedAs": [
+          "director"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Alfred Hitchcock",
+        "slug": "alfred-hitchcock",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "Number 17",
+            "imdbId": "tt0023285",
+            "year": "1932",
+            "slug": "number-seventeen-1932",
+            "grade": "D",
+            "genres": [
+              "Crime",
+              "Mystery",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Man Who Knew Too Much",
+            "imdbId": "tt0025452",
+            "year": "1934",
+            "slug": "the-man-who-knew-too-much-1934",
+            "grade": "C",
+            "genres": [
+              "Crime",
+              "Mystery",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Young and Innocent",
+            "imdbId": "tt0029811",
+            "year": "1937",
+            "slug": "young-and-innocent-1937",
+            "grade": "B-",
+            "genres": [
+              "Crime",
+              "Mystery",
+              "Romance",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Lady Vanishes",
+            "imdbId": "tt0030341",
+            "year": "1938",
+            "slug": "the-lady-vanishes-1938",
+            "grade": "B",
+            "genres": [
+              "Mystery",
+              "Thriller"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "3 from Hell",
+        "imdbId": "tt8134742",
+        "year": "2019",
+        "slug": "3-from-hell-2019",
+        "grade": "D+",
+        "genres": [
+          "Action",
+          "Horror"
+        ]
+      },
+      {
+        "title": "3 Godfathers",
+        "imdbId": "tt0040064",
+        "year": "1948",
+        "slug": "3-godfathers-1948",
+        "grade": "C",
+        "genres": [
+          "Drama",
+          "Western"
+        ]
+      },
+      {
+        "title": "3:10 to Yuma",
+        "imdbId": "tt0381849",
+        "year": "2007",
+        "slug": "3-10-to-yuma-2007",
+        "grade": "C+",
+        "genres": [
+          "Action",
+          "Crime",
+          "Drama",
+          "Western"
+        ]
+      },
+      {
+        "title": "4 for Texas",
+        "imdbId": "tt0057071",
+        "year": "1963",
+        "slug": "4-for-texas-1963",
+        "grade": "C+",
+        "genres": [
+          "Comedy",
+          "Western"
+        ]
+      }
+    ]
+  },
+  {
     "imdbId": "tt0092576",
     "title": "StageFright",
     "year": "1987",
@@ -42880,14 +43408,15 @@
         ]
       },
       {
-        "title": "8-Bit Christmas",
-        "imdbId": "tt11540284",
-        "year": "2021",
-        "slug": "8-bit-christmas-2021",
-        "grade": "D-",
+        "title": "The 7th Dawn",
+        "imdbId": "tt0057813",
+        "year": "1964",
+        "slug": "the-7th-dawn-1964",
+        "grade": "D+",
         "genres": [
-          "Comedy",
-          "Family"
+          "Adventure",
+          "Drama",
+          "War"
         ]
       }
     ]
@@ -44085,6 +44614,167 @@
           "Drama",
           "Film-Noir",
           "Thriller"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0028597",
+    "title": "The Awful Truth",
+    "year": "1937",
+    "slug": "the-awful-truth-1937",
+    "grade": "D+",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "sortTitle": "Awful Truth (1937)",
+    "originalTitle": null,
+    "gradeValue": 4,
+    "runtimeMinutes": 90,
+    "releaseSequence": "1937-10-20tt0028597",
+    "directorNames": [
+      "Leo McCarey"
+    ],
+    "writerNames": [
+      "Vi\u00f1a Delmar",
+      "Arthur Richman"
+    ],
+    "principalCastNames": [
+      "Irene Dunne",
+      "Cary Grant",
+      "Ralph Bellamy",
+      "Alexander D'Arcy"
+    ],
+    "reviewDate": "2008-04-05",
+    "reviewYear": "2008",
+    "sequence": "2008-04-05-71",
+    "viewings": [
+      {
+        "sequence": 71,
+        "medium": "TCM HD",
+        "mediumNotes": null,
+        "date": "2012-02-12",
+        "venue": null,
+        "venueNotes": null
+      }
+    ],
+    "castAndCrew": [
+      {
+        "name": "Cary Grant",
+        "slug": "cary-grant",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Cary Grant",
+        "slug": "cary-grant",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "Topper",
+            "imdbId": "tt0029682",
+            "year": "1937",
+            "slug": "topper-1937",
+            "grade": "B-",
+            "genres": [
+              "Comedy",
+              "Fantasy",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Toast of New York",
+            "imdbId": "tt0029675",
+            "year": "1937",
+            "slug": "the-toast-of-new-york-1937",
+            "grade": "C+",
+            "genres": [
+              "Biography",
+              "Comedy",
+              "Drama",
+              "History",
+              "Romance",
+              "War"
+            ]
+          },
+          {
+            "title": "Holiday",
+            "imdbId": "tt0030241",
+            "year": "1938",
+            "slug": "holiday-1938",
+            "grade": "B",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Gunga Din",
+            "imdbId": "tt0031398",
+            "year": "1939",
+            "slug": "gunga-din-1939",
+            "grade": "B-",
+            "genres": [
+              "Adventure",
+              "Comedy",
+              "War"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Avengers: Infinity War",
+        "imdbId": "tt4154756",
+        "year": "2018",
+        "slug": "avengers-infinity-war-2018",
+        "grade": "A+",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Sci-Fi"
+        ]
+      },
+      {
+        "title": "The Awakening of the Beast",
+        "imdbId": "tt0062690",
+        "year": "1970",
+        "slug": "the-awakening-of-the-beast-1970",
+        "grade": "D+",
+        "genres": [
+          "Drama",
+          "Horror"
+        ]
+      },
+      {
+        "title": "Baby the Rain Must Fall",
+        "imdbId": "tt0058930",
+        "year": "1965",
+        "slug": "baby-the-rain-must-fall-1965",
+        "grade": "D",
+        "genres": [
+          "Drama"
+        ]
+      },
+      {
+        "title": "The Bachelor and the Bobby-Soxer",
+        "imdbId": "tt0039169",
+        "year": "1947",
+        "slug": "the-bachelor-and-the-bobby-soxer-1947",
+        "grade": "B",
+        "genres": [
+          "Comedy",
+          "Romance"
         ]
       }
     ]
@@ -46446,6 +47136,19 @@
         ]
       },
       {
+        "title": "The Asphalt Jungle",
+        "imdbId": "tt0042208",
+        "year": "1950",
+        "slug": "the-asphalt-jungle-1950",
+        "grade": "B",
+        "genres": [
+          "Crime",
+          "Drama",
+          "Film-Noir",
+          "Thriller"
+        ]
+      },
+      {
         "title": "Assault on a Queen",
         "imdbId": "tt0060135",
         "year": "1966",
@@ -46457,18 +47160,6 @@
           "Thriller",
           "Action",
           "Drama"
-        ]
-      },
-      {
-        "title": "Assault on Precinct 13",
-        "imdbId": "tt0074156",
-        "year": "1976",
-        "slug": "assault-on-precinct-13-1976",
-        "grade": "A-",
-        "genres": [
-          "Action",
-          "Crime",
-          "Thriller"
         ]
       }
     ]
@@ -51451,19 +52142,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Arrebato",
-        "imdbId": "tt0078797",
-        "year": "1979",
-        "slug": "arrebato-1979",
-        "grade": "B-",
-        "genres": [
-          "Drama",
-          "Fantasy",
-          "Horror",
-          "Mystery"
-        ]
-      },
-      {
         "title": "Arrowsmith",
         "imdbId": "tt0021622",
         "year": "1931",
@@ -51471,6 +52149,19 @@
         "grade": "D+",
         "genres": [
           "Drama"
+        ]
+      },
+      {
+        "title": "The Asphalt Jungle",
+        "imdbId": "tt0042208",
+        "year": "1950",
+        "slug": "the-asphalt-jungle-1950",
+        "grade": "B",
+        "genres": [
+          "Crime",
+          "Drama",
+          "Film-Noir",
+          "Thriller"
         ]
       },
       {
@@ -51486,13 +52177,14 @@
         ]
       },
       {
-        "title": "Asylum",
-        "imdbId": "tt0068230",
-        "year": "1972",
-        "slug": "asylum-1972",
-        "grade": "D+",
+        "title": "The Astonished Heart",
+        "imdbId": "tt0041134",
+        "year": "1950",
+        "slug": "the-astonished-heart-1950",
+        "grade": "C+",
         "genres": [
-          "Horror"
+          "Drama",
+          "Romance"
         ]
       }
     ]
@@ -53013,20 +53705,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Horse Soldiers",
-            "imdbId": "tt0052902",
-            "year": "1959",
-            "slug": "the-horse-soldiers-1959",
-            "grade": "C-",
-            "genres": [
-              "Adventure",
-              "Drama",
-              "Romance",
-              "War",
-              "Western"
-            ]
-          },
-          {
             "title": "The World of Suzie Wong",
             "imdbId": "tt0054483",
             "year": "1960",
@@ -53035,6 +53713,18 @@
             "genres": [
               "Drama",
               "Romance"
+            ]
+          },
+          {
+            "title": "The 7th Dawn",
+            "imdbId": "tt0057813",
+            "year": "1964",
+            "slug": "the-7th-dawn-1964",
+            "grade": "D+",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "War"
             ]
           },
           {
@@ -53726,17 +54416,15 @@
         ]
       },
       {
-        "title": "Apostle",
-        "imdbId": "tt6217306",
-        "year": "2018",
-        "slug": "apostle-2018",
-        "grade": "C+",
+        "title": "The Apartment",
+        "imdbId": "tt0053604",
+        "year": "1960",
+        "slug": "the-apartment-1960",
+        "grade": "A+",
         "genres": [
+          "Comedy",
           "Drama",
-          "Fantasy",
-          "Horror",
-          "Mystery",
-          "Thriller"
+          "Romance"
         ]
       }
     ]
@@ -60635,17 +61323,15 @@
         ]
       },
       {
-        "title": "The Alamo",
-        "imdbId": "tt0053580",
-        "year": "1960",
-        "slug": "the-alamo-1960",
-        "grade": "B",
+        "title": "The Adventures of Robin Hood",
+        "imdbId": "tt0029843",
+        "year": "1938",
+        "slug": "the-adventures-of-robin-hood-1938",
+        "grade": "A",
         "genres": [
+          "Action",
           "Adventure",
-          "Drama",
-          "History",
-          "War",
-          "Western"
+          "Romance"
         ]
       }
     ]
@@ -62173,18 +62859,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Misfits",
-            "imdbId": "tt0055184",
-            "year": "1961",
-            "slug": "the-misfits-1961",
-            "grade": "B",
-            "genres": [
-              "Drama",
-              "Romance",
-              "Western"
-            ]
-          },
-          {
             "title": "Ladies of the Chorus",
             "imdbId": "tt0041571",
             "year": "1948",
@@ -62193,6 +62867,19 @@
             "genres": [
               "Musical",
               "Romance"
+            ]
+          },
+          {
+            "title": "The Asphalt Jungle",
+            "imdbId": "tt0042208",
+            "year": "1950",
+            "slug": "the-asphalt-jungle-1950",
+            "grade": "B",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Film-Noir",
+              "Thriller"
             ]
           },
           {
@@ -63918,14 +64605,16 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Ladies of the Chorus",
-            "imdbId": "tt0041571",
-            "year": "1948",
-            "slug": "ladies-of-the-chorus-1948",
-            "grade": "C",
+            "title": "The Asphalt Jungle",
+            "imdbId": "tt0042208",
+            "year": "1950",
+            "slug": "the-asphalt-jungle-1950",
+            "grade": "B",
             "genres": [
-              "Musical",
-              "Romance"
+              "Crime",
+              "Drama",
+              "Film-Noir",
+              "Thriller"
             ]
           },
           {
@@ -64781,18 +65470,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Treasure of the Sierra Madre",
-            "imdbId": "tt0040897",
-            "year": "1948",
-            "slug": "the-treasure-of-the-sierra-madre-1948",
-            "grade": "A",
-            "genres": [
-              "Adventure",
-              "Drama",
-              "Western"
-            ]
-          },
-          {
             "title": "Chain Lightning",
             "imdbId": "tt0042324",
             "year": "1950",
@@ -64802,6 +65479,19 @@
               "Action",
               "Adventure",
               "Drama"
+            ]
+          },
+          {
+            "title": "The African Queen",
+            "imdbId": "tt0043265",
+            "year": "1951",
+            "slug": "the-african-queen-1951",
+            "grade": "B+",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "Romance",
+              "War"
             ]
           },
           {
@@ -65149,14 +65839,13 @@
             ]
           },
           {
-            "title": "Theater of Blood",
-            "imdbId": "tt0070791",
-            "year": "1973",
-            "slug": "theater-of-blood-1973",
-            "grade": "B",
+            "title": "The Abominable Dr. Phibes",
+            "imdbId": "tt0066740",
+            "year": "1971",
+            "slug": "the-abominable-dr-phibes-1971",
+            "grade": "B-",
             "genres": [
               "Comedy",
-              "Drama",
               "Horror"
             ]
           }
@@ -73453,6 +74142,19 @@
             ]
           },
           {
+            "title": "The Asphalt Jungle",
+            "imdbId": "tt0042208",
+            "year": "1950",
+            "slug": "the-asphalt-jungle-1950",
+            "grade": "B",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Film-Noir",
+              "Thriller"
+            ]
+          },
+          {
             "title": "Monkey Business",
             "imdbId": "tt0044916",
             "year": "1952",
@@ -73461,17 +74163,6 @@
             "genres": [
               "Comedy",
               "Sci-Fi"
-            ]
-          },
-          {
-            "title": "The Seven Year Itch",
-            "imdbId": "tt0048605",
-            "year": "1955",
-            "slug": "the-seven-year-itch-1955",
-            "grade": "C-",
-            "genres": [
-              "Comedy",
-              "Romance"
             ]
           }
         ]
@@ -76458,14 +77149,16 @@
             ]
           },
           {
-            "title": "Monkey Business",
-            "imdbId": "tt0044916",
-            "year": "1952",
-            "slug": "monkey-business-1952",
-            "grade": "C-",
+            "title": "The Asphalt Jungle",
+            "imdbId": "tt0042208",
+            "year": "1950",
+            "slug": "the-asphalt-jungle-1950",
+            "grade": "B",
             "genres": [
-              "Comedy",
-              "Sci-Fi"
+              "Crime",
+              "Drama",
+              "Film-Noir",
+              "Thriller"
             ]
           }
         ]
@@ -76970,11 +77663,11 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "The Man Who Knew Too Much",
-            "imdbId": "tt0025452",
-            "year": "1934",
-            "slug": "the-man-who-knew-too-much-1934",
-            "grade": "C",
+            "title": "The 39 Steps",
+            "imdbId": "tt0026029",
+            "year": "1935",
+            "slug": "the-39-steps-1935",
+            "grade": "B+",
             "genres": [
               "Crime",
               "Mystery",
@@ -80054,17 +80747,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "3 from Hell",
-        "imdbId": "tt8134742",
-        "year": "2019",
-        "slug": "3-from-hell-2019",
-        "grade": "D+",
-        "genres": [
-          "Action",
-          "Horror"
-        ]
-      },
-      {
         "title": "3 Godfathers",
         "imdbId": "tt0040064",
         "year": "1948",
@@ -80073,6 +80755,18 @@
         "genres": [
           "Drama",
           "Western"
+        ]
+      },
+      {
+        "title": "The 39 Steps",
+        "imdbId": "tt0026029",
+        "year": "1935",
+        "slug": "the-39-steps-1935",
+        "grade": "B+",
+        "genres": [
+          "Crime",
+          "Mystery",
+          "Thriller"
         ]
       },
       {
@@ -90248,14 +90942,15 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The World of Suzie Wong",
-            "imdbId": "tt0054483",
-            "year": "1960",
-            "slug": "the-world-of-suzie-wong-1960",
+            "title": "The 7th Dawn",
+            "imdbId": "tt0057813",
+            "year": "1964",
+            "slug": "the-7th-dawn-1964",
             "grade": "D+",
             "genres": [
+              "Adventure",
               "Drama",
-              "Romance"
+              "War"
             ]
           },
           {
@@ -93620,14 +94315,16 @@
             ]
           },
           {
-            "title": "The Red Badge of Courage",
-            "imdbId": "tt0043961",
-            "year": "1951",
-            "slug": "the-red-badge-of-courage-1951",
-            "grade": "C-",
+            "title": "The Asphalt Jungle",
+            "imdbId": "tt0042208",
+            "year": "1950",
+            "slug": "the-asphalt-jungle-1950",
+            "grade": "B",
             "genres": [
+              "Crime",
               "Drama",
-              "War"
+              "Film-Noir",
+              "Thriller"
             ]
           }
         ]
@@ -93677,15 +94374,16 @@
             ]
           },
           {
-            "title": "Deadline - U.S.A.",
-            "imdbId": "tt0044533",
-            "year": "1952",
-            "slug": "deadline-usa-1952",
-            "grade": "B",
+            "title": "The African Queen",
+            "imdbId": "tt0043265",
+            "year": "1951",
+            "slug": "the-african-queen-1951",
+            "grade": "B+",
             "genres": [
-              "Crime",
+              "Adventure",
               "Drama",
-              "Film-Noir"
+              "Romance",
+              "War"
             ]
           }
         ]
@@ -94453,6 +95151,17 @@
         ]
       },
       {
+        "title": "The Awful Truth",
+        "imdbId": "tt0028597",
+        "year": "1937",
+        "slug": "the-awful-truth-1937",
+        "grade": "D+",
+        "genres": [
+          "Comedy",
+          "Romance"
+        ]
+      },
+      {
         "title": "Baby the Rain Must Fall",
         "imdbId": "tt0058930",
         "year": "1965",
@@ -94460,17 +95169,6 @@
         "grade": "D",
         "genres": [
           "Drama"
-        ]
-      },
-      {
-        "title": "The Bachelor and the Bobby-Soxer",
-        "imdbId": "tt0039169",
-        "year": "1947",
-        "slug": "the-bachelor-and-the-bobby-soxer-1947",
-        "grade": "B",
-        "genres": [
-          "Comedy",
-          "Romance"
         ]
       }
     ]
@@ -94932,17 +95630,16 @@
         ]
       },
       {
-        "title": "Assault on a Queen",
-        "imdbId": "tt0060135",
-        "year": "1966",
-        "slug": "assault-on-a-queen-1966",
-        "grade": "D-",
+        "title": "The Asphalt Jungle",
+        "imdbId": "tt0042208",
+        "year": "1950",
+        "slug": "the-asphalt-jungle-1950",
+        "grade": "B",
         "genres": [
-          "Adventure",
           "Crime",
-          "Thriller",
-          "Action",
-          "Drama"
+          "Drama",
+          "Film-Noir",
+          "Thriller"
         ]
       }
     ]
@@ -96116,18 +96813,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Avengers: Infinity War",
-        "imdbId": "tt4154756",
-        "year": "2018",
-        "slug": "avengers-infinity-war-2018",
-        "grade": "A+",
-        "genres": [
-          "Action",
-          "Adventure",
-          "Sci-Fi"
-        ]
-      },
-      {
         "title": "The Awakening of the Beast",
         "imdbId": "tt0062690",
         "year": "1970",
@@ -96136,6 +96821,17 @@
         "genres": [
           "Drama",
           "Horror"
+        ]
+      },
+      {
+        "title": "The Awful Truth",
+        "imdbId": "tt0028597",
+        "year": "1937",
+        "slug": "the-awful-truth-1937",
+        "grade": "D+",
+        "genres": [
+          "Comedy",
+          "Romance"
         ]
       },
       {
@@ -99686,6 +100382,17 @@
             ]
           },
           {
+            "title": "The Awful Truth",
+            "imdbId": "tt0028597",
+            "year": "1937",
+            "slug": "the-awful-truth-1937",
+            "grade": "D+",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          },
+          {
             "title": "Holiday",
             "imdbId": "tt0030241",
             "year": "1938",
@@ -99694,18 +100401,6 @@
             "genres": [
               "Comedy",
               "Romance"
-            ]
-          },
-          {
-            "title": "Gunga Din",
-            "imdbId": "tt0031398",
-            "year": "1939",
-            "slug": "gunga-din-1939",
-            "grade": "B-",
-            "genres": [
-              "Adventure",
-              "Comedy",
-              "War"
             ]
           }
         ]
@@ -99972,13 +100667,13 @@
             ]
           },
           {
-            "title": "The Devil's Brigade",
-            "imdbId": "tt0062886",
-            "year": "1968",
-            "slug": "the-devils-brigade-1968",
-            "grade": "C",
+            "title": "The 7th Dawn",
+            "imdbId": "tt0057813",
+            "year": "1964",
+            "slug": "the-7th-dawn-1964",
+            "grade": "D+",
             "genres": [
-              "Action",
+              "Adventure",
               "Drama",
               "War"
             ]
@@ -102895,29 +103590,28 @@
         ]
       },
       {
-        "title": "The Alamo",
-        "imdbId": "tt0053580",
-        "year": "1960",
-        "slug": "the-alamo-1960",
-        "grade": "B",
+        "title": "The Adventures of Robin Hood",
+        "imdbId": "tt0029843",
+        "year": "1938",
+        "slug": "the-adventures-of-robin-hood-1938",
+        "grade": "A",
         "genres": [
+          "Action",
           "Adventure",
-          "Drama",
-          "History",
-          "War",
-          "Western"
+          "Romance"
         ]
       },
       {
-        "title": "Alice in Wonderland",
-        "imdbId": "tt0023753",
-        "year": "1933",
-        "slug": "alice-in-wonderland-1933",
-        "grade": "F",
+        "title": "The African Queen",
+        "imdbId": "tt0043265",
+        "year": "1951",
+        "slug": "the-african-queen-1951",
+        "grade": "B+",
         "genres": [
           "Adventure",
-          "Family",
-          "Fantasy"
+          "Drama",
+          "Romance",
+          "War"
         ]
       }
     ]
@@ -103494,6 +104188,18 @@
             ]
           },
           {
+            "title": "The 39 Steps",
+            "imdbId": "tt0026029",
+            "year": "1935",
+            "slug": "the-39-steps-1935",
+            "grade": "B+",
+            "genres": [
+              "Crime",
+              "Mystery",
+              "Thriller"
+            ]
+          },
+          {
             "title": "Young and Innocent",
             "imdbId": "tt0029811",
             "year": "1937",
@@ -103503,17 +104209,6 @@
               "Crime",
               "Mystery",
               "Romance",
-              "Thriller"
-            ]
-          },
-          {
-            "title": "The Lady Vanishes",
-            "imdbId": "tt0030341",
-            "year": "1938",
-            "slug": "the-lady-vanishes-1938",
-            "grade": "B",
-            "genres": [
-              "Mystery",
               "Thriller"
             ]
           }
@@ -103999,11 +104694,11 @@
             ]
           },
           {
-            "title": "Holiday",
-            "imdbId": "tt0030241",
-            "year": "1938",
-            "slug": "holiday-1938",
-            "grade": "B",
+            "title": "The Awful Truth",
+            "imdbId": "tt0028597",
+            "year": "1937",
+            "slug": "the-awful-truth-1937",
+            "grade": "D+",
             "genres": [
               "Comedy",
               "Romance"
@@ -106087,18 +106782,14 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Toast of New York",
-            "imdbId": "tt0029675",
+            "title": "The Awful Truth",
+            "imdbId": "tt0028597",
             "year": "1937",
-            "slug": "the-toast-of-new-york-1937",
-            "grade": "C+",
+            "slug": "the-awful-truth-1937",
+            "grade": "D+",
             "genres": [
-              "Biography",
               "Comedy",
-              "Drama",
-              "History",
-              "Romance",
-              "War"
+              "Romance"
             ]
           },
           {
@@ -107952,11 +108643,11 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "Number 17",
-            "imdbId": "tt0023285",
-            "year": "1932",
-            "slug": "number-seventeen-1932",
-            "grade": "D",
+            "title": "The Man Who Knew Too Much",
+            "imdbId": "tt0025452",
+            "year": "1934",
+            "slug": "the-man-who-knew-too-much-1934",
+            "grade": "C",
             "genres": [
               "Crime",
               "Mystery",
@@ -107964,11 +108655,11 @@
             ]
           },
           {
-            "title": "The Man Who Knew Too Much",
-            "imdbId": "tt0025452",
-            "year": "1934",
-            "slug": "the-man-who-knew-too-much-1934",
-            "grade": "C",
+            "title": "The 39 Steps",
+            "imdbId": "tt0026029",
+            "year": "1935",
+            "slug": "the-39-steps-1935",
+            "grade": "B+",
             "genres": [
               "Crime",
               "Mystery",
@@ -109384,18 +110075,14 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Scream and Scream Again",
-            "imdbId": "tt0064949",
-            "year": "1970",
-            "slug": "scream-and-scream-again-1970",
+            "title": "The Abominable Dr. Phibes",
+            "imdbId": "tt0066740",
+            "year": "1971",
+            "slug": "the-abominable-dr-phibes-1971",
             "grade": "B-",
             "genres": [
-              "Crime",
-              "Drama",
-              "Horror",
-              "Mystery",
-              "Sci-Fi",
-              "Thriller"
+              "Comedy",
+              "Horror"
             ]
           },
           {
@@ -119725,14 +120412,14 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "Some Like It Hot",
-            "imdbId": "tt0053291",
-            "year": "1959",
-            "slug": "some-like-it-hot-1959",
+            "title": "The Apartment",
+            "imdbId": "tt0053604",
+            "year": "1960",
+            "slug": "the-apartment-1960",
             "grade": "A+",
             "genres": [
               "Comedy",
-              "Music",
+              "Drama",
               "Romance"
             ]
           },
@@ -119778,14 +120465,14 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Some Like It Hot",
-            "imdbId": "tt0053291",
-            "year": "1959",
-            "slug": "some-like-it-hot-1959",
+            "title": "The Apartment",
+            "imdbId": "tt0053604",
+            "year": "1960",
+            "slug": "the-apartment-1960",
             "grade": "A+",
             "genres": [
               "Comedy",
-              "Music",
+              "Drama",
               "Romance"
             ]
           },
@@ -120152,6 +120839,230 @@
         "genres": [
           "Comedy",
           "Romance"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0043265",
+    "title": "The African Queen",
+    "year": "1951",
+    "slug": "the-african-queen-1951",
+    "grade": "B+",
+    "countries": [
+      "United Kingdom",
+      "United States"
+    ],
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Romance",
+      "War"
+    ],
+    "sortTitle": "African Queen (1951)",
+    "originalTitle": null,
+    "gradeValue": 10,
+    "runtimeMinutes": 105,
+    "releaseSequence": "1951-12-26tt0043265",
+    "directorNames": [
+      "John Huston"
+    ],
+    "writerNames": [
+      "C.S. Forester",
+      "James Agee",
+      "John Huston"
+    ],
+    "principalCastNames": [
+      "Humphrey Bogart",
+      "Katharine Hepburn",
+      "Robert Morley",
+      "Peter Bull"
+    ],
+    "reviewDate": "2007-10-24",
+    "reviewYear": "2007",
+    "sequence": "2007-10-24-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "John Huston",
+        "slug": "john-huston",
+        "creditedAs": [
+          "director",
+          "writer"
+        ]
+      },
+      {
+        "name": "Humphrey Bogart",
+        "slug": "humphrey-bogart",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "John Huston",
+        "slug": "john-huston",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "The Asphalt Jungle",
+            "imdbId": "tt0042208",
+            "year": "1950",
+            "slug": "the-asphalt-jungle-1950",
+            "grade": "B",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Film-Noir",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "The Red Badge of Courage",
+            "imdbId": "tt0043961",
+            "year": "1951",
+            "slug": "the-red-badge-of-courage-1951",
+            "grade": "C-",
+            "genres": [
+              "Drama",
+              "War"
+            ]
+          },
+          {
+            "title": "Moby Dick",
+            "imdbId": "tt0049513",
+            "year": "1956",
+            "slug": "moby-dick-1956",
+            "grade": "C+",
+            "genres": [
+              "Adventure",
+              "Drama"
+            ]
+          },
+          {
+            "title": "Heaven Knows, Mr. Allison",
+            "imdbId": "tt0050490",
+            "year": "1957",
+            "slug": "heaven-knows-mr-allison-1957",
+            "grade": "B-",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "War"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Humphrey Bogart",
+        "slug": "humphrey-bogart",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Treasure of the Sierra Madre",
+            "imdbId": "tt0040897",
+            "year": "1948",
+            "slug": "the-treasure-of-the-sierra-madre-1948",
+            "grade": "A",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "Western"
+            ]
+          },
+          {
+            "title": "Chain Lightning",
+            "imdbId": "tt0042324",
+            "year": "1950",
+            "slug": "chain-lightning-1950",
+            "grade": "D+",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama"
+            ]
+          },
+          {
+            "title": "Deadline - U.S.A.",
+            "imdbId": "tt0044533",
+            "year": "1952",
+            "slug": "deadline-usa-1952",
+            "grade": "B",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Film-Noir"
+            ]
+          },
+          {
+            "title": "The Caine Mutiny",
+            "imdbId": "tt0046816",
+            "year": "1954",
+            "slug": "the-caine-mutiny-1954",
+            "grade": "B+",
+            "genres": [
+              "Drama",
+              "War"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The Adventures of Ford Fairlane",
+        "imdbId": "tt0098987",
+        "year": "1990",
+        "slug": "the-adventures-of-ford-fairlane-1990",
+        "grade": "C+",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Comedy",
+          "Crime",
+          "Music",
+          "Mystery"
+        ]
+      },
+      {
+        "title": "The Adventures of Robin Hood",
+        "imdbId": "tt0029843",
+        "year": "1938",
+        "slug": "the-adventures-of-robin-hood-1938",
+        "grade": "A",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Romance"
+        ]
+      },
+      {
+        "title": "The Alamo",
+        "imdbId": "tt0053580",
+        "year": "1960",
+        "slug": "the-alamo-1960",
+        "grade": "B",
+        "genres": [
+          "Adventure",
+          "Drama",
+          "History",
+          "War",
+          "Western"
+        ]
+      },
+      {
+        "title": "Alice in Wonderland",
+        "imdbId": "tt0023753",
+        "year": "1933",
+        "slug": "alice-in-wonderland-1933",
+        "grade": "F",
+        "genres": [
+          "Adventure",
+          "Family",
+          "Fantasy"
         ]
       }
     ]
@@ -122593,6 +123504,19 @@
             ]
           },
           {
+            "title": "The Asphalt Jungle",
+            "imdbId": "tt0042208",
+            "year": "1950",
+            "slug": "the-asphalt-jungle-1950",
+            "grade": "B",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Film-Noir",
+              "Thriller"
+            ]
+          },
+          {
             "title": "The Red Badge of Courage",
             "imdbId": "tt0043961",
             "year": "1951",
@@ -122601,17 +123525,6 @@
             "genres": [
               "Drama",
               "War"
-            ]
-          },
-          {
-            "title": "Moby Dick",
-            "imdbId": "tt0049513",
-            "year": "1956",
-            "slug": "moby-dick-1956",
-            "grade": "C+",
-            "genres": [
-              "Adventure",
-              "Drama"
             ]
           }
         ]
@@ -126773,16 +127686,15 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Ant-Man and the Wasp",
-        "imdbId": "tt5095030",
-        "year": "2018",
-        "slug": "ant-man-and-the-wasp-2018",
-        "grade": "D",
+        "title": "The Apartment",
+        "imdbId": "tt0053604",
+        "year": "1960",
+        "slug": "the-apartment-1960",
+        "grade": "A+",
         "genres": [
-          "Action",
-          "Adventure",
           "Comedy",
-          "Sci-Fi"
+          "Drama",
+          "Romance"
         ]
       },
       {
@@ -131614,13 +132526,14 @@
             ]
           },
           {
-            "title": "Irma la Douce",
-            "imdbId": "tt0057187",
-            "year": "1963",
-            "slug": "irma-la-douce-1963",
-            "grade": "C-",
+            "title": "The Apartment",
+            "imdbId": "tt0053604",
+            "year": "1960",
+            "slug": "the-apartment-1960",
+            "grade": "A+",
             "genres": [
               "Comedy",
+              "Drama",
               "Romance"
             ]
           }
@@ -135188,6 +136101,160 @@
           "Horror",
           "Sci-Fi",
           "Thriller"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0066740",
+    "title": "The Abominable Dr. Phibes",
+    "year": "1971",
+    "slug": "the-abominable-dr-phibes-1971",
+    "grade": "B-",
+    "countries": [
+      "United Kingdom"
+    ],
+    "genres": [
+      "Comedy",
+      "Horror"
+    ],
+    "sortTitle": "Abominable Dr. Phibes (1971)",
+    "originalTitle": null,
+    "gradeValue": 8,
+    "runtimeMinutes": 94,
+    "releaseSequence": "1971-05-18tt0066740",
+    "directorNames": [
+      "Robert Fuest"
+    ],
+    "writerNames": [
+      "James Whiton",
+      "William Goldstein"
+    ],
+    "principalCastNames": [
+      "Vincent Price",
+      "Joseph Cotten",
+      "Virginia North",
+      "Terry-Thomas"
+    ],
+    "reviewDate": "2007-12-18",
+    "reviewYear": "2007",
+    "sequence": "2007-12-18-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "Vincent Price",
+        "slug": "vincent-price",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "Vincent Price",
+        "slug": "vincent-price",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Oblong Box",
+            "imdbId": "tt0064747",
+            "year": "1969",
+            "slug": "the-oblong-box-1969",
+            "grade": "D+",
+            "genres": [
+              "Horror"
+            ]
+          },
+          {
+            "title": "Scream and Scream Again",
+            "imdbId": "tt0064949",
+            "year": "1970",
+            "slug": "scream-and-scream-again-1970",
+            "grade": "B-",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Horror",
+              "Mystery",
+              "Sci-Fi",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Theater of Blood",
+            "imdbId": "tt0070791",
+            "year": "1973",
+            "slug": "theater-of-blood-1973",
+            "grade": "B",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Horror"
+            ]
+          },
+          {
+            "title": "Service de Luxe",
+            "imdbId": "tt0030732",
+            "year": "1938",
+            "slug": "service-de-luxe-1938",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "The 7th Dawn",
+        "imdbId": "tt0057813",
+        "year": "1964",
+        "slug": "the-7th-dawn-1964",
+        "grade": "D+",
+        "genres": [
+          "Adventure",
+          "Drama",
+          "War"
+        ]
+      },
+      {
+        "title": "8-Bit Christmas",
+        "imdbId": "tt11540284",
+        "year": "2021",
+        "slug": "8-bit-christmas-2021",
+        "grade": "D-",
+        "genres": [
+          "Comedy",
+          "Family"
+        ]
+      },
+      {
+        "title": "The Abominable Snowman",
+        "imdbId": "tt0050095",
+        "year": "1957",
+        "slug": "the-abominable-snowman-1957",
+        "grade": "D+",
+        "genres": [
+          "Adventure",
+          "Horror"
+        ]
+      },
+      {
+        "title": "Across the Pacific",
+        "imdbId": "tt0034428",
+        "year": "1942",
+        "slug": "across-the-pacific-1942",
+        "grade": "C-",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Drama",
+          "Romance",
+          "War"
         ]
       }
     ]
@@ -140290,18 +141357,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Topper",
-            "imdbId": "tt0029682",
-            "year": "1937",
-            "slug": "topper-1937",
-            "grade": "B-",
-            "genres": [
-              "Comedy",
-              "Fantasy",
-              "Romance"
-            ]
-          },
-          {
             "title": "The Toast of New York",
             "imdbId": "tt0029675",
             "year": "1937",
@@ -140314,6 +141369,17 @@
               "History",
               "Romance",
               "War"
+            ]
+          },
+          {
+            "title": "The Awful Truth",
+            "imdbId": "tt0028597",
+            "year": "1937",
+            "slug": "the-awful-truth-1937",
+            "grade": "D+",
+            "genres": [
+              "Comedy",
+              "Romance"
             ]
           },
           {
@@ -146093,18 +147159,16 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Adventures of Ford Fairlane",
-        "imdbId": "tt0098987",
-        "year": "1990",
-        "slug": "the-adventures-of-ford-fairlane-1990",
-        "grade": "C+",
+        "title": "The African Queen",
+        "imdbId": "tt0043265",
+        "year": "1951",
+        "slug": "the-african-queen-1951",
+        "grade": "B+",
         "genres": [
-          "Action",
           "Adventure",
-          "Comedy",
-          "Crime",
-          "Music",
-          "Mystery"
+          "Drama",
+          "Romance",
+          "War"
         ]
       },
       {
@@ -146141,6 +147205,234 @@
         "genres": [
           "Horror",
           "Sci-Fi",
+          "Thriller"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0042208",
+    "title": "The Asphalt Jungle",
+    "year": "1950",
+    "slug": "the-asphalt-jungle-1950",
+    "grade": "B",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Crime",
+      "Drama",
+      "Film-Noir",
+      "Thriller"
+    ],
+    "sortTitle": "Asphalt Jungle (1950)",
+    "originalTitle": null,
+    "gradeValue": 9,
+    "runtimeMinutes": 112,
+    "releaseSequence": "1950-05-12tt0042208",
+    "directorNames": [
+      "John Huston"
+    ],
+    "writerNames": [
+      "Ben Maddow",
+      "John Huston",
+      "W.R. Burnett"
+    ],
+    "principalCastNames": [
+      "Sterling Hayden",
+      "Louis Calhern",
+      "Jean Hagen",
+      "James Whitmore"
+    ],
+    "reviewDate": "2007-07-15",
+    "reviewYear": "2007",
+    "sequence": "2007-07-15-142",
+    "viewings": [
+      {
+        "sequence": 142,
+        "medium": "TCM HD",
+        "mediumNotes": null,
+        "date": "2012-04-01",
+        "venue": null,
+        "venueNotes": null
+      }
+    ],
+    "castAndCrew": [
+      {
+        "name": "John Huston",
+        "slug": "john-huston",
+        "creditedAs": [
+          "director",
+          "writer"
+        ]
+      },
+      {
+        "name": "Marilyn Monroe",
+        "slug": "marilyn-monroe",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [
+      {
+        "name": "John Huston",
+        "slug": "john-huston",
+        "creditKind": "director",
+        "titles": [
+          {
+            "title": "The Treasure of the Sierra Madre",
+            "imdbId": "tt0040897",
+            "year": "1948",
+            "slug": "the-treasure-of-the-sierra-madre-1948",
+            "grade": "A",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "Western"
+            ]
+          },
+          {
+            "title": "We Were Strangers",
+            "imdbId": "tt0042035",
+            "year": "1949",
+            "slug": "we-were-strangers-1949",
+            "grade": "D+",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "Film-Noir",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Red Badge of Courage",
+            "imdbId": "tt0043961",
+            "year": "1951",
+            "slug": "the-red-badge-of-courage-1951",
+            "grade": "C-",
+            "genres": [
+              "Drama",
+              "War"
+            ]
+          },
+          {
+            "title": "The African Queen",
+            "imdbId": "tt0043265",
+            "year": "1951",
+            "slug": "the-african-queen-1951",
+            "grade": "B+",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "Romance",
+              "War"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Marilyn Monroe",
+        "slug": "marilyn-monroe",
+        "creditKind": "performer",
+        "titles": [
+          {
+            "title": "The Misfits",
+            "imdbId": "tt0055184",
+            "year": "1961",
+            "slug": "the-misfits-1961",
+            "grade": "B",
+            "genres": [
+              "Drama",
+              "Romance",
+              "Western"
+            ]
+          },
+          {
+            "title": "Ladies of the Chorus",
+            "imdbId": "tt0041571",
+            "year": "1948",
+            "slug": "ladies-of-the-chorus-1948",
+            "grade": "C",
+            "genres": [
+              "Musical",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Monkey Business",
+            "imdbId": "tt0044916",
+            "year": "1952",
+            "slug": "monkey-business-1952",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Sci-Fi"
+            ]
+          },
+          {
+            "title": "The Seven Year Itch",
+            "imdbId": "tt0048605",
+            "year": "1955",
+            "slug": "the-seven-year-itch-1955",
+            "grade": "C-",
+            "genres": [
+              "Comedy",
+              "Romance"
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Arrebato",
+        "imdbId": "tt0078797",
+        "year": "1979",
+        "slug": "arrebato-1979",
+        "grade": "B-",
+        "genres": [
+          "Drama",
+          "Fantasy",
+          "Horror",
+          "Mystery"
+        ]
+      },
+      {
+        "title": "Arrowsmith",
+        "imdbId": "tt0021622",
+        "year": "1931",
+        "slug": "arrowsmith-1931",
+        "grade": "D+",
+        "genres": [
+          "Drama"
+        ]
+      },
+      {
+        "title": "Assault on a Queen",
+        "imdbId": "tt0060135",
+        "year": "1966",
+        "slug": "assault-on-a-queen-1966",
+        "grade": "D-",
+        "genres": [
+          "Adventure",
+          "Crime",
+          "Thriller",
+          "Action",
+          "Drama"
+        ]
+      },
+      {
+        "title": "Assault on Precinct 13",
+        "imdbId": "tt0074156",
+        "year": "1976",
+        "slug": "assault-on-precinct-13-1976",
+        "grade": "A-",
+        "genres": [
+          "Action",
+          "Crime",
           "Thriller"
         ]
       }
@@ -146905,15 +148197,14 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "Assault on Precinct 13",
-        "imdbId": "tt0074156",
-        "year": "1976",
-        "slug": "assault-on-precinct-13-1976",
-        "grade": "A-",
+        "title": "The Astonished Heart",
+        "imdbId": "tt0041134",
+        "year": "1950",
+        "slug": "the-astonished-heart-1950",
+        "grade": "C+",
         "genres": [
-          "Action",
-          "Crime",
-          "Thriller"
+          "Drama",
+          "Romance"
         ]
       },
       {
@@ -153560,6 +154851,18 @@
         ]
       },
       {
+        "title": "The Apartment",
+        "imdbId": "tt0053604",
+        "year": "1960",
+        "slug": "the-apartment-1960",
+        "grade": "A+",
+        "genres": [
+          "Comedy",
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
         "title": "Apostle",
         "imdbId": "tt6217306",
         "year": "2018",
@@ -153571,17 +154874,6 @@
           "Horror",
           "Mystery",
           "Thriller"
-        ]
-      },
-      {
-        "title": "April Fool's Day",
-        "imdbId": "tt0090655",
-        "year": "1986",
-        "slug": "april-fools-day-1986",
-        "grade": "D+",
-        "genres": [
-          "Horror",
-          "Mystery"
         ]
       }
     ]
@@ -156134,19 +157426,6 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "We Were Strangers",
-            "imdbId": "tt0042035",
-            "year": "1949",
-            "slug": "we-were-strangers-1949",
-            "grade": "D+",
-            "genres": [
-              "Adventure",
-              "Drama",
-              "Film-Noir",
-              "Romance"
-            ]
-          },
-          {
             "title": "The Red Badge of Courage",
             "imdbId": "tt0043961",
             "year": "1951",
@@ -156154,6 +157433,19 @@
             "grade": "C-",
             "genres": [
               "Drama",
+              "War"
+            ]
+          },
+          {
+            "title": "The African Queen",
+            "imdbId": "tt0043265",
+            "year": "1951",
+            "slug": "the-african-queen-1951",
+            "grade": "B+",
+            "genres": [
+              "Adventure",
+              "Drama",
+              "Romance",
               "War"
             ]
           },
@@ -156644,16 +157936,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Oblong Box",
-            "imdbId": "tt0064747",
-            "year": "1969",
-            "slug": "the-oblong-box-1969",
-            "grade": "D+",
-            "genres": [
-              "Horror"
-            ]
-          },
-          {
             "title": "Scream and Scream Again",
             "imdbId": "tt0064949",
             "year": "1970",
@@ -156666,6 +157948,17 @@
               "Mystery",
               "Sci-Fi",
               "Thriller"
+            ]
+          },
+          {
+            "title": "The Abominable Dr. Phibes",
+            "imdbId": "tt0066740",
+            "year": "1971",
+            "slug": "the-abominable-dr-phibes-1971",
+            "grade": "B-",
+            "genres": [
+              "Comedy",
+              "Horror"
             ]
           },
           {
@@ -157171,16 +158464,6 @@
     ],
     "moreReviews": [
       {
-        "title": "71 Fragments of a Chronology of Chance",
-        "imdbId": "tt0109020",
-        "year": "1994",
-        "slug": "71-fragments-of-a-chronology-of-chance-1994",
-        "grade": "C+",
-        "genres": [
-          "Drama"
-        ]
-      },
-      {
         "title": "8-Bit Christmas",
         "imdbId": "tt11540284",
         "year": "2021",
@@ -157189,6 +158472,17 @@
         "genres": [
           "Comedy",
           "Family"
+        ]
+      },
+      {
+        "title": "The Abominable Dr. Phibes",
+        "imdbId": "tt0066740",
+        "year": "1971",
+        "slug": "the-abominable-dr-phibes-1971",
+        "grade": "B-",
+        "genres": [
+          "Comedy",
+          "Horror"
         ]
       },
       {
@@ -157331,22 +158625,23 @@
             ]
           },
           {
+            "title": "The Apartment",
+            "imdbId": "tt0053604",
+            "year": "1960",
+            "slug": "the-apartment-1960",
+            "grade": "A+",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
             "title": "Irma la Douce",
             "imdbId": "tt0057187",
             "year": "1963",
             "slug": "irma-la-douce-1963",
             "grade": "C-",
-            "genres": [
-              "Comedy",
-              "Romance"
-            ]
-          },
-          {
-            "title": "The Fortune Cookie",
-            "imdbId": "tt0060424",
-            "year": "1966",
-            "slug": "the-fortune-cookie-1966",
-            "grade": "C",
             "genres": [
               "Comedy",
               "Romance"
@@ -157383,22 +158678,23 @@
             ]
           },
           {
+            "title": "The Apartment",
+            "imdbId": "tt0053604",
+            "year": "1960",
+            "slug": "the-apartment-1960",
+            "grade": "A+",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
             "title": "Irma la Douce",
             "imdbId": "tt0057187",
             "year": "1963",
             "slug": "irma-la-douce-1963",
             "grade": "C-",
-            "genres": [
-              "Comedy",
-              "Romance"
-            ]
-          },
-          {
-            "title": "The Fortune Cookie",
-            "imdbId": "tt0060424",
-            "year": "1966",
-            "slug": "the-fortune-cookie-1966",
-            "grade": "C",
             "genres": [
               "Comedy",
               "Romance"
@@ -161089,13 +162385,15 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "The Red Badge of Courage",
-            "imdbId": "tt0043961",
+            "title": "The African Queen",
+            "imdbId": "tt0043265",
             "year": "1951",
-            "slug": "the-red-badge-of-courage-1951",
-            "grade": "C-",
+            "slug": "the-african-queen-1951",
+            "grade": "B+",
             "genres": [
+              "Adventure",
               "Drama",
+              "Romance",
               "War"
             ]
           },
@@ -161307,19 +162605,6 @@
         "creditKind": "director",
         "titles": [
           {
-            "title": "Witness for the Prosecution",
-            "imdbId": "tt0051201",
-            "year": "1957",
-            "slug": "witness-for-the-prosecution-1957",
-            "grade": "A",
-            "genres": [
-              "Crime",
-              "Drama",
-              "Mystery",
-              "Thriller"
-            ]
-          },
-          {
             "title": "Some Like It Hot",
             "imdbId": "tt0053291",
             "year": "1959",
@@ -161328,6 +162613,18 @@
             "genres": [
               "Comedy",
               "Music",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Apartment",
+            "imdbId": "tt0053604",
+            "year": "1960",
+            "slug": "the-apartment-1960",
+            "grade": "A+",
+            "genres": [
+              "Comedy",
+              "Drama",
               "Romance"
             ]
           },
@@ -161361,18 +162658,6 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Mister Roberts",
-            "imdbId": "tt0048380",
-            "year": "1955",
-            "slug": "mister-roberts-1955",
-            "grade": "B",
-            "genres": [
-              "Comedy",
-              "Drama",
-              "War"
-            ]
-          },
-          {
             "title": "Some Like It Hot",
             "imdbId": "tt0053291",
             "year": "1959",
@@ -161381,6 +162666,18 @@
             "genres": [
               "Comedy",
               "Music",
+              "Romance"
+            ]
+          },
+          {
+            "title": "The Apartment",
+            "imdbId": "tt0053604",
+            "year": "1960",
+            "slug": "the-apartment-1960",
+            "grade": "A+",
+            "genres": [
+              "Comedy",
+              "Drama",
               "Romance"
             ]
           },
@@ -162485,14 +163782,14 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "The Awakening of the Beast",
-        "imdbId": "tt0062690",
-        "year": "1970",
-        "slug": "the-awakening-of-the-beast-1970",
+        "title": "The Awful Truth",
+        "imdbId": "tt0028597",
+        "year": "1937",
+        "slug": "the-awful-truth-1937",
         "grade": "D+",
         "genres": [
-          "Drama",
-          "Horror"
+          "Comedy",
+          "Romance"
         ]
       },
       {
@@ -163835,16 +165132,6 @@
     "moreCollections": [],
     "moreReviews": [
       {
-        "title": "7 Women",
-        "imdbId": "tt0060050",
-        "year": "1965",
-        "slug": "7-women-1965",
-        "grade": "C+",
-        "genres": [
-          "Drama"
-        ]
-      },
-      {
         "title": "71 Fragments of a Chronology of Chance",
         "imdbId": "tt0109020",
         "year": "1994",
@@ -163852,6 +165139,29 @@
         "grade": "C+",
         "genres": [
           "Drama"
+        ]
+      },
+      {
+        "title": "The 7th Dawn",
+        "imdbId": "tt0057813",
+        "year": "1964",
+        "slug": "the-7th-dawn-1964",
+        "grade": "D+",
+        "genres": [
+          "Adventure",
+          "Drama",
+          "War"
+        ]
+      },
+      {
+        "title": "The Abominable Dr. Phibes",
+        "imdbId": "tt0066740",
+        "year": "1971",
+        "slug": "the-abominable-dr-phibes-1971",
+        "grade": "B-",
+        "genres": [
+          "Comedy",
+          "Horror"
         ]
       },
       {
@@ -163863,20 +165173,6 @@
         "genres": [
           "Adventure",
           "Horror"
-        ]
-      },
-      {
-        "title": "Across the Pacific",
-        "imdbId": "tt0034428",
-        "year": "1942",
-        "slug": "across-the-pacific-1942",
-        "grade": "C-",
-        "genres": [
-          "Action",
-          "Adventure",
-          "Drama",
-          "Romance",
-          "War"
         ]
       }
     ]
@@ -165989,6 +167285,111 @@
         "genres": [
           "Horror",
           "Mystery"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0029843",
+    "title": "The Adventures of Robin Hood",
+    "year": "1938",
+    "slug": "the-adventures-of-robin-hood-1938",
+    "grade": "A",
+    "countries": [
+      "United States"
+    ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Romance"
+    ],
+    "sortTitle": "Adventures of Robin Hood (1938)",
+    "originalTitle": null,
+    "gradeValue": 12,
+    "runtimeMinutes": 102,
+    "releaseSequence": "1938-05-12tt0029843",
+    "directorNames": [
+      "Michael Curtiz",
+      "William Keighley"
+    ],
+    "writerNames": [
+      "Norman Reilly Raine",
+      "Seton I. Miller"
+    ],
+    "principalCastNames": [
+      "Errol Flynn",
+      "Olivia de Havilland",
+      "Basil Rathbone",
+      "Claude Rains"
+    ],
+    "reviewDate": "2007-12-22",
+    "reviewYear": "2007",
+    "sequence": "2007-12-22-",
+    "viewings": [],
+    "castAndCrew": [
+      {
+        "name": "Errol Flynn",
+        "slug": "errol-flynn",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Ada",
+        "imdbId": "tt0054601",
+        "year": "1961",
+        "slug": "ada-1961",
+        "grade": "D+",
+        "genres": [
+          "Drama",
+          "Romance"
+        ]
+      },
+      {
+        "title": "The Adventures of Ford Fairlane",
+        "imdbId": "tt0098987",
+        "year": "1990",
+        "slug": "the-adventures-of-ford-fairlane-1990",
+        "grade": "C+",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Comedy",
+          "Crime",
+          "Music",
+          "Mystery"
+        ]
+      },
+      {
+        "title": "The African Queen",
+        "imdbId": "tt0043265",
+        "year": "1951",
+        "slug": "the-african-queen-1951",
+        "grade": "B+",
+        "genres": [
+          "Adventure",
+          "Drama",
+          "Romance",
+          "War"
+        ]
+      },
+      {
+        "title": "The Alamo",
+        "imdbId": "tt0053580",
+        "year": "1960",
+        "slug": "the-alamo-1960",
+        "grade": "B",
+        "genres": [
+          "Adventure",
+          "Drama",
+          "History",
+          "War",
+          "Western"
         ]
       }
     ]
@@ -168551,6 +169952,96 @@
         "grade": "B+",
         "genres": [
           "Horror"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0041134",
+    "title": "The Astonished Heart",
+    "year": "1950",
+    "slug": "the-astonished-heart-1950",
+    "grade": "C+",
+    "countries": [
+      "United Kingdom"
+    ],
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "sortTitle": "Astonished Heart (1950)",
+    "originalTitle": null,
+    "gradeValue": 7,
+    "runtimeMinutes": 85,
+    "releaseSequence": "1950-02-14tt0041134",
+    "directorNames": [
+      "Antony Darnborough",
+      "Terence Fisher"
+    ],
+    "writerNames": [
+      "No\u00ebl Coward"
+    ],
+    "principalCastNames": [
+      "No\u00ebl Coward",
+      "Celia Johnson",
+      "Margaret Leighton",
+      "Joyce Carey"
+    ],
+    "reviewDate": "2009-01-10",
+    "reviewYear": "2009",
+    "sequence": "2009-01-10-",
+    "viewings": [],
+    "castAndCrew": [],
+    "collections": [],
+    "moreCastAndCrew": [],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "title": "Assault on a Queen",
+        "imdbId": "tt0060135",
+        "year": "1966",
+        "slug": "assault-on-a-queen-1966",
+        "grade": "D-",
+        "genres": [
+          "Adventure",
+          "Crime",
+          "Thriller",
+          "Action",
+          "Drama"
+        ]
+      },
+      {
+        "title": "Assault on Precinct 13",
+        "imdbId": "tt0074156",
+        "year": "1976",
+        "slug": "assault-on-precinct-13-1976",
+        "grade": "A-",
+        "genres": [
+          "Action",
+          "Crime",
+          "Thriller"
+        ]
+      },
+      {
+        "title": "Asylum",
+        "imdbId": "tt0068230",
+        "year": "1972",
+        "slug": "asylum-1972",
+        "grade": "D+",
+        "genres": [
+          "Horror"
+        ]
+      },
+      {
+        "title": "Audition",
+        "imdbId": "tt0235198",
+        "year": "1999",
+        "slug": "audition-1999",
+        "grade": "B+",
+        "genres": [
+          "Drama",
+          "Horror",
+          "Mystery"
         ]
       }
     ]
