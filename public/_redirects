@@ -45,6 +45,8 @@
 /reviews/vegas-vampires-2003 /reviews/vegas-vampires-2007 301
 /reviews/zombi-2-1979 /reviews/zombie-1979 301
 
+/reviews/religulous-2008 /gone 410
+
 # watchlist to cast-and-crew
 /browse/* /cast-and-crew/:splat 301
 /watchlist/cast/* /cast-and-crew/:splat 301
