@@ -50,6 +50,7 @@
 /reviews/zombi-2-1979 /reviews/zombie-1979 301
 
 /reviews/religulous-2008 /gone 410
+/reviews/undefined /gone 410
 
 # watchlist to cast-and-crew
 /browse/* /cast-and-crew/:splat 301
@@ -78,7 +79,7 @@
 /cast-and-crew/universal-monsters /collections/universal-monsters 301
 
 /cast-and-crew/:name/by-grade /cast-and-crew/:name/ 301
-
+/cast-and-crew/:name/by-date-viewed /cast-and-crew/:name/ 301
 
 # cast and crew not coming back
 /cast-and-crew/ann-dvorak /gone 410
@@ -86,6 +87,7 @@
 /cast-and-crew/boyd-holbrook /gone 410
 /cast-and-crew/casey-affleck /gone 410
 /cast-and-crew/charles-bennett-i /gone 410
+/cast-and-crew/corey-feldman-i /gone 410
 /cast-and-crew/danielle-harris-i /gone 410
 /cast-and-crew/danny-boyle /gone 410
 /cast-and-crew/david-harbour-i /gone 410
@@ -107,6 +109,7 @@
 /cast-and-crew/michael-gough-i /gone 410
 /cast-and-crew/natalie-portman /gone 410
 /cast-and-crew/otis-harlan /gone 410
+/cast-and-crew/paul-dini /gone 410
 /cast-and-crew/robin-atkin-downes /gone 410
 /cast-and-crew/sheila-terry /gone 410
 /cast-and-crew/tenny-wright /gone 410
