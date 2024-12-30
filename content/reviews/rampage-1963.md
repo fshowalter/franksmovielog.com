@@ -1,7 +1,7 @@
 ---
 date: 2012-04-14
 imdb_id: tt0057447
-grade: C-
+grade: D
 slug: rampage-1963
 ---
 

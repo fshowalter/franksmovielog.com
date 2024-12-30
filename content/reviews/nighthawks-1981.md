@@ -1,7 +1,7 @@
 ---
 date: 2012-04-20
 imdb_id: tt0082817
-grade: C
+grade: C-
 slug: nighthawks-1981
 ---
 
