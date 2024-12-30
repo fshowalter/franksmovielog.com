@@ -1,7 +1,7 @@
 ---
 date: 2012-04-13
 imdb_id: tt0047422
-grade: C
+grade: C-
 slug: river-of-no-return-1954
 ---
 

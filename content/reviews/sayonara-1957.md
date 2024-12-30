@@ -1,7 +1,7 @@
 ---
 date: 2012-04-08
 imdb_id: tt0050933
-grade: C-
+grade: D+
 slug: sayonara-1957
 ---
 

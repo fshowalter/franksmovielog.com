@@ -1,7 +1,7 @@
 ---
 date: 2012-04-08
 imdb_id: tt0071276
-grade: C
+grade: C-
 slug: captain-kronos-vampire-hunter-1974
 ---
 

@@ -1,7 +1,7 @@
 ---
 date: 2012-04-07
 imdb_id: tt0057329
-grade: D
+grade: D-
 slug: move-over-darling-1963
 ---
 
