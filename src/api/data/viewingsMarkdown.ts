@@ -35,39 +35,37 @@ export type MarkdownViewing = {
   viewingNotesRaw: string | undefined;
 };
 
-export async function allViewingsMarkdown(): Promise<MarkdownViewing[]> {
-  return await parseAllViewingsMarkdown();
+export function allViewingsMarkdown(): MarkdownViewing[] {
+  return parseAllViewingsMarkdown();
 }
 
-async function parseAllViewingsMarkdown() {
+function parseAllViewingsMarkdown() {
   const dirents = fs.readdirSync(viewingsMarkdownDirectory, {
     withFileTypes: true,
   });
 
-  return Promise.all(
-    dirents
-      .filter((item) => !item.isDirectory() && item.name.endsWith(".md"))
-      .map((item) => {
-        const fileContents = fs.readFileSync(
-          `${viewingsMarkdownDirectory}/${item.name}`,
-          "utf8",
-        );
+  return dirents
+    .filter((item) => !item.isDirectory() && item.name.endsWith(".md"))
+    .map((item) => {
+      const fileContents = fs.readFileSync(
+        `${viewingsMarkdownDirectory}/${item.name}`,
+        "utf8",
+      );
 
-        const { content, data } = matter(fileContents);
-        const greyMatter = DataSchema.parse(data);
+      const { content, data } = matter(fileContents);
+      const greyMatter = DataSchema.parse(data);
 
-        const markdownViewing: MarkdownViewing = {
-          date: greyMatter.date,
-          imdbId: greyMatter.imdbId,
-          medium: greyMatter.medium,
-          mediumNotesRaw: greyMatter.mediumNotes,
-          sequence: greyMatter.sequence,
-          venue: greyMatter.venue,
-          venueNotesRaw: greyMatter.venueNotes,
-          viewingNotesRaw: content,
-        };
+      const markdownViewing: MarkdownViewing = {
+        date: greyMatter.date,
+        imdbId: greyMatter.imdbId,
+        medium: greyMatter.medium,
+        mediumNotesRaw: greyMatter.mediumNotes,
+        sequence: greyMatter.sequence,
+        venue: greyMatter.venue,
+        venueNotesRaw: greyMatter.venueNotes,
+        viewingNotesRaw: content,
+      };
 
-        return markdownViewing;
-      }),
-  );
+      return markdownViewing;
+    });
 }

@@ -21,34 +21,32 @@ const DataSchema = z.object({
   slug: z.string(),
 });
 
-export async function allReviewsMarkdown(): Promise<MarkdownReview[]> {
-  return await parseAllReviewsMarkdown();
+export function allReviewsMarkdown(): MarkdownReview[] {
+  return parseAllReviewsMarkdown();
 }
 
-async function parseAllReviewsMarkdown(): Promise<MarkdownReview[]> {
+function parseAllReviewsMarkdown(): MarkdownReview[] {
   const dirents = fs.readdirSync(reviewsMarkdownDirectory, {
     withFileTypes: true,
   });
 
-  return Promise.all(
-    dirents
-      .filter((item) => !item.isDirectory() && item.name.endsWith(".md"))
-      .map((item) => {
-        const fileContents = fs.readFileSync(
-          `${reviewsMarkdownDirectory}/${item.name}`,
-          "utf8",
-        );
+  return dirents
+    .filter((item) => !item.isDirectory() && item.name.endsWith(".md"))
+    .map((item) => {
+      const fileContents = fs.readFileSync(
+        `${reviewsMarkdownDirectory}/${item.name}`,
+        "utf8",
+      );
 
-        const { content, data } = matter(fileContents);
-        const greyMatter = DataSchema.parse(data);
+      const { content, data } = matter(fileContents);
+      const greyMatter = DataSchema.parse(data);
 
-        return {
-          date: greyMatter.date,
-          grade: greyMatter.grade,
-          imdbId: greyMatter.imdb_id,
-          rawContent: content,
-          slug: greyMatter.slug,
-        };
-      }),
-  );
+      return {
+        date: greyMatter.date,
+        grade: greyMatter.grade,
+        imdbId: greyMatter.imdb_id,
+        rawContent: content,
+        slug: greyMatter.slug,
+      };
+    });
 }

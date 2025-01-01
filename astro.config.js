@@ -7,10 +7,6 @@ import { fileURLToPath } from "node:url";
 import { createIndex } from "pagefind";
 import sirv from "sirv";
 
-const ReactCompilerConfig = {
-  target: "19",
-};
-
 function contentHmr() {
   return {
     enforce: "post",
@@ -132,7 +128,7 @@ export default defineConfig({
       contentHmr(),
       react({
         babel: {
-          plugins: [["babel-plugin-react-compiler", ReactCompilerConfig]],
+          plugins: [["babel-plugin-react-compiler", {}]],
         },
       }),
     ],
