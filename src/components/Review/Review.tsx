@@ -199,34 +199,6 @@ function OriginalTitle({
 }
 
 function ViewingHistory({ value }: Pick<Props, "value">) {
-  if (value.viewings.length === 0) {
-    return (
-      <div className="w-full max-w-popout">
-        <SubHeading as="h2" className="shadow-bottom">
-          Viewing History
-        </SubHeading>
-        <ul>
-          <ViewingHistoryListItem
-            key={1}
-            value={{
-              date: value.date,
-              imdbId: value.imdbId,
-              medium: undefined,
-              mediumNotes: undefined,
-              mediumNotesRaw: undefined,
-              sequence: 1,
-              venue: undefined,
-              venueNotes: undefined,
-              venueNotesRaw: undefined,
-              viewingNotes: undefined,
-              viewingNotesRaw: undefined,
-            }}
-          />
-        </ul>
-      </div>
-    );
-  }
-
   return (
     <div className="w-full max-w-popout">
       <SubHeading as="h2" className="shadow-bottom">
