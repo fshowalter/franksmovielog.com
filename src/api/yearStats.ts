@@ -13,7 +13,9 @@ export async function allStatYears() {
   const yearStats = await allYearStatsJson();
 
   for (const stats of yearStats) {
-    statYears.add(stats.year);
+    if (stats.year > "2011") {
+      statYears.add(stats.year);
+    }
   }
 
   return [...statYears].toSorted();
@@ -28,7 +30,6 @@ export async function statsForYear(year: string): Promise<YearStats> {
 
   for (const stats of yearStats) {
     cache[stats.year] = stats;
-    statYears.add(stats.year);
   }
 
   return cache[year];
