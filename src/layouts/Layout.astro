@@ -37,7 +37,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
     <link href="/sitemap-index.xml" rel="sitemap" />
     <meta content={description} name="description" />
     <link
-      href={new URL("feed.xml", Astro.site)}
+      href={new URL("feed.xml", import.meta.env.SITE)}
       rel="alternate"
       title={siteMeta.title}
       type="application/rss+xml"
