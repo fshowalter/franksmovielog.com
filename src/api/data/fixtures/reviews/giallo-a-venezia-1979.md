@@ -3,7 +3,7 @@ date: 2020-10-29
 imdb_id: tt0079207
 title: Giallo a Venezia (1979)
 grade: F
-slug: giallo-a-venezia-1979
+slug: giallo-in-venice-1979
 ---
 
 I have a soft-spot for over-the-top exploitation films. I gave <span data-imdb-id="tt0188527">_Island of Death_</span> a four-star review, praising its “everything-but-the-kitchen sink approach that pushes the film past any genuine scares or mean-spirited umbrage, and firmly into parody.” _Giallo a Venezia_ is no parody.

@@ -3,7 +3,7 @@ date: 2022-01-05
 imdb_id: tt1614989
 title: Jo Nesbø's Headhunters (2011)
 grade: A-
-slug: jo-nesbos-headhunters-2011
+slug: headhunters-2011
 ---
 
 An elite corporate head hunter finances his lavish lifestyle by stealing art from his prospects. This setup serves as a fulcrum for a clockwork plot. To reveal anymore would spoil the film's myriad surprises.

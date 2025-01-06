@@ -3,7 +3,7 @@ date: 2021-01-07
 imdb_id: tt0022353
 title: Seas Beneath (1931)
 grade: D+
-slug: seas-beneath-1931
+slug: the-seas-beneath-1931
 ---
 
 An uneven amalgam of war picture, spy drama, and romance. In late WWI, O’Brien captains a naval crew aboard a decoy ship posing as merchant marines. They’re hunting for a notorious German U-boat.

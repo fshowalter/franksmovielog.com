@@ -3,7 +3,7 @@ date: 2021-02-05
 imdb_id: tt0093608
 title: Nekromantik (1987)
 grade: D-
-slug: nekromantik-1987
+slug: nekromantik-1988
 ---
 
 As much as I’d like to dismiss it, _Nekromantik_ isn’t trash. It’s too damn self-aware and well-executed. It’s also the first film to make me gag since the toilet bowl scene in <span data-imdb-id="tt0117951">_Trainspotting_</span>.

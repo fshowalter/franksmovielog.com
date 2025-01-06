@@ -60,6 +60,10 @@ export async function getFluidWidthPosterImageProps(
     return path.endsWith(`/${slug}.png`);
   })!;
 
+  if (!(posterFilePath in images)) {
+    throw new Error(`Poster not found: ${slug}`);
+  }
+
   const posterFile = await images[posterFilePath]();
 
   const optimizedImage = await getImage({
