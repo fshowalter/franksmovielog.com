@@ -3,7 +3,7 @@ date: 2021-03-12
 imdb_id: tt0083972
 title: Friday the 13th Part III (1982)
 grade: C-
-slug: friday-the-13th-part-iii-1982
+slug: friday-the-13th-part-3-1982
 ---
 
 Picks up where <span data-imdb-id="tt0082418">_Part 2_</span> ends. Another group of teens head to another lakeside cabin where an increasingly indestructible Jason slaughters them. Along the way, Jason picks up his iconic hockey mask.

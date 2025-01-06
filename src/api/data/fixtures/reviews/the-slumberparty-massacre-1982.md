@@ -3,7 +3,7 @@ date: 2021-10-08
 imdb_id: tt0084695
 title: The Slumberparty Massacre (1982)
 grade: D+
-slug: the-slumberparty-massacre-1982
+slug: the-slumber-party-massacre-1982
 ---
 
 I went in knowing this had an all-woman creative team, but it was only after watching that I learned feminist activist Rita Mae Brown wrote the script as a slasher parody, but producer-director Amy Holden Jones shot it as a straight exploitation picture.

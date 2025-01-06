@@ -3,7 +3,7 @@ date: 2020-10-06
 imdb_id: tt0032339
 title: A Chump at Oxford (1939)
 grade: D+
-slug: a-chump-at-oxford-1939
+slug: a-chump-at-oxford-1940
 ---
 
 **Peter Cushing’s second film.** He has a minor speaking part playing one of the Oxford students who hassle Laurel and Hardy.

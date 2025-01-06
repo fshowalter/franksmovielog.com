@@ -3,7 +3,7 @@ date: 2020-11-09
 imdb_id: tt0021577
 title: L'Age d'Or (1930)
 grade: C+
-slug: lage-dor-1930
+slug: the-golden-age-1930
 ---
 
 How does one review this movie? A surrealist tale presented as a series of vignettes, the film offers no story. The lone through-line concerns two lovers struggling to consummate their relationship.

@@ -3,7 +3,7 @@ date: 2022-06-14
 imdb_id: tt0241687
 title: Loving Memory (1971)
 grade: C
-slug: loving-memory-1971
+slug: loving-memory-1970
 ---
 
 **Tony Scott's debut feature.** In the Yorkshire Moors, a young man sets out on his bicycle. A chance encounter with an aging duo results in tragedy and the story descends into a macabre meditation on isolation and the lasting impact of the Second World War.

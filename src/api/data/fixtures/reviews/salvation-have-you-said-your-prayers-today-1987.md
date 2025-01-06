@@ -3,7 +3,7 @@ date: 2020-11-27
 imdb_id: tt0093912
 title: 'Salvation!: Have You Said Your Prayers Today? (1987)'
 grade: B
-slug: salvation-have-you-said-your-prayers-today-1987
+slug: salvation-1987
 ---
 
 An early but impressive performance from Viggo Mortensen. A black comedy script indicting America's class gap and televangelism. A visual esthetic inspired by contemporary Italian horror. A nightmarish home-invasion sub-plot. A soundtrack driven by New Order and Arthur Baker. **How have I never seen this?**

@@ -3,7 +3,7 @@ date: 2022-09-14
 imdb_id: tt0039305
 title: Dead Reckoning (1947)
 grade: C+
-slug: dead-reckoning-1947
+slug: dead-reckoning-1946
 ---
 
 Humphrey Bogart plays Rip Murdoch, a paratrooper investigating his buddy's disappearance following their return to the states. The trail leads to a shady club owner named Martinelli, and a dangerous blonde played by Lizabeth Scott.

@@ -3,7 +3,7 @@ date: 2021-09-21
 imdb_id: tt0068457
 title: Deathdream (1974)
 grade: B+
-slug: deathdream-1974
+slug: dead-of-night-1974
 ---
 
 Andy, a young Vietnam draftee believed killed-in-action, returns home to grateful parents in a small Florida town. Though he appears fine on the outside, Andy is... different. Detached, icy, unfeeling and possessed with a terrible desire to kill.

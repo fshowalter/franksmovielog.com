@@ -3,7 +3,7 @@ date: 2020-11-30
 imdb_id: tt0045758
 title: Fear and Desire (1953)
 grade: D+
-slug: fear-and-desire-1953
+slug: fear-and-desire-1952
 ---
 
 **Stanley Kubrick’s feature debut.** During an unnamed conflict, four soldiers crash-land in enemy territory and confront the horrors of war. According to the IMDb, Kubrick disowned the film, comparing it to “a child’s drawing on a fridge.” Fair enough, if said child possesses Kubrick’s potential.
