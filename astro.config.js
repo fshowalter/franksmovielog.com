@@ -1,6 +1,7 @@
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
+import compressor from "astro-compressor";
 import { defineConfig } from "astro/config";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -117,6 +118,7 @@ export default defineConfig({
       filter: (page) => page !== "https://www.franksmovielog.com/gone/",
     }),
     pagefind(),
+    compressor(),
   ],
   site: "https://www.franksmovielog.com",
   trailingSlash: "always",
