@@ -6,7 +6,7 @@ import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
 
 import type { ListItemValue, Props } from "./Reviews";
 
-export async function getProps(): Promise<Props> {
+export async function getProps(): Promise<Props & { metaDescription: string }> {
   const { distinctGenres, distinctReleaseYears, distinctReviewYears, reviews } =
     await allReviews();
 
@@ -53,6 +53,8 @@ export async function getProps(): Promise<Props> {
     distinctReleaseYears,
     distinctReviewYears,
     initialSort: "title-asc",
+    metaDescription:
+      "All my movie reviews, from 2003 to present day. Filter by title, genre, review date, release date, or grade. Sort by best or worst, oldest or newest, or title.",
     values,
   };
 }

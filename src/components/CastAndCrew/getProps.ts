@@ -7,7 +7,7 @@ import { ListItemAvatarImageConfig } from "~/components/ListItemAvatar";
 import type { Props } from "./CastAndCrew";
 import type { ListItemValue } from "./CastAndCrew";
 
-export async function getProps(): Promise<Props> {
+export async function getProps(): Promise<Props & { metaDescription: string }> {
   const { castAndCrew } = await allCastAndCrew();
 
   castAndCrew.sort((a, b) => a.name.localeCompare(b.name));
@@ -37,6 +37,8 @@ export async function getProps(): Promise<Props> {
     ),
     deck: '"Round up the usual suspects."',
     initialSort: "name-asc",
+    metaDescription:
+      "A sortable index of directors, performers, and writers who contributed to the movies reviewed on this site. Sort by name, review count, or title count.",
     values,
   };
 }

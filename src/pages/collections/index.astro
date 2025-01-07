@@ -7,9 +7,12 @@ const props = await getProps();
 ---
 
 <Layout
-  article={false}
   canonical={true}
-  description={props.deck}
+  meta={{
+    description:
+      "A sortable index of movie collections reviewed on this site. Sort by name, review count, or title count.",
+  }}
+  openGraph={{ description: props.deck, type: "website" }}
   title="Collections"
 >
   <Collections client:load {...props} />

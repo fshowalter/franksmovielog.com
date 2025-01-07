@@ -7,7 +7,7 @@ import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
 import type { ListItemValue } from "./Underseen";
 import type { Props } from "./Underseen";
 
-export async function getProps(): Promise<Props> {
+export async function getProps(): Promise<Props & { metaDescription: string }> {
   const { distinctGenres, distinctReleaseYears, underseenGems } =
     await allUnderseenGems();
 
@@ -46,6 +46,8 @@ export async function getProps(): Promise<Props> {
     distinctGenres,
     distinctReleaseYears,
     initialSort: "release-date-desc",
+    metaDescription:
+      "Looking for something new? Behold my four and five star reviews of movies with a below average number of IMDb votes.",
     values,
   };
 }

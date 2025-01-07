@@ -7,7 +7,7 @@ import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
 import type { ListItemValue } from "./Underrated";
 import type { Props } from "./Underrated";
 
-export async function getProps(): Promise<Props> {
+export async function getProps(): Promise<Props & { metaDescription: string }> {
   const { distinctGenres, distinctReleaseYears, overratedDisappointments } =
     await allUnderratedSurprises();
 
@@ -42,10 +42,12 @@ export async function getProps(): Promise<Props> {
       "underrated",
       BackdropImageConfig,
     ),
-    deck: "Four and five star movies with an below-average IMDb rating.",
+    deck: "Four and five star movies with a below-average IMDb rating.",
     distinctGenres,
     distinctReleaseYears,
     initialSort: "release-date-desc",
+    metaDescription:
+      "The masses are wrong. These are movies have a four or five star review despite a below-average IMDb rating.",
     values,
   };
 }

@@ -28,10 +28,13 @@ const props = await getProps(slug);
 ---
 
 <Layout
-  article={false}
   canonical={true}
-  description={props.deck}
-  title={props.value.name}
+  meta={{ description: props.metaDescription }}
+  openGraph={{
+    description: props.deck,
+    type: "website",
+  }}
+  title={`${props.value.name} movie reviews`}
 >
   <CastAndCrewMember client:load {...props} />
 </Layout>

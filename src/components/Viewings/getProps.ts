@@ -6,7 +6,7 @@ import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
 
 import type { ListItemValue, Props } from "./Viewings";
 
-export async function getProps(): Promise<Props> {
+export async function getProps(): Promise<Props & { metaDescription: string }> {
   const {
     distinctGenres,
     distinctMedia,
@@ -66,6 +66,8 @@ export async function getProps(): Promise<Props> {
     distinctVenues,
     distinctViewingYears,
     initialSort: "viewing-date-desc",
+    metaDescription:
+      "A list of every movie I've seen since 2012. Filter by title, release year, viewing year, venue, medium, or genre. Sort by oldest or newest.",
     values,
   };
 }
