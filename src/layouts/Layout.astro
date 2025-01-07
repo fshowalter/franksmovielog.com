@@ -2,19 +2,10 @@
 import "./base.css";
 import "@pagefind/default-ui/css/ui.css";
 
-type Meta = {
-  description: string;
-};
-
-type OpenGraph = {
-  description: string;
-  type: "article" | "website";
-};
-
 type Props = {
+  article: boolean;
   canonical: boolean;
-  meta: Meta;
-  openGraph: OpenGraph;
+  description: string;
   title: string;
 };
 
@@ -23,7 +14,7 @@ const siteMeta = {
   title: "Frank's Movie Log",
 };
 
-const { canonical, meta, openGraph, title } = Astro.props;
+const { article, canonical, description, title } = Astro.props;
 let pageTitle;
 
 pageTitle = title.startsWith(siteMeta.title)
@@ -44,7 +35,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
     <link href="/apple-touch-icon.png" rel="apple-touch-icon" />
     <link href="/site.webmanifest" rel="manifest" />
     <link href="/sitemap-index.xml" rel="sitemap" />
-    <meta content={meta.description} name="description" />
+    <meta content={description} name="description" />
     <link
       href={new URL("feed.xml", import.meta.env.SITE)}
       rel="alternate"
@@ -57,8 +48,8 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
           <meta content={`${canonicalUrl}og.jpg`} property="og:image" />
           <meta content={`${canonicalUrl}`} property="og:url" />
           <meta content={title} property="og:title" />
-          <meta content={openGraph.description} property="og:description" />
-          <meta content={openGraph.type} property="og:type" />
+          <meta content={description} property="og:description" />
+          <meta content={article ? "article" : "website"} property="og:type" />
         </>
       )
     }
