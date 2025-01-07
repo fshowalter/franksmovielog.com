@@ -9,7 +9,9 @@ import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
 
 import type { Props } from "./CastAndCrewMember";
 
-export async function getProps(slug: string): Promise<Props> {
+export async function getProps(
+  slug: string,
+): Promise<Props & { metaDescription: string }> {
   const { distinctReleaseYears, member } = await castAndCrewMember(slug);
 
   member.titles.sort((a, b) =>
@@ -28,6 +30,7 @@ export async function getProps(slug: string): Promise<Props> {
     deck: deck(member),
     distinctReleaseYears,
     initialSort: "release-date-asc",
+    metaDescription: metaDescription(member),
     titles: await Promise.all(
       member.titles.map(async (title) => {
         return {
@@ -60,4 +63,18 @@ function deck(value: Props["value"]) {
       : `titles`;
 
   return `${creditList} with ${value.reviewCount} reviewed${watchlistTitleCount} ${titles}.`;
+}
+
+function metaDescription(value: Props["value"]) {
+  const creditMap: Record<string, string> = {
+    director: "directed by",
+    performer: "with",
+    writer: "written by",
+  };
+
+  const creditString = new Intl.ListFormat("en", {
+    type: "disjunction",
+  }).format(value.creditedAs.map((credit) => creditMap[credit]));
+
+  return `Reviews of movies ${creditString} ${value.name}. Sort reviews by best or worst, newest or oldest. Filter by credit kind, year, or title.`;
 }

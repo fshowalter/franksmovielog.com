@@ -7,9 +7,9 @@ const props = await getProps();
 ---
 
 <Layout
-  article={false}
   canonical={true}
-  description={props.deck}
+  meta={{ description: props.metaDescription }}
+  openGraph={{ description: props.deck, type: "website" }}
   title="Underseen Gems"
 >
   <Underseen client:load {...props} />

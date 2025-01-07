@@ -7,7 +7,7 @@ import type { Props } from "./WatchlistProgress";
 
 import { DetailsAvatarImageConfig } from "./Details";
 
-export async function getProps(): Promise<Props> {
+export async function getProps(): Promise<Props & { metaDescription: string }> {
   const progress = await watchlistProgress();
 
   return {
@@ -16,6 +16,8 @@ export async function getProps(): Promise<Props> {
       BackdropImageConfig,
     ),
     deck: '"I find your lack of faith disturbing."',
+    metaDescription:
+      "My progress working through my to-review watchlist. Overall and individual percentage breakdowns by director, writer, performer, and collection.",
     progress: {
       ...progress,
       collectionDetails: await Promise.all(

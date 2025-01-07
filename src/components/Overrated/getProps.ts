@@ -7,7 +7,7 @@ import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
 import type { ListItemValue } from "./Overrated";
 import type { Props } from "./Overrated";
 
-export async function getProps(): Promise<Props> {
+export async function getProps(): Promise<Props & { metaDescription: string }> {
   const { distinctGenres, distinctReleaseYears, overratedDisappointments } =
     await allOverratedDisappointments();
 
@@ -46,6 +46,8 @@ export async function getProps(): Promise<Props> {
     distinctGenres,
     distinctReleaseYears,
     initialSort: "release-date-desc",
+    metaDescription:
+      "Feeling contrarian? Behold my one and two star reviews of movies that somehow received and above-average IMDb rating.",
     values,
   };
 }

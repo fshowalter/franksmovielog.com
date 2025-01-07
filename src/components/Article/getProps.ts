@@ -13,14 +13,15 @@ export async function getProps({
 }: {
   deck: string;
   slug: string;
-}): Promise<Props> {
-  const { content, title } = await getPage(slug);
+}): Promise<Props & { rawContent: string }> {
+  const { content, rawContent, title } = await getPage(slug);
   const recentReviews = await mostRecentReviews(4);
 
   return {
     backdropImageProps: await getBackdropImageProps(slug, BackdropImageConfig),
     content,
     deck,
+    rawContent,
     recentReviews: await Promise.all(
       recentReviews.map(async (review) => {
         const titleWithExcerpt = await loadExcerptHtml(review);

@@ -29,10 +29,15 @@ const props = await getProps(slug);
 ---
 
 <Layout
-  article={false}
   canonical={true}
-  description={props.value.description}
-  title={props.value.name}
+  meta={{
+    description: `Movies in the ${props.value.name} collection. ${props.value.description}`,
+  }}
+  openGraph={{
+    description: props.value.description,
+    type: "website",
+  }}
+  title={`${props.value.name} movie reviews`}
 >
   <Collection client:load {...props} />
 </Layout>

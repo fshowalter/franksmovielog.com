@@ -6,7 +6,7 @@ import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
 
 import type { Props } from "./Watchlist";
 
-export async function getProps(): Promise<Props> {
+export async function getProps(): Promise<Props & { metaDescription: string }> {
   const {
     distinctCollections,
     distinctDirectors,
@@ -38,6 +38,8 @@ export async function getProps(): Promise<Props> {
     distinctReleaseYears,
     distinctWriters,
     initialSort: "release-date-asc",
+    metaDescription:
+      "My to-review bucket list. See what I've yet to review. Sort or filter titles by reason, release date, or title.",
     values: watchlistTitles,
   };
 }

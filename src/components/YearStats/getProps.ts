@@ -6,7 +6,9 @@ import { MostWatchedMoviesPosterConfig } from "~/components/MostWatchedMovies";
 
 import { type Props } from "./YearStats";
 
-export async function getProps(year: string): Promise<Props> {
+export async function getProps(
+  year: string,
+): Promise<Props & { metaDescription: string }> {
   const stats = await statsForYear(year);
   const distinctStatYears = await allStatYears();
 
@@ -17,6 +19,7 @@ export async function getProps(year: string): Promise<Props> {
         ? "A Year in Progress..."
         : "A Year in Review",
     distinctStatYears,
+    metaDescription: `My ${year} viewing stats. Includes my most-watched movies, directors, performers, and writers; as well as venue, release year, and media distributions.`,
     mostWatchedDirectors: await Promise.all(
       stats.mostWatchedDirectors.map(async (person) => {
         return {

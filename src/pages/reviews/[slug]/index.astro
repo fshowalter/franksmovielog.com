@@ -51,6 +51,11 @@ if (props.value.title.length <= 10) {
 title = `${title} (${props.value.year})`;
 ---
 
-<Layout article={true} canonical={true} description={description} title={title}>
+<Layout
+  canonical={true}
+  meta={{ description }}
+  openGraph={{ description, type: "article" }}
+  title={title}
+>
   <Review {...props} />
 </Layout>
