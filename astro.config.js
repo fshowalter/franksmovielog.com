@@ -1,6 +1,7 @@
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
+import playformInline from "@playform/inline";
 import compressor from "astro-compressor";
 import { defineConfig } from "astro/config";
 import path from "node:path";
@@ -118,6 +119,7 @@ export default defineConfig({
       filter: (page) => page !== "https://www.franksmovielog.com/gone/",
     }),
     pagefind(),
+    playformInline(),
     compressor(),
   ],
   site: "https://www.franksmovielog.com",
