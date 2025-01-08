@@ -31,7 +31,7 @@ export async function getBackdropImageProps(
     quality: 80,
     src: backdropFile.default,
     width: width,
-    widths: [0.5, 0.75, 1, 2].map((w) => w * width),
+    widths: [0.3, 0.7, 0.52, 0.675, 0.8, 0.89, 1, 1.5, 2].map((w) => w * width),
   });
 
   return {

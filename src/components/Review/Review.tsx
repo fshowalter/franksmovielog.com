@@ -20,7 +20,7 @@ import { ViewingHistoryListItem } from "./ViewingHistoryListItem";
 
 export const StillImageConfig = {
   height: 562.5,
-  sizes: "(max-width: 1190px) calc(100vw - 16%), 1000px",
+  sizes: "(min-width: 1260px) 1000px, calc(79.57vw + 13px)",
   width: 1000,
 };
 
