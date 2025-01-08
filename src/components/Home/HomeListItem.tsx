@@ -8,7 +8,7 @@ import { Still } from "~/components/Still";
 export const StillImageConfig = {
   height: 360,
   sizes:
-    "(max-width: 767px) 100vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160px) * 0.3132965), 482px",
+    "(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw",
   width: 640,
 };
 
