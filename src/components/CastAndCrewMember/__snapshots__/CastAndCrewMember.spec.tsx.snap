@@ -66393,6 +66393,7 @@ exports[`CastAndCrewMember > renders 1`] = `
                     </span>
                     <button
                       class="ml-auto flex justify-center gap-x-4 text-nowrap px-4 py-2 uppercase text-muted shadow-all tablet-landscape:hidden"
+                      style="background-color: var(--bg-canvas);"
                     >
                       Filter & Sort
                     </button>
