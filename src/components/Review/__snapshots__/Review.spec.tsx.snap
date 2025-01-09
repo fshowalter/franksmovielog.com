@@ -310,7 +310,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
             </a>
           </nav>
           <h1
-            class="text-center text-4xl desktop:text-7xl"
+            class="text-center text-4xl tracking-[-1px] desktop:text-7xl"
             data-pagefind-meta="title"
             data-pagefind-weight="10"
           >
@@ -1602,7 +1602,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
             </a>
           </nav>
           <h1
-            class="text-center text-4xl desktop:text-7xl"
+            class="text-center text-4xl tracking-[-1px] desktop:text-7xl"
             data-pagefind-meta="title"
             data-pagefind-weight="10"
           >
@@ -2571,13 +2571,13 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                     >
                       <p>
                         A sequel to 
-                        <a
-                          href="/reviews/greetings-1968/"
+                        <span
+                          data-imdb-id="tt0063036"
                         >
                           <em>
                             Greetings
                           </em>
-                        </a>
+                        </span>
                          that sees Robert De Niro reprising his role as Jon Rubin, now a Vietnam War vet returned home to New York City. 
                         <a
                           class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline"
@@ -3108,7 +3108,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
             </a>
           </nav>
           <h1
-            class="text-center text-4xl desktop:text-7xl"
+            class="text-center text-4xl tracking-[-1px] desktop:text-7xl"
             data-pagefind-meta="title"
             data-pagefind-weight="10"
           >
@@ -3654,13 +3654,13 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                           Asylum
                         </em>
                          is another anthology horror from Amicus Productions. As with 
-                        <a
-                          href="/reviews/the-house-that-dripped-blood-1971/"
+                        <span
+                          data-imdb-id="tt0065854"
                         >
                           <em>
                             The House That Dripped Blood (1971)
                           </em>
-                        </a>
+                        </span>
                         , the script comes courtesy of Robert Bloch. 
                         <a
                           class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline"
@@ -4038,21 +4038,21 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                           To the Devil a Daughter
                         </em>
                          was the final film of Hammer Film Productions. The studio rose to prominence with films such as 
-                        <a
-                          href="/reviews/the-curse-of-frankenstein-1957/"
+                        <span
+                          data-imdb-id="tt0050280"
                         >
                           <em>
                             The Curse of Frankenstein
                           </em>
-                        </a>
+                        </span>
                          and 
-                        <a
-                          href="/reviews/horror-of-dracula-1958/"
+                        <span
+                          data-imdb-id="tt0051554"
                         >
                           <em>
                             Horror of Dracula
                           </em>
-                        </a>
+                        </span>
                         . Unlike those staged, period pieces, this film is set in contemporary times and shot on location. It represented a big departure for Hammer, but it was too little too late. 
                         <a
                           class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline"
@@ -4966,7 +4966,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
             </a>
           </nav>
           <h1
-            class="text-center text-4xl desktop:text-7xl"
+            class="text-center text-4xl tracking-[-1px] desktop:text-7xl"
             data-pagefind-meta="title"
             data-pagefind-weight="10"
           >
@@ -6318,7 +6318,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
             </a>
           </nav>
           <h1
-            class="text-center text-4xl desktop:text-7xl"
+            class="text-center text-4xl tracking-[-1px] desktop:text-7xl"
             data-pagefind-meta="title"
             data-pagefind-weight="10"
           >
@@ -8035,9 +8035,13 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                     >
                       <p>
                         A 
-                        <em>
-                          Deliverance
-                        </em>
+                        <span
+                          data-imdb-id="tt0068473"
+                        >
+                          <em>
+                            Deliverance
+                          </em>
+                        </span>
                          knock-off that outdoes its inspiration—at least for the first half. A group of doctors travel into the Canadian wilderness planning to hike out over several days. Where 
                         <em>
                           Deliverance
@@ -8579,7 +8583,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             </a>
           </nav>
           <h1
-            class="text-center text-4xl desktop:text-7xl"
+            class="text-center text-4xl tracking-[-1px] desktop:text-7xl"
             data-pagefind-meta="title"
             data-pagefind-weight="10"
           >
@@ -9038,13 +9042,13 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                           Peter Cushing’s debut.
                         </strong>
                          Fitting it should come in a film directed by James Whale, who had—eight years prior—directed 
-                        <a
-                          href="/reviews/frankenstein-1931/"
+                        <span
+                          data-imdb-id="tt0021884"
                         >
                           <em>
                             Frankenstein
                           </em>
-                        </a>
+                        </span>
                         . This loose adaptation of Alexandre Dumas’s novel boasts a winning double-role from Louis Hayward. The lavish sets scream for Technicolor, but the optical effects involved in Hayward playing opposite himself may have prevented it. I’d have preferred more swashbuckling and less melodrama, but it’s still an entertaining ride. The climactic chase reminded me of a western. Our heroes on horseback pursing the villain across the California landscape as he shoots back at them. It also drove home that we weren’t in France. Cushing has one scene as the vice-goon of a band of soldiers sent to arrest d’Artagnan. 
                         <a
                           class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline"
@@ -9431,9 +9435,13 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                           Christopher Lee’s feature debut.
                         </strong>
                          Also Terence Young’s directorial debut. A 
-                        <em>
-                          Rebecca
-                        </em>
+                        <span
+                          data-imdb-id="tt0032976"
+                        >
+                          <em>
+                            Rebecca
+                          </em>
+                        </span>
                          knock-off featuring Eric Portman as a wealthy eccentric who believes Edana Romney to be the reincarnation of an Italian countess he loved in a past life. Lee’s bit part comes early and his lone line lacks his resonant baritone. 
                         <a
                           class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline"
@@ -9752,16 +9760,22 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       <p>
                         <strong>
                           If 
-                          <a
-                            href="/reviews/the-quatermass-xperiment-1955/"
+                          <span
+                            data-imdb-id="tt0049646"
                           >
                             <em>
                               The Quatermass Xperiment
                             </em>
                              marked Hammer Horror’s conception, this marks its birth.
-                          </a>
+                          </span>
                         </strong>
-                         Dean Jagger plays a scientist battling a radioactive blob spewed forth from the earth’s core. Unlike the other blob movie (that came two years later), Jimmy Sangster’s screenplay—his first produced—plays more grown-up, remixing the Quatermass essence into an efficient thriller exploiting the era’s atomic-age fears. Engaging performances and gruesome makeup effects offset the budget-constrained miniature work. Love the pervasive hints of cold, from the ice in the mud to the foggy puffs of breath in every outdoor shot. The Scream Factory print looks great, though not as good as the Kino Lorber Quatermass. 
+                         Dean Jagger plays a scientist battling a radioactive blob spewed forth from the earth’s core. Unlike 
+                        <span
+                          data-imdb-id="tt0051418"
+                        >
+                          the other blob movie
+                        </span>
+                         (that came two years later), Jimmy Sangster’s screenplay—his first produced—plays more grown-up, remixing the Quatermass essence into an efficient thriller exploiting the era’s atomic-age fears. Engaging performances and gruesome makeup effects offset the budget-constrained miniature work. Love the pervasive hints of cold, from the ice in the mud to the foggy puffs of breath in every outdoor shot. The Scream Factory print looks great, though not as good as the Kino Lorber Quatermass. 
                         <a
                           class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline"
                           href="/reviews/x-the-unknown-1956/"
@@ -9832,13 +9846,13 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     >
                       <p>
                         Disappointing sequel to 
-                        <a
-                          href="/reviews/the-quatermass-xperiment-1955/"
+                        <span
+                          data-imdb-id="tt0049646"
                         >
                           <em>
                             The Quatermass Xperiment
                           </em>
-                        </a>
+                        </span>
                          sees Brian Donlevy returning in the titular role, but the character has changed. A bulldog in the first film, this script affords Quatermass little agency. 
                         <a
                           class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline"
@@ -10086,11 +10100,11 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     >
                       <p>
                         A back-to-basics sequel set in an old house full of long shadows and creaky doors. Outside, a perpetual thunderstorm rages. Inside, a wheelchair-bound young woman realizes the toy doll in her home may have supernatural powers. Throwing back to 
-                        <a
-                          href="/reviews/childs-play-1988/"
+                        <span
+                          data-imdb-id="tt0094862"
                         >
                           the original
-                        </a>
+                        </span>
                         , we have a young moppet. But unlike the early films, she’s not central to the plot and disappears for the finale. Instead, the film proffers a surprising sexual thriller alongside the traditional bit where our leads must acknowledge and thwart Chucky. I loved the gothic atmosphere and found the performances entertaining throughout. And for franchise fans, the post-credits tag proves brilliant. 
                         <a
                           class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline"

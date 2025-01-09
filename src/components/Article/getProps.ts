@@ -24,7 +24,7 @@ export async function getProps({
     rawContent,
     recentReviews: await Promise.all(
       recentReviews.map(async (review) => {
-        const titleWithExcerpt = await loadExcerptHtml(review);
+        const titleWithExcerpt = loadExcerptHtml(review);
         return {
           ...titleWithExcerpt,
           stillImageProps: await getStillImageProps(
