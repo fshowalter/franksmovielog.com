@@ -71,7 +71,7 @@ export function Review({
           </a>
         </nav>
         <h1
-          className="text-center text-4xl desktop:text-7xl"
+          className="text-center text-4xl tracking-[-1px] desktop:text-7xl"
           data-pagefind-meta="title"
           data-pagefind-weight="10"
         >
