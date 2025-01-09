@@ -95,6 +95,7 @@ export async function loadContent<
     .filter((viewing) => {
       return viewing.imdbId === review.imdbId;
     })
+    .reverse()
     .map((viewing) => {
       return {
         ...viewing,

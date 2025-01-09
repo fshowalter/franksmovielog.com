@@ -96,6 +96,10 @@
       "count": 80
     },
     {
+      "name": "35mm",
+      "count": 70
+    },
+    {
       "name": "DVD",
       "count": 70
     },
@@ -106,10 +110,6 @@
     {
       "name": "Criterion Channel",
       "count": 57
-    },
-    {
-      "name": "Shudder",
-      "count": 27
     }
   ],
   "venueDistribution": [
@@ -118,16 +118,16 @@
       "count": 210
     },
     {
+      "name": "AFI Silver",
+      "count": 75
+    },
+    {
       "name": "AMC Tysons Corner 16",
       "count": 37
     },
     {
-      "name": "AFI Silver",
-      "count": 12
-    },
-    {
       "name": "Landmark E Street Cinema",
-      "count": 9
+      "count": 10
     },
     {
       "name": "Angelika Film Center Mosaic",
@@ -146,7 +146,11 @@
       "count": 5
     },
     {
-      "name": "Alamo Drafthouse Cinema - Winchester",
+      "name": "Majestic 20",
+      "count": 3
+    },
+    {
+      "name": "Lee Highway Multiplex Cinemas",
       "count": 1
     }
   ],
@@ -306,8 +310,8 @@
           "date": "2007-06-23",
           "slug": "the-searchers-1956",
           "title": "The Searchers",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1956"
         },
         {
@@ -315,8 +319,8 @@
           "date": "2007-06-29",
           "slug": "the-man-who-shot-liberty-valance-1962",
           "title": "The Man Who Shot Liberty Valance",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1962"
         },
         {
@@ -1409,8 +1413,8 @@
           "date": "2007-06-29",
           "slug": "rio-bravo-1959",
           "title": "Rio Bravo",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1959"
         },
         {
@@ -1902,8 +1906,8 @@
           "date": "2008-04-12",
           "slug": "the-cabin-in-the-cotton-1932",
           "title": "The Cabin in the Cotton",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1932"
         },
         {
@@ -1911,8 +1915,8 @@
           "date": "2008-04-13",
           "slug": "jimmy-the-gent-1934",
           "title": "Jimmy the Gent",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1934"
         },
         {
@@ -2134,8 +2138,8 @@
           "date": "2007-07-06",
           "slug": "the-maltese-falcon-1941",
           "title": "The Maltese Falcon",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1941"
         },
         {
@@ -2143,8 +2147,8 @@
           "date": "2007-07-06",
           "slug": "the-treasure-of-the-sierra-madre-1948",
           "title": "The Treasure of the Sierra Madre",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1948"
         },
         {
@@ -2152,8 +2156,8 @@
           "date": "2007-07-15",
           "slug": "key-largo-1948",
           "title": "Key Largo",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1948"
         },
         {
@@ -2161,8 +2165,8 @@
           "date": "2007-07-15",
           "slug": "the-asphalt-jungle-1950",
           "title": "The Asphalt Jungle",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1950"
         },
         {
@@ -2170,8 +2174,8 @@
           "date": "2007-07-31",
           "slug": "the-misfits-1961",
           "title": "The Misfits",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1961"
         },
         {
@@ -2179,8 +2183,8 @@
           "date": "2007-07-31",
           "slug": "heaven-knows-mr-allison-1957",
           "title": "Heaven Knows, Mr. Allison",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1957"
         },
         {
@@ -2188,8 +2192,8 @@
           "date": "2007-08-06",
           "slug": "the-night-of-the-iguana-1964",
           "title": "The Night of the Iguana",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1964"
         },
         {
@@ -2197,8 +2201,8 @@
           "date": "2007-08-07",
           "slug": "reflections-in-a-golden-eye-1967",
           "title": "Reflections in a Golden Eye",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1967"
         },
         {
@@ -2206,8 +2210,8 @@
           "date": "2007-08-13",
           "slug": "fat-city-1972",
           "title": "Fat City",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1972"
         },
         {
@@ -2215,8 +2219,8 @@
           "date": "2007-08-23",
           "slug": "the-man-who-would-be-king-1975",
           "title": "The Man Who Would Be King",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1975"
         },
         {
@@ -2224,8 +2228,8 @@
           "date": "2007-09-06",
           "slug": "the-dead-1987",
           "title": "The Dead",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1987"
         },
         {
@@ -2429,8 +2433,8 @@
           "date": "2004-07-30",
           "slug": "the-revenge-of-frankenstein-1958",
           "title": "The Revenge of Frankenstein",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1958"
         },
         {
@@ -2438,8 +2442,8 @@
           "date": "2004-08-14",
           "slug": "the-stranglers-of-bombay-1959",
           "title": "The Stranglers of Bombay",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1959"
         },
         {
@@ -3699,8 +3703,8 @@
           "date": "2007-06-23",
           "slug": "the-searchers-1956",
           "title": "The Searchers",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1956"
         },
         {
@@ -3708,8 +3712,8 @@
           "date": "2007-06-29",
           "slug": "the-man-who-shot-liberty-valance-1962",
           "title": "The Man Who Shot Liberty Valance",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1962"
         },
         {
@@ -3717,8 +3721,8 @@
           "date": "2007-06-29",
           "slug": "rio-bravo-1959",
           "title": "Rio Bravo",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1959"
         },
         {
@@ -5092,8 +5096,8 @@
           "date": "2007-07-06",
           "slug": "the-maltese-falcon-1941",
           "title": "The Maltese Falcon",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1941"
         },
         {
@@ -5101,8 +5105,8 @@
           "date": "2007-07-06",
           "slug": "the-treasure-of-the-sierra-madre-1948",
           "title": "The Treasure of the Sierra Madre",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1948"
         },
         {
@@ -5119,8 +5123,8 @@
           "date": "2007-07-15",
           "slug": "key-largo-1948",
           "title": "Key Largo",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1948"
         },
         {
@@ -5353,8 +5357,8 @@
           "date": "2008-04-13",
           "slug": "the-petrified-forest-1936",
           "title": "The Petrified Forest",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1936"
         },
         {
@@ -7552,8 +7556,8 @@
           "date": "2004-07-31",
           "slug": "the-creeping-flesh-1973",
           "title": "The Creeping Flesh",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1973"
         },
         {
@@ -7570,8 +7574,8 @@
           "date": "2004-08-20",
           "slug": "scream-of-fear-1961",
           "title": "Scream of Fear",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1961"
         },
         {
@@ -7606,8 +7610,8 @@
           "date": "2007-10-28",
           "slug": "the-wicker-man-1973",
           "title": "The Wicker Man",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1973"
         },
         {
@@ -8099,8 +8103,8 @@
           "date": "2004-07-24",
           "slug": "the-sorcerers-1967",
           "title": "The Sorcerers",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1967"
         },
         {
@@ -8691,8 +8695,8 @@
           "date": "2007-07-31",
           "slug": "heaven-knows-mr-allison-1957",
           "title": "Heaven Knows, Mr. Allison",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1957"
         },
         {
@@ -8745,8 +8749,8 @@
           "date": "2008-03-30",
           "slug": "pursued-1947",
           "title": "Pursued",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1947"
         },
         {
@@ -8754,8 +8758,8 @@
           "date": "2008-03-30",
           "slug": "the-lusty-men-1952",
           "title": "The Lusty Men",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1952"
         },
         {
@@ -8763,8 +8767,8 @@
           "date": "2008-04-06",
           "slug": "the-sundowners-1960",
           "title": "The Sundowners",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1960"
         },
         {
@@ -8781,8 +8785,8 @@
           "date": "2008-04-13",
           "slug": "the-night-of-the-hunter-1955",
           "title": "The Night of the Hunter",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1955"
         },
         {
@@ -8799,8 +8803,8 @@
           "date": "2008-05-04",
           "slug": "the-friends-of-eddie-coyle-1973",
           "title": "The Friends of Eddie Coyle",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1973"
         },
         {
@@ -9749,8 +9753,8 @@
           "date": "2004-07-24",
           "slug": "witchfinder-general-1968",
           "title": "Witchfinder General",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1968"
         },
         {
@@ -10467,8 +10471,8 @@
           "date": "2008-08-02",
           "slug": "the-bridge-on-the-river-kwai-1957",
           "title": "The Bridge on the River Kwai",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1957"
         },
         {
@@ -10773,8 +10777,8 @@
           "date": "2007-07-06",
           "slug": "the-maltese-falcon-1941",
           "title": "The Maltese Falcon",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1941"
         },
         {
@@ -10782,8 +10786,8 @@
           "date": "2007-07-06",
           "slug": "the-treasure-of-the-sierra-madre-1948",
           "title": "The Treasure of the Sierra Madre",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1948"
         },
         {
@@ -10800,8 +10804,8 @@
           "date": "2007-07-15",
           "slug": "key-largo-1948",
           "title": "Key Largo",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1948"
         },
         {
@@ -10809,8 +10813,8 @@
           "date": "2007-07-15",
           "slug": "the-asphalt-jungle-1950",
           "title": "The Asphalt Jungle",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1950"
         },
         {
@@ -10818,8 +10822,8 @@
           "date": "2007-07-31",
           "slug": "heaven-knows-mr-allison-1957",
           "title": "Heaven Knows, Mr. Allison",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1957"
         },
         {
@@ -10827,8 +10831,8 @@
           "date": "2007-08-06",
           "slug": "the-night-of-the-iguana-1964",
           "title": "The Night of the Iguana",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1964"
         },
         {
@@ -10836,8 +10840,8 @@
           "date": "2007-08-23",
           "slug": "the-man-who-would-be-king-1975",
           "title": "The Man Who Would Be King",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1975"
         },
         {
@@ -11577,8 +11581,8 @@
           "date": "2004-07-30",
           "slug": "the-revenge-of-frankenstein-1958",
           "title": "The Revenge of Frankenstein",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1958"
         },
         {
@@ -11586,8 +11590,8 @@
           "date": "2004-08-20",
           "slug": "scream-of-fear-1961",
           "title": "Scream of Fear",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1961"
         },
         {
@@ -11800,8 +11804,8 @@
           "date": "2007-07-15",
           "slug": "the-asphalt-jungle-1950",
           "title": "The Asphalt Jungle",
-          "medium": null,
-          "venue": null,
+          "medium": "35mm",
+          "venue": "AFI Silver",
           "year": "1950"
         },
         {

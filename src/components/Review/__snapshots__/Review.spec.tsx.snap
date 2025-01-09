@@ -493,132 +493,55 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
             </h2>
             <ul>
               <li
-                class="flex flex-col px-4 font-sans text-xs font-light even:bg-stripe"
+                class="flex flex-col font-sans text-xs font-light even:mx-[calc(-1_*_8vw)] even:bg-stripe even:px-[8vw] tablet:px-4 tablet:even:mx-0 tablet:even:px-4"
               >
                 <div
-                  class="flex items-center gap-x-[1ch] py-4"
+                  class="flex items-center gap-x-4 py-4 tablet:gap-x-6"
                 >
                   <div
                     class="size-auto"
                   >
-                    <svg
-                      class="fill-subtle mr-[1ch] min-h-4 min-w-4 w-4"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div
+                      class="bg-subtle p-2 text-center"
                     >
-                      <title>
-                        Watched on
-                      </title>
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                     
+                      <div
+                        class="px-4 pb-2 font-serif text-md font-normal text-subtle"
+                      >
+                        2022
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        May
+                      </div>
+                      <div
+                        class="bg-default font-serif text-md font-normal text-default"
+                      >
+                        29
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Sun
+                      </div>
+                    </div>
                   </div>
                   <div
                     class="grow"
                   >
                     <span
-                      class="inline-block font-sans text-xs font-normal tracking-normal text-subtle"
+                      class="font-serif text-base font-normal text-default"
                     >
-                      Fri, Jan 28, 2022
+                      35mm
                     </span>
-                     
                     <span
                       class="text-subtle"
                     >
                       <span>
-                        via
+                         at 
                       </span>
-                       
                       <span
-                        class="font-sans text-xs font-normal text-subtle"
-                      >
-                        HBO Max
-                      </span>
-                    </span>
-                      
-                  </div>
-                </div>
-                <div />
-              </li>
-              <li
-                class="flex flex-col px-4 font-sans text-xs font-light even:bg-stripe"
-              >
-                <div
-                  class="flex items-center gap-x-[1ch] py-4"
-                >
-                  <div
-                    class="size-auto"
-                  >
-                    <svg
-                      class="fill-subtle mr-[1ch] min-h-4 min-w-4 w-4"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <title>
-                        Watched on
-                      </title>
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                     
-                  </div>
-                  <div
-                    class="grow"
-                  >
-                    <span
-                      class="inline-block font-sans text-xs font-normal tracking-normal text-subtle"
-                    >
-                      Sun, May 29, 2022
-                    </span>
-                     
-                    <span
-                      class="text-subtle"
-                    >
-                      <span>
-                        via
-                      </span>
-                       
-                      <span
-                        class="font-sans text-xs font-normal text-subtle"
-                      >
-                        35mm
-                      </span>
-                    </span>
-                     
-                    <span
-                      class="text-subtle"
-                    >
-                      <span>
-                        at
-                      </span>
-                       
-                      <span
-                        class="font-sans text-xs font-normal text-subtle"
+                        class="font-serif text-base font-normal text-default"
                       >
                         Prince Charles Cinema
                       </span>
@@ -628,7 +551,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 </div>
                 <div>
                   <div
-                    class="pb-6 text-sm font-light tablet:mx-8"
+                    class="pb-6 text-sm font-light tablet:ml-28 tablet:mr-20"
                   >
                     <div
                       class="rendered-markdown leading-normal text-muted"
@@ -654,6 +577,53 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                     </div>
                   </div>
                 </div>
+              </li>
+              <li
+                class="flex flex-col font-sans text-xs font-light even:mx-[calc(-1_*_8vw)] even:bg-stripe even:px-[8vw] tablet:px-4 tablet:even:mx-0 tablet:even:px-4"
+              >
+                <div
+                  class="flex items-center gap-x-4 py-4 tablet:gap-x-6"
+                >
+                  <div
+                    class="size-auto"
+                  >
+                    <div
+                      class="bg-subtle p-2 text-center"
+                    >
+                      <div
+                        class="px-4 pb-2 font-serif text-md font-normal text-subtle"
+                      >
+                        2022
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Jan
+                      </div>
+                      <div
+                        class="bg-default font-serif text-md font-normal text-default"
+                      >
+                        28
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Fri
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="grow"
+                  >
+                    <span
+                      class="font-serif text-base font-normal text-default"
+                    >
+                      HBO Max
+                    </span>
+                     
+                  </div>
+                </div>
+                <div />
               </li>
             </ul>
           </div>
@@ -1747,127 +1717,51 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
             </h2>
             <ul>
               <li
-                class="flex flex-col px-4 font-sans text-xs font-light even:bg-stripe"
+                class="flex flex-col font-sans text-xs font-light even:mx-[calc(-1_*_8vw)] even:bg-stripe even:px-[8vw] tablet:px-4 tablet:even:mx-0 tablet:even:px-4"
               >
                 <div
-                  class="flex items-center gap-x-[1ch] py-4"
+                  class="flex items-center gap-x-4 py-4 tablet:gap-x-6"
                 >
                   <div
                     class="size-auto"
                   >
-                    <svg
-                      class="fill-subtle mr-[1ch] min-h-4 min-w-4 w-4"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div
+                      class="bg-subtle p-2 text-center"
                     >
-                      <title>
-                        Watched on
-                      </title>
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                     
+                      <div
+                        class="px-4 pb-2 font-serif text-md font-normal text-subtle"
+                      >
+                        2020
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Nov
+                      </div>
+                      <div
+                        class="bg-default font-serif text-md font-normal text-default"
+                      >
+                        4
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Wed
+                      </div>
+                    </div>
                   </div>
                   <div
                     class="grow"
                   >
                     <span
-                      class="inline-block font-sans text-xs font-normal tracking-normal text-subtle"
+                      class="font-serif text-base font-normal text-default"
                     >
-                      Thu, Oct 31, 2013
+                      Blu-ray
                     </span>
-                     
-                    <span
-                      class="text-subtle"
-                    >
-                      <span>
-                        via
-                      </span>
-                       
-                      <span
-                        class="font-sans text-xs font-normal text-subtle"
-                      >
-                        Blu-ray
-                      </span>
-                    </span>
-                      
-                  </div>
-                </div>
-                <div />
-              </li>
-              <li
-                class="flex flex-col px-4 font-sans text-xs font-light even:bg-stripe"
-              >
-                <div
-                  class="flex items-center gap-x-[1ch] py-4"
-                >
-                  <div
-                    class="size-auto"
-                  >
-                    <svg
-                      class="fill-subtle mr-[1ch] min-h-4 min-w-4 w-4"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <title>
-                        Watched on
-                      </title>
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                     
-                  </div>
-                  <div
-                    class="grow"
-                  >
-                    <span
-                      class="inline-block font-sans text-xs font-normal tracking-normal text-subtle"
-                    >
-                      Wed, Nov 4, 2020
-                    </span>
-                     
-                    <span
-                      class="text-subtle"
-                    >
-                      <span>
-                        via
-                      </span>
-                       
-                      <span
-                        class="font-sans text-xs font-normal text-subtle"
-                      >
-                        Blu-ray
-                      </span>
-                    </span>
-                     
                     <span
                       class="font-light tracking-normal text-subtle"
                     >
-                      (
+                       (
                       <span
                         class="rendered-markdown leading-none"
                       >
@@ -1876,6 +1770,53 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                         </span>
                       </span>
                       )
+                    </span>
+                     
+                  </div>
+                </div>
+                <div />
+              </li>
+              <li
+                class="flex flex-col font-sans text-xs font-light even:mx-[calc(-1_*_8vw)] even:bg-stripe even:px-[8vw] tablet:px-4 tablet:even:mx-0 tablet:even:px-4"
+              >
+                <div
+                  class="flex items-center gap-x-4 py-4 tablet:gap-x-6"
+                >
+                  <div
+                    class="size-auto"
+                  >
+                    <div
+                      class="bg-subtle p-2 text-center"
+                    >
+                      <div
+                        class="px-4 pb-2 font-serif text-md font-normal text-subtle"
+                      >
+                        2013
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Oct
+                      </div>
+                      <div
+                        class="bg-default font-serif text-md font-normal text-default"
+                      >
+                        31
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Thu
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="grow"
+                  >
+                    <span
+                      class="font-serif text-base font-normal text-default"
+                    >
+                      Blu-ray
                     </span>
                      
                   </div>
@@ -3315,118 +3256,47 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
             </h2>
             <ul>
               <li
-                class="flex flex-col px-4 font-sans text-xs font-light even:bg-stripe"
+                class="flex flex-col font-sans text-xs font-light even:mx-[calc(-1_*_8vw)] even:bg-stripe even:px-[8vw] tablet:px-4 tablet:even:mx-0 tablet:even:px-4"
               >
                 <div
-                  class="flex items-center gap-x-[1ch] py-4"
+                  class="flex items-center gap-x-4 py-4 tablet:gap-x-6"
                 >
                   <div
                     class="size-auto"
                   >
-                    <svg
-                      class="fill-subtle mr-[1ch] min-h-4 min-w-4 w-4"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div
+                      class="bg-subtle p-2 text-center"
                     >
-                      <title>
-                        Watched on
-                      </title>
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                     
-                  </div>
-                  <div
-                    class="grow"
-                  >
-                    <span
-                      class="inline-block font-sans text-xs font-normal tracking-normal text-subtle"
-                    >
-                      Sun, Mar 25, 2012
-                    </span>
-                     
-                    <span
-                      class="text-subtle"
-                    >
-                      <span>
-                        via
-                      </span>
-                       
-                      <span
-                        class="font-sans text-xs font-normal text-subtle"
+                      <div
+                        class="px-4 pb-2 font-serif text-md font-normal text-subtle"
                       >
-                        TCM HD
-                      </span>
-                    </span>
-                      
-                  </div>
-                </div>
-                <div />
-              </li>
-              <li
-                class="flex flex-col px-4 font-sans text-xs font-light even:bg-stripe"
-              >
-                <div
-                  class="flex items-center gap-x-[1ch] py-4"
-                >
-                  <div
-                    class="size-auto"
-                  >
-                    <svg
-                      class="fill-subtle mr-[1ch] min-h-4 min-w-4 w-4"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <title>
-                        Watched on
-                      </title>
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                     
+                        2024
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Apr
+                      </div>
+                      <div
+                        class="bg-default font-serif text-md font-normal text-default"
+                      >
+                        27
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Sat
+                      </div>
+                    </div>
                   </div>
                   <div
                     class="grow"
                   >
                     <span
-                      class="inline-block font-sans text-xs font-normal tracking-normal text-subtle"
-                    >
-                      Sat, Apr 27, 2024
-                    </span>
-                      
-                    <span
                       class="text-subtle"
                     >
-                      <span>
-                        at
-                      </span>
-                       
                       <span
-                        class="font-sans text-xs font-normal text-subtle"
+                        class="font-serif text-base font-normal text-default"
                       >
                         Alamo Drafthouse Cinema - One Loudoun
                       </span>
@@ -3445,6 +3315,53 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                       </span>
                       )
                     </span>
+                  </div>
+                </div>
+                <div />
+              </li>
+              <li
+                class="flex flex-col font-sans text-xs font-light even:mx-[calc(-1_*_8vw)] even:bg-stripe even:px-[8vw] tablet:px-4 tablet:even:mx-0 tablet:even:px-4"
+              >
+                <div
+                  class="flex items-center gap-x-4 py-4 tablet:gap-x-6"
+                >
+                  <div
+                    class="size-auto"
+                  >
+                    <div
+                      class="bg-subtle p-2 text-center"
+                    >
+                      <div
+                        class="px-4 pb-2 font-serif text-md font-normal text-subtle"
+                      >
+                        2012
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Mar
+                      </div>
+                      <div
+                        class="bg-default font-serif text-md font-normal text-default"
+                      >
+                        25
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Sun
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="grow"
+                  >
+                    <span
+                      class="font-serif text-base font-normal text-default"
+                    >
+                      TCM HD
+                    </span>
+                     
                   </div>
                 </div>
                 <div />
@@ -5255,207 +5172,47 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
             </h2>
             <ul>
               <li
-                class="flex flex-col px-4 font-sans text-xs font-light even:bg-stripe"
+                class="flex flex-col font-sans text-xs font-light even:mx-[calc(-1_*_8vw)] even:bg-stripe even:px-[8vw] tablet:px-4 tablet:even:mx-0 tablet:even:px-4"
               >
                 <div
-                  class="flex items-center gap-x-[1ch] py-4"
+                  class="flex items-center gap-x-4 py-4 tablet:gap-x-6"
                 >
                   <div
                     class="size-auto"
                   >
-                    <svg
-                      class="fill-subtle mr-[1ch] min-h-4 min-w-4 w-4"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div
+                      class="bg-subtle p-2 text-center"
                     >
-                      <title>
-                        Watched on
-                      </title>
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                     
+                      <div
+                        class="px-4 pb-2 font-serif text-md font-normal text-subtle"
+                      >
+                        2024
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Apr
+                      </div>
+                      <div
+                        class="bg-default font-serif text-md font-normal text-default"
+                      >
+                        27
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Sat
+                      </div>
+                    </div>
                   </div>
                   <div
                     class="grow"
                   >
                     <span
-                      class="inline-block font-sans text-xs font-normal tracking-normal text-subtle"
-                    >
-                      Sat, Mar 25, 2023
-                    </span>
-                     
-                    <span
                       class="text-subtle"
                     >
-                      <span>
-                        via
-                      </span>
-                       
                       <span
-                        class="font-sans text-xs font-normal text-subtle"
-                      >
-                        Blu-ray
-                      </span>
-                    </span>
-                     
-                    <span
-                      class="font-light tracking-normal text-subtle"
-                    >
-                      (
-                      <span
-                        class="rendered-markdown leading-none"
-                      >
-                        <span>
-                          Vinegar Syndrome, 2013
-                        </span>
-                      </span>
-                      )
-                    </span>
-                     
-                  </div>
-                </div>
-                <div />
-              </li>
-              <li
-                class="flex flex-col px-4 font-sans text-xs font-light even:bg-stripe"
-              >
-                <div
-                  class="flex items-center gap-x-[1ch] py-4"
-                >
-                  <div
-                    class="size-auto"
-                  >
-                    <svg
-                      class="fill-subtle mr-[1ch] min-h-4 min-w-4 w-4"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <title>
-                        Watched on
-                      </title>
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                     
-                  </div>
-                  <div
-                    class="grow"
-                  >
-                    <span
-                      class="inline-block font-sans text-xs font-normal tracking-normal text-subtle"
-                    >
-                      Thu, Jan 4, 2024
-                    </span>
-                     
-                    <span
-                      class="text-subtle"
-                    >
-                      <span>
-                        via
-                      </span>
-                       
-                      <span
-                        class="font-sans text-xs font-normal text-subtle"
-                      >
-                        Blu-ray
-                      </span>
-                    </span>
-                     
-                    <span
-                      class="font-light tracking-normal text-subtle"
-                    >
-                      (
-                      <span
-                        class="rendered-markdown leading-none"
-                      >
-                        <span>
-                          Vinegar Syndrome, 2013
-                        </span>
-                      </span>
-                      )
-                    </span>
-                     
-                  </div>
-                </div>
-                <div />
-              </li>
-              <li
-                class="flex flex-col px-4 font-sans text-xs font-light even:bg-stripe"
-              >
-                <div
-                  class="flex items-center gap-x-[1ch] py-4"
-                >
-                  <div
-                    class="size-auto"
-                  >
-                    <svg
-                      class="fill-subtle mr-[1ch] min-h-4 min-w-4 w-4"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <title>
-                        Watched on
-                      </title>
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                     
-                  </div>
-                  <div
-                    class="grow"
-                  >
-                    <span
-                      class="inline-block font-sans text-xs font-normal tracking-normal text-subtle"
-                    >
-                      Sat, Apr 27, 2024
-                    </span>
-                      
-                    <span
-                      class="text-subtle"
-                    >
-                      <span>
-                        at
-                      </span>
-                       
-                      <span
-                        class="font-sans text-xs font-normal text-subtle"
+                        class="font-serif text-base font-normal text-default"
                       >
                         Alamo Drafthouse Cinema - One Loudoun
                       </span>
@@ -5474,6 +5231,126 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                       </span>
                       )
                     </span>
+                  </div>
+                </div>
+                <div />
+              </li>
+              <li
+                class="flex flex-col font-sans text-xs font-light even:mx-[calc(-1_*_8vw)] even:bg-stripe even:px-[8vw] tablet:px-4 tablet:even:mx-0 tablet:even:px-4"
+              >
+                <div
+                  class="flex items-center gap-x-4 py-4 tablet:gap-x-6"
+                >
+                  <div
+                    class="size-auto"
+                  >
+                    <div
+                      class="bg-subtle p-2 text-center"
+                    >
+                      <div
+                        class="px-4 pb-2 font-serif text-md font-normal text-subtle"
+                      >
+                        2024
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Jan
+                      </div>
+                      <div
+                        class="bg-default font-serif text-md font-normal text-default"
+                      >
+                        4
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Thu
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="grow"
+                  >
+                    <span
+                      class="font-serif text-base font-normal text-default"
+                    >
+                      Blu-ray
+                    </span>
+                    <span
+                      class="font-light tracking-normal text-subtle"
+                    >
+                       (
+                      <span
+                        class="rendered-markdown leading-none"
+                      >
+                        <span>
+                          Vinegar Syndrome, 2013
+                        </span>
+                      </span>
+                      )
+                    </span>
+                     
+                  </div>
+                </div>
+                <div />
+              </li>
+              <li
+                class="flex flex-col font-sans text-xs font-light even:mx-[calc(-1_*_8vw)] even:bg-stripe even:px-[8vw] tablet:px-4 tablet:even:mx-0 tablet:even:px-4"
+              >
+                <div
+                  class="flex items-center gap-x-4 py-4 tablet:gap-x-6"
+                >
+                  <div
+                    class="size-auto"
+                  >
+                    <div
+                      class="bg-subtle p-2 text-center"
+                    >
+                      <div
+                        class="px-4 pb-2 font-serif text-md font-normal text-subtle"
+                      >
+                        2023
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Mar
+                      </div>
+                      <div
+                        class="bg-default font-serif text-md font-normal text-default"
+                      >
+                        25
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Sat
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="grow"
+                  >
+                    <span
+                      class="font-serif text-base font-normal text-default"
+                    >
+                      Blu-ray
+                    </span>
+                    <span
+                      class="font-light tracking-normal text-subtle"
+                    >
+                       (
+                      <span
+                        class="rendered-markdown leading-none"
+                      >
+                        <span>
+                          Vinegar Syndrome, 2013
+                        </span>
+                      </span>
+                      )
+                    </span>
+                     
                   </div>
                 </div>
                 <div />
@@ -6551,249 +6428,51 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
             </h2>
             <ul>
               <li
-                class="flex flex-col px-4 font-sans text-xs font-light even:bg-stripe"
+                class="flex flex-col font-sans text-xs font-light even:mx-[calc(-1_*_8vw)] even:bg-stripe even:px-[8vw] tablet:px-4 tablet:even:mx-0 tablet:even:px-4"
               >
                 <div
-                  class="flex items-center gap-x-[1ch] py-4"
+                  class="flex items-center gap-x-4 py-4 tablet:gap-x-6"
                 >
                   <div
                     class="size-auto"
                   >
-                    <svg
-                      class="fill-subtle mr-[1ch] min-h-4 min-w-4 w-4"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div
+                      class="bg-subtle p-2 text-center"
                     >
-                      <title>
-                        Watched on
-                      </title>
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                     
+                      <div
+                        class="px-4 pb-2 font-serif text-md font-normal text-subtle"
+                      >
+                        2021
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Jan
+                      </div>
+                      <div
+                        class="bg-default font-serif text-md font-normal text-default"
+                      >
+                        29
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Fri
+                      </div>
+                    </div>
                   </div>
                   <div
                     class="grow"
                   >
                     <span
-                      class="inline-block font-sans text-xs font-normal tracking-normal text-subtle"
+                      class="font-serif text-base font-normal text-default"
                     >
-                      Sun, Jun 18, 2017
+                      Blu-ray
                     </span>
-                      
-                    <span
-                      class="text-subtle"
-                    >
-                      <span>
-                        at
-                      </span>
-                       
-                      <span
-                        class="font-sans text-xs font-normal text-subtle"
-                      >
-                        Alamo Drafthouse Cinema - One Loudoun
-                      </span>
-                    </span>
-                     
-                  </div>
-                </div>
-                <div />
-              </li>
-              <li
-                class="flex flex-col px-4 font-sans text-xs font-light even:bg-stripe"
-              >
-                <div
-                  class="flex items-center gap-x-[1ch] py-4"
-                >
-                  <div
-                    class="size-auto"
-                  >
-                    <svg
-                      class="fill-subtle mr-[1ch] min-h-4 min-w-4 w-4"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <title>
-                        Watched on
-                      </title>
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                     
-                  </div>
-                  <div
-                    class="grow"
-                  >
-                    <span
-                      class="inline-block font-sans text-xs font-normal tracking-normal text-subtle"
-                    >
-                      Sat, Dec 9, 2017
-                    </span>
-                     
-                    <span
-                      class="text-subtle"
-                    >
-                      <span>
-                        via
-                      </span>
-                       
-                      <span
-                        class="font-sans text-xs font-normal text-subtle"
-                      >
-                        Blu-ray
-                      </span>
-                    </span>
-                      
-                  </div>
-                </div>
-                <div />
-              </li>
-              <li
-                class="flex flex-col px-4 font-sans text-xs font-light even:bg-stripe"
-              >
-                <div
-                  class="flex items-center gap-x-[1ch] py-4"
-                >
-                  <div
-                    class="size-auto"
-                  >
-                    <svg
-                      class="fill-subtle mr-[1ch] min-h-4 min-w-4 w-4"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <title>
-                        Watched on
-                      </title>
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                     
-                  </div>
-                  <div
-                    class="grow"
-                  >
-                    <span
-                      class="inline-block font-sans text-xs font-normal tracking-normal text-subtle"
-                    >
-                      Sun, Jun 17, 2018
-                    </span>
-                     
-                    <span
-                      class="text-subtle"
-                    >
-                      <span>
-                        via
-                      </span>
-                       
-                      <span
-                        class="font-sans text-xs font-normal text-subtle"
-                      >
-                        Blu-ray
-                      </span>
-                    </span>
-                      
-                  </div>
-                </div>
-                <div />
-              </li>
-              <li
-                class="flex flex-col px-4 font-sans text-xs font-light even:bg-stripe"
-              >
-                <div
-                  class="flex items-center gap-x-[1ch] py-4"
-                >
-                  <div
-                    class="size-auto"
-                  >
-                    <svg
-                      class="fill-subtle mr-[1ch] min-h-4 min-w-4 w-4"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <title>
-                        Watched on
-                      </title>
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                     
-                  </div>
-                  <div
-                    class="grow"
-                  >
-                    <span
-                      class="inline-block font-sans text-xs font-normal tracking-normal text-subtle"
-                    >
-                      Fri, Jan 29, 2021
-                    </span>
-                     
-                    <span
-                      class="text-subtle"
-                    >
-                      <span>
-                        via
-                      </span>
-                       
-                      <span
-                        class="font-sans text-xs font-normal text-subtle"
-                      >
-                        Blu-ray
-                      </span>
-                    </span>
-                     
                     <span
                       class="font-light tracking-normal text-subtle"
                     >
-                      (
+                       (
                       <span
                         class="rendered-markdown leading-none"
                       >
@@ -6802,6 +6481,151 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                         </span>
                       </span>
                       )
+                    </span>
+                     
+                  </div>
+                </div>
+                <div />
+              </li>
+              <li
+                class="flex flex-col font-sans text-xs font-light even:mx-[calc(-1_*_8vw)] even:bg-stripe even:px-[8vw] tablet:px-4 tablet:even:mx-0 tablet:even:px-4"
+              >
+                <div
+                  class="flex items-center gap-x-4 py-4 tablet:gap-x-6"
+                >
+                  <div
+                    class="size-auto"
+                  >
+                    <div
+                      class="bg-subtle p-2 text-center"
+                    >
+                      <div
+                        class="px-4 pb-2 font-serif text-md font-normal text-subtle"
+                      >
+                        2018
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Jun
+                      </div>
+                      <div
+                        class="bg-default font-serif text-md font-normal text-default"
+                      >
+                        17
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Sun
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="grow"
+                  >
+                    <span
+                      class="font-serif text-base font-normal text-default"
+                    >
+                      Blu-ray
+                    </span>
+                     
+                  </div>
+                </div>
+                <div />
+              </li>
+              <li
+                class="flex flex-col font-sans text-xs font-light even:mx-[calc(-1_*_8vw)] even:bg-stripe even:px-[8vw] tablet:px-4 tablet:even:mx-0 tablet:even:px-4"
+              >
+                <div
+                  class="flex items-center gap-x-4 py-4 tablet:gap-x-6"
+                >
+                  <div
+                    class="size-auto"
+                  >
+                    <div
+                      class="bg-subtle p-2 text-center"
+                    >
+                      <div
+                        class="px-4 pb-2 font-serif text-md font-normal text-subtle"
+                      >
+                        2017
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Dec
+                      </div>
+                      <div
+                        class="bg-default font-serif text-md font-normal text-default"
+                      >
+                        9
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Sat
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="grow"
+                  >
+                    <span
+                      class="font-serif text-base font-normal text-default"
+                    >
+                      Blu-ray
+                    </span>
+                     
+                  </div>
+                </div>
+                <div />
+              </li>
+              <li
+                class="flex flex-col font-sans text-xs font-light even:mx-[calc(-1_*_8vw)] even:bg-stripe even:px-[8vw] tablet:px-4 tablet:even:mx-0 tablet:even:px-4"
+              >
+                <div
+                  class="flex items-center gap-x-4 py-4 tablet:gap-x-6"
+                >
+                  <div
+                    class="size-auto"
+                  >
+                    <div
+                      class="bg-subtle p-2 text-center"
+                    >
+                      <div
+                        class="px-4 pb-2 font-serif text-md font-normal text-subtle"
+                      >
+                        2017
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Jun
+                      </div>
+                      <div
+                        class="bg-default font-serif text-md font-normal text-default"
+                      >
+                        18
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Sun
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="grow"
+                  >
+                    <span
+                      class="text-subtle"
+                    >
+                      <span
+                        class="font-serif text-base font-normal text-default"
+                      >
+                        Alamo Drafthouse Cinema - One Loudoun
+                      </span>
                     </span>
                      
                   </div>
@@ -8899,127 +8723,51 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             </h2>
             <ul>
               <li
-                class="flex flex-col px-4 font-sans text-xs font-light even:bg-stripe"
+                class="flex flex-col font-sans text-xs font-light even:mx-[calc(-1_*_8vw)] even:bg-stripe even:px-[8vw] tablet:px-4 tablet:even:mx-0 tablet:even:px-4"
               >
                 <div
-                  class="flex items-center gap-x-[1ch] py-4"
+                  class="flex items-center gap-x-4 py-4 tablet:gap-x-6"
                 >
                   <div
                     class="size-auto"
                   >
-                    <svg
-                      class="fill-subtle mr-[1ch] min-h-4 min-w-4 w-4"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div
+                      class="bg-subtle p-2 text-center"
                     >
-                      <title>
-                        Watched on
-                      </title>
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                     
+                      <div
+                        class="px-4 pb-2 font-serif text-md font-normal text-subtle"
+                      >
+                        2020
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Sep
+                      </div>
+                      <div
+                        class="bg-default font-serif text-md font-normal text-default"
+                      >
+                        19
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Sat
+                      </div>
+                    </div>
                   </div>
                   <div
                     class="grow"
                   >
                     <span
-                      class="inline-block font-sans text-xs font-normal tracking-normal text-subtle"
+                      class="font-serif text-base font-normal text-default"
                     >
-                      Sat, Oct 24, 2015
+                      Blu-ray
                     </span>
-                     
-                    <span
-                      class="text-subtle"
-                    >
-                      <span>
-                        via
-                      </span>
-                       
-                      <span
-                        class="font-sans text-xs font-normal text-subtle"
-                      >
-                        Blu-ray
-                      </span>
-                    </span>
-                      
-                  </div>
-                </div>
-                <div />
-              </li>
-              <li
-                class="flex flex-col px-4 font-sans text-xs font-light even:bg-stripe"
-              >
-                <div
-                  class="flex items-center gap-x-[1ch] py-4"
-                >
-                  <div
-                    class="size-auto"
-                  >
-                    <svg
-                      class="fill-subtle mr-[1ch] min-h-4 min-w-4 w-4"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <title>
-                        Watched on
-                      </title>
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M14 2H2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2H2z"
-                        fill-rule="evenodd"
-                      />
-                      <path
-                        d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                     
-                  </div>
-                  <div
-                    class="grow"
-                  >
-                    <span
-                      class="inline-block font-sans text-xs font-normal tracking-normal text-subtle"
-                    >
-                      Sat, Sep 19, 2020
-                    </span>
-                     
-                    <span
-                      class="text-subtle"
-                    >
-                      <span>
-                        via
-                      </span>
-                       
-                      <span
-                        class="font-sans text-xs font-normal text-subtle"
-                      >
-                        Blu-ray
-                      </span>
-                    </span>
-                     
                     <span
                       class="font-light tracking-normal text-subtle"
                     >
-                      (
+                       (
                       <span
                         class="rendered-markdown leading-none"
                       >
@@ -9028,6 +8776,53 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                         </span>
                       </span>
                       )
+                    </span>
+                     
+                  </div>
+                </div>
+                <div />
+              </li>
+              <li
+                class="flex flex-col font-sans text-xs font-light even:mx-[calc(-1_*_8vw)] even:bg-stripe even:px-[8vw] tablet:px-4 tablet:even:mx-0 tablet:even:px-4"
+              >
+                <div
+                  class="flex items-center gap-x-4 py-4 tablet:gap-x-6"
+                >
+                  <div
+                    class="size-auto"
+                  >
+                    <div
+                      class="bg-subtle p-2 text-center"
+                    >
+                      <div
+                        class="px-4 pb-2 font-serif text-md font-normal text-subtle"
+                      >
+                        2015
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Oct
+                      </div>
+                      <div
+                        class="bg-default font-serif text-md font-normal text-default"
+                      >
+                        24
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Sat
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="grow"
+                  >
+                    <span
+                      class="font-serif text-base font-normal text-default"
+                    >
+                      Blu-ray
                     </span>
                      
                   </div>
