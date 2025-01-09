@@ -26,7 +26,7 @@ const weekdayFormat = new Intl.DateTimeFormat("en-US", {
 
 export function ViewingHistoryListItem({ value }: { value: Viewing }) {
   return (
-    <li className="flex flex-col font-sans text-xs font-light shadow-bottom last:shadow-none even:mx-[calc(-1_*_8vw)] even:px-[8vw] tablet:px-4 tablet:even:mx-0 tablet:even:px-4">
+    <li className="mb-1 flex flex-col bg-subtle font-sans text-xs font-light even:mx-[calc(-1_*_8vw)] even:px-[8vw] tablet:px-4 tablet:even:mx-0 tablet:even:px-4">
       <div className="flex items-center gap-x-4 py-4 tablet:gap-x-6">
         <div className="size-auto">
           <Date date={value.date} />

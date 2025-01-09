@@ -203,7 +203,7 @@ function ViewingHistory({ value }: Pick<Props, "value">) {
       <SubHeading as="h2" className="shadow-bottom">
         Viewing History
       </SubHeading>
-      <ul className="bg-subtle">
+      <ul className="bg-default">
         {value.viewings.map((viewing) => (
           <ViewingHistoryListItem key={viewing.sequence} value={viewing} />
         ))}
