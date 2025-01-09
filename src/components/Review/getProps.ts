@@ -25,7 +25,7 @@ export async function getProps(slug: string): Promise<Props> {
           ...value,
           titles: await Promise.all(
             value.titles.map(async (title) => {
-              const titleWithExcerpt = await loadExcerptHtml(title);
+              const titleWithExcerpt = loadExcerptHtml(title);
               return {
                 ...titleWithExcerpt,
                 stillImageProps: await getStillImageProps(
@@ -44,7 +44,7 @@ export async function getProps(slug: string): Promise<Props> {
           ...value,
           titles: await Promise.all(
             value.titles.map(async (title) => {
-              const titleWithExcerpt = await loadExcerptHtml(title);
+              const titleWithExcerpt = loadExcerptHtml(title);
               return {
                 ...titleWithExcerpt,
                 stillImageProps: await getStillImageProps(
@@ -59,7 +59,7 @@ export async function getProps(slug: string): Promise<Props> {
     ),
     moreReviews: await Promise.all(
       review.moreReviews.map(async (value) => {
-        const titleWithExcerpt = await loadExcerptHtml(value);
+        const titleWithExcerpt = loadExcerptHtml(value);
         return {
           ...titleWithExcerpt,
           stillImageProps: await getStillImageProps(

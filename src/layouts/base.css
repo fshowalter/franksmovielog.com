@@ -265,9 +265,8 @@
 
   .rendered-markdown {
     a {
-      text-decoration-line: underline;
+      border-bottom: solid 1px var(--fg-accent);
       padding-right: 1px;
-      text-decoration-color: var(--fg-subtle);
       transition: all 150ms ease-out;
     }
 
@@ -286,7 +285,7 @@
     }
 
     p {
-      margin-bottom: 24px;
+      margin-bottom: 32px;
       text-wrap: pretty;
     }
 

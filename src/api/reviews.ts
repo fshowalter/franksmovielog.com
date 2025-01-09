@@ -113,12 +113,10 @@ export async function loadContent<
   };
 }
 
-export async function loadExcerptHtml<T extends { slug: string }>(
+export function loadExcerptHtml<T extends { slug: string }>(
   review: T,
-): Promise<ReviewExcerpt & T> {
+): ReviewExcerpt & T {
   const reviewsMarkdown = cachedMarkdownReviews || allReviewsMarkdown();
-  const reviewedTitlesJson =
-    cachedReviewedTitlesJson || (await allReviewedTitlesJson());
 
   const { rawContent } = reviewsMarkdown.find((markdown) => {
     return markdown.slug === review.slug;
@@ -141,7 +139,7 @@ export async function loadExcerptHtml<T extends { slug: string }>(
 
   return {
     ...review,
-    excerpt: linkReviewedTitles(excerptHtml, reviewedTitlesJson),
+    excerpt: excerptHtml,
   };
 }
 
