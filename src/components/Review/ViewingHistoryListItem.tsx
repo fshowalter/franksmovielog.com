@@ -13,15 +13,34 @@ const dateFormat = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
 });
 
+const monthFormat = new Intl.DateTimeFormat("en-US", {
+  month: "short",
+  timeZone: "UTC",
+});
+
+const yearFormat = new Intl.DateTimeFormat("en-US", {
+  timeZone: "UTC",
+  year: "numeric",
+});
+
+const dayFormat = new Intl.DateTimeFormat("en-US", {
+  day: "numeric",
+  timeZone: "UTC",
+});
+
+const weekdayFormat = new Intl.DateTimeFormat("en-US", {
+  timeZone: "UTC",
+  weekday: "short",
+});
+
 export function ViewingHistoryListItem({ value }: { value: Viewing }) {
   return (
     <li className="flex flex-col px-4 font-sans text-xs font-light even:bg-stripe">
       <div className="flex items-center gap-x-[1ch] py-4">
         <div className="size-auto">
-          <DateIcon className="w-4" />{" "}
+          <Date date={value.date} />
         </div>
         <div className="grow">
-          <Date date={value.date} />
           <Medium value={value.medium} />{" "}
           <MediumNotes value={value.mediumNotes} />
           <Venue value={value.venue} /> <VenueNotes value={value.venueNotes} />
@@ -36,12 +55,25 @@ export function ViewingHistoryListItem({ value }: { value: Viewing }) {
 
 function Date({ date }: { date: Date }) {
   return (
-    <>
-      <span className="inline-block font-sans text-xs font-normal tracking-normal text-subtle">
-        {dateFormat.format(date)}
-      </span>{" "}
-    </>
+    <div className="bg-subtle p-2 text-center">
+      <div className="px-4 pb-2 font-normal text-subtle">
+        {yearFormat.format(date)}
+      </div>
+      <div className="bg-default py-1">{monthFormat.format(date)}</div>
+      <div className="bg-default text-base font-normal text-subtle">
+        {dayFormat.format(date)}
+      </div>
+      <div className="bg-default py-1">{weekdayFormat.format(date)}</div>
+    </div>
   );
+
+  // return (
+  //   <>
+  //     <span className="inline-block font-sans text-xs font-normal tracking-normal text-subtle">
+  //       {dateFormat.format(date)}
+  //     </span>{" "}
+  //   </>
+  // );
 }
 
 function Medium({ value }: { value: Viewing["medium"] }) {
@@ -50,7 +82,7 @@ function Medium({ value }: { value: Viewing["medium"] }) {
   }
   return (
     <span className="text-subtle">
-      <span>via</span>{" "}
+      {/* <span>via</span>{" "} */}
       <span className="font-sans text-xs font-normal text-subtle">{value}</span>
     </span>
   );
