@@ -126,7 +126,10 @@ function ViewingNotes({ value }: { value: Viewing["viewingNotes"] }) {
   }
   return (
     <div className="pb-6 text-sm font-light tablet:ml-28 tablet:mr-20">
-      <RenderedMarkdown className="leading-normal text-muted" text={value} />
+      <RenderedMarkdown
+        className="leading-normal tracking-prose text-muted"
+        text={value}
+      />
     </div>
   );
 }
