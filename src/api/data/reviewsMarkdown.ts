@@ -12,6 +12,7 @@ export type MarkdownReview = {
   imdbId: string;
   rawContent: string;
   slug: string;
+  synopsis: string | undefined;
 };
 
 const DataSchema = z.object({
@@ -19,6 +20,7 @@ const DataSchema = z.object({
   grade: z.string(),
   imdb_id: z.string(),
   slug: z.string(),
+  synopsis: z.optional(z.string()),
 });
 
 export function allReviewsMarkdown(): MarkdownReview[] {
@@ -47,6 +49,7 @@ function parseAllReviewsMarkdown(): MarkdownReview[] {
         imdbId: greyMatter.imdb_id,
         rawContent: content,
         slug: greyMatter.slug,
+        synopsis: greyMatter.synopsis,
       };
     });
 }
