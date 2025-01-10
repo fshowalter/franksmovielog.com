@@ -71,7 +71,7 @@ export function Review({
           </a>
         </nav>
         <h1
-          className="text-center text-4xl tracking-[-1px] desktop:text-7xl"
+          className="text-center text-4xl desktop:text-7xl desktop:tracking-[-1px]"
           data-pagefind-meta="title"
           data-pagefind-weight="10"
         >
@@ -203,7 +203,7 @@ function ViewingHistory({ value }: Pick<Props, "value">) {
       <SubHeading as="h2" className="shadow-bottom">
         Viewing History
       </SubHeading>
-      <ul>
+      <ul className="bg-default">
         {value.viewings.map((viewing) => (
           <ViewingHistoryListItem key={viewing.sequence} value={viewing} />
         ))}
