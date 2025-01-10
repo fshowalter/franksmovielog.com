@@ -199,8 +199,8 @@ function OriginalTitle({
 
 function ViewingHistory({ value }: Pick<Props, "value">) {
   return (
-    <div className="w-full max-w-popout">
-      <SubHeading as="h2" className="shadow-bottom">
+    <aside className="w-full max-w-popout">
+      <SubHeading as="h2" className="text-center shadow-bottom">
         Viewing History
       </SubHeading>
       <ul className="bg-default">
@@ -208,6 +208,6 @@ function ViewingHistory({ value }: Pick<Props, "value">) {
           <ViewingHistoryListItem key={viewing.sequence} value={viewing} />
         ))}
       </ul>
-    </div>
+    </aside>
   );
 }
