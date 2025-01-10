@@ -19,9 +19,9 @@ import { StructuredData } from "./StructuredData";
 import { ViewingHistoryListItem } from "./ViewingHistoryListItem";
 
 export const StillImageConfig = {
-  height: 562.5,
-  sizes: "(min-width: 1260px) 1000px, calc(79.57vw + 13px)",
-  width: 1000,
+  height: 540,
+  sizes: "(min-width: 1143px) 960px, calc(79.57vw + 13px)",
+  width: 960,
 };
 
 const dateFormat = new Intl.DateTimeFormat("en-US", {
