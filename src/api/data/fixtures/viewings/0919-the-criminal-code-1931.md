@@ -2,7 +2,7 @@
 sequence: 919
 date: 2020-11-18
 imdbId: tt0021770
-slug: the-criminal-code-1930
+slug: the-criminal-code-1931
 venue: null
 venueNotes: null
 medium: DVD

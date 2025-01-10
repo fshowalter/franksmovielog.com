@@ -1,11 +1,10 @@
 ---
-sequence: 2
+sequence: 1349
+date: 2022-09-13
 imdbId: tt0033717
-date: 2007-07-09
-slug: high-sierra-1940
-medium: null
+slug: high-sierra-1941
 venue: null
 venueNotes: null
+medium: Watch TCM
 mediumNotes: null
 ---
-
