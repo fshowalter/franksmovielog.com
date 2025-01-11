@@ -118,9 +118,11 @@ export function loadExcerptHtml<T extends { slug: string }>(
 ): ReviewExcerpt & T {
   const reviewsMarkdown = cachedMarkdownReviews || allReviewsMarkdown();
 
-  const { rawContent } = reviewsMarkdown.find((markdown) => {
+  const { rawContent, synopsis } = reviewsMarkdown.find((markdown) => {
     return markdown.slug === review.slug;
   })!;
+
+  const excerptContent = synopsis || rawContent;
 
   let excerptHtml = getMastProcessor()
     .use(removeFootnotes)
@@ -128,7 +130,7 @@ export function loadExcerptHtml<T extends { slug: string }>(
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
     .use(rehypeStringify)
-    .processSync(rawContent)
+    .processSync(excerptContent)
     .toString();
 
   excerptHtml = excerptHtml.replace(/\n+$/, "");
@@ -190,7 +192,7 @@ function parseReviewedTitlesJson(
     for (const genre of title.genres) distinctGenres.add(genre);
     distinctReleaseYears.add(title.year);
 
-    const { date, grade, rawContent } = reviewsMarkdown.find(
+    const { date, grade, rawContent, synopsis } = reviewsMarkdown.find(
       (reviewsmarkdown) => {
         return reviewsmarkdown.slug === title.slug;
       },
@@ -208,6 +210,7 @@ function parseReviewedTitlesJson(
       date,
       grade,
       rawContent,
+      synopsis,
     };
   });
 
