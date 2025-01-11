@@ -1,11 +1,15 @@
 {
   "year": "2025",
   "newTitleCount": 1,
-  "viewingCount": 2,
-  "titleCount": 2,
+  "viewingCount": 3,
+  "titleCount": 3,
   "mediaDistribution": [
     {
       "name": "4k UHD Blu-ray",
+      "count": 1
+    },
+    {
+      "name": "Blu-ray",
       "count": 1
     }
   ],
@@ -16,6 +20,10 @@
     }
   ],
   "decadeDistribution": [
+    {
+      "name": "2000s",
+      "count": 1
+    },
     {
       "name": "2020s",
       "count": 2
