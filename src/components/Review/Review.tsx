@@ -95,7 +95,7 @@ export function Review({
           imageProps={stillImageProps}
           loading="eager"
         />
-        <div className="pt-10 font-sans text-xxs font-light uppercase tracking-wider">
+        <div className="pt-12 font-sans text-xs font-light uppercase tracking-wider">
           Reviewed {dateFormat.format(value.date)}
         </div>
       </header>
