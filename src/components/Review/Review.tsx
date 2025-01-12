@@ -61,10 +61,10 @@ export function Review({
       data-pagefind-meta={`image:${searchPosterImageProps.src}`}
       hasBackdrop={false}
     >
-      <header className="mb-8 flex flex-col items-center px-[8%] pt-10">
+      <header className="relative z-[1] mb-8 flex flex-col items-center px-[8%] pt-10">
         <nav className="pb-3">
           <a
-            className="font-sans text-xs font-light uppercase tracking-wider text-subtle hover:text-accent"
+            className="font-sans text-xs uppercase tracking-wider text-accent"
             href="/reviews/"
           >
             Reviews
@@ -83,7 +83,7 @@ export function Review({
         />
         <Grade className="mb-6" height={24} value={value.grade} />
         <Meta
-          className="mb-12"
+          className="mb-10 tablet:mb-12"
           countries={value.countries}
           runtimeMinutes={value.runtimeMinutes}
           year={value.year}
@@ -95,7 +95,7 @@ export function Review({
           imageProps={stillImageProps}
           loading="eager"
         />
-        <div className="pt-12 font-sans text-xs font-light uppercase tracking-wider">
+        <div className="relative mt-10 bg-default px-[1ch] font-sans text-xs uppercase tracking-wide text-subtle after:absolute after:left-[-11%] after:top-1/2 after:-z-10 after:w-[122%] after:border-t after:border-[var(--fg-subtle)] tablet:mt-12">
           Reviewed {dateFormat.format(value.date)}
         </div>
       </header>
@@ -170,14 +170,17 @@ function Meta({
   return (
     <div
       className={ccn(
-        "text-center font-sans text-xs font-light uppercase tracking-wide text-subtle",
+        "text-center font-sans text-xs uppercase tracking-wide text-subtle",
         className,
       )}
     >
       {year} <span>|</span> {allCountries} <span>|</span> {runtimeMinutes}
       &#x02009;min{" "}
       <span>
-        <span>|</span> <a href="#credits">More...</a>
+        <span>|</span>{" "}
+        <a className="text-accent" href="#credits">
+          More...
+        </a>
       </span>
     </div>
   );
