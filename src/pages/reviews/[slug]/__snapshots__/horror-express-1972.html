@@ -60,7 +60,7 @@
             position: static;
           "
         >
-          <div class="flex flex-col mt-2 tablet:mt-0">
+          <div class="flex flex-col">
             <div
               class="whitespace-nowrap font-normal leading-8"
               style="font-size: 1.5625rem"
@@ -230,10 +230,12 @@
           data-pagefind-body="true"
           data-pagefind-meta="image:/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-express-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=80&amp;h=113&amp;q=80&amp;f=avif"
         >
-          <header class="mb-8 flex flex-col items-center px-[8%] pt-10">
+          <header
+            class="relative z-[1] mb-8 flex flex-col items-center px-[8%] pt-10"
+          >
             <nav class="pb-3">
               <a
-                class="font-sans text-xs font-light uppercase tracking-wider text-subtle hover:text-accent"
+                class="font-sans text-xs uppercase tracking-wider text-accent"
                 href="/reviews/"
                 >Reviews</a
               >
@@ -260,14 +262,17 @@
                 width="120"
             /></picture>
             <div
-              class="text-center font-sans text-xs font-light uppercase tracking-wide text-subtle mb-12"
+              class="text-center font-sans text-xs uppercase tracking-wide text-subtle mb-10 tablet:mb-12"
             >
               1972<!-- -->
               <span>|</span>
               <!-- -->Spain<span>–</span>United Kingdom<!-- -->
               <span>|</span>
               <!-- -->88<!-- --> min<!-- -->
-              <span><span>|</span> <a href="#credits">More...</a></span>
+              <span
+                ><span>|</span>
+                <a class="text-accent" href="#credits">More...</a></span
+              >
             </div>
             <img
               src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fhorror-express-1972.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=960&amp;h=540&amp;q=80&amp;f=avif"
@@ -286,7 +291,7 @@
               class="aspect-video mx-auto mb-[.191px]"
             />
             <div
-              class="pt-12 font-sans text-xs font-light uppercase tracking-wider"
+              class="relative mt-10 bg-default px-[1ch] font-sans text-xs uppercase tracking-wide text-subtle after:absolute after:left-[-11%] after:top-1/2 after:-z-10 after:w-[122%] after:border-t after:border-[var(--fg-subtle)] tablet:mt-12"
             >
               Reviewed
               <!-- -->Apr 27, 2024

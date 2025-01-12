@@ -17,7 +17,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
         style="color: var(--fg-default); position: static;"
       >
         <div
-          class="flex flex-col mt-2 tablet:mt-0"
+          class="flex flex-col"
         >
           <div
             class="whitespace-nowrap font-normal leading-8"
@@ -298,13 +298,13 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
         id="content"
       >
         <header
-          class="mb-8 flex flex-col items-center px-[8%] pt-10"
+          class="relative z-[1] mb-8 flex flex-col items-center px-[8%] pt-10"
         >
           <nav
             class="pb-3"
           >
             <a
-              class="font-sans text-xs font-light uppercase tracking-wider text-subtle hover:text-accent"
+              class="font-sans text-xs uppercase tracking-wider text-accent"
               href="/reviews/"
             >
               Reviews
@@ -334,7 +334,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
             />
           </picture>
           <div
-            class="text-center font-sans text-xs font-light uppercase tracking-wide text-subtle mb-12"
+            class="text-center font-sans text-xs uppercase tracking-wide text-subtle mb-10 tablet:mb-12"
           >
             1997 
             <span>
@@ -359,6 +359,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
               </span>
                
               <a
+                class="text-accent"
                 href="#credits"
               >
                 More...
@@ -377,7 +378,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
             width="960"
           />
           <div
-            class="pt-12 font-sans text-xs font-light uppercase tracking-wider"
+            class="relative mt-10 bg-default px-[1ch] font-sans text-xs uppercase tracking-wide text-subtle after:absolute after:left-[-11%] after:top-1/2 after:-z-10 after:w-[122%] after:border-t after:border-[var(--fg-subtle)] tablet:mt-12"
           >
             Reviewed Jan 28, 2022
           </div>
@@ -1312,7 +1313,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
         style="color: var(--fg-default); position: static;"
       >
         <div
-          class="flex flex-col mt-2 tablet:mt-0"
+          class="flex flex-col"
         >
           <div
             class="whitespace-nowrap font-normal leading-8"
@@ -1593,13 +1594,13 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
         id="content"
       >
         <header
-          class="mb-8 flex flex-col items-center px-[8%] pt-10"
+          class="relative z-[1] mb-8 flex flex-col items-center px-[8%] pt-10"
         >
           <nav
             class="pb-3"
           >
             <a
-              class="font-sans text-xs font-light uppercase tracking-wider text-subtle hover:text-accent"
+              class="font-sans text-xs uppercase tracking-wider text-accent"
               href="/reviews/"
             >
               Reviews
@@ -1629,7 +1630,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
             />
           </picture>
           <div
-            class="text-center font-sans text-xs font-light uppercase tracking-wide text-subtle mb-12"
+            class="text-center font-sans text-xs uppercase tracking-wide text-subtle mb-10 tablet:mb-12"
           >
             1987 
             <span>
@@ -1646,6 +1647,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
               </span>
                
               <a
+                class="text-accent"
                 href="#credits"
               >
                 More...
@@ -1664,7 +1666,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
             width="960"
           />
           <div
-            class="pt-12 font-sans text-xs font-light uppercase tracking-wider"
+            class="relative mt-10 bg-default px-[1ch] font-sans text-xs uppercase tracking-wide text-subtle after:absolute after:left-[-11%] after:top-1/2 after:-z-10 after:w-[122%] after:border-t after:border-[var(--fg-subtle)] tablet:mt-12"
           >
             Reviewed Nov 4, 2020
           </div>
@@ -2821,7 +2823,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
         style="color: var(--fg-default); position: static;"
       >
         <div
-          class="flex flex-col mt-2 tablet:mt-0"
+          class="flex flex-col"
         >
           <div
             class="whitespace-nowrap font-normal leading-8"
@@ -3102,13 +3104,13 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
         id="content"
       >
         <header
-          class="mb-8 flex flex-col items-center px-[8%] pt-10"
+          class="relative z-[1] mb-8 flex flex-col items-center px-[8%] pt-10"
         >
           <nav
             class="pb-3"
           >
             <a
-              class="font-sans text-xs font-light uppercase tracking-wider text-subtle hover:text-accent"
+              class="font-sans text-xs uppercase tracking-wider text-accent"
               href="/reviews/"
             >
               Reviews
@@ -3140,7 +3142,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
             />
           </picture>
           <div
-            class="text-center font-sans text-xs font-light uppercase tracking-wide text-subtle mb-12"
+            class="text-center font-sans text-xs uppercase tracking-wide text-subtle mb-10 tablet:mb-12"
           >
             1972 
             <span>
@@ -3161,6 +3163,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
               </span>
                
               <a
+                class="text-accent"
                 href="#credits"
               >
                 More...
@@ -3179,7 +3182,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
             width="960"
           />
           <div
-            class="pt-12 font-sans text-xs font-light uppercase tracking-wider"
+            class="relative mt-10 bg-default px-[1ch] font-sans text-xs uppercase tracking-wide text-subtle after:absolute after:left-[-11%] after:top-1/2 after:-z-10 after:w-[122%] after:border-t after:border-[var(--fg-subtle)] tablet:mt-12"
           >
             Reviewed Apr 27, 2024
           </div>
@@ -4682,7 +4685,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
         style="color: var(--fg-default); position: static;"
       >
         <div
-          class="flex flex-col mt-2 tablet:mt-0"
+          class="flex flex-col"
         >
           <div
             class="whitespace-nowrap font-normal leading-8"
@@ -4963,13 +4966,13 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
         id="content"
       >
         <header
-          class="mb-8 flex flex-col items-center px-[8%] pt-10"
+          class="relative z-[1] mb-8 flex flex-col items-center px-[8%] pt-10"
         >
           <nav
             class="pb-3"
           >
             <a
-              class="font-sans text-xs font-light uppercase tracking-wider text-subtle hover:text-accent"
+              class="font-sans text-xs uppercase tracking-wider text-accent"
               href="/reviews/"
             >
               Reviews
@@ -4999,7 +5002,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
             />
           </picture>
           <div
-            class="text-center font-sans text-xs font-light uppercase tracking-wide text-subtle mb-12"
+            class="text-center font-sans text-xs uppercase tracking-wide text-subtle mb-10 tablet:mb-12"
           >
             1985 
             <span>
@@ -5016,6 +5019,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
               </span>
                
               <a
+                class="text-accent"
                 href="#credits"
               >
                 More...
@@ -5034,7 +5038,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
             width="960"
           />
           <div
-            class="pt-12 font-sans text-xs font-light uppercase tracking-wider"
+            class="relative mt-10 bg-default px-[1ch] font-sans text-xs uppercase tracking-wide text-subtle after:absolute after:left-[-11%] after:top-1/2 after:-z-10 after:w-[122%] after:border-t after:border-[var(--fg-subtle)] tablet:mt-12"
           >
             Reviewed Apr 27, 2024
           </div>
@@ -6037,7 +6041,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
         style="color: var(--fg-default); position: static;"
       >
         <div
-          class="flex flex-col mt-2 tablet:mt-0"
+          class="flex flex-col"
         >
           <div
             class="whitespace-nowrap font-normal leading-8"
@@ -6318,13 +6322,13 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
         id="content"
       >
         <header
-          class="mb-8 flex flex-col items-center px-[8%] pt-10"
+          class="relative z-[1] mb-8 flex flex-col items-center px-[8%] pt-10"
         >
           <nav
             class="pb-3"
           >
             <a
-              class="font-sans text-xs font-light uppercase tracking-wider text-subtle hover:text-accent"
+              class="font-sans text-xs uppercase tracking-wider text-accent"
               href="/reviews/"
             >
               Reviews
@@ -6354,7 +6358,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
             />
           </picture>
           <div
-            class="text-center font-sans text-xs font-light uppercase tracking-wide text-subtle mb-12"
+            class="text-center font-sans text-xs uppercase tracking-wide text-subtle mb-10 tablet:mb-12"
           >
             1959 
             <span>
@@ -6371,6 +6375,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
               </span>
                
               <a
+                class="text-accent"
                 href="#credits"
               >
                 More...
@@ -6389,7 +6394,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
             width="960"
           />
           <div
-            class="pt-12 font-sans text-xs font-light uppercase tracking-wider"
+            class="relative mt-10 bg-default px-[1ch] font-sans text-xs uppercase tracking-wide text-subtle after:absolute after:left-[-11%] after:top-1/2 after:-z-10 after:w-[122%] after:border-t after:border-[var(--fg-subtle)] tablet:mt-12"
           >
             Reviewed Jan 29, 2021
           </div>
@@ -8305,7 +8310,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
         style="color: var(--fg-default); position: static;"
       >
         <div
-          class="flex flex-col mt-2 tablet:mt-0"
+          class="flex flex-col"
         >
           <div
             class="whitespace-nowrap font-normal leading-8"
@@ -8586,13 +8591,13 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
         id="content"
       >
         <header
-          class="mb-8 flex flex-col items-center px-[8%] pt-10"
+          class="relative z-[1] mb-8 flex flex-col items-center px-[8%] pt-10"
         >
           <nav
             class="pb-3"
           >
             <a
-              class="font-sans text-xs font-light uppercase tracking-wider text-subtle hover:text-accent"
+              class="font-sans text-xs uppercase tracking-wider text-accent"
               href="/reviews/"
             >
               Reviews
@@ -8622,7 +8627,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             />
           </picture>
           <div
-            class="text-center font-sans text-xs font-light uppercase tracking-wide text-subtle mb-12"
+            class="text-center font-sans text-xs uppercase tracking-wide text-subtle mb-10 tablet:mb-12"
           >
             1957 
             <span>
@@ -8639,6 +8644,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               </span>
                
               <a
+                class="text-accent"
                 href="#credits"
               >
                 More...
@@ -8657,7 +8663,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             width="960"
           />
           <div
-            class="pt-12 font-sans text-xs font-light uppercase tracking-wider"
+            class="relative mt-10 bg-default px-[1ch] font-sans text-xs uppercase tracking-wide text-subtle after:absolute after:left-[-11%] after:top-1/2 after:-z-10 after:w-[122%] after:border-t after:border-[var(--fg-subtle)] tablet:mt-12"
           >
             Reviewed Sep 19, 2020
           </div>
