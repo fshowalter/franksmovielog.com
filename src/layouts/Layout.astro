@@ -45,6 +45,9 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
     <link href="/site.webmanifest" rel="manifest" />
     <link href="/sitemap-index.xml" rel="sitemap" />
     <meta content={meta.description} name="description" />
+    <slot name="meta-theme-color">
+      <meta content="rgba(0,0,0,.85)" name="theme-color" />
+    </slot>
     <link
       href={new URL("feed.xml", import.meta.env.SITE)}
       rel="alternate"
