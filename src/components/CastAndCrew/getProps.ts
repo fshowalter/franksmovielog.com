@@ -23,7 +23,6 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
         name: member.name,
         reviewCount: member.reviewCount,
         slug: member.slug,
-        totalCount: member.totalCount,
       };
 
       return value;

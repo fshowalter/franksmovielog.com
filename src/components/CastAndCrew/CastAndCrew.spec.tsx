@@ -47,32 +47,6 @@ describe("CastAndCrew", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by title count desc", async ({ expect }) => {
-    expect.hasAssertions();
-
-    render(<CastAndCrew {...props} />);
-
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Title Count (Most First)",
-    );
-
-    expect(screen.getByTestId("list")).toMatchSnapshot();
-  });
-
-  it("can sort by title count asc", async ({ expect }) => {
-    expect.hasAssertions();
-
-    render(<CastAndCrew {...props} />);
-
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Title Count (Fewest First)",
-    );
-
-    expect(screen.getByTestId("list")).toMatchSnapshot();
-  });
-
   it("can sort by review count desc", async ({ expect }) => {
     expect.hasAssertions();
 
