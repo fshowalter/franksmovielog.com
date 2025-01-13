@@ -9,7 +9,6 @@ import { CreditedAs } from "~/components/CreditedAs";
 import { GroupedList } from "~/components/GroupedList";
 import { ListItem } from "~/components/ListItem";
 import { ListItemAvatar } from "~/components/ListItemAvatar";
-import { ListItemCounts } from "~/components/ListItemCounts";
 import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 
 import type { Sort } from "./CastAndCrew.reducer";
@@ -19,7 +18,7 @@ import { Filters } from "./Filters";
 
 export type ListItemValue = Pick<
   CastAndCrewMember,
-  "creditedAs" | "name" | "reviewCount" | "slug" | "totalCount"
+  "creditedAs" | "name" | "reviewCount" | "slug"
 > & {
   avatarImageProps: AvatarImageProps | undefined;
 };
@@ -83,7 +82,9 @@ function MemberListItem({ value }: { value: ListItemValue }): JSX.Element {
     >
       <ListItemAvatar imageProps={value.avatarImageProps} name={value.name} />
       <MemberName value={value} />
-      <ListItemCounts current={value.reviewCount} total={value.totalCount} />
+      <div className="ml-auto text-nowrap font-sans text-xs text-subtle">
+        {value.reviewCount}
+      </div>
     </ListItem>
   );
 }
