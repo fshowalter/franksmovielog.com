@@ -57,5 +57,17 @@ title = `${title} (${props.value.year})`;
   openGraph={{ description, type: "article" }}
   title={title}
 >
+  <Fragment slot="meta-theme-color">
+    <meta
+      content="#fff"
+      media="(prefers-color-scheme: light)"
+      name="theme-color"
+    />
+    <meta
+      content="#322f2f"
+      media="(prefers-color-scheme: dark)"
+      name="theme-color"
+    />
+  </Fragment>
   <Review {...props} />
 </Layout>
