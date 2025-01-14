@@ -39,7 +39,7 @@ export function Details({
         {values.map((value) => {
           return (
             <div
-              className="relative col-span-5 grid grid-cols-subgrid grid-rows-[1fr,auto,auto,1fr] py-4 text-subtle shadow-bottom has-[a:hover]:bg-accent has-[a:hover]:font-semibold has-[a:hover]:text-inverse"
+              className="relative col-span-5 grid grid-cols-subgrid grid-rows-[1fr,auto,auto,1fr] py-4 text-subtle shadow-bottom has-[a:hover]:text-accent has-[a:hover]:[--bg-progress:var(--bg-accent)]"
               key={value.name}
             >
               <DetailsItemAvatar
@@ -75,16 +75,18 @@ function Name({ value, valueType }: { value: Value; valueType: ValueType }) {
 
   if (value.slug)
     return (
-      <a
-        className="relative block pb-1 font-sans text-sm leading-none text-accent before:absolute before:left-[-72px] before:top-[-11px] before:aspect-square before:w-12 before:bg-default before:opacity-15 after:absolute after:bottom-[-6px] after:left-0 after:z-10 after:h-[6px] after:w-full hover:text-inverse hover:before:opacity-0"
-        href={linkTarget}
-      >
-        {value.name}
-      </a>
+      <span>
+        <a
+          className="relative pb-1 font-sans text-sm leading-none text-accent before:absolute before:left-[-72px] before:top-[-13px] before:aspect-square before:w-12 before:bg-default before:opacity-15 hover:before:opacity-0"
+          href={linkTarget}
+        >
+          {value.name}
+        </a>
+      </span>
     );
 
   return (
-    <span className="block pb-1 font-sans text-sm font-light leading-none text-subtle hover:text-inverse">
+    <span className="block pb-1 font-sans text-sm font-light leading-none text-subtle">
       {value.name}
     </span>
   );
