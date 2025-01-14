@@ -28,18 +28,18 @@ export function Details({
   return (
     <section
       className={ccn(
-        "w-full bg-default px-container pb-8 desktop:w-auto desktop:basis-[calc(50%_-_16px)] desktop:px-8",
+        "w-full bg-default pb-8 desktop:w-auto desktop:basis-[calc(50%_-_16px)]",
         className,
       )}
     >
-      <h2 className="py-4 font-sans text-xs font-medium uppercase tracking-wide text-muted shadow-bottom">
+      <h2 className="px-container py-4 font-sans text-xs font-medium uppercase tracking-wide text-muted shadow-bottom desktop:px-8">
         {label}
       </h2>
       <div className="grid w-full grid-cols-[auto,1fr,auto] tablet:whitespace-nowrap">
         {values.map((value) => {
           return (
             <div
-              className="relative col-span-3 grid grid-cols-subgrid grid-rows-[1fr,auto,auto,1fr] py-3"
+              className="relative col-span-3 grid grid-cols-subgrid grid-rows-[1fr,auto,auto,1fr] px-container py-3 text-subtle has-[a:hover]:bg-accent has-[a:hover]:text-inverse desktop:px-8"
               key={value.name}
             >
               <DetailsItemAvatar
@@ -49,7 +49,7 @@ export function Details({
               />
               <div className="col-span-2 col-start-2 row-start-2 grid grid-cols-subgrid">
                 <Name value={value} valueType={valueType} />
-                <div className="col-start-3 self-center text-nowrap pb-1 text-right font-sans text-xs text-subtle">
+                <div className="col-start-3 self-center text-nowrap pb-1 text-right font-sans text-xs">
                   {value.reviewCount} / {value.titleCount}
                 </div>
               </div>
@@ -76,7 +76,7 @@ function Name({ value, valueType }: { value: Value; valueType: ValueType }) {
   if (value.slug)
     return (
       <a
-        className="block pb-1 font-sans text-sm font-normal leading-none text-accent before:absolute before:left-0 before:top-3 before:aspect-square before:w-12 hover:underline"
+        className="relative block pb-1 font-sans text-sm font-normal leading-none text-accent before:absolute before:-top-3 before:left-[-72px] before:aspect-square before:w-12 after:absolute after:bottom-[-6px] after:left-0 after:z-10 after:h-[6px] after:w-full hover:text-inverse"
         href={linkTarget}
       >
         {value.name}
@@ -84,7 +84,7 @@ function Name({ value, valueType }: { value: Value; valueType: ValueType }) {
     );
 
   return (
-    <span className="block pb-1 font-sans text-sm font-light leading-none text-subtle">
+    <span className="block pb-1 font-sans text-sm font-light leading-none text-subtle hover:text-inverse">
       {value.name}
     </span>
   );
