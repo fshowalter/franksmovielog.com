@@ -1,12 +1,12 @@
 {
   "year": "2025",
-  "newTitleCount": 2,
-  "viewingCount": 5,
-  "titleCount": 5,
+  "newTitleCount": 3,
+  "viewingCount": 6,
+  "titleCount": 6,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 3
+      "count": 4
     },
     {
       "name": "4k UHD Blu-ray",
@@ -25,6 +25,10 @@
       "count": 1
     },
     {
+      "name": "1980s",
+      "count": 1
+    },
+    {
       "name": "1990s",
       "count": 1
     },
@@ -39,6 +43,32 @@
   ],
   "mostWatchedTitles": [],
   "mostWatchedDirectors": [],
-  "mostWatchedPerformers": [],
+  "mostWatchedPerformers": [
+    {
+      "name": "Oliver Reed",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-10",
+          "slug": "the-brigand-of-kandahar-1965",
+          "title": "The Brigand of Kandahar",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1965"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-01-11",
+          "slug": "the-return-of-the-musketeers-1989",
+          "title": "The Return of the Musketeers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1989"
+        }
+      ]
+    }
+  ],
   "mostWatchedWriters": []
 }
