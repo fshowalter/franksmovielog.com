@@ -32,14 +32,14 @@ export function Details({
         className,
       )}
     >
-      <h2 className="px-container py-7 font-sans text-xs font-medium uppercase tracking-wide text-muted desktop:px-8">
+      <h2 className="px-container py-8 font-sans text-xs font-medium uppercase tracking-wide text-muted desktop:px-8">
         {label}
       </h2>
-      <div className="grid w-full grid-cols-[var(--container-padding),auto,1fr,auto,var(--container-padding)] tablet:whitespace-nowrap desktop:grid-cols-[2rem,auto,1fr,auto,2rem]">
+      <div className="grid w-full grid-cols-[var(--container-padding),auto,1fr,auto,var(--container-padding)] bg-default tablet:whitespace-nowrap desktop:grid-cols-[2rem,auto,1fr,auto,2rem]">
         {values.map((value) => {
           return (
             <div
-              className="relative col-span-5 grid grid-cols-subgrid grid-rows-[1fr,auto,auto,1fr] bg-default py-3 text-subtle has-[a:hover]:bg-accent has-[a:hover]:font-semibold has-[a:hover]:text-inverse"
+              className="relative col-span-5 grid grid-cols-subgrid grid-rows-[1fr,auto,auto,1fr] py-4 text-subtle shadow-bottom has-[a:hover]:bg-accent has-[a:hover]:font-semibold has-[a:hover]:text-inverse"
               key={value.name}
             >
               <DetailsItemAvatar
