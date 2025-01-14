@@ -28,27 +28,32 @@ title: How I Grade
 
 ## On Grading
 
-Let's start with a binary scale. Gene Siskel argued a reader yearns to know: "Should I watch this movie?"[^1]
+Choosing a grading system is surprisingly hard. Each has their merits.
 
-A pragmatic approach, but one that doesn't differentiate between movies one _should_ see and movies one _must_ see. <span data-imdb-id="tt0372784">_Batman Begins_</span> and <span data-imdb-id="tt0468569">_The Dark Knight_</span> both deserve a "Thumbs up," but they are not equal.
+Let's start with a binary scale. Rotten Tomatoes, possibly the most popular, has "fresh" and "rotten". Netflix has a thumbs-up or thumbs-down. Gene Siskel favored this approach, arguing that a reader yearns to know: "Should I watch this movie?"[^1]
 
-Enter the star scale. I've encountered scales from three stars to ten, sometimes with half-stars.
+A pragmatic approach, but one that doesn't differentiate between movies one _should_ see and movies one _must_ see. <span data-imdb-id="tt0372784">_Batman Begins_</span> and <span data-imdb-id="tt0468569">_The Dark Knight_</span> both deserve a "thumbs-up," but they are not equal. 
 
-But not all star-systems prove equal.
+Enter the star scale. I've encountered scales from three stars to ten.
 
-Roger Ebert hated the four-star scale his paper enforced because it presented no middle ground. However, Ebert also argued that readers dislike scales with a middle ground, but I disagree. We know what it means for a movie to be “okay.” Sometimes, instead of “Should I see this movie?” readers want to know “Will I hate this movie?” A middle ground answers that question.
+But not all star systems prove equal.
 
-Next, let's consider the IMDb. It proffers a ten-star system. That's a lot of stars. Perhaps too many. In 2009 the median movie score hit 6.6, implying users skew toward the upper bounds, blurring the distinction between movies that are "good" from ones that are "great". 
+Roger Ebert hated the four-star scale his paper enforced because it presented no middle ground.[^2] However, Ebert also argued that readers dislike scales with a middle ground, but I disagree. We know what it means for a movie to be “okay.” Sometimes, instead of "Should I see this movie?" readers want to know "Will I hate this movie?" A middle ground answers that question.
+
+Next, let's consider the IMDb. It proffers a ten-star system. That's a lot of stars. Perhaps too many. In 2009 the median movie score hit 6.6. I'll leave it to statisticians to say why, but it indicates users skew toward the upper bounds, blurring the distinction between movies that are "good" and ones that are "great". 
 
 So if a four-star scale proves too small and ten-star scale too large, what's ideal?
 
-I like a five-star system. Ebert liked it too.[^1] It offers a middle ground (3 stars) while proffering discrete rating definitions.
+I like a five-star system. Ebert liked it too.[^3] It offers a middle ground (three stars) while proffering discrete rating definitions.
 
-And what about letter grade systems? I like them. Under the covers, they translate to five-star systems. A's equate to 5 stars, B's to 4 stars, and so on. I employ letter grades behind the scenes because it's how my brain works.
+And what about letter grade systems? I like them. Under the covers, they translate to five-star systems. "A"s equate to five stars, "B"s to four stars, and so on. I employ letter grades behind the scenes because it's how my brain works. I also eschew Rotten Tomatoes' "fresh" and "rotten" in favor of their percentage scores which I find far more informative.
 
-So why display them as stars? Well, for one, grade definitions aren't universal. To me, a 'C' equates to an "okay" movie, to others it screams burn. A 3 star out of 5 display indicates a middle-of-the-road rating.
+Letter grades also allow me to note those movies that edged their way into a given grade. For example, I consider _The Dark Knight_ an "A" tier film, but the scene where Batman interrogates the Joker under bright lights in view of dozens of police officers always irked me, so it gets an "A-".
 
-Grading systems are hard. I think a 5-star system works best, though some of my favorite reviewers eschew grades entirely, preferring you read the review. Fair enough, but I bet they rate them behind the scenes.
+So why display them as stars? Well, for one, grade definitions aren't universal. To me, a "C" equates to an "okay" movie, to others it screams burn. A three-star-out-of-five display indicates a middle-of-the-road rating. Those "minus" movies that edged their way into a given tier get half-stars. Thus, a four-and-a-half star film is better than good, but not quite perfect. 
 
-[^1]: [Ebert, Roger. "You Give Out Too Many Stars." Roger Ebert (blog). September 14, 2008.](http://www.rogerebert.com/rogers-journal/you-give-out-too-many-stars)
+Ultimately, it's a balancing act -- communicating nuance in an efficient manner. I think a five-star system works best, though some of my favorite reviewers eschew grades entirely, preferring you read the review. Fair enough, but I bet they rate them behind the scenes.
 
+[^1]: Roger Ebert, "You Give Out Too Many Stars," _Roger Ebert_ (blog), September 14, 2008, http://www.rogerebert.com/rogers-journal/you-give-out-too-many-stars, accessed January 14, 2025.
+[^2]: Ebert, "You Give Out Too Many Stars."
+[^3]: Ebert, "You Give Out Too Many Stars," "The only rating system that makes any sense is the Little Man of the San Francisco Chronicle, who is seen (1) jumping out of his seat and applauding wildly; (2) sitting up happily and applauding; (3) sitting attentively; (4) asleep in his seat; or (5) gone from his seat."
