@@ -59,7 +59,7 @@ export function WatchlistProgress({
           writerReviewed={progress.writerReviewed}
           writerTotal={progress.writerTotal}
         />
-        <div className="mx-auto flex w-full max-w-screen-max flex-col gap-8 py-16 tablet:px-container desktop:grid desktop:grid-cols-2">
+        <div className="mx-auto flex w-full max-w-screen-max flex-col gap-x-8 gap-y-[72px] py-16 tablet:px-container desktop:grid desktop:grid-cols-2">
           <Details
             className="col-start-1 row-span-3"
             label="Directors"
