@@ -5,7 +5,7 @@ import { Review } from "~/components/Review/Review";
 import Layout from "~/layouts/Layout.astro";
 
 interface Props {
-  contextPlainText: string;
+  contentPlainText: string;
   slug: string;
 }
 
@@ -19,7 +19,7 @@ export async function getStaticPaths() {
           slug: review.slug,
         },
         props: {
-          contextPlainText: getContentPlainText(review.rawContent),
+          contentPlainText: getContentPlainText(review.rawContent),
           slug: review.slug,
         },
       };
@@ -27,12 +27,12 @@ export async function getStaticPaths() {
   );
 }
 
-const { contextPlainText, slug } = Astro.props;
+const { contentPlainText, slug } = Astro.props;
 
 const props = await getProps(slug);
 
 //trim the string to the maximum length
-var description = contextPlainText
+var description = contentPlainText
   .replaceAll(/\r?\n|\r/g, " ")
   .slice(0, Math.max(0, 160));
 

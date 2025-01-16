@@ -37,7 +37,7 @@ describe("/reviews/:slug", () => {
         {
           partial: false,
           props: {
-            contextPlainText: getContentPlainText(review.rawContent),
+            contentPlainText: getContentPlainText(review.rawContent),
             slug: review.slug,
           },
           request: new Request(
