@@ -133,12 +133,6 @@ export function loadExcerptHtml<T extends { slug: string }>(
     .processSync(excerptContent)
     .toString();
 
-  // excerptHtml = excerptHtml.replace(/\n+$/, "");
-  // excerptHtml = excerptHtml.replace(
-  //   /<\/p>$/,
-  //   ` <a class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline" href="/reviews/${review.slug}/">Continue reading...</a></p>`,
-  // );
-
   return {
     ...review,
     excerpt: excerptHtml,

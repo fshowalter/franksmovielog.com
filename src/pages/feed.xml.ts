@@ -36,11 +36,16 @@ export async function GET() {
     items: await Promise.all(
       rssItems.map(async (item) => {
         const stillSrc = await getOpenGraphStillSrc(item.slug);
+        let excerptHtml = item.excerpt.replace(/\n+$/, "");
+        excerptHtml = excerptHtml.replace(
+          /<\/p>$/,
+          ` <a href="/reviews/${item.slug}/">Read more...</a></p>`,
+        );
 
         return {
           content: `<img src="${stillSrc}" alt=""><p>${textStarsForGrade(
             item.grade,
-          )}</p>${item.excerpt}`,
+          )}</p>${excerptHtml}`,
           link: `https://www.franksmovielog.com/reviews/${item.slug}/`,
           pubDate: item.date,
           title: `${item.title} (${item.year})`,
