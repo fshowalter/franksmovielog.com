@@ -42,9 +42,6 @@ export default tsEslint.config(
         warnOnUnsupportedTypeScriptVersion: false,
       },
     },
-    plugins: {
-      "react-compiler": reactCompiler,
-    },
     rules: {
       "@typescript-eslint/array-type": "error",
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
@@ -60,7 +57,6 @@ export default tsEslint.config(
           ],
         },
       ],
-      "react-compiler/react-compiler": "error",
     },
   },
   {
@@ -68,9 +64,11 @@ export default tsEslint.config(
     files: ["**/*.tsx"],
     plugins: {
       react,
+      "react-compiler": reactCompiler,
     },
     rules: {
       ...react.configs.recommended.rules,
+      "react-compiler/react-compiler": "error",
       "react/react-in-jsx-scope": "off",
     },
     settings: {
