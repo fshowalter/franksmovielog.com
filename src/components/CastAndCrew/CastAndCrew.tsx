@@ -76,7 +76,7 @@ export function CastAndCrew({
 function MemberListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
     <ListItem
-      className="has-[a:hover]:bg-hover"
+      className="has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
       extraVerticalPadding={true}
       itemsCenter={true}
     >

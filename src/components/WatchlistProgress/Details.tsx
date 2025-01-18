@@ -39,7 +39,7 @@ export function Details({
         {values.map((value) => {
           return (
             <div
-              className="relative col-span-5 grid grid-cols-subgrid grid-rows-[1fr,auto,auto,1fr] py-4 text-subtle shadow-bottom last-of-type:shadow-none has-[a:hover]:bg-hover"
+              className="relative col-span-5 grid grid-cols-subgrid grid-rows-[1fr,auto,auto,1fr] py-4 text-subtle shadow-bottom last-of-type:shadow-none has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
               key={value.name}
             >
               <DetailsItemAvatar

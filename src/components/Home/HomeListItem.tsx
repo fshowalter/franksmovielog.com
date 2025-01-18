@@ -31,7 +31,7 @@ export type ListItemValue = Pick<
 
 export function HomeListItem({ value }: { value: ListItemValue }) {
   return (
-    <li className="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-[var(--bg-hover)] tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]">
+    <li className="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]">
       <div className="mx-[8%] mb-6 block tablet:mx-0">
         <Still
           imageProps={value.stillImageProps}

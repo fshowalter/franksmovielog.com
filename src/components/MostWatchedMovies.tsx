@@ -88,7 +88,7 @@ function ListItem({
   value: MostWatchedMoviesListItemValue;
 }): JSX.Element {
   return (
-    <li className="relative mb-1 flex items-center gap-x-6 bg-default py-4 tablet:w-auto tablet:flex-col tablet:p-0 desktop:w-auto">
+    <li className="relative mb-1 flex h-full items-center gap-x-6 bg-default py-4 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:w-auto tablet:flex-col tablet:p-0 desktop:w-auto">
       <FluidListItemPoster
         imageProps={value.posterImageProps}
         slug={value.slug}
