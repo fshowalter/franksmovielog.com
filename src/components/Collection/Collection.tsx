@@ -111,6 +111,7 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
     <ListItem
       background={value.slug ? "bg-default" : "bg-unreviewed"}
+      className="has-[a:hover]:bg-hover"
       itemsCenter={true}
     >
       <ListItemPoster imageProps={value.posterImageProps} />

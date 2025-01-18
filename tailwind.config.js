@@ -10,6 +10,7 @@ export default {
       default: "var(--bg-default)",
       footer: "var(--bg-footer)",
       group: "var(--bg-group)",
+      hover: "var(--bg-hover)",
       inverse: "var(--bg-inverse)",
       stripe: "var(--bg-stripe)",
       subtle: "var(--bg-subtle)",

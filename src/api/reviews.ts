@@ -124,7 +124,7 @@ export function loadExcerptHtml<T extends { slug: string }>(
 
   const excerptContent = synopsis || rawContent;
 
-  let excerptHtml = getMastProcessor()
+  const excerptHtml = getMastProcessor()
     .use(removeFootnotes)
     .use(trimToExcerpt)
     .use(remarkRehype, { allowDangerousHtml: true })
@@ -133,11 +133,11 @@ export function loadExcerptHtml<T extends { slug: string }>(
     .processSync(excerptContent)
     .toString();
 
-  excerptHtml = excerptHtml.replace(/\n+$/, "");
-  excerptHtml = excerptHtml.replace(
-    /<\/p>$/,
-    ` <a class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline" href="/reviews/${review.slug}/">Continue reading...</a></p>`,
-  );
+  // excerptHtml = excerptHtml.replace(/\n+$/, "");
+  // excerptHtml = excerptHtml.replace(
+  //   /<\/p>$/,
+  //   ` <a class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline" href="/reviews/${review.slug}/">Continue reading...</a></p>`,
+  // );
 
   return {
     ...review,

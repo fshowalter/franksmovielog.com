@@ -39,7 +39,7 @@ export function Details({
         {values.map((value) => {
           return (
             <div
-              className="relative col-span-5 grid grid-cols-subgrid grid-rows-[1fr,auto,auto,1fr] py-4 text-subtle shadow-bottom has-[a:hover]:text-accent has-[a:hover]:[--bg-progress:var(--bg-accent)]"
+              className="relative col-span-5 grid grid-cols-subgrid grid-rows-[1fr,auto,auto,1fr] py-4 text-subtle shadow-bottom last-of-type:shadow-none has-[a:hover]:bg-hover"
               key={value.name}
             >
               <DetailsItemAvatar
@@ -77,7 +77,7 @@ function Name({ value, valueType }: { value: Value; valueType: ValueType }) {
     return (
       <span>
         <a
-          className="relative pb-1 font-sans text-sm leading-none text-accent before:absolute before:left-[-72px] before:top-[-13px] before:aspect-square before:w-12 before:bg-default before:opacity-15 hover:before:opacity-0"
+          className="pb-1 font-sans text-sm leading-none text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-12 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-30 after:size-full after:opacity-0 hover:before:opacity-0"
           href={linkTarget}
         >
           {value.name}

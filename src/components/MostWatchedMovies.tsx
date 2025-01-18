@@ -123,7 +123,7 @@ function Title({
   if (slug) {
     return (
       <a
-        className="block font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-0 before:top-4 before:aspect-poster before:w-list-item-poster before:bg-[#fff] before:opacity-15 hover:underline hover:before:opacity-0 tablet:text-center tablet:before:top-0 tablet:before:w-full"
+        className="block font-sans text-sm font-medium text-accent decoration-accent decoration-2 before:absolute before:left-0 before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 hover:before:opacity-0 tablet:text-center tablet:before:top-0 tablet:before:w-full"
         href={`/reviews/${slug}/`}
       >
         {title}

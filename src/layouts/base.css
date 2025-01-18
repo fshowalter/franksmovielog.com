@@ -7,15 +7,16 @@
   --bg-canvas: #dfdfdf;
   --bg-default: #fff;
   --bg-footer: #252525;
+  --bg-hover: #f7f5f3;
   --bg-inverse: rgb(0 0 0 / 75%);
   --bg-progress: #14bd41;
   --bg-stripe: #fcfcfc;
   --bg-unreviewed: #fcfcfc;
   --bg-group: #ededed;
-  --bg-subtle: #f6f6f6;
+  --bg-subtle: #fafafa;
   --border-accent: #054a93;
   --border-default: #e9e7e0;
-  --fg-accent: #a52422;
+  --fg-accent: #bf0603;
   --fg-default: #252525;
   --fg-emphasis: rgb(0 0 0 / 95%);
   --fg-inverse: #fff;
@@ -35,6 +36,7 @@
     --bg-accent: #a52422;
     --bg-canvas: #484745;
     --bg-default: #322f2f;
+    --bg-hover: #3c393a;
     --bg-inverse: #322f2f;
     --bg-progress: #379634;
     --bg-group: #464646;
@@ -43,12 +45,12 @@
     --bg-subtle: #373434;
     --border-accent: #499ef8;
     --border-default: #484745;
-    --fg-accent: #c49090;
+    --fg-accent: #c86666;
     --fg-default: rgb(255 255 255 / 75%);
     --fg-emphasis: rgb(255 255 255 / 95%);
     --fg-muted: rgb(255 255 255 / 65%);
     --fg-subtle: rgb(255 255 255 / 60%);
-    --image-filter: brightness(0.8) contrast(1.2);
+    --image-filter: brightness(0.9) contrast(1.2);
   }
 }
 
