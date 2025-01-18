@@ -319,7 +319,7 @@ exports[`Home > matches snapshot 1`] = `
             class="flex w-full flex-col flex-wrap justify-center gap-x-[3%] pb-8 tablet:flex-row tablet:justify-between tablet:gap-y-[6vw] tablet:px-container desktop:gap-y-[3vw] max:gap-y-14"
           >
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
             >
               <div
                 class="mx-[8%] mb-6 block tablet:mx-0"
@@ -345,7 +345,7 @@ exports[`Home > matches snapshot 1`] = `
                   23 Jun 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 text-default before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
                   href="/reviews/chamber-of-horrors-1966/"
                 >
                   Chamber of Horrors 
@@ -376,13 +376,7 @@ exports[`Home > matches snapshot 1`] = `
                     <em>
                       Chamber of Horrors
                     </em>
-                     as a television movie, intended as a series pilot. When the network deemed the finished product too violent for television, the studio added some gimmicks and released it as a theatrical feature. The result looks good but underwhelms. 
-                    <a
-                      class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline"
-                      href="/reviews/chamber-of-horrors-1966/"
-                    >
-                      Continue reading...
-                    </a>
+                     as a television movie, intended as a series pilot. When the network deemed the finished product too violent for television, the studio added some gimmicks and released it as a theatrical feature. The result looks good but underwhelms.
                   </p>
                 </div>
                 <div
@@ -401,7 +395,7 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
             >
               <div
                 class="mx-[8%] mb-6 block tablet:mx-0"
@@ -427,7 +421,7 @@ exports[`Home > matches snapshot 1`] = `
                   18 Jun 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 text-default before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
                   href="/reviews/two-for-the-seesaw-1962/"
                 >
                   Two for the Seesaw 
@@ -462,13 +456,7 @@ exports[`Home > matches snapshot 1`] = `
                     <strong>
                       Spoilers follow
                     </strong>
-                    . 
-                    <a
-                      class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline"
-                      href="/reviews/two-for-the-seesaw-1962/"
-                    >
-                      Continue reading...
-                    </a>
+                    .
                   </p>
                 </div>
                 <div
@@ -484,7 +472,7 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
             >
               <div
                 class="mx-[8%] mb-6 block tablet:mx-0"
@@ -510,7 +498,7 @@ exports[`Home > matches snapshot 1`] = `
                   08 Jun 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 text-default before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
                   href="/reviews/the-man-with-nine-lives-1940/"
                 >
                   The Man with Nine Lives 
@@ -541,13 +529,7 @@ exports[`Home > matches snapshot 1`] = `
                     <em>
                       The Man with Nine Lives
                     </em>
-                     isn’t a mad scientist picture. It’s a drama centered on an ethical dilemma: Would you risk the deaths of six people to save millions? 
-                    <a
-                      class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline"
-                      href="/reviews/the-man-with-nine-lives-1940/"
-                    >
-                      Continue reading...
-                    </a>
+                     isn’t a mad scientist picture. It’s a drama centered on an ethical dilemma: Would you risk the deaths of six people to save millions?
                   </p>
                 </div>
                 <div
@@ -566,7 +548,7 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
             >
               <div
                 class="mx-[8%] mb-6 block tablet:mx-0"
@@ -592,7 +574,7 @@ exports[`Home > matches snapshot 1`] = `
                   23 May 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 text-default before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
                   href="/reviews/burial-ground-the-nights-of-terror-1981/"
                 >
                   Burial Ground: The Nights of Terror 
@@ -631,13 +613,7 @@ exports[`Home > matches snapshot 1`] = `
                         Zombie
                       </em>
                     </span>
-                     knock-offs. 
-                    <a
-                      class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline"
-                      href="/reviews/burial-ground-the-nights-of-terror-1981/"
-                    >
-                      Continue reading...
-                    </a>
+                     knock-offs.
                   </p>
                 </div>
                 <div
@@ -650,7 +626,7 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
             >
               <div
                 class="mx-[8%] mb-6 block tablet:mx-0"
@@ -676,7 +652,7 @@ exports[`Home > matches snapshot 1`] = `
                   15 May 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 text-default before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
                   href="/reviews/lucifers-women-1974/"
                 >
                   Lucifer's Women 
@@ -711,13 +687,7 @@ exports[`Home > matches snapshot 1`] = `
                     <em>
                       Railway to Hell
                     </em>
-                     marathon. The trailer paints it as a satanic shocker, but it proves more of a sleazy riff on the Svengali story. 
-                    <a
-                      class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline"
-                      href="/reviews/lucifers-women-1974/"
-                    >
-                      Continue reading...
-                    </a>
+                     marathon. The trailer paints it as a satanic shocker, but it proves more of a sleazy riff on the Svengali story.
                   </p>
                 </div>
                 <div
@@ -730,7 +700,7 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
             >
               <div
                 class="mx-[8%] mb-6 block tablet:mx-0"
@@ -756,7 +726,7 @@ exports[`Home > matches snapshot 1`] = `
                   27 Apr 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 text-default before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
                   href="/reviews/beyond-the-door-iii-1989/"
                 >
                   Beyond the Door III 
@@ -783,13 +753,7 @@ exports[`Home > matches snapshot 1`] = `
                   class="rendered-markdown mb-6 text-lg leading-normal tracking-prose text-muted"
                 >
                   <p>
-                    Bonkers in the best way possible. 
-                    <a
-                      class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline"
-                      href="/reviews/beyond-the-door-iii-1989/"
-                    >
-                      Continue reading...
-                    </a>
+                    Bonkers in the best way possible.
                   </p>
                 </div>
                 <div
@@ -808,7 +772,7 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
             >
               <div
                 class="mx-[8%] mb-6 block tablet:mx-0"
@@ -834,7 +798,7 @@ exports[`Home > matches snapshot 1`] = `
                   27 Apr 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 text-default before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
                   href="/reviews/the-midnight-meat-train-2008/"
                 >
                   The Midnight Meat Train 
@@ -865,13 +829,7 @@ exports[`Home > matches snapshot 1`] = `
                     <em>
                       The Midnight Meat Train
                     </em>
-                    . 
-                    <a
-                      class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline"
-                      href="/reviews/the-midnight-meat-train-2008/"
-                    >
-                      Continue reading...
-                    </a>
+                    .
                   </p>
                 </div>
                 <div
@@ -890,7 +848,7 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
             >
               <div
                 class="mx-[8%] mb-6 block tablet:mx-0"
@@ -916,7 +874,7 @@ exports[`Home > matches snapshot 1`] = `
                   27 Apr 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 text-default before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
                   href="/reviews/horror-express-1972/"
                 >
                   Horror Express 
@@ -946,13 +904,7 @@ exports[`Home > matches snapshot 1`] = `
                     <em>
                       Horror Express
                     </em>
-                     may be flawed, but the production, performances, and novelty of genre icons Peter Cushing and Christopher Lee working as allies make it hard to resist. 
-                    <a
-                      class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline"
-                      href="/reviews/horror-express-1972/"
-                    >
-                      Continue reading...
-                    </a>
+                     may be flawed, but the production, performances, and novelty of genre icons Peter Cushing and Christopher Lee working as allies make it hard to resist.
                   </p>
                 </div>
                 <div
@@ -974,7 +926,7 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
             >
               <div
                 class="mx-[8%] mb-6 block tablet:mx-0"
@@ -1000,7 +952,7 @@ exports[`Home > matches snapshot 1`] = `
                   27 Apr 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 text-default before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
                   href="/reviews/night-train-to-terror-1985/"
                 >
                   Night Train to Terror 
@@ -1031,13 +983,7 @@ exports[`Home > matches snapshot 1`] = `
                     <em>
                       Night Train to Terror
                     </em>
-                     is better than you’d expect. 
-                    <a
-                      class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline"
-                      href="/reviews/night-train-to-terror-1985/"
-                    >
-                      Continue reading...
-                    </a>
+                     is better than you’d expect.
                   </p>
                 </div>
                 <div
@@ -1062,7 +1008,7 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
             >
               <div
                 class="mx-[8%] mb-6 block tablet:mx-0"
@@ -1088,7 +1034,7 @@ exports[`Home > matches snapshot 1`] = `
                   24 Apr 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 text-default before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
                   href="/reviews/human-lanterns-1982/"
                 >
                   Human Lanterns 
@@ -1134,13 +1080,7 @@ exports[`Home > matches snapshot 1`] = `
                         The Boxer’s Omen
                       </em>
                     </span>
-                     that saw the studio trying to adjust to changing audience tastes. 
-                    <a
-                      class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline"
-                      href="/reviews/human-lanterns-1982/"
-                    >
-                      Continue reading...
-                    </a>
+                     that saw the studio trying to adjust to changing audience tastes.
                   </p>
                 </div>
                 <div
@@ -1156,7 +1096,7 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
             >
               <div
                 class="mx-[8%] mb-6 block tablet:mx-0"
@@ -1182,7 +1122,7 @@ exports[`Home > matches snapshot 1`] = `
                   24 Apr 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 text-default before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
                   href="/reviews/ninja-in-the-dragons-den-1982/"
                 >
                   Ninja in the Dragon's Den 
@@ -1213,13 +1153,7 @@ exports[`Home > matches snapshot 1`] = `
                     <em>
                       Ninja in the Dragon’s Den
                     </em>
-                     concerns a rogue ninja, played Hiroyuki Sanada, who travels to China seeking vengeance, but finds his target protected by a hot-shot young kung-fu master played by Conan Lee. But tight plotting is not the film’s strong suit, it’s bone-crunching stunts and action sequences. 
-                    <a
-                      class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline"
-                      href="/reviews/ninja-in-the-dragons-den-1982/"
-                    >
-                      Continue reading...
-                    </a>
+                     concerns a rogue ninja, played Hiroyuki Sanada, who travels to China seeking vengeance, but finds his target protected by a hot-shot young kung-fu master played by Conan Lee. But tight plotting is not the film’s strong suit, it’s bone-crunching stunts and action sequences.
                   </p>
                 </div>
                 <div
@@ -1235,7 +1169,7 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
             >
               <div
                 class="mx-[8%] mb-6 block tablet:mx-0"
@@ -1261,7 +1195,7 @@ exports[`Home > matches snapshot 1`] = `
                   13 Apr 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 text-default before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
                   href="/reviews/mandy-2018/"
                 >
                   Mandy 
@@ -1300,13 +1234,7 @@ exports[`Home > matches snapshot 1`] = `
                         Kill Bill
                       </em>
                     </span>
-                     is about a woman exacting revenge on her boss after he kills her husband. Explaining the plot provides no sense of the viewing experience. 
-                    <a
-                      class="!no-underline uppercase whitespace-nowrap font-normal font-sans text-accent text-xs  leading-none hover:!underline"
-                      href="/reviews/mandy-2018/"
-                    >
-                      Continue reading...
-                    </a>
+                     is about a woman exacting revenge on her boss after he kills her husband. Explaining the plot provides no sense of the viewing experience.
                   </p>
                 </div>
                 <div

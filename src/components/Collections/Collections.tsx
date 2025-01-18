@@ -7,7 +7,6 @@ import type { Collection } from "~/api/collections";
 import { Backdrop } from "~/components/Backdrop";
 import { ListItem } from "~/components/ListItem";
 import { ListItemAvatar } from "~/components/ListItemAvatar";
-import { ListItemCounts } from "~/components/ListItemCounts";
 import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 
 import type { Sort } from "./Collections.reducer";
@@ -71,10 +70,16 @@ export function Collections({
 
 function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
-    <ListItem extraVerticalPadding={true} itemsCenter={true}>
+    <ListItem
+      className="has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+      extraVerticalPadding={true}
+      itemsCenter={true}
+    >
       <ListItemAvatar imageProps={value.avatarImageProps} name={value.name} />
       <CollectionName value={value} />
-      <ListItemCounts current={value.reviewCount} total={value.titleCount} />
+      <div className="ml-auto text-nowrap font-sans text-xs text-subtle">
+        {value.reviewCount}
+      </div>
     </ListItem>
   );
 }
@@ -82,7 +87,7 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
 function CollectionName({ value }: { value: ListItemValue }) {
   return (
     <a
-      className="font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 hover:underline hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      className="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
       href={`/collections/${value.slug}/`}
     >
       <div className="leading-normal">{value.name}</div>

@@ -47,38 +47,40 @@ export function MoreReviews({
 function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
   return (
     <li className="relative w-full tablet:w-[47%]">
-      <div className="block">
-        <Still
-          imageProps={value.stillImageProps}
-          {...MoreReviewsImageConfig}
-          className="h-auto w-full"
-          decoding="async"
-          loading="lazy"
-        />
-      </div>
-      <div className="flex flex-col bg-default px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]">
-        <a
-          className="mb-3 block text-xl font-medium leading-6 text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video before:bg-[#fff] before:opacity-15 hover:text-accent hover:before:opacity-0"
-          href={`/reviews/${value.slug}/`}
-        >
-          {value.title}&nbsp;
-          <span className="text-sm font-normal leading-none text-muted">
-            {value.year}
-          </span>
-        </a>
-        <Grade className="mb-4" height={18} value={value.grade} />
-        <RenderedMarkdown
-          className="mb-8 text-base leading-[1.6] tracking-prose text-muted"
-          text={value.excerpt}
-        />
-        <div className="font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide">
-          {value.genres.map((genre, index) => {
-            if (index === 0) {
-              return <span key={genre}>{genre}</span>;
-            }
+      <div className="bg-default has-[a:hover]:bg-hover has-[a:hover]:shadow-hover">
+        <div className="block">
+          <Still
+            imageProps={value.stillImageProps}
+            {...MoreReviewsImageConfig}
+            className="h-auto w-full"
+            decoding="async"
+            loading="lazy"
+          />
+        </div>
+        <div className="flex flex-col px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]">
+          <a
+            className="mb-3 block text-xl font-medium leading-6 text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video before:bg-[#fff] before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:text-accent hover:before:opacity-0"
+            href={`/reviews/${value.slug}/`}
+          >
+            {value.title}&nbsp;
+            <span className="text-sm font-normal leading-none text-muted">
+              {value.year}
+            </span>
+          </a>
+          <Grade className="mb-4" height={18} value={value.grade} />
+          <RenderedMarkdown
+            className="mb-8 text-base leading-[1.6] tracking-prose text-muted"
+            text={value.excerpt}
+          />
+          <div className="font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide">
+            {value.genres.map((genre, index) => {
+              if (index === 0) {
+                return <span key={genre}>{genre}</span>;
+              }
 
-            return <span key={genre}> | {genre}</span>;
-          })}
+              return <span key={genre}> | {genre}</span>;
+            })}
+          </div>
         </div>
       </div>
     </li>

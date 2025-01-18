@@ -165,7 +165,7 @@ function ListItemTitle({
   if (slug) {
     return (
       <a
-        className="block font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 hover:underline hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-[#fff]"
+        className="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
         href={`/reviews/${slug}/`}
       >
         {title}
@@ -194,9 +194,9 @@ function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
 
   return (
     <li
-      className="relative mb-1 flex flex-row items-center gap-x-4 bg-default px-container py-4 last-of-type:mb-0 tablet:gap-x-6 tablet:pl-4"
+      className="relative mb-1 flex flex-row items-center gap-x-4 bg-default px-container py-4 last-of-type:mb-0 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:gap-x-6 tablet:pl-4"
       style={{
-        background: value.slug ? "var(--bg-default)" : "var(--bg-unreviewed)",
+        background: value.slug ? "" : "var(--bg-unreviewed)",
       }}
       {...rest}
     >

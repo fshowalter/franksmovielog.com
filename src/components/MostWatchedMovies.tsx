@@ -88,7 +88,7 @@ function ListItem({
   value: MostWatchedMoviesListItemValue;
 }): JSX.Element {
   return (
-    <li className="relative mb-1 flex items-center gap-x-6 bg-default py-4 tablet:w-auto tablet:flex-col tablet:p-0 desktop:w-auto">
+    <li className="relative mb-1 flex h-full items-center gap-x-6 bg-default py-4 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:w-auto tablet:flex-col tablet:p-0 desktop:w-auto">
       <FluidListItemPoster
         imageProps={value.posterImageProps}
         slug={value.slug}
@@ -123,7 +123,7 @@ function Title({
   if (slug) {
     return (
       <a
-        className="block font-sans text-sm font-medium text-accent decoration-accent decoration-2 underline-offset-4 before:absolute before:left-0 before:top-4 before:aspect-poster before:w-list-item-poster before:bg-[#fff] before:opacity-15 hover:underline hover:before:opacity-0 tablet:text-center tablet:before:top-0 tablet:before:w-full"
+        className="block font-sans text-sm font-medium text-accent decoration-accent decoration-2 before:absolute before:left-0 before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 hover:before:opacity-0 tablet:text-center tablet:before:top-0 tablet:before:w-full"
         href={`/reviews/${slug}/`}
       >
         {title}

@@ -37,7 +37,7 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
     deck: '"Round up the usual suspects."',
     initialSort: "name-asc",
     metaDescription:
-      "A sortable index of directors, performers, and writers who contributed to the movies reviewed on this site. Sort by name, review count, or title count.",
+      "A sortable index of directors, performers, and writers who contributed to the movies reviewed on this site. Sort by name or review count.",
     values,
   };
 }
