@@ -10,5 +10,5 @@
     "!**/__image_snapshots__/**",
     "!src/**/fixtures/**"
   ],
-  "ignoreDependencies": ["@prettier/plugin-xml"]
+  "ignoreDependencies": ["@prettier/plugin-xml", "babel-plugin-react-compiler"]
 }
