@@ -80,3 +80,26 @@ export async function getFluidWidthPosterImageProps(
     srcSet: normalizeSources(optimizedImage.srcSet.attribute),
   };
 }
+
+export async function getUpdatePosterProps(
+  slug: string,
+): Promise<PosterImageProps> {
+  const posterFilePath = Object.keys(images).find((path) => {
+    return path.endsWith(`/${slug}.png`);
+  })!;
+
+  const posterFile = await images[posterFilePath]();
+
+  const optimizedImage = await getImage({
+    format: "png",
+    height: 750,
+    quality: 100,
+    src: posterFile.default,
+    width: 500,
+  });
+
+  return {
+    src: normalizeSources(optimizedImage.src),
+    srcSet: normalizeSources(optimizedImage.srcSet.attribute),
+  };
+}
