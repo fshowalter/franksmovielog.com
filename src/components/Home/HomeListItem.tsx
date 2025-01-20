@@ -46,7 +46,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
           {formatDate(value.date)}
         </div>
         <a
-          className="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-[#fff] before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+          className="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
           href={`/reviews/${value.slug}/`}
         >
           {value.title}&nbsp;

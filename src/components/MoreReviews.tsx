@@ -59,7 +59,7 @@ function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
         </div>
         <div className="flex flex-col px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]">
           <a
-            className="mb-3 block text-xl font-medium leading-6 text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video before:bg-[#fff] before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:text-accent hover:before:opacity-0"
+            className="mb-3 block text-xl font-medium leading-6 text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:text-accent hover:before:opacity-0"
             href={`/reviews/${value.slug}/`}
           >
             {value.title}&nbsp;
