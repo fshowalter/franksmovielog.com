@@ -1,12 +1,12 @@
 {
   "year": "2025",
-  "newTitleCount": 3,
-  "viewingCount": 7,
-  "titleCount": 7,
+  "newTitleCount": 4,
+  "viewingCount": 8,
+  "titleCount": 8,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 5
+      "count": 6
     },
     {
       "name": "4k UHD Blu-ray",
@@ -22,7 +22,7 @@
   "decadeDistribution": [
     {
       "name": "1960s",
-      "count": 1
+      "count": 2
     },
     {
       "name": "1980s",
@@ -66,6 +66,31 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1989"
+        }
+      ]
+    },
+    {
+      "name": "Christopher Lee",
+      "count": 2,
+      "slug": "christopher-lee",
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-11",
+          "slug": "the-return-of-the-musketeers-1989",
+          "title": "The Return of the Musketeers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1989"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-01-14",
+          "slug": "challenge-the-devil-1963",
+          "title": "Challenge the Devil",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1963"
         }
       ]
     }
