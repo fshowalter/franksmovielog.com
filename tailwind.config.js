@@ -23,9 +23,7 @@ export default {
     colors: {
       accent: "var(--fg-accent)",
       border: "var(--border-default)",
-      "border-accent": "var(--border-accent)",
       default: "var(--fg-default)",
-      emphasis: "var(--fg-emphasis)",
       inherit: "inherit",
       inverse: "var(--fg-inverse)",
       "inverse-subtle": "var(--fg-inverse-subtle)",
