@@ -1,8 +1,8 @@
 {
   "year": "2025",
-  "newTitleCount": 4,
-  "viewingCount": 8,
-  "titleCount": 8,
+  "newTitleCount": 5,
+  "viewingCount": 9,
+  "titleCount": 9,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -10,6 +10,10 @@
     },
     {
       "name": "4k UHD Blu-ray",
+      "count": 1
+    },
+    {
+      "name": "iTunes",
       "count": 1
     }
   ],
@@ -37,6 +41,10 @@
       "count": 1
     },
     {
+      "name": "2010s",
+      "count": 1
+    },
+    {
       "name": "2020s",
       "count": 2
     }
@@ -44,6 +52,31 @@
   "mostWatchedTitles": [],
   "mostWatchedDirectors": [],
   "mostWatchedPerformers": [
+    {
+      "name": "Mo McRae",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-10",
+          "slug": "leprechaun-6-back-2-tha-hood-2003",
+          "title": "Leprechaun 6: Back 2 Tha Hood",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "2003"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-01-16",
+          "slug": "den-of-thieves-2018",
+          "title": "Den of Thieves",
+          "medium": "iTunes",
+          "venue": null,
+          "year": "2018"
+        }
+      ]
+    },
     {
       "name": "Oliver Reed",
       "count": 2,
