@@ -25,9 +25,9 @@ let cachedReviewedTitlesJson: ReviewedTitleJson[];
 let cachedReviews: Reviews;
 
 if (import.meta.env.MODE !== "development") {
-  cachedViewingsMarkdown = allViewingsMarkdown();
+  cachedViewingsMarkdown = await allViewingsMarkdown();
   cachedReviewedTitlesJson = await allReviewedTitlesJson();
-  cachedMarkdownReviews = allReviewsMarkdown();
+  cachedMarkdownReviews = await allReviewsMarkdown();
 }
 
 export type Review = MarkdownReview & ReviewedTitleJson & {};
@@ -81,7 +81,8 @@ export function getContentPlainText(rawContent: string): string {
 export async function loadContent<
   T extends { imdbId: string; rawContent: string; title: string },
 >(review: T): Promise<ReviewContent & T> {
-  const viewingsMarkdown = cachedViewingsMarkdown || allViewingsMarkdown();
+  const viewingsMarkdown =
+    cachedViewingsMarkdown || (await allViewingsMarkdown());
   const reviewedTitlesJson = await allReviewedTitlesJson();
 
   const excerptPlainText = getMastProcessor()

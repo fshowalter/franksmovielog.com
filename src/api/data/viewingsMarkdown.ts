@@ -1,5 +1,6 @@
 import matter from "gray-matter";
-import fs from "node:fs";
+import { promises as fs } from "node:fs";
+import pLimit from "p-limit";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
@@ -35,37 +36,43 @@ export type MarkdownViewing = {
   viewingNotesRaw: string | undefined;
 };
 
-export function allViewingsMarkdown(): MarkdownViewing[] {
-  return parseAllViewingsMarkdown();
+const limit = pLimit(10);
+
+export async function allViewingsMarkdown(): Promise<MarkdownViewing[]> {
+  return await parseAllViewingsMarkdown();
 }
 
-function parseAllViewingsMarkdown() {
-  const dirents = fs.readdirSync(viewingsMarkdownDirectory, {
+async function parseAllViewingsMarkdown() {
+  const dirents = await fs.readdir(viewingsMarkdownDirectory, {
     withFileTypes: true,
   });
 
-  return dirents
-    .filter((item) => !item.isDirectory() && item.name.endsWith(".md"))
-    .map((item) => {
-      const fileContents = fs.readFileSync(
-        `${viewingsMarkdownDirectory}/${item.name}`,
-        "utf8",
-      );
+  return Promise.all(
+    dirents
+      .filter((item) => !item.isDirectory() && item.name.endsWith(".md"))
+      .map(async (item) => {
+        return limit(async () => {
+          const fileContents = await fs.readFile(
+            `${viewingsMarkdownDirectory}/${item.name}`,
+            "utf8",
+          );
 
-      const { content, data } = matter(fileContents);
-      const greyMatter = DataSchema.parse(data);
+          const { content, data } = matter(fileContents);
+          const greyMatter = DataSchema.parse(data);
 
-      const markdownViewing: MarkdownViewing = {
-        date: greyMatter.date,
-        imdbId: greyMatter.imdbId,
-        medium: greyMatter.medium,
-        mediumNotesRaw: greyMatter.mediumNotes,
-        sequence: greyMatter.sequence,
-        venue: greyMatter.venue,
-        venueNotesRaw: greyMatter.venueNotes,
-        viewingNotesRaw: content,
-      };
+          const markdownViewing: MarkdownViewing = {
+            date: greyMatter.date,
+            imdbId: greyMatter.imdbId,
+            medium: greyMatter.medium,
+            mediumNotesRaw: greyMatter.mediumNotes,
+            sequence: greyMatter.sequence,
+            venue: greyMatter.venue,
+            venueNotesRaw: greyMatter.venueNotes,
+            viewingNotesRaw: content,
+          };
 
-      return markdownViewing;
-    });
+          return markdownViewing;
+        });
+      }),
+  );
 }
