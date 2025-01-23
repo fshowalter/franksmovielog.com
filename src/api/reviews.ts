@@ -61,7 +61,7 @@ export async function allReviews(): Promise<Reviews> {
   }
   const reviewedTitlesJson =
     cachedReviewedTitlesJson || (await allReviewedTitlesJson());
-  const reviews = parseReviewedTitlesJson(reviewedTitlesJson);
+  const reviews = await parseReviewedTitlesJson(reviewedTitlesJson);
 
   if (!import.meta.env.DEV) {
     cachedReviews = reviews;
@@ -114,10 +114,10 @@ export async function loadContent<
   };
 }
 
-export function loadExcerptHtml<T extends { slug: string }>(
+export async function loadExcerptHtml<T extends { slug: string }>(
   review: T,
-): ReviewExcerpt & T {
-  const reviewsMarkdown = cachedMarkdownReviews || allReviewsMarkdown();
+): Promise<ReviewExcerpt & T> {
+  const reviewsMarkdown = cachedMarkdownReviews || (await allReviewsMarkdown());
 
   const { rawContent, synopsis } = reviewsMarkdown.find((markdown) => {
     return markdown.slug === review.slug;
@@ -147,7 +147,7 @@ export async function mostRecentReviews(limit: number) {
   reviewedTitlesJson.sort((a, b) => b.sequence.localeCompare(a.sequence));
   const slicedTitles = reviewedTitlesJson.slice(0, limit);
 
-  const { reviews } = parseReviewedTitlesJson(slicedTitles);
+  const { reviews } = await parseReviewedTitlesJson(slicedTitles);
 
   return reviews;
 }
@@ -175,13 +175,13 @@ function getMastProcessor() {
   return remark().use(remarkGfm).use(smartypants);
 }
 
-function parseReviewedTitlesJson(
+async function parseReviewedTitlesJson(
   reviewedTitlesJson: ReviewedTitleJson[],
-): Reviews {
+): Promise<Reviews> {
   const distinctReviewYears = new Set<string>();
   const distinctReleaseYears = new Set<string>();
   const distinctGenres = new Set<string>();
-  const reviewsMarkdown = cachedMarkdownReviews || allReviewsMarkdown();
+  const reviewsMarkdown = cachedMarkdownReviews || (await allReviewsMarkdown());
 
   const reviews = reviewedTitlesJson.map((title) => {
     for (const genre of title.genres) distinctGenres.add(genre);

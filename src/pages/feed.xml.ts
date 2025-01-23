@@ -22,9 +22,11 @@ const gradeMap: Record<string, string> = {
 export async function GET() {
   const reviews = await mostRecentReviews(10);
 
-  const rssItems = reviews.map((review) => {
-    return loadExcerptHtml(review);
-  });
+  const rssItems = await Promise.all(
+    reviews.map(async (review) => {
+      return await loadExcerptHtml(review);
+    }),
+  );
 
   return rss({
     customData:
