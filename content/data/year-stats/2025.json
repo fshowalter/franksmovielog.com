@@ -1,12 +1,12 @@
 {
   "year": "2025",
-  "newTitleCount": 6,
-  "viewingCount": 11,
-  "titleCount": 11,
+  "newTitleCount": 7,
+  "viewingCount": 12,
+  "titleCount": 12,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 6
+      "count": 7
     },
     {
       "name": "4k UHD Blu-ray",
@@ -31,6 +31,10 @@
     {
       "name": "1960s",
       "count": 2
+    },
+    {
+      "name": "1970s",
+      "count": 1
     },
     {
       "name": "1980s",
@@ -103,6 +107,31 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1989"
+        }
+      ]
+    },
+    {
+      "name": "Frank Finlay",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-11",
+          "slug": "the-return-of-the-musketeers-1989",
+          "title": "The Return of the Musketeers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1989"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-01-23",
+          "slug": "murder-by-decree-1979",
+          "title": "Murder by Decree",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1979"
         }
       ]
     },
