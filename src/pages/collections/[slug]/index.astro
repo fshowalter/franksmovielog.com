@@ -31,7 +31,7 @@ const props = await getProps(slug);
 <Layout
   canonical={true}
   meta={{
-    description: `Movies in the ${props.value.name} collection. ${props.value.description}`,
+    description: `${props.value.name} movie reviews: ${props.value.description} Sort by oldest or newest, best or worst, or title.`,
   }}
   openGraph={{
     description: props.value.description,
