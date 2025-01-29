@@ -21,6 +21,7 @@ export function getHtml(
     .use(remarkRehype, {
       allowDangerousHtml: true,
       footnoteBackContent: "↩\u{FE0E}",
+      footnoteLabel: "Notes",
     })
     .use(rehypeRaw)
     .use(rehypeStringify)
