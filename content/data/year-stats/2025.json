@@ -1,12 +1,12 @@
 {
   "year": "2025",
-  "newTitleCount": 7,
-  "viewingCount": 13,
-  "titleCount": 13,
+  "newTitleCount": 8,
+  "viewingCount": 15,
+  "titleCount": 14,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 8
+      "count": 10
     },
     {
       "name": "4k UHD Blu-ray",
@@ -46,7 +46,7 @@
     },
     {
       "name": "2000s",
-      "count": 1
+      "count": 3
     },
     {
       "name": "2010s",
@@ -57,8 +57,42 @@
       "count": 3
     }
   ],
-  "mostWatchedTitles": [],
-  "mostWatchedDirectors": [],
+  "mostWatchedTitles": [
+    {
+      "title": "The Collector",
+      "imdbId": "tt0844479",
+      "year": "2009",
+      "count": 2,
+      "slug": "the-collector-2009"
+    }
+  ],
+  "mostWatchedDirectors": [
+    {
+      "name": "Marcus Dunstan",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-25",
+          "slug": "the-collector-2009",
+          "title": "The Collector",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "2009"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-02-06",
+          "slug": "the-collector-2009",
+          "title": "The Collector",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "2009"
+        }
+      ]
+    }
+  ],
   "mostWatchedPerformers": [
     {
       "name": "Mo McRae",
@@ -159,7 +193,208 @@
           "year": "1963"
         }
       ]
+    },
+    {
+      "name": "William Prael",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-25",
+          "slug": "the-collector-2009",
+          "title": "The Collector",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "2009"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-02-06",
+          "slug": "the-collector-2009",
+          "title": "The Collector",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "2009"
+        }
+      ]
+    },
+    {
+      "name": "Diane Ayala Goldner",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-25",
+          "slug": "the-collector-2009",
+          "title": "The Collector",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "2009"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-02-06",
+          "slug": "the-collector-2009",
+          "title": "The Collector",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "2009"
+        }
+      ]
+    },
+    {
+      "name": "Juan Fern\u00e1ndez",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-25",
+          "slug": "the-collector-2009",
+          "title": "The Collector",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "2009"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-02-06",
+          "slug": "the-collector-2009",
+          "title": "The Collector",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "2009"
+        }
+      ]
+    },
+    {
+      "name": "Josh Stewart",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-25",
+          "slug": "the-collector-2009",
+          "title": "The Collector",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "2009"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-02-06",
+          "slug": "the-collector-2009",
+          "title": "The Collector",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "2009"
+        }
+      ]
+    },
+    {
+      "name": "Michael Reilly Burke",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-25",
+          "slug": "the-collector-2009",
+          "title": "The Collector",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "2009"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-02-06",
+          "slug": "the-collector-2009",
+          "title": "The Collector",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "2009"
+        }
+      ]
+    },
+    {
+      "name": "Andrea Roth",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-25",
+          "slug": "the-collector-2009",
+          "title": "The Collector",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "2009"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-02-06",
+          "slug": "the-collector-2009",
+          "title": "The Collector",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "2009"
+        }
+      ]
     }
   ],
-  "mostWatchedWriters": []
+  "mostWatchedWriters": [
+    {
+      "name": "Patrick Melton",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-25",
+          "slug": "the-collector-2009",
+          "title": "The Collector",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "2009"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-02-06",
+          "slug": "the-collector-2009",
+          "title": "The Collector",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "2009"
+        }
+      ]
+    },
+    {
+      "name": "Marcus Dunstan",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-25",
+          "slug": "the-collector-2009",
+          "title": "The Collector",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "2009"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-02-06",
+          "slug": "the-collector-2009",
+          "title": "The Collector",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "2009"
+        }
+      ]
+    }
+  ]
 }
