@@ -1396,7 +1396,7 @@
       "Drama",
       "Western"
     ],
-    "releaseSequence": "1975-10-17tt0073636"
+    "releaseSequence": "1975-04-23tt0073636"
   },
   {
     "sequence": 85,
@@ -1433,7 +1433,7 @@
       "Film-Noir",
       "Thriller"
     ],
-    "releaseSequence": "1940-12-31tt0033717"
+    "releaseSequence": "1941-01-22tt0033717"
   },
   {
     "sequence": 87,
@@ -1717,7 +1717,6 @@
     "year": "2003",
     "slug": "the-lord-of-the-rings-the-return-of-the-king-2003",
     "genres": [
-      "Action",
       "Adventure",
       "Drama",
       "Fantasy"
@@ -1737,7 +1736,7 @@
     "genres": [
       "Comedy"
     ],
-    "releaseSequence": "1989-11-30tt0097958"
+    "releaseSequence": "1989-12-01tt0097958"
   },
   {
     "sequence": 105,
@@ -3111,7 +3110,7 @@
     "genres": [
       "Western"
     ],
-    "releaseSequence": "1959-03-18tt0053221"
+    "releaseSequence": "1959-03-08tt0053221"
   },
   {
     "sequence": 185,
@@ -3144,7 +3143,6 @@
     "genres": [
       "Crime",
       "Drama",
-      "Film-Noir",
       "Thriller"
     ],
     "releaseSequence": "1939-10-25tt0031867"
@@ -4123,7 +4121,7 @@
     "genres": [
       "Western"
     ],
-    "releaseSequence": "1959-03-18tt0053221"
+    "releaseSequence": "1959-03-08tt0053221"
   },
   {
     "sequence": 245,
@@ -4152,6 +4150,7 @@
     "year": "1954",
     "slug": "rear-window-1954",
     "genres": [
+      "Drama",
       "Mystery",
       "Thriller"
     ],
@@ -4220,6 +4219,7 @@
     "slug": "the-maltese-falcon-1941",
     "genres": [
       "Crime",
+      "Drama",
       "Film-Noir",
       "Mystery",
       "Romance"
@@ -4277,7 +4277,7 @@
       "Film-Noir",
       "Thriller"
     ],
-    "releaseSequence": "1940-12-31tt0033717"
+    "releaseSequence": "1941-01-22tt0033717"
   },
   {
     "sequence": 254,
@@ -4768,7 +4768,7 @@
     "genres": [
       "Horror"
     ],
-    "releaseSequence": "1968-07-20tt0062885"
+    "releaseSequence": "1968-05-19tt0062885"
   },
   {
     "sequence": 283,
@@ -5047,7 +5047,10 @@
     "slug": "duel-to-the-death-1983",
     "genres": [
       "Action",
-      "Drama"
+      "Comedy",
+      "Drama",
+      "Fantasy",
+      "Romance"
     ],
     "releaseSequence": "1983-01-13tt0084924"
   },
@@ -5655,7 +5658,8 @@
     "slug": "jamaica-inn-1939",
     "genres": [
       "Adventure",
-      "Crime"
+      "Crime",
+      "Drama"
     ],
     "releaseSequence": "1939-05-12tt0031505"
   },
@@ -5737,6 +5741,7 @@
     "genres": [
       "Drama",
       "Music",
+      "Musical",
       "Romance"
     ],
     "releaseSequence": "2006-07-25tt0907657"
@@ -6567,6 +6572,7 @@
     "year": "1947",
     "slug": "dark-passage-1947",
     "genres": [
+      "Drama",
       "Film-Noir",
       "Thriller"
     ],
@@ -8127,6 +8133,7 @@
     "genres": [
       "Adventure",
       "Comedy",
+      "Drama",
       "Film-Noir",
       "Romance",
       "Thriller",
@@ -8349,7 +8356,7 @@
     "genres": [
       "Comedy"
     ],
-    "releaseSequence": "1989-11-30tt0097958"
+    "releaseSequence": "1989-12-01tt0097958"
   },
   {
     "sequence": 496,
@@ -8362,6 +8369,7 @@
     "year": "1945",
     "slug": "spellbound-1945",
     "genres": [
+      "Drama",
       "Film-Noir",
       "Mystery",
       "Romance",
@@ -8414,7 +8422,6 @@
     "year": "1982",
     "slug": "conan-the-barbarian-1982",
     "genres": [
-      "Action",
       "Adventure",
       "Fantasy"
     ],
@@ -8616,6 +8623,7 @@
     "slug": "house-of-games-1987",
     "genres": [
       "Crime",
+      "Drama",
       "Thriller"
     ],
     "releaseSequence": "1987-09-04tt0093223"
@@ -8869,7 +8877,6 @@
     "year": "1971",
     "slug": "get-carter-1971",
     "genres": [
-      "Action",
       "Crime",
       "Thriller"
     ],
@@ -9175,6 +9182,7 @@
     "slug": "murder-1930",
     "genres": [
       "Crime",
+      "Drama",
       "Mystery",
       "Thriller"
     ],
@@ -9322,6 +9330,7 @@
     "slug": "marked-woman-1937",
     "genres": [
       "Crime",
+      "Drama",
       "Film-Noir",
       "Thriller"
     ],
@@ -9424,6 +9433,7 @@
     "slug": "race-with-the-devil-1975",
     "genres": [
       "Action",
+      "Drama",
       "Horror",
       "Thriller"
     ],
@@ -9787,6 +9797,7 @@
     "year": "1941",
     "slug": "suspicion-1941",
     "genres": [
+      "Drama",
       "Film-Noir",
       "Mystery",
       "Thriller"
@@ -9805,6 +9816,7 @@
     "slug": "blood-and-black-lace-1964",
     "genres": [
       "Crime",
+      "Drama",
       "Horror",
       "Mystery",
       "Thriller"
@@ -9858,6 +9870,8 @@
     "year": "1938",
     "slug": "the-lady-vanishes-1938",
     "genres": [
+      "Crime",
+      "Drama",
       "Mystery",
       "Thriller"
     ],
@@ -10457,6 +10471,7 @@
     "genres": [
       "Drama",
       "Film-Noir",
+      "Mystery",
       "Romance",
       "Thriller"
     ],
@@ -10593,7 +10608,7 @@
       "Drama",
       "Romance"
     ],
-    "releaseSequence": "1960-06-15tt0053604"
+    "releaseSequence": "1960-??-??tt0053604"
   },
   {
     "sequence": 629,
@@ -10806,6 +10821,7 @@
     "year": "1955",
     "slug": "to-catch-a-thief-1955",
     "genres": [
+      "Drama",
       "Mystery",
       "Romance",
       "Thriller"
@@ -11328,7 +11344,9 @@
     "year": "1943",
     "slug": "shadow-of-a-doubt-1943",
     "genres": [
+      "Drama",
       "Film-Noir",
+      "Mystery",
       "Thriller"
     ],
     "releaseSequence": "1943-01-12tt0036342"
@@ -11360,6 +11378,7 @@
     "year": "1942",
     "slug": "saboteur-1942",
     "genres": [
+      "Drama",
       "Thriller",
       "War"
     ],
@@ -11443,6 +11462,7 @@
     "slug": "scared-to-death-1946",
     "genres": [
       "Crime",
+      "Horror",
       "Mystery",
       "Thriller"
     ],
@@ -11461,7 +11481,6 @@
     "genres": [
       "Crime",
       "Drama",
-      "Film-Noir",
       "Thriller"
     ],
     "releaseSequence": "1939-10-25tt0031867"
@@ -12215,6 +12234,7 @@
     "slug": "the-man-who-knew-too-much-1934",
     "genres": [
       "Crime",
+      "Drama",
       "Mystery",
       "Thriller"
     ],
@@ -12604,6 +12624,7 @@
     "slug": "foreign-correspondent-1940",
     "genres": [
       "Action",
+      "Drama",
       "Romance",
       "Thriller",
       "War"
@@ -13005,6 +13026,7 @@
     "year": "1956",
     "slug": "the-man-who-knew-too-much-1956",
     "genres": [
+      "Crime",
       "Drama",
       "Thriller"
     ],
@@ -13490,6 +13512,7 @@
     "slug": "the-raven-1963",
     "genres": [
       "Comedy",
+      "Drama",
       "Fantasy",
       "Horror"
     ],
@@ -13521,6 +13544,7 @@
     "year": "1972",
     "slug": "frenzy-1972",
     "genres": [
+      "Drama",
       "Thriller"
     ],
     "releaseSequence": "1972-05-19tt0068611"
@@ -14406,6 +14430,7 @@
     "genres": [
       "Crime",
       "Drama",
+      "Mystery",
       "Thriller"
     ],
     "releaseSequence": "1929-07-28tt0019702"
@@ -14880,6 +14905,7 @@
     "year": "1939",
     "slug": "the-return-of-doctor-x-1939",
     "genres": [
+      "Drama",
       "Horror",
       "Mystery",
       "Sci-Fi",
@@ -15590,6 +15616,7 @@
     "slug": "young-and-innocent-1937",
     "genres": [
       "Crime",
+      "Drama",
       "Mystery",
       "Romance",
       "Thriller"
@@ -15610,6 +15637,7 @@
       "Comedy",
       "Crime",
       "Drama",
+      "Mystery",
       "Thriller"
     ],
     "releaseSequence": "1976-03-21tt0074512"
@@ -15762,7 +15790,6 @@
     "year": "2007",
     "slug": "death-proof-2007",
     "genres": [
-      "Action",
       "Drama",
       "Thriller"
     ],
@@ -15948,6 +15975,7 @@
     "year": "1958",
     "slug": "the-law-and-jake-wade-1958",
     "genres": [
+      "Drama",
       "Western"
     ],
     "releaseSequence": "1958-06-06tt0051848"
@@ -16089,7 +16117,8 @@
     "slug": "the-innocents-1961",
     "genres": [
       "Drama",
-      "Horror"
+      "Horror",
+      "Mystery"
     ],
     "releaseSequence": "1961-11-24tt0055018"
   },
@@ -16693,6 +16722,7 @@
     "slug": "farewell-my-lovely-1975",
     "genres": [
       "Crime",
+      "Drama",
       "Mystery",
       "Thriller"
     ],
@@ -17563,8 +17593,8 @@
     "year": "1959",
     "slug": "north-by-northwest-1959",
     "genres": [
-      "Action",
       "Adventure",
+      "Drama",
       "Mystery",
       "Thriller"
     ],
@@ -19885,6 +19915,7 @@
     "year": "1983",
     "slug": "videodrome-1983",
     "genres": [
+      "Drama",
       "Horror",
       "Sci-Fi",
       "Thriller"
@@ -19975,6 +20006,7 @@
     "year": "1941",
     "slug": "suspicion-1941",
     "genres": [
+      "Drama",
       "Film-Noir",
       "Mystery",
       "Thriller"
@@ -20209,6 +20241,7 @@
     "year": "1954",
     "slug": "rear-window-1954",
     "genres": [
+      "Drama",
       "Mystery",
       "Thriller"
     ],
@@ -20275,7 +20308,7 @@
     "year": "2012",
     "slug": "chronicle-2012",
     "genres": [
-      "Action",
+      "Adventure",
       "Drama",
       "Sci-Fi",
       "Thriller"
@@ -20850,6 +20883,7 @@
     "slug": "the-maltese-falcon-1941",
     "genres": [
       "Crime",
+      "Drama",
       "Film-Noir",
       "Mystery",
       "Romance"
@@ -21741,7 +21775,7 @@
       "Romance",
       "Thriller"
     ],
-    "releaseSequence": "1963-12-01tt0056923"
+    "releaseSequence": "1963-09-24tt0056923"
   },
   {
     "sequence": 1289,
@@ -21875,6 +21909,7 @@
     "slug": "the-big-sleep-1946",
     "genres": [
       "Crime",
+      "Drama",
       "Film-Noir",
       "Mystery",
       "Thriller"
@@ -21893,6 +21928,7 @@
     "slug": "the-big-sleep-1946",
     "genres": [
       "Crime",
+      "Drama",
       "Film-Noir",
       "Mystery",
       "Thriller"
@@ -22060,6 +22096,7 @@
     "slug": "foreign-correspondent-1940",
     "genres": [
       "Action",
+      "Drama",
       "Romance",
       "Thriller",
       "War"
@@ -22446,7 +22483,6 @@
     "slug": "batman-begins-2005",
     "genres": [
       "Action",
-      "Crime",
       "Drama"
     ],
     "releaseSequence": "2005-05-31tt0372784"
@@ -22660,7 +22696,6 @@
     "year": "1988",
     "slug": "phantasm-ii-1988",
     "genres": [
-      "Action",
       "Fantasy",
       "Horror",
       "Sci-Fi"
@@ -22678,7 +22713,6 @@
     "year": "2011",
     "slug": null,
     "genres": [
-      "Action",
       "Comedy",
       "Crime",
       "Drama"
@@ -23033,7 +23067,7 @@
     "genres": [
       "Horror"
     ],
-    "releaseSequence": "1968-07-20tt0062885"
+    "releaseSequence": "1968-05-19tt0062885"
   },
   {
     "sequence": 1366,
@@ -23409,7 +23443,6 @@
     "slug": null,
     "genres": [
       "Action",
-      "Mystery",
       "Thriller"
     ],
     "releaseSequence": "2012-12-10tt0790724"
@@ -23631,7 +23664,6 @@
       "Adventure",
       "Comedy",
       "Drama",
-      "Family",
       "Fantasy",
       "Romance"
     ],
@@ -23684,7 +23716,8 @@
     "slug": "croupier-1998",
     "genres": [
       "Crime",
-      "Drama"
+      "Drama",
+      "Thriller"
     ],
     "releaseSequence": "1998-06-25tt0159382"
   },
@@ -24445,7 +24478,6 @@
     "slug": null,
     "genres": [
       "Action",
-      "Crime",
       "Thriller"
     ],
     "releaseSequence": "2010-08-12tt1588170"
@@ -24773,7 +24805,8 @@
     "genres": [
       "Action",
       "Adventure",
-      "Fantasy"
+      "Fantasy",
+      "Sci-Fi"
     ],
     "releaseSequence": "2013-10-22tt1981115"
   },
@@ -25727,8 +25760,7 @@
     "slug": "stake-land-2010",
     "genres": [
       "Drama",
-      "Horror",
-      "Sci-Fi"
+      "Horror"
     ],
     "releaseSequence": "2010-09-17tt1464580"
   },
@@ -25775,7 +25807,6 @@
     "year": "1971",
     "slug": "get-carter-1971",
     "genres": [
-      "Action",
       "Crime",
       "Thriller"
     ],
@@ -25938,7 +25969,6 @@
     "slug": null,
     "genres": [
       "Action",
-      "Drama",
       "Sci-Fi",
       "Thriller"
     ],
@@ -26009,6 +26039,7 @@
     "slug": "psycho-circus-1966",
     "genres": [
       "Crime",
+      "Drama",
       "Mystery",
       "Thriller"
     ],
@@ -26386,6 +26417,7 @@
     "year": "1954",
     "slug": "rear-window-1954",
     "genres": [
+      "Drama",
       "Mystery",
       "Thriller"
     ],
@@ -26467,6 +26499,7 @@
     "year": "1983",
     "slug": "videodrome-1983",
     "genres": [
+      "Drama",
       "Horror",
       "Sci-Fi",
       "Thriller"
@@ -26784,7 +26817,8 @@
     "genres": [
       "Action",
       "Adventure",
-      "Fantasy"
+      "Fantasy",
+      "Sci-Fi"
     ],
     "releaseSequence": "2013-10-22tt1981115"
   },
@@ -26941,7 +26975,7 @@
     "genres": [
       "Horror"
     ],
-    "releaseSequence": "1968-07-20tt0062885"
+    "releaseSequence": "1968-05-19tt0062885"
   },
   {
     "sequence": 1597,
@@ -27711,6 +27745,7 @@
     "year": "1977",
     "slug": "shock-waves-1977",
     "genres": [
+      "Drama",
       "Horror",
       "Mystery",
       "Sci-Fi"
@@ -28693,7 +28728,7 @@
     "genres": [
       "Comedy"
     ],
-    "releaseSequence": "1989-11-30tt0097958"
+    "releaseSequence": "1989-12-01tt0097958"
   },
   {
     "sequence": 1701,
@@ -28957,8 +28992,8 @@
     "year": "1946",
     "slug": "shock-1946",
     "genres": [
+      "Drama",
       "Film-Noir",
-      "Horror",
       "Thriller"
     ],
     "releaseSequence": "1946-01-10tt0038937"
@@ -29042,6 +29077,7 @@
     "slug": "play-motel-1979",
     "genres": [
       "Crime",
+      "Drama",
       "Horror",
       "Mystery",
       "Romance",
@@ -29080,7 +29116,7 @@
     "genres": [
       "Western"
     ],
-    "releaseSequence": "1959-03-18tt0053221"
+    "releaseSequence": "1959-03-08tt0053221"
   },
   {
     "sequence": 1724,
@@ -29336,7 +29372,6 @@
     "year": "2013",
     "slug": "coherence-2013",
     "genres": [
-      "Drama",
       "Mystery",
       "Sci-Fi",
       "Thriller"
@@ -29485,7 +29520,7 @@
     "genres": [
       "Western"
     ],
-    "releaseSequence": "1959-03-18tt0053221"
+    "releaseSequence": "1959-03-08tt0053221"
   },
   {
     "sequence": 1748,
@@ -29687,6 +29722,7 @@
     "slug": "blood-and-black-lace-1964",
     "genres": [
       "Crime",
+      "Drama",
       "Horror",
       "Mystery",
       "Thriller"
@@ -30141,6 +30177,7 @@
     "slug": "young-and-innocent-1937",
     "genres": [
       "Crime",
+      "Drama",
       "Mystery",
       "Romance",
       "Thriller"
@@ -30396,8 +30433,6 @@
     "year": "2017",
     "slug": "the-endless-2017",
     "genres": [
-      "Drama",
-      "Fantasy",
       "Horror",
       "Mystery",
       "Sci-Fi",
@@ -30587,7 +30622,7 @@
     "genres": [
       "Western"
     ],
-    "releaseSequence": "1959-03-18tt0053221"
+    "releaseSequence": "1959-03-08tt0053221"
   },
   {
     "sequence": 1812,
@@ -30884,6 +30919,7 @@
     "year": "1983",
     "slug": "videodrome-1983",
     "genres": [
+      "Drama",
       "Horror",
       "Sci-Fi",
       "Thriller"
@@ -31087,7 +31123,7 @@
       "Comedy",
       "Horror"
     ],
-    "releaseSequence": "1989-05-13tt0098354"
+    "releaseSequence": "1989-09-20tt0098354"
   },
   {
     "sequence": 1842,
@@ -31440,12 +31476,12 @@
     "sequence": 1863,
     "viewingYear": "2019",
     "viewingDate": "2019-02-16",
-    "title": "Jason Goes to Hell",
-    "sortTitle": "jason-goes-to-hell-1993",
+    "title": "Jason Goes to Hell: The Final Friday",
+    "sortTitle": "jason-goes-to-hell-the-final-friday-1993",
     "medium": "Netflix",
     "venue": null,
     "year": "1993",
-    "slug": "jason-goes-to-hell-1993",
+    "slug": "jason-goes-to-hell-the-final-friday-1993",
     "genres": [
       "Fantasy",
       "Horror",
@@ -31516,7 +31552,10 @@
     "slug": "duel-to-the-death-1983",
     "genres": [
       "Action",
-      "Drama"
+      "Comedy",
+      "Drama",
+      "Fantasy",
+      "Romance"
     ],
     "releaseSequence": "1983-01-13tt0084924"
   },
@@ -31652,7 +31691,6 @@
     "genres": [
       "Action",
       "Adventure",
-      "Drama",
       "Sci-Fi"
     ],
     "releaseSequence": "2019-04-18tt4154796"
@@ -31670,7 +31708,6 @@
     "genres": [
       "Action",
       "Adventure",
-      "Drama",
       "Sci-Fi"
     ],
     "releaseSequence": "2019-04-18tt4154796"
@@ -31754,7 +31791,6 @@
     "genres": [
       "Action",
       "Adventure",
-      "Drama",
       "Sci-Fi"
     ],
     "releaseSequence": "2019-04-18tt4154796"
@@ -31787,7 +31823,6 @@
     "year": "1982",
     "slug": "conan-the-barbarian-1982",
     "genres": [
-      "Action",
       "Adventure",
       "Fantasy"
     ],
@@ -32227,7 +32262,7 @@
       "Horror",
       "Sci-Fi"
     ],
-    "releaseSequence": "1986-??-??tt0091499"
+    "releaseSequence": "1986-07-13tt0091499"
   },
   {
     "sequence": 1909,
@@ -32469,7 +32504,9 @@
     "genres": [
       "Biography",
       "Crime",
-      "Drama"
+      "Drama",
+      "History",
+      "Thriller"
     ],
     "releaseSequence": "2019-09-27tt1302006"
   },
@@ -32594,7 +32631,7 @@
     "genres": [
       "Comedy"
     ],
-    "releaseSequence": "1989-11-30tt0097958"
+    "releaseSequence": "1989-12-01tt0097958"
   },
   {
     "sequence": 1931,
@@ -33054,7 +33091,8 @@
     "genres": [
       "Action",
       "Adventure",
-      "Fantasy"
+      "Fantasy",
+      "Sci-Fi"
     ],
     "releaseSequence": "2013-10-22tt1981115"
   },
@@ -33160,6 +33198,7 @@
     "genres": [
       "Crime",
       "Drama",
+      "Mystery",
       "Thriller"
     ],
     "releaseSequence": "1929-07-28tt0019702"
@@ -33209,6 +33248,7 @@
     "slug": "the-canary-murder-case-1929",
     "genres": [
       "Crime",
+      "Drama",
       "Mystery"
     ],
     "releaseSequence": "1929-??-??tt0019745"
@@ -33634,8 +33674,7 @@
       "Comedy",
       "Family",
       "Fantasy",
-      "Musical",
-      "Romance"
+      "Musical"
     ],
     "releaseSequence": "2020-03-12tt6587640"
   },
@@ -33769,6 +33808,7 @@
     "year": "1969",
     "slug": "one-on-top-of-the-other-1969",
     "genres": [
+      "Drama",
       "Horror",
       "Mystery",
       "Thriller"
@@ -33806,6 +33846,7 @@
     "slug": "murder-1930",
     "genres": [
       "Crime",
+      "Drama",
       "Mystery",
       "Thriller"
     ],
@@ -34156,6 +34197,7 @@
     "year": "1971",
     "slug": "a-lizard-in-a-womans-skin-1971",
     "genres": [
+      "Drama",
       "Mystery",
       "Thriller"
     ],
@@ -34293,6 +34335,7 @@
     "slug": "play-motel-1979",
     "genres": [
       "Crime",
+      "Drama",
       "Horror",
       "Mystery",
       "Romance",
@@ -34313,8 +34356,7 @@
     "genres": [
       "Comedy",
       "Family",
-      "Fantasy",
-      "Horror"
+      "Fantasy"
     ],
     "releaseSequence": "1993-07-10tt0107120"
   },
@@ -34364,7 +34406,7 @@
       "Comedy",
       "Drama"
     ],
-    "releaseSequence": "1929-12-30tt0021015"
+    "releaseSequence": "1930-02-22tt0021015"
   },
   {
     "sequence": 2035,
@@ -34446,7 +34488,7 @@
       "Comedy",
       "Drama"
     ],
-    "releaseSequence": "1930-11-28tt0021577"
+    "releaseSequence": "1930-11-07tt0021577"
   },
   {
     "sequence": 2040,
@@ -34513,7 +34555,6 @@
     "genres": [
       "Action",
       "Adventure",
-      "Drama",
       "Sci-Fi"
     ],
     "releaseSequence": "2019-04-18tt4154796"
@@ -34533,7 +34574,7 @@
       "Drama",
       "Romance"
     ],
-    "releaseSequence": "1930-12-31tt0021770"
+    "releaseSequence": "1931-01-01tt0021770"
   },
   {
     "sequence": 2045,
@@ -34860,6 +34901,7 @@
     "year": "1957",
     "slug": "lust-of-the-vampire-1957",
     "genres": [
+      "Drama",
       "Horror"
     ],
     "releaseSequence": "1957-04-06tt0049429"
@@ -35181,7 +35223,7 @@
     "genres": [
       "Comedy"
     ],
-    "releaseSequence": "1989-11-30tt0097958"
+    "releaseSequence": "1989-12-01tt0097958"
   },
   {
     "sequence": 2084,
@@ -35450,6 +35492,7 @@
     "year": "1974",
     "slug": "let-sleeping-corpses-lie-1974",
     "genres": [
+      "Drama",
       "Horror"
     ],
     "releaseSequence": "1974-09-30tt0071431"
@@ -35877,7 +35920,7 @@
       "Horror",
       "Sci-Fi"
     ],
-    "releaseSequence": "1975-09-01tt0073705"
+    "releaseSequence": "1975-05-16tt0073705"
   },
   {
     "sequence": 2126,
@@ -35892,7 +35935,7 @@
     "genres": [
       "Western"
     ],
-    "releaseSequence": "1959-03-18tt0053221"
+    "releaseSequence": "1959-03-08tt0053221"
   },
   {
     "sequence": 2127,
@@ -36049,7 +36092,6 @@
     "genres": [
       "Drama",
       "Horror",
-      "Music",
       "Thriller"
     ],
     "releaseSequence": "2018-09-20tt7772580"
@@ -36350,7 +36392,8 @@
     "slug": "waterloo-bridge-1931",
     "genres": [
       "Drama",
-      "Romance"
+      "Romance",
+      "War"
     ],
     "releaseSequence": "1931-09-01tt0022550"
   },
@@ -36594,6 +36637,7 @@
     "year": "1987",
     "slug": "stagefright-1987",
     "genres": [
+      "Drama",
       "Horror",
       "Thriller"
     ],
@@ -36976,6 +37020,7 @@
     "year": "1994",
     "slug": "71-fragments-of-a-chronology-of-chance-1994",
     "genres": [
+      "Crime",
       "Drama"
     ],
     "releaseSequence": "1994-05-18tt0109020"
@@ -37655,7 +37700,7 @@
       "Comedy",
       "Horror"
     ],
-    "releaseSequence": "1989-05-13tt0098354"
+    "releaseSequence": "1989-09-20tt0098354"
   },
   {
     "sequence": 2234,
@@ -37997,7 +38042,6 @@
     "year": "2006",
     "slug": "children-of-men-2006",
     "genres": [
-      "Action",
       "Drama",
       "Sci-Fi",
       "Thriller"
@@ -38116,6 +38160,7 @@
     "slug": "race-with-the-devil-1975",
     "genres": [
       "Action",
+      "Drama",
       "Horror",
       "Thriller"
     ],
@@ -38348,7 +38393,7 @@
       "Music",
       "Romance"
     ],
-    "releaseSequence": "1987-08-17tt0092890"
+    "releaseSequence": "1987-05-12tt0092890"
   },
   {
     "sequence": 2275,
@@ -38509,12 +38554,12 @@
     "sequence": 2284,
     "viewingYear": "2021",
     "viewingDate": "2021-09-17",
-    "title": "Jason Goes to Hell",
-    "sortTitle": "jason-goes-to-hell-1993",
+    "title": "Jason Goes to Hell: The Final Friday",
+    "sortTitle": "jason-goes-to-hell-the-final-friday-1993",
     "medium": "Blu-ray",
     "venue": null,
     "year": "1993",
-    "slug": "jason-goes-to-hell-1993",
+    "slug": "jason-goes-to-hell-the-final-friday-1993",
     "genres": [
       "Fantasy",
       "Horror",
@@ -38633,7 +38678,8 @@
     "slug": "croupier-1998",
     "genres": [
       "Crime",
-      "Drama"
+      "Drama",
+      "Thriller"
     ],
     "releaseSequence": "1998-06-25tt0159382"
   },
@@ -38986,7 +39032,6 @@
     "year": "1989",
     "slug": "beyond-the-door-iii-1989",
     "genres": [
-      "Drama",
       "Fantasy",
       "Horror"
     ],
@@ -39249,6 +39294,7 @@
     "slug": "rituals-1977",
     "genres": [
       "Adventure",
+      "Drama",
       "Horror",
       "Thriller"
     ],
@@ -39686,7 +39732,10 @@
     "slug": "duel-to-the-death-1983",
     "genres": [
       "Action",
-      "Drama"
+      "Comedy",
+      "Drama",
+      "Fantasy",
+      "Romance"
     ],
     "releaseSequence": "1983-01-13tt0084924"
   },
@@ -39753,7 +39802,7 @@
     "genres": [
       "Horror"
     ],
-    "releaseSequence": "2008-05-01tt1029234"
+    "releaseSequence": "2008-08-19tt1029234"
   },
   {
     "sequence": 2359,
@@ -40015,8 +40064,7 @@
       "Drama",
       "Fantasy",
       "Horror",
-      "Mystery",
-      "Thriller"
+      "Mystery"
     ],
     "releaseSequence": "2019-03-09tt8745960"
   },
@@ -40947,7 +40995,6 @@
     "year": "1988",
     "slug": "phantasm-ii-1988",
     "genres": [
-      "Action",
       "Fantasy",
       "Horror",
       "Sci-Fi"
@@ -41610,7 +41657,6 @@
       "Action",
       "Adventure",
       "Comedy",
-      "Fantasy",
       "Romance",
       "Sci-Fi"
     ],
@@ -41719,7 +41765,7 @@
       "Film-Noir",
       "Thriller"
     ],
-    "releaseSequence": "1940-12-31tt0033717"
+    "releaseSequence": "1941-01-22tt0033717"
   },
   {
     "sequence": 2475,
@@ -42210,7 +42256,6 @@
     "genres": [
       "Crime",
       "Drama",
-      "Film-Noir",
       "Thriller"
     ],
     "releaseSequence": "1939-10-25tt0031867"
@@ -42412,7 +42457,8 @@
     "year": "1937",
     "slug": null,
     "genres": [
-      "Comedy"
+      "Comedy",
+      "Romance"
     ],
     "releaseSequence": "1937-08-25tt0029058"
   },
@@ -42896,6 +42942,7 @@
     "genres": [
       "Drama",
       "Horror",
+      "Mystery",
       "Thriller"
     ],
     "releaseSequence": "2022-01-21tt14253846"
@@ -43145,6 +43192,7 @@
     "year": "2010",
     "slug": "saw-3d-2010",
     "genres": [
+      "Crime",
       "Horror",
       "Mystery"
     ],
@@ -43212,7 +43260,6 @@
     "year": "2013",
     "slug": "coherence-2013",
     "genres": [
-      "Drama",
       "Mystery",
       "Sci-Fi",
       "Thriller"
@@ -43601,6 +43648,8 @@
     "year": "1977",
     "slug": "the-psychic-1977",
     "genres": [
+      "Comedy",
+      "Drama",
       "Horror",
       "Mystery",
       "Thriller"
@@ -43788,8 +43837,6 @@
     "year": "2017",
     "slug": "the-endless-2017",
     "genres": [
-      "Drama",
-      "Fantasy",
       "Horror",
       "Mystery",
       "Sci-Fi",
@@ -44127,6 +44174,7 @@
     "slug": "marked-woman-1937",
     "genres": [
       "Crime",
+      "Drama",
       "Film-Noir",
       "Thriller"
     ],
@@ -45055,6 +45103,7 @@
     "year": "2023",
     "slug": null,
     "genres": [
+      "Comedy",
       "Horror",
       "Mystery",
       "Thriller"
@@ -45351,7 +45400,6 @@
     "year": "1982",
     "slug": "conan-the-barbarian-1982",
     "genres": [
-      "Action",
       "Adventure",
       "Fantasy"
     ],
@@ -45753,7 +45801,6 @@
     "year": "1989",
     "slug": "beyond-the-door-iii-1989",
     "genres": [
-      "Drama",
       "Fantasy",
       "Horror"
     ],
@@ -45935,7 +45982,6 @@
     "year": "1964",
     "slug": null,
     "genres": [
-      "Action",
       "Drama",
       "Western"
     ],
@@ -46558,7 +46604,7 @@
       "Horror",
       "Thriller"
     ],
-    "releaseSequence": "2024-09-10tt27534307"
+    "releaseSequence": "2024-09-04tt27534307"
   },
   {
     "sequence": 2763,
@@ -46572,7 +46618,8 @@
     "slug": null,
     "genres": [
       "Drama",
-      "Horror"
+      "Horror",
+      "Sci-Fi"
     ],
     "releaseSequence": "2024-05-19tt17526714"
   },
@@ -46635,6 +46682,7 @@
     "year": "1983",
     "slug": "videodrome-1983",
     "genres": [
+      "Drama",
       "Horror",
       "Sci-Fi",
       "Thriller"
@@ -46720,6 +46768,7 @@
     "year": "1972",
     "slug": null,
     "genres": [
+      "Drama",
       "Horror",
       "Mystery",
       "Thriller"
@@ -47145,7 +47194,6 @@
     "slug": "batman-begins-2005",
     "genres": [
       "Action",
-      "Crime",
       "Drama"
     ],
     "releaseSequence": "2005-05-31tt0372784"
@@ -47192,6 +47240,7 @@
     "year": "2023",
     "slug": null,
     "genres": [
+      "Comedy",
       "Horror",
       "Mystery",
       "Thriller"
@@ -47407,6 +47456,7 @@
     "slug": "the-case-of-the-scorpions-tail-1971",
     "genres": [
       "Crime",
+      "Drama",
       "Horror",
       "Mystery",
       "Thriller"
@@ -47658,7 +47708,7 @@
       "Horror",
       "Mystery"
     ],
-    "releaseSequence": "2024-11-08tt5040012"
+    "releaseSequence": "2024-11-07tt5040012"
   },
   {
     "sequence": 2829,
@@ -47824,7 +47874,7 @@
       "Comedy",
       "Horror"
     ],
-    "releaseSequence": "2024-??-??tt12810074"
+    "releaseSequence": "2024-09-07tt12810074"
   },
   {
     "sequence": 2839,
@@ -47890,5 +47940,23 @@
       "Thriller"
     ],
     "releaseSequence": "2009-07-31tt0844479"
+  },
+  {
+    "sequence": 2843,
+    "viewingYear": "2025",
+    "viewingDate": "2025-02-06",
+    "title": "Red Rooms",
+    "sortTitle": "red-rooms-2023",
+    "medium": "Blu-ray",
+    "venue": null,
+    "year": "2023",
+    "slug": "red-rooms-2023",
+    "genres": [
+      "Crime",
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "releaseSequence": "2023-07-04tt22207786"
   }
 ]
