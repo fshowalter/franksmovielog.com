@@ -365,6 +365,12 @@
       margin-top: 3.5rem;
       padding-top: 2rem;
 
+      .data-footnote-backref {
+        border: solid 1px var(--border-default);
+        border-radius: 3px;
+        padding: 4px 4px 0;
+      }
+
       h2 {
         margin-bottom: 1.5rem;
       }
