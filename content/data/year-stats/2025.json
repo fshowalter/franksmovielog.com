@@ -1,12 +1,12 @@
 {
   "year": "2025",
   "newTitleCount": 15,
-  "viewingCount": 25,
-  "titleCount": 24,
+  "viewingCount": 26,
+  "titleCount": 25,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 18
+      "count": 19
     },
     {
       "name": "4k UHD Blu-ray",
@@ -46,7 +46,7 @@
     },
     {
       "name": "1980s",
-      "count": 4
+      "count": 5
     },
     {
       "name": "1990s",
@@ -203,6 +203,31 @@
       ]
     },
     {
+      "name": "Patricia Arquette",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-16",
+          "slug": "lost-highway-1997",
+          "title": "Lost Highway",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1997"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-03-01",
+          "slug": "a-nightmare-on-elm-street-3-dream-warriors-1987",
+          "title": "A Nightmare on Elm Street 3: Dream Warriors",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1987"
+        }
+      ]
+    },
+    {
       "name": "William Prael",
       "count": 2,
       "slug": null,
@@ -326,31 +351,6 @@
           "year": "2009"
         }
       ]
-    },
-    {
-      "name": "Andrea Roth",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1,
-          "date": "2025-01-25",
-          "slug": "the-collector-2009",
-          "title": "The Collector",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "2009"
-        },
-        {
-          "sequence": 2,
-          "date": "2025-02-06",
-          "slug": "the-collector-2009",
-          "title": "The Collector",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "2009"
-        }
-      ]
     }
   ],
   "mostWatchedWriters": [
@@ -401,6 +401,31 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "2009"
+        }
+      ]
+    },
+    {
+      "name": "Wes Craven",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-27",
+          "slug": "deadly-blessing-1981",
+          "title": "Deadly Blessing",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1981"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-03-01",
+          "slug": "a-nightmare-on-elm-street-3-dream-warriors-1987",
+          "title": "A Nightmare on Elm Street 3: Dream Warriors",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1987"
         }
       ]
     }
