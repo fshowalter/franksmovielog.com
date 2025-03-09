@@ -1,8 +1,8 @@
 {
   "year": "2025",
-  "newTitleCount": 15,
-  "viewingCount": 27,
-  "titleCount": 26,
+  "newTitleCount": 16,
+  "viewingCount": 28,
+  "titleCount": 27,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -10,7 +10,7 @@
     },
     {
       "name": "4k UHD Blu-ray",
-      "count": 4
+      "count": 5
     },
     {
       "name": "iTunes",
@@ -42,7 +42,7 @@
     },
     {
       "name": "1970s",
-      "count": 4
+      "count": 5
     },
     {
       "name": "1980s",
@@ -102,6 +102,40 @@
     }
   ],
   "mostWatchedPerformers": [
+    {
+      "name": "Christopher Lee",
+      "count": 3,
+      "slug": "christopher-lee",
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-11",
+          "slug": "the-return-of-the-musketeers-1989",
+          "title": "The Return of the Musketeers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1989"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-01-14",
+          "slug": "challenge-the-devil-1963",
+          "title": "Challenge the Devil",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1963"
+        },
+        {
+          "sequence": 3,
+          "date": "2025-03-06",
+          "slug": "count-dracula-1970",
+          "title": "Count Dracula",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1970"
+        }
+      ]
+    },
     {
       "name": "Mo McRae",
       "count": 2,
@@ -178,9 +212,9 @@
       ]
     },
     {
-      "name": "Christopher Lee",
+      "name": "Jack Taylor",
       "count": 2,
-      "slug": "christopher-lee",
+      "slug": null,
       "viewings": [
         {
           "sequence": 1,
@@ -193,12 +227,12 @@
         },
         {
           "sequence": 2,
-          "date": "2025-01-14",
-          "slug": "challenge-the-devil-1963",
-          "title": "Challenge the Devil",
-          "medium": "Blu-ray",
+          "date": "2025-03-06",
+          "slug": "count-dracula-1970",
+          "title": "Count Dracula",
+          "medium": "4k UHD Blu-ray",
           "venue": null,
-          "year": "1963"
+          "year": "1970"
         }
       ]
     },
@@ -326,34 +360,34 @@
           "year": "2009"
         }
       ]
-    },
+    }
+  ],
+  "mostWatchedWriters": [
     {
-      "name": "Michael Reilly Burke",
+      "name": "Bram Stoker",
       "count": 2,
       "slug": null,
       "viewings": [
         {
           "sequence": 1,
-          "date": "2025-01-25",
-          "slug": "the-collector-2009",
-          "title": "The Collector",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "2009"
+          "date": "2025-01-02",
+          "slug": null,
+          "title": "Nosferatu",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "2024"
         },
         {
           "sequence": 2,
-          "date": "2025-02-06",
-          "slug": "the-collector-2009",
-          "title": "The Collector",
-          "medium": "Blu-ray",
+          "date": "2025-03-06",
+          "slug": "count-dracula-1970",
+          "title": "Count Dracula",
+          "medium": "4k UHD Blu-ray",
           "venue": null,
-          "year": "2009"
+          "year": "1970"
         }
       ]
-    }
-  ],
-  "mostWatchedWriters": [
+    },
     {
       "name": "Patrick Melton",
       "count": 2,
