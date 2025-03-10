@@ -45,7 +45,9 @@ export function Mast({
         <label className="hamburger-icon desktop:hidden" htmlFor="mobile-nav">
           <span
             className="hamburger-icon-bars"
-            style={{ background: hasBackdrop ? "#fff" : "var(--fg-default)" }}
+            style={{
+              backgroundColor: hasBackdrop ? "#fff" : "var(--fg-default)",
+            }}
           />
         </label>
         <ul className="hamburger-menu flex flex-col items-start gap-y-5 text-left text-inverse desktop:hidden">
