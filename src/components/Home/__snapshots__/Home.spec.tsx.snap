@@ -14,7 +14,7 @@ exports[`Home > matches snapshot 1`] = `
     >
       <header
         class="z-20 flex w-full items-center justify-between px-container py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
-        style="color: rgb(255, 255, 255); position: absolute;"
+        style="background-image: linear-gradient(to bottom, rgba(0,0,0,.85), transparent 95%); color: rgb(255, 255, 255); position: absolute;"
       >
         <div />
         <div
@@ -144,7 +144,7 @@ exports[`Home > matches snapshot 1`] = `
           >
             <span
               class="hamburger-icon-bars"
-              style="background: rgb(255, 255, 255);"
+              style="background-color: rgb(255, 255, 255);"
             />
           </label>
           <ul
