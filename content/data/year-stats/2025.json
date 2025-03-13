@@ -1,12 +1,12 @@
 {
   "year": "2025",
-  "newTitleCount": 16,
-  "viewingCount": 28,
-  "titleCount": 27,
+  "newTitleCount": 17,
+  "viewingCount": 29,
+  "titleCount": 28,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 19
+      "count": 20
     },
     {
       "name": "4k UHD Blu-ray",
@@ -42,7 +42,7 @@
     },
     {
       "name": "1970s",
-      "count": 5
+      "count": 6
     },
     {
       "name": "1980s",
@@ -133,6 +133,40 @@
           "medium": "4k UHD Blu-ray",
           "venue": null,
           "year": "1970"
+        }
+      ]
+    },
+    {
+      "name": "Peter Cushing",
+      "count": 3,
+      "slug": "peter-cushing",
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-02-11",
+          "slug": "the-blood-beast-terror-1968",
+          "title": "The Blood Beast Terror",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1968"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-02-22",
+          "slug": "asylum-1972",
+          "title": "Asylum",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1972"
+        },
+        {
+          "sequence": 3,
+          "date": "2025-03-08",
+          "slug": "blood-suckers-1971",
+          "title": "Blood Suckers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1971"
         }
       ]
     },
@@ -313,31 +347,6 @@
     },
     {
       "name": "Juan Fern\u00e1ndez",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1,
-          "date": "2025-01-25",
-          "slug": "the-collector-2009",
-          "title": "The Collector",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "2009"
-        },
-        {
-          "sequence": 2,
-          "date": "2025-02-06",
-          "slug": "the-collector-2009",
-          "title": "The Collector",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "2009"
-        }
-      ]
-    },
-    {
-      "name": "Josh Stewart",
       "count": 2,
       "slug": null,
       "viewings": [
