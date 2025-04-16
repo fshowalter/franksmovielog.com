@@ -10,5 +10,9 @@
     "!**/__image_snapshots__/**",
     "!src/**/fixtures/**"
   ],
-  "ignoreDependencies": ["@prettier/plugin-xml", "babel-plugin-react-compiler"]
+  "ignoreDependencies": [
+    "@prettier/plugin-xml",
+    "@vitest/coverage-v8",
+    "babel-plugin-react-compiler"
+  ]
 }
