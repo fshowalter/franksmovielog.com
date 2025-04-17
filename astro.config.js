@@ -108,6 +108,9 @@ export default defineConfig({
   devToolbar: {
     enabled: false,
   },
+  experimental: {
+    fonts: [],
+  },
   integrations: [
     react(),
     tailwind({
