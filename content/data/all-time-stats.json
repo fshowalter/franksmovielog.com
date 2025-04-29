@@ -1,5 +1,5 @@
 {
-  "viewingCount": 2860,
+  "viewingCount": 2861,
   "titleCount": 2177,
   "reviewCount": 1767,
   "watchlistTitlesReviewedCount": 979,
@@ -93,7 +93,7 @@
     },
     {
       "name": "4k UHD Blu-ray",
-      "count": 86
+      "count": 87
     },
     {
       "name": "35mm",
@@ -169,7 +169,7 @@
     },
     {
       "name": "1950s",
-      "count": 283
+      "count": 284
     },
     {
       "name": "1960s",
@@ -202,18 +202,18 @@
   ],
   "mostWatchedTitles": [
     {
+      "title": "Rio Bravo",
+      "imdbId": "tt0053221",
+      "year": "1959",
+      "count": 7,
+      "slug": "rio-bravo-1959"
+    },
+    {
       "title": "Fright Night",
       "imdbId": "tt0089175",
       "year": "1985",
       "count": 7,
       "slug": "fright-night-1985"
-    },
-    {
-      "title": "Rio Bravo",
-      "imdbId": "tt0053221",
-      "year": "1959",
-      "count": 6,
-      "slug": "rio-bravo-1959"
     },
     {
       "title": "The Cabin in the Woods",
@@ -1378,7 +1378,7 @@
     },
     {
       "name": "Howard Hawks",
-      "count": 41,
+      "count": 42,
       "slug": "howard-hawks",
       "viewings": [
         {
@@ -1749,6 +1749,15 @@
           "medium": "DVD",
           "venue": null,
           "year": "1932"
+        },
+        {
+          "sequence": 42,
+          "date": "2025-03-22",
+          "slug": "rio-bravo-1959",
+          "title": "Rio Bravo",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1959"
         }
       ]
     },
@@ -3614,7 +3623,7 @@
   "mostWatchedPerformers": [
     {
       "name": "John Wayne",
-      "count": 144,
+      "count": 145,
       "slug": "john-wayne",
       "viewings": [
         {
@@ -4912,6 +4921,15 @@
           "medium": "DVD",
           "venue": null,
           "year": "1936"
+        },
+        {
+          "sequence": 145,
+          "date": "2025-03-22",
+          "slug": "rio-bravo-1959",
+          "title": "Rio Bravo",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1959"
         }
       ]
     },
