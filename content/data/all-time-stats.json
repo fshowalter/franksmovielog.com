@@ -1,5 +1,5 @@
 {
-  "viewingCount": 2861,
+  "viewingCount": 2863,
   "titleCount": 2177,
   "reviewCount": 1767,
   "watchlistTitlesReviewedCount": 979,
@@ -73,7 +73,7 @@
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 366
+      "count": 367
     },
     {
       "name": "Netflix",
@@ -93,7 +93,7 @@
     },
     {
       "name": "4k UHD Blu-ray",
-      "count": 87
+      "count": 88
     },
     {
       "name": "35mm",
@@ -177,11 +177,11 @@
     },
     {
       "name": "1970s",
-      "count": 315
+      "count": 316
     },
     {
       "name": "1980s",
-      "count": 361
+      "count": 362
     },
     {
       "name": "1990s",
@@ -202,18 +202,18 @@
   ],
   "mostWatchedTitles": [
     {
+      "title": "Fright Night",
+      "imdbId": "tt0089175",
+      "year": "1985",
+      "count": 8,
+      "slug": "fright-night-1985"
+    },
+    {
       "title": "Rio Bravo",
       "imdbId": "tt0053221",
       "year": "1959",
       "count": 7,
       "slug": "rio-bravo-1959"
-    },
-    {
-      "title": "Fright Night",
-      "imdbId": "tt0089175",
-      "year": "1985",
-      "count": 7,
-      "slug": "fright-night-1985"
     },
     {
       "title": "The Cabin in the Woods",
@@ -12847,171 +12847,180 @@
       ]
     },
     {
-      "name": "Edgar Allan Poe",
-      "count": 18,
+      "name": "John Carpenter",
+      "count": 19,
       "slug": null,
       "viewings": [
         {
           "sequence": 1,
-          "date": "2003-10-07",
-          "slug": "the-masque-of-the-red-death-1964",
-          "title": "The Masque of the Red Death",
+          "date": "2007-09-27",
+          "slug": "halloween-2007",
+          "title": "Halloween",
           "medium": null,
           "venue": null,
-          "year": "1964"
+          "year": "2007"
         },
         {
           "sequence": 2,
-          "date": "2007-07-23",
-          "slug": "the-pit-and-the-pendulum-1961",
-          "title": "The Pit and the Pendulum",
+          "date": "2008-07-12",
+          "slug": "the-fog-1980",
+          "title": "The Fog",
           "medium": null,
           "venue": null,
-          "year": "1961"
+          "year": "1980"
         },
         {
           "sequence": 3,
-          "date": "2007-08-02",
-          "slug": "house-of-usher-1960",
-          "title": "House of Usher",
-          "medium": null,
-          "venue": null,
-          "year": "1960"
+          "date": "2008-08-02",
+          "slug": "they-live-1988",
+          "title": "They Live",
+          "medium": "35mm",
+          "venue": "AFI Silver",
+          "year": "1988"
         },
         {
           "sequence": 4,
-          "date": "2007-08-04",
-          "slug": "the-mesmerist-2002",
-          "title": "The Mesmerist",
-          "medium": null,
+          "date": "2012-01-20",
+          "slug": "they-live-1988",
+          "title": "They Live",
+          "medium": "TCM HD",
           "venue": null,
-          "year": "2002"
+          "year": "1988"
         },
         {
           "sequence": 5,
-          "date": "2007-08-13",
-          "slug": "the-tomb-of-ligeia-1964",
-          "title": "The Tomb of Ligeia",
-          "medium": null,
+          "date": "2012-05-05",
+          "slug": "escape-from-new-york-1981",
+          "title": "Escape from New York",
+          "medium": "TCM HD",
           "venue": null,
-          "year": "1964"
+          "year": "1981"
         },
         {
           "sequence": 6,
-          "date": "2007-12-17",
-          "slug": "tales-of-terror-1962",
-          "title": "Tales of Terror",
+          "date": "2012-10-30",
+          "slug": "halloween-1978",
+          "title": "Halloween",
           "medium": null,
-          "venue": null,
-          "year": "1962"
+          "venue": "Landmark E Street Cinema",
+          "year": "1978"
         },
         {
           "sequence": 7,
-          "date": "2007-12-17",
-          "slug": "the-masque-of-the-red-death-1964",
-          "title": "The Masque of the Red Death",
-          "medium": null,
+          "date": "2013-01-20",
+          "slug": null,
+          "title": "Prince of Darkness",
+          "medium": "Netflix",
           "venue": null,
-          "year": "1964"
+          "year": "1987"
         },
         {
           "sequence": 8,
-          "date": "2008-07-26",
-          "slug": "the-raven-1963",
-          "title": "The Raven",
+          "date": "2013-08-08",
+          "slug": "escape-from-new-york-1981",
+          "title": "Escape from New York",
           "medium": null,
-          "venue": null,
-          "year": "1963"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "1981"
         },
         {
           "sequence": 9,
-          "date": "2009-01-09",
-          "slug": "the-haunted-palace-1963",
-          "title": "The Haunted Palace",
-          "medium": null,
+          "date": "2014-01-25",
+          "slug": "assault-on-precinct-13-1976",
+          "title": "Assault on Precinct 13",
+          "medium": "Netflix",
           "venue": null,
-          "year": "1963"
+          "year": "1976"
         },
         {
           "sequence": 10,
-          "date": "2012-01-12",
-          "slug": "the-pit-and-the-pendulum-1961",
-          "title": "The Pit and the Pendulum",
-          "medium": "TCM HD",
+          "date": "2015-02-13",
+          "slug": "halloween-1978",
+          "title": "Halloween",
+          "medium": "Blu-ray",
           "venue": null,
-          "year": "1961"
+          "year": "1978"
         },
         {
           "sequence": 11,
-          "date": "2012-01-12",
-          "slug": "the-masque-of-the-red-death-1964",
-          "title": "The Masque of the Red Death",
-          "medium": "TCM HD",
-          "venue": null,
-          "year": "1964"
+          "date": "2018-08-13",
+          "slug": "they-live-1988",
+          "title": "They Live",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "1988"
         },
         {
           "sequence": 12,
-          "date": "2012-01-25",
-          "slug": "murders-in-the-rue-morgue-1932",
-          "title": "Murders in the Rue Morgue",
-          "medium": "TCM HD",
-          "venue": null,
-          "year": "1932"
+          "date": "2018-10-27",
+          "slug": null,
+          "title": "Prince of Darkness",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - Woodbridge",
+          "year": "1987"
         },
         {
           "sequence": 13,
-          "date": "2012-01-26",
-          "slug": "the-black-cat-1934",
-          "title": "The Black Cat",
-          "medium": "TCM HD",
+          "date": "2019-01-31",
+          "slug": "halloween-1978",
+          "title": "Halloween",
+          "medium": "Shudder",
           "venue": null,
-          "year": "1934"
+          "year": "1978"
         },
         {
           "sequence": 14,
-          "date": "2015-08-08",
-          "slug": "two-evil-eyes-1990",
-          "title": "Two Evil Eyes",
-          "medium": "Shudder",
+          "date": "2019-01-31",
+          "slug": null,
+          "title": "Halloween II",
+          "medium": "Amazon",
           "venue": null,
-          "year": "1990"
+          "year": "1981"
         },
         {
           "sequence": 15,
-          "date": "2021-07-15",
-          "slug": "murders-in-the-rue-morgue-1932",
-          "title": "Murders in the Rue Morgue",
-          "medium": "Vudu",
+          "date": "2021-02-11",
+          "slug": "dark-star-1974",
+          "title": "Dark Star",
+          "medium": "Kanopy",
           "venue": null,
-          "year": "1932"
+          "year": "1974"
         },
         {
           "sequence": 16,
-          "date": "2024-10-23",
-          "slug": "the-oblong-box-1969",
-          "title": "The Oblong Box",
+          "date": "2021-03-27",
+          "slug": "assault-on-precinct-13-1976",
+          "title": "Assault on Precinct 13",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "1969"
+          "year": "1976"
         },
         {
           "sequence": 17,
-          "date": "2024-11-22",
-          "slug": "your-vice-is-a-locked-room-and-only-i-have-the-key-1972",
-          "title": "Your Vice Is a Locked Room and Only I Have the Key",
-          "medium": "Blu-ray",
+          "date": "2021-10-30",
+          "slug": "halloween-1978",
+          "title": "Halloween",
+          "medium": "4k UHD Blu-ray",
           "venue": null,
-          "year": "1972"
+          "year": "1978"
         },
         {
           "sequence": 18,
-          "date": "2025-02-16",
-          "slug": "the-black-cat-1934",
-          "title": "The Black Cat",
+          "date": "2022-03-31",
+          "slug": "halloween-2007",
+          "title": "Halloween",
+          "medium": "iTunes",
+          "venue": null,
+          "year": "2007"
+        },
+        {
+          "sequence": 19,
+          "date": "2025-03-22",
+          "slug": "assault-on-precinct-13-1976",
+          "title": "Assault on Precinct 13",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "1934"
+          "year": "1976"
         }
       ]
     }
