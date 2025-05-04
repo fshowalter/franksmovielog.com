@@ -1,12 +1,12 @@
 {
   "year": "2025",
   "newTitleCount": 20,
-  "viewingCount": 39,
-  "titleCount": 38,
+  "viewingCount": 40,
+  "titleCount": 39,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 22
+      "count": 23
     },
     {
       "name": "4k UHD Blu-ray",
@@ -50,7 +50,7 @@
     },
     {
       "name": "1960s",
-      "count": 4
+      "count": 5
     },
     {
       "name": "1970s",
@@ -111,12 +111,37 @@
           "year": "2009"
         }
       ]
+    },
+    {
+      "name": "Vernon Sewell",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-02-11",
+          "slug": "the-blood-beast-terror-1968",
+          "title": "The Blood Beast Terror",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1968"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-05-03",
+          "slug": "the-crimson-cult-1968",
+          "title": "The Crimson Cult",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1968"
+        }
+      ]
     }
   ],
   "mostWatchedPerformers": [
     {
       "name": "Christopher Lee",
-      "count": 3,
+      "count": 4,
       "slug": "christopher-lee",
       "viewings": [
         {
@@ -145,6 +170,15 @@
           "medium": "4k UHD Blu-ray",
           "venue": null,
           "year": "1970"
+        },
+        {
+          "sequence": 4,
+          "date": "2025-05-03",
+          "slug": "the-crimson-cult-1968",
+          "title": "The Crimson Cult",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1968"
         }
       ]
     },
@@ -308,6 +342,31 @@
       ]
     },
     {
+      "name": "Ron Pember",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-23",
+          "slug": "murder-by-decree-1979",
+          "title": "Murder by Decree",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1979"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-05-03",
+          "slug": "the-crimson-cult-1968",
+          "title": "The Crimson Cult",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1968"
+        }
+      ]
+    },
+    {
       "name": "William Prael",
       "count": 2,
       "slug": null,
@@ -334,31 +393,6 @@
     },
     {
       "name": "Diane Ayala Goldner",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1,
-          "date": "2025-01-25",
-          "slug": "the-collector-2009",
-          "title": "The Collector",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "2009"
-        },
-        {
-          "sequence": 2,
-          "date": "2025-02-06",
-          "slug": "the-collector-2009",
-          "title": "The Collector",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "2009"
-        }
-      ]
-    },
-    {
-      "name": "Juan Fern\u00e1ndez",
       "count": 2,
       "slug": null,
       "viewings": [
