@@ -1,8 +1,8 @@
 {
   "year": "2025",
-  "newTitleCount": 21,
-  "viewingCount": 42,
-  "titleCount": 41,
+  "newTitleCount": 22,
+  "viewingCount": 43,
+  "titleCount": 42,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -10,7 +10,7 @@
     },
     {
       "name": "4k UHD Blu-ray",
-      "count": 9
+      "count": 10
     },
     {
       "name": "iTunes",
@@ -66,7 +66,7 @@
     },
     {
       "name": "1990s",
-      "count": 3
+      "count": 4
     },
     {
       "name": "2000s",
@@ -113,6 +113,31 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "2009"
+        }
+      ]
+    },
+    {
+      "name": "Wes Craven",
+      "count": 2,
+      "slug": "wes-craven",
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-27",
+          "slug": "deadly-blessing-1981",
+          "title": "Deadly Blessing",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1981"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-05-06",
+          "slug": "scream-1996",
+          "title": "Scream",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1996"
         }
       ]
     },
