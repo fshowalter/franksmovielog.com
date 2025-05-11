@@ -26,6 +26,7 @@
 /reviews/chud-1984 /reviews/c-h-u-d-1984 301
 /reviews/circus-of-fear-1966 /reviews/psycho-circus-1966 301
 /reviews/crave-2012-i /reviews/crave-2012 301
+/reviews/curse-of-the-crimson-altar-1968 /reviews/the-crimson-cult-1968 301
 /reviews/curse-of-the-demon-1958 /reviews/curse-of-the-demon-1957 301
 /reviews/dance-of-the-vampires-1967 /reviews/the-fearless-vampire-killers-1967 301
 /reviews/dead-reckoning-1947 /reviews/dead-reckoning-1946 301
@@ -116,22 +117,23 @@
 /watchlist/collections/* /collections/:splat 301
 
 # old cast-and-crew to new
-/cast-and-crew/boris-karloff-i/ /cast-and-crew/boris-karloff/ 301
-/cast-and-crew/christopher-lee-i/ /cast-and-crew/christopher-lee/ 301
+/cast-and-crew/boris-karloff-i /cast-and-crew/boris-karloff 301
+/cast-and-crew/christopher-lee-i /cast-and-crew/christopher-lee 301
 /cast-and-crew/friday-the-13th /collections/friday-the-13th 301
 /cast-and-crew/halloween /collections/halloween 301
 /cast-and-crew/hammer-films /collections/hammer-films 301
 /cast-and-crew/james-bond /collections/james-bond 301
 /cast-and-crew/james-coburn-i /cast-and-crew/james-coburn 301
-/cast-and-crew/john-wayne-i/ /cast-and-crew/john-wayne/ 301
-/cast-and-crew/william-powell-i/ /cast-and-crew/william-powell/ 301
-/cast-and-crew/michael-caine-i/ /cast-and-crew/michael-caine/ 301
-/cast-and-crew/robert-mitchum-i/ /cast-and-crew/robert-mitchum/ 301
+/cast-and-crew/john-wayne-i /cast-and-crew/john-wayne 301
+/cast-and-crew/michael-caine-i /cast-and-crew/michael-caine 301
+/cast-and-crew/robert-mitchum-i /cast-and-crew/robert-mitchum 301
 /cast-and-crew/saw /collections/saw 301
 /cast-and-crew/shaw-brothers /collections/shaw-brothers 301
-/cast-and-crew/steve-mcqueen-i/ /cast-and-crew/steve-mcqueen/ 301
-/cast-and-crew/tom-atkins-i/ /cast-and-crew/tom-atkins/ 301
+/cast-and-crew/steve-mcqueen-i /cast-and-crew/steve-mcqueen 301
+/cast-and-crew/tom-atkins-i /cast-and-crew/tom-atkins 301
 /cast-and-crew/universal-monsters /collections/universal-monsters 301
+/cast-and-crew/vincent-price-i /cast-and-crew/vincent-price 301
+/cast-and-crew/william-powell-i /cast-and-crew/william-powell 301
 
 /cast-and-crew/:name/by-grade /cast-and-crew/:name/ 301
 /cast-and-crew/:name/by-date-viewed /cast-and-crew/:name/ 301
@@ -140,8 +142,10 @@
 /cast-and-crew/alice-gherardi /gone 410
 /cast-and-crew/ann-dvorak /gone 410
 /cast-and-crew/benedict-cumberbatch /gone 410
+/cast-and-crew/betta-st-john /gone 410
 /cast-and-crew/bill-finger-ii /gone 410
 /cast-and-crew/boyd-holbrook /gone 410
+/cast-and-crew/brian-wilde-i /gone 410
 /cast-and-crew/bruce-timm /gone 410
 /cast-and-crew/casey-affleck /gone 410
 /cast-and-crew/charles-bennett-i /gone 410
