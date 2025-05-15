@@ -1,12 +1,12 @@
 {
   "year": "2025",
-  "newTitleCount": 25,
-  "viewingCount": 46,
-  "titleCount": 45,
+  "newTitleCount": 26,
+  "viewingCount": 47,
+  "titleCount": 46,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 25
+      "count": 26
     },
     {
       "name": "4k UHD Blu-ray",
@@ -58,7 +58,7 @@
     },
     {
       "name": "1970s",
-      "count": 9
+      "count": 10
     },
     {
       "name": "1980s",
@@ -544,6 +544,31 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1987"
+        }
+      ]
+    },
+    {
+      "name": "Kuang Ni",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-02-19",
+          "slug": "the-web-of-death-1976",
+          "title": "The Web of Death",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1976"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-05-13",
+          "slug": "executioners-from-shaolin-1977",
+          "title": "Executioners from Shaolin",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1977"
         }
       ]
     }
