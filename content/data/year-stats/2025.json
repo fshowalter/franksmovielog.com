@@ -1,12 +1,12 @@
 {
   "year": "2025",
   "newTitleCount": 34,
-  "viewingCount": 56,
-  "titleCount": 55,
+  "viewingCount": 57,
+  "titleCount": 56,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 32
+      "count": 33
     },
     {
       "name": "4k UHD Blu-ray",
@@ -50,7 +50,7 @@
     },
     {
       "name": "1950s",
-      "count": 3
+      "count": 4
     },
     {
       "name": "1960s",
@@ -170,7 +170,7 @@
   "mostWatchedPerformers": [
     {
       "name": "Christopher Lee",
-      "count": 4,
+      "count": 5,
       "slug": "christopher-lee",
       "viewings": [
         {
@@ -208,12 +208,21 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1968"
+        },
+        {
+          "sequence": 5,
+          "date": "2025-05-24",
+          "slug": "the-hound-of-the-baskervilles-1959",
+          "title": "The Hound of the Baskervilles",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1959"
         }
       ]
     },
     {
       "name": "Peter Cushing",
-      "count": 3,
+      "count": 4,
       "slug": "peter-cushing",
       "viewings": [
         {
@@ -242,6 +251,15 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1971"
+        },
+        {
+          "sequence": 4,
+          "date": "2025-05-24",
+          "slug": "the-hound-of-the-baskervilles-1959",
+          "title": "The Hound of the Baskervilles",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1959"
         }
       ]
     },
@@ -544,6 +562,31 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1987"
+        }
+      ]
+    },
+    {
+      "name": "Peter Bryan",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-02-11",
+          "slug": "the-blood-beast-terror-1968",
+          "title": "The Blood Beast Terror",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1968"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-05-24",
+          "slug": "the-hound-of-the-baskervilles-1959",
+          "title": "The Hound of the Baskervilles",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1959"
         }
       ]
     },
