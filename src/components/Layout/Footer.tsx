@@ -90,7 +90,7 @@ export function Footer(): JSX.Element {
           </div>
         </div>
       </div>
-      <p className="w-full border-t px-container pt-10 text-center font-normal leading-5 text-inverse-subtle">
+      <p className="w-full border-t border-t-[var(--fg-inverse-subtle)] px-container pt-10 text-center font-normal leading-5 text-inverse-subtle">
         All reviews by Frank Showalter. All images used in accordance with the{" "}
         <a
           className="text-inherit underline decoration-dashed hover:bg-default hover:text-default"
