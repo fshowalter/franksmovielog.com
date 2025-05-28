@@ -409,8 +409,7 @@
 
   .footer-text {
     a {
-      border-bottom: dashed 1px var(--fg-inverse-subtle);
-      padding-right: 1px;
+      text-decoration: underline dashed var(--fg-inverse-subtle);
       transition: all 150ms ease-out;
     }
 
