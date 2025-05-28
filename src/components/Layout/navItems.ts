@@ -19,6 +19,16 @@ export const navItems: NavItem[] = [
     subItems: [
       {
         subItems: [],
+        target: "/cast-and-crew/",
+        text: "Cast & Crew",
+      },
+      {
+        subItems: [],
+        target: "/collections/",
+        text: "Collections",
+      },
+      {
+        subItems: [],
         target: "/reviews/overrated/",
         text: "Overrated",
       },
@@ -47,16 +57,7 @@ export const navItems: NavItem[] = [
     target: "/viewings/",
     text: "Viewing Log",
   },
-  {
-    subItems: [],
-    target: "/cast-and-crew/",
-    text: "Cast & Crew",
-  },
-  {
-    subItems: [],
-    target: "/collections/",
-    text: "Collections",
-  },
+
   {
     subItems: [
       {
