@@ -36,7 +36,7 @@
     <meta content="website" property="og:type" />
     <title>Viewing Log - Frank&#39;s Movie Log</title>
   </head>
-  <body>
+  <body class="w-full">
     <style>
       astro-island,
       astro-slot,
@@ -238,7 +238,7 @@
       })();
     </script>
     <astro-island
-      uid="ZnFXvQ"
+      uid="1nlPsU"
       prefix="r1"
       component-url="~/components/Viewings/Viewings"
       component-export="Viewings"
@@ -264,7 +264,7 @@
         >
         <div class="flex min-h-full w-full flex-col bg-default">
           <header
-            class="z-20 flex w-full items-center justify-between px-container py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
+            class="z-20 flex w-full items-center justify-between px-container py-4 tablet:py-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
             style="
               background-image: linear-gradient(
                 to bottom,
@@ -289,7 +289,9 @@
             <div class="flex items-center">
               <nav class="hidden w-full desktop:block desktop:w-auto">
                 <ul class="flex flex-wrap justify-start gap-x-6 text-xl">
-                  <li class="block whitespace-nowrap tracking-serif-wide">
+                  <li
+                    class="mast-item block whitespace-nowrap leading-10 tracking-serif-wide"
+                  >
                     <a
                       class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
                       href="/"
@@ -297,7 +299,9 @@
                       >Home</a
                     >
                   </li>
-                  <li class="block whitespace-nowrap tracking-serif-wide">
+                  <li
+                    class="mast-item block whitespace-nowrap leading-10 tracking-serif-wide"
+                  >
                     <a
                       class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
                       href="/how-i-grade/"
@@ -305,7 +309,9 @@
                       >How I Grade</a
                     >
                   </li>
-                  <li class="block whitespace-nowrap tracking-serif-wide">
+                  <li
+                    class="mast-item block whitespace-nowrap leading-10 tracking-serif-wide"
+                  >
                     <a
                       class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
                       href="/reviews/"
@@ -313,7 +319,9 @@
                       >Reviews</a
                     >
                   </li>
-                  <li class="block whitespace-nowrap tracking-serif-wide">
+                  <li
+                    class="mast-item block whitespace-nowrap leading-10 tracking-serif-wide"
+                  >
                     <a
                       class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
                       href="/viewings/"
@@ -321,23 +329,9 @@
                       >Viewing Log</a
                     >
                   </li>
-                  <li class="block whitespace-nowrap tracking-serif-wide">
-                    <a
-                      class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
-                      href="/cast-and-crew/"
-                      style="text-shadow: 1px 1px 2px black"
-                      >Cast &amp; Crew</a
-                    >
-                  </li>
-                  <li class="block whitespace-nowrap tracking-serif-wide">
-                    <a
-                      class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
-                      href="/collections/"
-                      style="text-shadow: 1px 1px 2px black"
-                      >Collections</a
-                    >
-                  </li>
-                  <li class="block whitespace-nowrap tracking-serif-wide">
+                  <li
+                    class="mast-item block whitespace-nowrap leading-10 tracking-serif-wide"
+                  >
                     <a
                       class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
                       href="/watchlist/"
@@ -347,7 +341,7 @@
                   </li>
                 </ul>
               </nav>
-              <div class="z-[1000]">
+              <div class="search-button z-[1000]">
                 <button
                   aria-keyshortcuts="Control+K"
                   aria-label="Search"
@@ -374,7 +368,7 @@
                 </button>
               </div>
               <input class="hidden" id="mobile-nav" type="checkbox" /><label
-                class="hamburger-icon desktop:hidden"
+                class="hamburger-icon"
                 for="mobile-nav"
                 ><span
                   class="hamburger-icon-bars"
@@ -382,17 +376,33 @@
                 ></span
               ></label>
               <ul
-                class="hamburger-menu flex flex-col items-start gap-y-5 text-left text-inverse desktop:hidden"
+                class="hamburger-menu flex flex-col items-start gap-y-5 text-left text-inverse tablet:gap-y-10"
               >
-                <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <li
+                  class="block w-1/2 whitespace-nowrap text-2xl desktop:w-full"
+                >
                   <a href="/">Home</a>
                 </li>
-                <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <li
+                  class="block w-1/2 whitespace-nowrap text-2xl desktop:w-full"
+                >
                   <a href="/how-i-grade/">How I Grade</a>
                 </li>
-                <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <li
+                  class="block w-1/2 whitespace-nowrap text-2xl desktop:w-full"
+                >
                   <a href="/reviews/">Reviews</a>
                   <ol class="mt-4">
+                    <li
+                      class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
+                    >
+                      <a href="/cast-and-crew/">Cast &amp; Crew</a>
+                    </li>
+                    <li
+                      class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
+                    >
+                      <a href="/collections/">Collections</a>
+                    </li>
                     <li
                       class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
                     >
@@ -410,7 +420,9 @@
                     </li>
                   </ol>
                 </li>
-                <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <li
+                  class="block w-1/2 whitespace-nowrap text-2xl desktop:w-full"
+                >
                   <a href="/viewings/">Viewing Log</a>
                   <ol class="mt-4">
                     <li
@@ -420,13 +432,9 @@
                     </li>
                   </ol>
                 </li>
-                <li class="block w-1/2 whitespace-nowrap text-2xl">
-                  <a href="/cast-and-crew/">Cast &amp; Crew</a>
-                </li>
-                <li class="block w-1/2 whitespace-nowrap text-2xl">
-                  <a href="/collections/">Collections</a>
-                </li>
-                <li class="block w-1/2 whitespace-nowrap text-2xl">
+                <li
+                  class="block w-1/2 whitespace-nowrap text-2xl desktop:w-full"
+                >
                   <a href="/watchlist/">Watchlist</a>
                   <ol class="mt-4">
                     <li
@@ -6958,110 +6966,194 @@
               </div>
             </div>
           </main>
-          <footer
-            class="flex flex-wrap items-start justify-between gap-[10%] bg-footer px-container py-20 text-inverse tablet:px-12 tablet:pt-10 desktop:p-20"
-          >
-            <div class="flex flex-col pb-12">
-              <div class="flex flex-col">
-                <div
-                  class="whitespace-nowrap font-normal leading-8"
-                  style="font-size: 1.5625rem"
+          <footer class="bg-footer text-inverse">
+            <div class="mx-auto max-w-screen-max px-container py-20">
+              <div
+                class="flex w-full flex-col tablet:flex-row-reverse tablet:justify-between"
+              >
+                <a
+                  class="mx-auto mb-8 w-full max-w-button bg-canvas py-5 text-center font-sans text-xs uppercase tracking-wide text-default hover:bg-inverse hover:text-inverse tablet:mx-0"
+                  href="#top"
+                  >To the top</a
                 >
-                  <a href="/">Frank&#x27;s Movie Log</a>
+                <div class="flex flex-col">
+                  <div
+                    class="whitespace-nowrap font-normal leading-8"
+                    style="font-size: 1.5625rem"
+                  >
+                    <a href="/">Frank&#x27;s Movie Log</a>
+                  </div>
+                  <p class="w-full pl-px text-sm italic leading-4 opacity-85">
+                    by Frank Showalter
+                  </p>
                 </div>
-                <p class="w-full pl-px text-sm italic leading-4 opacity-85">
-                  by Frank Showalter
-                </p>
+              </div>
+              <div class="justify-between tablet:flex">
+                <div class="flex max-w-prose flex-col pb-12 tablet:pr-32">
+                  <div
+                    class="footer-text pt-10 font-sans text-base font-light text-inverse-subtle"
+                  >
+                    <p>
+                      Hi there, I&#x27;m Frank, a husband and father old enough
+                      to have sat wide-eyed during E.T&#x27;s first theatrical
+                      run, I&#x27;ve been watching, absorbing, and dissecting
+                      films ever since.
+                    </p>
+                    <p>
+                      This site began in 2003 when I realized two things: I had
+                      become the designated “movie guy” among my friends (you
+                      know, the one everyone asks about every new release), and
+                      I was frequently experiencing the peculiar déjà vu of
+                      realizing, halfway through a film, that I&#x27;d already
+                      seen it. Clearly, I needed a system.
+                    </p>
+                    <p>
+                      What began as personal record-keeping evolved into this
+                      little corner of the internet where I share my thoughts on
+                      everything from blockbusters to obscure indies that
+                      deserved better.
+                    </p>
+                    <p>
+                      New visitors might want to start by reading about<!-- -->
+                      <a href="/how-i-grade/">how I grade</a> films. After that,
+                      feel free to browse my <a href="/reviews/">reviews</a>. If
+                      you&#x27;re looking for something that flew under the
+                      radar but deserves your attention, I recommend my<!-- -->
+                      <a href="/reviews/underseen/">underseen gems</a> section.
+                      Or, for those moments when you want to feel righteously
+                      contrarian, I maintain an list of<!-- -->
+                      <a href="/reviews/overrated/">overrated disappointments</a
+                      >.
+                    </p>
+                    <p>
+                      I also keep a <a href="/viewings/">viewing log</a> that
+                      tracks everything I watch, whether it gets a full review
+                      or not, complete with
+                      <a href="/viewings/stats/">stats</a>. In an age of endless
+                      content, sometimes the act of remembering what we&#x27;ve
+                      seen becomes as important as the seeing itself.
+                    </p>
+                    <p>
+                      And finally, if you&#x27;re curious about what&#x27;s on
+                      my critical horizon, my
+                      <a href="/watchlist/">watchlist</a> details the films I
+                      plan to review and why they&#x27;ve caught my interest.
+                    </p>
+                    <p>
+                      In an era of algorithmic recommendations and corporate
+                      marketing machines, consider this site a human
+                      alternative—one person&#x27;s attempt to catalog the vast
+                      ocean of cinema and maybe help a few fellow travelers
+                      along the way.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex grow-0 flex-col gap-20 pb-20 pt-10 tablet:basis-[430px] tablet:pr-10"
+                >
+                  <ul
+                    class="flex w-full flex-col gap-y-10 text-inverse max:w-auto"
+                  >
+                    <li class="block w-1/2 whitespace-nowrap text-2xl">
+                      <a class="hover:text-accent" href="/">Home</a>
+                    </li>
+                    <li class="block w-1/2 whitespace-nowrap text-2xl">
+                      <a class="hover:text-accent" href="/how-i-grade/"
+                        >How I Grade</a
+                      >
+                    </li>
+                    <li class="block w-1/2 whitespace-nowrap text-2xl">
+                      <a class="hover:text-accent" href="/reviews/">Reviews</a>
+                      <ol class="mt-4">
+                        <li
+                          class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                        >
+                          <a class="hover:text-inverse" href="/cast-and-crew/"
+                            >Cast &amp; Crew</a
+                          >
+                        </li>
+                        <li
+                          class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                        >
+                          <a class="hover:text-inverse" href="/collections/"
+                            >Collections</a
+                          >
+                        </li>
+                        <li
+                          class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                        >
+                          <a
+                            class="hover:text-inverse"
+                            href="/reviews/overrated/"
+                            >Overrated</a
+                          >
+                        </li>
+                        <li
+                          class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                        >
+                          <a
+                            class="hover:text-inverse"
+                            href="/reviews/underrated/"
+                            >Underrated</a
+                          >
+                        </li>
+                        <li
+                          class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                        >
+                          <a
+                            class="hover:text-inverse"
+                            href="/reviews/underseen/"
+                            >Underseen</a
+                          >
+                        </li>
+                      </ol>
+                    </li>
+                    <li class="block w-1/2 whitespace-nowrap text-2xl">
+                      <a class="hover:text-accent" href="/viewings/"
+                        >Viewing Log</a
+                      >
+                      <ol class="mt-4">
+                        <li
+                          class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                        >
+                          <a class="hover:text-inverse" href="/viewings/stats/"
+                            >Stats</a
+                          >
+                        </li>
+                      </ol>
+                    </li>
+                    <li class="block w-1/2 whitespace-nowrap text-2xl">
+                      <a class="hover:text-accent" href="/watchlist/"
+                        >Watchlist</a
+                      >
+                      <ol class="mt-4">
+                        <li
+                          class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                        >
+                          <a
+                            class="hover:text-inverse"
+                            href="/watchlist/progress/"
+                            >Progress</a
+                          >
+                        </li>
+                      </ol>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div
-              class="flex flex-col gap-20 pb-20 pt-10 tablet:basis-1/2 tablet:pt-20"
+            <p
+              class="w-full bg-canvas px-container py-10 text-center font-normal leading-5 text-default"
             >
-              <ul class="flex w-full flex-col gap-y-10 text-inverse max:w-auto">
-                <li class="block w-1/2 whitespace-nowrap text-2xl">
-                  <a class="hover:text-accent" href="/">Home</a>
-                </li>
-                <li class="block w-1/2 whitespace-nowrap text-2xl">
-                  <a class="hover:text-accent" href="/how-i-grade/"
-                    >How I Grade</a
-                  >
-                </li>
-                <li class="block w-1/2 whitespace-nowrap text-2xl">
-                  <a class="hover:text-accent" href="/reviews/">Reviews</a>
-                  <ol class="mt-4">
-                    <li
-                      class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
-                    >
-                      <a class="hover:text-inverse" href="/reviews/overrated/"
-                        >Overrated</a
-                      >
-                    </li>
-                    <li
-                      class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
-                    >
-                      <a class="hover:text-inverse" href="/reviews/underrated/"
-                        >Underrated</a
-                      >
-                    </li>
-                    <li
-                      class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
-                    >
-                      <a class="hover:text-inverse" href="/reviews/underseen/"
-                        >Underseen</a
-                      >
-                    </li>
-                  </ol>
-                </li>
-                <li class="block w-1/2 whitespace-nowrap text-2xl">
-                  <a class="hover:text-accent" href="/viewings/">Viewing Log</a>
-                  <ol class="mt-4">
-                    <li
-                      class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
-                    >
-                      <a class="hover:text-inverse" href="/viewings/stats/"
-                        >Stats</a
-                      >
-                    </li>
-                  </ol>
-                </li>
-                <li class="block w-1/2 whitespace-nowrap text-2xl">
-                  <a class="hover:text-accent" href="/cast-and-crew/"
-                    >Cast &amp; Crew</a
-                  >
-                </li>
-                <li class="block w-1/2 whitespace-nowrap text-2xl">
-                  <a class="hover:text-accent" href="/collections/"
-                    >Collections</a
-                  >
-                </li>
-                <li class="block w-1/2 whitespace-nowrap text-2xl">
-                  <a class="hover:text-accent" href="/watchlist/">Watchlist</a>
-                  <ol class="mt-4">
-                    <li
-                      class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
-                    >
-                      <a class="hover:text-inverse" href="/watchlist/progress/"
-                        >Progress</a
-                      >
-                    </li>
-                  </ol>
-                </li>
-              </ul>
+              All reviews by Frank Showalter. All images used in accordance with
+              the<!-- -->
               <a
-                class="mb-8 w-full max-w-button bg-canvas py-5 text-center font-sans text-xs uppercase tracking-wide text-default hover:bg-inverse hover:text-inverse"
-                href="#top"
-                >To the top</a
-              >
-              <p class="w-full font-normal leading-4 text-inverse-subtle">
-                All reviews by Frank Showalter. All images used in accordance
-                with the<!-- -->
-                <a
-                  class="text-inherit underline decoration-2 underline-offset-4 hover:bg-default hover:text-default"
-                  href="http://www.copyright.gov/title17/92chap1.html#107"
-                  >Fair Use Law.</a
-                >
-              </p>
-            </div>
+                class="text-inherit underline decoration-dashed hover:bg-default hover:text-default"
+                href="http://www.copyright.gov/title17/92chap1.html#107"
+                rel="nofollow"
+                >Fair Use Law</a
+              >.
+            </p>
           </footer>
         </div>
       </div>
