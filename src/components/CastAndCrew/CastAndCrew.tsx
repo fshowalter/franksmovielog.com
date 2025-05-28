@@ -10,6 +10,7 @@ import { GroupedList } from "~/components/GroupedList";
 import { ListItem } from "~/components/ListItem";
 import { ListItemAvatar } from "~/components/ListItemAvatar";
 import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
+import { ReviewsSubNav } from "~/components/ReviewsSubNav";
 
 import type { Sort } from "./CastAndCrew.reducer";
 
@@ -68,6 +69,7 @@ export function CastAndCrew({
           }}
         </GroupedList>
       }
+      subNav={<ReviewsSubNav active="castAndCrew" />}
       totalCount={state.filteredValues.length}
     />
   );

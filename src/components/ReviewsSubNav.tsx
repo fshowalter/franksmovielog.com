@@ -5,6 +5,8 @@ type SubNavValue = {
 
 const items: Record<string, SubNavValue> = {
   all: { href: "/reviews/", text: "All Reviews" },
+  castAndCrew: { href: "/cast-and-crew/", text: "Cast & Crew" },
+  collections: { href: "/collections/", text: "Collections" },
   overrated: { href: "/reviews/overrated/", text: "Overrated" },
   underrated: { href: "/reviews/underrated/", text: "Underrated" },
   underseen: { href: "/reviews/underseen/", text: "Underseen" },
@@ -21,9 +23,12 @@ export function ReviewsSubNav({ active }: { active: keyof typeof items }) {
               key={value.href}
             >
               {active === key ? (
-                <div className="bg-default p-6 text-default tablet:py-8">
+                <a
+                  className="block bg-default p-6 text-default tablet:py-8"
+                  href={value.href}
+                >
                   {value.text}
-                </div>
+                </a>
               ) : (
                 <a
                   className="block p-6 hover:bg-accent hover:text-inverse tablet:py-8"
