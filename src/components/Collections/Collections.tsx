@@ -8,7 +8,6 @@ import { Backdrop } from "~/components/Backdrop";
 import { ListItem } from "~/components/ListItem";
 import { ListItemAvatar } from "~/components/ListItemAvatar";
 import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
-import { ReviewsSubNav } from "~/components/ReviewsSubNav";
 
 import type { Sort } from "./Collections.reducer";
 
@@ -64,7 +63,6 @@ export function Collections({
           })}
         </ol>
       }
-      subNav={<ReviewsSubNav active="collections" />}
       totalCount={state.filteredValues.length}
     />
   );

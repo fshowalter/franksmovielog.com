@@ -155,7 +155,7 @@
     position: relative;
     transition: 0.2s ease-in-out;
     width: 40px;
-    z-index: 100;
+    z-index: 400;
   }
 
   .hamburger-icon-bars {
@@ -190,9 +190,6 @@
   #mobile-nav:checked + .hamburger-icon {
     background: #252525;
     border-radius: 0;
-    box-shadow:
-      0 0 0 100vw #252525,
-      0 0 0 100vh #252525;
   }
 
   #mobile-nav:checked + .hamburger-icon .hamburger-icon-bars {
@@ -211,36 +208,67 @@
   }
 
   .hamburger-menu {
-    height: 0;
-    inset: -100% 0 0 100%;
+    background: #252525;
+    height: 100%;
     opacity: 0;
     overflow: hidden;
     position: fixed;
-    transform: translate(-100%, 100%);
+    right: 0;
+    transform: translateX(100%);
     transition: 0.2s 0s ease-in-out;
     width: 0;
+
+    @media screen(tablet) {
+      max-width: 35vw;
+    }
+
+    @media screen(desktop) {
+      max-width: 25vw;
+    }
   }
 
   #mobile-nav:checked + .hamburger-icon + .hamburger-menu {
     bottom: 0;
     height: 100%;
-    margin-top: 80px;
     opacity: 1;
-    overflow: unset;
-    overflow: hidden;
-    padding: 0 16% 0 12%;
+    overflow-y: auto;
+    padding: 80px 16% 20px 12%;
+    transform: translateX(0);
     width: 100%;
     z-index: 250;
+
+    @media screen(tablet) {
+      padding: 160px 40px;
+    }
+
+    @media screen(desktop) {
+      padding: 160px 80px;
+    }
   }
 
-  .mast:has(#mobile-nav:checked) {
-    color: #fff !important;
+  .mast-item {
+    transition: 0.2s 0s ease-in-out;
+  }
+
+  body main {
+    transition: opacity 0.2s 0s ease-in-out;
   }
 
   body:has(#mobile-nav:checked) {
-    overflow: hidden;
+    overflow-y: scroll;
     position: fixed;
-    width: 100vw;
+
+    main {
+      opacity: 0.8;
+    }
+
+    .mast-item {
+      opacity: 0;
+    }
+
+    .search-button {
+      color: #fff !important;
+    }
   }
 
   .progress-bar-bg {
@@ -409,6 +437,7 @@
 
   .footer-text {
     a {
+      color: var(--fg-inverse);
       text-decoration: underline dashed var(--fg-inverse-subtle);
       text-underline-offset: 4px;
       transition: all 150ms ease-out;

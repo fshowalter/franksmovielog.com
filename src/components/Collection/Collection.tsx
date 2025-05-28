@@ -12,7 +12,6 @@ import { ListItem } from "~/components/ListItem";
 import { ListItemPoster } from "~/components/ListItemPoster";
 import { ListItemTitle } from "~/components/ListItemTitle";
 import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
-import { ReviewsSubNav } from "~/components/ReviewsSubNav";
 
 import { Actions, initState, reducer, type Sort } from "./Collection.reducer";
 import { Filters } from "./Filters";
@@ -103,7 +102,6 @@ export function Collection({
           }}
         </GroupedList>
       }
-      subNav={<ReviewsSubNav active="collections" />}
       totalCount={state.filteredValues.length}
     />
   );

@@ -67,7 +67,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
     }
     <title>{pageTitle}</title>
   </head>
-  <body>
+  <body class="w-full">
     <slot />
     <dialog
       aria-label="Search"

@@ -16,7 +16,7 @@ export function Mast({
 }) {
   return (
     <header
-      className="z-20 flex w-full items-center justify-between px-container py-4 tablet:p-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
+      className="z-20 flex w-full items-center justify-between px-container py-4 tablet:py-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
       style={{
         backgroundImage: addGradient
           ? "linear-gradient(to bottom, rgba(0,0,0,.85), transparent 95%)"
@@ -42,7 +42,7 @@ export function Mast({
         </nav>
         <SearchButton />
         <input className="hidden" id="mobile-nav" type="checkbox" />
-        <label className="hamburger-icon desktop:hidden" htmlFor="mobile-nav">
+        <label className="hamburger-icon" htmlFor="mobile-nav">
           <span
             className="hamburger-icon-bars"
             style={{
@@ -50,7 +50,7 @@ export function Mast({
             }}
           />
         </label>
-        <ul className="hamburger-menu flex flex-col items-start gap-y-5 text-left text-inverse desktop:hidden">
+        <ul className="hamburger-menu flex flex-col items-start gap-y-5 text-left text-inverse tablet:gap-y-10">
           {navItems.map((item) => {
             return <MenuItem key={item.target} value={item} />;
           })}
@@ -62,7 +62,7 @@ export function Mast({
 
 function MenuItem({ value }: { value: NavItem }): JSX.Element {
   return (
-    <li className="block w-1/2 whitespace-nowrap text-2xl">
+    <li className="block w-1/2 whitespace-nowrap text-2xl desktop:w-full">
       <a href={value.target}>{value.text}</a>
       <SubMenu values={value.subItems} />
     </li>
@@ -77,7 +77,7 @@ function NavListItem({
   value: NavItem;
 }): JSX.Element {
   return (
-    <li className="block whitespace-nowrap tracking-serif-wide">
+    <li className="mast-item block whitespace-nowrap leading-10 tracking-serif-wide">
       <a
         className={`text-inherit transition-all duration-500 ease-in-out ${hasBackdrop ? "hover:bg-[rgba(0,0,0,.50)]" : "hover:text-accent"}`}
         href={value.target}
@@ -93,7 +93,7 @@ function NavListItem({
 
 function SearchButton() {
   return (
-    <div className="z-[1000]">
+    <div className="search-button z-[1000]">
       <button
         aria-keyshortcuts="Control+K"
         aria-label="Search"

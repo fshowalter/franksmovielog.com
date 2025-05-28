@@ -13,7 +13,6 @@ import { ListItem } from "~/components/ListItem";
 import { ListItemPoster } from "~/components/ListItemPoster";
 import { ListItemTitle } from "~/components/ListItemTitle";
 import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
-import { ReviewsSubNav } from "~/components/ReviewsSubNav";
 import { WatchlistTitleSlug } from "~/components/WatchlistTitleSlug";
 
 import {
@@ -111,7 +110,6 @@ export function CastAndCrewMember({
           }}
         </GroupedList>
       }
-      subNav={<ReviewsSubNav active="castAndCrew" />}
       totalCount={state.filteredValues.length}
     />
   );

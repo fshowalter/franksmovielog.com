@@ -46,22 +46,21 @@ export function Footer(): JSX.Element {
               <p>
                 New visitors might want to start by reading about{" "}
                 <a href="/how-i-grade/">how I grade</a> films. After that, feel
-                free to browse my <a href="/reviews/">review archive</a>. If
+                free to browse my <a href="/reviews/">reviews</a>. If
                 you&apos;re looking for something that flew under the radar but
                 deserves your attention, I recommend my{" "}
                 <a href="/reviews/underseen/">underseen gems</a> section. Or,
                 for those moments when you want to feel righteously contrarian,
-                I maintain an <a href="/reviews/overrated/">overrated</a> list
-                of films that everyone else seems to love but left me cold.
+                I maintain an list of{" "}
+                <a href="/reviews/overrated/">overrated disappointments</a>.
               </p>
 
               <p>
-                I also maintain a comprehensive{" "}
-                <a href="/viewings/">viewing log</a> that tracks everything I
-                watch, whether it gets a full review or not, complete with{" "}
-                <a href="/viewings/stats/">stats</a>. In an age of endless
-                content, sometimes the act of remembering what we&apos;ve seen
-                becomes as important as the seeing itself.
+                I also keep a <a href="/viewings/">viewing log</a> that tracks
+                everything I watch, whether it gets a full review or not,
+                complete with <a href="/viewings/stats/">stats</a>. In an age of
+                endless content, sometimes the act of remembering what
+                we&apos;ve seen becomes as important as the seeing itself.
               </p>
 
               <p>

@@ -5,8 +5,6 @@ type SubNavValue = {
 
 const items: Record<string, SubNavValue> = {
   all: { href: "/reviews/", text: "All Reviews" },
-  castAndCrew: { href: "/cast-and-crew/", text: "Cast & Crew" },
-  collections: { href: "/collections/", text: "Collections" },
   overrated: { href: "/reviews/overrated/", text: "Overrated" },
   underrated: { href: "/reviews/underrated/", text: "Underrated" },
   underseen: { href: "/reviews/underseen/", text: "Underseen" },
