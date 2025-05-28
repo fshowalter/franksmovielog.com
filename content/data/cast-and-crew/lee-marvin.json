@@ -817,15 +817,17 @@
       "imdbId": "tt0069121",
       "title": "Prime Cut",
       "year": "1972",
-      "slug": "prime-cut-1972",
-      "grade": "B-",
+      "slug": null,
+      "grade": null,
       "sortTitle": "prime-cut-1972",
-      "gradeValue": 8,
+      "gradeValue": null,
       "releaseSequence": "1972-??-??tt0069121",
-      "reviewDate": "2025-05-24",
-      "viewingSequence": "2025-05-24-1",
+      "reviewDate": null,
+      "viewingSequence": null,
       "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
+      "watchlistPerformerNames": [
+        "Lee Marvin"
+      ],
       "watchlistWriterNames": [],
       "collectionNames": []
     },
@@ -1105,7 +1107,7 @@
       "collectionNames": []
     }
   ],
-  "reviewCount": 11,
+  "reviewCount": 10,
   "totalCount": 53,
   "creditedAs": [
     "performer"
