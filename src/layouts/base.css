@@ -410,6 +410,7 @@
   .footer-text {
     a {
       text-decoration: underline dashed var(--fg-inverse-subtle);
+      text-underline-offset: 4px;
       transition: all 150ms ease-out;
     }
 

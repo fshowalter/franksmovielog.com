@@ -7,10 +7,8 @@ import { navItems } from "./navItems";
 
 export function Footer(): JSX.Element {
   return (
-    <footer
-      className={"bg-footer py-20 text-inverse tablet:pt-10 desktop:py-20"}
-    >
-      <div className="mx-auto max-w-screen-max px-container">
+    <footer className={"bg-footer text-inverse"}>
+      <div className="mx-auto max-w-screen-max px-container py-20">
         <div className="flex w-full flex-col tablet:flex-row-reverse tablet:justify-between">
           <a
             className="mx-auto mb-8 w-full max-w-button bg-canvas py-5 text-center font-sans text-xs uppercase tracking-wide text-default hover:bg-inverse hover:text-inverse tablet:mx-0"
@@ -22,7 +20,7 @@ export function Footer(): JSX.Element {
         </div>
         <div className="justify-between tablet:flex">
           <div className="flex max-w-prose flex-col pb-12 tablet:pr-32">
-            <div className="footer-text pt-10 font-sans text-sm font-light text-inverse-subtle">
+            <div className="footer-text pt-10 font-sans text-base font-light text-inverse-subtle">
               <p>
                 Hi there, I&apos;m Frank, a husband and father old enough to
                 have sat wide-eyed during E.T&apos;s first theatrical run,
@@ -90,7 +88,7 @@ export function Footer(): JSX.Element {
           </div>
         </div>
       </div>
-      <p className="w-full border-t border-t-[var(--fg-inverse-subtle)] px-container pt-10 text-center font-normal leading-5 text-inverse-subtle">
+      <p className="w-full bg-canvas px-container py-10 text-center font-normal leading-5 text-default">
         All reviews by Frank Showalter. All images used in accordance with the{" "}
         <a
           className="text-inherit underline decoration-dashed hover:bg-default hover:text-default"
