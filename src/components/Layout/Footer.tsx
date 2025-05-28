@@ -22,7 +22,7 @@ export function Footer(): JSX.Element {
         </div>
         <div className="justify-between tablet:flex">
           <div className="flex max-w-prose flex-col pb-12 tablet:pr-32">
-            <div className="footer-text pt-10 text-md text-inverse-subtle">
+            <div className="footer-text pt-10 font-sans text-sm font-light text-inverse-subtle">
               <p>
                 Hi there, I&apos;m Frank, a husband and father old enough to
                 have sat wide-eyed during E.T&apos;s first theatrical run,
