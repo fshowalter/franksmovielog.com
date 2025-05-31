@@ -23,9 +23,9 @@ export function Footer(): JSX.Element {
             <div className="footer-text pt-10 font-sans text-base font-light text-inverse-subtle">
               <p>
                 Hi there, I&apos;m Frank, a husband and father old enough to
-                have sat wide-eyed during E.T&apos;s first theatrical run,
-                I&apos;ve been watching, absorbing, and dissecting films ever
-                since.
+                have sat wide-eyed during <em>E.T</em>&apos;s first theatrical
+                run, I&apos;ve been watching, absorbing, and dissecting films
+                ever since.
               </p>
 
               <p>

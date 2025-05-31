@@ -12339,8 +12339,7 @@ exports[`Underrated > renders 1`] = `
           class="flex flex-col"
         >
           <div
-            class="whitespace-nowrap font-normal leading-8"
-            style="font-size: 1.5625rem;"
+            class="whitespace-nowrap text-[1.375rem] font-normal leading-8 tablet:text-[1.5625rem]"
           >
             <a
               href="/"
@@ -14937,8 +14936,7 @@ exports[`Underrated > renders 1`] = `
               class="flex flex-col"
             >
               <div
-                class="whitespace-nowrap font-normal leading-8"
-                style="font-size: 1.5625rem;"
+                class="whitespace-nowrap text-[1.375rem] font-normal leading-8 tablet:text-[1.5625rem]"
               >
                 <a
                   href="/"
@@ -14963,7 +14961,11 @@ exports[`Underrated > renders 1`] = `
                 class="footer-text pt-10 font-sans text-base font-light text-inverse-subtle"
               >
                 <p>
-                  Hi there, I'm Frank, a husband and father old enough to have sat wide-eyed during E.T's first theatrical run, I've been watching, absorbing, and dissecting films ever since.
+                  Hi there, I'm Frank, a husband and father old enough to have sat wide-eyed during 
+                  <em>
+                    E.T
+                  </em>
+                  's first theatrical run, I've been watching, absorbing, and dissecting films ever since.
                 </p>
                 <p>
                   This site began in 2003 when I realized two things: I had become the designated “movie guy” among my friends (you know, the one everyone asks about every new release), and I was frequently experiencing the peculiar déjà vu of realizing, halfway through a film, that I'd already seen it. Clearly, I needed a system.
