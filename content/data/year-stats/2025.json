@@ -1,8 +1,8 @@
 {
   "year": "2025",
   "newTitleCount": 36,
-  "viewingCount": 59,
-  "titleCount": 58,
+  "viewingCount": 60,
+  "titleCount": 59,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -21,15 +21,15 @@
       "count": 2
     },
     {
+      "name": "DVD",
+      "count": 2
+    },
+    {
       "name": "Hulu",
       "count": 1
     },
     {
       "name": "Watch TCM",
-      "count": 1
-    },
-    {
-      "name": "DVD",
       "count": 1
     }
   ],
@@ -50,7 +50,7 @@
     },
     {
       "name": "1950s",
-      "count": 5
+      "count": 6
     },
     {
       "name": "1960s",
@@ -264,6 +264,40 @@
       ]
     },
     {
+      "name": "Vincent Price",
+      "count": 3,
+      "slug": "vincent-price",
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-05-20",
+          "slug": "catchfire-1990",
+          "title": "Catchfire",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1990"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-05-28",
+          "slug": "return-of-the-fly-1959",
+          "title": "Return of the Fly",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1959"
+        },
+        {
+          "sequence": 3,
+          "date": "2025-05-30",
+          "slug": "the-las-vegas-story-1952",
+          "title": "The Las Vegas Story",
+          "medium": "DVD",
+          "venue": null,
+          "year": "1952"
+        }
+      ]
+    },
+    {
       "name": "Mo McRae",
       "count": 2,
       "slug": null,
@@ -435,31 +469,6 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1968"
-        }
-      ]
-    },
-    {
-      "name": "William Prael",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1,
-          "date": "2025-01-25",
-          "slug": "the-collector-2009",
-          "title": "The Collector",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "2009"
-        },
-        {
-          "sequence": 2,
-          "date": "2025-02-06",
-          "slug": "the-collector-2009",
-          "title": "The Collector",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "2009"
         }
       ]
     }
