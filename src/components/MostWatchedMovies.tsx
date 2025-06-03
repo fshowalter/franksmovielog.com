@@ -8,8 +8,7 @@ import { Poster } from "./Poster";
 
 export const MostWatchedMoviesPosterConfig = {
   height: 372,
-  sizes:
-    "(max-width: 767px) 64px, (max-width: 1279px) 128px, (min-width: 784px) 20vw, 248px",
+  sizes: "(max-width: 767px) 64px, (min-width: 784px) 20vw, 248px",
   width: 248,
 };
 
@@ -35,7 +34,10 @@ export function MostWatchedMovies({
 
   return (
     <section
-      className={ccn("bg-default px-container desktop:pb-10", className)}
+      className={ccn(
+        "max-w-screen-desktop bg-default px-container desktop:pb-10",
+        className,
+      )}
     >
       <h2 className="py-4 text-xl font-medium shadow-bottom tablet:text-center tablet:text-2xl desktop:py-8">
         Most Watched Movies
