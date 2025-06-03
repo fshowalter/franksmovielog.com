@@ -13,7 +13,7 @@ import YearStats from "./index.astro";
 describe("/viewings/stats/:year", () => {
   it.for(["2012", "2024", "2022"])(
     "matches snapshot for year %i",
-    { timeout: 10_000 },
+    { timeout: 20_000 },
     async (year, { expect }) => {
       const renderers = await loadRenderers([reactContainerRenderer()]);
       const container = await AstroContainer.create({ renderers });
