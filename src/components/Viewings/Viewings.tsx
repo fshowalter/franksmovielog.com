@@ -194,10 +194,7 @@ function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
 
   return (
     <li
-      className="relative mb-1 flex flex-row items-center gap-x-4 bg-default px-container py-4 last-of-type:mb-0 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:gap-x-6 tablet:pl-4"
-      style={{
-        background: value.slug ? "" : "var(--bg-unreviewed)",
-      }}
+      className={`relative mb-1 flex flex-row items-center gap-x-4 ${value.slug ? "bg-default" : "bg-unreviewed"} px-container py-4 last-of-type:mb-0 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:gap-x-6 tablet:pl-4`}
       {...rest}
     >
       <ListItemPoster imageProps={value.posterImageProps} />
