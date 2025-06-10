@@ -1,12 +1,12 @@
 {
   "year": "2025",
   "newTitleCount": 42,
-  "viewingCount": 67,
-  "titleCount": 66,
+  "viewingCount": 68,
+  "titleCount": 67,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 40
+      "count": 41
     },
     {
       "name": "4k UHD Blu-ray",
@@ -54,7 +54,7 @@
     },
     {
       "name": "1960s",
-      "count": 7
+      "count": 8
     },
     {
       "name": "1970s",
@@ -163,6 +163,31 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1968"
+        }
+      ]
+    },
+    {
+      "name": "Lucio Fulci",
+      "count": 2,
+      "slug": "lucio-fulci",
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-04-24",
+          "slug": "the-beyond-1981",
+          "title": "The Beyond",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1981"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-06-09",
+          "slug": "massacre-time-1966",
+          "title": "Massacre Time",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1966"
         }
       ]
     }
