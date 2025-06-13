@@ -8,7 +8,7 @@ import { navItems } from "./navItems";
 export function Footer(): JSX.Element {
   return (
     <footer className={"bg-footer text-inverse"}>
-      <div className="mx-auto max-w-screen-max px-container py-20">
+      <div className="mx-auto max-w-screen-desktop px-container py-20">
         <div className="flex w-full flex-col tablet:flex-row-reverse tablet:justify-between">
           <a
             className="mx-auto mb-8 w-full max-w-button bg-canvas py-5 text-center font-sans text-xs uppercase tracking-wide text-default hover:bg-inverse hover:text-inverse tablet:mx-0"
