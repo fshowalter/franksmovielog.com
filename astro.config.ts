@@ -1,7 +1,9 @@
+import type { AstroIntegration } from "astro";
+import type { HmrContext } from "vite";
+
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
-import playformInline from "@playform/inline";
+import tailwindcss from "@tailwindcss/vite";
 import compressor from "astro-compressor";
 import { defineConfig } from "astro/config";
 import path from "node:path";
@@ -11,9 +13,9 @@ import sirv from "sirv";
 
 function contentHmr() {
   return {
-    enforce: "post",
+    enforce: "post" as const,
     // HMR
-    handleHotUpdate({ file, server }) {
+    handleHotUpdate({ file, server }: HmrContext) {
       console.log(file);
       if (file.includes("/content/")) {
         console.log("reloading content file...");
@@ -27,9 +29,10 @@ function contentHmr() {
   };
 }
 
-function pagefind() {
-  let outDir;
-  let assets;
+function pagefind(): AstroIntegration {
+  let outDir: string;
+  let assets: null | string;
+
   return {
     hooks: {
       "astro:build:done": async ({ logger }) => {
@@ -110,16 +113,10 @@ export default defineConfig({
   },
   integrations: [
     react(),
-    tailwind({
-      // Example: Disable injecting a basic `base.css` import on every page.
-      // Useful if you need to define and/or import your own custom `base.css`.
-      applyBaseStyles: false,
-    }),
     sitemap({
       filter: (page) => page !== "https://www.franksmovielog.com/gone/",
     }),
     pagefind(),
-    playformInline(),
     compressor(),
   ],
   site: "https://www.franksmovielog.com",
@@ -129,6 +126,7 @@ export default defineConfig({
       exclude: ["fsevents"],
     },
     plugins: [
+      tailwindcss(),
       contentHmr(),
       react({
         babel: {

@@ -52,7 +52,11 @@ export function BreadcrumbLink({
 }) {
   return (
     <a
-      className="font-sans text-sm uppercase tracking-wide decoration-inverse-subtle decoration-2 underline-offset-8 hover:underline"
+      className={`
+        font-sans text-sm tracking-wide uppercase decoration-inverse-subtle
+        decoration-2 underline-offset-8
+        hover:underline
+      `}
       href={href}
     >
       {children}
@@ -83,7 +87,12 @@ function Deck({
 
   return (
     <p
-      className={`mt-1 text-base desktop:my-4 desktop:text-xl ${shadow ? "[text-shadow:1px_1px_2px_black]" : ""} ${center ? "text-center" : ""}`}
+      className={`
+        mt-1 text-base
+        desktop:my-4 desktop:text-xl
+        ${shadow ? `[text-shadow:1px_1px_2px_black]` : ""}
+        ${center ? `text-center` : ""}
+      `}
     >
       {value}
     </p>
@@ -103,7 +112,12 @@ function Title({
     <h1
       className={
         className ||
-        `font-sans ${center ? "text-center" : ""} text-2xl font-bold uppercase tracking-widest desktop:text-7xl`
+        `
+          font-sans
+          ${center ? "text-center" : ""}
+          text-2xl font-bold tracking-widest uppercase
+          desktop:text-7xl
+        `
       }
       data-pagefind-weight="10"
     >
@@ -139,11 +153,21 @@ function Wrapper({
 
   return (
     <header
-      className={`${sizes} relative flex w-full flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pb-8 pt-40 text-inverse tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40`}
+      className={`
+        ${sizes}
+        relative flex w-full flex-col content-start items-center justify-end
+        gap-6 bg-[#2A2B2A] pt-40 pb-8 text-inverse
+        tablet:pt-40 tablet:pb-10
+        desktop:pt-40 desktop:pb-16
+      `}
     >
       {heroImage}
       <div
-        className={`${centerText ? "items-center" : ""} z-10 mx-auto flex w-full max-w-screen-max flex-col px-container`}
+        className={`
+          ${centerText ? "items-center" : ""}
+          z-10 mx-auto flex w-full max-w-(--breakpoint-max) flex-col
+          px-container
+        `}
       >
         {children}
       </div>

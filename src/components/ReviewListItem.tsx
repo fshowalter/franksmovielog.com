@@ -23,7 +23,13 @@ export function ReviewListItem({ value }: { value: ReviewListItemValue }) {
   return (
     <ListItem className="has-[a:hover]:bg-hover has-[a:hover]:shadow-hover">
       <ListItemPoster imageProps={value.posterImageProps} />
-      <div className="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4">
+      <div
+        className={`
+          flex grow flex-col items-start gap-y-2
+          tablet:w-full
+          desktop:pr-4
+        `}
+      >
         <ListItemTitle
           slug={value.slug}
           title={value.title}

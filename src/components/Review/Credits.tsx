@@ -42,13 +42,21 @@ export function Credits({
   return (
     <aside
       className={ccn(
-        "bg-subtle px-container pb-8 pt-8 tablet:pt-12",
+        `
+          bg-subtle px-container pt-8 pb-8
+          tablet:pt-12
+        `,
         className,
       )}
       data-pagefind-meta={`image:${posterImageProps.src}`}
       id="credits"
     >
-      <div className="flex flex-wrap justify-center gap-8 tablet:flex-nowrap">
+      <div
+        className={`
+          flex flex-wrap justify-center gap-8
+          tablet:flex-nowrap
+        `}
+      >
         <div className="shrink-0">
           <div className="block">
             <Poster
@@ -86,7 +94,12 @@ export function Credits({
         </dl>
       </div>
       <a
-        className="mx-auto mt-8 flex w-full max-w-button cursor-pointer place-content-center items-center py-5 font-sans text-xs uppercase tracking-wide shadow-all hover:bg-inverse hover:text-inverse"
+        className={`
+          mx-auto mt-8 flex w-full max-w-button cursor-pointer
+          place-content-center items-center py-5 font-sans text-xs tracking-wide
+          uppercase shadow-all
+          hover:bg-inverse hover:text-inverse
+        `}
         href="#top"
       >
         Back to Top
@@ -98,10 +111,10 @@ export function Credits({
 function Credit({ term, value }: { term: string; value: React.ReactNode }) {
   return (
     <div>
-      <dt className="font-sans text-xxs uppercase tracking-wide text-subtle">
+      <dt className="font-sans text-xxs tracking-wide text-subtle uppercase">
         {term}
       </dt>
-      <dd className="text-wrap font-normal text-muted">{value}</dd>
+      <dd className="font-normal text-wrap text-muted">{value}</dd>
     </div>
   );
 }

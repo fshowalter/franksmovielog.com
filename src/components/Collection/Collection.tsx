@@ -115,7 +115,12 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
       itemsCenter={true}
     >
       <ListItemPoster imageProps={value.posterImageProps} />
-      <div className="flex grow flex-col items-start tablet:w-full">
+      <div
+        className={`
+          flex grow flex-col items-start
+          tablet:w-full
+        `}
+      >
         <ListItemTitle
           slug={value.slug}
           title={value.title}

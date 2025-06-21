@@ -77,16 +77,32 @@ export function AlltimeStats({
         viewingCount={stats.viewingCount}
         watchlistTitlesReviewedCount={stats.watchlistTitlesReviewedCount}
       />
-      <div className="mx-auto flex w-full max-w-screen-max flex-col items-stretch gap-y-8 py-10 tablet:px-container">
+      <div
+        className={`
+          mx-auto flex w-full max-w-(--breakpoint-max) flex-col items-stretch
+          gap-y-8 py-10
+          tablet:px-container
+        `}
+      >
         <MostWatchedMovies
           className="mx-auto w-full"
           values={mostWatchedMovies}
         />
-        <div className="flex flex-col items-start gap-y-8 desktop:flex-row desktop:gap-x-8">
+        <div
+          className={`
+            flex flex-col items-start gap-y-8
+            desktop:flex-row desktop:gap-x-8
+          `}
+        >
           <GradeDistribution values={stats.gradeDistribution} />
           <DecadeDistribution values={stats.decadeDistribution} />
         </div>
-        <div className="mx-auto flex w-full flex-col gap-y-8 desktop:max-w-[calc(66%_+_24px)]">
+        <div
+          className={`
+            mx-auto flex w-full flex-col gap-y-8
+            desktop:max-w-[calc(66%+24px)]
+          `}
+        >
           <MediaDistribution values={stats.mediaDistribution} />
           <VenueDistribution values={stats.venueDistribution} />
           <MostWatchedDirectors values={mostWatchedDirectors} />

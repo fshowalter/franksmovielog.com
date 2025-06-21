@@ -122,7 +122,12 @@ function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
       className="has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
     >
       <ListItemPoster imageProps={value.posterImageProps} />
-      <div className="flex grow flex-col gap-2 pb-2 tablet:w-full">
+      <div
+        className={`
+          flex grow flex-col gap-2 pb-2
+          tablet:w-full
+        `}
+      >
         <CreditedAs values={value.creditedAs} />
         <ListItemTitle
           slug={value.slug}
