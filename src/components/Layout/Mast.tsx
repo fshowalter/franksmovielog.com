@@ -103,7 +103,7 @@ function HamburgerMenu({ hasBackdrop }: { hasBackdrop: boolean }) {
           group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%]
           group-has-[#nav:checked]:opacity-100
           group-has-[#nav:checked]:tablet:px-10
-          group-has-[#nav:checked]:tablet:py-40
+          group-has-[#nav:checked]:tablet:pt-40
           group-has-[#nav:checked]:desktop:px-20
           tablet:max-w-[35vw] tablet:gap-y-10
           desktop:max-w-[25vw]
