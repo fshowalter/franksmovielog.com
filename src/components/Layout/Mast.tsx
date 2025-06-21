@@ -164,7 +164,12 @@ function NavListItem({
 
 function SearchButton() {
   return (
-    <div className="search-button z-1000">
+    <div
+      className={`
+        z-1000
+        group-has-[#nav:checked]:!text-[#fff]
+      `}
+    >
       <button
         aria-keyshortcuts="Control+K"
         aria-label="Search"

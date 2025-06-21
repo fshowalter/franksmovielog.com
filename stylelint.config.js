@@ -13,27 +13,22 @@ export default {
     "at-rule-no-unknown": [
       true,
       {
-        ignoreAtRules: [
-          "tailwind",
-          "apply",
-          "layer",
-          "config",
-          "variants",
-          "responsive",
-          "screen",
-        ],
+        ignoreAtRules: ["theme", "layer", "utility", "component"],
       },
     ],
+    "custom-property-empty-line-before": null,
+    "custom-property-pattern": null,
     "function-no-unknown": [
       true,
       {
         ignoreFunctions: ["theme"],
       },
     ],
+    "import-notation": null,
     "media-query-no-invalid": [
       true,
       {
-        ignoreFunctions: ["screen"],
+        ignoreFunctions: ["theme"],
       },
     ],
     "no-descending-specificity": null,

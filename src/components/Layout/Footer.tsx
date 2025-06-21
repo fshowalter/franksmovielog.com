@@ -42,18 +42,17 @@ export function Footer(): JSX.Element {
           >
             <div
               className={`
-                footer-text pt-10 font-sans text-base font-light
-                text-inverse-subtle
+                pt-10 font-sans text-base font-light text-inverse-subtle
               `}
             >
-              <p>
+              <p className="mb-6 text-pretty">
                 Hi there, I&apos;m Frank, a husband and father old enough to
                 have sat wide-eyed during <em>E.T</em>&apos;s first theatrical
                 run, I&apos;ve been watching, absorbing, and dissecting films
                 ever since.
               </p>
 
-              <p>
+              <p className="mb-6 text-pretty">
                 This site began in 2003 when I realized two things: I had become
                 the designated &ldquo;movie guy&rdquo; among my friends (you
                 know, the one everyone asks about every new release), and I was
@@ -62,40 +61,47 @@ export function Footer(): JSX.Element {
                 I needed a system.
               </p>
 
-              <p>
+              <p className="mb-6 text-pretty">
                 What began as personal record-keeping evolved into this little
                 corner of the internet where I share my thoughts on everything
                 from blockbusters to obscure indies that deserved better.
               </p>
 
-              <p>
+              <p className="mb-6 text-pretty">
                 New visitors might want to start by reading about{" "}
-                <a href="/how-i-grade/">how I grade</a> films. After that, feel
-                free to browse my <a href="/reviews/">reviews</a>. If
-                you&apos;re looking for something that flew under the radar but
-                deserves your attention, I recommend my{" "}
-                <a href="/reviews/underseen/">underseen gems</a> section. Or,
-                for those moments when you want to feel righteously contrarian,
-                I maintain an list of{" "}
-                <a href="/reviews/overrated/">overrated disappointments</a>.
+                <FooterLink href="/how-i-grade/" text="how I grade" /> films.
+                After that, feel free to browse my{" "}
+                <FooterLink href="/reviews/" text="reviews" />. If you&apos;re
+                looking for something that flew under the radar but deserves
+                your attention, I recommend my{" "}
+                <FooterLink href="/reviews/underseen/" text="underseen gems" />{" "}
+                section. Or, for those moments when you want to feel righteously
+                contrarian, I maintain an list of{" "}
+                <FooterLink
+                  href="/reviews/overrated/"
+                  text="overrated disappointments"
+                />
+                .
               </p>
 
-              <p>
-                I also keep a <a href="/viewings/">viewing log</a> that tracks
+              <p className="mb-6 text-pretty">
+                I also keep a{" "}
+                <FooterLink href="/viewings/" text="viewing log" /> that tracks
                 everything I watch, whether it gets a full review or not,
-                complete with <a href="/viewings/stats/">stats</a>. In an age of
-                endless content, sometimes the act of remembering what
+                complete with{" "}
+                <FooterLink href="/viewings/stats/" text="stats" />. In an age
+                of endless content, sometimes the act of remembering what
                 we&apos;ve seen becomes as important as the seeing itself.
               </p>
 
-              <p>
+              <p className="mb-6 text-pretty">
                 And finally, if you&apos;re curious about what&apos;s on my
-                critical horizon, my <a href="/watchlist/">watchlist</a> details
-                the films I plan to review and why they&apos;ve caught my
-                interest.
+                critical horizon, my{" "}
+                <FooterLink href="/watchlist/" text="watchlist" /> details the
+                films I plan to review and why they&apos;ve caught my interest.
               </p>
 
-              <p>
+              <p className="text-pretty">
                 In an era of algorithmic recommendations and corporate marketing
                 machines, consider this site a human alternative—one
                 person&apos;s attempt to catalog the vast ocean of cinema and
@@ -142,6 +148,22 @@ export function Footer(): JSX.Element {
         .
       </p>
     </footer>
+  );
+}
+
+function FooterLink({ href, text }: { href: string; text: string }) {
+  return (
+    <a
+      className={`
+        text-inverse underline decoration-inverse-subtle decoration-dashed
+        underline-offset-4 transition-all duration-150 ease-out
+        hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
+        hover:duration-75 hover:ease-in
+      `}
+      href={href}
+    >
+      {text}
+    </a>
   );
 }
 
