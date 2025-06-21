@@ -7,7 +7,6 @@ export function SvgIcon({
   className,
 }: {
   children: React.ReactNode;
-  /** CSS class to apply to the rendered element. */
   className?: string;
 }): JSX.Element {
   return (
