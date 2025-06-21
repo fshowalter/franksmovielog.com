@@ -25,7 +25,7 @@ export function Layout({
   }
 
   return (
-    <div>
+    <div className="group">
       <a
         className={`
           absolute top-0.5 left-1/2 z-50 mx-auto bg-subtle px-6 py-2 text-center
@@ -43,7 +43,18 @@ export function Layout({
           hasBackdrop={hasBackdrop}
           hideLogo={hideLogo}
         />
-        <main className={ccn("grow", className)} id="content" {...rest}>
+        <main
+          className={ccn(
+            "grow",
+            `
+              grow transition-[opacity] duration-200 ease-in-out
+              group-has-[#nav:checked]:opacity-80
+            `,
+            className,
+          )}
+          id="content"
+          {...rest}
+        >
           {children}
         </main>
         <Footer />

@@ -17,7 +17,7 @@ export function Mast({
   return (
     <header
       className={`
-        z-20 flex w-full items-center justify-between px-container py-4
+        group z-20 flex w-full items-center justify-between px-container py-4
         tablet:py-6
         desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap
         desktop:px-16 desktop:py-8 desktop:text-left
@@ -51,28 +51,69 @@ export function Mast({
           </ul>
         </nav>
         <SearchButton />
-        <input className="hidden" id="mobile-nav" type="checkbox" />
-        <label className="hamburger-icon" htmlFor="mobile-nav">
-          <span
-            className="hamburger-icon-bars"
-            style={{
-              backgroundColor: hasBackdrop ? "#fff" : "var(--fg-default)",
-            }}
-          />
-        </label>
-        <ul
-          className={`
-            hamburger-menu flex flex-col items-start gap-y-5 text-left
-            text-inverse
-            tablet:gap-y-10
-          `}
-        >
-          {navItems.map((item) => {
-            return <MenuItem key={item.target} value={item} />;
-          })}
-        </ul>
+        <HamburgerMenu hasBackdrop={hasBackdrop} />
       </div>
     </header>
+  );
+}
+
+function HamburgerMenu({ hasBackdrop }: { hasBackdrop: boolean }) {
+  return (
+    <div className="group">
+      <input className="hidden" id="nav" type="checkbox" />
+      <label
+        className={`
+          relative z-40 ml-2 flex h-10 w-10 cursor-pointer items-center
+          justify-center
+        `}
+        htmlFor="nav"
+      >
+        <span
+          className={`
+            relative block h-0.5 w-6 origin-center
+            transition-[top,bottom,transform] duration-200 ease-in-out
+            group-has-[#nav:checked]:transform-[rotate(45deg)]
+            group-has-[#nav:checked]:!bg-[#fff]
+            group-has-[#nav:checked]:before:top-0
+            group-has-[#nav:checked]:before:transform-[rotate(90deg)]
+            group-has-[#nav:checked]:after:bottom-0
+            group-has-[#nav:checked]:after:transform-[rotate(90deg)]
+            before:absolute before:-top-2 before:block before:h-0.5 before:w-6
+            before:bg-inherit before:transition before:duration-200
+            before:ease-in-out
+            after:absolute after:-bottom-2 after:block after:h-0.5 after:w-6
+            after:bg-inherit after:transition after:duration-200
+            after:ease-in-out
+          `}
+          style={{
+            backgroundColor: hasBackdrop ? "#fff" : "var(--fg-default)",
+          }}
+        />
+      </label>
+      <ul
+        className={`
+          fixed top-0 right-0 z-20 flex h-full w-0 transform-[translateX(100%)]
+          flex-col items-start gap-y-5 overflow-hidden bg-footer text-left
+          text-inverse opacity-0 duration-200 ease-in-out
+          group-has-[#nav:checked]:bottom-0 group-has-[#nav:checked]:z-20
+          group-has-[#nav:checked]:h-full group-has-[#nav:checked]:w-full
+          group-has-[#nav:checked]:transform-[translateX(0)]
+          group-has-[#nav:checked]:overflow-y-auto
+          group-has-[#nav:checked]:pt-20 group-has-[#nav:checked]:pr-[16%]
+          group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%]
+          group-has-[#nav:checked]:opacity-100
+          group-has-[#nav:checked]:tablet:px-10
+          group-has-[#nav:checked]:tablet:py-40
+          group-has-[#nav:checked]:desktop:px-20
+          tablet:max-w-[35vw] tablet:gap-y-10
+          desktop:max-w-[25vw]
+        `}
+      >
+        {navItems.map((item) => {
+          return <MenuItem key={item.target} value={item} />;
+        })}
+      </ul>
+    </div>
   );
 }
 
@@ -100,7 +141,9 @@ function NavListItem({
   return (
     <li
       className={`
-        block leading-10 tracking-serif-wide whitespace-nowrap mast-item
+        block leading-10 tracking-serif-wide whitespace-nowrap transition
+        duration-200 ease-in-out
+        group-has-[#nav:checked]:opacity-0
       `}
     >
       <a
@@ -110,7 +153,7 @@ function NavListItem({
         `}
         href={value.target}
         style={{
-          textShadow: hasBackdrop ? "1px 1px 2px black" : "unset",
+          textShadow: hasBackdrop ? "1px 1px 2px black" : undefined,
         }}
       >
         {value.text}
