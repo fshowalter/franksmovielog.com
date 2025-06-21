@@ -17,7 +17,12 @@ export function Distribution({
   return (
     <section className="w-full bg-default px-container pb-8">
       <h2 className="py-4 text-xl font-medium">{title}</h2>
-      <div className="grid w-full grid-cols-[1fr_auto] tablet:whitespace-nowrap">
+      <div
+        className={`
+          grid w-full grid-cols-[1fr_auto]
+          tablet:whitespace-nowrap
+        `}
+      >
         {values.map((value) => {
           return (
             <div
@@ -28,7 +33,12 @@ export function Distribution({
                 <div className="pr-3 font-sans text-xs text-muted">
                   {value.name}
                 </div>
-                <div className="col-start-2 self-center text-nowrap pb-1 text-right font-sans text-xs text-subtle">
+                <div
+                  className={`
+                    col-start-2 self-center pb-1 text-right font-sans text-xs
+                    text-nowrap text-subtle
+                  `}
+                >
                   {value.count}
                 </div>
               </div>

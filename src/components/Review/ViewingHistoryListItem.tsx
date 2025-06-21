@@ -26,8 +26,18 @@ const weekdayFormat = new Intl.DateTimeFormat("en-US", {
 
 export function ViewingHistoryListItem({ value }: { value: Viewing }) {
   return (
-    <li className="mb-1 flex flex-col bg-subtle px-container font-sans text-xs font-light tablet:px-6">
-      <div className="flex items-center gap-x-4 py-4 tablet:gap-x-6">
+    <li
+      className={`
+        mb-1 flex flex-col bg-subtle px-container font-sans text-xs font-light
+        tablet:px-6
+      `}
+    >
+      <div
+        className={`
+          flex items-center gap-x-4 py-4
+          tablet:gap-x-6
+        `}
+      >
         <div className="size-auto">
           <Date date={value.date} />
         </div>
@@ -125,7 +135,12 @@ function ViewingNotes({ value }: { value: Viewing["viewingNotes"] }) {
     return false;
   }
   return (
-    <div className="px-2 pb-6 text-sm font-light tablet:mx-24 tablet:px-0">
+    <div
+      className={`
+        px-2 pb-6 text-sm font-light
+        tablet:mx-24 tablet:px-0
+      `}
+    >
       <RenderedMarkdown
         className="leading-normal tracking-prose text-muted"
         text={value}

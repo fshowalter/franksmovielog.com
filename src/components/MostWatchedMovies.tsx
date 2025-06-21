@@ -35,11 +35,20 @@ export function MostWatchedMovies({
   return (
     <section
       className={ccn(
-        "max-w-(--breakpoint-desktop) bg-default px-container desktop:pb-10",
+        `
+          max-w-(--breakpoint-desktop) bg-default px-container
+          desktop:pb-10
+        `,
         className,
       )}
     >
-      <h2 className="py-4 text-xl font-medium shadow-bottom tablet:text-center tablet:text-2xl desktop:py-8">
+      <h2
+        className={`
+          py-4 text-xl font-medium shadow-bottom
+          tablet:text-center tablet:text-2xl
+          desktop:py-8
+        `}
+      >
         Most Watched Movies
       </h2>
       <List>
@@ -62,7 +71,15 @@ function FluidListItemPoster({
   year: string;
 }) {
   return (
-    <div className={ccn("w-16 tablet:w-auto tablet:max-w-[248px]", className)}>
+    <div
+      className={ccn(
+        `
+          w-16
+          tablet:w-auto tablet:max-w-[248px]
+        `,
+        className,
+      )}
+    >
       <Poster
         className="h-auto"
         decoding="async"
@@ -78,7 +95,13 @@ function FluidListItemPoster({
 
 function List({ children }: { children: React.ReactNode }): JSX.Element {
   return (
-    <ol className="grid-cols-[repeat(auto-fit,minmax(128px,248px))] items-center justify-center gap-x-6 gap-y-8 bg-subtle tablet:grid tablet:items-start tablet:bg-default">
+    <ol
+      className={`
+        grid-cols-[repeat(auto-fit,minmax(128px,248px))] items-center
+        justify-center gap-x-6 gap-y-8 bg-subtle
+        tablet:grid tablet:items-start tablet:bg-default
+      `}
+    >
       {children}
     </ol>
   );
@@ -90,16 +113,33 @@ function ListItem({
   value: MostWatchedMoviesListItemValue;
 }): JSX.Element {
   return (
-    <li className="relative mb-1 flex h-full items-center gap-x-6 bg-default py-4 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:w-auto tablet:flex-col tablet:p-0 desktop:w-auto">
+    <li
+      className={`
+        relative mb-1 flex h-full items-center gap-x-6 bg-default py-4
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+        tablet:w-auto tablet:flex-col tablet:p-0
+        desktop:w-auto
+      `}
+    >
       <FluidListItemPoster
         imageProps={value.posterImageProps}
         slug={value.slug}
         title={value.title}
         year={value.year}
       />
-      <div className="grow tablet:w-full">
+      <div
+        className={`
+          grow
+          tablet:w-full
+        `}
+      >
         <Title slug={value.slug} title={value.title} year={value.year} />
-        <div className="flex justify-start font-sans text-xs font-light text-subtle tablet:justify-center tablet:text-sm">
+        <div
+          className={`
+            flex justify-start font-sans text-xs font-light text-subtle
+            tablet:justify-center tablet:text-sm
+          `}
+        >
           {value.count.toLocaleString()} times
         </div>
       </div>
@@ -117,7 +157,12 @@ function Title({
   year: string;
 }) {
   const yearBox = (
-    <span className="text-xxs font-light text-subtle tablet:text-xs">
+    <span
+      className={`
+        text-xxs font-light text-subtle
+        tablet:text-xs
+      `}
+    >
       {year}
     </span>
   );
@@ -125,7 +170,14 @@ function Title({
   if (slug) {
     return (
       <a
-        className="block font-sans text-sm font-medium text-accent decoration-accent decoration-2 before:absolute before:left-0 before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 hover:before:opacity-0 tablet:text-center tablet:before:top-0 tablet:before:w-full"
+        className={`
+          block font-sans text-sm font-medium text-accent decoration-accent
+          decoration-2
+          before:absolute before:top-4 before:left-0 before:aspect-poster
+          before:w-list-item-poster before:bg-default before:opacity-15
+          hover:before:opacity-0
+          tablet:text-center tablet:before:top-0 tablet:before:w-full
+        `}
         href={`/reviews/${slug}/`}
       >
         {title}
@@ -137,7 +189,12 @@ function Title({
   }
 
   return (
-    <span className="block font-sans text-sm font-normal text-muted tablet:text-center">
+    <span
+      className={`
+        block font-sans text-sm font-normal text-muted
+        tablet:text-center
+      `}
+    >
       {title}
       {"\u202F"}
       {"\u202F"}

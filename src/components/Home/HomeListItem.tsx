@@ -31,8 +31,20 @@ export type ListItemValue = Pick<
 
 export function HomeListItem({ value }: { value: ListItemValue }) {
   return (
-    <li className="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]">
-      <div className="mx-[8%] mb-6 block tablet:mx-0">
+    <li
+      className={`
+        relative mb-1 flex flex-col bg-default pt-12
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+        tablet:mb-0 tablet:max-w-[47%] tablet:pt-0
+        desktop:max-w-[31.33%]
+      `}
+    >
+      <div
+        className={`
+          mx-[8%] mb-6 block
+          tablet:mx-0
+        `}
+      >
         <Still
           imageProps={value.stillImageProps}
           {...StillImageConfig}
@@ -41,25 +53,56 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
           loading="lazy"
         />
       </div>
-      <div className="flex grow flex-col px-[8%] pb-8 desktop:pl-[8.5%] desktop:pr-[10%]">
-        <div className="mb-3 font-sans text-xxs font-light uppercase leading-4 tracking-wider text-subtle desktop:tracking-wide">
+      <div
+        className={`
+          flex grow flex-col px-[8%] pb-8
+          desktop:pr-[10%] desktop:pl-[8.5%]
+        `}
+      >
+        <div
+          className={`
+            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle uppercase
+            desktop:tracking-wide
+          `}
+        >
           {formatDate(value.date)}
         </div>
         <a
-          className="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+          className={`
+            mb-3 block text-2.5xl leading-7 font-medium
+            before:absolute before:inset-x-[8%] before:top-12
+            before:aspect-video before:bg-default before:opacity-15
+            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            hover:text-accent hover:before:opacity-0
+            tablet:before:inset-x-0 tablet:before:top-0
+          `}
           href={`/reviews/${value.slug}/`}
         >
           {value.title}&nbsp;
-          <span className="text-sm font-normal leading-none text-muted">
+          <span className="text-sm leading-none font-normal text-muted">
             {value.year}
           </span>
         </a>
-        <Grade className="mb-5 tablet:mb-8" height={24} value={value.grade} />
+        <Grade
+          className={`
+            mb-5
+            tablet:mb-8
+          `}
+          height={24}
+          value={value.grade}
+        />
         <RenderedMarkdown
-          className="mb-6 text-lg leading-normal tracking-prose text-muted"
+          className="leading-normal mb-6 text-lg tracking-prose text-muted"
           text={value.excerpt}
         />
-        <div className="mt-auto font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide">
+        <div
+          className={`
+            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle
+            desktop:tracking-wide
+          `}
+        >
           {value.genres.map((genre, index) => {
             if (index === 0) {
               return <span key={genre}>{genre}</span>;

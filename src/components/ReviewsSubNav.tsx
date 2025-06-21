@@ -13,23 +13,39 @@ const items: Record<string, SubNavValue> = {
 export function ReviewsSubNav({ active }: { active: keyof typeof items }) {
   return (
     <nav className="bg-footer">
-      <ul className="scrollbar-hidden mx-auto flex max-w-(--breakpoint-max) overflow-x-auto px-container font-sans text-xs font-medium uppercase tracking-wider tablet:justify-center">
+      <ul
+        className={`
+          mx-auto flex scrollbar-hidden max-w-(--breakpoint-max) overflow-x-auto
+          px-container font-sans text-xs font-medium tracking-wider uppercase
+          tablet:justify-center
+        `}
+      >
         {Object.entries(items).map(([key, value]) => {
           return (
             <li
-              className={`whitespace-nowrap text-center ${active === key ? "text-inverse" : "text-inverse-subtle"}`}
+              className={`
+                text-center whitespace-nowrap
+                ${active === key ? `text-inverse` : `text-inverse-subtle`}
+              `}
               key={value.href}
             >
               {active === key ? (
                 <a
-                  className="block bg-default p-6 text-default tablet:py-8"
+                  className={`
+                    block bg-default p-6 text-default
+                    tablet:py-8
+                  `}
                   href={value.href}
                 >
                   {value.text}
                 </a>
               ) : (
                 <a
-                  className="block p-6 hover:bg-accent hover:text-inverse tablet:py-8"
+                  className={`
+                    block p-6
+                    hover:bg-accent hover:text-inverse
+                    tablet:py-8
+                  `}
                   href={value.href}
                 >
                   {value.text}

@@ -32,9 +32,20 @@ export function MoreReviews({
 }): JSX.Element {
   return (
     <nav data-pagefind-ignore>
-      <div className="relative mx-auto w-full max-w-(--breakpoint-max) px-container desktop:px-20">
+      <div
+        className={`
+          relative mx-auto w-full max-w-(--breakpoint-max) px-container
+          desktop:px-20
+        `}
+      >
         {children}
-        <ul className="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap">
+        <ul
+          className={`
+            flex w-full flex-col gap-[3%] gap-y-[6vw]
+            tablet:flex-row tablet:flex-wrap tablet:justify-between
+            desktop:flex-nowrap
+          `}
+        >
           {values.map((value) => {
             return <MoreReviewsCard key={value.slug} value={value} />;
           })}
@@ -46,8 +57,18 @@ export function MoreReviews({
 
 function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
   return (
-    <li className="relative w-full tablet:w-[47%]">
-      <div className="bg-default has-[a:hover]:bg-hover has-[a:hover]:shadow-hover">
+    <li
+      className={`
+        relative w-full
+        tablet:w-[47%]
+      `}
+    >
+      <div
+        className={`
+          bg-default
+          has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+        `}
+      >
         <div className="block">
           <Still
             imageProps={value.stillImageProps}
@@ -57,13 +78,25 @@ function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
             loading="lazy"
           />
         </div>
-        <div className="flex flex-col px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]">
+        <div
+          className={`
+            flex flex-col px-6 pt-6 pb-4
+            desktop:pr-[14%] desktop:pl-[12%]
+          `}
+        >
           <a
-            className="mb-3 block text-xl font-medium leading-6 text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:text-accent hover:before:opacity-0"
+            className={`
+              mb-3 block text-xl leading-6 font-medium text-default
+              before:absolute before:inset-x-0 before:top-0 before:aspect-video
+              before:bg-default before:opacity-15
+              after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+              after:opacity-0
+              hover:text-accent hover:before:opacity-0
+            `}
             href={`/reviews/${value.slug}/`}
           >
             {value.title}&nbsp;
-            <span className="text-sm font-normal leading-none text-muted">
+            <span className="text-sm leading-none font-normal text-muted">
               {value.year}
             </span>
           </a>
@@ -72,7 +105,12 @@ function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
             className="mb-8 text-base leading-[1.6] tracking-prose text-muted"
             text={value.excerpt}
           />
-          <div className="font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide">
+          <div
+            className={`
+              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              desktop:tracking-wide
+            `}
+          >
             {value.genres.map((genre, index) => {
               if (index === 0) {
                 return <span key={genre}>{genre}</span>;

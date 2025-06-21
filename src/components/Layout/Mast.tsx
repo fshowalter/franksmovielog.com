@@ -16,7 +16,12 @@ export function Mast({
 }) {
   return (
     <header
-      className="z-20 flex w-full items-center justify-between px-container py-4 tablet:py-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
+      className={`
+        z-20 flex w-full items-center justify-between px-container py-4
+        tablet:py-6
+        desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap
+        desktop:px-16 desktop:py-8 desktop:text-left
+      `}
       style={{
         backgroundImage: addGradient
           ? "linear-gradient(to bottom, rgba(0,0,0,.85), transparent 95%)"
@@ -27,7 +32,12 @@ export function Mast({
     >
       {hideLogo ? <div /> : <Logo className="" />}
       <div className="flex items-center">
-        <nav className="hidden w-full desktop:block desktop:w-auto">
+        <nav
+          className={`
+            hidden w-full
+            desktop:block desktop:w-auto
+          `}
+        >
           <ul className={`flex flex-wrap justify-start gap-x-6 text-xl`}>
             {navItems.map((item) => {
               return (
@@ -50,7 +60,13 @@ export function Mast({
             }}
           />
         </label>
-        <ul className="hamburger-menu flex flex-col items-start gap-y-5 text-left text-inverse tablet:gap-y-10">
+        <ul
+          className={`
+            hamburger-menu flex flex-col items-start gap-y-5 text-left
+            text-inverse
+            tablet:gap-y-10
+          `}
+        >
           {navItems.map((item) => {
             return <MenuItem key={item.target} value={item} />;
           })}
@@ -62,7 +78,12 @@ export function Mast({
 
 function MenuItem({ value }: { value: NavItem }): JSX.Element {
   return (
-    <li className="block w-1/2 whitespace-nowrap text-2xl desktop:w-full">
+    <li
+      className={`
+        block w-1/2 text-2xl whitespace-nowrap
+        desktop:w-full
+      `}
+    >
       <a href={value.target}>{value.text}</a>
       <SubMenu values={value.subItems} />
     </li>
@@ -77,9 +98,16 @@ function NavListItem({
   value: NavItem;
 }): JSX.Element {
   return (
-    <li className="mast-item block whitespace-nowrap leading-10 tracking-serif-wide">
+    <li
+      className={`
+        block leading-10 tracking-serif-wide whitespace-nowrap mast-item
+      `}
+    >
       <a
-        className={`text-inherit transition-all duration-500 ease-in-out ${hasBackdrop ? "hover:bg-[rgba(0,0,0,.50)]" : "hover:text-accent"}`}
+        className={`
+          text-inherit transition-all duration-500 ease-in-out
+          ${hasBackdrop ? `hover:bg-[rgba(0,0,0,.50)]` : `hover:text-accent`}
+        `}
         href={value.target}
         style={{
           textShadow: hasBackdrop ? "1px 1px 2px black" : "unset",
@@ -97,7 +125,11 @@ function SearchButton() {
       <button
         aria-keyshortcuts="Control+K"
         aria-label="Search"
-        className="flex size-10 items-center justify-center overflow-hidden text-sm leading-6 ring-default desktop:ml-6"
+        className={`
+          flex size-10 items-center justify-center overflow-hidden text-sm
+          leading-6 ring-default
+          desktop:ml-6
+        `}
         data-open-modal
         disabled
         suppressHydrationWarning
@@ -133,7 +165,11 @@ function SubMenu({ values }: { values: NavItem[] }): false | JSX.Element {
       {values.map((value) => {
         return (
           <li
-            className="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
+            className={`
+              mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
+              uppercase
+              last:mb-0
+            `}
             key={value.target}
           >
             <a href={value.target}>{value.text}</a>

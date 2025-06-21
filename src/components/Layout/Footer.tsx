@@ -9,18 +9,43 @@ export function Footer(): JSX.Element {
   return (
     <footer className={"bg-footer text-inverse"}>
       <div className="mx-auto max-w-(--breakpoint-desktop) px-container py-20">
-        <div className="flex w-full flex-col tablet:flex-row-reverse tablet:justify-between">
+        <div
+          className={`
+            flex w-full flex-col
+            tablet:flex-row-reverse tablet:justify-between
+          `}
+        >
           <a
-            className="mx-auto mb-8 w-full max-w-button bg-canvas py-5 text-center font-sans text-xs uppercase tracking-wide text-default hover:bg-inverse hover:text-inverse tablet:mx-0"
+            className={`
+              mx-auto mb-8 w-full max-w-button bg-canvas py-5 text-center
+              font-sans text-xs tracking-wide text-default uppercase
+              hover:bg-inverse hover:text-inverse
+              tablet:mx-0
+            `}
             href="#top"
           >
             To the top
           </a>
           <Logo />
         </div>
-        <div className="justify-between tablet:flex">
-          <div className="flex max-w-prose flex-col pb-12 tablet:pr-32">
-            <div className="footer-text pt-10 font-sans text-base font-light text-inverse-subtle">
+        <div
+          className={`
+            justify-between
+            tablet:flex
+          `}
+        >
+          <div
+            className={`
+              flex max-w-prose flex-col pb-12
+              tablet:pr-32
+            `}
+          >
+            <div
+              className={`
+                footer-text pt-10 font-sans text-base font-light
+                text-inverse-subtle
+              `}
+            >
               <p>
                 Hi there, I&apos;m Frank, a husband and father old enough to
                 have sat wide-eyed during <em>E.T</em>&apos;s first theatrical
@@ -78,8 +103,18 @@ export function Footer(): JSX.Element {
               </p>
             </div>
           </div>
-          <div className="flex grow-0 flex-col gap-20 pb-20 pt-10 tablet:basis-button tablet:pr-10">
-            <ul className="flex w-full flex-col gap-y-10 text-inverse max:w-auto">
+          <div
+            className={`
+              flex grow-0 flex-col gap-20 pt-10 pb-20
+              tablet:basis-button tablet:pr-10
+            `}
+          >
+            <ul
+              className={`
+                flex w-full flex-col gap-y-10 text-inverse
+                max:w-auto
+              `}
+            >
               {navItems.map((item) => {
                 return <NavListItem key={item.target} value={item} />;
               })}
@@ -87,10 +122,18 @@ export function Footer(): JSX.Element {
           </div>
         </div>
       </div>
-      <p className="w-full bg-canvas px-container py-10 text-center font-normal leading-5 text-default">
+      <p
+        className={`
+          w-full bg-canvas px-container py-10 text-center leading-5 font-normal
+          text-default
+        `}
+      >
         All reviews by Frank Showalter. All images used in accordance with the{" "}
         <a
-          className="text-inherit underline decoration-dashed underline-offset-4 hover:bg-default hover:text-default"
+          className={`
+            text-inherit underline decoration-dashed underline-offset-4
+            hover:bg-default hover:text-default
+          `}
           href="http://www.copyright.gov/title17/92chap1.html#107"
           rel="nofollow"
         >
@@ -104,7 +147,7 @@ export function Footer(): JSX.Element {
 
 function NavListItem({ value }: { value: NavItem }): JSX.Element {
   return (
-    <li className="block w-1/2 whitespace-nowrap text-2xl">
+    <li className="block w-1/2 text-2xl whitespace-nowrap">
       <a className="hover:text-accent" href={value.target}>
         {value.text}
       </a>
@@ -123,7 +166,11 @@ function SubNavList({ values }: { values: NavItem[] }): false | JSX.Element {
       {values.map((value) => {
         return (
           <li
-            className="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+            className={`
+              mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
+              uppercase
+              last:mb-0
+            `}
             key={value.target}
           >
             <a className="hover:text-inverse" href={value.target}>

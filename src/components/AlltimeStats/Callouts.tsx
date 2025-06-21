@@ -16,7 +16,12 @@ export function Callouts({
   watchlistTitlesReviewedCount,
 }: Props): JSX.Element {
   return (
-    <div className="flex flex-wrap justify-center gap-6 desktop:flex-nowrap">
+    <div
+      className={`
+        flex flex-wrap justify-center gap-6
+        desktop:flex-nowrap
+      `}
+    >
       <StatsCallout label="Viewings" value={viewingCount} />
       <StatsCallout label="Movies" value={titleCount} />
       <StatsCallout label="Reviews" value={reviewCount} />
