@@ -1,5 +1,6 @@
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
+import tailwindcss from "@tailwindcss/vite";
 import compressor from "astro-compressor";
 import { defineConfig } from "astro/config";
 import path from "node:path";
@@ -121,6 +122,7 @@ export default defineConfig({
       exclude: ["fsevents"],
     },
     plugins: [
+      tailwindcss(),
       contentHmr(),
       react({
         babel: {
