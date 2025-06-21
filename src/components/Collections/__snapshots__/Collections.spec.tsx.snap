@@ -2,14 +2,29 @@
 
 exports[`Collections > can filter by name 1`] = `
 <ol
-  class="mt-4 bg-subtle tablet-landscape:my-24"
+  class="
+            mt-4 bg-subtle
+            tablet-landscape:my-24
+          "
   data-testid="list"
 >
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Child's Play"
@@ -22,7 +37,15 @@ exports[`Collections > can filter by name 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/childs-play/"
     >
       <div
@@ -32,16 +55,28 @@ exports[`Collections > can filter by name 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       8
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Friday the 13th"
@@ -54,7 +89,15 @@ exports[`Collections > can filter by name 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/friday-the-13th/"
     >
       <div
@@ -64,16 +107,28 @@ exports[`Collections > can filter by name 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       10
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Halloween"
@@ -86,7 +141,15 @@ exports[`Collections > can filter by name 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/halloween/"
     >
       <div
@@ -96,16 +159,28 @@ exports[`Collections > can filter by name 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       6
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Hammer Films"
@@ -118,7 +193,15 @@ exports[`Collections > can filter by name 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/hammer-films/"
     >
       <div
@@ -128,16 +211,28 @@ exports[`Collections > can filter by name 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       10
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Hatchet"
@@ -150,7 +245,15 @@ exports[`Collections > can filter by name 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/hatchet/"
     >
       <div
@@ -160,16 +263,28 @@ exports[`Collections > can filter by name 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       4
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="James Bond"
@@ -182,7 +297,15 @@ exports[`Collections > can filter by name 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/james-bond/"
     >
       <div
@@ -192,16 +315,28 @@ exports[`Collections > can filter by name 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       7
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Phantasm"
@@ -214,7 +349,15 @@ exports[`Collections > can filter by name 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/phantasm/"
     >
       <div
@@ -224,16 +367,28 @@ exports[`Collections > can filter by name 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       5
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Saw"
@@ -246,7 +401,15 @@ exports[`Collections > can filter by name 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/saw/"
     >
       <div
@@ -256,16 +419,28 @@ exports[`Collections > can filter by name 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       7
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Shaw Brothers"
@@ -278,7 +453,15 @@ exports[`Collections > can filter by name 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/shaw-brothers/"
     >
       <div
@@ -288,16 +471,28 @@ exports[`Collections > can filter by name 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       7
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Universal Monsters"
@@ -310,7 +505,15 @@ exports[`Collections > can filter by name 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/universal-monsters/"
     >
       <div
@@ -320,7 +523,7 @@ exports[`Collections > can filter by name 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       3
     </div>
@@ -330,14 +533,29 @@ exports[`Collections > can filter by name 1`] = `
 
 exports[`Collections > can sort by name asc 1`] = `
 <ol
-  class="mt-4 bg-subtle tablet-landscape:my-24"
+  class="
+            mt-4 bg-subtle
+            tablet-landscape:my-24
+          "
   data-testid="list"
 >
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Child's Play"
@@ -350,7 +568,15 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/childs-play/"
     >
       <div
@@ -360,16 +586,28 @@ exports[`Collections > can sort by name asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       8
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Friday the 13th"
@@ -382,7 +620,15 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/friday-the-13th/"
     >
       <div
@@ -392,16 +638,28 @@ exports[`Collections > can sort by name asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       10
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Halloween"
@@ -414,7 +672,15 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/halloween/"
     >
       <div
@@ -424,16 +690,28 @@ exports[`Collections > can sort by name asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       6
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Hammer Films"
@@ -446,7 +724,15 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/hammer-films/"
     >
       <div
@@ -456,16 +742,28 @@ exports[`Collections > can sort by name asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       10
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Hatchet"
@@ -478,7 +776,15 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/hatchet/"
     >
       <div
@@ -488,16 +794,28 @@ exports[`Collections > can sort by name asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       4
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="James Bond"
@@ -510,7 +828,15 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/james-bond/"
     >
       <div
@@ -520,16 +846,28 @@ exports[`Collections > can sort by name asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       7
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Phantasm"
@@ -542,7 +880,15 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/phantasm/"
     >
       <div
@@ -552,16 +898,28 @@ exports[`Collections > can sort by name asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       5
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Saw"
@@ -574,7 +932,15 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/saw/"
     >
       <div
@@ -584,16 +950,28 @@ exports[`Collections > can sort by name asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       7
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Shaw Brothers"
@@ -606,7 +984,15 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/shaw-brothers/"
     >
       <div
@@ -616,16 +1002,28 @@ exports[`Collections > can sort by name asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       7
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Universal Monsters"
@@ -638,7 +1036,15 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/universal-monsters/"
     >
       <div
@@ -648,7 +1054,7 @@ exports[`Collections > can sort by name asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       3
     </div>
@@ -658,14 +1064,29 @@ exports[`Collections > can sort by name asc 1`] = `
 
 exports[`Collections > can sort by name desc 1`] = `
 <ol
-  class="mt-4 bg-subtle tablet-landscape:my-24"
+  class="
+            mt-4 bg-subtle
+            tablet-landscape:my-24
+          "
   data-testid="list"
 >
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Child's Play"
@@ -678,7 +1099,15 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/childs-play/"
     >
       <div
@@ -688,16 +1117,28 @@ exports[`Collections > can sort by name desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       8
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Friday the 13th"
@@ -710,7 +1151,15 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/friday-the-13th/"
     >
       <div
@@ -720,16 +1169,28 @@ exports[`Collections > can sort by name desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       10
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Halloween"
@@ -742,7 +1203,15 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/halloween/"
     >
       <div
@@ -752,16 +1221,28 @@ exports[`Collections > can sort by name desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       6
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Hammer Films"
@@ -774,7 +1255,15 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/hammer-films/"
     >
       <div
@@ -784,16 +1273,28 @@ exports[`Collections > can sort by name desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       10
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Hatchet"
@@ -806,7 +1307,15 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/hatchet/"
     >
       <div
@@ -816,16 +1325,28 @@ exports[`Collections > can sort by name desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       4
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="James Bond"
@@ -838,7 +1359,15 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/james-bond/"
     >
       <div
@@ -848,16 +1377,28 @@ exports[`Collections > can sort by name desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       7
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Phantasm"
@@ -870,7 +1411,15 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/phantasm/"
     >
       <div
@@ -880,16 +1429,28 @@ exports[`Collections > can sort by name desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       5
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Saw"
@@ -902,7 +1463,15 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/saw/"
     >
       <div
@@ -912,16 +1481,28 @@ exports[`Collections > can sort by name desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       7
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Shaw Brothers"
@@ -934,7 +1515,15 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/shaw-brothers/"
     >
       <div
@@ -944,16 +1533,28 @@ exports[`Collections > can sort by name desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       7
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Universal Monsters"
@@ -966,7 +1567,15 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/universal-monsters/"
     >
       <div
@@ -976,7 +1585,7 @@ exports[`Collections > can sort by name desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       3
     </div>
@@ -986,14 +1595,29 @@ exports[`Collections > can sort by name desc 1`] = `
 
 exports[`Collections > can sort by review count asc 1`] = `
 <ol
-  class="mt-4 bg-subtle tablet-landscape:my-24"
+  class="
+            mt-4 bg-subtle
+            tablet-landscape:my-24
+          "
   data-testid="list"
 >
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Child's Play"
@@ -1006,7 +1630,15 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/childs-play/"
     >
       <div
@@ -1016,16 +1648,28 @@ exports[`Collections > can sort by review count asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       8
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Friday the 13th"
@@ -1038,7 +1682,15 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/friday-the-13th/"
     >
       <div
@@ -1048,16 +1700,28 @@ exports[`Collections > can sort by review count asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       10
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Halloween"
@@ -1070,7 +1734,15 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/halloween/"
     >
       <div
@@ -1080,16 +1752,28 @@ exports[`Collections > can sort by review count asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       6
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Hammer Films"
@@ -1102,7 +1786,15 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/hammer-films/"
     >
       <div
@@ -1112,16 +1804,28 @@ exports[`Collections > can sort by review count asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       10
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Hatchet"
@@ -1134,7 +1838,15 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/hatchet/"
     >
       <div
@@ -1144,16 +1856,28 @@ exports[`Collections > can sort by review count asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       4
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="James Bond"
@@ -1166,7 +1890,15 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/james-bond/"
     >
       <div
@@ -1176,16 +1908,28 @@ exports[`Collections > can sort by review count asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       7
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Phantasm"
@@ -1198,7 +1942,15 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/phantasm/"
     >
       <div
@@ -1208,16 +1960,28 @@ exports[`Collections > can sort by review count asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       5
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Saw"
@@ -1230,7 +1994,15 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/saw/"
     >
       <div
@@ -1240,16 +2012,28 @@ exports[`Collections > can sort by review count asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       7
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Shaw Brothers"
@@ -1262,7 +2046,15 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/shaw-brothers/"
     >
       <div
@@ -1272,16 +2064,28 @@ exports[`Collections > can sort by review count asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       7
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Universal Monsters"
@@ -1294,7 +2098,15 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/universal-monsters/"
     >
       <div
@@ -1304,7 +2116,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       3
     </div>
@@ -1314,14 +2126,29 @@ exports[`Collections > can sort by review count asc 1`] = `
 
 exports[`Collections > can sort by review count desc 1`] = `
 <ol
-  class="mt-4 bg-subtle tablet-landscape:my-24"
+  class="
+            mt-4 bg-subtle
+            tablet-landscape:my-24
+          "
   data-testid="list"
 >
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Child's Play"
@@ -1334,7 +2161,15 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/childs-play/"
     >
       <div
@@ -1344,16 +2179,28 @@ exports[`Collections > can sort by review count desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       8
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Friday the 13th"
@@ -1366,7 +2213,15 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/friday-the-13th/"
     >
       <div
@@ -1376,16 +2231,28 @@ exports[`Collections > can sort by review count desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       10
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Halloween"
@@ -1398,7 +2265,15 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/halloween/"
     >
       <div
@@ -1408,16 +2283,28 @@ exports[`Collections > can sort by review count desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       6
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Hammer Films"
@@ -1430,7 +2317,15 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/hammer-films/"
     >
       <div
@@ -1440,16 +2335,28 @@ exports[`Collections > can sort by review count desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       10
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Hatchet"
@@ -1462,7 +2369,15 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/hatchet/"
     >
       <div
@@ -1472,16 +2387,28 @@ exports[`Collections > can sort by review count desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       4
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="James Bond"
@@ -1494,7 +2421,15 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/james-bond/"
     >
       <div
@@ -1504,16 +2439,28 @@ exports[`Collections > can sort by review count desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       7
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Phantasm"
@@ -1526,7 +2473,15 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/phantasm/"
     >
       <div
@@ -1536,16 +2491,28 @@ exports[`Collections > can sort by review count desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       5
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Saw"
@@ -1558,7 +2525,15 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/saw/"
     >
       <div
@@ -1568,16 +2543,28 @@ exports[`Collections > can sort by review count desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       7
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Shaw Brothers"
@@ -1590,7 +2577,15 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/shaw-brothers/"
     >
       <div
@@ -1600,16 +2595,28 @@ exports[`Collections > can sort by review count desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       7
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Universal Monsters"
@@ -1622,7 +2629,15 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/universal-monsters/"
     >
       <div
@@ -1632,7 +2647,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       3
     </div>
@@ -1642,14 +2657,29 @@ exports[`Collections > can sort by review count desc 1`] = `
 
 exports[`Collections > can sort by title count asc 1`] = `
 <ol
-  class="mt-4 bg-subtle tablet-landscape:my-24"
+  class="
+            mt-4 bg-subtle
+            tablet-landscape:my-24
+          "
   data-testid="list"
 >
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Child's Play"
@@ -1662,7 +2692,15 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/childs-play/"
     >
       <div
@@ -1672,16 +2710,28 @@ exports[`Collections > can sort by title count asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       8
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Friday the 13th"
@@ -1694,7 +2744,15 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/friday-the-13th/"
     >
       <div
@@ -1704,16 +2762,28 @@ exports[`Collections > can sort by title count asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       10
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Halloween"
@@ -1726,7 +2796,15 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/halloween/"
     >
       <div
@@ -1736,16 +2814,28 @@ exports[`Collections > can sort by title count asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       6
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Hammer Films"
@@ -1758,7 +2848,15 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/hammer-films/"
     >
       <div
@@ -1768,16 +2866,28 @@ exports[`Collections > can sort by title count asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       10
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Hatchet"
@@ -1790,7 +2900,15 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/hatchet/"
     >
       <div
@@ -1800,16 +2918,28 @@ exports[`Collections > can sort by title count asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       4
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="James Bond"
@@ -1822,7 +2952,15 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/james-bond/"
     >
       <div
@@ -1832,16 +2970,28 @@ exports[`Collections > can sort by title count asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       7
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Phantasm"
@@ -1854,7 +3004,15 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/phantasm/"
     >
       <div
@@ -1864,16 +3022,28 @@ exports[`Collections > can sort by title count asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       5
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Saw"
@@ -1886,7 +3056,15 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/saw/"
     >
       <div
@@ -1896,16 +3074,28 @@ exports[`Collections > can sort by title count asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       7
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Shaw Brothers"
@@ -1918,7 +3108,15 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/shaw-brothers/"
     >
       <div
@@ -1928,16 +3126,28 @@ exports[`Collections > can sort by title count asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       7
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Universal Monsters"
@@ -1950,7 +3160,15 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/universal-monsters/"
     >
       <div
@@ -1960,7 +3178,7 @@ exports[`Collections > can sort by title count asc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       3
     </div>
@@ -1970,14 +3188,29 @@ exports[`Collections > can sort by title count asc 1`] = `
 
 exports[`Collections > can sort by title count desc 1`] = `
 <ol
-  class="mt-4 bg-subtle tablet-landscape:my-24"
+  class="
+            mt-4 bg-subtle
+            tablet-landscape:my-24
+          "
   data-testid="list"
 >
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Child's Play"
@@ -1990,7 +3223,15 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/childs-play/"
     >
       <div
@@ -2000,16 +3241,28 @@ exports[`Collections > can sort by title count desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       8
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Friday the 13th"
@@ -2022,7 +3275,15 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/friday-the-13th/"
     >
       <div
@@ -2032,16 +3293,28 @@ exports[`Collections > can sort by title count desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       10
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Halloween"
@@ -2054,7 +3327,15 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/halloween/"
     >
       <div
@@ -2064,16 +3345,28 @@ exports[`Collections > can sort by title count desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       6
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Hammer Films"
@@ -2086,7 +3379,15 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/hammer-films/"
     >
       <div
@@ -2096,16 +3397,28 @@ exports[`Collections > can sort by title count desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       10
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Hatchet"
@@ -2118,7 +3431,15 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/hatchet/"
     >
       <div
@@ -2128,16 +3449,28 @@ exports[`Collections > can sort by title count desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       4
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="James Bond"
@@ -2150,7 +3483,15 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/james-bond/"
     >
       <div
@@ -2160,16 +3501,28 @@ exports[`Collections > can sort by title count desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       7
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Phantasm"
@@ -2182,7 +3535,15 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/phantasm/"
     >
       <div
@@ -2192,16 +3553,28 @@ exports[`Collections > can sort by title count desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       5
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Saw"
@@ -2214,7 +3587,15 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/saw/"
     >
       <div
@@ -2224,16 +3605,28 @@ exports[`Collections > can sort by title count desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       7
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Shaw Brothers"
@@ -2246,7 +3639,15 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/shaw-brothers/"
     >
       <div
@@ -2256,16 +3657,28 @@ exports[`Collections > can sort by title count desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       7
     </div>
   </li>
   <li
-    class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+    class="
+        bg-default
+        items-center
+        tablet:py-6
+        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
+        px-container py-4
+        tablet:gap-x-6 tablet:px-4
+        desktop:px-6
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+      "
   >
     <div
-      class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
+      class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          tablet:w-20
+        "
     >
       <img
         alt="Universal Monsters"
@@ -2278,7 +3691,15 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </div>
     <a
-      class="font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 desktop:before:left-6"
+      class="
+        font-sans text-sm font-medium text-accent
+        before:absolute before:top-4 before:left-(--container-padding)
+        before:aspect-square before:w-16 before:bg-default before:opacity-15
+        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
+        hover:before:opacity-0
+        tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
+        desktop:before:left-6
+      "
       href="/collections/universal-monsters/"
     >
       <div
@@ -2288,7 +3709,7 @@ exports[`Collections > can sort by title count desc 1`] = `
       </div>
     </a>
     <div
-      class="ml-auto text-nowrap font-sans text-xs text-subtle"
+      class="ml-auto font-sans text-xs text-nowrap text-subtle"
     >
       3
     </div>

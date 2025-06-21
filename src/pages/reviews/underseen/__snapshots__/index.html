@@ -39,7 +39,9 @@
     <meta content="website" property="og:type" />
     <title>Underseen Gems - Frank&#39;s Movie Log</title>
   </head>
-  <body class="w-full">
+  <body
+    class="h-full w-full bg-canvas text-default has-[#nav:checked]:fixed has-[#nav:checked]:overflow-y-scroll data-search-modal-open:overflow-hidden data-search-modal-open:before:fixed data-search-modal-open:before:inset-0 data-search-modal-open:before:z-50 data-search-modal-open:before:backdrop-blur-xs"
+  >
     <style>
       astro-island,
       astro-slot,
@@ -243,7 +245,7 @@
       })();
     </script>
     <astro-island
-      uid="Z1kURBS"
+      uid="1utbU2"
       prefix="r1"
       component-url="~/components/Underseen/Underseen"
       component-export="Underseen"
@@ -261,24 +263,24 @@
         imagesizes="100vw"
         fetchpriority="high"
       />
-      <div>
+      <div class="group">
         <a
-          class="absolute left-1/2 top-0.5 z-50 mx-auto bg-subtle px-6 py-2 text-center text-accent [transform:translate(-50%,calc(-100%-2px))] focus:[transform:translate(-50%,0%)]"
+          class="absolute top-0.5 left-1/2 z-50 mx-auto bg-subtle px-6 py-2 text-center text-accent [transform:translate(-50%,calc(-100%-2px))] focus:[transform:translate(-50%,0%)]"
           href="#content"
           >Skip to content</a
         >
         <div class="flex min-h-full w-full flex-col bg-default">
           <header
-            class="z-20 flex w-full items-center justify-between px-container py-4 tablet:py-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
+            class="group z-20 flex w-full items-center justify-between px-container py-4 tablet:py-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
             style="background-image: unset; color: #fff; position: absolute"
           >
             <div class="flex flex-col">
               <div
-                class="whitespace-nowrap text-[1.375rem] font-normal leading-8 tablet:text-[1.5625rem]"
+                class="text-[1.375rem] leading-8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
               >
                 <a href="/">Frank&#x27;s Movie Log</a>
               </div>
-              <p class="w-full pl-px text-sm italic leading-4 opacity-85">
+              <p class="w-full pl-px text-sm leading-4 italic opacity-85">
                 by Frank Showalter
               </p>
             </div>
@@ -286,7 +288,7 @@
               <nav class="hidden w-full desktop:block desktop:w-auto">
                 <ul class="flex flex-wrap justify-start gap-x-6 text-xl">
                   <li
-                    class="mast-item block whitespace-nowrap leading-10 tracking-serif-wide"
+                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition duration-200 ease-in-out group-has-[#nav:checked]:opacity-0"
                   >
                     <a
                       class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
@@ -296,7 +298,7 @@
                     >
                   </li>
                   <li
-                    class="mast-item block whitespace-nowrap leading-10 tracking-serif-wide"
+                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition duration-200 ease-in-out group-has-[#nav:checked]:opacity-0"
                   >
                     <a
                       class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
@@ -306,7 +308,7 @@
                     >
                   </li>
                   <li
-                    class="mast-item block whitespace-nowrap leading-10 tracking-serif-wide"
+                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition duration-200 ease-in-out group-has-[#nav:checked]:opacity-0"
                   >
                     <a
                       class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
@@ -316,7 +318,7 @@
                     >
                   </li>
                   <li
-                    class="mast-item block whitespace-nowrap leading-10 tracking-serif-wide"
+                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition duration-200 ease-in-out group-has-[#nav:checked]:opacity-0"
                   >
                     <a
                       class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
@@ -326,7 +328,7 @@
                     >
                   </li>
                   <li
-                    class="mast-item block whitespace-nowrap leading-10 tracking-serif-wide"
+                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition duration-200 ease-in-out group-has-[#nav:checked]:opacity-0"
                   >
                     <a
                       class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
@@ -337,7 +339,7 @@
                   </li>
                 </ul>
               </nav>
-              <div class="search-button z-1000">
+              <div class="z-1000 group-has-[#nav:checked]:!text-[#fff]">
                 <button
                   aria-keyshortcuts="Control+K"
                   aria-label="Search"
@@ -363,89 +365,94 @@
                   </svg>
                 </button>
               </div>
-              <input class="hidden" id="mobile-nav" type="checkbox" /><label
-                class="hamburger-icon"
-                for="mobile-nav"
-                ><span
-                  class="hamburger-icon-bars"
-                  style="background-color: #fff"
-                ></span
-              ></label>
-              <ul
-                class="hamburger-menu flex flex-col items-start gap-y-5 text-left text-inverse tablet:gap-y-10"
-              >
-                <li
-                  class="block w-1/2 whitespace-nowrap text-2xl desktop:w-full"
+              <div class="group">
+                <input class="hidden" id="nav" type="checkbox" /><label
+                  class="relative z-40 ml-2 flex h-10 w-10 cursor-pointer items-center justify-center"
+                  for="nav"
+                  ><span
+                    class="relative block h-0.5 w-6 origin-center transition-[top,bottom,transform] duration-200 ease-in-out group-has-[#nav:checked]:transform-[rotate(45deg)] group-has-[#nav:checked]:!bg-[#fff] group-has-[#nav:checked]:before:top-0 group-has-[#nav:checked]:before:transform-[rotate(90deg)] group-has-[#nav:checked]:after:bottom-0 group-has-[#nav:checked]:after:transform-[rotate(90deg)] before:absolute before:-top-2 before:block before:h-0.5 before:w-6 before:bg-inherit before:transition before:duration-200 before:ease-in-out after:absolute after:-bottom-2 after:block after:h-0.5 after:w-6 after:bg-inherit after:transition after:duration-200 after:ease-in-out"
+                    style="background-color: #fff"
+                  ></span
+                ></label>
+                <ul
+                  class="fixed top-0 right-0 z-20 flex h-full w-0 transform-[translateX(100%)] flex-col items-start gap-y-5 overflow-hidden bg-footer text-left text-inverse opacity-0 duration-200 ease-in-out group-has-[#nav:checked]:bottom-0 group-has-[#nav:checked]:z-20 group-has-[#nav:checked]:h-full group-has-[#nav:checked]:w-full group-has-[#nav:checked]:transform-[translateX(0)] group-has-[#nav:checked]:overflow-y-auto group-has-[#nav:checked]:pt-20 group-has-[#nav:checked]:pr-[16%] group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%] group-has-[#nav:checked]:opacity-100 group-has-[#nav:checked]:tablet:px-10 group-has-[#nav:checked]:tablet:pt-40 group-has-[#nav:checked]:desktop:px-20 tablet:max-w-[35vw] tablet:gap-y-10 desktop:max-w-[25vw]"
                 >
-                  <a href="/">Home</a>
-                </li>
-                <li
-                  class="block w-1/2 whitespace-nowrap text-2xl desktop:w-full"
-                >
-                  <a href="/how-i-grade/">How I Grade</a>
-                </li>
-                <li
-                  class="block w-1/2 whitespace-nowrap text-2xl desktop:w-full"
-                >
-                  <a href="/reviews/">Reviews</a>
-                  <ol class="mt-4">
-                    <li
-                      class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
-                    >
-                      <a href="/cast-and-crew/">Cast &amp; Crew</a>
-                    </li>
-                    <li
-                      class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
-                    >
-                      <a href="/collections/">Collections</a>
-                    </li>
-                    <li
-                      class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
-                    >
-                      <a href="/reviews/overrated/">Overrated</a>
-                    </li>
-                    <li
-                      class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
-                    >
-                      <a href="/reviews/underrated/">Underrated</a>
-                    </li>
-                    <li
-                      class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
-                    >
-                      <a href="/reviews/underseen/">Underseen</a>
-                    </li>
-                  </ol>
-                </li>
-                <li
-                  class="block w-1/2 whitespace-nowrap text-2xl desktop:w-full"
-                >
-                  <a href="/viewings/">Viewing Log</a>
-                  <ol class="mt-4">
-                    <li
-                      class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
-                    >
-                      <a href="/viewings/stats/">Stats</a>
-                    </li>
-                  </ol>
-                </li>
-                <li
-                  class="block w-1/2 whitespace-nowrap text-2xl desktop:w-full"
-                >
-                  <a href="/watchlist/">Watchlist</a>
-                  <ol class="mt-4">
-                    <li
-                      class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
-                    >
-                      <a href="/watchlist/progress/">Progress</a>
-                    </li>
-                  </ol>
-                </li>
-              </ul>
+                  <li
+                    class="block w-1/2 text-2xl whitespace-nowrap desktop:w-full"
+                  >
+                    <a href="/">Home</a>
+                  </li>
+                  <li
+                    class="block w-1/2 text-2xl whitespace-nowrap desktop:w-full"
+                  >
+                    <a href="/how-i-grade/">How I Grade</a>
+                  </li>
+                  <li
+                    class="block w-1/2 text-2xl whitespace-nowrap desktop:w-full"
+                  >
+                    <a href="/reviews/">Reviews</a>
+                    <ol class="mt-4">
+                      <li
+                        class="mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:mb-0"
+                      >
+                        <a href="/cast-and-crew/">Cast &amp; Crew</a>
+                      </li>
+                      <li
+                        class="mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:mb-0"
+                      >
+                        <a href="/collections/">Collections</a>
+                      </li>
+                      <li
+                        class="mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:mb-0"
+                      >
+                        <a href="/reviews/overrated/">Overrated</a>
+                      </li>
+                      <li
+                        class="mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:mb-0"
+                      >
+                        <a href="/reviews/underrated/">Underrated</a>
+                      </li>
+                      <li
+                        class="mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:mb-0"
+                      >
+                        <a href="/reviews/underseen/">Underseen</a>
+                      </li>
+                    </ol>
+                  </li>
+                  <li
+                    class="block w-1/2 text-2xl whitespace-nowrap desktop:w-full"
+                  >
+                    <a href="/viewings/">Viewing Log</a>
+                    <ol class="mt-4">
+                      <li
+                        class="mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:mb-0"
+                      >
+                        <a href="/viewings/stats/">Stats</a>
+                      </li>
+                    </ol>
+                  </li>
+                  <li
+                    class="block w-1/2 text-2xl whitespace-nowrap desktop:w-full"
+                  >
+                    <a href="/watchlist/">Watchlist</a>
+                    <ol class="mt-4">
+                      <li
+                        class="mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:mb-0"
+                      >
+                        <a href="/watchlist/progress/">Progress</a>
+                      </li>
+                    </ol>
+                  </li>
+                </ul>
+              </div>
             </div>
           </header>
-          <main class="grow bg-subtle" id="content">
+          <main
+            class="grow grow transition-[opacity] duration-200 ease-in-out group-has-[#nav:checked]:opacity-80 bg-subtle"
+            id="content"
+          >
             <header
-              class="min-h-[400px] tablet:min-h-[640px] desktop:min-h-[clamp(640px,70vh,1350px)] relative flex w-full flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pb-8 pt-40 text-inverse tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40"
+              class="min-h-[400px] tablet:min-h-[640px] desktop:min-h-[clamp(640px,70vh,1350px)] relative flex w-full flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pt-40 pb-8 text-inverse tablet:pt-40 tablet:pb-10 desktop:pt-40 desktop:pb-16"
             >
               <img
                 class="absolute inset-0 size-full object-cover object-top"
@@ -468,13 +475,13 @@
               >
                 <p class="mb-2">
                   <a
-                    class="font-sans text-sm uppercase tracking-wide decoration-inverse-subtle decoration-2 underline-offset-8 hover:underline"
+                    class="font-sans text-sm tracking-wide uppercase decoration-inverse-subtle decoration-2 underline-offset-8 hover:underline"
                     href="/reviews/"
                     >Reviews</a
                   >
                 </p>
                 <h1
-                  class="font-sans text-2xl font-bold uppercase tracking-widest desktop:text-7xl"
+                  class="font-sans text-2xl font-bold tracking-widest uppercase desktop:text-7xl"
                   data-pagefind-weight="10"
                 >
                   Underseen Gems
@@ -489,30 +496,30 @@
             </header>
             <nav class="bg-footer">
               <ul
-                class="scrollbar-hidden mx-auto flex max-w-(--breakpoint-max) overflow-x-auto px-container font-sans text-xs font-medium uppercase tracking-wider tablet:justify-center"
+                class="mx-auto flex scrollbar-hidden max-w-(--breakpoint-max) overflow-x-auto px-container font-sans text-xs font-medium tracking-wider uppercase tablet:justify-center"
               >
-                <li class="whitespace-nowrap text-center text-inverse-subtle">
+                <li class="text-center whitespace-nowrap text-inverse-subtle">
                   <a
                     class="block p-6 hover:bg-accent hover:text-inverse tablet:py-8"
                     href="/reviews/"
                     >All Reviews</a
                   >
                 </li>
-                <li class="whitespace-nowrap text-center text-inverse-subtle">
+                <li class="text-center whitespace-nowrap text-inverse-subtle">
                   <a
                     class="block p-6 hover:bg-accent hover:text-inverse tablet:py-8"
                     href="/reviews/overrated/"
                     >Overrated</a
                   >
                 </li>
-                <li class="whitespace-nowrap text-center text-inverse-subtle">
+                <li class="text-center whitespace-nowrap text-inverse-subtle">
                   <a
                     class="block p-6 hover:bg-accent hover:text-inverse tablet:py-8"
                     href="/reviews/underrated/"
                     >Underrated</a
                   >
                 </li>
-                <li class="whitespace-nowrap text-center text-inverse">
+                <li class="text-center whitespace-nowrap text-inverse">
                   <a
                     class="block bg-default p-6 text-default tablet:py-8"
                     href="/reviews/underseen/"
@@ -529,13 +536,13 @@
                       class="relative z-10 row-start-1 bg-default text-xs tablet:-mx-12 tablet:px-0 tablet-landscape:col-span-3 tablet-landscape:mx-0 tablet-landscape:w-full"
                     >
                       <div
-                        class="mx-auto flex w-full max-w-(--breakpoint-max) flex-wrap items-baseline justify-between gap-x-4 gap-y-5 px-container py-10 font-sans font-medium uppercase tracking-wide text-subtle"
+                        class="mx-auto flex w-full max-w-(--breakpoint-max) flex-wrap items-baseline justify-between gap-x-4 gap-y-5 px-container py-10 font-sans font-medium tracking-wide text-subtle uppercase"
                       >
                         <span class="block pr-4"
                           ><span class="font-semibold text-default">32</span>
                           <!-- -->Results</span
                         ><button
-                          class="ml-auto flex justify-center gap-x-4 text-nowrap px-4 py-2 uppercase text-muted shadow-all tablet-landscape:hidden"
+                          class="ml-auto flex justify-center gap-x-4 px-4 py-2 text-nowrap text-muted uppercase shadow-all tablet-landscape:hidden"
                           style="background-color: var(--bg-canvas)"
                         >
                           Filter &amp; Sort
@@ -557,13 +564,13 @@
                               class="flex flex-col gap-5 bg-group px-container py-10 tablet:gap-8 tablet:bg-default tablet-landscape:mt-0 tablet-landscape:gap-12 tablet-landscape:px-0"
                             >
                               <legend
-                                class="hidden w-full py-10 font-sans text-xs font-bold uppercase tracking-wide text-subtle tablet-landscape:block tablet-landscape:shadow-bottom"
+                                class="hidden w-full py-10 font-sans text-xs font-bold tracking-wide text-subtle uppercase tablet-landscape:block tablet-landscape:shadow-bottom"
                               >
                                 Filter &amp; Sort
                               </legend>
                               <label class="flex flex-col text-subtle"
                                 ><span
-                                  class="inline-block h-6 text-left font-sans text-xxs uppercase leading-none tracking-wide text-subtle"
+                                  class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
                                   >Title</span
                                 ><input
                                   class="border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
@@ -572,7 +579,7 @@
                               /></label>
                               <fieldset class="text-subtle">
                                 <legend
-                                  class="inline-block h-6 text-left font-sans text-xxs uppercase leading-none tracking-wide text-subtle"
+                                  class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
                                 >
                                   Release Year
                                 </legend>
@@ -583,7 +590,7 @@
                                       class="min-w-10 text-left text-sm tracking-serif-wide"
                                       >From</span
                                     ><select
-                                      class="w-full appearance-none border-none bg-default py-2 pl-4 pr-8 text-base leading-6 text-subtle shadow-all outline-accent"
+                                      class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
                                     >
                                       <option value="1930" selected="">
                                         1930
@@ -615,7 +622,7 @@
                                       class="min-w-10 text-center text-sm tracking-serif-wide"
                                       >to</span
                                     ><select
-                                      class="w-full appearance-none border-none bg-default py-2 pl-4 pr-8 text-base leading-6 text-subtle shadow-all outline-accent"
+                                      class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
                                     >
                                       <option value="1989" selected="">
                                         1989
@@ -647,7 +654,7 @@
                               </fieldset>
                               <div class="flex flex-col text-left text-subtle">
                                 <label
-                                  class="inline-block h-6 text-left font-sans text-xxs uppercase leading-none tracking-wide text-subtle"
+                                  class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
                                   for="Genres"
                                   >Genres</label
                                 ><style data-emotion="css b62m3t-container">
@@ -885,10 +892,10 @@
                               </div>
                               <label class="flex flex-col"
                                 ><span
-                                  class="inline-block h-6 text-left font-sans text-xxs uppercase leading-none tracking-wide text-subtle"
+                                  class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
                                   >Sort</span
                                 ><select
-                                  class="w-full appearance-none border-none bg-default py-2 pl-4 pr-8 text-base leading-6 text-subtle shadow-all outline-accent"
+                                  class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
                                 >
                                   <option value="title-asc">
                                     Title (A → Z)
@@ -953,10 +960,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/beyond-the-door-iii-1989/"
                                       >Beyond the Door III<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1989</span
                                       ></a
                                     ><picture
@@ -971,7 +978,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span>
@@ -1022,10 +1029,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/salvation-1987/"
                                       >Salvation!<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1987</span
                                       ></a
                                     ><picture
@@ -1040,7 +1047,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Comedy</span>
                                     </div>
@@ -1084,10 +1091,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/the-seventh-curse-1986/"
                                       >The Seventh Curse<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1986</span
                                       ></a
                                     ><picture
@@ -1102,7 +1109,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Action</span
                                       ><span>
@@ -1137,10 +1144,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/sorority-house-massacre-1986/"
                                       >Sorority House Massacre<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1986</span
                                       ></a
                                     ><picture
@@ -1155,7 +1162,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Horror</span>
                                     </div>
@@ -1199,10 +1206,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/the-peanut-butter-solution-1985/"
                                       >The Peanut Butter Solution<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1985</span
                                       ></a
                                     ><picture
@@ -1217,7 +1224,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Adventure</span
                                       ><span>
@@ -1274,10 +1281,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/the-boxers-omen-1983/"
                                       >The Boxer&#x27;s Omen<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1983</span
                                       ></a
                                     ><picture
@@ -1292,7 +1299,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Horror</span>
                                     </div>
@@ -1323,10 +1330,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/duel-to-the-death-1983/"
                                       >Duel to the Death<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1983</span
                                       ></a
                                     ><picture
@@ -1341,7 +1348,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Action</span
                                       ><span>
@@ -1389,10 +1396,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/ninja-in-the-dragons-den-1982/"
                                       >Ninja in the Dragon&#x27;s Den<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1982</span
                                       ></a
                                     ><picture
@@ -1407,7 +1414,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Action</span
                                       ><span>
@@ -1455,10 +1462,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/arrebato-1979/"
                                       >Arrebato<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1979</span
                                       ></a
                                     ><picture
@@ -1473,7 +1480,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span>
@@ -1527,10 +1534,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/scalpel-1977/"
                                       >Scalpel<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1977</span
                                       ></a
                                     ><picture
@@ -1545,7 +1552,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span>
@@ -1596,10 +1603,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/welcome-home-brother-charles-1975/"
                                       >Welcome Home Brother Charles<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1975</span
                                       ></a
                                     ><picture
@@ -1614,7 +1621,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Action</span
                                       ><span>
@@ -1652,10 +1659,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/last-stop-on-the-night-train-1975/"
                                       >Last Stop on the Night Train<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1975</span
                                       ></a
                                     ><picture
@@ -1670,7 +1677,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Horror</span
                                       ><span>
@@ -1718,10 +1725,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/the-thief-who-came-to-dinner-1973/"
                                       >The Thief Who Came to Dinner<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1973</span
                                       ></a
                                     ><picture
@@ -1736,7 +1743,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Comedy</span
                                       ><span>
@@ -1784,10 +1791,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/one-armed-boxer-1972/"
                                       >One-Armed Boxer<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1972</span
                                       ></a
                                     ><picture
@@ -1802,7 +1809,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Action</span
                                       ><span>
@@ -1840,10 +1847,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/bone-1972/"
                                       >Bone<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1972</span
                                       ></a
                                     ><picture
@@ -1858,7 +1865,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Comedy</span
                                       ><span>
@@ -1896,10 +1903,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/five-fingers-of-death-1972/"
                                       >Five Fingers of Death<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1972</span
                                       ></a
                                     ><picture
@@ -1914,7 +1921,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Action</span
                                       ><span>
@@ -1952,10 +1959,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/the-carey-treatment-1972/"
                                       >The Carey Treatment<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1972</span
                                       ></a
                                     ><picture
@@ -1970,7 +1977,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Crime</span
                                       ><span>
@@ -2021,10 +2028,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/the-conspiracy-of-torture-1969/"
                                       >The Conspiracy of Torture<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1969</span
                                       ></a
                                     ><picture
@@ -2039,7 +2046,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span>
@@ -2077,10 +2084,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/one-on-top-of-the-other-1969/"
                                       >One on Top of the Other<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1969</span
                                       ></a
                                     ><picture
@@ -2095,7 +2102,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Horror</span
                                       ><span>
@@ -2146,10 +2153,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/murder-a-la-mod-1968/"
                                       >Murder à la Mod<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1968</span
                                       ></a
                                     ><picture
@@ -2164,7 +2171,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Comedy</span
                                       ><span>
@@ -2218,10 +2225,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/having-a-wild-weekend-1965/"
                                       >Having a Wild Weekend<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1965</span
                                       ></a
                                     ><picture
@@ -2236,7 +2243,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Comedy</span
                                       ><span>
@@ -2284,10 +2291,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/the-camp-on-blood-island-1958/"
                                       >The Camp on Blood Island<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1958</span
                                       ></a
                                     ><picture
@@ -2302,7 +2309,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Action</span
                                       ><span>
@@ -2343,10 +2350,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/violent-playground-1958/"
                                       >Violent Playground<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1958</span
                                       ></a
                                     ><picture
@@ -2361,7 +2368,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span>
@@ -2409,10 +2416,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/bandido-1956/"
                                       >Bandido!<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1956</span
                                       ></a
                                     ><picture
@@ -2427,7 +2434,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Action</span
                                       ><span>
@@ -2484,10 +2491,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/the-racket-1951/"
                                       >The Racket<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1951</span
                                       ></a
                                     ><picture
@@ -2502,7 +2509,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Crime</span
                                       ><span>
@@ -2556,10 +2563,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/it-rains-on-our-love-1946/"
                                       >It Rains on Our Love<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1946</span
                                       ></a
                                     ><picture
@@ -2574,7 +2581,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span>
@@ -2609,10 +2616,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/crisis-1946/"
                                       >Crisis<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1946</span
                                       ></a
                                     ><picture
@@ -2627,7 +2634,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span>
@@ -2675,10 +2682,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/the-corn-is-green-1945/"
                                       >The Corn Is Green<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1945</span
                                       ></a
                                     ><picture
@@ -2693,7 +2700,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Drama</span>
                                     </div>
@@ -2737,10 +2744,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/20000-years-in-sing-sing-1932/"
                                       >20,000 Years in Sing Sing<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1932</span
                                       ></a
                                     ><picture
@@ -2755,7 +2762,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Crime</span
                                       ><span>
@@ -2806,10 +2813,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/the-road-to-singapore-1931/"
                                       >The Road to Singapore<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1931</span
                                       ></a
                                     ><picture
@@ -2824,7 +2831,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span>
@@ -2872,10 +2879,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/up-the-river-1930/"
                                       >Up the River<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1930</span
                                       ></a
                                     ><picture
@@ -2890,7 +2897,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Comedy</span
                                       ><span>
@@ -2928,10 +2935,10 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:w-full desktop:pr-4"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
                                       href="/reviews/the-dawn-patrol-1930/"
                                       >The Dawn Patrol<!-- -->  <span
-                                        class="text-xxs font-light leading-none text-subtle tablet:text-xs"
+                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
                                         >1930</span
                                       ></a
                                     ><picture
@@ -2946,7 +2953,7 @@
                                         width="80"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs font-light leading-4 text-subtle"
+                                      class="font-sans text-xs leading-4 font-light text-subtle"
                                     >
                                       <span>Action</span
                                       ><span>
@@ -2974,22 +2981,24 @@
             </div>
           </main>
           <footer class="bg-footer text-inverse">
-            <div class="mx-auto max-w-(--breakpoint-desktop) px-container py-20">
+            <div
+              class="mx-auto max-w-(--breakpoint-desktop) px-container py-20"
+            >
               <div
                 class="flex w-full flex-col tablet:flex-row-reverse tablet:justify-between"
               >
                 <a
-                  class="mx-auto mb-8 w-full max-w-button bg-canvas py-5 text-center font-sans text-xs uppercase tracking-wide text-default hover:bg-inverse hover:text-inverse tablet:mx-0"
+                  class="mx-auto mb-8 w-full max-w-button bg-canvas py-5 text-center font-sans text-xs tracking-wide text-default uppercase hover:bg-inverse hover:text-inverse tablet:mx-0"
                   href="#top"
                   >To the top</a
                 >
                 <div class="flex flex-col">
                   <div
-                    class="whitespace-nowrap text-[1.375rem] font-normal leading-8 tablet:text-[1.5625rem]"
+                    class="text-[1.375rem] leading-8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
                   >
                     <a href="/">Frank&#x27;s Movie Log</a>
                   </div>
-                  <p class="w-full pl-px text-sm italic leading-4 opacity-85">
+                  <p class="w-full pl-px text-sm leading-4 italic opacity-85">
                     by Frank Showalter
                   </p>
                 </div>
@@ -2997,15 +3006,15 @@
               <div class="justify-between tablet:flex">
                 <div class="flex max-w-prose flex-col pb-12 tablet:pr-32">
                   <div
-                    class="footer-text pt-10 font-sans text-base font-light text-inverse-subtle"
+                    class="pt-10 font-sans text-base font-light text-inverse-subtle"
                   >
-                    <p>
+                    <p class="mb-6 text-pretty">
                       Hi there, I&#x27;m Frank, a husband and father old enough
                       to have sat wide-eyed during <em>E.T</em>&#x27;s first
                       theatrical run, I&#x27;ve been watching, absorbing, and
                       dissecting films ever since.
                     </p>
-                    <p>
+                    <p class="mb-6 text-pretty">
                       This site began in 2003 when I realized two things: I had
                       become the designated “movie guy” among my friends (you
                       know, the one everyone asks about every new release), and
@@ -3013,39 +3022,68 @@
                       realizing, halfway through a film, that I&#x27;d already
                       seen it. Clearly, I needed a system.
                     </p>
-                    <p>
+                    <p class="mb-6 text-pretty">
                       What began as personal record-keeping evolved into this
                       little corner of the internet where I share my thoughts on
                       everything from blockbusters to obscure indies that
                       deserved better.
                     </p>
-                    <p>
+                    <p class="mb-6 text-pretty">
                       New visitors might want to start by reading about<!-- -->
-                      <a href="/how-i-grade/">how I grade</a> films. After that,
-                      feel free to browse my <a href="/reviews/">reviews</a>. If
-                      you&#x27;re looking for something that flew under the
-                      radar but deserves your attention, I recommend my<!-- -->
-                      <a href="/reviews/underseen/">underseen gems</a> section.
-                      Or, for those moments when you want to feel righteously
-                      contrarian, I maintain an list of<!-- -->
-                      <a href="/reviews/overrated/">overrated disappointments</a
+                      <a
+                        class="text-inverse underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                        href="/how-i-grade/"
+                        >how I grade</a
+                      >
+                      films. After that, feel free to browse my<!-- -->
+                      <a
+                        class="text-inverse underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                        href="/reviews/"
+                        >reviews</a
+                      >. If you&#x27;re looking for something that flew under
+                      the radar but deserves your attention, I recommend my<!-- -->
+                      <a
+                        class="text-inverse underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                        href="/reviews/underseen/"
+                        >underseen gems</a
+                      >
+                      <!-- -->section. Or, for those moments when you want to
+                      feel righteously contrarian, I maintain an list of<!-- -->
+                      <a
+                        class="text-inverse underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                        href="/reviews/overrated/"
+                        >overrated disappointments</a
                       >.
                     </p>
-                    <p>
-                      I also keep a <a href="/viewings/">viewing log</a> that
-                      tracks everything I watch, whether it gets a full review
-                      or not, complete with
-                      <a href="/viewings/stats/">stats</a>. In an age of endless
-                      content, sometimes the act of remembering what we&#x27;ve
-                      seen becomes as important as the seeing itself.
+                    <p class="mb-6 text-pretty">
+                      I also keep a<!-- -->
+                      <a
+                        class="text-inverse underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                        href="/viewings/"
+                        >viewing log</a
+                      >
+                      that tracks everything I watch, whether it gets a full
+                      review or not, complete with<!-- -->
+                      <a
+                        class="text-inverse underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                        href="/viewings/stats/"
+                        >stats</a
+                      >. In an age of endless content, sometimes the act of
+                      remembering what we&#x27;ve seen becomes as important as
+                      the seeing itself.
                     </p>
-                    <p>
+                    <p class="mb-6 text-pretty">
                       And finally, if you&#x27;re curious about what&#x27;s on
-                      my critical horizon, my
-                      <a href="/watchlist/">watchlist</a> details the films I
-                      plan to review and why they&#x27;ve caught my interest.
+                      my critical horizon, my<!-- -->
+                      <a
+                        class="text-inverse underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                        href="/watchlist/"
+                        >watchlist</a
+                      >
+                      details the films I plan to review and why they&#x27;ve
+                      caught my interest.
                     </p>
-                    <p>
+                    <p class="text-pretty">
                       In an era of algorithmic recommendations and corporate
                       marketing machines, consider this site a human
                       alternative—one person&#x27;s attempt to catalog the vast
@@ -3055,38 +3093,38 @@
                   </div>
                 </div>
                 <div
-                  class="flex grow-0 flex-col gap-20 pb-20 pt-10 tablet:basis-button tablet:pr-10"
+                  class="flex grow-0 flex-col gap-20 pt-10 pb-20 tablet:basis-button tablet:pr-10"
                 >
                   <ul
                     class="flex w-full flex-col gap-y-10 text-inverse max:w-auto"
                   >
-                    <li class="block w-1/2 whitespace-nowrap text-2xl">
+                    <li class="block w-1/2 text-2xl whitespace-nowrap">
                       <a class="hover:text-accent" href="/">Home</a>
                     </li>
-                    <li class="block w-1/2 whitespace-nowrap text-2xl">
+                    <li class="block w-1/2 text-2xl whitespace-nowrap">
                       <a class="hover:text-accent" href="/how-i-grade/"
                         >How I Grade</a
                       >
                     </li>
-                    <li class="block w-1/2 whitespace-nowrap text-2xl">
+                    <li class="block w-1/2 text-2xl whitespace-nowrap">
                       <a class="hover:text-accent" href="/reviews/">Reviews</a>
                       <ol class="mt-4">
                         <li
-                          class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                          class="mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:mb-0"
                         >
                           <a class="hover:text-inverse" href="/cast-and-crew/"
                             >Cast &amp; Crew</a
                           >
                         </li>
                         <li
-                          class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                          class="mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:mb-0"
                         >
                           <a class="hover:text-inverse" href="/collections/"
                             >Collections</a
                           >
                         </li>
                         <li
-                          class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                          class="mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:mb-0"
                         >
                           <a
                             class="hover:text-inverse"
@@ -3095,7 +3133,7 @@
                           >
                         </li>
                         <li
-                          class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                          class="mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:mb-0"
                         >
                           <a
                             class="hover:text-inverse"
@@ -3104,7 +3142,7 @@
                           >
                         </li>
                         <li
-                          class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                          class="mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:mb-0"
                         >
                           <a
                             class="hover:text-inverse"
@@ -3114,13 +3152,13 @@
                         </li>
                       </ol>
                     </li>
-                    <li class="block w-1/2 whitespace-nowrap text-2xl">
+                    <li class="block w-1/2 text-2xl whitespace-nowrap">
                       <a class="hover:text-accent" href="/viewings/"
                         >Viewing Log</a
                       >
                       <ol class="mt-4">
                         <li
-                          class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                          class="mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:mb-0"
                         >
                           <a class="hover:text-inverse" href="/viewings/stats/"
                             >Stats</a
@@ -3128,13 +3166,13 @@
                         </li>
                       </ol>
                     </li>
-                    <li class="block w-1/2 whitespace-nowrap text-2xl">
+                    <li class="block w-1/2 text-2xl whitespace-nowrap">
                       <a class="hover:text-accent" href="/watchlist/"
                         >Watchlist</a
                       >
                       <ol class="mt-4">
                         <li
-                          class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                          class="mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:mb-0"
                         >
                           <a
                             class="hover:text-inverse"
@@ -3149,7 +3187,7 @@
               </div>
             </div>
             <p
-              class="w-full bg-canvas px-container py-10 text-center font-normal leading-5 text-default"
+              class="w-full bg-canvas px-container py-10 text-center leading-5 font-normal text-default"
             >
               All reviews by Frank Showalter. All images used in accordance with
               the<!-- -->
@@ -3167,11 +3205,11 @@
     >
     <dialog
       aria-label="Search"
-      class="fixed left-4 right-4 h-screen w-full rounded-lg border border-default bg-default shadow-lg backdrop:bg-[#000] backdrop:opacity-40 open:flex open:flex-col tablet:mx-auto tablet:mt-16 tablet:h-min tablet:max-h-[min(100vh-128px,900px)] tablet:min-h-60 tablet:max-w-[min(100vw-64px,36rem)] tablet:rounded-xl desktop:min-h-0"
+      class="fixed inset-x-4 m-auto h-screen w-full rounded-lg border border-default bg-default shadow-lg backdrop:bg-[#000] backdrop:opacity-40 open:flex open:flex-col tablet:mx-auto tablet:mt-16 tablet:h-min tablet:max-h-[min(100vh-128px,900px)] tablet:min-h-60 tablet:max-w-[min(100vw-64px,36rem)] tablet:rounded-xl desktop:min-h-0"
     >
       <div class="contents" data-dialog-frame>
         <button
-          class="px-2 font-mono text-xs font-light hover:bg-inverse hover:text-inverse focus:outline-accent"
+          class="absolute right-[var(--search-dialog-padding)] z-10 mt-5 h-[calc(24px_*_var(---pagefind-ui-scale))] cursor-pointer border-none bg-subtle px-2 font-mono text-xs font-light text-muted hover:bg-inverse hover:text-inverse focus:outline-accent"
           data-close-modal
         >
           ESC
@@ -3192,16 +3230,6 @@
         </div>
       </div>
     </dialog>
-    <script>
-      (() => {
-        const openBtn = document.querySelector("button[data-open-modal]");
-        if (!openBtn) return;
-        if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
-          openBtn.setAttribute("aria-keyshortcuts", "Meta+K");
-          openBtn.setAttribute("title", `Search: ⌘K`);
-        }
-      })();
-    </script>
     <script
       type="module"
       src="/src/layouts/Layout.astro?astro&type=script&index=0&lang.ts"

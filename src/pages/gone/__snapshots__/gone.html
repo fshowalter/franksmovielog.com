@@ -21,7 +21,9 @@
     />
     <title>410: Gone - Frank&#39;s Movie Log</title>
   </head>
-  <body class="w-full">
+  <body
+    class="h-full w-full bg-canvas text-default has-[#nav:checked]:fixed has-[#nav:checked]:overflow-y-scroll data-search-modal-open:overflow-hidden data-search-modal-open:before:fixed data-search-modal-open:before:inset-0 data-search-modal-open:before:z-50 data-search-modal-open:before:backdrop-blur-xs"
+  >
     <link
       rel="preload"
       as="image"
@@ -29,15 +31,15 @@
       imagesizes="100vw"
       fetchpriority="high"
     />
-    <div>
+    <div class="group">
       <a
-        class="absolute left-1/2 top-0.5 z-50 mx-auto bg-subtle px-6 py-2 text-center text-accent [transform:translate(-50%,calc(-100%-2px))] focus:[transform:translate(-50%,0%)]"
+        class="absolute top-0.5 left-1/2 z-50 mx-auto bg-subtle px-6 py-2 text-center text-accent [transform:translate(-50%,calc(-100%-2px))] focus:[transform:translate(-50%,0%)]"
         href="#content"
         >Skip to content</a
       >
       <div class="flex min-h-full w-full flex-col bg-default">
         <header
-          class="z-20 flex w-full items-center justify-between px-container py-4 tablet:py-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
+          class="group z-20 flex w-full items-center justify-between px-container py-4 tablet:py-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
           style="
             background-image: linear-gradient(
               to bottom,
@@ -50,11 +52,11 @@
         >
           <div class="flex flex-col">
             <div
-              class="whitespace-nowrap text-[1.375rem] font-normal leading-8 tablet:text-[1.5625rem]"
+              class="text-[1.375rem] leading-8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
             >
               <a href="/">Frank&#x27;s Movie Log</a>
             </div>
-            <p class="w-full pl-px text-sm italic leading-4 opacity-85">
+            <p class="w-full pl-px text-sm leading-4 italic opacity-85">
               by Frank Showalter
             </p>
           </div>
@@ -62,7 +64,7 @@
             <nav class="hidden w-full desktop:block desktop:w-auto">
               <ul class="flex flex-wrap justify-start gap-x-6 text-xl">
                 <li
-                  class="mast-item block whitespace-nowrap leading-10 tracking-serif-wide"
+                  class="block leading-10 tracking-serif-wide whitespace-nowrap transition duration-200 ease-in-out group-has-[#nav:checked]:opacity-0"
                 >
                   <a
                     class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
@@ -72,7 +74,7 @@
                   >
                 </li>
                 <li
-                  class="mast-item block whitespace-nowrap leading-10 tracking-serif-wide"
+                  class="block leading-10 tracking-serif-wide whitespace-nowrap transition duration-200 ease-in-out group-has-[#nav:checked]:opacity-0"
                 >
                   <a
                     class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
@@ -82,7 +84,7 @@
                   >
                 </li>
                 <li
-                  class="mast-item block whitespace-nowrap leading-10 tracking-serif-wide"
+                  class="block leading-10 tracking-serif-wide whitespace-nowrap transition duration-200 ease-in-out group-has-[#nav:checked]:opacity-0"
                 >
                   <a
                     class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
@@ -92,7 +94,7 @@
                   >
                 </li>
                 <li
-                  class="mast-item block whitespace-nowrap leading-10 tracking-serif-wide"
+                  class="block leading-10 tracking-serif-wide whitespace-nowrap transition duration-200 ease-in-out group-has-[#nav:checked]:opacity-0"
                 >
                   <a
                     class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
@@ -102,7 +104,7 @@
                   >
                 </li>
                 <li
-                  class="mast-item block whitespace-nowrap leading-10 tracking-serif-wide"
+                  class="block leading-10 tracking-serif-wide whitespace-nowrap transition duration-200 ease-in-out group-has-[#nav:checked]:opacity-0"
                 >
                   <a
                     class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
@@ -113,7 +115,7 @@
                 </li>
               </ul>
             </nav>
-            <div class="search-button z-1000">
+            <div class="z-1000 group-has-[#nav:checked]:!text-[#fff]">
               <button
                 aria-keyshortcuts="Control+K"
                 aria-label="Search"
@@ -139,80 +141,95 @@
                 </svg>
               </button>
             </div>
-            <input class="hidden" id="mobile-nav" type="checkbox" /><label
-              class="hamburger-icon"
-              for="mobile-nav"
-              ><span
-                class="hamburger-icon-bars"
-                style="background-color: #fff"
-              ></span
-            ></label>
-            <ul
-              class="hamburger-menu flex flex-col items-start gap-y-5 text-left text-inverse tablet:gap-y-10"
-            >
-              <li class="block w-1/2 whitespace-nowrap text-2xl desktop:w-full">
-                <a href="/">Home</a>
-              </li>
-              <li class="block w-1/2 whitespace-nowrap text-2xl desktop:w-full">
-                <a href="/how-i-grade/">How I Grade</a>
-              </li>
-              <li class="block w-1/2 whitespace-nowrap text-2xl desktop:w-full">
-                <a href="/reviews/">Reviews</a>
-                <ol class="mt-4">
-                  <li
-                    class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
-                  >
-                    <a href="/cast-and-crew/">Cast &amp; Crew</a>
-                  </li>
-                  <li
-                    class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
-                  >
-                    <a href="/collections/">Collections</a>
-                  </li>
-                  <li
-                    class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
-                  >
-                    <a href="/reviews/overrated/">Overrated</a>
-                  </li>
-                  <li
-                    class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
-                  >
-                    <a href="/reviews/underrated/">Underrated</a>
-                  </li>
-                  <li
-                    class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
-                  >
-                    <a href="/reviews/underseen/">Underseen</a>
-                  </li>
-                </ol>
-              </li>
-              <li class="block w-1/2 whitespace-nowrap text-2xl desktop:w-full">
-                <a href="/viewings/">Viewing Log</a>
-                <ol class="mt-4">
-                  <li
-                    class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
-                  >
-                    <a href="/viewings/stats/">Stats</a>
-                  </li>
-                </ol>
-              </li>
-              <li class="block w-1/2 whitespace-nowrap text-2xl desktop:w-full">
-                <a href="/watchlist/">Watchlist</a>
-                <ol class="mt-4">
-                  <li
-                    class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
-                  >
-                    <a href="/watchlist/progress/">Progress</a>
-                  </li>
-                </ol>
-              </li>
-            </ul>
+            <div class="group">
+              <input class="hidden" id="nav" type="checkbox" /><label
+                class="relative z-40 ml-2 flex h-10 w-10 cursor-pointer items-center justify-center"
+                for="nav"
+                ><span
+                  class="relative block h-0.5 w-6 origin-center transition-[top,bottom,transform] duration-200 ease-in-out group-has-[#nav:checked]:transform-[rotate(45deg)] group-has-[#nav:checked]:!bg-[#fff] group-has-[#nav:checked]:before:top-0 group-has-[#nav:checked]:before:transform-[rotate(90deg)] group-has-[#nav:checked]:after:bottom-0 group-has-[#nav:checked]:after:transform-[rotate(90deg)] before:absolute before:-top-2 before:block before:h-0.5 before:w-6 before:bg-inherit before:transition before:duration-200 before:ease-in-out after:absolute after:-bottom-2 after:block after:h-0.5 after:w-6 after:bg-inherit after:transition after:duration-200 after:ease-in-out"
+                  style="background-color: #fff"
+                ></span
+              ></label>
+              <ul
+                class="fixed top-0 right-0 z-20 flex h-full w-0 transform-[translateX(100%)] flex-col items-start gap-y-5 overflow-hidden bg-footer text-left text-inverse opacity-0 duration-200 ease-in-out group-has-[#nav:checked]:bottom-0 group-has-[#nav:checked]:z-20 group-has-[#nav:checked]:h-full group-has-[#nav:checked]:w-full group-has-[#nav:checked]:transform-[translateX(0)] group-has-[#nav:checked]:overflow-y-auto group-has-[#nav:checked]:pt-20 group-has-[#nav:checked]:pr-[16%] group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%] group-has-[#nav:checked]:opacity-100 group-has-[#nav:checked]:tablet:px-10 group-has-[#nav:checked]:tablet:pt-40 group-has-[#nav:checked]:desktop:px-20 tablet:max-w-[35vw] tablet:gap-y-10 desktop:max-w-[25vw]"
+              >
+                <li
+                  class="block w-1/2 text-2xl whitespace-nowrap desktop:w-full"
+                >
+                  <a href="/">Home</a>
+                </li>
+                <li
+                  class="block w-1/2 text-2xl whitespace-nowrap desktop:w-full"
+                >
+                  <a href="/how-i-grade/">How I Grade</a>
+                </li>
+                <li
+                  class="block w-1/2 text-2xl whitespace-nowrap desktop:w-full"
+                >
+                  <a href="/reviews/">Reviews</a>
+                  <ol class="mt-4">
+                    <li
+                      class="mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:mb-0"
+                    >
+                      <a href="/cast-and-crew/">Cast &amp; Crew</a>
+                    </li>
+                    <li
+                      class="mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:mb-0"
+                    >
+                      <a href="/collections/">Collections</a>
+                    </li>
+                    <li
+                      class="mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:mb-0"
+                    >
+                      <a href="/reviews/overrated/">Overrated</a>
+                    </li>
+                    <li
+                      class="mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:mb-0"
+                    >
+                      <a href="/reviews/underrated/">Underrated</a>
+                    </li>
+                    <li
+                      class="mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:mb-0"
+                    >
+                      <a href="/reviews/underseen/">Underseen</a>
+                    </li>
+                  </ol>
+                </li>
+                <li
+                  class="block w-1/2 text-2xl whitespace-nowrap desktop:w-full"
+                >
+                  <a href="/viewings/">Viewing Log</a>
+                  <ol class="mt-4">
+                    <li
+                      class="mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:mb-0"
+                    >
+                      <a href="/viewings/stats/">Stats</a>
+                    </li>
+                  </ol>
+                </li>
+                <li
+                  class="block w-1/2 text-2xl whitespace-nowrap desktop:w-full"
+                >
+                  <a href="/watchlist/">Watchlist</a>
+                  <ol class="mt-4">
+                    <li
+                      class="mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:mb-0"
+                    >
+                      <a href="/watchlist/progress/">Progress</a>
+                    </li>
+                  </ol>
+                </li>
+              </ul>
+            </div>
           </div>
         </header>
-        <main class="grow" id="content">
+        <main
+          class="grow grow transition-[opacity] duration-200 ease-in-out group-has-[#nav:checked]:opacity-80"
+          id="content"
+        >
           <article>
             <header
-              class="min-h-[90vh] max-h-[1350px] relative flex w-full flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pb-8 pt-40 text-inverse tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40"
+              class="min-h-[90vh] max-h-[1350px] relative flex w-full flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pt-40 pb-8 text-inverse tablet:pt-40 tablet:pb-10 desktop:pt-40 desktop:pb-16"
             >
               <img
                 class="absolute inset-0 size-full object-cover object-top"
@@ -234,7 +251,7 @@
                 class="z-10 mx-auto flex w-full max-w-(--breakpoint-max) flex-col px-container"
               >
                 <h1
-                  class="font-sans text-2xl font-bold uppercase tracking-widest desktop:text-7xl"
+                  class="font-sans text-2xl font-bold tracking-widest uppercase desktop:text-7xl"
                   data-pagefind-weight="10"
                 >
                   410 Gone
@@ -246,7 +263,7 @@
                 </p>
               </div>
             </header>
-            <section class="flex flex-col items-center pb-32 pt-16">
+            <section class="flex flex-col items-center pt-16 pb-32">
               <div class="px-container">
                 <div
                   class="rendered-markdown text-md/7 tracking-prose tablet:text-xl/8 max-w-prose"
@@ -256,13 +273,13 @@
               </div>
             </section>
           </article>
-          <div class="bg-subtle pb-16 pt-6">
+          <div class="bg-subtle pt-6 pb-16">
             <nav data-pagefind-ignore="true">
               <div
                 class="relative mx-auto w-full max-w-(--breakpoint-max) px-container desktop:px-20"
               >
                 <h2
-                  class="py-10 font-sans text-xs font-semibold uppercase tracking-wide text-subtle"
+                  class="py-10 font-sans text-xs font-semibold tracking-wide text-subtle uppercase"
                 >
                   Recent<!-- -->
                   <a class="text-accent" href="/reviews/">Reviews</a>
@@ -293,13 +310,13 @@
                         />
                       </div>
                       <div
-                        class="flex flex-col px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                        class="flex flex-col px-6 pt-6 pb-4 desktop:pr-[14%] desktop:pl-[12%]"
                       >
                         <a
-                          class="mb-3 block text-xl font-medium leading-6 text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:text-accent hover:before:opacity-0"
+                          class="mb-3 block text-xl leading-6 font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:text-accent hover:before:opacity-0"
                           href="/reviews/chamber-of-horrors-1966/"
                           >Chamber of Horrors<!-- --> <span
-                            class="text-sm font-normal leading-none text-muted"
+                            class="text-sm leading-none font-normal text-muted"
                             >1966</span
                           ></a
                         ><picture
@@ -326,7 +343,7 @@
                           </p>
                         </div>
                         <div
-                          class="font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                          class="font-sans text-xxs leading-4 font-light tracking-wider text-subtle desktop:tracking-wide"
                         >
                           <span>Crime</span
                           ><span>
@@ -363,13 +380,13 @@
                         />
                       </div>
                       <div
-                        class="flex flex-col px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                        class="flex flex-col px-6 pt-6 pb-4 desktop:pr-[14%] desktop:pl-[12%]"
                       >
                         <a
-                          class="mb-3 block text-xl font-medium leading-6 text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:text-accent hover:before:opacity-0"
+                          class="mb-3 block text-xl leading-6 font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:text-accent hover:before:opacity-0"
                           href="/reviews/two-for-the-seesaw-1962/"
                           >Two for the Seesaw<!-- --> <span
-                            class="text-sm font-normal leading-none text-muted"
+                            class="text-sm leading-none font-normal text-muted"
                             >1962</span
                           ></a
                         ><picture
@@ -397,7 +414,7 @@
                           </p>
                         </div>
                         <div
-                          class="font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                          class="font-sans text-xxs leading-4 font-light tracking-wider text-subtle desktop:tracking-wide"
                         >
                           <span>Drama</span
                           ><span>
@@ -431,13 +448,13 @@
                         />
                       </div>
                       <div
-                        class="flex flex-col px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                        class="flex flex-col px-6 pt-6 pb-4 desktop:pr-[14%] desktop:pl-[12%]"
                       >
                         <a
-                          class="mb-3 block text-xl font-medium leading-6 text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:text-accent hover:before:opacity-0"
+                          class="mb-3 block text-xl leading-6 font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:text-accent hover:before:opacity-0"
                           href="/reviews/the-man-with-nine-lives-1940/"
                           >The Man with Nine Lives<!-- --> <span
-                            class="text-sm font-normal leading-none text-muted"
+                            class="text-sm leading-none font-normal text-muted"
                             >1940</span
                           ></a
                         ><picture
@@ -465,7 +482,7 @@
                           </p>
                         </div>
                         <div
-                          class="font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                          class="font-sans text-xxs leading-4 font-light tracking-wider text-subtle desktop:tracking-wide"
                         >
                           <span>Horror</span
                           ><span>
@@ -502,13 +519,13 @@
                         />
                       </div>
                       <div
-                        class="flex flex-col px-6 pb-4 pt-6 desktop:pl-[12%] desktop:pr-[14%]"
+                        class="flex flex-col px-6 pt-6 pb-4 desktop:pr-[14%] desktop:pl-[12%]"
                       >
                         <a
-                          class="mb-3 block text-xl font-medium leading-6 text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:opacity-0 hover:text-accent hover:before:opacity-0"
+                          class="mb-3 block text-xl leading-6 font-medium text-default before:absolute before:inset-x-0 before:top-0 before:aspect-video before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:text-accent hover:before:opacity-0"
                           href="/reviews/burial-ground-the-nights-of-terror-1981/"
                           >Burial Ground: The Nights of Terror<!-- --> <span
-                            class="text-sm font-normal leading-none text-muted"
+                            class="text-sm leading-none font-normal text-muted"
                             >1981</span
                           ></a
                         ><picture
@@ -537,7 +554,7 @@
                           </p>
                         </div>
                         <div
-                          class="font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                          class="font-sans text-xxs leading-4 font-light tracking-wider text-subtle desktop:tracking-wide"
                         >
                           <span>Horror</span>
                         </div>
@@ -555,17 +572,17 @@
               class="flex w-full flex-col tablet:flex-row-reverse tablet:justify-between"
             >
               <a
-                class="mx-auto mb-8 w-full max-w-button bg-canvas py-5 text-center font-sans text-xs uppercase tracking-wide text-default hover:bg-inverse hover:text-inverse tablet:mx-0"
+                class="mx-auto mb-8 w-full max-w-button bg-canvas py-5 text-center font-sans text-xs tracking-wide text-default uppercase hover:bg-inverse hover:text-inverse tablet:mx-0"
                 href="#top"
                 >To the top</a
               >
               <div class="flex flex-col">
                 <div
-                  class="whitespace-nowrap text-[1.375rem] font-normal leading-8 tablet:text-[1.5625rem]"
+                  class="text-[1.375rem] leading-8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
                 >
                   <a href="/">Frank&#x27;s Movie Log</a>
                 </div>
-                <p class="w-full pl-px text-sm italic leading-4 opacity-85">
+                <p class="w-full pl-px text-sm leading-4 italic opacity-85">
                   by Frank Showalter
                 </p>
               </div>
@@ -573,15 +590,15 @@
             <div class="justify-between tablet:flex">
               <div class="flex max-w-prose flex-col pb-12 tablet:pr-32">
                 <div
-                  class="footer-text pt-10 font-sans text-base font-light text-inverse-subtle"
+                  class="pt-10 font-sans text-base font-light text-inverse-subtle"
                 >
-                  <p>
+                  <p class="mb-6 text-pretty">
                     Hi there, I&#x27;m Frank, a husband and father old enough to
                     have sat wide-eyed during <em>E.T</em>&#x27;s first
                     theatrical run, I&#x27;ve been watching, absorbing, and
                     dissecting films ever since.
                   </p>
-                  <p>
+                  <p class="mb-6 text-pretty">
                     This site began in 2003 when I realized two things: I had
                     become the designated “movie guy” among my friends (you
                     know, the one everyone asks about every new release), and I
@@ -589,38 +606,68 @@
                     realizing, halfway through a film, that I&#x27;d already
                     seen it. Clearly, I needed a system.
                   </p>
-                  <p>
+                  <p class="mb-6 text-pretty">
                     What began as personal record-keeping evolved into this
                     little corner of the internet where I share my thoughts on
                     everything from blockbusters to obscure indies that deserved
                     better.
                   </p>
-                  <p>
+                  <p class="mb-6 text-pretty">
                     New visitors might want to start by reading about<!-- -->
-                    <a href="/how-i-grade/">how I grade</a> films. After that,
-                    feel free to browse my <a href="/reviews/">reviews</a>. If
-                    you&#x27;re looking for something that flew under the radar
-                    but deserves your attention, I recommend my<!-- -->
-                    <a href="/reviews/underseen/">underseen gems</a> section.
-                    Or, for those moments when you want to feel righteously
-                    contrarian, I maintain an list of<!-- -->
-                    <a href="/reviews/overrated/">overrated disappointments</a>.
+                    <a
+                      class="text-inverse underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                      href="/how-i-grade/"
+                      >how I grade</a
+                    >
+                    films. After that, feel free to browse my<!-- -->
+                    <a
+                      class="text-inverse underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                      href="/reviews/"
+                      >reviews</a
+                    >. If you&#x27;re looking for something that flew under the
+                    radar but deserves your attention, I recommend my<!-- -->
+                    <a
+                      class="text-inverse underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                      href="/reviews/underseen/"
+                      >underseen gems</a
+                    >
+                    <!-- -->section. Or, for those moments when you want to feel
+                    righteously contrarian, I maintain an list of<!-- -->
+                    <a
+                      class="text-inverse underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                      href="/reviews/overrated/"
+                      >overrated disappointments</a
+                    >.
                   </p>
-                  <p>
-                    I also keep a <a href="/viewings/">viewing log</a> that
-                    tracks everything I watch, whether it gets a full review or
-                    not, complete with <a href="/viewings/stats/">stats</a>. In
-                    an age of endless content, sometimes the act of remembering
-                    what we&#x27;ve seen becomes as important as the seeing
-                    itself.
+                  <p class="mb-6 text-pretty">
+                    I also keep a<!-- -->
+                    <a
+                      class="text-inverse underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                      href="/viewings/"
+                      >viewing log</a
+                    >
+                    that tracks everything I watch, whether it gets a full
+                    review or not, complete with<!-- -->
+                    <a
+                      class="text-inverse underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                      href="/viewings/stats/"
+                      >stats</a
+                    >. In an age of endless content, sometimes the act of
+                    remembering what we&#x27;ve seen becomes as important as the
+                    seeing itself.
                   </p>
-                  <p>
+                  <p class="mb-6 text-pretty">
                     And finally, if you&#x27;re curious about what&#x27;s on my
-                    critical horizon, my
-                    <a href="/watchlist/">watchlist</a> details the films I plan
-                    to review and why they&#x27;ve caught my interest.
+                    critical horizon, my<!-- -->
+                    <a
+                      class="text-inverse underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                      href="/watchlist/"
+                      >watchlist</a
+                    >
+                    details the films I plan to review and why they&#x27;ve
+                    caught my interest.
                   </p>
-                  <p>
+                  <p class="text-pretty">
                     In an era of algorithmic recommendations and corporate
                     marketing machines, consider this site a human
                     alternative—one person&#x27;s attempt to catalog the vast
@@ -630,45 +677,45 @@
                 </div>
               </div>
               <div
-                class="flex grow-0 flex-col gap-20 pb-20 pt-10 tablet:basis-button tablet:pr-10"
+                class="flex grow-0 flex-col gap-20 pt-10 pb-20 tablet:basis-button tablet:pr-10"
               >
                 <ul
                   class="flex w-full flex-col gap-y-10 text-inverse max:w-auto"
                 >
-                  <li class="block w-1/2 whitespace-nowrap text-2xl">
+                  <li class="block w-1/2 text-2xl whitespace-nowrap">
                     <a class="hover:text-accent" href="/">Home</a>
                   </li>
-                  <li class="block w-1/2 whitespace-nowrap text-2xl">
+                  <li class="block w-1/2 text-2xl whitespace-nowrap">
                     <a class="hover:text-accent" href="/how-i-grade/"
                       >How I Grade</a
                     >
                   </li>
-                  <li class="block w-1/2 whitespace-nowrap text-2xl">
+                  <li class="block w-1/2 text-2xl whitespace-nowrap">
                     <a class="hover:text-accent" href="/reviews/">Reviews</a>
                     <ol class="mt-4">
                       <li
-                        class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                        class="mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:mb-0"
                       >
                         <a class="hover:text-inverse" href="/cast-and-crew/"
                           >Cast &amp; Crew</a
                         >
                       </li>
                       <li
-                        class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                        class="mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:mb-0"
                       >
                         <a class="hover:text-inverse" href="/collections/"
                           >Collections</a
                         >
                       </li>
                       <li
-                        class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                        class="mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:mb-0"
                       >
                         <a class="hover:text-inverse" href="/reviews/overrated/"
                           >Overrated</a
                         >
                       </li>
                       <li
-                        class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                        class="mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:mb-0"
                       >
                         <a
                           class="hover:text-inverse"
@@ -677,7 +724,7 @@
                         >
                       </li>
                       <li
-                        class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                        class="mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:mb-0"
                       >
                         <a class="hover:text-inverse" href="/reviews/underseen/"
                           >Underseen</a
@@ -685,13 +732,13 @@
                       </li>
                     </ol>
                   </li>
-                  <li class="block w-1/2 whitespace-nowrap text-2xl">
+                  <li class="block w-1/2 text-2xl whitespace-nowrap">
                     <a class="hover:text-accent" href="/viewings/"
                       >Viewing Log</a
                     >
                     <ol class="mt-4">
                       <li
-                        class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                        class="mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:mb-0"
                       >
                         <a class="hover:text-inverse" href="/viewings/stats/"
                           >Stats</a
@@ -699,13 +746,13 @@
                       </li>
                     </ol>
                   </li>
-                  <li class="block w-1/2 whitespace-nowrap text-2xl">
+                  <li class="block w-1/2 text-2xl whitespace-nowrap">
                     <a class="hover:text-accent" href="/watchlist/"
                       >Watchlist</a
                     >
                     <ol class="mt-4">
                       <li
-                        class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                        class="mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:mb-0"
                       >
                         <a
                           class="hover:text-inverse"
@@ -720,7 +767,7 @@
             </div>
           </div>
           <p
-            class="w-full bg-canvas px-container py-10 text-center font-normal leading-5 text-default"
+            class="w-full bg-canvas px-container py-10 text-center leading-5 font-normal text-default"
           >
             All reviews by Frank Showalter. All images used in accordance with
             the<!-- -->
@@ -736,11 +783,11 @@
     </div>
     <dialog
       aria-label="Search"
-      class="fixed left-4 right-4 h-screen w-full rounded-lg border border-default bg-default shadow-lg backdrop:bg-[#000] backdrop:opacity-40 open:flex open:flex-col tablet:mx-auto tablet:mt-16 tablet:h-min tablet:max-h-[min(100vh-128px,900px)] tablet:min-h-60 tablet:max-w-[min(100vw-64px,36rem)] tablet:rounded-xl desktop:min-h-0"
+      class="fixed inset-x-4 m-auto h-screen w-full rounded-lg border border-default bg-default shadow-lg backdrop:bg-[#000] backdrop:opacity-40 open:flex open:flex-col tablet:mx-auto tablet:mt-16 tablet:h-min tablet:max-h-[min(100vh-128px,900px)] tablet:min-h-60 tablet:max-w-[min(100vw-64px,36rem)] tablet:rounded-xl desktop:min-h-0"
     >
       <div class="contents" data-dialog-frame>
         <button
-          class="px-2 font-mono text-xs font-light hover:bg-inverse hover:text-inverse focus:outline-accent"
+          class="absolute right-[var(--search-dialog-padding)] z-10 mt-5 h-[calc(24px_*_var(---pagefind-ui-scale))] cursor-pointer border-none bg-subtle px-2 font-mono text-xs font-light text-muted hover:bg-inverse hover:text-inverse focus:outline-accent"
           data-close-modal
         >
           ESC
@@ -761,16 +808,6 @@
         </div>
       </div>
     </dialog>
-    <script>
-      (() => {
-        const openBtn = document.querySelector("button[data-open-modal]");
-        if (!openBtn) return;
-        if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
-          openBtn.setAttribute("aria-keyshortcuts", "Meta+K");
-          openBtn.setAttribute("title", `Search: ⌘K`);
-        }
-      })();
-    </script>
     <script
       type="module"
       src="/src/layouts/Layout.astro?astro&type=script&index=0&lang.ts"
