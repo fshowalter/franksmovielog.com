@@ -2,9 +2,16 @@
 
 exports[`Home > matches snapshot 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class="group"
+  >
     <a
-      class="absolute left-1/2 top-0.5 z-50 mx-auto bg-subtle px-6 py-2 text-center text-accent [transform:translate(-50%,calc(-100%_-_2px))] focus:[transform:translate(-50%,0%)]"
+      class="
+          absolute top-0.5 left-1/2 z-50 mx-auto bg-subtle px-6 py-2 text-center
+          text-accent
+          [transform:translate(-50%,calc(-100%-2px))]
+          focus:[transform:translate(-50%,0%)]
+        "
       href="#content"
     >
       Skip to content
@@ -13,7 +20,12 @@ exports[`Home > matches snapshot 1`] = `
       class="flex min-h-full w-full flex-col bg-default"
     >
       <header
-        class="z-20 flex w-full items-center justify-between px-container py-4 tablet:py-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
+        class="
+        group z-20 flex w-full items-center justify-between px-container py-4
+        tablet:py-6
+        desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap
+        desktop:px-16 desktop:py-8 desktop:text-left
+      "
         style="background-image: linear-gradient(to bottom, rgba(0,0,0,.85), transparent 95%); color: rgb(255, 255, 255); position: absolute;"
       >
         <div />
@@ -21,16 +33,26 @@ exports[`Home > matches snapshot 1`] = `
           class="flex items-center"
         >
           <nav
-            class="hidden w-full desktop:block desktop:w-auto"
+            class="
+            hidden w-full
+            desktop:block desktop:w-auto
+          "
           >
             <ul
               class="flex flex-wrap justify-start gap-x-6 text-xl"
             >
               <li
-                class="mast-item block whitespace-nowrap leading-10 tracking-serif-wide"
+                class="
+        block leading-10 tracking-serif-wide whitespace-nowrap transition
+        duration-200 ease-in-out
+        group-has-[#nav:checked]:opacity-0
+      "
               >
                 <a
-                  class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                  class="
+          text-inherit transition-all duration-500 ease-in-out
+          hover:bg-[rgba(0,0,0,.50)]
+        "
                   href="/"
                   style="text-shadow: 1px 1px 2px black;"
                 >
@@ -38,10 +60,17 @@ exports[`Home > matches snapshot 1`] = `
                 </a>
               </li>
               <li
-                class="mast-item block whitespace-nowrap leading-10 tracking-serif-wide"
+                class="
+        block leading-10 tracking-serif-wide whitespace-nowrap transition
+        duration-200 ease-in-out
+        group-has-[#nav:checked]:opacity-0
+      "
               >
                 <a
-                  class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                  class="
+          text-inherit transition-all duration-500 ease-in-out
+          hover:bg-[rgba(0,0,0,.50)]
+        "
                   href="/how-i-grade/"
                   style="text-shadow: 1px 1px 2px black;"
                 >
@@ -49,10 +78,17 @@ exports[`Home > matches snapshot 1`] = `
                 </a>
               </li>
               <li
-                class="mast-item block whitespace-nowrap leading-10 tracking-serif-wide"
+                class="
+        block leading-10 tracking-serif-wide whitespace-nowrap transition
+        duration-200 ease-in-out
+        group-has-[#nav:checked]:opacity-0
+      "
               >
                 <a
-                  class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                  class="
+          text-inherit transition-all duration-500 ease-in-out
+          hover:bg-[rgba(0,0,0,.50)]
+        "
                   href="/reviews/"
                   style="text-shadow: 1px 1px 2px black;"
                 >
@@ -60,10 +96,17 @@ exports[`Home > matches snapshot 1`] = `
                 </a>
               </li>
               <li
-                class="mast-item block whitespace-nowrap leading-10 tracking-serif-wide"
+                class="
+        block leading-10 tracking-serif-wide whitespace-nowrap transition
+        duration-200 ease-in-out
+        group-has-[#nav:checked]:opacity-0
+      "
               >
                 <a
-                  class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                  class="
+          text-inherit transition-all duration-500 ease-in-out
+          hover:bg-[rgba(0,0,0,.50)]
+        "
                   href="/viewings/"
                   style="text-shadow: 1px 1px 2px black;"
                 >
@@ -71,10 +114,17 @@ exports[`Home > matches snapshot 1`] = `
                 </a>
               </li>
               <li
-                class="mast-item block whitespace-nowrap leading-10 tracking-serif-wide"
+                class="
+        block leading-10 tracking-serif-wide whitespace-nowrap transition
+        duration-200 ease-in-out
+        group-has-[#nav:checked]:opacity-0
+      "
               >
                 <a
-                  class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                  class="
+          text-inherit transition-all duration-500 ease-in-out
+          hover:bg-[rgba(0,0,0,.50)]
+        "
                   href="/watchlist/"
                   style="text-shadow: 1px 1px 2px black;"
                 >
@@ -84,12 +134,19 @@ exports[`Home > matches snapshot 1`] = `
             </ul>
           </nav>
           <div
-            class="search-button z-[1000]"
+            class="
+        z-1000
+        group-has-[#nav:checked]:!text-[#fff]
+      "
           >
             <button
               aria-keyshortcuts="Control+K"
               aria-label="Search"
-              class="flex size-10 items-center justify-center overflow-hidden text-sm leading-6 ring-default desktop:ml-6"
+              class="
+          flex size-10 items-center justify-center overflow-hidden text-sm
+          leading-6 ring-default
+          desktop:ml-6
+        "
               data-open-modal="true"
               disabled=""
               title="Search: Control+K"
@@ -111,152 +168,242 @@ exports[`Home > matches snapshot 1`] = `
               </svg>
             </button>
           </div>
-          <input
-            class="hidden"
-            id="mobile-nav"
-            type="checkbox"
-          />
-          <label
-            class="hamburger-icon"
-            for="mobile-nav"
+          <div
+            class="group"
           >
-            <span
-              class="hamburger-icon-bars"
-              style="background-color: rgb(255, 255, 255);"
+            <input
+              class="hidden"
+              id="nav"
+              type="checkbox"
             />
-          </label>
-          <ul
-            class="hamburger-menu flex flex-col items-start gap-y-5 text-left text-inverse tablet:gap-y-10"
-          >
-            <li
-              class="block w-1/2 whitespace-nowrap text-2xl desktop:w-full"
+            <label
+              class="
+          relative z-40 ml-2 flex h-10 w-10 cursor-pointer items-center
+          justify-center
+        "
+              for="nav"
             >
-              <a
-                href="/"
-              >
-                Home
-              </a>
-            </li>
-            <li
-              class="block w-1/2 whitespace-nowrap text-2xl desktop:w-full"
+              <span
+                class="
+            relative block h-0.5 w-6 origin-center
+            transition-[top,bottom,transform] duration-200 ease-in-out
+            group-has-[#nav:checked]:transform-[rotate(45deg)]
+            group-has-[#nav:checked]:!bg-[#fff]
+            group-has-[#nav:checked]:before:top-0
+            group-has-[#nav:checked]:before:transform-[rotate(90deg)]
+            group-has-[#nav:checked]:after:bottom-0
+            group-has-[#nav:checked]:after:transform-[rotate(90deg)]
+            before:absolute before:-top-2 before:block before:h-0.5 before:w-6
+            before:bg-inherit before:transition before:duration-200
+            before:ease-in-out
+            after:absolute after:-bottom-2 after:block after:h-0.5 after:w-6
+            after:bg-inherit after:transition after:duration-200
+            after:ease-in-out
+          "
+                style="background-color: rgb(255, 255, 255);"
+              />
+            </label>
+            <ul
+              class="
+          fixed top-0 right-0 z-20 flex h-full w-0 transform-[translateX(100%)]
+          flex-col items-start gap-y-5 overflow-hidden bg-footer text-left
+          text-inverse opacity-0 duration-200 ease-in-out
+          group-has-[#nav:checked]:bottom-0 group-has-[#nav:checked]:z-20
+          group-has-[#nav:checked]:h-full group-has-[#nav:checked]:w-full
+          group-has-[#nav:checked]:transform-[translateX(0)]
+          group-has-[#nav:checked]:overflow-y-auto
+          group-has-[#nav:checked]:pt-20 group-has-[#nav:checked]:pr-[16%]
+          group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%]
+          group-has-[#nav:checked]:opacity-100
+          group-has-[#nav:checked]:tablet:px-10
+          group-has-[#nav:checked]:tablet:pt-40
+          group-has-[#nav:checked]:desktop:px-20
+          tablet:max-w-[35vw] tablet:gap-y-10
+          desktop:max-w-[25vw]
+        "
             >
-              <a
-                href="/how-i-grade/"
+              <li
+                class="
+        block w-1/2 text-2xl whitespace-nowrap
+        desktop:w-full
+      "
               >
-                How I Grade
-              </a>
-            </li>
-            <li
-              class="block w-1/2 whitespace-nowrap text-2xl desktop:w-full"
-            >
-              <a
-                href="/reviews/"
+                <a
+                  href="/"
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                class="
+        block w-1/2 text-2xl whitespace-nowrap
+        desktop:w-full
+      "
               >
-                Reviews
-              </a>
-              <ol
-                class="mt-4"
+                <a
+                  href="/how-i-grade/"
+                >
+                  How I Grade
+                </a>
+              </li>
+              <li
+                class="
+        block w-1/2 text-2xl whitespace-nowrap
+        desktop:w-full
+      "
               >
-                <li
-                  class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
+                <a
+                  href="/reviews/"
                 >
-                  <a
-                    href="/cast-and-crew/"
-                  >
-                    Cast & Crew
-                  </a>
-                </li>
-                <li
-                  class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
+                  Reviews
+                </a>
+                <ol
+                  class="mt-4"
                 >
-                  <a
-                    href="/collections/"
+                  <li
+                    class="
+              mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
                   >
-                    Collections
-                  </a>
-                </li>
-                <li
-                  class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
-                >
-                  <a
-                    href="/reviews/overrated/"
+                    <a
+                      href="/cast-and-crew/"
+                    >
+                      Cast & Crew
+                    </a>
+                  </li>
+                  <li
+                    class="
+              mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
                   >
-                    Overrated
-                  </a>
-                </li>
-                <li
-                  class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
-                >
-                  <a
-                    href="/reviews/underrated/"
+                    <a
+                      href="/collections/"
+                    >
+                      Collections
+                    </a>
+                  </li>
+                  <li
+                    class="
+              mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
                   >
-                    Underrated
-                  </a>
-                </li>
-                <li
-                  class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
-                >
-                  <a
-                    href="/reviews/underseen/"
+                    <a
+                      href="/reviews/overrated/"
+                    >
+                      Overrated
+                    </a>
+                  </li>
+                  <li
+                    class="
+              mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
                   >
-                    Underseen
-                  </a>
-                </li>
-              </ol>
-            </li>
-            <li
-              class="block w-1/2 whitespace-nowrap text-2xl desktop:w-full"
-            >
-              <a
-                href="/viewings/"
+                    <a
+                      href="/reviews/underrated/"
+                    >
+                      Underrated
+                    </a>
+                  </li>
+                  <li
+                    class="
+              mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
+                  >
+                    <a
+                      href="/reviews/underseen/"
+                    >
+                      Underseen
+                    </a>
+                  </li>
+                </ol>
+              </li>
+              <li
+                class="
+        block w-1/2 text-2xl whitespace-nowrap
+        desktop:w-full
+      "
               >
-                Viewing Log
-              </a>
-              <ol
-                class="mt-4"
-              >
-                <li
-                  class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
+                <a
+                  href="/viewings/"
                 >
-                  <a
-                    href="/viewings/stats/"
-                  >
-                    Stats
-                  </a>
-                </li>
-              </ol>
-            </li>
-            <li
-              class="block w-1/2 whitespace-nowrap text-2xl desktop:w-full"
-            >
-              <a
-                href="/watchlist/"
-              >
-                Watchlist
-              </a>
-              <ol
-                class="mt-4"
-              >
-                <li
-                  class="mb-4 ml-1 font-sans text-xs uppercase tracking-wider text-inverse-subtle last:mb-0"
+                  Viewing Log
+                </a>
+                <ol
+                  class="mt-4"
                 >
-                  <a
-                    href="/watchlist/progress/"
+                  <li
+                    class="
+              mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
                   >
-                    Progress
-                  </a>
-                </li>
-              </ol>
-            </li>
-          </ul>
+                    <a
+                      href="/viewings/stats/"
+                    >
+                      Stats
+                    </a>
+                  </li>
+                </ol>
+              </li>
+              <li
+                class="
+        block w-1/2 text-2xl whitespace-nowrap
+        desktop:w-full
+      "
+              >
+                <a
+                  href="/watchlist/"
+                >
+                  Watchlist
+                </a>
+                <ol
+                  class="mt-4"
+                >
+                  <li
+                    class="
+              mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
+                  >
+                    <a
+                      href="/watchlist/progress/"
+                    >
+                      Progress
+                    </a>
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </div>
         </div>
       </header>
       <main
-        class="grow bg-subtle pb-8"
+        class="
+              grow transition-[opacity] duration-200 ease-in-out
+              group-has-[#nav:checked]:opacity-80
+             bg-subtle pb-8"
         id="content"
       >
         <header
-          class="min-h-[400px] tablet:min-h-[640px] desktop:min-h-[clamp(640px,70vh,1350px)] relative flex w-full flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pb-8 pt-40 text-inverse tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40"
+          class="
+        min-h-[400px] tablet:min-h-[640px] desktop:min-h-[clamp(640px,70vh,1350px)]
+        relative flex w-full flex-col content-start items-center justify-end
+        gap-6 bg-[#2A2B2A] pt-40 pb-8 text-inverse
+        tablet:pt-40 tablet:pb-10
+        desktop:pt-40 desktop:pb-16
+      "
         >
           <img
             alt=""
@@ -270,7 +417,11 @@ exports[`Home > matches snapshot 1`] = `
             width="2400"
           />
           <div
-            class=" z-10 mx-auto flex w-full max-w-screen-max flex-col px-container"
+            class="
+          
+          z-10 mx-auto flex w-full max-w-(--breakpoint-max) flex-col
+          px-container
+        "
           >
             <h1
               class="[text-shadow:1px_1px_2px_black] text-[2rem] leading-10 tablet:text-4xl desktop:text-7xl"
@@ -279,28 +430,50 @@ exports[`Home > matches snapshot 1`] = `
               Frank's Movie Log
             </h1>
             <p
-              class="mt-1 text-base desktop:my-4 desktop:text-xl [text-shadow:1px_1px_2px_black] "
+              class="
+        mt-1 text-base
+        desktop:my-4 desktop:text-xl
+        [text-shadow:1px_1px_2px_black]
+        
+      "
             >
               Quality reviews of films of questionable quality.
             </p>
           </div>
         </header>
         <nav
-          class="mx-auto max-w-screen-max"
+          class="mx-auto max-w-(--breakpoint-max)"
         >
           <h2
-            class="py-10 font-sans text-xs font-semibold uppercase tracking-wide text-subtle px-container"
+            class="
+          py-10 font-sans text-xs font-semibold tracking-wide text-subtle
+          uppercase
+         px-container"
           >
             Latest Reviews
           </h2>
           <ul
-            class="flex w-full flex-col flex-wrap justify-center gap-x-[3%] pb-8 tablet:flex-row tablet:justify-between tablet:gap-y-[6vw] tablet:px-container desktop:gap-y-[3vw] max:gap-y-14"
+            class="
+            flex w-full flex-col flex-wrap justify-center gap-x-[3%] pb-8
+            max:gap-y-14
+            tablet:flex-row tablet:justify-between tablet:gap-y-[6vw]
+            tablet:px-container
+            desktop:gap-y-[3vw]
+          "
           >
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="
+        relative mb-1 flex flex-col bg-default pt-12
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+        tablet:mb-0 tablet:max-w-[47%] tablet:pt-0
+        desktop:max-w-[31.33%]
+      "
             >
               <div
-                class="mx-[8%] mb-6 block tablet:mx-0"
+                class="
+          mx-[8%] mb-6 block
+          tablet:mx-0
+        "
               >
                 <img
                   alt=""
@@ -315,20 +488,34 @@ exports[`Home > matches snapshot 1`] = `
                 />
               </div>
               <div
-                class="flex grow flex-col px-[8%] pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+                class="
+          flex grow flex-col px-[8%] pb-8
+          desktop:pr-[10%] desktop:pl-[8.5%]
+        "
               >
                 <div
-                  class="mb-3 font-sans text-xxs font-light uppercase leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle uppercase
+            desktop:tracking-wide
+          "
                 >
                   23 Jun 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="
+            mb-3 block text-2.5xl leading-7 font-medium
+            before:absolute before:inset-x-[8%] before:top-12
+            before:aspect-video before:bg-default before:opacity-15
+            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            hover:text-accent hover:before:opacity-0
+            tablet:before:inset-x-0 tablet:before:top-0
+          "
                   href="/reviews/chamber-of-horrors-1966/"
                 >
                   Chamber of Horrors 
                   <span
-                    class="text-sm font-normal leading-none text-muted"
+                    class="text-sm leading-none font-normal text-muted"
                   >
                     1966
                   </span>
@@ -340,14 +527,17 @@ exports[`Home > matches snapshot 1`] = `
                   />
                   <img
                     alt="D+: 2 stars (out of 5)"
-                    class="mb-5 tablet:mb-8"
+                    class="
+            mb-5
+            tablet:mb-8
+          "
                     height="24"
                     src="/svg/2-stars.svg"
                     width="120"
                   />
                 </picture>
                 <div
-                  class="rendered-markdown mb-6 text-lg leading-normal tracking-prose text-muted"
+                  class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                 >
                   <p>
                     Warner Bros. shot 
@@ -358,7 +548,11 @@ exports[`Home > matches snapshot 1`] = `
                   </p>
                 </div>
                 <div
-                  class="mt-auto font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle
+            desktop:tracking-wide
+          "
                 >
                   <span>
                     Crime
@@ -373,10 +567,18 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="
+        relative mb-1 flex flex-col bg-default pt-12
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+        tablet:mb-0 tablet:max-w-[47%] tablet:pt-0
+        desktop:max-w-[31.33%]
+      "
             >
               <div
-                class="mx-[8%] mb-6 block tablet:mx-0"
+                class="
+          mx-[8%] mb-6 block
+          tablet:mx-0
+        "
               >
                 <img
                   alt=""
@@ -391,20 +593,34 @@ exports[`Home > matches snapshot 1`] = `
                 />
               </div>
               <div
-                class="flex grow flex-col px-[8%] pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+                class="
+          flex grow flex-col px-[8%] pb-8
+          desktop:pr-[10%] desktop:pl-[8.5%]
+        "
               >
                 <div
-                  class="mb-3 font-sans text-xxs font-light uppercase leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle uppercase
+            desktop:tracking-wide
+          "
                 >
                   18 Jun 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="
+            mb-3 block text-2.5xl leading-7 font-medium
+            before:absolute before:inset-x-[8%] before:top-12
+            before:aspect-video before:bg-default before:opacity-15
+            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            hover:text-accent hover:before:opacity-0
+            tablet:before:inset-x-0 tablet:before:top-0
+          "
                   href="/reviews/two-for-the-seesaw-1962/"
                 >
                   Two for the Seesaw 
                   <span
-                    class="text-sm font-normal leading-none text-muted"
+                    class="text-sm leading-none font-normal text-muted"
                   >
                     1962
                   </span>
@@ -416,14 +632,17 @@ exports[`Home > matches snapshot 1`] = `
                   />
                   <img
                     alt="C+: 3 stars (out of 5)"
-                    class="mb-5 tablet:mb-8"
+                    class="
+            mb-5
+            tablet:mb-8
+          "
                     height="24"
                     src="/svg/3-stars.svg"
                     width="120"
                   />
                 </picture>
                 <div
-                  class="rendered-markdown mb-6 text-lg leading-normal tracking-prose text-muted"
+                  class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                 >
                   <p>
                     In 
@@ -438,7 +657,11 @@ exports[`Home > matches snapshot 1`] = `
                   </p>
                 </div>
                 <div
-                  class="mt-auto font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle
+            desktop:tracking-wide
+          "
                 >
                   <span>
                     Drama
@@ -450,10 +673,18 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="
+        relative mb-1 flex flex-col bg-default pt-12
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+        tablet:mb-0 tablet:max-w-[47%] tablet:pt-0
+        desktop:max-w-[31.33%]
+      "
             >
               <div
-                class="mx-[8%] mb-6 block tablet:mx-0"
+                class="
+          mx-[8%] mb-6 block
+          tablet:mx-0
+        "
               >
                 <img
                   alt=""
@@ -468,20 +699,34 @@ exports[`Home > matches snapshot 1`] = `
                 />
               </div>
               <div
-                class="flex grow flex-col px-[8%] pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+                class="
+          flex grow flex-col px-[8%] pb-8
+          desktop:pr-[10%] desktop:pl-[8.5%]
+        "
               >
                 <div
-                  class="mb-3 font-sans text-xxs font-light uppercase leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle uppercase
+            desktop:tracking-wide
+          "
                 >
                   08 Jun 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="
+            mb-3 block text-2.5xl leading-7 font-medium
+            before:absolute before:inset-x-[8%] before:top-12
+            before:aspect-video before:bg-default before:opacity-15
+            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            hover:text-accent hover:before:opacity-0
+            tablet:before:inset-x-0 tablet:before:top-0
+          "
                   href="/reviews/the-man-with-nine-lives-1940/"
                 >
                   The Man with Nine Lives 
                   <span
-                    class="text-sm font-normal leading-none text-muted"
+                    class="text-sm leading-none font-normal text-muted"
                   >
                     1940
                   </span>
@@ -493,14 +738,17 @@ exports[`Home > matches snapshot 1`] = `
                   />
                   <img
                     alt="C-: 2.5 stars (out of 5)"
-                    class="mb-5 tablet:mb-8"
+                    class="
+            mb-5
+            tablet:mb-8
+          "
                     height="24"
                     src="/svg/2-half-stars.svg"
                     width="120"
                   />
                 </picture>
                 <div
-                  class="rendered-markdown mb-6 text-lg leading-normal tracking-prose text-muted"
+                  class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                 >
                   <p>
                     Despite Boris Karloff playing a doctor with a secret underground laboratory where he holds six people hostage as unwilling test subjects, 
@@ -511,7 +759,11 @@ exports[`Home > matches snapshot 1`] = `
                   </p>
                 </div>
                 <div
-                  class="mt-auto font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle
+            desktop:tracking-wide
+          "
                 >
                   <span>
                     Horror
@@ -526,10 +778,18 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="
+        relative mb-1 flex flex-col bg-default pt-12
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+        tablet:mb-0 tablet:max-w-[47%] tablet:pt-0
+        desktop:max-w-[31.33%]
+      "
             >
               <div
-                class="mx-[8%] mb-6 block tablet:mx-0"
+                class="
+          mx-[8%] mb-6 block
+          tablet:mx-0
+        "
               >
                 <img
                   alt=""
@@ -544,20 +804,34 @@ exports[`Home > matches snapshot 1`] = `
                 />
               </div>
               <div
-                class="flex grow flex-col px-[8%] pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+                class="
+          flex grow flex-col px-[8%] pb-8
+          desktop:pr-[10%] desktop:pl-[8.5%]
+        "
               >
                 <div
-                  class="mb-3 font-sans text-xxs font-light uppercase leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle uppercase
+            desktop:tracking-wide
+          "
                 >
                   23 May 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="
+            mb-3 block text-2.5xl leading-7 font-medium
+            before:absolute before:inset-x-[8%] before:top-12
+            before:aspect-video before:bg-default before:opacity-15
+            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            hover:text-accent hover:before:opacity-0
+            tablet:before:inset-x-0 tablet:before:top-0
+          "
                   href="/reviews/burial-ground-the-nights-of-terror-1981/"
                 >
                   Burial Ground: The Nights of Terror 
                   <span
-                    class="text-sm font-normal leading-none text-muted"
+                    class="text-sm leading-none font-normal text-muted"
                   >
                     1981
                   </span>
@@ -569,14 +843,17 @@ exports[`Home > matches snapshot 1`] = `
                   />
                   <img
                     alt="C: 3 stars (out of 5)"
-                    class="mb-5 tablet:mb-8"
+                    class="
+            mb-5
+            tablet:mb-8
+          "
                     height="24"
                     src="/svg/3-stars.svg"
                     width="120"
                   />
                 </picture>
                 <div
-                  class="rendered-markdown mb-6 text-lg leading-normal tracking-prose text-muted"
+                  class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                 >
                   <p>
                     Teamwork wins. That’s the takeaway from 
@@ -595,7 +872,11 @@ exports[`Home > matches snapshot 1`] = `
                   </p>
                 </div>
                 <div
-                  class="mt-auto font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle
+            desktop:tracking-wide
+          "
                 >
                   <span>
                     Horror
@@ -604,10 +885,18 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="
+        relative mb-1 flex flex-col bg-default pt-12
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+        tablet:mb-0 tablet:max-w-[47%] tablet:pt-0
+        desktop:max-w-[31.33%]
+      "
             >
               <div
-                class="mx-[8%] mb-6 block tablet:mx-0"
+                class="
+          mx-[8%] mb-6 block
+          tablet:mx-0
+        "
               >
                 <img
                   alt=""
@@ -622,20 +911,34 @@ exports[`Home > matches snapshot 1`] = `
                 />
               </div>
               <div
-                class="flex grow flex-col px-[8%] pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+                class="
+          flex grow flex-col px-[8%] pb-8
+          desktop:pr-[10%] desktop:pl-[8.5%]
+        "
               >
                 <div
-                  class="mb-3 font-sans text-xxs font-light uppercase leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle uppercase
+            desktop:tracking-wide
+          "
                 >
                   15 May 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="
+            mb-3 block text-2.5xl leading-7 font-medium
+            before:absolute before:inset-x-[8%] before:top-12
+            before:aspect-video before:bg-default before:opacity-15
+            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            hover:text-accent hover:before:opacity-0
+            tablet:before:inset-x-0 tablet:before:top-0
+          "
                   href="/reviews/lucifers-women-1974/"
                 >
                   Lucifer's Women 
                   <span
-                    class="text-sm font-normal leading-none text-muted"
+                    class="text-sm leading-none font-normal text-muted"
                   >
                     1974
                   </span>
@@ -647,14 +950,17 @@ exports[`Home > matches snapshot 1`] = `
                   />
                   <img
                     alt="D: 2 stars (out of 5)"
-                    class="mb-5 tablet:mb-8"
+                    class="
+            mb-5
+            tablet:mb-8
+          "
                     height="24"
                     src="/svg/2-stars.svg"
                     width="120"
                   />
                 </picture>
                 <div
-                  class="rendered-markdown mb-6 text-lg leading-normal tracking-prose text-muted"
+                  class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                 >
                   <p>
                     I watched 
@@ -669,7 +975,11 @@ exports[`Home > matches snapshot 1`] = `
                   </p>
                 </div>
                 <div
-                  class="mt-auto font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle
+            desktop:tracking-wide
+          "
                 >
                   <span>
                     Horror
@@ -678,10 +988,18 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="
+        relative mb-1 flex flex-col bg-default pt-12
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+        tablet:mb-0 tablet:max-w-[47%] tablet:pt-0
+        desktop:max-w-[31.33%]
+      "
             >
               <div
-                class="mx-[8%] mb-6 block tablet:mx-0"
+                class="
+          mx-[8%] mb-6 block
+          tablet:mx-0
+        "
               >
                 <img
                   alt=""
@@ -696,20 +1014,34 @@ exports[`Home > matches snapshot 1`] = `
                 />
               </div>
               <div
-                class="flex grow flex-col px-[8%] pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+                class="
+          flex grow flex-col px-[8%] pb-8
+          desktop:pr-[10%] desktop:pl-[8.5%]
+        "
               >
                 <div
-                  class="mb-3 font-sans text-xxs font-light uppercase leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle uppercase
+            desktop:tracking-wide
+          "
                 >
                   27 Apr 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="
+            mb-3 block text-2.5xl leading-7 font-medium
+            before:absolute before:inset-x-[8%] before:top-12
+            before:aspect-video before:bg-default before:opacity-15
+            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            hover:text-accent hover:before:opacity-0
+            tablet:before:inset-x-0 tablet:before:top-0
+          "
                   href="/reviews/beyond-the-door-iii-1989/"
                 >
                   Beyond the Door III 
                   <span
-                    class="text-sm font-normal leading-none text-muted"
+                    class="text-sm leading-none font-normal text-muted"
                   >
                     1989
                   </span>
@@ -721,21 +1053,28 @@ exports[`Home > matches snapshot 1`] = `
                   />
                   <img
                     alt="B-: 3.5 stars (out of 5)"
-                    class="mb-5 tablet:mb-8"
+                    class="
+            mb-5
+            tablet:mb-8
+          "
                     height="24"
                     src="/svg/3-half-stars.svg"
                     width="120"
                   />
                 </picture>
                 <div
-                  class="rendered-markdown mb-6 text-lg leading-normal tracking-prose text-muted"
+                  class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                 >
                   <p>
                     Bonkers in the best way possible.
                   </p>
                 </div>
                 <div
-                  class="mt-auto font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle
+            desktop:tracking-wide
+          "
                 >
                   <span>
                     Drama
@@ -750,10 +1089,18 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="
+        relative mb-1 flex flex-col bg-default pt-12
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+        tablet:mb-0 tablet:max-w-[47%] tablet:pt-0
+        desktop:max-w-[31.33%]
+      "
             >
               <div
-                class="mx-[8%] mb-6 block tablet:mx-0"
+                class="
+          mx-[8%] mb-6 block
+          tablet:mx-0
+        "
               >
                 <img
                   alt=""
@@ -768,20 +1115,34 @@ exports[`Home > matches snapshot 1`] = `
                 />
               </div>
               <div
-                class="flex grow flex-col px-[8%] pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+                class="
+          flex grow flex-col px-[8%] pb-8
+          desktop:pr-[10%] desktop:pl-[8.5%]
+        "
               >
                 <div
-                  class="mb-3 font-sans text-xxs font-light uppercase leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle uppercase
+            desktop:tracking-wide
+          "
                 >
                   27 Apr 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="
+            mb-3 block text-2.5xl leading-7 font-medium
+            before:absolute before:inset-x-[8%] before:top-12
+            before:aspect-video before:bg-default before:opacity-15
+            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            hover:text-accent hover:before:opacity-0
+            tablet:before:inset-x-0 tablet:before:top-0
+          "
                   href="/reviews/the-midnight-meat-train-2008/"
                 >
                   The Midnight Meat Train 
                   <span
-                    class="text-sm font-normal leading-none text-muted"
+                    class="text-sm leading-none font-normal text-muted"
                   >
                     2008
                   </span>
@@ -793,14 +1154,17 @@ exports[`Home > matches snapshot 1`] = `
                   />
                   <img
                     alt="D: 2 stars (out of 5)"
-                    class="mb-5 tablet:mb-8"
+                    class="
+            mb-5
+            tablet:mb-8
+          "
                     height="24"
                     src="/svg/2-stars.svg"
                     width="120"
                   />
                 </picture>
                 <div
-                  class="rendered-markdown mb-6 text-lg leading-normal tracking-prose text-muted"
+                  class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                 >
                   <p>
                     Sometimes, frustrating films are worse than bad ones. Such is the case with 
@@ -811,7 +1175,11 @@ exports[`Home > matches snapshot 1`] = `
                   </p>
                 </div>
                 <div
-                  class="mt-auto font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle
+            desktop:tracking-wide
+          "
                 >
                   <span>
                     Horror
@@ -826,10 +1194,18 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="
+        relative mb-1 flex flex-col bg-default pt-12
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+        tablet:mb-0 tablet:max-w-[47%] tablet:pt-0
+        desktop:max-w-[31.33%]
+      "
             >
               <div
-                class="mx-[8%] mb-6 block tablet:mx-0"
+                class="
+          mx-[8%] mb-6 block
+          tablet:mx-0
+        "
               >
                 <img
                   alt=""
@@ -844,20 +1220,34 @@ exports[`Home > matches snapshot 1`] = `
                 />
               </div>
               <div
-                class="flex grow flex-col px-[8%] pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+                class="
+          flex grow flex-col px-[8%] pb-8
+          desktop:pr-[10%] desktop:pl-[8.5%]
+        "
               >
                 <div
-                  class="mb-3 font-sans text-xxs font-light uppercase leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle uppercase
+            desktop:tracking-wide
+          "
                 >
                   27 Apr 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="
+            mb-3 block text-2.5xl leading-7 font-medium
+            before:absolute before:inset-x-[8%] before:top-12
+            before:aspect-video before:bg-default before:opacity-15
+            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            hover:text-accent hover:before:opacity-0
+            tablet:before:inset-x-0 tablet:before:top-0
+          "
                   href="/reviews/horror-express-1972/"
                 >
                   Horror Express 
                   <span
-                    class="text-sm font-normal leading-none text-muted"
+                    class="text-sm leading-none font-normal text-muted"
                   >
                     1972
                   </span>
@@ -869,14 +1259,17 @@ exports[`Home > matches snapshot 1`] = `
                   />
                   <img
                     alt="D+: 2 stars (out of 5)"
-                    class="mb-5 tablet:mb-8"
+                    class="
+            mb-5
+            tablet:mb-8
+          "
                     height="24"
                     src="/svg/2-stars.svg"
                     width="120"
                   />
                 </picture>
                 <div
-                  class="rendered-markdown mb-6 text-lg leading-normal tracking-prose text-muted"
+                  class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                 >
                   <p>
                     <em>
@@ -886,7 +1279,11 @@ exports[`Home > matches snapshot 1`] = `
                   </p>
                 </div>
                 <div
-                  class="mt-auto font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle
+            desktop:tracking-wide
+          "
                 >
                   <span>
                     Adventure
@@ -904,10 +1301,18 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="
+        relative mb-1 flex flex-col bg-default pt-12
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+        tablet:mb-0 tablet:max-w-[47%] tablet:pt-0
+        desktop:max-w-[31.33%]
+      "
             >
               <div
-                class="mx-[8%] mb-6 block tablet:mx-0"
+                class="
+          mx-[8%] mb-6 block
+          tablet:mx-0
+        "
               >
                 <img
                   alt=""
@@ -922,20 +1327,34 @@ exports[`Home > matches snapshot 1`] = `
                 />
               </div>
               <div
-                class="flex grow flex-col px-[8%] pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+                class="
+          flex grow flex-col px-[8%] pb-8
+          desktop:pr-[10%] desktop:pl-[8.5%]
+        "
               >
                 <div
-                  class="mb-3 font-sans text-xxs font-light uppercase leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle uppercase
+            desktop:tracking-wide
+          "
                 >
                   27 Apr 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="
+            mb-3 block text-2.5xl leading-7 font-medium
+            before:absolute before:inset-x-[8%] before:top-12
+            before:aspect-video before:bg-default before:opacity-15
+            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            hover:text-accent hover:before:opacity-0
+            tablet:before:inset-x-0 tablet:before:top-0
+          "
                   href="/reviews/night-train-to-terror-1985/"
                 >
                   Night Train to Terror 
                   <span
-                    class="text-sm font-normal leading-none text-muted"
+                    class="text-sm leading-none font-normal text-muted"
                   >
                     1985
                   </span>
@@ -947,14 +1366,17 @@ exports[`Home > matches snapshot 1`] = `
                   />
                   <img
                     alt="C: 3 stars (out of 5)"
-                    class="mb-5 tablet:mb-8"
+                    class="
+            mb-5
+            tablet:mb-8
+          "
                     height="24"
                     src="/svg/3-stars.svg"
                     width="120"
                   />
                 </picture>
                 <div
-                  class="rendered-markdown mb-6 text-lg leading-normal tracking-prose text-muted"
+                  class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                 >
                   <p>
                     For an anthology comprising three unrelated low-budget horror features cut to half or a third of their running time and book-ended by God and Satan riding a train to Las Vegas with an 80s teen pop-rock band, 
@@ -965,7 +1387,11 @@ exports[`Home > matches snapshot 1`] = `
                   </p>
                 </div>
                 <div
-                  class="mt-auto font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle
+            desktop:tracking-wide
+          "
                 >
                   <span>
                     Drama
@@ -986,10 +1412,18 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="
+        relative mb-1 flex flex-col bg-default pt-12
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+        tablet:mb-0 tablet:max-w-[47%] tablet:pt-0
+        desktop:max-w-[31.33%]
+      "
             >
               <div
-                class="mx-[8%] mb-6 block tablet:mx-0"
+                class="
+          mx-[8%] mb-6 block
+          tablet:mx-0
+        "
               >
                 <img
                   alt=""
@@ -1004,20 +1438,34 @@ exports[`Home > matches snapshot 1`] = `
                 />
               </div>
               <div
-                class="flex grow flex-col px-[8%] pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+                class="
+          flex grow flex-col px-[8%] pb-8
+          desktop:pr-[10%] desktop:pl-[8.5%]
+        "
               >
                 <div
-                  class="mb-3 font-sans text-xxs font-light uppercase leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle uppercase
+            desktop:tracking-wide
+          "
                 >
                   24 Apr 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="
+            mb-3 block text-2.5xl leading-7 font-medium
+            before:absolute before:inset-x-[8%] before:top-12
+            before:aspect-video before:bg-default before:opacity-15
+            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            hover:text-accent hover:before:opacity-0
+            tablet:before:inset-x-0 tablet:before:top-0
+          "
                   href="/reviews/human-lanterns-1982/"
                 >
                   Human Lanterns 
                   <span
-                    class="text-sm font-normal leading-none text-muted"
+                    class="text-sm leading-none font-normal text-muted"
                   >
                     1982
                   </span>
@@ -1029,14 +1477,17 @@ exports[`Home > matches snapshot 1`] = `
                   />
                   <img
                     alt="C: 3 stars (out of 5)"
-                    class="mb-5 tablet:mb-8"
+                    class="
+            mb-5
+            tablet:mb-8
+          "
                     height="24"
                     src="/svg/3-stars.svg"
                     width="120"
                   />
                 </picture>
                 <div
-                  class="rendered-markdown mb-6 text-lg leading-normal tracking-prose text-muted"
+                  class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                 >
                   <p>
                     <em>
@@ -1062,7 +1513,11 @@ exports[`Home > matches snapshot 1`] = `
                   </p>
                 </div>
                 <div
-                  class="mt-auto font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle
+            desktop:tracking-wide
+          "
                 >
                   <span>
                     Horror
@@ -1074,10 +1529,18 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="
+        relative mb-1 flex flex-col bg-default pt-12
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+        tablet:mb-0 tablet:max-w-[47%] tablet:pt-0
+        desktop:max-w-[31.33%]
+      "
             >
               <div
-                class="mx-[8%] mb-6 block tablet:mx-0"
+                class="
+          mx-[8%] mb-6 block
+          tablet:mx-0
+        "
               >
                 <img
                   alt=""
@@ -1092,20 +1555,34 @@ exports[`Home > matches snapshot 1`] = `
                 />
               </div>
               <div
-                class="flex grow flex-col px-[8%] pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+                class="
+          flex grow flex-col px-[8%] pb-8
+          desktop:pr-[10%] desktop:pl-[8.5%]
+        "
               >
                 <div
-                  class="mb-3 font-sans text-xxs font-light uppercase leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle uppercase
+            desktop:tracking-wide
+          "
                 >
                   24 Apr 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="
+            mb-3 block text-2.5xl leading-7 font-medium
+            before:absolute before:inset-x-[8%] before:top-12
+            before:aspect-video before:bg-default before:opacity-15
+            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            hover:text-accent hover:before:opacity-0
+            tablet:before:inset-x-0 tablet:before:top-0
+          "
                   href="/reviews/ninja-in-the-dragons-den-1982/"
                 >
                   Ninja in the Dragon's Den 
                   <span
-                    class="text-sm font-normal leading-none text-muted"
+                    class="text-sm leading-none font-normal text-muted"
                   >
                     1982
                   </span>
@@ -1117,14 +1594,17 @@ exports[`Home > matches snapshot 1`] = `
                   />
                   <img
                     alt="B: 4 stars (out of 5)"
-                    class="mb-5 tablet:mb-8"
+                    class="
+            mb-5
+            tablet:mb-8
+          "
                     height="24"
                     src="/svg/4-stars.svg"
                     width="120"
                   />
                 </picture>
                 <div
-                  class="rendered-markdown mb-6 text-lg leading-normal tracking-prose text-muted"
+                  class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                 >
                   <p>
                     The overarching plot of 
@@ -1135,7 +1615,11 @@ exports[`Home > matches snapshot 1`] = `
                   </p>
                 </div>
                 <div
-                  class="mt-auto font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle
+            desktop:tracking-wide
+          "
                 >
                   <span>
                     Action
@@ -1147,10 +1631,18 @@ exports[`Home > matches snapshot 1`] = `
               </div>
             </li>
             <li
-              class="relative mb-1 flex flex-col bg-default pt-12 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:mb-0 tablet:max-w-[47%] tablet:pt-0 desktop:max-w-[31.33%]"
+              class="
+        relative mb-1 flex flex-col bg-default pt-12
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+        tablet:mb-0 tablet:max-w-[47%] tablet:pt-0
+        desktop:max-w-[31.33%]
+      "
             >
               <div
-                class="mx-[8%] mb-6 block tablet:mx-0"
+                class="
+          mx-[8%] mb-6 block
+          tablet:mx-0
+        "
               >
                 <img
                   alt=""
@@ -1165,20 +1657,34 @@ exports[`Home > matches snapshot 1`] = `
                 />
               </div>
               <div
-                class="flex grow flex-col px-[8%] pb-8 desktop:pl-[8.5%] desktop:pr-[10%]"
+                class="
+          flex grow flex-col px-[8%] pb-8
+          desktop:pr-[10%] desktop:pl-[8.5%]
+        "
               >
                 <div
-                  class="mb-3 font-sans text-xxs font-light uppercase leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle uppercase
+            desktop:tracking-wide
+          "
                 >
                   13 Apr 2024
                 </div>
                 <a
-                  class="mb-3 block text-2.5xl font-medium leading-7 before:absolute before:inset-x-[8%] before:top-12 before:aspect-video before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-10 after:size-full hover:text-accent hover:before:opacity-0 tablet:before:inset-x-0 tablet:before:top-0"
+                  class="
+            mb-3 block text-2.5xl leading-7 font-medium
+            before:absolute before:inset-x-[8%] before:top-12
+            before:aspect-video before:bg-default before:opacity-15
+            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            hover:text-accent hover:before:opacity-0
+            tablet:before:inset-x-0 tablet:before:top-0
+          "
                   href="/reviews/mandy-2018/"
                 >
                   Mandy 
                   <span
-                    class="text-sm font-normal leading-none text-muted"
+                    class="text-sm leading-none font-normal text-muted"
                   >
                     2018
                   </span>
@@ -1190,14 +1696,17 @@ exports[`Home > matches snapshot 1`] = `
                   />
                   <img
                     alt="A+: 5 stars (out of 5)"
-                    class="mb-5 tablet:mb-8"
+                    class="
+            mb-5
+            tablet:mb-8
+          "
                     height="24"
                     src="/svg/5-stars.svg"
                     width="120"
                   />
                 </picture>
                 <div
-                  class="rendered-markdown mb-6 text-lg leading-normal tracking-prose text-muted"
+                  class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                 >
                   <p>
                     Saying 
@@ -1216,7 +1725,11 @@ exports[`Home > matches snapshot 1`] = `
                   </p>
                 </div>
                 <div
-                  class="mt-auto font-sans text-xxs font-light leading-4 tracking-wider text-subtle desktop:tracking-wide"
+                  class="
+            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
+            text-subtle
+            desktop:tracking-wide
+          "
                 >
                   <span>
                     Action
@@ -1235,7 +1748,11 @@ exports[`Home > matches snapshot 1`] = `
             class="flex px-container py-10"
           >
             <a
-              class="mx-auto w-full max-w-button bg-default py-5 text-center font-sans text-xs font-semibold uppercase tracking-wide text-accent hover:bg-accent hover:text-inverse"
+              class="
+              mx-auto w-full max-w-button bg-default py-5 text-center font-sans
+              text-xs font-semibold tracking-wide text-accent uppercase
+              hover:bg-accent hover:text-inverse
+            "
               href="/reviews/"
             >
               All Reviews
@@ -1247,13 +1764,21 @@ exports[`Home > matches snapshot 1`] = `
         class="bg-footer text-inverse"
       >
         <div
-          class="mx-auto max-w-screen-desktop px-container py-20"
+          class="mx-auto max-w-(--breakpoint-desktop) px-container py-20"
         >
           <div
-            class="flex w-full flex-col tablet:flex-row-reverse tablet:justify-between"
+            class="
+            flex w-full flex-col
+            tablet:flex-row-reverse tablet:justify-between
+          "
           >
             <a
-              class="mx-auto mb-8 w-full max-w-button bg-canvas py-5 text-center font-sans text-xs uppercase tracking-wide text-default hover:bg-inverse hover:text-inverse tablet:mx-0"
+              class="
+              mx-auto mb-8 w-full max-w-button bg-canvas py-5 text-center
+              font-sans text-xs tracking-wide text-default uppercase
+              hover:bg-inverse hover:text-inverse
+              tablet:mx-0
+            "
               href="#top"
             >
               To the top
@@ -1262,7 +1787,10 @@ exports[`Home > matches snapshot 1`] = `
               class="flex flex-col"
             >
               <div
-                class="whitespace-nowrap text-[1.375rem] font-normal leading-8 tablet:text-[1.5625rem]"
+                class="
+          text-[1.375rem] leading-8 font-normal whitespace-nowrap
+          tablet:text-[1.5625rem]
+        "
               >
                 <a
                   href="/"
@@ -1271,98 +1799,168 @@ exports[`Home > matches snapshot 1`] = `
                 </a>
               </div>
               <p
-                class="w-full pl-px text-sm italic leading-4 opacity-85"
+                class="w-full pl-px text-sm leading-4 italic opacity-85"
               >
                 by Frank Showalter
               </p>
             </div>
           </div>
           <div
-            class="justify-between tablet:flex"
+            class="
+            justify-between
+            tablet:flex
+          "
           >
             <div
-              class="flex max-w-prose flex-col pb-12 tablet:pr-32"
+              class="
+              flex max-w-prose flex-col pb-12
+              tablet:pr-32
+            "
             >
               <div
-                class="footer-text pt-10 font-sans text-base font-light text-inverse-subtle"
+                class="
+                pt-10 font-sans text-base font-light text-inverse-subtle
+              "
               >
-                <p>
+                <p
+                  class="mb-6 text-pretty"
+                >
                   Hi there, I'm Frank, a husband and father old enough to have sat wide-eyed during 
                   <em>
                     E.T
                   </em>
                   's first theatrical run, I've been watching, absorbing, and dissecting films ever since.
                 </p>
-                <p>
+                <p
+                  class="mb-6 text-pretty"
+                >
                   This site began in 2003 when I realized two things: I had become the designated “movie guy” among my friends (you know, the one everyone asks about every new release), and I was frequently experiencing the peculiar déjà vu of realizing, halfway through a film, that I'd already seen it. Clearly, I needed a system.
                 </p>
-                <p>
+                <p
+                  class="mb-6 text-pretty"
+                >
                   What began as personal record-keeping evolved into this little corner of the internet where I share my thoughts on everything from blockbusters to obscure indies that deserved better.
                 </p>
-                <p>
+                <p
+                  class="mb-6 text-pretty"
+                >
                   New visitors might want to start by reading about 
                   <a
+                    class="
+        text-inverse underline decoration-inverse-subtle decoration-dashed
+        underline-offset-4 transition-all duration-150 ease-out
+        hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
+        hover:duration-75 hover:ease-in
+      "
                     href="/how-i-grade/"
                   >
                     how I grade
                   </a>
                    films. After that, feel free to browse my 
                   <a
+                    class="
+        text-inverse underline decoration-inverse-subtle decoration-dashed
+        underline-offset-4 transition-all duration-150 ease-out
+        hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
+        hover:duration-75 hover:ease-in
+      "
                     href="/reviews/"
                   >
                     reviews
                   </a>
                   . If you're looking for something that flew under the radar but deserves your attention, I recommend my 
                   <a
+                    class="
+        text-inverse underline decoration-inverse-subtle decoration-dashed
+        underline-offset-4 transition-all duration-150 ease-out
+        hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
+        hover:duration-75 hover:ease-in
+      "
                     href="/reviews/underseen/"
                   >
                     underseen gems
                   </a>
                    section. Or, for those moments when you want to feel righteously contrarian, I maintain an list of 
                   <a
+                    class="
+        text-inverse underline decoration-inverse-subtle decoration-dashed
+        underline-offset-4 transition-all duration-150 ease-out
+        hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
+        hover:duration-75 hover:ease-in
+      "
                     href="/reviews/overrated/"
                   >
                     overrated disappointments
                   </a>
                   .
                 </p>
-                <p>
+                <p
+                  class="mb-6 text-pretty"
+                >
                   I also keep a 
                   <a
+                    class="
+        text-inverse underline decoration-inverse-subtle decoration-dashed
+        underline-offset-4 transition-all duration-150 ease-out
+        hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
+        hover:duration-75 hover:ease-in
+      "
                     href="/viewings/"
                   >
                     viewing log
                   </a>
                    that tracks everything I watch, whether it gets a full review or not, complete with 
                   <a
+                    class="
+        text-inverse underline decoration-inverse-subtle decoration-dashed
+        underline-offset-4 transition-all duration-150 ease-out
+        hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
+        hover:duration-75 hover:ease-in
+      "
                     href="/viewings/stats/"
                   >
                     stats
                   </a>
                   . In an age of endless content, sometimes the act of remembering what we've seen becomes as important as the seeing itself.
                 </p>
-                <p>
+                <p
+                  class="mb-6 text-pretty"
+                >
                   And finally, if you're curious about what's on my critical horizon, my 
                   <a
+                    class="
+        text-inverse underline decoration-inverse-subtle decoration-dashed
+        underline-offset-4 transition-all duration-150 ease-out
+        hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
+        hover:duration-75 hover:ease-in
+      "
                     href="/watchlist/"
                   >
                     watchlist
                   </a>
                    details the films I plan to review and why they've caught my interest.
                 </p>
-                <p>
+                <p
+                  class="text-pretty"
+                >
                   In an era of algorithmic recommendations and corporate marketing machines, consider this site a human alternative—one person's attempt to catalog the vast ocean of cinema and maybe help a few fellow travelers along the way.
                 </p>
               </div>
             </div>
             <div
-              class="flex grow-0 flex-col gap-20 pb-20 pt-10 tablet:basis-[430px] tablet:pr-10"
+              class="
+              flex grow-0 flex-col gap-20 pt-10 pb-20
+              tablet:basis-button tablet:pr-10
+            "
             >
               <ul
-                class="flex w-full flex-col gap-y-10 text-inverse max:w-auto"
+                class="
+                flex w-full flex-col gap-y-10 text-inverse
+                max:w-auto
+              "
               >
                 <li
-                  class="block w-1/2 whitespace-nowrap text-2xl"
+                  class="block w-1/2 text-2xl whitespace-nowrap"
                 >
                   <a
                     class="hover:text-accent"
@@ -1372,7 +1970,7 @@ exports[`Home > matches snapshot 1`] = `
                   </a>
                 </li>
                 <li
-                  class="block w-1/2 whitespace-nowrap text-2xl"
+                  class="block w-1/2 text-2xl whitespace-nowrap"
                 >
                   <a
                     class="hover:text-accent"
@@ -1382,7 +1980,7 @@ exports[`Home > matches snapshot 1`] = `
                   </a>
                 </li>
                 <li
-                  class="block w-1/2 whitespace-nowrap text-2xl"
+                  class="block w-1/2 text-2xl whitespace-nowrap"
                 >
                   <a
                     class="hover:text-accent"
@@ -1394,7 +1992,11 @@ exports[`Home > matches snapshot 1`] = `
                     class="mt-4"
                   >
                     <li
-                      class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                      class="
+              mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
                     >
                       <a
                         class="hover:text-inverse"
@@ -1404,7 +2006,11 @@ exports[`Home > matches snapshot 1`] = `
                       </a>
                     </li>
                     <li
-                      class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                      class="
+              mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
                     >
                       <a
                         class="hover:text-inverse"
@@ -1414,7 +2020,11 @@ exports[`Home > matches snapshot 1`] = `
                       </a>
                     </li>
                     <li
-                      class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                      class="
+              mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
                     >
                       <a
                         class="hover:text-inverse"
@@ -1424,7 +2034,11 @@ exports[`Home > matches snapshot 1`] = `
                       </a>
                     </li>
                     <li
-                      class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                      class="
+              mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
                     >
                       <a
                         class="hover:text-inverse"
@@ -1434,7 +2048,11 @@ exports[`Home > matches snapshot 1`] = `
                       </a>
                     </li>
                     <li
-                      class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                      class="
+              mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
                     >
                       <a
                         class="hover:text-inverse"
@@ -1446,7 +2064,7 @@ exports[`Home > matches snapshot 1`] = `
                   </ol>
                 </li>
                 <li
-                  class="block w-1/2 whitespace-nowrap text-2xl"
+                  class="block w-1/2 text-2xl whitespace-nowrap"
                 >
                   <a
                     class="hover:text-accent"
@@ -1458,7 +2076,11 @@ exports[`Home > matches snapshot 1`] = `
                     class="mt-4"
                   >
                     <li
-                      class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                      class="
+              mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
                     >
                       <a
                         class="hover:text-inverse"
@@ -1470,7 +2092,7 @@ exports[`Home > matches snapshot 1`] = `
                   </ol>
                 </li>
                 <li
-                  class="block w-1/2 whitespace-nowrap text-2xl"
+                  class="block w-1/2 text-2xl whitespace-nowrap"
                 >
                   <a
                     class="hover:text-accent"
@@ -1482,7 +2104,11 @@ exports[`Home > matches snapshot 1`] = `
                     class="mt-4"
                   >
                     <li
-                      class="mb-4 ml-1 font-sans text-xs uppercase tracking-wide text-inverse-subtle last:mb-0"
+                      class="
+              mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
                     >
                       <a
                         class="hover:text-inverse"
@@ -1498,11 +2124,17 @@ exports[`Home > matches snapshot 1`] = `
           </div>
         </div>
         <p
-          class="w-full bg-canvas px-container py-10 text-center font-normal leading-5 text-default"
+          class="
+          w-full bg-canvas px-container py-10 text-center leading-5 font-normal
+          text-default
+        "
         >
           All reviews by Frank Showalter. All images used in accordance with the 
           <a
-            class="text-inherit underline decoration-dashed underline-offset-4 hover:bg-default hover:text-default"
+            class="
+            text-inherit underline decoration-dashed underline-offset-4
+            hover:bg-default hover:text-default
+          "
             href="http://www.copyright.gov/title17/92chap1.html#107"
             rel="nofollow"
           >

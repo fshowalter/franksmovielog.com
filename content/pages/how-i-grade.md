@@ -52,7 +52,7 @@ Letter grades also allow me to note those movies that edged their way into a giv
 
 So why display them as stars? Well, for one, grade definitions aren't universal. To me, a "C" equates to an "okay" movie, to others it screams burn. A three-star-out-of-five display indicates a middle-of-the-road rating. Those "minus" movies that edged their way into a given tier get half-stars. Thus, a four-and-a-half star film is better than good, but not quite perfect. 
 
-Ultimately, it's a balancing act -- communicating nuance in an efficient manner. I think a five-star system works best, though some of my favorite reviewers eschew grades entirely, preferring you read the review. Fair enough, but I bet they rate them behind the scenes.
+Ultimately, it's a balancing act--communicating nuance in an efficient manner. I think a five-star system works best, though some of my favorite reviewers eschew grades entirely, preferring you read the review. Fair enough, but I bet they rate them behind the scenes.
 
 [^1]: Roger Ebert, "You Give Out Too Many Stars," _Roger Ebert_ (blog), September 14, 2008, http://www.rogerebert.com/rogers-journal/you-give-out-too-many-stars, accessed January 14, 2025.
 [^2]: Ebert, "You Give Out Too Many Stars."

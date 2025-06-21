@@ -61,17 +61,22 @@ export function Review({
       data-pagefind-meta={`image:${searchPosterImageProps.src}`}
       hasBackdrop={false}
     >
-      <header className="relative z-[1] mb-8 flex flex-col items-center px-[8%] pt-10">
+      <header
+        className={`relative z-1 mb-8 flex flex-col items-center px-[8%] pt-10`}
+      >
         <nav className="pb-3">
           <a
-            className="font-sans text-xs uppercase tracking-wider text-accent"
+            className="font-sans text-xs tracking-wider text-accent uppercase"
             href="/reviews/"
           >
             Reviews
           </a>
         </nav>
         <h1
-          className="text-center text-4xl desktop:text-7xl desktop:tracking-[-1px]"
+          className={`
+            text-center text-4xl
+            desktop:text-7xl desktop:tracking-[-1px]
+          `}
           data-pagefind-meta="title"
           data-pagefind-weight="10"
         >
@@ -83,7 +88,10 @@ export function Review({
         />
         <Grade className="mb-6" height={24} value={value.grade} />
         <Meta
-          className="mb-10 tablet:mb-12"
+          className={`
+            mb-10
+            tablet:mb-12
+          `}
           countries={value.countries}
           runtimeMinutes={value.runtimeMinutes}
           year={value.year}
@@ -95,11 +103,24 @@ export function Review({
           imageProps={stillImageProps}
           loading="eager"
         />
-        <div className="relative mt-10 bg-default px-[1ch] font-sans text-xs uppercase tracking-wide text-subtle after:absolute after:left-[-11%] after:top-1/2 after:-z-10 after:w-[122%] after:border-t after:border-[var(--fg-subtle)] tablet:mt-12">
+        <div
+          className={`
+            relative mt-10 bg-default px-[1ch] font-sans text-xs tracking-wide
+            text-subtle uppercase
+            after:absolute after:top-1/2 after:left-[-11%] after:-z-10
+            after:w-[122%] after:border-t after:border-(--fg-subtle)
+            tablet:mt-12
+          `}
+        >
           Reviewed {dateFormat.format(value.date)}
         </div>
       </header>
-      <div className="flex flex-col items-center gap-16 px-container pb-20 desktop:gap-20 desktop:pb-32">
+      <div
+        className={`
+          flex flex-col items-center gap-16 px-container pb-20
+          desktop:gap-20 desktop:pb-32
+        `}
+      >
         <Content content={value.content} />
         <ViewingHistory value={value} />
         <Credits
@@ -116,7 +137,11 @@ export function Review({
         />
       </div>
       <div
-        className="flex w-full flex-col items-center gap-y-12 bg-subtle pb-32 pt-16 tablet:pt-8 desktop:gap-y-24"
+        className={`
+          flex w-full flex-col items-center gap-y-12 bg-subtle pt-16 pb-32
+          tablet:pt-8
+          desktop:gap-y-24
+        `}
         data-pagefind-ignore
       >
         <MoreFromCastAndCrew values={moreFromCastAndCrew} />
@@ -170,7 +195,7 @@ function Meta({
   return (
     <div
       className={ccn(
-        "text-center font-sans text-xs uppercase tracking-wide text-subtle",
+        "text-center font-sans text-xs tracking-wide text-subtle uppercase",
         className,
       )}
     >

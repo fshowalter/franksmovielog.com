@@ -25,9 +25,14 @@ export function Layout({
   }
 
   return (
-    <div>
+    <div className="group">
       <a
-        className="absolute left-1/2 top-0.5 z-50 mx-auto bg-subtle px-6 py-2 text-center text-accent [transform:translate(-50%,calc(-100%_-_2px))] focus:[transform:translate(-50%,0%)]"
+        className={`
+          absolute top-0.5 left-1/2 z-50 mx-auto bg-subtle px-6 py-2 text-center
+          text-accent
+          [transform:translate(-50%,calc(-100%-2px))]
+          focus:[transform:translate(-50%,0%)]
+        `}
         href="#content"
       >
         Skip to content
@@ -38,7 +43,17 @@ export function Layout({
           hasBackdrop={hasBackdrop}
           hideLogo={hideLogo}
         />
-        <main className={ccn("grow", className)} id="content" {...rest}>
+        <main
+          className={ccn(
+            `
+              grow transition-[opacity] duration-200 ease-in-out
+              group-has-[#nav:checked]:opacity-80
+            `,
+            className,
+          )}
+          id="content"
+          {...rest}
+        >
           {children}
         </main>
         <Footer />

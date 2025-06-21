@@ -127,18 +127,50 @@ function DateListItem({
   const [day, date] = dayAndDate.split("-");
 
   return (
-    <li className="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4">
-      <div className="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted">
-        <div className="flex items-center gap-1 tablet:block">
-          <div className="text-center text-2xl text-muted tablet:text-2.5xl/8">
+    <li
+      className={`
+        relative flex max-w-(--breakpoint-max) flex-col bg-group
+        last-of-type:pb-12
+        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
+        tablet:last-of-type:pb-4
+      `}
+    >
+      <div
+        className={`
+          px-container py-4
+          tablet:px-4 tablet:pt-11 tablet:text-muted
+        `}
+      >
+        <div
+          className={`
+            flex items-center gap-1
+            tablet:block
+          `}
+        >
+          <div
+            className={`
+              text-center text-2xl text-muted
+              tablet:text-2.5xl/8
+            `}
+          >
             {date}
           </div>
-          <div className="ml-1 py-2 font-sans text-xxs/none uppercase text-subtle tablet:ml-0 tablet:w-12 tablet:text-center">
+          <div
+            className={`
+              ml-1 py-2 font-sans text-xxs/none text-subtle uppercase
+              tablet:ml-0 tablet:w-12 tablet:text-center
+            `}
+          >
             {day}
           </div>
         </div>
       </div>
-      <ul className="flex h-full grow flex-col tablet:gap-y-0">
+      <ul
+        className={`
+          flex h-full grow flex-col
+          tablet:gap-y-0
+        `}
+      >
         {values.map((value) => {
           return <ViewingListItem key={value.sequence} value={value} />;
         })}
@@ -157,7 +189,12 @@ function ListItemTitle({
   year: string;
 }) {
   const yearBox = (
-    <span className="text-xxs font-light text-subtle tablet:text-xs">
+    <span
+      className={`
+        text-xxs font-light text-subtle
+        tablet:text-xs
+      `}
+    >
       {year}
     </span>
   );
@@ -165,7 +202,15 @@ function ListItemTitle({
   if (slug) {
     return (
       <a
-        className="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+        className={`
+          block font-sans text-sm font-medium text-accent
+          before:absolute before:top-4 before:left-(--container-padding)
+          before:aspect-poster before:w-list-item-poster before:opacity-15
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:opacity-0
+          hover:before:opacity-0
+          tablet:before:left-4 tablet:before:bg-default
+        `}
         href={`/reviews/${slug}/`}
       >
         {title}
@@ -194,7 +239,14 @@ function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
 
   return (
     <li
-      className={`relative mb-1 flex flex-row items-center gap-x-4 ${value.slug ? "bg-default" : "bg-unreviewed"} px-container py-4 last-of-type:mb-0 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover tablet:gap-x-6 tablet:pl-4`}
+      className={`
+        relative mb-1 flex flex-row items-center gap-x-4
+        ${value.slug ? `bg-default` : `bg-unreviewed`}
+        px-container py-4
+        last-of-type:mb-0
+        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+        tablet:gap-x-6 tablet:pl-4
+      `}
       {...rest}
     >
       <ListItemPoster imageProps={value.posterImageProps} />
