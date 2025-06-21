@@ -63,7 +63,7 @@ export default tsEslint.config(
       ],
     },
   },
-    {
+  {
     files: ["**/*.astro"],
     plugins: {
       "better-tailwindcss": eslintPluginBetterTailwindcss,

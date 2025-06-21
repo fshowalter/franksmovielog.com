@@ -45,7 +45,6 @@ export function Layout({
         />
         <main
           className={ccn(
-            "grow",
             `
               grow transition-[opacity] duration-200 ease-in-out
               group-has-[#nav:checked]:opacity-80
