@@ -13,7 +13,7 @@ const items: Record<string, SubNavValue> = {
 export function ReviewsSubNav({ active }: { active: keyof typeof items }) {
   return (
     <nav className="bg-footer">
-      <ul className="scrollbar-hidden mx-auto flex max-w-screen-max overflow-x-auto px-container font-sans text-xs font-medium uppercase tracking-wider tablet:justify-center">
+      <ul className="scrollbar-hidden mx-auto flex max-w-(--breakpoint-max) overflow-x-auto px-container font-sans text-xs font-medium uppercase tracking-wider tablet:justify-center">
         {Object.entries(items).map(([key, value]) => {
           return (
             <li

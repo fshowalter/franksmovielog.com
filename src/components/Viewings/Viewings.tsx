@@ -127,7 +127,7 @@ function DateListItem({
   const [day, date] = dayAndDate.split("-");
 
   return (
-    <li className="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4">
+    <li className="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4">
       <div className="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted">
         <div className="flex items-center gap-1 tablet:block">
           <div className="text-center text-2xl text-muted tablet:text-2.5xl/8">
@@ -165,7 +165,7 @@ function ListItemTitle({
   if (slug) {
     return (
       <a
-        className="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+        className="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
         href={`/reviews/${slug}/`}
       >
         {title}

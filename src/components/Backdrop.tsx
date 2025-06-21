@@ -143,7 +143,7 @@ function Wrapper({
     >
       {heroImage}
       <div
-        className={`${centerText ? "items-center" : ""} z-10 mx-auto flex w-full max-w-screen-max flex-col px-container`}
+        className={`${centerText ? "items-center" : ""} z-10 mx-auto flex w-full max-w-(--breakpoint-max) flex-col px-container`}
       >
         {children}
       </div>

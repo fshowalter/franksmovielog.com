@@ -61,7 +61,7 @@ export function Review({
       data-pagefind-meta={`image:${searchPosterImageProps.src}`}
       hasBackdrop={false}
     >
-      <header className="relative z-[1] mb-8 flex flex-col items-center px-[8%] pt-10">
+      <header className="relative z-1 mb-8 flex flex-col items-center px-[8%] pt-10">
         <nav className="pb-3">
           <a
             className="font-sans text-xs uppercase tracking-wider text-accent"
@@ -95,7 +95,7 @@ export function Review({
           imageProps={stillImageProps}
           loading="eager"
         />
-        <div className="relative mt-10 bg-default px-[1ch] font-sans text-xs uppercase tracking-wide text-subtle after:absolute after:left-[-11%] after:top-1/2 after:-z-10 after:w-[122%] after:border-t after:border-[var(--fg-subtle)] tablet:mt-12">
+        <div className="relative mt-10 bg-default px-[1ch] font-sans text-xs uppercase tracking-wide text-subtle after:absolute after:left-[-11%] after:top-1/2 after:-z-10 after:w-[122%] after:border-t after:border-(--fg-subtle) tablet:mt-12">
           Reviewed {dateFormat.format(value.date)}
         </div>
       </header>

@@ -260,7 +260,7 @@
       />
       <div>
         <a
-          class="absolute left-1/2 top-0.5 z-50 mx-auto bg-subtle px-6 py-2 text-center text-accent [transform:translate(-50%,calc(-100%_-_2px))] focus:[transform:translate(-50%,0%)]"
+          class="absolute left-1/2 top-0.5 z-50 mx-auto bg-subtle px-6 py-2 text-center text-accent [transform:translate(-50%,calc(-100%-2px))] focus:[transform:translate(-50%,0%)]"
           href="#content"
           >Skip to content</a
         >
@@ -342,7 +342,7 @@
                   </li>
                 </ul>
               </nav>
-              <div class="search-button z-[1000]">
+              <div class="search-button z-1000">
                 <button
                   aria-keyshortcuts="Control+K"
                   aria-label="Search"
@@ -469,7 +469,7 @@
                 loading="eager"
               />
               <div
-                class="z-10 mx-auto flex w-full max-w-screen-max flex-col px-container"
+                class="z-10 mx-auto flex w-full max-w-(--breakpoint-max) flex-col px-container"
               >
                 <h1
                   class="font-sans text-2xl font-bold uppercase tracking-widest desktop:text-7xl"
@@ -492,7 +492,7 @@
                       class="relative z-10 row-start-1 bg-default text-xs tablet:-mx-12 tablet:px-0 tablet-landscape:col-span-3 tablet-landscape:mx-0 tablet-landscape:w-full"
                     >
                       <div
-                        class="mx-auto flex w-full max-w-screen-max flex-wrap items-baseline justify-between gap-x-4 gap-y-5 px-container py-10 font-sans font-medium uppercase tracking-wide text-subtle"
+                        class="mx-auto flex w-full max-w-(--breakpoint-max) flex-wrap items-baseline justify-between gap-x-4 gap-y-5 px-container py-10 font-sans font-medium uppercase tracking-wide text-subtle"
                       >
                         <span class="block pr-4"
                           ><span class="font-semibold text-default">1,609</span>
@@ -520,7 +520,7 @@
                       </div>
                     </div>
                     <div
-                      class="mx-auto max-w-screen-max grid-cols-[1fr_48px_minmax(398px,33%)] tablet-landscape:grid tablet-landscape:grid-rows-[auto_1fr]"
+                      class="mx-auto max-w-(--breakpoint-max) grid-cols-[1fr_48px_minmax(398px,33%)] tablet-landscape:grid tablet-landscape:grid-rows-[auto_1fr]"
                     >
                       <div
                         class="relative z-10 col-start-3 row-span-2 row-start-2 grid min-w-[320px] text-sm transition-[grid-template-rows] duration-300 ease-out tablet-landscape:mr-12 tablet-landscape:block tablet-landscape:py-24 tablet-landscape:pb-12 tablet-landscape:shadow-none desktop:mr-20"
@@ -1189,7 +1189,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 1">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 June 2024
                               </div>
@@ -1197,7 +1197,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -1259,7 +1259,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -1321,7 +1321,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -1383,7 +1383,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -1430,7 +1430,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/chamber-of-horrors-1966/"
                                           >Chamber of Horrors<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -1447,7 +1447,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -1545,7 +1545,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -1592,7 +1592,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/two-for-the-seesaw-1962/"
                                           >Two for the Seesaw<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -1609,7 +1609,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -1743,7 +1743,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -1877,7 +1877,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -1924,7 +1924,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/the-man-with-nine-lives-1940/"
                                           >The Man with Nine Lives<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -1941,7 +1941,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -2039,7 +2039,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -2106,7 +2106,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 2">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 May 2024
                               </div>
@@ -2114,7 +2114,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -2197,7 +2197,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/burial-ground-the-nights-of-terror-1981/"
                                           >Burial Ground: The Nights of Terror<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -2214,7 +2214,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -2261,7 +2261,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/lucifers-women-1974/"
                                           >Lucifer&#x27;s Women<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -2283,7 +2283,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 3">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 April 2024
                               </div>
@@ -2291,7 +2291,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -2338,7 +2338,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/beyond-the-door-iii-1989/"
                                           >Beyond the Door III<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -2376,7 +2376,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/the-midnight-meat-train-2008/"
                                           >The Midnight Meat Train<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -2414,7 +2414,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/horror-express-1972/"
                                           >Horror Express<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -2452,7 +2452,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/night-train-to-terror-1985/"
                                           >Night Train to Terror<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -2469,7 +2469,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -2516,7 +2516,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/human-lanterns-1982/"
                                           >Human Lanterns<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -2554,7 +2554,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/ninja-in-the-dragons-den-1982/"
                                           >Ninja in the Dragon&#x27;s Den<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -2571,7 +2571,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -2633,7 +2633,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -2680,7 +2680,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/mandy-2018/"
                                           >Mandy<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -2697,7 +2697,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -2744,7 +2744,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/city-of-the-living-dead-1980/"
                                           >City of the Living Dead<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -2766,7 +2766,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 4">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 March 2024
                               </div>
@@ -2774,7 +2774,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -2836,7 +2836,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -2900,7 +2900,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -2962,7 +2962,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -3065,7 +3065,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 5">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 February 2024
                               </div>
@@ -3073,7 +3073,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -3120,7 +3120,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/frankenhooker-1990/"
                                           >Frankenhooker<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -3158,7 +3158,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/lords-of-chaos-2018/"
                                           >Lords of Chaos<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -3175,7 +3175,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -3237,7 +3237,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -3284,7 +3284,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/leprechaun-6-back-2-tha-hood-2003/"
                                           >Leprechaun 6: Back 2 Tha Hood<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -3301,7 +3301,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -3348,7 +3348,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/the-entity-1982/"
                                           >The Entity<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -3365,7 +3365,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -3463,7 +3463,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -3510,7 +3510,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/the-demons-baby-1998/"
                                           >The Demon&#x27;s Baby<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -3527,7 +3527,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -3589,7 +3589,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -3693,7 +3693,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 6">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 January 2024
                               </div>
@@ -3701,7 +3701,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -3748,7 +3748,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/leprechaun-4-in-space-1996/"
                                           >Leprechaun 4: In Space<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -3765,7 +3765,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -3827,7 +3827,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -3925,7 +3925,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -3987,7 +3987,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -4034,7 +4034,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/leprechaun-2-1994/"
                                           >Leprechaun 2<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -4051,7 +4051,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -4113,7 +4113,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -4175,7 +4175,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -4222,7 +4222,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/night-train-to-terror-1985/"
                                           >Night Train to Terror<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -4280,7 +4280,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 7">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 December 2023
                               </div>
@@ -4288,7 +4288,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -4350,7 +4350,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -4413,7 +4413,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -4476,7 +4476,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -4538,7 +4538,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -4585,7 +4585,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/silent-night-deadly-night-3-better-watch-out-1989/"
                                           >Silent Night, Deadly Night 3: Better
                                           Watch Out!<!-- --> <!-- --> <span
@@ -4603,7 +4603,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -4650,7 +4650,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/christmas-evil-1980/"
                                           >Christmas Evil<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -4688,7 +4688,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/silent-night-deadly-night-part-2-1987/"
                                           >Silent Night, Deadly Night Part 2<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -4710,7 +4710,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 8">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 November 2023
                               </div>
@@ -4718,7 +4718,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -4780,7 +4780,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -4827,7 +4827,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/the-pit-1981/"
                                           >The Pit<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -4865,7 +4865,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/green-room-2015/"
                                           >Green Room<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -4887,7 +4887,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 9">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 October 2023
                               </div>
@@ -4895,7 +4895,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -4942,7 +4942,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/ladies-man-1931/"
                                           >Ladies&#x27; Man<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -4959,7 +4959,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -5114,7 +5114,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/nightmare-beach-1989/"
                                           >Nightmare Beach<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -5131,7 +5131,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -5229,7 +5229,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -5276,7 +5276,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/the-death-kiss-1932/"
                                           >The Death Kiss<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -5293,7 +5293,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -5340,7 +5340,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/friday-the-13th-the-new-blood-1988/"
                                           >Friday the 13th: The New Blood<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -5357,7 +5357,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -5404,7 +5404,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/eggshells-1969/"
                                           >Eggshells<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -5426,7 +5426,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 10">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 September 2023
                               </div>
@@ -5434,7 +5434,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -5517,7 +5517,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/bones-and-all-2022/"
                                           >Bones and All<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -5534,7 +5534,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -5581,7 +5581,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/the-night-they-raided-minskys-1968/"
                                           >The Night They Raided Minsky&#x27;s<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -5598,7 +5598,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -5645,7 +5645,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/street-of-chance-1930/"
                                           >Street of Chance<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -5662,7 +5662,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -5709,7 +5709,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/night-of-the-demons-1988/"
                                           >Night of the Demons<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -5726,7 +5726,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -5773,7 +5773,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/frankenhooker-1990/"
                                           >Frankenhooker<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -5790,7 +5790,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -5837,7 +5837,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/batman-the-dark-knight-returns-2013/"
                                           >Batman: The Dark Knight Returns<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -5875,7 +5875,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/batman-mask-of-the-phantasm-1993/"
                                           >Batman: Mask of the Phantasm<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -5892,7 +5892,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -5939,7 +5939,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/the-murder-man-1935/"
                                           >The Murder Man<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -5961,7 +5961,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 11">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 August 2023
                               </div>
@@ -5969,7 +5969,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -6016,7 +6016,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/aqua-teen-forever-plantasm-2022/"
                                           >Aqua Teen Forever: Plantasm<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -6054,7 +6054,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/phantasm-ravager-2016/"
                                           >Phantasm: Ravager<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -6071,7 +6071,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -6118,7 +6118,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/the-magnificent-seven-1960/"
                                           >The Magnificent Seven<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -6135,7 +6135,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -6182,7 +6182,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/frontiers-2007/"
                                           >Frontier(s)<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -6220,7 +6220,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/the-seventh-curse-1986/"
                                           >The Seventh Curse<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -6237,7 +6237,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -6284,7 +6284,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/punisher-war-zone-2008/"
                                           >Punisher: War Zone<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -6322,7 +6322,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/dredd-2012/"
                                           >Dredd<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -6344,7 +6344,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 12">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 July 2023
                               </div>
@@ -6352,7 +6352,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -6399,7 +6399,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/big-jim-mclain-1952/"
                                           >Big Jim McLain<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -6416,7 +6416,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -6463,7 +6463,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/whirlpool-1970/"
                                           >Whirlpool<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -6501,7 +6501,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/the-invisible-menace-1938/"
                                           >The Invisible Menace<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -6518,7 +6518,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -6565,7 +6565,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/british-intelligence-1939/"
                                           >British Intelligence<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -6582,7 +6582,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -6629,7 +6629,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/the-house-on-sorority-row-1982/"
                                           >The House on Sorority Row<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -6646,7 +6646,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -6693,7 +6693,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/sorority-house-massacre-1986/"
                                           >Sorority House Massacre<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -6710,7 +6710,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -6757,7 +6757,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/mausoleum-1983/"
                                           >Mausoleum<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -6774,7 +6774,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -6821,7 +6821,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/life-with-father-1947/"
                                           >Life with Father<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -6838,7 +6838,7 @@
                                   </ul>
                                 </li>
                                 <li
-                                  class="relative flex max-w-screen-max flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
+                                  class="relative flex max-w-(--breakpoint-max) flex-col bg-group last-of-type:pb-12 tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4 tablet:last-of-type:pb-4"
                                 >
                                   <div
                                     class="px-container py-4 tablet:px-4 tablet:pt-11 tablet:text-muted"
@@ -6885,7 +6885,7 @@
                                       </div>
                                       <div class="flex grow flex-col gap-1">
                                         <a
-                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
+                                          class="block font-sans text-sm font-medium text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-poster before:w-list-item-poster before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default"
                                           href="/reviews/pete-kellys-blues-1955/"
                                           >Pete Kelly&#x27;s Blues<!-- --> <!-- --> <span
                                             class="text-xxs font-light text-subtle tablet:text-xs"
@@ -6923,7 +6923,7 @@
             </div>
           </main>
           <footer class="bg-footer text-inverse">
-            <div class="mx-auto max-w-screen-desktop px-container py-20">
+            <div class="mx-auto max-w-(--breakpoint-desktop) px-container py-20">
               <div
                 class="flex w-full flex-col tablet:flex-row-reverse tablet:justify-between"
               >
@@ -7004,7 +7004,7 @@
                   </div>
                 </div>
                 <div
-                  class="flex grow-0 flex-col gap-20 pb-20 pt-10 tablet:basis-[430px] tablet:pr-10"
+                  class="flex grow-0 flex-col gap-20 pb-20 pt-10 tablet:basis-button tablet:pr-10"
                 >
                   <ul
                     class="flex w-full flex-col gap-y-10 text-inverse max:w-auto"
@@ -7116,7 +7116,7 @@
     >
     <dialog
       aria-label="Search"
-      class="fixed left-4 right-4 h-screen w-full rounded-lg border border-default bg-default shadow-lg backdrop:bg-[#000] backdrop:opacity-40 open:flex open:flex-col tablet:mx-auto tablet:mt-16 tablet:h-min tablet:max-h-[min(100vh_-_128px,900px)] tablet:min-h-60 tablet:max-w-[min(100vw_-_64px,36rem)] tablet:rounded-xl desktop:min-h-0"
+      class="fixed left-4 right-4 h-screen w-full rounded-lg border border-default bg-default shadow-lg backdrop:bg-[#000] backdrop:opacity-40 open:flex open:flex-col tablet:mx-auto tablet:mt-16 tablet:h-min tablet:max-h-[min(100vh-128px,900px)] tablet:min-h-60 tablet:max-w-[min(100vw-64px,36rem)] tablet:rounded-xl desktop:min-h-0"
     >
       <div class="contents" data-dialog-frame>
         <button
@@ -7127,7 +7127,7 @@
         </button>
         <div class="contents"><div id="pagefind__search"></div></div>
         <div
-          class="hidden px-[var(--search-dialog-padding)] py-4 font-sans text-xs font-light tracking-wide text-subtle desktop:block"
+          class="hidden px-(--search-dialog-padding) py-4 font-sans text-xs font-light tracking-wide text-subtle desktop:block"
         >
           <kbd class="rounded-md bg-default p-2 font-mono text-xs text-subtle"
             >Tab</kbd

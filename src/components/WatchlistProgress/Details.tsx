@@ -28,18 +28,18 @@ export function Details({
   return (
     <section
       className={ccn(
-        "w-full desktop:w-auto desktop:basis-[calc(50%_-_16px)]",
+        "w-full desktop:w-auto desktop:basis-[calc(50%-16px)]",
         className,
       )}
     >
       <h2 className="px-container py-8 font-sans text-xs font-medium uppercase tracking-wide text-muted desktop:px-8">
         {label}
       </h2>
-      <div className="grid w-full grid-cols-[var(--container-padding),auto,1fr,auto,var(--container-padding)] bg-default tablet:whitespace-nowrap desktop:grid-cols-[2rem,auto,1fr,auto,2rem]">
+      <div className="grid w-full grid-cols-[var(--container-padding)_auto_1fr_auto_var(--container-padding)] bg-default tablet:whitespace-nowrap desktop:grid-cols-[2rem_auto_1fr_auto_2rem]">
         {values.map((value) => {
           return (
             <div
-              className="relative col-span-5 grid grid-cols-subgrid grid-rows-[1fr,auto,auto,1fr] py-4 text-subtle shadow-bottom last-of-type:shadow-none has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+              className="relative col-span-5 grid grid-cols-subgrid grid-rows-[1fr_auto_auto_1fr] py-4 text-subtle shadow-bottom last-of-type:shadow-none has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
               key={value.name}
             >
               <DetailsItemAvatar
@@ -77,7 +77,7 @@ function Name({ value, valueType }: { value: Value; valueType: ValueType }) {
     return (
       <span>
         <a
-          className="pb-1 font-sans text-sm leading-none text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-12 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-30 after:size-full after:opacity-0 hover:before:opacity-0"
+          className="pb-1 font-sans text-sm leading-none text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-12 before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:z-30 after:size-full after:opacity-0 hover:before:opacity-0"
           href={linkTarget}
         >
           {value.name}

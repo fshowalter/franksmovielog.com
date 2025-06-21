@@ -263,7 +263,7 @@
       />
       <div>
         <a
-          class="absolute left-1/2 top-0.5 z-50 mx-auto bg-subtle px-6 py-2 text-center text-accent [transform:translate(-50%,calc(-100%_-_2px))] focus:[transform:translate(-50%,0%)]"
+          class="absolute left-1/2 top-0.5 z-50 mx-auto bg-subtle px-6 py-2 text-center text-accent [transform:translate(-50%,calc(-100%-2px))] focus:[transform:translate(-50%,0%)]"
           href="#content"
           >Skip to content</a
         >
@@ -345,7 +345,7 @@
                   </li>
                 </ul>
               </nav>
-              <div class="search-button z-[1000]">
+              <div class="search-button z-1000">
                 <button
                   aria-keyshortcuts="Control+K"
                   aria-label="Search"
@@ -472,7 +472,7 @@
                 loading="eager"
               />
               <div
-                class="z-10 mx-auto flex w-full max-w-screen-max flex-col px-container"
+                class="z-10 mx-auto flex w-full max-w-(--breakpoint-max) flex-col px-container"
               >
                 <h1
                   class="font-sans text-2xl font-bold uppercase tracking-widest desktop:text-7xl"
@@ -495,7 +495,7 @@
                       class="relative z-10 row-start-1 bg-default text-xs tablet:-mx-12 tablet:px-0 tablet-landscape:col-span-3 tablet-landscape:mx-0 tablet-landscape:w-full"
                     >
                       <div
-                        class="mx-auto flex w-full max-w-screen-max flex-wrap items-baseline justify-between gap-x-4 gap-y-5 px-container py-10 font-sans font-medium uppercase tracking-wide text-subtle"
+                        class="mx-auto flex w-full max-w-(--breakpoint-max) flex-wrap items-baseline justify-between gap-x-4 gap-y-5 px-container py-10 font-sans font-medium uppercase tracking-wide text-subtle"
                       >
                         <span class="block pr-4"
                           ><span class="font-semibold text-default">68</span>
@@ -509,7 +509,7 @@
                       </div>
                     </div>
                     <div
-                      class="mx-auto max-w-screen-max grid-cols-[1fr_48px_minmax(398px,33%)] tablet-landscape:grid tablet-landscape:grid-rows-[auto_1fr]"
+                      class="mx-auto max-w-(--breakpoint-max) grid-cols-[1fr_48px_minmax(398px,33%)] tablet-landscape:grid tablet-landscape:grid-rows-[auto_1fr]"
                     >
                       <div
                         class="relative z-10 col-start-3 row-span-2 row-start-2 grid min-w-[320px] text-sm transition-[grid-template-rows] duration-300 ease-out tablet-landscape:mr-12 tablet-landscape:block tablet-landscape:py-24 tablet-landscape:pb-12 tablet-landscape:shadow-none desktop:mr-20"
@@ -579,7 +579,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 1">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 A
                               </div>
@@ -587,7 +587,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -607,7 +607,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/abel-ferrara/"
                                       >Abel Ferrara</a
                                     >
@@ -626,7 +626,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -646,7 +646,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/alfred-hitchcock/"
                                       >Alfred Hitchcock</a
                                     >
@@ -669,7 +669,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 2">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 B
                               </div>
@@ -677,7 +677,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -697,7 +697,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/bela-lugosi/"
                                       >Bela Lugosi</a
                                     >
@@ -714,7 +714,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -734,7 +734,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/ben-johnson/"
                                       >Ben Johnson</a
                                     >
@@ -751,7 +751,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -771,7 +771,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/bette-davis/"
                                       >Bette Davis</a
                                     >
@@ -788,7 +788,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -808,7 +808,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/billy-wilder/"
                                       >Billy Wilder</a
                                     >
@@ -826,7 +826,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -846,7 +846,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/boris-karloff/"
                                       >Boris Karloff</a
                                     >
@@ -863,7 +863,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -883,7 +883,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/brian-de-palma/"
                                       >Brian De Palma</a
                                     >
@@ -901,7 +901,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -921,7 +921,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/burt-reynolds/"
                                       >Burt Reynolds</a
                                     >
@@ -945,7 +945,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 3">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 C
                               </div>
@@ -953,7 +953,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -973,7 +973,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/cary-grant/"
                                       >Cary Grant</a
                                     >
@@ -990,7 +990,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1010,7 +1010,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/christopher-lee/"
                                       >Christopher Lee</a
                                     >
@@ -1027,7 +1027,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1047,7 +1047,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/clive-barker/"
                                       >Clive Barker</a
                                     >
@@ -1071,7 +1071,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 4">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 D
                               </div>
@@ -1079,7 +1079,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1099,7 +1099,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/dario-argento/"
                                       >Dario Argento</a
                                     >
@@ -1118,7 +1118,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1138,7 +1138,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/david-cronenberg/"
                                       >David Cronenberg</a
                                     >
@@ -1157,7 +1157,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1177,7 +1177,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/david-lean/"
                                       >David Lean</a
                                     >
@@ -1195,7 +1195,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1215,7 +1215,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/david-mamet/"
                                       >David Mamet</a
                                     >
@@ -1234,7 +1234,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1254,7 +1254,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/dean-martin/"
                                       >Dean Martin</a
                                     >
@@ -1276,7 +1276,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 5">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 E
                               </div>
@@ -1284,7 +1284,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1304,7 +1304,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/errol-flynn/"
                                       >Errol Flynn</a
                                     >
@@ -1327,7 +1327,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 6">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 F
                               </div>
@@ -1335,7 +1335,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1355,7 +1355,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/frank-sinatra/"
                                       >Frank Sinatra</a
                                     >
@@ -1373,7 +1373,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1393,7 +1393,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/fritz-lang/"
                                       >Fritz Lang</a
                                     >
@@ -1416,7 +1416,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 7">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 G
                               </div>
@@ -1424,7 +1424,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1444,7 +1444,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/gene-hackman/"
                                       >Gene Hackman</a
                                     >
@@ -1461,7 +1461,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1481,7 +1481,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/george-a-romero/"
                                       >George A. Romero</a
                                     >
@@ -1505,7 +1505,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 8">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 H
                               </div>
@@ -1513,7 +1513,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1533,7 +1533,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/howard-hawks/"
                                       >Howard Hawks</a
                                     >
@@ -1551,7 +1551,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1571,7 +1571,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/humphrey-bogart/"
                                       >Humphrey Bogart</a
                                     >
@@ -1593,7 +1593,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 9">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 I
                               </div>
@@ -1601,7 +1601,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1621,7 +1621,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/ingmar-bergman/"
                                       >Ingmar Bergman</a
                                     >
@@ -1645,7 +1645,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 10">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 J
                               </div>
@@ -1653,7 +1653,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1673,7 +1673,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/jack-lemmon/"
                                       >Jack Lemmon</a
                                     >
@@ -1690,7 +1690,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1710,7 +1710,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/jack-nicholson/"
                                       >Jack Nicholson</a
                                     >
@@ -1729,7 +1729,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1749,7 +1749,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/james-coburn/"
                                       >James Coburn</a
                                     >
@@ -1767,7 +1767,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1787,7 +1787,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/james-stewart/"
                                       >James Stewart</a
                                     >
@@ -1804,7 +1804,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1824,7 +1824,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/john-boorman/"
                                       >John Boorman</a
                                     >
@@ -1843,7 +1843,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1863,7 +1863,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/john-carpenter/"
                                       >John Carpenter</a
                                     >
@@ -1882,7 +1882,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1902,7 +1902,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/john-ford/"
                                       >John Ford</a
                                     >
@@ -1920,7 +1920,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1940,7 +1940,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/john-frankenheimer/"
                                       >John Frankenheimer</a
                                     >
@@ -1957,7 +1957,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -1977,7 +1977,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/john-huston/"
                                       >John Huston</a
                                     >
@@ -1996,7 +1996,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2016,7 +2016,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/john-sturges/"
                                       >John Sturges</a
                                     >
@@ -2033,7 +2033,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2053,7 +2053,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/john-wayne/"
                                       >John Wayne</a
                                     >
@@ -2076,7 +2076,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 11">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 K
                               </div>
@@ -2084,7 +2084,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2104,7 +2104,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/ken-russell/"
                                       >Ken Russell</a
                                     >
@@ -2128,7 +2128,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 12">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 L
                               </div>
@@ -2136,7 +2136,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2156,7 +2156,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/lee-marvin/"
                                       >Lee Marvin</a
                                     >
@@ -2173,7 +2173,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2193,7 +2193,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/leigh-brackett/"
                                       >Leigh Brackett</a
                                     >
@@ -2210,7 +2210,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2230,7 +2230,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/lucio-fulci/"
                                       >Lucio Fulci</a
                                     >
@@ -2249,7 +2249,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2269,7 +2269,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/luis-bunuel/"
                                       >Luis Buñuel</a
                                     >
@@ -2292,7 +2292,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 13">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 M
                               </div>
@@ -2300,7 +2300,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2320,7 +2320,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/marilyn-monroe/"
                                       >Marilyn Monroe</a
                                     >
@@ -2337,7 +2337,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2357,7 +2357,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/mario-bava/"
                                       >Mario Bava</a
                                     >
@@ -2375,7 +2375,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2395,7 +2395,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/michael-haneke/"
                                       >Michael Haneke</a
                                     >
@@ -2413,7 +2413,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2433,7 +2433,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/michele-soavi/"
                                       >Michele Soavi</a
                                     >
@@ -2457,7 +2457,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 14">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 N
                               </div>
@@ -2465,7 +2465,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2485,7 +2485,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/neil-labute/"
                                       >Neil LaBute</a
                                     >
@@ -2508,7 +2508,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 15">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 P
                               </div>
@@ -2516,7 +2516,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2536,7 +2536,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/paul-thomas-anderson/"
                                       >Paul Thomas Anderson</a
                                     >
@@ -2554,7 +2554,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2574,7 +2574,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/peter-cushing/"
                                       >Peter Cushing</a
                                     >
@@ -2596,7 +2596,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 16">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 R
                               </div>
@@ -2604,7 +2604,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2624,7 +2624,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/raymond-chandler/"
                                       >Raymond Chandler</a
                                     >
@@ -2641,7 +2641,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2661,7 +2661,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/robert-altman/"
                                       >Robert Altman</a
                                     >
@@ -2679,7 +2679,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2699,7 +2699,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/robert-mitchum/"
                                       >Robert Mitchum</a
                                     >
@@ -2717,7 +2717,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2737,7 +2737,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/roger-corman/"
                                       >Roger Corman</a
                                     >
@@ -2756,7 +2756,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2776,7 +2776,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/roman-polanski/"
                                       >Roman Polanski</a
                                     >
@@ -2800,7 +2800,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 17">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 S
                               </div>
@@ -2808,7 +2808,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2828,7 +2828,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/sam-peckinpah/"
                                       >Sam Peckinpah</a
                                     >
@@ -2847,7 +2847,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2867,7 +2867,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/sidney-lumet/"
                                       >Sidney Lumet</a
                                     >
@@ -2885,7 +2885,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2905,7 +2905,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/stanley-kubrick/"
                                       >Stanley Kubrick</a
                                     >
@@ -2923,7 +2923,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2943,7 +2943,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/stephen-king/"
                                       >Stephen King</a
                                     >
@@ -2962,7 +2962,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -2982,7 +2982,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/steve-mcqueen/"
                                       >Steve McQueen</a
                                     >
@@ -3004,7 +3004,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 18">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 T
                               </div>
@@ -3012,7 +3012,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -3032,7 +3032,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/tobe-hooper/"
                                       >Tobe Hooper</a
                                     >
@@ -3051,7 +3051,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -3071,7 +3071,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/tod-browning/"
                                       >Tod Browning</a
                                     >
@@ -3089,7 +3089,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -3109,7 +3109,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/tony-scott/"
                                       >Tony Scott</a
                                     >
@@ -3132,7 +3132,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 19">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 V
                               </div>
@@ -3140,7 +3140,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -3160,7 +3160,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/vincent-price/"
                                       >Vincent Price</a
                                     >
@@ -3182,7 +3182,7 @@
                           <li class="block">
                             <div class="pt-0 text-md" style="z-index: 20">
                               <div
-                                class="max-w-screen-max bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
+                                class="max-w-(--breakpoint-max) bg-subtle px-container py-8 text-xl leading-8 tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100"
                               >
                                 W
                               </div>
@@ -3190,7 +3190,7 @@
                             <div class="bg-subtle">
                               <ol>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -3210,7 +3210,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/ward-bond/"
                                       >Ward Bond</a
                                     >
@@ -3227,7 +3227,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -3247,7 +3247,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/warren-oates/"
                                       >Warren Oates</a
                                     >
@@ -3264,7 +3264,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -3284,7 +3284,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/wes-craven/"
                                       >Wes Craven</a
                                     >
@@ -3303,7 +3303,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -3323,7 +3323,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/william-friedkin/"
                                       >William Friedkin</a
                                     >
@@ -3342,7 +3342,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -3362,7 +3362,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/william-holden/"
                                       >William Holden</a
                                     >
@@ -3379,7 +3379,7 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-screen-max flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+                                  class="bg-default items-center tablet:py-6 relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 desktop:px-6 has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
                                 >
                                   <div
                                     class="safari-border-radius-fix w-16 overflow-hidden rounded-full shadow-all tablet:w-20"
@@ -3399,7 +3399,7 @@
                                   </div>
                                   <div>
                                     <a
-                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-[var(--container-padding)] before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium leading-normal text-accent before:absolute before:left-(--container-padding) before:top-4 before:aspect-square before:w-16 before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:top-6 tablet:before:w-20 tablet:before:bg-default desktop:before:left-6"
                                       href="/cast-and-crew/william-powell/"
                                       >William Powell</a
                                     >
@@ -3430,7 +3430,7 @@
             </div>
           </main>
           <footer class="bg-footer text-inverse">
-            <div class="mx-auto max-w-screen-desktop px-container py-20">
+            <div class="mx-auto max-w-(--breakpoint-desktop) px-container py-20">
               <div
                 class="flex w-full flex-col tablet:flex-row-reverse tablet:justify-between"
               >
@@ -3511,7 +3511,7 @@
                   </div>
                 </div>
                 <div
-                  class="flex grow-0 flex-col gap-20 pb-20 pt-10 tablet:basis-[430px] tablet:pr-10"
+                  class="flex grow-0 flex-col gap-20 pb-20 pt-10 tablet:basis-button tablet:pr-10"
                 >
                   <ul
                     class="flex w-full flex-col gap-y-10 text-inverse max:w-auto"
@@ -3623,7 +3623,7 @@
     >
     <dialog
       aria-label="Search"
-      class="fixed left-4 right-4 h-screen w-full rounded-lg border border-default bg-default shadow-lg backdrop:bg-[#000] backdrop:opacity-40 open:flex open:flex-col tablet:mx-auto tablet:mt-16 tablet:h-min tablet:max-h-[min(100vh_-_128px,900px)] tablet:min-h-60 tablet:max-w-[min(100vw_-_64px,36rem)] tablet:rounded-xl desktop:min-h-0"
+      class="fixed left-4 right-4 h-screen w-full rounded-lg border border-default bg-default shadow-lg backdrop:bg-[#000] backdrop:opacity-40 open:flex open:flex-col tablet:mx-auto tablet:mt-16 tablet:h-min tablet:max-h-[min(100vh-128px,900px)] tablet:min-h-60 tablet:max-w-[min(100vw-64px,36rem)] tablet:rounded-xl desktop:min-h-0"
     >
       <div class="contents" data-dialog-frame>
         <button
@@ -3634,7 +3634,7 @@
         </button>
         <div class="contents"><div id="pagefind__search"></div></div>
         <div
-          class="hidden px-[var(--search-dialog-padding)] py-4 font-sans text-xs font-light tracking-wide text-subtle desktop:block"
+          class="hidden px-(--search-dialog-padding) py-4 font-sans text-xs font-light tracking-wide text-subtle desktop:block"
         >
           <kbd class="rounded-md bg-default p-2 font-mono text-xs text-subtle"
             >Tab</kbd

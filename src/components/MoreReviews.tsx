@@ -32,7 +32,7 @@ export function MoreReviews({
 }): JSX.Element {
   return (
     <nav data-pagefind-ignore>
-      <div className="relative mx-auto w-full max-w-screen-max px-container desktop:px-20">
+      <div className="relative mx-auto w-full max-w-(--breakpoint-max) px-container desktop:px-20">
         {children}
         <ul className="flex w-full flex-col gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between desktop:flex-nowrap">
           {values.map((value) => {

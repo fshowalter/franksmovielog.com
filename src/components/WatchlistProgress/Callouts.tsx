@@ -31,7 +31,7 @@ export function Callouts({
   writerTotal,
 }: Props): JSX.Element {
   return (
-    <div className="mx-auto w-full max-w-screen-max tablet:mt-12 tablet:px-container">
+    <div className="mx-auto w-full max-w-(--breakpoint-max) tablet:mt-12 tablet:px-container">
       <div className="flex w-full flex-wrap justify-center gap-8 px-container py-10">
         <Callout label="Total Progress" reviewed={reviewed} total={total} />
         <Callout

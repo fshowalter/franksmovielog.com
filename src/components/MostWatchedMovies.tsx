@@ -35,7 +35,7 @@ export function MostWatchedMovies({
   return (
     <section
       className={ccn(
-        "max-w-screen-desktop bg-default px-container desktop:pb-10",
+        "max-w-(--breakpoint-desktop) bg-default px-container desktop:pb-10",
         className,
       )}
     >
@@ -78,7 +78,7 @@ function FluidListItemPoster({
 
 function List({ children }: { children: React.ReactNode }): JSX.Element {
   return (
-    <ol className="grid-cols-[repeat(auto-fit,_minmax(128px,248px))] items-center justify-center gap-x-6 gap-y-8 bg-subtle tablet:grid tablet:items-start tablet:bg-default">
+    <ol className="grid-cols-[repeat(auto-fit,minmax(128px,248px))] items-center justify-center gap-x-6 gap-y-8 bg-subtle tablet:grid tablet:items-start tablet:bg-default">
       {children}
     </ol>
   );
