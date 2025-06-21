@@ -1,6 +1,11 @@
 import eslint from "@eslint/js";
 import vitest from "@vitest/eslint-plugin";
 import eslintPluginAstro from "eslint-plugin-astro";
+import eslintPluginBetterTailwindcss from "eslint-plugin-better-tailwindcss";
+import {
+  getDefaultAttributes,
+  getDefaultCallees,
+} from "eslint-plugin-better-tailwindcss/api/defaults";
 import perfectionist from "eslint-plugin-perfectionist";
 import react from "eslint-plugin-react";
 import reactCompiler from "eslint-plugin-react-compiler";
@@ -58,9 +63,25 @@ export default tsEslint.config(
       ],
     },
   },
+    {
+    files: ["**/*.astro"],
+    plugins: {
+      "better-tailwindcss": eslintPluginBetterTailwindcss,
+    },
+    rules: {
+      ...eslintPluginBetterTailwindcss.configs["recommended-error"].rules,
+      "better-tailwindcss/no-conflicting-classes": "error",
+    },
+    settings: {
+      "better-tailwindcss": {
+        entryPoint: "src/layouts/tailwind.css",
+      },
+    },
+  },
   {
     files: ["**/*.tsx"],
     plugins: {
+      "better-tailwindcss": eslintPluginBetterTailwindcss,
       react,
       "react-compiler": reactCompiler,
     },
@@ -68,8 +89,20 @@ export default tsEslint.config(
       ...react.configs.recommended.rules,
       "react-compiler/react-compiler": "error",
       "react/react-in-jsx-scope": "off",
+      ...eslintPluginBetterTailwindcss.configs["recommended-error"].rules,
+      "better-tailwindcss/enforce-consistent-variable-syntax": "error",
+      "better-tailwindcss/no-conflicting-classes": "error",
+      "better-tailwindcss/no-unregistered-classes": [
+        "error",
+        { detectComponentClasses: true },
+      ],
     },
     settings: {
+      "better-tailwindcss": {
+        attributes: [...getDefaultAttributes(), ".*Classes"],
+        callees: [...getDefaultCallees(), "ccn"],
+        entryPoint: "src/layouts/tailwind.css",
+      },
       react: {
         version: "detect",
       },
