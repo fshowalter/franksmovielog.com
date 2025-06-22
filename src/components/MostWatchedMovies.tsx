@@ -115,7 +115,7 @@ function ListItem({
   return (
     <li
       className={`
-        relative mb-1 flex h-full items-center gap-x-6 bg-default py-4
+        relative mb-1 flex h-full items-center gap-x-4 bg-default py-4
         has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
         tablet:w-auto tablet:flex-col tablet:p-0
         desktop:w-auto
