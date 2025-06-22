@@ -8,7 +8,7 @@ import { Poster } from "./Poster";
 
 export const MostWatchedMoviesPosterConfig = {
   height: 372,
-  sizes: "(max-width: 767px) 64px, (min-width: 784px) 20vw, 248px",
+  sizes: "(min-width: 780px) 248px, 64px",
   width: 248,
 };
 
