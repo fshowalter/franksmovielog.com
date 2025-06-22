@@ -18,7 +18,8 @@ export function Callouts({
   return (
     <div
       className={`
-        flex flex-wrap justify-center gap-6
+        flex flex-wrap justify-center gap-4
+        tablet:gap-6
         desktop:flex-nowrap
       `}
     >

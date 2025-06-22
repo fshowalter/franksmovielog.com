@@ -30,12 +30,16 @@ export function Distribution({
               key={value.name}
             >
               <div className="col-span-2 grid grid-cols-subgrid">
-                <div className="pr-3 font-sans text-xs text-muted">
+                <div
+                  className={`
+                    pr-3 pb-1 font-sans text-xs leading-3.5 text-muted
+                  `}
+                >
                   {value.name}
                 </div>
                 <div
                   className={`
-                    col-start-2 self-center pb-1 text-right font-sans text-xs
+                    col-start-2 self-center text-right font-sans text-xs
                     text-nowrap text-subtle
                   `}
                 >

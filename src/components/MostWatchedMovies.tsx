@@ -74,7 +74,7 @@ function FluidListItemPoster({
     <div
       className={ccn(
         `
-          w-16
+          w-list-item-poster shrink-0
           tablet:w-auto tablet:max-w-[248px]
         `,
         className,
