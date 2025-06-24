@@ -49,8 +49,7 @@ A quick look at the non-standard directories included in the project.
 
     .
     ├── content
-    ├── src/images
-    ├── src/styles
+    ├── src/api
     └── src/utils
 
 1.  **`/content`**: The movie log content. Reviews and data copied from the backend system, as well as front-end specific assets like backdrops and posters. It also contains the content for the [how I grade](https://www.franksmovielog.com/how-i-grade/) page. We don't leverage Astro's content directory because I prefer keeping content and code separate.
