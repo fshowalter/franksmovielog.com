@@ -76,6 +76,7 @@ export function CastAndCrewMember({
     <ListWithFiltersLayout
       backdrop={
         <Backdrop
+          bottomShadow={true}
           breadcrumb={
             <BreadcrumbLink href="/cast-and-crew/">Cast & Crew</BreadcrumbLink>
           }
