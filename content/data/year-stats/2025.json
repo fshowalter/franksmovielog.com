@@ -1,12 +1,12 @@
 {
   "year": "2025",
   "newTitleCount": 44,
-  "viewingCount": 72,
-  "titleCount": 71,
+  "viewingCount": 73,
+  "titleCount": 72,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 43
+      "count": 44
     },
     {
       "name": "4k UHD Blu-ray",
@@ -42,7 +42,7 @@
   "decadeDistribution": [
     {
       "name": "1930s",
-      "count": 2
+      "count": 3
     },
     {
       "name": "1940s",
@@ -163,6 +163,31 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1968"
+        }
+      ]
+    },
+    {
+      "name": "Howard Hawks",
+      "count": 2,
+      "slug": "howard-hawks",
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-03-22",
+          "slug": "rio-bravo-1959",
+          "title": "Rio Bravo",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1959"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-06-15",
+          "slug": "only-angels-have-wings-1939",
+          "title": "Only Angels Have Wings",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1939"
         }
       ]
     },
@@ -673,6 +698,31 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1977"
+        }
+      ]
+    },
+    {
+      "name": "Jules Furthman",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-03-22",
+          "slug": "rio-bravo-1959",
+          "title": "Rio Bravo",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1959"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-06-15",
+          "slug": "only-angels-have-wings-1939",
+          "title": "Only Angels Have Wings",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1939"
         }
       ]
     }
