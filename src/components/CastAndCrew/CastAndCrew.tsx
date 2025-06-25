@@ -49,6 +49,7 @@ export function CastAndCrew({
     <ListWithFiltersLayout
       backdrop={
         <Backdrop
+          bottomShadow={true}
           deck={deck}
           imageProps={backdropImageProps}
           title="Cast & Crew"
