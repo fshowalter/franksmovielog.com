@@ -1,12 +1,12 @@
 {
   "year": "2025",
-  "newTitleCount": 44,
-  "viewingCount": 73,
-  "titleCount": 72,
+  "newTitleCount": 45,
+  "viewingCount": 75,
+  "titleCount": 74,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 44
+      "count": 45
     },
     {
       "name": "4k UHD Blu-ray",
@@ -14,7 +14,7 @@
     },
     {
       "name": "iTunes",
-      "count": 2
+      "count": 3
     },
     {
       "name": "Criterion Channel",
@@ -46,7 +46,7 @@
     },
     {
       "name": "1940s",
-      "count": 3
+      "count": 4
     },
     {
       "name": "1950s",
@@ -62,7 +62,7 @@
     },
     {
       "name": "1980s",
-      "count": 14
+      "count": 15
     },
     {
       "name": "1990s",
@@ -91,6 +91,40 @@
     }
   ],
   "mostWatchedDirectors": [
+    {
+      "name": "Howard Hawks",
+      "count": 3,
+      "slug": "howard-hawks",
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-03-22",
+          "slug": "rio-bravo-1959",
+          "title": "Rio Bravo",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1959"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-06-15",
+          "slug": "only-angels-have-wings-1939",
+          "title": "Only Angels Have Wings",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1939"
+        },
+        {
+          "sequence": 3,
+          "date": "2025-06-15",
+          "slug": "red-river-1948",
+          "title": "Red River",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1948"
+        }
+      ]
+    },
     {
       "name": "Marcus Dunstan",
       "count": 2,
@@ -163,31 +197,6 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1968"
-        }
-      ]
-    },
-    {
-      "name": "Howard Hawks",
-      "count": 2,
-      "slug": "howard-hawks",
-      "viewings": [
-        {
-          "sequence": 1,
-          "date": "2025-03-22",
-          "slug": "rio-bravo-1959",
-          "title": "Rio Bravo",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1959"
-        },
-        {
-          "sequence": 2,
-          "date": "2025-06-15",
-          "slug": "only-angels-have-wings-1939",
-          "title": "Only Angels Have Wings",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1939"
         }
       ]
     },
@@ -416,6 +425,40 @@
       ]
     },
     {
+      "name": "John Wayne",
+      "count": 3,
+      "slug": "john-wayne",
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-03-22",
+          "slug": "rio-bravo-1959",
+          "title": "Rio Bravo",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1959"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-06-14",
+          "slug": "pals-of-the-saddle-1938",
+          "title": "Pals of the Saddle",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1938"
+        },
+        {
+          "sequence": 3,
+          "date": "2025-06-15",
+          "slug": "red-river-1948",
+          "title": "Red River",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1948"
+        }
+      ]
+    },
+    {
       "name": "Vincent Price",
       "count": 3,
       "slug": "vincent-price",
@@ -521,31 +564,6 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1997"
-        }
-      ]
-    },
-    {
-      "name": "Frank Finlay",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1,
-          "date": "2025-01-11",
-          "slug": "the-return-of-the-musketeers-1989",
-          "title": "The Return of the Musketeers",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1989"
-        },
-        {
-          "sequence": 2,
-          "date": "2025-01-23",
-          "slug": "murder-by-decree-1979",
-          "title": "Murder by Decree",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1979"
         }
       ]
     }
