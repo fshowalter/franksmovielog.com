@@ -1,12 +1,12 @@
 {
   "year": "2025",
-  "newTitleCount": 45,
-  "viewingCount": 75,
-  "titleCount": 74,
+  "newTitleCount": 46,
+  "viewingCount": 76,
+  "titleCount": 75,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 45
+      "count": 46
     },
     {
       "name": "4k UHD Blu-ray",
@@ -58,7 +58,7 @@
     },
     {
       "name": "1970s",
-      "count": 15
+      "count": 16
     },
     {
       "name": "1980s",
@@ -741,6 +741,31 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1939"
+        }
+      ]
+    },
+    {
+      "name": "Steven W. Carabatsos",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-05-04",
+          "slug": "the-revengers-1972",
+          "title": "The Revengers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1972"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-06-28",
+          "slug": "tentacles-1977",
+          "title": "Tentacles",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1977"
         }
       ]
     }
