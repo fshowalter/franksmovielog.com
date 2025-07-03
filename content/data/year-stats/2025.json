@@ -1,12 +1,12 @@
 {
   "year": "2025",
   "newTitleCount": 46,
-  "viewingCount": 76,
-  "titleCount": 75,
+  "viewingCount": 77,
+  "titleCount": 76,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 46
+      "count": 47
     },
     {
       "name": "4k UHD Blu-ray",
@@ -50,7 +50,7 @@
     },
     {
       "name": "1950s",
-      "count": 6
+      "count": 7
     },
     {
       "name": "1960s",
@@ -323,6 +323,49 @@
       ]
     },
     {
+      "name": "Vincent Price",
+      "count": 4,
+      "slug": "vincent-price",
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-05-20",
+          "slug": "catchfire-1990",
+          "title": "Catchfire",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1990"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-05-28",
+          "slug": "return-of-the-fly-1959",
+          "title": "Return of the Fly",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1959"
+        },
+        {
+          "sequence": 3,
+          "date": "2025-05-30",
+          "slug": "the-las-vegas-story-1952",
+          "title": "The Las Vegas Story",
+          "medium": "DVD",
+          "venue": null,
+          "year": "1952"
+        },
+        {
+          "sequence": 4,
+          "date": "2025-07-01",
+          "slug": "his-kind-of-woman-1951",
+          "title": "His Kind of Woman",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1951"
+        }
+      ]
+    },
+    {
       "name": "Lily Li",
       "count": 3,
       "slug": null,
@@ -459,36 +502,36 @@
       ]
     },
     {
-      "name": "Vincent Price",
+      "name": "Jane Russell",
       "count": 3,
-      "slug": "vincent-price",
+      "slug": null,
       "viewings": [
         {
           "sequence": 1,
-          "date": "2025-05-20",
-          "slug": "catchfire-1990",
-          "title": "Catchfire",
-          "medium": "Blu-ray",
+          "date": "2025-05-05",
+          "slug": "double-dynamite-1951",
+          "title": "Double Dynamite",
+          "medium": "DVD",
           "venue": null,
-          "year": "1990"
+          "year": "1951"
         },
         {
           "sequence": 2,
-          "date": "2025-05-28",
-          "slug": "return-of-the-fly-1959",
-          "title": "Return of the Fly",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1959"
-        },
-        {
-          "sequence": 3,
           "date": "2025-05-30",
           "slug": "the-las-vegas-story-1952",
           "title": "The Las Vegas Story",
           "medium": "DVD",
           "venue": null,
           "year": "1952"
+        },
+        {
+          "sequence": 3,
+          "date": "2025-07-01",
+          "slug": "his-kind-of-woman-1951",
+          "title": "His Kind of Woman",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1951"
         }
       ]
     },
@@ -539,31 +582,6 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1989"
-        }
-      ]
-    },
-    {
-      "name": "Rony Clanton",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1,
-          "date": "2025-01-11",
-          "slug": "def-by-temptation-1990",
-          "title": "Def by Temptation",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1990"
-        },
-        {
-          "sequence": 2,
-          "date": "2025-05-17",
-          "slug": "the-devils-advocate-1997",
-          "title": "The Devil's Advocate",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1997"
         }
       ]
     }
