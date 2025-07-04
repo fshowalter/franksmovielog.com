@@ -33,18 +33,13 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
   return (
     <li
       className={`
-        relative mb-1 flex flex-col bg-default pt-12
+        relative mb-1 flex flex-col bg-default px-[8%] pt-12
         has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
-        tablet:mb-0 tablet:max-w-[47%] tablet:pt-0
+        tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
         desktop:max-w-[31.33%]
       `}
     >
-      <div
-        className={`
-          mx-[8%] mb-6 block
-          tablet:mx-0
-        `}
-      >
+      <div className={`mb-6 block`}>
         <Still
           imageProps={value.stillImageProps}
           {...StillImageConfig}
@@ -55,7 +50,8 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
       </div>
       <div
         className={`
-          flex grow flex-col px-[8%] pb-8
+          flex grow flex-col px-1 pb-8
+          tablet:px-[8%]
           desktop:pr-[10%] desktop:pl-[8.5%]
         `}
       >
