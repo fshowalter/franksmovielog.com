@@ -80,7 +80,7 @@ function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
         </div>
         <div
           className={`
-            flex flex-col px-6 pt-6 pb-4
+            flex flex-col px-6 pt-6 pb-6
             desktop:pr-[14%] desktop:pl-[12%]
           `}
         >
