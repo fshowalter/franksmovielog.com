@@ -1,12 +1,12 @@
 {
   "year": "2025",
   "newTitleCount": 46,
-  "viewingCount": 78,
-  "titleCount": 77,
+  "viewingCount": 79,
+  "titleCount": 78,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 47
+      "count": 48
     },
     {
       "name": "4k UHD Blu-ray",
@@ -58,7 +58,7 @@
     },
     {
       "name": "1970s",
-      "count": 16
+      "count": 17
     },
     {
       "name": "1980s",
@@ -201,6 +201,31 @@
       ]
     },
     {
+      "name": "Gordon Hessler",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-03-08",
+          "slug": "pray-for-death-1985",
+          "title": "Pray for Death",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1985"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-07-04",
+          "slug": "scream-and-scream-again-1970",
+          "title": "Scream and Scream Again",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1970"
+        }
+      ]
+    },
+    {
       "name": "Lucio Fulci",
       "count": 2,
       "slug": "lucio-fulci",
@@ -229,7 +254,7 @@
   "mostWatchedPerformers": [
     {
       "name": "Christopher Lee",
-      "count": 5,
+      "count": 6,
       "slug": "christopher-lee",
       "viewings": [
         {
@@ -276,12 +301,21 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1959"
+        },
+        {
+          "sequence": 6,
+          "date": "2025-07-04",
+          "slug": "scream-and-scream-again-1970",
+          "title": "Scream and Scream Again",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1970"
         }
       ]
     },
     {
       "name": "Peter Cushing",
-      "count": 4,
+      "count": 5,
       "slug": "peter-cushing",
       "viewings": [
         {
@@ -319,12 +353,21 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1959"
+        },
+        {
+          "sequence": 5,
+          "date": "2025-07-04",
+          "slug": "scream-and-scream-again-1970",
+          "title": "Scream and Scream Again",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1970"
         }
       ]
     },
     {
       "name": "Vincent Price",
-      "count": 4,
+      "count": 5,
       "slug": "vincent-price",
       "viewings": [
         {
@@ -362,6 +405,15 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1951"
+        },
+        {
+          "sequence": 5,
+          "date": "2025-07-04",
+          "slug": "scream-and-scream-again-1970",
+          "title": "Scream and Scream Again",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1970"
         }
       ]
     },
