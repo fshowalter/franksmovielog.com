@@ -1,12 +1,12 @@
 {
   "year": "2025",
   "newTitleCount": 46,
-  "viewingCount": 80,
+  "viewingCount": 81,
   "titleCount": 79,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 48
+      "count": 49
     },
     {
       "name": "4k UHD Blu-ray",
@@ -62,7 +62,7 @@
     },
     {
       "name": "1980s",
-      "count": 16
+      "count": 17
     },
     {
       "name": "1990s",
@@ -82,6 +82,13 @@
     }
   ],
   "mostWatchedTitles": [
+    {
+      "title": "The Return of the Musketeers",
+      "imdbId": "tt0098194",
+      "year": "1989",
+      "count": 2,
+      "slug": "the-return-of-the-musketeers-1989"
+    },
     {
       "title": "The Collector",
       "imdbId": "tt0844479",
@@ -122,6 +129,31 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1948"
+        }
+      ]
+    },
+    {
+      "name": "Richard Lester",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-11",
+          "slug": "the-return-of-the-musketeers-1989",
+          "title": "The Return of the Musketeers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1989"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-07-07",
+          "slug": "the-return-of-the-musketeers-1989",
+          "title": "The Return of the Musketeers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1989"
         }
       ]
     },
@@ -254,7 +286,7 @@
   "mostWatchedPerformers": [
     {
       "name": "Christopher Lee",
-      "count": 6,
+      "count": 7,
       "slug": "christopher-lee",
       "viewings": [
         {
@@ -310,6 +342,15 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1970"
+        },
+        {
+          "sequence": 7,
+          "date": "2025-07-07",
+          "slug": "the-return-of-the-musketeers-1989",
+          "title": "The Return of the Musketeers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1989"
         }
       ]
     },
@@ -418,6 +459,142 @@
       ]
     },
     {
+      "name": "Oliver Reed",
+      "count": 3,
+      "slug": "oliver-reed",
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-10",
+          "slug": "the-brigand-of-kandahar-1965",
+          "title": "The Brigand of Kandahar",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1965"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-01-11",
+          "slug": "the-return-of-the-musketeers-1989",
+          "title": "The Return of the Musketeers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1989"
+        },
+        {
+          "sequence": 3,
+          "date": "2025-07-07",
+          "slug": "the-return-of-the-musketeers-1989",
+          "title": "The Return of the Musketeers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1989"
+        }
+      ]
+    },
+    {
+      "name": "Frank Finlay",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-11",
+          "slug": "the-return-of-the-musketeers-1989",
+          "title": "The Return of the Musketeers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1989"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-01-23",
+          "slug": "murder-by-decree-1979",
+          "title": "Murder by Decree",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1979"
+        },
+        {
+          "sequence": 3,
+          "date": "2025-07-07",
+          "slug": "the-return-of-the-musketeers-1989",
+          "title": "The Return of the Musketeers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1989"
+        }
+      ]
+    },
+    {
+      "name": "C. Thomas Howell",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-11",
+          "slug": "the-return-of-the-musketeers-1989",
+          "title": "The Return of the Musketeers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1989"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-06-07",
+          "slug": "tank-1984",
+          "title": "Tank",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1984"
+        },
+        {
+          "sequence": 3,
+          "date": "2025-07-07",
+          "slug": "the-return-of-the-musketeers-1989",
+          "title": "The Return of the Musketeers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1989"
+        }
+      ]
+    },
+    {
+      "name": "Jack Taylor",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-11",
+          "slug": "the-return-of-the-musketeers-1989",
+          "title": "The Return of the Musketeers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1989"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-03-06",
+          "slug": "count-dracula-1970",
+          "title": "Count Dracula",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1970"
+        },
+        {
+          "sequence": 3,
+          "date": "2025-07-07",
+          "slug": "the-return-of-the-musketeers-1989",
+          "title": "The Return of the Musketeers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1989"
+        }
+      ]
+    },
+    {
       "name": "Lily Li",
       "count": 3,
       "slug": null,
@@ -518,124 +695,6 @@
           "year": "1978"
         }
       ]
-    },
-    {
-      "name": "John Wayne",
-      "count": 3,
-      "slug": "john-wayne",
-      "viewings": [
-        {
-          "sequence": 1,
-          "date": "2025-03-22",
-          "slug": "rio-bravo-1959",
-          "title": "Rio Bravo",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1959"
-        },
-        {
-          "sequence": 2,
-          "date": "2025-06-14",
-          "slug": "pals-of-the-saddle-1938",
-          "title": "Pals of the Saddle",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1938"
-        },
-        {
-          "sequence": 3,
-          "date": "2025-06-15",
-          "slug": "red-river-1948",
-          "title": "Red River",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1948"
-        }
-      ]
-    },
-    {
-      "name": "Jane Russell",
-      "count": 3,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1,
-          "date": "2025-05-05",
-          "slug": "double-dynamite-1951",
-          "title": "Double Dynamite",
-          "medium": "DVD",
-          "venue": null,
-          "year": "1951"
-        },
-        {
-          "sequence": 2,
-          "date": "2025-05-30",
-          "slug": "the-las-vegas-story-1952",
-          "title": "The Las Vegas Story",
-          "medium": "DVD",
-          "venue": null,
-          "year": "1952"
-        },
-        {
-          "sequence": 3,
-          "date": "2025-07-01",
-          "slug": "his-kind-of-woman-1951",
-          "title": "His Kind of Woman",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1951"
-        }
-      ]
-    },
-    {
-      "name": "Mo McRae",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1,
-          "date": "2025-01-10",
-          "slug": "leprechaun-6-back-2-tha-hood-2003",
-          "title": "Leprechaun 6: Back 2 Tha Hood",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "2003"
-        },
-        {
-          "sequence": 2,
-          "date": "2025-01-16",
-          "slug": "den-of-thieves-2018",
-          "title": "Den of Thieves",
-          "medium": "iTunes",
-          "venue": null,
-          "year": "2018"
-        }
-      ]
-    },
-    {
-      "name": "Oliver Reed",
-      "count": 2,
-      "slug": "oliver-reed",
-      "viewings": [
-        {
-          "sequence": 1,
-          "date": "2025-01-10",
-          "slug": "the-brigand-of-kandahar-1965",
-          "title": "The Brigand of Kandahar",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1965"
-        },
-        {
-          "sequence": 2,
-          "date": "2025-01-11",
-          "slug": "the-return-of-the-musketeers-1989",
-          "title": "The Return of the Musketeers",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1989"
-        }
-      ]
     }
   ],
   "mostWatchedWriters": [
@@ -661,6 +720,56 @@
           "medium": "4k UHD Blu-ray",
           "venue": null,
           "year": "1970"
+        }
+      ]
+    },
+    {
+      "name": "George MacDonald Fraser",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-11",
+          "slug": "the-return-of-the-musketeers-1989",
+          "title": "The Return of the Musketeers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1989"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-07-07",
+          "slug": "the-return-of-the-musketeers-1989",
+          "title": "The Return of the Musketeers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1989"
+        }
+      ]
+    },
+    {
+      "name": "Alexandre Dumas",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-11",
+          "slug": "the-return-of-the-musketeers-1989",
+          "title": "The Return of the Musketeers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1989"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-07-07",
+          "slug": "the-return-of-the-musketeers-1989",
+          "title": "The Return of the Musketeers",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1989"
         }
       ]
     },
