@@ -11,6 +11,7 @@ export const BackdropImageConfig = {
 export function Backdrop({
   bottomShadow = false,
   breadcrumb,
+  centerText = false,
   deck,
   imageProps,
   size = "default",
@@ -19,6 +20,7 @@ export function Backdrop({
 }: {
   bottomShadow?: boolean;
   breadcrumb?: React.ReactNode;
+  centerText?: boolean;
   deck?: React.ReactNode;
   imageProps: BackdropImageProps;
   size?: "default" | "large";
@@ -37,10 +39,15 @@ export function Backdrop({
   );
 
   return (
-    <Wrapper bottomShadow={bottomShadow} heroImage={heroImage} size={size}>
+    <Wrapper
+      bottomShadow={bottomShadow}
+      centerText={centerText}
+      heroImage={heroImage}
+      size={size}
+    >
       <Breadcrumb value={breadcrumb} />
       <Title className={titleStyle} value={title} />
-      <Deck shadow={true} value={deck} />
+      <Deck center={centerText} shadow={true} value={deck} />
     </Wrapper>
   );
 }

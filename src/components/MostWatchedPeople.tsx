@@ -128,13 +128,24 @@ function MostWatchedPersonViewingListItem({
     <li
       className={`
         ${value.slug ? "bg-default" : "bg-unreviewed"}
-        relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4 py-4
-        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+        group/list-item relative mb-1 flex max-w-(--breakpoint-max)
+        transform-gpu flex-row gap-x-4 py-4
+        has-[a:hover]:z-30 has-[a:hover]:shadow-all
+        has-[a:hover]:drop-shadow-2xl
         tablet:gap-x-6 tablet:px-4
         desktop:px-6
       `}
     >
-      <ListItemPoster imageProps={value.posterImageProps} />
+      <div
+        className={`
+          relative
+          after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        `}
+      >
+        <ListItemPoster imageProps={value.posterImageProps} />
+      </div>
       <div className="flex grow flex-col gap-2">
         <ListItemTitle
           slug={value.slug}

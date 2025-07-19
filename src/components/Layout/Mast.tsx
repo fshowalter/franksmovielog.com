@@ -141,15 +141,16 @@ function NavListItem({
   return (
     <li
       className={`
-        block leading-10 tracking-serif-wide whitespace-nowrap transition
-        duration-200 ease-in-out
+        block leading-10 tracking-serif-wide whitespace-nowrap
+        transition-transform
         group-has-[#nav:checked]:opacity-0
+        has-[a:hover]:-translate-y-1
       `}
     >
       <a
         className={`
-          text-inherit transition-all duration-500 ease-in-out
-          ${hasBackdrop ? `hover:bg-[rgba(0,0,0,.50)]` : `hover:text-accent`}
+          relative text-inherit
+          ${hasBackdrop ? `` : `hover:text-accent`}
         `}
         href={value.target}
         style={{

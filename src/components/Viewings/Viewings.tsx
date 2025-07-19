@@ -204,12 +204,8 @@ function ListItemTitle({
       <a
         className={`
           block font-sans text-sm font-medium text-accent
-          before:absolute before:top-4 before:left-(--container-padding)
-          before:aspect-poster before:w-list-item-poster before:opacity-15
           after:absolute after:top-0 after:left-0 after:size-full
           after:opacity-0
-          hover:before:opacity-0
-          tablet:before:left-4 tablet:before:bg-default
         `}
         href={`/reviews/${slug}/`}
       >
@@ -240,16 +236,27 @@ function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
     <li
       className={`
-        relative mb-1 flex flex-row items-center gap-x-4
+        group/list-item relative mb-1 flex transform-gpu flex-row items-center
+        gap-x-4
+        has-[a:hover]:z-30 has-[a:hover]:shadow-all
+        has-[a:hover]:drop-shadow-2xl
         ${value.slug ? `bg-default` : `bg-unreviewed`}
         px-container py-4
         last-of-type:mb-0
-        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
         tablet:gap-x-6 tablet:pl-4
       `}
       {...rest}
     >
-      <ListItemPoster imageProps={value.posterImageProps} />
+      <div
+        className={`
+          relative
+          after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        `}
+      >
+        <ListItemPoster imageProps={value.posterImageProps} />
+      </div>
       <div className="flex grow flex-col gap-1">
         <ListItemTitle
           slug={value.slug}
