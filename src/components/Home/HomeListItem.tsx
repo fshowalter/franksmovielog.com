@@ -33,8 +33,9 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
   return (
     <li
       className={`
-        relative mb-1 flex flex-col bg-default px-[8%] pt-12
-        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+        relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12
+        transition-transform
+        has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl
         tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
         desktop:max-w-[31.33%]
       `}
