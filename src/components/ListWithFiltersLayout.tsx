@@ -100,7 +100,7 @@ export function ListWithFiltersLayout({
                     tablet-landscape:mr-12 tablet-landscape:block
                     tablet-landscape:py-24 tablet-landscape:pb-12
                     tablet-landscape:shadow-none
-                    desktop:mr-20
+                    laptop:mr-20
                   `}
                   style={{
                     gridTemplateRows: filtersVisible ? "1fr" : "0fr",
@@ -114,7 +114,7 @@ export function ListWithFiltersLayout({
                         tablet-landscape:overflow-visible
                         tablet-landscape:bg-default
                         tablet-landscape:px-container tablet-landscape:pt-0
-                        desktop:px-8
+                        laptop:px-8
                       `}
                     >
                       <fieldset
@@ -145,7 +145,7 @@ export function ListWithFiltersLayout({
                   className={`
                     col-start-1 row-start-2 pb-10
                     tablet-landscape:pl-12
-                    desktop:pl-20
+                    laptop:pl-20
                   `}
                 >
                   {list}

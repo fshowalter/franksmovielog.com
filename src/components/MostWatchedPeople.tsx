@@ -139,7 +139,7 @@ function MostWatchedPersonViewingListItem({
         has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
         has-[a:hover]:drop-shadow-2xl
         tablet:gap-x-6 tablet:px-4
-        desktop:px-6
+        laptop:px-6
       `}
     >
       <div

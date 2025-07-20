@@ -19,8 +19,8 @@ export function Mast({
       className={`
         group z-20 flex w-full items-center justify-between px-container py-4
         tablet:py-6
-        desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap
-        desktop:px-16 desktop:py-8 desktop:text-left
+        laptop:inset-x-0 laptop:z-40 laptop:flex-row laptop:flex-wrap
+        laptop:px-16 laptop:py-8 laptop:text-left
       `}
       style={{
         backgroundImage: addGradient
@@ -35,7 +35,7 @@ export function Mast({
         <nav
           className={`
             hidden w-full
-            desktop:block desktop:w-auto
+            laptop:block laptop:w-auto
           `}
         >
           <ul className={`flex flex-wrap justify-start gap-x-6 text-xl`}>
@@ -106,8 +106,8 @@ function HamburgerMenu({ hasBackdrop }: { hasBackdrop: boolean }) {
           tablet:max-w-[35vw] tablet:gap-y-10
           group-has-[#nav:checked]:tablet:px-10
           group-has-[#nav:checked]:tablet:pt-40
-          desktop:max-w-[25vw]
-          group-has-[#nav:checked]:desktop:px-20
+          laptop:max-w-[25vw]
+          group-has-[#nav:checked]:laptop:px-20
         `}
       >
         {navItems.map((item) => {
@@ -123,7 +123,7 @@ function MenuItem({ value }: { value: NavItem }): JSX.Element {
     <li
       className={`
         block w-1/2 text-2xl whitespace-nowrap
-        desktop:w-full
+        laptop:w-full
       `}
     >
       <a
@@ -157,10 +157,7 @@ function NavListItem({
       `}
     >
       <a
-        className={`
-          relative text-inherit
-          ${hasBackdrop ? `` : `hover:text-accent`}
-        `}
+        className={`relative text-inherit transition-colors`}
         href={value.target}
         style={{
           textShadow: hasBackdrop ? "1px 1px 2px black" : undefined,
@@ -187,7 +184,7 @@ function SearchButton() {
         className={`
           flex size-10 items-center justify-center overflow-hidden text-sm
           leading-6 ring-default
-          desktop:ml-6
+          laptop:ml-6
         `}
         data-open-modal
         disabled

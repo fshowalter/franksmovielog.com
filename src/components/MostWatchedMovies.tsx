@@ -36,8 +36,8 @@ export function MostWatchedMovies({
     <section
       className={ccn(
         `
-          max-w-(--breakpoint-desktop) bg-default px-container pb-5
-          desktop:pb-10
+          max-w-(--breakpoint-laptop) bg-default px-container pb-5
+          laptop:pb-10
         `,
         className,
       )}
@@ -46,7 +46,7 @@ export function MostWatchedMovies({
         className={`
           py-4 text-xl font-medium shadow-bottom
           tablet:text-center tablet:text-2xl
-          desktop:py-8
+          laptop:py-8
         `}
       >
         Most Watched Movies
@@ -119,7 +119,7 @@ function ListItem({
         gap-x-4 bg-default py-4 transition-transform
         has-[a:hover]:-translate-y-2 has-[a:hover]:scale-105
         tablet:w-auto tablet:flex-col tablet:p-0
-        desktop:w-auto
+        laptop:w-auto
       `}
     >
       <div

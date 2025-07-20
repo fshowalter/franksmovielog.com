@@ -23,7 +23,7 @@ export function Home({ backdropImageProps, deck, values }: Props): JSX.Element {
         deck={deck}
         imageProps={backdropImageProps}
         title="Frank's Movie Log"
-        titleStyle="[text-shadow:1px_1px_2px_black] text-[2rem] leading-10 tablet:text-4xl desktop:text-7xl"
+        titleStyle="[text-shadow:1px_1px_2px_black] text-[2rem] leading-10 tablet:text-4xl laptop:text-7xl"
       />
       <nav className="mx-auto max-w-(--breakpoint-max)">
         <SubHeading as="h2" className="px-container">
@@ -32,10 +32,10 @@ export function Home({ backdropImageProps, deck, values }: Props): JSX.Element {
         <ul
           className={`
             flex w-full flex-col flex-wrap justify-center gap-x-[3%] pb-8
-            max:gap-y-14
             tablet:flex-row tablet:justify-between tablet:gap-y-[6vw]
             tablet:px-container
-            desktop:gap-y-[3vw]
+            laptop:gap-y-[3vw]
+            desktop:gap-y-14
           `}
         >
           {values.map((value) => {

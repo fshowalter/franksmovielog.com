@@ -126,7 +126,7 @@ function WatchlistListItem({
         relative mb-1 flex max-w-(--breakpoint-max) flex-row items-center
         gap-x-4 bg-unreviewed px-container py-4
         tablet:gap-x-6 tablet:px-4
-        desktop:px-6
+        laptop:px-6
       `}
     >
       <ListItemPoster imageProps={defaultPosterImageProps} />

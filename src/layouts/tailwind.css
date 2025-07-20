@@ -37,10 +37,10 @@
   --tracking-widest: 2px;
 
   --breakpoint-*: initial;
-  --breakpoint-desktop: 1280px;
-  --breakpoint-max: 1696px;
   --breakpoint-tablet: 768px;
   --breakpoint-tablet-landscape: 1024px;
+  --breakpoint-laptop: 1280px;
+  --breakpoint-desktop: 1696px;
 
   --aspect-poster: 1 / 1.5;
 
@@ -141,7 +141,7 @@
     }
   }
 
-  @media (width >= theme(--breakpoint-desktop)) {
+  @media (width >= theme(--breakpoint-laptop)) {
     :root {
       --container-padding: 80px;
       --search-dialog-padding: 32px;
@@ -552,6 +552,7 @@
     .pagefind-ui__search-input {
       align-items: center;
       border: none;
+      color: var(--fg-default);
       display: flex;
       flex-shrink: 0;
       font-family: var(--font-serif);

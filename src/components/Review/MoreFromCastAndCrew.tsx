@@ -21,16 +21,15 @@ type Props = {
 export function MoreFromCastAndCrew({ values }: Props) {
   return values.map((value) => (
     <MoreReviews key={value.slug} values={value.titles}>
-      <SubHeading as="h2">
+      <SubHeading
+        as="h2"
+        className={`
+          origin-left transform-gpu text-accent transition-transform
+          has-[a:hover]:scale-110
+        `}
+      >
         {leadTextForCreditKind(value.creditKind)}{" "}
-        <a
-          className={`
-            inline-block origin-left transform-gpu text-accent
-            transition-transform
-            hover:scale-105
-          `}
-          href={`/cast-and-crew/${value.slug}/`}
-        >
+        <a className={`text-accent`} href={`/cast-and-crew/${value.slug}/`}>
           {value.name}
         </a>
       </SubHeading>

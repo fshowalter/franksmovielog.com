@@ -37,7 +37,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
         transition-transform
         has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl
         tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
-        desktop:max-w-[31.33%]
+        laptop:max-w-[31.33%]
       `}
     >
       <div className={`mb-6 block`}>
@@ -53,14 +53,14 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
         className={`
           flex grow flex-col px-1 pb-8
           tablet:px-[8%]
-          desktop:pr-[10%] desktop:pl-[8.5%]
+          laptop:pr-[10%] laptop:pl-[8.5%]
         `}
       >
         <div
           className={`
             mb-3 font-sans text-xxs leading-4 font-light tracking-wider
             text-subtle uppercase
-            desktop:tracking-wide
+            laptop:tracking-wide
           `}
         >
           {formatDate(value.date)}
@@ -97,7 +97,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
           className={`
             mt-auto font-sans text-xxs leading-4 font-light tracking-wider
             text-subtle
-            desktop:tracking-wide
+            laptop:tracking-wide
           `}
         >
           {value.genres.map((genre, index) => {

@@ -48,7 +48,7 @@
       >
       <div class="flex min-h-full w-full flex-col bg-default">
         <header
-          class="group z-20 flex w-full items-center justify-between px-container py-4 tablet:py-6 desktop:inset-x-0 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:px-16 desktop:py-8 desktop:text-left"
+          class="group z-20 flex w-full items-center justify-between px-container py-4 tablet:py-6 laptop:inset-x-0 laptop:z-40 laptop:flex-row laptop:flex-wrap laptop:px-16 laptop:py-8 laptop:text-left"
           style="
             background-image: linear-gradient(
               to bottom,
@@ -61,13 +61,13 @@
         >
           <div></div>
           <div class="flex items-center">
-            <nav class="hidden w-full desktop:block desktop:w-auto">
+            <nav class="hidden w-full laptop:block laptop:w-auto">
               <ul class="flex flex-wrap justify-start gap-x-6 text-xl">
                 <li
                   class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform group-has-[#nav:checked]:opacity-0 has-[a:hover]:scale-105"
                 >
                   <a
-                    class="relative text-inherit"
+                    class="relative text-inherit transition-colors"
                     href="/"
                     style="text-shadow: 1px 1px 2px black"
                     >Home</a
@@ -77,7 +77,7 @@
                   class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform group-has-[#nav:checked]:opacity-0 has-[a:hover]:scale-105"
                 >
                   <a
-                    class="relative text-inherit"
+                    class="relative text-inherit transition-colors"
                     href="/how-i-grade/"
                     style="text-shadow: 1px 1px 2px black"
                     >How I Grade</a
@@ -87,7 +87,7 @@
                   class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform group-has-[#nav:checked]:opacity-0 has-[a:hover]:scale-105"
                 >
                   <a
-                    class="relative text-inherit"
+                    class="relative text-inherit transition-colors"
                     href="/reviews/"
                     style="text-shadow: 1px 1px 2px black"
                     >Reviews</a
@@ -97,7 +97,7 @@
                   class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform group-has-[#nav:checked]:opacity-0 has-[a:hover]:scale-105"
                 >
                   <a
-                    class="relative text-inherit"
+                    class="relative text-inherit transition-colors"
                     href="/viewings/"
                     style="text-shadow: 1px 1px 2px black"
                     >Viewing Log</a
@@ -107,7 +107,7 @@
                   class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform group-has-[#nav:checked]:opacity-0 has-[a:hover]:scale-105"
                 >
                   <a
-                    class="relative text-inherit"
+                    class="relative text-inherit transition-colors"
                     href="/watchlist/"
                     style="text-shadow: 1px 1px 2px black"
                     >Watchlist</a
@@ -121,7 +121,7 @@
               <button
                 aria-keyshortcuts="Control+K"
                 aria-label="Search"
-                class="flex size-10 items-center justify-center overflow-hidden text-sm leading-6 ring-default desktop:ml-6"
+                class="flex size-10 items-center justify-center overflow-hidden text-sm leading-6 ring-default laptop:ml-6"
                 data-open-modal="true"
                 disabled=""
                 title="Search: Control+K"
@@ -153,10 +153,10 @@
                 ></span
               ></label>
               <ul
-                class="fixed top-0 right-0 z-20 flex h-full w-0 transform-[translateX(100%)] flex-col items-start gap-y-5 overflow-hidden bg-footer text-left text-inverse opacity-0 duration-200 ease-in-out group-has-[#nav:checked]:bottom-0 group-has-[#nav:checked]:z-20 group-has-[#nav:checked]:h-full group-has-[#nav:checked]:w-full group-has-[#nav:checked]:transform-[translateX(0)] group-has-[#nav:checked]:overflow-y-auto group-has-[#nav:checked]:pt-20 group-has-[#nav:checked]:pr-[16%] group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%] group-has-[#nav:checked]:opacity-100 tablet:max-w-[35vw] tablet:gap-y-10 group-has-[#nav:checked]:tablet:px-10 group-has-[#nav:checked]:tablet:pt-40 desktop:max-w-[25vw] group-has-[#nav:checked]:desktop:px-20"
+                class="fixed top-0 right-0 z-20 flex h-full w-0 transform-[translateX(100%)] flex-col items-start gap-y-5 overflow-hidden bg-footer text-left text-inverse opacity-0 duration-200 ease-in-out group-has-[#nav:checked]:bottom-0 group-has-[#nav:checked]:z-20 group-has-[#nav:checked]:h-full group-has-[#nav:checked]:w-full group-has-[#nav:checked]:transform-[translateX(0)] group-has-[#nav:checked]:overflow-y-auto group-has-[#nav:checked]:pt-20 group-has-[#nav:checked]:pr-[16%] group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%] group-has-[#nav:checked]:opacity-100 tablet:max-w-[35vw] tablet:gap-y-10 group-has-[#nav:checked]:tablet:px-10 group-has-[#nav:checked]:tablet:pt-40 laptop:max-w-[25vw] group-has-[#nav:checked]:laptop:px-20"
               >
                 <li
-                  class="block w-1/2 text-2xl whitespace-nowrap desktop:w-full"
+                  class="block w-1/2 text-2xl whitespace-nowrap laptop:w-full"
                 >
                   <a
                     class="inline-block origin-left transform-gpu transition-all hover:scale-105"
@@ -165,7 +165,7 @@
                   >
                 </li>
                 <li
-                  class="block w-1/2 text-2xl whitespace-nowrap desktop:w-full"
+                  class="block w-1/2 text-2xl whitespace-nowrap laptop:w-full"
                 >
                   <a
                     class="inline-block origin-left transform-gpu transition-all hover:scale-105"
@@ -174,7 +174,7 @@
                   >
                 </li>
                 <li
-                  class="block w-1/2 text-2xl whitespace-nowrap desktop:w-full"
+                  class="block w-1/2 text-2xl whitespace-nowrap laptop:w-full"
                 >
                   <a
                     class="inline-block origin-left transform-gpu transition-all hover:scale-105"
@@ -230,7 +230,7 @@
                   </ol>
                 </li>
                 <li
-                  class="block w-1/2 text-2xl whitespace-nowrap desktop:w-full"
+                  class="block w-1/2 text-2xl whitespace-nowrap laptop:w-full"
                 >
                   <a
                     class="inline-block origin-left transform-gpu transition-all hover:scale-105"
@@ -250,7 +250,7 @@
                   </ol>
                 </li>
                 <li
-                  class="block w-1/2 text-2xl whitespace-nowrap desktop:w-full"
+                  class="block w-1/2 text-2xl whitespace-nowrap laptop:w-full"
                 >
                   <a
                     class="inline-block origin-left transform-gpu transition-all hover:scale-105"
@@ -278,7 +278,7 @@
           id="content"
         >
           <header
-            class="min-h-[400px] tablet:min-h-[640px] desktop:min-h-[clamp(640px,70vh,1350px)] relative flex w-full flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pt-40 pb-8 text-inverse tablet:pt-40 tablet:pb-10 desktop:pt-40 desktop:pb-16"
+            class="min-h-[400px] tablet:min-h-[640px] laptop:min-h-[clamp(640px,70vh,1350px)] relative flex w-full flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pt-40 pb-8 text-inverse tablet:pt-40 tablet:pb-10 laptop:pt-40 laptop:pb-16"
           >
             <img
               class="absolute inset-0 size-full object-cover object-top"
@@ -300,13 +300,13 @@
               class="z-10 mx-auto flex w-full max-w-(--breakpoint-max) flex-col px-container"
             >
               <h1
-                class="[text-shadow:1px_1px_2px_black] text-[2rem] leading-10 tablet:text-4xl desktop:text-7xl"
+                class="[text-shadow:1px_1px_2px_black] text-[2rem] leading-10 tablet:text-4xl laptop:text-7xl"
                 data-pagefind-weight="10"
               >
                 Frank&#x27;s Movie Log
               </h1>
               <p
-                class="mt-1 text-base desktop:my-4 desktop:text-xl [text-shadow:1px_1px_2px_black]"
+                class="mt-1 text-base laptop:my-4 laptop:text-xl [text-shadow:1px_1px_2px_black]"
               >
                 Quality reviews of films of questionable quality.
               </p>
@@ -319,10 +319,10 @@
               Latest Reviews
             </h2>
             <ul
-              class="flex w-full flex-col flex-wrap justify-center gap-x-[3%] pb-8 max:gap-y-14 tablet:flex-row tablet:justify-between tablet:gap-y-[6vw] tablet:px-container desktop:gap-y-[3vw]"
+              class="flex w-full flex-col flex-wrap justify-center gap-x-[3%] pb-8 tablet:flex-row tablet:justify-between tablet:gap-y-[6vw] tablet:px-container laptop:gap-y-[3vw] desktop:gap-y-14"
             >
               <li
-                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 desktop:max-w-[31.33%]"
+                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 laptop:max-w-[31.33%]"
               >
                 <div class="mb-6 block">
                   <img
@@ -343,10 +343,10 @@
                   />
                 </div>
                 <div
-                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] desktop:pr-[10%] desktop:pl-[8.5%]"
+                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] laptop:pr-[10%] laptop:pl-[8.5%]"
                 >
                   <div
-                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase desktop:tracking-wide"
+                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase laptop:tracking-wide"
                   >
                     23 Jun 2024
                   </div>
@@ -381,7 +381,7 @@
                     </p>
                   </div>
                   <div
-                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle desktop:tracking-wide"
+                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle laptop:tracking-wide"
                   >
                     <span>Crime</span
                     ><span>
@@ -395,7 +395,7 @@
                 </div>
               </li>
               <li
-                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 desktop:max-w-[31.33%]"
+                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 laptop:max-w-[31.33%]"
               >
                 <div class="mb-6 block">
                   <img
@@ -416,10 +416,10 @@
                   />
                 </div>
                 <div
-                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] desktop:pr-[10%] desktop:pl-[8.5%]"
+                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] laptop:pr-[10%] laptop:pl-[8.5%]"
                 >
                   <div
-                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase desktop:tracking-wide"
+                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase laptop:tracking-wide"
                   >
                     18 Jun 2024
                   </div>
@@ -454,7 +454,7 @@
                     </p>
                   </div>
                   <div
-                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle desktop:tracking-wide"
+                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle laptop:tracking-wide"
                   >
                     <span>Drama</span
                     ><span>
@@ -465,7 +465,7 @@
                 </div>
               </li>
               <li
-                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 desktop:max-w-[31.33%]"
+                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 laptop:max-w-[31.33%]"
               >
                 <div class="mb-6 block">
                   <img
@@ -486,10 +486,10 @@
                   />
                 </div>
                 <div
-                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] desktop:pr-[10%] desktop:pl-[8.5%]"
+                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] laptop:pr-[10%] laptop:pl-[8.5%]"
                 >
                   <div
-                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase desktop:tracking-wide"
+                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase laptop:tracking-wide"
                   >
                     08 Jun 2024
                   </div>
@@ -524,7 +524,7 @@
                     </p>
                   </div>
                   <div
-                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle desktop:tracking-wide"
+                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle laptop:tracking-wide"
                   >
                     <span>Horror</span
                     ><span>
@@ -538,7 +538,7 @@
                 </div>
               </li>
               <li
-                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 desktop:max-w-[31.33%]"
+                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 laptop:max-w-[31.33%]"
               >
                 <div class="mb-6 block">
                   <img
@@ -559,10 +559,10 @@
                   />
                 </div>
                 <div
-                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] desktop:pr-[10%] desktop:pl-[8.5%]"
+                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] laptop:pr-[10%] laptop:pl-[8.5%]"
                 >
                   <div
-                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase desktop:tracking-wide"
+                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase laptop:tracking-wide"
                   >
                     23 May 2024
                   </div>
@@ -597,14 +597,14 @@
                     </p>
                   </div>
                   <div
-                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle desktop:tracking-wide"
+                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle laptop:tracking-wide"
                   >
                     <span>Horror</span>
                   </div>
                 </div>
               </li>
               <li
-                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 desktop:max-w-[31.33%]"
+                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 laptop:max-w-[31.33%]"
               >
                 <div class="mb-6 block">
                   <img
@@ -625,10 +625,10 @@
                   />
                 </div>
                 <div
-                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] desktop:pr-[10%] desktop:pl-[8.5%]"
+                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] laptop:pr-[10%] laptop:pl-[8.5%]"
                 >
                   <div
-                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase desktop:tracking-wide"
+                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase laptop:tracking-wide"
                   >
                     15 May 2024
                   </div>
@@ -662,14 +662,14 @@
                     </p>
                   </div>
                   <div
-                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle desktop:tracking-wide"
+                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle laptop:tracking-wide"
                   >
                     <span>Horror</span>
                   </div>
                 </div>
               </li>
               <li
-                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 desktop:max-w-[31.33%]"
+                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 laptop:max-w-[31.33%]"
               >
                 <div class="mb-6 block">
                   <img
@@ -690,10 +690,10 @@
                   />
                 </div>
                 <div
-                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] desktop:pr-[10%] desktop:pl-[8.5%]"
+                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] laptop:pr-[10%] laptop:pl-[8.5%]"
                 >
                   <div
-                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase desktop:tracking-wide"
+                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase laptop:tracking-wide"
                   >
                     27 Apr 2024
                   </div>
@@ -721,7 +721,7 @@
                     <p>Bonkers in the best way possible.</p>
                   </div>
                   <div
-                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle desktop:tracking-wide"
+                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle laptop:tracking-wide"
                   >
                     <span>Drama</span
                     ><span>
@@ -735,7 +735,7 @@
                 </div>
               </li>
               <li
-                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 desktop:max-w-[31.33%]"
+                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 laptop:max-w-[31.33%]"
               >
                 <div class="mb-6 block">
                   <img
@@ -756,10 +756,10 @@
                   />
                 </div>
                 <div
-                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] desktop:pr-[10%] desktop:pl-[8.5%]"
+                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] laptop:pr-[10%] laptop:pl-[8.5%]"
                 >
                   <div
-                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase desktop:tracking-wide"
+                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase laptop:tracking-wide"
                   >
                     27 Apr 2024
                   </div>
@@ -790,7 +790,7 @@
                     </p>
                   </div>
                   <div
-                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle desktop:tracking-wide"
+                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle laptop:tracking-wide"
                   >
                     <span>Horror</span
                     ><span>
@@ -804,7 +804,7 @@
                 </div>
               </li>
               <li
-                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 desktop:max-w-[31.33%]"
+                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 laptop:max-w-[31.33%]"
               >
                 <div class="mb-6 block">
                   <img
@@ -825,10 +825,10 @@
                   />
                 </div>
                 <div
-                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] desktop:pr-[10%] desktop:pl-[8.5%]"
+                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] laptop:pr-[10%] laptop:pl-[8.5%]"
                 >
                   <div
-                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase desktop:tracking-wide"
+                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase laptop:tracking-wide"
                   >
                     27 Apr 2024
                   </div>
@@ -860,7 +860,7 @@
                     </p>
                   </div>
                   <div
-                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle desktop:tracking-wide"
+                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle laptop:tracking-wide"
                   >
                     <span>Adventure</span
                     ><span>
@@ -877,7 +877,7 @@
                 </div>
               </li>
               <li
-                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 desktop:max-w-[31.33%]"
+                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 laptop:max-w-[31.33%]"
               >
                 <div class="mb-6 block">
                   <img
@@ -898,10 +898,10 @@
                   />
                 </div>
                 <div
-                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] desktop:pr-[10%] desktop:pl-[8.5%]"
+                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] laptop:pr-[10%] laptop:pl-[8.5%]"
                 >
                   <div
-                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase desktop:tracking-wide"
+                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase laptop:tracking-wide"
                   >
                     27 Apr 2024
                   </div>
@@ -936,7 +936,7 @@
                     </p>
                   </div>
                   <div
-                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle desktop:tracking-wide"
+                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle laptop:tracking-wide"
                   >
                     <span>Drama</span
                     ><span>
@@ -956,7 +956,7 @@
                 </div>
               </li>
               <li
-                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 desktop:max-w-[31.33%]"
+                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 laptop:max-w-[31.33%]"
               >
                 <div class="mb-6 block">
                   <img
@@ -977,10 +977,10 @@
                   />
                 </div>
                 <div
-                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] desktop:pr-[10%] desktop:pl-[8.5%]"
+                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] laptop:pr-[10%] laptop:pl-[8.5%]"
                 >
                   <div
-                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase desktop:tracking-wide"
+                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase laptop:tracking-wide"
                   >
                     24 Apr 2024
                   </div>
@@ -1023,7 +1023,7 @@
                     </p>
                   </div>
                   <div
-                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle desktop:tracking-wide"
+                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle laptop:tracking-wide"
                   >
                     <span>Horror</span
                     ><span>
@@ -1034,7 +1034,7 @@
                 </div>
               </li>
               <li
-                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 desktop:max-w-[31.33%]"
+                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 laptop:max-w-[31.33%]"
               >
                 <div class="mb-6 block">
                   <img
@@ -1055,10 +1055,10 @@
                   />
                 </div>
                 <div
-                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] desktop:pr-[10%] desktop:pl-[8.5%]"
+                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] laptop:pr-[10%] laptop:pl-[8.5%]"
                 >
                   <div
-                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase desktop:tracking-wide"
+                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase laptop:tracking-wide"
                   >
                     24 Apr 2024
                   </div>
@@ -1094,7 +1094,7 @@
                     </p>
                   </div>
                   <div
-                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle desktop:tracking-wide"
+                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle laptop:tracking-wide"
                   >
                     <span>Action</span
                     ><span>
@@ -1105,7 +1105,7 @@
                 </div>
               </li>
               <li
-                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 desktop:max-w-[31.33%]"
+                class="relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 laptop:max-w-[31.33%]"
               >
                 <div class="mb-6 block">
                   <img
@@ -1126,10 +1126,10 @@
                   />
                 </div>
                 <div
-                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] desktop:pr-[10%] desktop:pl-[8.5%]"
+                  class="flex grow flex-col px-1 pb-8 tablet:px-[8%] laptop:pr-[10%] laptop:pl-[8.5%]"
                 >
                   <div
-                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase desktop:tracking-wide"
+                    class="mb-3 font-sans text-xxs leading-4 font-light tracking-wider text-subtle uppercase laptop:tracking-wide"
                   >
                     13 Apr 2024
                   </div>
@@ -1165,7 +1165,7 @@
                     </p>
                   </div>
                   <div
-                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle desktop:tracking-wide"
+                    class="mt-auto font-sans text-xxs leading-4 font-light tracking-wider text-subtle laptop:tracking-wide"
                   >
                     <span>Action</span
                     ><span>
@@ -1189,7 +1189,7 @@
           </nav>
         </main>
         <footer class="bg-footer text-inverse">
-          <div class="mx-auto max-w-(--breakpoint-desktop) px-container py-20">
+          <div class="mx-auto max-w-(--breakpoint-laptop) px-container py-20">
             <div
               class="flex w-full flex-col tablet:flex-row-reverse tablet:justify-between"
             >
@@ -1241,26 +1241,26 @@
                   <p class="mb-6 text-pretty">
                     New visitors might want to start by reading about<!-- -->
                     <a
-                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--bg-default) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
                       href="/how-i-grade/"
                       >how I grade</a
                     >
                     films. After that, feel free to browse my<!-- -->
                     <a
-                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--bg-default) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
                       href="/reviews/"
                       >reviews</a
                     >. If you&#x27;re looking for something that flew under the
                     radar but deserves your attention, I recommend my<!-- -->
                     <a
-                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--bg-default) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
                       href="/reviews/underseen/"
                       >underseen gems</a
                     >
                     <!-- -->section. Or, for those moments when you want to feel
                     righteously contrarian, I maintain an list of<!-- -->
                     <a
-                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--bg-default) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
                       href="/reviews/overrated/"
                       >overrated disappointments</a
                     >.
@@ -1268,14 +1268,14 @@
                   <p class="mb-6 text-pretty">
                     I also keep a<!-- -->
                     <a
-                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--bg-default) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
                       href="/viewings/"
                       >viewing log</a
                     >
                     that tracks everything I watch, whether it gets a full
                     review or not, complete with<!-- -->
                     <a
-                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--bg-default) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
                       href="/viewings/stats/"
                       >stats</a
                     >. In an age of endless content, sometimes the act of
@@ -1286,7 +1286,7 @@
                     And finally, if you&#x27;re curious about what&#x27;s on my
                     critical horizon, my<!-- -->
                     <a
-                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--bg-default) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
                       href="/watchlist/"
                       >watchlist</a
                     >
@@ -1306,7 +1306,7 @@
                 class="flex grow-0 flex-col gap-20 pt-10 pb-20 tablet:basis-button tablet:pr-10"
               >
                 <ul
-                  class="flex w-full flex-col gap-y-10 text-inverse max:w-auto"
+                  class="flex w-full flex-col gap-y-10 text-inverse desktop:w-auto"
                 >
                   <li class="block w-1/2 text-2xl whitespace-nowrap">
                     <a
@@ -1433,7 +1433,7 @@
     </div>
     <dialog
       aria-label="Search"
-      class="fixed inset-x-4 m-auto h-screen w-full rounded-lg border border-default bg-default shadow-lg backdrop:bg-[#000] backdrop:opacity-40 open:flex open:flex-col tablet:mx-auto tablet:mt-16 tablet:h-min tablet:max-h-[min(100vh-128px,900px)] tablet:min-h-60 tablet:max-w-[min(100vw-64px,36rem)] tablet:rounded-xl desktop:min-h-0"
+      class="fixed inset-x-4 m-auto h-screen w-full rounded-lg border border-default bg-default shadow-lg backdrop:bg-[#000] backdrop:opacity-40 open:flex open:flex-col tablet:mx-auto tablet:mt-16 tablet:h-min tablet:max-h-[min(100vh-128px,900px)] tablet:min-h-60 tablet:max-w-[min(100vw-64px,36rem)] tablet:rounded-xl laptop:min-h-0"
     >
       <div class="contents" data-dialog-frame>
         <button
@@ -1444,7 +1444,7 @@
         </button>
         <div class="contents"><div id="pagefind__search"></div></div>
         <div
-          class="hidden px-(--search-dialog-padding) py-4 font-sans text-xs font-light tracking-wide text-subtle desktop:block"
+          class="hidden px-(--search-dialog-padding) py-4 font-sans text-xs font-light tracking-wide text-subtle laptop:block"
         >
           <kbd class="rounded-md bg-default p-2 font-mono text-xs text-subtle"
             >Tab</kbd

@@ -19,7 +19,7 @@ export function StatsNavigation({
         className={`
           mx-auto flex scrollbar-hidden max-w-(--breakpoint-max) overflow-x-auto
           px-container font-sans text-sm font-normal tracking-wide
-          desktop:justify-center
+          laptop:justify-center
         `}
       >
         <AllTimeLink currentYear={currentYear} linkFunc={linkFunc} />
@@ -56,7 +56,7 @@ function AllTimeLink({
         <div
           className={`
             bg-subtle p-4 whitespace-nowrap text-default
-            desktop:py-4
+            laptop:py-4
           `}
         >
           All-Time
@@ -64,9 +64,9 @@ function AllTimeLink({
       ) : (
         <a
           className={`
-            block p-4 whitespace-nowrap
-            hover:bg-accent hover:text-inverse
-            desktop:py-4
+            block transform-gpu p-4 whitespace-nowrap transition-all
+            hover:scale-105 hover:bg-accent hover:text-inverse
+            laptop:py-4
           `}
           href={linkFunc("all")}
         >
@@ -97,7 +97,7 @@ function YearLink({
         <div
           className={`
             bg-subtle p-4 text-default
-            desktop:py-4
+            laptop:py-4
           `}
         >
           {year}
@@ -105,8 +105,8 @@ function YearLink({
       ) : (
         <a
           className={`
-            block p-4
-            hover:bg-accent hover:text-inverse
+            block transform-gpu p-4 transition-all
+            hover:scale-105 hover:bg-accent hover:text-inverse
           `}
           href={linkFunc(year)}
         >

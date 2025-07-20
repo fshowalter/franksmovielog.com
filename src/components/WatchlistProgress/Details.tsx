@@ -30,7 +30,7 @@ export function Details({
       className={ccn(
         `
           w-full
-          desktop:w-auto desktop:basis-[calc(50%-16px)]
+          laptop:w-auto laptop:basis-[calc(50%-16px)]
         `,
         className,
       )}
@@ -39,7 +39,7 @@ export function Details({
         className={`
           px-container py-8 font-sans text-xs font-medium tracking-wide
           text-muted uppercase
-          desktop:px-8
+          laptop:px-8
         `}
       >
         {label}
@@ -50,7 +50,7 @@ export function Details({
           grid-cols-[var(--container-padding)_auto_24px_1fr_var(--container-padding)]
           gap-y-1
           tablet:whitespace-nowrap
-          desktop:grid-cols-[2rem_auto_24px_1fr_2rem]
+          laptop:grid-cols-[2rem_auto_24px_1fr_2rem]
         `}
       >
         {values.map((value) => {
