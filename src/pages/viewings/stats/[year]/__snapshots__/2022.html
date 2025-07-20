@@ -466,21 +466,21 @@
             class="mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col items-stretch gap-y-8 py-10 tablet:px-container"
           >
             <section
-              class="max-w-(--breakpoint-laptop) bg-default px-container pb-5 laptop:pb-10 mx-auto w-full"
+              class="max-w-(--breakpoint-laptop) pb-5 laptop:pb-10 mx-auto w-full"
             >
               <h2
-                class="py-4 text-xl font-medium shadow-bottom tablet:text-center tablet:text-2xl laptop:py-8"
+                class="px-container py-4 text-xl font-medium shadow-bottom tablet:text-center tablet:text-2xl laptop:py-8"
               >
                 Most Watched Movies
               </h2>
               <ol
-                class="grid-cols-[repeat(auto-fit,minmax(128px,248px))] items-center justify-center gap-x-6 gap-y-8 bg-subtle tablet:grid tablet:items-start tablet:bg-default"
+                class="grid-cols-[repeat(auto-fit,minmax(128px,248px))] items-center justify-center gap-x-6 gap-y-8 bg-subtle tablet:grid tablet:items-start"
               >
                 <li
-                  class="group/list-item relative mb-1 flex h-full transform-gpu items-center gap-x-4 bg-default py-4 transition-transform has-[a:hover]:-translate-y-2 has-[a:hover]:scale-105 tablet:w-auto tablet:flex-col tablet:p-0 laptop:w-auto"
+                  class="group/list-item relative mb-1 flex h-full transform-gpu items-center gap-x-4 bg-default px-container py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:w-auto tablet:flex-col tablet:p-6 laptop:w-auto"
                 >
                   <div
-                    class="transform-gpu group-has-[a:hover]/list-item:shadow-all group-has-[a:hover]/list-item:drop-shadow-2xl after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 has-[a:hover]:shadow-all"
+                    class="transform-gpu after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:rounded-[2.5px] after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
                   >
                     <div
                       class="w-list-item-poster shrink-0 tablet:w-auto tablet:max-w-[248px]"
@@ -497,7 +497,7 @@
                         height="354"
                         sizes="(min-width: 780px) 248px, 64px"
                         width="236"
-                        class="aspect-poster h-auto"
+                        class="aspect-poster h-auto rounded-[2.5px]"
                         decoding="async"
                         loading="lazy"
                       />
@@ -7952,26 +7952,26 @@
                   <p class="mb-6 text-pretty">
                     New visitors might want to start by reading about<!-- -->
                     <a
-                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--bg-default) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-colors hover:text-inverse hover:decoration-inverse hover:duration-75 hover:ease-in"
                       href="/how-i-grade/"
                       >how I grade</a
                     >
                     films. After that, feel free to browse my<!-- -->
                     <a
-                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--bg-default) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-colors hover:text-inverse hover:decoration-inverse hover:duration-75 hover:ease-in"
                       href="/reviews/"
                       >reviews</a
                     >. If you&#x27;re looking for something that flew under the
                     radar but deserves your attention, I recommend my<!-- -->
                     <a
-                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--bg-default) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-colors hover:text-inverse hover:decoration-inverse hover:duration-75 hover:ease-in"
                       href="/reviews/underseen/"
                       >underseen gems</a
                     >
                     <!-- -->section. Or, for those moments when you want to feel
                     righteously contrarian, I maintain an list of<!-- -->
                     <a
-                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--bg-default) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-colors hover:text-inverse hover:decoration-inverse hover:duration-75 hover:ease-in"
                       href="/reviews/overrated/"
                       >overrated disappointments</a
                     >.
@@ -7979,14 +7979,14 @@
                   <p class="mb-6 text-pretty">
                     I also keep a<!-- -->
                     <a
-                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--bg-default) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-colors hover:text-inverse hover:decoration-inverse hover:duration-75 hover:ease-in"
                       href="/viewings/"
                       >viewing log</a
                     >
                     that tracks everything I watch, whether it gets a full
                     review or not, complete with<!-- -->
                     <a
-                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--bg-default) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-colors hover:text-inverse hover:decoration-inverse hover:duration-75 hover:ease-in"
                       href="/viewings/stats/"
                       >stats</a
                     >. In an age of endless content, sometimes the act of
@@ -7997,7 +7997,7 @@
                     And finally, if you&#x27;re curious about what&#x27;s on my
                     critical horizon, my<!-- -->
                     <a
-                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--bg-default) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                      class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-colors hover:text-inverse hover:decoration-inverse hover:duration-75 hover:ease-in"
                       href="/watchlist/"
                       >watchlist</a
                     >
