@@ -167,7 +167,7 @@ function FooterLink({ href, text }: { href: string; text: string }) {
         transform-gpu text-inverse-subtle underline decoration-inverse-subtle
         decoration-dashed underline-offset-4 transition-all duration-150
         ease-out
-        hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
+        hover:bg-(--bg-default) hover:text-default hover:decoration-default
         hover:duration-75 hover:ease-in
       `}
       href={href}
