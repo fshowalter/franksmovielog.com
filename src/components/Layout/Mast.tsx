@@ -158,7 +158,7 @@ function NavListItem({
     >
       <a
         className={`
-          relative text-inherit
+          relative text-inherit transition-colors
           ${hasBackdrop ? `` : `hover:text-accent`}
         `}
         href={value.target}

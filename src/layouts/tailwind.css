@@ -552,6 +552,7 @@
     .pagefind-ui__search-input {
       align-items: center;
       border: none;
+      color: var(--fg-default);
       display: flex;
       flex-shrink: 0;
       font-family: var(--font-serif);
