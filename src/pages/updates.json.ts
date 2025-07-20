@@ -31,7 +31,8 @@ export async function GET() {
         image: posterProps.src,
         slug: review.slug,
         stars: gradeToStars[review.grade],
-        title: `${review.title} (${review.year})`,
+        title: review.title,
+        year: review.year,
       };
     }),
   );
