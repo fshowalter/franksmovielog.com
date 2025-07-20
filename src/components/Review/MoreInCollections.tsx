@@ -22,7 +22,14 @@ export function MoreInCollections({ values }: Props) {
     <MoreReviews key={value.slug} values={value.titles}>
       <SubHeading as="h2">
         More{" "}
-        <a className="text-accent" href={`/collections/${value.slug}/`}>
+        <a
+          className={`
+            inline-block origin-left transform-gpu text-accent
+            transition-transform
+            hover:scale-105
+          `}
+          href={`/collections/${value.slug}/`}
+        >
           {value.name}
         </a>
       </SubHeading>

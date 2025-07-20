@@ -42,8 +42,8 @@ export function ReviewsSubNav({ active }: { active: keyof typeof items }) {
               ) : (
                 <a
                   className={`
-                    block p-6
-                    hover:bg-accent hover:text-inverse
+                    block transform-gpu p-6 transition-all
+                    hover:scale-105 hover:bg-accent hover:text-inverse
                     tablet:py-8
                   `}
                   href={value.href}

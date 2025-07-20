@@ -46,42 +46,57 @@ export function Details({
       </h2>
       <div
         className={`
-          grid w-full grid-cols-(--container-padding) bg-default
+          grid w-full
+          grid-cols-[var(--container-padding)_auto_24px_1fr_var(--container-padding)]
+          gap-y-1
           tablet:whitespace-nowrap
-          desktop:grid-cols-[2rem_auto_1fr_auto_2rem]
+          desktop:grid-cols-[2rem_auto_24px_1fr_2rem]
         `}
       >
         {values.map((value) => {
           return (
             <div
               className={`
-                relative col-span-5 grid grid-cols-subgrid
-                grid-rows-[1fr_auto_auto_1fr] py-4 text-subtle shadow-bottom
+                group/list-item relative col-span-5 grid transform-gpu
+                grid-cols-subgrid grid-rows-[1fr_auto_auto_1fr] bg-default py-4
+                text-subtle transition-transform
                 last-of-type:shadow-none
-                has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+                has-[a:hover]:z-30 has-[a:hover]:scale-105
+                has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl
               `}
               key={value.name}
             >
-              <DetailsItemAvatar
-                className="col-start-2 row-span-4 mr-6"
-                imageProps={value.avatarImageProps}
-                name={value.name}
-              />
               <div
                 className={`
-                  col-span-2 col-start-3 row-start-2 grid grid-cols-subgrid
+                  relative col-start-2 row-span-4 transition-opacity
+                  after:absolute after:top-0 after:left-0 after:z-60
+                  after:size-full after:overflow-hidden after:rounded-full
+                  after:bg-default after:opacity-15
+                  group-has-[a:hover]/list-item:after:opacity-0
+                `}
+              >
+                <DetailsItemAvatar
+                  className=""
+                  imageProps={value.avatarImageProps}
+                  name={value.name}
+                />
+              </div>
+              <div
+                className={`
+                  col-start-4 row-start-2 flex items-center justify-between
                 `}
               >
                 <Name value={value} valueType={valueType} />
                 <div
                   className={`
-                    self-center pb-1 text-right font-sans text-xs text-nowrap
+                    self-center pb-1 text-right font-sans text-xs leading-0
+                    text-nowrap
                   `}
                 >
                   {value.reviewCount} / {value.titleCount}
                 </div>
               </div>
-              <div className="col-span-2 col-start-3 row-start-3 bg-subtle">
+              <div className="col-start-4 row-start-3 bg-subtle">
                 <BarGradient
                   maxValue={value.titleCount}
                   value={value.reviewCount}
@@ -107,11 +122,8 @@ function Name({ value, valueType }: { value: Value; valueType: ValueType }) {
         <a
           className={`
             pb-1 font-sans text-sm leading-none text-accent
-            before:absolute before:top-4 before:left-(--container-padding)
-            before:aspect-square before:w-12 before:bg-default before:opacity-15
             after:absolute after:top-0 after:left-0 after:z-30 after:size-full
             after:opacity-0
-            hover:before:opacity-0
           `}
           href={linkTarget}
         >
@@ -157,12 +169,7 @@ function DetailsItemAvatar({
   );
 
   return (
-    <div
-      className={ccn(
-        "w-12 safari-border-radius-fix overflow-hidden rounded-full",
-        className,
-      )}
-    >
+    <div className={ccn("w-12 overflow-hidden rounded-full", className)}>
       {avatar}
     </div>
   );

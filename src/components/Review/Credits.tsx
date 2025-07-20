@@ -95,10 +95,10 @@ export function Credits({
       </div>
       <a
         className={`
-          mx-auto mt-8 flex w-full max-w-button cursor-pointer
+          mx-auto mt-8 flex w-full max-w-button transform-gpu cursor-pointer
           place-content-center items-center py-5 font-sans text-xs tracking-wide
-          uppercase shadow-all
-          hover:bg-inverse hover:text-inverse
+          uppercase shadow-all transition-all
+          hover:scale-105 hover:bg-inverse hover:text-inverse
         `}
         href="#top"
       >

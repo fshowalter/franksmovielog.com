@@ -77,11 +77,24 @@ export function CastAndCrew({
 function MemberListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
     <ListItem
-      className="has-[a:hover]:bg-hover has-[a:hover]:shadow-hover"
+      className={`
+        group/list-item relative transform-gpu transition-transform
+        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
+        has-[a:hover]:drop-shadow-2xl
+      `}
       extraVerticalPadding={true}
       itemsCenter={true}
     >
-      <ListItemAvatar imageProps={value.avatarImageProps} name={value.name} />
+      <div
+        className={`
+          relative rounded-full
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        `}
+      >
+        <ListItemAvatar imageProps={value.avatarImageProps} name={value.name} />
+      </div>
       <MemberName value={value} />
       <div className="ml-auto font-sans text-xs text-nowrap text-subtle">
         {value.reviewCount}
@@ -96,14 +109,8 @@ function MemberName({ value }: { value: ListItemValue }) {
       <a
         className={`
           leading-normal font-sans text-sm font-medium text-accent
-          before:absolute before:top-4 before:left-(--container-padding)
-          before:aspect-square before:w-16 before:opacity-15
           after:absolute after:top-0 after:left-0 after:size-full
           after:opacity-0
-          hover:before:opacity-0
-          tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
-          tablet:before:bg-default
-          desktop:before:left-6
         `}
         href={`/cast-and-crew/${value.slug}/`}
       >

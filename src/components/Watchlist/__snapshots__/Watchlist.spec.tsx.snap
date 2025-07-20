@@ -66774,7 +66774,11 @@ exports[`/watchlist > renders 1`] = `
         style="background-image: linear-gradient(to bottom, rgba(0,0,0,.85), transparent 95%); color: rgb(255, 255, 255); position: absolute;"
       >
         <div
-          class="flex flex-col"
+          class="
+        flex transform-gpu flex-col transition-transform
+        has-[a:hover]:scale-105
+        
+      "
         >
           <div
             class="
@@ -66808,15 +66812,16 @@ exports[`/watchlist > renders 1`] = `
             >
               <li
                 class="
-        block leading-10 tracking-serif-wide whitespace-nowrap transition
-        duration-200 ease-in-out
+        block leading-10 tracking-serif-wide whitespace-nowrap
+        transition-transform
         group-has-[#nav:checked]:opacity-0
+        has-[a:hover]:scale-105
       "
               >
                 <a
                   class="
-          text-inherit transition-all duration-500 ease-in-out
-          hover:bg-[rgba(0,0,0,.50)]
+          relative text-inherit
+          
         "
                   href="/"
                   style="text-shadow: 1px 1px 2px black;"
@@ -66826,15 +66831,16 @@ exports[`/watchlist > renders 1`] = `
               </li>
               <li
                 class="
-        block leading-10 tracking-serif-wide whitespace-nowrap transition
-        duration-200 ease-in-out
+        block leading-10 tracking-serif-wide whitespace-nowrap
+        transition-transform
         group-has-[#nav:checked]:opacity-0
+        has-[a:hover]:scale-105
       "
               >
                 <a
                   class="
-          text-inherit transition-all duration-500 ease-in-out
-          hover:bg-[rgba(0,0,0,.50)]
+          relative text-inherit
+          
         "
                   href="/how-i-grade/"
                   style="text-shadow: 1px 1px 2px black;"
@@ -66844,15 +66850,16 @@ exports[`/watchlist > renders 1`] = `
               </li>
               <li
                 class="
-        block leading-10 tracking-serif-wide whitespace-nowrap transition
-        duration-200 ease-in-out
+        block leading-10 tracking-serif-wide whitespace-nowrap
+        transition-transform
         group-has-[#nav:checked]:opacity-0
+        has-[a:hover]:scale-105
       "
               >
                 <a
                   class="
-          text-inherit transition-all duration-500 ease-in-out
-          hover:bg-[rgba(0,0,0,.50)]
+          relative text-inherit
+          
         "
                   href="/reviews/"
                   style="text-shadow: 1px 1px 2px black;"
@@ -66862,15 +66869,16 @@ exports[`/watchlist > renders 1`] = `
               </li>
               <li
                 class="
-        block leading-10 tracking-serif-wide whitespace-nowrap transition
-        duration-200 ease-in-out
+        block leading-10 tracking-serif-wide whitespace-nowrap
+        transition-transform
         group-has-[#nav:checked]:opacity-0
+        has-[a:hover]:scale-105
       "
               >
                 <a
                   class="
-          text-inherit transition-all duration-500 ease-in-out
-          hover:bg-[rgba(0,0,0,.50)]
+          relative text-inherit
+          
         "
                   href="/viewings/"
                   style="text-shadow: 1px 1px 2px black;"
@@ -66880,15 +66888,16 @@ exports[`/watchlist > renders 1`] = `
               </li>
               <li
                 class="
-        block leading-10 tracking-serif-wide whitespace-nowrap transition
-        duration-200 ease-in-out
+        block leading-10 tracking-serif-wide whitespace-nowrap
+        transition-transform
         group-has-[#nav:checked]:opacity-0
+        has-[a:hover]:scale-105
       "
               >
                 <a
                   class="
-          text-inherit transition-all duration-500 ease-in-out
-          hover:bg-[rgba(0,0,0,.50)]
+          relative text-inherit
+          
         "
                   href="/watchlist/"
                   style="text-shadow: 1px 1px 2px black;"
@@ -66900,8 +66909,9 @@ exports[`/watchlist > renders 1`] = `
           </nav>
           <div
             class="
-        z-1000
+        z-1000 transform-gpu transition-transform
         group-has-[#nav:checked]:!text-[#fff]
+        hover:scale-105
       "
           >
             <button
@@ -66943,14 +66953,15 @@ exports[`/watchlist > renders 1`] = `
             />
             <label
               class="
-          relative z-40 ml-2 flex h-10 w-10 cursor-pointer items-center
-          justify-center
+          relative z-40 ml-2 flex h-10 w-10 transform-gpu cursor-pointer
+          items-center justify-center transition-transform
+          hover:scale-110
         "
               for="nav"
             >
               <span
                 class="
-            relative block h-0.5 w-6 origin-center
+            relative block h-0.5 w-6 origin-center transform-gpu
             transition-[top,bottom,transform] duration-200 ease-in-out
             group-has-[#nav:checked]:transform-[rotate(45deg)]
             group-has-[#nav:checked]:!bg-[#fff]
@@ -66994,6 +67005,10 @@ exports[`/watchlist > renders 1`] = `
       "
               >
                 <a
+                  class="
+          inline-block origin-left transform-gpu transition-all
+          hover:scale-105
+        "
                   href="/"
                 >
                   Home
@@ -67006,6 +67021,10 @@ exports[`/watchlist > renders 1`] = `
       "
               >
                 <a
+                  class="
+          inline-block origin-left transform-gpu transition-all
+          hover:scale-105
+        "
                   href="/how-i-grade/"
                 >
                   How I Grade
@@ -67018,6 +67037,10 @@ exports[`/watchlist > renders 1`] = `
       "
               >
                 <a
+                  class="
+          inline-block origin-left transform-gpu transition-all
+          hover:scale-105
+        "
                   href="/reviews/"
                 >
                   Reviews
@@ -67033,6 +67056,10 @@ exports[`/watchlist > renders 1`] = `
             "
                   >
                     <a
+                      class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
                       href="/cast-and-crew/"
                     >
                       Cast & Crew
@@ -67046,6 +67073,10 @@ exports[`/watchlist > renders 1`] = `
             "
                   >
                     <a
+                      class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
                       href="/collections/"
                     >
                       Collections
@@ -67059,6 +67090,10 @@ exports[`/watchlist > renders 1`] = `
             "
                   >
                     <a
+                      class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
                       href="/reviews/overrated/"
                     >
                       Overrated
@@ -67072,6 +67107,10 @@ exports[`/watchlist > renders 1`] = `
             "
                   >
                     <a
+                      class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
                       href="/reviews/underrated/"
                     >
                       Underrated
@@ -67085,6 +67124,10 @@ exports[`/watchlist > renders 1`] = `
             "
                   >
                     <a
+                      class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
                       href="/reviews/underseen/"
                     >
                       Underseen
@@ -67099,6 +67142,10 @@ exports[`/watchlist > renders 1`] = `
       "
               >
                 <a
+                  class="
+          inline-block origin-left transform-gpu transition-all
+          hover:scale-105
+        "
                   href="/viewings/"
                 >
                   Viewing Log
@@ -67114,6 +67161,10 @@ exports[`/watchlist > renders 1`] = `
             "
                   >
                     <a
+                      class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
                       href="/viewings/stats/"
                     >
                       Stats
@@ -67128,6 +67179,10 @@ exports[`/watchlist > renders 1`] = `
       "
               >
                 <a
+                  class="
+          inline-block origin-left transform-gpu transition-all
+          hover:scale-105
+        "
                   href="/watchlist/"
                 >
                   Watchlist
@@ -67143,6 +67198,10 @@ exports[`/watchlist > renders 1`] = `
             "
                   >
                     <a
+                      class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
                       href="/watchlist/progress/"
                     >
                       Progress
@@ -67263,8 +67322,8 @@ exports[`/watchlist > renders 1`] = `
                       >
                         <a
                           class="
-          block px-4 py-2
-          hover:bg-accent hover:text-inverse
+          block transform-gpu px-4 py-2 transition-all
+          hover:scale-105 hover:bg-accent hover:text-inverse
         "
                           href="/watchlist/progress/"
                         >
@@ -74518,7 +74577,8 @@ exports[`/watchlist > renders 1`] = `
               class="
               mx-auto mb-8 w-full max-w-button bg-canvas py-5 text-center
               font-sans text-xs tracking-wide text-default uppercase
-              hover:bg-inverse hover:text-inverse
+              transition-all
+              hover:scale-105 hover:bg-inverse hover:text-inverse
               tablet:mx-0
             "
               href="#top"
@@ -74526,7 +74586,11 @@ exports[`/watchlist > renders 1`] = `
               To the top
             </a>
             <div
-              class="flex flex-col"
+              class="
+        flex transform-gpu flex-col transition-transform
+        has-[a:hover]:scale-105
+        undefined
+      "
             >
               <div
                 class="
@@ -74555,17 +74619,23 @@ exports[`/watchlist > renders 1`] = `
           >
             <div
               class="
-              flex max-w-prose flex-col pb-12
+              flex max-w-[640px] flex-col pb-12
               tablet:pr-32
             "
             >
               <div
                 class="
-                pt-10 font-sans text-base font-light text-inverse-subtle
+                pt-10 font-sans text-sm font-light text-inverse-subtle
               "
               >
                 <p
-                  class="mb-6 text-pretty"
+                  class="
+                  mb-6 text-pretty
+                  first-letter:float-left first-letter:mt-[6px]
+                  first-letter:pr-1 first-letter:font-sans
+                  first-letter:text-[40px] first-letter:leading-[.8]
+                  first-letter:font-bold first-letter:text-inverse
+                "
                 >
                   Hi there, I'm Frank, a husband and father old enough to have sat wide-eyed during 
                   <em>
@@ -74589,8 +74659,9 @@ exports[`/watchlist > renders 1`] = `
                   New visitors might want to start by reading about 
                   <a
                     class="
-        text-inverse underline decoration-inverse-subtle decoration-dashed
-        underline-offset-4 transition-all duration-150 ease-out
+        transform-gpu text-inverse-subtle underline decoration-inverse-subtle
+        decoration-dashed underline-offset-4 transition-all duration-150
+        ease-out
         hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
         hover:duration-75 hover:ease-in
       "
@@ -74601,8 +74672,9 @@ exports[`/watchlist > renders 1`] = `
                    films. After that, feel free to browse my 
                   <a
                     class="
-        text-inverse underline decoration-inverse-subtle decoration-dashed
-        underline-offset-4 transition-all duration-150 ease-out
+        transform-gpu text-inverse-subtle underline decoration-inverse-subtle
+        decoration-dashed underline-offset-4 transition-all duration-150
+        ease-out
         hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
         hover:duration-75 hover:ease-in
       "
@@ -74613,8 +74685,9 @@ exports[`/watchlist > renders 1`] = `
                   . If you're looking for something that flew under the radar but deserves your attention, I recommend my 
                   <a
                     class="
-        text-inverse underline decoration-inverse-subtle decoration-dashed
-        underline-offset-4 transition-all duration-150 ease-out
+        transform-gpu text-inverse-subtle underline decoration-inverse-subtle
+        decoration-dashed underline-offset-4 transition-all duration-150
+        ease-out
         hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
         hover:duration-75 hover:ease-in
       "
@@ -74625,8 +74698,9 @@ exports[`/watchlist > renders 1`] = `
                    section. Or, for those moments when you want to feel righteously contrarian, I maintain an list of 
                   <a
                     class="
-        text-inverse underline decoration-inverse-subtle decoration-dashed
-        underline-offset-4 transition-all duration-150 ease-out
+        transform-gpu text-inverse-subtle underline decoration-inverse-subtle
+        decoration-dashed underline-offset-4 transition-all duration-150
+        ease-out
         hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
         hover:duration-75 hover:ease-in
       "
@@ -74642,8 +74716,9 @@ exports[`/watchlist > renders 1`] = `
                   I also keep a 
                   <a
                     class="
-        text-inverse underline decoration-inverse-subtle decoration-dashed
-        underline-offset-4 transition-all duration-150 ease-out
+        transform-gpu text-inverse-subtle underline decoration-inverse-subtle
+        decoration-dashed underline-offset-4 transition-all duration-150
+        ease-out
         hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
         hover:duration-75 hover:ease-in
       "
@@ -74654,8 +74729,9 @@ exports[`/watchlist > renders 1`] = `
                    that tracks everything I watch, whether it gets a full review or not, complete with 
                   <a
                     class="
-        text-inverse underline decoration-inverse-subtle decoration-dashed
-        underline-offset-4 transition-all duration-150 ease-out
+        transform-gpu text-inverse-subtle underline decoration-inverse-subtle
+        decoration-dashed underline-offset-4 transition-all duration-150
+        ease-out
         hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
         hover:duration-75 hover:ease-in
       "
@@ -74671,8 +74747,9 @@ exports[`/watchlist > renders 1`] = `
                   And finally, if you're curious about what's on my critical horizon, my 
                   <a
                     class="
-        text-inverse underline decoration-inverse-subtle decoration-dashed
-        underline-offset-4 transition-all duration-150 ease-out
+        transform-gpu text-inverse-subtle underline decoration-inverse-subtle
+        decoration-dashed underline-offset-4 transition-all duration-150
+        ease-out
         hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
         hover:duration-75 hover:ease-in
       "
@@ -74705,7 +74782,10 @@ exports[`/watchlist > renders 1`] = `
                   class="block w-1/2 text-2xl whitespace-nowrap"
                 >
                   <a
-                    class="hover:text-accent"
+                    class="
+          inline-block origin-left transform-gpu transition-transform
+          hover:scale-105
+        "
                     href="/"
                   >
                     Home
@@ -74715,7 +74795,10 @@ exports[`/watchlist > renders 1`] = `
                   class="block w-1/2 text-2xl whitespace-nowrap"
                 >
                   <a
-                    class="hover:text-accent"
+                    class="
+          inline-block origin-left transform-gpu transition-transform
+          hover:scale-105
+        "
                     href="/how-i-grade/"
                   >
                     How I Grade
@@ -74725,7 +74808,10 @@ exports[`/watchlist > renders 1`] = `
                   class="block w-1/2 text-2xl whitespace-nowrap"
                 >
                   <a
-                    class="hover:text-accent"
+                    class="
+          inline-block origin-left transform-gpu transition-transform
+          hover:scale-105
+        "
                     href="/reviews/"
                   >
                     Reviews
@@ -74741,7 +74827,10 @@ exports[`/watchlist > renders 1`] = `
             "
                     >
                       <a
-                        class="hover:text-inverse"
+                        class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
                         href="/cast-and-crew/"
                       >
                         Cast & Crew
@@ -74755,7 +74844,10 @@ exports[`/watchlist > renders 1`] = `
             "
                     >
                       <a
-                        class="hover:text-inverse"
+                        class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
                         href="/collections/"
                       >
                         Collections
@@ -74769,7 +74861,10 @@ exports[`/watchlist > renders 1`] = `
             "
                     >
                       <a
-                        class="hover:text-inverse"
+                        class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
                         href="/reviews/overrated/"
                       >
                         Overrated
@@ -74783,7 +74878,10 @@ exports[`/watchlist > renders 1`] = `
             "
                     >
                       <a
-                        class="hover:text-inverse"
+                        class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
                         href="/reviews/underrated/"
                       >
                         Underrated
@@ -74797,7 +74895,10 @@ exports[`/watchlist > renders 1`] = `
             "
                     >
                       <a
-                        class="hover:text-inverse"
+                        class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
                         href="/reviews/underseen/"
                       >
                         Underseen
@@ -74809,7 +74910,10 @@ exports[`/watchlist > renders 1`] = `
                   class="block w-1/2 text-2xl whitespace-nowrap"
                 >
                   <a
-                    class="hover:text-accent"
+                    class="
+          inline-block origin-left transform-gpu transition-transform
+          hover:scale-105
+        "
                     href="/viewings/"
                   >
                     Viewing Log
@@ -74825,7 +74929,10 @@ exports[`/watchlist > renders 1`] = `
             "
                     >
                       <a
-                        class="hover:text-inverse"
+                        class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
                         href="/viewings/stats/"
                       >
                         Stats
@@ -74837,7 +74944,10 @@ exports[`/watchlist > renders 1`] = `
                   class="block w-1/2 text-2xl whitespace-nowrap"
                 >
                   <a
-                    class="hover:text-accent"
+                    class="
+          inline-block origin-left transform-gpu transition-transform
+          hover:scale-105
+        "
                     href="/watchlist/"
                   >
                     Watchlist
@@ -74853,7 +74963,10 @@ exports[`/watchlist > renders 1`] = `
             "
                     >
                       <a
-                        class="hover:text-inverse"
+                        class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
                         href="/watchlist/progress/"
                       >
                         Progress

@@ -7,9 +7,9 @@ import { ccn } from "~/utils/concatClassNames";
 import { Poster } from "./Poster";
 
 export const MostWatchedMoviesPosterConfig = {
-  height: 372,
+  height: 354,
   sizes: "(min-width: 780px) 248px, 64px",
-  width: 248,
+  width: 236,
 };
 
 export type MostWatchedMoviesListItemValue = {
@@ -36,7 +36,7 @@ export function MostWatchedMovies({
     <section
       className={ccn(
         `
-          max-w-(--breakpoint-desktop) bg-default px-container
+          max-w-(--breakpoint-desktop) bg-default px-container pb-5
           desktop:pb-10
         `,
         className,
@@ -115,18 +115,31 @@ function ListItem({
   return (
     <li
       className={`
-        relative mb-1 flex h-full items-center gap-x-4 bg-default py-4
-        has-[a:hover]:bg-hover has-[a:hover]:shadow-hover
+        group/list-item relative mb-1 flex h-full transform-gpu items-center
+        gap-x-4 bg-default py-4 transition-transform
+        has-[a:hover]:-translate-y-2 has-[a:hover]:scale-105
         tablet:w-auto tablet:flex-col tablet:p-0
         desktop:w-auto
       `}
     >
-      <FluidListItemPoster
-        imageProps={value.posterImageProps}
-        slug={value.slug}
-        title={value.title}
-        year={value.year}
-      />
+      <div
+        className={`
+          transform-gpu
+          group-has-[a:hover]/list-item:shadow-all
+          group-has-[a:hover]/list-item:drop-shadow-2xl
+          after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+          has-[a:hover]:shadow-all
+        `}
+      >
+        <FluidListItemPoster
+          imageProps={value.posterImageProps}
+          slug={value.slug}
+          title={value.title}
+          year={value.year}
+        />
+      </div>
       <div
         className={`
           grow
@@ -137,7 +150,7 @@ function ListItem({
         <div
           className={`
             flex justify-start font-sans text-xs font-light text-subtle
-            tablet:justify-center tablet:text-sm
+            tablet:justify-center
           `}
         >
           {value.count.toLocaleString()} times
@@ -171,12 +184,11 @@ function Title({
     return (
       <a
         className={`
-          block font-sans text-sm font-medium text-accent decoration-accent
-          decoration-2
-          before:absolute before:top-4 before:left-0 before:aspect-poster
-          before:w-list-item-poster before:bg-default before:opacity-15
-          hover:before:opacity-0
-          tablet:text-center tablet:before:top-0 tablet:before:w-full
+          block pt-2 font-sans text-xs leading-4 font-normal text-accent
+          decoration-accent
+          after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+          after:opacity-0
+          tablet:text-center
         `}
         href={`/reviews/${slug}/`}
       >
