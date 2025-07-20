@@ -66820,7 +66820,7 @@ exports[`/watchlist > renders 1`] = `
               >
                 <a
                   class="
-          relative text-inherit
+          relative text-inherit transition-colors
           
         "
                   href="/"
@@ -66839,7 +66839,7 @@ exports[`/watchlist > renders 1`] = `
               >
                 <a
                   class="
-          relative text-inherit
+          relative text-inherit transition-colors
           
         "
                   href="/how-i-grade/"
@@ -66858,7 +66858,7 @@ exports[`/watchlist > renders 1`] = `
               >
                 <a
                   class="
-          relative text-inherit
+          relative text-inherit transition-colors
           
         "
                   href="/reviews/"
@@ -66877,7 +66877,7 @@ exports[`/watchlist > renders 1`] = `
               >
                 <a
                   class="
-          relative text-inherit
+          relative text-inherit transition-colors
           
         "
                   href="/viewings/"
@@ -66896,7 +66896,7 @@ exports[`/watchlist > renders 1`] = `
               >
                 <a
                   class="
-          relative text-inherit
+          relative text-inherit transition-colors
           
         "
                   href="/watchlist/"
@@ -74662,7 +74662,7 @@ exports[`/watchlist > renders 1`] = `
         transform-gpu text-inverse-subtle underline decoration-inverse-subtle
         decoration-dashed underline-offset-4 transition-all duration-150
         ease-out
-        hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
+        hover:bg-(--bg-default) hover:text-default hover:decoration-default
         hover:duration-75 hover:ease-in
       "
                     href="/how-i-grade/"
@@ -74675,7 +74675,7 @@ exports[`/watchlist > renders 1`] = `
         transform-gpu text-inverse-subtle underline decoration-inverse-subtle
         decoration-dashed underline-offset-4 transition-all duration-150
         ease-out
-        hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
+        hover:bg-(--bg-default) hover:text-default hover:decoration-default
         hover:duration-75 hover:ease-in
       "
                     href="/reviews/"
@@ -74688,7 +74688,7 @@ exports[`/watchlist > renders 1`] = `
         transform-gpu text-inverse-subtle underline decoration-inverse-subtle
         decoration-dashed underline-offset-4 transition-all duration-150
         ease-out
-        hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
+        hover:bg-(--bg-default) hover:text-default hover:decoration-default
         hover:duration-75 hover:ease-in
       "
                     href="/reviews/underseen/"
@@ -74701,7 +74701,7 @@ exports[`/watchlist > renders 1`] = `
         transform-gpu text-inverse-subtle underline decoration-inverse-subtle
         decoration-dashed underline-offset-4 transition-all duration-150
         ease-out
-        hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
+        hover:bg-(--bg-default) hover:text-default hover:decoration-default
         hover:duration-75 hover:ease-in
       "
                     href="/reviews/overrated/"
@@ -74719,7 +74719,7 @@ exports[`/watchlist > renders 1`] = `
         transform-gpu text-inverse-subtle underline decoration-inverse-subtle
         decoration-dashed underline-offset-4 transition-all duration-150
         ease-out
-        hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
+        hover:bg-(--bg-default) hover:text-default hover:decoration-default
         hover:duration-75 hover:ease-in
       "
                     href="/viewings/"
@@ -74732,7 +74732,7 @@ exports[`/watchlist > renders 1`] = `
         transform-gpu text-inverse-subtle underline decoration-inverse-subtle
         decoration-dashed underline-offset-4 transition-all duration-150
         ease-out
-        hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
+        hover:bg-(--bg-default) hover:text-default hover:decoration-default
         hover:duration-75 hover:ease-in
       "
                     href="/viewings/stats/"
@@ -74750,7 +74750,7 @@ exports[`/watchlist > renders 1`] = `
         transform-gpu text-inverse-subtle underline decoration-inverse-subtle
         decoration-dashed underline-offset-4 transition-all duration-150
         ease-out
-        hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
+        hover:bg-(--bg-default) hover:text-default hover:decoration-default
         hover:duration-75 hover:ease-in
       "
                     href="/watchlist/"
