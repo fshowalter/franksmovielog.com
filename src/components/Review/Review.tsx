@@ -64,9 +64,18 @@ export function Review({
       <header
         className={`relative z-1 mb-8 flex flex-col items-center px-[8%] pt-10`}
       >
-        <nav className="pb-3">
+        <nav
+          className={`
+            transform-gpu pb-3 transition-transform
+            has-[a:hover]:scale-110
+          `}
+        >
           <a
-            className="font-sans text-xs tracking-wider text-accent uppercase"
+            className={`
+              font-sans text-xs tracking-wider text-subtle uppercase
+              transition-all
+              hover:text-accent
+            `}
             href="/reviews/"
           >
             Reviews
@@ -149,7 +158,14 @@ export function Review({
         <MoreReviews values={moreReviews}>
           <SubHeading as="h2">
             More{" "}
-            <a className="text-accent" href={`/reviews/`}>
+            <a
+              className={`
+                inline-block origin-left transform-gpu text-accent
+                transition-transform
+                hover:scale-105
+              `}
+              href={`/reviews/`}
+            >
               Reviews
             </a>
           </SubHeading>
@@ -203,7 +219,14 @@ function Meta({
       &#x02009;min{" "}
       <span>
         <span>|</span>{" "}
-        <a className="text-accent" href="#credits">
+        <a
+          className={`
+            inline-block origin-left transform-gpu text-accent
+            transition-transform
+            hover:scale-105
+          `}
+          href="#credits"
+        >
           More...
         </a>
       </span>

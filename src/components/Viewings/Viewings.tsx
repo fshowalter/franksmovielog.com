@@ -237,8 +237,8 @@ function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
     <li
       className={`
         group/list-item relative mb-1 flex transform-gpu flex-row items-center
-        gap-x-4
-        has-[a:hover]:z-30 has-[a:hover]:shadow-all
+        gap-x-4 transition-transform
+        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
         has-[a:hover]:drop-shadow-2xl
         ${value.slug ? `bg-default` : `bg-unreviewed`}
         px-container py-4

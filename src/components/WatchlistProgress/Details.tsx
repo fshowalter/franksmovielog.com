@@ -59,19 +59,19 @@ export function Details({
               className={`
                 group/list-item relative col-span-5 grid transform-gpu
                 grid-cols-subgrid grid-rows-[1fr_auto_auto_1fr] bg-default py-4
-                text-subtle
+                text-subtle transition-transform
                 last-of-type:shadow-none
-                has-[a:hover]:z-30 has-[a:hover]:shadow-all
-                has-[a:hover]:drop-shadow-2xl
+                has-[a:hover]:z-30 has-[a:hover]:scale-105
+                has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl
               `}
               key={value.name}
             >
               <div
                 className={`
-                  relative col-start-2 row-span-4 justify-self-start
-                  transition-opacity
-                  after:absolute after:top-0 after:left-0 after:size-full
-                  after:transform-gpu after:overflow-hidden after:rounded-full
+                  relative col-start-2 row-span-4 transition-opacity
+                  after:absolute after:top-0 after:left-0 after:z-60
+                  after:size-full after:overflow-hidden after:rounded-full
+                  after:bg-default after:opacity-15
                   group-has-[a:hover]/list-item:after:opacity-0
                 `}
               >
@@ -169,12 +169,7 @@ function DetailsItemAvatar({
   );
 
   return (
-    <div
-      className={ccn(
-        "w-12 safari-border-radius-fix overflow-hidden rounded-full",
-        className,
-      )}
-    >
+    <div className={ccn("w-12 overflow-hidden rounded-full", className)}>
       {avatar}
     </div>
   );

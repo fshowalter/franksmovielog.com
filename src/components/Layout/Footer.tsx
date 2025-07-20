@@ -19,7 +19,8 @@ export function Footer(): JSX.Element {
             className={`
               mx-auto mb-8 w-full max-w-button bg-canvas py-5 text-center
               font-sans text-xs tracking-wide text-default uppercase
-              hover:bg-inverse hover:text-inverse
+              transition-all
+              hover:scale-105 hover:bg-inverse hover:text-inverse
               tablet:mx-0
             `}
             href="#top"
@@ -36,16 +37,24 @@ export function Footer(): JSX.Element {
         >
           <div
             className={`
-              flex max-w-prose flex-col pb-12
+              flex max-w-[640px] flex-col pb-12
               tablet:pr-32
             `}
           >
             <div
               className={`
-                pt-10 font-sans text-base font-light text-inverse-subtle
+                pt-10 font-sans text-sm font-light text-inverse-subtle
               `}
             >
-              <p className="mb-6 text-pretty">
+              <p
+                className={`
+                  mb-6 text-pretty
+                  first-letter:float-left first-letter:mt-[6px]
+                  first-letter:pr-1 first-letter:font-sans
+                  first-letter:text-[40px] first-letter:leading-[.8]
+                  first-letter:font-bold first-letter:text-inverse
+                `}
+              >
                 Hi there, I&apos;m Frank, a husband and father old enough to
                 have sat wide-eyed during <em>E.T</em>&apos;s first theatrical
                 run, I&apos;ve been watching, absorbing, and dissecting films
@@ -155,8 +164,9 @@ function FooterLink({ href, text }: { href: string; text: string }) {
   return (
     <a
       className={`
-        text-inverse underline decoration-inverse-subtle decoration-dashed
-        underline-offset-4 transition-all duration-150 ease-out
+        transform-gpu text-inverse-subtle underline decoration-inverse-subtle
+        decoration-dashed underline-offset-4 transition-all duration-150
+        ease-out
         hover:bg-(--fg-inverse) hover:text-default hover:decoration-default
         hover:duration-75 hover:ease-in
       `}
@@ -170,7 +180,13 @@ function FooterLink({ href, text }: { href: string; text: string }) {
 function NavListItem({ value }: { value: NavItem }): JSX.Element {
   return (
     <li className="block w-1/2 text-2xl whitespace-nowrap">
-      <a className="hover:text-accent" href={value.target}>
+      <a
+        className={`
+          block origin-left transform-gpu transition-transform
+          hover:scale-105
+        `}
+        href={value.target}
+      >
         {value.text}
       </a>
       <SubNavList values={value.subItems} />
@@ -195,7 +211,13 @@ function SubNavList({ values }: { values: NavItem[] }): false | JSX.Element {
             `}
             key={value.target}
           >
-            <a className="hover:text-inverse" href={value.target}>
+            <a
+              className={`
+                block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              `}
+              href={value.target}
+            >
               {value.text}
             </a>
           </li>

@@ -59,18 +59,19 @@ export function Mast({
 
 function HamburgerMenu({ hasBackdrop }: { hasBackdrop: boolean }) {
   return (
-    <div className="group">
+    <div className={`group`}>
       <input className="hidden" id="nav" type="checkbox" />
       <label
         className={`
-          relative z-40 ml-2 flex h-10 w-10 cursor-pointer items-center
-          justify-center
+          relative z-40 ml-2 flex h-10 w-10 transform-gpu cursor-pointer
+          items-center justify-center transition-transform
+          hover:scale-110
         `}
         htmlFor="nav"
       >
         <span
           className={`
-            relative block h-0.5 w-6 origin-center
+            relative block h-0.5 w-6 origin-center transform-gpu
             transition-[top,bottom,transform] duration-200 ease-in-out
             group-has-[#nav:checked]:transform-[rotate(45deg)]
             group-has-[#nav:checked]:!bg-[#fff]
@@ -125,7 +126,15 @@ function MenuItem({ value }: { value: NavItem }): JSX.Element {
         desktop:w-full
       `}
     >
-      <a href={value.target}>{value.text}</a>
+      <a
+        className={`
+          block origin-left transform-gpu transition-all
+          hover:scale-105
+        `}
+        href={value.target}
+      >
+        {value.text}
+      </a>
       <SubMenu values={value.subItems} />
     </li>
   );
@@ -144,7 +153,7 @@ function NavListItem({
         block leading-10 tracking-serif-wide whitespace-nowrap
         transition-transform
         group-has-[#nav:checked]:opacity-0
-        has-[a:hover]:-translate-y-1
+        has-[a:hover]:scale-105
       `}
     >
       <a
@@ -167,8 +176,9 @@ function SearchButton() {
   return (
     <div
       className={`
-        z-1000
+        z-1000 transform-gpu transition-transform
         group-has-[#nav:checked]:!text-[#fff]
+        hover:scale-105
       `}
     >
       <button
@@ -221,7 +231,15 @@ function SubMenu({ values }: { values: NavItem[] }): false | JSX.Element {
             `}
             key={value.target}
           >
-            <a href={value.target}>{value.text}</a>
+            <a
+              className={`
+                block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              `}
+              href={value.target}
+            >
+              {value.text}
+            </a>
           </li>
         );
       })}
