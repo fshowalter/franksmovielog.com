@@ -182,7 +182,7 @@ function NavListItem({ value }: { value: NavItem }): JSX.Element {
     <li className="block w-1/2 text-2xl whitespace-nowrap">
       <a
         className={`
-          block origin-left transform-gpu transition-transform
+          inline-block origin-left transform-gpu transition-transform
           hover:scale-105
         `}
         href={value.target}
@@ -213,7 +213,7 @@ function SubNavList({ values }: { values: NavItem[] }): false | JSX.Element {
           >
             <a
               className={`
-                block origin-left transform-gpu transition-all
+                inline-block origin-left transform-gpu transition-all
                 hover:scale-105 hover:text-inverse
               `}
               href={value.target}

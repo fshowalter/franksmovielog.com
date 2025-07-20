@@ -128,7 +128,7 @@ function MenuItem({ value }: { value: NavItem }): JSX.Element {
     >
       <a
         className={`
-          block origin-left transform-gpu transition-all
+          inline-block origin-left transform-gpu transition-all
           hover:scale-105
         `}
         href={value.target}
@@ -233,7 +233,7 @@ function SubMenu({ values }: { values: NavItem[] }): false | JSX.Element {
           >
             <a
               className={`
-                block origin-left transform-gpu transition-all
+                inline-block origin-left transform-gpu transition-all
                 hover:scale-105 hover:text-inverse
               `}
               href={value.target}

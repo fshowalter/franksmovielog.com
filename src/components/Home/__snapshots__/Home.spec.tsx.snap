@@ -237,7 +237,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <a
                   class="
-          block origin-left transform-gpu transition-all
+          inline-block origin-left transform-gpu transition-all
           hover:scale-105
         "
                   href="/"
@@ -253,7 +253,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <a
                   class="
-          block origin-left transform-gpu transition-all
+          inline-block origin-left transform-gpu transition-all
           hover:scale-105
         "
                   href="/how-i-grade/"
@@ -269,7 +269,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <a
                   class="
-          block origin-left transform-gpu transition-all
+          inline-block origin-left transform-gpu transition-all
           hover:scale-105
         "
                   href="/reviews/"
@@ -288,7 +288,7 @@ exports[`Home > matches snapshot 1`] = `
                   >
                     <a
                       class="
-                block origin-left transform-gpu transition-all
+                inline-block origin-left transform-gpu transition-all
                 hover:scale-105 hover:text-inverse
               "
                       href="/cast-and-crew/"
@@ -305,7 +305,7 @@ exports[`Home > matches snapshot 1`] = `
                   >
                     <a
                       class="
-                block origin-left transform-gpu transition-all
+                inline-block origin-left transform-gpu transition-all
                 hover:scale-105 hover:text-inverse
               "
                       href="/collections/"
@@ -322,7 +322,7 @@ exports[`Home > matches snapshot 1`] = `
                   >
                     <a
                       class="
-                block origin-left transform-gpu transition-all
+                inline-block origin-left transform-gpu transition-all
                 hover:scale-105 hover:text-inverse
               "
                       href="/reviews/overrated/"
@@ -339,7 +339,7 @@ exports[`Home > matches snapshot 1`] = `
                   >
                     <a
                       class="
-                block origin-left transform-gpu transition-all
+                inline-block origin-left transform-gpu transition-all
                 hover:scale-105 hover:text-inverse
               "
                       href="/reviews/underrated/"
@@ -356,7 +356,7 @@ exports[`Home > matches snapshot 1`] = `
                   >
                     <a
                       class="
-                block origin-left transform-gpu transition-all
+                inline-block origin-left transform-gpu transition-all
                 hover:scale-105 hover:text-inverse
               "
                       href="/reviews/underseen/"
@@ -374,7 +374,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <a
                   class="
-          block origin-left transform-gpu transition-all
+          inline-block origin-left transform-gpu transition-all
           hover:scale-105
         "
                   href="/viewings/"
@@ -393,7 +393,7 @@ exports[`Home > matches snapshot 1`] = `
                   >
                     <a
                       class="
-                block origin-left transform-gpu transition-all
+                inline-block origin-left transform-gpu transition-all
                 hover:scale-105 hover:text-inverse
               "
                       href="/viewings/stats/"
@@ -411,7 +411,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <a
                   class="
-          block origin-left transform-gpu transition-all
+          inline-block origin-left transform-gpu transition-all
           hover:scale-105
         "
                   href="/watchlist/"
@@ -430,7 +430,7 @@ exports[`Home > matches snapshot 1`] = `
                   >
                     <a
                       class="
-                block origin-left transform-gpu transition-all
+                inline-block origin-left transform-gpu transition-all
                 hover:scale-105 hover:text-inverse
               "
                       href="/watchlist/progress/"
@@ -2027,7 +2027,7 @@ exports[`Home > matches snapshot 1`] = `
                 >
                   <a
                     class="
-          block origin-left transform-gpu transition-transform
+          inline-block origin-left transform-gpu transition-transform
           hover:scale-105
         "
                     href="/"
@@ -2040,7 +2040,7 @@ exports[`Home > matches snapshot 1`] = `
                 >
                   <a
                     class="
-          block origin-left transform-gpu transition-transform
+          inline-block origin-left transform-gpu transition-transform
           hover:scale-105
         "
                     href="/how-i-grade/"
@@ -2053,7 +2053,7 @@ exports[`Home > matches snapshot 1`] = `
                 >
                   <a
                     class="
-          block origin-left transform-gpu transition-transform
+          inline-block origin-left transform-gpu transition-transform
           hover:scale-105
         "
                     href="/reviews/"
@@ -2072,7 +2072,7 @@ exports[`Home > matches snapshot 1`] = `
                     >
                       <a
                         class="
-                block origin-left transform-gpu transition-all
+                inline-block origin-left transform-gpu transition-all
                 hover:scale-105 hover:text-inverse
               "
                         href="/cast-and-crew/"
@@ -2089,7 +2089,7 @@ exports[`Home > matches snapshot 1`] = `
                     >
                       <a
                         class="
-                block origin-left transform-gpu transition-all
+                inline-block origin-left transform-gpu transition-all
                 hover:scale-105 hover:text-inverse
               "
                         href="/collections/"
@@ -2106,7 +2106,7 @@ exports[`Home > matches snapshot 1`] = `
                     >
                       <a
                         class="
-                block origin-left transform-gpu transition-all
+                inline-block origin-left transform-gpu transition-all
                 hover:scale-105 hover:text-inverse
               "
                         href="/reviews/overrated/"
@@ -2123,7 +2123,7 @@ exports[`Home > matches snapshot 1`] = `
                     >
                       <a
                         class="
-                block origin-left transform-gpu transition-all
+                inline-block origin-left transform-gpu transition-all
                 hover:scale-105 hover:text-inverse
               "
                         href="/reviews/underrated/"
@@ -2140,7 +2140,7 @@ exports[`Home > matches snapshot 1`] = `
                     >
                       <a
                         class="
-                block origin-left transform-gpu transition-all
+                inline-block origin-left transform-gpu transition-all
                 hover:scale-105 hover:text-inverse
               "
                         href="/reviews/underseen/"
@@ -2155,7 +2155,7 @@ exports[`Home > matches snapshot 1`] = `
                 >
                   <a
                     class="
-          block origin-left transform-gpu transition-transform
+          inline-block origin-left transform-gpu transition-transform
           hover:scale-105
         "
                     href="/viewings/"
@@ -2174,7 +2174,7 @@ exports[`Home > matches snapshot 1`] = `
                     >
                       <a
                         class="
-                block origin-left transform-gpu transition-all
+                inline-block origin-left transform-gpu transition-all
                 hover:scale-105 hover:text-inverse
               "
                         href="/viewings/stats/"
@@ -2189,7 +2189,7 @@ exports[`Home > matches snapshot 1`] = `
                 >
                   <a
                     class="
-          block origin-left transform-gpu transition-transform
+          inline-block origin-left transform-gpu transition-transform
           hover:scale-105
         "
                     href="/watchlist/"
@@ -2208,7 +2208,7 @@ exports[`Home > matches snapshot 1`] = `
                     >
                       <a
                         class="
-                block origin-left transform-gpu transition-all
+                inline-block origin-left transform-gpu transition-all
                 hover:scale-105 hover:text-inverse
               "
                         href="/watchlist/progress/"
