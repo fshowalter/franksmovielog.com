@@ -247,7 +247,7 @@
       })();
     </script>
     <astro-island
-      uid="ZIODMi"
+      uid="ZxP7Db"
       prefix="r1"
       component-url="~/components/Collection/Collection"
       component-export="Collection"
@@ -284,7 +284,9 @@
               position: absolute;
             "
           >
-            <div class="flex flex-col">
+            <div
+              class="flex transform-gpu flex-col transition-transform has-[a:hover]:scale-105"
+            >
               <div
                 class="text-[1.375rem] leading-8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
               >
@@ -298,50 +300,50 @@
               <nav class="hidden w-full desktop:block desktop:w-auto">
                 <ul class="flex flex-wrap justify-start gap-x-6 text-xl">
                   <li
-                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition duration-200 ease-in-out group-has-[#nav:checked]:opacity-0"
+                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform group-has-[#nav:checked]:opacity-0 has-[a:hover]:scale-105"
                   >
                     <a
-                      class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                      class="relative text-inherit"
                       href="/"
                       style="text-shadow: 1px 1px 2px black"
                       >Home</a
                     >
                   </li>
                   <li
-                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition duration-200 ease-in-out group-has-[#nav:checked]:opacity-0"
+                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform group-has-[#nav:checked]:opacity-0 has-[a:hover]:scale-105"
                   >
                     <a
-                      class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                      class="relative text-inherit"
                       href="/how-i-grade/"
                       style="text-shadow: 1px 1px 2px black"
                       >How I Grade</a
                     >
                   </li>
                   <li
-                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition duration-200 ease-in-out group-has-[#nav:checked]:opacity-0"
+                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform group-has-[#nav:checked]:opacity-0 has-[a:hover]:scale-105"
                   >
                     <a
-                      class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                      class="relative text-inherit"
                       href="/reviews/"
                       style="text-shadow: 1px 1px 2px black"
                       >Reviews</a
                     >
                   </li>
                   <li
-                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition duration-200 ease-in-out group-has-[#nav:checked]:opacity-0"
+                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform group-has-[#nav:checked]:opacity-0 has-[a:hover]:scale-105"
                   >
                     <a
-                      class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                      class="relative text-inherit"
                       href="/viewings/"
                       style="text-shadow: 1px 1px 2px black"
                       >Viewing Log</a
                     >
                   </li>
                   <li
-                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition duration-200 ease-in-out group-has-[#nav:checked]:opacity-0"
+                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform group-has-[#nav:checked]:opacity-0 has-[a:hover]:scale-105"
                   >
                     <a
-                      class="text-inherit transition-all duration-500 ease-in-out hover:bg-[rgba(0,0,0,.50)]"
+                      class="relative text-inherit"
                       href="/watchlist/"
                       style="text-shadow: 1px 1px 2px black"
                       >Watchlist</a
@@ -349,7 +351,9 @@
                   </li>
                 </ul>
               </nav>
-              <div class="z-1000 group-has-[#nav:checked]:!text-[#fff]">
+              <div
+                class="z-1000 transform-gpu transition-transform group-has-[#nav:checked]:!text-[#fff] hover:scale-105"
+              >
                 <button
                   aria-keyshortcuts="Control+K"
                   aria-label="Search"
@@ -377,10 +381,10 @@
               </div>
               <div class="group">
                 <input class="hidden" id="nav" type="checkbox" /><label
-                  class="relative z-40 ml-2 flex h-10 w-10 cursor-pointer items-center justify-center"
+                  class="relative z-40 ml-2 flex h-10 w-10 transform-gpu cursor-pointer items-center justify-center transition-transform hover:scale-110"
                   for="nav"
                   ><span
-                    class="relative block h-0.5 w-6 origin-center transition-[top,bottom,transform] duration-200 ease-in-out group-has-[#nav:checked]:transform-[rotate(45deg)] group-has-[#nav:checked]:!bg-[#fff] before:absolute before:-top-2 before:block before:h-0.5 before:w-6 before:bg-inherit before:transition before:duration-200 before:ease-in-out group-has-[#nav:checked]:before:top-0 group-has-[#nav:checked]:before:transform-[rotate(90deg)] after:absolute after:-bottom-2 after:block after:h-0.5 after:w-6 after:bg-inherit after:transition after:duration-200 after:ease-in-out group-has-[#nav:checked]:after:bottom-0 group-has-[#nav:checked]:after:transform-[rotate(90deg)]"
+                    class="relative block h-0.5 w-6 origin-center transform-gpu transition-[top,bottom,transform] duration-200 ease-in-out group-has-[#nav:checked]:transform-[rotate(45deg)] group-has-[#nav:checked]:!bg-[#fff] before:absolute before:-top-2 before:block before:h-0.5 before:w-6 before:bg-inherit before:transition before:duration-200 before:ease-in-out group-has-[#nav:checked]:before:top-0 group-has-[#nav:checked]:before:transform-[rotate(90deg)] after:absolute after:-bottom-2 after:block after:h-0.5 after:w-6 after:bg-inherit after:transition after:duration-200 after:ease-in-out group-has-[#nav:checked]:after:bottom-0 group-has-[#nav:checked]:after:transform-[rotate(90deg)]"
                     style="background-color: #fff"
                   ></span
                 ></label>
@@ -390,66 +394,114 @@
                   <li
                     class="block w-1/2 text-2xl whitespace-nowrap desktop:w-full"
                   >
-                    <a href="/">Home</a>
+                    <a
+                      class="block origin-left transform-gpu transition-all hover:scale-105"
+                      href="/"
+                      >Home</a
+                    >
                   </li>
                   <li
                     class="block w-1/2 text-2xl whitespace-nowrap desktop:w-full"
                   >
-                    <a href="/how-i-grade/">How I Grade</a>
+                    <a
+                      class="block origin-left transform-gpu transition-all hover:scale-105"
+                      href="/how-i-grade/"
+                      >How I Grade</a
+                    >
                   </li>
                   <li
                     class="block w-1/2 text-2xl whitespace-nowrap desktop:w-full"
                   >
-                    <a href="/reviews/">Reviews</a>
+                    <a
+                      class="block origin-left transform-gpu transition-all hover:scale-105"
+                      href="/reviews/"
+                      >Reviews</a
+                    >
                     <ol class="mt-4">
                       <li
                         class="mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:mb-0"
                       >
-                        <a href="/cast-and-crew/">Cast &amp; Crew</a>
+                        <a
+                          class="block origin-left transform-gpu transition-all hover:scale-105 hover:text-inverse"
+                          href="/cast-and-crew/"
+                          >Cast &amp; Crew</a
+                        >
                       </li>
                       <li
                         class="mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:mb-0"
                       >
-                        <a href="/collections/">Collections</a>
+                        <a
+                          class="block origin-left transform-gpu transition-all hover:scale-105 hover:text-inverse"
+                          href="/collections/"
+                          >Collections</a
+                        >
                       </li>
                       <li
                         class="mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:mb-0"
                       >
-                        <a href="/reviews/overrated/">Overrated</a>
+                        <a
+                          class="block origin-left transform-gpu transition-all hover:scale-105 hover:text-inverse"
+                          href="/reviews/overrated/"
+                          >Overrated</a
+                        >
                       </li>
                       <li
                         class="mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:mb-0"
                       >
-                        <a href="/reviews/underrated/">Underrated</a>
+                        <a
+                          class="block origin-left transform-gpu transition-all hover:scale-105 hover:text-inverse"
+                          href="/reviews/underrated/"
+                          >Underrated</a
+                        >
                       </li>
                       <li
                         class="mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:mb-0"
                       >
-                        <a href="/reviews/underseen/">Underseen</a>
+                        <a
+                          class="block origin-left transform-gpu transition-all hover:scale-105 hover:text-inverse"
+                          href="/reviews/underseen/"
+                          >Underseen</a
+                        >
                       </li>
                     </ol>
                   </li>
                   <li
                     class="block w-1/2 text-2xl whitespace-nowrap desktop:w-full"
                   >
-                    <a href="/viewings/">Viewing Log</a>
+                    <a
+                      class="block origin-left transform-gpu transition-all hover:scale-105"
+                      href="/viewings/"
+                      >Viewing Log</a
+                    >
                     <ol class="mt-4">
                       <li
                         class="mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:mb-0"
                       >
-                        <a href="/viewings/stats/">Stats</a>
+                        <a
+                          class="block origin-left transform-gpu transition-all hover:scale-105 hover:text-inverse"
+                          href="/viewings/stats/"
+                          >Stats</a
+                        >
                       </li>
                     </ol>
                   </li>
                   <li
                     class="block w-1/2 text-2xl whitespace-nowrap desktop:w-full"
                   >
-                    <a href="/watchlist/">Watchlist</a>
+                    <a
+                      class="block origin-left transform-gpu transition-all hover:scale-105"
+                      href="/watchlist/"
+                      >Watchlist</a
+                    >
                     <ol class="mt-4">
                       <li
                         class="mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:mb-0"
                       >
-                        <a href="/watchlist/progress/">Progress</a>
+                        <a
+                          class="block origin-left transform-gpu transition-all hover:scale-105 hover:text-inverse"
+                          href="/watchlist/progress/"
+                          >Progress</a
+                        >
                       </li>
                     </ol>
                   </li>
@@ -686,7 +738,7 @@
                                     class="flex grow flex-col items-start tablet:w-full"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0"
                                       href="/reviews/friday-the-13th-1980/"
                                       >Friday the 13th<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle tablet:text-xs"
@@ -743,7 +795,7 @@
                                     class="flex grow flex-col items-start tablet:w-full"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0"
                                       href="/reviews/friday-the-13th-part-2-1981/"
                                       >Friday the 13th Part 2<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle tablet:text-xs"
@@ -800,7 +852,7 @@
                                     class="flex grow flex-col items-start tablet:w-full"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0"
                                       href="/reviews/friday-the-13th-part-3-1982/"
                                       >Friday the 13th: Part 3<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle tablet:text-xs"
@@ -857,7 +909,7 @@
                                     class="flex grow flex-col items-start tablet:w-full"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0"
                                       href="/reviews/friday-the-13th-the-final-chapter-1984/"
                                       >Friday the 13th: The Final Chapter<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle tablet:text-xs"
@@ -914,7 +966,7 @@
                                     class="flex grow flex-col items-start tablet:w-full"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0"
                                       href="/reviews/friday-the-13th-a-new-beginning-1985/"
                                       >Friday the 13th: A New Beginning<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle tablet:text-xs"
@@ -971,7 +1023,7 @@
                                     class="flex grow flex-col items-start tablet:w-full"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0"
                                       href="/reviews/friday-the-13th-part-vi-jason-lives-1986/"
                                       >Friday the 13th Part VI: Jason Lives<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle tablet:text-xs"
@@ -1028,7 +1080,7 @@
                                     class="flex grow flex-col items-start tablet:w-full"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0"
                                       href="/reviews/friday-the-13th-the-new-blood-1988/"
                                       >Friday the 13th: The New Blood<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle tablet:text-xs"
@@ -1085,7 +1137,7 @@
                                     class="flex grow flex-col items-start tablet:w-full"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0"
                                       href="/reviews/friday-the-13th-part-viii-jason-takes-manhattan-1989/"
                                       >Friday the 13th Part VIII: Jason Takes
                                       Manhattan<!-- -->  <span
@@ -1143,7 +1195,7 @@
                                     class="flex grow flex-col items-start tablet:w-full"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0"
                                       href="/reviews/jason-goes-to-hell-the-final-friday-1993/"
                                       >Jason Goes to Hell<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle tablet:text-xs"
@@ -1246,7 +1298,7 @@
                                     class="flex grow flex-col items-start tablet:w-full"
                                   >
                                     <a
-                                      class="font-sans text-sm font-medium text-accent before:absolute before:top-4 before:left-(--container-padding) before:aspect-poster before:w-list-item-poster before:bg-default before:opacity-15 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:before:opacity-0 tablet:before:left-4 tablet:before:bg-default desktop:before:left-6"
+                                      class="font-sans text-sm font-medium text-accent after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0"
                                       href="/reviews/freddy-vs-jason-2003/"
                                       >Freddy vs. Jason<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle tablet:text-xs"
@@ -1333,11 +1385,13 @@
                 class="flex w-full flex-col tablet:flex-row-reverse tablet:justify-between"
               >
                 <a
-                  class="mx-auto mb-8 w-full max-w-button bg-canvas py-5 text-center font-sans text-xs tracking-wide text-default uppercase hover:bg-inverse hover:text-inverse tablet:mx-0"
+                  class="mx-auto mb-8 w-full max-w-button bg-canvas py-5 text-center font-sans text-xs tracking-wide text-default uppercase transition-all hover:scale-105 hover:bg-inverse hover:text-inverse tablet:mx-0"
                   href="#top"
                   >To the top</a
                 >
-                <div class="flex flex-col">
+                <div
+                  class="flex transform-gpu flex-col transition-transform has-[a:hover]:scale-105 undefined"
+                >
                   <div
                     class="text-[1.375rem] leading-8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
                   >
@@ -1349,11 +1403,13 @@
                 </div>
               </div>
               <div class="justify-between tablet:flex">
-                <div class="flex max-w-prose flex-col pb-12 tablet:pr-32">
+                <div class="flex max-w-[640px] flex-col pb-12 tablet:pr-32">
                   <div
-                    class="pt-10 font-sans text-base font-light text-inverse-subtle"
+                    class="pt-10 font-sans text-sm font-light text-inverse-subtle"
                   >
-                    <p class="mb-6 text-pretty">
+                    <p
+                      class="mb-6 text-pretty first-letter:float-left first-letter:mt-[6px] first-letter:pr-1 first-letter:font-sans first-letter:text-[40px] first-letter:leading-[.8] first-letter:font-bold first-letter:text-inverse"
+                    >
                       Hi there, I&#x27;m Frank, a husband and father old enough
                       to have sat wide-eyed during <em>E.T</em>&#x27;s first
                       theatrical run, I&#x27;ve been watching, absorbing, and
@@ -1376,26 +1432,26 @@
                     <p class="mb-6 text-pretty">
                       New visitors might want to start by reading about<!-- -->
                       <a
-                        class="text-inverse underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                        class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
                         href="/how-i-grade/"
                         >how I grade</a
                       >
                       films. After that, feel free to browse my<!-- -->
                       <a
-                        class="text-inverse underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                        class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
                         href="/reviews/"
                         >reviews</a
                       >. If you&#x27;re looking for something that flew under
                       the radar but deserves your attention, I recommend my<!-- -->
                       <a
-                        class="text-inverse underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                        class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
                         href="/reviews/underseen/"
                         >underseen gems</a
                       >
                       <!-- -->section. Or, for those moments when you want to
                       feel righteously contrarian, I maintain an list of<!-- -->
                       <a
-                        class="text-inverse underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                        class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
                         href="/reviews/overrated/"
                         >overrated disappointments</a
                       >.
@@ -1403,14 +1459,14 @@
                     <p class="mb-6 text-pretty">
                       I also keep a<!-- -->
                       <a
-                        class="text-inverse underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                        class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
                         href="/viewings/"
                         >viewing log</a
                       >
                       that tracks everything I watch, whether it gets a full
                       review or not, complete with<!-- -->
                       <a
-                        class="text-inverse underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                        class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
                         href="/viewings/stats/"
                         >stats</a
                       >. In an age of endless content, sometimes the act of
@@ -1421,7 +1477,7 @@
                       And finally, if you&#x27;re curious about what&#x27;s on
                       my critical horizon, my<!-- -->
                       <a
-                        class="text-inverse underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
+                        class="transform-gpu text-inverse-subtle underline decoration-inverse-subtle decoration-dashed underline-offset-4 transition-all duration-150 ease-out hover:bg-(--fg-inverse) hover:text-default hover:decoration-default hover:duration-75 hover:ease-in"
                         href="/watchlist/"
                         >watchlist</a
                       >
@@ -1444,27 +1500,41 @@
                     class="flex w-full flex-col gap-y-10 text-inverse max:w-auto"
                   >
                     <li class="block w-1/2 text-2xl whitespace-nowrap">
-                      <a class="hover:text-accent" href="/">Home</a>
+                      <a
+                        class="block origin-left transform-gpu transition-transform hover:scale-105"
+                        href="/"
+                        >Home</a
+                      >
                     </li>
                     <li class="block w-1/2 text-2xl whitespace-nowrap">
-                      <a class="hover:text-accent" href="/how-i-grade/"
+                      <a
+                        class="block origin-left transform-gpu transition-transform hover:scale-105"
+                        href="/how-i-grade/"
                         >How I Grade</a
                       >
                     </li>
                     <li class="block w-1/2 text-2xl whitespace-nowrap">
-                      <a class="hover:text-accent" href="/reviews/">Reviews</a>
+                      <a
+                        class="block origin-left transform-gpu transition-transform hover:scale-105"
+                        href="/reviews/"
+                        >Reviews</a
+                      >
                       <ol class="mt-4">
                         <li
                           class="mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:mb-0"
                         >
-                          <a class="hover:text-inverse" href="/cast-and-crew/"
+                          <a
+                            class="block origin-left transform-gpu transition-all hover:scale-105 hover:text-inverse"
+                            href="/cast-and-crew/"
                             >Cast &amp; Crew</a
                           >
                         </li>
                         <li
                           class="mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:mb-0"
                         >
-                          <a class="hover:text-inverse" href="/collections/"
+                          <a
+                            class="block origin-left transform-gpu transition-all hover:scale-105 hover:text-inverse"
+                            href="/collections/"
                             >Collections</a
                           >
                         </li>
@@ -1472,7 +1542,7 @@
                           class="mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:mb-0"
                         >
                           <a
-                            class="hover:text-inverse"
+                            class="block origin-left transform-gpu transition-all hover:scale-105 hover:text-inverse"
                             href="/reviews/overrated/"
                             >Overrated</a
                           >
@@ -1481,7 +1551,7 @@
                           class="mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:mb-0"
                         >
                           <a
-                            class="hover:text-inverse"
+                            class="block origin-left transform-gpu transition-all hover:scale-105 hover:text-inverse"
                             href="/reviews/underrated/"
                             >Underrated</a
                           >
@@ -1490,7 +1560,7 @@
                           class="mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:mb-0"
                         >
                           <a
-                            class="hover:text-inverse"
+                            class="block origin-left transform-gpu transition-all hover:scale-105 hover:text-inverse"
                             href="/reviews/underseen/"
                             >Underseen</a
                           >
@@ -1498,21 +1568,27 @@
                       </ol>
                     </li>
                     <li class="block w-1/2 text-2xl whitespace-nowrap">
-                      <a class="hover:text-accent" href="/viewings/"
+                      <a
+                        class="block origin-left transform-gpu transition-transform hover:scale-105"
+                        href="/viewings/"
                         >Viewing Log</a
                       >
                       <ol class="mt-4">
                         <li
                           class="mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:mb-0"
                         >
-                          <a class="hover:text-inverse" href="/viewings/stats/"
+                          <a
+                            class="block origin-left transform-gpu transition-all hover:scale-105 hover:text-inverse"
+                            href="/viewings/stats/"
                             >Stats</a
                           >
                         </li>
                       </ol>
                     </li>
                     <li class="block w-1/2 text-2xl whitespace-nowrap">
-                      <a class="hover:text-accent" href="/watchlist/"
+                      <a
+                        class="block origin-left transform-gpu transition-transform hover:scale-105"
+                        href="/watchlist/"
                         >Watchlist</a
                       >
                       <ol class="mt-4">
@@ -1520,7 +1596,7 @@
                           class="mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:mb-0"
                         >
                           <a
-                            class="hover:text-inverse"
+                            class="block origin-left transform-gpu transition-all hover:scale-105 hover:text-inverse"
                             href="/watchlist/progress/"
                             >Progress</a
                           >
