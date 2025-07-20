@@ -176,7 +176,7 @@ function Wrapper({
       <div
         className={`
           ${centerText ? "items-center" : ""}
-          z-10 mx-auto flex w-full max-w-(--breakpoint-max) flex-col
+          z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col
           px-container
           ${
             bottomShadow

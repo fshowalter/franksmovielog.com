@@ -36,7 +36,7 @@ export function MostWatchedMovies({
     <section
       className={ccn(
         `
-          max-w-(--breakpoint-laptop) bg-default px-container pb-5
+          max-w-(--breakpoint-laptop) pb-5
           laptop:pb-10
         `,
         className,
@@ -44,7 +44,7 @@ export function MostWatchedMovies({
     >
       <h2
         className={`
-          py-4 text-xl font-medium shadow-bottom
+          px-container py-4 text-xl font-medium shadow-bottom
           tablet:text-center tablet:text-2xl
           laptop:py-8
         `}
@@ -81,7 +81,7 @@ function FluidListItemPoster({
       )}
     >
       <Poster
-        className="h-auto"
+        className="h-auto rounded-[2.5px]"
         decoding="async"
         height={MostWatchedMoviesPosterConfig.height}
         imageProps={imageProps}
@@ -99,7 +99,7 @@ function List({ children }: { children: React.ReactNode }): JSX.Element {
       className={`
         grid-cols-[repeat(auto-fit,minmax(128px,248px))] items-center
         justify-center gap-x-6 gap-y-8 bg-subtle
-        tablet:grid tablet:items-start tablet:bg-default
+        tablet:grid tablet:items-start
       `}
     >
       {children}
@@ -116,21 +116,20 @@ function ListItem({
     <li
       className={`
         group/list-item relative mb-1 flex h-full transform-gpu items-center
-        gap-x-4 bg-default py-4 transition-transform
-        has-[a:hover]:-translate-y-2 has-[a:hover]:scale-105
-        tablet:w-auto tablet:flex-col tablet:p-0
+        gap-x-4 bg-default px-container py-4 transition-transform
+        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
+        has-[a:hover]:drop-shadow-2xl
+        tablet:w-auto tablet:flex-col tablet:p-6
         laptop:w-auto
       `}
     >
       <div
         className={`
           transform-gpu
-          group-has-[a:hover]/list-item:shadow-all
-          group-has-[a:hover]/list-item:drop-shadow-2xl
           after:absolute after:top-0 after:left-0 after:z-10 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:rounded-[2.5px] after:bg-default after:opacity-15
+          after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
-          has-[a:hover]:shadow-all
         `}
       >
         <FluidListItemPoster

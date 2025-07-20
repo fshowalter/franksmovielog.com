@@ -33,7 +33,7 @@ export function Callouts({
   return (
     <div
       className={`
-        mx-auto w-full max-w-(--breakpoint-max)
+        mx-auto w-full max-w-(--breakpoint-desktop)
         tablet:mt-12 tablet:px-container
       `}
     >

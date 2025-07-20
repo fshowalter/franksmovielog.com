@@ -123,7 +123,7 @@ function WatchlistListItem({
   return (
     <li
       className={`
-        relative mb-1 flex max-w-(--breakpoint-max) flex-row items-center
+        relative mb-1 flex max-w-(--breakpoint-desktop) flex-row items-center
         gap-x-4 bg-unreviewed px-container py-4
         tablet:gap-x-6 tablet:px-4
         laptop:px-6

@@ -15,8 +15,9 @@ export function ReviewsSubNav({ active }: { active: keyof typeof items }) {
     <nav className="bg-footer">
       <ul
         className={`
-          mx-auto flex scrollbar-hidden max-w-(--breakpoint-max) overflow-x-auto
-          px-container font-sans text-xs font-medium tracking-wider uppercase
+          mx-auto flex scrollbar-hidden max-w-(--breakpoint-desktop)
+          overflow-x-auto px-container font-sans text-xs font-medium
+          tracking-wider uppercase
           tablet:justify-center
         `}
       >
