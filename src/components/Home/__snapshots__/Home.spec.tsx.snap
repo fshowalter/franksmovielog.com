@@ -459,7 +459,7 @@ exports[`Home > matches snapshot 1`] = `
           <div
             class="
           
-          z-10 mx-auto flex w-full max-w-(--breakpoint-max) flex-col
+          z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col
           px-container
           
         "
@@ -483,7 +483,7 @@ exports[`Home > matches snapshot 1`] = `
           </div>
         </header>
         <nav
-          class="mx-auto max-w-(--breakpoint-max)"
+          class="mx-auto max-w-(--breakpoint-desktop)"
         >
           <h2
             class="

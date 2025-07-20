@@ -34,7 +34,7 @@ export function MoreReviews({
     <nav data-pagefind-ignore>
       <div
         className={`
-          relative mx-auto w-full max-w-(--breakpoint-max) px-container
+          relative mx-auto w-full max-w-(--breakpoint-desktop) px-container
           laptop:px-20
         `}
       >

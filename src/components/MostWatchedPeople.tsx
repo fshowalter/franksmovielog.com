@@ -134,7 +134,7 @@ function MostWatchedPersonViewingListItem({
     <li
       className={`
         ${value.slug ? "bg-default" : "bg-unreviewed"}
-        group/list-item relative mb-1 flex max-w-(--breakpoint-max)
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-4 py-4 transition-transform
         has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
         has-[a:hover]:drop-shadow-2xl
