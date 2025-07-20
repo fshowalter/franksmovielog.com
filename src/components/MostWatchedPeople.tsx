@@ -65,7 +65,13 @@ export function MostWatchedPeople({
                   tablet:px-0
                 `}
               >
-                <div className="font-sans text-sm text-muted">
+                <div
+                  className={`
+                    origin-left transform-gpu font-sans text-sm text-muted
+                    transition-transform
+                    has-[a:hover]:scale-110
+                  `}
+                >
                   <Name value={value} />
                 </div>
                 <div
@@ -129,8 +135,8 @@ function MostWatchedPersonViewingListItem({
       className={`
         ${value.slug ? "bg-default" : "bg-unreviewed"}
         group/list-item relative mb-1 flex max-w-(--breakpoint-max)
-        transform-gpu flex-row gap-x-4 py-4
-        has-[a:hover]:z-30 has-[a:hover]:shadow-all
+        transform-gpu flex-row gap-x-4 py-4 transition-transform
+        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
         has-[a:hover]:drop-shadow-2xl
         tablet:gap-x-6 tablet:px-4
         desktop:px-6
