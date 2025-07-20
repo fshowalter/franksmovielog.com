@@ -97,7 +97,7 @@ function CollectionName({ value }: { value: ListItemValue }) {
         after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
         hover:before:opacity-0
         tablet:before:top-6 tablet:before:left-4 tablet:before:w-20
-        desktop:before:left-6
+        laptop:before:left-6
       `}
       href={`/collections/${value.slug}/`}
     >

@@ -20,7 +20,7 @@ export function ListItem({
         relative mb-1 flex max-w-(--breakpoint-max) flex-row gap-x-4
         px-container py-4
         tablet:gap-x-6 tablet:px-4
-        desktop:px-6
+        laptop:px-6
         ${className || ""}
       `}
     >

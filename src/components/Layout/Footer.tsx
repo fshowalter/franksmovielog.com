@@ -8,7 +8,7 @@ import { navItems } from "./navItems";
 export function Footer(): JSX.Element {
   return (
     <footer className={"bg-footer text-inverse"}>
-      <div className="mx-auto max-w-(--breakpoint-desktop) px-container py-20">
+      <div className="mx-auto max-w-(--breakpoint-laptop) px-container py-20">
         <div
           className={`
             flex w-full flex-col
@@ -127,7 +127,7 @@ export function Footer(): JSX.Element {
             <ul
               className={`
                 flex w-full flex-col gap-y-10 text-inverse
-                max:w-auto
+                desktop:w-auto
               `}
             >
               {navItems.map((item) => {

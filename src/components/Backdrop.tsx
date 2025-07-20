@@ -98,7 +98,7 @@ function Deck({
     <p
       className={`
         mt-1 text-base
-        desktop:my-4 desktop:text-xl
+        laptop:my-4 laptop:text-xl
         ${shadow ? `[text-shadow:1px_1px_2px_black]` : ""}
         ${center ? `text-center` : ""}
       `}
@@ -125,7 +125,7 @@ function Title({
           font-sans
           ${center ? "text-center" : ""}
           text-2xl font-bold tracking-widest uppercase
-          desktop:text-7xl
+          laptop:text-7xl
         `
       }
       data-pagefind-weight="10"
@@ -149,11 +149,11 @@ function Wrapper({
   size?: "default" | "large" | "small";
 }) {
   const defaultSizes =
-    "min-h-[400px] tablet:min-h-[640px] desktop:min-h-[clamp(640px,70vh,1350px)]";
+    "min-h-[400px] tablet:min-h-[640px] laptop:min-h-[clamp(640px,70vh,1350px)]";
 
   const largeSizes = "min-h-[90vh] max-h-[1350px]";
 
-  const smallSizes = "min-h-[240px] desktop:min-h-[clamp(640px,50vh,1350px)]";
+  const smallSizes = "min-h-[240px] laptop:min-h-[clamp(640px,50vh,1350px)]";
 
   const sizes =
     size === "large"
@@ -169,7 +169,7 @@ function Wrapper({
         relative flex w-full flex-col content-start items-center justify-end
         gap-6 bg-[#2A2B2A] pt-40 pb-8 text-inverse
         tablet:pt-40 tablet:pb-10
-        desktop:pt-40 desktop:pb-16
+        laptop:pt-40 laptop:pb-16
       `}
     >
       {heroImage}

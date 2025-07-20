@@ -20,7 +20,7 @@ export function Callouts({
       className={`
         flex flex-wrap justify-center gap-4
         tablet:gap-6
-        desktop:flex-nowrap
+        laptop:flex-nowrap
       `}
     >
       <StatsCallout label="Viewings" value={viewingCount} />

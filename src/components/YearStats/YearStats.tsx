@@ -82,7 +82,7 @@ export function YearStats({
         <div
           className={`
             mx-auto flex w-full flex-col items-start gap-y-8
-            desktop:flex-row desktop:gap-x-8
+            laptop:flex-row laptop:gap-x-8
           `}
         >
           <DecadeDistribution values={stats.decadeDistribution} />
@@ -92,7 +92,7 @@ export function YearStats({
         <div
           className={`
             mx-auto flex w-full flex-col gap-y-8
-            desktop:max-w-[calc(66%+24px)]
+            laptop:max-w-[calc(66%+24px)]
           `}
         >
           <MostWatchedDirectors values={mostWatchedDirectors} />

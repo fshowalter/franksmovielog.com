@@ -42,7 +42,7 @@ export function ReviewListItem({ value }: { value: ReviewListItemValue }) {
         className={`
           flex grow flex-col items-start gap-y-2
           tablet:w-full
-          desktop:pr-4
+          laptop:pr-4
         `}
       >
         <ListItemTitle

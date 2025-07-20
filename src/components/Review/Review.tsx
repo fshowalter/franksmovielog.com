@@ -84,7 +84,7 @@ export function Review({
         <h1
           className={`
             text-center text-4xl
-            desktop:text-7xl desktop:tracking-[-1px]
+            laptop:text-7xl laptop:tracking-[-1px]
           `}
           data-pagefind-meta="title"
           data-pagefind-weight="10"
@@ -127,7 +127,7 @@ export function Review({
       <div
         className={`
           flex flex-col items-center gap-16 px-container pb-20
-          desktop:gap-20 desktop:pb-32
+          laptop:gap-20 laptop:pb-32
         `}
       >
         <Content content={value.content} />
@@ -149,23 +149,22 @@ export function Review({
         className={`
           flex w-full flex-col items-center gap-y-12 bg-subtle pt-16 pb-32
           tablet:pt-8
-          desktop:gap-y-24
+          laptop:gap-y-24
         `}
         data-pagefind-ignore
       >
         <MoreFromCastAndCrew values={moreFromCastAndCrew} />
         <MoreInCollections values={moreInCollections} />
         <MoreReviews values={moreReviews}>
-          <SubHeading as="h2">
+          <SubHeading
+            as="h2"
+            className={`
+              origin-left transform-gpu text-accent transition-transform
+              has-[a:hover]:scale-110
+            `}
+          >
             More{" "}
-            <a
-              className={`
-                inline-block origin-left transform-gpu text-accent
-                transition-transform
-                hover:scale-105
-              `}
-              href={`/reviews/`}
-            >
+            <a className={`text-accent`} href={`/reviews/`}>
               Reviews
             </a>
           </SubHeading>

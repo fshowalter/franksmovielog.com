@@ -35,7 +35,7 @@ export function MoreReviews({
       <div
         className={`
           relative mx-auto w-full max-w-(--breakpoint-max) px-container
-          desktop:px-20
+          laptop:px-20
         `}
       >
         {children}
@@ -43,7 +43,7 @@ export function MoreReviews({
           className={`
             flex w-full flex-col gap-[3%] gap-y-[6vw]
             tablet:flex-row tablet:flex-wrap tablet:justify-between
-            desktop:flex-nowrap
+            laptop:flex-nowrap
           `}
         >
           {values.map((value) => {
@@ -85,7 +85,7 @@ function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
         <div
           className={`
             flex flex-col px-6 pt-6 pb-6
-            desktop:pr-[14%] desktop:pl-[12%]
+            laptop:pr-[14%] laptop:pl-[12%]
           `}
         >
           <a
@@ -110,7 +110,7 @@ function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
           <div
             className={`
               font-sans text-xxs leading-4 font-light tracking-wider text-subtle
-              desktop:tracking-wide
+              laptop:tracking-wide
             `}
           >
             {value.genres.map((genre, index) => {
