@@ -156,16 +156,15 @@ export function Review({
         <MoreFromCastAndCrew values={moreFromCastAndCrew} />
         <MoreInCollections values={moreInCollections} />
         <MoreReviews values={moreReviews}>
-          <SubHeading
-            as="h2"
-            className={`
-              origin-left transform-gpu text-accent transition-transform
-              has-[a:hover]:scale-110
-            `}
-          >
-            More{" "}
-            <a className={`text-accent`} href={`/reviews/`}>
-              Reviews
+          <SubHeading as="h2">
+            <a
+              className={`
+                inline-block transform-gpu transition-transform
+                hover:scale-110
+              `}
+              href={`/reviews/`}
+            >
+              More <span className={`text-accent`}>Reviews</span>
             </a>
           </SubHeading>
         </MoreReviews>
@@ -220,7 +219,7 @@ function Meta({
         <span>|</span>{" "}
         <a
           className={`
-            inline-block origin-left transform-gpu text-accent
+            inline-block origin-bottom-left transform-gpu text-accent
             transition-transform
             hover:scale-105
           `}

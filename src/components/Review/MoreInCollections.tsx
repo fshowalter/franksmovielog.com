@@ -20,16 +20,15 @@ type Props = {
 export function MoreInCollections({ values }: Props) {
   return values.map((value) => (
     <MoreReviews key={value.slug} values={value.titles}>
-      <SubHeading
-        as="h2"
-        className={`
-          origin-left transform-gpu text-accent transition-transform
-          has-[a:hover]:scale-110
-        `}
-      >
-        More{" "}
-        <a className={`text-accent`} href={`/collections/${value.slug}/`}>
-          {value.name}
+      <SubHeading as="h2">
+        <a
+          className={`
+            inline-block transform-gpu transition-transform
+            hover:scale-110
+          `}
+          href={`/collections/${value.slug}/`}
+        >
+          More <span className="text-accent">{value.name}</span>
         </a>
       </SubHeading>
     </MoreReviews>

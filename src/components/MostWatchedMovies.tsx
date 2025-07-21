@@ -139,17 +139,12 @@ function ListItem({
           year={value.year}
         />
       </div>
-      <div
-        className={`
-          grow
-          tablet:w-full
-        `}
-      >
+      <div className={`tablet:w-full`}>
         <Title slug={value.slug} title={value.title} year={value.year} />
         <div
           className={`
             flex justify-start font-sans text-xs font-light text-subtle
-            tablet:justify-center
+            tablet:mt-1 tablet:justify-center
           `}
         >
           {value.count.toLocaleString()} times
@@ -171,7 +166,7 @@ function Title({
   const yearBox = (
     <span
       className={`
-        text-xxs font-light text-subtle
+        text-xxs leading-none font-light text-subtle
         tablet:text-xs
       `}
     >
@@ -187,7 +182,7 @@ function Title({
           decoration-accent
           after:absolute after:top-0 after:left-0 after:z-10 after:size-full
           after:opacity-0
-          tablet:text-center
+          tablet:text-center tablet:text-sm
         `}
         href={`/reviews/${slug}/`}
       >
