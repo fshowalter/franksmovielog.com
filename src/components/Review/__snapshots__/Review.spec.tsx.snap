@@ -533,7 +533,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                
               <a
                 class="
-            inline-block origin-left transform-gpu text-accent
+            inline-block origin-bottom-left transform-gpu text-accent
             transition-transform
             hover:scale-105
           "
@@ -1009,17 +1009,21 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
                 class="
           py-10 font-sans text-xs font-semibold tracking-wide text-subtle
           uppercase
-         
-              origin-left transform-gpu text-accent transition-transform
-              has-[a:hover]:scale-110
-            "
+        "
               >
-                More 
                 <a
-                  class="text-accent"
+                  class="
+                inline-block transform-gpu transition-transform
+                hover:scale-110
+              "
                   href="/reviews/"
                 >
-                  Reviews
+                  More 
+                  <span
+                    class="text-accent"
+                  >
+                    Reviews
+                  </span>
                 </a>
               </h2>
               <ul
@@ -2389,7 +2393,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                
               <a
                 class="
-            inline-block origin-left transform-gpu text-accent
+            inline-block origin-bottom-left transform-gpu text-accent
             transition-transform
             hover:scale-105
           "
@@ -2776,17 +2780,21 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 class="
           py-10 font-sans text-xs font-semibold tracking-wide text-subtle
           uppercase
-         
-          origin-left transform-gpu text-accent transition-transform
-          has-[a:hover]:scale-110
         "
               >
-                More written by 
                 <a
-                  class="text-accent"
+                  class="
+            inline-block transform-gpu transition-transform
+            hover:scale-110
+          "
                   href="/cast-and-crew/clive-barker/"
                 >
-                  Clive Barker
+                  More written by 
+                  <span
+                    class="text-accent"
+                  >
+                    Clive Barker
+                  </span>
                 </a>
               </h2>
               <ul
@@ -3190,17 +3198,21 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
                 class="
           py-10 font-sans text-xs font-semibold tracking-wide text-subtle
           uppercase
-         
-              origin-left transform-gpu text-accent transition-transform
-              has-[a:hover]:scale-110
-            "
+        "
               >
-                More 
                 <a
-                  class="text-accent"
+                  class="
+                inline-block transform-gpu transition-transform
+                hover:scale-110
+              "
                   href="/reviews/"
                 >
-                  Reviews
+                  More 
+                  <span
+                    class="text-accent"
+                  >
+                    Reviews
+                  </span>
                 </a>
               </h2>
               <ul
@@ -4560,7 +4572,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                
               <a
                 class="
-            inline-block origin-left transform-gpu text-accent
+            inline-block origin-bottom-left transform-gpu text-accent
             transition-transform
             hover:scale-105
           "
@@ -4993,17 +5005,21 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 class="
           py-10 font-sans text-xs font-semibold tracking-wide text-subtle
           uppercase
-         
-          origin-left transform-gpu text-accent transition-transform
-          has-[a:hover]:scale-110
         "
               >
-                More with 
                 <a
-                  class="text-accent"
+                  class="
+            inline-block transform-gpu transition-transform
+            hover:scale-110
+          "
                   href="/cast-and-crew/peter-cushing/"
                 >
-                  Peter Cushing
+                  More with 
+                  <span
+                    class="text-accent"
+                  >
+                    Peter Cushing
+                  </span>
                 </a>
               </h2>
               <ul
@@ -5393,17 +5409,21 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 class="
           py-10 font-sans text-xs font-semibold tracking-wide text-subtle
           uppercase
-         
-          origin-left transform-gpu text-accent transition-transform
-          has-[a:hover]:scale-110
         "
               >
-                More with 
                 <a
-                  class="text-accent"
+                  class="
+            inline-block transform-gpu transition-transform
+            hover:scale-110
+          "
                   href="/cast-and-crew/christopher-lee/"
                 >
-                  Christopher Lee
+                  More with 
+                  <span
+                    class="text-accent"
+                  >
+                    Christopher Lee
+                  </span>
                 </a>
               </h2>
               <ul
@@ -5801,17 +5821,21 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
                 class="
           py-10 font-sans text-xs font-semibold tracking-wide text-subtle
           uppercase
-         
-              origin-left transform-gpu text-accent transition-transform
-              has-[a:hover]:scale-110
-            "
+        "
               >
-                More 
                 <a
-                  class="text-accent"
+                  class="
+                inline-block transform-gpu transition-transform
+                hover:scale-110
+              "
                   href="/reviews/"
                 >
-                  Reviews
+                  More 
+                  <span
+                    class="text-accent"
+                  >
+                    Reviews
+                  </span>
                 </a>
               </h2>
               <ul
@@ -7160,7 +7184,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                
               <a
                 class="
-            inline-block origin-left transform-gpu text-accent
+            inline-block origin-bottom-left transform-gpu text-accent
             transition-transform
             hover:scale-105
           "
@@ -7733,17 +7757,21 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
                 class="
           py-10 font-sans text-xs font-semibold tracking-wide text-subtle
           uppercase
-         
-              origin-left transform-gpu text-accent transition-transform
-              has-[a:hover]:scale-110
-            "
+        "
               >
-                More 
                 <a
-                  class="text-accent"
+                  class="
+                inline-block transform-gpu transition-transform
+                hover:scale-110
+              "
                   href="/reviews/"
                 >
-                  Reviews
+                  More 
+                  <span
+                    class="text-accent"
+                  >
+                    Reviews
+                  </span>
                 </a>
               </h2>
               <ul
@@ -9088,7 +9116,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                
               <a
                 class="
-            inline-block origin-left transform-gpu text-accent
+            inline-block origin-bottom-left transform-gpu text-accent
             transition-transform
             hover:scale-105
           "
@@ -9586,17 +9614,21 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 class="
           py-10 font-sans text-xs font-semibold tracking-wide text-subtle
           uppercase
-         
-          origin-left transform-gpu text-accent transition-transform
-          has-[a:hover]:scale-110
         "
               >
-                More directed by 
                 <a
-                  class="text-accent"
+                  class="
+            inline-block transform-gpu transition-transform
+            hover:scale-110
+          "
                   href="/cast-and-crew/howard-hawks/"
                 >
-                  Howard Hawks
+                  More directed by 
+                  <span
+                    class="text-accent"
+                  >
+                    Howard Hawks
+                  </span>
                 </a>
               </h2>
               <ul
@@ -10002,17 +10034,21 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 class="
           py-10 font-sans text-xs font-semibold tracking-wide text-subtle
           uppercase
-         
-          origin-left transform-gpu text-accent transition-transform
-          has-[a:hover]:scale-110
         "
               >
-                More with 
                 <a
-                  class="text-accent"
+                  class="
+            inline-block transform-gpu transition-transform
+            hover:scale-110
+          "
                   href="/cast-and-crew/ward-bond/"
                 >
-                  Ward Bond
+                  More with 
+                  <span
+                    class="text-accent"
+                  >
+                    Ward Bond
+                  </span>
                 </a>
               </h2>
               <ul
@@ -10409,17 +10445,21 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 class="
           py-10 font-sans text-xs font-semibold tracking-wide text-subtle
           uppercase
-         
-          origin-left transform-gpu text-accent transition-transform
-          has-[a:hover]:scale-110
         "
               >
-                More with 
                 <a
-                  class="text-accent"
+                  class="
+            inline-block transform-gpu transition-transform
+            hover:scale-110
+          "
                   href="/cast-and-crew/john-wayne/"
                 >
-                  John Wayne
+                  More with 
+                  <span
+                    class="text-accent"
+                  >
+                    John Wayne
+                  </span>
                 </a>
               </h2>
               <ul
@@ -10828,17 +10868,21 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
                 class="
           py-10 font-sans text-xs font-semibold tracking-wide text-subtle
           uppercase
-         
-              origin-left transform-gpu text-accent transition-transform
-              has-[a:hover]:scale-110
-            "
+        "
               >
-                More 
                 <a
-                  class="text-accent"
+                  class="
+                inline-block transform-gpu transition-transform
+                hover:scale-110
+              "
                   href="/reviews/"
                 >
-                  Reviews
+                  More 
+                  <span
+                    class="text-accent"
+                  >
+                    Reviews
+                  </span>
                 </a>
               </h2>
               <ul
@@ -12202,7 +12246,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                
               <a
                 class="
-            inline-block origin-left transform-gpu text-accent
+            inline-block origin-bottom-left transform-gpu text-accent
             transition-transform
             hover:scale-105
           "
@@ -12621,17 +12665,21 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 class="
           py-10 font-sans text-xs font-semibold tracking-wide text-subtle
           uppercase
-         
-          origin-left transform-gpu text-accent transition-transform
-          has-[a:hover]:scale-110
         "
               >
-                More with 
                 <a
-                  class="text-accent"
+                  class="
+            inline-block transform-gpu transition-transform
+            hover:scale-110
+          "
                   href="/cast-and-crew/peter-cushing/"
                 >
-                  Peter Cushing
+                  More with 
+                  <span
+                    class="text-accent"
+                  >
+                    Peter Cushing
+                  </span>
                 </a>
               </h2>
               <ul
@@ -13033,17 +13081,21 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 class="
           py-10 font-sans text-xs font-semibold tracking-wide text-subtle
           uppercase
-         
-          origin-left transform-gpu text-accent transition-transform
-          has-[a:hover]:scale-110
         "
               >
-                More with 
                 <a
-                  class="text-accent"
+                  class="
+            inline-block transform-gpu transition-transform
+            hover:scale-110
+          "
                   href="/cast-and-crew/christopher-lee/"
                 >
-                  Christopher Lee
+                  More with 
+                  <span
+                    class="text-accent"
+                  >
+                    Christopher Lee
+                  </span>
                 </a>
               </h2>
               <ul
@@ -13446,17 +13498,21 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 class="
           py-10 font-sans text-xs font-semibold tracking-wide text-subtle
           uppercase
-         
-          origin-left transform-gpu text-accent transition-transform
-          has-[a:hover]:scale-110
         "
               >
-                More 
                 <a
-                  class="text-accent"
+                  class="
+            inline-block transform-gpu transition-transform
+            hover:scale-110
+          "
                   href="/collections/hammer-films/"
                 >
-                  Hammer Films
+                  More 
+                  <span
+                    class="text-accent"
+                  >
+                    Hammer Films
+                  </span>
                 </a>
               </h2>
               <ul
@@ -13869,17 +13925,21 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 class="
           py-10 font-sans text-xs font-semibold tracking-wide text-subtle
           uppercase
-         
-              origin-left transform-gpu text-accent transition-transform
-              has-[a:hover]:scale-110
-            "
+        "
               >
-                More 
                 <a
-                  class="text-accent"
+                  class="
+                inline-block transform-gpu transition-transform
+                hover:scale-110
+              "
                   href="/reviews/"
                 >
-                  Reviews
+                  More 
+                  <span
+                    class="text-accent"
+                  >
+                    Reviews
+                  </span>
                 </a>
               </h2>
               <ul
