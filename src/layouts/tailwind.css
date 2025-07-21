@@ -237,8 +237,7 @@
 @layer components {
   .rendered-markdown {
     a {
-      border-bottom: solid 1px var(--bg-canvas);
-      padding-right: 1px;
+      text-decoration: underline;
       transition: all 150ms ease-out;
     }
 
@@ -257,14 +256,14 @@
     }
 
     a:hover {
-      background-color: var(--bg-accent);
-      border-bottom-color: var(--bg-accent);
-      color: var(--fg-inverse);
+      color: var(--fg-accent);
       transition: all 80ms ease-in;
     }
 
     sup a:hover {
+      background-color: var(--bg-accent);
       border-color: var(--fg-accent);
+      color: var(--fg-inverse);
     }
 
     sup {

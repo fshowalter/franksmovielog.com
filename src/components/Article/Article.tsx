@@ -28,6 +28,7 @@ export function Article({
     <Layout>
       <article>
         <Backdrop
+          centerText={true}
           deck={deck}
           imageProps={backdropImageProps}
           size="large"

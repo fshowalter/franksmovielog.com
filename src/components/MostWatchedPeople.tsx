@@ -67,9 +67,10 @@ export function MostWatchedPeople({
               >
                 <div
                   className={`
-                    origin-left transform-gpu font-sans text-sm text-muted
+                    origin-left transform-gpu font-sans text-xs text-muted
                     transition-transform
                     has-[a:hover]:scale-110
+                    laptop:text-sm
                   `}
                 >
                   <Name value={value} />

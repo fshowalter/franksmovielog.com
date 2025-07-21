@@ -99,12 +99,19 @@ export function AlltimeStats({
         </div>
         <div
           className={`
-            mx-auto flex w-full flex-col gap-y-8
-            laptop:max-w-[calc(66%+24px)]
+            flex flex-col items-start gap-y-8
+            laptop:flex-row laptop:gap-x-8
           `}
         >
           <MediaDistribution values={stats.mediaDistribution} />
           <VenueDistribution values={stats.venueDistribution} />
+        </div>
+        <div
+          className={`
+            mx-auto flex w-full flex-col gap-y-8
+            laptop:max-w-[calc(66%+24px)]
+          `}
+        >
           <MostWatchedDirectors values={mostWatchedDirectors} />
           <MostWatchedPerformers values={mostWatchedPerformers} />
           <MostWatchedWriters values={mostWatchedWriters} />
