@@ -1888,34 +1888,28 @@ exports[`Home > matches snapshot 1`] = `
                   New visitors might want to start by reading about 
                   <a
                     class="
-        transform-gpu text-inverse-subtle underline decoration-inverse-subtle
-        decoration-dashed underline-offset-4 transition-colors
-        hover:text-inverse hover:decoration-inverse hover:duration-75
-        hover:ease-in
+        underline
+        hover:text-inverse
       "
                     href="/how-i-grade/"
                   >
                     how I grade
                   </a>
-                   films. After that, feel free to browse my 
+                   films. After that, feel free to browse 
                   <a
                     class="
-        transform-gpu text-inverse-subtle underline decoration-inverse-subtle
-        decoration-dashed underline-offset-4 transition-colors
-        hover:text-inverse hover:decoration-inverse hover:duration-75
-        hover:ease-in
+        underline
+        hover:text-inverse
       "
                     href="/reviews/"
                   >
-                    reviews
+                    my reviews
                   </a>
                   . If you're looking for something that flew under the radar but deserves your attention, I recommend my 
                   <a
                     class="
-        transform-gpu text-inverse-subtle underline decoration-inverse-subtle
-        decoration-dashed underline-offset-4 transition-colors
-        hover:text-inverse hover:decoration-inverse hover:duration-75
-        hover:ease-in
+        underline
+        hover:text-inverse
       "
                     href="/reviews/underseen/"
                   >
@@ -1924,10 +1918,8 @@ exports[`Home > matches snapshot 1`] = `
                    section. Or, for those moments when you want to feel righteously contrarian, I maintain an list of 
                   <a
                     class="
-        transform-gpu text-inverse-subtle underline decoration-inverse-subtle
-        decoration-dashed underline-offset-4 transition-colors
-        hover:text-inverse hover:decoration-inverse hover:duration-75
-        hover:ease-in
+        underline
+        hover:text-inverse
       "
                     href="/reviews/overrated/"
                   >
@@ -1941,10 +1933,8 @@ exports[`Home > matches snapshot 1`] = `
                   I also keep a 
                   <a
                     class="
-        transform-gpu text-inverse-subtle underline decoration-inverse-subtle
-        decoration-dashed underline-offset-4 transition-colors
-        hover:text-inverse hover:decoration-inverse hover:duration-75
-        hover:ease-in
+        underline
+        hover:text-inverse
       "
                     href="/viewings/"
                   >
@@ -1953,10 +1943,8 @@ exports[`Home > matches snapshot 1`] = `
                    that tracks everything I watch, whether it gets a full review or not, complete with 
                   <a
                     class="
-        transform-gpu text-inverse-subtle underline decoration-inverse-subtle
-        decoration-dashed underline-offset-4 transition-colors
-        hover:text-inverse hover:decoration-inverse hover:duration-75
-        hover:ease-in
+        underline
+        hover:text-inverse
       "
                     href="/viewings/stats/"
                   >
@@ -1967,17 +1955,15 @@ exports[`Home > matches snapshot 1`] = `
                 <p
                   class="mb-6 text-pretty"
                 >
-                  And finally, if you're curious about what's on my critical horizon, my 
+                  And finally, if you're curious about what's on my critical horizon, 
                   <a
                     class="
-        transform-gpu text-inverse-subtle underline decoration-inverse-subtle
-        decoration-dashed underline-offset-4 transition-colors
-        hover:text-inverse hover:decoration-inverse hover:duration-75
-        hover:ease-in
+        underline
+        hover:text-inverse
       "
                     href="/watchlist/"
                   >
-                    watchlist
+                    my watchlist
                   </a>
                    details the films I plan to review and why they've caught my interest.
                 </p>
@@ -2208,10 +2194,7 @@ exports[`Home > matches snapshot 1`] = `
         >
           All reviews by Frank Showalter. All images used in accordance with the 
           <a
-            class="
-            text-inherit underline decoration-dashed underline-offset-4
-            hover:bg-default hover:text-default
-          "
+            class="text-inherit underline"
             href="http://www.copyright.gov/title17/92chap1.html#107"
             rel="nofollow"
           >
