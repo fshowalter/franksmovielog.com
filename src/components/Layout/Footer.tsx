@@ -79,10 +79,10 @@ export function Footer(): JSX.Element {
               <p className="mb-6 text-pretty">
                 New visitors might want to start by reading about{" "}
                 <FooterLink href="/how-i-grade/" text="how I grade" /> films.
-                After that, feel free to browse my{" "}
-                <FooterLink href="/reviews/" text="reviews" />. If you&apos;re
-                looking for something that flew under the radar but deserves
-                your attention, I recommend my{" "}
+                After that, feel free to browse{" "}
+                <FooterLink href="/reviews/" text="my reviews" />. If
+                you&apos;re looking for something that flew under the radar but
+                deserves your attention, I recommend my{" "}
                 <FooterLink href="/reviews/underseen/" text="underseen gems" />{" "}
                 section. Or, for those moments when you want to feel righteously
                 contrarian, I maintain an list of{" "}
@@ -105,9 +105,10 @@ export function Footer(): JSX.Element {
 
               <p className="mb-6 text-pretty">
                 And finally, if you&apos;re curious about what&apos;s on my
-                critical horizon, my{" "}
-                <FooterLink href="/watchlist/" text="watchlist" /> details the
-                films I plan to review and why they&apos;ve caught my interest.
+                critical horizon,{" "}
+                <FooterLink href="/watchlist/" text="my watchlist" /> details
+                the films I plan to review and why they&apos;ve caught my
+                interest.
               </p>
 
               <p className="text-pretty">
@@ -161,10 +162,8 @@ function FooterLink({ href, text }: { href: string; text: string }) {
   return (
     <a
       className={`
-        transform-gpu text-inverse-subtle underline decoration-inverse-subtle
-        decoration-dashed underline-offset-4 transition-colors
-        hover:text-inverse hover:decoration-inverse hover:duration-75
-        hover:ease-in
+        underline
+        hover:text-inverse
       `}
       href={href}
     >
