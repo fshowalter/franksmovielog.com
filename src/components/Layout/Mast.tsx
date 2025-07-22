@@ -25,7 +25,7 @@ export function Mast({
       style={{
         backgroundImage: addGradient
           ? "linear-gradient(to bottom, rgba(0,0,0,.85), transparent 95%)"
-          : undefined,
+          : "",
         color: hasBackdrop ? "#fff" : "var(--fg-default)",
         position: hasBackdrop ? "absolute" : "static",
       }}
@@ -160,7 +160,7 @@ function NavListItem({
         className={`relative text-inherit transition-colors`}
         href={value.target}
         style={{
-          textShadow: hasBackdrop ? "1px 1px 2px black" : undefined,
+          textShadow: hasBackdrop ? "1px 1px 2px black" : "",
         }}
       >
         {value.text}
