@@ -1,12 +1,12 @@
 {
   "year": "2025",
-  "newTitleCount": 47,
-  "viewingCount": 82,
-  "titleCount": 80,
+  "newTitleCount": 48,
+  "viewingCount": 83,
+  "titleCount": 81,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 50
+      "count": 51
     },
     {
       "name": "4k UHD Blu-ray",
@@ -58,7 +58,7 @@
     },
     {
       "name": "1970s",
-      "count": 18
+      "count": 19
     },
     {
       "name": "1980s",
@@ -229,6 +229,31 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1968"
+        }
+      ]
+    },
+    {
+      "name": "William Friedkin",
+      "count": 2,
+      "slug": "william-friedkin",
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-02-18",
+          "slug": null,
+          "title": "The Exorcist",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1973"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-07-14",
+          "slug": "the-french-connection-1971",
+          "title": "The French Connection",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1971"
         }
       ]
     },
