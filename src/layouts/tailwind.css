@@ -238,12 +238,14 @@
   .rendered-markdown {
     a {
       text-decoration: underline;
+      text-decoration-thickness: 1px;
       transition: all 150ms ease-out;
     }
 
     sup a,
     .data-footnote-backref {
       color: var(--fg-accent);
+      text-decoration-thickness: auto;
     }
 
     sup a {
