@@ -14,14 +14,14 @@ export function ListItem({
   return (
     <li
       className={`
-        ${background}
+        ${background ?? ""}
         ${itemsCenter ? "items-center" : ""}
         ${extraVerticalPadding ? `tablet:py-6` : ""}
-        relative mb-1 flex max-w-(--breakpoint-desktop) flex-row gap-x-4
-        px-container py-4
+        mb-1 flex max-w-(--breakpoint-desktop) flex-row gap-x-4 px-container
+        py-4
         tablet:gap-x-6 tablet:px-4
         laptop:px-6
-        ${className || ""}
+        ${className ?? ""}
       `}
     >
       {children}
