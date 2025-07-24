@@ -1,8 +1,8 @@
 {
   "year": "2025",
-  "newTitleCount": 48,
-  "viewingCount": 83,
-  "titleCount": 81,
+  "newTitleCount": 49,
+  "viewingCount": 85,
+  "titleCount": 82,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -36,7 +36,7 @@
   "venueDistribution": [
     {
       "name": "Alamo Drafthouse Cinema - One Loudoun",
-      "count": 4
+      "count": 6
     }
   ],
   "decadeDistribution": [
@@ -78,7 +78,7 @@
     },
     {
       "name": "2020s",
-      "count": 8
+      "count": 10
     }
   ],
   "mostWatchedTitles": [
@@ -95,6 +95,13 @@
       "year": "2009",
       "count": 2,
       "slug": "the-collector-2009"
+    },
+    {
+      "title": "Superman",
+      "imdbId": "tt5950044",
+      "year": "2025",
+      "count": 2,
+      "slug": "superman-2025"
     }
   ],
   "mostWatchedDirectors": [
@@ -306,6 +313,31 @@
           "year": "1966"
         }
       ]
+    },
+    {
+      "name": "James Gunn",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-07-16",
+          "slug": "superman-2025",
+          "title": "Superman",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "2025"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-07-20",
+          "slug": "superman-2025",
+          "title": "Superman",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "2025"
+        }
+      ]
     }
   ],
   "mostWatchedPerformers": [
@@ -480,6 +512,40 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1970"
+        }
+      ]
+    },
+    {
+      "name": "Nicholas Hoult",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1,
+          "date": "2025-01-02",
+          "slug": null,
+          "title": "Nosferatu",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "2024"
+        },
+        {
+          "sequence": 2,
+          "date": "2025-07-16",
+          "slug": "superman-2025",
+          "title": "Superman",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "2025"
+        },
+        {
+          "sequence": 3,
+          "date": "2025-07-20",
+          "slug": "superman-2025",
+          "title": "Superman",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "2025"
         }
       ]
     },
@@ -675,40 +741,6 @@
           "medium": "Blu-ray",
           "venue": null,
           "year": "1977"
-        },
-        {
-          "sequence": 3,
-          "date": "2025-05-31",
-          "slug": "soul-of-the-sword-1978",
-          "title": "Soul of the Sword",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1978"
-        }
-      ]
-    },
-    {
-      "name": "Wah Yuen",
-      "count": 3,
-      "slug": null,
-      "viewings": [
-        {
-          "sequence": 1,
-          "date": "2025-02-19",
-          "slug": "the-web-of-death-1976",
-          "title": "The Web of Death",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "1976"
-        },
-        {
-          "sequence": 2,
-          "date": "2025-03-14",
-          "slug": null,
-          "title": "Mr. Vampire",
-          "medium": "Criterion Channel",
-          "venue": null,
-          "year": "1985"
         },
         {
           "sequence": 3,
