@@ -9,12 +9,25 @@ export function StatsCallout({
   return (
     <div
       className={`
-        flex size-36 flex-col justify-center rounded-full bg-stripe text-center
+        flex size-30 flex-col justify-center rounded-full bg-stripe text-center
         text-default shadow-all
+        tablet:size-36
       `}
     >
-      <div className="text-[2rem] leading-8">{value.toLocaleString()}</div>{" "}
-      <div className="font-sans text-sm leading-6 font-light text-subtle">
+      <div
+        className={`
+          text-[1.75rem] leading-8
+          tablet:text-[2rem]
+        `}
+      >
+        {value.toLocaleString()}
+      </div>{" "}
+      <div
+        className={`
+          font-sans text-xxs leading-6 font-light text-subtle
+          tablet:text-sm
+        `}
+      >
         {label}
       </div>
     </div>
