@@ -9,7 +9,6 @@ import type { ListItemValue } from "./CastAndCrew";
 export enum Actions {
   FILTER_CREDIT_KIND = "FILTER_CREDIT_KIND",
   FILTER_NAME = "FILTER_NAME",
-  SHOW_MORE = "SHOW_MORE",
   SORT = "SORT",
 }
 
@@ -61,11 +60,7 @@ function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
 
 const SHOW_COUNT_DEFAULT = 100;
 
-export type ActionType =
-  | FilterCreditKindAction
-  | FilterNameAction
-  | ShowMoreAction
-  | SortAction;
+export type ActionType = FilterCreditKindAction | FilterNameAction | SortAction;
 
 type FilterCreditKindAction = {
   type: Actions.FILTER_CREDIT_KIND;
@@ -75,10 +70,6 @@ type FilterCreditKindAction = {
 type FilterNameAction = {
   type: Actions.FILTER_NAME;
   value: string;
-};
-
-type ShowMoreAction = {
-  type: Actions.SHOW_MORE;
 };
 
 type SortAction = {
@@ -124,20 +115,6 @@ export function reducer(state: State, action: ActionType): State {
       return updateFilter(state, "name", (value) => {
         return regex.test(value.name);
       });
-    }
-    case Actions.SHOW_MORE: {
-      const showCount = state.showCount + SHOW_COUNT_DEFAULT;
-
-      groupedValues = groupValues(
-        state.filteredValues.slice(0, showCount),
-        state.sortValue,
-      );
-
-      return {
-        ...state,
-        groupedValues,
-        showCount,
-      };
     }
     case Actions.SORT: {
       filteredValues = sortValues(state.filteredValues, action.value);

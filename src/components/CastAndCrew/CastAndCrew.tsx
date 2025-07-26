@@ -13,7 +13,7 @@ import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 
 import type { Sort } from "./CastAndCrew.reducer";
 
-import { Actions, initState, reducer } from "./CastAndCrew.reducer";
+import { initState, reducer } from "./CastAndCrew.reducer";
 import { Filters } from "./Filters";
 
 export type ListItemValue = Pick<
@@ -60,7 +60,7 @@ export function CastAndCrew({
         <GroupedList
           data-testid="list"
           groupedValues={state.groupedValues}
-          onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
+          groupItemClassName={`scroll-mt-[52px]`}
           totalCount={state.filteredValues.length}
           visibleCount={state.showCount}
         >
@@ -69,8 +69,80 @@ export function CastAndCrew({
           }}
         </GroupedList>
       }
+      subNav={<AlphabetSubNav groupedValues={state.groupedValues} />}
       totalCount={state.filteredValues.length}
     />
+  );
+}
+
+function AlphabetSubNav({
+  groupedValues,
+}: {
+  groupedValues: Map<string, ListItemValue[]>;
+}) {
+  return (
+    <nav className={`sticky top-0 z-1000 bg-footer`}>
+      <ul
+        className={`
+          mx-auto flex scrollbar-hidden max-w-(--breakpoint-desktop) snap-x
+          overflow-x-auto px-container font-sans text-sm font-normal
+          tracking-wide
+          laptop:justify-center
+        `}
+      >
+        {[..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"].map((letter) => {
+          return (
+            <LetterLink
+              key={letter}
+              letter={letter}
+              linkFunc={
+                groupedValues.has(letter)
+                  ? (letter: string) => `#${letter}`
+                  : undefined
+              }
+            />
+          );
+        })}
+      </ul>
+    </nav>
+  );
+}
+
+function LetterLink({
+  letter,
+  linkFunc,
+}: {
+  letter: string;
+  linkFunc?: (letter: string) => string;
+}) {
+  return (
+    <li
+      className={`
+        snap-start text-center
+        ${linkFunc ? "text-inverse" : `text-inverse-subtle`}
+      `}
+    >
+      {linkFunc ? (
+        <a
+          className={`
+            block transform-gpu p-4 transition-all
+            hover:scale-105 hover:bg-accent hover:text-inverse
+          `}
+          href={linkFunc(letter)}
+        >
+          {letter}
+        </a>
+      ) : (
+        <div
+          className={`
+            p-4
+            laptop:py-4
+          `}
+        >
+          {letter}
+        </div>
+      )}
+    </li>
   );
 }
 
