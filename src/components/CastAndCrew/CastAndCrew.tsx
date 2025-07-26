@@ -69,7 +69,12 @@ export function CastAndCrew({
           }}
         </GroupedList>
       }
-      subNav={<AlphabetSubNav groupedValues={state.groupedValues} />}
+      subNav={
+        <AlphabetSubNav
+          groupedValues={state.groupedValues}
+          sortValue={state.sortValue}
+        />
+      }
       totalCount={state.filteredValues.length}
     />
   );
@@ -77,9 +82,20 @@ export function CastAndCrew({
 
 function AlphabetSubNav({
   groupedValues,
+  sortValue,
 }: {
   groupedValues: Map<string, ListItemValue[]>;
+  sortValue: Sort;
 }) {
+  if (!sortValue.startsWith("name-")) {
+    return;
+  }
+
+  const letters = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+  if (sortValue == "name-desc") {
+    letters.reverse();
+  }
+
   return (
     <nav className={`sticky top-0 z-1000 bg-footer`}>
       <ul
@@ -90,7 +106,7 @@ function AlphabetSubNav({
           laptop:justify-center
         `}
       >
-        {[..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"].map((letter) => {
+        {letters.map((letter) => {
           return (
             <LetterLink
               key={letter}
