@@ -94,6 +94,7 @@ export function Viewings({
           data-testid="list"
           groupedValues={state.groupedValues}
           onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
+          stickyGroupHeaders={true}
           totalCount={state.filteredValues.length}
           visibleCount={state.showCount}
         >

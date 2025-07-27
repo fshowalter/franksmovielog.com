@@ -8,6 +8,7 @@ export function GroupedList<T>({
   groupedValues,
   groupItemClassName,
   onShowMore,
+  stickyGroupHeaders = false,
   totalCount,
   visibleCount,
   ...rest
@@ -17,12 +18,13 @@ export function GroupedList<T>({
   groupedValues: Map<string, Iterable<T>>;
   groupItemClassName?: string;
   onShowMore?: () => void;
+  stickyGroupHeaders?: boolean;
   totalCount: number;
   visibleCount: number;
 }): JSX.Element {
   return (
     <>
-      <ol className={className} {...rest}>
+      <ol className={className ?? ""} {...rest}>
         {[...groupedValues].map((groupedValue, index) => {
           const [group, groupValues] = groupedValue;
 
@@ -31,6 +33,7 @@ export function GroupedList<T>({
               className={groupItemClassName ?? groupItemClassName}
               groupText={group}
               key={group}
+              stickyHeader={stickyGroupHeaders}
               zIndex={index + 1}
             >
               <ol>{[...groupValues].map((value) => children(value))}</ol>
@@ -53,27 +56,35 @@ function GroupingListItem({
   children,
   className,
   groupText,
+  stickyHeader,
   zIndex,
 }: {
   children: React.ReactNode;
   className?: string;
   groupText: string;
+  stickyHeader: boolean;
   zIndex: number;
 }) {
   return (
     <li
       className={`
         block
-        ${className}
+        ${className ?? ""}
       `}
       id={groupText}
     >
-      <div className="pt-0 text-md" style={{ zIndex: zIndex }}>
+      <div
+        className={`
+          pt-0 text-md
+          ${stickyHeader ? "sticky top-0" : ""}
+        `}
+        style={{ zIndex: zIndex }}
+      >
         <div
           className={`
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           `}
         >
           {groupText}
