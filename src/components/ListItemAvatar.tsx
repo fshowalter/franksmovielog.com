@@ -32,7 +32,8 @@ export function ListItemAvatar({
     <div
       className={ccn(
         `
-          w-16 safari-border-radius-fix overflow-hidden rounded-full shadow-all
+          w-16 safari-border-radius-fix overflow-hidden rounded-full
+          drop-shadow-md
           tablet:w-20
         `,
         className,
