@@ -184,7 +184,12 @@ function MemberListItem({ value }: { value: ListItemValue }): JSX.Element {
         <ListItemAvatar imageProps={value.avatarImageProps} name={value.name} />
       </div>
       <MemberName value={value} />
-      <div className="ml-auto font-sans text-xs text-nowrap text-subtle">
+      <div
+        className={`
+          ml-auto font-sans text-xs text-nowrap text-subtle
+          laptop:text-sm
+        `}
+      >
         {value.reviewCount}
       </div>
     </ListItem>
