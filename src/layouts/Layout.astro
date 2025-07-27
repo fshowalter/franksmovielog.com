@@ -70,9 +70,9 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
     class={`
       h-full w-full bg-canvas text-default
       has-[#nav:checked]:fixed has-[#nav:checked]:overflow-y-scroll
-      data-search-modal-open:overflow-hidden data-search-modal-open:before:fixed
-      data-search-modal-open:before:inset-0 data-search-modal-open:before:z-50
-      data-search-modal-open:before:backdrop-blur-xs
+      data-modal-open:overflow-hidden data-modal-open:before:fixed
+      data-modal-open:before:inset-0 data-modal-open:before:z-50
+      data-modal-open:before:backdrop-blur-xs
     `}
   >
     <slot />
@@ -88,6 +88,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
         tablet:max-w-[min(100vw-64px,36rem)] tablet:rounded-xl
         laptop:min-h-0
       `}
+      data-search
     >
       <div class="contents" data-dialog-frame>
         <button

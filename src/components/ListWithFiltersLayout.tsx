@@ -1,5 +1,6 @@
 import { type JSX, type ReactNode, useState } from "react";
 
+import { Dialog } from "./Dialog";
 import { Layout } from "./Layout";
 
 type Props = {
@@ -79,6 +80,7 @@ export function ListWithFiltersLayout({
                 `}
               >
                 <ListHeader
+                  filters={filters}
                   filtersVisible={filtersVisible}
                   listHeaderButtons={listHeaderButtons}
                   onToggleFilters={() => toggleFilters(!filtersVisible)}
@@ -94,19 +96,22 @@ export function ListWithFiltersLayout({
               >
                 <div
                   className={`
-                    relative z-10 col-start-3 row-span-2 row-start-2 grid
-                    min-w-[320px] text-sm transition-[grid-template-rows]
-                    duration-300 ease-out
+                    z-10 col-start-3 row-span-2 min-w-[320px] text-sm
                     tablet-landscape:mr-12 tablet-landscape:block
                     tablet-landscape:py-24 tablet-landscape:pb-12
                     tablet-landscape:shadow-none
                     laptop:mr-20
                   `}
-                  style={{
-                    gridTemplateRows: filtersVisible ? "1fr" : "0fr",
-                  }}
                 >
-                  <div className="overflow-hidden">
+                  <Dialog
+                    className={`
+                      tablet-landscape:static tablet-landscape:mt-0
+                      tablet-landscape:block tablet-landscape:rounded-none
+                      tablet-landscape:border-none tablet-landscape:shadow-none
+                    `}
+                    onClose={() => toggleFilters(!filtersVisible)}
+                    open={filtersVisible}
+                  >
                     <div
                       className={`
                         w-full bg-subtle text-sm
@@ -138,12 +143,12 @@ export function ListWithFiltersLayout({
                         {filters}
                       </fieldset>
                     </div>
-                  </div>
+                  </Dialog>
                 </div>
 
                 <div
                   className={`
-                    col-start-1 row-start-2 pb-10
+                    col-start-1 row-span-2 row-start-1 pb-10
                     tablet-landscape:pl-12
                     laptop:pl-20
                   `}
@@ -160,11 +165,13 @@ export function ListWithFiltersLayout({
 }
 
 function ListHeader({
+  filters,
   filtersVisible,
   listHeaderButtons,
   onToggleFilters,
   totalCount,
 }: {
+  filters: React.ReactNode;
   filtersVisible: boolean;
   listHeaderButtons?: ReactNode;
   onToggleFilters: () => void;

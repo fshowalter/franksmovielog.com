@@ -16,7 +16,9 @@ const openBtn = document.querySelector<HTMLButtonElement>(
 const closeBtn = document.querySelector<HTMLButtonElement>(
   "button[data-close-modal]",
 )!;
-const dialog = document.querySelector("dialog")!;
+const dialog: HTMLDialogElement = document.querySelector(
+  "dialog[data-search]",
+)!;
 const dialogFrame = document.querySelector("div[data-dialog-frame]")!;
 
 // ios safari doesn't bubble click events unless a parent has a listener
@@ -47,7 +49,7 @@ const onClick = (event: MouseEvent) => {
 
 const openModal = (event?: MouseEvent) => {
   dialog.showModal();
-  document.body.toggleAttribute("data-search-modal-open", true);
+  document.body.toggleAttribute("data-modal-open", true);
   dialog.querySelector("input")?.focus();
   event?.stopPropagation();
   globalThis.addEventListener("click", onClick);
@@ -60,7 +62,7 @@ openBtn.disabled = false;
 closeBtn.addEventListener("click", closeModal);
 
 dialog.addEventListener("close", () => {
-  document.body.toggleAttribute("data-search-modal-open", false);
+  document.body.toggleAttribute("data-modal-open", false);
   globalThis.removeEventListener("click", onClick);
 });
 
