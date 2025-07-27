@@ -2,6 +2,7 @@
 
 exports[`CastAndCrew > can filter by name 1`] = `
 <ol
+  class=""
   data-testid="list"
 >
   <li
@@ -12,14 +13,17 @@ exports[`CastAndCrew > can filter by name 1`] = `
     id="J"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 1;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         J
@@ -106,6 +110,7 @@ exports[`CastAndCrew > can filter by name 1`] = `
 
 exports[`CastAndCrew > can filter directors 1`] = `
 <ol
+  class=""
   data-testid="list"
 >
   <li
@@ -116,14 +121,17 @@ exports[`CastAndCrew > can filter directors 1`] = `
     id="A"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 1;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         A
@@ -283,14 +291,17 @@ exports[`CastAndCrew > can filter directors 1`] = `
     id="B"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 2;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         B
@@ -519,14 +530,17 @@ exports[`CastAndCrew > can filter directors 1`] = `
     id="C"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 3;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         C
@@ -617,14 +631,17 @@ exports[`CastAndCrew > can filter directors 1`] = `
     id="D"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 4;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         D
@@ -924,14 +941,17 @@ exports[`CastAndCrew > can filter directors 1`] = `
     id="F"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 5;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         F
@@ -1090,14 +1110,17 @@ exports[`CastAndCrew > can filter directors 1`] = `
     id="G"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 6;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         G
@@ -1188,14 +1211,17 @@ exports[`CastAndCrew > can filter directors 1`] = `
     id="H"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 7;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         H
@@ -1285,14 +1311,17 @@ exports[`CastAndCrew > can filter directors 1`] = `
     id="I"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 8;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         I
@@ -1383,14 +1412,17 @@ exports[`CastAndCrew > can filter directors 1`] = `
     id="J"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 9;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         J
@@ -1965,14 +1997,17 @@ exports[`CastAndCrew > can filter directors 1`] = `
     id="K"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 10;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         K
@@ -2063,14 +2098,17 @@ exports[`CastAndCrew > can filter directors 1`] = `
     id="L"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 11;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         L
@@ -2230,14 +2268,17 @@ exports[`CastAndCrew > can filter directors 1`] = `
     id="M"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 12;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         M
@@ -2466,14 +2507,17 @@ exports[`CastAndCrew > can filter directors 1`] = `
     id="N"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 13;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         N
@@ -2563,14 +2607,17 @@ exports[`CastAndCrew > can filter directors 1`] = `
     id="P"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 14;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         P
@@ -2660,14 +2707,17 @@ exports[`CastAndCrew > can filter directors 1`] = `
     id="R"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 15;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         R
@@ -2897,14 +2947,17 @@ exports[`CastAndCrew > can filter directors 1`] = `
     id="S"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 16;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         S
@@ -3203,14 +3256,17 @@ exports[`CastAndCrew > can filter directors 1`] = `
     id="T"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 17;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         T
@@ -3439,14 +3495,17 @@ exports[`CastAndCrew > can filter directors 1`] = `
     id="W"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 18;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         W
@@ -3604,6 +3663,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
 
 exports[`CastAndCrew > can filter directors then show all 1`] = `
 <ol
+  class=""
   data-testid="list"
 >
   <li
@@ -3614,14 +3674,17 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     id="A"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 1;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         A
@@ -3781,14 +3844,17 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     id="B"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 2;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         B
@@ -4289,14 +4355,17 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     id="C"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 3;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         C
@@ -4523,14 +4592,17 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     id="D"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 4;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         D
@@ -4898,14 +4970,17 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     id="E"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 5;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         E
@@ -4995,14 +5070,17 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     id="F"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 6;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         F
@@ -5161,14 +5239,17 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     id="G"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 7;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         G
@@ -5327,14 +5408,17 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     id="H"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 8;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         H
@@ -5492,14 +5576,17 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     id="I"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 9;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         I
@@ -5590,14 +5677,17 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     id="J"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 10;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         J
@@ -6377,14 +6467,17 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     id="K"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 11;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         K
@@ -6475,14 +6568,17 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     id="L"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 12;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         L
@@ -6778,14 +6874,17 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     id="M"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 13;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         M
@@ -7082,14 +7181,17 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     id="N"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 14;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         N
@@ -7179,14 +7281,17 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     id="P"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 15;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         P
@@ -7344,14 +7449,17 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     id="R"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 16;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         R
@@ -7718,14 +7826,17 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     id="S"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 17;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         S
@@ -8092,14 +8203,17 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     id="T"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 18;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         T
@@ -8328,14 +8442,17 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     id="V"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 19;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         V
@@ -8424,14 +8541,17 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     id="W"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 20;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         W
@@ -8861,6 +8981,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
 
 exports[`CastAndCrew > can filter performers 1`] = `
 <ol
+  class=""
   data-testid="list"
 >
   <li
@@ -8871,14 +8992,17 @@ exports[`CastAndCrew > can filter performers 1`] = `
     id="A"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 1;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         A
@@ -8969,14 +9093,17 @@ exports[`CastAndCrew > can filter performers 1`] = `
     id="B"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 2;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         B
@@ -9339,14 +9466,17 @@ exports[`CastAndCrew > can filter performers 1`] = `
     id="C"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 3;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         C
@@ -9573,14 +9703,17 @@ exports[`CastAndCrew > can filter performers 1`] = `
     id="D"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 4;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         D
@@ -9879,14 +10012,17 @@ exports[`CastAndCrew > can filter performers 1`] = `
     id="E"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 5;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         E
@@ -9976,14 +10112,17 @@ exports[`CastAndCrew > can filter performers 1`] = `
     id="F"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 6;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         F
@@ -10073,14 +10212,17 @@ exports[`CastAndCrew > can filter performers 1`] = `
     id="G"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 7;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         G
@@ -10239,14 +10381,17 @@ exports[`CastAndCrew > can filter performers 1`] = `
     id="H"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 8;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         H
@@ -10335,14 +10480,17 @@ exports[`CastAndCrew > can filter performers 1`] = `
     id="I"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 9;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         I
@@ -10433,14 +10581,17 @@ exports[`CastAndCrew > can filter performers 1`] = `
     id="J"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 10;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         J
@@ -11015,14 +11166,17 @@ exports[`CastAndCrew > can filter performers 1`] = `
     id="K"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 11;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         K
@@ -11113,14 +11267,17 @@ exports[`CastAndCrew > can filter performers 1`] = `
     id="L"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 12;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         L
@@ -11279,14 +11436,17 @@ exports[`CastAndCrew > can filter performers 1`] = `
     id="M"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 13;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         M
@@ -11445,14 +11605,17 @@ exports[`CastAndCrew > can filter performers 1`] = `
     id="P"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 14;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         P
@@ -11541,14 +11704,17 @@ exports[`CastAndCrew > can filter performers 1`] = `
     id="R"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 15;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         R
@@ -11778,14 +11944,17 @@ exports[`CastAndCrew > can filter performers 1`] = `
     id="S"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 16;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         S
@@ -12014,14 +12183,17 @@ exports[`CastAndCrew > can filter performers 1`] = `
     id="T"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 17;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         T
@@ -12112,14 +12284,17 @@ exports[`CastAndCrew > can filter performers 1`] = `
     id="V"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 18;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         V
@@ -12208,14 +12383,17 @@ exports[`CastAndCrew > can filter performers 1`] = `
     id="W"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 19;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         W
@@ -12645,6 +12823,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
 
 exports[`CastAndCrew > can filter performers then show all 1`] = `
 <ol
+  class=""
   data-testid="list"
 >
   <li
@@ -12655,14 +12834,17 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     id="A"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 1;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         A
@@ -12822,14 +13004,17 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     id="B"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 2;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         B
@@ -13330,14 +13515,17 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     id="C"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 3;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         C
@@ -13564,14 +13752,17 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     id="D"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 4;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         D
@@ -13939,14 +14130,17 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     id="E"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 5;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         E
@@ -14036,14 +14230,17 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     id="F"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 6;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         F
@@ -14202,14 +14399,17 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     id="G"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 7;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         G
@@ -14368,14 +14568,17 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     id="H"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 8;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         H
@@ -14533,14 +14736,17 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     id="I"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 9;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         I
@@ -14631,14 +14837,17 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     id="J"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 10;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         J
@@ -15418,14 +15627,17 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     id="K"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 11;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         K
@@ -15516,14 +15728,17 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     id="L"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 12;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         L
@@ -15819,14 +16034,17 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     id="M"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 13;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         M
@@ -16123,14 +16341,17 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     id="N"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 14;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         N
@@ -16220,14 +16441,17 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     id="P"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 15;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         P
@@ -16385,14 +16609,17 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     id="R"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 16;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         R
@@ -16759,14 +16986,17 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     id="S"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 17;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         S
@@ -17133,14 +17363,17 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     id="T"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 18;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         T
@@ -17369,14 +17602,17 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     id="V"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 19;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         V
@@ -17465,14 +17701,17 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     id="W"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 20;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         W
@@ -17902,6 +18141,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
 
 exports[`CastAndCrew > can filter writers 1`] = `
 <ol
+  class=""
   data-testid="list"
 >
   <li
@@ -17912,14 +18152,17 @@ exports[`CastAndCrew > can filter writers 1`] = `
     id="A"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 1;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         A
@@ -18079,14 +18322,17 @@ exports[`CastAndCrew > can filter writers 1`] = `
     id="B"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 2;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         B
@@ -18315,14 +18561,17 @@ exports[`CastAndCrew > can filter writers 1`] = `
     id="C"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 3;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         C
@@ -18413,14 +18662,17 @@ exports[`CastAndCrew > can filter writers 1`] = `
     id="D"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 4;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         D
@@ -18720,14 +18972,17 @@ exports[`CastAndCrew > can filter writers 1`] = `
     id="E"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 5;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         E
@@ -18817,14 +19072,17 @@ exports[`CastAndCrew > can filter writers 1`] = `
     id="F"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 6;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         F
@@ -18914,14 +19172,17 @@ exports[`CastAndCrew > can filter writers 1`] = `
     id="G"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 7;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         G
@@ -19012,14 +19273,17 @@ exports[`CastAndCrew > can filter writers 1`] = `
     id="H"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 8;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         H
@@ -19109,14 +19373,17 @@ exports[`CastAndCrew > can filter writers 1`] = `
     id="I"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 9;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         I
@@ -19207,14 +19474,17 @@ exports[`CastAndCrew > can filter writers 1`] = `
     id="J"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 10;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         J
@@ -19653,14 +19923,17 @@ exports[`CastAndCrew > can filter writers 1`] = `
     id="K"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 11;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         K
@@ -19751,14 +20024,17 @@ exports[`CastAndCrew > can filter writers 1`] = `
     id="L"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 12;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         L
@@ -19986,14 +20262,17 @@ exports[`CastAndCrew > can filter writers 1`] = `
     id="M"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 13;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         M
@@ -20222,14 +20501,17 @@ exports[`CastAndCrew > can filter writers 1`] = `
     id="N"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 14;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         N
@@ -20319,14 +20601,17 @@ exports[`CastAndCrew > can filter writers 1`] = `
     id="P"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 15;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         P
@@ -20416,14 +20701,17 @@ exports[`CastAndCrew > can filter writers 1`] = `
     id="R"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 16;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         R
@@ -20790,14 +21078,17 @@ exports[`CastAndCrew > can filter writers 1`] = `
     id="S"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 17;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         S
@@ -21096,14 +21387,17 @@ exports[`CastAndCrew > can filter writers 1`] = `
     id="T"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 18;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         T
@@ -21332,14 +21626,17 @@ exports[`CastAndCrew > can filter writers 1`] = `
     id="W"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 19;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         W
@@ -21497,6 +21794,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
 
 exports[`CastAndCrew > can filter writers then show all 1`] = `
 <ol
+  class=""
   data-testid="list"
 >
   <li
@@ -21507,14 +21805,17 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     id="A"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 1;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         A
@@ -21674,14 +21975,17 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     id="B"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 2;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         B
@@ -22182,14 +22486,17 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     id="C"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 3;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         C
@@ -22416,14 +22723,17 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     id="D"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 4;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         D
@@ -22791,14 +23101,17 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     id="E"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 5;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         E
@@ -22888,14 +23201,17 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     id="F"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 6;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         F
@@ -23054,14 +23370,17 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     id="G"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 7;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         G
@@ -23220,14 +23539,17 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     id="H"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 8;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         H
@@ -23385,14 +23707,17 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     id="I"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 9;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         I
@@ -23483,14 +23808,17 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     id="J"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 10;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         J
@@ -24270,14 +24598,17 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     id="K"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 11;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         K
@@ -24368,14 +24699,17 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     id="L"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 12;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         L
@@ -24671,14 +25005,17 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     id="M"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 13;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         M
@@ -24975,14 +25312,17 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     id="N"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 14;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         N
@@ -25072,14 +25412,17 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     id="P"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 15;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         P
@@ -25237,14 +25580,17 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     id="R"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 16;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         R
@@ -25611,14 +25957,17 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     id="S"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 17;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         S
@@ -25985,14 +26334,17 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     id="T"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 18;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         T
@@ -26221,14 +26573,17 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     id="V"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 19;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         V
@@ -26317,14 +26672,17 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     id="W"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 20;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         W
@@ -26754,6 +27112,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
 
 exports[`CastAndCrew > can sort by name asc 1`] = `
 <ol
+  class=""
   data-testid="list"
 >
   <li
@@ -26764,14 +27123,17 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     id="A"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 1;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         A
@@ -26931,14 +27293,17 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     id="B"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 2;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         B
@@ -27439,14 +27804,17 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     id="C"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 3;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         C
@@ -27673,14 +28041,17 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     id="D"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 4;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         D
@@ -28048,14 +28419,17 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     id="E"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 5;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         E
@@ -28145,14 +28519,17 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     id="F"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 6;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         F
@@ -28311,14 +28688,17 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     id="G"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 7;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         G
@@ -28477,14 +28857,17 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     id="H"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 8;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         H
@@ -28642,14 +29025,17 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     id="I"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 9;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         I
@@ -28740,14 +29126,17 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     id="J"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 10;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         J
@@ -29527,14 +29916,17 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     id="K"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 11;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         K
@@ -29625,14 +30017,17 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     id="L"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 12;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         L
@@ -29928,14 +30323,17 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     id="M"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 13;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         M
@@ -30232,14 +30630,17 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     id="N"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 14;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         N
@@ -30329,14 +30730,17 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     id="P"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 15;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         P
@@ -30494,14 +30898,17 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     id="R"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 16;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         R
@@ -30868,14 +31275,17 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     id="S"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 17;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         S
@@ -31242,14 +31652,17 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     id="T"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 18;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         T
@@ -31478,14 +31891,17 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     id="V"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 19;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         V
@@ -31574,14 +31990,17 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     id="W"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 20;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         W
@@ -32011,6 +32430,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
 
 exports[`CastAndCrew > can sort by name desc 1`] = `
 <ol
+  class=""
   data-testid="list"
 >
   <li
@@ -32021,14 +32441,17 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     id="W"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 1;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         W
@@ -32461,14 +32884,17 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     id="V"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 2;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         V
@@ -32557,14 +32983,17 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     id="T"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 3;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         T
@@ -32793,14 +33222,17 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     id="S"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 4;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         S
@@ -33167,14 +33599,17 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     id="R"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 5;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         R
@@ -33541,14 +33976,17 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     id="P"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 6;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         P
@@ -33706,14 +34144,17 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     id="N"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 7;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         N
@@ -33803,14 +34244,17 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     id="M"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 8;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         M
@@ -34107,14 +34551,17 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     id="L"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 9;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         L
@@ -34410,14 +34857,17 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     id="K"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 10;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         K
@@ -34508,14 +34958,17 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     id="J"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 11;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         J
@@ -35295,14 +35748,17 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     id="I"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 12;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         I
@@ -35393,14 +35849,17 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     id="H"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 13;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         H
@@ -35558,14 +36017,17 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     id="G"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 14;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         G
@@ -35724,14 +36186,17 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     id="F"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 15;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         F
@@ -35890,14 +36355,17 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     id="E"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 16;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         E
@@ -35987,14 +36455,17 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     id="D"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 17;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         D
@@ -36362,14 +36833,17 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     id="C"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 18;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         C
@@ -36596,14 +37070,17 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     id="B"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 19;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         B
@@ -37104,14 +37581,17 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     id="A"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 20;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         A
@@ -37268,6 +37748,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
 
 exports[`CastAndCrew > can sort by review count asc 1`] = `
 <ol
+  class=""
   data-testid="list"
 >
   <li
@@ -37278,14 +37759,17 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     id=""
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 1;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       />
     </div>
@@ -41991,6 +42475,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
 
 exports[`CastAndCrew > can sort by review count desc 1`] = `
 <ol
+  class=""
   data-testid="list"
 >
   <li
@@ -42001,14 +42486,17 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     id=""
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 1;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       />
     </div>

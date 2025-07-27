@@ -2,24 +2,28 @@
 
 exports[`Collection > can filter by release year 1`] = `
 <ol
+  class=""
   data-testid="list"
 >
   <li
     class="
         block
-        undefined
+        
       "
     id="1970"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 1;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1970
@@ -531,19 +535,22 @@ exports[`Collection > can filter by release year 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1971"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 2;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1971
@@ -1551,19 +1558,22 @@ exports[`Collection > can filter by release year 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1972"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 3;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1972
@@ -2607,19 +2617,22 @@ exports[`Collection > can filter by release year 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1973"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 4;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1973
@@ -3131,19 +3144,22 @@ exports[`Collection > can filter by release year 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1974"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 5;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1974
@@ -3779,19 +3795,22 @@ exports[`Collection > can filter by release year 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1975"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 6;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1975
@@ -4489,19 +4508,22 @@ exports[`Collection > can filter by release year 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1976"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 7;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1976
@@ -5199,19 +5221,22 @@ exports[`Collection > can filter by release year 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1977"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 8;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1977
@@ -5847,19 +5872,22 @@ exports[`Collection > can filter by release year 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1978"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 9;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1978
@@ -6497,30 +6525,35 @@ exports[`Collection > can filter by release year 1`] = `
 
 exports[`Collection > can filter by title 1`] = `
 <ol
+  class=""
   data-testid="list"
 />
 `;
 
 exports[`Collection > can hide reviewed titles 1`] = `
 <ol
+  class=""
   data-testid="list"
 >
   <li
     class="
         block
-        undefined
+        
       "
     id="1966"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 1;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1966
@@ -6660,19 +6693,22 @@ exports[`Collection > can hide reviewed titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1967"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 2;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1967
@@ -7122,19 +7158,22 @@ exports[`Collection > can hide reviewed titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1968"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 3;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1968
@@ -7522,19 +7561,22 @@ exports[`Collection > can hide reviewed titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1969"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 4;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1969
@@ -8046,19 +8088,22 @@ exports[`Collection > can hide reviewed titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1970"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 5;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1970
@@ -8570,19 +8615,22 @@ exports[`Collection > can hide reviewed titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1971"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 6;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1971
@@ -9590,19 +9638,22 @@ exports[`Collection > can hide reviewed titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1972"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 7;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1972
@@ -10486,19 +10537,22 @@ exports[`Collection > can hide reviewed titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1973"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 8;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1973
@@ -11010,19 +11064,22 @@ exports[`Collection > can hide reviewed titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1974"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 9;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1974
@@ -11658,19 +11715,22 @@ exports[`Collection > can hide reviewed titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1975"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 10;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1975
@@ -12368,19 +12428,22 @@ exports[`Collection > can hide reviewed titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1976"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 11;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1976
@@ -13018,24 +13081,28 @@ exports[`Collection > can hide reviewed titles 1`] = `
 
 exports[`Collection > can show hidden reviewed titles 1`] = `
 <ol
+  class=""
   data-testid="list"
 >
   <li
     class="
         block
-        undefined
+        
       "
     id="1966"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 1;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1966
@@ -13175,19 +13242,22 @@ exports[`Collection > can show hidden reviewed titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1967"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 2;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1967
@@ -13637,19 +13707,22 @@ exports[`Collection > can show hidden reviewed titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1968"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 3;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1968
@@ -14037,19 +14110,22 @@ exports[`Collection > can show hidden reviewed titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1969"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 4;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1969
@@ -14561,19 +14637,22 @@ exports[`Collection > can show hidden reviewed titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1970"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 5;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1970
@@ -15085,19 +15164,22 @@ exports[`Collection > can show hidden reviewed titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1971"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 6;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1971
@@ -16105,19 +16187,22 @@ exports[`Collection > can show hidden reviewed titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1972"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 7;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1972
@@ -17161,19 +17246,22 @@ exports[`Collection > can show hidden reviewed titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1973"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 8;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1973
@@ -17685,19 +17773,22 @@ exports[`Collection > can show hidden reviewed titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1974"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 9;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1974
@@ -18333,19 +18424,22 @@ exports[`Collection > can show hidden reviewed titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1975"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 10;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1975
@@ -19043,19 +19137,22 @@ exports[`Collection > can show hidden reviewed titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1976"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 11;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1976
@@ -19569,24 +19666,28 @@ exports[`Collection > can show hidden reviewed titles 1`] = `
 
 exports[`Collection > can show more titles 1`] = `
 <ol
+  class=""
   data-testid="list"
 >
   <li
     class="
         block
-        undefined
+        
       "
     id="1966"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 1;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1966
@@ -19726,19 +19827,22 @@ exports[`Collection > can show more titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1967"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 2;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1967
@@ -20188,19 +20292,22 @@ exports[`Collection > can show more titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1968"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 3;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1968
@@ -20588,19 +20695,22 @@ exports[`Collection > can show more titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1969"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 4;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1969
@@ -21112,19 +21222,22 @@ exports[`Collection > can show more titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1970"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 5;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1970
@@ -21636,19 +21749,22 @@ exports[`Collection > can show more titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1971"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 6;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1971
@@ -22656,19 +22772,22 @@ exports[`Collection > can show more titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1972"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 7;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1972
@@ -23712,19 +23831,22 @@ exports[`Collection > can show more titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1973"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 8;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1973
@@ -24236,19 +24358,22 @@ exports[`Collection > can show more titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1974"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 9;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1974
@@ -24884,19 +25009,22 @@ exports[`Collection > can show more titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1975"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 10;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1975
@@ -25594,19 +25722,22 @@ exports[`Collection > can show more titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1976"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 11;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1976
@@ -26304,19 +26435,22 @@ exports[`Collection > can show more titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1977"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 12;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1977
@@ -26952,19 +27086,22 @@ exports[`Collection > can show more titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1978"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 13;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1978
@@ -27990,19 +28127,22 @@ exports[`Collection > can show more titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1979"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 14;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1979
@@ -29010,19 +29150,22 @@ exports[`Collection > can show more titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1980"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 15;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1980
@@ -29906,19 +30049,22 @@ exports[`Collection > can show more titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1981"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 16;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1981
@@ -30802,19 +30948,22 @@ exports[`Collection > can show more titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1982"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 17;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1982
@@ -31672,19 +31821,22 @@ exports[`Collection > can show more titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1983"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 18;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1983
@@ -32338,19 +32490,22 @@ exports[`Collection > can show more titles 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1984"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 19;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1984
@@ -32634,24 +32789,28 @@ exports[`Collection > can show more titles 1`] = `
 
 exports[`Collection > can sort by grade with best first 1`] = `
 <ol
+  class=""
   data-testid="list"
 >
   <li
     class="
         block
-        undefined
+        
       "
     id="B"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 1;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         B
@@ -32827,19 +32986,22 @@ exports[`Collection > can sort by grade with best first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="C+"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 2;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         C+
@@ -33095,19 +33257,22 @@ exports[`Collection > can sort by grade with best first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="C"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 3;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         C
@@ -33203,19 +33368,22 @@ exports[`Collection > can sort by grade with best first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="D+"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 4;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         D+
@@ -33311,19 +33479,22 @@ exports[`Collection > can sort by grade with best first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="Unrated"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 5;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         Unrated
@@ -39107,24 +39278,28 @@ exports[`Collection > can sort by grade with best first 1`] = `
 
 exports[`Collection > can sort by grade with worst first 1`] = `
 <ol
+  class=""
   data-testid="list"
 >
   <li
     class="
         block
-        undefined
+        
       "
     id="D+"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 1;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         D+
@@ -39220,19 +39395,22 @@ exports[`Collection > can sort by grade with worst first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="C"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 2;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         C
@@ -39328,19 +39506,22 @@ exports[`Collection > can sort by grade with worst first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="C+"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 3;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         C+
@@ -39596,19 +39777,22 @@ exports[`Collection > can sort by grade with worst first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="B"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 4;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         B
@@ -39784,19 +39968,22 @@ exports[`Collection > can sort by grade with worst first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="Unrated"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 5;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         Unrated
@@ -45580,24 +45767,28 @@ exports[`Collection > can sort by grade with worst first 1`] = `
 
 exports[`Collection > can sort by release date with newest first 1`] = `
 <ol
+  class=""
   data-testid="list"
 >
   <li
     class="
         block
-        undefined
+        
       "
     id="1988"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 1;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1988
@@ -45675,19 +45866,22 @@ exports[`Collection > can sort by release date with newest first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1986"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 2;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1986
@@ -45765,19 +45959,22 @@ exports[`Collection > can sort by release date with newest first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1985"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 3;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1985
@@ -45979,19 +46176,22 @@ exports[`Collection > can sort by release date with newest first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1984"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 4;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1984
@@ -46459,19 +46659,22 @@ exports[`Collection > can sort by release date with newest first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1983"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 5;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1983
@@ -47125,19 +47328,22 @@ exports[`Collection > can sort by release date with newest first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1982"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 6;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1982
@@ -47995,19 +48201,22 @@ exports[`Collection > can sort by release date with newest first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1981"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 7;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1981
@@ -48891,19 +49100,22 @@ exports[`Collection > can sort by release date with newest first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1980"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 8;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1980
@@ -49787,19 +49999,22 @@ exports[`Collection > can sort by release date with newest first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1979"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 9;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1979
@@ -50807,19 +51022,22 @@ exports[`Collection > can sort by release date with newest first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1978"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 10;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1978
@@ -51845,19 +52063,22 @@ exports[`Collection > can sort by release date with newest first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1977"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 11;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1977
@@ -52185,24 +52406,28 @@ exports[`Collection > can sort by release date with newest first 1`] = `
 
 exports[`Collection > can sort by release date with oldest first 1`] = `
 <ol
+  class=""
   data-testid="list"
 >
   <li
     class="
         block
-        undefined
+        
       "
     id="1966"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 1;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1966
@@ -52342,19 +52567,22 @@ exports[`Collection > can sort by release date with oldest first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1967"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 2;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1967
@@ -52804,19 +53032,22 @@ exports[`Collection > can sort by release date with oldest first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1968"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 3;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1968
@@ -53204,19 +53435,22 @@ exports[`Collection > can sort by release date with oldest first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1969"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 4;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1969
@@ -53728,19 +53962,22 @@ exports[`Collection > can sort by release date with oldest first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1970"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 5;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1970
@@ -54252,19 +54489,22 @@ exports[`Collection > can sort by release date with oldest first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1971"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 6;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1971
@@ -55272,19 +55512,22 @@ exports[`Collection > can sort by release date with oldest first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1972"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 7;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1972
@@ -56328,19 +56571,22 @@ exports[`Collection > can sort by release date with oldest first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1973"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 8;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1973
@@ -56852,19 +57098,22 @@ exports[`Collection > can sort by release date with oldest first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1974"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 9;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1974
@@ -57500,19 +57749,22 @@ exports[`Collection > can sort by release date with oldest first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1975"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 10;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1975
@@ -58210,19 +58462,22 @@ exports[`Collection > can sort by release date with oldest first 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="1976"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 11;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         1976
@@ -58736,24 +58991,28 @@ exports[`Collection > can sort by release date with oldest first 1`] = `
 
 exports[`Collection > can sort by title 1`] = `
 <ol
+  class=""
   data-testid="list"
 >
   <li
     class="
         block
-        undefined
+        
       "
     id="#"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 1;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         #
@@ -58955,19 +59214,22 @@ exports[`Collection > can sort by title 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="A"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 2;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         A
@@ -59417,19 +59679,22 @@ exports[`Collection > can sort by title 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="B"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 3;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         B
@@ -60659,19 +60924,22 @@ exports[`Collection > can sort by title 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="C"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 4;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         C
@@ -61325,19 +61593,22 @@ exports[`Collection > can sort by title 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="D"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 5;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         D
@@ -62283,19 +62554,22 @@ exports[`Collection > can sort by title 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="E"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 6;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         E
@@ -62577,19 +62851,22 @@ exports[`Collection > can sort by title 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="F"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 7;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         F
@@ -63447,19 +63724,22 @@ exports[`Collection > can sort by title 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="G"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 8;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         G
@@ -63847,19 +64127,22 @@ exports[`Collection > can sort by title 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="H"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 9;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         H
@@ -64699,19 +64982,22 @@ exports[`Collection > can sort by title 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="I"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 10;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         I
@@ -65161,19 +65447,22 @@ exports[`Collection > can sort by title 1`] = `
   <li
     class="
         block
-        undefined
+        
       "
     id="J"
   >
     <div
-      class="pt-0 text-md"
+      class="
+          pt-0 text-md
+          
+        "
       style="z-index: 11;"
     >
       <div
         class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
       >
         J
@@ -66368,24 +66657,28 @@ exports[`Collection > renders 1`] = `
                   "
                   >
                     <ol
+                      class=""
                       data-testid="list"
                     >
                       <li
                         class="
         block
-        undefined
+        
       "
                         id="1966"
                       >
                         <div
-                          class="pt-0 text-md"
+                          class="
+          pt-0 text-md
+          
+        "
                           style="z-index: 1;"
                         >
                           <div
                             class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
                           >
                             1966
@@ -66523,19 +66816,22 @@ exports[`Collection > renders 1`] = `
                       <li
                         class="
         block
-        undefined
+        
       "
                         id="1967"
                       >
                         <div
-                          class="pt-0 text-md"
+                          class="
+          pt-0 text-md
+          
+        "
                           style="z-index: 2;"
                         >
                           <div
                             class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
                           >
                             1967
@@ -66978,19 +67274,22 @@ exports[`Collection > renders 1`] = `
                       <li
                         class="
         block
-        undefined
+        
       "
                         id="1968"
                       >
                         <div
-                          class="pt-0 text-md"
+                          class="
+          pt-0 text-md
+          
+        "
                           style="z-index: 3;"
                         >
                           <div
                             class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
                           >
                             1968
@@ -67372,19 +67671,22 @@ exports[`Collection > renders 1`] = `
                       <li
                         class="
         block
-        undefined
+        
       "
                         id="1969"
                       >
                         <div
-                          class="pt-0 text-md"
+                          class="
+          pt-0 text-md
+          
+        "
                           style="z-index: 4;"
                         >
                           <div
                             class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
                           >
                             1969
@@ -67888,19 +68190,22 @@ exports[`Collection > renders 1`] = `
                       <li
                         class="
         block
-        undefined
+        
       "
                         id="1970"
                       >
                         <div
-                          class="pt-0 text-md"
+                          class="
+          pt-0 text-md
+          
+        "
                           style="z-index: 5;"
                         >
                           <div
                             class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
                           >
                             1970
@@ -68404,19 +68709,22 @@ exports[`Collection > renders 1`] = `
                       <li
                         class="
         block
-        undefined
+        
       "
                         id="1971"
                       >
                         <div
-                          class="pt-0 text-md"
+                          class="
+          pt-0 text-md
+          
+        "
                           style="z-index: 6;"
                         >
                           <div
                             class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
                           >
                             1971
@@ -69408,19 +69716,22 @@ exports[`Collection > renders 1`] = `
                       <li
                         class="
         block
-        undefined
+        
       "
                         id="1972"
                       >
                         <div
-                          class="pt-0 text-md"
+                          class="
+          pt-0 text-md
+          
+        "
                           style="z-index: 7;"
                         >
                           <div
                             class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
                           >
                             1972
@@ -70448,19 +70759,22 @@ exports[`Collection > renders 1`] = `
                       <li
                         class="
         block
-        undefined
+        
       "
                         id="1973"
                       >
                         <div
-                          class="pt-0 text-md"
+                          class="
+          pt-0 text-md
+          
+        "
                           style="z-index: 8;"
                         >
                           <div
                             class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
                           >
                             1973
@@ -70964,19 +71278,22 @@ exports[`Collection > renders 1`] = `
                       <li
                         class="
         block
-        undefined
+        
       "
                         id="1974"
                       >
                         <div
-                          class="pt-0 text-md"
+                          class="
+          pt-0 text-md
+          
+        "
                           style="z-index: 9;"
                         >
                           <div
                             class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
                           >
                             1974
@@ -71602,19 +71919,22 @@ exports[`Collection > renders 1`] = `
                       <li
                         class="
         block
-        undefined
+        
       "
                         id="1975"
                       >
                         <div
-                          class="pt-0 text-md"
+                          class="
+          pt-0 text-md
+          
+        "
                           style="z-index: 10;"
                         >
                           <div
                             class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
                           >
                             1975
@@ -72301,19 +72621,22 @@ exports[`Collection > renders 1`] = `
                       <li
                         class="
         block
-        undefined
+        
       "
                         id="1976"
                       >
                         <div
-                          class="pt-0 text-md"
+                          class="
+          pt-0 text-md
+          
+        "
                           style="z-index: 11;"
                         >
                           <div
                             class="
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:bg-subtle tablet:px-4 tablet:text-default tablet:opacity-100
+            tablet:px-4
           "
                           >
                             1976
