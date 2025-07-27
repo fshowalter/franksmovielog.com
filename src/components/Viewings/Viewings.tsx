@@ -35,6 +35,7 @@ export type ListItemValue = Pick<
   posterImageProps: PosterImageProps;
   viewingDay: string;
   viewingMonth: string;
+  viewingMonthShort: string;
 };
 
 export type Props = {
@@ -93,8 +94,11 @@ export function Viewings({
         <GroupedList
           data-testid="list"
           groupedValues={state.groupedValues}
+          groupHeaderClasses={`
+            sticky top-0
+            tablet:static
+          `}
           onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
-          stickyGroupHeaders={true}
           totalCount={state.filteredValues.length}
           visibleCount={state.showCount}
         >
@@ -125,7 +129,7 @@ function DateListItem({
   dayAndDate: string;
   values: ListItemValue[];
 }): JSX.Element {
-  const [day, date] = dayAndDate.split("-");
+  const [day, date, month, year] = dayAndDate.split("-");
 
   return (
     <li
@@ -139,15 +143,24 @@ function DateListItem({
       <div
         className={`
           px-container py-4
-          tablet:px-4 tablet:pt-11 tablet:text-muted
+          tablet:px-4 tablet:py-0 tablet:text-muted
         `}
       >
         <div
           className={`
             flex items-center gap-1
-            tablet:block
+            tablet:h-full tablet:flex-col tablet:justify-center
           `}
         >
+          <div
+            className={`
+              ml-0 hidden w-12 py-2 text-center font-sans text-xxs/none
+              text-subtle uppercase
+              tablet:block tablet:font-light
+            `}
+          >
+            {month}
+          </div>
           <div
             className={`
               text-center text-2xl text-muted
@@ -158,8 +171,16 @@ function DateListItem({
           </div>
           <div
             className={`
+              ml-0 hidden w-12 py-2 text-center font-sans text-xs/none uppercase
+              tablet:block tablet:font-light
+            `}
+          >
+            {year}
+          </div>
+          <div
+            className={`
               ml-1 py-2 font-sans text-xxs/none text-subtle uppercase
-              tablet:ml-0 tablet:w-12 tablet:text-center
+              tablet:ml-0 tablet:w-12 tablet:text-center tablet:font-light
             `}
           >
             {day}

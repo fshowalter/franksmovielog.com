@@ -46,6 +46,10 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
           month: "long",
           timeZone: "UTC",
         }),
+        viewingMonthShort: viewingDate.toLocaleString("en-US", {
+          month: "short",
+          timeZone: "UTC",
+        }),
         viewingYear: viewing.viewingYear,
         year: viewing.year,
       };
