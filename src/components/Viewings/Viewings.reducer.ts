@@ -183,7 +183,7 @@ function groupValues(
       groupedValues.set(monthYearGroup, groupValue);
     }
 
-    const dayGroup = `${value.viewingDay}-${value.viewingDate}`;
+    const dayGroup = `${value.viewingDay}-${value.viewingDate}-${value.viewingMonthShort}-${value.viewingYear}`;
 
     let dayGroupValue = groupValue.get(dayGroup);
 

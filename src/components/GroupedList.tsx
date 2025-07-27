@@ -6,9 +6,9 @@ export function GroupedList<T>({
   children,
   className,
   groupedValues,
+  groupHeaderClasses,
   groupItemClassName,
   onShowMore,
-  stickyGroupHeaders = false,
   totalCount,
   visibleCount,
   ...rest
@@ -16,9 +16,9 @@ export function GroupedList<T>({
   children: (item: T) => React.ReactNode;
   className?: string;
   groupedValues: Map<string, Iterable<T>>;
+  groupHeaderClasses?: string;
   groupItemClassName?: string;
   onShowMore?: () => void;
-  stickyGroupHeaders?: boolean;
   totalCount: number;
   visibleCount: number;
 }): JSX.Element {
@@ -31,9 +31,9 @@ export function GroupedList<T>({
           return (
             <GroupingListItem
               className={groupItemClassName ?? groupItemClassName}
+              groupHeaderClasses={groupHeaderClasses}
               groupText={group}
               key={group}
-              stickyHeader={stickyGroupHeaders}
               zIndex={index + 1}
             >
               <ol>{[...groupValues].map((value) => children(value))}</ol>
@@ -55,14 +55,14 @@ export function GroupedList<T>({
 function GroupingListItem({
   children,
   className,
+  groupHeaderClasses,
   groupText,
-  stickyHeader,
   zIndex,
 }: {
   children: React.ReactNode;
   className?: string;
+  groupHeaderClasses?: string;
   groupText: string;
-  stickyHeader: boolean;
   zIndex: number;
 }) {
   return (
@@ -76,7 +76,7 @@ function GroupingListItem({
       <div
         className={`
           pt-0 text-md
-          ${stickyHeader ? "sticky top-0" : ""}
+          ${groupHeaderClasses ?? ""}
         `}
         style={{ zIndex: zIndex }}
       >
