@@ -17,7 +17,7 @@ export function ListItemPoster({
         {...imageProps}
         alt=""
         {...ListItemPosterImageConfig}
-        className="aspect-poster"
+        className="aspect-poster drop-shadow-sm"
         decoding="async"
         loading="lazy"
       />
