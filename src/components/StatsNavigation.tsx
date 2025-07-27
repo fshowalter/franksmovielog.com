@@ -17,7 +17,7 @@ export function StatsNavigation({
     <nav className={ccn("bg-footer", className)}>
       <ul
         className={`
-          mx-auto flex scrollbar-hidden max-w-(--breakpoint-desktop)
+          mx-auto flex scrollbar-hidden max-w-(--breakpoint-desktop) snap-x
           overflow-x-auto px-container font-sans text-sm font-normal
           tracking-wide
           laptop:justify-center
@@ -49,7 +49,7 @@ function AllTimeLink({
   return (
     <li
       className={`
-        text-center
+        snap-start text-center
         ${"all" === currentYear ? "text-inverse" : `text-inverse-subtle`}
       `}
     >
@@ -90,7 +90,7 @@ function YearLink({
   return (
     <li
       className={`
-        text-center
+        snap-start text-center
         ${year === currentYear ? "text-inverse" : `text-inverse-subtle`}
       `}
     >

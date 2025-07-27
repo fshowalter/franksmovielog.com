@@ -15,7 +15,7 @@ export function ReviewsSubNav({ active }: { active: keyof typeof items }) {
     <nav className="bg-footer">
       <ul
         className={`
-          mx-auto flex scrollbar-hidden max-w-(--breakpoint-desktop)
+          mx-auto flex scrollbar-hidden max-w-(--breakpoint-desktop) snap-x
           overflow-x-auto px-container font-sans text-xs font-medium
           tracking-wider uppercase
           tablet:justify-center
@@ -25,7 +25,7 @@ export function ReviewsSubNav({ active }: { active: keyof typeof items }) {
           return (
             <li
               className={`
-                text-center whitespace-nowrap
+                snap-start text-center whitespace-nowrap
                 ${active === key ? `text-inverse` : `text-inverse-subtle`}
               `}
               key={value.href}
