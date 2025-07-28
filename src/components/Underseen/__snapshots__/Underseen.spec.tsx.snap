@@ -23303,7 +23303,7 @@ exports[`Underseen > renders 1`] = `
             >
               <a
                 class="
-                    block transform-gpu p-6 transition-all
+                    block transform-gpu px-6 py-5 transition-all
                     hover:scale-105 hover:bg-accent hover:text-inverse
                     tablet:py-8
                   "
@@ -23320,7 +23320,7 @@ exports[`Underseen > renders 1`] = `
             >
               <a
                 class="
-                    block transform-gpu p-6 transition-all
+                    block transform-gpu px-6 py-5 transition-all
                     hover:scale-105 hover:bg-accent hover:text-inverse
                     tablet:py-8
                   "
@@ -23337,7 +23337,7 @@ exports[`Underseen > renders 1`] = `
             >
               <a
                 class="
-                    block transform-gpu p-6 transition-all
+                    block transform-gpu px-6 py-5 transition-all
                     hover:scale-105 hover:bg-accent hover:text-inverse
                     tablet:py-8
                   "
@@ -23354,7 +23354,7 @@ exports[`Underseen > renders 1`] = `
             >
               <a
                 class="
-                    block bg-default p-6 text-default
+                    block bg-default px-6 py-5 text-default
                     tablet:py-8
                   "
                 href="/reviews/underseen/"
@@ -23397,7 +23397,8 @@ exports[`Underseen > renders 1`] = `
         mx-auto flex w-full max-w-(--breakpoint-desktop) flex-wrap
         items-baseline justify-end gap-x-4 gap-y-5 px-container py-5 font-sans
         font-medium tracking-wide text-subtle uppercase
-        tablet-landscape:static tablet-landscape:py-10
+        tablet:py-10
+        tablet-landscape:static
       "
                   >
                     <span
