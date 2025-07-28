@@ -46,8 +46,13 @@ export function Layout({
         <main
           className={ccn(
             `
-              grow transition-[opacity] duration-200 ease-in-out
-              group-has-[#nav:checked]:opacity-80
+              grow
+              group-has-[[data-drawer]:checked]:before:absolute
+              group-has-[[data-drawer]:checked]:before:top-0
+              group-has-[[data-drawer]:checked]:before:left-0
+              group-has-[[data-drawer]:checked]:before:z-10
+              group-has-[[data-drawer]:checked]:before:size-full
+              group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
             `,
             className,
           )}

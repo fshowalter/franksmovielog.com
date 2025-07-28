@@ -60,7 +60,7 @@ export function Mast({
 function HamburgerMenu({ hasBackdrop }: { hasBackdrop: boolean }) {
   return (
     <div className={`group`}>
-      <input className="hidden" id="nav" type="checkbox" />
+      <input className="hidden" data-drawer id="nav" type="checkbox" />
       <label
         className={`
           relative z-40 ml-2 flex h-10 w-10 transform-gpu cursor-pointer
@@ -103,6 +103,7 @@ function HamburgerMenu({ hasBackdrop }: { hasBackdrop: boolean }) {
           group-has-[#nav:checked]:pt-20 group-has-[#nav:checked]:pr-[16%]
           group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%]
           group-has-[#nav:checked]:opacity-100
+          group-has-[#nav:checked]:drop-shadow-2xl
           tablet:max-w-[35vw] tablet:gap-y-10
           group-has-[#nav:checked]:tablet:px-10
           group-has-[#nav:checked]:tablet:pt-40

@@ -60,7 +60,11 @@ export function ListWithFiltersLayout({
     >
       {backdrop}
       {subNav && subNav}
-      <div className="mx-auto flex flex-col items-center bg-default">
+      <div
+        className={`
+          group/list-with-filters mx-auto flex flex-col items-center bg-default
+        `}
+      >
         <div className="mx-auto flex w-full flex-col items-stretch">
           <div className="flex grow flex-col bg-subtle">
             <div
@@ -94,49 +98,69 @@ export function ListWithFiltersLayout({
               >
                 <div
                   className={`
-                    relative z-10 col-start-3 row-span-2 row-start-2 grid
-                    min-w-[320px] text-sm transition-[grid-template-rows]
-                    duration-300 ease-out
-                    tablet-landscape:mr-12 tablet-landscape:block
-                    tablet-landscape:py-24 tablet-landscape:pb-12
-                    tablet-landscape:shadow-none
-                    laptop:mr-20
+                    fixed top-0 right-0 flex h-full w-0 max-w-[380px]
+                    transform-[translateX(100%)] flex-col items-start gap-y-5
+                    overflow-hidden bg-default text-left text-inverse
+                    duration-200 ease-in-out
+                    group-has-[#filters:checked]/list-with-filters:bottom-0
+                    group-has-[#filters:checked]/list-with-filters:z-60
+                    group-has-[#filters:checked]/list-with-filters:h-full
+                    group-has-[#filters:checked]/list-with-filters:w-full
+                    group-has-[#filters:checked]/list-with-filters:transform-[translateX(0)]
+                    group-has-[#filters:checked]/list-with-filters:overflow-y-auto
+                    group-has-[#filters:checked]/list-with-filters:drop-shadow-2xl
+                    tablet:gap-y-10
                   `}
-                  style={{
-                    gridTemplateRows: filtersVisible ? "1fr" : "0fr",
-                  }}
                 >
-                  <div className="overflow-hidden">
-                    <div
+                  <div
+                    className={`
+                      flex h-full w-full flex-col text-sm
+                      tablet:pt-12 tablet:text-base
+                      tablet-landscape:overflow-visible
+                      tablet-landscape:bg-default tablet-landscape:px-container
+                      tablet-landscape:pt-0
+                      laptop:px-8
+                    `}
+                  >
+                    <fieldset
                       className={`
-                        w-full bg-subtle text-sm
-                        tablet:pt-12 tablet:text-base
-                        tablet-landscape:overflow-visible
-                        tablet-landscape:bg-default
-                        tablet-landscape:px-container tablet-landscape:pt-0
-                        laptop:px-8
+                        flex grow flex-col gap-5 px-container pb-4
+                        tablet:gap-8
+                        tablet-landscape:mt-0 tablet-landscape:gap-12
+                        tablet-landscape:px-0
                       `}
                     >
-                      <fieldset
+                      <legend
                         className={`
-                          flex flex-col gap-5 bg-group px-container py-10
-                          tablet:gap-8 tablet:bg-default
-                          tablet-landscape:mt-0 tablet-landscape:gap-12
-                          tablet-landscape:px-0
+                          mb-5 block w-full py-4 text-lg text-subtle
+                          shadow-bottom
+                          tablet-landscape:py-10 tablet-landscape:font-sans
+                          tablet-landscape:text-xs tablet-landscape:font-bold
+                          tablet-landscape:tracking-wide
+                          tablet-landscape:uppercase
                         `}
                       >
-                        <legend
-                          className={`
-                            hidden w-full py-10 font-sans text-xs font-bold
-                            tracking-wide text-subtle uppercase
-                            tablet-landscape:block
-                            tablet-landscape:shadow-bottom
-                          `}
-                        >
-                          Filter & Sort
-                        </legend>
-                        {filters}
-                      </fieldset>
+                        Filter & Sort
+                      </legend>
+                      {filters}
+                    </fieldset>
+                    <div
+                      className={`
+                        sticky bottom-0 z-40 mt-auto w-full self-end border-t
+                        border-t-default bg-default px-8 py-4 drop-shadow-2xl
+                      `}
+                    >
+                      <label
+                        className={`
+                          flex cursor-pointer items-center justify-center
+                          gap-x-4 bg-footer px-4 py-3 font-sans text-xs
+                          text-nowrap text-inverse uppercase
+                          tablet-landscape:hidden
+                        `}
+                        htmlFor="filters"
+                      >
+                        View {totalCount} Results
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -160,9 +184,7 @@ export function ListWithFiltersLayout({
 }
 
 function ListHeader({
-  filtersVisible,
   listHeaderButtons,
-  onToggleFilters,
   totalCount,
 }: {
   filtersVisible: boolean;
@@ -189,21 +211,19 @@ function ListHeader({
           {listHeaderButtons}
         </div>
       )}
-      <button
+      <input className="hidden" data-drawer id="filters" type="checkbox" />
+      <label
         className={`
-          ml-auto flex justify-center gap-x-4 px-4 py-2 text-nowrap text-muted
-          uppercase shadow-all
+          relative z-40 ml-auto flex transform-gpu cursor-pointer items-center
+          justify-center gap-x-4 bg-canvas px-4 py-2 text-nowrap text-muted
+          uppercase shadow-all transition-transform
+          hover:scale-110
           tablet-landscape:hidden
         `}
-        onClick={onToggleFilters}
-        style={{
-          backgroundColor: filtersVisible
-            ? "var(--bg-subtle)"
-            : "var(--bg-canvas)",
-        }}
+        htmlFor="filters"
       >
         Filter & Sort
-      </button>
+      </label>
     </div>
   );
 }
