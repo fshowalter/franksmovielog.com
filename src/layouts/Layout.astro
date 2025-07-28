@@ -69,7 +69,8 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
   <body
     class={`
       h-full w-full bg-canvas text-default
-      has-[#nav:checked]:fixed has-[#nav:checked]:overflow-y-scroll
+      has-[[data-drawer]:checked]:fixed
+      has-[[data-drawer]:checked]:overflow-y-scroll
       data-search-modal-open:overflow-hidden data-search-modal-open:before:fixed
       data-search-modal-open:before:inset-0 data-search-modal-open:before:z-50
       data-search-modal-open:before:backdrop-blur-xs

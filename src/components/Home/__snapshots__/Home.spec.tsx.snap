@@ -164,6 +164,7 @@ exports[`Home > matches snapshot 1`] = `
           >
             <input
               class="hidden"
+              data-drawer="true"
               id="nav"
               type="checkbox"
             />
@@ -207,6 +208,7 @@ exports[`Home > matches snapshot 1`] = `
           group-has-[#nav:checked]:pt-20 group-has-[#nav:checked]:pr-[16%]
           group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%]
           group-has-[#nav:checked]:opacity-100
+          group-has-[#nav:checked]:drop-shadow-2xl
           tablet:max-w-[35vw] tablet:gap-y-10
           group-has-[#nav:checked]:tablet:px-10
           group-has-[#nav:checked]:tablet:pt-40
@@ -431,8 +433,13 @@ exports[`Home > matches snapshot 1`] = `
       </header>
       <main
         class="
-              grow transition-[opacity] duration-200 ease-in-out
-              group-has-[#nav:checked]:opacity-80
+              grow
+              group-has-[[data-drawer]:checked]:before:absolute
+              group-has-[[data-drawer]:checked]:before:top-0
+              group-has-[[data-drawer]:checked]:before:left-0
+              group-has-[[data-drawer]:checked]:before:z-10
+              group-has-[[data-drawer]:checked]:before:size-full
+              group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
              bg-subtle pb-8"
         id="content"
       >

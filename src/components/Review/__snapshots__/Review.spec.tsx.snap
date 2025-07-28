@@ -183,6 +183,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
           >
             <input
               class="hidden"
+              data-drawer="true"
               id="nav"
               type="checkbox"
             />
@@ -226,6 +227,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
           group-has-[#nav:checked]:pt-20 group-has-[#nav:checked]:pr-[16%]
           group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%]
           group-has-[#nav:checked]:opacity-100
+          group-has-[#nav:checked]:drop-shadow-2xl
           tablet:max-w-[35vw] tablet:gap-y-10
           group-has-[#nav:checked]:tablet:px-10
           group-has-[#nav:checked]:tablet:pt-40
@@ -450,8 +452,13 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
       </header>
       <main
         class="
-              grow transition-[opacity] duration-200 ease-in-out
-              group-has-[#nav:checked]:opacity-80
+              grow
+              group-has-[[data-drawer]:checked]:before:absolute
+              group-has-[[data-drawer]:checked]:before:top-0
+              group-has-[[data-drawer]:checked]:before:left-0
+              group-has-[[data-drawer]:checked]:before:z-10
+              group-has-[[data-drawer]:checked]:before:size-full
+              group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
              flex flex-col"
         data-pagefind-body="true"
         data-pagefind-meta="image:/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fevent-horizon-1997.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
@@ -2034,6 +2041,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
           >
             <input
               class="hidden"
+              data-drawer="true"
               id="nav"
               type="checkbox"
             />
@@ -2077,6 +2085,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
           group-has-[#nav:checked]:pt-20 group-has-[#nav:checked]:pr-[16%]
           group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%]
           group-has-[#nav:checked]:opacity-100
+          group-has-[#nav:checked]:drop-shadow-2xl
           tablet:max-w-[35vw] tablet:gap-y-10
           group-has-[#nav:checked]:tablet:px-10
           group-has-[#nav:checked]:tablet:pt-40
@@ -2301,8 +2310,13 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
       </header>
       <main
         class="
-              grow transition-[opacity] duration-200 ease-in-out
-              group-has-[#nav:checked]:opacity-80
+              grow
+              group-has-[[data-drawer]:checked]:before:absolute
+              group-has-[[data-drawer]:checked]:before:top-0
+              group-has-[[data-drawer]:checked]:before:left-0
+              group-has-[[data-drawer]:checked]:before:z-10
+              group-has-[[data-drawer]:checked]:before:size-full
+              group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
              flex flex-col"
         data-pagefind-body="true"
         data-pagefind-meta="image:/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhellraiser-1987.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
@@ -4190,6 +4204,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
           >
             <input
               class="hidden"
+              data-drawer="true"
               id="nav"
               type="checkbox"
             />
@@ -4233,6 +4248,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
           group-has-[#nav:checked]:pt-20 group-has-[#nav:checked]:pr-[16%]
           group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%]
           group-has-[#nav:checked]:opacity-100
+          group-has-[#nav:checked]:drop-shadow-2xl
           tablet:max-w-[35vw] tablet:gap-y-10
           group-has-[#nav:checked]:tablet:px-10
           group-has-[#nav:checked]:tablet:pt-40
@@ -4457,8 +4473,13 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
       </header>
       <main
         class="
-              grow transition-[opacity] duration-200 ease-in-out
-              group-has-[#nav:checked]:opacity-80
+              grow
+              group-has-[[data-drawer]:checked]:before:absolute
+              group-has-[[data-drawer]:checked]:before:top-0
+              group-has-[[data-drawer]:checked]:before:left-0
+              group-has-[[data-drawer]:checked]:before:z-10
+              group-has-[[data-drawer]:checked]:before:size-full
+              group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
              flex flex-col"
         data-pagefind-body="true"
         data-pagefind-meta="image:/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-express-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
@@ -6791,6 +6812,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
           >
             <input
               class="hidden"
+              data-drawer="true"
               id="nav"
               type="checkbox"
             />
@@ -6834,6 +6856,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
           group-has-[#nav:checked]:pt-20 group-has-[#nav:checked]:pr-[16%]
           group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%]
           group-has-[#nav:checked]:opacity-100
+          group-has-[#nav:checked]:drop-shadow-2xl
           tablet:max-w-[35vw] tablet:gap-y-10
           group-has-[#nav:checked]:tablet:px-10
           group-has-[#nav:checked]:tablet:pt-40
@@ -7058,8 +7081,13 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
       </header>
       <main
         class="
-              grow transition-[opacity] duration-200 ease-in-out
-              group-has-[#nav:checked]:opacity-80
+              grow
+              group-has-[[data-drawer]:checked]:before:absolute
+              group-has-[[data-drawer]:checked]:before:top-0
+              group-has-[[data-drawer]:checked]:before:left-0
+              group-has-[[data-drawer]:checked]:before:z-10
+              group-has-[[data-drawer]:checked]:before:size-full
+              group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
              flex flex-col"
         data-pagefind-body="true"
         data-pagefind-meta="image:/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnight-train-to-terror-1985.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
@@ -8706,6 +8734,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
           >
             <input
               class="hidden"
+              data-drawer="true"
               id="nav"
               type="checkbox"
             />
@@ -8749,6 +8778,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
           group-has-[#nav:checked]:pt-20 group-has-[#nav:checked]:pr-[16%]
           group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%]
           group-has-[#nav:checked]:opacity-100
+          group-has-[#nav:checked]:drop-shadow-2xl
           tablet:max-w-[35vw] tablet:gap-y-10
           group-has-[#nav:checked]:tablet:px-10
           group-has-[#nav:checked]:tablet:pt-40
@@ -8973,8 +9003,13 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
       </header>
       <main
         class="
-              grow transition-[opacity] duration-200 ease-in-out
-              group-has-[#nav:checked]:opacity-80
+              grow
+              group-has-[[data-drawer]:checked]:before:absolute
+              group-has-[[data-drawer]:checked]:before:top-0
+              group-has-[[data-drawer]:checked]:before:left-0
+              group-has-[[data-drawer]:checked]:before:z-10
+              group-has-[[data-drawer]:checked]:before:size-full
+              group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
              flex flex-col"
         data-pagefind-body="true"
         data-pagefind-meta="image:/_image/?href=%2Fcontent%2Fassets%2Fposters%2Frio-bravo-1959.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
@@ -11819,6 +11854,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
           >
             <input
               class="hidden"
+              data-drawer="true"
               id="nav"
               type="checkbox"
             />
@@ -11862,6 +11898,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
           group-has-[#nav:checked]:pt-20 group-has-[#nav:checked]:pr-[16%]
           group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%]
           group-has-[#nav:checked]:opacity-100
+          group-has-[#nav:checked]:drop-shadow-2xl
           tablet:max-w-[35vw] tablet:gap-y-10
           group-has-[#nav:checked]:tablet:px-10
           group-has-[#nav:checked]:tablet:pt-40
@@ -12086,8 +12123,13 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
       </header>
       <main
         class="
-              grow transition-[opacity] duration-200 ease-in-out
-              group-has-[#nav:checked]:opacity-80
+              grow
+              group-has-[[data-drawer]:checked]:before:absolute
+              group-has-[[data-drawer]:checked]:before:top-0
+              group-has-[[data-drawer]:checked]:before:left-0
+              group-has-[[data-drawer]:checked]:before:z-10
+              group-has-[[data-drawer]:checked]:before:size-full
+              group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
              flex flex-col"
         data-pagefind-body="true"
         data-pagefind-meta="image:/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
