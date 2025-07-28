@@ -6,7 +6,6 @@ export function GroupedList<T>({
   children,
   className,
   groupedValues,
-  groupHeaderClasses,
   groupItemClassName,
   onShowMore,
   totalCount,
@@ -16,7 +15,6 @@ export function GroupedList<T>({
   children: (item: T) => React.ReactNode;
   className?: string;
   groupedValues: Map<string, Iterable<T>>;
-  groupHeaderClasses?: string;
   groupItemClassName?: string;
   onShowMore?: () => void;
   totalCount: number;
@@ -31,7 +29,6 @@ export function GroupedList<T>({
           return (
             <GroupingListItem
               className={groupItemClassName ?? groupItemClassName}
-              groupHeaderClasses={groupHeaderClasses}
               groupText={group}
               key={group}
               zIndex={index + 1}
@@ -55,13 +52,11 @@ export function GroupedList<T>({
 function GroupingListItem({
   children,
   className,
-  groupHeaderClasses,
   groupText,
   zIndex,
 }: {
   children: React.ReactNode;
   className?: string;
-  groupHeaderClasses?: string;
   groupText: string;
   zIndex: number;
 }) {
@@ -73,13 +68,7 @@ function GroupingListItem({
       `}
       id={groupText}
     >
-      <div
-        className={`
-          pt-0 text-md
-          ${groupHeaderClasses ?? ""}
-        `}
-        style={{ zIndex: zIndex }}
-      >
+      <div className={`pt-0 text-md`} style={{ zIndex: zIndex }}>
         <div
           className={`
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
