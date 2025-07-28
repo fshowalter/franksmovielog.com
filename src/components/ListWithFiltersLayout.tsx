@@ -80,7 +80,6 @@ export function ListWithFiltersLayout({
                 `}
               >
                 <ListHeader
-                  filters={filters}
                   filtersVisible={filtersVisible}
                   listHeaderButtons={listHeaderButtons}
                   onToggleFilters={() => toggleFilters(!filtersVisible)}
@@ -110,12 +109,12 @@ export function ListWithFiltersLayout({
                       tablet-landscape:border-none tablet-landscape:shadow-none
                     `}
                     onClose={() => toggleFilters(!filtersVisible)}
-                    open={filtersVisible}
+                    open={true}
                   >
                     <div
                       className={`
-                        w-full bg-subtle text-sm
-                        tablet:pt-12 tablet:text-base
+                        relative w-full text-sm
+                        tablet:text-base
                         tablet-landscape:overflow-visible
                         tablet-landscape:bg-default
                         tablet-landscape:px-container tablet-landscape:pt-0
@@ -124,24 +123,51 @@ export function ListWithFiltersLayout({
                     >
                       <fieldset
                         className={`
-                          flex flex-col gap-5 bg-group px-container py-10
+                          flex flex-col gap-4
                           tablet:gap-8 tablet:bg-default
                           tablet-landscape:mt-0 tablet-landscape:gap-12
-                          tablet-landscape:px-0
+                          tablet-landscape:px-0 tablet-landscape:py-10
                         `}
                       >
                         <legend
                           className={`
-                            hidden w-full py-10 font-sans text-xs font-bold
-                            tracking-wide text-subtle uppercase
-                            tablet-landscape:block
-                            tablet-landscape:shadow-bottom
+                            mb-px block w-full px-container py-4 text-lg
+                            text-default shadow-bottom
+                            tablet-landscape:py-10 tablet-landscape:font-sans
+                            tablet-landscape:font-bold
+                            tablet-landscape:tracking-wide
+                            tablet-landscape:uppercase
                           `}
                         >
                           Filter & Sort
                         </legend>
-                        {filters}
+                        <div
+                          className={`
+                            flex flex-col gap-5 px-container py-4
+                            tablet:gap-8 tablet:bg-default
+                            tablet-landscape:mt-0 tablet-landscape:gap-12
+                            tablet-landscape:px-0 tablet-landscape:py-10
+                          `}
+                        >
+                          {filters}
+                        </div>
                       </fieldset>
+                      <div
+                        className={`
+                          sticky right-0 bottom-0 left-0 z-10 flex justify-end
+                          gap-x-4 bg-default px-container py-4 font-sans
+                          text-xxs drop-shadow-sm
+                        `}
+                      >
+                        <button
+                          className={`min-w-16 bg-accent p-2 text-inverse`}
+                        >
+                          Apply
+                        </button>
+                        <button className={`min-w-16 bg-canvas p-2`}>
+                          Reset
+                        </button>
+                      </div>
                     </div>
                   </Dialog>
                 </div>
@@ -165,13 +191,11 @@ export function ListWithFiltersLayout({
 }
 
 function ListHeader({
-  filters,
   filtersVisible,
   listHeaderButtons,
   onToggleFilters,
   totalCount,
 }: {
-  filters: React.ReactNode;
   filtersVisible: boolean;
   listHeaderButtons?: ReactNode;
   onToggleFilters: () => void;

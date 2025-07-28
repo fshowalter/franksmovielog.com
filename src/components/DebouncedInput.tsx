@@ -20,9 +20,10 @@ export function DebouncedInput({
       <LabelText value={label} />
       <input
         className={`
-          border-0 bg-default px-4 py-2 text-base text-default shadow-all
+          border-0 bg-default px-2 py-1 text-base text-default shadow-all
           outline-accent
           placeholder:text-default placeholder:opacity-50
+          tablet-landscape:py-2
         `}
         onChange={(e: React.FormEvent<HTMLInputElement>) =>
           debouncedHandleChange((e.target as HTMLInputElement).value)
