@@ -98,10 +98,10 @@ export function ListWithFiltersLayout({
               >
                 <div
                   className={`
-                    fixed top-0 right-0 flex h-full w-0 max-w-[380px]
-                    transform-[translateX(100%)] flex-col items-start gap-y-5
-                    overflow-hidden bg-default text-left text-inverse
-                    duration-200 ease-in-out
+                    fixed top-0 right-0 col-start-3 row-span-2 row-start-2 flex
+                    h-full w-0 max-w-[380px] transform-[translateX(100%)]
+                    flex-col items-start gap-y-5 overflow-hidden bg-default
+                    text-left text-inverse duration-200 ease-in-out
                     group-has-[#filters:checked]/list-with-filters:bottom-0
                     group-has-[#filters:checked]/list-with-filters:z-60
                     group-has-[#filters:checked]/list-with-filters:h-full
@@ -110,13 +110,20 @@ export function ListWithFiltersLayout({
                     group-has-[#filters:checked]/list-with-filters:overflow-y-auto
                     group-has-[#filters:checked]/list-with-filters:drop-shadow-2xl
                     tablet:gap-y-10
+                    tablet-landscape:relative tablet-landscape:mr-12
+                    tablet-landscape:block tablet-landscape:w-auto
+                    tablet-landscape:max-w-unset tablet-landscape:min-w-[320px]
+                    tablet-landscape:transform-none tablet-landscape:bg-inherit
+                    tablet-landscape:py-24 tablet-landscape:pb-12
+                    tablet-landscape:shadow-none
+                    laptop:mr-20
                   `}
                 >
                   <div
                     className={`
                       flex h-full w-full flex-col text-sm
                       tablet:pt-12 tablet:text-base
-                      tablet-landscape:overflow-visible
+                      tablet-landscape:h-auto tablet-landscape:overflow-visible
                       tablet-landscape:bg-default tablet-landscape:px-container
                       tablet-landscape:pt-0
                       laptop:px-8
@@ -127,15 +134,16 @@ export function ListWithFiltersLayout({
                         flex grow flex-col gap-5 px-container pb-4
                         tablet:gap-8
                         tablet-landscape:mt-0 tablet-landscape:gap-12
-                        tablet-landscape:px-0
+                        tablet-landscape:px-0 tablet-landscape:py-10
                       `}
                     >
                       <legend
                         className={`
                           mb-5 block w-full py-4 text-lg text-subtle
                           shadow-bottom
-                          tablet-landscape:py-10 tablet-landscape:font-sans
-                          tablet-landscape:text-xs tablet-landscape:font-bold
+                          tablet-landscape:mb-0 tablet-landscape:py-10
+                          tablet-landscape:font-sans tablet-landscape:text-xs
+                          tablet-landscape:font-bold
                           tablet-landscape:tracking-wide
                           tablet-landscape:uppercase
                         `}
@@ -148,6 +156,7 @@ export function ListWithFiltersLayout({
                       className={`
                         sticky bottom-0 z-40 mt-auto w-full self-end border-t
                         border-t-default bg-default px-8 py-4 drop-shadow-2xl
+                        tablet-landscape:hidden
                       `}
                     >
                       <label

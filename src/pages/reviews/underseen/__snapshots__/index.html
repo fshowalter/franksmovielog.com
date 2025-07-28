@@ -40,7 +40,7 @@
     <title>Underseen Gems - Frank&#39;s Movie Log</title>
   </head>
   <body
-    class="h-full w-full bg-canvas text-default has-[#nav:checked]:fixed has-[#nav:checked]:overflow-y-scroll data-search-modal-open:overflow-hidden data-search-modal-open:before:fixed data-search-modal-open:before:inset-0 data-search-modal-open:before:z-50 data-search-modal-open:before:backdrop-blur-xs"
+    class="h-full w-full bg-canvas text-default has-[[data-drawer]:checked]:fixed has-[[data-drawer]:checked]:overflow-y-scroll data-search-modal-open:overflow-hidden data-search-modal-open:before:fixed data-search-modal-open:before:inset-0 data-search-modal-open:before:z-50 data-search-modal-open:before:backdrop-blur-xs"
   >
     <style>
       astro-island,
@@ -245,7 +245,7 @@
       })();
     </script>
     <astro-island
-      uid="Z1iuLY2"
+      uid="ZYF0yB"
       prefix="r1"
       component-url="~/components/Underseen/Underseen"
       component-export="Underseen"
@@ -370,7 +370,12 @@
                 </button>
               </div>
               <div class="group">
-                <input class="hidden" id="nav" type="checkbox" /><label
+                <input
+                  class="hidden"
+                  data-drawer="true"
+                  id="nav"
+                  type="checkbox"
+                /><label
                   class="relative z-40 ml-2 flex h-10 w-10 transform-gpu cursor-pointer items-center justify-center transition-transform hover:scale-110"
                   for="nav"
                   ><span
@@ -379,7 +384,7 @@
                   ></span
                 ></label>
                 <ul
-                  class="fixed top-0 right-0 z-20 flex h-full w-0 transform-[translateX(100%)] flex-col items-start gap-y-5 overflow-hidden bg-footer text-left text-inverse opacity-0 duration-200 ease-in-out group-has-[#nav:checked]:bottom-0 group-has-[#nav:checked]:z-20 group-has-[#nav:checked]:h-full group-has-[#nav:checked]:w-full group-has-[#nav:checked]:transform-[translateX(0)] group-has-[#nav:checked]:overflow-y-auto group-has-[#nav:checked]:pt-20 group-has-[#nav:checked]:pr-[16%] group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%] group-has-[#nav:checked]:opacity-100 tablet:max-w-[35vw] tablet:gap-y-10 group-has-[#nav:checked]:tablet:px-10 group-has-[#nav:checked]:tablet:pt-40 laptop:max-w-[25vw] group-has-[#nav:checked]:laptop:px-20"
+                  class="fixed top-0 right-0 z-20 flex h-full w-0 transform-[translateX(100%)] flex-col items-start gap-y-5 overflow-hidden bg-footer text-left text-inverse opacity-0 duration-200 ease-in-out group-has-[#nav:checked]:bottom-0 group-has-[#nav:checked]:z-20 group-has-[#nav:checked]:h-full group-has-[#nav:checked]:w-full group-has-[#nav:checked]:transform-[translateX(0)] group-has-[#nav:checked]:overflow-y-auto group-has-[#nav:checked]:pt-20 group-has-[#nav:checked]:pr-[16%] group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%] group-has-[#nav:checked]:opacity-100 group-has-[#nav:checked]:drop-shadow-2xl tablet:max-w-[35vw] tablet:gap-y-10 group-has-[#nav:checked]:tablet:px-10 group-has-[#nav:checked]:tablet:pt-40 laptop:max-w-[25vw] group-has-[#nav:checked]:laptop:px-20"
                 >
                   <li
                     class="block w-1/2 text-2xl whitespace-nowrap laptop:w-full"
@@ -500,7 +505,7 @@
             </div>
           </header>
           <main
-            class="grow transition-[opacity] duration-200 ease-in-out group-has-[#nav:checked]:opacity-80 bg-subtle"
+            class="grow group-has-[[data-drawer]:checked]:before:absolute group-has-[[data-drawer]:checked]:before:top-0 group-has-[[data-drawer]:checked]:before:left-0 group-has-[[data-drawer]:checked]:before:z-10 group-has-[[data-drawer]:checked]:before:size-full group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)] bg-subtle"
             id="content"
           >
             <header
@@ -588,7 +593,9 @@
                 </li>
               </ul>
             </nav>
-            <div class="mx-auto flex flex-col items-center bg-default">
+            <div
+              class="group/list-with-filters mx-auto flex flex-col items-center bg-default"
+            >
               <div class="mx-auto flex w-full flex-col items-stretch">
                 <div class="flex grow flex-col bg-subtle">
                   <div class="relative tablet:px-12 tablet-landscape:px-0">
@@ -601,383 +608,391 @@
                         <span class="block pr-4"
                           ><span class="font-semibold text-default">32</span>
                           <!-- -->Results</span
-                        ><button
-                          class="ml-auto flex justify-center gap-x-4 px-4 py-2 text-nowrap text-muted uppercase shadow-all tablet-landscape:hidden"
-                          style="background-color: var(--bg-canvas)"
+                        ><input
+                          class="hidden"
+                          data-drawer="true"
+                          id="filters"
+                          type="checkbox"
+                        /><label
+                          class="relative z-40 ml-auto flex transform-gpu cursor-pointer items-center justify-center gap-x-4 bg-canvas px-4 py-2 text-nowrap text-muted uppercase shadow-all transition-transform hover:scale-110 tablet-landscape:hidden"
+                          for="filters"
+                          >Filter &amp; Sort</label
                         >
-                          Filter &amp; Sort
-                        </button>
                       </div>
                     </div>
                     <div
                       class="mx-auto max-w-(--breakpoint-desktop) grid-cols-[1fr_48px_minmax(398px,33%)] tablet-landscape:grid tablet-landscape:grid-rows-[auto_1fr]"
                     >
                       <div
-                        class="relative z-10 col-start-3 row-span-2 row-start-2 grid min-w-[320px] text-sm transition-[grid-template-rows] duration-300 ease-out tablet-landscape:mr-12 tablet-landscape:block tablet-landscape:py-24 tablet-landscape:pb-12 tablet-landscape:shadow-none laptop:mr-20"
-                        style="grid-template-rows: 0fr"
+                        class="fixed top-0 right-0 col-start-3 row-span-2 row-start-2 flex h-full w-0 max-w-[380px] transform-[translateX(100%)] flex-col items-start gap-y-5 overflow-hidden bg-default text-left text-inverse duration-200 ease-in-out group-has-[#filters:checked]/list-with-filters:bottom-0 group-has-[#filters:checked]/list-with-filters:z-60 group-has-[#filters:checked]/list-with-filters:h-full group-has-[#filters:checked]/list-with-filters:w-full group-has-[#filters:checked]/list-with-filters:transform-[translateX(0)] group-has-[#filters:checked]/list-with-filters:overflow-y-auto group-has-[#filters:checked]/list-with-filters:drop-shadow-2xl tablet:gap-y-10 tablet-landscape:relative tablet-landscape:mr-12 tablet-landscape:block tablet-landscape:w-auto tablet-landscape:max-w-unset tablet-landscape:min-w-[320px] tablet-landscape:transform-none tablet-landscape:bg-inherit tablet-landscape:py-24 tablet-landscape:pb-12 tablet-landscape:shadow-none laptop:mr-20"
                       >
-                        <div class="overflow-hidden">
-                          <div
-                            class="w-full bg-subtle text-sm tablet:pt-12 tablet:text-base tablet-landscape:overflow-visible tablet-landscape:bg-default tablet-landscape:px-container tablet-landscape:pt-0 laptop:px-8"
+                        <div
+                          class="flex h-full w-full flex-col text-sm tablet:pt-12 tablet:text-base tablet-landscape:h-auto tablet-landscape:overflow-visible tablet-landscape:bg-default tablet-landscape:px-container tablet-landscape:pt-0 laptop:px-8"
+                        >
+                          <fieldset
+                            class="flex grow flex-col gap-5 px-container pb-4 tablet:gap-8 tablet-landscape:mt-0 tablet-landscape:gap-12 tablet-landscape:px-0 tablet-landscape:py-10"
                           >
-                            <fieldset
-                              class="flex flex-col gap-5 bg-group px-container py-10 tablet:gap-8 tablet:bg-default tablet-landscape:mt-0 tablet-landscape:gap-12 tablet-landscape:px-0"
+                            <legend
+                              class="mb-5 block w-full py-4 text-lg text-subtle shadow-bottom tablet-landscape:mb-0 tablet-landscape:py-10 tablet-landscape:font-sans tablet-landscape:text-xs tablet-landscape:font-bold tablet-landscape:tracking-wide tablet-landscape:uppercase"
                             >
+                              Filter &amp; Sort
+                            </legend>
+                            <label class="flex flex-col text-subtle"
+                              ><span
+                                class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
+                                >Title</span
+                              ><input
+                                class="border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
+                                placeholder="Enter all or part of a title"
+                                type="text"
+                            /></label>
+                            <fieldset class="text-subtle">
                               <legend
-                                class="hidden w-full py-10 font-sans text-xs font-bold tracking-wide text-subtle uppercase tablet-landscape:block tablet-landscape:shadow-bottom"
+                                class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
                               >
-                                Filter &amp; Sort
+                                Release Year
                               </legend>
-                              <label class="flex flex-col text-subtle"
-                                ><span
-                                  class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
-                                  >Title</span
-                                ><input
-                                  class="border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
-                                  placeholder="Enter all or part of a title"
-                                  type="text"
-                              /></label>
-                              <fieldset class="text-subtle">
-                                <legend
-                                  class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
-                                >
-                                  Release Year
-                                </legend>
-                                <div class="flex items-baseline">
-                                  <label
-                                    class="flex flex-1 items-center gap-x-[.5ch]"
-                                    ><span
-                                      class="min-w-10 text-left text-sm tracking-serif-wide"
-                                      >From</span
-                                    ><select
-                                      class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
-                                    >
-                                      <option value="1930" selected="">
-                                        1930
-                                      </option>
-                                      <option value="1931">1931</option>
-                                      <option value="1932">1932</option>
-                                      <option value="1945">1945</option>
-                                      <option value="1946">1946</option>
-                                      <option value="1951">1951</option>
-                                      <option value="1956">1956</option>
-                                      <option value="1958">1958</option>
-                                      <option value="1965">1965</option>
-                                      <option value="1968">1968</option>
-                                      <option value="1969">1969</option>
-                                      <option value="1972">1972</option>
-                                      <option value="1973">1973</option>
-                                      <option value="1975">1975</option>
-                                      <option value="1977">1977</option>
-                                      <option value="1979">1979</option>
-                                      <option value="1982">1982</option>
-                                      <option value="1983">1983</option>
-                                      <option value="1985">1985</option>
-                                      <option value="1986">1986</option>
-                                      <option value="1987">1987</option>
-                                      <option value="1989">1989</option>
-                                    </select></label
-                                  ><label class="flex flex-1 items-center"
-                                    ><span
-                                      class="min-w-10 text-center text-sm tracking-serif-wide"
-                                      >to</span
-                                    ><select
-                                      class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
-                                    >
-                                      <option value="1989" selected="">
-                                        1989
-                                      </option>
-                                      <option value="1987">1987</option>
-                                      <option value="1986">1986</option>
-                                      <option value="1985">1985</option>
-                                      <option value="1983">1983</option>
-                                      <option value="1982">1982</option>
-                                      <option value="1979">1979</option>
-                                      <option value="1977">1977</option>
-                                      <option value="1975">1975</option>
-                                      <option value="1973">1973</option>
-                                      <option value="1972">1972</option>
-                                      <option value="1969">1969</option>
-                                      <option value="1968">1968</option>
-                                      <option value="1965">1965</option>
-                                      <option value="1958">1958</option>
-                                      <option value="1956">1956</option>
-                                      <option value="1951">1951</option>
-                                      <option value="1946">1946</option>
-                                      <option value="1945">1945</option>
-                                      <option value="1932">1932</option>
-                                      <option value="1931">1931</option>
-                                      <option value="1930">1930</option>
-                                    </select></label
-                                  >
-                                </div>
-                              </fieldset>
-                              <div class="flex flex-col text-left text-subtle">
+                              <div class="flex items-baseline">
                                 <label
-                                  class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
-                                  for="Genres"
-                                  >Genres</label
-                                ><style data-emotion="css b62m3t-container">
-                                  .css-b62m3t-container {
+                                  class="flex flex-1 items-center gap-x-[.5ch]"
+                                  ><span
+                                    class="min-w-10 text-left text-sm tracking-serif-wide"
+                                    >From</span
+                                  ><select
+                                    class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                  >
+                                    <option value="1930" selected="">
+                                      1930
+                                    </option>
+                                    <option value="1931">1931</option>
+                                    <option value="1932">1932</option>
+                                    <option value="1945">1945</option>
+                                    <option value="1946">1946</option>
+                                    <option value="1951">1951</option>
+                                    <option value="1956">1956</option>
+                                    <option value="1958">1958</option>
+                                    <option value="1965">1965</option>
+                                    <option value="1968">1968</option>
+                                    <option value="1969">1969</option>
+                                    <option value="1972">1972</option>
+                                    <option value="1973">1973</option>
+                                    <option value="1975">1975</option>
+                                    <option value="1977">1977</option>
+                                    <option value="1979">1979</option>
+                                    <option value="1982">1982</option>
+                                    <option value="1983">1983</option>
+                                    <option value="1985">1985</option>
+                                    <option value="1986">1986</option>
+                                    <option value="1987">1987</option>
+                                    <option value="1989">1989</option>
+                                  </select></label
+                                ><label class="flex flex-1 items-center"
+                                  ><span
+                                    class="min-w-10 text-center text-sm tracking-serif-wide"
+                                    >to</span
+                                  ><select
+                                    class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                  >
+                                    <option value="1989" selected="">
+                                      1989
+                                    </option>
+                                    <option value="1987">1987</option>
+                                    <option value="1986">1986</option>
+                                    <option value="1985">1985</option>
+                                    <option value="1983">1983</option>
+                                    <option value="1982">1982</option>
+                                    <option value="1979">1979</option>
+                                    <option value="1977">1977</option>
+                                    <option value="1975">1975</option>
+                                    <option value="1973">1973</option>
+                                    <option value="1972">1972</option>
+                                    <option value="1969">1969</option>
+                                    <option value="1968">1968</option>
+                                    <option value="1965">1965</option>
+                                    <option value="1958">1958</option>
+                                    <option value="1956">1956</option>
+                                    <option value="1951">1951</option>
+                                    <option value="1946">1946</option>
+                                    <option value="1945">1945</option>
+                                    <option value="1932">1932</option>
+                                    <option value="1931">1931</option>
+                                    <option value="1930">1930</option>
+                                  </select></label
+                                >
+                              </div>
+                            </fieldset>
+                            <div class="flex flex-col text-left text-subtle">
+                              <label
+                                class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
+                                for="Genres"
+                                >Genres</label
+                              ><style data-emotion="css b62m3t-container">
+                                .css-b62m3t-container {
+                                  position: relative;
+                                  box-sizing: border-box;
+                                }
+                              </style>
+                              <div class="css-b62m3t-container">
+                                <style
+                                  data-emotion="css 1f43avz-a11yText-A11yText"
+                                >
+                                  .css-1f43avz-a11yText-A11yText {
+                                    z-index: 9999;
+                                    border: 0;
+                                    clip: rect(1px, 1px, 1px, 1px);
+                                    height: 1px;
+                                    width: 1px;
+                                    position: absolute;
+                                    overflow: hidden;
+                                    padding: 0;
+                                    white-space: nowrap;
+                                  }</style
+                                ><span
+                                  id="react-select-2-live-region"
+                                  class="css-1f43avz-a11yText-A11yText"
+                                ></span
+                                ><span
+                                  aria-live="polite"
+                                  aria-atomic="false"
+                                  aria-relevant="additions text"
+                                  role="log"
+                                  class="css-1f43avz-a11yText-A11yText"
+                                ></span
+                                ><style data-emotion="css 1v8g8jv-control">
+                                  .css-1v8g8jv-control {
+                                    -webkit-align-items: center;
+                                    -webkit-box-align: center;
+                                    -ms-flex-align: center;
+                                    align-items: center;
+                                    cursor: default;
+                                    display: -webkit-box;
+                                    display: -webkit-flex;
+                                    display: -ms-flexbox;
+                                    display: flex;
+                                    -webkit-box-flex-wrap: wrap;
+                                    -webkit-flex-wrap: wrap;
+                                    -ms-flex-wrap: wrap;
+                                    flex-wrap: wrap;
+                                    -webkit-box-pack: justify;
+                                    -webkit-justify-content: space-between;
+                                    justify-content: space-between;
+                                    min-height: 38px;
+                                    outline: 0 !important;
                                     position: relative;
+                                    -webkit-transition: all 100ms;
+                                    transition: all 100ms;
+                                    background-color: var(--bg-default);
+                                    border-color: var(--border-default);
+                                    border-radius: 4px;
+                                    border-style: solid;
+                                    border-width: 1px;
                                     box-sizing: border-box;
                                   }
+                                  .css-1v8g8jv-control:hover {
+                                    border-color: hsl(0, 0%, 70%);
+                                  }
                                 </style>
-                                <div class="css-b62m3t-container">
-                                  <style
-                                    data-emotion="css 1f43avz-a11yText-A11yText"
-                                  >
-                                    .css-1f43avz-a11yText-A11yText {
-                                      z-index: 9999;
-                                      border: 0;
-                                      clip: rect(1px, 1px, 1px, 1px);
-                                      height: 1px;
-                                      width: 1px;
-                                      position: absolute;
-                                      overflow: hidden;
-                                      padding: 0;
-                                      white-space: nowrap;
-                                    }</style
-                                  ><span
-                                    id="react-select-2-live-region"
-                                    class="css-1f43avz-a11yText-A11yText"
-                                  ></span
-                                  ><span
-                                    aria-live="polite"
-                                    aria-atomic="false"
-                                    aria-relevant="additions text"
-                                    role="log"
-                                    class="css-1f43avz-a11yText-A11yText"
-                                  ></span
-                                  ><style data-emotion="css 1v8g8jv-control">
-                                    .css-1v8g8jv-control {
+                                <div
+                                  class="reactSelect__control css-1v8g8jv-control"
+                                >
+                                  <style data-emotion="css hlgwow">
+                                    .css-hlgwow {
                                       -webkit-align-items: center;
                                       -webkit-box-align: center;
                                       -ms-flex-align: center;
                                       align-items: center;
-                                      cursor: default;
-                                      display: -webkit-box;
-                                      display: -webkit-flex;
-                                      display: -ms-flexbox;
-                                      display: flex;
+                                      display: grid;
+                                      -webkit-flex: 1;
+                                      -ms-flex: 1;
+                                      flex: 1;
                                       -webkit-box-flex-wrap: wrap;
                                       -webkit-flex-wrap: wrap;
                                       -ms-flex-wrap: wrap;
                                       flex-wrap: wrap;
-                                      -webkit-box-pack: justify;
-                                      -webkit-justify-content: space-between;
-                                      justify-content: space-between;
-                                      min-height: 38px;
-                                      outline: 0 !important;
+                                      -webkit-overflow-scrolling: touch;
                                       position: relative;
-                                      -webkit-transition: all 100ms;
-                                      transition: all 100ms;
-                                      background-color: var(--bg-default);
-                                      border-color: var(--border-default);
-                                      border-radius: 4px;
-                                      border-style: solid;
-                                      border-width: 1px;
+                                      overflow: hidden;
+                                      padding: 2px 8px;
                                       box-sizing: border-box;
-                                    }
-                                    .css-1v8g8jv-control:hover {
-                                      border-color: hsl(0, 0%, 70%);
                                     }
                                   </style>
                                   <div
-                                    class="reactSelect__control css-1v8g8jv-control"
+                                    class="reactSelect__value-container reactSelect__value-container--is-multi css-hlgwow"
                                   >
-                                    <style data-emotion="css hlgwow">
-                                      .css-hlgwow {
-                                        -webkit-align-items: center;
-                                        -webkit-box-align: center;
-                                        -ms-flex-align: center;
-                                        align-items: center;
-                                        display: grid;
-                                        -webkit-flex: 1;
-                                        -ms-flex: 1;
-                                        flex: 1;
-                                        -webkit-box-flex-wrap: wrap;
-                                        -webkit-flex-wrap: wrap;
-                                        -ms-flex-wrap: wrap;
-                                        flex-wrap: wrap;
-                                        -webkit-overflow-scrolling: touch;
-                                        position: relative;
-                                        overflow: hidden;
-                                        padding: 2px 8px;
+                                    <style
+                                      data-emotion="css 1kb5t8y-placeholder"
+                                    >
+                                      .css-1kb5t8y-placeholder {
+                                        grid-area: 1/1/2/3;
+                                        color: var(--fg-defaults);
+                                        margin-left: 2px;
+                                        margin-right: 2px;
                                         box-sizing: border-box;
                                       }
                                     </style>
                                     <div
-                                      class="reactSelect__value-container reactSelect__value-container--is-multi css-hlgwow"
+                                      class="reactSelect__placeholder css-1kb5t8y-placeholder"
+                                      id="react-select-2-placeholder"
                                     >
-                                      <style
-                                        data-emotion="css 1kb5t8y-placeholder"
-                                      >
-                                        .css-1kb5t8y-placeholder {
-                                          grid-area: 1/1/2/3;
-                                          color: var(--fg-defaults);
-                                          margin-left: 2px;
-                                          margin-right: 2px;
-                                          box-sizing: border-box;
-                                        }
-                                      </style>
-                                      <div
-                                        class="reactSelect__placeholder css-1kb5t8y-placeholder"
-                                        id="react-select-2-placeholder"
-                                      >
-                                        Select...
-                                      </div>
-                                      <style
-                                        data-emotion="css 1s80ejz-dummyInput-DummyInput"
-                                      >
-                                        .css-1s80ejz-dummyInput-DummyInput {
-                                          background: 0;
-                                          border: 0;
-                                          caret-color: transparent;
-                                          font-size: inherit;
-                                          grid-area: 1/1/2/3;
-                                          outline: 0;
-                                          padding: 0;
-                                          width: 1px;
-                                          color: transparent;
-                                          left: -100px;
-                                          opacity: 0;
-                                          position: relative;
-                                          -webkit-transform: scale(0.01);
-                                          -moz-transform: scale(0.01);
-                                          -ms-transform: scale(0.01);
-                                          transform: scale(0.01);
-                                        } /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkR1bW15SW5wdXQudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXlCTSIsImZpbGUiOiJEdW1teUlucHV0LnRzeCIsInNvdXJjZXNDb250ZW50IjpbIi8qKiBAanN4IGpzeCAqL1xuaW1wb3J0IHsgSlNYLCBSZWYgfSBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyBqc3ggfSBmcm9tICdAZW1vdGlvbi9yZWFjdCc7XG5pbXBvcnQgeyByZW1vdmVQcm9wcyB9IGZyb20gJy4uL3V0aWxzJztcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gRHVtbXlJbnB1dCh7XG4gIGlubmVyUmVmLFxuICAuLi5wcm9wc1xufTogSlNYLkludHJpbnNpY0VsZW1lbnRzWydpbnB1dCddICYge1xuICByZWFkb25seSBpbm5lclJlZjogUmVmPEhUTUxJbnB1dEVsZW1lbnQ+O1xufSkge1xuICAvLyBSZW1vdmUgYW5pbWF0aW9uIHByb3BzIG5vdCBtZWFudCBmb3IgSFRNTCBlbGVtZW50c1xuICBjb25zdCBmaWx0ZXJlZFByb3BzID0gcmVtb3ZlUHJvcHMoXG4gICAgcHJvcHMsXG4gICAgJ29uRXhpdGVkJyxcbiAgICAnaW4nLFxuICAgICdlbnRlcicsXG4gICAgJ2V4aXQnLFxuICAgICdhcHBlYXInXG4gICk7XG5cbiAgcmV0dXJuIChcbiAgICA8aW5wdXRcbiAgICAgIHJlZj17aW5uZXJSZWZ9XG4gICAgICB7Li4uZmlsdGVyZWRQcm9wc31cbiAgICAgIGNzcz17e1xuICAgICAgICBsYWJlbDogJ2R1bW15SW5wdXQnLFxuICAgICAgICAvLyBnZXQgcmlkIG9mIGFueSBkZWZhdWx0IHN0eWxlc1xuICAgICAgICBiYWNrZ3JvdW5kOiAwLFxuICAgICAgICBib3JkZXI6IDAsXG4gICAgICAgIC8vIGltcG9ydGFudCEgdGhpcyBoaWRlcyB0aGUgZmxhc2hpbmcgY3Vyc29yXG4gICAgICAgIGNhcmV0Q29sb3I6ICd0cmFuc3BhcmVudCcsXG4gICAgICAgIGZvbnRTaXplOiAnaW5oZXJpdCcsXG4gICAgICAgIGdyaWRBcmVhOiAnMSAvIDEgLyAyIC8gMycsXG4gICAgICAgIG91dGxpbmU6IDAsXG4gICAgICAgIHBhZGRpbmc6IDAsXG4gICAgICAgIC8vIGltcG9ydGFudCEgd2l0aG91dCBgd2lkdGhgIGJyb3dzZXJzIHdvbid0IGFsbG93IGZvY3VzXG4gICAgICAgIHdpZHRoOiAxLFxuXG4gICAgICAgIC8vIHJlbW92ZSBjdXJzb3Igb24gZGVza3RvcFxuICAgICAgICBjb2xvcjogJ3RyYW5zcGFyZW50JyxcblxuICAgICAgICAvLyByZW1vdmUgY3Vyc29yIG9uIG1vYmlsZSB3aGlsc3QgbWFpbnRhaW5pbmcgXCJzY3JvbGwgaW50byB2aWV3XCIgYmVoYXZpb3VyXG4gICAgICAgIGxlZnQ6IC0xMDAsXG4gICAgICAgIG9wYWNpdHk6IDAsXG4gICAgICAgIHBvc2l0aW9uOiAncmVsYXRpdmUnLFxuICAgICAgICB0cmFuc2Zvcm06ICdzY2FsZSguMDEpJyxcbiAgICAgIH19XG4gICAgLz5cbiAgKTtcbn1cbiJdfQ== */</style
-                                      ><input
-                                        id="Genres"
-                                        tabindex="0"
-                                        inputmode="none"
-                                        aria-autocomplete="list"
-                                        aria-expanded="false"
-                                        aria-haspopup="true"
-                                        role="combobox"
-                                        aria-activedescendant=""
-                                        aria-readonly="true"
-                                        aria-describedby="react-select-2-placeholder"
-                                        class="css-1s80ejz-dummyInput-DummyInput"
-                                        value=""
-                                      />
+                                      Select...
                                     </div>
-                                    <style data-emotion="css 1wy0on6">
-                                      .css-1wy0on6 {
-                                        -webkit-align-items: center;
-                                        -webkit-box-align: center;
-                                        -ms-flex-align: center;
-                                        align-items: center;
+                                    <style
+                                      data-emotion="css 1s80ejz-dummyInput-DummyInput"
+                                    >
+                                      .css-1s80ejz-dummyInput-DummyInput {
+                                        background: 0;
+                                        border: 0;
+                                        caret-color: transparent;
+                                        font-size: inherit;
+                                        grid-area: 1/1/2/3;
+                                        outline: 0;
+                                        padding: 0;
+                                        width: 1px;
+                                        color: transparent;
+                                        left: -100px;
+                                        opacity: 0;
+                                        position: relative;
+                                        -webkit-transform: scale(0.01);
+                                        -moz-transform: scale(0.01);
+                                        -ms-transform: scale(0.01);
+                                        transform: scale(0.01);
+                                      } /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkR1bW15SW5wdXQudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXlCTSIsImZpbGUiOiJEdW1teUlucHV0LnRzeCIsInNvdXJjZXNDb250ZW50IjpbIi8qKiBAanN4IGpzeCAqL1xuaW1wb3J0IHsgSlNYLCBSZWYgfSBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyBqc3ggfSBmcm9tICdAZW1vdGlvbi9yZWFjdCc7XG5pbXBvcnQgeyByZW1vdmVQcm9wcyB9IGZyb20gJy4uL3V0aWxzJztcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gRHVtbXlJbnB1dCh7XG4gIGlubmVyUmVmLFxuICAuLi5wcm9wc1xufTogSlNYLkludHJpbnNpY0VsZW1lbnRzWydpbnB1dCddICYge1xuICByZWFkb25seSBpbm5lclJlZjogUmVmPEhUTUxJbnB1dEVsZW1lbnQ+O1xufSkge1xuICAvLyBSZW1vdmUgYW5pbWF0aW9uIHByb3BzIG5vdCBtZWFudCBmb3IgSFRNTCBlbGVtZW50c1xuICBjb25zdCBmaWx0ZXJlZFByb3BzID0gcmVtb3ZlUHJvcHMoXG4gICAgcHJvcHMsXG4gICAgJ29uRXhpdGVkJyxcbiAgICAnaW4nLFxuICAgICdlbnRlcicsXG4gICAgJ2V4aXQnLFxuICAgICdhcHBlYXInXG4gICk7XG5cbiAgcmV0dXJuIChcbiAgICA8aW5wdXRcbiAgICAgIHJlZj17aW5uZXJSZWZ9XG4gICAgICB7Li4uZmlsdGVyZWRQcm9wc31cbiAgICAgIGNzcz17e1xuICAgICAgICBsYWJlbDogJ2R1bW15SW5wdXQnLFxuICAgICAgICAvLyBnZXQgcmlkIG9mIGFueSBkZWZhdWx0IHN0eWxlc1xuICAgICAgICBiYWNrZ3JvdW5kOiAwLFxuICAgICAgICBib3JkZXI6IDAsXG4gICAgICAgIC8vIGltcG9ydGFudCEgdGhpcyBoaWRlcyB0aGUgZmxhc2hpbmcgY3Vyc29yXG4gICAgICAgIGNhcmV0Q29sb3I6ICd0cmFuc3BhcmVudCcsXG4gICAgICAgIGZvbnRTaXplOiAnaW5oZXJpdCcsXG4gICAgICAgIGdyaWRBcmVhOiAnMSAvIDEgLyAyIC8gMycsXG4gICAgICAgIG91dGxpbmU6IDAsXG4gICAgICAgIHBhZGRpbmc6IDAsXG4gICAgICAgIC8vIGltcG9ydGFudCEgd2l0aG91dCBgd2lkdGhgIGJyb3dzZXJzIHdvbid0IGFsbG93IGZvY3VzXG4gICAgICAgIHdpZHRoOiAxLFxuXG4gICAgICAgIC8vIHJlbW92ZSBjdXJzb3Igb24gZGVza3RvcFxuICAgICAgICBjb2xvcjogJ3RyYW5zcGFyZW50JyxcblxuICAgICAgICAvLyByZW1vdmUgY3Vyc29yIG9uIG1vYmlsZSB3aGlsc3QgbWFpbnRhaW5pbmcgXCJzY3JvbGwgaW50byB2aWV3XCIgYmVoYXZpb3VyXG4gICAgICAgIGxlZnQ6IC0xMDAsXG4gICAgICAgIG9wYWNpdHk6IDAsXG4gICAgICAgIHBvc2l0aW9uOiAncmVsYXRpdmUnLFxuICAgICAgICB0cmFuc2Zvcm06ICdzY2FsZSguMDEpJyxcbiAgICAgIH19XG4gICAgLz5cbiAgKTtcbn1cbiJdfQ== */</style
+                                    ><input
+                                      id="Genres"
+                                      tabindex="0"
+                                      inputmode="none"
+                                      aria-autocomplete="list"
+                                      aria-expanded="false"
+                                      aria-haspopup="true"
+                                      role="combobox"
+                                      aria-activedescendant=""
+                                      aria-readonly="true"
+                                      aria-describedby="react-select-2-placeholder"
+                                      class="css-1s80ejz-dummyInput-DummyInput"
+                                      value=""
+                                    />
+                                  </div>
+                                  <style data-emotion="css 1wy0on6">
+                                    .css-1wy0on6 {
+                                      -webkit-align-items: center;
+                                      -webkit-box-align: center;
+                                      -ms-flex-align: center;
+                                      align-items: center;
+                                      -webkit-align-self: stretch;
+                                      -ms-flex-item-align: stretch;
+                                      align-self: stretch;
+                                      display: -webkit-box;
+                                      display: -webkit-flex;
+                                      display: -ms-flexbox;
+                                      display: flex;
+                                      -webkit-flex-shrink: 0;
+                                      -ms-flex-negative: 0;
+                                      flex-shrink: 0;
+                                      box-sizing: border-box;
+                                    }
+                                  </style>
+                                  <div
+                                    class="reactSelect__indicators css-1wy0on6"
+                                  >
+                                    <style
+                                      data-emotion="css 1xn9wwu-indicatorSeparator"
+                                    >
+                                      .css-1xn9wwu-indicatorSeparator {
                                         -webkit-align-self: stretch;
                                         -ms-flex-item-align: stretch;
                                         align-self: stretch;
+                                        width: 1px;
+                                        background-color: var(--border-default);
+                                        margin-bottom: 8px;
+                                        margin-top: 8px;
+                                        box-sizing: border-box;
+                                      }</style
+                                    ><span
+                                      class="reactSelect__indicator-separator css-1xn9wwu-indicatorSeparator"
+                                    ></span
+                                    ><style
+                                      data-emotion="css 1mycq09-indicatorContainer"
+                                    >
+                                      .css-1mycq09-indicatorContainer {
                                         display: -webkit-box;
                                         display: -webkit-flex;
                                         display: -ms-flexbox;
                                         display: flex;
-                                        -webkit-flex-shrink: 0;
-                                        -ms-flex-negative: 0;
-                                        flex-shrink: 0;
+                                        -webkit-transition: color 150ms;
+                                        transition: color 150ms;
+                                        color: var(--border-color-accent);
+                                        padding: 8px;
                                         box-sizing: border-box;
+                                      }
+                                      .css-1mycq09-indicatorContainer:hover {
+                                        color: hsl(0, 0%, 60%);
                                       }
                                     </style>
                                     <div
-                                      class="reactSelect__indicators css-1wy0on6"
+                                      class="reactSelect__indicator reactSelect__dropdown-indicator css-1mycq09-indicatorContainer"
+                                      aria-hidden="true"
                                     >
-                                      <style
-                                        data-emotion="css 1xn9wwu-indicatorSeparator"
-                                      >
-                                        .css-1xn9wwu-indicatorSeparator {
-                                          -webkit-align-self: stretch;
-                                          -ms-flex-item-align: stretch;
-                                          align-self: stretch;
-                                          width: 1px;
-                                          background-color: var(
-                                            --border-default
-                                          );
-                                          margin-bottom: 8px;
-                                          margin-top: 8px;
-                                          box-sizing: border-box;
+                                      <style data-emotion="css tj5bde-Svg">
+                                        .css-tj5bde-Svg {
+                                          display: inline-block;
+                                          fill: currentColor;
+                                          line-height: 1;
+                                          stroke: currentColor;
+                                          stroke-width: 0;
                                         }</style
-                                      ><span
-                                        class="reactSelect__indicator-separator css-1xn9wwu-indicatorSeparator"
-                                      ></span
-                                      ><style
-                                        data-emotion="css 1mycq09-indicatorContainer"
-                                      >
-                                        .css-1mycq09-indicatorContainer {
-                                          display: -webkit-box;
-                                          display: -webkit-flex;
-                                          display: -ms-flexbox;
-                                          display: flex;
-                                          -webkit-transition: color 150ms;
-                                          transition: color 150ms;
-                                          color: var(--border-color-accent);
-                                          padding: 8px;
-                                          box-sizing: border-box;
-                                        }
-                                        .css-1mycq09-indicatorContainer:hover {
-                                          color: hsl(0, 0%, 60%);
-                                        }
-                                      </style>
-                                      <div
-                                        class="reactSelect__indicator reactSelect__dropdown-indicator css-1mycq09-indicatorContainer"
+                                      ><svg
+                                        height="20"
+                                        width="20"
+                                        viewBox="0 0 20 20"
                                         aria-hidden="true"
+                                        focusable="false"
+                                        class="css-tj5bde-Svg"
                                       >
-                                        <style data-emotion="css tj5bde-Svg">
-                                          .css-tj5bde-Svg {
-                                            display: inline-block;
-                                            fill: currentColor;
-                                            line-height: 1;
-                                            stroke: currentColor;
-                                            stroke-width: 0;
-                                          }</style
-                                        ><svg
-                                          height="20"
-                                          width="20"
-                                          viewBox="0 0 20 20"
-                                          aria-hidden="true"
-                                          focusable="false"
-                                          class="css-tj5bde-Svg"
-                                        >
-                                          <path
-                                            d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                                          ></path>
-                                        </svg>
-                                      </div>
+                                        <path
+                                          d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                                        ></path>
+                                      </svg>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                              <label class="flex flex-col"
-                                ><span
-                                  class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
-                                  >Sort</span
-                                ><select
-                                  class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
-                                >
-                                  <option value="title-asc">
-                                    Title (A → Z)
-                                  </option>
-                                  <option value="title-desc">
-                                    Title (Z → A)
-                                  </option>
-                                  <option value="grade-desc">
-                                    Grade (Best First)
-                                  </option>
-                                  <option value="grade-asc">
-                                    Grade (Worst First)
-                                  </option>
-                                  <option value="release-date-desc" selected="">
-                                    Release Date (Newest First)
-                                  </option>
-                                  <option value="release-date-asc">
-                                    Release Date (Oldest First)
-                                  </option>
-                                </select></label
+                            </div>
+                            <label class="flex flex-col"
+                              ><span
+                                class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
+                                >Sort</span
+                              ><select
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
                               >
-                            </fieldset>
+                                <option value="title-asc">Title (A → Z)</option>
+                                <option value="title-desc">
+                                  Title (Z → A)
+                                </option>
+                                <option value="grade-desc">
+                                  Grade (Best First)
+                                </option>
+                                <option value="grade-asc">
+                                  Grade (Worst First)
+                                </option>
+                                <option value="release-date-desc" selected="">
+                                  Release Date (Newest First)
+                                </option>
+                                <option value="release-date-asc">
+                                  Release Date (Oldest First)
+                                </option>
+                              </select></label
+                            >
+                          </fieldset>
+                          <div
+                            class="sticky bottom-0 z-40 mt-auto w-full self-end border-t border-t-default bg-default px-8 py-4 drop-shadow-2xl tablet-landscape:hidden"
+                          >
+                            <label
+                              class="flex cursor-pointer items-center justify-center gap-x-4 bg-footer px-4 py-3 font-sans text-xs text-nowrap text-inverse uppercase tablet-landscape:hidden"
+                              for="filters"
+                              >View
+                              <!-- -->32<!-- -->
+                              Results</label
+                            >
                           </div>
                         </div>
                       </div>
