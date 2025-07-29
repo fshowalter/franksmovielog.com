@@ -25,8 +25,10 @@ export function ReviewListItem({ value }: { value: ReviewListItemValue }) {
     <ListItem
       className={`
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       `}
     >
       <div

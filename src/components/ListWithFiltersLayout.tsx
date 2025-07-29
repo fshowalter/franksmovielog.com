@@ -266,8 +266,9 @@ function ListHeader<T extends string>({
             Sort{" "}
             <select
               className={`
-                flex w-full appearance-none border-none bg-default py-2 pr-8
-                pl-4 text-xs font-normal text-subtle shadow-all outline-accent
+                flex w-full appearance-none border-none bg-default py-2 pr-4
+                pl-4 text-xs font-normal tracking-normal text-subtle shadow-all
+                outline-accent
                 tablet:max-w-1/3
                 laptop:max-w-1/4
               `}

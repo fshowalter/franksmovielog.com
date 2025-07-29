@@ -263,8 +263,10 @@ function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
       className={`
         group/list-item relative mb-1 flex transform-gpu flex-row items-center
         gap-x-4 transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
         ${value.slug ? `bg-default` : `bg-unreviewed`}
         px-container py-4
         last-of-type:mb-0
