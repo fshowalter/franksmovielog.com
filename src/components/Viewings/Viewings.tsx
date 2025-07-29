@@ -94,10 +94,6 @@ export function Viewings({
         <GroupedList
           data-testid="list"
           groupedValues={state.groupedValues}
-          groupHeaderClasses={`
-            sticky top-0
-            tablet:static
-          `}
           onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
           totalCount={state.filteredValues.length}
           visibleCount={state.showCount}
@@ -154,9 +150,9 @@ function DateListItem({
         >
           <div
             className={`
-              ml-0 hidden w-12 pb-1 text-center font-sans text-xxs/none
-              font-light text-subtle uppercase
-              tablet:block
+              mr-1 py-2 text-center font-sans text-xxs/none font-light
+              text-subtle uppercase
+              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
             `}
           >
             {month}
@@ -171,17 +167,18 @@ function DateListItem({
           </div>
           <div
             className={`
-              ml-0 hidden w-12 py-2 text-center font-sans text-xs/none uppercase
-              tablet:block tablet:py-1 tablet:font-light
+              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
+              text-subtle uppercase
+              tablet:w-12 tablet:px-0 tablet:py-1
             `}
           >
             {year}
           </div>
           <div
             className={`
-              ml-1 py-2 font-sans text-xxs/none text-subtle uppercase
+              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
+              uppercase
               tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
-              tablet:font-light
             `}
           >
             {day}

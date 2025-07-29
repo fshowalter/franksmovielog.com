@@ -1,4 +1,4 @@
-import { type JSX, type ReactNode, useState } from "react";
+import { type JSX, type ReactNode, useRef } from "react";
 
 import { Layout } from "./Layout";
 
@@ -50,8 +50,6 @@ export function ListWithFiltersLayout({
   totalCount,
   ...rest
 }: Props): JSX.Element {
-  const [filtersVisible, toggleFilters] = useState(false);
-
   return (
     <Layout
       className={className || "bg-subtle"}
@@ -76,16 +74,16 @@ export function ListWithFiltersLayout({
             >
               <div
                 className={`
-                  relative z-10 row-start-1 bg-default text-xs
+                  sticky top-0 z-10 row-start-1 border-b border-default
+                  bg-default text-xs
                   tablet:-mx-12 tablet:px-0
-                  tablet-landscape:col-span-3 tablet-landscape:mx-0
-                  tablet-landscape:w-full
+                  tablet-landscape:static tablet-landscape:col-span-3
+                  tablet-landscape:mx-0 tablet-landscape:w-full
+                  tablet-landscape:border-none
                 `}
               >
                 <ListHeader
-                  filtersVisible={filtersVisible}
                   listHeaderButtons={listHeaderButtons}
-                  onToggleFilters={() => toggleFilters(!filtersVisible)}
                   totalCount={totalCount}
                 />
               </div>
@@ -196,34 +194,48 @@ function ListHeader({
   listHeaderButtons,
   totalCount,
 }: {
-  filtersVisible: boolean;
   listHeaderButtons?: ReactNode;
-  onToggleFilters: () => void;
   totalCount: number;
 }): JSX.Element {
+  const headerRef = useRef<HTMLDivElement | null>(null);
+
+  const executeScroll: React.ChangeEventHandler<HTMLInputElement> = (event) => {
+    if (!event.currentTarget.checked) {
+      headerRef?.current?.scrollIntoView();
+    }
+  };
+
   return (
     <div
       className={`
         mx-auto flex w-full max-w-(--breakpoint-desktop) flex-wrap
-        items-baseline justify-between gap-x-4 gap-y-5 px-container py-10
-        font-sans font-medium tracking-wide text-subtle uppercase
+        items-baseline justify-end gap-x-4 gap-y-5 px-container py-10 font-sans
+        font-medium tracking-wide text-subtle uppercase
+        tablet-landscape:static
       `}
+      ref={headerRef}
     >
-      <span className="block pr-4">
+      <span className="mr-auto block">
         <span className="font-semibold text-default">
           {totalCount.toLocaleString()}
         </span>{" "}
         Results
       </span>
       {listHeaderButtons && (
-        <div className="ml-auto flex w-1/2 flex-wrap justify-end gap-4">
+        <div className={`flex flex-wrap justify-end gap-4`}>
           {listHeaderButtons}
         </div>
       )}
-      <input className="hidden" data-drawer id="filters" type="checkbox" />
+      <input
+        className="hidden"
+        data-drawer
+        id="filters"
+        onChange={executeScroll}
+        type="checkbox"
+      />
       <label
         className={`
-          relative z-40 ml-auto flex transform-gpu cursor-pointer items-center
+          relative z-40 flex transform-gpu cursor-pointer items-center
           justify-center gap-x-4 bg-canvas px-4 py-2 text-nowrap text-muted
           uppercase shadow-all transition-transform
           hover:scale-110

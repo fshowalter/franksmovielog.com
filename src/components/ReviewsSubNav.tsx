@@ -32,10 +32,7 @@ export function ReviewsSubNav({ active }: { active: keyof typeof items }) {
             >
               {active === key ? (
                 <a
-                  className={`
-                    block bg-default p-6 text-default
-                    tablet:py-8
-                  `}
+                  className={`block bg-default px-6 py-8 text-default`}
                   href={value.href}
                 >
                   {value.text}
@@ -43,9 +40,8 @@ export function ReviewsSubNav({ active }: { active: keyof typeof items }) {
               ) : (
                 <a
                   className={`
-                    block transform-gpu p-6 transition-all
+                    block transform-gpu px-6 py-8 transition-all
                     hover:scale-105 hover:bg-accent hover:text-inverse
-                    tablet:py-8
                   `}
                   href={value.href}
                 >

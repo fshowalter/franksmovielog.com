@@ -53,6 +53,7 @@ export function Layout({
               group-has-[[data-drawer]:checked]:before:z-10
               group-has-[[data-drawer]:checked]:before:size-full
               group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
+              tablet-landscape:group-has-[[data-drawer]:checked]:before:hidden
             `,
             className,
           )}
