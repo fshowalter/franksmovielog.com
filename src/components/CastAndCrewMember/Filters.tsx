@@ -16,12 +16,14 @@ export function Filters({
   creditedAs,
   dispatch,
   distinctReleaseYears,
+  distinctReviewYears,
   hideReviewed,
   sortValue,
 }: {
   creditedAs: readonly string[];
   dispatch: React.Dispatch<ActionType>;
   distinctReleaseYears: readonly string[];
+  distinctReviewYears: readonly string[];
   hideReviewed: boolean;
   sortValue: Sort;
 }): JSX.Element {
@@ -66,6 +68,13 @@ export function Filters({
         }
         years={distinctReleaseYears}
       />
+      <YearInput
+        label="Review Year"
+        onYearChange={(values) =>
+          dispatch({ type: Actions.FILTER_REVIEW_YEAR, values })
+        }
+        years={distinctReviewYears}
+      />
       <SelectField
         className="basis-full"
         label="Sort"
@@ -82,6 +91,8 @@ export function Filters({
         <option value="title">Title</option>
         <option value="grade-desc">Grade (Best First)</option>
         <option value="grade-asc">Grade (Worst First)</option>
+        <option value="review-date-desc">Review Date (Newest First)</option>
+        <option value="review-date-asc">Review Date (Oldest First)</option>
       </SelectField>
     </>
   );
