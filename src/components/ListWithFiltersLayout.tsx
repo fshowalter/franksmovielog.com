@@ -209,9 +209,8 @@ function ListHeader({
     <div
       className={`
         mx-auto flex w-full max-w-(--breakpoint-desktop) flex-wrap
-        items-baseline justify-end gap-x-4 gap-y-5 px-container py-5 font-sans
+        items-baseline justify-end gap-x-4 gap-y-5 px-container py-10 font-sans
         font-medium tracking-wide text-subtle uppercase
-        tablet:py-10
         tablet-landscape:static
       `}
       ref={headerRef}

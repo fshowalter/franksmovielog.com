@@ -23216,6 +23216,7 @@ exports[`Underseen > renders 1`] = `
               group-has-[[data-drawer]:checked]:before:z-10
               group-has-[[data-drawer]:checked]:before:size-full
               group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
+              tablet-landscape:group-has-[[data-drawer]:checked]:before:hidden
              bg-subtle"
         id="content"
       >
@@ -23303,9 +23304,8 @@ exports[`Underseen > renders 1`] = `
             >
               <a
                 class="
-                    block transform-gpu px-6 py-5 transition-all
+                    block transform-gpu px-6 py-8 transition-all
                     hover:scale-105 hover:bg-accent hover:text-inverse
-                    tablet:py-8
                   "
                 href="/reviews/"
               >
@@ -23320,9 +23320,8 @@ exports[`Underseen > renders 1`] = `
             >
               <a
                 class="
-                    block transform-gpu px-6 py-5 transition-all
+                    block transform-gpu px-6 py-8 transition-all
                     hover:scale-105 hover:bg-accent hover:text-inverse
-                    tablet:py-8
                   "
                 href="/reviews/overrated/"
               >
@@ -23337,9 +23336,8 @@ exports[`Underseen > renders 1`] = `
             >
               <a
                 class="
-                    block transform-gpu px-6 py-5 transition-all
+                    block transform-gpu px-6 py-8 transition-all
                     hover:scale-105 hover:bg-accent hover:text-inverse
-                    tablet:py-8
                   "
                 href="/reviews/underrated/"
               >
@@ -23353,10 +23351,7 @@ exports[`Underseen > renders 1`] = `
               "
             >
               <a
-                class="
-                    block bg-default px-6 py-5 text-default
-                    tablet:py-8
-                  "
+                class="block bg-default px-6 py-8 text-default"
                 href="/reviews/underseen/"
               >
                 Underseen
@@ -23395,9 +23390,8 @@ exports[`Underseen > renders 1`] = `
                   <div
                     class="
         mx-auto flex w-full max-w-(--breakpoint-desktop) flex-wrap
-        items-baseline justify-end gap-x-4 gap-y-5 px-container py-5 font-sans
+        items-baseline justify-end gap-x-4 gap-y-5 px-container py-10 font-sans
         font-medium tracking-wide text-subtle uppercase
-        tablet:py-10
         tablet-landscape:static
       "
                   >
