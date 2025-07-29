@@ -12,7 +12,8 @@ import type { Props } from "./CastAndCrewMember";
 export async function getProps(
   slug: string,
 ): Promise<Props & { metaDescription: string }> {
-  const { distinctReleaseYears, member } = await castAndCrewMember(slug);
+  const { distinctReleaseYears, distinctReviewYears, member } =
+    await castAndCrewMember(slug);
 
   member.titles.sort((a, b) =>
     a.releaseSequence.localeCompare(b.releaseSequence),
@@ -29,6 +30,7 @@ export async function getProps(
     ),
     deck: deck(member),
     distinctReleaseYears,
+    distinctReviewYears,
     initialSort: "release-date-asc",
     metaDescription: metaDescription(member),
     titles: await Promise.all(
@@ -39,6 +41,25 @@ export async function getProps(
             title.slug,
             ListItemPosterImageConfig,
           ),
+          reviewDisplayDate: title.reviewDate
+            ? `${new Date(title.reviewDate).toLocaleDateString("en-US", {
+                timeZone: "UTC",
+                year: "numeric",
+              })}-${new Date(title.reviewDate).toLocaleDateString("en-US", {
+                month: "short",
+                timeZone: "UTC",
+              })}-${new Date(title.reviewDate).toLocaleDateString("en-US", {
+                day: "2-digit",
+                timeZone: "UTC",
+              })}`
+            : "",
+          reviewSequence: title.reviewSequence,
+          reviewYear: title.reviewDate
+            ? new Date(title.reviewDate).toLocaleDateString("en-US", {
+                timeZone: "UTC",
+                year: "numeric",
+              })
+            : "",
         };
       }),
     ),

@@ -40,6 +40,9 @@ export type ListItemValue = Pick<
   | "year"
 > & {
   posterImageProps: PosterImageProps;
+  reviewDisplayDate: string;
+  reviewSequence?: string;
+  reviewYear: string;
 };
 
 export type Props = {
@@ -47,6 +50,7 @@ export type Props = {
   backdropImageProps: BackdropImageProps;
   deck: string;
   distinctReleaseYears: readonly string[];
+  distinctReviewYears: readonly string[];
   initialSort: Sort;
   titles: ListItemValue[];
   value: Pick<
@@ -60,6 +64,7 @@ export function CastAndCrewMember({
   backdropImageProps,
   deck,
   distinctReleaseYears,
+  distinctReviewYears,
   initialSort,
   titles,
   value,
@@ -94,6 +99,7 @@ export function CastAndCrewMember({
           creditedAs={value.creditedAs}
           dispatch={dispatch}
           distinctReleaseYears={distinctReleaseYears}
+          distinctReviewYears={distinctReviewYears}
           hideReviewed={state.hideReviewed}
           sortValue={state.sortValue}
         />
@@ -138,8 +144,9 @@ function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
       </div>
       <div
         className={`
-          flex grow flex-col gap-2 pb-2
+          flex grow flex-col items-start gap-y-2
           tablet:w-full
+          laptop:pr-4
         `}
       >
         <CreditedAs values={value.creditedAs} />
@@ -148,7 +155,9 @@ function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
           title={value.title}
           year={value.year}
         />
-        {value.grade && <Grade height={16} value={value.grade} />}
+        {value.grade && (
+          <Grade className="mb-1" height={16} value={value.grade} />
+        )}
         {!value.grade && (
           <WatchlistTitleSlug
             collectionNames={value.collectionNames}
@@ -157,6 +166,9 @@ function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
             writerNames={value.watchlistWriterNames}
           />
         )}
+        <div className="font-sans text-xs leading-4 font-light text-subtle">
+          {value.reviewDisplayDate}
+        </div>
       </div>
     </ListItem>
   );
