@@ -69,7 +69,7 @@ export function Filters({
       >
         <SelectOptions options={distinctVenues} />
       </SelectField>
-      <SelectField
+      {/* <SelectField
         label="Sort"
         onChange={(e) =>
           dispatch({
@@ -81,7 +81,16 @@ export function Filters({
       >
         <option value="viewing-date-desc">Viewing Date (Newest First)</option>
         <option value="viewing-date-asc">Viewing Date (Oldest First)</option>
-      </SelectField>
+      </SelectField> */}
+    </>
+  );
+}
+
+export function SortOptions(): React.ReactNode {
+  return (
+    <>
+      <option value="viewing-date-desc">Viewing Date (Newest First)</option>
+      <option value="viewing-date-asc">Viewing Date (Oldest First)</option>
     </>
   );
 }

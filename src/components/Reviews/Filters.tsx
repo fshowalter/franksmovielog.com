@@ -13,13 +13,11 @@ export function Filters({
   distinctGenres,
   distinctReleaseYears,
   distinctReviewYears,
-  sortValue,
 }: {
   dispatch: React.Dispatch<ActionType>;
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
-  sortValue: string;
 }) {
   return (
     <>
@@ -63,25 +61,36 @@ export function Filters({
         }
         options={distinctGenres}
       />
-      <SelectField
-        label="Sort"
-        onChange={(e) =>
-          dispatch({
-            type: Actions.SORT,
-            value: e.target.value as Sort,
-          })
-        }
-        value={sortValue}
-      >
-        <option value="title-asc">Title (A &rarr; Z)</option>
-        <option value="title-desc">Title (Z &rarr; A)</option>
-        <option value="grade-desc">Grade (Best First)</option>
-        <option value="grade-asc">Grade (Worst First)</option>
-        <option value="release-date-desc">Release Date (Newest First)</option>
-        <option value="release-date-asc">Release Date (Oldest First)</option>
-        <option value="review-date-desc">Review Date (Newest First)</option>
-        <option value="review-date-asc">Review Date (Oldest First)</option>
-      </SelectField>
     </>
+  );
+}
+
+export function Sorter({
+  dispatch,
+  sortValue,
+}: {
+  dispatch: React.Dispatch<ActionType>;
+  sortValue: Sort;
+}) {
+  return (
+    <SelectField
+      label="Sorted By"
+      onChange={(e) =>
+        dispatch({
+          type: Actions.SORT,
+          value: e.target.value as Sort,
+        })
+      }
+      value={sortValue}
+    >
+      <option value="title-asc">Title (A &rarr; Z)</option>
+      <option value="title-desc">Title (Z &rarr; A)</option>
+      <option value="grade-desc">Grade (Best First)</option>
+      <option value="grade-asc">Grade (Worst First)</option>
+      <option value="release-date-desc">Release Date (Newest First)</option>
+      <option value="release-date-asc">Release Date (Oldest First)</option>
+      <option value="review-date-desc">Review Date (Newest First)</option>
+      <option value="review-date-asc">Review Date (Oldest First)</option>
+    </SelectField>
   );
 }

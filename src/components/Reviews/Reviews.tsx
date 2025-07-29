@@ -11,7 +11,7 @@ import { ReviewsSubNav } from "~/components/ReviewsSubNav";
 
 import type { Sort } from "./Reviews.reducer";
 
-import { Filters } from "./Filters";
+import { Filters, Sorter } from "./Filters";
 import { Actions, initState, reducer } from "./Reviews.reducer";
 
 export type ListItemValue = ReviewListItemValue & {
@@ -59,7 +59,6 @@ export function Reviews({
           distinctGenres={distinctGenres}
           distinctReleaseYears={distinctReleaseYears}
           distinctReviewYears={distinctReviewYears}
-          sortValue={state.sortValue}
         />
       }
       list={
@@ -74,6 +73,7 @@ export function Reviews({
           {(value) => <ReviewListItem key={value.imdbId} value={value} />}
         </GroupedList>
       }
+      sorter={<Sorter dispatch={dispatch} sortValue={state.sortValue} />}
       subNav={<ReviewsSubNav active="all" />}
       totalCount={state.filteredValues.length}
     />

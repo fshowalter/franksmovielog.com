@@ -15,7 +15,7 @@ import {
 
 import type { Sort } from "./Viewings.reducer";
 
-import { Filters } from "./Filters";
+import { Filters, SortOptions } from "./Filters";
 import { Actions, initState, reducer } from "./Viewings.reducer";
 
 export type ListItemValue = Pick<
@@ -109,6 +109,15 @@ export function Viewings({
       listHeaderButtons={
         <ListHeaderButton href="/viewings/stats/" text="stats" />
       }
+      sortProps={{
+        currentSortValue: state.sortValue,
+        onSortChange: (e) =>
+          dispatch({
+            type: Actions.SORT,
+            value: e.target.value as Sort,
+          }),
+        sortOptions: <SortOptions />,
+      }}
       totalCount={state.filteredValues.length}
     />
   );

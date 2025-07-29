@@ -2,15 +2,22 @@ import { type JSX, type ReactNode, useRef } from "react";
 
 import { Layout } from "./Layout";
 
-type Props = {
+type Props<T extends string> = {
   backdrop: React.ReactNode;
   className?: string;
   filters: React.ReactNode;
   list: React.ReactNode;
   listHeaderButtons?: React.ReactNode;
   mastGradient?: boolean;
+  sortProps: SortProps<T>;
   subNav?: React.ReactNode;
   totalCount: number;
+};
+
+type SortProps<T extends string> = {
+  currentSortValue: T;
+  onSortChange: React.ChangeEventHandler<HTMLSelectElement>;
+  sortOptions: React.ReactNode;
 };
 
 export function ListHeaderButton({
@@ -39,17 +46,18 @@ export function ListHeaderButton({
   );
 }
 
-export function ListWithFiltersLayout({
+export function ListWithFiltersLayout<T extends string>({
   backdrop,
   className,
   filters,
   list,
   listHeaderButtons,
   mastGradient,
+  sortProps,
   subNav,
   totalCount,
   ...rest
-}: Props): JSX.Element {
+}: Props<T>): JSX.Element {
   return (
     <Layout
       className={className || "bg-subtle"}
@@ -84,6 +92,7 @@ export function ListWithFiltersLayout({
               >
                 <ListHeader
                   listHeaderButtons={listHeaderButtons}
+                  sortProps={sortProps}
                   totalCount={totalCount}
                 />
               </div>
@@ -113,7 +122,7 @@ export function ListWithFiltersLayout({
                     tablet-landscape:max-w-unset tablet-landscape:min-w-[320px]
                     tablet-landscape:transform-none tablet-landscape:bg-inherit
                     tablet-landscape:py-24 tablet-landscape:pb-12
-                    tablet-landscape:shadow-none
+                    tablet-landscape:drop-shadow-none
                     laptop:mr-20
                   `}
                 >
@@ -137,16 +146,17 @@ export function ListWithFiltersLayout({
                     >
                       <legend
                         className={`
-                          mb-5 block w-full py-4 text-lg text-subtle
+                          mb-5 block w-full pt-4 pb-4 text-lg text-subtle
                           shadow-bottom
-                          tablet-landscape:mb-0 tablet-landscape:py-10
-                          tablet-landscape:font-sans tablet-landscape:text-xs
-                          tablet-landscape:font-bold
+                          tablet-landscape:mb-0 tablet-landscape:pt-10
+                          tablet-landscape:pb-0 tablet-landscape:font-sans
+                          tablet-landscape:text-xs tablet-landscape:font-bold
                           tablet-landscape:tracking-wide
                           tablet-landscape:uppercase
+                          tablet-landscape:shadow-none
                         `}
                       >
-                        Filter & Sort
+                        Filter
                       </legend>
                       {filters}
                     </fieldset>
@@ -190,14 +200,17 @@ export function ListWithFiltersLayout({
   );
 }
 
-function ListHeader({
+function ListHeader<T extends string>({
   listHeaderButtons,
+  sortProps,
   totalCount,
 }: {
   listHeaderButtons?: ReactNode;
+  sortProps: SortProps<T>;
   totalCount: number;
 }): JSX.Element {
   const headerRef = useRef<HTMLDivElement | null>(null);
+  const { currentSortValue, onSortChange, sortOptions } = sortProps;
 
   const executeScroll: React.ChangeEventHandler<HTMLInputElement> = (event) => {
     if (!event.currentTarget.checked) {
@@ -209,7 +222,7 @@ function ListHeader({
     <div
       className={`
         mx-auto flex w-full max-w-(--breakpoint-desktop) flex-wrap
-        items-baseline justify-end gap-x-4 gap-y-5 px-container py-10 font-sans
+        items-baseline justify-end gap-x-2 gap-y-5 px-container py-10 font-sans
         font-medium tracking-wide text-subtle uppercase
         tablet-landscape:static
       `}
@@ -218,14 +231,16 @@ function ListHeader({
       <span className="mr-auto block">
         <span className="font-semibold text-default">
           {totalCount.toLocaleString()}
-        </span>{" "}
-        Results
+        </span>
+        <span className="text-xxs leading-none tracking-wide"> Results</span>
       </span>
+
       {listHeaderButtons && (
         <div className={`flex flex-wrap justify-end gap-4`}>
           {listHeaderButtons}
         </div>
       )}
+
       <input
         className="hidden"
         data-drawer
@@ -243,8 +258,27 @@ function ListHeader({
         `}
         htmlFor="filters"
       >
-        Filter & Sort
+        Filter
       </label>
+      {sortOptions && (
+        <div className={`ml-auto w-full`}>
+          <label className="flex items-baseline gap-x-4 text-xxs tracking-wide">
+            Sort{" "}
+            <select
+              className={`
+                flex w-full appearance-none border-none bg-default py-2 pr-8
+                pl-4 text-xs font-normal text-subtle shadow-all outline-accent
+                tablet:max-w-1/3
+                laptop:max-w-1/4
+              `}
+              onChange={onSortChange}
+              value={currentSortValue}
+            >
+              {sortOptions}
+            </select>
+          </label>
+        </div>
+      )}
     </div>
   );
 }
