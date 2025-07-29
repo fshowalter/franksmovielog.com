@@ -8,7 +8,6 @@ import type { ListItemValue, Props } from "./Viewings";
 
 export async function getProps(): Promise<Props & { metaDescription: string }> {
   const {
-    distinctGenres,
     distinctMedia,
     distinctReleaseYears,
     distinctVenues,
@@ -22,7 +21,6 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
     viewings.map(async (viewing) => {
       const viewingDate = new Date(viewing.viewingDate);
       const value: ListItemValue = {
-        genres: viewing.genres,
         medium: viewing.medium,
         posterImageProps: await getFluidWidthPosterImageProps(
           viewing.slug,
@@ -64,7 +62,6 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
       BackdropImageConfig,
     ),
     deck: '"We have such sights to show you!"',
-    distinctGenres,
     distinctMedia,
     distinctReleaseYears,
     distinctVenues,

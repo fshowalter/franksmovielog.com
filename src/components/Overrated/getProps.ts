@@ -8,29 +8,48 @@ import type { ListItemValue } from "./Overrated";
 import type { Props } from "./Overrated";
 
 export async function getProps(): Promise<Props & { metaDescription: string }> {
-  const { distinctGenres, distinctReleaseYears, overratedDisappointments } =
-    await allOverratedDisappointments();
+  const {
+    distinctGenres,
+    distinctReleaseYears,
+    distinctReviewYears,
+    overratedDisappointments,
+  } = await allOverratedDisappointments();
 
   overratedDisappointments.sort((a, b) =>
     b.releaseSequence.localeCompare(a.releaseSequence),
   );
 
   const values = await Promise.all(
-    overratedDisappointments.map(async (review) => {
+    overratedDisappointments.map(async (title) => {
       const listItemData: ListItemValue = {
-        genres: review.genres,
-        grade: review.grade,
-        gradeValue: review.gradeValue,
-        imdbId: review.imdbId,
+        genres: title.genres,
+        grade: title.grade,
+        gradeValue: title.gradeValue,
+        imdbId: title.imdbId,
         posterImageProps: await getFluidWidthPosterImageProps(
-          review.slug,
+          title.slug,
           ListItemPosterImageConfig,
         ),
-        releaseSequence: review.releaseSequence,
-        slug: review.slug,
-        sortTitle: review.sortTitle,
-        title: review.title,
-        year: review.year,
+        releaseSequence: title.releaseSequence,
+        reviewDisplayDate: `${title.reviewDate.toLocaleDateString("en-US", {
+          timeZone: "UTC",
+          year: "numeric",
+        })}-${title.reviewDate.toLocaleDateString("en-US", {
+          month: "short",
+          timeZone: "UTC",
+        })}-${title.reviewDate.toLocaleDateString("en-US", {
+          day: "2-digit",
+          timeZone: "UTC",
+        })}`,
+        reviewSequence: title.reviewSequence,
+        reviewYear: title.reviewDate.toLocaleDateString("en-US", {
+          timeZone: "UTC",
+          year: "numeric",
+        }),
+        slug: title.slug,
+        sortTitle: title.sortTitle,
+        title: title.title,
+        year: title.year,
       };
 
       return listItemData;
@@ -45,6 +64,7 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
     deck: "One and two star movies with an above-average IMDb rating.",
     distinctGenres,
     distinctReleaseYears,
+    distinctReviewYears,
     initialSort: "release-date-desc",
     metaDescription:
       "Feeling contrarian? Behold my one and two star reviews of movies that somehow received and above-average IMDb rating.",

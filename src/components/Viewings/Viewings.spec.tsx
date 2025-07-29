@@ -162,17 +162,6 @@ describe("Viewings", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can filter by genres", async ({ expect }) => {
-    expect.hasAssertions();
-    render(<Viewings {...props} />);
-
-    const selectElement = screen.getByLabelText("Genres");
-
-    await select(selectElement, ["Horror", "Comedy"]);
-
-    expect(screen.getByTestId("list")).toMatchSnapshot();
-  });
-
   it("can show more titles", async ({ expect }) => {
     expect.hasAssertions();
 

@@ -12,7 +12,6 @@ export type Sort = "viewing-date-asc" | "viewing-date-desc";
 const { clearFilter, updateFilter } = filterTools(sortValues, groupValues);
 
 export enum Actions {
-  FILTER_GENRES = "FILTER_GENRES",
   FILTER_MEDIUM = "FILTER_MEDIUM",
   FILTER_RELEASE_YEAR = "FILTER_RELEASE_YEAR",
   FILTER_TITLE = "FILTER_TITLE",
@@ -23,7 +22,6 @@ export enum Actions {
 }
 
 export type ActionType =
-  | FilterGenresAction
   | FilterMediumAction
   | FilterReleaseYearAction
   | FilterTitleAction
@@ -31,11 +29,6 @@ export type ActionType =
   | FilterViewingYearAction
   | ShowMoreAction
   | SortAction;
-
-type FilterGenresAction = {
-  type: Actions.FILTER_GENRES;
-  values: string[];
-};
 
 type FilterMediumAction = {
   type: Actions.FILTER_MEDIUM;
@@ -99,11 +92,6 @@ export function reducer(state: State, action: ActionType): State {
   let filteredValues;
 
   switch (action.type) {
-    case Actions.FILTER_GENRES: {
-      return updateFilter(state, "genres", (value) => {
-        return action.values.every((genre) => value.genres.includes(genre));
-      });
-    }
     case Actions.FILTER_MEDIUM: {
       return (
         clearFilter(action.value, state, "medium") ??

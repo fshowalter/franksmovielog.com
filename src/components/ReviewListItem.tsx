@@ -13,6 +13,7 @@ export type ReviewListItemValue = {
   imdbId: string;
   posterImageProps: PosterImageProps;
   releaseSequence: string;
+  reviewDisplayDate: string;
   slug: string;
   sortTitle: string;
   title: string;
@@ -51,6 +52,9 @@ export function ReviewListItem({ value }: { value: ReviewListItemValue }) {
           year={value.year}
         />
         <Grade className="mb-1" height={16} value={value.grade} />
+        <div className="font-sans text-xs leading-4 font-light text-subtle">
+          {value.reviewDisplayDate}
+        </div>
         <ListItemGenres values={value.genres} />
       </div>
     </ListItem>

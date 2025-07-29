@@ -8,29 +8,48 @@ import type { ListItemValue } from "./Underseen";
 import type { Props } from "./Underseen";
 
 export async function getProps(): Promise<Props & { metaDescription: string }> {
-  const { distinctGenres, distinctReleaseYears, underseenGems } =
-    await allUnderseenGems();
+  const {
+    distinctGenres,
+    distinctReleaseYears,
+    distinctReviewYears,
+    underseenGems,
+  } = await allUnderseenGems();
 
   underseenGems.sort((a, b) =>
     b.releaseSequence.localeCompare(a.releaseSequence),
   );
 
   const values = await Promise.all(
-    underseenGems.map(async (review) => {
+    underseenGems.map(async (title) => {
       const value: ListItemValue = {
-        genres: review.genres,
-        grade: review.grade,
-        gradeValue: review.gradeValue,
-        imdbId: review.imdbId,
+        genres: title.genres,
+        grade: title.grade,
+        gradeValue: title.gradeValue,
+        imdbId: title.imdbId,
         posterImageProps: await getFluidWidthPosterImageProps(
-          review.slug,
+          title.slug,
           ListItemPosterImageConfig,
         ),
-        releaseSequence: review.releaseSequence,
-        slug: review.slug,
-        sortTitle: review.sortTitle,
-        title: review.title,
-        year: review.year,
+        releaseSequence: title.releaseSequence,
+        reviewDisplayDate: `${title.reviewDate.toLocaleDateString("en-US", {
+          timeZone: "UTC",
+          year: "numeric",
+        })}-${title.reviewDate.toLocaleDateString("en-US", {
+          month: "short",
+          timeZone: "UTC",
+        })}-${title.reviewDate.toLocaleDateString("en-US", {
+          day: "2-digit",
+          timeZone: "UTC",
+        })}`,
+        reviewSequence: title.reviewSequence,
+        reviewYear: title.reviewDate.toLocaleDateString("en-US", {
+          timeZone: "UTC",
+          year: "numeric",
+        }),
+        slug: title.slug,
+        sortTitle: title.sortTitle,
+        title: title.title,
+        year: title.year,
       };
 
       return value;
@@ -45,6 +64,7 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
     deck: "Four and five star movies with a below average number of IMDb votes.",
     distinctGenres,
     distinctReleaseYears,
+    distinctReviewYears,
     initialSort: "release-date-desc",
     metaDescription:
       "Looking for something new? Behold my four and five star reviews of movies with a below average number of IMDb votes.",

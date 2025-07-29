@@ -3,7 +3,7 @@
     "imdbId": "tt14549466",
     "title": "Crimes of the Future",
     "year": "2022",
-    "sortTitle": "Crimes of the Future (2022)",
+    "sortTitle": "crimes-of-the-future-2022",
     "slug": "crimes-of-the-future-2022",
     "grade": "B-",
     "gradeValue": 8,
@@ -12,13 +12,15 @@
       "Horror",
       "Sci-Fi"
     ],
-    "releaseSequence": "2022-05-23tt14549466"
+    "releaseSequence": "2022-05-23tt14549466",
+    "reviewDate": "2025-01-09",
+    "reviewSequence": "2025-01-09-1"
   },
   {
     "imdbId": "tt0293429",
     "title": "Mortal Kombat",
     "year": "2021",
-    "sortTitle": "Mortal Kombat (2021)",
+    "sortTitle": "mortal-kombat-2021",
     "slug": "mortal-kombat-2021",
     "grade": "B-",
     "gradeValue": 8,
@@ -29,13 +31,87 @@
       "Sci-Fi",
       "Thriller"
     ],
-    "releaseSequence": "2021-04-01tt0293429"
+    "releaseSequence": "2021-04-01tt0293429",
+    "reviewDate": "2021-05-13",
+    "reviewSequence": "2021-05-13-1"
+  },
+  {
+    "imdbId": "tt11252440",
+    "title": "Psycho Goreman",
+    "year": "2020",
+    "sortTitle": "psycho-goreman-2020",
+    "slug": "psycho-goreman-2020",
+    "grade": "B",
+    "gradeValue": 9,
+    "genres": [
+      "Comedy",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "releaseSequence": "2020-09-10tt11252440",
+    "reviewDate": "2021-06-24",
+    "reviewSequence": "2021-06-24-1"
+  },
+  {
+    "imdbId": "tt5073642",
+    "title": "Color Out of Space",
+    "year": "2019",
+    "sortTitle": "color-out-of-space-2019",
+    "slug": "color-out-of-space-2019",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "releaseSequence": "2019-09-07tt5073642",
+    "reviewDate": "2021-05-27",
+    "reviewSequence": "2021-05-27-1"
+  },
+  {
+    "imdbId": "tt7772580",
+    "title": "The Perfection",
+    "year": "2018",
+    "sortTitle": "perfection-2018",
+    "slug": "the-perfection-2018",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Drama",
+      "Horror",
+      "Thriller"
+    ],
+    "releaseSequence": "2018-09-20tt7772580",
+    "reviewDate": "2021-02-07",
+    "reviewSequence": "2021-02-07-1"
+  },
+  {
+    "imdbId": "tt7464188",
+    "title": "In Fabric",
+    "year": "2018",
+    "sortTitle": "in-fabric-2018",
+    "slug": "in-fabric-2018",
+    "grade": "B",
+    "gradeValue": 9,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Fantasy",
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "releaseSequence": "2018-09-13tt7464188",
+    "reviewDate": "2021-03-10",
+    "reviewSequence": "2021-03-10-1"
   },
   {
     "imdbId": "tt6516314",
     "title": "Piercing",
     "year": "2018",
-    "sortTitle": "Piercing (2018)",
+    "sortTitle": "piercing-2018",
     "slug": "piercing-2018",
     "grade": "B",
     "gradeValue": 9,
@@ -44,13 +120,15 @@
       "Mystery",
       "Thriller"
     ],
-    "releaseSequence": "2018-01-20tt6516314"
+    "releaseSequence": "2018-01-20tt6516314",
+    "reviewDate": "2021-01-13",
+    "reviewSequence": "2021-01-13-1"
   },
   {
     "imdbId": "tt4381236",
     "title": "The Greasy Strangler",
     "year": "2016",
-    "sortTitle": "Greasy Strangler (2016)",
+    "sortTitle": "greasy-strangler-2016",
     "slug": "the-greasy-strangler-2016",
     "grade": "A-",
     "gradeValue": 11,
@@ -58,13 +136,49 @@
       "Comedy",
       "Horror"
     ],
-    "releaseSequence": "2016-01-22tt4381236"
+    "releaseSequence": "2016-01-22tt4381236",
+    "reviewDate": "2021-05-13",
+    "reviewSequence": "2021-05-13-2"
+  },
+  {
+    "imdbId": "tt2975590",
+    "title": "Batman v Superman: Dawn of Justice",
+    "year": "2016",
+    "sortTitle": "batman-v-superman-dawn-of-justice-2016",
+    "slug": "batman-v-superman-dawn-of-justice-2016",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "releaseSequence": "2016-03-12tt2975590",
+    "reviewDate": "2021-03-27",
+    "reviewSequence": "2021-03-27-4"
+  },
+  {
+    "imdbId": "tt3850590",
+    "title": "Krampus",
+    "year": "2015",
+    "sortTitle": "krampus-2015",
+    "slug": "krampus-2015",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Comedy",
+      "Fantasy",
+      "Horror"
+    ],
+    "releaseSequence": "2015-11-30tt3850590",
+    "reviewDate": "2020-12-25",
+    "reviewSequence": "2020-12-25-2"
   },
   {
     "imdbId": "tt2781516",
     "title": "Wolfcop",
     "year": "2014",
-    "sortTitle": "Wolfcop (2014)",
+    "sortTitle": "wolfcop-2014",
     "slug": "wolfcop-2014",
     "grade": "B",
     "gradeValue": 9,
@@ -72,13 +186,514 @@
       "Comedy",
       "Horror"
     ],
-    "releaseSequence": "2014-06-06tt2781516"
+    "releaseSequence": "2014-06-06tt2781516",
+    "reviewDate": "2020-10-02",
+    "reviewSequence": "2020-10-02-1"
+  },
+  {
+    "imdbId": "tt1441395",
+    "title": "Under the Skin",
+    "year": "2013",
+    "sortTitle": "under-the-skin-2013",
+    "slug": "under-the-skin-2013",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Drama",
+      "Horror",
+      "Mystery",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "releaseSequence": "2013-08-29tt1441395",
+    "reviewDate": "2022-07-10",
+    "reviewSequence": "2022-07-10-1"
+  },
+  {
+    "imdbId": "tt1977895",
+    "title": "Resolution",
+    "year": "2012",
+    "sortTitle": "resolution-2012",
+    "slug": "resolution-2012",
+    "grade": "B+",
+    "gradeValue": 10,
+    "genres": [
+      "Drama",
+      "Horror",
+      "Mystery",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "releaseSequence": "2012-04-22tt1977895",
+    "reviewDate": "2023-04-07",
+    "reviewSequence": "2023-04-07-1"
+  },
+  {
+    "imdbId": "tt1788391",
+    "title": "Kill List",
+    "year": "2011",
+    "sortTitle": "kill-list-2011",
+    "slug": "kill-list-2011",
+    "grade": "B+",
+    "gradeValue": 10,
+    "genres": [
+      "Crime",
+      "Drama",
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "releaseSequence": "2011-03-12tt1788391",
+    "reviewDate": "2020-12-19",
+    "reviewSequence": "2020-12-19-1"
+  },
+  {
+    "imdbId": "tt1506999",
+    "title": "Haywire",
+    "year": "2011",
+    "sortTitle": "haywire-2011",
+    "slug": "haywire-2011",
+    "grade": "B+",
+    "gradeValue": 10,
+    "genres": [
+      "Action",
+      "Drama",
+      "Thriller"
+    ],
+    "releaseSequence": "2011-11-06tt1506999",
+    "reviewDate": "2012-02-02",
+    "reviewSequence": "2012-02-02-1"
+  },
+  {
+    "imdbId": "tt1489167",
+    "title": "Down Terrace",
+    "year": "2009",
+    "sortTitle": "down-terrace-2009",
+    "slug": "down-terrace-2009",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Drama"
+    ],
+    "releaseSequence": "2009-09-01tt1489167",
+    "reviewDate": "2021-02-09",
+    "reviewSequence": "2021-02-09-1"
+  },
+  {
+    "imdbId": "tt1278340",
+    "title": "Dead Snow",
+    "year": "2009",
+    "sortTitle": "dead-snow-2009",
+    "slug": "dead-snow-2009",
+    "grade": "B+",
+    "gradeValue": 10,
+    "genres": [
+      "Comedy",
+      "Fantasy",
+      "Horror"
+    ],
+    "releaseSequence": "2009-01-09tt1278340",
+    "reviewDate": "2020-12-25",
+    "reviewSequence": "2020-12-25-2"
+  },
+  {
+    "imdbId": "tt1179891",
+    "title": "My Bloody Valentine",
+    "year": "2009",
+    "sortTitle": "my-bloody-valentine-2009",
+    "slug": "my-bloody-valentine-2009",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "releaseSequence": "2009-01-08tt1179891",
+    "reviewDate": "2009-01-28",
+    "reviewSequence": "2009-01-28-1"
+  },
+  {
+    "imdbId": "tt1135487",
+    "title": "Duplicity",
+    "year": "2009",
+    "sortTitle": "duplicity-2009",
+    "slug": "duplicity-2009",
+    "grade": "B",
+    "gradeValue": 9,
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Romance",
+      "Thriller"
+    ],
+    "releaseSequence": "2009-03-10tt1135487",
+    "reviewDate": "2009-04-09",
+    "reviewSequence": "2009-04-09-1"
+  },
+  {
+    "imdbId": "tt1121931",
+    "title": "Crank: High Voltage",
+    "year": "2009",
+    "sortTitle": "crank-high-voltage-2009",
+    "slug": "crank-high-voltage-2009",
+    "grade": "A-",
+    "gradeValue": 11,
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "releaseSequence": "2009-04-16tt1121931",
+    "reviewDate": "2009-04-30",
+    "reviewSequence": "2009-04-30-1"
+  },
+  {
+    "imdbId": "tt1001508",
+    "title": "He's Just Not That Into You",
+    "year": "2009",
+    "sortTitle": "hes-just-not-that-into-you-2009",
+    "slug": "hes-just-not-that-into-you-2009",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "releaseSequence": "2009-01-24tt1001508",
+    "reviewDate": "2009-02-26",
+    "reviewSequence": "2009-02-26-1"
+  },
+  {
+    "imdbId": "tt0844479",
+    "title": "The Collector",
+    "year": "2009",
+    "sortTitle": "collector-2009",
+    "slug": "the-collector-2009",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "releaseSequence": "2009-07-31tt0844479",
+    "reviewDate": "2025-02-06",
+    "reviewSequence": "2025-02-06-1"
+  },
+  {
+    "imdbId": "tt0839980",
+    "title": "Semi-Pro",
+    "year": "2008",
+    "sortTitle": "semi-pro-2008",
+    "slug": "semi-pro-2008",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Comedy",
+      "Sport"
+    ],
+    "releaseSequence": "2008-02-19tt0839980",
+    "reviewDate": "2008-03-06",
+    "reviewSequence": "2008-03-06-1"
+  },
+  {
+    "imdbId": "tt0379865",
+    "title": "Leatherheads",
+    "year": "2008",
+    "sortTitle": "leatherheads-2008",
+    "slug": "leatherheads-2008",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance",
+      "Sport"
+    ],
+    "releaseSequence": "2008-03-24tt0379865",
+    "reviewDate": "2008-04-10",
+    "reviewSequence": "2008-04-10-1"
+  },
+  {
+    "imdbId": "tt0452702",
+    "title": "Vacancy",
+    "year": "2007",
+    "sortTitle": "vacancy-2007",
+    "slug": "vacancy-2007",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "releaseSequence": "2007-04-20tt0452702",
+    "reviewDate": "2008-02-23",
+    "reviewSequence": "2008-02-23-2"
+  },
+  {
+    "imdbId": "tt0442933",
+    "title": "Beowulf",
+    "year": "2007",
+    "sortTitle": "beowulf-2007",
+    "slug": "beowulf-2007",
+    "grade": "B+",
+    "gradeValue": 10,
+    "genres": [
+      "Animation",
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "releaseSequence": "2007-11-05tt0442933",
+    "reviewDate": "2007-11-29",
+    "reviewSequence": "2007-11-29-1"
+  },
+  {
+    "imdbId": "tt0486551",
+    "title": "Beerfest",
+    "year": "2006",
+    "sortTitle": "beerfest-2006",
+    "slug": "beerfest-2006",
+    "grade": "A-",
+    "gradeValue": 11,
+    "genres": [
+      "Comedy"
+    ],
+    "releaseSequence": "2006-08-25tt0486551",
+    "reviewDate": "2009-02-27",
+    "reviewSequence": "2009-02-27-2"
+  },
+  {
+    "imdbId": "tt0300051",
+    "title": "Jersey Girl",
+    "year": "2004",
+    "sortTitle": "jersey-girl-2004",
+    "slug": "jersey-girl-2004",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "releaseSequence": "2004-03-09tt0300051",
+    "reviewDate": "2008-12-25",
+    "reviewSequence": "2008-12-25-2"
+  },
+  {
+    "imdbId": "tt0313792",
+    "title": "Anything Else",
+    "year": "2003",
+    "sortTitle": "anything-else-2003",
+    "slug": "anything-else-2003",
+    "grade": "A",
+    "gradeValue": 12,
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "releaseSequence": "2003-08-27tt0313792",
+    "reviewDate": "2003-09-27",
+    "reviewSequence": "2003-09-27-1"
+  },
+  {
+    "imdbId": "tt0181852",
+    "title": "Terminator 3: Rise of the Machines",
+    "year": "2003",
+    "sortTitle": "terminator-3-rise-of-the-machines-2003",
+    "slug": "terminator-3-rise-of-the-machines-2003",
+    "grade": "B",
+    "gradeValue": 9,
+    "genres": [
+      "Action",
+      "Sci-Fi"
+    ],
+    "releaseSequence": "2003-06-30tt0181852",
+    "reviewDate": "2003-07-01",
+    "reviewSequence": "2003-07-01-2"
+  },
+  {
+    "imdbId": "tt0138524",
+    "title": "Intolerable Cruelty",
+    "year": "2003",
+    "sortTitle": "intolerable-cruelty-2003",
+    "slug": "intolerable-cruelty-2003",
+    "grade": "B",
+    "gradeValue": 9,
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Romance"
+    ],
+    "releaseSequence": "2003-09-02tt0138524",
+    "reviewDate": "2003-10-24",
+    "reviewSequence": "2003-10-24-1"
+  },
+  {
+    "imdbId": "tt0295178",
+    "title": "Austin Powers in Goldmember",
+    "year": "2002",
+    "sortTitle": "austin-powers-in-goldmember-2002",
+    "slug": "austin-powers-in-goldmember-2002",
+    "grade": "B",
+    "gradeValue": 9,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Crime"
+    ],
+    "releaseSequence": "2002-07-22tt0295178",
+    "reviewDate": "2004-08-13",
+    "reviewSequence": "2004-08-13-1"
+  },
+  {
+    "imdbId": "tt0280949",
+    "title": "Miranda",
+    "year": "2002",
+    "sortTitle": "miranda-2002",
+    "slug": "miranda-2002",
+    "grade": "B",
+    "gradeValue": 9,
+    "genres": [
+      "Comedy",
+      "Mystery",
+      "Romance",
+      "Thriller"
+    ],
+    "releaseSequence": "2002-01-18tt0280949",
+    "reviewDate": "2004-06-28",
+    "reviewSequence": "2004-06-28-1"
+  },
+  {
+    "imdbId": "tt0265591",
+    "title": "Pumpkin",
+    "year": "2002",
+    "sortTitle": "pumpkin-2002",
+    "slug": "pumpkin-2002",
+    "grade": "B",
+    "gradeValue": 9,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance",
+      "Sport"
+    ],
+    "releaseSequence": "2002-01-14tt0265591",
+    "reviewDate": "2004-05-17",
+    "reviewSequence": "2004-05-17-1"
+  },
+  {
+    "imdbId": "tt0264508",
+    "title": "Dagon",
+    "year": "2001",
+    "sortTitle": "dagon-2001",
+    "slug": "dagon-2001",
+    "grade": "B",
+    "gradeValue": 9,
+    "genres": [
+      "Fantasy",
+      "Horror",
+      "Mystery"
+    ],
+    "releaseSequence": "2001-10-12tt0264508",
+    "reviewDate": "2021-10-06",
+    "reviewSequence": "2021-10-06-1"
+  },
+  {
+    "imdbId": "tt0234354",
+    "title": "Novocaine",
+    "year": "2001",
+    "sortTitle": "novocaine-2001",
+    "slug": "novocaine-2001",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "releaseSequence": "2001-09-08tt0234354",
+    "reviewDate": "2003-07-11",
+    "reviewSequence": "2003-07-11-1"
+  },
+  {
+    "imdbId": "tt0211443",
+    "title": "Jason X",
+    "year": "2001",
+    "sortTitle": "jason-x-2001",
+    "slug": "jason-x-2001",
+    "grade": "B",
+    "gradeValue": 9,
+    "genres": [
+      "Action",
+      "Horror",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "releaseSequence": "2001-07-24tt0211443",
+    "reviewDate": "2025-06-13",
+    "reviewSequence": "2025-06-13-1"
+  },
+  {
+    "imdbId": "tt0275773",
+    "title": "Versus",
+    "year": "2000",
+    "sortTitle": "versus-2000",
+    "slug": "versus-2000",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Action",
+      "Drama",
+      "Fantasy",
+      "Horror",
+      "Thriller"
+    ],
+    "releaseSequence": "2000-10-29tt0275773",
+    "reviewDate": "2021-09-02",
+    "reviewSequence": "2021-09-02-2"
+  },
+  {
+    "imdbId": "tt0115964",
+    "title": "Crash",
+    "year": "1996",
+    "sortTitle": "crash-1996",
+    "slug": "crash-1996",
+    "grade": "B+",
+    "gradeValue": 10,
+    "genres": [
+      "Drama"
+    ],
+    "releaseSequence": "1996-05-17tt0115964",
+    "reviewDate": "2009-01-09",
+    "reviewSequence": "2009-01-09-2"
+  },
+  {
+    "imdbId": "tt0113241",
+    "title": "Habit",
+    "year": "1995",
+    "sortTitle": "habit-1995",
+    "slug": "habit-1995",
+    "grade": "B",
+    "gradeValue": 9,
+    "genres": [
+      "Drama",
+      "Horror",
+      "Romance"
+    ],
+    "releaseSequence": "1995-10-01tt0113241",
+    "reviewDate": "2008-10-12",
+    "reviewSequence": "2008-10-12-2"
   },
   {
     "imdbId": "tt0110823",
     "title": "Phantasm III: Lord of the Dead",
     "year": "1994",
-    "sortTitle": "Phantasm III: Lord of the Dead (1994)",
+    "sortTitle": "phantasm-iii-lord-of-the-dead-1994",
     "slug": "phantasm-iii-lord-of-the-dead-1994",
     "grade": "B-",
     "gradeValue": 8,
@@ -88,54 +703,112 @@
       "Horror",
       "Sci-Fi"
     ],
-    "releaseSequence": "1994-02-25tt0110823"
+    "releaseSequence": "1994-02-25tt0110823",
+    "reviewDate": "2023-04-13",
+    "reviewSequence": "2023-04-13-1"
+  },
+  {
+    "imdbId": "tt0106215",
+    "title": "Mutant Action",
+    "year": "1993",
+    "sortTitle": "mutant-action-1993",
+    "slug": "mutant-action-1993",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Comedy",
+      "Fantasy",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "releaseSequence": "1993-01-18tt0106215",
+    "reviewDate": "2023-02-16",
+    "reviewSequence": "2023-02-16-2"
+  },
+  {
+    "imdbId": "tt0099611",
+    "title": "Frankenhooker",
+    "year": "1990",
+    "sortTitle": "frankenhooker-1990",
+    "slug": "frankenhooker-1990",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Comedy",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "releaseSequence": "1990-04-01tt0099611",
+    "reviewDate": "2024-02-29",
+    "reviewSequence": "2024-02-29-2"
   },
   {
     "imdbId": "tt0096920",
     "title": "Beyond the Door III",
     "year": "1989",
-    "sortTitle": "Beyond the Door III (1989)",
+    "sortTitle": "beyond-the-door-iii-1989",
     "slug": "beyond-the-door-iii-1989",
     "grade": "B-",
     "gradeValue": 8,
     "genres": [
-      "Drama",
       "Fantasy",
       "Horror"
     ],
-    "releaseSequence": "1989-10-01tt0096920"
+    "releaseSequence": "1989-10-01tt0096920",
+    "reviewDate": "2024-04-27",
+    "reviewSequence": "2024-04-27-4"
+  },
+  {
+    "imdbId": "tt0095488",
+    "title": "The Lair of the White Worm",
+    "year": "1988",
+    "sortTitle": "lair-of-the-white-worm-1988",
+    "slug": "the-lair-of-the-white-worm-1988",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Comedy",
+      "Horror"
+    ],
+    "releaseSequence": "1988-09-14tt0095488",
+    "reviewDate": "2007-12-14",
+    "reviewSequence": "2007-12-14-3"
   },
   {
     "imdbId": "tt0093912",
     "title": "Salvation!",
     "year": "1987",
-    "sortTitle": "Salvation! (1987)",
+    "sortTitle": "salvation-1987",
     "slug": "salvation-1987",
     "grade": "B",
     "gradeValue": 9,
     "genres": [
       "Comedy"
     ],
-    "releaseSequence": "1987-05-31tt0093912"
+    "releaseSequence": "1987-05-31tt0093912",
+    "reviewDate": "2020-11-27",
+    "reviewSequence": "2020-11-27-2"
   },
   {
     "imdbId": "tt0091990",
     "title": "Sorority House Massacre",
     "year": "1986",
-    "sortTitle": "Sorority House Massacre (1986)",
+    "sortTitle": "sorority-house-massacre-1986",
     "slug": "sorority-house-massacre-1986",
     "grade": "B-",
     "gradeValue": 8,
     "genres": [
       "Horror"
     ],
-    "releaseSequence": "1986-10-10tt0091990"
+    "releaseSequence": "1986-10-10tt0091990",
+    "reviewDate": "2023-07-20",
+    "reviewSequence": "2023-07-20-1"
   },
   {
     "imdbId": "tt0091080",
     "title": "Friday the 13th Part VI: Jason Lives",
     "year": "1986",
-    "sortTitle": "Friday the 13th Part VI: Jason Lives (1986)",
+    "sortTitle": "friday-the-13th-part-vi-jason-lives-1986",
     "slug": "friday-the-13th-part-vi-jason-lives-1986",
     "grade": "B-",
     "gradeValue": 8,
@@ -143,13 +816,15 @@
       "Horror",
       "Thriller"
     ],
-    "releaseSequence": "1986-08-01tt0091080"
+    "releaseSequence": "1986-08-01tt0091080",
+    "reviewDate": "2021-04-16",
+    "reviewSequence": "2021-04-16-1"
   },
   {
     "imdbId": "tt0089789",
     "title": "The Peanut Butter Solution",
     "year": "1985",
-    "sortTitle": "Peanut Butter Solution (1985)",
+    "sortTitle": "peanut-butter-solution-1985",
     "slug": "the-peanut-butter-solution-1985",
     "grade": "B-",
     "gradeValue": 8,
@@ -160,13 +835,49 @@
       "Fantasy",
       "Horror"
     ],
-    "releaseSequence": "1985-12-04tt0089789"
+    "releaseSequence": "1985-12-04tt0089789",
+    "reviewDate": "2021-06-26",
+    "reviewSequence": "2021-06-26-1"
+  },
+  {
+    "imdbId": "tt0088708",
+    "title": "American Ninja",
+    "year": "1985",
+    "sortTitle": "american-ninja-1985",
+    "slug": "american-ninja-1985",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Romance"
+    ],
+    "releaseSequence": "1985-08-30tt0088708",
+    "reviewDate": "2024-11-12",
+    "reviewSequence": "2024-11-12-1"
+  },
+  {
+    "imdbId": "tt0088224",
+    "title": "Tank",
+    "year": "1984",
+    "sortTitle": "tank-1984",
+    "slug": "tank-1984",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama"
+    ],
+    "releaseSequence": "1984-03-16tt0088224",
+    "reviewDate": "2025-06-07",
+    "reviewSequence": "2025-06-07-1"
   },
   {
     "imdbId": "tt0087298",
     "title": "Friday the 13th: The Final Chapter",
     "year": "1984",
-    "sortTitle": "Friday the 13th: The Final Chapter (1984)",
+    "sortTitle": "friday-the-13th-the-final-chapter-1984",
     "slug": "friday-the-13th-the-final-chapter-1984",
     "grade": "B",
     "gradeValue": 9,
@@ -174,13 +885,49 @@
       "Horror",
       "Thriller"
     ],
-    "releaseSequence": "1984-04-13tt0087298"
+    "releaseSequence": "1984-04-13tt0087298",
+    "reviewDate": "2021-04-02",
+    "reviewSequence": "2021-04-02-1"
+  },
+  {
+    "imdbId": "tt0084719",
+    "title": "The New York Ripper",
+    "year": "1982",
+    "sortTitle": "new-york-ripper-1982",
+    "slug": "the-new-york-ripper-1982",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "releaseSequence": "1982-03-04tt0084719",
+    "reviewDate": "2023-03-11",
+    "reviewSequence": "2023-03-11-2"
+  },
+  {
+    "imdbId": "tt0082782",
+    "title": "My Bloody Valentine",
+    "year": "1981",
+    "sortTitle": "my-bloody-valentine-1981",
+    "slug": "my-bloody-valentine-1981",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "releaseSequence": "1981-02-11tt0082782",
+    "reviewDate": "2022-02-14",
+    "reviewSequence": "2022-02-14-1"
   },
   {
     "imdbId": "tt0081793",
     "title": "Christmas Evil",
     "year": "1980",
-    "sortTitle": "Christmas Evil (1980)",
+    "sortTitle": "christmas-evil-1980",
     "slug": "christmas-evil-1980",
     "grade": "B+",
     "gradeValue": 10,
@@ -188,13 +935,30 @@
       "Horror",
       "Thriller"
     ],
-    "releaseSequence": "1980-11-01tt0081793"
+    "releaseSequence": "1980-11-01tt0081793",
+    "reviewDate": "2020-12-11",
+    "reviewSequence": "2020-12-11-2"
+  },
+  {
+    "imdbId": "tt0081318",
+    "title": "City of the Living Dead",
+    "year": "1980",
+    "sortTitle": "city-of-the-living-dead-1980",
+    "slug": "city-of-the-living-dead-1980",
+    "grade": "B+",
+    "gradeValue": 10,
+    "genres": [
+      "Horror"
+    ],
+    "releaseSequence": "1980-08-11tt0081318",
+    "reviewDate": "2024-04-10",
+    "reviewSequence": "2024-04-10-1"
   },
   {
     "imdbId": "tt0080904",
     "title": "Humanoids from the Deep",
     "year": "1980",
-    "sortTitle": "Humanoids from the Deep (1980)",
+    "sortTitle": "humanoids-from-the-deep-1980",
     "slug": "humanoids-from-the-deep-1980",
     "grade": "B-",
     "gradeValue": 8,
@@ -202,13 +966,32 @@
       "Horror",
       "Sci-Fi"
     ],
-    "releaseSequence": "1980-03-28tt0080904"
+    "releaseSequence": "1980-03-28tt0080904",
+    "reviewDate": "2023-04-22",
+    "reviewSequence": "2023-04-22-1"
+  },
+  {
+    "imdbId": "tt0080354",
+    "title": "Alligator",
+    "year": "1980",
+    "sortTitle": "alligator-1980",
+    "slug": "alligator-1980",
+    "grade": "B",
+    "gradeValue": 9,
+    "genres": [
+      "Horror",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "releaseSequence": "1980-11-14tt0080354",
+    "reviewDate": "2022-06-09",
+    "reviewSequence": "2022-06-09-2"
   },
   {
     "imdbId": "tt0079082",
     "title": "The Driller Killer",
     "year": "1979",
-    "sortTitle": "Driller Killer (1979)",
+    "sortTitle": "driller-killer-1979",
     "slug": "the-driller-killer-1979",
     "grade": "B-",
     "gradeValue": 8,
@@ -217,13 +1000,47 @@
       "Horror",
       "Thriller"
     ],
-    "releaseSequence": "1979-06-15tt0079082"
+    "releaseSequence": "1979-06-15tt0079082",
+    "reviewDate": "2021-02-19",
+    "reviewSequence": "2021-02-19-1"
+  },
+  {
+    "imdbId": "tt0076257",
+    "title": "The Kentucky Fried Movie",
+    "year": "1977",
+    "sortTitle": "kentucky-fried-movie-1977",
+    "slug": "the-kentucky-fried-movie-1977",
+    "grade": "B+",
+    "gradeValue": 10,
+    "genres": [
+      "Comedy"
+    ],
+    "releaseSequence": "1977-08-10tt0076257",
+    "reviewDate": "2009-02-21",
+    "reviewSequence": "2009-02-21-1"
+  },
+  {
+    "imdbId": "tt0074510",
+    "title": "Scalpel",
+    "year": "1977",
+    "sortTitle": "scalpel-1977",
+    "slug": "scalpel-1977",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Drama",
+      "Horror",
+      "Thriller"
+    ],
+    "releaseSequence": "1977-01-01tt0074510",
+    "reviewDate": "2021-07-16",
+    "reviewSequence": "2021-07-16-1"
   },
   {
     "imdbId": "tt0188527",
     "title": "Island of Death",
     "year": "1976",
-    "sortTitle": "Island of Death (1976)",
+    "sortTitle": "island-of-death-1976",
     "slug": "island-of-death-1976",
     "grade": "B",
     "gradeValue": 9,
@@ -231,13 +1048,31 @@
       "Horror",
       "Romance"
     ],
-    "releaseSequence": "1976-??-??tt0188527"
+    "releaseSequence": "1976-??-??tt0188527",
+    "reviewDate": "2020-10-23",
+    "reviewSequence": "2020-10-23-2"
+  },
+  {
+    "imdbId": "tt0073836",
+    "title": "Last Stop on the Night Train",
+    "year": "1975",
+    "sortTitle": "last-stop-on-the-night-train-1975",
+    "slug": "last-stop-on-the-night-train-1975",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "releaseSequence": "1975-04-08tt0073836",
+    "reviewDate": "2021-09-24",
+    "reviewSequence": "2021-09-24-1"
   },
   {
     "imdbId": "tt0073735",
     "title": "Welcome Home Brother Charles",
     "year": "1975",
-    "sortTitle": "Welcome Home Brother Charles (1975)",
+    "sortTitle": "welcome-home-brother-charles-1975",
     "slug": "welcome-home-brother-charles-1975",
     "grade": "B-",
     "gradeValue": 8,
@@ -246,13 +1081,149 @@
       "Drama",
       "Horror"
     ],
-    "releaseSequence": "1975-11-21tt0073735"
+    "releaseSequence": "1975-11-21tt0073735",
+    "reviewDate": "2023-07-06",
+    "reviewSequence": "2023-07-06-2"
+  },
+  {
+    "imdbId": "tt0072285",
+    "title": "Thriller: A Cruel Picture",
+    "year": "1973",
+    "sortTitle": "thriller-a-cruel-picture-1973",
+    "slug": "thriller-a-cruel-picture-1973",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama",
+      "Horror",
+      "Thriller"
+    ],
+    "releaseSequence": "1973-05-01tt0072285",
+    "reviewDate": "2023-06-23",
+    "reviewSequence": "2023-06-23-2"
+  },
+  {
+    "imdbId": "tt0071508",
+    "title": "Flesh for Frankenstein",
+    "year": "1973",
+    "sortTitle": "flesh-for-frankenstein-1973",
+    "slug": "flesh-for-frankenstein-1973",
+    "grade": "B",
+    "gradeValue": 9,
+    "genres": [
+      "Horror",
+      "Sci-Fi"
+    ],
+    "releaseSequence": "1973-11-30tt0071508",
+    "reviewDate": "2008-07-29",
+    "reviewSequence": "2008-07-29-1"
+  },
+  {
+    "imdbId": "tt0070794",
+    "title": "The Thief Who Came to Dinner",
+    "year": "1973",
+    "sortTitle": "thief-who-came-to-dinner-1973",
+    "slug": "the-thief-who-came-to-dinner-1973",
+    "grade": "B+",
+    "gradeValue": 10,
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "releaseSequence": "1973-03-01tt0070794",
+    "reviewDate": "2022-08-30",
+    "reviewSequence": "2022-08-30-1"
+  },
+  {
+    "imdbId": "tt0068337",
+    "title": "The Carey Treatment",
+    "year": "1972",
+    "sortTitle": "carey-treatment-1972",
+    "slug": "the-carey-treatment-1972",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Crime",
+      "Mystery",
+      "Thriller"
+    ],
+    "releaseSequence": "1972-03-29tt0068337",
+    "reviewDate": "2023-06-19",
+    "reviewSequence": "2023-06-19-1"
+  },
+  {
+    "imdbId": "tt0067924",
+    "title": "Vampire Circus",
+    "year": "1972",
+    "sortTitle": "vampire-circus-1972",
+    "slug": "vampire-circus-1972",
+    "grade": "B",
+    "gradeValue": 9,
+    "genres": [
+      "Horror"
+    ],
+    "releaseSequence": "1972-04-30tt0067924",
+    "reviewDate": "2012-02-19",
+    "reviewSequence": "2012-02-19-2"
+  },
+  {
+    "imdbId": "tt0068675",
+    "title": "Hannie Caulder",
+    "year": "1971",
+    "sortTitle": "hannie-caulder-1971",
+    "slug": "hannie-caulder-1971",
+    "grade": "B",
+    "gradeValue": 9,
+    "genres": [
+      "Crime",
+      "Drama",
+      "Western"
+    ],
+    "releaseSequence": "1971-11-08tt0068675",
+    "reviewDate": "2022-08-20",
+    "reviewSequence": "2022-08-20-2"
+  },
+  {
+    "imdbId": "tt0067341",
+    "title": "Let's Scare Jessica to Death",
+    "year": "1971",
+    "sortTitle": "lets-scare-jessica-to-death-1971",
+    "slug": "lets-scare-jessica-to-death-1971",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Drama",
+      "Horror",
+      "Mystery"
+    ],
+    "releaseSequence": "1971-08-27tt0067341",
+    "reviewDate": "2012-06-12",
+    "reviewSequence": "2012-06-12-1"
+  },
+  {
+    "imdbId": "tt0066767",
+    "title": "The Anderson Tapes",
+    "year": "1971",
+    "sortTitle": "anderson-tapes-1971",
+    "slug": "the-anderson-tapes-1971",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Action",
+      "Crime",
+      "Thriller"
+    ],
+    "releaseSequence": "1971-06-17tt0066767",
+    "reviewDate": "2024-11-16",
+    "reviewSequence": "2024-11-16-1"
   },
   {
     "imdbId": "tt0066952",
     "title": "Count Yorga, Vampire",
     "year": "1970",
-    "sortTitle": "Count Yorga, Vampire (1970)",
+    "sortTitle": "count-yorga-vampire-1970",
     "slug": "count-yorga-vampire-1970",
     "grade": "B",
     "gradeValue": 9,
@@ -264,13 +1235,32 @@
       "Romance",
       "Thriller"
     ],
-    "releaseSequence": "1970-06-10tt0066952"
+    "releaseSequence": "1970-06-10tt0066952",
+    "reviewDate": "2024-10-24",
+    "reviewSequence": "2024-10-24-1"
+  },
+  {
+    "imdbId": "tt0065466",
+    "title": "Beyond the Valley of the Dolls",
+    "year": "1970",
+    "sortTitle": "beyond-the-valley-of-the-dolls-1970",
+    "slug": "beyond-the-valley-of-the-dolls-1970",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Music"
+    ],
+    "releaseSequence": "1970-06-17tt0065466",
+    "reviewDate": "2021-09-26",
+    "reviewSequence": "2021-09-26-1"
   },
   {
     "imdbId": "tt0064949",
     "title": "Scream and Scream Again",
     "year": "1970",
-    "sortTitle": "Scream and Scream Again (1970)",
+    "sortTitle": "scream-and-scream-again-1970",
     "slug": "scream-and-scream-again-1970",
     "grade": "B-",
     "gradeValue": 8,
@@ -282,13 +1272,15 @@
       "Sci-Fi",
       "Thriller"
     ],
-    "releaseSequence": "1970-01-01tt0064949"
+    "releaseSequence": "1970-01-01tt0064949",
+    "reviewDate": "2025-07-04",
+    "reviewSequence": "2025-07-04-1"
   },
   {
     "imdbId": "tt0163114",
     "title": "Murder \u00e0 la Mod",
     "year": "1968",
-    "sortTitle": "Murder \u00e0 la Mod (1968)",
+    "sortTitle": "murder-a-la-mod-1968",
     "slug": "murder-a-la-mod-1968",
     "grade": "B-",
     "gradeValue": 8,
@@ -298,13 +1290,67 @@
       "Mystery",
       "Thriller"
     ],
-    "releaseSequence": "1968-05-01tt0163114"
+    "releaseSequence": "1968-05-01tt0163114",
+    "reviewDate": "2021-01-01",
+    "reviewSequence": "2021-01-01-3"
+  },
+  {
+    "imdbId": "tt0060548",
+    "title": "Island of Terror",
+    "year": "1966",
+    "sortTitle": "island-of-terror-1966",
+    "slug": "island-of-terror-1966",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Horror",
+      "Sci-Fi"
+    ],
+    "releaseSequence": "1966-06-03tt0060548",
+    "reviewDate": "2024-10-29",
+    "reviewSequence": "2024-10-29-1"
+  },
+  {
+    "imdbId": "tt0060287",
+    "title": "Dead Heat on a Merry-Go-Round",
+    "year": "1966",
+    "sortTitle": "dead-heat-on-a-merry-go-round-1966",
+    "slug": "dead-heat-on-a-merry-go-round-1966",
+    "grade": "B",
+    "gradeValue": 9,
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Drama"
+    ],
+    "releaseSequence": "1966-10-12tt0060287",
+    "reviewDate": "2008-11-23",
+    "reviewSequence": "2008-11-23-2"
+  },
+  {
+    "imdbId": "tt0059557",
+    "title": "Our Man Flint",
+    "year": "1966",
+    "sortTitle": "our-man-flint-1966",
+    "slug": "our-man-flint-1966",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Fantasy",
+      "Sci-Fi"
+    ],
+    "releaseSequence": "1966-01-16tt0059557",
+    "reviewDate": "2004-12-09",
+    "reviewSequence": "2004-12-09-1"
   },
   {
     "imdbId": "tt0059258",
     "title": "Having a Wild Weekend",
     "year": "1965",
-    "sortTitle": "Having a Wild Weekend (1965)",
+    "sortTitle": "having-a-wild-weekend-1965",
     "slug": "having-a-wild-weekend-1965",
     "grade": "B-",
     "gradeValue": 8,
@@ -312,13 +1358,70 @@
       "Comedy",
       "Music"
     ],
-    "releaseSequence": "1965-07-15tt0059258"
+    "releaseSequence": "1965-07-15tt0059258",
+    "reviewDate": "2023-06-18",
+    "reviewSequence": "2023-06-18-1"
+  },
+  {
+    "imdbId": "tt0058529",
+    "title": "Robin and the 7 Hoods",
+    "year": "1964",
+    "sortTitle": "robin-and-the-7-hoods-1964",
+    "slug": "robin-and-the-7-hoods-1964",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Musical"
+    ],
+    "releaseSequence": "1964-06-24tt0058529",
+    "reviewDate": "2008-10-19",
+    "reviewSequence": "2008-10-19-1"
+  },
+  {
+    "imdbId": "tt0056347",
+    "title": "The Phantom of the Opera",
+    "year": "1962",
+    "sortTitle": "phantom-of-the-opera-1962",
+    "slug": "the-phantom-of-the-opera-1962",
+    "grade": "B",
+    "gradeValue": 9,
+    "genres": [
+      "Drama",
+      "Horror",
+      "Music",
+      "Mystery",
+      "Romance",
+      "Thriller"
+    ],
+    "releaseSequence": "1962-??-??tt0056347",
+    "reviewDate": "2007-08-11",
+    "reviewSequence": "2007-08-11-2"
+  },
+  {
+    "imdbId": "tt0054346",
+    "title": "The Stranglers of Bombay",
+    "year": "1959",
+    "sortTitle": "stranglers-of-bombay-1959",
+    "slug": "the-stranglers-of-bombay-1959",
+    "grade": "B",
+    "gradeValue": 9,
+    "genres": [
+      "Action",
+      "Adventure",
+      "History",
+      "Horror"
+    ],
+    "releaseSequence": "1959-12-04tt0054346",
+    "reviewDate": "2008-10-02",
+    "reviewSequence": "2008-10-02-2"
   },
   {
     "imdbId": "tt0048983",
     "title": "Bandido!",
     "year": "1956",
-    "sortTitle": "Bandido! (1956)",
+    "sortTitle": "bandido-1956",
     "slug": "bandido-1956",
     "grade": "B-",
     "gradeValue": 8,
@@ -329,13 +1432,112 @@
       "War",
       "Western"
     ],
-    "releaseSequence": "1956-09-01tt0048983"
+    "releaseSequence": "1956-09-01tt0048983",
+    "reviewDate": "2012-01-27",
+    "reviewSequence": "2012-01-27-1"
+  },
+  {
+    "imdbId": "tt0047889",
+    "title": "Blood Alley",
+    "year": "1955",
+    "sortTitle": "blood-alley-1955",
+    "slug": "blood-alley-1955",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "releaseSequence": "1955-10-01tt0047889",
+    "reviewDate": "2008-12-25",
+    "reviewSequence": "2008-12-25-1"
+  },
+  {
+    "imdbId": "tt0038675",
+    "title": "Crisis",
+    "year": "1946",
+    "sortTitle": "crisis-1946",
+    "slug": "crisis-1946",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "releaseSequence": "1946-02-25tt0038675",
+    "reviewDate": "2020-12-13",
+    "reviewSequence": "2020-12-13-1"
+  },
+  {
+    "imdbId": "tt0033021",
+    "title": "Santa Fe Trail",
+    "year": "1940",
+    "sortTitle": "santa-fe-trail-1940",
+    "slug": "santa-fe-trail-1940",
+    "grade": "B+",
+    "gradeValue": 10,
+    "genres": [
+      "Drama",
+      "War",
+      "Western"
+    ],
+    "releaseSequence": "1940-12-13tt0033021",
+    "reviewDate": "2004-08-22",
+    "reviewSequence": "2004-08-22-1"
+  },
+  {
+    "imdbId": "tt0029754",
+    "title": "West of Shanghai",
+    "year": "1937",
+    "sortTitle": "west-of-shanghai-1937",
+    "slug": "west-of-shanghai-1937",
+    "grade": "B",
+    "gradeValue": 9,
+    "genres": [
+      "Adventure",
+      "Drama",
+      "War"
+    ],
+    "releaseSequence": "1937-10-28tt0029754",
+    "reviewDate": "2007-07-23",
+    "reviewSequence": "2007-07-23-1"
+  },
+  {
+    "imdbId": "tt0023694",
+    "title": "White Zombie",
+    "year": "1932",
+    "sortTitle": "white-zombie-1932",
+    "slug": "white-zombie-1932",
+    "grade": "B",
+    "gradeValue": 9,
+    "genres": [
+      "Horror"
+    ],
+    "releaseSequence": "1932-07-28tt0023694",
+    "reviewDate": "2009-01-10",
+    "reviewSequence": "2009-01-10-1"
+  },
+  {
+    "imdbId": "tt0022321",
+    "title": "The Road to Singapore",
+    "year": "1931",
+    "sortTitle": "road-to-singapore-1931",
+    "slug": "the-road-to-singapore-1931",
+    "grade": "B-",
+    "gradeValue": 8,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "releaseSequence": "1931-09-02tt0022321",
+    "reviewDate": "2021-03-02",
+    "reviewSequence": "2021-03-02-1"
   },
   {
     "imdbId": "tt0021508",
     "title": "Up the River",
     "year": "1930",
-    "sortTitle": "Up the River (1930)",
+    "sortTitle": "up-the-river-1930",
     "slug": "up-the-river-1930",
     "grade": "B-",
     "gradeValue": 8,
@@ -344,6 +1546,8 @@
       "Crime",
       "Drama"
     ],
-    "releaseSequence": "1930-10-10tt0021508"
+    "releaseSequence": "1930-10-10tt0021508",
+    "reviewDate": "2020-11-06",
+    "reviewSequence": "2020-11-06-1"
   }
 ]

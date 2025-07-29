@@ -11,6 +11,8 @@ const OverratedJsonSchema = z.object({
   gradeValue: z.number(),
   imdbId: z.string(),
   releaseSequence: z.string(),
+  reviewDate: z.date({ coerce: true }),
+  reviewSequence: z.string(),
   slug: z.string(),
   sortTitle: z.string(),
   title: z.string(),

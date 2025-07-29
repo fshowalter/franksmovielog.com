@@ -5,7 +5,6 @@ import { allViewingsJson } from "./data/viewingsJson";
 export type Viewing = ViewingJson & {};
 
 type Viewings = {
-  distinctGenres: string[];
   distinctMedia: string[];
   distinctReleaseYears: string[];
   distinctVenues: string[];
@@ -17,12 +16,10 @@ export async function allViewings(): Promise<Viewings> {
   const viewingsJson = await allViewingsJson();
   const distinctViewingYears = new Set<string>();
   const distinctReleaseYears = new Set<string>();
-  const distinctGenres = new Set<string>();
   const distinctMedia = new Set<string>();
   const distinctVenues = new Set<string>();
 
   const viewings = viewingsJson.map((title) => {
-    for (const genre of title.genres) distinctGenres.add(genre);
     distinctReleaseYears.add(title.year);
     distinctViewingYears.add(title.viewingYear);
     if (title.medium) {
@@ -38,7 +35,6 @@ export async function allViewings(): Promise<Viewings> {
   });
 
   return {
-    distinctGenres: [...distinctGenres].toSorted(),
     distinctMedia: [...distinctMedia].toSorted(),
     distinctReleaseYears: [...distinctReleaseYears].toSorted(),
     distinctVenues: [...distinctVenues].toSorted(),
