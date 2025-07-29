@@ -47,12 +47,12 @@ export function Layout({
           className={ccn(
             `
               grow
-              group-has-[[data-drawer]:checked]:before:absolute
-              group-has-[[data-drawer]:checked]:before:top-0
-              group-has-[[data-drawer]:checked]:before:left-0
-              group-has-[[data-drawer]:checked]:before:z-10
-              group-has-[[data-drawer]:checked]:before:size-full
-              group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
+              min-[381px]:group-has-[[data-drawer]:checked]:before:absolute
+              min-[381px]:group-has-[[data-drawer]:checked]:before:top-0
+              min-[381px]:group-has-[[data-drawer]:checked]:before:left-0
+              min-[381px]:group-has-[[data-drawer]:checked]:before:z-10
+              min-[381px]:group-has-[[data-drawer]:checked]:before:size-full
+              min-[381px]:group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
               tablet-landscape:group-has-[[data-drawer]:checked]:before:hidden
             `,
             className,
