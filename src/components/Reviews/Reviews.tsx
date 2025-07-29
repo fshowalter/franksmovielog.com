@@ -15,8 +15,8 @@ import { Filters } from "./Filters";
 import { Actions, initState, reducer } from "./Reviews.reducer";
 
 export type ListItemValue = ReviewListItemValue & {
-  reviewDate: string;
   reviewMonth: string;
+  reviewSequence: string;
   reviewYear: string;
 };
 

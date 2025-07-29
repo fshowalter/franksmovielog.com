@@ -11,6 +11,8 @@ export type Sort =
   | "grade-desc"
   | "release-date-asc"
   | "release-date-desc"
+  | "review-date-asc"
+  | "review-date-desc"
   | "title-asc"
   | "title-desc";
 
@@ -20,6 +22,7 @@ const { updateFilter } = filterTools(sortValues, groupValues);
 export enum Actions {
   FILTER_GENRES = "FILTER_GENRES",
   FILTER_RELEASE_YEAR = "FILTER_RELEASE_YEAR",
+  FILTER_REVIEW_YEAR = "FILTER_REVIEW_YEAR",
   FILTER_TITLE = "FILTER_TITLE",
   SHOW_MORE = "SHOW_MORE",
   SORT = "SORT",
@@ -28,6 +31,7 @@ export enum Actions {
 export type ActionType =
   | FilterGenresAction
   | FilterReleaseYearAction
+  | FilterReviewYearAction
   | FilterTitleAction
   | ShowMoreAction
   | SortAction;
@@ -39,6 +43,11 @@ type FilterGenresAction = {
 
 type FilterReleaseYearAction = {
   type: Actions.FILTER_RELEASE_YEAR;
+  values: [string, string];
+};
+
+type FilterReviewYearAction = {
+  type: Actions.FILTER_REVIEW_YEAR;
   values: [string, string];
 };
 
@@ -96,6 +105,12 @@ export function reducer(state: State, action: ActionType): State {
         );
       });
     }
+    case Actions.FILTER_REVIEW_YEAR: {
+      return updateFilter(state, "releaseYear", (value) => {
+        const reviewYear = value.reviewYear;
+        return reviewYear >= action.values[0] && reviewYear <= action.values[1];
+      });
+    }
     case Actions.FILTER_TITLE: {
       const regex = new RegExp(action.value, "i");
       return updateFilter(state, "title", (value) => {
@@ -144,6 +159,10 @@ function groupForValue(value: ListItemValue, sortValue: Sort): string {
     case "release-date-desc": {
       return value.year.toString();
     }
+    case "review-date-asc":
+    case "review-date-desc": {
+      return value.reviewYear;
+    }
     case "title-asc":
     case "title-desc": {
       const letter = value.sortTitle.slice(0, 1);
@@ -167,6 +186,10 @@ function sortValues(values: ListItemValue[], sortOrder: Sort) {
         sortString(a.releaseSequence, b.releaseSequence),
       "release-date-desc": (a, b) =>
         sortString(a.releaseSequence, b.releaseSequence) * -1,
+      "review-date-asc": (a, b) =>
+        sortString(a.reviewSequence, b.reviewSequence),
+      "review-date-desc": (a, b) =>
+        sortString(a.reviewSequence, b.reviewSequence) * -1,
       "title-asc": (a, b) => collator.compare(a.sortTitle, b.sortTitle),
       "title-desc": (a, b) => collator.compare(a.sortTitle, b.sortTitle) * -1,
     };

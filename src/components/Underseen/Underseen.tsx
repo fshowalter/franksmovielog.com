@@ -14,13 +14,17 @@ import type { Sort } from "./Underseen.reducer";
 import { Filters } from "./Filters";
 import { Actions, initState, reducer } from "./Underseen.reducer";
 
-export type ListItemValue = ReviewListItemValue & {};
+export type ListItemValue = ReviewListItemValue & {
+  reviewSequence: string;
+  reviewYear: string;
+};
 
 export type Props = {
   backdropImageProps: BackdropImageProps;
   deck: string;
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
+  distinctReviewYears: readonly string[];
   initialSort: Sort;
   values: ListItemValue[];
 };
@@ -30,6 +34,7 @@ export function Underseen({
   deck,
   distinctGenres,
   distinctReleaseYears,
+  distinctReviewYears,
   initialSort,
   values,
 }: Props): JSX.Element {
@@ -57,6 +62,7 @@ export function Underseen({
           dispatch={dispatch}
           distinctGenres={distinctGenres}
           distinctReleaseYears={distinctReleaseYears}
+          distinctReviewYears={distinctReviewYears}
           sortValue={state.sortValue}
         />
       }

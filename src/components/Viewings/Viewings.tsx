@@ -20,7 +20,6 @@ import { Actions, initState, reducer } from "./Viewings.reducer";
 
 export type ListItemValue = Pick<
   Viewing,
-  | "genres"
   | "medium"
   | "releaseSequence"
   | "sequence"
@@ -41,7 +40,6 @@ export type ListItemValue = Pick<
 export type Props = {
   backdropImageProps: BackdropImageProps;
   deck: string;
-  distinctGenres: readonly string[];
   distinctMedia: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctVenues: readonly string[];
@@ -53,7 +51,6 @@ export type Props = {
 export function Viewings({
   backdropImageProps,
   deck,
-  distinctGenres,
   distinctMedia,
   distinctReleaseYears,
   distinctVenues,
@@ -82,7 +79,6 @@ export function Viewings({
       filters={
         <Filters
           dispatch={dispatch}
-          distinctGenres={distinctGenres}
           distinctMedia={distinctMedia}
           distinctReleaseYears={distinctReleaseYears}
           distinctVenues={distinctVenues}

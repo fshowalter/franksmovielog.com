@@ -1,7 +1,6 @@
 import type { JSX } from "react";
 
 import { DebouncedInput } from "~/components/DebouncedInput";
-import { MultiSelectField } from "~/components/MultiSelectField";
 import { SelectField } from "~/components/SelectField";
 import { SelectOptions } from "~/components/SelectOptions";
 import { YearInput } from "~/components/YearInput";
@@ -12,7 +11,6 @@ import { Actions } from "./Viewings.reducer";
 
 export function Filters({
   dispatch,
-  distinctGenres,
   distinctMedia,
   distinctReleaseYears,
   distinctVenues,
@@ -20,7 +18,6 @@ export function Filters({
   sortValue,
 }: {
   dispatch: React.Dispatch<ActionType>;
-  distinctGenres: readonly string[];
   distinctMedia: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctVenues: readonly string[];
@@ -72,16 +69,6 @@ export function Filters({
       >
         <SelectOptions options={distinctVenues} />
       </SelectField>
-      <MultiSelectField
-        label="Genres"
-        onChange={(e) =>
-          dispatch({
-            type: Actions.FILTER_GENRES,
-            values: e.map((selection) => selection.value),
-          })
-        }
-        options={distinctGenres}
-      />
       <SelectField
         label="Sort"
         onChange={(e) =>

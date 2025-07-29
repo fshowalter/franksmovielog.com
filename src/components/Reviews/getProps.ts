@@ -24,11 +24,21 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
           ListItemPosterImageConfig,
         ),
         releaseSequence: review.releaseSequence,
-        reviewDate: review.date.toISOString(),
+        reviewDisplayDate: `${review.date.toLocaleDateString("en-US", {
+          timeZone: "UTC",
+          year: "numeric",
+        })}-${review.date.toLocaleDateString("en-US", {
+          month: "short",
+          timeZone: "UTC",
+        })}-${review.date.toLocaleDateString("en-US", {
+          day: "2-digit",
+          timeZone: "UTC",
+        })}`,
         reviewMonth: review.date.toLocaleDateString("en-US", {
           month: "long",
           timeZone: "UTC",
         }),
+        reviewSequence: review.sequence,
         reviewYear: review.date.toLocaleDateString("en-US", {
           timeZone: "UTC",
           year: "numeric",

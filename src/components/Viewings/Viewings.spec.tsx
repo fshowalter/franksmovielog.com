@@ -1,6 +1,5 @@
 import { act, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { select } from "react-select-event";
 import { describe, it } from "vitest";
 
 import { getProps } from "./getProps";
@@ -158,17 +157,6 @@ describe("Viewings", () => {
     await userEvent.selectOptions(toInput, "2021");
     await userEvent.selectOptions(fromInput, "2022");
     await userEvent.selectOptions(toInput, "2020");
-
-    expect(screen.getByTestId("list")).toMatchSnapshot();
-  });
-
-  it("can filter by genres", async ({ expect }) => {
-    expect.hasAssertions();
-    render(<Viewings {...props} />);
-
-    const selectElement = screen.getByLabelText("Genres");
-
-    await select(selectElement, ["Horror", "Comedy"]);
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });

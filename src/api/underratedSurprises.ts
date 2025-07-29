@@ -7,17 +7,25 @@ type UnderratedSurprise = UnderratedJson & {};
 type UnderratedSurprises = {
   distinctGenres: string[];
   distinctReleaseYears: string[];
-  overratedDisappointments: UnderratedSurprise[];
+  distinctReviewYears: string[];
+  underratedSurprises: UnderratedSurprise[];
 };
 
 export async function allUnderratedSurprises(): Promise<UnderratedSurprises> {
-  const overratedJson = await allUnderratedJson();
+  const underratedJson = await allUnderratedJson();
   const distinctReleaseYears = new Set<string>();
   const distinctGenres = new Set<string>();
+  const distinctReviewYears = new Set<string>();
 
-  const overratedDisappointments = overratedJson.map((title) => {
+  const underratedSurprises = underratedJson.map((title) => {
     for (const genre of title.genres) distinctGenres.add(genre);
     distinctReleaseYears.add(title.year);
+    distinctReviewYears.add(
+      title.reviewDate.toLocaleDateString("en-US", {
+        timeZone: "UTC",
+        year: "numeric",
+      }),
+    );
 
     return {
       ...title,
@@ -27,6 +35,7 @@ export async function allUnderratedSurprises(): Promise<UnderratedSurprises> {
   return {
     distinctGenres: [...distinctGenres].toSorted(),
     distinctReleaseYears: [...distinctReleaseYears].toSorted(),
-    overratedDisappointments: overratedDisappointments,
+    distinctReviewYears: [...distinctReviewYears].toSorted(),
+    underratedSurprises,
   };
 }

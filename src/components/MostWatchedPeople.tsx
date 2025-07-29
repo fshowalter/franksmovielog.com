@@ -14,7 +14,7 @@ export type MostWatchedPeopleListItemValue = {
 };
 
 type ViewingSubListItemValue = {
-  date: string;
+  displayDate: string;
   medium: string | undefined;
   posterImageProps: PosterImageProps;
   sequence: number;
@@ -160,7 +160,7 @@ function MostWatchedPersonViewingListItem({
           year={value.year}
         />
         <div className="-mt-px font-sans text-xs font-light text-muted">
-          {value.date}
+          {value.displayDate}
         </div>
         <ListItemMediumAndVenue medium={value.medium} venue={value.venue} />
       </div>

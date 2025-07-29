@@ -207,8 +207,10 @@ function sortValues(values: ListItemValue[], sortOrder: Sort) {
         sortString(a.releaseSequence, b.releaseSequence),
       "release-date-desc": (a, b) =>
         sortString(a.releaseSequence, b.releaseSequence) * -1,
-      "review-date-asc": (a, b) => sortString(a.reviewDate, b.reviewDate),
-      "review-date-desc": (a, b) => sortString(a.reviewDate, b.reviewDate) * -1,
+      "review-date-asc": (a, b) =>
+        sortString(a.reviewSequence, b.reviewSequence),
+      "review-date-desc": (a, b) =>
+        sortString(a.reviewSequence, b.reviewSequence) * -1,
       "title-asc": (a, b) => collator.compare(a.sortTitle, b.sortTitle),
       "title-desc": (a, b) => collator.compare(a.sortTitle, b.sortTitle) * -1,
     };

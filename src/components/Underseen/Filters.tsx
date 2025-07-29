@@ -12,11 +12,13 @@ export function Filters({
   dispatch,
   distinctGenres,
   distinctReleaseYears,
+  distinctReviewYears,
   sortValue,
 }: {
   dispatch: React.Dispatch<ActionType>;
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
+  distinctReviewYears: readonly string[];
   sortValue: Sort;
 }) {
   return (
@@ -34,6 +36,13 @@ export function Filters({
           dispatch({ type: Actions.FILTER_RELEASE_YEAR, values })
         }
         years={distinctReleaseYears}
+      />
+      <YearInput
+        label="Review Year"
+        onYearChange={(values) =>
+          dispatch({ type: Actions.FILTER_REVIEW_YEAR, values })
+        }
+        years={distinctReviewYears}
       />
       <MultiSelectField
         label="Genres"
@@ -59,6 +68,8 @@ export function Filters({
         <option value="title-desc">Title (Z &rarr; A)</option>
         <option value="grade-desc">Grade (Best First)</option>
         <option value="grade-asc">Grade (Worst First)</option>
+        <option value="review-date-desc">Review Date (Newest First)</option>
+        <option value="review-date-asc">Review Date (Oldest First)</option>
         <option value="release-date-desc">Release Date (Newest First)</option>
         <option value="release-date-asc">Release Date (Oldest First)</option>
       </SelectField>
