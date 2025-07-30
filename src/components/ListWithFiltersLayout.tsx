@@ -1,13 +1,18 @@
 import type { JSX, ReactNode } from "react";
 
-import { useRef } from "react";
+import { unescape } from "node:querystring";
+import { useRef, useState } from "react";
 
 import { Layout } from "./Layout";
+
+export type FiltersHandle = {
+  focus: () => undefined | void;
+};
 
 type Props<T extends string> = {
   backdrop: React.ReactNode;
   className?: string;
-  filters: React.ReactNode;
+  filters: (ref: React.Ref<FiltersHandle>) => React.ReactNode;
   headerClasses?: string;
   list: React.ReactNode;
   listHeaderButtons?: React.ReactNode;
@@ -62,6 +67,23 @@ export function ListWithFiltersLayout<T extends string>({
   totalCount,
   ...rest
 }: Props<T>): JSX.Element {
+  const filtersRef = useRef<FiltersHandle>(null);
+  const [filterDrawerVisible, setFilterDrawerVisible] = useState(false);
+
+  const onFilterClick = () => {
+    const documentSize = document.documentElement.clientWidth;
+    const tabletLandscapeBreakpoint = Number.parseFloat(
+      globalThis
+        .getComputedStyle(document.body)
+        .getPropertyValue("--breakpoint-tablet-landscape"),
+    );
+
+    if (documentSize >= tabletLandscapeBreakpoint) {
+      setFilterDrawerVisible(false);
+      filtersRef.current?.focus();
+    }
+  };
+
   return (
     <Layout
       className={className || "bg-subtle"}
@@ -164,7 +186,7 @@ export function ListWithFiltersLayout<T extends string>({
                       >
                         Filter
                       </legend>
-                      {filters}
+                      {filters(filtersRef)}
                     </fieldset>
                     <div
                       className={`
@@ -218,10 +240,8 @@ function ListHeader<T extends string>({
   const headerRef = useRef<HTMLDivElement | null>(null);
   const { currentSortValue, onSortChange, sortOptions } = sortProps;
 
-  const executeScroll: React.ChangeEventHandler<HTMLInputElement> = (event) => {
-    if (!event.currentTarget.checked) {
-      headerRef?.current?.scrollIntoView();
-    }
+  const executeScroll: React.MouseEventHandler<HTMLButtonElement> = () => {
+    headerRef?.current?.scrollIntoView();
   };
 
   return (
@@ -236,73 +256,57 @@ function ListHeader<T extends string>({
       `}
       ref={headerRef}
     >
-      <span className={`mr-auto block grow-0`}>
+      <span className={`block grow-0`}>
         <span className={`font-semibold text-default`}>
           {totalCount.toLocaleString()}
         </span>
         <span className="text-xxs leading-none tracking-wide"> Results</span>
       </span>
-
-      {sortOptions && (
-        <div
-          className={`
-            order-last w-full
-            tablet:order-none tablet:w-auto tablet:max-w-1/3
-            tablet:min-w-[280px] tablet:grow
-            tablet-landscape:max-w-1/3
-          `}
-        >
-          <label
-            className={`
-              flex items-baseline gap-x-4 text-xxs font-semibold tracking-wide
-              text-subtle
-            `}
-          >
-            Sort{" "}
-            <select
-              className={`
-                flex w-full appearance-none border-none bg-default py-2 pr-4
-                pl-4 font-serif text-base font-normal tracking-normal
-                text-default shadow-all outline-accent
-                tablet-landscape:font-serif tablet-landscape:text-base
-              `}
-              onChange={onSortChange}
-              value={currentSortValue}
-            >
-              {sortOptions}
-            </select>
-          </label>
-        </div>
-      )}
-      <input
-        className="hidden"
-        data-drawer
-        id="filters"
-        onChange={executeScroll}
-        type="checkbox"
-      />
-      <label
-        className={`
-          relative z-40 flex transform-gpu cursor-pointer items-center
-          justify-center gap-x-4 bg-canvas px-4 py-2 text-nowrap text-muted
-          uppercase shadow-all transition-transform
-          hover:scale-110
-          tablet-landscape:hidden
-        `}
-        htmlFor="filters"
-      >
-        Filter
-      </label>
       {listHeaderButtons && (
-        <div
-          className={`
-            flex flex-wrap justify-end gap-4
-            tablet-landscape:order-3
-          `}
-        >
+        <div className={`flex flex-wrap justify-end gap-4`}>
           {listHeaderButtons}
         </div>
       )}
+      <button
+        className={`
+          relative z-40 ml-auto flex transform-gpu cursor-pointer items-center
+          justify-center gap-x-4 bg-canvas px-4 py-2 text-nowrap text-muted
+          uppercase shadow-all transition-transform
+          hover:scale-110
+        `}
+        onClick={executeScroll}
+      >
+        Filter
+      </button>
+      <div
+        className={`
+          w-full
+          tablet:order-none tablet:w-auto tablet:max-w-1/3 tablet:min-w-[280px]
+          tablet:grow
+          tablet-landscape:max-w-1/3
+        `}
+      >
+        <label
+          className={`
+            flex items-baseline gap-x-4 text-xxs font-semibold tracking-wide
+            text-subtle
+          `}
+        >
+          Sort{" "}
+          <select
+            className={`
+              flex w-full appearance-none border-none bg-default py-2 pr-4 pl-4
+              font-serif text-base font-normal tracking-normal text-default
+              shadow-all outline-accent
+              tablet-landscape:font-serif tablet-landscape:text-base
+            `}
+            onChange={onSortChange}
+            value={currentSortValue}
+          >
+            {sortOptions}
+          </select>
+        </label>
+      </div>
     </div>
   );
 }

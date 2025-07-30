@@ -1,6 +1,11 @@
-import type { JSX } from "react";
+import { useImperativeHandle, useRef } from "react";
 
-import { DebouncedInput } from "~/components/DebouncedInput";
+import type { FiltersHandle } from "~/components/ListWithFiltersLayout";
+
+import {
+  DebouncedInput,
+  type DebouncedInputHandle,
+} from "~/components/DebouncedInput";
 import { SelectField } from "~/components/SelectField";
 import { SelectOptions } from "~/components/SelectOptions";
 import { YearInput } from "~/components/YearInput";
@@ -15,13 +20,25 @@ export function Filters({
   distinctReleaseYears,
   distinctVenues,
   distinctViewingYears,
+  ref,
 }: {
   dispatch: React.Dispatch<ActionType>;
   distinctMedia: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctVenues: readonly string[];
   distinctViewingYears: readonly string[];
-}): JSX.Element {
+  ref: React.Ref<FiltersHandle>;
+}) {
+  const inputRef = useRef<DebouncedInputHandle>(null);
+
+  useImperativeHandle(ref, () => {
+    return {
+      focus() {
+        inputRef?.current?.focus();
+      },
+    };
+  }, []);
+
   return (
     <>
       <DebouncedInput
@@ -30,6 +47,7 @@ export function Filters({
           dispatch({ type: Actions.FILTER_TITLE, value })
         }
         placeholder="Enter all or part of a title"
+        ref={inputRef}
       />
       <YearInput
         label="Release Year"
@@ -67,19 +85,6 @@ export function Filters({
       >
         <SelectOptions options={distinctVenues} />
       </SelectField>
-      {/* <SelectField
-        label="Sort"
-        onChange={(e) =>
-          dispatch({
-            type: Actions.SORT,
-            value: e.target.value as Sort,
-          })
-        }
-        value={sortValue}
-      >
-        <option value="viewing-date-desc">Viewing Date (Newest First)</option>
-        <option value="viewing-date-asc">Viewing Date (Oldest First)</option>
-      </SelectField> */}
     </>
   );
 }

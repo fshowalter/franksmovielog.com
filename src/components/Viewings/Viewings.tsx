@@ -76,15 +76,16 @@ export function Viewings({
           title="Viewing Log"
         />
       }
-      filters={
+      filters={(ref) => (
         <Filters
           dispatch={dispatch}
           distinctMedia={distinctMedia}
           distinctReleaseYears={distinctReleaseYears}
           distinctVenues={distinctVenues}
           distinctViewingYears={distinctViewingYears}
+          ref={ref}
         />
-      }
+      )}
       list={
         <GroupedList
           data-testid="list"
