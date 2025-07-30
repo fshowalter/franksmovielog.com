@@ -35,8 +35,9 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
       className={`
         relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12
         transition-transform
-        has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl
         tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
+        tablet-landscape:has-[a:hover]:-translate-y-2
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
         laptop:max-w-[31.33%]
       `}
     >

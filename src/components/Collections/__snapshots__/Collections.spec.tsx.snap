@@ -19,8 +19,10 @@ exports[`Collections > can filter by name 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -65,8 +67,8 @@ exports[`Collections > can filter by name 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       8
@@ -83,8 +85,10 @@ exports[`Collections > can filter by name 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -129,11 +133,11 @@ exports[`Collections > can filter by name 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      10
+      11
     </div>
   </li>
   <li
@@ -147,8 +151,10 @@ exports[`Collections > can filter by name 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -193,8 +199,8 @@ exports[`Collections > can filter by name 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       6
@@ -211,8 +217,10 @@ exports[`Collections > can filter by name 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -257,11 +265,11 @@ exports[`Collections > can filter by name 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      10
+      41
     </div>
   </li>
   <li
@@ -275,8 +283,10 @@ exports[`Collections > can filter by name 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -321,8 +331,8 @@ exports[`Collections > can filter by name 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       4
@@ -339,8 +349,10 @@ exports[`Collections > can filter by name 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -385,11 +397,11 @@ exports[`Collections > can filter by name 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      7
+      24
     </div>
   </li>
   <li
@@ -403,8 +415,10 @@ exports[`Collections > can filter by name 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -449,8 +463,8 @@ exports[`Collections > can filter by name 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       5
@@ -467,8 +481,10 @@ exports[`Collections > can filter by name 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -513,8 +529,8 @@ exports[`Collections > can filter by name 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       7
@@ -531,8 +547,10 @@ exports[`Collections > can filter by name 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -577,11 +595,11 @@ exports[`Collections > can filter by name 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      7
+      14
     </div>
   </li>
   <li
@@ -595,8 +613,10 @@ exports[`Collections > can filter by name 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -641,11 +661,11 @@ exports[`Collections > can filter by name 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      3
+      8
     </div>
   </li>
 </ol>
@@ -670,8 +690,10 @@ exports[`Collections > can sort by name asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -716,8 +738,8 @@ exports[`Collections > can sort by name asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       8
@@ -734,8 +756,10 @@ exports[`Collections > can sort by name asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -780,11 +804,11 @@ exports[`Collections > can sort by name asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      10
+      11
     </div>
   </li>
   <li
@@ -798,8 +822,10 @@ exports[`Collections > can sort by name asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -844,8 +870,8 @@ exports[`Collections > can sort by name asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       6
@@ -862,8 +888,10 @@ exports[`Collections > can sort by name asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -908,11 +936,11 @@ exports[`Collections > can sort by name asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      10
+      41
     </div>
   </li>
   <li
@@ -926,8 +954,10 @@ exports[`Collections > can sort by name asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -972,8 +1002,8 @@ exports[`Collections > can sort by name asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       4
@@ -990,8 +1020,10 @@ exports[`Collections > can sort by name asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -1036,11 +1068,11 @@ exports[`Collections > can sort by name asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      7
+      24
     </div>
   </li>
   <li
@@ -1054,8 +1086,10 @@ exports[`Collections > can sort by name asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -1100,8 +1134,8 @@ exports[`Collections > can sort by name asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       5
@@ -1118,8 +1152,10 @@ exports[`Collections > can sort by name asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -1164,8 +1200,8 @@ exports[`Collections > can sort by name asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       7
@@ -1182,8 +1218,10 @@ exports[`Collections > can sort by name asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -1228,11 +1266,11 @@ exports[`Collections > can sort by name asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      7
+      14
     </div>
   </li>
   <li
@@ -1246,8 +1284,10 @@ exports[`Collections > can sort by name asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -1292,11 +1332,11 @@ exports[`Collections > can sort by name asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      3
+      8
     </div>
   </li>
 </ol>
@@ -1321,8 +1361,10 @@ exports[`Collections > can sort by name desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -1367,8 +1409,8 @@ exports[`Collections > can sort by name desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       8
@@ -1385,8 +1427,10 @@ exports[`Collections > can sort by name desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -1431,11 +1475,11 @@ exports[`Collections > can sort by name desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      10
+      11
     </div>
   </li>
   <li
@@ -1449,8 +1493,10 @@ exports[`Collections > can sort by name desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -1495,8 +1541,8 @@ exports[`Collections > can sort by name desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       6
@@ -1513,8 +1559,10 @@ exports[`Collections > can sort by name desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -1559,11 +1607,11 @@ exports[`Collections > can sort by name desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      10
+      41
     </div>
   </li>
   <li
@@ -1577,8 +1625,10 @@ exports[`Collections > can sort by name desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -1623,8 +1673,8 @@ exports[`Collections > can sort by name desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       4
@@ -1641,8 +1691,10 @@ exports[`Collections > can sort by name desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -1687,11 +1739,11 @@ exports[`Collections > can sort by name desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      7
+      24
     </div>
   </li>
   <li
@@ -1705,8 +1757,10 @@ exports[`Collections > can sort by name desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -1751,8 +1805,8 @@ exports[`Collections > can sort by name desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       5
@@ -1769,8 +1823,10 @@ exports[`Collections > can sort by name desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -1815,8 +1871,8 @@ exports[`Collections > can sort by name desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       7
@@ -1833,8 +1889,10 @@ exports[`Collections > can sort by name desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -1879,11 +1937,11 @@ exports[`Collections > can sort by name desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      7
+      14
     </div>
   </li>
   <li
@@ -1897,8 +1955,10 @@ exports[`Collections > can sort by name desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -1943,11 +2003,11 @@ exports[`Collections > can sort by name desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      3
+      8
     </div>
   </li>
 </ol>
@@ -1972,8 +2032,10 @@ exports[`Collections > can sort by review count asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -2018,8 +2080,8 @@ exports[`Collections > can sort by review count asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       8
@@ -2036,8 +2098,10 @@ exports[`Collections > can sort by review count asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -2082,11 +2146,11 @@ exports[`Collections > can sort by review count asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      10
+      11
     </div>
   </li>
   <li
@@ -2100,8 +2164,10 @@ exports[`Collections > can sort by review count asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -2146,8 +2212,8 @@ exports[`Collections > can sort by review count asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       6
@@ -2164,8 +2230,10 @@ exports[`Collections > can sort by review count asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -2210,11 +2278,11 @@ exports[`Collections > can sort by review count asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      10
+      41
     </div>
   </li>
   <li
@@ -2228,8 +2296,10 @@ exports[`Collections > can sort by review count asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -2274,8 +2344,8 @@ exports[`Collections > can sort by review count asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       4
@@ -2292,8 +2362,10 @@ exports[`Collections > can sort by review count asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -2338,11 +2410,11 @@ exports[`Collections > can sort by review count asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      7
+      24
     </div>
   </li>
   <li
@@ -2356,8 +2428,10 @@ exports[`Collections > can sort by review count asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -2402,8 +2476,8 @@ exports[`Collections > can sort by review count asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       5
@@ -2420,8 +2494,10 @@ exports[`Collections > can sort by review count asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -2466,8 +2542,8 @@ exports[`Collections > can sort by review count asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       7
@@ -2484,8 +2560,10 @@ exports[`Collections > can sort by review count asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -2530,11 +2608,11 @@ exports[`Collections > can sort by review count asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      7
+      14
     </div>
   </li>
   <li
@@ -2548,8 +2626,10 @@ exports[`Collections > can sort by review count asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -2594,11 +2674,11 @@ exports[`Collections > can sort by review count asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      3
+      8
     </div>
   </li>
 </ol>
@@ -2623,8 +2703,10 @@ exports[`Collections > can sort by review count desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -2669,8 +2751,8 @@ exports[`Collections > can sort by review count desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       8
@@ -2687,8 +2769,10 @@ exports[`Collections > can sort by review count desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -2733,11 +2817,11 @@ exports[`Collections > can sort by review count desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      10
+      11
     </div>
   </li>
   <li
@@ -2751,8 +2835,10 @@ exports[`Collections > can sort by review count desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -2797,8 +2883,8 @@ exports[`Collections > can sort by review count desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       6
@@ -2815,8 +2901,10 @@ exports[`Collections > can sort by review count desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -2861,11 +2949,11 @@ exports[`Collections > can sort by review count desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      10
+      41
     </div>
   </li>
   <li
@@ -2879,8 +2967,10 @@ exports[`Collections > can sort by review count desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -2925,8 +3015,8 @@ exports[`Collections > can sort by review count desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       4
@@ -2943,8 +3033,10 @@ exports[`Collections > can sort by review count desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -2989,11 +3081,11 @@ exports[`Collections > can sort by review count desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      7
+      24
     </div>
   </li>
   <li
@@ -3007,8 +3099,10 @@ exports[`Collections > can sort by review count desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -3053,8 +3147,8 @@ exports[`Collections > can sort by review count desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       5
@@ -3071,8 +3165,10 @@ exports[`Collections > can sort by review count desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -3117,8 +3213,8 @@ exports[`Collections > can sort by review count desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       7
@@ -3135,8 +3231,10 @@ exports[`Collections > can sort by review count desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -3181,11 +3279,11 @@ exports[`Collections > can sort by review count desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      7
+      14
     </div>
   </li>
   <li
@@ -3199,8 +3297,10 @@ exports[`Collections > can sort by review count desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -3245,11 +3345,11 @@ exports[`Collections > can sort by review count desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      3
+      8
     </div>
   </li>
 </ol>
@@ -3274,8 +3374,10 @@ exports[`Collections > can sort by title count asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -3320,8 +3422,8 @@ exports[`Collections > can sort by title count asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       8
@@ -3338,8 +3440,10 @@ exports[`Collections > can sort by title count asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -3384,11 +3488,11 @@ exports[`Collections > can sort by title count asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      10
+      11
     </div>
   </li>
   <li
@@ -3402,8 +3506,10 @@ exports[`Collections > can sort by title count asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -3448,8 +3554,8 @@ exports[`Collections > can sort by title count asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       6
@@ -3466,8 +3572,10 @@ exports[`Collections > can sort by title count asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -3512,11 +3620,11 @@ exports[`Collections > can sort by title count asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      10
+      41
     </div>
   </li>
   <li
@@ -3530,8 +3638,10 @@ exports[`Collections > can sort by title count asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -3576,8 +3686,8 @@ exports[`Collections > can sort by title count asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       4
@@ -3594,8 +3704,10 @@ exports[`Collections > can sort by title count asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -3640,11 +3752,11 @@ exports[`Collections > can sort by title count asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      7
+      24
     </div>
   </li>
   <li
@@ -3658,8 +3770,10 @@ exports[`Collections > can sort by title count asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -3704,8 +3818,8 @@ exports[`Collections > can sort by title count asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       5
@@ -3722,8 +3836,10 @@ exports[`Collections > can sort by title count asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -3768,8 +3884,8 @@ exports[`Collections > can sort by title count asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       7
@@ -3786,8 +3902,10 @@ exports[`Collections > can sort by title count asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -3832,11 +3950,11 @@ exports[`Collections > can sort by title count asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      7
+      14
     </div>
   </li>
   <li
@@ -3850,8 +3968,10 @@ exports[`Collections > can sort by title count asc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -3896,11 +4016,11 @@ exports[`Collections > can sort by title count asc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      3
+      8
     </div>
   </li>
 </ol>
@@ -3925,8 +4045,10 @@ exports[`Collections > can sort by title count desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -3971,8 +4093,8 @@ exports[`Collections > can sort by title count desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       8
@@ -3989,8 +4111,10 @@ exports[`Collections > can sort by title count desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -4035,11 +4159,11 @@ exports[`Collections > can sort by title count desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      10
+      11
     </div>
   </li>
   <li
@@ -4053,8 +4177,10 @@ exports[`Collections > can sort by title count desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -4099,8 +4225,8 @@ exports[`Collections > can sort by title count desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       6
@@ -4117,8 +4243,10 @@ exports[`Collections > can sort by title count desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -4163,11 +4291,11 @@ exports[`Collections > can sort by title count desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      10
+      41
     </div>
   </li>
   <li
@@ -4181,8 +4309,10 @@ exports[`Collections > can sort by title count desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -4227,8 +4357,8 @@ exports[`Collections > can sort by title count desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       4
@@ -4245,8 +4375,10 @@ exports[`Collections > can sort by title count desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -4291,11 +4423,11 @@ exports[`Collections > can sort by title count desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      7
+      24
     </div>
   </li>
   <li
@@ -4309,8 +4441,10 @@ exports[`Collections > can sort by title count desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -4355,8 +4489,8 @@ exports[`Collections > can sort by title count desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       5
@@ -4373,8 +4507,10 @@ exports[`Collections > can sort by title count desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -4419,8 +4555,8 @@ exports[`Collections > can sort by title count desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
       7
@@ -4437,8 +4573,10 @@ exports[`Collections > can sort by title count desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -4483,11 +4621,11 @@ exports[`Collections > can sort by title count desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      7
+      14
     </div>
   </li>
   <li
@@ -4501,8 +4639,10 @@ exports[`Collections > can sort by title count desc 1`] = `
         laptop:px-6
         
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       
       "
   >
@@ -4547,11 +4687,11 @@ exports[`Collections > can sort by title count desc 1`] = `
     </a>
     <div
       class="
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         "
     >
-      3
+      8
     </div>
   </li>
 </ol>

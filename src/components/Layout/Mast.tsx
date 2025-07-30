@@ -17,7 +17,7 @@ export function Mast({
   return (
     <header
       className={`
-        group z-20 flex w-full items-center justify-between px-container py-4
+        group z-30 flex w-full items-center justify-between px-container py-4
         tablet:py-6
         laptop:inset-x-0 laptop:z-40 laptop:flex-row laptop:flex-wrap
         laptop:px-16 laptop:py-8 laptop:text-left
@@ -71,7 +71,7 @@ function HamburgerMenu({ hasBackdrop }: { hasBackdrop: boolean }) {
       >
         <span
           className={`
-            relative block h-0.5 w-6 origin-center transform-gpu
+            relative flex h-0.5 w-6 origin-center transform-gpu
             transition-[top,bottom,transform] duration-200 ease-in-out
             group-has-[#nav:checked]:transform-[rotate(45deg)]
             group-has-[#nav:checked]:!bg-[#fff]
@@ -93,7 +93,7 @@ function HamburgerMenu({ hasBackdrop }: { hasBackdrop: boolean }) {
       </label>
       <ul
         className={`
-          fixed top-0 right-0 z-20 flex h-full w-0 transform-[translateX(100%)]
+          fixed top-0 right-0 flex h-full w-0 transform-[translateX(100%)]
           flex-col items-start gap-y-5 overflow-hidden bg-footer text-left
           text-inverse opacity-0 duration-200 ease-in-out
           group-has-[#nav:checked]:bottom-0 group-has-[#nav:checked]:z-20

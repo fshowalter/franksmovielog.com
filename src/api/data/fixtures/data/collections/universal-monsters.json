@@ -2,297 +2,355 @@
   "name": "Universal Monsters",
   "slug": "universal-monsters",
   "titleCount": 29,
-  "reviewCount": 3,
+  "reviewCount": 8,
   "titles": [
     {
       "imdbId": "tt0021814",
       "title": "Dracula",
-      "sortTitle": "Dracula (1931)",
+      "sortTitle": "dracula-1931",
       "year": "1931",
       "releaseSequence": "1931-02-09tt0021814",
       "slug": "dracula-1931",
       "grade": "A-",
-      "gradeValue": 11
+      "gradeValue": 11,
+      "reviewDate": "2020-10-04",
+      "reviewSequence": "2020-10-04-1"
     },
     {
       "imdbId": "tt0021815",
       "title": "Dr\u00e1cula",
-      "sortTitle": "Dr\u00e1cula (1931)",
+      "sortTitle": "dracula-1931",
       "year": "1931",
       "releaseSequence": "1931-03-11tt0021815",
       "slug": "dracula-1931-spanish",
       "grade": "C+",
-      "gradeValue": 7
+      "gradeValue": 7,
+      "reviewDate": "2021-03-28",
+      "reviewSequence": "2021-03-28-2"
     },
     {
       "imdbId": "tt0021884",
       "title": "Frankenstein",
-      "sortTitle": "Frankenstein (1931)",
+      "sortTitle": "frankenstein-1931",
       "year": "1931",
       "releaseSequence": "1931-11-19tt0021884",
       "slug": "frankenstein-1931",
       "grade": "B+",
-      "gradeValue": 10
+      "gradeValue": 10,
+      "reviewDate": "2021-04-20",
+      "reviewSequence": "2021-04-20-1"
     },
     {
       "imdbId": "tt0023245",
       "title": "The Mummy",
-      "sortTitle": "Mummy (1932)",
+      "sortTitle": "mummy-1932",
       "year": "1932",
       "releaseSequence": "1932-12-22tt0023245",
       "slug": null,
       "grade": null,
-      "gradeValue": null
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
     },
     {
       "imdbId": "tt0024184",
       "title": "The Invisible Man",
-      "sortTitle": "Invisible Man (1933)",
+      "sortTitle": "invisible-man-1933",
       "year": "1933",
       "releaseSequence": "1933-10-31tt0024184",
-      "slug": null,
-      "grade": null,
-      "gradeValue": null
+      "slug": "the-invisible-man-1933",
+      "grade": "C",
+      "gradeValue": 6,
+      "reviewDate": "2024-11-13",
+      "reviewSequence": "2024-11-13-2"
     },
     {
       "imdbId": "tt0026138",
       "title": "Bride of Frankenstein",
-      "sortTitle": "Bride of Frankenstein (1935)",
+      "sortTitle": "bride-of-frankenstein-1935",
       "year": "1935",
       "releaseSequence": "1935-04-19tt0026138",
       "slug": null,
       "grade": null,
-      "gradeValue": null
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
     },
     {
       "imdbId": "tt0027545",
       "title": "Dracula's Daughter",
-      "sortTitle": "Dracula's Daughter (1936)",
+      "sortTitle": "draculas-daughter-1936",
       "year": "1936",
       "releaseSequence": "1936-05-11tt0027545",
-      "slug": null,
-      "grade": null,
-      "gradeValue": null
+      "slug": "draculas-daughter-1936",
+      "grade": "D",
+      "gradeValue": 3,
+      "reviewDate": "2007-12-26",
+      "reviewSequence": "2007-12-26-1"
     },
     {
       "imdbId": "tt0031951",
       "title": "Son of Frankenstein",
-      "sortTitle": "Son of Frankenstein (1939)",
+      "sortTitle": "son-of-frankenstein-1939",
       "year": "1939",
       "releaseSequence": "1939-01-10tt0031951",
       "slug": null,
       "grade": null,
-      "gradeValue": null
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
     },
     {
       "imdbId": "tt0032635",
       "title": "The Invisible Man Returns",
-      "sortTitle": "Invisible Man Returns (1940)",
+      "sortTitle": "invisible-man-returns-1940",
       "year": "1940",
       "releaseSequence": "1940-01-12tt0032635",
       "slug": null,
       "grade": null,
-      "gradeValue": null
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
     },
     {
       "imdbId": "tt0032818",
       "title": "The Mummy's Hand",
-      "sortTitle": "Mummy's Hand (1940)",
+      "sortTitle": "mummys-hand-1940",
       "year": "1940",
       "releaseSequence": "1940-09-20tt0032818",
       "slug": null,
       "grade": null,
-      "gradeValue": null
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
     },
     {
       "imdbId": "tt0032637",
       "title": "The Invisible Woman",
-      "sortTitle": "Invisible Woman (1940)",
+      "sortTitle": "invisible-woman-1940",
       "year": "1940",
       "releaseSequence": "1940-12-27tt0032637",
       "slug": null,
       "grade": null,
-      "gradeValue": null
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
     },
     {
       "imdbId": "tt0034398",
       "title": "The Wolf Man",
-      "sortTitle": "Wolf Man (1941)",
+      "sortTitle": "wolf-man-1941",
       "year": "1941",
       "releaseSequence": "1941-12-09tt0034398",
-      "slug": null,
-      "grade": null,
-      "gradeValue": null
+      "slug": "the-wolf-man-1941",
+      "grade": "B",
+      "gradeValue": 9,
+      "reviewDate": "2007-07-23",
+      "reviewSequence": "2007-07-23-2"
     },
     {
       "imdbId": "tt0034786",
       "title": "The Ghost of Frankenstein",
-      "sortTitle": "Ghost of Frankenstein (1942)",
+      "sortTitle": "ghost-of-frankenstein-1942",
       "year": "1942",
       "releaseSequence": "1942-03-13tt0034786",
       "slug": null,
       "grade": null,
-      "gradeValue": null
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
     },
     {
       "imdbId": "tt0034902",
       "title": "Invisible Agent",
-      "sortTitle": "Invisible Agent (1942)",
+      "sortTitle": "invisible-agent-1942",
       "year": "1942",
       "releaseSequence": "1942-07-31tt0034902",
       "slug": null,
       "grade": null,
-      "gradeValue": null
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
     },
     {
       "imdbId": "tt0035096",
       "title": "The Mummy's Tomb",
-      "sortTitle": "Mummy's Tomb (1942)",
+      "sortTitle": "mummys-tomb-1942",
       "year": "1942",
       "releaseSequence": "1942-10-23tt0035096",
       "slug": null,
       "grade": null,
-      "gradeValue": null
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
     },
     {
       "imdbId": "tt0035899",
       "title": "Frankenstein Meets the Wolf Man",
-      "sortTitle": "Frankenstein Meets the Wolf Man (1943)",
+      "sortTitle": "frankenstein-meets-the-wolf-man-1943",
       "year": "1943",
       "releaseSequence": "1943-03-05tt0035899",
       "slug": null,
       "grade": null,
-      "gradeValue": null
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
     },
     {
       "imdbId": "tt0036261",
       "title": "Phantom of the Opera",
-      "sortTitle": "Phantom of the Opera (1943)",
+      "sortTitle": "phantom-of-the-opera-1943",
       "year": "1943",
       "releaseSequence": "1943-08-12tt0036261",
       "slug": null,
       "grade": null,
-      "gradeValue": null
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
     },
     {
       "imdbId": "tt0036376",
       "title": "Son of Dracula",
-      "sortTitle": "Son of Dracula (1943)",
+      "sortTitle": "son-of-dracula-1943",
       "year": "1943",
       "releaseSequence": "1943-10-20tt0036376",
       "slug": null,
       "grade": null,
-      "gradeValue": null
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
     },
     {
       "imdbId": "tt0036959",
       "title": "The Invisible Man's Revenge",
-      "sortTitle": "Invisible Man's Revenge (1944)",
+      "sortTitle": "invisible-mans-revenge-1944",
       "year": "1944",
       "releaseSequence": "1944-06-09tt0036959",
       "slug": null,
       "grade": null,
-      "gradeValue": null
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
     },
     {
       "imdbId": "tt0037099",
       "title": "The Mummy's Ghost",
-      "sortTitle": "Mummy's Ghost (1944)",
+      "sortTitle": "mummys-ghost-1944",
       "year": "1944",
       "releaseSequence": "1944-07-01tt0037099",
       "slug": null,
       "grade": null,
-      "gradeValue": null
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
     },
     {
       "imdbId": "tt0036931",
       "title": "House of Frankenstein",
-      "sortTitle": "House of Frankenstein (1944)",
+      "sortTitle": "house-of-frankenstein-1944",
       "year": "1944",
       "releaseSequence": "1944-12-01tt0036931",
       "slug": null,
       "grade": null,
-      "gradeValue": null
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
     },
     {
       "imdbId": "tt0037098",
       "title": "The Mummy's Curse",
-      "sortTitle": "Mummy's Curse (1944)",
+      "sortTitle": "mummys-curse-1944",
       "year": "1944",
       "releaseSequence": "1944-12-22tt0037098",
       "slug": null,
       "grade": null,
-      "gradeValue": null
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
     },
     {
       "imdbId": "tt0037793",
       "title": "House of Dracula",
-      "sortTitle": "House of Dracula (1945)",
+      "sortTitle": "house-of-dracula-1945",
       "year": "1945",
       "releaseSequence": "1945-12-07tt0037793",
-      "slug": null,
-      "grade": null,
-      "gradeValue": null
+      "slug": "house-of-dracula-1945",
+      "grade": "D",
+      "gradeValue": 3,
+      "reviewDate": "2025-05-17",
+      "reviewSequence": "2025-05-17-2"
     },
     {
       "imdbId": "tt0040068",
       "title": "Abbott and Costello Meet Frankenstein",
-      "sortTitle": "Abbott and Costello Meet Frankenstein (1948)",
+      "sortTitle": "abbott-and-costello-meet-frankenstein-1948",
       "year": "1948",
       "releaseSequence": "1948-06-15tt0040068",
-      "slug": null,
-      "grade": null,
-      "gradeValue": null
+      "slug": "abbott-and-costello-meet-frankenstein-1948",
+      "grade": "C+",
+      "gradeValue": 7,
+      "reviewDate": "2007-11-11",
+      "reviewSequence": "2007-11-11-2"
     },
     {
       "imdbId": "tt0043255",
       "title": "Bud Abbott and Lou Costello Meet the Invisible Man",
-      "sortTitle": "Bud Abbott and Lou Costello Meet the Invisible Man (1951)",
+      "sortTitle": "bud-abbott-and-lou-costello-meet-the-invisible-man-1951",
       "year": "1951",
       "releaseSequence": "1951-03-07tt0043255",
       "slug": null,
       "grade": null,
-      "gradeValue": null
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
     },
     {
       "imdbId": "tt0046876",
       "title": "Creature from the Black Lagoon",
-      "sortTitle": "Creature from the Black Lagoon (1954)",
+      "sortTitle": "creature-from-the-black-lagoon-1954",
       "year": "1954",
       "releaseSequence": "1954-01-07tt0046876",
       "slug": null,
       "grade": null,
-      "gradeValue": null
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
     },
     {
       "imdbId": "tt0048554",
       "title": "Revenge of the Creature",
-      "sortTitle": "Revenge of the Creature (1955)",
+      "sortTitle": "revenge-of-the-creature-1955",
       "year": "1955",
       "releaseSequence": "1955-03-28tt0048554",
       "slug": null,
       "grade": null,
-      "gradeValue": null
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
     },
     {
       "imdbId": "tt0047795",
       "title": "Abbott and Costello Meet the Mummy",
-      "sortTitle": "Abbott and Costello Meet the Mummy (1955)",
+      "sortTitle": "abbott-and-costello-meet-the-mummy-1955",
       "year": "1955",
       "releaseSequence": "1955-06-23tt0047795",
       "slug": null,
       "grade": null,
-      "gradeValue": null
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
     },
     {
       "imdbId": "tt0049103",
       "title": "The Creature Walks Among Us",
-      "sortTitle": "Creature Walks Among Us (1956)",
+      "sortTitle": "creature-walks-among-us-1956",
       "year": "1956",
       "releaseSequence": "1956-04-26tt0049103",
       "slug": null,
       "grade": null,
-      "gradeValue": null
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
     }
   ],
   "description": "From _Dracula_ through _The Creature Walks Among Us_."

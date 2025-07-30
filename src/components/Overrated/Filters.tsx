@@ -1,22 +1,21 @@
 import { DebouncedInput } from "~/components/DebouncedInput";
 import { MultiSelectField } from "~/components/MultiSelectField";
-import { SelectField } from "~/components/SelectField";
 import { YearInput } from "~/components/YearInput";
 
-import { Actions, type ActionType, type Sort } from "./Overrated.reducer";
+import type { ActionType } from "./Overrated.reducer";
+
+import { Actions } from "./Overrated.reducer";
 
 export function Filters({
   dispatch,
   distinctGenres,
   distinctReleaseYears,
   distinctReviewYears,
-  sortValue,
 }: {
   dispatch: React.Dispatch<ActionType>;
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
-  sortValue: Sort;
 }) {
   return (
     <>
@@ -51,25 +50,21 @@ export function Filters({
         }
         options={distinctGenres}
       />
-      <SelectField
-        label="Sort"
-        onChange={(e) =>
-          dispatch({
-            type: Actions.SORT,
-            value: e.target.value as Sort,
-          })
-        }
-        value={sortValue}
-      >
-        <option value="title-asc">Title (A &rarr; Z)</option>
-        <option value="title-desc">Title (Z &rarr; A)</option>
-        <option value="grade-desc">Grade (Best First)</option>
-        <option value="grade-asc">Grade (Worst First)</option>
-        <option value="review-date-desc">Review Date (Newest First)</option>
-        <option value="review-date-asc">Review Date (Oldest First)</option>
-        <option value="release-date-desc">Release Date (Newest First)</option>
-        <option value="release-date-asc">Release Date (Oldest First)</option>
-      </SelectField>
+    </>
+  );
+}
+
+export function SortOptions() {
+  return (
+    <>
+      <option value="title-asc">Title (A &rarr; Z)</option>
+      <option value="title-desc">Title (Z &rarr; A)</option>
+      <option value="grade-desc">Grade (Best First)</option>
+      <option value="grade-asc">Grade (Worst First)</option>
+      <option value="review-date-desc">Review Date (Newest First)</option>
+      <option value="review-date-asc">Review Date (Oldest First)</option>
+      <option value="release-date-desc">Release Date (Newest First)</option>
+      <option value="release-date-asc">Release Date (Oldest First)</option>
     </>
   );
 }

@@ -54,7 +54,7 @@
       >
       <div class="flex min-h-full w-full flex-col bg-default">
         <header
-          class="group z-20 flex w-full items-center justify-between px-container py-4 tablet:py-6 laptop:inset-x-0 laptop:z-40 laptop:flex-row laptop:flex-wrap laptop:px-16 laptop:py-8 laptop:text-left"
+          class="group z-30 flex w-full items-center justify-between px-container py-4 tablet:py-6 laptop:inset-x-0 laptop:z-40 laptop:flex-row laptop:flex-wrap laptop:px-16 laptop:py-8 laptop:text-left"
           style="
             background-image: linear-gradient(
               to bottom,
@@ -170,12 +170,12 @@
                 class="relative z-40 ml-2 flex h-10 w-10 transform-gpu cursor-pointer items-center justify-center transition-transform hover:scale-110"
                 for="nav"
                 ><span
-                  class="relative block h-0.5 w-6 origin-center transform-gpu transition-[top,bottom,transform] duration-200 ease-in-out group-has-[#nav:checked]:transform-[rotate(45deg)] group-has-[#nav:checked]:!bg-[#fff] before:absolute before:-top-2 before:block before:h-0.5 before:w-6 before:bg-inherit before:transition before:duration-200 before:ease-in-out group-has-[#nav:checked]:before:top-0 group-has-[#nav:checked]:before:transform-[rotate(90deg)] after:absolute after:-bottom-2 after:block after:h-0.5 after:w-6 after:bg-inherit after:transition after:duration-200 after:ease-in-out group-has-[#nav:checked]:after:bottom-0 group-has-[#nav:checked]:after:transform-[rotate(90deg)]"
+                  class="relative flex h-0.5 w-6 origin-center transform-gpu transition-[top,bottom,transform] duration-200 ease-in-out group-has-[#nav:checked]:transform-[rotate(45deg)] group-has-[#nav:checked]:!bg-[#fff] before:absolute before:-top-2 before:block before:h-0.5 before:w-6 before:bg-inherit before:transition before:duration-200 before:ease-in-out group-has-[#nav:checked]:before:top-0 group-has-[#nav:checked]:before:transform-[rotate(90deg)] after:absolute after:-bottom-2 after:block after:h-0.5 after:w-6 after:bg-inherit after:transition after:duration-200 after:ease-in-out group-has-[#nav:checked]:after:bottom-0 group-has-[#nav:checked]:after:transform-[rotate(90deg)]"
                   style="background-color: #fff"
                 ></span
               ></label>
               <ul
-                class="fixed top-0 right-0 z-20 flex h-full w-0 transform-[translateX(100%)] flex-col items-start gap-y-5 overflow-hidden bg-footer text-left text-inverse opacity-0 duration-200 ease-in-out group-has-[#nav:checked]:bottom-0 group-has-[#nav:checked]:z-20 group-has-[#nav:checked]:h-full group-has-[#nav:checked]:w-full group-has-[#nav:checked]:transform-[translateX(0)] group-has-[#nav:checked]:overflow-y-auto group-has-[#nav:checked]:pt-20 group-has-[#nav:checked]:pr-[16%] group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%] group-has-[#nav:checked]:opacity-100 group-has-[#nav:checked]:drop-shadow-2xl tablet:max-w-[35vw] tablet:gap-y-10 group-has-[#nav:checked]:tablet:px-10 group-has-[#nav:checked]:tablet:pt-40 laptop:max-w-[25vw] group-has-[#nav:checked]:laptop:px-20"
+                class="fixed top-0 right-0 flex h-full w-0 transform-[translateX(100%)] flex-col items-start gap-y-5 overflow-hidden bg-footer text-left text-inverse opacity-0 duration-200 ease-in-out group-has-[#nav:checked]:bottom-0 group-has-[#nav:checked]:z-20 group-has-[#nav:checked]:h-full group-has-[#nav:checked]:w-full group-has-[#nav:checked]:transform-[translateX(0)] group-has-[#nav:checked]:overflow-y-auto group-has-[#nav:checked]:pt-20 group-has-[#nav:checked]:pr-[16%] group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%] group-has-[#nav:checked]:opacity-100 group-has-[#nav:checked]:drop-shadow-2xl tablet:max-w-[35vw] tablet:gap-y-10 group-has-[#nav:checked]:tablet:px-10 group-has-[#nav:checked]:tablet:pt-40 laptop:max-w-[25vw] group-has-[#nav:checked]:laptop:px-20"
               >
                 <li
                   class="block w-1/2 text-2xl whitespace-nowrap laptop:w-full"
@@ -296,7 +296,7 @@
           </div>
         </header>
         <main
-          class="grow group-has-[[data-drawer]:checked]:before:absolute group-has-[[data-drawer]:checked]:before:top-0 group-has-[[data-drawer]:checked]:before:left-0 group-has-[[data-drawer]:checked]:before:z-10 group-has-[[data-drawer]:checked]:before:size-full group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)] tablet-landscape:group-has-[[data-drawer]:checked]:before:hidden flex flex-col items-center bg-subtle"
+          class="grow min-[381px]:group-has-[[data-drawer]:checked]:before:absolute min-[381px]:group-has-[[data-drawer]:checked]:before:top-0 min-[381px]:group-has-[[data-drawer]:checked]:before:left-0 min-[381px]:group-has-[[data-drawer]:checked]:before:z-10 min-[381px]:group-has-[[data-drawer]:checked]:before:size-full min-[381px]:group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)] tablet-landscape:group-has-[[data-drawer]:checked]:before:hidden flex flex-col items-center bg-subtle"
           id="content"
         >
           <header
@@ -490,7 +490,7 @@
                 class="grid-cols-[repeat(auto-fit,minmax(128px,248px))] items-center justify-center gap-x-6 gap-y-8 bg-subtle tablet:grid tablet:items-start"
               >
                 <li
-                  class="group/list-item relative mb-1 flex h-full transform-gpu items-center gap-x-4 bg-default px-container py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:w-auto tablet:flex-col tablet:p-6 laptop:w-auto"
+                  class="group/list-item relative mb-1 flex h-full transform-gpu items-center gap-x-4 bg-default px-container py-4 transition-transform tablet:w-auto tablet:flex-col tablet:p-6 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:w-auto"
                 >
                   <div
                     class="transform-gpu after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:rounded-[2.5px] after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -534,7 +534,7 @@
                   </div>
                 </li>
                 <li
-                  class="group/list-item relative mb-1 flex h-full transform-gpu items-center gap-x-4 bg-default px-container py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:w-auto tablet:flex-col tablet:p-6 laptop:w-auto"
+                  class="group/list-item relative mb-1 flex h-full transform-gpu items-center gap-x-4 bg-default px-container py-4 transition-transform tablet:w-auto tablet:flex-col tablet:p-6 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:w-auto"
                 >
                   <div
                     class="transform-gpu after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:rounded-[2.5px] after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -577,7 +577,7 @@
                   </div>
                 </li>
                 <li
-                  class="group/list-item relative mb-1 flex h-full transform-gpu items-center gap-x-4 bg-default px-container py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:w-auto tablet:flex-col tablet:p-6 laptop:w-auto"
+                  class="group/list-item relative mb-1 flex h-full transform-gpu items-center gap-x-4 bg-default px-container py-4 transition-transform tablet:w-auto tablet:flex-col tablet:p-6 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:w-auto"
                 >
                   <div
                     class="transform-gpu after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:rounded-[2.5px] after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -1075,7 +1075,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <a
                           class="inline-block leading-6 font-normal text-accent"
@@ -1102,7 +1102,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -1148,7 +1148,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -1193,7 +1193,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -1239,7 +1239,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -1285,7 +1285,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -1337,7 +1337,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Sergio Leone</span>
                       </div>
@@ -1360,7 +1360,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -1405,7 +1405,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -1450,7 +1450,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -1501,7 +1501,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">John Carr</span>
                       </div>
@@ -1524,7 +1524,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -1570,7 +1570,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -1622,7 +1622,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Phillip Marshak</span>
                       </div>
@@ -1645,7 +1645,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -1691,7 +1691,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -1743,7 +1743,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Tom McGowan</span>
                       </div>
@@ -1766,7 +1766,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -1812,7 +1812,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -1864,7 +1864,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Jay Schlossberg-Cohen</span>
                       </div>
@@ -1887,7 +1887,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -1933,7 +1933,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -1985,7 +1985,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Gregg G. Tallas</span>
                       </div>
@@ -2008,7 +2008,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -2054,7 +2054,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -2106,7 +2106,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Larry Cohen</span>
                       </div>
@@ -2129,7 +2129,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -2174,7 +2174,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -2225,7 +2225,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <a
                           class="inline-block leading-6 font-normal text-accent"
@@ -2252,7 +2252,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -2297,7 +2297,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -2348,7 +2348,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Cameron Cairnes</span>
                       </div>
@@ -2371,7 +2371,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -2416,7 +2416,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -2474,7 +2474,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <a
                           class="inline-block leading-6 font-normal text-accent"
@@ -2501,7 +2501,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -2546,7 +2546,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -2591,7 +2591,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -2637,7 +2637,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -2683,7 +2683,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -2729,7 +2729,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -2781,7 +2781,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <a
                           class="inline-block leading-6 font-normal text-accent"
@@ -2808,7 +2808,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -2854,7 +2854,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -2899,7 +2899,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -2945,7 +2945,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -2991,7 +2991,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -3043,7 +3043,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Nicolas Cage</span>
                       </div>
@@ -3066,7 +3066,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -3112,7 +3112,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -3157,7 +3157,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -3202,7 +3202,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -3253,7 +3253,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <a
                           class="inline-block leading-6 font-normal text-accent"
@@ -3280,7 +3280,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -3326,7 +3326,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -3371,7 +3371,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -3417,7 +3417,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -3469,7 +3469,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Clint Eastwood</span>
                       </div>
@@ -3492,7 +3492,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -3537,7 +3537,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -3582,7 +3582,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -3627,7 +3627,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -3678,7 +3678,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Faith Clift</span>
                       </div>
@@ -3701,7 +3701,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -3747,7 +3747,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -3793,7 +3793,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -3845,7 +3845,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Warwick Davis</span>
                       </div>
@@ -3868,7 +3868,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -3914,7 +3914,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -3960,7 +3960,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -4012,7 +4012,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Luis Barboo</span>
                       </div>
@@ -4035,7 +4035,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -4080,7 +4080,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -4125,7 +4125,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -4177,7 +4177,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Lee Van Cleef</span>
                       </div>
@@ -4200,7 +4200,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -4245,7 +4245,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -4290,7 +4290,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -4341,7 +4341,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Miao Ching</span>
                       </div>
@@ -4364,7 +4364,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -4410,7 +4410,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -4455,7 +4455,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -4513,7 +4513,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Lucio Fulci</span>
                       </div>
@@ -4536,7 +4536,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -4582,7 +4582,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -4628,7 +4628,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -4680,7 +4680,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Kuang Ni</span>
                       </div>
@@ -4703,7 +4703,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -4749,7 +4749,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -4794,7 +4794,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -4846,7 +4846,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Sergio Leone</span>
                       </div>
@@ -4869,7 +4869,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -4914,7 +4914,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -4959,7 +4959,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -5010,7 +5010,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Philip Yordan</span>
                       </div>
@@ -5033,7 +5033,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -5079,7 +5079,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -5131,7 +5131,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Larry Cohen</span>
                       </div>
@@ -5154,7 +5154,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -5199,7 +5199,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -5250,7 +5250,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Dick Randall</span>
                       </div>
@@ -5273,7 +5273,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -5318,7 +5318,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -5369,7 +5369,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Colin Cairnes</span>
                       </div>
@@ -5392,7 +5392,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -5437,7 +5437,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -5488,7 +5488,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Cameron Cairnes</span>
                       </div>
@@ -5511,7 +5511,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -5556,7 +5556,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-unreviewed group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -5607,7 +5607,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Dardano Sacchetti</span>
                       </div>
@@ -5630,7 +5630,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -5676,7 +5676,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -5728,7 +5728,7 @@
                   <div class="py-3">
                     <div class="flex justify-between px-container tablet:px-0">
                       <div
-                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 laptop:text-sm"
+                        class="transform-gpu font-sans text-xs text-muted transition-transform has-[a:hover]:scale-110 tablet:text-sm"
                       >
                         <span class="font-normal">Panos Cosmatos</span>
                       </div>
@@ -5751,7 +5751,7 @@
                           class="tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5"
                         >
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
@@ -5797,7 +5797,7 @@
                             </div>
                           </li>
                           <li
-                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl tablet:gap-x-6 tablet:px-4 laptop:px-6"
+                            class="bg-default group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-4 py-4 transition-transform tablet:gap-x-6 tablet:px-4 tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:px-6"
                           >
                             <div
                               class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"

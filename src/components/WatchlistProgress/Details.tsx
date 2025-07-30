@@ -61,8 +61,10 @@ export function Details({
                 grid-cols-subgrid grid-rows-[1fr_auto_auto_1fr] bg-default py-4
                 text-subtle transition-transform
                 last-of-type:shadow-none
-                has-[a:hover]:z-30 has-[a:hover]:scale-105
-                has-[a:hover]:shadow-all has-[a:hover]:drop-shadow-2xl
+                tablet-landscape:has-[a:hover]:z-30
+                tablet-landscape:has-[a:hover]:scale-105
+                tablet-landscape:has-[a:hover]:shadow-all
+                tablet-landscape:has-[a:hover]:drop-shadow-2xl
               `}
               key={value.name}
             >

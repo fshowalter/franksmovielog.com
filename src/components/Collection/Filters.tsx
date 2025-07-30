@@ -2,23 +2,24 @@ import type { JSX } from "react";
 
 import { Button } from "~/components/Button";
 import { DebouncedInput } from "~/components/DebouncedInput";
-import { SelectField } from "~/components/SelectField";
 import { YearInput } from "~/components/YearInput";
 
-import { Actions, type ActionType, type Sort } from "./Collection.reducer";
+import type { ActionType } from "./Collection.reducer";
+
+import { Actions } from "./Collection.reducer";
 
 export function Filters({
   dispatch,
   distinctReleaseYears,
+  distinctReviewYears,
   hideReviewed,
   showHideReviewed,
-  sortValue,
 }: {
   dispatch: React.Dispatch<ActionType>;
   distinctReleaseYears: readonly string[];
+  distinctReviewYears: readonly string[];
   hideReviewed: boolean;
   showHideReviewed: boolean;
-  sortValue: Sort;
 }): JSX.Element {
   return (
     <>
@@ -44,23 +45,27 @@ export function Filters({
         }
         years={distinctReleaseYears}
       />
-      <SelectField
-        className="basis-full"
-        label="Sort"
-        onChange={(e) =>
-          dispatch({
-            type: Actions.SORT,
-            value: e.target.value as Sort,
-          })
+      <YearInput
+        label="Review Year"
+        onYearChange={(values) =>
+          dispatch({ type: Actions.FILTER_REVIEW_YEAR, values })
         }
-        value={sortValue}
-      >
-        <option value="release-date-desc">Release Date (Newest First)</option>
-        <option value="release-date-asc">Release Date (Oldest First)</option>
-        <option value="title">Title</option>
-        <option value="grade-desc">Grade (Best First)</option>
-        <option value="grade-asc">Grade (Worst First)</option>
-      </SelectField>
+        years={distinctReviewYears}
+      />
+    </>
+  );
+}
+
+export function SortOptions() {
+  return (
+    <>
+      <option value="release-date-desc">Release Date (Newest First)</option>
+      <option value="release-date-asc">Release Date (Oldest First)</option>
+      <option value="title">Title</option>
+      <option value="grade-desc">Grade (Best First)</option>
+      <option value="grade-asc">Grade (Worst First)</option>
+      <option value="review-date-desc">Review Date (Newest First)</option>
+      <option value="review-date-asc">Review Date (Oldest First)</option>
     </>
   );
 }

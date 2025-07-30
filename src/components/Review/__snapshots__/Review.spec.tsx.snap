@@ -21,7 +21,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
     >
       <header
         class="
-        group z-20 flex w-full items-center justify-between px-container py-4
+        group z-30 flex w-full items-center justify-between px-container py-4
         tablet:py-6
         laptop:inset-x-0 laptop:z-40 laptop:flex-row laptop:flex-wrap
         laptop:px-16 laptop:py-8 laptop:text-left
@@ -197,7 +197,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
             >
               <span
                 class="
-            relative block h-0.5 w-6 origin-center transform-gpu
+            relative flex h-0.5 w-6 origin-center transform-gpu
             transition-[top,bottom,transform] duration-200 ease-in-out
             group-has-[#nav:checked]:transform-[rotate(45deg)]
             group-has-[#nav:checked]:!bg-[#fff]
@@ -217,7 +217,7 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
             </label>
             <ul
               class="
-          fixed top-0 right-0 z-20 flex h-full w-0 transform-[translateX(100%)]
+          fixed top-0 right-0 flex h-full w-0 transform-[translateX(100%)]
           flex-col items-start gap-y-5 overflow-hidden bg-footer text-left
           text-inverse opacity-0 duration-200 ease-in-out
           group-has-[#nav:checked]:bottom-0 group-has-[#nav:checked]:z-20
@@ -453,12 +453,12 @@ exports[`Review > matches snapshot for slug 'event-horizon-1997' 1`] = `
       <main
         class="
               grow
-              group-has-[[data-drawer]:checked]:before:absolute
-              group-has-[[data-drawer]:checked]:before:top-0
-              group-has-[[data-drawer]:checked]:before:left-0
-              group-has-[[data-drawer]:checked]:before:z-10
-              group-has-[[data-drawer]:checked]:before:size-full
-              group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
+              min-[381px]:group-has-[[data-drawer]:checked]:before:absolute
+              min-[381px]:group-has-[[data-drawer]:checked]:before:top-0
+              min-[381px]:group-has-[[data-drawer]:checked]:before:left-0
+              min-[381px]:group-has-[[data-drawer]:checked]:before:z-10
+              min-[381px]:group-has-[[data-drawer]:checked]:before:size-full
+              min-[381px]:group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
               tablet-landscape:group-has-[[data-drawer]:checked]:before:hidden
              flex flex-col"
         data-pagefind-body="true"
@@ -1880,7 +1880,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
     >
       <header
         class="
-        group z-20 flex w-full items-center justify-between px-container py-4
+        group z-30 flex w-full items-center justify-between px-container py-4
         tablet:py-6
         laptop:inset-x-0 laptop:z-40 laptop:flex-row laptop:flex-wrap
         laptop:px-16 laptop:py-8 laptop:text-left
@@ -2056,7 +2056,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
             >
               <span
                 class="
-            relative block h-0.5 w-6 origin-center transform-gpu
+            relative flex h-0.5 w-6 origin-center transform-gpu
             transition-[top,bottom,transform] duration-200 ease-in-out
             group-has-[#nav:checked]:transform-[rotate(45deg)]
             group-has-[#nav:checked]:!bg-[#fff]
@@ -2076,7 +2076,7 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
             </label>
             <ul
               class="
-          fixed top-0 right-0 z-20 flex h-full w-0 transform-[translateX(100%)]
+          fixed top-0 right-0 flex h-full w-0 transform-[translateX(100%)]
           flex-col items-start gap-y-5 overflow-hidden bg-footer text-left
           text-inverse opacity-0 duration-200 ease-in-out
           group-has-[#nav:checked]:bottom-0 group-has-[#nav:checked]:z-20
@@ -2312,12 +2312,12 @@ exports[`Review > matches snapshot for slug 'hellraiser-1987' 1`] = `
       <main
         class="
               grow
-              group-has-[[data-drawer]:checked]:before:absolute
-              group-has-[[data-drawer]:checked]:before:top-0
-              group-has-[[data-drawer]:checked]:before:left-0
-              group-has-[[data-drawer]:checked]:before:z-10
-              group-has-[[data-drawer]:checked]:before:size-full
-              group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
+              min-[381px]:group-has-[[data-drawer]:checked]:before:absolute
+              min-[381px]:group-has-[[data-drawer]:checked]:before:top-0
+              min-[381px]:group-has-[[data-drawer]:checked]:before:left-0
+              min-[381px]:group-has-[[data-drawer]:checked]:before:z-10
+              min-[381px]:group-has-[[data-drawer]:checked]:before:size-full
+              min-[381px]:group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
               tablet-landscape:group-has-[[data-drawer]:checked]:before:hidden
              flex flex-col"
         data-pagefind-body="true"
@@ -4044,7 +4044,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
     >
       <header
         class="
-        group z-20 flex w-full items-center justify-between px-container py-4
+        group z-30 flex w-full items-center justify-between px-container py-4
         tablet:py-6
         laptop:inset-x-0 laptop:z-40 laptop:flex-row laptop:flex-wrap
         laptop:px-16 laptop:py-8 laptop:text-left
@@ -4220,7 +4220,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
             >
               <span
                 class="
-            relative block h-0.5 w-6 origin-center transform-gpu
+            relative flex h-0.5 w-6 origin-center transform-gpu
             transition-[top,bottom,transform] duration-200 ease-in-out
             group-has-[#nav:checked]:transform-[rotate(45deg)]
             group-has-[#nav:checked]:!bg-[#fff]
@@ -4240,7 +4240,7 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
             </label>
             <ul
               class="
-          fixed top-0 right-0 z-20 flex h-full w-0 transform-[translateX(100%)]
+          fixed top-0 right-0 flex h-full w-0 transform-[translateX(100%)]
           flex-col items-start gap-y-5 overflow-hidden bg-footer text-left
           text-inverse opacity-0 duration-200 ease-in-out
           group-has-[#nav:checked]:bottom-0 group-has-[#nav:checked]:z-20
@@ -4476,12 +4476,12 @@ exports[`Review > matches snapshot for slug 'horror-express-1972' 1`] = `
       <main
         class="
               grow
-              group-has-[[data-drawer]:checked]:before:absolute
-              group-has-[[data-drawer]:checked]:before:top-0
-              group-has-[[data-drawer]:checked]:before:left-0
-              group-has-[[data-drawer]:checked]:before:z-10
-              group-has-[[data-drawer]:checked]:before:size-full
-              group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
+              min-[381px]:group-has-[[data-drawer]:checked]:before:absolute
+              min-[381px]:group-has-[[data-drawer]:checked]:before:top-0
+              min-[381px]:group-has-[[data-drawer]:checked]:before:left-0
+              min-[381px]:group-has-[[data-drawer]:checked]:before:z-10
+              min-[381px]:group-has-[[data-drawer]:checked]:before:size-full
+              min-[381px]:group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
               tablet-landscape:group-has-[[data-drawer]:checked]:before:hidden
              flex flex-col"
         data-pagefind-body="true"
@@ -6653,7 +6653,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
     >
       <header
         class="
-        group z-20 flex w-full items-center justify-between px-container py-4
+        group z-30 flex w-full items-center justify-between px-container py-4
         tablet:py-6
         laptop:inset-x-0 laptop:z-40 laptop:flex-row laptop:flex-wrap
         laptop:px-16 laptop:py-8 laptop:text-left
@@ -6829,7 +6829,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
             >
               <span
                 class="
-            relative block h-0.5 w-6 origin-center transform-gpu
+            relative flex h-0.5 w-6 origin-center transform-gpu
             transition-[top,bottom,transform] duration-200 ease-in-out
             group-has-[#nav:checked]:transform-[rotate(45deg)]
             group-has-[#nav:checked]:!bg-[#fff]
@@ -6849,7 +6849,7 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
             </label>
             <ul
               class="
-          fixed top-0 right-0 z-20 flex h-full w-0 transform-[translateX(100%)]
+          fixed top-0 right-0 flex h-full w-0 transform-[translateX(100%)]
           flex-col items-start gap-y-5 overflow-hidden bg-footer text-left
           text-inverse opacity-0 duration-200 ease-in-out
           group-has-[#nav:checked]:bottom-0 group-has-[#nav:checked]:z-20
@@ -7085,12 +7085,12 @@ exports[`Review > matches snapshot for slug 'night-train-to-terror-1985' 1`] = `
       <main
         class="
               grow
-              group-has-[[data-drawer]:checked]:before:absolute
-              group-has-[[data-drawer]:checked]:before:top-0
-              group-has-[[data-drawer]:checked]:before:left-0
-              group-has-[[data-drawer]:checked]:before:z-10
-              group-has-[[data-drawer]:checked]:before:size-full
-              group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
+              min-[381px]:group-has-[[data-drawer]:checked]:before:absolute
+              min-[381px]:group-has-[[data-drawer]:checked]:before:top-0
+              min-[381px]:group-has-[[data-drawer]:checked]:before:left-0
+              min-[381px]:group-has-[[data-drawer]:checked]:before:z-10
+              min-[381px]:group-has-[[data-drawer]:checked]:before:size-full
+              min-[381px]:group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
               tablet-landscape:group-has-[[data-drawer]:checked]:before:hidden
              flex flex-col"
         data-pagefind-body="true"
@@ -8576,7 +8576,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
     >
       <header
         class="
-        group z-20 flex w-full items-center justify-between px-container py-4
+        group z-30 flex w-full items-center justify-between px-container py-4
         tablet:py-6
         laptop:inset-x-0 laptop:z-40 laptop:flex-row laptop:flex-wrap
         laptop:px-16 laptop:py-8 laptop:text-left
@@ -8752,7 +8752,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
             >
               <span
                 class="
-            relative block h-0.5 w-6 origin-center transform-gpu
+            relative flex h-0.5 w-6 origin-center transform-gpu
             transition-[top,bottom,transform] duration-200 ease-in-out
             group-has-[#nav:checked]:transform-[rotate(45deg)]
             group-has-[#nav:checked]:!bg-[#fff]
@@ -8772,7 +8772,7 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
             </label>
             <ul
               class="
-          fixed top-0 right-0 z-20 flex h-full w-0 transform-[translateX(100%)]
+          fixed top-0 right-0 flex h-full w-0 transform-[translateX(100%)]
           flex-col items-start gap-y-5 overflow-hidden bg-footer text-left
           text-inverse opacity-0 duration-200 ease-in-out
           group-has-[#nav:checked]:bottom-0 group-has-[#nav:checked]:z-20
@@ -9008,12 +9008,12 @@ exports[`Review > matches snapshot for slug 'rio-bravo-1959' 1`] = `
       <main
         class="
               grow
-              group-has-[[data-drawer]:checked]:before:absolute
-              group-has-[[data-drawer]:checked]:before:top-0
-              group-has-[[data-drawer]:checked]:before:left-0
-              group-has-[[data-drawer]:checked]:before:z-10
-              group-has-[[data-drawer]:checked]:before:size-full
-              group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
+              min-[381px]:group-has-[[data-drawer]:checked]:before:absolute
+              min-[381px]:group-has-[[data-drawer]:checked]:before:top-0
+              min-[381px]:group-has-[[data-drawer]:checked]:before:left-0
+              min-[381px]:group-has-[[data-drawer]:checked]:before:z-10
+              min-[381px]:group-has-[[data-drawer]:checked]:before:size-full
+              min-[381px]:group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
               tablet-landscape:group-has-[[data-drawer]:checked]:before:hidden
              flex flex-col"
         data-pagefind-body="true"
@@ -11697,7 +11697,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
     >
       <header
         class="
-        group z-20 flex w-full items-center justify-between px-container py-4
+        group z-30 flex w-full items-center justify-between px-container py-4
         tablet:py-6
         laptop:inset-x-0 laptop:z-40 laptop:flex-row laptop:flex-wrap
         laptop:px-16 laptop:py-8 laptop:text-left
@@ -11873,7 +11873,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             >
               <span
                 class="
-            relative block h-0.5 w-6 origin-center transform-gpu
+            relative flex h-0.5 w-6 origin-center transform-gpu
             transition-[top,bottom,transform] duration-200 ease-in-out
             group-has-[#nav:checked]:transform-[rotate(45deg)]
             group-has-[#nav:checked]:!bg-[#fff]
@@ -11893,7 +11893,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             </label>
             <ul
               class="
-          fixed top-0 right-0 z-20 flex h-full w-0 transform-[translateX(100%)]
+          fixed top-0 right-0 flex h-full w-0 transform-[translateX(100%)]
           flex-col items-start gap-y-5 overflow-hidden bg-footer text-left
           text-inverse opacity-0 duration-200 ease-in-out
           group-has-[#nav:checked]:bottom-0 group-has-[#nav:checked]:z-20
@@ -12129,12 +12129,12 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
       <main
         class="
               grow
-              group-has-[[data-drawer]:checked]:before:absolute
-              group-has-[[data-drawer]:checked]:before:top-0
-              group-has-[[data-drawer]:checked]:before:left-0
-              group-has-[[data-drawer]:checked]:before:z-10
-              group-has-[[data-drawer]:checked]:before:size-full
-              group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
+              min-[381px]:group-has-[[data-drawer]:checked]:before:absolute
+              min-[381px]:group-has-[[data-drawer]:checked]:before:top-0
+              min-[381px]:group-has-[[data-drawer]:checked]:before:left-0
+              min-[381px]:group-has-[[data-drawer]:checked]:before:z-10
+              min-[381px]:group-has-[[data-drawer]:checked]:before:size-full
+              min-[381px]:group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
               tablet-landscape:group-has-[[data-drawer]:checked]:before:hidden
              flex flex-col"
         data-pagefind-body="true"

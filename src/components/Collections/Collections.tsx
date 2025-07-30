@@ -11,8 +11,8 @@ import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 
 import type { Sort } from "./Collections.reducer";
 
-import { initState, reducer } from "./Collections.reducer";
-import { Filters } from "./Filters";
+import { Actions, initState, reducer } from "./Collections.reducer";
+import { Filters, SortOptions } from "./Filters";
 
 export type ListItemValue = Pick<
   Collection,
@@ -52,7 +52,7 @@ export function Collections({
           title="Collections"
         />
       }
-      filters={<Filters dispatch={dispatch} sortValue={state.sortValue} />}
+      filters={<Filters dispatch={dispatch} />}
       list={
         <ol
           className={`
@@ -66,6 +66,15 @@ export function Collections({
           })}
         </ol>
       }
+      sortProps={{
+        currentSortValue: state.sortValue,
+        onSortChange: (e) =>
+          dispatch({
+            type: Actions.SORT,
+            value: e.target.value as Sort,
+          }),
+        sortOptions: <SortOptions />,
+      }}
       totalCount={state.filteredValues.length}
     />
   );
@@ -76,8 +85,10 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
     <ListItem
       className={`
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       `}
       extraVerticalPadding={true}
       itemsCenter={true}
@@ -95,8 +106,8 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
       <CollectionName value={value} />
       <div
         className={`
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
+          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
+          tablet:text-sm
         `}
       >
         {value.reviewCount}

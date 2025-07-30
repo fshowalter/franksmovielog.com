@@ -15,13 +15,10 @@ import { ListItemTitle } from "~/components/ListItemTitle";
 import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 import { WatchlistTitleSlug } from "~/components/WatchlistTitleSlug";
 
-import {
-  Actions,
-  initState,
-  reducer,
-  type Sort,
-} from "./CastAndCrewMember.reducer";
-import { Filters } from "./Filters";
+import type { Sort } from "./CastAndCrewMember.reducer";
+
+import { Actions, initState, reducer } from "./CastAndCrewMember.reducer";
+import { Filters, SortOptions } from "./Filters";
 
 export type ListItemValue = Pick<
   CastAndCrewMember["titles"][0],
@@ -101,7 +98,6 @@ export function CastAndCrewMember({
           distinctReleaseYears={distinctReleaseYears}
           distinctReviewYears={distinctReviewYears}
           hideReviewed={state.hideReviewed}
-          sortValue={state.sortValue}
         />
       }
       list={
@@ -117,6 +113,15 @@ export function CastAndCrewMember({
           }}
         </GroupedList>
       }
+      sortProps={{
+        currentSortValue: state.sortValue,
+        onSortChange: (e) =>
+          dispatch({
+            type: Actions.SORT,
+            value: e.target.value as Sort,
+          }),
+        sortOptions: <SortOptions />,
+      }}
       totalCount={state.filteredValues.length}
     />
   );
@@ -128,8 +133,10 @@ function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
       background={value.slug ? "bg-default" : "bg-unreviewed"}
       className={`
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       `}
     >
       <div
