@@ -262,13 +262,17 @@ function ListHeader<T extends string>({
       </label>
       {sortOptions && (
         <div className={`ml-auto w-full`}>
-          <label className="flex items-baseline gap-x-4 text-xxs tracking-wide">
+          <label
+            className={`
+              flex items-baseline gap-x-4 text-xxs tracking-wide text-subtle
+            `}
+          >
             Sort{" "}
             <select
               className={`
                 flex w-full appearance-none border-none bg-default py-2 pr-4
-                pl-4 text-xs font-normal tracking-normal text-subtle shadow-all
-                outline-accent
+                pl-4 font-sans text-sm font-normal tracking-normal text-subtle
+                shadow-all outline-accent
                 tablet:max-w-1/3
                 laptop:max-w-1/4
               `}
