@@ -246,8 +246,9 @@ function ListHeader<T extends string>({
       {sortOptions && (
         <div
           className={`
-            order-last w-full min-w-[280px]
-            tablet:order-none tablet:w-auto tablet:max-w-1/3 tablet:grow
+            order-last w-full
+            tablet:order-none tablet:w-auto tablet:max-w-1/3
+            tablet:min-w-[280px] tablet:grow
             tablet-landscape:max-w-1/3
           `}
         >
