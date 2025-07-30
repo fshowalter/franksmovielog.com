@@ -1,6 +1,12 @@
 import type { JSX } from "react";
 
+import { useImperativeHandle, useRef } from "react";
+
 import { LabelText } from "./LabelText";
+
+export type DebouncedInputHandle = {
+  focus: () => undefined | void;
+};
 
 type onChangeHandler = (value: string) => void;
 
@@ -8,11 +14,23 @@ export function DebouncedInput({
   label,
   onInputChange,
   placeholder,
+  ref,
 }: {
   label: string;
   onInputChange: onChangeHandler;
   placeholder: string;
+  ref?: React.Ref<DebouncedInputHandle>;
 }): JSX.Element {
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useImperativeHandle(ref, () => {
+    return {
+      focus() {
+        inputRef.current?.focus();
+      },
+    };
+  }, []);
+
   const debouncedHandleChange = underscoreDebounce(onInputChange, 150);
 
   return (
@@ -28,6 +46,7 @@ export function DebouncedInput({
           debouncedHandleChange((e.target as HTMLInputElement).value)
         }
         placeholder={placeholder}
+        ref={inputRef}
         type="text"
       />
     </label>
