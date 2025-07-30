@@ -70,7 +70,7 @@ export function MostWatchedPeople({
                     transform-gpu font-sans text-xs text-muted
                     transition-transform
                     has-[a:hover]:scale-110
-                    laptop:text-sm
+                    tablet:text-sm
                   `}
                 >
                   <Name value={value} />
@@ -137,9 +137,11 @@ function MostWatchedPersonViewingListItem({
         ${value.slug ? "bg-default" : "bg-unreviewed"}
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-4 py-4 transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
         tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
         laptop:px-6
       `}
     >

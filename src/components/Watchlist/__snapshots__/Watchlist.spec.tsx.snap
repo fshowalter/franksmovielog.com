@@ -67433,7 +67433,7 @@ exports[`/watchlist > renders 1`] = `
     >
       <header
         class="
-        group z-20 flex w-full items-center justify-between px-container py-4
+        group z-30 flex w-full items-center justify-between px-container py-4
         tablet:py-6
         laptop:inset-x-0 laptop:z-40 laptop:flex-row laptop:flex-wrap
         laptop:px-16 laptop:py-8 laptop:text-left
@@ -67614,7 +67614,7 @@ exports[`/watchlist > renders 1`] = `
             >
               <span
                 class="
-            relative block h-0.5 w-6 origin-center transform-gpu
+            relative flex h-0.5 w-6 origin-center transform-gpu
             transition-[top,bottom,transform] duration-200 ease-in-out
             group-has-[#nav:checked]:transform-[rotate(45deg)]
             group-has-[#nav:checked]:!bg-[#fff]
@@ -67634,7 +67634,7 @@ exports[`/watchlist > renders 1`] = `
             </label>
             <ul
               class="
-          fixed top-0 right-0 z-20 flex h-full w-0 transform-[translateX(100%)]
+          fixed top-0 right-0 flex h-full w-0 transform-[translateX(100%)]
           flex-col items-start gap-y-5 overflow-hidden bg-footer text-left
           text-inverse opacity-0 duration-200 ease-in-out
           group-has-[#nav:checked]:bottom-0 group-has-[#nav:checked]:z-20
@@ -67957,44 +67957,72 @@ exports[`/watchlist > renders 1`] = `
                   tablet-landscape:static tablet-landscape:col-span-3
                   tablet-landscape:mx-0 tablet-landscape:w-full
                   tablet-landscape:border-none
+                  
                 "
                 >
                   <div
                     class="
         mx-auto flex w-full max-w-(--breakpoint-desktop) flex-wrap
-        items-baseline justify-end gap-x-4 gap-y-5 px-container py-10 font-sans
+        items-baseline justify-end gap-x-2 gap-y-5 px-container py-10 font-sans
         font-medium tracking-wide text-subtle uppercase
-        tablet-landscape:static
+        tablet:gap-x-4
+        tablet-landscape:static tablet-landscape:flex-wrap
+        tablet-landscape:justify-start
       "
                   >
                     <span
-                      class="mr-auto block"
+                      class="mr-auto block grow-0"
                     >
                       <span
                         class="font-semibold text-default"
                       >
                         3,164
                       </span>
-                       Results
+                      <span
+                        class="text-xxs leading-none tracking-wide"
+                      >
+                         Results
+                      </span>
                     </span>
                     <div
-                      class="flex flex-wrap justify-end gap-4"
+                      class="
+            order-last w-full min-w-[280px]
+            tablet:order-none tablet:w-auto tablet:max-w-1/3 tablet:grow
+            tablet-landscape:max-w-1/3
+          "
                     >
-                      <div
+                      <label
                         class="
-        flex items-start gap-x-4 bg-default text-nowrap text-accent uppercase
-      "
+              flex items-baseline gap-x-4 text-xxs font-semibold tracking-wide
+              text-subtle
+            "
                       >
-                        <a
+                        Sort 
+                        <select
                           class="
-          block transform-gpu px-4 py-2 transition-all
-          hover:scale-105 hover:bg-accent hover:text-inverse
-        "
-                          href="/watchlist/progress/"
+                flex w-full appearance-none border-none bg-default py-2 pr-4
+                pl-4 font-serif text-base font-normal tracking-normal
+                text-default shadow-all outline-accent
+                tablet-landscape:font-serif tablet-landscape:text-base
+              "
                         >
-                          progress
-                        </a>
-                      </div>
+                          <option
+                            value="release-date-desc"
+                          >
+                            Release Date (Newest First)
+                          </option>
+                          <option
+                            value="release-date-asc"
+                          >
+                            Release Date (Oldest First)
+                          </option>
+                          <option
+                            value="title"
+                          >
+                            Title
+                          </option>
+                        </select>
+                      </label>
                     </div>
                     <input
                       class="hidden"
@@ -68012,8 +68040,30 @@ exports[`/watchlist > renders 1`] = `
         "
                       for="filters"
                     >
-                      Filter & Sort
+                      Filter
                     </label>
+                    <div
+                      class="
+            flex flex-wrap justify-end gap-4
+            tablet-landscape:order-3
+          "
+                    >
+                      <div
+                        class="
+        flex items-start gap-x-4 bg-default text-nowrap text-accent uppercase
+      "
+                      >
+                        <a
+                          class="
+          block transform-gpu px-4 py-2 transition-all
+          hover:scale-105 hover:bg-accent hover:text-inverse
+        "
+                          href="/watchlist/progress/"
+                        >
+                          progress
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -68042,7 +68092,7 @@ exports[`/watchlist > renders 1`] = `
                     tablet-landscape:max-w-unset tablet-landscape:min-w-[320px]
                     tablet-landscape:transform-none tablet-landscape:bg-inherit
                     tablet-landscape:py-24 tablet-landscape:pb-12
-                    tablet-landscape:shadow-none
+                    tablet-landscape:drop-shadow-none
                     laptop:mr-20
                   "
                   >
@@ -68066,16 +68116,18 @@ exports[`/watchlist > renders 1`] = `
                       >
                         <legend
                           class="
-                          mb-5 block w-full py-4 text-lg text-subtle
+                          mb-5 block w-full pt-4 pb-4 text-lg text-subtle
                           shadow-bottom
-                          tablet-landscape:mb-0 tablet-landscape:py-10
-                          tablet-landscape:font-sans tablet-landscape:text-xs
-                          tablet-landscape:font-bold
+                          tablet-landscape:mb-0 tablet-landscape:pt-10
+                          tablet-landscape:pb-0 tablet-landscape:font-sans
+                          tablet-landscape:text-xxs
+                          tablet-landscape:font-semibold
                           tablet-landscape:tracking-wide
                           tablet-landscape:uppercase
+                          tablet-landscape:shadow-none
                         "
                         >
-                          Filter & Sort
+                          Filter
                         </legend>
                         <label
                           class="flex flex-col text-subtle"
@@ -69627,40 +69679,6 @@ exports[`/watchlist > renders 1`] = `
                             </label>
                           </div>
                         </fieldset>
-                        <label
-                          class="flex flex-col"
-                        >
-                          <span
-                            class="
-        inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide
-        text-subtle uppercase
-      "
-                          >
-                            Sort
-                          </span>
-                          <select
-                            class="
-          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
-          leading-6 text-subtle shadow-all outline-accent
-        "
-                          >
-                            <option
-                              value="release-date-desc"
-                            >
-                              Release Date (Newest First)
-                            </option>
-                            <option
-                              value="release-date-asc"
-                            >
-                              Release Date (Oldest First)
-                            </option>
-                            <option
-                              value="title"
-                            >
-                              Title
-                            </option>
-                          </select>
-                        </label>
                       </fieldset>
                       <div
                         class="

@@ -41,14 +41,25 @@ export async function allCollections(): Promise<{
 export async function collectionDetails(slug: string): Promise<{
   collection: CollectionWithDetails;
   distinctReleaseYears: string[];
+  distinctReviewYears: string[];
 }> {
   const collections = await allCollectionsJson();
   const collection = collections.find((value) => value.slug === slug)!;
 
   const releaseYears = new Set<string>();
+  const reviewYears = new Set<string>();
 
   for (const title of collection.titles) {
     releaseYears.add(title.year);
+
+    if (title.reviewDate) {
+      reviewYears.add(
+        new Date(title.reviewDate).toLocaleDateString("en-US", {
+          timeZone: "UTC",
+          year: "numeric",
+        }),
+      );
+    }
   }
 
   return {
@@ -58,6 +69,7 @@ export async function collectionDetails(slug: string): Promise<{
       descriptionHtml: descriptionToHtml(collection.description),
     },
     distinctReleaseYears: [...releaseYears].toSorted(),
+    distinctReviewYears: [...reviewYears].toSorted(),
   };
 }
 

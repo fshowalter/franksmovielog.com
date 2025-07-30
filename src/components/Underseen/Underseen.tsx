@@ -11,7 +11,7 @@ import { ReviewsSubNav } from "~/components/ReviewsSubNav";
 
 import type { Sort } from "./Underseen.reducer";
 
-import { Filters } from "./Filters";
+import { Filters, SortOptions } from "./Filters";
 import { Actions, initState, reducer } from "./Underseen.reducer";
 
 export type ListItemValue = ReviewListItemValue & {
@@ -63,7 +63,6 @@ export function Underseen({
           distinctGenres={distinctGenres}
           distinctReleaseYears={distinctReleaseYears}
           distinctReviewYears={distinctReviewYears}
-          sortValue={state.sortValue}
         />
       }
       list={
@@ -79,6 +78,15 @@ export function Underseen({
         </GroupedList>
       }
       mastGradient={false}
+      sortProps={{
+        currentSortValue: state.sortValue,
+        onSortChange: (e) =>
+          dispatch({
+            type: Actions.SORT,
+            value: e.target.value as Sort,
+          }),
+        sortOptions: <SortOptions />,
+      }}
       subNav={<ReviewsSubNav active="underseen" />}
       totalCount={state.filteredValues.length}
     />

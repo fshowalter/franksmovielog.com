@@ -2,7 +2,9 @@ import { DebouncedInput } from "~/components/DebouncedInput";
 import { MultiSelectField } from "~/components/MultiSelectField";
 import { YearInput } from "~/components/YearInput";
 
-import { Actions, type ActionType } from "./Overrated.reducer";
+import type { ActionType } from "./Overrated.reducer";
+
+import { Actions } from "./Overrated.reducer";
 
 export function Filters({
   dispatch,

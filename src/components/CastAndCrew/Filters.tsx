@@ -3,14 +3,14 @@ import type { JSX } from "react";
 import { DebouncedInput } from "~/components/DebouncedInput";
 import { SelectField } from "~/components/SelectField";
 
-import { Actions, type ActionType, type Sort } from "./CastAndCrew.reducer";
+import type { ActionType } from "./CastAndCrew.reducer";
+
+import { Actions } from "./CastAndCrew.reducer";
 
 export function Filters({
   dispatch,
-  sortValue,
 }: {
   dispatch: React.Dispatch<ActionType>;
-  sortValue: Sort;
 }): JSX.Element {
   return (
     <>
@@ -36,21 +36,17 @@ export function Filters({
         <option value="writer">Writer</option>
         <option value="performer">Performer</option>
       </SelectField>
-      <SelectField
-        label="Sort"
-        onChange={(e) =>
-          dispatch({
-            type: Actions.SORT,
-            value: e.target.value as Sort,
-          })
-        }
-        value={sortValue}
-      >
-        <option value="name-asc">Name (A &rarr; Z)</option>
-        <option value="name-desc">Name (Z &rarr; A)</option>
-        <option value="review-count-desc">Review Count (Most First)</option>
-        <option value="review-count-asc">Review Count (Fewest First)</option>
-      </SelectField>
+    </>
+  );
+}
+
+export function SortOptions() {
+  return (
+    <>
+      <option value="name-asc">Name (A &rarr; Z)</option>
+      <option value="name-desc">Name (Z &rarr; A)</option>
+      <option value="review-count-desc">Review Count (Most First)</option>
+      <option value="review-count-asc">Review Count (Fewest First)</option>
     </>
   );
 }

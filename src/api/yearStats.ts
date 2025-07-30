@@ -1,4 +1,6 @@
-import { allYearStatsJson, type YearStatsJson } from "./data/yearStatsJson";
+import type { YearStatsJson } from "./data/yearStatsJson";
+
+import { allYearStatsJson } from "./data/yearStatsJson";
 
 export type YearStats = YearStatsJson & {};
 

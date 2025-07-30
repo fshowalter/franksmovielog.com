@@ -5,7 +5,9 @@ import { SelectField } from "~/components/SelectField";
 import { SelectOptions } from "~/components/SelectOptions";
 import { YearInput } from "~/components/YearInput";
 
-import { Actions, type ActionType, type Sort } from "./Watchlist.reducer";
+import type { ActionType } from "./Watchlist.reducer";
+
+import { Actions } from "./Watchlist.reducer";
 
 export function Filters({
   dispatch,
@@ -14,7 +16,6 @@ export function Filters({
   distinctPerformers,
   distinctReleaseYears,
   distinctWriters,
-  sortValue,
 }: {
   dispatch: React.Dispatch<ActionType>;
   distinctCollections: readonly string[];
@@ -22,7 +23,6 @@ export function Filters({
   distinctPerformers: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctWriters: readonly string[];
-  sortValue: string;
 }): JSX.Element {
   return (
     <>
@@ -64,20 +64,16 @@ export function Filters({
         }
         years={distinctReleaseYears}
       />
-      <SelectField
-        label="Sort"
-        onChange={(e) =>
-          dispatch({
-            type: Actions.SORT,
-            value: e.target.value as Sort,
-          })
-        }
-        value={sortValue}
-      >
-        <option value="release-date-desc">Release Date (Newest First)</option>
-        <option value="release-date-asc">Release Date (Oldest First)</option>
-        <option value="title">Title</option>
-      </SelectField>
+    </>
+  );
+}
+
+export function SortOptions() {
+  return (
+    <>
+      <option value="release-date-desc">Release Date (Newest First)</option>
+      <option value="release-date-asc">Release Date (Oldest First)</option>
+      <option value="title">Title</option>
     </>
   );
 }

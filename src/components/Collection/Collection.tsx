@@ -13,8 +13,10 @@ import { ListItemPoster } from "~/components/ListItemPoster";
 import { ListItemTitle } from "~/components/ListItemTitle";
 import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 
-import { Actions, initState, reducer, type Sort } from "./Collection.reducer";
-import { Filters } from "./Filters";
+import type { Sort } from "./Collection.reducer";
+
+import { Actions, initState, reducer } from "./Collection.reducer";
+import { Filters, SortOptions } from "./Filters";
 
 export type ListItemValue = Pick<
   Collection["titles"][0],
@@ -28,12 +30,16 @@ export type ListItemValue = Pick<
   | "year"
 > & {
   posterImageProps: PosterImageProps;
+  reviewDisplayDate: string;
+  reviewSequence?: string;
+  reviewYear: string;
 };
 
 export type Props = {
   avatarImageProps: AvatarImageProps | undefined;
   backdropImageProps: BackdropImageProps;
   distinctReleaseYears: readonly string[];
+  distinctReviewYears: readonly string[];
   initialSort: Sort;
   titles: ListItemValue[];
   value: Pick<
@@ -46,6 +52,7 @@ export function Collection({
   avatarImageProps,
   backdropImageProps,
   distinctReleaseYears,
+  distinctReviewYears,
   initialSort,
   titles,
   value,
@@ -84,9 +91,9 @@ export function Collection({
         <Filters
           dispatch={dispatch}
           distinctReleaseYears={distinctReleaseYears}
+          distinctReviewYears={distinctReviewYears}
           hideReviewed={state.hideReviewed}
           showHideReviewed={value.reviewCount != titles.length}
-          sortValue={state.sortValue}
         />
       }
       list={
@@ -102,6 +109,15 @@ export function Collection({
           }}
         </GroupedList>
       }
+      sortProps={{
+        currentSortValue: state.sortValue,
+        onSortChange: (e) =>
+          dispatch({
+            type: Actions.SORT,
+            value: e.target.value as Sort,
+          }),
+        sortOptions: <SortOptions />,
+      }}
       totalCount={state.filteredValues.length}
     />
   );
@@ -113,10 +129,11 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
       background={value.slug ? "bg-default" : "bg-unreviewed"}
       className={`
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       `}
-      itemsCenter={true}
     >
       <div
         className={`
@@ -130,8 +147,9 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
       </div>
       <div
         className={`
-          flex grow flex-col gap-1 pb-2
+          flex grow flex-col items-start gap-y-2
           tablet:w-full
+          laptop:pr-4
         `}
       >
         <ListItemTitle
@@ -140,8 +158,11 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
           year={value.year}
         />
         {value.grade && (
-          <Grade className="mt-1" height={16} value={value.grade} />
+          <Grade className="mb-1" height={16} value={value.grade} />
         )}
+        <div className="font-sans text-xs leading-4 font-light text-subtle">
+          {value.reviewDisplayDate}
+        </div>
       </div>
     </ListItem>
   );

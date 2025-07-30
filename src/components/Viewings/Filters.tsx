@@ -5,7 +5,7 @@ import { SelectField } from "~/components/SelectField";
 import { SelectOptions } from "~/components/SelectOptions";
 import { YearInput } from "~/components/YearInput";
 
-import type { ActionType, Sort } from "./Viewings.reducer";
+import type { ActionType } from "./Viewings.reducer";
 
 import { Actions } from "./Viewings.reducer";
 
@@ -15,14 +15,12 @@ export function Filters({
   distinctReleaseYears,
   distinctVenues,
   distinctViewingYears,
-  sortValue,
 }: {
   dispatch: React.Dispatch<ActionType>;
   distinctMedia: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctVenues: readonly string[];
   distinctViewingYears: readonly string[];
-  sortValue: Sort;
 }): JSX.Element {
   return (
     <>

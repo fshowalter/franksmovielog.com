@@ -117,9 +117,11 @@ function ListItem({
       className={`
         group/list-item relative mb-1 flex h-full transform-gpu items-center
         gap-x-4 bg-default px-container py-4 transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
         tablet:w-auto tablet:flex-col tablet:p-6
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
         laptop:w-auto
       `}
     >

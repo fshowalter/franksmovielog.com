@@ -15,8 +15,10 @@ import {
 import { SvgIcon } from "~/components/SvgIcon";
 import { WatchlistTitleSlug } from "~/components/WatchlistTitleSlug";
 
-import { Filters } from "./Filters";
-import { Actions, initState, reducer, type Sort } from "./Watchlist.reducer";
+import type { Sort } from "./Watchlist.reducer";
+
+import { Filters, SortOptions } from "./Filters";
+import { Actions, initState, reducer } from "./Watchlist.reducer";
 
 export type ListItemValue = Pick<
   WatchlistTitle,
@@ -83,7 +85,6 @@ export function Watchlist({
           distinctPerformers={distinctPerformers}
           distinctReleaseYears={distinctReleaseYears}
           distinctWriters={distinctWriters}
-          sortValue={state.sortValue}
         />
       }
       list={
@@ -108,6 +109,15 @@ export function Watchlist({
       listHeaderButtons={
         <ListHeaderButton href="/watchlist/progress/" text="progress" />
       }
+      sortProps={{
+        currentSortValue: state.sortValue,
+        onSortChange: (e) =>
+          dispatch({
+            type: Actions.SORT,
+            value: e.target.value as Sort,
+          }),
+        sortOptions: <SortOptions />,
+      }}
       totalCount={state.filteredValues.length}
     />
   );

@@ -13,8 +13,8 @@ import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 
 import type { Sort } from "./CastAndCrew.reducer";
 
-import { initState, reducer } from "./CastAndCrew.reducer";
-import { Filters } from "./Filters";
+import { Actions, initState, reducer } from "./CastAndCrew.reducer";
+import { Filters, SortOptions } from "./Filters";
 
 export type ListItemValue = Pick<
   CastAndCrewMember,
@@ -55,7 +55,8 @@ export function CastAndCrew({
           title="Cast & Crew"
         />
       }
-      filters={<Filters dispatch={dispatch} sortValue={state.sortValue} />}
+      filters={<Filters dispatch={dispatch} />}
+      headerClasses={`top-[52px] scroll-mt-[52px]`}
       list={
         <GroupedList
           data-testid="list"
@@ -69,6 +70,15 @@ export function CastAndCrew({
           }}
         </GroupedList>
       }
+      sortProps={{
+        currentSortValue: state.sortValue,
+        onSortChange: (e) =>
+          dispatch({
+            type: Actions.SORT,
+            value: e.target.value as Sort,
+          }),
+        sortOptions: <SortOptions />,
+      }}
       subNav={
         <AlphabetSubNav
           groupedValues={state.groupedValues}
@@ -97,7 +107,7 @@ function AlphabetSubNav({
   }
 
   return (
-    <nav className={`sticky top-0 z-1000 bg-footer`}>
+    <nav className={`sticky top-0 z-20 bg-footer`}>
       <ul
         className={`
           mx-auto flex scrollbar-hidden max-w-(--breakpoint-desktop) snap-x
@@ -167,8 +177,10 @@ function MemberListItem({ value }: { value: ListItemValue }): JSX.Element {
     <ListItem
       className={`
         group/list-item relative transform-gpu transition-transform
-        has-[a:hover]:z-30 has-[a:hover]:scale-105 has-[a:hover]:shadow-all
-        has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
       `}
       extraVerticalPadding={true}
       itemsCenter={true}

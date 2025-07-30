@@ -83,7 +83,6 @@ export function Viewings({
           distinctReleaseYears={distinctReleaseYears}
           distinctVenues={distinctVenues}
           distinctViewingYears={distinctViewingYears}
-          sortValue={state.sortValue}
         />
       }
       list={

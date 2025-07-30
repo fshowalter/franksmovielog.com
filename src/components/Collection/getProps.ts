@@ -10,7 +10,8 @@ import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
 import type { Props } from "./Collection";
 
 export async function getProps(slug: string): Promise<Props> {
-  const { collection, distinctReleaseYears } = await collectionDetails(slug);
+  const { collection, distinctReleaseYears, distinctReviewYears } =
+    await collectionDetails(slug);
 
   collection.titles.sort((a, b) =>
     a.releaseSequence.localeCompare(b.releaseSequence),
@@ -26,6 +27,7 @@ export async function getProps(slug: string): Promise<Props> {
       BackdropImageConfig,
     ),
     distinctReleaseYears,
+    distinctReviewYears,
     initialSort: "release-date-asc",
     titles: await Promise.all(
       collection.titles.map(async (title) => {
@@ -35,6 +37,25 @@ export async function getProps(slug: string): Promise<Props> {
             title.slug,
             ListItemPosterImageConfig,
           ),
+          reviewDisplayDate: title.reviewDate
+            ? `${new Date(title.reviewDate).toLocaleDateString("en-US", {
+                timeZone: "UTC",
+                year: "numeric",
+              })}-${new Date(title.reviewDate).toLocaleDateString("en-US", {
+                month: "short",
+                timeZone: "UTC",
+              })}-${new Date(title.reviewDate).toLocaleDateString("en-US", {
+                day: "2-digit",
+                timeZone: "UTC",
+              })}`
+            : "",
+          reviewSequence: title.reviewSequence,
+          reviewYear: title.reviewDate
+            ? new Date(title.reviewDate).toLocaleDateString("en-US", {
+                timeZone: "UTC",
+                year: "numeric",
+              })
+            : "",
         };
       }),
     ),
