@@ -236,7 +236,7 @@ function ListHeader<T extends string>({
         grid grid-cols-[auto_auto_1fr_auto] items-baseline gap-y-7 px-container
         py-10 font-sans font-medium tracking-wide text-subtle uppercase
         tablet:grid-cols-[auto_auto_1fr_auto_auto] tablet:gap-x-4
-        tablet-landscape:grid-cols-[auto_auto_1fr_minmax(318px,calc(33%_-_176px))_auto]
+        tablet-landscape:grid-cols-[auto_auto_1fr_minmax(302px,calc(33%_-_192px))_auto]
       `}
     >
       <span className={`text-nowrap`}>
