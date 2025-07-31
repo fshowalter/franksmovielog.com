@@ -1,11 +1,4 @@
-import { useImperativeHandle, useRef } from "react";
-
-import type { FiltersHandle } from "~/components/ListWithFiltersLayout";
-
-import {
-  DebouncedInput,
-  type DebouncedInputHandle,
-} from "~/components/DebouncedInput";
+import { DebouncedInput } from "~/components/DebouncedInput";
 import { SelectField } from "~/components/SelectField";
 import { SelectOptions } from "~/components/SelectOptions";
 import { YearInput } from "~/components/YearInput";
@@ -20,25 +13,13 @@ export function Filters({
   distinctReleaseYears,
   distinctVenues,
   distinctViewingYears,
-  ref,
 }: {
   dispatch: React.Dispatch<ActionType>;
   distinctMedia: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctVenues: readonly string[];
   distinctViewingYears: readonly string[];
-  ref: React.Ref<FiltersHandle>;
 }) {
-  const inputRef = useRef<DebouncedInputHandle>(null);
-
-  useImperativeHandle(ref, () => {
-    return {
-      focus() {
-        inputRef?.current?.focus();
-      },
-    };
-  }, []);
-
   return (
     <>
       <DebouncedInput
@@ -47,7 +28,6 @@ export function Filters({
           dispatch({ type: Actions.FILTER_TITLE, value })
         }
         placeholder="Enter all or part of a title"
-        ref={inputRef}
       />
       <YearInput
         label="Release Year"

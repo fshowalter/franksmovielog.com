@@ -1,18 +1,13 @@
 import type { JSX, ReactNode } from "react";
 
-import { unescape } from "node:querystring";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 import { Layout } from "./Layout";
-
-export type FiltersHandle = {
-  focus: () => undefined | void;
-};
 
 type Props<T extends string> = {
   backdrop: React.ReactNode;
   className?: string;
-  filters: (ref: React.Ref<FiltersHandle>) => React.ReactNode;
+  filters: React.ReactNode;
   headerClasses?: string;
   list: React.ReactNode;
   listHeaderButtons?: React.ReactNode;
@@ -67,10 +62,9 @@ export function ListWithFiltersLayout<T extends string>({
   totalCount,
   ...rest
 }: Props<T>): JSX.Element {
-  const filtersRef = useRef<FiltersHandle>(null);
   const [filterDrawerVisible, setFilterDrawerVisible] = useState(false);
 
-  const onFilterClick = () => {
+  const onFilterClick: React.MouseEventHandler<HTMLAnchorElement> = (event) => {
     const documentSize = document.documentElement.clientWidth;
     const tabletLandscapeBreakpoint = Number.parseFloat(
       globalThis
@@ -80,8 +74,19 @@ export function ListWithFiltersLayout<T extends string>({
 
     if (documentSize >= tabletLandscapeBreakpoint) {
       setFilterDrawerVisible(false);
-      filtersRef.current?.focus();
+      return event;
     }
+
+    event.preventDefault();
+    document.body.classList.toggle("overflow-hidden");
+    setFilterDrawerVisible(!filterDrawerVisible);
+  };
+
+  const onCloseFiltersClick: React.MouseEventHandler<
+    HTMLAnchorElement
+  > = () => {
+    setFilterDrawerVisible(false);
+    document.body.classList.remove("overflow-hidden");
   };
 
   return (
@@ -94,132 +99,116 @@ export function ListWithFiltersLayout<T extends string>({
       {subNav && subNav}
       <div
         className={`
-          group/list-with-filters mx-auto flex flex-col items-center bg-default
+          group/list-with-filters mx-auto grid bg-subtle
+          tablet:grid-cols-[var(--container-padding)_1fr_var(--container-padding)]
+          tablet-landscape:grid-cols-[var(--container-padding)_1fr_var(--container-padding)_minmax(398px,calc(33%_-_96px))_var(--container-padding)]
         `}
       >
-        <div className="mx-auto flex w-full flex-col items-stretch">
-          <div className="flex grow flex-col bg-subtle">
-            <div
+        <div
+          className={`
+            sticky top-0 z-10 border-b border-default bg-default text-xs
+            tablet:col-span-full
+            ${headerClasses ?? ""}
+          `}
+        >
+          <input
+            checked={filterDrawerVisible}
+            className="hidden"
+            data-drawer
+            id="hiddenState"
+            type="checkbox"
+          />
+          <ListHeader
+            listHeaderButtons={listHeaderButtons}
+            onFilterClick={onFilterClick}
+            sortProps={sortProps}
+            totalCount={totalCount}
+          />
+        </div>
+
+        <div
+          className={`
+            scroll-mt-[181px] pb-10
+            tablet:col-start-2 tablet:row-start-2 tablet:scroll-mt-[121px]
+          `}
+          id="list"
+        >
+          {list}
+        </div>
+        <div
+          className={`
+            fixed top-0 right-0 z-80 flex h-full max-w-[380px] flex-col
+            items-start gap-y-5 bg-default text-left text-inverse duration-200
+            ease-in-out
+            ${
+              filterDrawerVisible
+                ? `
+                  bottom-0 w-full transform-[translateX(0)] overflow-y-auto
+                  drop-shadow-2xl
+                `
+                : `w-0 transform-[translateX(100%)] overflow-y-hidden`
+            }
+            tablet:gap-y-10
+            tablet-landscape:relative tablet-landscape:z-auto
+            tablet-landscape:col-start-4 tablet-landscape:block
+            tablet-landscape:w-auto tablet-landscape:max-w-unset
+            tablet-landscape:min-w-[320px] tablet-landscape:transform-none
+            tablet-landscape:bg-inherit tablet-landscape:py-24
+            tablet-landscape:pb-12 tablet-landscape:drop-shadow-none
+          `}
+          id="filters"
+        >
+          <div
+            className={`
+              flex h-full w-full flex-col text-sm
+              tablet:pt-12 tablet:text-base
+              tablet-landscape:h-auto tablet-landscape:overflow-visible
+              tablet-landscape:bg-default tablet-landscape:px-container
+              tablet-landscape:pt-0
+              laptop:px-8
+            `}
+          >
+            <fieldset
               className={`
-                relative
-                tablet:px-12
-                tablet-landscape:px-0
+                flex grow flex-col gap-5 px-container pb-4
+                tablet:gap-8
+                tablet-landscape:mt-0 tablet-landscape:gap-12
+                tablet-landscape:px-0 tablet-landscape:py-10
               `}
             >
-              <div
+              <legend
                 className={`
-                  sticky top-0 z-10 row-start-1 border-b border-default
-                  bg-default text-xs
-                  tablet:-mx-12 tablet:px-0
-                  tablet-landscape:static tablet-landscape:col-span-3
-                  tablet-landscape:mx-0 tablet-landscape:w-full
-                  tablet-landscape:border-none
-                  ${headerClasses ?? ""}
+                  mb-5 block w-full pt-4 pb-4 text-lg text-subtle shadow-bottom
+                  tablet-landscape:mb-0 tablet-landscape:pt-10
+                  tablet-landscape:pb-0 tablet-landscape:font-sans
+                  tablet-landscape:text-xxs tablet-landscape:font-semibold
+                  tablet-landscape:tracking-wide tablet-landscape:uppercase
+                  tablet-landscape:shadow-none
                 `}
               >
-                <ListHeader
-                  listHeaderButtons={listHeaderButtons}
-                  sortProps={sortProps}
-                  totalCount={totalCount}
-                />
-              </div>
-              <div
+                Filter
+              </legend>
+              {filters}
+            </fieldset>
+            <div
+              className={`
+                sticky bottom-0 z-40 mt-auto w-full self-end border-t
+                border-t-default bg-default px-8 py-4 drop-shadow-2xl
+                tablet-landscape:hidden
+              `}
+            >
+              <a
                 className={`
-                  mx-auto max-w-(--breakpoint-desktop)
-                  grid-cols-[1fr_48px_minmax(398px,33%)]
-                  tablet-landscape:grid tablet-landscape:grid-rows-[auto_1fr]
+                  flex cursor-pointer items-center justify-center gap-x-4
+                  bg-footer px-4 py-3 font-sans text-xs text-nowrap text-inverse
+                  uppercase
+                  tablet-landscape:hidden
                 `}
+                href="#list"
+                onClick={onCloseFiltersClick}
               >
-                <div
-                  className={`
-                    fixed top-0 right-0 col-start-3 row-span-2 row-start-2 flex
-                    h-full w-0 max-w-[380px] transform-[translateX(100%)]
-                    flex-col items-start gap-y-5 overflow-hidden bg-default
-                    text-left text-inverse duration-200 ease-in-out
-                    group-has-[#filters:checked]/list-with-filters:bottom-0
-                    group-has-[#filters:checked]/list-with-filters:z-60
-                    group-has-[#filters:checked]/list-with-filters:h-full
-                    group-has-[#filters:checked]/list-with-filters:w-full
-                    group-has-[#filters:checked]/list-with-filters:transform-[translateX(0)]
-                    group-has-[#filters:checked]/list-with-filters:overflow-y-auto
-                    group-has-[#filters:checked]/list-with-filters:drop-shadow-2xl
-                    tablet:gap-y-10
-                    tablet-landscape:relative tablet-landscape:mr-12
-                    tablet-landscape:block tablet-landscape:w-auto
-                    tablet-landscape:max-w-unset tablet-landscape:min-w-[320px]
-                    tablet-landscape:transform-none tablet-landscape:bg-inherit
-                    tablet-landscape:py-24 tablet-landscape:pb-12
-                    tablet-landscape:drop-shadow-none
-                    laptop:mr-20
-                  `}
-                >
-                  <div
-                    className={`
-                      flex h-full w-full flex-col text-sm
-                      tablet:pt-12 tablet:text-base
-                      tablet-landscape:h-auto tablet-landscape:overflow-visible
-                      tablet-landscape:bg-default tablet-landscape:px-container
-                      tablet-landscape:pt-0
-                      laptop:px-8
-                    `}
-                  >
-                    <fieldset
-                      className={`
-                        flex grow flex-col gap-5 px-container pb-4
-                        tablet:gap-8
-                        tablet-landscape:mt-0 tablet-landscape:gap-12
-                        tablet-landscape:px-0 tablet-landscape:py-10
-                      `}
-                    >
-                      <legend
-                        className={`
-                          mb-5 block w-full pt-4 pb-4 text-lg text-subtle
-                          shadow-bottom
-                          tablet-landscape:mb-0 tablet-landscape:pt-10
-                          tablet-landscape:pb-0 tablet-landscape:font-sans
-                          tablet-landscape:text-xxs
-                          tablet-landscape:font-semibold
-                          tablet-landscape:tracking-wide
-                          tablet-landscape:uppercase
-                          tablet-landscape:shadow-none
-                        `}
-                      >
-                        Filter
-                      </legend>
-                      {filters(filtersRef)}
-                    </fieldset>
-                    <div
-                      className={`
-                        sticky bottom-0 z-40 mt-auto w-full self-end border-t
-                        border-t-default bg-default px-8 py-4 drop-shadow-2xl
-                        tablet-landscape:hidden
-                      `}
-                    >
-                      <label
-                        className={`
-                          flex cursor-pointer items-center justify-center
-                          gap-x-4 bg-footer px-4 py-3 font-sans text-xs
-                          text-nowrap text-inverse uppercase
-                          tablet-landscape:hidden
-                        `}
-                        htmlFor="filters"
-                      >
-                        View {totalCount} Results
-                      </label>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  className={`
-                    col-start-1 row-start-2 pb-10
-                    tablet-landscape:pl-12
-                    laptop:pl-20
-                  `}
-                >
-                  {list}
-                </div>
-              </div>
+                View {totalCount} Results
+              </a>
             </div>
           </div>
         </div>
@@ -230,60 +219,37 @@ export function ListWithFiltersLayout<T extends string>({
 
 function ListHeader<T extends string>({
   listHeaderButtons,
+  onFilterClick,
   sortProps,
   totalCount,
 }: {
   listHeaderButtons?: ReactNode;
+  onFilterClick: React.MouseEventHandler<HTMLAnchorElement>;
   sortProps: SortProps<T>;
   totalCount: number;
 }): JSX.Element {
-  const headerRef = useRef<HTMLDivElement | null>(null);
   const { currentSortValue, onSortChange, sortOptions } = sortProps;
-
-  const executeScroll: React.MouseEventHandler<HTMLButtonElement> = () => {
-    headerRef?.current?.scrollIntoView();
-  };
 
   return (
     <div
       className={`
-        mx-auto flex w-full max-w-(--breakpoint-desktop) flex-wrap
-        items-baseline justify-end gap-x-2 gap-y-5 px-container py-10 font-sans
-        font-medium tracking-wide text-subtle uppercase
-        tablet:gap-x-4
-        tablet-landscape:static tablet-landscape:flex-wrap
-        tablet-landscape:justify-start
+        grid grid-cols-[auto_auto_1fr_auto] items-baseline gap-y-7 px-container
+        py-10 font-sans font-medium tracking-wide text-subtle uppercase
+        tablet:grid-cols-[auto_auto_1fr_auto_auto] tablet:gap-x-4
+        tablet-landscape:grid-cols-[auto_auto_1fr_minmax(318px,calc(33%_-_176px))_auto]
       `}
-      ref={headerRef}
     >
-      <span className={`block grow-0`}>
+      <span className={`text-nowrap`}>
         <span className={`font-semibold text-default`}>
           {totalCount.toLocaleString()}
         </span>
         <span className="text-xxs leading-none tracking-wide"> Results</span>
       </span>
-      {listHeaderButtons && (
-        <div className={`flex flex-wrap justify-end gap-4`}>
-          {listHeaderButtons}
-        </div>
-      )}
-      <button
-        className={`
-          relative z-40 ml-auto flex transform-gpu cursor-pointer items-center
-          justify-center gap-x-4 bg-canvas px-4 py-2 text-nowrap text-muted
-          uppercase shadow-all transition-transform
-          hover:scale-110
-        `}
-        onClick={executeScroll}
-      >
-        Filter
-      </button>
+      <div className={``}>{listHeaderButtons && listHeaderButtons}</div>
       <div
         className={`
-          w-full
-          tablet:order-none tablet:w-auto tablet:max-w-1/3 tablet:min-w-[280px]
-          tablet:grow
-          tablet-landscape:max-w-1/3
+          col-span-full
+          tablet:col-span-1 tablet:col-start-4
         `}
       >
         <label
@@ -296,9 +262,8 @@ function ListHeader<T extends string>({
           <select
             className={`
               flex w-full appearance-none border-none bg-default py-2 pr-4 pl-4
-              font-serif text-base font-normal tracking-normal text-default
-              shadow-all outline-accent
-              tablet-landscape:font-serif tablet-landscape:text-base
+              font-serif text-base font-normal tracking-normal overflow-ellipsis
+              text-default shadow-all outline-accent
             `}
             onChange={onSortChange}
             value={currentSortValue}
@@ -307,6 +272,19 @@ function ListHeader<T extends string>({
           </select>
         </label>
       </div>
+      <a
+        className={`
+          col-start-4 row-start-1 flex transform-gpu cursor-pointer items-center
+          justify-center gap-x-4 bg-canvas px-4 py-2 text-nowrap text-muted
+          uppercase shadow-all transition-transform
+          hover:scale-110
+          tablet:col-start-5 tablet:w-20
+        `}
+        href="#filters"
+        onClick={onFilterClick}
+      >
+        Filter
+      </a>
     </div>
   );
 }

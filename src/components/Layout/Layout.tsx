@@ -47,7 +47,7 @@ export function Layout({
           className={ccn(
             `
               grow
-              min-[381px]:group-has-[[data-drawer]:checked]:before:absolute
+              min-[381px]:group-has-[[data-drawer]:checked]:before:fixed
               min-[381px]:group-has-[[data-drawer]:checked]:before:top-0
               min-[381px]:group-has-[[data-drawer]:checked]:before:left-0
               min-[381px]:group-has-[[data-drawer]:checked]:before:z-10

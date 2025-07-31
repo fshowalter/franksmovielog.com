@@ -5,7 +5,7 @@ import { sortNumber } from "~/utils/sortTools";
 
 import type { ListItemValue } from "./Viewings";
 
-const SHOW_COUNT_DEFAULT = 100;
+const SHOW_COUNT_DEFAULT = 11;
 
 export type Sort = "viewing-date-asc" | "viewing-date-desc";
 
