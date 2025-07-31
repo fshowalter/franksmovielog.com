@@ -73,7 +73,7 @@ function GroupingListItem({
           className={`
             max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
             leading-8
-            tablet:px-4
+            tablet:px-1
           `}
         >
           {groupText}
