@@ -81,8 +81,12 @@ This site uses Astro's partial hydration strategy:
 1. Create feature branch from main
 2. Make changes with proper types
 3. Run tests and linting
-4. Create PR with descriptive title
-5. Ensure all checks pass
+4. **IMPORTANT**: Before creating any PR, run:
+   - `npm run lint` - Must pass with no errors
+   - `npm run check` - Must pass with no errors  
+   - `npm run knip` - Must pass with no errors
+5. Create PR with descriptive title
+6. Ensure all CI checks pass
 
 ## Recent Updates
 - Migrated to Tailwind v4
