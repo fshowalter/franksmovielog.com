@@ -106,7 +106,7 @@ export function ListWithFiltersLayout<T extends string>({
       >
         <div
           className={`
-            sticky top-0 z-10 border-b border-default bg-default text-xs
+            sticky top-0 z-sticky border-b border-default bg-default text-xs
             tablet:col-span-full
             ${headerClasses ?? ""}
           `}
@@ -137,7 +137,7 @@ export function ListWithFiltersLayout<T extends string>({
         </div>
         <div
           className={`
-            fixed top-0 right-0 z-80 flex h-full max-w-[380px] flex-col
+            fixed top-0 right-0 z-filter-drawer flex h-full max-w-[380px] flex-col
             items-start gap-y-5 bg-default text-left text-inverse duration-200
             ease-in-out
             ${
@@ -192,7 +192,7 @@ export function ListWithFiltersLayout<T extends string>({
             </fieldset>
             <div
               className={`
-                sticky bottom-0 z-40 mt-auto w-full self-end border-t
+                sticky bottom-0 z-filter-footer mt-auto w-full self-end border-t
                 border-t-default bg-default px-8 py-4 drop-shadow-2xl
                 tablet-landscape:hidden
               `}

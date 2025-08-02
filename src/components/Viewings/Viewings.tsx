@@ -262,7 +262,7 @@ function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
       className={`
         group/list-item relative mb-1 flex transform-gpu flex-row items-center
         gap-x-4 transition-transform
-        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:z-hover
         tablet-landscape:has-[a:hover]:scale-105
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -276,7 +276,7 @@ function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
       <div
         className={`
           relative
-          after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
         `}

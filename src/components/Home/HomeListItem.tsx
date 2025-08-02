@@ -71,7 +71,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
             mb-3 block text-2.5xl leading-7 font-medium
             before:absolute before:inset-x-[8%] before:top-12
             before:aspect-video before:bg-default before:opacity-15
-            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
             hover:text-accent hover:before:opacity-0
             tablet:before:inset-x-0 tablet:before:top-0
           `}
