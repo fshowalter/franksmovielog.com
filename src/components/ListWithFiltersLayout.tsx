@@ -66,36 +66,39 @@ export function ListWithFiltersLayout<T extends string>({
   const filtersRef = useRef<HTMLDivElement | null>(null);
   const toggleButtonRef = useRef<HTMLButtonElement | null>(null);
 
-  const onFilterClick = useCallback((event: React.MouseEvent) => {
-    const documentSize = document.documentElement.clientWidth;
-    const tabletLandscapeBreakpoint = Number.parseFloat(
-      globalThis
-        .getComputedStyle(document.body)
-        .getPropertyValue("--breakpoint-tablet-landscape"),
-    );
+  const onFilterClick = useCallback(
+    (event: React.MouseEvent) => {
+      const documentSize = document.documentElement.clientWidth;
+      const tabletLandscapeBreakpoint = Number.parseFloat(
+        globalThis
+          .getComputedStyle(document.body)
+          .getPropertyValue("--breakpoint-tablet-landscape"),
+      );
 
-    if (documentSize >= tabletLandscapeBreakpoint) {
-      setFilterDrawerVisible(false);
-      return event;
-    }
+      if (documentSize >= tabletLandscapeBreakpoint) {
+        setFilterDrawerVisible(false);
+        return event;
+      }
 
-    event.preventDefault();
-    
-    if (filterDrawerVisible) {
-      document.body.classList.remove("overflow-hidden");
-      setFilterDrawerVisible(false);
-    } else {
-      document.body.classList.add("overflow-hidden");
-      setFilterDrawerVisible(true);
-      // Focus first focusable element after drawer opens
-      requestAnimationFrame(() => {
-        const firstFocusable = filtersRef.current?.querySelector<HTMLElement>(
-          'button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
-        );
-        firstFocusable?.focus();
-      });
-    }
-  }, [filterDrawerVisible]);
+      event.preventDefault();
+
+      if (filterDrawerVisible) {
+        document.body.classList.remove("overflow-hidden");
+        setFilterDrawerVisible(false);
+      } else {
+        document.body.classList.add("overflow-hidden");
+        setFilterDrawerVisible(true);
+        // Focus first focusable element after drawer opens
+        requestAnimationFrame(() => {
+          const firstFocusable = filtersRef.current?.querySelector<HTMLElement>(
+            'button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+          );
+          firstFocusable?.focus();
+        });
+      }
+    },
+    [filterDrawerVisible],
+  );
 
   // Handle escape key
   useEffect(() => {
@@ -171,7 +174,7 @@ export function ListWithFiltersLayout<T extends string>({
         >
           {list}
         </div>
-        
+
         {/* Backdrop for mobile filters */}
         <div
           aria-hidden="true"
@@ -183,7 +186,7 @@ export function ListWithFiltersLayout<T extends string>({
           `}
           onClick={() => setFilterDrawerVisible(false)}
         />
-        
+
         <div
           aria-label="Filters"
           className={`
