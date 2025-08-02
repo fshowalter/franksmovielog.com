@@ -93,6 +93,7 @@ This site uses Astro's partial hydration strategy:
 4. **IMPORTANT**: Before creating any PR, run:
    - `npm run format` - Must pass with no errors
    - `npm run lint` - Must pass with no errors
+   - `npm run lint:spelling` - Must pass with no errors
    - `npm run check` - Must pass with no errors
    - `npm run knip` - Must pass with no errors
 5. Create PR with descriptive title
