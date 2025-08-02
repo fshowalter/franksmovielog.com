@@ -43,11 +43,7 @@ export function Layout({
           hasBackdrop={hasBackdrop}
           hideLogo={hideLogo}
         />
-        <main
-          className={ccn("grow", className)}
-          id="content"
-          {...rest}
-        >
+        <main className={ccn("grow", className)} id="content" {...rest}>
           {children}
         </main>
         <Footer />

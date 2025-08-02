@@ -137,9 +137,9 @@ export function ListWithFiltersLayout<T extends string>({
         </div>
         <div
           className={`
-            fixed top-0 right-0 z-filter-drawer flex h-full max-w-[380px] flex-col
-            items-start gap-y-5 bg-default text-left text-inverse duration-200
-            ease-in-out
+            fixed top-0 right-0 z-filter-drawer flex h-full max-w-[380px]
+            flex-col items-start gap-y-5 bg-default text-left text-inverse
+            duration-200 ease-in-out
             ${
               filterDrawerVisible
                 ? `

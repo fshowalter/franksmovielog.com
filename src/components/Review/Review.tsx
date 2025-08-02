@@ -62,7 +62,9 @@ export function Review({
       hasBackdrop={false}
     >
       <header
-        className={`relative z-base mb-8 flex flex-col items-center px-[8%] pt-10`}
+        className={`
+          relative z-base mb-8 flex flex-col items-center px-[8%] pt-10
+        `}
       >
         <nav
           className={`

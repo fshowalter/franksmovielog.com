@@ -42,7 +42,7 @@
     <title>Hatchet movie reviews - Frank&#39;s Movie Log</title>
   </head>
   <body
-    class="h-full w-full bg-canvas text-default has-[[data-drawer]:checked]:fixed has-[[data-drawer]:checked]:overflow-y-scroll data-search-modal-open:overflow-hidden data-search-modal-open:before:fixed data-search-modal-open:before:inset-0 data-search-modal-open:before:z-50 data-search-modal-open:before:backdrop-blur-xs"
+    class="h-full w-full bg-canvas text-default data-search-modal-open:overflow-hidden data-search-modal-open:before:fixed data-search-modal-open:before:inset-0 data-search-modal-open:before:z-search-backdrop data-search-modal-open:before:backdrop-blur-xs [&#38;.nav-open]:overflow-hidden"
   >
     <style>
       astro-island,
@@ -247,7 +247,7 @@
       })();
     </script>
     <astro-island
-      uid="169jkn"
+      uid="ZXoKk6"
       prefix="r1"
       component-url="~/components/Collection/Collection"
       component-export="Collection"
@@ -267,7 +267,7 @@
       />
       <div class="group">
         <a
-          class="absolute top-0.5 left-1/2 z-50 mx-auto [transform:translate(-50%,calc(-100%-2px))] bg-subtle px-6 py-2 text-center text-accent focus:[transform:translate(-50%,0%)]"
+          class="absolute top-0.5 left-1/2 z-skip-link mx-auto [transform:translate(-50%,calc(-100%-2px))] bg-subtle px-6 py-2 text-center text-accent focus:[transform:translate(-50%,0%)]"
           href="#content"
           >Skip to content</a
         >
@@ -300,7 +300,7 @@
               <nav class="hidden w-full laptop:block laptop:w-auto">
                 <ul class="flex flex-wrap justify-start gap-x-6 text-xl">
                   <li
-                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform group-has-[#nav:checked]:opacity-0 has-[a:hover]:scale-105"
+                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform has-[a:hover]:scale-105 [body.nav-open_&amp;]:opacity-0"
                   >
                     <a
                       class="relative text-inherit transition-colors"
@@ -310,7 +310,7 @@
                     >
                   </li>
                   <li
-                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform group-has-[#nav:checked]:opacity-0 has-[a:hover]:scale-105"
+                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform has-[a:hover]:scale-105 [body.nav-open_&amp;]:opacity-0"
                   >
                     <a
                       class="relative text-inherit transition-colors"
@@ -320,7 +320,7 @@
                     >
                   </li>
                   <li
-                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform group-has-[#nav:checked]:opacity-0 has-[a:hover]:scale-105"
+                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform has-[a:hover]:scale-105 [body.nav-open_&amp;]:opacity-0"
                   >
                     <a
                       class="relative text-inherit transition-colors"
@@ -330,7 +330,7 @@
                     >
                   </li>
                   <li
-                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform group-has-[#nav:checked]:opacity-0 has-[a:hover]:scale-105"
+                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform has-[a:hover]:scale-105 [body.nav-open_&amp;]:opacity-0"
                   >
                     <a
                       class="relative text-inherit transition-colors"
@@ -340,7 +340,7 @@
                     >
                   </li>
                   <li
-                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform group-has-[#nav:checked]:opacity-0 has-[a:hover]:scale-105"
+                    class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform has-[a:hover]:scale-105 [body.nav-open_&amp;]:opacity-0"
                   >
                     <a
                       class="relative text-inherit transition-colors"
@@ -352,7 +352,7 @@
                 </ul>
               </nav>
               <div
-                class="z-1000 transform-gpu transition-transform group-has-[#nav:checked]:!text-[#fff] hover:scale-105"
+                class="z-1000 transform-gpu transition-transform hover:scale-105 [body.nav-open_&amp;]:!text-[#fff]"
               >
                 <button
                   aria-keyshortcuts="Control+K"
@@ -364,6 +364,7 @@
                   type="button"
                 >
                   <svg
+                    aria-hidden="true"
                     class="size-7"
                     fill="none"
                     stroke="currentColor"
@@ -379,22 +380,29 @@
                   </svg>
                 </button>
               </div>
-              <div class="group">
-                <input
-                  class="hidden"
-                  data-drawer="true"
-                  id="nav"
-                  type="checkbox"
-                /><label
-                  class="relative z-40 ml-2 flex h-10 w-10 transform-gpu cursor-pointer items-center justify-center transition-transform hover:scale-110"
-                  for="nav"
-                  ><span
-                    class="relative flex h-0.5 w-6 origin-center transform-gpu transition-[top,bottom,transform] duration-200 ease-in-out group-has-[#nav:checked]:transform-[rotate(45deg)] group-has-[#nav:checked]:!bg-[#fff] before:absolute before:-top-2 before:block before:h-0.5 before:w-6 before:bg-inherit before:transition before:duration-200 before:ease-in-out group-has-[#nav:checked]:before:top-0 group-has-[#nav:checked]:before:transform-[rotate(90deg)] after:absolute after:-bottom-2 after:block after:h-0.5 after:w-6 after:bg-inherit after:transition after:duration-200 after:ease-in-out group-has-[#nav:checked]:after:bottom-0 group-has-[#nav:checked]:after:transform-[rotate(90deg)]"
-                    style="background-color: #fff"
-                  ></span
-                ></label>
+              <div
+                class="invisible fixed inset-0 bg-[rgba(0,0,0,.4)] opacity-0 transition-opacity duration-200 [body.nav-open_&amp;]:tablet:visible [body.nav-open_&amp;]:tablet:z-nav-backdrop [body.nav-open_&amp;]:tablet:opacity-100"
+                data-nav-backdrop="true"
+              ></div>
+              <button
+                aria-controls="nav-menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation menu"
+                class="relative z-40 ml-2 flex h-10 w-10 transform-gpu cursor-pointer items-center justify-center transition-transform hover:scale-110"
+                data-nav-toggle="true"
+                type="button"
+              >
+                <span
+                  aria-hidden="true"
+                  class="relative flex h-0.5 w-6 origin-center transform-gpu transition-[top,bottom,transform] duration-200 ease-in-out before:absolute before:-top-2 before:block before:h-0.5 before:w-6 before:bg-inherit before:transition before:duration-200 before:ease-in-out after:absolute after:-bottom-2 after:block after:h-0.5 after:w-6 after:bg-inherit after:transition after:duration-200 after:ease-in-out [body.nav-open_&amp;]:transform-[rotate(45deg)] [body.nav-open_&amp;]:!bg-[#fff] [body.nav-open_&amp;]:before:top-0 [body.nav-open_&amp;]:before:transform-[rotate(90deg)] [body.nav-open_&amp;]:after:bottom-0 [body.nav-open_&amp;]:after:transform-[rotate(90deg)]"
+                  style="background-color: #fff"
+                ></span>
+              </button>
+              <nav aria-label="Main navigation">
                 <ul
-                  class="fixed top-0 right-0 flex h-full w-0 transform-[translateX(100%)] flex-col items-start gap-y-5 overflow-hidden bg-footer text-left text-inverse opacity-0 duration-200 ease-in-out group-has-[#nav:checked]:bottom-0 group-has-[#nav:checked]:z-20 group-has-[#nav:checked]:h-full group-has-[#nav:checked]:w-full group-has-[#nav:checked]:transform-[translateX(0)] group-has-[#nav:checked]:overflow-y-auto group-has-[#nav:checked]:pt-20 group-has-[#nav:checked]:pr-[16%] group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%] group-has-[#nav:checked]:opacity-100 group-has-[#nav:checked]:drop-shadow-2xl tablet:max-w-[35vw] tablet:gap-y-10 group-has-[#nav:checked]:tablet:px-10 group-has-[#nav:checked]:tablet:pt-40 laptop:max-w-[25vw] group-has-[#nav:checked]:laptop:px-20"
+                  class="invisible fixed top-0 right-0 flex h-full w-0 transform-[translateX(100%)] flex-col items-start gap-y-5 overflow-hidden bg-footer text-left text-inverse opacity-0 duration-200 ease-in-out tablet:max-w-[35vw] tablet:gap-y-10 laptop:max-w-[25vw] [body.nav-open_&amp;]:visible [body.nav-open_&amp;]:bottom-0 [body.nav-open_&amp;]:z-nav-menu [body.nav-open_&amp;]:h-full [body.nav-open_&amp;]:w-full [body.nav-open_&amp;]:transform-[translateX(0)] [body.nav-open_&amp;]:overflow-y-auto [body.nav-open_&amp;]:pt-20 [body.nav-open_&amp;]:pr-[16%] [body.nav-open_&amp;]:pb-5 [body.nav-open_&amp;]:pl-[12%] [body.nav-open_&amp;]:opacity-100 [body.nav-open_&amp;]:drop-shadow-2xl [body.nav-open_&amp;]:tablet:px-10 [body.nav-open_&amp;]:tablet:pt-40 [body.nav-open_&amp;]:laptop:px-20"
+                  data-nav-menu="true"
+                  id="nav-menu"
                 >
                   <li
                     class="block w-1/2 text-2xl whitespace-nowrap laptop:w-full"
@@ -511,11 +519,11 @@
                     </ol>
                   </li>
                 </ul>
-              </div>
+              </nav>
             </div>
           </header>
           <main
-            class="grow min-[381px]:group-has-[[data-drawer]:checked]:before:absolute min-[381px]:group-has-[[data-drawer]:checked]:before:top-0 min-[381px]:group-has-[[data-drawer]:checked]:before:left-0 min-[381px]:group-has-[[data-drawer]:checked]:before:z-10 min-[381px]:group-has-[[data-drawer]:checked]:before:size-full min-[381px]:group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)] tablet-landscape:group-has-[[data-drawer]:checked]:before:hidden bg-subtle"
+            class="grow bg-subtle"
             id="content"
             data-pagefind-body="true"
             data-pagefind-meta="image:/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"
@@ -565,454 +573,434 @@
               </div>
             </header>
             <div
-              class="group/list-with-filters mx-auto flex flex-col items-center bg-default"
+              class="group/list-with-filters mx-auto grid bg-subtle tablet:grid-cols-[var(--container-padding)_1fr_var(--container-padding)] tablet-landscape:grid-cols-[var(--container-padding)_1fr_var(--container-padding)_minmax(398px,calc(33%_-_96px))_var(--container-padding)]"
             >
-              <div class="mx-auto flex w-full flex-col items-stretch">
-                <div class="flex grow flex-col bg-subtle">
-                  <div class="relative tablet:px-12 tablet-landscape:px-0">
-                    <div
-                      class="sticky top-0 z-10 row-start-1 border-b border-default bg-default text-xs tablet:-mx-12 tablet:px-0 tablet-landscape:static tablet-landscape:col-span-3 tablet-landscape:mx-0 tablet-landscape:w-full tablet-landscape:border-none"
-                    >
-                      <div
-                        class="mx-auto flex w-full max-w-(--breakpoint-desktop) flex-wrap items-baseline justify-end gap-x-2 gap-y-5 px-container py-10 font-sans font-medium tracking-wide text-subtle uppercase tablet:gap-x-4 tablet-landscape:static tablet-landscape:flex-wrap tablet-landscape:justify-start"
+              <div
+                class="sticky top-0 z-sticky border-b border-default bg-default text-xs tablet:col-span-full"
+              >
+                <input
+                  class="hidden"
+                  data-drawer="true"
+                  id="hiddenState"
+                  type="checkbox"
+                />
+                <div
+                  class="grid grid-cols-[auto_auto_1fr_auto] items-baseline gap-y-7 px-container py-10 font-sans font-medium tracking-wide text-subtle uppercase tablet:grid-cols-[auto_auto_1fr_auto_auto] tablet:gap-x-4 tablet-landscape:grid-cols-[auto_auto_1fr_minmax(302px,calc(33%_-_192px))_auto]"
+                >
+                  <span class="text-nowrap"
+                    ><span class="font-semibold text-default">4</span
+                    ><span class="text-xxs leading-none tracking-wide">
+                      Results</span
+                    ></span
+                  >
+                  <div class=""></div>
+                  <div
+                    class="col-span-full tablet:col-span-1 tablet:col-start-4"
+                  >
+                    <label
+                      class="flex items-baseline gap-x-4 text-xxs font-semibold tracking-wide text-subtle"
+                      >Sort<!-- -->
+                      <select
+                        class="flex w-full appearance-none border-none bg-default py-2 pr-4 pl-4 font-serif text-base font-normal tracking-normal overflow-ellipsis text-default shadow-all outline-accent"
                       >
-                        <span class="mr-auto block grow-0"
-                          ><span class="font-semibold text-default">4</span
-                          ><span class="text-xxs leading-none tracking-wide">
-                            Results</span
-                          ></span
-                        >
-                        <div
-                          class="order-last w-full tablet:order-none tablet:w-auto tablet:max-w-1/3 tablet:min-w-[280px] tablet:grow tablet-landscape:max-w-1/3"
-                        >
-                          <label
-                            class="flex items-baseline gap-x-4 text-xxs font-semibold tracking-wide text-subtle"
-                            >Sort<!-- -->
-                            <select
-                              class="flex w-full appearance-none border-none bg-default py-2 pr-4 pl-4 font-serif text-base font-normal tracking-normal text-default shadow-all outline-accent tablet-landscape:font-serif tablet-landscape:text-base"
-                            >
-                              <option value="release-date-desc">
-                                Release Date (Newest First)
-                              </option>
-                              <option value="release-date-asc" selected="">
-                                Release Date (Oldest First)
-                              </option>
-                              <option value="title">Title</option>
-                              <option value="grade-desc">
-                                Grade (Best First)
-                              </option>
-                              <option value="grade-asc">
-                                Grade (Worst First)
-                              </option>
-                              <option value="review-date-desc">
-                                Review Date (Newest First)
-                              </option>
-                              <option value="review-date-asc">
-                                Review Date (Oldest First)
-                              </option>
-                            </select></label
-                          >
-                        </div>
-                        <input
-                          class="hidden"
-                          data-drawer="true"
-                          id="filters"
-                          type="checkbox"
-                        /><label
-                          class="relative z-40 flex transform-gpu cursor-pointer items-center justify-center gap-x-4 bg-canvas px-4 py-2 text-nowrap text-muted uppercase shadow-all transition-transform hover:scale-110 tablet-landscape:hidden"
-                          for="filters"
-                          >Filter</label
-                        >
+                        <option value="release-date-desc">
+                          Release Date (Newest First)
+                        </option>
+                        <option value="release-date-asc" selected="">
+                          Release Date (Oldest First)
+                        </option>
+                        <option value="title">Title</option>
+                        <option value="grade-desc">Grade (Best First)</option>
+                        <option value="grade-asc">Grade (Worst First)</option>
+                        <option value="review-date-desc">
+                          Review Date (Newest First)
+                        </option>
+                        <option value="review-date-asc">
+                          Review Date (Oldest First)
+                        </option>
+                      </select></label
+                    >
+                  </div>
+                  <a
+                    class="col-start-4 row-start-1 flex transform-gpu cursor-pointer items-center justify-center gap-x-4 bg-canvas px-4 py-2 text-nowrap text-muted uppercase shadow-all transition-transform hover:scale-110 tablet:col-start-5 tablet:w-20"
+                    href="#filters"
+                    >Filter</a
+                  >
+                </div>
+              </div>
+              <div
+                class="scroll-mt-[181px] pb-10 tablet:col-start-2 tablet:row-start-2 tablet:scroll-mt-[121px]"
+                id="list"
+              >
+                <ol class="" data-testid="list">
+                  <li class="block" id="2006">
+                    <div class="pt-0 text-md" style="z-index: 1">
+                      <div
+                        class="max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl leading-8 tablet:px-1"
+                      >
+                        2006
                       </div>
                     </div>
-                    <div
-                      class="mx-auto max-w-(--breakpoint-desktop) grid-cols-[1fr_48px_minmax(398px,33%)] tablet-landscape:grid tablet-landscape:grid-rows-[auto_1fr]"
-                    >
-                      <div
-                        class="fixed top-0 right-0 col-start-3 row-span-2 row-start-2 flex h-full w-0 max-w-[380px] transform-[translateX(100%)] flex-col items-start gap-y-5 overflow-hidden bg-default text-left text-inverse duration-200 ease-in-out group-has-[#filters:checked]/list-with-filters:bottom-0 group-has-[#filters:checked]/list-with-filters:z-60 group-has-[#filters:checked]/list-with-filters:h-full group-has-[#filters:checked]/list-with-filters:w-full group-has-[#filters:checked]/list-with-filters:transform-[translateX(0)] group-has-[#filters:checked]/list-with-filters:overflow-y-auto group-has-[#filters:checked]/list-with-filters:drop-shadow-2xl tablet:gap-y-10 tablet-landscape:relative tablet-landscape:mr-12 tablet-landscape:block tablet-landscape:w-auto tablet-landscape:max-w-unset tablet-landscape:min-w-[320px] tablet-landscape:transform-none tablet-landscape:bg-inherit tablet-landscape:py-24 tablet-landscape:pb-12 tablet-landscape:drop-shadow-none laptop:mr-20"
-                      >
-                        <div
-                          class="flex h-full w-full flex-col text-sm tablet:pt-12 tablet:text-base tablet-landscape:h-auto tablet-landscape:overflow-visible tablet-landscape:bg-default tablet-landscape:px-container tablet-landscape:pt-0 laptop:px-8"
+                    <div class="bg-subtle">
+                      <ol>
+                        <li
+                          class="bg-default mb-1 flex max-w-(--breakpoint-desktop) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 laptop:px-6 group/list-item relative transform-gpu transition-transform tablet-landscape:has-[a:hover]:z-hover tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl"
                         >
-                          <fieldset
-                            class="flex grow flex-col gap-5 px-container pb-4 tablet:gap-8 tablet-landscape:mt-0 tablet-landscape:gap-12 tablet-landscape:px-0 tablet-landscape:py-10"
-                          >
-                            <legend
-                              class="mb-5 block w-full pt-4 pb-4 text-lg text-subtle shadow-bottom tablet-landscape:mb-0 tablet-landscape:pt-10 tablet-landscape:pb-0 tablet-landscape:font-sans tablet-landscape:text-xxs tablet-landscape:font-semibold tablet-landscape:tracking-wide tablet-landscape:uppercase tablet-landscape:shadow-none"
-                            >
-                              Filter
-                            </legend>
-                            <label class="flex flex-col text-subtle"
-                              ><span
-                                class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
-                                >Title</span
-                              ><input
-                                class="border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
-                                placeholder="Enter all or part of a title"
-                                type="text"
-                            /></label>
-                            <fieldset class="text-subtle">
-                              <legend
-                                class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
-                              >
-                                Release Year
-                              </legend>
-                              <div class="flex items-baseline">
-                                <label
-                                  class="flex flex-1 items-center gap-x-[.5ch]"
-                                  ><span
-                                    class="min-w-10 text-left text-sm tracking-serif-wide"
-                                    >From</span
-                                  ><select
-                                    class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
-                                  >
-                                    <option value="2006" selected="">
-                                      2006
-                                    </option>
-                                    <option value="2010">2010</option>
-                                    <option value="2013">2013</option>
-                                    <option value="2017">2017</option>
-                                  </select></label
-                                ><label class="flex flex-1 items-center"
-                                  ><span
-                                    class="min-w-10 text-center text-sm tracking-serif-wide"
-                                    >to</span
-                                  ><select
-                                    class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
-                                  >
-                                    <option value="2017" selected="">
-                                      2017
-                                    </option>
-                                    <option value="2013">2013</option>
-                                    <option value="2010">2010</option>
-                                    <option value="2006">2006</option>
-                                  </select></label
-                                >
-                              </div>
-                            </fieldset>
-                            <fieldset class="text-subtle">
-                              <legend
-                                class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
-                              >
-                                Review Year
-                              </legend>
-                              <div class="flex items-baseline">
-                                <label
-                                  class="flex flex-1 items-center gap-x-[.5ch]"
-                                  ><span
-                                    class="min-w-10 text-left text-sm tracking-serif-wide"
-                                    >From</span
-                                  ><select
-                                    class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
-                                  >
-                                    <option value="2020" selected="">
-                                      2020
-                                    </option>
-                                    <option value="2021">2021</option>
-                                  </select></label
-                                ><label class="flex flex-1 items-center"
-                                  ><span
-                                    class="min-w-10 text-center text-sm tracking-serif-wide"
-                                    >to</span
-                                  ><select
-                                    class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
-                                  >
-                                    <option value="2021" selected="">
-                                      2021
-                                    </option>
-                                    <option value="2020">2020</option>
-                                  </select></label
-                                >
-                              </div>
-                            </fieldset>
-                          </fieldset>
                           <div
-                            class="sticky bottom-0 z-40 mt-auto w-full self-end border-t border-t-default bg-default px-8 py-4 drop-shadow-2xl tablet-landscape:hidden"
+                            class="relative after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
                           >
-                            <label
-                              class="flex cursor-pointer items-center justify-center gap-x-4 bg-footer px-4 py-3 font-sans text-xs text-nowrap text-inverse uppercase tablet-landscape:hidden"
-                              for="filters"
-                              >View
-                              <!-- -->4<!-- -->
-                              Results</label
-                            >
+                            <div class="w-list-item-poster shrink-0">
+                              <img
+                                src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=80&amp;h=113&amp;q=80&amp;f=avif"
+                                srcset="
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=20&amp;h=28&amp;q=80&amp;f=avif    20w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=40&amp;h=57&amp;q=80&amp;f=avif    40w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=80&amp;h=113&amp;q=80&amp;f=avif   80w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=160&amp;h=226&amp;q=80&amp;f=avif 160w
+                                "
+                                alt=""
+                                height="113"
+                                sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                                width="80"
+                                class="aspect-poster drop-shadow-sm"
+                                decoding="async"
+                                loading="lazy"
+                              />
+                            </div>
                           </div>
-                        </div>
-                      </div>
+                          <div
+                            class="flex grow flex-col items-start gap-y-2 tablet:w-full laptop:pr-4"
+                          >
+                            <a
+                              class="font-sans text-sm font-medium text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                              href="/reviews/hatchet-2006/"
+                              >Hatchet<!-- -->  <span
+                                class="text-xxs leading-none font-light text-subtle tablet:text-xs"
+                                >2006</span
+                              ></a
+                            ><picture
+                              ><source
+                                media="(prefers-color-scheme: dark)"
+                                srcset="/svg/3-stars-dark.svg" />
+                              <img
+                                alt="C: 3 stars (out of 5)"
+                                class="mb-1"
+                                height="16"
+                                src="/svg/3-stars.svg"
+                                width="80"
+                            /></picture>
+                            <div
+                              class="font-sans text-xs leading-4 font-light text-subtle"
+                            >
+                              2020-Sep-19
+                            </div>
+                          </div>
+                        </li>
+                      </ol>
+                    </div>
+                  </li>
+                  <li class="block" id="2010">
+                    <div class="pt-0 text-md" style="z-index: 2">
                       <div
-                        class="col-start-1 row-start-2 pb-10 tablet-landscape:pl-12 laptop:pl-20"
+                        class="max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl leading-8 tablet:px-1"
                       >
-                        <ol class="" data-testid="list">
-                          <li class="block" id="2006">
-                            <div class="pt-0 text-md" style="z-index: 1">
-                              <div
-                                class="max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl leading-8 tablet:px-4"
-                              >
-                                2006
-                              </div>
-                            </div>
-                            <div class="bg-subtle">
-                              <ol>
-                                <li
-                                  class="bg-default mb-1 flex max-w-(--breakpoint-desktop) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 laptop:px-6 group/list-item relative transform-gpu transition-transform tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl"
-                                >
-                                  <div
-                                    class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
-                                  >
-                                    <div class="w-list-item-poster shrink-0">
-                                      <img
-                                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=80&amp;h=113&amp;q=80&amp;f=avif"
-                                        srcset="
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=20&amp;h=28&amp;q=80&amp;f=avif    20w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=40&amp;h=57&amp;q=80&amp;f=avif    40w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=80&amp;h=113&amp;q=80&amp;f=avif   80w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=160&amp;h=226&amp;q=80&amp;f=avif 160w
-                                        "
-                                        alt=""
-                                        height="113"
-                                        sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                                        width="80"
-                                        class="aspect-poster drop-shadow-sm"
-                                        decoding="async"
-                                        loading="lazy"
-                                      />
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="flex grow flex-col items-start gap-y-2 tablet:w-full laptop:pr-4"
-                                  >
-                                    <a
-                                      class="font-sans text-sm font-medium text-accent after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0"
-                                      href="/reviews/hatchet-2006/"
-                                      >Hatchet<!-- -->  <span
-                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
-                                        >2006</span
-                                      ></a
-                                    ><picture
-                                      ><source
-                                        media="(prefers-color-scheme: dark)"
-                                        srcset="/svg/3-stars-dark.svg" />
-                                      <img
-                                        alt="C: 3 stars (out of 5)"
-                                        class="mb-1"
-                                        height="16"
-                                        src="/svg/3-stars.svg"
-                                        width="80"
-                                    /></picture>
-                                    <div
-                                      class="font-sans text-xs leading-4 font-light text-subtle"
-                                    >
-                                      2020-Sep-19
-                                    </div>
-                                  </div>
-                                </li>
-                              </ol>
-                            </div>
-                          </li>
-                          <li class="block" id="2010">
-                            <div class="pt-0 text-md" style="z-index: 2">
-                              <div
-                                class="max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl leading-8 tablet:px-4"
-                              >
-                                2010
-                              </div>
-                            </div>
-                            <div class="bg-subtle">
-                              <ol>
-                                <li
-                                  class="bg-default mb-1 flex max-w-(--breakpoint-desktop) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 laptop:px-6 group/list-item relative transform-gpu transition-transform tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl"
-                                >
-                                  <div
-                                    class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
-                                  >
-                                    <div class="w-list-item-poster shrink-0">
-                                      <img
-                                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=80&amp;h=113&amp;q=80&amp;f=avif"
-                                        srcset="
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=20&amp;h=28&amp;q=80&amp;f=avif    20w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=40&amp;h=57&amp;q=80&amp;f=avif    40w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=80&amp;h=113&amp;q=80&amp;f=avif   80w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=160&amp;h=226&amp;q=80&amp;f=avif 160w
-                                        "
-                                        alt=""
-                                        height="113"
-                                        sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                                        width="80"
-                                        class="aspect-poster drop-shadow-sm"
-                                        decoding="async"
-                                        loading="lazy"
-                                      />
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="flex grow flex-col items-start gap-y-2 tablet:w-full laptop:pr-4"
-                                  >
-                                    <a
-                                      class="font-sans text-sm font-medium text-accent after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0"
-                                      href="/reviews/hatchet-ii-2010/"
-                                      >Hatchet II<!-- -->  <span
-                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
-                                        >2010</span
-                                      ></a
-                                    ><picture
-                                      ><source
-                                        media="(prefers-color-scheme: dark)"
-                                        srcset="/svg/2-half-stars-dark.svg" />
-                                      <img
-                                        alt="C-: 2.5 stars (out of 5)"
-                                        class="mb-1"
-                                        height="16"
-                                        src="/svg/2-half-stars.svg"
-                                        width="80"
-                                    /></picture>
-                                    <div
-                                      class="font-sans text-xs leading-4 font-light text-subtle"
-                                    >
-                                      2020-Oct-15
-                                    </div>
-                                  </div>
-                                </li>
-                              </ol>
-                            </div>
-                          </li>
-                          <li class="block" id="2013">
-                            <div class="pt-0 text-md" style="z-index: 3">
-                              <div
-                                class="max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl leading-8 tablet:px-4"
-                              >
-                                2013
-                              </div>
-                            </div>
-                            <div class="bg-subtle">
-                              <ol>
-                                <li
-                                  class="bg-default mb-1 flex max-w-(--breakpoint-desktop) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 laptop:px-6 group/list-item relative transform-gpu transition-transform tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl"
-                                >
-                                  <div
-                                    class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
-                                  >
-                                    <div class="w-list-item-poster shrink-0">
-                                      <img
-                                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=80&amp;h=113&amp;q=80&amp;f=avif"
-                                        srcset="
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=20&amp;h=28&amp;q=80&amp;f=avif    20w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=40&amp;h=57&amp;q=80&amp;f=avif    40w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=80&amp;h=113&amp;q=80&amp;f=avif   80w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=160&amp;h=226&amp;q=80&amp;f=avif 160w
-                                        "
-                                        alt=""
-                                        height="113"
-                                        sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                                        width="80"
-                                        class="aspect-poster drop-shadow-sm"
-                                        decoding="async"
-                                        loading="lazy"
-                                      />
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="flex grow flex-col items-start gap-y-2 tablet:w-full laptop:pr-4"
-                                  >
-                                    <a
-                                      class="font-sans text-sm font-medium text-accent after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0"
-                                      href="/reviews/hatchet-iii-2013/"
-                                      >Hatchet III<!-- -->  <span
-                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
-                                        >2013</span
-                                      ></a
-                                    ><picture
-                                      ><source
-                                        media="(prefers-color-scheme: dark)"
-                                        srcset="/svg/3-stars-dark.svg" />
-                                      <img
-                                        alt="C+: 3 stars (out of 5)"
-                                        class="mb-1"
-                                        height="16"
-                                        src="/svg/3-stars.svg"
-                                        width="80"
-                                    /></picture>
-                                    <div
-                                      class="font-sans text-xs leading-4 font-light text-subtle"
-                                    >
-                                      2020-Nov-19
-                                    </div>
-                                  </div>
-                                </li>
-                              </ol>
-                            </div>
-                          </li>
-                          <li class="block" id="2017">
-                            <div class="pt-0 text-md" style="z-index: 4">
-                              <div
-                                class="max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl leading-8 tablet:px-4"
-                              >
-                                2017
-                              </div>
-                            </div>
-                            <div class="bg-subtle">
-                              <ol>
-                                <li
-                                  class="bg-default mb-1 flex max-w-(--breakpoint-desktop) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 laptop:px-6 group/list-item relative transform-gpu transition-transform tablet-landscape:has-[a:hover]:z-30 tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl"
-                                >
-                                  <div
-                                    class="relative after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
-                                  >
-                                    <div class="w-list-item-poster shrink-0">
-                                      <img
-                                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=80&amp;h=113&amp;q=80&amp;f=avif"
-                                        srcset="
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=20&amp;h=28&amp;q=80&amp;f=avif    20w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=40&amp;h=57&amp;q=80&amp;f=avif    40w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=80&amp;h=113&amp;q=80&amp;f=avif   80w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=160&amp;h=226&amp;q=80&amp;f=avif 160w
-                                        "
-                                        alt=""
-                                        height="113"
-                                        sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                                        width="80"
-                                        class="aspect-poster drop-shadow-sm"
-                                        decoding="async"
-                                        loading="lazy"
-                                      />
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="flex grow flex-col items-start gap-y-2 tablet:w-full laptop:pr-4"
-                                  >
-                                    <a
-                                      class="font-sans text-sm font-medium text-accent after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0"
-                                      href="/reviews/victor-crowley-2017/"
-                                      >Victor Crowley<!-- -->  <span
-                                        class="text-xxs leading-none font-light text-subtle tablet:text-xs"
-                                        >2017</span
-                                      ></a
-                                    ><picture
-                                      ><source
-                                        media="(prefers-color-scheme: dark)"
-                                        srcset="/svg/2-stars-dark.svg" />
-                                      <img
-                                        alt="D+: 2 stars (out of 5)"
-                                        class="mb-1"
-                                        height="16"
-                                        src="/svg/2-stars.svg"
-                                        width="80"
-                                    /></picture>
-                                    <div
-                                      class="font-sans text-xs leading-4 font-light text-subtle"
-                                    >
-                                      2021-Jan-16
-                                    </div>
-                                  </div>
-                                </li>
-                              </ol>
-                            </div>
-                          </li>
-                        </ol>
-                        <div
-                          class="flex flex-col items-center px-container py-10"
-                        ></div>
+                        2010
                       </div>
                     </div>
+                    <div class="bg-subtle">
+                      <ol>
+                        <li
+                          class="bg-default mb-1 flex max-w-(--breakpoint-desktop) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 laptop:px-6 group/list-item relative transform-gpu transition-transform tablet-landscape:has-[a:hover]:z-hover tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl"
+                        >
+                          <div
+                            class="relative after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
+                          >
+                            <div class="w-list-item-poster shrink-0">
+                              <img
+                                src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=80&amp;h=113&amp;q=80&amp;f=avif"
+                                srcset="
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=20&amp;h=28&amp;q=80&amp;f=avif    20w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=40&amp;h=57&amp;q=80&amp;f=avif    40w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=80&amp;h=113&amp;q=80&amp;f=avif   80w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=160&amp;h=226&amp;q=80&amp;f=avif 160w
+                                "
+                                alt=""
+                                height="113"
+                                sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                                width="80"
+                                class="aspect-poster drop-shadow-sm"
+                                decoding="async"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="flex grow flex-col items-start gap-y-2 tablet:w-full laptop:pr-4"
+                          >
+                            <a
+                              class="font-sans text-sm font-medium text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                              href="/reviews/hatchet-ii-2010/"
+                              >Hatchet II<!-- -->  <span
+                                class="text-xxs leading-none font-light text-subtle tablet:text-xs"
+                                >2010</span
+                              ></a
+                            ><picture
+                              ><source
+                                media="(prefers-color-scheme: dark)"
+                                srcset="/svg/2-half-stars-dark.svg" />
+                              <img
+                                alt="C-: 2.5 stars (out of 5)"
+                                class="mb-1"
+                                height="16"
+                                src="/svg/2-half-stars.svg"
+                                width="80"
+                            /></picture>
+                            <div
+                              class="font-sans text-xs leading-4 font-light text-subtle"
+                            >
+                              2020-Oct-15
+                            </div>
+                          </div>
+                        </li>
+                      </ol>
+                    </div>
+                  </li>
+                  <li class="block" id="2013">
+                    <div class="pt-0 text-md" style="z-index: 3">
+                      <div
+                        class="max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl leading-8 tablet:px-1"
+                      >
+                        2013
+                      </div>
+                    </div>
+                    <div class="bg-subtle">
+                      <ol>
+                        <li
+                          class="bg-default mb-1 flex max-w-(--breakpoint-desktop) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 laptop:px-6 group/list-item relative transform-gpu transition-transform tablet-landscape:has-[a:hover]:z-hover tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl"
+                        >
+                          <div
+                            class="relative after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
+                          >
+                            <div class="w-list-item-poster shrink-0">
+                              <img
+                                src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=80&amp;h=113&amp;q=80&amp;f=avif"
+                                srcset="
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=20&amp;h=28&amp;q=80&amp;f=avif    20w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=40&amp;h=57&amp;q=80&amp;f=avif    40w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=80&amp;h=113&amp;q=80&amp;f=avif   80w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=160&amp;h=226&amp;q=80&amp;f=avif 160w
+                                "
+                                alt=""
+                                height="113"
+                                sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                                width="80"
+                                class="aspect-poster drop-shadow-sm"
+                                decoding="async"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="flex grow flex-col items-start gap-y-2 tablet:w-full laptop:pr-4"
+                          >
+                            <a
+                              class="font-sans text-sm font-medium text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                              href="/reviews/hatchet-iii-2013/"
+                              >Hatchet III<!-- -->  <span
+                                class="text-xxs leading-none font-light text-subtle tablet:text-xs"
+                                >2013</span
+                              ></a
+                            ><picture
+                              ><source
+                                media="(prefers-color-scheme: dark)"
+                                srcset="/svg/3-stars-dark.svg" />
+                              <img
+                                alt="C+: 3 stars (out of 5)"
+                                class="mb-1"
+                                height="16"
+                                src="/svg/3-stars.svg"
+                                width="80"
+                            /></picture>
+                            <div
+                              class="font-sans text-xs leading-4 font-light text-subtle"
+                            >
+                              2020-Nov-19
+                            </div>
+                          </div>
+                        </li>
+                      </ol>
+                    </div>
+                  </li>
+                  <li class="block" id="2017">
+                    <div class="pt-0 text-md" style="z-index: 4">
+                      <div
+                        class="max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl leading-8 tablet:px-1"
+                      >
+                        2017
+                      </div>
+                    </div>
+                    <div class="bg-subtle">
+                      <ol>
+                        <li
+                          class="bg-default mb-1 flex max-w-(--breakpoint-desktop) flex-row gap-x-4 px-container py-4 tablet:gap-x-6 tablet:px-4 laptop:px-6 group/list-item relative transform-gpu transition-transform tablet-landscape:has-[a:hover]:z-hover tablet-landscape:has-[a:hover]:scale-105 tablet-landscape:has-[a:hover]:shadow-all tablet-landscape:has-[a:hover]:drop-shadow-2xl"
+                        >
+                          <div
+                            class="relative after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0"
+                          >
+                            <div class="w-list-item-poster shrink-0">
+                              <img
+                                src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=80&amp;h=113&amp;q=80&amp;f=avif"
+                                srcset="
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=20&amp;h=28&amp;q=80&amp;f=avif    20w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=40&amp;h=57&amp;q=80&amp;f=avif    40w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=80&amp;h=113&amp;q=80&amp;f=avif   80w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=160&amp;h=226&amp;q=80&amp;f=avif 160w
+                                "
+                                alt=""
+                                height="113"
+                                sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                                width="80"
+                                class="aspect-poster drop-shadow-sm"
+                                decoding="async"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="flex grow flex-col items-start gap-y-2 tablet:w-full laptop:pr-4"
+                          >
+                            <a
+                              class="font-sans text-sm font-medium text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                              href="/reviews/victor-crowley-2017/"
+                              >Victor Crowley<!-- -->  <span
+                                class="text-xxs leading-none font-light text-subtle tablet:text-xs"
+                                >2017</span
+                              ></a
+                            ><picture
+                              ><source
+                                media="(prefers-color-scheme: dark)"
+                                srcset="/svg/2-stars-dark.svg" />
+                              <img
+                                alt="D+: 2 stars (out of 5)"
+                                class="mb-1"
+                                height="16"
+                                src="/svg/2-stars.svg"
+                                width="80"
+                            /></picture>
+                            <div
+                              class="font-sans text-xs leading-4 font-light text-subtle"
+                            >
+                              2021-Jan-16
+                            </div>
+                          </div>
+                        </li>
+                      </ol>
+                    </div>
+                  </li>
+                </ol>
+                <div
+                  class="flex flex-col items-center px-container py-10"
+                ></div>
+              </div>
+              <div
+                class="fixed top-0 right-0 z-filter-drawer flex h-full max-w-[380px] flex-col items-start gap-y-5 bg-default text-left text-inverse duration-200 ease-in-out w-0 transform-[translateX(100%)] overflow-y-hidden tablet:gap-y-10 tablet-landscape:relative tablet-landscape:z-auto tablet-landscape:col-start-4 tablet-landscape:block tablet-landscape:w-auto tablet-landscape:max-w-unset tablet-landscape:min-w-[320px] tablet-landscape:transform-none tablet-landscape:bg-inherit tablet-landscape:py-24 tablet-landscape:pb-12 tablet-landscape:drop-shadow-none"
+                id="filters"
+              >
+                <div
+                  class="flex h-full w-full flex-col text-sm tablet:pt-12 tablet:text-base tablet-landscape:h-auto tablet-landscape:overflow-visible tablet-landscape:bg-default tablet-landscape:px-container tablet-landscape:pt-0 laptop:px-8"
+                >
+                  <fieldset
+                    class="flex grow flex-col gap-5 px-container pb-4 tablet:gap-8 tablet-landscape:mt-0 tablet-landscape:gap-12 tablet-landscape:px-0 tablet-landscape:py-10"
+                  >
+                    <legend
+                      class="mb-5 block w-full pt-4 pb-4 text-lg text-subtle shadow-bottom tablet-landscape:mb-0 tablet-landscape:pt-10 tablet-landscape:pb-0 tablet-landscape:font-sans tablet-landscape:text-xxs tablet-landscape:font-semibold tablet-landscape:tracking-wide tablet-landscape:uppercase tablet-landscape:shadow-none"
+                    >
+                      Filter
+                    </legend>
+                    <label class="flex flex-col text-subtle"
+                      ><span
+                        class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
+                        >Title</span
+                      ><input
+                        class="border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
+                        placeholder="Enter all or part of a title"
+                        type="text"
+                    /></label>
+                    <fieldset class="text-subtle">
+                      <legend
+                        class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
+                      >
+                        Release Year
+                      </legend>
+                      <div class="flex items-baseline">
+                        <label class="flex flex-1 items-center gap-x-[.5ch]"
+                          ><span
+                            class="min-w-10 text-left text-sm tracking-serif-wide"
+                            >From</span
+                          ><select
+                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                          >
+                            <option value="2006" selected="">2006</option>
+                            <option value="2010">2010</option>
+                            <option value="2013">2013</option>
+                            <option value="2017">2017</option>
+                          </select></label
+                        ><label class="flex flex-1 items-center"
+                          ><span
+                            class="min-w-10 text-center text-sm tracking-serif-wide"
+                            >to</span
+                          ><select
+                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                          >
+                            <option value="2017" selected="">2017</option>
+                            <option value="2013">2013</option>
+                            <option value="2010">2010</option>
+                            <option value="2006">2006</option>
+                          </select></label
+                        >
+                      </div>
+                    </fieldset>
+                    <fieldset class="text-subtle">
+                      <legend
+                        class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
+                      >
+                        Review Year
+                      </legend>
+                      <div class="flex items-baseline">
+                        <label class="flex flex-1 items-center gap-x-[.5ch]"
+                          ><span
+                            class="min-w-10 text-left text-sm tracking-serif-wide"
+                            >From</span
+                          ><select
+                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                          >
+                            <option value="2020" selected="">2020</option>
+                            <option value="2021">2021</option>
+                          </select></label
+                        ><label class="flex flex-1 items-center"
+                          ><span
+                            class="min-w-10 text-center text-sm tracking-serif-wide"
+                            >to</span
+                          ><select
+                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                          >
+                            <option value="2021" selected="">2021</option>
+                            <option value="2020">2020</option>
+                          </select></label
+                        >
+                      </div>
+                    </fieldset>
+                  </fieldset>
+                  <div
+                    class="sticky bottom-0 z-filter-footer mt-auto w-full self-end border-t border-t-default bg-default px-8 py-4 drop-shadow-2xl tablet-landscape:hidden"
+                  >
+                    <a
+                      class="flex cursor-pointer items-center justify-center gap-x-4 bg-footer px-4 py-3 font-sans text-xs text-nowrap text-inverse uppercase tablet-landscape:hidden"
+                      href="#list"
+                      >View
+                      <!-- -->4<!-- -->
+                      Results</a
+                    >
                   </div>
                 </div>
               </div>
@@ -1263,7 +1251,7 @@
     >
       <div class="contents" data-dialog-frame>
         <button
-          class="absolute right-[var(--search-dialog-padding)] z-10 mt-5 h-[calc(24px_*_var(---pagefind-ui-scale))] cursor-pointer border-none bg-subtle px-2 font-mono text-xs font-light text-muted hover:bg-inverse hover:text-inverse focus:outline-accent"
+          class="absolute right-[var(--search-dialog-padding)] z-sticky mt-5 h-[calc(24px_*_var(---pagefind-ui-scale))] cursor-pointer border-none bg-subtle px-2 font-mono text-xs font-light text-muted hover:bg-inverse hover:text-inverse focus:outline-accent"
           data-close-modal
         >
           ESC
@@ -1287,6 +1275,10 @@
     <script
       type="module"
       src="/src/layouts/Layout.astro?astro&type=script&index=0&lang.ts"
+    ></script>
+    <script
+      type="module"
+      src="/Users/frank/Developer/franksmovielog.com/src/layouts/Layout.astro?astro&type=script&index=1&lang.ts"
     ></script>
   </body>
 </html>

@@ -7,7 +7,7 @@ exports[`Home > matches snapshot 1`] = `
   >
     <a
       class="
-          absolute top-0.5 left-1/2 z-50 mx-auto
+          absolute top-0.5 left-1/2 z-skip-link mx-auto
           [transform:translate(-50%,calc(-100%-2px))]
           bg-subtle px-6 py-2 text-center text-accent
           focus:[transform:translate(-50%,0%)]
@@ -45,8 +45,8 @@ exports[`Home > matches snapshot 1`] = `
                 class="
         block leading-10 tracking-serif-wide whitespace-nowrap
         transition-transform
-        group-has-[#nav:checked]:opacity-0
         has-[a:hover]:scale-105
+        [body.nav-open_&]:opacity-0
       "
               >
                 <a
@@ -61,8 +61,8 @@ exports[`Home > matches snapshot 1`] = `
                 class="
         block leading-10 tracking-serif-wide whitespace-nowrap
         transition-transform
-        group-has-[#nav:checked]:opacity-0
         has-[a:hover]:scale-105
+        [body.nav-open_&]:opacity-0
       "
               >
                 <a
@@ -77,8 +77,8 @@ exports[`Home > matches snapshot 1`] = `
                 class="
         block leading-10 tracking-serif-wide whitespace-nowrap
         transition-transform
-        group-has-[#nav:checked]:opacity-0
         has-[a:hover]:scale-105
+        [body.nav-open_&]:opacity-0
       "
               >
                 <a
@@ -93,8 +93,8 @@ exports[`Home > matches snapshot 1`] = `
                 class="
         block leading-10 tracking-serif-wide whitespace-nowrap
         transition-transform
-        group-has-[#nav:checked]:opacity-0
         has-[a:hover]:scale-105
+        [body.nav-open_&]:opacity-0
       "
               >
                 <a
@@ -109,8 +109,8 @@ exports[`Home > matches snapshot 1`] = `
                 class="
         block leading-10 tracking-serif-wide whitespace-nowrap
         transition-transform
-        group-has-[#nav:checked]:opacity-0
         has-[a:hover]:scale-105
+        [body.nav-open_&]:opacity-0
       "
               >
                 <a
@@ -126,8 +126,8 @@ exports[`Home > matches snapshot 1`] = `
           <div
             class="
         z-1000 transform-gpu transition-transform
-        group-has-[#nav:checked]:!text-[#fff]
         hover:scale-105
+        [body.nav-open_&]:!text-[#fff]
       "
           >
             <button
@@ -144,6 +144,7 @@ exports[`Home > matches snapshot 1`] = `
               type="button"
             >
               <svg
+                aria-hidden="true"
                 class="size-7"
                 fill="none"
                 stroke="currentColor"
@@ -160,61 +161,69 @@ exports[`Home > matches snapshot 1`] = `
             </button>
           </div>
           <div
-            class="group"
-          >
-            <input
-              class="hidden"
-              data-drawer="true"
-              id="nav"
-              type="checkbox"
-            />
-            <label
-              class="
+            class="
+          invisible fixed inset-0 bg-[rgba(0,0,0,.4)] opacity-0
+          transition-opacity duration-200
+          [body.nav-open_&]:tablet:visible
+          [body.nav-open_&]:tablet:z-nav-backdrop
+          [body.nav-open_&]:tablet:opacity-100
+        "
+            data-nav-backdrop="true"
+          />
+          <button
+            aria-controls="nav-menu"
+            aria-expanded="false"
+            aria-label="Toggle navigation menu"
+            class="
           relative z-40 ml-2 flex h-10 w-10 transform-gpu cursor-pointer
           items-center justify-center transition-transform
           hover:scale-110
         "
-              for="nav"
-            >
-              <span
-                class="
+            data-nav-toggle="true"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="
             relative flex h-0.5 w-6 origin-center transform-gpu
             transition-[top,bottom,transform] duration-200 ease-in-out
-            group-has-[#nav:checked]:transform-[rotate(45deg)]
-            group-has-[#nav:checked]:!bg-[#fff]
             before:absolute before:-top-2 before:block before:h-0.5 before:w-6
             before:bg-inherit before:transition before:duration-200
             before:ease-in-out
-            group-has-[#nav:checked]:before:top-0
-            group-has-[#nav:checked]:before:transform-[rotate(90deg)]
             after:absolute after:-bottom-2 after:block after:h-0.5 after:w-6
             after:bg-inherit after:transition after:duration-200
             after:ease-in-out
-            group-has-[#nav:checked]:after:bottom-0
-            group-has-[#nav:checked]:after:transform-[rotate(90deg)]
+            [body.nav-open_&]:transform-[rotate(45deg)]
+            [body.nav-open_&]:!bg-[#fff] [body.nav-open_&]:before:top-0
+            [body.nav-open_&]:before:transform-[rotate(90deg)]
+            [body.nav-open_&]:after:bottom-0
+            [body.nav-open_&]:after:transform-[rotate(90deg)]
           "
-                style="background-color: rgb(255, 255, 255);"
-              />
-            </label>
+              style="background-color: rgb(255, 255, 255);"
+            />
+          </button>
+          <nav
+            aria-label="Main navigation"
+          >
             <ul
               class="
-          fixed top-0 right-0 flex h-full w-0 transform-[translateX(100%)]
-          flex-col items-start gap-y-5 overflow-hidden bg-footer text-left
-          text-inverse opacity-0 duration-200 ease-in-out
-          group-has-[#nav:checked]:bottom-0 group-has-[#nav:checked]:z-20
-          group-has-[#nav:checked]:h-full group-has-[#nav:checked]:w-full
-          group-has-[#nav:checked]:transform-[translateX(0)]
-          group-has-[#nav:checked]:overflow-y-auto
-          group-has-[#nav:checked]:pt-20 group-has-[#nav:checked]:pr-[16%]
-          group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%]
-          group-has-[#nav:checked]:opacity-100
-          group-has-[#nav:checked]:drop-shadow-2xl
-          tablet:max-w-[35vw] tablet:gap-y-10
-          group-has-[#nav:checked]:tablet:px-10
-          group-has-[#nav:checked]:tablet:pt-40
-          laptop:max-w-[25vw]
-          group-has-[#nav:checked]:laptop:px-20
-        "
+            invisible fixed top-0 right-0 flex h-full w-0
+            transform-[translateX(100%)] flex-col items-start gap-y-5
+            overflow-hidden bg-footer text-left text-inverse opacity-0
+            duration-200 ease-in-out
+            tablet:max-w-[35vw] tablet:gap-y-10
+            laptop:max-w-[25vw]
+            [body.nav-open_&]:visible [body.nav-open_&]:bottom-0
+            [body.nav-open_&]:z-nav-menu [body.nav-open_&]:h-full
+            [body.nav-open_&]:w-full [body.nav-open_&]:transform-[translateX(0)]
+            [body.nav-open_&]:overflow-y-auto [body.nav-open_&]:pt-20
+            [body.nav-open_&]:pr-[16%] [body.nav-open_&]:pb-5
+            [body.nav-open_&]:pl-[12%] [body.nav-open_&]:opacity-100
+            [body.nav-open_&]:drop-shadow-2xl [body.nav-open_&]:tablet:px-10
+            [body.nav-open_&]:tablet:pt-40 [body.nav-open_&]:laptop:px-20
+          "
+              data-nav-menu="true"
+              id="nav-menu"
             >
               <li
                 class="
@@ -428,20 +437,11 @@ exports[`Home > matches snapshot 1`] = `
                 </ol>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
       </header>
       <main
-        class="
-              grow
-              min-[381px]:group-has-[[data-drawer]:checked]:before:absolute
-              min-[381px]:group-has-[[data-drawer]:checked]:before:top-0
-              min-[381px]:group-has-[[data-drawer]:checked]:before:left-0
-              min-[381px]:group-has-[[data-drawer]:checked]:before:z-10
-              min-[381px]:group-has-[[data-drawer]:checked]:before:size-full
-              min-[381px]:group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
-              tablet-landscape:group-has-[[data-drawer]:checked]:before:hidden
-             bg-subtle pb-8"
+        class="grow bg-subtle pb-8"
         id="content"
       >
         <header
@@ -556,7 +556,8 @@ exports[`Home > matches snapshot 1`] = `
             mb-3 block text-2.5xl leading-7 font-medium
             before:absolute before:inset-x-[8%] before:top-12
             before:aspect-video before:bg-default before:opacity-15
-            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            after:absolute after:top-0 after:left-0 after:z-sticky
+            after:size-full
             hover:text-accent hover:before:opacity-0
             tablet:before:inset-x-0 tablet:before:top-0
           "
@@ -661,7 +662,8 @@ exports[`Home > matches snapshot 1`] = `
             mb-3 block text-2.5xl leading-7 font-medium
             before:absolute before:inset-x-[8%] before:top-12
             before:aspect-video before:bg-default before:opacity-15
-            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            after:absolute after:top-0 after:left-0 after:z-sticky
+            after:size-full
             hover:text-accent hover:before:opacity-0
             tablet:before:inset-x-0 tablet:before:top-0
           "
@@ -767,7 +769,8 @@ exports[`Home > matches snapshot 1`] = `
             mb-3 block text-2.5xl leading-7 font-medium
             before:absolute before:inset-x-[8%] before:top-12
             before:aspect-video before:bg-default before:opacity-15
-            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            after:absolute after:top-0 after:left-0 after:z-sticky
+            after:size-full
             hover:text-accent hover:before:opacity-0
             tablet:before:inset-x-0 tablet:before:top-0
           "
@@ -872,7 +875,8 @@ exports[`Home > matches snapshot 1`] = `
             mb-3 block text-2.5xl leading-7 font-medium
             before:absolute before:inset-x-[8%] before:top-12
             before:aspect-video before:bg-default before:opacity-15
-            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            after:absolute after:top-0 after:left-0 after:z-sticky
+            after:size-full
             hover:text-accent hover:before:opacity-0
             tablet:before:inset-x-0 tablet:before:top-0
           "
@@ -979,7 +983,8 @@ exports[`Home > matches snapshot 1`] = `
             mb-3 block text-2.5xl leading-7 font-medium
             before:absolute before:inset-x-[8%] before:top-12
             before:aspect-video before:bg-default before:opacity-15
-            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            after:absolute after:top-0 after:left-0 after:z-sticky
+            after:size-full
             hover:text-accent hover:before:opacity-0
             tablet:before:inset-x-0 tablet:before:top-0
           "
@@ -1082,7 +1087,8 @@ exports[`Home > matches snapshot 1`] = `
             mb-3 block text-2.5xl leading-7 font-medium
             before:absolute before:inset-x-[8%] before:top-12
             before:aspect-video before:bg-default before:opacity-15
-            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            after:absolute after:top-0 after:left-0 after:z-sticky
+            after:size-full
             hover:text-accent hover:before:opacity-0
             tablet:before:inset-x-0 tablet:before:top-0
           "
@@ -1183,7 +1189,8 @@ exports[`Home > matches snapshot 1`] = `
             mb-3 block text-2.5xl leading-7 font-medium
             before:absolute before:inset-x-[8%] before:top-12
             before:aspect-video before:bg-default before:opacity-15
-            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            after:absolute after:top-0 after:left-0 after:z-sticky
+            after:size-full
             hover:text-accent hover:before:opacity-0
             tablet:before:inset-x-0 tablet:before:top-0
           "
@@ -1288,7 +1295,8 @@ exports[`Home > matches snapshot 1`] = `
             mb-3 block text-2.5xl leading-7 font-medium
             before:absolute before:inset-x-[8%] before:top-12
             before:aspect-video before:bg-default before:opacity-15
-            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            after:absolute after:top-0 after:left-0 after:z-sticky
+            after:size-full
             hover:text-accent hover:before:opacity-0
             tablet:before:inset-x-0 tablet:before:top-0
           "
@@ -1395,7 +1403,8 @@ exports[`Home > matches snapshot 1`] = `
             mb-3 block text-2.5xl leading-7 font-medium
             before:absolute before:inset-x-[8%] before:top-12
             before:aspect-video before:bg-default before:opacity-15
-            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            after:absolute after:top-0 after:left-0 after:z-sticky
+            after:size-full
             hover:text-accent hover:before:opacity-0
             tablet:before:inset-x-0 tablet:before:top-0
           "
@@ -1506,7 +1515,8 @@ exports[`Home > matches snapshot 1`] = `
             mb-3 block text-2.5xl leading-7 font-medium
             before:absolute before:inset-x-[8%] before:top-12
             before:aspect-video before:bg-default before:opacity-15
-            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            after:absolute after:top-0 after:left-0 after:z-sticky
+            after:size-full
             hover:text-accent hover:before:opacity-0
             tablet:before:inset-x-0 tablet:before:top-0
           "
@@ -1623,7 +1633,8 @@ exports[`Home > matches snapshot 1`] = `
             mb-3 block text-2.5xl leading-7 font-medium
             before:absolute before:inset-x-[8%] before:top-12
             before:aspect-video before:bg-default before:opacity-15
-            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            after:absolute after:top-0 after:left-0 after:z-sticky
+            after:size-full
             hover:text-accent hover:before:opacity-0
             tablet:before:inset-x-0 tablet:before:top-0
           "
@@ -1725,7 +1736,8 @@ exports[`Home > matches snapshot 1`] = `
             mb-3 block text-2.5xl leading-7 font-medium
             before:absolute before:inset-x-[8%] before:top-12
             before:aspect-video before:bg-default before:opacity-15
-            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            after:absolute after:top-0 after:left-0 after:z-sticky
+            after:size-full
             hover:text-accent hover:before:opacity-0
             tablet:before:inset-x-0 tablet:before:top-0
           "

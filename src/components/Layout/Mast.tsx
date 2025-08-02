@@ -59,21 +59,21 @@ export function Mast({
 
 function HamburgerMenu({ hasBackdrop }: { hasBackdrop: boolean }) {
   return (
-    <div className={`laptop:hidden`}>
+    <>
       <div
         className={`
-          fixed inset-0 bg-[rgba(0,0,0,.4)] opacity-0 invisible
+          invisible fixed inset-0 bg-[rgba(0,0,0,.4)] opacity-0
           transition-opacity duration-200
-          [body.nav-open_&]:opacity-100 [body.nav-open_&]:visible
-          [body.nav-open_&]:z-nav-backdrop
-          tablet-landscape:hidden
+          [body.nav-open_&]:tablet:visible
+          [body.nav-open_&]:tablet:z-nav-backdrop
+          [body.nav-open_&]:tablet:opacity-100
         `}
         data-nav-backdrop
       />
       <button
-        aria-label="Toggle navigation menu"
-        aria-expanded="false"
         aria-controls="nav-menu"
+        aria-expanded="false"
+        aria-label="Toggle navigation menu"
         className={`
           relative z-40 ml-2 flex h-10 w-10 transform-gpu cursor-pointer
           items-center justify-center transition-transform
@@ -106,31 +106,31 @@ function HamburgerMenu({ hasBackdrop }: { hasBackdrop: boolean }) {
       </button>
       <nav aria-label="Main navigation">
         <ul
-          id="nav-menu"
           className={`
-          invisible fixed top-0 right-0 flex h-full w-0
-          transform-[translateX(100%)] flex-col items-start gap-y-5
-          overflow-hidden bg-footer text-left text-inverse opacity-0
-          duration-200 ease-in-out
-          tablet:max-w-[35vw] tablet:gap-y-10
-          laptop:max-w-[25vw]
-          [body.nav-open_&]:visible [body.nav-open_&]:bottom-0
-          [body.nav-open_&]:z-nav-menu [body.nav-open_&]:h-full
-          [body.nav-open_&]:w-full [body.nav-open_&]:transform-[translateX(0)]
-          [body.nav-open_&]:overflow-y-auto [body.nav-open_&]:pt-20
-          [body.nav-open_&]:pr-[16%] [body.nav-open_&]:pb-5
-          [body.nav-open_&]:pl-[12%] [body.nav-open_&]:opacity-100
-          [body.nav-open_&]:drop-shadow-2xl [body.nav-open_&]:tablet:px-10
-          [body.nav-open_&]:tablet:pt-40 [body.nav-open_&]:laptop:px-20
-        `}
-        data-nav-menu
-      >
+            invisible fixed top-0 right-0 flex h-full w-0
+            transform-[translateX(100%)] flex-col items-start gap-y-5
+            overflow-hidden bg-footer text-left text-inverse opacity-0
+            duration-200 ease-in-out
+            tablet:max-w-[35vw] tablet:gap-y-10
+            laptop:max-w-[25vw]
+            [body.nav-open_&]:visible [body.nav-open_&]:bottom-0
+            [body.nav-open_&]:z-nav-menu [body.nav-open_&]:h-full
+            [body.nav-open_&]:w-full [body.nav-open_&]:transform-[translateX(0)]
+            [body.nav-open_&]:overflow-y-auto [body.nav-open_&]:pt-20
+            [body.nav-open_&]:pr-[16%] [body.nav-open_&]:pb-5
+            [body.nav-open_&]:pl-[12%] [body.nav-open_&]:opacity-100
+            [body.nav-open_&]:drop-shadow-2xl [body.nav-open_&]:tablet:px-10
+            [body.nav-open_&]:tablet:pt-40 [body.nav-open_&]:laptop:px-20
+          `}
+          data-nav-menu
+          id="nav-menu"
+        >
           {navItems.map((item) => {
             return <MenuItem key={item.target} value={item} />;
           })}
         </ul>
       </nav>
-    </div>
+    </>
   );
 }
 
