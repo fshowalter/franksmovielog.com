@@ -1,6 +1,6 @@
 import type { JSX, ReactNode } from "react";
 
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { Layout } from "./Layout";
 
@@ -63,8 +63,10 @@ export function ListWithFiltersLayout<T extends string>({
   ...rest
 }: Props<T>): JSX.Element {
   const [filterDrawerVisible, setFilterDrawerVisible] = useState(false);
+  const filtersRef = useRef<HTMLDivElement | null>(null);
+  const toggleButtonRef = useRef<HTMLButtonElement | null>(null);
 
-  const onFilterClick: React.MouseEventHandler<HTMLAnchorElement> = (event) => {
+  const onFilterClick = useCallback((event: React.MouseEvent) => {
     const documentSize = document.documentElement.clientWidth;
     const tabletLandscapeBreakpoint = Number.parseFloat(
       globalThis
@@ -78,16 +80,55 @@ export function ListWithFiltersLayout<T extends string>({
     }
 
     event.preventDefault();
-    document.body.classList.toggle("overflow-hidden");
-    setFilterDrawerVisible(!filterDrawerVisible);
-  };
+    
+    if (filterDrawerVisible) {
+      document.body.classList.remove("overflow-hidden");
+      setFilterDrawerVisible(false);
+    } else {
+      document.body.classList.add("overflow-hidden");
+      setFilterDrawerVisible(true);
+      // Focus first focusable element after drawer opens
+      requestAnimationFrame(() => {
+        const firstFocusable = filtersRef.current?.querySelector<HTMLElement>(
+          'button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        );
+        firstFocusable?.focus();
+      });
+    }
+  }, [filterDrawerVisible]);
 
-  const onCloseFiltersClick: React.MouseEventHandler<
-    HTMLAnchorElement
-  > = () => {
-    setFilterDrawerVisible(false);
-    document.body.classList.remove("overflow-hidden");
-  };
+  // Handle escape key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && filterDrawerVisible) {
+        setFilterDrawerVisible(false);
+        document.body.classList.remove("overflow-hidden");
+        toggleButtonRef.current?.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [filterDrawerVisible]);
+
+  // Handle click outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (
+        filterDrawerVisible &&
+        filtersRef.current &&
+        !filtersRef.current.contains(target) &&
+        !toggleButtonRef.current?.contains(target)
+      ) {
+        setFilterDrawerVisible(false);
+        document.body.classList.remove("overflow-hidden");
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, [filterDrawerVisible]);
 
   return (
     <Layout
@@ -111,17 +152,12 @@ export function ListWithFiltersLayout<T extends string>({
             ${headerClasses ?? ""}
           `}
         >
-          <input
-            checked={filterDrawerVisible}
-            className="hidden"
-            data-drawer
-            id="hiddenState"
-            type="checkbox"
-          />
           <ListHeader
+            filterDrawerVisible={filterDrawerVisible}
             listHeaderButtons={listHeaderButtons}
             onFilterClick={onFilterClick}
             sortProps={sortProps}
+            toggleButtonRef={toggleButtonRef}
             totalCount={totalCount}
           />
         </div>
@@ -135,7 +171,21 @@ export function ListWithFiltersLayout<T extends string>({
         >
           {list}
         </div>
+        
+        {/* Backdrop for mobile filters */}
         <div
+          aria-hidden="true"
+          className={`
+            invisible fixed inset-0 bg-[rgba(0,0,0,.4)] opacity-0
+            transition-opacity duration-200
+            tablet-landscape:hidden
+            ${filterDrawerVisible ? "visible z-side-drawer-backdrop opacity-100" : ""}
+          `}
+          onClick={() => setFilterDrawerVisible(false)}
+        />
+        
+        <div
+          aria-label="Filters"
           className={`
             fixed top-0 right-0 z-filter-drawer flex h-full max-w-[380px]
             flex-col items-start gap-y-5 bg-default text-left text-inverse
@@ -157,6 +207,7 @@ export function ListWithFiltersLayout<T extends string>({
             tablet-landscape:pb-12 tablet-landscape:drop-shadow-none
           `}
           id="filters"
+          ref={filtersRef}
         >
           <div
             className={`
@@ -197,18 +248,22 @@ export function ListWithFiltersLayout<T extends string>({
                 tablet-landscape:hidden
               `}
             >
-              <a
+              <button
                 className={`
-                  flex cursor-pointer items-center justify-center gap-x-4
+                  flex w-full cursor-pointer items-center justify-center gap-x-4
                   bg-footer px-4 py-3 font-sans text-xs text-nowrap text-inverse
                   uppercase
                   tablet-landscape:hidden
                 `}
-                href="#list"
-                onClick={onCloseFiltersClick}
+                onClick={() => {
+                  setFilterDrawerVisible(false);
+                  document.body.classList.remove("overflow-hidden");
+                  document.querySelector("#list")?.scrollIntoView();
+                }}
+                type="button"
               >
                 View {totalCount} Results
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -218,14 +273,18 @@ export function ListWithFiltersLayout<T extends string>({
 }
 
 function ListHeader<T extends string>({
+  filterDrawerVisible,
   listHeaderButtons,
   onFilterClick,
   sortProps,
+  toggleButtonRef,
   totalCount,
 }: {
+  filterDrawerVisible: boolean;
   listHeaderButtons?: ReactNode;
-  onFilterClick: React.MouseEventHandler<HTMLAnchorElement>;
+  onFilterClick: (event: React.MouseEvent) => void;
   sortProps: SortProps<T>;
+  toggleButtonRef: React.RefObject<HTMLButtonElement | null>;
   totalCount: number;
 }): JSX.Element {
   const { currentSortValue, onSortChange, sortOptions } = sortProps;
@@ -272,7 +331,10 @@ function ListHeader<T extends string>({
           </select>
         </label>
       </div>
-      <a
+      <button
+        aria-controls="filters"
+        aria-expanded={filterDrawerVisible}
+        aria-label="Toggle filters"
         className={`
           col-start-4 row-start-1 flex transform-gpu cursor-pointer items-center
           justify-center gap-x-4 bg-canvas px-4 py-2 text-nowrap text-muted
@@ -280,11 +342,12 @@ function ListHeader<T extends string>({
           hover:scale-110
           tablet:col-start-5 tablet:w-20
         `}
-        href="#filters"
         onClick={onFilterClick}
+        ref={toggleButtonRef}
+        type="button"
       >
         Filter
-      </a>
+      </button>
     </div>
   );
 }
