@@ -4,7 +4,7 @@ import { useImperativeHandle, useRef } from "react";
 
 import { LabelText } from "./LabelText";
 
-export type DebouncedInputHandle = {
+type DebouncedInputHandle = {
   focus: () => undefined | void;
 };
 
