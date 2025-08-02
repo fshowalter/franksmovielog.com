@@ -107,7 +107,7 @@ function AlphabetSubNav({
   }
 
   return (
-    <nav className={`sticky top-0 z-20 bg-footer`}>
+    <nav className={`sticky top-0 z-nav-menu bg-footer`}>
       <ul
         className={`
           mx-auto flex scrollbar-hidden max-w-(--breakpoint-desktop) snap-x
@@ -177,7 +177,7 @@ function MemberListItem({ value }: { value: ListItemValue }): JSX.Element {
     <ListItem
       className={`
         group/list-item relative transform-gpu transition-transform
-        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:z-hover
         tablet-landscape:has-[a:hover]:scale-105
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl

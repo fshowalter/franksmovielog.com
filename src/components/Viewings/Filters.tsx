@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import { DebouncedInput } from "~/components/DebouncedInput";
 import { SelectField } from "~/components/SelectField";
 import { SelectOptions } from "~/components/SelectOptions";
@@ -21,7 +19,7 @@ export function Filters({
   distinctReleaseYears: readonly string[];
   distinctVenues: readonly string[];
   distinctViewingYears: readonly string[];
-}): JSX.Element {
+}) {
   return (
     <>
       <DebouncedInput
@@ -67,19 +65,6 @@ export function Filters({
       >
         <SelectOptions options={distinctVenues} />
       </SelectField>
-      {/* <SelectField
-        label="Sort"
-        onChange={(e) =>
-          dispatch({
-            type: Actions.SORT,
-            value: e.target.value as Sort,
-          })
-        }
-        value={sortValue}
-      >
-        <option value="viewing-date-desc">Viewing Date (Newest First)</option>
-        <option value="viewing-date-asc">Viewing Date (Oldest First)</option>
-      </SelectField> */}
     </>
   );
 }

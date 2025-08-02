@@ -1,6 +1,10 @@
 {
   "$schema": "https://unpkg.com/knip@5/schema.json",
-  "entry": ["src/pages/**/*.astro", "src/layouts/pageFind.ts"],
+  "entry": [
+    "src/pages/**/*.astro",
+    "src/layouts/pageFind.ts",
+    "src/layouts/navMenu.ts"
+  ],
   "project": [
     "**/*",
     "!src/**/__mocks__/**",
