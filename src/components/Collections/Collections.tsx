@@ -85,7 +85,7 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
     <ListItem
       className={`
         group/list-item relative transform-gpu transition-transform
-        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:z-hover
         tablet-landscape:has-[a:hover]:scale-105
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl

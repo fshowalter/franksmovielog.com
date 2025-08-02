@@ -59,62 +59,77 @@ export function Mast({
 
 function HamburgerMenu({ hasBackdrop }: { hasBackdrop: boolean }) {
   return (
-    <div className={`group`}>
-      <input className="hidden" data-drawer id="nav" type="checkbox" />
-      <label
+    <div className={`laptop:hidden`}>
+      <div
+        className={`
+          fixed inset-0 bg-[rgba(0,0,0,.4)] opacity-0 invisible
+          transition-opacity duration-200
+          [body.nav-open_&]:opacity-100 [body.nav-open_&]:visible
+          [body.nav-open_&]:z-nav-backdrop
+          tablet-landscape:hidden
+        `}
+        data-nav-backdrop
+      />
+      <button
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-menu"
         className={`
           relative z-40 ml-2 flex h-10 w-10 transform-gpu cursor-pointer
           items-center justify-center transition-transform
           hover:scale-110
         `}
-        htmlFor="nav"
+        data-nav-toggle
+        type="button"
       >
         <span
+          aria-hidden="true"
           className={`
             relative flex h-0.5 w-6 origin-center transform-gpu
             transition-[top,bottom,transform] duration-200 ease-in-out
-            group-has-[#nav:checked]:transform-[rotate(45deg)]
-            group-has-[#nav:checked]:!bg-[#fff]
             before:absolute before:-top-2 before:block before:h-0.5 before:w-6
             before:bg-inherit before:transition before:duration-200
             before:ease-in-out
-            group-has-[#nav:checked]:before:top-0
-            group-has-[#nav:checked]:before:transform-[rotate(90deg)]
             after:absolute after:-bottom-2 after:block after:h-0.5 after:w-6
             after:bg-inherit after:transition after:duration-200
             after:ease-in-out
-            group-has-[#nav:checked]:after:bottom-0
-            group-has-[#nav:checked]:after:transform-[rotate(90deg)]
+            [body.nav-open_&]:transform-[rotate(45deg)]
+            [body.nav-open_&]:!bg-[#fff] [body.nav-open_&]:before:top-0
+            [body.nav-open_&]:before:transform-[rotate(90deg)]
+            [body.nav-open_&]:after:bottom-0
+            [body.nav-open_&]:after:transform-[rotate(90deg)]
           `}
           style={{
             backgroundColor: hasBackdrop ? "#fff" : "var(--fg-default)",
           }}
         />
-      </label>
-      <ul
-        className={`
-          fixed top-0 right-0 flex h-full w-0 transform-[translateX(100%)]
-          flex-col items-start gap-y-5 overflow-hidden bg-footer text-left
-          text-inverse opacity-0 duration-200 ease-in-out
-          group-has-[#nav:checked]:bottom-0 group-has-[#nav:checked]:z-20
-          group-has-[#nav:checked]:h-full group-has-[#nav:checked]:w-full
-          group-has-[#nav:checked]:transform-[translateX(0)]
-          group-has-[#nav:checked]:overflow-y-auto
-          group-has-[#nav:checked]:pt-20 group-has-[#nav:checked]:pr-[16%]
-          group-has-[#nav:checked]:pb-5 group-has-[#nav:checked]:pl-[12%]
-          group-has-[#nav:checked]:opacity-100
-          group-has-[#nav:checked]:drop-shadow-2xl
+      </button>
+      <nav aria-label="Main navigation">
+        <ul
+          id="nav-menu"
+          className={`
+          invisible fixed top-0 right-0 flex h-full w-0
+          transform-[translateX(100%)] flex-col items-start gap-y-5
+          overflow-hidden bg-footer text-left text-inverse opacity-0
+          duration-200 ease-in-out
           tablet:max-w-[35vw] tablet:gap-y-10
-          group-has-[#nav:checked]:tablet:px-10
-          group-has-[#nav:checked]:tablet:pt-40
           laptop:max-w-[25vw]
-          group-has-[#nav:checked]:laptop:px-20
+          [body.nav-open_&]:visible [body.nav-open_&]:bottom-0
+          [body.nav-open_&]:z-nav-menu [body.nav-open_&]:h-full
+          [body.nav-open_&]:w-full [body.nav-open_&]:transform-[translateX(0)]
+          [body.nav-open_&]:overflow-y-auto [body.nav-open_&]:pt-20
+          [body.nav-open_&]:pr-[16%] [body.nav-open_&]:pb-5
+          [body.nav-open_&]:pl-[12%] [body.nav-open_&]:opacity-100
+          [body.nav-open_&]:drop-shadow-2xl [body.nav-open_&]:tablet:px-10
+          [body.nav-open_&]:tablet:pt-40 [body.nav-open_&]:laptop:px-20
         `}
+        data-nav-menu
       >
-        {navItems.map((item) => {
-          return <MenuItem key={item.target} value={item} />;
-        })}
-      </ul>
+          {navItems.map((item) => {
+            return <MenuItem key={item.target} value={item} />;
+          })}
+        </ul>
+      </nav>
     </div>
   );
 }
@@ -153,8 +168,8 @@ function NavListItem({
       className={`
         block leading-10 tracking-serif-wide whitespace-nowrap
         transition-transform
-        group-has-[#nav:checked]:opacity-0
         has-[a:hover]:scale-105
+        [body.nav-open_&]:opacity-0
       `}
     >
       <a
@@ -175,8 +190,8 @@ function SearchButton() {
     <div
       className={`
         z-1000 transform-gpu transition-transform
-        group-has-[#nav:checked]:!text-[#fff]
         hover:scale-105
+        [body.nav-open_&]:!text-[#fff]
       `}
     >
       <button
@@ -194,6 +209,7 @@ function SearchButton() {
         type="button"
       >
         <svg
+          aria-hidden="true"
           className="size-7"
           fill="none"
           stroke="currentColor"

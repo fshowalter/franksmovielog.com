@@ -28,7 +28,7 @@ export function Layout({
     <div className="group">
       <a
         className={`
-          absolute top-0.5 left-1/2 z-50 mx-auto
+          absolute top-0.5 left-1/2 z-skip-link mx-auto
           [transform:translate(-50%,calc(-100%-2px))]
           bg-subtle px-6 py-2 text-center text-accent
           focus:[transform:translate(-50%,0%)]
@@ -44,19 +44,7 @@ export function Layout({
           hideLogo={hideLogo}
         />
         <main
-          className={ccn(
-            `
-              grow
-              min-[381px]:group-has-[[data-drawer]:checked]:before:fixed
-              min-[381px]:group-has-[[data-drawer]:checked]:before:top-0
-              min-[381px]:group-has-[[data-drawer]:checked]:before:left-0
-              min-[381px]:group-has-[[data-drawer]:checked]:before:z-10
-              min-[381px]:group-has-[[data-drawer]:checked]:before:size-full
-              min-[381px]:group-has-[[data-drawer]:checked]:before:bg-[rgba(255,255,255,.2)]
-              tablet-landscape:group-has-[[data-drawer]:checked]:before:hidden
-            `,
-            className,
-          )}
+          className={ccn("grow", className)}
           id="content"
           {...rest}
         >

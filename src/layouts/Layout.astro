@@ -69,9 +69,9 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
   <body
     class={`
       h-full w-full bg-canvas text-default
-      has-[[data-drawer]:checked]:overflow-hidden
+      [&.nav-open]:overflow-hidden
       data-search-modal-open:overflow-hidden data-search-modal-open:before:fixed
-      data-search-modal-open:before:inset-0 data-search-modal-open:before:z-50
+      data-search-modal-open:before:inset-0 data-search-modal-open:before:z-search-backdrop
       data-search-modal-open:before:backdrop-blur-xs
     `}
   >
@@ -92,7 +92,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
       <div class="contents" data-dialog-frame>
         <button
           class={`
-            absolute right-[var(--search-dialog-padding)] z-10 mt-5
+            absolute right-[var(--search-dialog-padding)] z-sticky mt-5
             h-[calc(24px_*_var(---pagefind-ui-scale))] cursor-pointer
             border-none bg-subtle px-2 font-mono text-xs font-light text-muted
             hover:bg-inverse hover:text-inverse
@@ -124,3 +124,4 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
   </body>
 </html>
 <script src="./pageFind.ts"></script>
+<script src="./navMenu.ts"></script>

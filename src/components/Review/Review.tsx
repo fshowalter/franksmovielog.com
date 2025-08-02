@@ -62,7 +62,7 @@ export function Review({
       hasBackdrop={false}
     >
       <header
-        className={`relative z-1 mb-8 flex flex-col items-center px-[8%] pt-10`}
+        className={`relative z-base mb-8 flex flex-col items-center px-[8%] pt-10`}
       >
         <nav
           className={`
@@ -116,7 +116,7 @@ export function Review({
           className={`
             relative mt-10 bg-default px-[1ch] font-sans text-xs tracking-wide
             text-subtle uppercase
-            after:absolute after:top-1/2 after:left-[-11%] after:-z-10
+            after:absolute after:top-1/2 after:left-[-11%] after:z-behind
             after:w-[122%] after:border-t after:border-(--fg-subtle)
             tablet:mt-12
           `}

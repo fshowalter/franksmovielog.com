@@ -61,7 +61,7 @@ export function Details({
                 grid-cols-subgrid grid-rows-[1fr_auto_auto_1fr] bg-default py-4
                 text-subtle transition-transform
                 last-of-type:shadow-none
-                tablet-landscape:has-[a:hover]:z-30
+                tablet-landscape:has-[a:hover]:z-hover
                 tablet-landscape:has-[a:hover]:scale-105
                 tablet-landscape:has-[a:hover]:shadow-all
                 tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -71,7 +71,7 @@ export function Details({
               <div
                 className={`
                   relative col-start-2 row-span-4 transition-opacity
-                  after:absolute after:top-0 after:left-0 after:z-60
+                  after:absolute after:top-0 after:left-0 after:z-watchlist-overlay
                   after:size-full after:overflow-hidden after:rounded-full
                   after:bg-default after:opacity-15
                   group-has-[a:hover]/list-item:after:opacity-0
@@ -124,7 +124,7 @@ function Name({ value, valueType }: { value: Value; valueType: ValueType }) {
         <a
           className={`
             pb-1 font-sans text-sm leading-none text-accent
-            after:absolute after:top-0 after:left-0 after:z-30 after:size-full
+            after:absolute after:top-0 after:left-0 after:z-hover after:size-full
             after:opacity-0
           `}
           href={linkTarget}

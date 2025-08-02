@@ -91,7 +91,7 @@ function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
           <a
             className={`
               mb-3 block text-xl leading-6 font-medium text-default
-              after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+              after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
               after:opacity-0
               hover:text-accent hover:before:opacity-0
             `}

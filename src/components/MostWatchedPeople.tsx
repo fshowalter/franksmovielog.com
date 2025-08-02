@@ -138,7 +138,7 @@ function MostWatchedPersonViewingListItem({
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-4 py-4 transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-30
+        tablet-landscape:has-[a:hover]:z-hover
         tablet-landscape:has-[a:hover]:scale-105
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -148,7 +148,7 @@ function MostWatchedPersonViewingListItem({
       <div
         className={`
           relative
-          after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
         `}
