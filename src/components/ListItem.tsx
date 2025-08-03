@@ -17,9 +17,13 @@ export function ListItem({
         ${background ?? ""}
         ${itemsCenter ? "items-center" : ""}
         ${extraVerticalPadding ? `tablet:py-6` : ""}
-        mb-1 flex max-w-(--breakpoint-desktop) flex-row gap-x-4 px-container
-        py-4
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
         tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
         laptop:px-6
         ${className ?? ""}
       `}

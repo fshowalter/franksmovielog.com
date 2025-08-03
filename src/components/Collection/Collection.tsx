@@ -125,16 +125,7 @@ export function Collection({
 
 function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
-    <ListItem
-      background={value.slug ? "bg-default" : "bg-unreviewed"}
-      className={`
-        group/list-item relative transform-gpu transition-transform
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-105
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-      `}
-    >
+    <ListItem background={value.slug ? "bg-default" : "bg-unreviewed"}>
       <div
         className={`
           relative

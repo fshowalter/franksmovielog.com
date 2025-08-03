@@ -69,7 +69,6 @@ This document outlines opportunities to reduce code duplication and minimize LOC
 - Compose common filter sets into reusable component
 - Parameters: showTitle, showReleaseYear, showReviewYear, etc.
 
-
 ### 5. Consolidate Sort Comparators
 
 - Title sorting (with collator)
