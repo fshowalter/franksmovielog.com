@@ -17,6 +17,25 @@ This document outlines opportunities to reduce code duplication and minimize LOC
   - Removed 4 duplicate filter files
   - All components now use the shared implementation
 
+### 2. Replace DebouncedInput with TextFilter
+
+- **Status**: COMPLETED (PR #2231)
+- **Impact**: 19 lines reduction
+- **Changes Made**:
+  - Created `TextFilter` component with cleaner implementation
+  - Removed unused ref and useImperativeHandle code
+  - Updated all 7 components to use TextFilter
+  - More semantic naming
+
+### 3. Extract getGroupLetter Utility
+
+- **Status**: COMPLETED (PR #2232)
+- **Impact**: ~40 lines reduction
+- **Changes Made**:
+  - Created `getGroupLetter` utility function
+  - Updated 5 reducers to use the utility
+  - Centralized letter extraction logic
+
 ## High Priority Tasks (Biggest Impact)
 
 ### 1. Create Generic Reducer Factory for Remaining Components
@@ -32,14 +51,6 @@ This document outlines opportunities to reduce code duplication and minimize LOC
 
 ### 2. Extract Common Filter Components
 
-- **TitleFilter**: Used in remaining 5+ components
-  ```tsx
-  <DebouncedInput
-    label="Title"
-    onInputChange={(value) => dispatch({ type: Actions.FILTER_TITLE, value })}
-    placeholder="Enter all or part of a title"
-  />
-  ```
 - **YearRangeFilter**: Used in remaining 4+ components
 - **DropdownFilter**: Used in 5+ components
 
@@ -58,38 +69,28 @@ This document outlines opportunities to reduce code duplication and minimize LOC
 - Compose common filter sets into reusable component
 - Parameters: showTitle, showReleaseYear, showReviewYear, etc.
 
-### 5. Extract Letter Extraction Utility
 
-- **Duplicated 6+ times**:
-  ```typescript
-  const letter = value.sortTitle.slice(0, 1);
-  if (letter.toLowerCase() == letter.toUpperCase()) {
-    return "#";
-  }
-  return value.sortTitle.slice(0, 1).toLocaleUpperCase();
-  ```
-
-### 6. Consolidate Sort Comparators
+### 5. Consolidate Sort Comparators
 
 - Title sorting (with collator)
 - Date sorting
 - Grade sorting
 - Sequence sorting
 
-### 7. Standardize Type Definitions
+### 6. Standardize Type Definitions
 
 - Create shared ListItemValue type
 - Standardize Sort type definitions
 - Common filter action types
 
-### 8. Apply New Abstractions
+### 7. Apply New Abstractions
 
 - Refactor Viewings, Watchlist, Collection components
 - Update remaining list components to use new patterns
 
 ## Low Priority Tasks
 
-### 9. Create ListItemWithHover Component
+### 8. Create ListItemWithHover Component
 
 - Extract common hover effect pattern:
   ```tsx
@@ -102,12 +103,12 @@ This document outlines opportunities to reduce code duplication and minimize LOC
   `}
   ```
 
-### 10. Standardize Backdrop Components
+### 9. Standardize Backdrop Components
 
 - Similar structure across multiple components
 - Extract common backdrop pattern
 
-### 11. Extract Constants
+### 10. Extract Constants
 
 - SHOW_COUNT_DEFAULT = 100 (appears in 9 files)
 - Other repeated constants
@@ -168,10 +169,13 @@ export function ComponentName({ props }): JSX.Element {
 - ✅ Reviews reducer consolidation: ~1,200 lines saved
 - ✅ Reviews filters unification: ~400 lines saved
 - ✅ Removed 8 redundant files
+- ✅ TextFilter component: 19 lines saved
+- ✅ getGroupLetter utility: ~40 lines saved
+- **Total saved so far**: ~1,659 lines
 
 ### Remaining Potential
 
-- **Code reduction**: 2,300-3,300 additional lines
+- **Code reduction**: 1,841-2,841 additional lines
 - **Maintenance improvement**: Changes need updates in only one place
 - **Better testability**: Test generic components once
 - **Improved consistency**: Standardized patterns across codebase
