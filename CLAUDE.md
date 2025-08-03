@@ -96,8 +96,11 @@ This site uses Astro's partial hydration strategy:
    - `npm run lint:spelling` - Must pass with no errors
    - `npm run check` - Must pass with no errors
    - `npm run knip` - Must pass with no errors
-5. Create PR with descriptive title
-6. Ensure all CI checks pass
+5. **IMPORTANT**: Always rebase on origin/main before pushing:
+   - `git pull --rebase origin main`
+   - This ensures your PR is based on the latest code
+6. Create PR with descriptive title
+7. Ensure all CI checks pass
 
 ## Recent Updates
 
