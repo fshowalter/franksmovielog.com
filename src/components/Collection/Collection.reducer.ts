@@ -1,5 +1,6 @@
 import { buildGroupValues } from "~/utils/buildGroupValues";
 import { type FilterableState, filterTools } from "~/utils/filterTools";
+import { getGroupLetter } from "~/utils/getGroupLetter";
 import { collator, sortNumber, sortString } from "~/utils/sortTools";
 
 import type { ListItemValue } from "./Collection";
@@ -183,13 +184,7 @@ function groupForValue(value: ListItemValue, sortValue: Sort): string {
       return value.reviewYear.toString();
     }
     case "title": {
-      const letter = value.sortTitle.slice(0, 1);
-
-      if (letter.toLowerCase() == letter.toUpperCase()) {
-        return "#";
-      }
-
-      return value.sortTitle.slice(0, 1).toLocaleUpperCase();
+      return getGroupLetter(value.sortTitle);
     }
     // no default
   }

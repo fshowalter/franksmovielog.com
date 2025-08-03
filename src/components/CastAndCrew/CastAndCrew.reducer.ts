@@ -2,6 +2,7 @@ import type { FilterableState } from "~/utils/filterTools";
 
 import { buildGroupValues } from "~/utils/buildGroupValues";
 import { filterTools } from "~/utils/filterTools";
+import { getGroupLetter } from "~/utils/getGroupLetter";
 import { sortNumber, sortString } from "~/utils/sortTools";
 
 import type { ListItemValue } from "./CastAndCrew";
@@ -27,13 +28,7 @@ function groupForValue(item: ListItemValue, sortValue: Sort): string {
   switch (sortValue) {
     case "name-asc":
     case "name-desc": {
-      const letter = item.name.slice(0, 1);
-
-      if (letter.toLowerCase() == letter.toUpperCase()) {
-        return "#";
-      }
-
-      return item.name.slice(0, 1).toLocaleUpperCase();
+      return getGroupLetter(item.name);
     }
     case "review-count-asc":
     case "review-count-desc": {
