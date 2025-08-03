@@ -1,10 +1,11 @@
+import type { ReviewListItemValue } from "~/components/ReviewListItem";
+
 import { getBackdropImageProps } from "~/api/backdrops";
 import { allOverratedDisappointments } from "~/api/overratedDisappointments";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
 import { BackdropImageConfig } from "~/components/Backdrop";
 import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
 
-import type { ListItemValue } from "./Overrated";
 import type { Props } from "./Overrated";
 
 export async function getProps(): Promise<Props & { metaDescription: string }> {
@@ -21,7 +22,7 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
 
   const values = await Promise.all(
     overratedDisappointments.map(async (title) => {
-      const listItemData: ListItemValue = {
+      const listItemData: ReviewListItemValue = {
         genres: title.genres,
         grade: title.grade,
         gradeValue: title.gradeValue,

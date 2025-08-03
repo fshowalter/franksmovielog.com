@@ -14,12 +14,6 @@ import type { Sort } from "./Reviews.reducer";
 import { Filters, SortOptions } from "./Filters";
 import { Actions, initState, reducer } from "./Reviews.reducer";
 
-export type ListItemValue = ReviewListItemValue & {
-  reviewMonth: string;
-  reviewSequence: string;
-  reviewYear: string;
-};
-
 export type Props = {
   backdropImageProps: BackdropImageProps;
   deck: string;
@@ -27,7 +21,7 @@ export type Props = {
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   initialSort: Sort;
-  values: ListItemValue[];
+  values: ReviewListItemValue[];
 };
 
 export function Reviews({
