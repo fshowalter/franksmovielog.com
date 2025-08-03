@@ -4,28 +4,35 @@
 
 This document outlines opportunities to reduce code duplication and minimize LOC count in the franksmovielog.com codebase. Estimated total reduction: 3,500-4,500 lines (~30-40% of component code).
 
+## Completed Tasks ✅
+
+### 1. Create Reviews Reducer and Filters
+
+- **Status**: COMPLETED
+- **Impact**: ~1,200 lines reduction
+- **Changes Made**:
+  - Created shared `Reviews.reducer.ts` for Reviews, Overrated, Underrated, and Underseen
+  - Created shared `Reviews.Filters.tsx` with all common filters
+  - Removed 4 duplicate reducer files
+  - Removed 4 duplicate filter files
+  - All components now use the shared implementation
+
 ## High Priority Tasks (Biggest Impact)
 
-### 1. Create Generic Reducer Factory
+### 1. Create Generic Reducer Factory for Remaining Components
 
-- **Impact**: ~2,000-2,500 lines reduction
-- **Details**: Create factory for common reducer patterns
-  - SHOW_MORE action (identical in 8 files)
-  - SORT action (identical in 8 files)
-  - FILTER_TITLE action (identical in 7 files)
-  - Year range filters (identical in 8 files)
+- **Impact**: ~1,500-2,000 lines reduction
+- **Details**: Create factory for Viewings, Watchlist, Collection, and Cast/Staff components
+  - SHOW_MORE action (identical in remaining files)
+  - SORT action (identical in remaining files)
+  - FILTER_TITLE action (identical in remaining files)
+  - Year range filters (identical in remaining files)
   - Standard state initialization
   - Common sorting and grouping functions
 
-### 2. Refactor Nearly Identical Reducers
+### 2. Extract Common Filter Components
 
-- **Files**: Overrated, Underrated, Underseen reducers (95%+ identical)
-- **Impact**: Eliminate 3 complete files
-- **Approach**: Use generic reducer factory from task #1
-
-### 3. Extract Common Filter Components
-
-- **TitleFilter**: Used in 9+ components
+- **TitleFilter**: Used in remaining 5+ components
   ```tsx
   <DebouncedInput
     label="Title"
@@ -33,10 +40,10 @@ This document outlines opportunities to reduce code duplication and minimize LOC
     placeholder="Enter all or part of a title"
   />
   ```
-- **YearRangeFilter**: Used in 8+ components
+- **YearRangeFilter**: Used in remaining 4+ components
 - **DropdownFilter**: Used in 5+ components
 
-### 4. Create FilteredListLayout HOC
+### 3. Create FilteredListLayout HOC
 
 - **Impact**: ~800-1,000 lines reduction
 - **Pattern**: Encapsulate common list structure
@@ -46,12 +53,12 @@ This document outlines opportunities to reduce code duplication and minimize LOC
 
 ## Medium Priority Tasks
 
-### 5. Create StandardFilters Composition
+### 4. Create StandardFilters Composition
 
 - Compose common filter sets into reusable component
 - Parameters: showTitle, showReleaseYear, showReviewYear, etc.
 
-### 6. Extract Letter Extraction Utility
+### 5. Extract Letter Extraction Utility
 
 - **Duplicated 6+ times**:
   ```typescript
@@ -62,27 +69,27 @@ This document outlines opportunities to reduce code duplication and minimize LOC
   return value.sortTitle.slice(0, 1).toLocaleUpperCase();
   ```
 
-### 7. Consolidate Sort Comparators
+### 6. Consolidate Sort Comparators
 
 - Title sorting (with collator)
 - Date sorting
 - Grade sorting
 - Sequence sorting
 
-### 8. Standardize Type Definitions
+### 7. Standardize Type Definitions
 
 - Create shared ListItemValue type
 - Standardize Sort type definitions
 - Common filter action types
 
-### 9. Apply New Abstractions
+### 8. Apply New Abstractions
 
-- Refactor Reviews, Viewings, Watchlist components
+- Refactor Viewings, Watchlist, Collection components
 - Update remaining list components to use new patterns
 
 ## Low Priority Tasks
 
-### 10. Create ListItemWithHover Component
+### 9. Create ListItemWithHover Component
 
 - Extract common hover effect pattern:
   ```tsx
@@ -95,12 +102,12 @@ This document outlines opportunities to reduce code duplication and minimize LOC
   `}
   ```
 
-### 11. Standardize Backdrop Components
+### 10. Standardize Backdrop Components
 
 - Similar structure across multiple components
 - Extract common backdrop pattern
 
-### 12. Extract Constants
+### 11. Extract Constants
 
 - SHOW_COUNT_DEFAULT = 100 (appears in 9 files)
 - Other repeated constants
@@ -154,9 +161,17 @@ export function ComponentName({ props }): JSX.Element {
 }
 ```
 
-## Expected Outcomes
+## Progress Summary
 
-- **Code reduction**: 3,500-4,500 lines
+### Completed
+
+- ✅ Reviews reducer consolidation: ~1,200 lines saved
+- ✅ Reviews filters unification: ~400 lines saved
+- ✅ Removed 8 redundant files
+
+### Remaining Potential
+
+- **Code reduction**: 2,300-3,300 additional lines
 - **Maintenance improvement**: Changes need updates in only one place
 - **Better testability**: Test generic components once
 - **Improved consistency**: Standardized patterns across codebase
