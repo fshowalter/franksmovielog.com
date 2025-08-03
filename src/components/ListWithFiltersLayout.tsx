@@ -77,7 +77,20 @@ export function ListWithFiltersLayout<T extends string>({
 
       if (documentSize >= tabletLandscapeBreakpoint) {
         setFilterDrawerVisible(false);
-        return event;
+        event.preventDefault();
+
+        // Scroll to the filters and focus first input
+        document.querySelector("#filters")?.scrollIntoView();
+
+        // Delay focus to allow smooth scroll to complete
+        setTimeout(() => {
+          const firstFocusable = filtersRef.current?.querySelector<HTMLElement>(
+            'button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+          );
+          firstFocusable?.focus();
+        }, 500); // Wait for scroll animation to complete
+
+        return;
       }
 
       event.preventDefault();
