@@ -2,6 +2,7 @@ import type { ReviewListItemValue } from "~/components/ReviewListItem";
 
 import { buildGroupValues } from "~/utils/buildGroupValues";
 import { type FilterableState, filterTools } from "~/utils/filterTools";
+import { getGroupLetter } from "~/utils/getGroupLetter";
 import { collator, sortNumber, sortString } from "~/utils/sortTools";
 
 const SHOW_COUNT_DEFAULT = 100;
@@ -104,13 +105,7 @@ function groupForValue(
     }
     case "title-asc":
     case "title-desc": {
-      const letter = value.sortTitle.slice(0, 1);
-
-      if (letter.toLowerCase() == letter.toUpperCase()) {
-        return "#";
-      }
-
-      return value.sortTitle.slice(0, 1).toLocaleUpperCase();
+      return getGroupLetter(value.sortTitle);
     }
     // should never get here
     default: {
