@@ -78,10 +78,10 @@ export function ListWithFiltersLayout<T extends string>({
       if (documentSize >= tabletLandscapeBreakpoint) {
         setFilterDrawerVisible(false);
         event.preventDefault();
-        
+
         // Scroll to the filters and focus first input
         document.querySelector("#filters")?.scrollIntoView();
-        
+
         // Delay focus to allow smooth scroll to complete
         setTimeout(() => {
           const firstFocusable = filtersRef.current?.querySelector<HTMLElement>(
@@ -89,7 +89,7 @@ export function ListWithFiltersLayout<T extends string>({
           );
           firstFocusable?.focus();
         }, 500); // Wait for scroll animation to complete
-        
+
         return;
       }
 
