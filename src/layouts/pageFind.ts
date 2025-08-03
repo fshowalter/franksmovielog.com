@@ -4,7 +4,7 @@ import { PagefindUI } from "@pagefind/default-ui";
 (() => {
   const openBtn = document.querySelector("button[data-open-modal]");
   if (!openBtn) return;
-  if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+  if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
     openBtn.setAttribute("aria-keyshortcuts", "Meta+K");
     openBtn.setAttribute("title", `Search: ⌘K`);
   }
