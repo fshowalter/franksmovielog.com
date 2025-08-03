@@ -1,7 +1,7 @@
 import type { JSX } from "react";
 
-import { DebouncedInput } from "~/components/DebouncedInput";
 import { SelectField } from "~/components/SelectField";
+import { TextFilter } from "~/components/TextFilter";
 
 import type { ActionType } from "./CastAndCrew.reducer";
 
@@ -14,7 +14,7 @@ export function Filters({
 }): JSX.Element {
   return (
     <>
-      <DebouncedInput
+      <TextFilter
         label="Name"
         onInputChange={(value) =>
           dispatch({ type: Actions.FILTER_NAME, value })
