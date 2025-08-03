@@ -14,6 +14,9 @@ export type ReviewListItemValue = {
   posterImageProps: PosterImageProps;
   releaseSequence: string;
   reviewDisplayDate: string;
+  reviewMonth?: string;
+  reviewSequence: string;
+  reviewYear: string;
   slug: string;
   sortTitle: string;
   title: string;

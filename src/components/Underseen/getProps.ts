@@ -1,10 +1,11 @@
+import type { ReviewListItemValue } from "~/components/ReviewListItem";
+
 import { getBackdropImageProps } from "~/api/backdrops";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
 import { allUnderseenGems } from "~/api/underseenGems";
 import { BackdropImageConfig } from "~/components/Backdrop";
 import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
 
-import type { ListItemValue } from "./Underseen";
 import type { Props } from "./Underseen";
 
 export async function getProps(): Promise<Props & { metaDescription: string }> {
@@ -21,7 +22,7 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
 
   const values = await Promise.all(
     underseenGems.map(async (title) => {
-      const value: ListItemValue = {
+      const value: ReviewListItemValue = {
         genres: title.genres,
         grade: title.grade,
         gradeValue: title.gradeValue,

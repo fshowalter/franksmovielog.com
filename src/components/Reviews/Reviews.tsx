@@ -7,18 +7,14 @@ import { Backdrop } from "~/components/Backdrop";
 import { GroupedList } from "~/components/GroupedList";
 import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 import { ReviewListItem } from "~/components/ReviewListItem";
+import { Filters, SortOptions } from "~/components/Reviews.Filters";
+import {
+  Actions,
+  initState,
+  reducer,
+  type Sort,
+} from "~/components/Reviews.reducer";
 import { ReviewsSubNav } from "~/components/ReviewsSubNav";
-
-import type { Sort } from "./Reviews.reducer";
-
-import { Filters, SortOptions } from "./Filters";
-import { Actions, initState, reducer } from "./Reviews.reducer";
-
-export type ListItemValue = ReviewListItemValue & {
-  reviewMonth: string;
-  reviewSequence: string;
-  reviewYear: string;
-};
 
 export type Props = {
   backdropImageProps: BackdropImageProps;
@@ -27,7 +23,7 @@ export type Props = {
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   initialSort: Sort;
-  values: ListItemValue[];
+  values: ReviewListItemValue[];
 };
 
 export function Reviews({

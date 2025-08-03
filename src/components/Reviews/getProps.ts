@@ -1,10 +1,12 @@
+import type { ReviewListItemValue } from "~/components/ReviewListItem";
+
 import { getBackdropImageProps } from "~/api/backdrops";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
 import { allReviews } from "~/api/reviews";
 import { BackdropImageConfig } from "~/components/Backdrop";
 import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
 
-import type { ListItemValue, Props } from "./Reviews";
+import type { Props } from "./Reviews";
 
 export async function getProps(): Promise<Props & { metaDescription: string }> {
   const { distinctGenres, distinctReleaseYears, distinctReviewYears, reviews } =
@@ -14,7 +16,7 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
 
   const values = await Promise.all(
     reviews.map(async (review) => {
-      const value: ListItemValue = {
+      const value: ReviewListItemValue = {
         genres: review.genres,
         grade: review.grade,
         gradeValue: review.gradeValue,

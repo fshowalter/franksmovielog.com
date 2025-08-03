@@ -1,10 +1,8 @@
 import { DebouncedInput } from "~/components/DebouncedInput";
+import { GradeInput } from "~/components/GradeInput";
 import { MultiSelectField } from "~/components/MultiSelectField";
+import { Actions, type ActionType } from "~/components/Reviews.reducer";
 import { YearInput } from "~/components/YearInput";
-
-import type { ActionType } from "./Underrated.reducer";
-
-import { Actions } from "./Underrated.reducer";
 
 export function Filters({
   dispatch,
@@ -40,6 +38,15 @@ export function Filters({
         }
         years={distinctReviewYears}
       />
+      <GradeInput
+        label="Grade"
+        onGradeChange={(values) =>
+          dispatch({
+            type: Actions.FILTER_GRADE,
+            values,
+          })
+        }
+      />
       <MultiSelectField
         label="Genres"
         onChange={(e) =>
@@ -61,10 +68,10 @@ export function SortOptions() {
       <option value="title-desc">Title (Z &rarr; A)</option>
       <option value="grade-desc">Grade (Best First)</option>
       <option value="grade-asc">Grade (Worst First)</option>
-      <option value="review-date-desc">Review Date (Newest First)</option>
-      <option value="review-date-asc">Review Date (Oldest First)</option>
       <option value="release-date-desc">Release Date (Newest First)</option>
       <option value="release-date-asc">Release Date (Oldest First)</option>
+      <option value="review-date-desc">Review Date (Newest First)</option>
+      <option value="review-date-asc">Review Date (Oldest First)</option>
     </>
   );
 }
