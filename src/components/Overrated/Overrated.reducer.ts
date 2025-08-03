@@ -1,6 +1,5 @@
 export { 
   Actions, 
-  type ActionType, 
   initState,
   reducer,
   type Sort

@@ -6,7 +6,7 @@ import { collator, sortNumber, sortString } from "~/utils/sortTools";
 
 const SHOW_COUNT_DEFAULT = 100;
 
-export type ReviewsSort = 
+type ReviewsSort = 
   | "grade-asc"
   | "grade-desc"
   | "release-date-asc"
@@ -30,7 +30,7 @@ export type ActionType = FilterGenresAction | FilterGradeAction | FilterReleaseY
   FilterReviewYearAction | FilterTitleAction | ShowMoreAction | SortAction;
 
 // Define state type
-export type State = FilterableState<ReviewListItemValue, ReviewsSort, Map<string, ReviewListItemValue[]>>;
+type State = FilterableState<ReviewListItemValue, ReviewsSort, Map<string, ReviewListItemValue[]>>;
 
 // Define action types
 type FilterGenresAction = {
