@@ -1,7 +1,7 @@
-import { DebouncedInput } from "~/components/DebouncedInput";
 import { GradeInput } from "~/components/GradeInput";
 import { MultiSelectField } from "~/components/MultiSelectField";
 import { Actions, type ActionType } from "~/components/Reviews.reducer";
+import { TextFilter } from "~/components/TextFilter";
 import { YearInput } from "~/components/YearInput";
 
 export function Filters({
@@ -17,7 +17,7 @@ export function Filters({
 }) {
   return (
     <>
-      <DebouncedInput
+      <TextFilter
         label="Title"
         onInputChange={(value) =>
           dispatch({ type: Actions.FILTER_TITLE, value })

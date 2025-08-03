@@ -1,8 +1,8 @@
 import type { JSX } from "react";
 
 import { Button } from "~/components/Button";
-import { DebouncedInput } from "~/components/DebouncedInput";
 import { SelectField } from "~/components/SelectField";
+import { TextFilter } from "~/components/TextFilter";
 import { YearInput } from "~/components/YearInput";
 import { capitalize } from "~/utils/capitalize";
 
@@ -49,7 +49,7 @@ export function Filters({
           })}
         </SelectField>
       )}
-      <DebouncedInput
+      <TextFilter
         label="Title"
         onInputChange={(value) =>
           dispatch({ type: Actions.FILTER_TITLE, value })

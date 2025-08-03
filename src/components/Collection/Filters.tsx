@@ -1,7 +1,7 @@
 import type { JSX } from "react";
 
 import { Button } from "~/components/Button";
-import { DebouncedInput } from "~/components/DebouncedInput";
+import { TextFilter } from "~/components/TextFilter";
 import { YearInput } from "~/components/YearInput";
 
 import type { ActionType } from "./Collection.reducer";
@@ -30,7 +30,7 @@ export function Filters({
           </Button>
         </div>
       )}
-      <DebouncedInput
+      <TextFilter
         label="Title"
         onInputChange={(value) =>
           dispatch({ type: Actions.FILTER_TITLE, value })
