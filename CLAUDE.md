@@ -87,7 +87,10 @@ This site uses Astro's partial hydration strategy:
 
 ## Development Workflow
 
-1. Create feature branch from main
+1. **IMPORTANT**: Always create a new feature branch for new features:
+   - `git checkout -b feat/feature-name` for features
+   - `git checkout -b fix/bug-name` for bug fixes
+   - `git checkout -b chore/task-name` for maintenance tasks
 2. Make changes with proper types
 3. Run tests and linting
 4. **IMPORTANT**: Before creating any PR, run:
