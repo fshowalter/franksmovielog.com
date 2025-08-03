@@ -1,8 +1,9 @@
 import { GradeInput } from "~/components/GradeInput";
 import { MultiSelectField } from "~/components/MultiSelectField";
-import { Actions, type ActionType } from "~/components/Reviews.reducer";
 import { TextFilter } from "~/components/TextFilter";
 import { YearInput } from "~/components/YearInput";
+
+import { Actions, type ActionType } from "./reducer";
 
 export function Filters({
   dispatch,

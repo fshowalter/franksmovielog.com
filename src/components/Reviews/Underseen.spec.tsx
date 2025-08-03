@@ -3,21 +3,21 @@ import { userEvent } from "@testing-library/user-event";
 import { select } from "react-select-event";
 import { describe, it } from "vitest";
 
-import { getProps } from "./getProps";
-import { Overrated } from "./Overrated";
+import { getPropsForUnderseen } from "./getProps";
+import { Underseen } from "./Underseen";
 
-const props = await getProps();
+const props = await getPropsForUnderseen();
 
-describe("Overrated", () => {
+describe("Underseen", () => {
   it("renders", ({ expect }) => {
-    const { asFragment } = render(<Overrated {...props} />);
+    const { asFragment } = render(<Underseen {...props} />);
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   it("can filter by title", async ({ expect }) => {
     expect.hasAssertions();
-    render(<Overrated {...props} />);
+    render(<Underseen {...props} />);
 
     await act(async () => {
       await userEvent.type(screen.getByLabelText("Title"), "Arrebato");
@@ -30,7 +30,7 @@ describe("Overrated", () => {
   it("can sort by title (A → Z)", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Overrated {...props} />);
+    render(<Underseen {...props} />);
 
     await userEvent.selectOptions(
       screen.getByLabelText("Sort"),
@@ -43,7 +43,7 @@ describe("Overrated", () => {
   it("can sort by title (Z → A)", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Overrated {...props} />);
+    render(<Underseen {...props} />);
 
     await userEvent.selectOptions(
       screen.getByLabelText("Sort"),
@@ -56,7 +56,7 @@ describe("Overrated", () => {
   it("can sort by release date with oldest first", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Overrated {...props} />);
+    render(<Underseen {...props} />);
 
     await userEvent.selectOptions(
       screen.getByLabelText("Sort"),
@@ -69,7 +69,7 @@ describe("Overrated", () => {
   it("can sort by release date with newest first", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Overrated {...props} />);
+    render(<Underseen {...props} />);
 
     await userEvent.selectOptions(
       screen.getByLabelText("Sort"),
@@ -82,7 +82,7 @@ describe("Overrated", () => {
   it("can sort by grade with best first", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Overrated {...props} />);
+    render(<Underseen {...props} />);
 
     await userEvent.selectOptions(
       screen.getByLabelText("Sort"),
@@ -95,7 +95,7 @@ describe("Overrated", () => {
   it("can sort by grade with worst first", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Overrated {...props} />);
+    render(<Underseen {...props} />);
 
     await userEvent.selectOptions(
       screen.getByLabelText("Sort"),
@@ -107,14 +107,15 @@ describe("Overrated", () => {
 
   it("can filter by release year", async ({ expect }) => {
     expect.hasAssertions();
-    render(<Overrated {...props} />);
+
+    render(<Underseen {...props} />);
 
     const fieldset = screen.getByRole("group", { name: "Release Year" });
     const fromInput = within(fieldset).getByLabelText("From");
     const toInput = within(fieldset).getByLabelText("to");
 
-    await userEvent.selectOptions(fromInput, "1984");
-    await userEvent.selectOptions(toInput, "2020");
+    await userEvent.selectOptions(fromInput, "1975");
+    await userEvent.selectOptions(toInput, "1987");
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
@@ -122,24 +123,23 @@ describe("Overrated", () => {
   it("can filter by release year reversed", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Overrated {...props} />);
+    render(<Underseen {...props} />);
 
     const fieldset = screen.getByRole("group", { name: "Release Year" });
     const fromInput = within(fieldset).getByLabelText("From");
     const toInput = within(fieldset).getByLabelText("to");
 
-    await userEvent.selectOptions(fromInput, "1984");
-    await userEvent.selectOptions(toInput, "2018");
-    await userEvent.selectOptions(fromInput, "2020");
-    await userEvent.selectOptions(toInput, "1981");
+    await userEvent.selectOptions(fromInput, "1975");
+    await userEvent.selectOptions(toInput, "1987");
+    await userEvent.selectOptions(fromInput, "1989");
+    await userEvent.selectOptions(toInput, "1986");
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
   it("can filter by genres", async ({ expect }) => {
     expect.hasAssertions();
-
-    render(<Overrated {...props} />);
+    render(<Underseen {...props} />);
 
     const selectElement = screen.getByLabelText("Genres");
 

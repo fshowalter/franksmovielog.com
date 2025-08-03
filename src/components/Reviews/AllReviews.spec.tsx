@@ -3,21 +3,21 @@ import { userEvent } from "@testing-library/user-event";
 import { select } from "react-select-event";
 import { describe, it } from "vitest";
 
+import { AllReviews } from "./AllReviews";
 import { getProps } from "./getProps";
-import { Reviews } from "./Reviews";
 
 const props = await getProps();
 
-describe("Reviews", () => {
+describe("AllReviews", () => {
   it("renders", ({ expect }) => {
-    const { asFragment } = render(<Reviews {...props} />);
+    const { asFragment } = render(<AllReviews {...props} />);
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   it("can filter by title", async ({ expect }) => {
     expect.hasAssertions();
-    render(<Reviews {...props} />);
+    render(<AllReviews {...props} />);
 
     await act(async () => {
       await userEvent.type(screen.getByLabelText("Title"), "Human Tornado");
@@ -30,7 +30,7 @@ describe("Reviews", () => {
   it("can sort by review date with newest first", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Reviews {...props} />);
+    render(<AllReviews {...props} />);
 
     await userEvent.selectOptions(
       screen.getByLabelText("Sort"),
@@ -43,7 +43,7 @@ describe("Reviews", () => {
   it("can sort by review date with oldest first", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Reviews {...props} />);
+    render(<AllReviews {...props} />);
 
     await userEvent.selectOptions(
       screen.getByLabelText("Sort"),
@@ -56,7 +56,7 @@ describe("Reviews", () => {
   it("can sort by title A → Z", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Reviews {...props} />);
+    render(<AllReviews {...props} />);
 
     await userEvent.selectOptions(
       screen.getByLabelText("Sort"),
@@ -69,7 +69,7 @@ describe("Reviews", () => {
   it("can sort by title Z → A", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Reviews {...props} />);
+    render(<AllReviews {...props} />);
 
     await userEvent.selectOptions(
       screen.getByLabelText("Sort"),
@@ -82,7 +82,7 @@ describe("Reviews", () => {
   it("can sort by release date with oldest first", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Reviews {...props} />);
+    render(<AllReviews {...props} />);
 
     await userEvent.selectOptions(
       screen.getByLabelText("Sort"),
@@ -95,7 +95,7 @@ describe("Reviews", () => {
   it("can sort by release date with newest first", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Reviews {...props} />);
+    render(<AllReviews {...props} />);
 
     await userEvent.selectOptions(
       screen.getByLabelText("Sort"),
@@ -108,7 +108,7 @@ describe("Reviews", () => {
   it("can sort by grade with best first", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Reviews {...props} />);
+    render(<AllReviews {...props} />);
 
     await userEvent.selectOptions(
       screen.getByLabelText("Sort"),
@@ -121,7 +121,7 @@ describe("Reviews", () => {
   it("can sort by grade with worst first", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Reviews {...props} />);
+    render(<AllReviews {...props} />);
 
     await userEvent.selectOptions(
       screen.getByLabelText("Sort"),
@@ -134,7 +134,7 @@ describe("Reviews", () => {
   it("can filter by release year", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Reviews {...props} />);
+    render(<AllReviews {...props} />);
 
     const fieldset = screen.getByRole("group", { name: "Release Year" });
     const fromInput = within(fieldset).getByLabelText("From");
@@ -149,7 +149,7 @@ describe("Reviews", () => {
   it("can filter by release year reversed", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Reviews {...props} />);
+    render(<AllReviews {...props} />);
 
     const fieldset = screen.getByRole("group", { name: "Release Year" });
     const fromInput = within(fieldset).getByLabelText("From");
@@ -166,7 +166,7 @@ describe("Reviews", () => {
   it("can filter by review year", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Reviews {...props} />);
+    render(<AllReviews {...props} />);
 
     const fieldset = screen.getByRole("group", { name: "Review Year" });
     const fromInput = within(fieldset).getByLabelText("From");
@@ -181,7 +181,7 @@ describe("Reviews", () => {
   it("can filter by review year reversed", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Reviews {...props} />);
+    render(<AllReviews {...props} />);
 
     const fieldset = screen.getByRole("group", { name: "Review Year" });
     const fromInput = within(fieldset).getByLabelText("From");
@@ -198,7 +198,7 @@ describe("Reviews", () => {
   it("can filter by grade", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Reviews {...props} />);
+    render(<AllReviews {...props} />);
 
     const fieldset = screen.getByRole("group", { name: "Grade" });
     const fromInput = within(fieldset).getByLabelText("From");
@@ -212,7 +212,7 @@ describe("Reviews", () => {
 
   it("can filter by genres", async ({ expect }) => {
     expect.hasAssertions();
-    render(<Reviews {...props} />);
+    render(<AllReviews {...props} />);
 
     const selectElement = screen.getByLabelText("Genres");
 
@@ -224,7 +224,7 @@ describe("Reviews", () => {
   it("can filter by grade reversed", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Reviews {...props} />);
+    render(<AllReviews {...props} />);
 
     const fieldset = screen.getByRole("group", { name: "Grade" });
     const fromInput = within(fieldset).getByLabelText("From");
@@ -241,7 +241,7 @@ describe("Reviews", () => {
   it("can show more titles", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Reviews {...props} />);
+    render(<AllReviews {...props} />);
 
     await userEvent.click(screen.getByText("Show More"));
 

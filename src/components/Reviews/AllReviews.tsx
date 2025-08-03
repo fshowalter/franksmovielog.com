@@ -3,30 +3,26 @@ import { type JSX, useReducer } from "react";
 import type { BackdropImageProps } from "~/api/backdrops";
 import type { ReviewListItemValue } from "~/components/ReviewListItem";
 
-import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
+import { Backdrop } from "~/components/Backdrop";
 import { GroupedList } from "~/components/GroupedList";
 import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 import { ReviewListItem } from "~/components/ReviewListItem";
-import { Filters, SortOptions } from "~/components/Reviews.Filters";
-import {
-  Actions,
-  initState,
-  reducer,
-  type Sort,
-} from "~/components/Reviews.reducer";
 import { ReviewsSubNav } from "~/components/ReviewsSubNav";
+
+import { Filters, SortOptions } from "./Filters";
+import { Actions, initState, reducer, type Sort } from "./reducer";
 
 export type Props = {
   backdropImageProps: BackdropImageProps;
   deck: string;
-  distinctGenres: string[];
-  distinctReleaseYears: string[];
-  distinctReviewYears: string[];
+  distinctGenres: readonly string[];
+  distinctReleaseYears: readonly string[];
+  distinctReviewYears: readonly string[];
   initialSort: Sort;
   values: ReviewListItemValue[];
 };
 
-export function Overrated({
+export function AllReviews({
   backdropImageProps,
   deck,
   distinctGenres,
@@ -47,12 +43,7 @@ export function Overrated({
   return (
     <ListWithFiltersLayout
       backdrop={
-        <Backdrop
-          breadcrumb={<BreadcrumbLink href="/reviews/">Reviews</BreadcrumbLink>}
-          deck={deck}
-          imageProps={backdropImageProps}
-          title="Overrated Disappointments"
-        />
+        <Backdrop deck={deck} imageProps={backdropImageProps} title="Reviews" />
       }
       filters={
         <Filters
@@ -74,7 +65,6 @@ export function Overrated({
           {(value) => <ReviewListItem key={value.imdbId} value={value} />}
         </GroupedList>
       }
-      mastGradient={false}
       sortProps={{
         currentSortValue: state.sortValue,
         onSortChange: (e) =>
@@ -84,7 +74,7 @@ export function Overrated({
           }),
         sortOptions: <SortOptions />,
       }}
-      subNav={<ReviewsSubNav active="overrated" />}
+      subNav={<ReviewsSubNav active="all" />}
       totalCount={state.filteredValues.length}
     />
   );
