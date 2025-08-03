@@ -8,7 +8,12 @@ import { GroupedList } from "~/components/GroupedList";
 import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 import { ReviewListItem } from "~/components/ReviewListItem";
 import { Filters, SortOptions } from "~/components/Reviews.Filters";
-import { Actions, initState, reducer, type Sort } from "~/components/Reviews.reducer";
+import {
+  Actions,
+  initState,
+  reducer,
+  type Sort,
+} from "~/components/Reviews.reducer";
 import { ReviewsSubNav } from "~/components/ReviewsSubNav";
 
 export type Props = {

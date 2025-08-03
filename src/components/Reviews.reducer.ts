@@ -6,7 +6,7 @@ import { collator, sortNumber, sortString } from "~/utils/sortTools";
 
 const SHOW_COUNT_DEFAULT = 100;
 
-type ReviewsSort = 
+type ReviewsSort =
   | "grade-asc"
   | "grade-desc"
   | "release-date-asc"
@@ -26,8 +26,14 @@ export const Actions = {
   SORT: "SORT",
 } as const;
 
-export type ActionType = FilterGenresAction | FilterGradeAction | FilterReleaseYearAction | 
-  FilterReviewYearAction | FilterTitleAction | ShowMoreAction | SortAction;
+export type ActionType =
+  | FilterGenresAction
+  | FilterGradeAction
+  | FilterReleaseYearAction
+  | FilterReviewYearAction
+  | FilterTitleAction
+  | ShowMoreAction
+  | SortAction;
 
 // Define action types
 type FilterGenresAction = {
@@ -65,7 +71,11 @@ type SortAction = {
 };
 
 // Define state type
-type State = FilterableState<ReviewListItemValue, ReviewsSort, Map<string, ReviewListItemValue[]>>;
+type State = FilterableState<
+  ReviewListItemValue,
+  ReviewsSort,
+  Map<string, ReviewListItemValue[]>
+>;
 
 // Helper functions
 function getReviewDateGroup(value: ReviewListItemValue): string {
@@ -75,7 +85,10 @@ function getReviewDateGroup(value: ReviewListItemValue): string {
   return value.reviewYear;
 }
 
-function groupForValue(value: ReviewListItemValue, sortValue: ReviewsSort): string {
+function groupForValue(
+  value: ReviewListItemValue,
+  sortValue: ReviewsSort,
+): string {
   switch (sortValue) {
     case "grade-asc":
     case "grade-desc": {
@@ -106,16 +119,22 @@ function groupForValue(value: ReviewListItemValue, sortValue: ReviewsSort): stri
   }
 }
 
-function sortValues(values: ReviewListItemValue[], sortOrder: ReviewsSort): ReviewListItemValue[] {
-  const sortMap: Record<ReviewsSort, (a: ReviewListItemValue, b: ReviewListItemValue) => number> = {
+function sortValues(
+  values: ReviewListItemValue[],
+  sortOrder: ReviewsSort,
+): ReviewListItemValue[] {
+  const sortMap: Record<
+    ReviewsSort,
+    (a: ReviewListItemValue, b: ReviewListItemValue) => number
+  > = {
     "grade-asc": (a, b) => sortNumber(a.gradeValue ?? 0, b.gradeValue ?? 0),
-    "grade-desc": (a, b) => sortNumber(a.gradeValue ?? 0, b.gradeValue ?? 0) * -1,
+    "grade-desc": (a, b) =>
+      sortNumber(a.gradeValue ?? 0, b.gradeValue ?? 0) * -1,
     "release-date-asc": (a, b) =>
       sortString(a.releaseSequence, b.releaseSequence),
     "release-date-desc": (a, b) =>
       sortString(a.releaseSequence, b.releaseSequence) * -1,
-    "review-date-asc": (a, b) =>
-      sortString(a.reviewSequence, b.reviewSequence),
+    "review-date-asc": (a, b) => sortString(a.reviewSequence, b.reviewSequence),
     "review-date-desc": (a, b) =>
       sortString(a.reviewSequence, b.reviewSequence) * -1,
     "title-asc": (a, b) => collator.compare(a.sortTitle, b.sortTitle),
@@ -129,7 +148,7 @@ function sortValues(values: ReviewListItemValue[], sortOrder: ReviewsSort): Revi
 // Create groupValues function using buildGroupValues
 const groupValues = buildGroupValues(groupForValue);
 
-// Create filterTools helpers  
+// Create filterTools helpers
 const { updateFilter } = filterTools(sortValues, groupValues);
 
 // Re-export sort type for convenience
@@ -173,18 +192,14 @@ export function reducer(state: State, action: ActionType): State {
         if (gradeValue === undefined) {
           return false;
         }
-        return (
-          gradeValue >= action.values[0] && 
-          gradeValue <= action.values[1]
-        );
+        return gradeValue >= action.values[0] && gradeValue <= action.values[1];
       });
     }
     case Actions.FILTER_RELEASE_YEAR: {
       return updateFilter(state, "releaseYear", (value) => {
         const releaseYear = value.year;
         return (
-          releaseYear >= action.values[0] &&
-          releaseYear <= action.values[1]
+          releaseYear >= action.values[0] && releaseYear <= action.values[1]
         );
       });
     }

@@ -1,11 +1,13 @@
 # Refactoring Plan - Code Duplication Reduction
 
 ## Overview
+
 This document outlines opportunities to reduce code duplication and minimize LOC count in the franksmovielog.com codebase. Estimated total reduction: 3,500-4,500 lines (~30-40% of component code).
 
 ## High Priority Tasks (Biggest Impact)
 
 ### 1. Create Generic Reducer Factory
+
 - **Impact**: ~2,000-2,500 lines reduction
 - **Details**: Create factory for common reducer patterns
   - SHOW_MORE action (identical in 8 files)
@@ -16,11 +18,13 @@ This document outlines opportunities to reduce code duplication and minimize LOC
   - Common sorting and grouping functions
 
 ### 2. Refactor Nearly Identical Reducers
+
 - **Files**: Overrated, Underrated, Underseen reducers (95%+ identical)
 - **Impact**: Eliminate 3 complete files
 - **Approach**: Use generic reducer factory from task #1
 
 ### 3. Extract Common Filter Components
+
 - **TitleFilter**: Used in 9+ components
   ```tsx
   <DebouncedInput
@@ -33,6 +37,7 @@ This document outlines opportunities to reduce code duplication and minimize LOC
 - **DropdownFilter**: Used in 5+ components
 
 ### 4. Create FilteredListLayout HOC
+
 - **Impact**: ~800-1,000 lines reduction
 - **Pattern**: Encapsulate common list structure
   - useReducer setup
@@ -42,10 +47,12 @@ This document outlines opportunities to reduce code duplication and minimize LOC
 ## Medium Priority Tasks
 
 ### 5. Create StandardFilters Composition
+
 - Compose common filter sets into reusable component
 - Parameters: showTitle, showReleaseYear, showReviewYear, etc.
 
 ### 6. Extract Letter Extraction Utility
+
 - **Duplicated 6+ times**:
   ```typescript
   const letter = value.sortTitle.slice(0, 1);
@@ -56,23 +63,27 @@ This document outlines opportunities to reduce code duplication and minimize LOC
   ```
 
 ### 7. Consolidate Sort Comparators
+
 - Title sorting (with collator)
 - Date sorting
 - Grade sorting
 - Sequence sorting
 
 ### 8. Standardize Type Definitions
+
 - Create shared ListItemValue type
 - Standardize Sort type definitions
 - Common filter action types
 
 ### 9. Apply New Abstractions
+
 - Refactor Reviews, Viewings, Watchlist components
 - Update remaining list components to use new patterns
 
 ## Low Priority Tasks
 
 ### 10. Create ListItemWithHover Component
+
 - Extract common hover effect pattern:
   ```tsx
   className={`
@@ -85,10 +96,12 @@ This document outlines opportunities to reduce code duplication and minimize LOC
   ```
 
 ### 11. Standardize Backdrop Components
+
 - Similar structure across multiple components
 - Extract common backdrop pattern
 
 ### 12. Extract Constants
+
 - SHOW_COUNT_DEFAULT = 100 (appears in 9 files)
 - Other repeated constants
 
@@ -102,13 +115,17 @@ This document outlines opportunities to reduce code duplication and minimize LOC
 ## Specific Duplication Examples
 
 ### Reducer Pattern (10 files)
+
 ```typescript
 export function initState({ initialSort, values }) {
   return {
     allValues: values,
     filteredValues: values,
     filters: {},
-    groupedValues: groupValues(values.slice(0, SHOW_COUNT_DEFAULT), initialSort),
+    groupedValues: groupValues(
+      values.slice(0, SHOW_COUNT_DEFAULT),
+      initialSort,
+    ),
     showCount: SHOW_COUNT_DEFAULT,
     sortValue: initialSort,
   };
@@ -116,6 +133,7 @@ export function initState({ initialSort, values }) {
 ```
 
 ### List Component Pattern
+
 ```tsx
 export function ComponentName({ props }): JSX.Element {
   const [state, dispatch] = useReducer(reducer, { initialSort, values }, initState);
