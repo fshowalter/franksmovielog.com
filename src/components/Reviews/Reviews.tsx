@@ -7,12 +7,10 @@ import { Backdrop } from "~/components/Backdrop";
 import { GroupedList } from "~/components/GroupedList";
 import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 import { ReviewListItem } from "~/components/ReviewListItem";
+import { Actions, initState, reducer, type Sort } from "~/components/Reviews.reducer";
 import { ReviewsSubNav } from "~/components/ReviewsSubNav";
 
-import type { Sort } from "./Reviews.reducer";
-
 import { Filters, SortOptions } from "./Filters";
-import { Actions, initState, reducer } from "./Reviews.reducer";
 
 export type Props = {
   backdropImageProps: BackdropImageProps;

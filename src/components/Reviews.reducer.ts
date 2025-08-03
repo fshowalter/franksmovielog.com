@@ -29,9 +29,6 @@ export const Actions = {
 export type ActionType = FilterGenresAction | FilterGradeAction | FilterReleaseYearAction | 
   FilterReviewYearAction | FilterTitleAction | ShowMoreAction | SortAction;
 
-// Define state type
-type State = FilterableState<ReviewListItemValue, ReviewsSort, Map<string, ReviewListItemValue[]>>;
-
 // Define action types
 type FilterGenresAction = {
   type: typeof Actions.FILTER_GENRES;
@@ -66,6 +63,9 @@ type SortAction = {
   type: typeof Actions.SORT;
   value: ReviewsSort;
 };
+
+// Define state type
+type State = FilterableState<ReviewListItemValue, ReviewsSort, Map<string, ReviewListItemValue[]>>;
 
 // Helper functions
 function getReviewDateGroup(value: ReviewListItemValue): string {
