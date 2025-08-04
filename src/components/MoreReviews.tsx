@@ -17,10 +17,10 @@ export type MoreReviewsValue = {
   excerpt: string;
   genres: string[];
   grade: string;
+  releaseYear: string;
   slug: string;
   stillImageProps: StillImageProps;
   title: string;
-  year: string;
 };
 
 export function MoreReviews({
@@ -99,7 +99,7 @@ function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
           >
             {value.title}&nbsp;
             <span className="text-sm leading-none font-normal text-muted">
-              {value.year}
+              {value.releaseYear}
             </span>
           </a>
           <Grade className="mb-4" height={18} value={value.grade} />

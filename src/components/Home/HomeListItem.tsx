@@ -20,10 +20,10 @@ export type ListItemValue = Pick<
   | "grade"
   | "imdbId"
   | "principalCastNames"
+  | "releaseYear"
   | "sequence"
   | "slug"
   | "title"
-  | "year"
 > &
   ReviewExcerpt & {
     stillImageProps: StillImageProps;
@@ -80,7 +80,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
         >
           {value.title}&nbsp;
           <span className="text-sm leading-none font-normal text-muted">
-            {value.year}
+            {value.releaseYear}
           </span>
         </a>
         <Grade

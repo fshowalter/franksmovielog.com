@@ -32,7 +32,7 @@ export async function GET() {
         slug: review.slug,
         stars: gradeToStars[review.grade],
         title: review.title,
-        year: review.year,
+        year: review.releaseYear,
       };
     }),
   );

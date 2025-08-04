@@ -142,13 +142,13 @@ async function buildReviewListItemValues(
     gradeValue: number;
     imdbId: string;
     releaseSequence: string;
+    releaseYear: string;
     reviewDate?: Date;
     reviewSequence?: string;
     sequence?: string;
     slug: string;
     sortTitle: string;
     title: string;
-    year: string;
   }[],
 ): Promise<ReviewListItemValue[]> {
   return Promise.all(
@@ -166,6 +166,7 @@ async function buildReviewListItemValues(
           ListItemPosterImageConfig,
         ),
         releaseSequence: review.releaseSequence,
+        releaseYear: review.releaseYear,
         reviewDisplayDate: `${date.toLocaleDateString("en-US", {
           timeZone: "UTC",
           year: "numeric",
@@ -188,7 +189,6 @@ async function buildReviewListItemValues(
         slug: review.slug,
         sortTitle: review.sortTitle,
         title: review.title,
-        year: review.year,
       };
 
       return value;

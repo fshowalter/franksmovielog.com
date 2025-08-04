@@ -12,5 +12,5 @@ export const MostWatchedTitleSchema = z
   })
   .transform(({ count, imdbId, slug, title, year }) => {
     // fix zod making anything with undefined optional
-    return { count, imdbId, slug, title, year };
+    return { count, imdbId, releaseYear: year, slug, title };
   });

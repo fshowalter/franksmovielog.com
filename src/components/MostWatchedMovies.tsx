@@ -16,9 +16,9 @@ export type MostWatchedMoviesListItemValue = {
   count: number;
   imdbId: string;
   posterImageProps: PosterImageProps;
+  releaseYear: string;
   slug: string | undefined;
   title: string;
-  year: string;
 };
 
 export function MostWatchedMovies({
@@ -138,11 +138,11 @@ function ListItem({
           imageProps={value.posterImageProps}
           slug={value.slug}
           title={value.title}
-          year={value.year}
+          year={value.releaseYear}
         />
       </div>
       <div className={`tablet:w-full`}>
-        <Title slug={value.slug} title={value.title} year={value.year} />
+        <Title slug={value.slug} title={value.title} year={value.releaseYear} />
         <div
           className={`
             flex justify-start font-sans text-xs font-light text-subtle

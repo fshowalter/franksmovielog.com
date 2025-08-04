@@ -22,6 +22,7 @@ export type ListItemValue = Pick<
   Viewing,
   | "medium"
   | "releaseSequence"
+  | "releaseYear"
   | "sequence"
   | "slug"
   | "sortTitle"
@@ -29,7 +30,6 @@ export type ListItemValue = Pick<
   | "venue"
   | "viewingDate"
   | "viewingYear"
-  | "year"
 > & {
   posterImageProps: PosterImageProps;
   viewingDay: string;
@@ -287,7 +287,7 @@ function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
         <ListItemTitle
           slug={value.slug}
           title={value.title}
-          year={value.year}
+          year={value.releaseYear}
         />
         <ListItemMediumAndVenue medium={value.medium} venue={value.venue} />
       </div>

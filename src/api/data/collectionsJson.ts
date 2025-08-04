@@ -38,12 +38,12 @@ const TitleSchema = z
         gradeValue,
         imdbId,
         releaseSequence,
+        releaseYear: year,
         reviewDate,
         reviewSequence,
         slug,
         sortTitle,
         title,
-        year,
       };
     },
   );

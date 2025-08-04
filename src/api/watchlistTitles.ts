@@ -27,7 +27,7 @@ export async function allWatchlistTitles(): Promise<WatchlistTitles> {
     for (const name of title.performerNames) distinctPerformers.add(name);
     for (const name of title.writerNames) distinctWriters.add(name);
     for (const name of title.collectionNames) distinctCollections.add(name);
-    distinctReleaseYears.add(title.year);
+    distinctReleaseYears.add(title.releaseYear);
 
     return {
       ...title,

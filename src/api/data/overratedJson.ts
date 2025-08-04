@@ -17,7 +17,19 @@ const OverratedJsonSchema = z.object({
   sortTitle: z.string(),
   title: z.string(),
   year: z.string(),
-});
+}).transform(({ genres, grade, gradeValue, imdbId, releaseSequence, reviewDate, reviewSequence, slug, sortTitle, title, year }) => ({
+  genres,
+  grade,
+  gradeValue,
+  imdbId,
+  releaseSequence,
+  releaseYear: year,
+  reviewDate,
+  reviewSequence,
+  slug,
+  sortTitle,
+  title,
+}));
 
 export type OverratedJson = z.infer<typeof OverratedJsonSchema>;
 

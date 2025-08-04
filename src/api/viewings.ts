@@ -20,7 +20,7 @@ export async function allViewings(): Promise<Viewings> {
   const distinctVenues = new Set<string>();
 
   const viewings = viewingsJson.map((title) => {
-    distinctReleaseYears.add(title.year);
+    distinctReleaseYears.add(title.releaseYear);
     distinctViewingYears.add(title.viewingYear);
     if (title.medium) {
       distinctMedia.add(title.medium);

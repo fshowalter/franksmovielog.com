@@ -24,10 +24,10 @@ export type ListItemValue = Pick<
   | "gradeValue"
   | "imdbId"
   | "releaseSequence"
+  | "releaseYear"
   | "slug"
   | "sortTitle"
   | "title"
-  | "year"
 > & {
   posterImageProps: PosterImageProps;
   reviewDisplayDate: string;
@@ -146,7 +146,7 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
         <ListItemTitle
           slug={value.slug}
           title={value.title}
-          year={value.year}
+          year={value.releaseYear}
         />
         {value.grade && (
           <Grade className="mb-1" height={16} value={value.grade} />

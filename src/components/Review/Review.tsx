@@ -104,8 +104,8 @@ export function Review({
             tablet:mb-12
           `}
           countries={value.countries}
+          releaseYear={value.releaseYear}
           runtimeMinutes={value.runtimeMinutes}
-          year={value.year}
         />
         <Still
           {...StillImageConfig}
@@ -141,10 +141,10 @@ export function Review({
           originalTitle={value.originalTitle}
           posterImageProps={posterImageProps}
           principalCastNames={value.principalCastNames}
+          releaseYear={value.releaseYear}
           runtimeMinutes={value.runtimeMinutes}
           title={value.title}
           writerNames={value.writerNames}
-          year={value.year}
         />
       </div>
       <div
@@ -175,9 +175,9 @@ export function Review({
         directorNames={value.directorNames}
         grade={value.grade}
         imdbId={value.imdbId}
+        releaseYear={value.releaseYear}
         seoImageSrc={seoImageSrc}
         title={value.title}
-        year={value.year}
       />
     </Layout>
   );
@@ -186,9 +186,9 @@ export function Review({
 function Meta({
   className,
   countries,
+  releaseYear,
   runtimeMinutes,
-  year,
-}: Pick<Review, "countries" | "runtimeMinutes" | "year"> & {
+}: Pick<Review, "countries" | "releaseYear" | "runtimeMinutes"> & {
   className?: string;
 }) {
   let allCountries;
@@ -215,7 +215,7 @@ function Meta({
         className,
       )}
     >
-      {year} <span>|</span> {allCountries} <span>|</span> {runtimeMinutes}
+      {releaseYear} <span>|</span> {allCountries} <span>|</span> {runtimeMinutes}
       &#x02009;min{" "}
       <span>
         <span>|</span>{" "}

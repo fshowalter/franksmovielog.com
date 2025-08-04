@@ -185,7 +185,7 @@ async function parseReviewedTitlesJson(
 
   const reviews = reviewedTitlesJson.map((title) => {
     for (const genre of title.genres) distinctGenres.add(genre);
-    distinctReleaseYears.add(title.year);
+    distinctReleaseYears.add(title.releaseYear);
 
     const { date, grade, rawContent, synopsis } = reviewsMarkdown.find(
       (reviewsmarkdown) => {

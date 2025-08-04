@@ -22,7 +22,7 @@ export async function getStaticPaths() {
         grade: review.grade,
         slug: review.slug,
         title: review.title,
-        year: review.year,
+        year: review.releaseYear,
       },
     };
   });
@@ -49,8 +49,8 @@ export const GET: APIRoute = async function get({ props }) {
     OpenGraphImage({
       backdrop: `data:${"image/png"};base64,${imageBuffer.toString("base64")}`,
       grade: `data:${"image/png"};base64,${gradeBuffer.toString("base64")}`,
+      releaseYear: year,
       title,
-      year,
     }),
   );
 

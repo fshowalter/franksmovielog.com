@@ -2,13 +2,13 @@ import type { JSX } from "react";
 export function OpenGraphImage({
   backdrop,
   grade,
+  releaseYear,
   title,
-  year,
 }: {
   backdrop: string;
   grade: string;
+  releaseYear: string;
   title: string;
-  year: string;
 }): JSX.Element {
   return (
     <div
@@ -62,7 +62,7 @@ export function OpenGraphImage({
             textWrap: "balance",
           }}
         >
-          {title} ({year})
+          {title} ({releaseYear})
         </div>
 
         <img

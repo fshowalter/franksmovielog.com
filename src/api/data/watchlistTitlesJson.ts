@@ -16,7 +16,18 @@ const WatchlistTitleJsonSchema = z.object({
   viewed: z.boolean(),
   writerNames: z.array(z.string()),
   year: z.string(),
-});
+}).transform(({ collectionNames, directorNames, imdbId, performerNames, releaseSequence, sortTitle, title, viewed, writerNames, year }) => ({
+  collectionNames,
+  directorNames,
+  imdbId,
+  performerNames,
+  releaseSequence,
+  releaseYear: year,
+  sortTitle,
+  title,
+  viewed,
+  writerNames,
+}));
 
 export type WatchlistTitleJson = z.infer<typeof WatchlistTitleJsonSchema>;
 
