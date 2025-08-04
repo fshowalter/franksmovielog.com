@@ -22,11 +22,11 @@ const MoreTitleSchema = z
     genres: z.array(z.string()),
     grade: z.string(),
     imdbId: z.string(),
-    year: z.string(),
     slug: z.string(),
     title: z.string(),
+    year: z.string(),
   })
-  .transform(({ genres, grade, imdbId, year, slug, title }) => ({
+  .transform(({ genres, grade, imdbId, slug, title, year }) => ({
     genres,
     grade,
     imdbId,
