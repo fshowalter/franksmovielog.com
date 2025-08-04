@@ -215,7 +215,8 @@ function Meta({
         className,
       )}
     >
-      {releaseYear} <span>|</span> {allCountries} <span>|</span> {runtimeMinutes}
+      {releaseYear} <span>|</span> {allCountries} <span>|</span>{" "}
+      {runtimeMinutes}
       &#x02009;min{" "}
       <span>
         <span>|</span>{" "}

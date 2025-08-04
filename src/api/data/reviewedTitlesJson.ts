@@ -17,21 +17,23 @@ const CollectionSchema = z.object({
   slug: z.string(),
 });
 
-const MoreTitleSchema = z.object({
-  genres: z.array(z.string()),
-  grade: z.string(),
-  imdbId: z.string(),
-  year: z.string(),
-  slug: z.string(),
-  title: z.string(),
-}).transform(({ genres, grade, imdbId, year, slug, title }) => ({
-  genres,
-  grade,
-  imdbId,
-  releaseYear: year,
-  slug,
-  title,
-}));
+const MoreTitleSchema = z
+  .object({
+    genres: z.array(z.string()),
+    grade: z.string(),
+    imdbId: z.string(),
+    year: z.string(),
+    slug: z.string(),
+    title: z.string(),
+  })
+  .transform(({ genres, grade, imdbId, year, slug, title }) => ({
+    genres,
+    grade,
+    imdbId,
+    releaseYear: year,
+    slug,
+    title,
+  }));
 
 const CreditKindSchema = z.enum(["writer", "director", "performer"]);
 
