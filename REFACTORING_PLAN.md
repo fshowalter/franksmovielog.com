@@ -40,14 +40,16 @@ This document outlines opportunities to reduce code duplication and minimize LOC
 
 ### 1. Create Generic Reducer Factory for Remaining Components
 
-- **Impact**: ~1,500-2,000 lines reduction
-- **Details**: Create factory for Viewings, Watchlist, Collection, and Cast/Staff components
+- **Status**: COMPLETED with learnings (see Task Analysis section)
+- **Impact**: Attempted ~1,500-2,000 lines reduction but reverted due to type safety concerns
+- **Details**: Attempted factory for Viewings, Watchlist, Collection, and Cast/Staff components
   - SHOW_MORE action (identical in remaining files)
   - SORT action (identical in remaining files)
   - FILTER_TITLE action (identical in remaining files)
   - Year range filters (identical in remaining files)
   - Standard state initialization
   - Common sorting and grouping functions
+- **Outcome**: Reverted to simpler utility functions approach in `~/utils/reducerUtils.ts`
 
 ### 2. Extract Common Filter Components
 
@@ -161,6 +163,92 @@ export function ComponentName({ props }): JSX.Element {
 }
 ```
 
+## Task Analysis & Learnings
+
+### Generic Reducer Factory Attempt (COMPLETED - Reverted)
+
+**What we tried**:
+
+- Created a comprehensive generic reducer factory with complex TypeScript generics
+- Attempted to handle all common reducer patterns (FILTER_TITLE, SHOW_MORE, SORT, year filters)
+- Used discriminated unions and advanced type inference
+
+**What we learned**:
+
+- **Type Safety vs Code Reduction Trade-off**: The factory required extensive use of `unknown` types and type casting, which significantly reduced type safety
+- **Complex Generics Create Maintenance Burden**: The generic types became so complex that they were harder to understand than the original duplicate code
+- **Custom Logic Still Required Individual Handling**: Each reducer had enough unique logic that the factory couldn't eliminate as much duplication as expected
+
+**Better Approach - Reducer Utilities**:
+
+- Created focused utility functions in `~/utils/reducerUtils.ts`
+- Each utility handles one specific pattern (title filtering, year filtering, etc.)
+- Maintains full type safety with constrained generics
+- Easier to understand and maintain
+- Still provides code reuse without sacrificing type safety
+
+**Key Utilities Created**:
+
+- `handleFilterTitle` - Common title/name filtering with regex
+- `handleFilterReleaseYear` - Year range filtering for release years
+- `handleFilterReviewYear` - Year range filtering for review years
+- `handleShowMore` - Pagination logic
+- `handleSort` - Common sorting logic
+- `handleToggleReviewed` - Toggle reviewed items filter
+- `buildGroupValues` - Generic grouping utility
+
+**Current Status**:
+
+**Work in Progress Branch**: `feat/generic-reducer-factory` (contains all reducer utilities implementation)
+
+All reducers have been updated to use the utility functions where beneficial:
+
+- Watchlist: Uses handleShowMore, handleSort, plus inline optimized filters
+- Viewings: Uses filterTools (clearFilter, updateFilter) with custom grouping logic
+- Collections: Uses FilterableState type with inline implementations
+- CastAndCrew: Uses buildGroupValues and filterTools
+- CastAndCrewMember: Uses buildGroupValues
+- Reviews: Uses buildGroupValues
+
+**Performance Optimizations Applied**:
+
+- Inline filter implementations in hot paths to avoid unnecessary property checks
+- Direct property access (e.g., `item.title` vs `item.title || item.name`)
+- Optimized regex usage in filter handlers
+
+**Type Safety Improvements**:
+
+- Updated all generic type variables to be descriptive: `TItem`, `TSortValue`, `TGroupedValues` instead of `T`, `S`, `G`
+- Maintained strict TypeScript constraints throughout utility functions
+
+## Next Phase: Schema Normalization
+
+**Identified Issue**:
+Field naming inconsistencies are creating complexity in reducer utilities. Currently `handleFilterReleaseYear` must check both `item.year` and `item.releaseYear` and handle both string and number types.
+
+**Proposed Solution**:
+Normalize all schemas to use consistent field names and types:
+
+- `year` → `releaseYear` (string type)
+- Standardize all year-related fields across the codebase
+
+**Impact**:
+
+- Simplifies reducer utilities significantly
+- Removes dual property checking in hot paths
+- Better semantic clarity (releaseYear vs viewingYear vs reviewYear)
+- Type system becomes more precise
+
+**Estimated Changes**:
+
+- ~6 data schema files
+- ~6 component ListItemValue types
+- ~6 reducer files
+- ~10+ API functions
+- Template files with year references
+
+**Branch**: To be started in new branch off main after completing current reducer utils work.
+
 ## Progress Summary
 
 ### Completed
@@ -170,12 +258,15 @@ export function ComponentName({ props }): JSX.Element {
 - ✅ Removed 8 redundant files
 - ✅ TextFilter component: 19 lines saved
 - ✅ getGroupLetter utility: ~40 lines saved
+- ✅ Reducer utilities created: Provides reusable patterns while maintaining type safety
+- ✅ Generic factory attempted and analyzed: Valuable learnings about type safety vs code reduction
 - **Total saved so far**: ~1,659 lines
 
 ### Remaining Potential
 
-- **Code reduction**: 1,841-2,841 additional lines
+- **Code reduction**: 1,841-2,841 additional lines (using utility approach)
 - **Maintenance improvement**: Changes need updates in only one place
-- **Better testability**: Test generic components once
+- **Better testability**: Test utility functions once
 - **Improved consistency**: Standardized patterns across codebase
 - **Easier onboarding**: Less duplicate code to understand
+- **Better Type Safety**: Utilities maintain full TypeScript benefits
