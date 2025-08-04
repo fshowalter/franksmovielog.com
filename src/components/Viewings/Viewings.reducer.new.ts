@@ -43,11 +43,7 @@ function customGroupValues(
 }
 
 // Create the reducer using the factory
-export const { Actions, initState, reducer } = createListReducer<
-  ListItemValue,
-  Sort,
-  Map<string, Map<string, ListItemValue[]>>
->({
+const reducerConfig = {
   customGroupValues,
   filters: {
     custom: {
@@ -78,14 +74,20 @@ export const { Actions, initState, reducer } = createListReducer<
   groupByLetter: false, // Viewings doesn't use letter grouping
   initialSort: "viewing-date-desc",
   sortMap,
-});
+} as const;
+
+export const { Actions, initState, reducer } = createListReducer<
+  ListItemValue,
+  Sort,
+  Map<string, Map<string, ListItemValue[]>>
+>(reducerConfig);
 
 // Export action types for compatibility
 export type ActionType =
-  | { type: typeof Actions.FILTER_MEDIUM; value: string }
-  | { type: typeof Actions.FILTER_RELEASE_YEAR; values: [string, string] }
-  | { type: typeof Actions.FILTER_TITLE; value: string }
-  | { type: typeof Actions.FILTER_VENUE; value: string }
-  | { type: typeof Actions.FILTER_VIEWING_YEAR; values: [string, string] }
-  | { type: typeof Actions.SHOW_MORE }
-  | { type: typeof Actions.SORT; value: Sort };
+  | { type: "FILTER_MEDIUM"; value: string }
+  | { type: "FILTER_RELEASE_YEAR"; values: [string, string] }
+  | { type: "FILTER_TITLE"; value: string }
+  | { type: "FILTER_VENUE"; value: string }
+  | { type: "FILTER_VIEWING_YEAR"; values: [string, string] }
+  | { type: "SHOW_MORE" }
+  | { type: "SORT"; value: Sort };

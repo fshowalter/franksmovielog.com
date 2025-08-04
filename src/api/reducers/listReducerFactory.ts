@@ -4,10 +4,10 @@ import { getGroupLetter } from "~/utils/getGroupLetter";
 // Core Types
 export type BaseListItem = Record<string, unknown>;
 
-export type FilterConfig = {
+export type FilterConfig<TValue = unknown, TItem = unknown> = {
   actionType: string;
   clearable?: boolean; // Support "All" clearing pattern
-  filterFn: (value: unknown) => (item: unknown) => boolean;
+  filterFn: (value: TValue) => (item: TItem) => boolean;
 };
 
 export type ListReducerConfig<
@@ -22,7 +22,7 @@ export type ListReducerConfig<
 
   // Filter configurations
   filters?: {
-    custom?: Record<string, FilterConfig>; // Custom filters
+    custom?: Record<string, FilterConfig<any, TItem>>; // Custom filters
     releaseYear?: boolean; // Enable FILTER_RELEASE_YEAR
     reviewed?: ((item: TItem) => boolean) | boolean; // Enable TOGGLE_REVIEWED with optional custom logic
     reviewYear?: boolean; // Enable FILTER_REVIEW_YEAR
@@ -61,19 +61,24 @@ export function buildGroupValues<T, S>(
   };
 }
 
-// Action Factory
-type ActionMap<T extends ListReducerConfig<any, any, any>> = {
-  SHOW_MORE: "SHOW_MORE";
-  SORT: "SORT";
-} & (T["filters"] extends { title: true } ? { FILTER_TITLE: "FILTER_TITLE" } : {}) &
-  (T["filters"] extends { releaseYear: true } ? { FILTER_RELEASE_YEAR: "FILTER_RELEASE_YEAR" } : {}) &
-  (T["filters"] extends { reviewYear: true } ? { FILTER_REVIEW_YEAR: "FILTER_REVIEW_YEAR" } : {}) &
-  (T["filters"] extends { reviewed: boolean | ((item: any) => boolean) } ? { TOGGLE_REVIEWED: "TOGGLE_REVIEWED" } : {}) &
-  (T["filters"] extends { custom: infer C } ? (C extends Record<string, FilterConfig> ? { [K in keyof C]: K } : {}) : {});
+// Action Factory - simplified approach
+type GetFilterActions<T extends ListReducerConfig<any, any, any>> = T["filters"] extends {
+  title?: infer Title;
+  releaseYear?: infer ReleaseYear;
+  reviewYear?: infer ReviewYear;
+  reviewed?: infer Reviewed;
+  custom?: infer Custom;
+}
+  ? (Title extends true ? { FILTER_TITLE: "FILTER_TITLE" } : {}) &
+    (ReleaseYear extends true ? { FILTER_RELEASE_YEAR: "FILTER_RELEASE_YEAR" } : {}) &
+    (ReviewYear extends true ? { FILTER_REVIEW_YEAR: "FILTER_REVIEW_YEAR" } : {}) &
+    (Reviewed extends boolean | Function ? { TOGGLE_REVIEWED: "TOGGLE_REVIEWED" } : {}) &
+    (Custom extends Record<string, any> ? { [K in keyof Custom as K extends string ? K : never]: K } : {})
+  : {};
 
 export function createActions<TConfig extends ListReducerConfig<any, any, any>>(
   config: TConfig,
-): ActionMap<TConfig> {
+): { SHOW_MORE: "SHOW_MORE"; SORT: "SORT" } & GetFilterActions<TConfig> {
   const baseActions = {
     SHOW_MORE: "SHOW_MORE",
     SORT: "SORT",
@@ -101,7 +106,7 @@ export function createActions<TConfig extends ListReducerConfig<any, any, any>>(
     }
   }
 
-  return { ...baseActions, ...filterActions } as ActionMap<TConfig>;
+  return { ...baseActions, ...filterActions } as any;
 }
 
 // Reducer Factory
@@ -163,7 +168,7 @@ export function createListReducer<
 
     const filterHelpers = filterTools<TItem, TSort, TGroup>(
       applySort,
-      groupValues,
+      groupValues as (items: TItem[], sortOrder: TSort) => TGroup,
     );
     
     const updateFilter = filterHelpers.updateFilter;
@@ -174,7 +179,7 @@ export function createListReducer<
     };
 
     switch (action.type) {
-      case Actions.FILTER_RELEASE_YEAR: {
+      case "FILTER_RELEASE_YEAR": {
         if (!config.filters?.releaseYear) return state;
 
         const [minYear, maxYear] = (action.value || action.values) as [number | string, number | string];
@@ -186,7 +191,7 @@ export function createListReducer<
         });
       }
 
-      case Actions.FILTER_REVIEW_YEAR: {
+      case "FILTER_REVIEW_YEAR": {
         if (!config.filters?.reviewYear) return state;
 
         const [minYear, maxYear] = action.value as [number | string, number | string];
@@ -198,7 +203,7 @@ export function createListReducer<
       }
 
       // Optional filter actions
-      case Actions.FILTER_TITLE: {
+      case "FILTER_TITLE": {
         if (!config.filters?.title) return state;
 
         const regex = new RegExp(action.value as string, "i");
@@ -210,7 +215,7 @@ export function createListReducer<
         });
       }
 
-      case Actions.SHOW_MORE: {
+      case "SHOW_MORE": {
         const showCount = state.showCount + SHOW_COUNT_DEFAULT;
         const groupedValues = groupValues(
           state.filteredValues.slice(0, showCount),
@@ -224,7 +229,7 @@ export function createListReducer<
       }
 
       // Core actions
-      case Actions.SORT: {
+      case "SORT": {
         const groupedValues = groupValues(
           state.filteredValues.slice(0, state.showCount),
           action.value as TSort,
@@ -236,9 +241,8 @@ export function createListReducer<
         };
       }
 
-      case Actions.TOGGLE_REVIEWED: {
+      case "TOGGLE_REVIEWED": {
         if (!config.filters?.reviewed) return state;
-        if (!("TOGGLE_REVIEWED" in Actions)) return state;
 
         if (state.hideReviewed) {
           const newState = clearFilter(state, "reviewed");
@@ -283,7 +287,7 @@ export function createListReducer<
   }
 
   return {
-    Actions,
+    Actions: Actions as { SHOW_MORE: "SHOW_MORE"; SORT: "SORT" } & GetFilterActions<typeof config>,
     initState,
     reducer,
   };

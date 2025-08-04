@@ -37,11 +37,7 @@ function groupForValue(item: ListItemValue, sortValue: Sort): string {
 }
 
 // Create the reducer using the factory
-export const { Actions, initState, reducer } = createListReducer<
-  ListItemValue,
-  Sort,
-  Map<string, ListItemValue[]>
->({
+const reducerConfig = {
   customGroupValues: buildGroupValues(groupForValue),
   filters: {
     custom: {
@@ -61,12 +57,19 @@ export const { Actions, initState, reducer } = createListReducer<
       },
     },
   },
-  initialSort: "name-asc",
+  initialSort: "name-asc" as Sort,
   sortMap,
-});
+} as const;
+
+export const { Actions, initState, reducer } = createListReducer<
+  ListItemValue,
+  Sort,
+  Map<string, ListItemValue[]>
+>(reducerConfig);
 
 // Export action types for compatibility
 export type ActionType =
-  | { type: typeof Actions.FILTER_CREDIT_KIND; value: string }
-  | { type: typeof Actions.FILTER_NAME; value: string }
-  | { type: typeof Actions.SORT; value: Sort };
+  | { type: "FILTER_CREDIT_KIND"; value: string }
+  | { type: "FILTER_NAME"; value: string }
+  | { type: "SHOW_MORE" }
+  | { type: "SORT"; value: Sort };

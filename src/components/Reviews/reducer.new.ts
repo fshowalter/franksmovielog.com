@@ -73,11 +73,7 @@ function groupForValue(
 }
 
 // Create the reducer using the factory
-export const { Actions, initState, reducer } = createListReducer<
-  ReviewListItemValue,
-  ReviewsSort,
-  Map<string, ReviewListItemValue[]>
->({
+const reducerConfig = {
   customGroupValues: buildGroupValues(groupForValue),
   filters: {
     custom: {
@@ -105,17 +101,23 @@ export const { Actions, initState, reducer } = createListReducer<
   },
   initialSort: "review-date-desc",
   sortMap,
-});
+} as const;
+
+export const { Actions, initState, reducer } = createListReducer<
+  ReviewListItemValue,
+  ReviewsSort,
+  Map<string, ReviewListItemValue[]>
+>(reducerConfig);
 
 // Export action types for compatibility
 export type ActionType =
-  | { type: typeof Actions.FILTER_GENRES; values: readonly string[] }
-  | { type: typeof Actions.FILTER_GRADE; values: [number, number] }
-  | { type: typeof Actions.FILTER_RELEASE_YEAR; values: [string, string] }
-  | { type: typeof Actions.FILTER_REVIEW_YEAR; values: [string, string] }
-  | { type: typeof Actions.FILTER_TITLE; value: string }
-  | { type: typeof Actions.SHOW_MORE }
-  | { type: typeof Actions.SORT; value: ReviewsSort };
+  | { type: "FILTER_GENRES"; values: readonly string[] }
+  | { type: "FILTER_GRADE"; values: [number, number] }
+  | { type: "FILTER_RELEASE_YEAR"; values: [string, string] }
+  | { type: "FILTER_REVIEW_YEAR"; values: [string, string] }
+  | { type: "FILTER_TITLE"; value: string }
+  | { type: "SHOW_MORE" }
+  | { type: "SORT"; value: ReviewsSort };
 
 // Re-export sort type for convenience
 export type Sort = ReviewsSort;
