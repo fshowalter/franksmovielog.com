@@ -189,8 +189,10 @@ function groupValues(
 function sortValues(values: ListItemValue[], sortOrder: Sort) {
   const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
     {
-      "viewing-date-asc": (a, b) => sortNumber(a.viewingSequence, b.viewingSequence),
-      "viewing-date-desc": (a, b) => sortNumber(a.viewingSequence, b.viewingSequence) * -1,
+      "viewing-date-asc": (a, b) =>
+        sortNumber(a.viewingSequence, b.viewingSequence),
+      "viewing-date-desc": (a, b) =>
+        sortNumber(a.viewingSequence, b.viewingSequence) * -1,
     };
 
   const comparer = sortMap[sortOrder];

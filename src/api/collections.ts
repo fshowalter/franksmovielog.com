@@ -70,7 +70,7 @@ export async function collectionDetails(slug: string): Promise<{
         : undefined,
       descriptionHtml: collection.description
         ? descriptionToHtml(collection.description)
-        : undefined,
+        : null,
     },
     distinctReleaseYears: [...releaseYears].toSorted(),
     distinctReviewYears: [...reviewYears].toSorted(),

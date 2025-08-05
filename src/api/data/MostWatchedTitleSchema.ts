@@ -12,5 +12,11 @@ export const MostWatchedTitleSchema = z
   })
   .transform((data) => {
     // fix zod making anything with undefined optional
-    return data;
+    return {
+      count: data.count,
+      imdbId: data.imdbId,
+      releaseYear: data.releaseYear,
+      slug: data.slug,
+      title: data.title,
+    };
   });

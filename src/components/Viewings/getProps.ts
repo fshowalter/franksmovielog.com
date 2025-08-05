@@ -28,7 +28,6 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
         ),
         releaseSequence: viewing.releaseSequence,
         releaseYear: viewing.releaseYear,
-        viewingSequence: viewing.viewingSequence,
         slug: viewing.slug,
         sortTitle: viewing.sortTitle,
         title: viewing.title,
@@ -49,6 +48,7 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
           month: "short",
           timeZone: "UTC",
         }),
+        viewingSequence: viewing.viewingSequence,
         viewingYear: viewing.viewingYear,
       };
 

@@ -21,7 +21,7 @@ export type ListItemValue = Pick<
   | "imdbId"
   | "principalCastNames"
   | "releaseYear"
-  | "sequence"
+  | "reviewSequence"
   | "slug"
   | "title"
 > &

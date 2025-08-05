@@ -34,7 +34,7 @@ const props = await getProps(slug);
     description: `${props.value.name} movie reviews: ${props.value.description} Sort by oldest or newest, best or worst, or title.`,
   }}
   openGraph={{
-    description: props.value.description,
+    description: props.value.description || "",
     type: "website",
   }}
   title={`${props.value.name} movie reviews`}
