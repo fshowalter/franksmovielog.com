@@ -30,9 +30,9 @@ export function WatchlistTitleSlug({
   );
 }
 
-function formatCollectionNames(names: readonly string[]): string | string[] {
+function formatCollectionNames(names: readonly string[]): string[] {
   if (names.length === 0) {
-    return "";
+    return [];
   }
 
   const suffix = names.length > 1 ? "collections" : "collection";
