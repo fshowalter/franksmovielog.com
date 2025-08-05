@@ -105,9 +105,9 @@
     {
       "title": "The Beyond",
       "imdbId": "tt0082307",
-      "year": "1981",
       "count": 2,
-      "slug": null
+      "slug": null,
+      "releaseYear": "1981"
     }
   ],
   "mostWatchedDirectors": [
@@ -117,22 +117,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 471,
           "date": "2015-01-17",
           "slug": "the-devil-rides-out-1968",
           "title": "The Devil Rides Out",
           "medium": "DVD",
           "venue": null,
-          "year": "1968"
+          "year": "1968",
+          "viewingSequence": 471
         },
         {
-          "sequence": 527,
           "date": "2015-10-24",
           "slug": "the-curse-of-frankenstein-1957",
           "title": "The Curse of Frankenstein",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "1957"
+          "year": "1957",
+          "viewingSequence": 527
         }
       ]
     },
@@ -142,22 +142,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 473,
           "date": "2015-01-31",
           "slug": "the-big-steal-1949",
           "title": "The Big Steal",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1949"
+          "year": "1949",
+          "viewingSequence": 473
         },
         {
-          "sequence": 504,
           "date": "2015-07-11",
           "slug": "hell-is-for-heroes-1962",
           "title": "Hell Is for Heroes",
           "medium": "Netflix",
           "venue": null,
-          "year": "1962"
+          "year": "1962",
+          "viewingSequence": 504
         }
       ]
     },
@@ -167,22 +167,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 484,
           "date": "2015-03-07",
           "slug": "three-on-a-match-1932",
           "title": "Three on a Match",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1932"
+          "year": "1932",
+          "viewingSequence": 484
         },
         {
-          "sequence": 513,
           "date": "2015-08-08",
           "slug": "big-city-blues-1932",
           "title": "Big City Blues",
           "medium": "TCM",
           "venue": null,
-          "year": "1932"
+          "year": "1932",
+          "viewingSequence": 513
         }
       ]
     },
@@ -192,22 +192,22 @@
       "slug": "lucio-fulci",
       "viewings": [
         {
-          "sequence": 503,
           "date": "2015-06-23",
           "slug": null,
           "title": "The Beyond",
           "medium": "35mm",
           "venue": "Alamo Drafthouse Cinema - Winchester",
-          "year": "1981"
+          "year": "1981",
+          "viewingSequence": 503
         },
         {
-          "sequence": 532,
           "date": "2015-11-05",
           "slug": null,
           "title": "The Beyond",
           "medium": "35mm",
           "venue": "AFI Silver",
-          "year": "1981"
+          "year": "1981",
+          "viewingSequence": 532
         }
       ]
     },
@@ -217,22 +217,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 515,
           "date": "2015-08-13",
           "slug": "and-now-the-screaming-starts-1973",
           "title": "And Now the Screaming Starts!",
           "medium": "Shudder",
           "venue": null,
-          "year": "1973"
+          "year": "1973",
+          "viewingSequence": 515
         },
         {
-          "sequence": 521,
           "date": "2015-09-19",
           "slug": "asylum-1972",
           "title": "Asylum",
           "medium": "Amazon",
           "venue": null,
-          "year": "1972"
+          "year": "1972",
+          "viewingSequence": 521
         }
       ]
     }
@@ -244,103 +244,103 @@
       "slug": "christopher-lee",
       "viewings": [
         {
-          "sequence": 466,
           "date": "2015-01-08",
           "slug": null,
           "title": "The Hobbit: The Battle of the Five Armies",
           "medium": null,
           "venue": "AMC Tysons Corner 16",
-          "year": "2014"
+          "year": "2014",
+          "viewingSequence": 466
         },
         {
-          "sequence": 471,
           "date": "2015-01-17",
           "slug": "the-devil-rides-out-1968",
           "title": "The Devil Rides Out",
           "medium": "DVD",
           "venue": null,
-          "year": "1968"
+          "year": "1968",
+          "viewingSequence": 471
         },
         {
-          "sequence": 472,
           "date": "2015-01-17",
           "slug": "rasputin-the-mad-monk-1966",
           "title": "Rasputin: The Mad Monk",
           "medium": "DVD",
           "venue": null,
-          "year": "1966"
+          "year": "1966",
+          "viewingSequence": 472
         },
         {
-          "sequence": 475,
           "date": "2015-01-31",
           "slug": "the-crimson-cult-1968",
           "title": "The Crimson Cult",
           "medium": "Netflix",
           "venue": null,
-          "year": "1968"
+          "year": "1968",
+          "viewingSequence": 475
         },
         {
-          "sequence": 481,
           "date": "2015-02-21",
           "slug": "to-the-devil-a-daughter-1976",
           "title": "To the Devil a Daughter",
           "medium": "DVD",
           "venue": null,
-          "year": "1976"
+          "year": "1976",
+          "viewingSequence": 481
         },
         {
-          "sequence": 498,
           "date": "2015-06-06",
           "slug": "the-city-of-the-dead-1960",
           "title": "The City of the Dead",
           "medium": "DVD",
           "venue": null,
-          "year": "1960"
+          "year": "1960",
+          "viewingSequence": 498
         },
         {
-          "sequence": 514,
           "date": "2015-08-11",
           "slug": "i-monster-1971",
           "title": "I, Monster",
           "medium": "Shudder",
           "venue": null,
-          "year": "1971"
+          "year": "1971",
+          "viewingSequence": 514
         },
         {
-          "sequence": 519,
           "date": "2015-08-29",
           "slug": "the-whip-and-the-body-1963",
           "title": "The Whip and the Body",
           "medium": "Shudder",
           "venue": null,
-          "year": "1963"
+          "year": "1963",
+          "viewingSequence": 519
         },
         {
-          "sequence": 520,
           "date": "2015-09-05",
           "slug": "the-house-that-dripped-blood-1971",
           "title": "The House That Dripped Blood",
           "medium": "Amazon",
           "venue": null,
-          "year": "1971"
+          "year": "1971",
+          "viewingSequence": 520
         },
         {
-          "sequence": 525,
           "date": "2015-10-13",
           "slug": null,
           "title": "The Creeping Flesh",
           "medium": null,
           "venue": "AFI Silver",
-          "year": "1973"
+          "year": "1973",
+          "viewingSequence": 525
         },
         {
-          "sequence": 527,
           "date": "2015-10-24",
           "slug": "the-curse-of-frankenstein-1957",
           "title": "The Curse of Frankenstein",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "1957"
+          "year": "1957",
+          "viewingSequence": 527
         }
       ]
     },
@@ -350,67 +350,67 @@
       "slug": "peter-cushing",
       "viewings": [
         {
-          "sequence": 514,
           "date": "2015-08-11",
           "slug": "i-monster-1971",
           "title": "I, Monster",
           "medium": "Shudder",
           "venue": null,
-          "year": "1971"
+          "year": "1971",
+          "viewingSequence": 514
         },
         {
-          "sequence": 515,
           "date": "2015-08-13",
           "slug": "and-now-the-screaming-starts-1973",
           "title": "And Now the Screaming Starts!",
           "medium": "Shudder",
           "venue": null,
-          "year": "1973"
+          "year": "1973",
+          "viewingSequence": 515
         },
         {
-          "sequence": 517,
           "date": "2015-08-15",
           "slug": "shock-waves-1977",
           "title": "Shock Waves",
           "medium": "Shudder",
           "venue": null,
-          "year": "1977"
+          "year": "1977",
+          "viewingSequence": 517
         },
         {
-          "sequence": 520,
           "date": "2015-09-05",
           "slug": "the-house-that-dripped-blood-1971",
           "title": "The House That Dripped Blood",
           "medium": "Amazon",
           "venue": null,
-          "year": "1971"
+          "year": "1971",
+          "viewingSequence": 520
         },
         {
-          "sequence": 521,
           "date": "2015-09-19",
           "slug": "asylum-1972",
           "title": "Asylum",
           "medium": "Amazon",
           "venue": null,
-          "year": "1972"
+          "year": "1972",
+          "viewingSequence": 521
         },
         {
-          "sequence": 525,
           "date": "2015-10-13",
           "slug": null,
           "title": "The Creeping Flesh",
           "medium": null,
           "venue": "AFI Silver",
-          "year": "1973"
+          "year": "1973",
+          "viewingSequence": 525
         },
         {
-          "sequence": 527,
           "date": "2015-10-24",
           "slug": "the-curse-of-frankenstein-1957",
           "title": "The Curse of Frankenstein",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "1957"
+          "year": "1957",
+          "viewingSequence": 527
         }
       ]
     },
@@ -420,58 +420,58 @@
       "slug": "robert-mitchum",
       "viewings": [
         {
-          "sequence": 463,
           "date": "2015-01-03",
           "slug": "she-couldnt-say-no-1953",
           "title": "She Couldn't Say No",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1953"
+          "year": "1953",
+          "viewingSequence": 463
         },
         {
-          "sequence": 467,
           "date": "2015-01-09",
           "slug": "rachel-and-the-stranger-1948",
           "title": "Rachel and the Stranger",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1948"
+          "year": "1948",
+          "viewingSequence": 467
         },
         {
-          "sequence": 468,
           "date": "2015-01-10",
           "slug": "the-angry-hills-1959",
           "title": "The Angry Hills",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1959"
+          "year": "1959",
+          "viewingSequence": 468
         },
         {
-          "sequence": 473,
           "date": "2015-01-31",
           "slug": "the-big-steal-1949",
           "title": "The Big Steal",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1949"
+          "year": "1949",
+          "viewingSequence": 473
         },
         {
-          "sequence": 476,
           "date": "2015-02-07",
           "slug": "where-danger-lives-1950",
           "title": "Where Danger Lives",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1950"
+          "year": "1950",
+          "viewingSequence": 476
         },
         {
-          "sequence": 499,
           "date": "2015-06-06",
           "slug": null,
           "title": "Out of the Past",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "1947"
+          "year": "1947",
+          "viewingSequence": 499
         }
       ]
     },
@@ -481,40 +481,40 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 465,
           "date": "2015-01-04",
           "slug": null,
           "title": "Captain America: The Winter Soldier",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "2014"
+          "year": "2014",
+          "viewingSequence": 465
         },
         {
-          "sequence": 477,
           "date": "2015-02-12",
           "slug": "kingsman-the-secret-service-2014",
           "title": "Kingsman: The Secret Service",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2014"
+          "year": "2014",
+          "viewingSequence": 477
         },
         {
-          "sequence": 492,
           "date": "2015-04-30",
           "slug": "avengers-age-of-ultron-2015",
           "title": "Avengers: Age of Ultron",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 492
         },
         {
-          "sequence": 537,
           "date": "2015-12-29",
           "slug": null,
           "title": "The Hateful Eight",
           "medium": "70mm",
           "venue": "AFI Silver",
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 537
         }
       ]
     },
@@ -524,40 +524,40 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 465,
           "date": "2015-01-04",
           "slug": null,
           "title": "Captain America: The Winter Soldier",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "2014"
+          "year": "2014",
+          "viewingSequence": 465
         },
         {
-          "sequence": 470,
           "date": "2015-01-11",
           "slug": null,
           "title": "Guardians of the Galaxy",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "2014"
+          "year": "2014",
+          "viewingSequence": 470
         },
         {
-          "sequence": 492,
           "date": "2015-04-30",
           "slug": "avengers-age-of-ultron-2015",
           "title": "Avengers: Age of Ultron",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 492
         },
         {
-          "sequence": 508,
           "date": "2015-07-30",
           "slug": "ant-man-2015",
           "title": "Ant-Man",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 508
         }
       ]
     },
@@ -567,40 +567,40 @@
       "slug": "vincent-price",
       "viewings": [
         {
-          "sequence": 480,
           "date": "2015-02-14",
           "slug": "the-long-night-1947",
           "title": "The Long Night",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1947"
+          "year": "1947",
+          "viewingSequence": 480
         },
         {
-          "sequence": 483,
           "date": "2015-02-28",
           "slug": "dangerous-mission-1954",
           "title": "Dangerous Mission",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1954"
+          "year": "1954",
+          "viewingSequence": 483
         },
         {
-          "sequence": 486,
           "date": "2015-03-26",
           "slug": null,
           "title": "House on Haunted Hill",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1959"
+          "year": "1959",
+          "viewingSequence": 486
         },
         {
-          "sequence": 523,
           "date": "2015-10-08",
           "slug": null,
           "title": "House of Wax",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1953"
+          "year": "1953",
+          "viewingSequence": 523
         }
       ]
     },
@@ -610,31 +610,31 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 465,
           "date": "2015-01-04",
           "slug": null,
           "title": "Captain America: The Winter Soldier",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "2014"
+          "year": "2014",
+          "viewingSequence": 465
         },
         {
-          "sequence": 492,
           "date": "2015-04-30",
           "slug": "avengers-age-of-ultron-2015",
           "title": "Avengers: Age of Ultron",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 492
         },
         {
-          "sequence": 508,
           "date": "2015-07-30",
           "slug": "ant-man-2015",
           "title": "Ant-Man",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 508
         }
       ]
     },
@@ -644,31 +644,31 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 465,
           "date": "2015-01-04",
           "slug": null,
           "title": "Captain America: The Winter Soldier",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "2014"
+          "year": "2014",
+          "viewingSequence": 465
         },
         {
-          "sequence": 492,
           "date": "2015-04-30",
           "slug": "avengers-age-of-ultron-2015",
           "title": "Avengers: Age of Ultron",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 492
         },
         {
-          "sequence": 508,
           "date": "2015-07-30",
           "slug": "ant-man-2015",
           "title": "Ant-Man",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 508
         }
       ]
     },
@@ -678,31 +678,31 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 479,
           "date": "2015-02-14",
           "slug": null,
           "title": "Raiders of the Lost Ark",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "1981"
+          "year": "1981",
+          "viewingSequence": 479
         },
         {
-          "sequence": 481,
           "date": "2015-02-21",
           "slug": "to-the-devil-a-daughter-1976",
           "title": "To the Devil a Daughter",
           "medium": "DVD",
           "venue": null,
-          "year": "1976"
+          "year": "1976",
+          "viewingSequence": 481
         },
         {
-          "sequence": 520,
           "date": "2015-09-05",
           "slug": "the-house-that-dripped-blood-1971",
           "title": "The House That Dripped Blood",
           "medium": "Amazon",
           "venue": null,
-          "year": "1971"
+          "year": "1971",
+          "viewingSequence": 520
         }
       ]
     },
@@ -712,22 +712,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 463,
           "date": "2015-01-03",
           "slug": "she-couldnt-say-no-1953",
           "title": "She Couldn't Say No",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1953"
+          "year": "1953",
+          "viewingSequence": 463
         },
         {
-          "sequence": 476,
           "date": "2015-02-07",
           "slug": "where-danger-lives-1950",
           "title": "Where Danger Lives",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1950"
+          "year": "1950",
+          "viewingSequence": 476
         }
       ]
     }
@@ -739,31 +739,31 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 503,
           "date": "2015-06-23",
           "slug": null,
           "title": "The Beyond",
           "medium": "35mm",
           "venue": "Alamo Drafthouse Cinema - Winchester",
-          "year": "1981"
+          "year": "1981",
+          "viewingSequence": 503
         },
         {
-          "sequence": 531,
           "date": "2015-10-31",
           "slug": null,
           "title": "Demons",
           "medium": "Shudder",
           "venue": null,
-          "year": "1985"
+          "year": "1985",
+          "viewingSequence": 531
         },
         {
-          "sequence": 532,
           "date": "2015-11-05",
           "slug": null,
           "title": "The Beyond",
           "medium": "35mm",
           "venue": "AFI Silver",
-          "year": "1981"
+          "year": "1981",
+          "viewingSequence": 532
         }
       ]
     },
@@ -773,22 +773,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 471,
           "date": "2015-01-17",
           "slug": "the-devil-rides-out-1968",
           "title": "The Devil Rides Out",
           "medium": "DVD",
           "venue": null,
-          "year": "1968"
+          "year": "1968",
+          "viewingSequence": 471
         },
         {
-          "sequence": 481,
           "date": "2015-02-21",
           "slug": "to-the-devil-a-daughter-1976",
           "title": "To the Devil a Daughter",
           "medium": "DVD",
           "venue": null,
-          "year": "1976"
+          "year": "1976",
+          "viewingSequence": 481
         }
       ]
     },
@@ -798,22 +798,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 473,
           "date": "2015-01-31",
           "slug": "the-big-steal-1949",
           "title": "The Big Steal",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1949"
+          "year": "1949",
+          "viewingSequence": 473
         },
         {
-          "sequence": 499,
           "date": "2015-06-06",
           "slug": null,
           "title": "Out of the Past",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "1947"
+          "year": "1947",
+          "viewingSequence": 499
         }
       ]
     },
@@ -823,22 +823,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 476,
           "date": "2015-02-07",
           "slug": "where-danger-lives-1950",
           "title": "Where Danger Lives",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1950"
+          "year": "1950",
+          "viewingSequence": 476
         },
         {
-          "sequence": 483,
           "date": "2015-02-28",
           "slug": "dangerous-mission-1954",
           "title": "Dangerous Mission",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1954"
+          "year": "1954",
+          "viewingSequence": 483
         }
       ]
     },
@@ -848,22 +848,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 479,
           "date": "2015-02-14",
           "slug": null,
           "title": "Raiders of the Lost Ark",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "1981"
+          "year": "1981",
+          "viewingSequence": 479
         },
         {
-          "sequence": 536,
           "date": "2015-12-21",
           "slug": null,
           "title": "Star Wars: Episode VII - The Force Awakens",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 536
         }
       ]
     },
@@ -873,22 +873,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 492,
           "date": "2015-04-30",
           "slug": "avengers-age-of-ultron-2015",
           "title": "Avengers: Age of Ultron",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 492
         },
         {
-          "sequence": 529,
           "date": "2015-10-31",
           "slug": "the-cabin-in-the-woods-2011",
           "title": "The Cabin in the Woods",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "2011"
+          "year": "2011",
+          "viewingSequence": 529
         }
       ]
     },
@@ -898,22 +898,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 498,
           "date": "2015-06-06",
           "slug": "the-city-of-the-dead-1960",
           "title": "The City of the Dead",
           "medium": "DVD",
           "venue": null,
-          "year": "1960"
+          "year": "1960",
+          "viewingSequence": 498
         },
         {
-          "sequence": 514,
           "date": "2015-08-11",
           "slug": "i-monster-1971",
           "title": "I, Monster",
           "medium": "Shudder",
           "venue": null,
-          "year": "1971"
+          "year": "1971",
+          "viewingSequence": 514
         }
       ]
     },
@@ -923,22 +923,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 502,
           "date": "2015-06-22",
           "slug": "inside-out-2015",
           "title": "Inside Out",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 502
         },
         {
-          "sequence": 536,
           "date": "2015-12-21",
           "slug": null,
           "title": "Star Wars: Episode VII - The Force Awakens",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 536
         }
       ]
     },
@@ -948,22 +948,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 503,
           "date": "2015-06-23",
           "slug": null,
           "title": "The Beyond",
           "medium": "35mm",
           "venue": "Alamo Drafthouse Cinema - Winchester",
-          "year": "1981"
+          "year": "1981",
+          "viewingSequence": 503
         },
         {
-          "sequence": 532,
           "date": "2015-11-05",
           "slug": null,
           "title": "The Beyond",
           "medium": "35mm",
           "venue": "AFI Silver",
-          "year": "1981"
+          "year": "1981",
+          "viewingSequence": 532
         }
       ]
     },
@@ -973,22 +973,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 503,
           "date": "2015-06-23",
           "slug": null,
           "title": "The Beyond",
           "medium": "35mm",
           "venue": "Alamo Drafthouse Cinema - Winchester",
-          "year": "1981"
+          "year": "1981",
+          "viewingSequence": 503
         },
         {
-          "sequence": 532,
           "date": "2015-11-05",
           "slug": null,
           "title": "The Beyond",
           "medium": "35mm",
           "venue": "AFI Silver",
-          "year": "1981"
+          "year": "1981",
+          "viewingSequence": 532
         }
       ]
     }

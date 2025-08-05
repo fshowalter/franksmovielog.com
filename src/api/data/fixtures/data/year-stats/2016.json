@@ -65,16 +65,16 @@
     {
       "title": "The Witch",
       "imdbId": "tt4263482",
-      "year": "2015",
       "count": 2,
-      "slug": "the-witch-2015"
+      "slug": "the-witch-2015",
+      "releaseYear": "2015"
     },
     {
       "title": "Captain America: Civil War",
       "imdbId": "tt3498820",
-      "year": "2016",
       "count": 2,
-      "slug": "captain-america-civil-war-2016"
+      "slug": "captain-america-civil-war-2016",
+      "releaseYear": "2016"
     }
   ],
   "mostWatchedDirectors": [
@@ -84,22 +84,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 542,
           "date": "2016-03-10",
           "slug": "the-witch-2015",
           "title": "The Witch",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 542
         },
         {
-          "sequence": 559,
           "date": "2016-09-17",
           "slug": "the-witch-2015",
           "title": "The Witch",
           "medium": "Amazon",
           "venue": null,
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 559
         }
       ]
     },
@@ -109,22 +109,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 547,
           "date": "2016-05-12",
           "slug": "captain-america-civil-war-2016",
           "title": "Captain America: Civil War",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2016"
+          "year": "2016",
+          "viewingSequence": 547
         },
         {
-          "sequence": 569,
           "date": "2016-11-12",
           "slug": "captain-america-civil-war-2016",
           "title": "Captain America: Civil War",
           "medium": "Amazon",
           "venue": null,
-          "year": "2016"
+          "year": "2016",
+          "viewingSequence": 569
         }
       ]
     },
@@ -134,22 +134,22 @@
       "slug": "sam-peckinpah",
       "viewings": [
         {
-          "sequence": 571,
           "date": "2016-11-27",
           "slug": "the-getaway-1972",
           "title": "The Getaway",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "1972"
+          "year": "1972",
+          "viewingSequence": 571
         },
         {
-          "sequence": 573,
           "date": "2016-12-02",
           "slug": "straw-dogs-1971",
           "title": "Straw Dogs",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "1971"
+          "year": "1971",
+          "viewingSequence": 573
         }
       ]
     }
@@ -161,40 +161,40 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 541,
           "date": "2016-03-10",
           "slug": "deadpool-2016",
           "title": "Deadpool",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2016"
+          "year": "2016",
+          "viewingSequence": 541
         },
         {
-          "sequence": 547,
           "date": "2016-05-12",
           "slug": "captain-america-civil-war-2016",
           "title": "Captain America: Civil War",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2016"
+          "year": "2016",
+          "viewingSequence": 547
         },
         {
-          "sequence": 569,
           "date": "2016-11-12",
           "slug": "captain-america-civil-war-2016",
           "title": "Captain America: Civil War",
           "medium": "Amazon",
           "venue": null,
-          "year": "2016"
+          "year": "2016",
+          "viewingSequence": 569
         },
         {
-          "sequence": 570,
           "date": "2016-11-16",
           "slug": "doctor-strange-2016",
           "title": "Doctor Strange",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2016"
+          "year": "2016",
+          "viewingSequence": 570
         }
       ]
     },
@@ -204,40 +204,40 @@
       "slug": "john-wayne",
       "viewings": [
         {
-          "sequence": 555,
           "date": "2016-08-22",
           "slug": "haunted-gold-1932",
           "title": "Haunted Gold",
           "medium": "TCM",
           "venue": null,
-          "year": "1932"
+          "year": "1932",
+          "viewingSequence": 555
         },
         {
-          "sequence": 558,
           "date": "2016-09-04",
           "slug": "ride-him-cowboy-1932",
           "title": "Ride Him, Cowboy",
           "medium": "TCM",
           "venue": null,
-          "year": "1932"
+          "year": "1932",
+          "viewingSequence": 558
         },
         {
-          "sequence": 560,
           "date": "2016-09-17",
           "slug": "riders-of-destiny-1933",
           "title": "Riders of Destiny",
           "medium": "Amazon",
           "venue": null,
-          "year": "1933"
+          "year": "1933",
+          "viewingSequence": 560
         },
         {
-          "sequence": 568,
           "date": "2016-11-09",
           "slug": "sagebrush-trail-1933",
           "title": "Sagebrush Trail",
           "medium": "Amazon",
           "venue": null,
-          "year": "1933"
+          "year": "1933",
+          "viewingSequence": 568
         }
       ]
     },
@@ -247,31 +247,31 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 538,
           "date": "2016-01-02",
           "slug": null,
           "title": "Mississippi Grind",
           "medium": "Amazon",
           "venue": null,
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 538
         },
         {
-          "sequence": 547,
           "date": "2016-05-12",
           "slug": "captain-america-civil-war-2016",
           "title": "Captain America: Civil War",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2016"
+          "year": "2016",
+          "viewingSequence": 547
         },
         {
-          "sequence": 569,
           "date": "2016-11-12",
           "slug": "captain-america-civil-war-2016",
           "title": "Captain America: Civil War",
           "medium": "Amazon",
           "venue": null,
-          "year": "2016"
+          "year": "2016",
+          "viewingSequence": 569
         }
       ]
     },
@@ -281,31 +281,31 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 545,
           "date": "2016-04-21",
           "slug": null,
           "title": "Barbershop: The Next Cut",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2016"
+          "year": "2016",
+          "viewingSequence": 545
         },
         {
-          "sequence": 547,
           "date": "2016-05-12",
           "slug": "captain-america-civil-war-2016",
           "title": "Captain America: Civil War",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2016"
+          "year": "2016",
+          "viewingSequence": 547
         },
         {
-          "sequence": 569,
           "date": "2016-11-12",
           "slug": "captain-america-civil-war-2016",
           "title": "Captain America: Civil War",
           "medium": "Amazon",
           "venue": null,
-          "year": "2016"
+          "year": "2016",
+          "viewingSequence": 569
         }
       ]
     },
@@ -315,31 +315,31 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 547,
           "date": "2016-05-12",
           "slug": "captain-america-civil-war-2016",
           "title": "Captain America: Civil War",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2016"
+          "year": "2016",
+          "viewingSequence": 547
         },
         {
-          "sequence": 569,
           "date": "2016-11-12",
           "slug": "captain-america-civil-war-2016",
           "title": "Captain America: Civil War",
           "medium": "Amazon",
           "venue": null,
-          "year": "2016"
+          "year": "2016",
+          "viewingSequence": 569
         },
         {
-          "sequence": 572,
           "date": "2016-11-27",
           "slug": "oceans-thirteen-2007",
           "title": "Ocean's Thirteen",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "2007"
+          "year": "2007",
+          "viewingSequence": 572
         }
       ]
     },
@@ -349,22 +349,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 538,
           "date": "2016-01-02",
           "slug": null,
           "title": "Mississippi Grind",
           "medium": "Amazon",
           "venue": null,
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 538
         },
         {
-          "sequence": 541,
           "date": "2016-03-10",
           "slug": "deadpool-2016",
           "title": "Deadpool",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2016"
+          "year": "2016",
+          "viewingSequence": 541
         }
       ]
     },
@@ -374,22 +374,22 @@
       "slug": "humphrey-bogart",
       "viewings": [
         {
-          "sequence": 539,
           "date": "2016-01-21",
           "slug": "chain-lightning-1950",
           "title": "Chain Lightning",
           "medium": "TCM",
           "venue": null,
-          "year": "1950"
+          "year": "1950",
+          "viewingSequence": 539
         },
         {
-          "sequence": 540,
           "date": "2016-02-28",
           "slug": "casablanca-1942",
           "title": "Casablanca",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "1942"
+          "year": "1942",
+          "viewingSequence": 540
         }
       ]
     },
@@ -399,22 +399,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 542,
           "date": "2016-03-10",
           "slug": "the-witch-2015",
           "title": "The Witch",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 542
         },
         {
-          "sequence": 559,
           "date": "2016-09-17",
           "slug": "the-witch-2015",
           "title": "The Witch",
           "medium": "Amazon",
           "venue": null,
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 559
         }
       ]
     },
@@ -424,22 +424,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 542,
           "date": "2016-03-10",
           "slug": "the-witch-2015",
           "title": "The Witch",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 542
         },
         {
-          "sequence": 559,
           "date": "2016-09-17",
           "slug": "the-witch-2015",
           "title": "The Witch",
           "medium": "Amazon",
           "venue": null,
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 559
         }
       ]
     },
@@ -449,22 +449,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 542,
           "date": "2016-03-10",
           "slug": "the-witch-2015",
           "title": "The Witch",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 542
         },
         {
-          "sequence": 559,
           "date": "2016-09-17",
           "slug": "the-witch-2015",
           "title": "The Witch",
           "medium": "Amazon",
           "venue": null,
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 559
         }
       ]
     }
@@ -476,22 +476,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 542,
           "date": "2016-03-10",
           "slug": "the-witch-2015",
           "title": "The Witch",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 542
         },
         {
-          "sequence": 559,
           "date": "2016-09-17",
           "slug": "the-witch-2015",
           "title": "The Witch",
           "medium": "Amazon",
           "venue": null,
-          "year": "2015"
+          "year": "2015",
+          "viewingSequence": 559
         }
       ]
     },
@@ -501,22 +501,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 547,
           "date": "2016-05-12",
           "slug": "captain-america-civil-war-2016",
           "title": "Captain America: Civil War",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2016"
+          "year": "2016",
+          "viewingSequence": 547
         },
         {
-          "sequence": 569,
           "date": "2016-11-12",
           "slug": "captain-america-civil-war-2016",
           "title": "Captain America: Civil War",
           "medium": "Amazon",
           "venue": null,
-          "year": "2016"
+          "year": "2016",
+          "viewingSequence": 569
         }
       ]
     },
@@ -526,22 +526,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 547,
           "date": "2016-05-12",
           "slug": "captain-america-civil-war-2016",
           "title": "Captain America: Civil War",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2016"
+          "year": "2016",
+          "viewingSequence": 547
         },
         {
-          "sequence": 569,
           "date": "2016-11-12",
           "slug": "captain-america-civil-war-2016",
           "title": "Captain America: Civil War",
           "medium": "Amazon",
           "venue": null,
-          "year": "2016"
+          "year": "2016",
+          "viewingSequence": 569
         }
       ]
     }

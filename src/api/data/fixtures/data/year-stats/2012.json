@@ -89,16 +89,16 @@
     {
       "title": "Fright Night",
       "imdbId": "tt0089175",
-      "year": "1985",
       "count": 4,
-      "slug": "fright-night-1985"
+      "slug": "fright-night-1985",
+      "releaseYear": "1985"
     },
     {
       "title": "The Big Sleep",
       "imdbId": "tt0038355",
-      "year": "1946",
       "count": 2,
-      "slug": null
+      "slug": null,
+      "releaseYear": "1946"
     }
   ],
   "mostWatchedDirectors": [
@@ -108,112 +108,112 @@
       "slug": "john-ford",
       "viewings": [
         {
-          "sequence": 28,
           "date": "2012-01-25",
           "slug": null,
           "title": "The World Moves On",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 28
         },
         {
-          "sequence": 45,
           "date": "2012-01-28",
           "slug": null,
           "title": "Sergeant Rutledge",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1960"
+          "year": "1960",
+          "viewingSequence": 45
         },
         {
-          "sequence": 68,
           "date": "2012-02-10",
           "slug": null,
           "title": "The Long Voyage Home",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1940"
+          "year": "1940",
+          "viewingSequence": 68
         },
         {
-          "sequence": 76,
           "date": "2012-02-15",
           "slug": null,
           "title": "They Were Expendable",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1945"
+          "year": "1945",
+          "viewingSequence": 76
         },
         {
-          "sequence": 82,
           "date": "2012-02-19",
           "slug": null,
           "title": "Mogambo",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1953"
+          "year": "1953",
+          "viewingSequence": 82
         },
         {
-          "sequence": 86,
           "date": "2012-02-24",
           "slug": "arrowsmith-1931",
           "title": "Arrowsmith",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1931"
+          "year": "1931",
+          "viewingSequence": 86
         },
         {
-          "sequence": 113,
           "date": "2012-03-12",
           "slug": null,
           "title": "The Hurricane",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1937"
+          "year": "1937",
+          "viewingSequence": 113
         },
         {
-          "sequence": 134,
           "date": "2012-03-30",
           "slug": null,
           "title": "The Whole Town's Talking",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1935"
+          "year": "1935",
+          "viewingSequence": 134
         },
         {
-          "sequence": 137,
           "date": "2012-03-31",
           "slug": null,
           "title": "Mary of Scotland",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1936"
+          "year": "1936",
+          "viewingSequence": 137
         },
         {
-          "sequence": 138,
           "date": "2012-03-31",
           "slug": null,
           "title": "The Rising of the Moon",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1957"
+          "year": "1957",
+          "viewingSequence": 138
         },
         {
-          "sequence": 139,
           "date": "2012-04-01",
           "slug": null,
           "title": "The Last Hurrah",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1958"
+          "year": "1958",
+          "viewingSequence": 139
         },
         {
-          "sequence": 143,
           "date": "2012-04-06",
           "slug": null,
           "title": "Stagecoach",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1939"
+          "year": "1939",
+          "viewingSequence": 143
         }
       ]
     },
@@ -223,94 +223,94 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 91,
           "date": "2012-02-25",
           "slug": "riders-of-destiny-1933",
           "title": "Riders of Destiny",
           "medium": "Netflix",
           "venue": null,
-          "year": "1933"
+          "year": "1933",
+          "viewingSequence": 91
         },
         {
-          "sequence": 93,
           "date": "2012-02-26",
           "slug": "the-lawless-frontier-1934",
           "title": "The Lawless Frontier",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 93
         },
         {
-          "sequence": 95,
           "date": "2012-02-27",
           "slug": null,
           "title": "The Man from Utah",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 95
         },
         {
-          "sequence": 96,
           "date": "2012-02-27",
           "slug": null,
           "title": "West of the Divide",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 96
         },
         {
-          "sequence": 100,
           "date": "2012-02-28",
           "slug": "the-star-packer-1934",
           "title": "The Star Packer",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 100
         },
         {
-          "sequence": 101,
           "date": "2012-02-28",
           "slug": null,
           "title": "The Trail Beyond",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 101
         },
         {
-          "sequence": 102,
           "date": "2012-02-28",
           "slug": "the-lucky-texan-1934",
           "title": "The Lucky Texan",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 102
         },
         {
-          "sequence": 103,
           "date": "2012-02-28",
           "slug": null,
           "title": "Texas Terror",
           "medium": "Netflix",
           "venue": null,
-          "year": "1935"
+          "year": "1935",
+          "viewingSequence": 103
         },
         {
-          "sequence": 106,
           "date": "2012-02-28",
           "slug": null,
           "title": "Blue Steel",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 106
         },
         {
-          "sequence": 107,
           "date": "2012-02-28",
           "slug": null,
           "title": "The Dawn Rider",
           "medium": "Netflix",
           "venue": null,
-          "year": "1935"
+          "year": "1935",
+          "viewingSequence": 107
         }
       ]
     },
@@ -320,58 +320,58 @@
       "slug": "john-carpenter",
       "viewings": [
         {
-          "sequence": 23,
           "date": "2012-01-20",
           "slug": null,
           "title": "They Live",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1988"
+          "year": "1988",
+          "viewingSequence": 23
         },
         {
-          "sequence": 122,
           "date": "2012-03-24",
           "slug": null,
           "title": "Big Trouble in Little China",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "1986"
+          "year": "1986",
+          "viewingSequence": 122
         },
         {
-          "sequence": 123,
           "date": "2012-03-24",
           "slug": null,
           "title": "In the Mouth of Madness",
           "medium": "Encore HD",
           "venue": null,
-          "year": "1994"
+          "year": "1994",
+          "viewingSequence": 123
         },
         {
-          "sequence": 176,
           "date": "2012-05-05",
           "slug": null,
           "title": "Escape from New York",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1981"
+          "year": "1981",
+          "viewingSequence": 176
         },
         {
-          "sequence": 194,
           "date": "2012-07-02",
           "slug": null,
           "title": "The Thing",
           "medium": null,
           "venue": "The Black Cat",
-          "year": "1982"
+          "year": "1982",
+          "viewingSequence": 194
         },
         {
-          "sequence": 235,
           "date": "2012-10-30",
           "slug": "halloween-1978",
           "title": "Halloween",
           "medium": null,
           "venue": "Landmark E Street Cinema",
-          "year": "1978"
+          "year": "1978",
+          "viewingSequence": 235
         }
       ]
     },
@@ -381,58 +381,58 @@
       "slug": "alfred-hitchcock",
       "viewings": [
         {
-          "sequence": 59,
           "date": "2012-02-04",
           "slug": null,
           "title": "Suspicion",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1941"
+          "year": "1941",
+          "viewingSequence": 59
         },
         {
-          "sequence": 73,
           "date": "2012-02-14",
           "slug": null,
           "title": "Rear Window",
           "medium": "Encore HD",
           "venue": null,
-          "year": "1954"
+          "year": "1954",
+          "viewingSequence": 73
         },
         {
-          "sequence": 149,
           "date": "2012-04-08",
           "slug": null,
           "title": "I Confess",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1953"
+          "year": "1953",
+          "viewingSequence": 149
         },
         {
-          "sequence": 182,
           "date": "2012-06-10",
           "slug": null,
           "title": "Foreign Correspondent",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1940"
+          "year": "1940",
+          "viewingSequence": 182
         },
         {
-          "sequence": 184,
           "date": "2012-06-12",
           "slug": null,
           "title": "Under Capricorn",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1949"
+          "year": "1949",
+          "viewingSequence": 184
         },
         {
-          "sequence": 198,
           "date": "2012-07-08",
           "slug": null,
           "title": "Vertigo",
           "medium": "70mm",
           "venue": "AFI Silver",
-          "year": "1958"
+          "year": "1958",
+          "viewingSequence": 198
         }
       ]
     },
@@ -442,58 +442,58 @@
       "slug": "howard-hawks",
       "viewings": [
         {
-          "sequence": 69,
           "date": "2012-02-10",
           "slug": null,
           "title": "The Big Sky",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1952"
+          "year": "1952",
+          "viewingSequence": 69
         },
         {
-          "sequence": 75,
           "date": "2012-02-15",
           "slug": null,
           "title": "Air Force",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1943"
+          "year": "1943",
+          "viewingSequence": 75
         },
         {
-          "sequence": 90,
           "date": "2012-02-25",
           "slug": null,
           "title": "Only Angels Have Wings",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1939"
+          "year": "1939",
+          "viewingSequence": 90
         },
         {
-          "sequence": 130,
           "date": "2012-03-26",
           "slug": null,
           "title": "I Was a Male War Bride",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1949"
+          "year": "1949",
+          "viewingSequence": 130
         },
         {
-          "sequence": 171,
           "date": "2012-04-27",
           "slug": null,
           "title": "The Big Sleep",
           "medium": null,
           "venue": "Landmark E Street Cinema",
-          "year": "1946"
+          "year": "1946",
+          "viewingSequence": 171
         },
         {
-          "sequence": 172,
           "date": "2012-04-28",
           "slug": null,
           "title": "The Big Sleep",
           "medium": null,
           "venue": "Landmark E Street Cinema",
-          "year": "1946"
+          "year": "1946",
+          "viewingSequence": 172
         }
       ]
     },
@@ -503,49 +503,49 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 20,
           "date": "2012-01-15",
           "slug": null,
           "title": "The Gorgon",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1964"
+          "year": "1964",
+          "viewingSequence": 20
         },
         {
-          "sequence": 213,
           "date": "2012-08-10",
           "slug": null,
           "title": "Frankenstein and the Monster from Hell",
           "medium": "Netflix",
           "venue": null,
-          "year": "1974"
+          "year": "1974",
+          "viewingSequence": 213
         },
         {
-          "sequence": 233,
           "date": "2012-10-28",
           "slug": null,
           "title": "The Hound of the Baskervilles",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1959"
+          "year": "1959",
+          "viewingSequence": 233
         },
         {
-          "sequence": 240,
           "date": "2012-11-02",
           "slug": "the-devil-rides-out-1968",
           "title": "The Devil Rides Out",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1968"
+          "year": "1968",
+          "viewingSequence": 240
         },
         {
-          "sequence": 242,
           "date": "2012-11-03",
           "slug": null,
           "title": "Dracula: Prince of Darkness",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1966"
+          "year": "1966",
+          "viewingSequence": 242
         }
       ]
     },
@@ -555,49 +555,49 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 27,
           "date": "2012-01-21",
           "slug": "the-key-1934",
           "title": "The Key",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 27
         },
         {
-          "sequence": 29,
           "date": "2012-01-25",
           "slug": null,
           "title": "Kid Galahad",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1937"
+          "year": "1937",
+          "viewingSequence": 29
         },
         {
-          "sequence": 44,
           "date": "2012-01-28",
           "slug": null,
           "title": "Passage to Marseille",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1944"
+          "year": "1944",
+          "viewingSequence": 44
         },
         {
-          "sequence": 74,
           "date": "2012-02-15",
           "slug": "life-with-father-1947",
           "title": "Life with Father",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1947"
+          "year": "1947",
+          "viewingSequence": 74
         },
         {
-          "sequence": 118,
           "date": "2012-03-18",
           "slug": "virginia-city-1940",
           "title": "Virginia City",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1940"
+          "year": "1940",
+          "viewingSequence": 118
         }
       ]
     },
@@ -607,49 +607,49 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 61,
           "date": "2012-02-04",
           "slug": null,
           "title": "Key Largo",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1948"
+          "year": "1948",
+          "viewingSequence": 61
         },
         {
-          "sequence": 65,
           "date": "2012-02-05",
           "slug": null,
           "title": "Under the Volcano",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1984"
+          "year": "1984",
+          "viewingSequence": 65
         },
         {
-          "sequence": 66,
           "date": "2012-02-05",
           "slug": null,
           "title": "The Night of the Iguana",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1964"
+          "year": "1964",
+          "viewingSequence": 66
         },
         {
-          "sequence": 111,
           "date": "2012-03-10",
           "slug": null,
           "title": "The Maltese Falcon",
           "medium": null,
           "venue": "Landmark E Street Cinema",
-          "year": "1941"
+          "year": "1941",
+          "viewingSequence": 111
         },
         {
-          "sequence": 142,
           "date": "2012-04-01",
           "slug": null,
           "title": "The Asphalt Jungle",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1950"
+          "year": "1950",
+          "viewingSequence": 142
         }
       ]
     },
@@ -659,40 +659,40 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 48,
           "date": "2012-01-28",
           "slug": "fright-night-1985",
           "title": "Fright Night",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "1985"
+          "year": "1985",
+          "viewingSequence": 48
         },
         {
-          "sequence": 197,
           "date": "2012-07-07",
           "slug": "fright-night-1985",
           "title": "Fright Night",
           "medium": "35mm",
           "venue": "AFI Silver",
-          "year": "1985"
+          "year": "1985",
+          "viewingSequence": 197
         },
         {
-          "sequence": 199,
           "date": "2012-07-08",
           "slug": "fright-night-1985",
           "title": "Fright Night",
           "medium": "35mm",
           "venue": "AFI Silver",
-          "year": "1985"
+          "year": "1985",
+          "viewingSequence": 199
         },
         {
-          "sequence": 210,
           "date": "2012-07-30",
           "slug": "fright-night-1985",
           "title": "Fright Night",
           "medium": "Blu-ray",
           "venue": "The Black Cat",
-          "year": "1985"
+          "year": "1985",
+          "viewingSequence": 210
         }
       ]
     },
@@ -702,31 +702,31 @@
       "slug": "roger-corman",
       "viewings": [
         {
-          "sequence": 6,
           "date": "2012-01-12",
           "slug": null,
           "title": "The Pit and the Pendulum",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1961"
+          "year": "1961",
+          "viewingSequence": 6
         },
         {
-          "sequence": 7,
           "date": "2012-01-12",
           "slug": null,
           "title": "The Masque of the Red Death",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1964"
+          "year": "1964",
+          "viewingSequence": 7
         },
         {
-          "sequence": 124,
           "date": "2012-03-24",
           "slug": null,
           "title": "Frankenstein Unbound",
           "medium": "Encore HD",
           "venue": null,
-          "year": "1990"
+          "year": "1990",
+          "viewingSequence": 124
         }
       ]
     }
@@ -738,202 +738,202 @@
       "slug": "john-wayne",
       "viewings": [
         {
-          "sequence": 52,
           "date": "2012-01-29",
           "slug": null,
           "title": "Tycoon",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1947"
+          "year": "1947",
+          "viewingSequence": 52
         },
         {
-          "sequence": 60,
           "date": "2012-02-04",
           "slug": null,
           "title": "Reap the Wild Wind",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1942"
+          "year": "1942",
+          "viewingSequence": 60
         },
         {
-          "sequence": 68,
           "date": "2012-02-10",
           "slug": null,
           "title": "The Long Voyage Home",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1940"
+          "year": "1940",
+          "viewingSequence": 68
         },
         {
-          "sequence": 76,
           "date": "2012-02-15",
           "slug": null,
           "title": "They Were Expendable",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1945"
+          "year": "1945",
+          "viewingSequence": 76
         },
         {
-          "sequence": 91,
           "date": "2012-02-25",
           "slug": "riders-of-destiny-1933",
           "title": "Riders of Destiny",
           "medium": "Netflix",
           "venue": null,
-          "year": "1933"
+          "year": "1933",
+          "viewingSequence": 91
         },
         {
-          "sequence": 92,
           "date": "2012-02-25",
           "slug": "his-private-secretary-1933",
           "title": "His Private Secretary",
           "medium": "Netflix",
           "venue": null,
-          "year": "1933"
+          "year": "1933",
+          "viewingSequence": 92
         },
         {
-          "sequence": 93,
           "date": "2012-02-26",
           "slug": "the-lawless-frontier-1934",
           "title": "The Lawless Frontier",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 93
         },
         {
-          "sequence": 94,
           "date": "2012-02-26",
           "slug": "sagebrush-trail-1933",
           "title": "Sagebrush Trail",
           "medium": "Netflix",
           "venue": null,
-          "year": "1933"
+          "year": "1933",
+          "viewingSequence": 94
         },
         {
-          "sequence": 95,
           "date": "2012-02-27",
           "slug": null,
           "title": "The Man from Utah",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 95
         },
         {
-          "sequence": 96,
           "date": "2012-02-27",
           "slug": null,
           "title": "West of the Divide",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 96
         },
         {
-          "sequence": 97,
           "date": "2012-02-27",
           "slug": null,
           "title": "Paradise Canyon",
           "medium": "Netflix",
           "venue": null,
-          "year": "1935"
+          "year": "1935",
+          "viewingSequence": 97
         },
         {
-          "sequence": 99,
           "date": "2012-02-28",
           "slug": null,
           "title": "'Neath the Arizona Skies",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 99
         },
         {
-          "sequence": 100,
           "date": "2012-02-28",
           "slug": "the-star-packer-1934",
           "title": "The Star Packer",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 100
         },
         {
-          "sequence": 101,
           "date": "2012-02-28",
           "slug": null,
           "title": "The Trail Beyond",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 101
         },
         {
-          "sequence": 102,
           "date": "2012-02-28",
           "slug": "the-lucky-texan-1934",
           "title": "The Lucky Texan",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 102
         },
         {
-          "sequence": 103,
           "date": "2012-02-28",
           "slug": null,
           "title": "Texas Terror",
           "medium": "Netflix",
           "venue": null,
-          "year": "1935"
+          "year": "1935",
+          "viewingSequence": 103
         },
         {
-          "sequence": 104,
           "date": "2012-02-28",
           "slug": null,
           "title": "The Desert Trail",
           "medium": "Netflix",
           "venue": null,
-          "year": "1935"
+          "year": "1935",
+          "viewingSequence": 104
         },
         {
-          "sequence": 105,
           "date": "2012-02-28",
           "slug": "randy-rides-alone-1934",
           "title": "Randy Rides Alone",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 105
         },
         {
-          "sequence": 106,
           "date": "2012-02-28",
           "slug": null,
           "title": "Blue Steel",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 106
         },
         {
-          "sequence": 107,
           "date": "2012-02-28",
           "slug": null,
           "title": "The Dawn Rider",
           "medium": "Netflix",
           "venue": null,
-          "year": "1935"
+          "year": "1935",
+          "viewingSequence": 107
         },
         {
-          "sequence": 116,
           "date": "2012-03-17",
           "slug": null,
           "title": "Flying Tigers",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1942"
+          "year": "1942",
+          "viewingSequence": 116
         },
         {
-          "sequence": 143,
           "date": "2012-04-06",
           "slug": null,
           "title": "Stagecoach",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1939"
+          "year": "1939",
+          "viewingSequence": 143
         }
       ]
     },
@@ -943,184 +943,184 @@
       "slug": "humphrey-bogart",
       "viewings": [
         {
-          "sequence": 29,
           "date": "2012-01-25",
           "slug": null,
           "title": "Kid Galahad",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1937"
+          "year": "1937",
+          "viewingSequence": 29
         },
         {
-          "sequence": 30,
           "date": "2012-01-25",
           "slug": null,
           "title": "Crime School",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1938"
+          "year": "1938",
+          "viewingSequence": 30
         },
         {
-          "sequence": 44,
           "date": "2012-01-28",
           "slug": null,
           "title": "Passage to Marseille",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1944"
+          "year": "1944",
+          "viewingSequence": 44
         },
         {
-          "sequence": 55,
           "date": "2012-01-30",
           "slug": "conflict-1945",
           "title": "Conflict",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1945"
+          "year": "1945",
+          "viewingSequence": 55
         },
         {
-          "sequence": 56,
           "date": "2012-01-30",
           "slug": null,
           "title": "All Through the Night",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1942"
+          "year": "1942",
+          "viewingSequence": 56
         },
         {
-          "sequence": 61,
           "date": "2012-02-04",
           "slug": null,
           "title": "Key Largo",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1948"
+          "year": "1948",
+          "viewingSequence": 61
         },
         {
-          "sequence": 78,
           "date": "2012-02-17",
           "slug": null,
           "title": "The Caine Mutiny",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1954"
+          "year": "1954",
+          "viewingSequence": 78
         },
         {
-          "sequence": 111,
           "date": "2012-03-10",
           "slug": null,
           "title": "The Maltese Falcon",
           "medium": null,
           "venue": "Landmark E Street Cinema",
-          "year": "1941"
+          "year": "1941",
+          "viewingSequence": 111
         },
         {
-          "sequence": 118,
           "date": "2012-03-18",
           "slug": "virginia-city-1940",
           "title": "Virginia City",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1940"
+          "year": "1940",
+          "viewingSequence": 118
         },
         {
-          "sequence": 119,
           "date": "2012-03-18",
           "slug": null,
           "title": "Racket Busters",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1938"
+          "year": "1938",
+          "viewingSequence": 119
         },
         {
-          "sequence": 153,
           "date": "2012-04-09",
           "slug": null,
           "title": "The Amazing Dr. Clitterhouse",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1938"
+          "year": "1938",
+          "viewingSequence": 153
         },
         {
-          "sequence": 154,
           "date": "2012-04-09",
           "slug": "they-drive-by-night-1940",
           "title": "They Drive by Night",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1940"
+          "year": "1940",
+          "viewingSequence": 154
         },
         {
-          "sequence": 168,
           "date": "2012-04-23",
           "slug": "invisible-stripes-1939",
           "title": "Invisible Stripes",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1939"
+          "year": "1939",
+          "viewingSequence": 168
         },
         {
-          "sequence": 171,
           "date": "2012-04-27",
           "slug": null,
           "title": "The Big Sleep",
           "medium": null,
           "venue": "Landmark E Street Cinema",
-          "year": "1946"
+          "year": "1946",
+          "viewingSequence": 171
         },
         {
-          "sequence": 172,
           "date": "2012-04-28",
           "slug": null,
           "title": "The Big Sleep",
           "medium": null,
           "venue": "Landmark E Street Cinema",
-          "year": "1946"
+          "year": "1946",
+          "viewingSequence": 172
         },
         {
-          "sequence": 186,
           "date": "2012-06-13",
           "slug": null,
           "title": "The Wagons Roll at Night",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1941"
+          "year": "1941",
+          "viewingSequence": 186
         },
         {
-          "sequence": 188,
           "date": "2012-06-14",
           "slug": "black-legion-1937",
           "title": "Black Legion",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1937"
+          "year": "1937",
+          "viewingSequence": 188
         },
         {
-          "sequence": 189,
           "date": "2012-06-14",
           "slug": "men-are-such-fools-1938",
           "title": "Men Are Such Fools",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1938"
+          "year": "1938",
+          "viewingSequence": 189
         },
         {
-          "sequence": 238,
           "date": "2012-11-01",
           "slug": "dead-reckoning-1946",
           "title": "Dead Reckoning",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1946"
+          "year": "1946",
+          "viewingSequence": 238
         },
         {
-          "sequence": 257,
           "date": "2012-12-30",
           "slug": null,
           "title": "The Barefoot Contessa",
           "medium": "Netflix",
           "venue": null,
-          "year": "1954"
+          "year": "1954",
+          "viewingSequence": 257
         }
       ]
     },
@@ -1130,121 +1130,121 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 91,
           "date": "2012-02-25",
           "slug": "riders-of-destiny-1933",
           "title": "Riders of Destiny",
           "medium": "Netflix",
           "venue": null,
-          "year": "1933"
+          "year": "1933",
+          "viewingSequence": 91
         },
         {
-          "sequence": 93,
           "date": "2012-02-26",
           "slug": "the-lawless-frontier-1934",
           "title": "The Lawless Frontier",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 93
         },
         {
-          "sequence": 94,
           "date": "2012-02-26",
           "slug": "sagebrush-trail-1933",
           "title": "Sagebrush Trail",
           "medium": "Netflix",
           "venue": null,
-          "year": "1933"
+          "year": "1933",
+          "viewingSequence": 94
         },
         {
-          "sequence": 95,
           "date": "2012-02-27",
           "slug": null,
           "title": "The Man from Utah",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 95
         },
         {
-          "sequence": 96,
           "date": "2012-02-27",
           "slug": null,
           "title": "West of the Divide",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 96
         },
         {
-          "sequence": 97,
           "date": "2012-02-27",
           "slug": null,
           "title": "Paradise Canyon",
           "medium": "Netflix",
           "venue": null,
-          "year": "1935"
+          "year": "1935",
+          "viewingSequence": 97
         },
         {
-          "sequence": 99,
           "date": "2012-02-28",
           "slug": null,
           "title": "'Neath the Arizona Skies",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 99
         },
         {
-          "sequence": 100,
           "date": "2012-02-28",
           "slug": "the-star-packer-1934",
           "title": "The Star Packer",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 100
         },
         {
-          "sequence": 102,
           "date": "2012-02-28",
           "slug": "the-lucky-texan-1934",
           "title": "The Lucky Texan",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 102
         },
         {
-          "sequence": 105,
           "date": "2012-02-28",
           "slug": "randy-rides-alone-1934",
           "title": "Randy Rides Alone",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 105
         },
         {
-          "sequence": 106,
           "date": "2012-02-28",
           "slug": null,
           "title": "Blue Steel",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 106
         },
         {
-          "sequence": 107,
           "date": "2012-02-28",
           "slug": null,
           "title": "The Dawn Rider",
           "medium": "Netflix",
           "venue": null,
-          "year": "1935"
+          "year": "1935",
+          "viewingSequence": 107
         },
         {
-          "sequence": 143,
           "date": "2012-04-06",
           "slug": null,
           "title": "Stagecoach",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1939"
+          "year": "1939",
+          "viewingSequence": 143
         }
       ]
     },
@@ -1254,103 +1254,103 @@
       "slug": "christopher-lee",
       "viewings": [
         {
-          "sequence": 20,
           "date": "2012-01-15",
           "slug": null,
           "title": "The Gorgon",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1964"
+          "year": "1964",
+          "viewingSequence": 20
         },
         {
-          "sequence": 21,
           "date": "2012-01-15",
           "slug": "the-crimson-cult-1968",
           "title": "The Crimson Cult",
           "medium": "Netflix",
           "venue": null,
-          "year": "1968"
+          "year": "1968",
+          "viewingSequence": 21
         },
         {
-          "sequence": 50,
           "date": "2012-01-29",
           "slug": null,
           "title": "She",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1965"
+          "year": "1965",
+          "viewingSequence": 50
         },
         {
-          "sequence": 125,
           "date": "2012-03-25",
           "slug": "horror-express-1972",
           "title": "Horror Express",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1972"
+          "year": "1972",
+          "viewingSequence": 125
         },
         {
-          "sequence": 126,
           "date": "2012-03-25",
           "slug": null,
           "title": "Death Line",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1972"
+          "year": "1972",
+          "viewingSequence": 126
         },
         {
-          "sequence": 180,
           "date": "2012-06-07",
           "slug": null,
           "title": "Dark Shadows",
           "medium": null,
           "venue": "AMC Tysons Corner 16",
-          "year": "2012"
+          "year": "2012",
+          "viewingSequence": 180
         },
         {
-          "sequence": 233,
           "date": "2012-10-28",
           "slug": null,
           "title": "The Hound of the Baskervilles",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1959"
+          "year": "1959",
+          "viewingSequence": 233
         },
         {
-          "sequence": 240,
           "date": "2012-11-02",
           "slug": "the-devil-rides-out-1968",
           "title": "The Devil Rides Out",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1968"
+          "year": "1968",
+          "viewingSequence": 240
         },
         {
-          "sequence": 242,
           "date": "2012-11-03",
           "slug": null,
           "title": "Dracula: Prince of Darkness",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1966"
+          "year": "1966",
+          "viewingSequence": 242
         },
         {
-          "sequence": 244,
           "date": "2012-11-09",
           "slug": null,
           "title": "Dracula Has Risen from the Grave",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1968"
+          "year": "1968",
+          "viewingSequence": 244
         },
         {
-          "sequence": 252,
           "date": "2012-12-13",
           "slug": null,
           "title": "The Hobbit: An Unexpected Journey",
           "medium": null,
           "venue": "AMC Tysons Corner 16",
-          "year": "2012"
+          "year": "2012",
+          "viewingSequence": 252
         }
       ]
     },
@@ -1360,103 +1360,103 @@
       "slug": "robert-mitchum",
       "viewings": [
         {
-          "sequence": 38,
           "date": "2012-01-27",
           "slug": "bandido-1956",
           "title": "Bandido!",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1956"
+          "year": "1956",
+          "viewingSequence": 38
         },
         {
-          "sequence": 39,
           "date": "2012-01-27",
           "slug": null,
           "title": "Undercurrent",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1946"
+          "year": "1946",
+          "viewingSequence": 39
         },
         {
-          "sequence": 89,
           "date": "2012-02-25",
           "slug": null,
           "title": "The Sundowners",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1960"
+          "year": "1960",
+          "viewingSequence": 89
         },
         {
-          "sequence": 117,
           "date": "2012-03-17",
           "slug": null,
           "title": "Desire Me",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1947"
+          "year": "1947",
+          "viewingSequence": 117
         },
         {
-          "sequence": 136,
           "date": "2012-03-30",
           "slug": null,
           "title": "Cape Fear",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1962"
+          "year": "1962",
+          "viewingSequence": 136
         },
         {
-          "sequence": 141,
           "date": "2012-04-01",
           "slug": null,
           "title": "Going Home",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1971"
+          "year": "1971",
+          "viewingSequence": 141
         },
         {
-          "sequence": 156,
           "date": "2012-04-09",
           "slug": null,
           "title": "Crossfire",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1947"
+          "year": "1947",
+          "viewingSequence": 156
         },
         {
-          "sequence": 159,
           "date": "2012-04-13",
           "slug": null,
           "title": "River of No Return",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1954"
+          "year": "1954",
+          "viewingSequence": 159
         },
         {
-          "sequence": 161,
           "date": "2012-04-14",
           "slug": null,
           "title": "Rampage",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1963"
+          "year": "1963",
+          "viewingSequence": 161
         },
         {
-          "sequence": 165,
           "date": "2012-04-21",
           "slug": null,
           "title": "Home from the Hill",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1960"
+          "year": "1960",
+          "viewingSequence": 165
         },
         {
-          "sequence": 170,
           "date": "2012-04-25",
           "slug": null,
           "title": "The Night Fighters",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1960"
+          "year": "1960",
+          "viewingSequence": 170
         }
       ]
     },
@@ -1466,94 +1466,94 @@
       "slug": "boris-karloff",
       "viewings": [
         {
-          "sequence": 5,
           "date": "2012-01-12",
           "slug": "the-ghoul-1933",
           "title": "The Ghoul",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1933"
+          "year": "1933",
+          "viewingSequence": 5
         },
         {
-          "sequence": 8,
           "date": "2012-01-12",
           "slug": "the-body-snatcher-1945",
           "title": "The Body Snatcher",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1945"
+          "year": "1945",
+          "viewingSequence": 8
         },
         {
-          "sequence": 12,
           "date": "2012-01-13",
           "slug": null,
           "title": "Isle of the Dead",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1945"
+          "year": "1945",
+          "viewingSequence": 12
         },
         {
-          "sequence": 13,
           "date": "2012-01-13",
           "slug": null,
           "title": "The Comedy of Terrors",
           "medium": "Netflix",
           "venue": null,
-          "year": "1963"
+          "year": "1963",
+          "viewingSequence": 13
         },
         {
-          "sequence": 17,
           "date": "2012-01-14",
           "slug": null,
           "title": "Bedlam",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1946"
+          "year": "1946",
+          "viewingSequence": 17
         },
         {
-          "sequence": 21,
           "date": "2012-01-15",
           "slug": "the-crimson-cult-1968",
           "title": "The Crimson Cult",
           "medium": "Netflix",
           "venue": null,
-          "year": "1968"
+          "year": "1968",
+          "viewingSequence": 21
         },
         {
-          "sequence": 35,
           "date": "2012-01-26",
           "slug": null,
           "title": "The Black Cat",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 35
         },
         {
-          "sequence": 67,
           "date": "2012-02-05",
           "slug": null,
           "title": "Die, Monster, Die!",
           "medium": "Netflix",
           "venue": null,
-          "year": "1965"
+          "year": "1965",
+          "viewingSequence": 67
         },
         {
-          "sequence": 230,
           "date": "2012-10-24",
           "slug": "frankenstein-1931",
           "title": "Frankenstein",
           "medium": null,
           "venue": "AMC Tysons Corner 16",
-          "year": "1931"
+          "year": "1931",
+          "viewingSequence": 230
         },
         {
-          "sequence": 231,
           "date": "2012-10-24",
           "slug": null,
           "title": "Bride of Frankenstein",
           "medium": null,
           "venue": "AMC Tysons Corner 16",
-          "year": "1935"
+          "year": "1935",
+          "viewingSequence": 231
         }
       ]
     },
@@ -1563,94 +1563,94 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 91,
           "date": "2012-02-25",
           "slug": "riders-of-destiny-1933",
           "title": "Riders of Destiny",
           "medium": "Netflix",
           "venue": null,
-          "year": "1933"
+          "year": "1933",
+          "viewingSequence": 91
         },
         {
-          "sequence": 93,
           "date": "2012-02-26",
           "slug": "the-lawless-frontier-1934",
           "title": "The Lawless Frontier",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 93
         },
         {
-          "sequence": 95,
           "date": "2012-02-27",
           "slug": null,
           "title": "The Man from Utah",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 95
         },
         {
-          "sequence": 96,
           "date": "2012-02-27",
           "slug": null,
           "title": "West of the Divide",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 96
         },
         {
-          "sequence": 99,
           "date": "2012-02-28",
           "slug": null,
           "title": "'Neath the Arizona Skies",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 99
         },
         {
-          "sequence": 100,
           "date": "2012-02-28",
           "slug": "the-star-packer-1934",
           "title": "The Star Packer",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 100
         },
         {
-          "sequence": 102,
           "date": "2012-02-28",
           "slug": "the-lucky-texan-1934",
           "title": "The Lucky Texan",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 102
         },
         {
-          "sequence": 103,
           "date": "2012-02-28",
           "slug": null,
           "title": "Texas Terror",
           "medium": "Netflix",
           "venue": null,
-          "year": "1935"
+          "year": "1935",
+          "viewingSequence": 103
         },
         {
-          "sequence": 105,
           "date": "2012-02-28",
           "slug": "randy-rides-alone-1934",
           "title": "Randy Rides Alone",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 105
         },
         {
-          "sequence": 106,
           "date": "2012-02-28",
           "slug": null,
           "title": "Blue Steel",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 106
         }
       ]
     },
@@ -1660,85 +1660,85 @@
       "slug": "vincent-price",
       "viewings": [
         {
-          "sequence": 2,
           "date": "2012-01-11",
           "slug": null,
           "title": "The Tingler",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1959"
+          "year": "1959",
+          "viewingSequence": 2
         },
         {
-          "sequence": 6,
           "date": "2012-01-12",
           "slug": null,
           "title": "The Pit and the Pendulum",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1961"
+          "year": "1961",
+          "viewingSequence": 6
         },
         {
-          "sequence": 7,
           "date": "2012-01-12",
           "slug": null,
           "title": "The Masque of the Red Death",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1964"
+          "year": "1964",
+          "viewingSequence": 7
         },
         {
-          "sequence": 13,
           "date": "2012-01-13",
           "slug": null,
           "title": "The Comedy of Terrors",
           "medium": "Netflix",
           "venue": null,
-          "year": "1963"
+          "year": "1963",
+          "viewingSequence": 13
         },
         {
-          "sequence": 57,
           "date": "2012-01-30",
           "slug": null,
           "title": "The Las Vegas Story",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1952"
+          "year": "1952",
+          "viewingSequence": 57
         },
         {
-          "sequence": 80,
           "date": "2012-02-18",
           "slug": "the-three-musketeers-1948",
           "title": "The Three Musketeers",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1948"
+          "year": "1948",
+          "viewingSequence": 80
         },
         {
-          "sequence": 114,
           "date": "2012-03-14",
           "slug": null,
           "title": "The House of the Seven Gables",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1940"
+          "year": "1940",
+          "viewingSequence": 114
         },
         {
-          "sequence": 147,
           "date": "2012-04-07",
           "slug": null,
           "title": "The Baron of Arizona",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1950"
+          "year": "1950",
+          "viewingSequence": 147
         },
         {
-          "sequence": 237,
           "date": "2012-11-01",
           "slug": null,
           "title": "The Big Circus",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1959"
+          "year": "1959",
+          "viewingSequence": 237
         }
       ]
     },
@@ -1748,85 +1748,85 @@
       "slug": "william-powell",
       "viewings": [
         {
-          "sequence": 11,
           "date": "2012-01-13",
           "slug": "fashions-of-1934-1934",
           "title": "Fashions of 1934",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 11
         },
         {
-          "sequence": 25,
           "date": "2012-01-21",
           "slug": "high-pressure-1932",
           "title": "High Pressure",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1932"
+          "year": "1932",
+          "viewingSequence": 25
         },
         {
-          "sequence": 26,
           "date": "2012-01-21",
           "slug": "the-road-to-singapore-1931",
           "title": "The Road to Singapore",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1931"
+          "year": "1931",
+          "viewingSequence": 26
         },
         {
-          "sequence": 27,
           "date": "2012-01-21",
           "slug": "the-key-1934",
           "title": "The Key",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 27
         },
         {
-          "sequence": 34,
           "date": "2012-01-26",
           "slug": "the-girl-who-had-everything-1953",
           "title": "The Girl Who Had Everything",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1953"
+          "year": "1953",
+          "viewingSequence": 34
         },
         {
-          "sequence": 74,
           "date": "2012-02-15",
           "slug": "life-with-father-1947",
           "title": "Life with Father",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1947"
+          "year": "1947",
+          "viewingSequence": 74
         },
         {
-          "sequence": 144,
           "date": "2012-04-06",
           "slug": "jewel-robbery-1932",
           "title": "Jewel Robbery",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1932"
+          "year": "1932",
+          "viewingSequence": 144
         },
         {
-          "sequence": 145,
           "date": "2012-04-07",
           "slug": null,
           "title": "The Ex-Mrs. Bradford",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1936"
+          "year": "1936",
+          "viewingSequence": 145
         },
         {
-          "sequence": 196,
           "date": "2012-07-06",
           "slug": "the-thin-man-1934",
           "title": "The Thin Man",
           "medium": null,
           "venue": "Landmark E Street Cinema",
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 196
         }
       ]
     },
@@ -1836,85 +1836,85 @@
       "slug": "cary-grant",
       "viewings": [
         {
-          "sequence": 18,
           "date": "2012-01-14",
           "slug": "crisis-1950",
           "title": "Crisis",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1950"
+          "year": "1950",
+          "viewingSequence": 18
         },
         {
-          "sequence": 59,
           "date": "2012-02-04",
           "slug": null,
           "title": "Suspicion",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1941"
+          "year": "1941",
+          "viewingSequence": 59
         },
         {
-          "sequence": 64,
           "date": "2012-02-05",
           "slug": null,
           "title": "The Philadelphia Story",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1940"
+          "year": "1940",
+          "viewingSequence": 64
         },
         {
-          "sequence": 71,
           "date": "2012-02-12",
           "slug": null,
           "title": "The Awful Truth",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1937"
+          "year": "1937",
+          "viewingSequence": 71
         },
         {
-          "sequence": 90,
           "date": "2012-02-25",
           "slug": null,
           "title": "Only Angels Have Wings",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1939"
+          "year": "1939",
+          "viewingSequence": 90
         },
         {
-          "sequence": 130,
           "date": "2012-03-26",
           "slug": null,
           "title": "I Was a Male War Bride",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1949"
+          "year": "1949",
+          "viewingSequence": 130
         },
         {
-          "sequence": 146,
           "date": "2012-04-07",
           "slug": null,
           "title": "That Touch of Mink",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1962"
+          "year": "1962",
+          "viewingSequence": 146
         },
         {
-          "sequence": 163,
           "date": "2012-04-20",
           "slug": null,
           "title": "Charade",
           "medium": null,
           "venue": "Landmark E Street Cinema",
-          "year": "1963"
+          "year": "1963",
+          "viewingSequence": 163
         },
         {
-          "sequence": 208,
           "date": "2012-07-21",
           "slug": null,
           "title": "Mr. Blandings Builds His Dream House",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1948"
+          "year": "1948",
+          "viewingSequence": 208
         }
       ]
     }
@@ -1926,67 +1926,67 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 91,
           "date": "2012-02-25",
           "slug": "riders-of-destiny-1933",
           "title": "Riders of Destiny",
           "medium": "Netflix",
           "venue": null,
-          "year": "1933"
+          "year": "1933",
+          "viewingSequence": 91
         },
         {
-          "sequence": 93,
           "date": "2012-02-26",
           "slug": "the-lawless-frontier-1934",
           "title": "The Lawless Frontier",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 93
         },
         {
-          "sequence": 96,
           "date": "2012-02-27",
           "slug": null,
           "title": "West of the Divide",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 96
         },
         {
-          "sequence": 100,
           "date": "2012-02-28",
           "slug": "the-star-packer-1934",
           "title": "The Star Packer",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 100
         },
         {
-          "sequence": 102,
           "date": "2012-02-28",
           "slug": "the-lucky-texan-1934",
           "title": "The Lucky Texan",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 102
         },
         {
-          "sequence": 103,
           "date": "2012-02-28",
           "slug": null,
           "title": "Texas Terror",
           "medium": "Netflix",
           "venue": null,
-          "year": "1935"
+          "year": "1935",
+          "viewingSequence": 103
         },
         {
-          "sequence": 106,
           "date": "2012-02-28",
           "slug": null,
           "title": "Blue Steel",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 106
         }
       ]
     },
@@ -1996,58 +1996,58 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 31,
           "date": "2012-01-25",
           "slug": "murders-in-the-rue-morgue-1932",
           "title": "Murders in the Rue Morgue",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1932"
+          "year": "1932",
+          "viewingSequence": 31
         },
         {
-          "sequence": 61,
           "date": "2012-02-04",
           "slug": null,
           "title": "Key Largo",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1948"
+          "year": "1948",
+          "viewingSequence": 61
         },
         {
-          "sequence": 66,
           "date": "2012-02-05",
           "slug": null,
           "title": "The Night of the Iguana",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1964"
+          "year": "1964",
+          "viewingSequence": 66
         },
         {
-          "sequence": 111,
           "date": "2012-03-10",
           "slug": null,
           "title": "The Maltese Falcon",
           "medium": null,
           "venue": "Landmark E Street Cinema",
-          "year": "1941"
+          "year": "1941",
+          "viewingSequence": 111
         },
         {
-          "sequence": 142,
           "date": "2012-04-01",
           "slug": null,
           "title": "The Asphalt Jungle",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1950"
+          "year": "1950",
+          "viewingSequence": 142
         },
         {
-          "sequence": 153,
           "date": "2012-04-09",
           "slug": null,
           "title": "The Amazing Dr. Clitterhouse",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1938"
+          "year": "1938",
+          "viewingSequence": 153
         }
       ]
     },
@@ -2057,58 +2057,58 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 68,
           "date": "2012-02-10",
           "slug": null,
           "title": "The Long Voyage Home",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1940"
+          "year": "1940",
+          "viewingSequence": 68
         },
         {
-          "sequence": 69,
           "date": "2012-02-10",
           "slug": null,
           "title": "The Big Sky",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1952"
+          "year": "1952",
+          "viewingSequence": 69
         },
         {
-          "sequence": 75,
           "date": "2012-02-15",
           "slug": null,
           "title": "Air Force",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1943"
+          "year": "1943",
+          "viewingSequence": 75
         },
         {
-          "sequence": 113,
           "date": "2012-03-12",
           "slug": null,
           "title": "The Hurricane",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1937"
+          "year": "1937",
+          "viewingSequence": 113
         },
         {
-          "sequence": 137,
           "date": "2012-03-31",
           "slug": null,
           "title": "Mary of Scotland",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1936"
+          "year": "1936",
+          "viewingSequence": 137
         },
         {
-          "sequence": 143,
           "date": "2012-04-06",
           "slug": null,
           "title": "Stagecoach",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1939"
+          "year": "1939",
+          "viewingSequence": 143
         }
       ]
     },
@@ -2118,58 +2118,58 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 94,
           "date": "2012-02-26",
           "slug": "sagebrush-trail-1933",
           "title": "Sagebrush Trail",
           "medium": "Netflix",
           "venue": null,
-          "year": "1933"
+          "year": "1933",
+          "viewingSequence": 94
         },
         {
-          "sequence": 95,
           "date": "2012-02-27",
           "slug": null,
           "title": "The Man from Utah",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 95
         },
         {
-          "sequence": 97,
           "date": "2012-02-27",
           "slug": null,
           "title": "Paradise Canyon",
           "medium": "Netflix",
           "venue": null,
-          "year": "1935"
+          "year": "1935",
+          "viewingSequence": 97
         },
         {
-          "sequence": 101,
           "date": "2012-02-28",
           "slug": null,
           "title": "The Trail Beyond",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 101
         },
         {
-          "sequence": 104,
           "date": "2012-02-28",
           "slug": null,
           "title": "The Desert Trail",
           "medium": "Netflix",
           "venue": null,
-          "year": "1935"
+          "year": "1935",
+          "viewingSequence": 104
         },
         {
-          "sequence": 105,
           "date": "2012-02-28",
           "slug": "randy-rides-alone-1934",
           "title": "Randy Rides Alone",
           "medium": "Netflix",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 105
         }
       ]
     },
@@ -2179,40 +2179,40 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 3,
           "date": "2012-01-11",
           "slug": "curse-of-the-demon-1957",
           "title": "Curse of the Demon",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1957"
+          "year": "1957",
+          "viewingSequence": 3
         },
         {
-          "sequence": 60,
           "date": "2012-02-04",
           "slug": null,
           "title": "Reap the Wild Wind",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1942"
+          "year": "1942",
+          "viewingSequence": 60
         },
         {
-          "sequence": 182,
           "date": "2012-06-10",
           "slug": null,
           "title": "Foreign Correspondent",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1940"
+          "year": "1940",
+          "viewingSequence": 182
         },
         {
-          "sequence": 237,
           "date": "2012-11-01",
           "slug": null,
           "title": "The Big Circus",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1959"
+          "year": "1959",
+          "viewingSequence": 237
         }
       ]
     },
@@ -2222,40 +2222,40 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 6,
           "date": "2012-01-12",
           "slug": null,
           "title": "The Pit and the Pendulum",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1961"
+          "year": "1961",
+          "viewingSequence": 6
         },
         {
-          "sequence": 13,
           "date": "2012-01-13",
           "slug": null,
           "title": "The Comedy of Terrors",
           "medium": "Netflix",
           "venue": null,
-          "year": "1963"
+          "year": "1963",
+          "viewingSequence": 13
         },
         {
-          "sequence": 221,
           "date": "2012-09-08",
           "slug": null,
           "title": "The Legend of Hell House",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1973"
+          "year": "1973",
+          "viewingSequence": 221
         },
         {
-          "sequence": 240,
           "date": "2012-11-02",
           "slug": "the-devil-rides-out-1968",
           "title": "The Devil Rides Out",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1968"
+          "year": "1968",
+          "viewingSequence": 240
         }
       ]
     },
@@ -2265,40 +2265,40 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 6,
           "date": "2012-01-12",
           "slug": null,
           "title": "The Pit and the Pendulum",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1961"
+          "year": "1961",
+          "viewingSequence": 6
         },
         {
-          "sequence": 7,
           "date": "2012-01-12",
           "slug": null,
           "title": "The Masque of the Red Death",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1964"
+          "year": "1964",
+          "viewingSequence": 7
         },
         {
-          "sequence": 31,
           "date": "2012-01-25",
           "slug": "murders-in-the-rue-morgue-1932",
           "title": "Murders in the Rue Morgue",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1932"
+          "year": "1932",
+          "viewingSequence": 31
         },
         {
-          "sequence": 35,
           "date": "2012-01-26",
           "slug": null,
           "title": "The Black Cat",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1934"
+          "year": "1934",
+          "viewingSequence": 35
         }
       ]
     },
@@ -2308,40 +2308,40 @@
       "slug": "raymond-chandler",
       "viewings": [
         {
-          "sequence": 10,
           "date": "2012-01-13",
           "slug": "murder-my-sweet-1944",
           "title": "Murder, My Sweet",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1944"
+          "year": "1944",
+          "viewingSequence": 10
         },
         {
-          "sequence": 171,
           "date": "2012-04-27",
           "slug": null,
           "title": "The Big Sleep",
           "medium": null,
           "venue": "Landmark E Street Cinema",
-          "year": "1946"
+          "year": "1946",
+          "viewingSequence": 171
         },
         {
-          "sequence": 172,
           "date": "2012-04-28",
           "slug": null,
           "title": "The Big Sleep",
           "medium": null,
           "venue": "Landmark E Street Cinema",
-          "year": "1946"
+          "year": "1946",
+          "viewingSequence": 172
         },
         {
-          "sequence": 256,
           "date": "2012-12-30",
           "slug": null,
           "title": "The Long Goodbye",
           "medium": "Netflix",
           "venue": null,
-          "year": "1973"
+          "year": "1973",
+          "viewingSequence": 256
         }
       ]
     },
@@ -2351,40 +2351,40 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 14,
           "date": "2012-01-13",
           "slug": null,
           "title": "The Reptile",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1966"
+          "year": "1966",
+          "viewingSequence": 14
         },
         {
-          "sequence": 213,
           "date": "2012-08-10",
           "slug": null,
           "title": "Frankenstein and the Monster from Hell",
           "medium": "Netflix",
           "venue": null,
-          "year": "1974"
+          "year": "1974",
+          "viewingSequence": 213
         },
         {
-          "sequence": 242,
           "date": "2012-11-03",
           "slug": null,
           "title": "Dracula: Prince of Darkness",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1966"
+          "year": "1966",
+          "viewingSequence": 242
         },
         {
-          "sequence": 244,
           "date": "2012-11-09",
           "slug": null,
           "title": "Dracula Has Risen from the Grave",
           "medium": "TCM HD",
           "venue": null,
-          "year": "1968"
+          "year": "1968",
+          "viewingSequence": 244
         }
       ]
     },
@@ -2394,40 +2394,40 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 48,
           "date": "2012-01-28",
           "slug": "fright-night-1985",
           "title": "Fright Night",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "1985"
+          "year": "1985",
+          "viewingSequence": 48
         },
         {
-          "sequence": 197,
           "date": "2012-07-07",
           "slug": "fright-night-1985",
           "title": "Fright Night",
           "medium": "35mm",
           "venue": "AFI Silver",
-          "year": "1985"
+          "year": "1985",
+          "viewingSequence": 197
         },
         {
-          "sequence": 199,
           "date": "2012-07-08",
           "slug": "fright-night-1985",
           "title": "Fright Night",
           "medium": "35mm",
           "venue": "AFI Silver",
-          "year": "1985"
+          "year": "1985",
+          "viewingSequence": 199
         },
         {
-          "sequence": 210,
           "date": "2012-07-30",
           "slug": "fright-night-1985",
           "title": "Fright Night",
           "medium": "Blu-ray",
           "venue": "The Black Cat",
-          "year": "1985"
+          "year": "1985",
+          "viewingSequence": 210
         }
       ]
     }

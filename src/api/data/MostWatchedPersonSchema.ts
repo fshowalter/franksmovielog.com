@@ -6,15 +6,23 @@ const MostWatchedPersonViewingSchema = z
   .object({
     date: z.string(),
     medium: nullableString(),
-    sequence: z.number(),
     slug: nullableString(),
     title: z.string(),
     venue: nullableString(),
+    viewingSequence: z.number(),
     year: z.string(),
   })
-  .transform(({ date, medium, sequence, slug, title, venue, year }) => {
+  .transform(({ date, medium, slug, title, venue, viewingSequence, year }) => {
     // fix zod making anything with undefined optional
-    return { date, medium, releaseYear: year, sequence, slug, title, venue };
+    return {
+      date,
+      medium,
+      releaseYear: year,
+      slug,
+      title,
+      venue,
+      viewingSequence,
+    };
   });
 
 export const MostWatchedPersonSchema = z

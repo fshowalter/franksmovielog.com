@@ -18,10 +18,10 @@ type ViewingSubListItemValue = {
   medium: string | undefined;
   posterImageProps: PosterImageProps;
   releaseYear: string;
-  sequence: number;
   slug: string | undefined;
   title: string;
   venue: string | undefined;
+  viewingSequence: number;
 };
 
 export function MostWatchedPeople({
@@ -110,7 +110,7 @@ export function MostWatchedPeople({
                     {value.viewings.map((viewing) => {
                       return (
                         <MostWatchedPersonViewingListItem
-                          key={viewing.sequence}
+                          key={viewing.viewingSequence}
                           value={viewing}
                         />
                       );

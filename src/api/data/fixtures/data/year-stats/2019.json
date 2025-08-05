@@ -101,30 +101,30 @@
     {
       "title": "Avengers: Endgame",
       "imdbId": "tt4154796",
-      "year": "2019",
       "count": 3,
-      "slug": "avengers-endgame-2019"
+      "slug": "avengers-endgame-2019",
+      "releaseYear": "2019"
     },
     {
       "title": "Halloween III: Season of the Witch",
       "imdbId": "tt0085636",
-      "year": "1982",
       "count": 2,
-      "slug": null
+      "slug": null,
+      "releaseYear": "1982"
     },
     {
       "title": "Jason X",
       "imdbId": "tt0211443",
-      "year": "2001",
       "count": 2,
-      "slug": null
+      "slug": null,
+      "releaseYear": "2001"
     },
     {
       "title": "Once Upon a Time... in Hollywood",
       "imdbId": "tt7131622",
-      "year": "2019",
       "count": 2,
-      "slug": null
+      "slug": null,
+      "releaseYear": "2019"
     }
   ],
   "mostWatchedDirectors": [
@@ -134,31 +134,31 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 750,
           "date": "2019-05-13",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 750
         },
         {
-          "sequence": 751,
           "date": "2019-05-16",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 751
         },
         {
-          "sequence": 756,
           "date": "2019-06-03",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 756
         }
       ]
     },
@@ -168,22 +168,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 729,
           "date": "2019-01-31",
           "slug": null,
           "title": "Halloween II",
           "medium": "Amazon",
           "venue": null,
-          "year": "1981"
+          "year": "1981",
+          "viewingSequence": 729
         },
         {
-          "sequence": 737,
           "date": "2019-02-15",
           "slug": null,
           "title": "Halloween: Resurrection",
           "medium": "Hulu",
           "venue": null,
-          "year": "2002"
+          "year": "2002",
+          "viewingSequence": 737
         }
       ]
     },
@@ -193,22 +193,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 730,
           "date": "2019-02-01",
           "slug": null,
           "title": "Halloween III: Season of the Witch",
           "medium": "Vudu",
           "venue": null,
-          "year": "1982"
+          "year": "1982",
+          "viewingSequence": 730
         },
         {
-          "sequence": 790,
           "date": "2019-10-22",
           "slug": null,
           "title": "Halloween III: Season of the Witch",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1982"
+          "year": "1982",
+          "viewingSequence": 790
         }
       ]
     },
@@ -218,22 +218,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 735,
           "date": "2019-02-09",
           "slug": null,
           "title": "Halloween H20: 20 Years Later",
           "medium": "Vudu",
           "venue": null,
-          "year": "1998"
+          "year": "1998",
+          "viewingSequence": 735
         },
         {
-          "sequence": 782,
           "date": "2019-09-13",
           "slug": "friday-the-13th-part-2-1981",
           "title": "Friday the 13th Part 2",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1981"
+          "year": "1981",
+          "viewingSequence": 782
         }
       ]
     },
@@ -243,22 +243,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 739,
           "date": "2019-02-16",
           "slug": null,
           "title": "Jason X",
           "medium": "Netflix",
           "venue": null,
-          "year": "2001"
+          "year": "2001",
+          "viewingSequence": 739
         },
         {
-          "sequence": 801,
           "date": "2019-12-13",
           "slug": null,
           "title": "Jason X",
           "medium": "Vudu",
           "venue": null,
-          "year": "2001"
+          "year": "2001",
+          "viewingSequence": 801
         }
       ]
     },
@@ -268,22 +268,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 755,
           "date": "2019-05-25",
           "slug": null,
           "title": "Pusher",
           "medium": "Shudder",
           "venue": null,
-          "year": "1996"
+          "year": "1996",
+          "viewingSequence": 755
         },
         {
-          "sequence": 767,
           "date": "2019-08-05",
           "slug": null,
           "title": "Drive",
           "medium": null,
           "venue": "Prince Charles Cinema",
-          "year": "2011"
+          "year": "2011",
+          "viewingSequence": 767
         }
       ]
     },
@@ -293,22 +293,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 763,
           "date": "2019-07-20",
           "slug": null,
           "title": "The Resurrected",
           "medium": "Blu-ray",
           "venue": null,
-          "year": "1991"
+          "year": "1991",
+          "viewingSequence": 763
         },
         {
-          "sequence": 764,
           "date": "2019-07-23",
           "slug": null,
           "title": "The Return of the Living Dead",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1985"
+          "year": "1985",
+          "viewingSequence": 764
         }
       ]
     },
@@ -318,22 +318,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 773,
           "date": "2019-08-22",
           "slug": null,
           "title": "Once Upon a Time... in Hollywood",
           "medium": "35mm",
           "venue": "AFI Silver",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 773
         },
         {
-          "sequence": 780,
           "date": "2019-09-09",
           "slug": null,
           "title": "Once Upon a Time... in Hollywood",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 780
         }
       ]
     },
@@ -343,22 +343,22 @@
       "slug": "tobe-hooper",
       "viewings": [
         {
-          "sequence": 776,
           "date": "2019-08-27",
           "slug": null,
           "title": "The Texas Chain Saw Massacre",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1974"
+          "year": "1974",
+          "viewingSequence": 776
         },
         {
-          "sequence": 777,
           "date": "2019-08-27",
           "slug": null,
           "title": "The Texas Chainsaw Massacre 2",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1986"
+          "year": "1986",
+          "viewingSequence": 777
         }
       ]
     }
@@ -370,67 +370,67 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 728,
           "date": "2019-01-31",
           "slug": "halloween-1978",
           "title": "Halloween",
           "medium": "Shudder",
           "venue": null,
-          "year": "1978"
+          "year": "1978",
+          "viewingSequence": 728
         },
         {
-          "sequence": 729,
           "date": "2019-01-31",
           "slug": null,
           "title": "Halloween II",
           "medium": "Amazon",
           "venue": null,
-          "year": "1981"
+          "year": "1981",
+          "viewingSequence": 729
         },
         {
-          "sequence": 730,
           "date": "2019-02-01",
           "slug": null,
           "title": "Halloween III: Season of the Witch",
           "medium": "Vudu",
           "venue": null,
-          "year": "1982"
+          "year": "1982",
+          "viewingSequence": 730
         },
         {
-          "sequence": 735,
           "date": "2019-02-09",
           "slug": null,
           "title": "Halloween H20: 20 Years Later",
           "medium": "Vudu",
           "venue": null,
-          "year": "1998"
+          "year": "1998",
+          "viewingSequence": 735
         },
         {
-          "sequence": 737,
           "date": "2019-02-15",
           "slug": null,
           "title": "Halloween: Resurrection",
           "medium": "Hulu",
           "venue": null,
-          "year": "2002"
+          "year": "2002",
+          "viewingSequence": 737
         },
         {
-          "sequence": 790,
           "date": "2019-10-22",
           "slug": null,
           "title": "Halloween III: Season of the Witch",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1982"
+          "year": "1982",
+          "viewingSequence": 790
         },
         {
-          "sequence": 803,
           "date": "2019-12-18",
           "slug": null,
           "title": "Knives Out",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 803
         }
       ]
     },
@@ -440,49 +440,49 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 728,
           "date": "2019-01-31",
           "slug": "halloween-1978",
           "title": "Halloween",
           "medium": "Shudder",
           "venue": null,
-          "year": "1978"
+          "year": "1978",
+          "viewingSequence": 728
         },
         {
-          "sequence": 729,
           "date": "2019-01-31",
           "slug": null,
           "title": "Halloween II",
           "medium": "Amazon",
           "venue": null,
-          "year": "1981"
+          "year": "1981",
+          "viewingSequence": 729
         },
         {
-          "sequence": 731,
           "date": "2019-02-01",
           "slug": null,
           "title": "Halloween 4: The Return of Michael Myers",
           "medium": "Shudder",
           "venue": null,
-          "year": "1988"
+          "year": "1988",
+          "viewingSequence": 731
         },
         {
-          "sequence": 732,
           "date": "2019-02-02",
           "slug": null,
           "title": "Halloween 5: The Revenge of Michael Myers",
           "medium": "Shudder",
           "venue": null,
-          "year": "1989"
+          "year": "1989",
+          "viewingSequence": 732
         },
         {
-          "sequence": 733,
           "date": "2019-02-02",
           "slug": null,
           "title": "Halloween: The Curse of Michael Myers",
           "medium": "Amazon",
           "venue": null,
-          "year": "1995"
+          "year": "1995",
+          "viewingSequence": 733
         }
       ]
     },
@@ -492,49 +492,49 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 741,
           "date": "2019-03-16",
           "slug": "captain-marvel-2019",
           "title": "Captain Marvel",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 741
         },
         {
-          "sequence": 750,
           "date": "2019-05-13",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 750
         },
         {
-          "sequence": 751,
           "date": "2019-05-16",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 751
         },
         {
-          "sequence": 756,
           "date": "2019-06-03",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 756
         },
         {
-          "sequence": 760,
           "date": "2019-06-23",
           "slug": null,
           "title": "The Hitman's Bodyguard",
           "medium": "iTunes",
           "venue": null,
-          "year": "2017"
+          "year": "2017",
+          "viewingSequence": 760
         }
       ]
     },
@@ -544,40 +544,40 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 728,
           "date": "2019-01-31",
           "slug": "halloween-1978",
           "title": "Halloween",
           "medium": "Shudder",
           "venue": null,
-          "year": "1978"
+          "year": "1978",
+          "viewingSequence": 728
         },
         {
-          "sequence": 729,
           "date": "2019-01-31",
           "slug": null,
           "title": "Halloween II",
           "medium": "Amazon",
           "venue": null,
-          "year": "1981"
+          "year": "1981",
+          "viewingSequence": 729
         },
         {
-          "sequence": 730,
           "date": "2019-02-01",
           "slug": null,
           "title": "Halloween III: Season of the Witch",
           "medium": "Vudu",
           "venue": null,
-          "year": "1982"
+          "year": "1982",
+          "viewingSequence": 730
         },
         {
-          "sequence": 790,
           "date": "2019-10-22",
           "slug": null,
           "title": "Halloween III: Season of the Witch",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1982"
+          "year": "1982",
+          "viewingSequence": 790
         }
       ]
     },
@@ -587,40 +587,40 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 731,
           "date": "2019-02-01",
           "slug": null,
           "title": "Halloween 4: The Return of Michael Myers",
           "medium": "Shudder",
           "venue": null,
-          "year": "1988"
+          "year": "1988",
+          "viewingSequence": 731
         },
         {
-          "sequence": 732,
           "date": "2019-02-02",
           "slug": null,
           "title": "Halloween 5: The Revenge of Michael Myers",
           "medium": "Shudder",
           "venue": null,
-          "year": "1989"
+          "year": "1989",
+          "viewingSequence": 732
         },
         {
-          "sequence": 773,
           "date": "2019-08-22",
           "slug": null,
           "title": "Once Upon a Time... in Hollywood",
           "medium": "35mm",
           "venue": "AFI Silver",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 773
         },
         {
-          "sequence": 780,
           "date": "2019-09-09",
           "slug": null,
           "title": "Once Upon a Time... in Hollywood",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 780
         }
       ]
     },
@@ -630,40 +630,40 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 733,
           "date": "2019-02-02",
           "slug": null,
           "title": "Halloween: The Curse of Michael Myers",
           "medium": "Amazon",
           "venue": null,
-          "year": "1995"
+          "year": "1995",
+          "viewingSequence": 733
         },
         {
-          "sequence": 750,
           "date": "2019-05-13",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 750
         },
         {
-          "sequence": 751,
           "date": "2019-05-16",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 751
         },
         {
-          "sequence": 756,
           "date": "2019-06-03",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 756
         }
       ]
     },
@@ -673,40 +673,40 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 741,
           "date": "2019-03-16",
           "slug": "captain-marvel-2019",
           "title": "Captain Marvel",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 741
         },
         {
-          "sequence": 750,
           "date": "2019-05-13",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 750
         },
         {
-          "sequence": 751,
           "date": "2019-05-16",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 751
         },
         {
-          "sequence": 756,
           "date": "2019-06-03",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 756
         }
       ]
     },
@@ -716,40 +716,40 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 741,
           "date": "2019-03-16",
           "slug": "captain-marvel-2019",
           "title": "Captain Marvel",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 741
         },
         {
-          "sequence": 750,
           "date": "2019-05-13",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 750
         },
         {
-          "sequence": 751,
           "date": "2019-05-16",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 751
         },
         {
-          "sequence": 756,
           "date": "2019-06-03",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 756
         }
       ]
     },
@@ -759,40 +759,40 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 743,
           "date": "2019-04-01",
           "slug": null,
           "title": "Us",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 743
         },
         {
-          "sequence": 750,
           "date": "2019-05-13",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 750
         },
         {
-          "sequence": 751,
           "date": "2019-05-16",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 751
         },
         {
-          "sequence": 756,
           "date": "2019-06-03",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 756
         }
       ]
     },
@@ -802,40 +802,40 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 750,
           "date": "2019-05-13",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 750
         },
         {
-          "sequence": 751,
           "date": "2019-05-16",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 751
         },
         {
-          "sequence": 756,
           "date": "2019-06-03",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 756
         },
         {
-          "sequence": 803,
           "date": "2019-12-18",
           "slug": null,
           "title": "Knives Out",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 803
         }
       ]
     }
@@ -847,31 +847,31 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 736,
           "date": "2019-02-12",
           "slug": null,
           "title": "My Bloody Valentine",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2009"
+          "year": "2009",
+          "viewingSequence": 736
         },
         {
-          "sequence": 739,
           "date": "2019-02-16",
           "slug": null,
           "title": "Jason X",
           "medium": "Netflix",
           "venue": null,
-          "year": "2001"
+          "year": "2001",
+          "viewingSequence": 739
         },
         {
-          "sequence": 801,
           "date": "2019-12-13",
           "slug": null,
           "title": "Jason X",
           "medium": "Vudu",
           "venue": null,
-          "year": "2001"
+          "year": "2001",
+          "viewingSequence": 801
         }
       ]
     },
@@ -881,31 +881,31 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 750,
           "date": "2019-05-13",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 750
         },
         {
-          "sequence": 751,
           "date": "2019-05-16",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 751
         },
         {
-          "sequence": 756,
           "date": "2019-06-03",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 756
         }
       ]
     },
@@ -915,31 +915,31 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 750,
           "date": "2019-05-13",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 750
         },
         {
-          "sequence": 751,
           "date": "2019-05-16",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 751
         },
         {
-          "sequence": 756,
           "date": "2019-06-03",
           "slug": "avengers-endgame-2019",
           "title": "Avengers: Endgame",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2019"
+          "year": "2019",
+          "viewingSequence": 756
         }
       ]
     },
@@ -949,31 +949,31 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 807,
           "date": "2019-12-28",
           "slug": null,
           "title": "Skyfall",
           "medium": "iTunes",
           "venue": null,
-          "year": "2012"
+          "year": "2012",
+          "viewingSequence": 807
         },
         {
-          "sequence": 808,
           "date": "2019-12-29",
           "slug": "casino-royale-2006",
           "title": "Casino Royale",
           "medium": "iTunes",
           "venue": null,
-          "year": "2006"
+          "year": "2006",
+          "viewingSequence": 808
         },
         {
-          "sequence": 809,
           "date": "2019-12-30",
           "slug": null,
           "title": "Quantum of Solace",
           "medium": "iTunes",
           "venue": null,
-          "year": "2008"
+          "year": "2008",
+          "viewingSequence": 809
         }
       ]
     },
@@ -983,31 +983,31 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 807,
           "date": "2019-12-28",
           "slug": null,
           "title": "Skyfall",
           "medium": "iTunes",
           "venue": null,
-          "year": "2012"
+          "year": "2012",
+          "viewingSequence": 807
         },
         {
-          "sequence": 808,
           "date": "2019-12-29",
           "slug": "casino-royale-2006",
           "title": "Casino Royale",
           "medium": "iTunes",
           "venue": null,
-          "year": "2006"
+          "year": "2006",
+          "viewingSequence": 808
         },
         {
-          "sequence": 809,
           "date": "2019-12-30",
           "slug": null,
           "title": "Quantum of Solace",
           "medium": "iTunes",
           "venue": null,
-          "year": "2008"
+          "year": "2008",
+          "viewingSequence": 809
         }
       ]
     },
@@ -1017,22 +1017,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 728,
           "date": "2019-01-31",
           "slug": "halloween-1978",
           "title": "Halloween",
           "medium": "Shudder",
           "venue": null,
-          "year": "1978"
+          "year": "1978",
+          "viewingSequence": 728
         },
         {
-          "sequence": 729,
           "date": "2019-01-31",
           "slug": null,
           "title": "Halloween II",
           "medium": "Amazon",
           "venue": null,
-          "year": "1981"
+          "year": "1981",
+          "viewingSequence": 729
         }
       ]
     },
@@ -1042,22 +1042,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 728,
           "date": "2019-01-31",
           "slug": "halloween-1978",
           "title": "Halloween",
           "medium": "Shudder",
           "venue": null,
-          "year": "1978"
+          "year": "1978",
+          "viewingSequence": 728
         },
         {
-          "sequence": 729,
           "date": "2019-01-31",
           "slug": null,
           "title": "Halloween II",
           "medium": "Amazon",
           "venue": null,
-          "year": "1981"
+          "year": "1981",
+          "viewingSequence": 729
         }
       ]
     },
@@ -1067,22 +1067,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 730,
           "date": "2019-02-01",
           "slug": null,
           "title": "Halloween III: Season of the Witch",
           "medium": "Vudu",
           "venue": null,
-          "year": "1982"
+          "year": "1982",
+          "viewingSequence": 730
         },
         {
-          "sequence": 790,
           "date": "2019-10-22",
           "slug": null,
           "title": "Halloween III: Season of the Witch",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1982"
+          "year": "1982",
+          "viewingSequence": 790
         }
       ]
     },
@@ -1092,22 +1092,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 746,
           "date": "2019-04-13",
           "slug": "freddy-vs-jason-2003",
           "title": "Freddy vs. Jason",
           "medium": "Netflix",
           "venue": null,
-          "year": "2003"
+          "year": "2003",
+          "viewingSequence": 746
         },
         {
-          "sequence": 748,
           "date": "2019-04-27",
           "slug": null,
           "title": "Friday the 13th",
           "medium": "Netflix",
           "venue": null,
-          "year": "2009"
+          "year": "2009",
+          "viewingSequence": 748
         }
       ]
     },
@@ -1117,22 +1117,22 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 746,
           "date": "2019-04-13",
           "slug": "freddy-vs-jason-2003",
           "title": "Freddy vs. Jason",
           "medium": "Netflix",
           "venue": null,
-          "year": "2003"
+          "year": "2003",
+          "viewingSequence": 746
         },
         {
-          "sequence": 748,
           "date": "2019-04-27",
           "slug": null,
           "title": "Friday the 13th",
           "medium": "Netflix",
           "venue": null,
-          "year": "2009"
+          "year": "2009",
+          "viewingSequence": 748
         }
       ]
     }
