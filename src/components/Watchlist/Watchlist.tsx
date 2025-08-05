@@ -2,7 +2,6 @@ import { type JSX, useReducer } from "react";
 
 import type { BackdropImageProps } from "~/api/backdrops";
 import type { PosterImageProps } from "~/api/posters";
-import type { WatchlistTitle } from "~/api/watchlistTitles";
 
 import { Backdrop } from "~/components/Backdrop";
 import { GroupedList } from "~/components/GroupedList";
@@ -15,24 +14,10 @@ import {
 import { SvgIcon } from "~/components/SvgIcon";
 import { WatchlistTitleSlug } from "~/components/WatchlistTitleSlug";
 
-import type { Sort } from "./Watchlist.reducer";
+import type { ListItemValue, Sort } from "./Watchlist.reducer";
 
 import { Filters, SortOptions } from "./Filters";
 import { Actions, initState, reducer } from "./Watchlist.reducer";
-
-export type ListItemValue = Pick<
-  WatchlistTitle,
-  | "imdbId"
-  | "releaseSequence"
-  | "releaseYear"
-  | "sortTitle"
-  | "title"
-  | "viewed"
-  | "watchlistCollectionNames"
-  | "watchlistDirectorNames"
-  | "watchlistPerformerNames"
-  | "watchlistWriterNames"
->;
 
 export type Props = {
   backdropImageProps: BackdropImageProps;
