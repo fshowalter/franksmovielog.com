@@ -15,7 +15,7 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
     viewings,
   } = await allViewings();
 
-  viewings.sort((a, b) => b.sequence - a.sequence);
+  viewings.sort((a, b) => b.viewingSequence - a.viewingSequence);
 
   const values = await Promise.all(
     viewings.map(async (viewing) => {
@@ -28,7 +28,7 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
         ),
         releaseSequence: viewing.releaseSequence,
         releaseYear: viewing.releaseYear,
-        sequence: viewing.sequence,
+        viewingSequence: viewing.viewingSequence,
         slug: viewing.slug,
         sortTitle: viewing.sortTitle,
         title: viewing.title,

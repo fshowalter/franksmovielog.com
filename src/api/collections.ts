@@ -65,8 +65,12 @@ export async function collectionDetails(slug: string): Promise<{
   return {
     collection: {
       ...collection,
-      description: descriptionToString(collection.description),
-      descriptionHtml: descriptionToHtml(collection.description),
+      description: collection.description
+        ? descriptionToString(collection.description)
+        : undefined,
+      descriptionHtml: collection.description
+        ? descriptionToHtml(collection.description)
+        : undefined,
     },
     distinctReleaseYears: [...releaseYears].toSorted(),
     distinctReviewYears: [...reviewYears].toSorted(),

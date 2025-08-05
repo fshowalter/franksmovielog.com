@@ -110,7 +110,7 @@ export function reducer(state: State, action: ActionType): State {
       return (
         clearFilter(action.value, state, "collection") ??
         updateFilter(state, "collection", (value) => {
-          return value.collectionNames.includes(action.value);
+          return value.watchlistCollectionNames.includes(action.value);
         })
       );
     }
@@ -118,7 +118,7 @@ export function reducer(state: State, action: ActionType): State {
       return (
         clearFilter(action.value, state, "director") ??
         updateFilter(state, "director", (value) => {
-          return value.directorNames.includes(action.value);
+          return value.watchlistDirectorNames.includes(action.value);
         })
       );
     }
@@ -126,7 +126,7 @@ export function reducer(state: State, action: ActionType): State {
       return (
         clearFilter(action.value, state, "performer") ??
         updateFilter(state, "performer", (value) => {
-          return value.performerNames.includes(action.value);
+          return value.watchlistPerformerNames.includes(action.value);
         })
       );
     }
@@ -148,7 +148,7 @@ export function reducer(state: State, action: ActionType): State {
       return (
         clearFilter(action.value, state, "writer") ??
         updateFilter(state, "writer", (value) => {
-          return value.writerNames.includes(action.value);
+          return value.watchlistWriterNames.includes(action.value);
         })
       );
     }

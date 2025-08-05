@@ -23,12 +23,12 @@ export type ListItemValue = Pick<
   | "medium"
   | "releaseSequence"
   | "releaseYear"
-  | "sequence"
   | "slug"
   | "sortTitle"
   | "title"
   | "venue"
   | "viewingDate"
+  | "viewingSequence"
   | "viewingYear"
 > & {
   posterImageProps: PosterImageProps;
@@ -196,7 +196,7 @@ function DateListItem({
         `}
       >
         {values.map((value) => {
-          return <ViewingListItem key={value.sequence} value={value} />;
+          return <ViewingListItem key={value.viewingSequence} value={value} />;
         })}
       </ul>
     </li>

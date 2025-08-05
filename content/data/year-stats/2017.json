@@ -91,11 +91,20 @@
   ],
   "mostWatchedTitles": [
     {
-      "title": "Rio Bravo",
       "imdbId": "tt0053221",
-      "year": "1959",
-      "count": 2,
-      "slug": "rio-bravo-1959"
+      "title": "Rio Bravo",
+      "releaseYear": "1959",
+      "sortTitle": "rio-bravo-1959",
+      "releaseSequence": "1959-03-08tt0053221",
+      "genres": [
+        "Western"
+      ],
+      "slug": "rio-bravo-1959",
+      "grade": "A+",
+      "gradeValue": 13,
+      "reviewDate": "2025-03-22",
+      "reviewSequence": "2025-03-22-2",
+      "count": 2
     }
   ],
   "mostWatchedDirectors": [
@@ -105,22 +114,46 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-01-10",
-          "slug": "the-big-stampede-1932",
+          "imdbId": "tt0022681",
           "title": "The Big Stampede",
+          "releaseYear": "1932",
+          "sortTitle": "big-stampede-1932",
+          "releaseSequence": "1932-09-29tt0022681",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-big-stampede-1932",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2021-11-28",
+          "reviewSequence": "2021-11-28-1",
+          "viewingDate": "2017-01-10",
+          "viewingSequence": 1,
           "medium": "TCM",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2017-01-17",
-          "slug": "the-telegraph-trail-1933",
+          "imdbId": "tt0024647",
           "title": "The Telegraph Trail",
+          "releaseYear": "1933",
+          "sortTitle": "telegraph-trail-1933",
+          "releaseSequence": "1933-03-18tt0024647",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-telegraph-trail-1933",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2024-08-05",
+          "reviewSequence": "2024-08-05-1",
+          "viewingDate": "2017-01-17",
+          "viewingSequence": 2,
           "medium": "TCM",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         }
       ]
     },
@@ -130,22 +163,44 @@
       "slug": "dario-argento",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-01-31",
-          "slug": "the-bird-with-the-crystal-plumage-1970",
+          "imdbId": "tt0065143",
           "title": "The Bird with the Crystal Plumage",
+          "releaseYear": "1970",
+          "sortTitle": "bird-with-the-crystal-plumage-1970",
+          "releaseSequence": "1970-02-27tt0065143",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-bird-with-the-crystal-plumage-1970",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2021-01-22",
+          "reviewSequence": "2021-01-22-1",
+          "viewingDate": "2017-01-31",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1970"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2017-10-21",
-          "slug": null,
+          "imdbId": "tt0076786",
           "title": "Suspiria",
+          "releaseYear": "1977",
+          "sortTitle": "suspiria-1977",
+          "releaseSequence": "1977-??-??tt0076786",
+          "genres": [
+            "Horror"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2017-10-21",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1977"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -155,22 +210,47 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-03-01",
-          "slug": "what-we-do-in-the-shadows-2014",
+          "imdbId": "tt3416742",
           "title": "What We Do in the Shadows",
+          "releaseYear": "2014",
+          "sortTitle": "what-we-do-in-the-shadows-2014",
+          "releaseSequence": "2014-01-19tt3416742",
+          "genres": [
+            "Comedy",
+            "Horror"
+          ],
+          "slug": "what-we-do-in-the-shadows-2014",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2017-03-01",
+          "reviewSequence": "2017-03-01-1",
+          "viewingDate": "2017-03-01",
+          "viewingSequence": 1,
           "medium": "Amazon",
-          "venue": null,
-          "year": "2014"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2017-12-13",
-          "slug": "thor-ragnarok-2017",
+          "imdbId": "tt3501632",
           "title": "Thor: Ragnarok",
+          "releaseYear": "2017",
+          "sortTitle": "thor-ragnarok-2017",
+          "releaseSequence": "2017-10-10tt3501632",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Fantasy",
+            "Sci-Fi"
+          ],
+          "slug": "thor-ragnarok-2017",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-09-26",
+          "reviewSequence": "2020-09-26-1",
+          "viewingDate": "2017-12-13",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2017"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -180,22 +260,42 @@
       "slug": "howard-hawks",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-06-18",
-          "slug": "rio-bravo-1959",
+          "imdbId": "tt0053221",
           "title": "Rio Bravo",
+          "releaseYear": "1959",
+          "sortTitle": "rio-bravo-1959",
+          "releaseSequence": "1959-03-08tt0053221",
+          "genres": [
+            "Western"
+          ],
+          "slug": "rio-bravo-1959",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2025-03-22",
+          "reviewSequence": "2025-03-22-2",
+          "viewingDate": "2017-06-18",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1959"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2017-12-09",
-          "slug": "rio-bravo-1959",
+          "imdbId": "tt0053221",
           "title": "Rio Bravo",
+          "releaseYear": "1959",
+          "sortTitle": "rio-bravo-1959",
+          "releaseSequence": "1959-03-08tt0053221",
+          "genres": [
+            "Western"
+          ],
+          "slug": "rio-bravo-1959",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2025-03-22",
+          "reviewSequence": "2025-03-22-2",
+          "viewingDate": "2017-12-09",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1959"
+          "venue": null
         }
       ]
     },
@@ -205,22 +305,50 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-11-13",
-          "slug": "hellboy-2004",
+          "imdbId": "tt0167190",
           "title": "Hellboy",
+          "releaseYear": "2004",
+          "sortTitle": "hellboy-2004",
+          "releaseSequence": "2004-03-30tt0167190",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "hellboy-2004",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2004-04-03",
+          "reviewSequence": "2004-04-03-1",
+          "viewingDate": "2017-11-13",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2004"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2017-11-13",
-          "slug": "hellboy-ii-the-golden-army-2008",
+          "imdbId": "tt0411477",
           "title": "Hellboy II: The Golden Army",
+          "releaseYear": "2008",
+          "sortTitle": "hellboy-ii-the-golden-army-2008",
+          "releaseSequence": "2008-06-28tt0411477",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "hellboy-ii-the-golden-army-2008",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2008-07-17",
+          "reviewSequence": "2008-07-17-2",
+          "viewingDate": "2017-11-13",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2008"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     }
@@ -232,40 +360,84 @@
       "slug": "john-wayne",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-01-10",
-          "slug": "the-big-stampede-1932",
+          "imdbId": "tt0022681",
           "title": "The Big Stampede",
+          "releaseYear": "1932",
+          "sortTitle": "big-stampede-1932",
+          "releaseSequence": "1932-09-29tt0022681",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-big-stampede-1932",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2021-11-28",
+          "reviewSequence": "2021-11-28-1",
+          "viewingDate": "2017-01-10",
+          "viewingSequence": 1,
           "medium": "TCM",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2017-01-17",
-          "slug": "the-telegraph-trail-1933",
+          "imdbId": "tt0024647",
           "title": "The Telegraph Trail",
+          "releaseYear": "1933",
+          "sortTitle": "telegraph-trail-1933",
+          "releaseSequence": "1933-03-18tt0024647",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-telegraph-trail-1933",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2024-08-05",
+          "reviewSequence": "2024-08-05-1",
+          "viewingDate": "2017-01-17",
+          "viewingSequence": 2,
           "medium": "TCM",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2017-06-18",
-          "slug": "rio-bravo-1959",
+          "imdbId": "tt0053221",
           "title": "Rio Bravo",
+          "releaseYear": "1959",
+          "sortTitle": "rio-bravo-1959",
+          "releaseSequence": "1959-03-08tt0053221",
+          "genres": [
+            "Western"
+          ],
+          "slug": "rio-bravo-1959",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2025-03-22",
+          "reviewSequence": "2025-03-22-2",
+          "viewingDate": "2017-06-18",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1959"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 4,
-          "date": "2017-12-09",
-          "slug": "rio-bravo-1959",
+          "imdbId": "tt0053221",
           "title": "Rio Bravo",
+          "releaseYear": "1959",
+          "sortTitle": "rio-bravo-1959",
+          "releaseSequence": "1959-03-08tt0053221",
+          "genres": [
+            "Western"
+          ],
+          "slug": "rio-bravo-1959",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2025-03-22",
+          "reviewSequence": "2025-03-22-2",
+          "viewingDate": "2017-12-09",
+          "viewingSequence": 4,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1959"
+          "venue": null
         }
       ]
     },
@@ -275,22 +447,46 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-01-10",
-          "slug": "the-big-stampede-1932",
+          "imdbId": "tt0022681",
           "title": "The Big Stampede",
+          "releaseYear": "1932",
+          "sortTitle": "big-stampede-1932",
+          "releaseSequence": "1932-09-29tt0022681",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-big-stampede-1932",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2021-11-28",
+          "reviewSequence": "2021-11-28-1",
+          "viewingDate": "2017-01-10",
+          "viewingSequence": 1,
           "medium": "TCM",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2017-01-17",
-          "slug": "the-telegraph-trail-1933",
+          "imdbId": "tt0024647",
           "title": "The Telegraph Trail",
+          "releaseYear": "1933",
+          "sortTitle": "telegraph-trail-1933",
+          "releaseSequence": "1933-03-18tt0024647",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-telegraph-trail-1933",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2024-08-05",
+          "reviewSequence": "2024-08-05-1",
+          "viewingDate": "2017-01-17",
+          "viewingSequence": 2,
           "medium": "TCM",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         }
       ]
     },
@@ -300,22 +496,46 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-01-10",
-          "slug": "the-big-stampede-1932",
+          "imdbId": "tt0022681",
           "title": "The Big Stampede",
+          "releaseYear": "1932",
+          "sortTitle": "big-stampede-1932",
+          "releaseSequence": "1932-09-29tt0022681",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-big-stampede-1932",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2021-11-28",
+          "reviewSequence": "2021-11-28-1",
+          "viewingDate": "2017-01-10",
+          "viewingSequence": 1,
           "medium": "TCM",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2017-01-17",
-          "slug": "the-telegraph-trail-1933",
+          "imdbId": "tt0024647",
           "title": "The Telegraph Trail",
+          "releaseYear": "1933",
+          "sortTitle": "telegraph-trail-1933",
+          "releaseSequence": "1933-03-18tt0024647",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-telegraph-trail-1933",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2024-08-05",
+          "reviewSequence": "2024-08-05-1",
+          "viewingDate": "2017-01-17",
+          "viewingSequence": 2,
           "medium": "TCM",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         }
       ]
     },
@@ -325,22 +545,48 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-01-14",
-          "slug": "green-room-2015",
+          "imdbId": "tt4062536",
           "title": "Green Room",
+          "releaseYear": "2015",
+          "sortTitle": "green-room-2015",
+          "releaseSequence": "2015-05-17tt4062536",
+          "genres": [
+            "Crime",
+            "Horror",
+            "Music",
+            "Thriller"
+          ],
+          "slug": "green-room-2015",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2017-01-14",
+          "reviewSequence": "2017-01-14-1",
+          "viewingDate": "2017-01-14",
+          "viewingSequence": 1,
           "medium": "Amazon",
-          "venue": null,
-          "year": "2015"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2017-03-09",
-          "slug": "logan-2017",
+          "imdbId": "tt3315342",
           "title": "Logan",
+          "releaseYear": "2017",
+          "sortTitle": "logan-2017",
+          "releaseSequence": "2017-02-17tt3315342",
+          "genres": [
+            "Action",
+            "Drama",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "logan-2017",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2021-03-13",
+          "reviewSequence": "2021-03-13-1",
+          "viewingDate": "2017-03-09",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2017"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -350,22 +596,44 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-01-31",
-          "slug": "the-bird-with-the-crystal-plumage-1970",
+          "imdbId": "tt0065143",
           "title": "The Bird with the Crystal Plumage",
+          "releaseYear": "1970",
+          "sortTitle": "bird-with-the-crystal-plumage-1970",
+          "releaseSequence": "1970-02-27tt0065143",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-bird-with-the-crystal-plumage-1970",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2021-01-22",
+          "reviewSequence": "2021-01-22-1",
+          "viewingDate": "2017-01-31",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1970"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2017-10-21",
-          "slug": null,
+          "imdbId": "tt0076786",
           "title": "Suspiria",
+          "releaseYear": "1977",
+          "sortTitle": "suspiria-1977",
+          "releaseSequence": "1977-??-??tt0076786",
+          "genres": [
+            "Horror"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2017-10-21",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1977"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -375,22 +643,47 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-03-01",
-          "slug": "what-we-do-in-the-shadows-2014",
+          "imdbId": "tt3416742",
           "title": "What We Do in the Shadows",
+          "releaseYear": "2014",
+          "sortTitle": "what-we-do-in-the-shadows-2014",
+          "releaseSequence": "2014-01-19tt3416742",
+          "genres": [
+            "Comedy",
+            "Horror"
+          ],
+          "slug": "what-we-do-in-the-shadows-2014",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2017-03-01",
+          "reviewSequence": "2017-03-01-1",
+          "viewingDate": "2017-03-01",
+          "viewingSequence": 1,
           "medium": "Amazon",
-          "venue": null,
-          "year": "2014"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2017-12-13",
-          "slug": "thor-ragnarok-2017",
+          "imdbId": "tt3501632",
           "title": "Thor: Ragnarok",
+          "releaseYear": "2017",
+          "sortTitle": "thor-ragnarok-2017",
+          "releaseSequence": "2017-10-10tt3501632",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Fantasy",
+            "Sci-Fi"
+          ],
+          "slug": "thor-ragnarok-2017",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-09-26",
+          "reviewSequence": "2020-09-26-1",
+          "viewingDate": "2017-12-13",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2017"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -400,22 +693,46 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-04-20",
-          "slug": "deadpool-2016",
+          "imdbId": "tt1431045",
           "title": "Deadpool",
+          "releaseYear": "2016",
+          "sortTitle": "deadpool-2016",
+          "releaseSequence": "2016-01-21tt1431045",
+          "genres": [
+            "Action",
+            "Comedy"
+          ],
+          "slug": "deadpool-2016",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2021-02-27",
+          "reviewSequence": "2021-02-27-1",
+          "viewingDate": "2017-04-20",
+          "viewingSequence": 1,
           "medium": "HBO GO",
-          "venue": null,
-          "year": "2016"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2017-12-09",
-          "slug": "guardians-of-the-galaxy-vol-2-2017",
+          "imdbId": "tt3896198",
           "title": "Guardians of the Galaxy Vol. 2",
+          "releaseYear": "2017",
+          "sortTitle": "guardians-of-the-galaxy-vol-2-2017",
+          "releaseSequence": "2017-04-10tt3896198",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Sci-Fi"
+          ],
+          "slug": "guardians-of-the-galaxy-vol-2-2017",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-08-29",
+          "reviewSequence": "2020-08-29-1",
+          "viewingDate": "2017-12-09",
+          "viewingSequence": 2,
           "medium": "Netflix",
-          "venue": null,
-          "year": "2017"
+          "venue": null
         }
       ]
     },
@@ -425,22 +742,46 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-05-02",
-          "slug": "heat-1995",
+          "imdbId": "tt0113277",
           "title": "Heat",
+          "releaseYear": "1995",
+          "sortTitle": "heat-1995",
+          "releaseSequence": "1995-12-06tt0113277",
+          "genres": [
+            "Action",
+            "Crime",
+            "Drama"
+          ],
+          "slug": "heat-1995",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2022-03-12",
+          "reviewSequence": "2022-03-12-1",
+          "viewingDate": "2017-05-02",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1995"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2017-08-17",
-          "slug": null,
+          "imdbId": "tt0099685",
           "title": "Goodfellas",
+          "releaseYear": "1990",
+          "sortTitle": "goodfellas-1990",
+          "releaseSequence": "1990-09-09tt0099685",
+          "genres": [
+            "Biography",
+            "Crime",
+            "Drama"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2017-08-17",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1990"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -450,22 +791,46 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-05-02",
-          "slug": "heat-1995",
+          "imdbId": "tt0113277",
           "title": "Heat",
+          "releaseYear": "1995",
+          "sortTitle": "heat-1995",
+          "releaseSequence": "1995-12-06tt0113277",
+          "genres": [
+            "Action",
+            "Crime",
+            "Drama"
+          ],
+          "slug": "heat-1995",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2022-03-12",
+          "reviewSequence": "2022-03-12-1",
+          "viewingDate": "2017-05-02",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1995"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2017-08-17",
-          "slug": null,
+          "imdbId": "tt0099685",
           "title": "Goodfellas",
+          "releaseYear": "1990",
+          "sortTitle": "goodfellas-1990",
+          "releaseSequence": "1990-09-09tt0099685",
+          "genres": [
+            "Biography",
+            "Crime",
+            "Drama"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2017-08-17",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1990"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -475,22 +840,42 @@
       "slug": "dean-martin",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-06-18",
-          "slug": "rio-bravo-1959",
+          "imdbId": "tt0053221",
           "title": "Rio Bravo",
+          "releaseYear": "1959",
+          "sortTitle": "rio-bravo-1959",
+          "releaseSequence": "1959-03-08tt0053221",
+          "genres": [
+            "Western"
+          ],
+          "slug": "rio-bravo-1959",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2025-03-22",
+          "reviewSequence": "2025-03-22-2",
+          "viewingDate": "2017-06-18",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1959"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2017-12-09",
-          "slug": "rio-bravo-1959",
+          "imdbId": "tt0053221",
           "title": "Rio Bravo",
+          "releaseYear": "1959",
+          "sortTitle": "rio-bravo-1959",
+          "releaseSequence": "1959-03-08tt0053221",
+          "genres": [
+            "Western"
+          ],
+          "slug": "rio-bravo-1959",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2025-03-22",
+          "reviewSequence": "2025-03-22-2",
+          "viewingDate": "2017-12-09",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1959"
+          "venue": null
         }
       ]
     }
@@ -502,31 +887,63 @@
       "slug": "dario-argento",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-01-31",
-          "slug": "the-bird-with-the-crystal-plumage-1970",
+          "imdbId": "tt0065143",
           "title": "The Bird with the Crystal Plumage",
+          "releaseYear": "1970",
+          "sortTitle": "bird-with-the-crystal-plumage-1970",
+          "releaseSequence": "1970-02-27tt0065143",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-bird-with-the-crystal-plumage-1970",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2021-01-22",
+          "reviewSequence": "2021-01-22-1",
+          "viewingDate": "2017-01-31",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1970"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2017-10-11",
-          "slug": null,
+          "imdbId": "tt0089013",
           "title": "Demons",
+          "releaseYear": "1985",
+          "sortTitle": "demons-1985",
+          "releaseSequence": "1985-10-04tt0089013",
+          "genres": [
+            "Horror"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2017-10-11",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1985"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 3,
-          "date": "2017-10-21",
-          "slug": null,
+          "imdbId": "tt0076786",
           "title": "Suspiria",
+          "releaseYear": "1977",
+          "sortTitle": "suspiria-1977",
+          "releaseSequence": "1977-??-??tt0076786",
+          "genres": [
+            "Horror"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2017-10-21",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1977"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -536,22 +953,46 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-01-10",
-          "slug": "the-big-stampede-1932",
+          "imdbId": "tt0022681",
           "title": "The Big Stampede",
+          "releaseYear": "1932",
+          "sortTitle": "big-stampede-1932",
+          "releaseSequence": "1932-09-29tt0022681",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-big-stampede-1932",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2021-11-28",
+          "reviewSequence": "2021-11-28-1",
+          "viewingDate": "2017-01-10",
+          "viewingSequence": 1,
           "medium": "TCM",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2017-01-17",
-          "slug": "the-telegraph-trail-1933",
+          "imdbId": "tt0024647",
           "title": "The Telegraph Trail",
+          "releaseYear": "1933",
+          "sortTitle": "telegraph-trail-1933",
+          "releaseSequence": "1933-03-18tt0024647",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-telegraph-trail-1933",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2024-08-05",
+          "reviewSequence": "2024-08-05-1",
+          "viewingDate": "2017-01-17",
+          "viewingSequence": 2,
           "medium": "TCM",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         }
       ]
     },
@@ -561,22 +1002,49 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-03-09",
-          "slug": "logan-2017",
+          "imdbId": "tt3315342",
           "title": "Logan",
+          "releaseYear": "2017",
+          "sortTitle": "logan-2017",
+          "releaseSequence": "2017-02-17tt3315342",
+          "genres": [
+            "Action",
+            "Drama",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "logan-2017",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2021-03-13",
+          "reviewSequence": "2021-03-13-1",
+          "viewingDate": "2017-03-09",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2017"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2017-10-30",
-          "slug": null,
+          "imdbId": "tt1856101",
           "title": "Blade Runner 2049",
+          "releaseYear": "2017",
+          "sortTitle": "blade-runner-2049-2017",
+          "releaseSequence": "2017-10-03tt1856101",
+          "genres": [
+            "Action",
+            "Drama",
+            "Mystery",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2017-10-30",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2017"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -586,22 +1054,42 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-06-18",
-          "slug": "rio-bravo-1959",
+          "imdbId": "tt0053221",
           "title": "Rio Bravo",
+          "releaseYear": "1959",
+          "sortTitle": "rio-bravo-1959",
+          "releaseSequence": "1959-03-08tt0053221",
+          "genres": [
+            "Western"
+          ],
+          "slug": "rio-bravo-1959",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2025-03-22",
+          "reviewSequence": "2025-03-22-2",
+          "viewingDate": "2017-06-18",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1959"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2017-12-09",
-          "slug": "rio-bravo-1959",
+          "imdbId": "tt0053221",
           "title": "Rio Bravo",
+          "releaseYear": "1959",
+          "sortTitle": "rio-bravo-1959",
+          "releaseSequence": "1959-03-08tt0053221",
+          "genres": [
+            "Western"
+          ],
+          "slug": "rio-bravo-1959",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2025-03-22",
+          "reviewSequence": "2025-03-22-2",
+          "viewingDate": "2017-12-09",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1959"
+          "venue": null
         }
       ]
     },
@@ -611,22 +1099,42 @@
       "slug": "leigh-brackett",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-06-18",
-          "slug": "rio-bravo-1959",
+          "imdbId": "tt0053221",
           "title": "Rio Bravo",
+          "releaseYear": "1959",
+          "sortTitle": "rio-bravo-1959",
+          "releaseSequence": "1959-03-08tt0053221",
+          "genres": [
+            "Western"
+          ],
+          "slug": "rio-bravo-1959",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2025-03-22",
+          "reviewSequence": "2025-03-22-2",
+          "viewingDate": "2017-06-18",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1959"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2017-12-09",
-          "slug": "rio-bravo-1959",
+          "imdbId": "tt0053221",
           "title": "Rio Bravo",
+          "releaseYear": "1959",
+          "sortTitle": "rio-bravo-1959",
+          "releaseSequence": "1959-03-08tt0053221",
+          "genres": [
+            "Western"
+          ],
+          "slug": "rio-bravo-1959",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2025-03-22",
+          "reviewSequence": "2025-03-22-2",
+          "viewingDate": "2017-12-09",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1959"
+          "venue": null
         }
       ]
     },
@@ -636,22 +1144,42 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-06-18",
-          "slug": "rio-bravo-1959",
+          "imdbId": "tt0053221",
           "title": "Rio Bravo",
+          "releaseYear": "1959",
+          "sortTitle": "rio-bravo-1959",
+          "releaseSequence": "1959-03-08tt0053221",
+          "genres": [
+            "Western"
+          ],
+          "slug": "rio-bravo-1959",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2025-03-22",
+          "reviewSequence": "2025-03-22-2",
+          "viewingDate": "2017-06-18",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1959"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2017-12-09",
-          "slug": "rio-bravo-1959",
+          "imdbId": "tt0053221",
           "title": "Rio Bravo",
+          "releaseYear": "1959",
+          "sortTitle": "rio-bravo-1959",
+          "releaseSequence": "1959-03-08tt0053221",
+          "genres": [
+            "Western"
+          ],
+          "slug": "rio-bravo-1959",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2025-03-22",
+          "reviewSequence": "2025-03-22-2",
+          "viewingDate": "2017-12-09",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1959"
+          "venue": null
         }
       ]
     },
@@ -661,22 +1189,50 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-11-13",
-          "slug": "hellboy-2004",
+          "imdbId": "tt0167190",
           "title": "Hellboy",
+          "releaseYear": "2004",
+          "sortTitle": "hellboy-2004",
+          "releaseSequence": "2004-03-30tt0167190",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "hellboy-2004",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2004-04-03",
+          "reviewSequence": "2004-04-03-1",
+          "viewingDate": "2017-11-13",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2004"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2017-11-13",
-          "slug": "hellboy-ii-the-golden-army-2008",
+          "imdbId": "tt0411477",
           "title": "Hellboy II: The Golden Army",
+          "releaseYear": "2008",
+          "sortTitle": "hellboy-ii-the-golden-army-2008",
+          "releaseSequence": "2008-06-28tt0411477",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "hellboy-ii-the-golden-army-2008",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2008-07-17",
+          "reviewSequence": "2008-07-17-2",
+          "viewingDate": "2017-11-13",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2008"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -686,22 +1242,50 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2017-11-13",
-          "slug": "hellboy-2004",
+          "imdbId": "tt0167190",
           "title": "Hellboy",
+          "releaseYear": "2004",
+          "sortTitle": "hellboy-2004",
+          "releaseSequence": "2004-03-30tt0167190",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "hellboy-2004",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2004-04-03",
+          "reviewSequence": "2004-04-03-1",
+          "viewingDate": "2017-11-13",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2004"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2017-11-13",
-          "slug": "hellboy-ii-the-golden-army-2008",
+          "imdbId": "tt0411477",
           "title": "Hellboy II: The Golden Army",
+          "releaseYear": "2008",
+          "sortTitle": "hellboy-ii-the-golden-army-2008",
+          "releaseSequence": "2008-06-28tt0411477",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "hellboy-ii-the-golden-army-2008",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2008-07-17",
+          "reviewSequence": "2008-07-17-2",
+          "viewingDate": "2017-11-13",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2008"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     }

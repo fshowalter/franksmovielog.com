@@ -87,25 +87,59 @@
   ],
   "mostWatchedTitles": [
     {
-      "title": "Night Train to Terror",
       "imdbId": "tt0087798",
-      "year": "1985",
-      "count": 2,
-      "slug": "night-train-to-terror-1985"
+      "title": "Night Train to Terror",
+      "releaseYear": "1985",
+      "sortTitle": "night-train-to-terror-1985",
+      "releaseSequence": "1985-02-22tt0087798",
+      "genres": [
+        "Drama",
+        "Fantasy",
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "slug": "night-train-to-terror-1985",
+      "grade": "C",
+      "gradeValue": 6,
+      "reviewDate": "2024-04-27",
+      "reviewSequence": "2024-04-27-1",
+      "count": 2
     },
     {
-      "title": "Late Night with the Devil",
       "imdbId": "tt14966898",
-      "year": "2023",
-      "count": 2,
-      "slug": null
+      "title": "Late Night with the Devil",
+      "releaseYear": "2023",
+      "sortTitle": "late-night-with-the-devil-2023",
+      "releaseSequence": "2023-03-10tt14966898",
+      "genres": [
+        "Horror"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "count": 2
     },
     {
-      "title": "Deadpool & Wolverine",
       "imdbId": "tt6263850",
-      "year": "2024",
-      "count": 2,
-      "slug": null
+      "title": "Deadpool & Wolverine",
+      "releaseYear": "2024",
+      "sortTitle": "deadpool-and-wolverine-2024",
+      "releaseSequence": "2024-07-22tt6263850",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Sci-Fi"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "count": 2
     }
   ],
   "mostWatchedDirectors": [
@@ -115,49 +149,105 @@
       "slug": "lucio-fulci",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-04-10",
-          "slug": "city-of-the-living-dead-1980",
+          "imdbId": "tt0081318",
           "title": "City of the Living Dead",
+          "releaseYear": "1980",
+          "sortTitle": "city-of-the-living-dead-1980",
+          "releaseSequence": "1980-08-11tt0081318",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "city-of-the-living-dead-1980",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2024-04-10",
+          "reviewSequence": "2024-04-10-1",
+          "viewingDate": "2024-04-10",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1980"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-10-12",
-          "slug": null,
+          "imdbId": "tt0085356",
           "title": "Conquest",
+          "releaseYear": "1983",
+          "sortTitle": "conquest-1983",
+          "releaseSequence": "1983-06-02tt0085356",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Horror"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-10-12",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1983"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2024-10-18",
-          "slug": "manhattan-baby-1982",
+          "imdbId": "tt0084298",
           "title": "Manhattan Baby",
+          "releaseYear": "1982",
+          "sortTitle": "manhattan-baby-1982",
+          "releaseSequence": "1982-08-12tt0084298",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "manhattan-baby-1982",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2024-10-18",
+          "reviewSequence": "2024-10-18-1",
+          "viewingDate": "2024-10-18",
+          "viewingSequence": 3,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1982"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2024-11-14",
-          "slug": "the-devils-honey-1986",
+          "imdbId": "tt0090903",
           "title": "The Devil's Honey",
+          "releaseYear": "1986",
+          "sortTitle": "devils-honey-1986",
+          "releaseSequence": "1986-08-21tt0090903",
+          "genres": [
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-devils-honey-1986",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2024-11-14",
+          "reviewSequence": "2024-11-14-1",
+          "viewingDate": "2024-11-14",
+          "viewingSequence": 4,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1986"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2024-11-15",
-          "slug": "the-conspiracy-of-torture-1969",
+          "imdbId": "tt0064073",
           "title": "The Conspiracy of Torture",
+          "releaseYear": "1969",
+          "sortTitle": "conspiracy-of-torture-1969",
+          "releaseSequence": "1969-11-14tt0064073",
+          "genres": [
+            "Drama",
+            "History",
+            "Horror"
+          ],
+          "slug": "the-conspiracy-of-torture-1969",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2024-11-15",
+          "reviewSequence": "2024-11-15-1",
+          "viewingDate": "2024-11-15",
+          "viewingSequence": 5,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1969"
+          "venue": null
         }
       ]
     },
@@ -167,31 +257,65 @@
       "slug": "sergio-leone",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-06-16",
-          "slug": null,
+          "imdbId": "tt0058461",
           "title": "A Fistful of Dollars",
+          "releaseYear": "1964",
+          "sortTitle": "fistful-of-dollars-1964",
+          "releaseSequence": "1964-09-12tt0058461",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-06-16",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1964"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-06-16",
-          "slug": "for-a-few-dollars-more-1965",
+          "imdbId": "tt0059578",
           "title": "For a Few Dollars More",
+          "releaseYear": "1965",
+          "sortTitle": "for-a-few-dollars-more-1965",
+          "releaseSequence": "1965-12-18tt0059578",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "for-a-few-dollars-more-1965",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2007-08-02",
+          "reviewSequence": "2007-08-02-2",
+          "viewingDate": "2024-06-16",
+          "viewingSequence": 2,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1965"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2024-06-16",
-          "slug": "the-good-the-bad-and-the-ugly-1966",
+          "imdbId": "tt0060196",
           "title": "The Good, the Bad and the Ugly",
+          "releaseYear": "1966",
+          "sortTitle": "good-the-bad-and-the-ugly-1966",
+          "releaseSequence": "1966-12-23tt0060196",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-good-the-bad-and-the-ugly-1966",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2008-05-24",
+          "reviewSequence": "2008-05-24-3",
+          "viewingDate": "2024-06-16",
+          "viewingSequence": 3,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1966"
+          "venue": null
         }
       ]
     },
@@ -201,22 +325,50 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-01-04",
-          "slug": "night-train-to-terror-1985",
+          "imdbId": "tt0087798",
           "title": "Night Train to Terror",
+          "releaseYear": "1985",
+          "sortTitle": "night-train-to-terror-1985",
+          "releaseSequence": "1985-02-22tt0087798",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "night-train-to-terror-1985",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2024-04-27",
+          "reviewSequence": "2024-04-27-1",
+          "viewingDate": "2024-01-04",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1985"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-04-27",
-          "slug": "night-train-to-terror-1985",
+          "imdbId": "tt0087798",
           "title": "Night Train to Terror",
+          "releaseYear": "1985",
+          "sortTitle": "night-train-to-terror-1985",
+          "releaseSequence": "1985-02-22tt0087798",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "night-train-to-terror-1985",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2024-04-27",
+          "reviewSequence": "2024-04-27-1",
+          "viewingDate": "2024-04-27",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1985"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -226,22 +378,50 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-01-04",
-          "slug": "night-train-to-terror-1985",
+          "imdbId": "tt0087798",
           "title": "Night Train to Terror",
+          "releaseYear": "1985",
+          "sortTitle": "night-train-to-terror-1985",
+          "releaseSequence": "1985-02-22tt0087798",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "night-train-to-terror-1985",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2024-04-27",
+          "reviewSequence": "2024-04-27-1",
+          "viewingDate": "2024-01-04",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1985"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-04-27",
-          "slug": "night-train-to-terror-1985",
+          "imdbId": "tt0087798",
           "title": "Night Train to Terror",
+          "releaseYear": "1985",
+          "sortTitle": "night-train-to-terror-1985",
+          "releaseSequence": "1985-02-22tt0087798",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "night-train-to-terror-1985",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2024-04-27",
+          "reviewSequence": "2024-04-27-1",
+          "viewingDate": "2024-04-27",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1985"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -251,22 +431,50 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-01-04",
-          "slug": "night-train-to-terror-1985",
+          "imdbId": "tt0087798",
           "title": "Night Train to Terror",
+          "releaseYear": "1985",
+          "sortTitle": "night-train-to-terror-1985",
+          "releaseSequence": "1985-02-22tt0087798",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "night-train-to-terror-1985",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2024-04-27",
+          "reviewSequence": "2024-04-27-1",
+          "viewingDate": "2024-01-04",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1985"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-04-27",
-          "slug": "night-train-to-terror-1985",
+          "imdbId": "tt0087798",
           "title": "Night Train to Terror",
+          "releaseYear": "1985",
+          "sortTitle": "night-train-to-terror-1985",
+          "releaseSequence": "1985-02-22tt0087798",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "night-train-to-terror-1985",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2024-04-27",
+          "reviewSequence": "2024-04-27-1",
+          "viewingDate": "2024-04-27",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1985"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -276,22 +484,50 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-01-04",
-          "slug": "night-train-to-terror-1985",
+          "imdbId": "tt0087798",
           "title": "Night Train to Terror",
+          "releaseYear": "1985",
+          "sortTitle": "night-train-to-terror-1985",
+          "releaseSequence": "1985-02-22tt0087798",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "night-train-to-terror-1985",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2024-04-27",
+          "reviewSequence": "2024-04-27-1",
+          "viewingDate": "2024-01-04",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1985"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-04-27",
-          "slug": "night-train-to-terror-1985",
+          "imdbId": "tt0087798",
           "title": "Night Train to Terror",
+          "releaseYear": "1985",
+          "sortTitle": "night-train-to-terror-1985",
+          "releaseSequence": "1985-02-22tt0087798",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "night-train-to-terror-1985",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2024-04-27",
+          "reviewSequence": "2024-04-27-1",
+          "viewingDate": "2024-04-27",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1985"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -301,22 +537,50 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-01-04",
-          "slug": "night-train-to-terror-1985",
+          "imdbId": "tt0087798",
           "title": "Night Train to Terror",
+          "releaseYear": "1985",
+          "sortTitle": "night-train-to-terror-1985",
+          "releaseSequence": "1985-02-22tt0087798",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "night-train-to-terror-1985",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2024-04-27",
+          "reviewSequence": "2024-04-27-1",
+          "viewingDate": "2024-01-04",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1985"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-04-27",
-          "slug": "night-train-to-terror-1985",
+          "imdbId": "tt0087798",
           "title": "Night Train to Terror",
+          "releaseYear": "1985",
+          "sortTitle": "night-train-to-terror-1985",
+          "releaseSequence": "1985-02-22tt0087798",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "night-train-to-terror-1985",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2024-04-27",
+          "reviewSequence": "2024-04-27-1",
+          "viewingDate": "2024-04-27",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1985"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -326,22 +590,44 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-01-21",
-          "slug": null,
+          "imdbId": "tt0071675",
           "title": "It's Alive",
+          "releaseYear": "1974",
+          "sortTitle": "its-alive-1974",
+          "releaseSequence": "1974-04-26tt0071675",
+          "genres": [
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-01-21",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1974"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-10-10",
-          "slug": null,
+          "imdbId": "tt0077756",
           "title": "It Lives Again",
+          "releaseYear": "1978",
+          "sortTitle": "it-lives-again-1978",
+          "releaseSequence": "1978-05-10tt0077756",
+          "genres": [
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-10-10",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1978"
+          "venue": null
         }
       ]
     },
@@ -351,22 +637,45 @@
       "slug": "john-ford",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-03-12",
-          "slug": "stagecoach-1939",
+          "imdbId": "tt0031971",
           "title": "Stagecoach",
+          "releaseYear": "1939",
+          "sortTitle": "stagecoach-1939",
+          "releaseSequence": "1939-??-??tt0031971",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Western"
+          ],
+          "slug": "stagecoach-1939",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2008-01-22",
+          "reviewSequence": "2008-01-22-1",
+          "viewingDate": "2024-03-12",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1939"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-03-12",
-          "slug": "the-man-who-shot-liberty-valance-1962",
+          "imdbId": "tt0056217",
           "title": "The Man Who Shot Liberty Valance",
+          "releaseYear": "1962",
+          "sortTitle": "man-who-shot-liberty-valance-1962",
+          "releaseSequence": "1962-04-13tt0056217",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-man-who-shot-liberty-valance-1962",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2007-06-29",
+          "reviewSequence": "2007-06-29-2",
+          "viewingDate": "2024-03-12",
+          "viewingSequence": 2,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1962"
+          "venue": null
         }
       ]
     },
@@ -376,22 +685,42 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-03-25",
-          "slug": null,
+          "imdbId": "tt14966898",
           "title": "Late Night with the Devil",
+          "releaseYear": "2023",
+          "sortTitle": "late-night-with-the-devil-2023",
+          "releaseSequence": "2023-03-10tt14966898",
+          "genres": [
+            "Horror"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-03-25",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Prince Charles Cinema",
-          "year": "2023"
+          "venue": "Prince Charles Cinema"
         },
         {
-          "sequence": 2,
-          "date": "2024-10-26",
-          "slug": null,
+          "imdbId": "tt14966898",
           "title": "Late Night with the Devil",
+          "releaseYear": "2023",
+          "sortTitle": "late-night-with-the-devil-2023",
+          "releaseSequence": "2023-03-10tt14966898",
+          "genres": [
+            "Horror"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-10-26",
+          "viewingSequence": 2,
           "medium": "iTunes",
-          "venue": null,
-          "year": "2023"
+          "venue": null
         }
       ]
     }
@@ -403,58 +732,128 @@
       "slug": "john-wayne",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-03-12",
-          "slug": "stagecoach-1939",
+          "imdbId": "tt0031971",
           "title": "Stagecoach",
+          "releaseYear": "1939",
+          "sortTitle": "stagecoach-1939",
+          "releaseSequence": "1939-??-??tt0031971",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Western"
+          ],
+          "slug": "stagecoach-1939",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2008-01-22",
+          "reviewSequence": "2008-01-22-1",
+          "viewingDate": "2024-03-12",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1939"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-03-12",
-          "slug": "the-man-who-shot-liberty-valance-1962",
+          "imdbId": "tt0056217",
           "title": "The Man Who Shot Liberty Valance",
+          "releaseYear": "1962",
+          "sortTitle": "man-who-shot-liberty-valance-1962",
+          "releaseSequence": "1962-04-13tt0056217",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-man-who-shot-liberty-valance-1962",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2007-06-29",
+          "reviewSequence": "2007-06-29-2",
+          "viewingDate": "2024-03-12",
+          "viewingSequence": 2,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1962"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2024-08-05",
-          "slug": "the-telegraph-trail-1933",
+          "imdbId": "tt0024647",
           "title": "The Telegraph Trail",
+          "releaseYear": "1933",
+          "sortTitle": "telegraph-trail-1933",
+          "releaseSequence": "1933-03-18tt0024647",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-telegraph-trail-1933",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2024-08-05",
+          "reviewSequence": "2024-08-05-1",
+          "viewingDate": "2024-08-05",
+          "viewingSequence": 3,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2024-08-05",
-          "slug": "the-man-from-monterey-1933",
+          "imdbId": "tt0024293",
           "title": "The Man from Monterey",
+          "releaseYear": "1933",
+          "sortTitle": "man-from-monterey-1933",
+          "releaseSequence": "1933-07-15tt0024293",
+          "genres": [
+            "Adventure",
+            "Music",
+            "Romance",
+            "Western"
+          ],
+          "slug": "the-man-from-monterey-1933",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2024-08-05",
+          "reviewSequence": "2024-08-05-2",
+          "viewingDate": "2024-08-05",
+          "viewingSequence": 4,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2024-08-06",
-          "slug": "tall-in-the-saddle-1944",
+          "imdbId": "tt0037343",
           "title": "Tall in the Saddle",
+          "releaseYear": "1944",
+          "sortTitle": "tall-in-the-saddle-1944",
+          "releaseSequence": "1944-09-29tt0037343",
+          "genres": [
+            "Western"
+          ],
+          "slug": "tall-in-the-saddle-1944",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2024-08-06",
+          "reviewSequence": "2024-08-06-1",
+          "viewingDate": "2024-08-06",
+          "viewingSequence": 5,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1944"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2024-11-20",
-          "slug": "winds-of-the-wasteland-1936",
+          "imdbId": "tt0028510",
           "title": "Winds of the Wasteland",
+          "releaseYear": "1936",
+          "sortTitle": "winds-of-the-wasteland-1936",
+          "releaseSequence": "1936-07-06tt0028510",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "winds-of-the-wasteland-1936",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2024-11-20",
+          "reviewSequence": "2024-11-20-1",
+          "viewingDate": "2024-11-20",
+          "viewingSequence": 6,
           "medium": "DVD",
-          "venue": null,
-          "year": "1936"
+          "venue": null
         }
       ]
     },
@@ -464,49 +863,112 @@
       "slug": "christopher-lee",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-04-27",
-          "slug": "horror-express-1972",
+          "imdbId": "tt0068713",
           "title": "Horror Express",
+          "releaseYear": "1972",
+          "sortTitle": "horror-express-1972",
+          "releaseSequence": "1972-09-30tt0068713",
+          "genres": [
+            "Adventure",
+            "Horror",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "horror-express-1972",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2024-04-27",
+          "reviewSequence": "2024-04-27-2",
+          "viewingDate": "2024-04-27",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1972"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2024-08-19",
-          "slug": null,
+          "imdbId": "tt0059162",
           "title": "The Face of Fu Manchu",
+          "releaseYear": "1965",
+          "sortTitle": "face-of-fu-manchu-1965",
+          "releaseSequence": "1965-08-06tt0059162",
+          "genres": [
+            "Action",
+            "Crime",
+            "Drama",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-08-19",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1965"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2024-10-16",
-          "slug": "scream-and-scream-again-1970",
+          "imdbId": "tt0064949",
           "title": "Scream and Scream Again",
+          "releaseYear": "1970",
+          "sortTitle": "scream-and-scream-again-1970",
+          "releaseSequence": "1970-01-01tt0064949",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "scream-and-scream-again-1970",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2025-07-04",
+          "reviewSequence": "2025-07-04-1",
+          "viewingDate": "2024-10-16",
+          "viewingSequence": 3,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1970"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2024-10-23",
-          "slug": "the-oblong-box-1969",
+          "imdbId": "tt0064747",
           "title": "The Oblong Box",
+          "releaseYear": "1969",
+          "sortTitle": "oblong-box-1969",
+          "releaseSequence": "1969-06-11tt0064747",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-oblong-box-1969",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2024-10-23",
+          "reviewSequence": "2024-10-23-1",
+          "viewingDate": "2024-10-23",
+          "viewingSequence": 4,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1969"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2024-11-09",
-          "slug": "the-castle-of-the-living-dead-1964",
+          "imdbId": "tt0057924",
           "title": "The Castle of the Living Dead",
+          "releaseYear": "1964",
+          "sortTitle": "castle-of-the-living-dead-1964",
+          "releaseSequence": "1964-08-05tt0057924",
+          "genres": [
+            "Horror",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "the-castle-of-the-living-dead-1964",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2024-11-09",
+          "reviewSequence": "2024-11-09-1",
+          "viewingDate": "2024-11-09",
+          "viewingSequence": 5,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1964"
+          "venue": null
         }
       ]
     },
@@ -516,40 +978,89 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-04-13",
-          "slug": "mandy-2018",
+          "imdbId": "tt6998518",
           "title": "Mandy",
+          "releaseYear": "2018",
+          "sortTitle": "mandy-2018",
+          "releaseSequence": "2018-01-19tt6998518",
+          "genres": [
+            "Action",
+            "Fantasy",
+            "Horror"
+          ],
+          "slug": "mandy-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2024-04-13",
+          "reviewSequence": "2024-04-13-1",
+          "viewingDate": "2024-04-13",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2024-06-06",
-          "slug": null,
+          "imdbId": "tt0105226",
           "title": "Red Rock West",
+          "releaseYear": "1993",
+          "sortTitle": "red-rock-west-1993",
+          "releaseSequence": "1993-05-14tt0105226",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-06-06",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1993"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2024-06-24",
-          "slug": null,
+          "imdbId": "tt0098577",
           "title": "Vampire's Kiss",
+          "releaseYear": "1988",
+          "sortTitle": "vampires-kiss-1988",
+          "releaseSequence": "1988-05-01tt0098577",
+          "genres": [
+            "Comedy",
+            "Crime",
+            "Fantasy",
+            "Horror"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-06-24",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1988"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 4,
-          "date": "2024-07-31",
-          "slug": null,
+          "imdbId": "tt23468450",
           "title": "Longlegs",
+          "releaseYear": "2024",
+          "sortTitle": "longlegs-2024",
+          "releaseSequence": "2024-05-31tt23468450",
+          "genres": [
+            "Crime",
+            "Horror",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-07-31",
+          "viewingSequence": 4,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2024"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -559,40 +1070,88 @@
       "slug": "boris-karloff",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-06-08",
-          "slug": "the-man-with-nine-lives-1940",
+          "imdbId": "tt0032753",
           "title": "The Man with Nine Lives",
+          "releaseYear": "1940",
+          "sortTitle": "man-with-nine-lives-1940",
+          "releaseSequence": "1940-04-18tt0032753",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Sci-Fi"
+          ],
+          "slug": "the-man-with-nine-lives-1940",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2024-06-08",
+          "reviewSequence": "2024-06-08-1",
+          "viewingDate": "2024-06-08",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1940"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-08-04",
-          "slug": null,
+          "imdbId": "tt0026138",
           "title": "Bride of Frankenstein",
+          "releaseYear": "1935",
+          "sortTitle": "bride-of-frankenstein-1935",
+          "releaseSequence": "1935-04-19tt0026138",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-08-04",
+          "viewingSequence": 2,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1935"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2024-10-21",
-          "slug": "the-black-room-1935",
+          "imdbId": "tt0026123",
           "title": "The Black Room",
+          "releaseYear": "1935",
+          "sortTitle": "black-room-1935",
+          "releaseSequence": "1935-07-15tt0026123",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-black-room-1935",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2024-10-21",
+          "reviewSequence": "2024-10-21-1",
+          "viewingDate": "2024-10-21",
+          "viewingSequence": 3,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1935"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2024-11-01",
-          "slug": "mr-wong-detective-1938",
+          "imdbId": "tt0030473",
           "title": "Mr. Wong, Detective",
+          "releaseYear": "1938",
+          "sortTitle": "mr-wong-detective-1938",
+          "releaseSequence": "1938-10-05tt0030473",
+          "genres": [
+            "Adventure",
+            "Crime",
+            "Drama",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "mr-wong-detective-1938",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2024-11-01",
+          "reviewSequence": "2024-11-01-1",
+          "viewingDate": "2024-11-01",
+          "viewingSequence": 4,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1938"
+          "venue": null
         }
       ]
     },
@@ -602,40 +1161,86 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-06-16",
-          "slug": null,
+          "imdbId": "tt0058461",
           "title": "A Fistful of Dollars",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1964"
-        },
-        {
-          "sequence": 2,
-          "date": "2024-06-16",
-          "slug": "for-a-few-dollars-more-1965",
-          "title": "For a Few Dollars More",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1965"
-        },
-        {
-          "sequence": 3,
-          "date": "2024-06-16",
-          "slug": "the-good-the-bad-and-the-ugly-1966",
-          "title": "The Good, the Bad and the Ugly",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1966"
-        },
-        {
-          "sequence": 4,
-          "date": "2024-07-02",
+          "releaseYear": "1964",
+          "sortTitle": "fistful-of-dollars-1964",
+          "releaseSequence": "1964-09-12tt0058461",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
           "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-06-16",
+          "viewingSequence": 1,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0059578",
+          "title": "For a Few Dollars More",
+          "releaseYear": "1965",
+          "sortTitle": "for-a-few-dollars-more-1965",
+          "releaseSequence": "1965-12-18tt0059578",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "for-a-few-dollars-more-1965",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2007-08-02",
+          "reviewSequence": "2007-08-02-2",
+          "viewingDate": "2024-06-16",
+          "viewingSequence": 2,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0060196",
+          "title": "The Good, the Bad and the Ugly",
+          "releaseYear": "1966",
+          "sortTitle": "good-the-bad-and-the-ugly-1966",
+          "releaseSequence": "1966-12-23tt0060196",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-good-the-bad-and-the-ugly-1966",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2008-05-24",
+          "reviewSequence": "2008-05-24-3",
+          "viewingDate": "2024-06-16",
+          "viewingSequence": 3,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0066999",
           "title": "Dirty Harry",
+          "releaseYear": "1971",
+          "sortTitle": "dirty-harry-1971",
+          "releaseSequence": "1971-12-21tt0066999",
+          "genres": [
+            "Action",
+            "Crime",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-07-02",
+          "viewingSequence": 4,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1971"
+          "venue": null
         }
       ]
     },
@@ -645,40 +1250,90 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-06-16",
-          "slug": "for-a-few-dollars-more-1965",
+          "imdbId": "tt0059578",
           "title": "For a Few Dollars More",
+          "releaseYear": "1965",
+          "sortTitle": "for-a-few-dollars-more-1965",
+          "releaseSequence": "1965-12-18tt0059578",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "for-a-few-dollars-more-1965",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2007-08-02",
+          "reviewSequence": "2007-08-02-2",
+          "viewingDate": "2024-06-16",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1965"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-06-16",
-          "slug": "the-good-the-bad-and-the-ugly-1966",
+          "imdbId": "tt0060196",
           "title": "The Good, the Bad and the Ugly",
+          "releaseYear": "1966",
+          "sortTitle": "good-the-bad-and-the-ugly-1966",
+          "releaseSequence": "1966-12-23tt0060196",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-good-the-bad-and-the-ugly-1966",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2008-05-24",
+          "reviewSequence": "2008-05-24-3",
+          "viewingDate": "2024-06-16",
+          "viewingSequence": 2,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1966"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2024-11-19",
-          "slug": "the-case-of-the-scorpions-tail-1971",
+          "imdbId": "tt0066924",
           "title": "The Case of the Scorpion's Tail",
+          "releaseYear": "1971",
+          "sortTitle": "case-of-the-scorpions-tail-1971",
+          "releaseSequence": "1971-08-16tt0066924",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-case-of-the-scorpions-tail-1971",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2024-11-19",
+          "reviewSequence": "2024-11-19-1",
+          "viewingDate": "2024-11-19",
+          "viewingSequence": 3,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1971"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2024-11-22",
-          "slug": "your-vice-is-a-locked-room-and-only-i-have-the-key-1972",
+          "imdbId": "tt0069421",
           "title": "Your Vice Is a Locked Room and Only I Have the Key",
+          "releaseYear": "1972",
+          "sortTitle": "your-vice-is-a-locked-room-and-only-i-have-the-key-1972",
+          "releaseSequence": "1972-08-18tt0069421",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "your-vice-is-a-locked-room-and-only-i-have-the-key-1972",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2024-11-22",
+          "reviewSequence": "2024-11-22-1",
+          "viewingDate": "2024-11-22",
+          "viewingSequence": 4,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1972"
+          "venue": null
         }
       ]
     },
@@ -688,31 +1343,72 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-01-04",
-          "slug": "night-train-to-terror-1985",
+          "imdbId": "tt0087798",
           "title": "Night Train to Terror",
+          "releaseYear": "1985",
+          "sortTitle": "night-train-to-terror-1985",
+          "releaseSequence": "1985-02-22tt0087798",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "night-train-to-terror-1985",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2024-04-27",
+          "reviewSequence": "2024-04-27-1",
+          "viewingDate": "2024-01-04",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1985"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-04-27",
-          "slug": "night-train-to-terror-1985",
+          "imdbId": "tt0087798",
           "title": "Night Train to Terror",
+          "releaseYear": "1985",
+          "sortTitle": "night-train-to-terror-1985",
+          "releaseSequence": "1985-02-22tt0087798",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "night-train-to-terror-1985",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2024-04-27",
+          "reviewSequence": "2024-04-27-1",
+          "viewingDate": "2024-04-27",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1985"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 3,
-          "date": "2024-04-27",
-          "slug": "horror-express-1972",
+          "imdbId": "tt0068713",
           "title": "Horror Express",
+          "releaseYear": "1972",
+          "sortTitle": "horror-express-1972",
+          "releaseSequence": "1972-09-30tt0068713",
+          "genres": [
+            "Adventure",
+            "Horror",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "horror-express-1972",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2024-04-27",
+          "reviewSequence": "2024-04-27-2",
+          "viewingDate": "2024-04-27",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1972"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -722,31 +1418,68 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-01-15",
-          "slug": "leprechaun-2-1994",
+          "imdbId": "tt0110329",
           "title": "Leprechaun 2",
+          "releaseYear": "1994",
+          "sortTitle": "leprechaun-2-1994",
+          "releaseSequence": "1994-04-08tt0110329",
+          "genres": [
+            "Comedy",
+            "Fantasy",
+            "Horror"
+          ],
+          "slug": "leprechaun-2-1994",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2024-01-15",
+          "reviewSequence": "2024-01-15-1",
+          "viewingDate": "2024-01-15",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1994"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-01-27",
-          "slug": "leprechaun-4-in-space-1996",
+          "imdbId": "tt0116861",
           "title": "Leprechaun 4: In Space",
+          "releaseYear": "1996",
+          "sortTitle": "leprechaun-4-in-space-1996",
+          "releaseSequence": "1996-??-??tt0116861",
+          "genres": [
+            "Comedy",
+            "Fantasy",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "leprechaun-4-in-space-1996",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2024-01-27",
+          "reviewSequence": "2024-01-27-1",
+          "viewingDate": "2024-01-27",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1996"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2024-02-23",
-          "slug": "leprechaun-6-back-2-tha-hood-2003",
+          "imdbId": "tt0339294",
           "title": "Leprechaun 6: Back 2 Tha Hood",
+          "releaseYear": "2003",
+          "sortTitle": "leprechaun-6-back-2-tha-hood-2003",
+          "releaseSequence": "2003-12-01tt0339294",
+          "genres": [
+            "Comedy",
+            "Fantasy",
+            "Horror"
+          ],
+          "slug": "leprechaun-6-back-2-tha-hood-2003",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2025-01-10",
+          "reviewSequence": "2025-01-10-1",
+          "viewingDate": "2024-02-23",
+          "viewingSequence": 3,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "2003"
+          "venue": null
         }
       ]
     },
@@ -756,31 +1489,66 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-02-01",
-          "slug": "conan-the-barbarian-1982",
+          "imdbId": "tt0082198",
           "title": "Conan the Barbarian",
+          "releaseYear": "1982",
+          "sortTitle": "conan-the-barbarian-1982",
+          "releaseSequence": "1982-03-16tt0082198",
+          "genres": [
+            "Adventure",
+            "Fantasy"
+          ],
+          "slug": "conan-the-barbarian-1982",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2007-12-15",
+          "reviewSequence": "2007-12-15-1",
+          "viewingDate": "2024-02-01",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1982"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-02-24",
-          "slug": null,
+          "imdbId": "tt0075999",
           "title": "Satan's Blood",
+          "releaseYear": "1978",
+          "sortTitle": "satans-blood-1978",
+          "releaseSequence": "1978-08-14tt0075999",
+          "genres": [
+            "Horror"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-02-24",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1978"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2024-11-19",
-          "slug": "the-case-of-the-scorpions-tail-1971",
+          "imdbId": "tt0066924",
           "title": "The Case of the Scorpion's Tail",
+          "releaseYear": "1971",
+          "sortTitle": "case-of-the-scorpions-tail-1971",
+          "releaseSequence": "1971-08-16tt0066924",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-case-of-the-scorpions-tail-1971",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2024-11-19",
+          "reviewSequence": "2024-11-19-1",
+          "viewingDate": "2024-11-19",
+          "viewingSequence": 3,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1971"
+          "venue": null
         }
       ]
     },
@@ -790,31 +1558,65 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-03-12",
-          "slug": "the-man-who-shot-liberty-valance-1962",
+          "imdbId": "tt0056217",
           "title": "The Man Who Shot Liberty Valance",
+          "releaseYear": "1962",
+          "sortTitle": "man-who-shot-liberty-valance-1962",
+          "releaseSequence": "1962-04-13tt0056217",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-man-who-shot-liberty-valance-1962",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2007-06-29",
+          "reviewSequence": "2007-06-29-2",
+          "viewingDate": "2024-03-12",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1962"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-06-16",
-          "slug": "for-a-few-dollars-more-1965",
+          "imdbId": "tt0059578",
           "title": "For a Few Dollars More",
+          "releaseYear": "1965",
+          "sortTitle": "for-a-few-dollars-more-1965",
+          "releaseSequence": "1965-12-18tt0059578",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "for-a-few-dollars-more-1965",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2007-08-02",
+          "reviewSequence": "2007-08-02-2",
+          "viewingDate": "2024-06-16",
+          "viewingSequence": 2,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1965"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2024-06-16",
-          "slug": "the-good-the-bad-and-the-ugly-1966",
+          "imdbId": "tt0060196",
           "title": "The Good, the Bad and the Ugly",
+          "releaseYear": "1966",
+          "sortTitle": "good-the-bad-and-the-ugly-1966",
+          "releaseSequence": "1966-12-23tt0060196",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-good-the-bad-and-the-ugly-1966",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2008-05-24",
+          "reviewSequence": "2008-05-24-3",
+          "viewingDate": "2024-06-16",
+          "viewingSequence": 3,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1966"
+          "venue": null
         }
       ]
     }
@@ -826,31 +1628,64 @@
       "slug": "lucio-fulci",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-04-10",
-          "slug": "city-of-the-living-dead-1980",
+          "imdbId": "tt0081318",
           "title": "City of the Living Dead",
+          "releaseYear": "1980",
+          "sortTitle": "city-of-the-living-dead-1980",
+          "releaseSequence": "1980-08-11tt0081318",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "city-of-the-living-dead-1980",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2024-04-10",
+          "reviewSequence": "2024-04-10-1",
+          "viewingDate": "2024-04-10",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1980"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-11-14",
-          "slug": "the-devils-honey-1986",
+          "imdbId": "tt0090903",
           "title": "The Devil's Honey",
+          "releaseYear": "1986",
+          "sortTitle": "devils-honey-1986",
+          "releaseSequence": "1986-08-21tt0090903",
+          "genres": [
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-devils-honey-1986",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2024-11-14",
+          "reviewSequence": "2024-11-14-1",
+          "viewingDate": "2024-11-14",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1986"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2024-11-15",
-          "slug": "the-conspiracy-of-torture-1969",
+          "imdbId": "tt0064073",
           "title": "The Conspiracy of Torture",
+          "releaseYear": "1969",
+          "sortTitle": "conspiracy-of-torture-1969",
+          "releaseSequence": "1969-11-14tt0064073",
+          "genres": [
+            "Drama",
+            "History",
+            "Horror"
+          ],
+          "slug": "the-conspiracy-of-torture-1969",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2024-11-15",
+          "reviewSequence": "2024-11-15-1",
+          "viewingDate": "2024-11-15",
+          "viewingSequence": 3,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1969"
+          "venue": null
         }
       ]
     },
@@ -860,31 +1695,64 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-04-24",
-          "slug": "human-lanterns-1982",
+          "imdbId": "tt0084586",
           "title": "Human Lanterns",
+          "releaseYear": "1982",
+          "sortTitle": "human-lanterns-1982",
+          "releaseSequence": "1982-07-14tt0084586",
+          "genres": [
+            "Horror",
+            "Action"
+          ],
+          "slug": "human-lanterns-1982",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2024-04-24",
+          "reviewSequence": "2024-04-24-2",
+          "viewingDate": "2024-04-24",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1982"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-07-01",
-          "slug": null,
+          "imdbId": "tt0079892",
           "title": "Abbot of Shaolin",
+          "releaseYear": "1979",
+          "sortTitle": "abbot-of-shaolin-1979",
+          "releaseSequence": "1979-07-11tt0079892",
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-07-01",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1979"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2024-11-05",
-          "slug": "disciples-of-shaolin-1975",
+          "imdbId": "tt0073121",
           "title": "Disciples of Shaolin",
+          "releaseYear": "1975",
+          "sortTitle": "disciples-of-shaolin-1975",
+          "releaseSequence": "1975-06-28tt0073121",
+          "genres": [
+            "Action",
+            "Drama"
+          ],
+          "slug": "disciples-of-shaolin-1975",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2024-11-05",
+          "reviewSequence": "2024-11-05-1",
+          "viewingDate": "2024-11-05",
+          "viewingSequence": 3,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1975"
+          "venue": null
         }
       ]
     },
@@ -894,31 +1762,65 @@
       "slug": "sergio-leone",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-06-16",
-          "slug": null,
+          "imdbId": "tt0058461",
           "title": "A Fistful of Dollars",
+          "releaseYear": "1964",
+          "sortTitle": "fistful-of-dollars-1964",
+          "releaseSequence": "1964-09-12tt0058461",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-06-16",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1964"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-06-16",
-          "slug": "for-a-few-dollars-more-1965",
+          "imdbId": "tt0059578",
           "title": "For a Few Dollars More",
+          "releaseYear": "1965",
+          "sortTitle": "for-a-few-dollars-more-1965",
+          "releaseSequence": "1965-12-18tt0059578",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "for-a-few-dollars-more-1965",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2007-08-02",
+          "reviewSequence": "2007-08-02-2",
+          "viewingDate": "2024-06-16",
+          "viewingSequence": 2,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1965"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2024-06-16",
-          "slug": "the-good-the-bad-and-the-ugly-1966",
+          "imdbId": "tt0060196",
           "title": "The Good, the Bad and the Ugly",
+          "releaseYear": "1966",
+          "sortTitle": "good-the-bad-and-the-ugly-1966",
+          "releaseSequence": "1966-12-23tt0060196",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-good-the-bad-and-the-ugly-1966",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2008-05-24",
+          "reviewSequence": "2008-05-24-3",
+          "viewingDate": "2024-06-16",
+          "viewingSequence": 3,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1966"
+          "venue": null
         }
       ]
     },
@@ -928,31 +1830,67 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-10-16",
-          "slug": "scream-and-scream-again-1970",
+          "imdbId": "tt0064949",
           "title": "Scream and Scream Again",
+          "releaseYear": "1970",
+          "sortTitle": "scream-and-scream-again-1970",
+          "releaseSequence": "1970-01-01tt0064949",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "scream-and-scream-again-1970",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2025-07-04",
+          "reviewSequence": "2025-07-04-1",
+          "viewingDate": "2024-10-16",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1970"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-10-23",
-          "slug": "the-oblong-box-1969",
+          "imdbId": "tt0064747",
           "title": "The Oblong Box",
+          "releaseYear": "1969",
+          "sortTitle": "oblong-box-1969",
+          "releaseSequence": "1969-06-11tt0064747",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-oblong-box-1969",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2024-10-23",
+          "reviewSequence": "2024-10-23-1",
+          "viewingDate": "2024-10-23",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1969"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2024-12-02",
-          "slug": "demons-of-the-mind-1972",
+          "imdbId": "tt0066982",
           "title": "Demons of the Mind",
+          "releaseYear": "1972",
+          "sortTitle": "demons-of-the-mind-1972",
+          "releaseSequence": "1972-11-05tt0066982",
+          "genres": [
+            "Horror",
+            "Thriller"
+          ],
+          "slug": "demons-of-the-mind-1972",
+          "grade": "F",
+          "gradeValue": 1,
+          "reviewDate": "2024-12-02",
+          "reviewSequence": "2024-12-02-1",
+          "viewingDate": "2024-12-02",
+          "viewingSequence": 3,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1972"
+          "venue": null
         }
       ]
     },
@@ -962,22 +1900,50 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-01-04",
-          "slug": "night-train-to-terror-1985",
+          "imdbId": "tt0087798",
           "title": "Night Train to Terror",
+          "releaseYear": "1985",
+          "sortTitle": "night-train-to-terror-1985",
+          "releaseSequence": "1985-02-22tt0087798",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "night-train-to-terror-1985",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2024-04-27",
+          "reviewSequence": "2024-04-27-1",
+          "viewingDate": "2024-01-04",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1985"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-04-27",
-          "slug": "night-train-to-terror-1985",
+          "imdbId": "tt0087798",
           "title": "Night Train to Terror",
+          "releaseYear": "1985",
+          "sortTitle": "night-train-to-terror-1985",
+          "releaseSequence": "1985-02-22tt0087798",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "night-train-to-terror-1985",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2024-04-27",
+          "reviewSequence": "2024-04-27-1",
+          "viewingDate": "2024-04-27",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1985"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -987,22 +1953,44 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-01-21",
-          "slug": null,
+          "imdbId": "tt0071675",
           "title": "It's Alive",
+          "releaseYear": "1974",
+          "sortTitle": "its-alive-1974",
+          "releaseSequence": "1974-04-26tt0071675",
+          "genres": [
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-01-21",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1974"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-10-10",
-          "slug": null,
+          "imdbId": "tt0077756",
           "title": "It Lives Again",
+          "releaseYear": "1978",
+          "sortTitle": "it-lives-again-1978",
+          "releaseSequence": "1978-05-10tt0077756",
+          "genres": [
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-10-10",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1978"
+          "venue": null
         }
       ]
     },
@@ -1012,22 +2000,47 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-02-03",
-          "slug": null,
+          "imdbId": "tt0082748",
           "title": "Pieces",
+          "releaseYear": "1982",
+          "sortTitle": "pieces-1982",
+          "releaseSequence": "1982-08-23tt0082748",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-02-03",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1982"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-10-11",
-          "slug": null,
+          "imdbId": "tt0069850",
           "title": "The French Sex Murders",
+          "releaseYear": "1972",
+          "sortTitle": "french-sex-murders-1972",
+          "releaseSequence": "1972-06-16tt0069850",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-10-11",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1972"
+          "venue": null
         }
       ]
     },
@@ -1037,22 +2050,42 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-03-25",
-          "slug": null,
+          "imdbId": "tt14966898",
           "title": "Late Night with the Devil",
+          "releaseYear": "2023",
+          "sortTitle": "late-night-with-the-devil-2023",
+          "releaseSequence": "2023-03-10tt14966898",
+          "genres": [
+            "Horror"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-03-25",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Prince Charles Cinema",
-          "year": "2023"
+          "venue": "Prince Charles Cinema"
         },
         {
-          "sequence": 2,
-          "date": "2024-10-26",
-          "slug": null,
+          "imdbId": "tt14966898",
           "title": "Late Night with the Devil",
+          "releaseYear": "2023",
+          "sortTitle": "late-night-with-the-devil-2023",
+          "releaseSequence": "2023-03-10tt14966898",
+          "genres": [
+            "Horror"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-10-26",
+          "viewingSequence": 2,
           "medium": "iTunes",
-          "venue": null,
-          "year": "2023"
+          "venue": null
         }
       ]
     },
@@ -1062,22 +2095,42 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-03-25",
-          "slug": null,
+          "imdbId": "tt14966898",
           "title": "Late Night with the Devil",
+          "releaseYear": "2023",
+          "sortTitle": "late-night-with-the-devil-2023",
+          "releaseSequence": "2023-03-10tt14966898",
+          "genres": [
+            "Horror"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-03-25",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Prince Charles Cinema",
-          "year": "2023"
+          "venue": "Prince Charles Cinema"
         },
         {
-          "sequence": 2,
-          "date": "2024-10-26",
-          "slug": null,
+          "imdbId": "tt14966898",
           "title": "Late Night with the Devil",
+          "releaseYear": "2023",
+          "sortTitle": "late-night-with-the-devil-2023",
+          "releaseSequence": "2023-03-10tt14966898",
+          "genres": [
+            "Horror"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2024-10-26",
+          "viewingSequence": 2,
           "medium": "iTunes",
-          "venue": null,
-          "year": "2023"
+          "venue": null
         }
       ]
     },
@@ -1087,22 +2140,42 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2024-04-10",
-          "slug": "city-of-the-living-dead-1980",
+          "imdbId": "tt0081318",
           "title": "City of the Living Dead",
+          "releaseYear": "1980",
+          "sortTitle": "city-of-the-living-dead-1980",
+          "releaseSequence": "1980-08-11tt0081318",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "city-of-the-living-dead-1980",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2024-04-10",
+          "reviewSequence": "2024-04-10-1",
+          "viewingDate": "2024-04-10",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1980"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2024-10-18",
-          "slug": "manhattan-baby-1982",
+          "imdbId": "tt0084298",
           "title": "Manhattan Baby",
+          "releaseYear": "1982",
+          "sortTitle": "manhattan-baby-1982",
+          "releaseSequence": "1982-08-12tt0084298",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "manhattan-baby-1982",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2024-10-18",
+          "reviewSequence": "2024-10-18-1",
+          "viewingDate": "2024-10-18",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1982"
+          "venue": null
         }
       ]
     }

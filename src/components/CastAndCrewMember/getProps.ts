@@ -74,12 +74,12 @@ function deck(value: Props["value"]) {
     creditString.charAt(0).toUpperCase() + creditString.slice(1);
 
   const watchlistTitleCount =
-    value.reviewCount === value.totalCount
+    value.reviewCount === value.titleCount
       ? ""
-      : ` and ${value.totalCount - value.reviewCount} watchlist`;
+      : ` and ${value.titleCount - value.reviewCount} watchlist`;
 
   const titles =
-    value.reviewCount === 1 && value.totalCount - value.reviewCount < 2
+    value.reviewCount === 1 && value.titleCount - value.reviewCount < 2
       ? "title"
       : `titles`;
 

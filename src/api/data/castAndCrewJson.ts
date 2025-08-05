@@ -8,69 +8,78 @@ const castAndCrewJsonDirectory = getContentPath("data", "cast-and-crew");
 
 const TitleSchema = z
   .object({
-    collectionNames: z.array(z.string()),
+    collectionNames: z.array(z.string()).optional(),
     creditedAs: z.array(z.string()),
+    genres: z.array(z.string()).optional(),
     grade: nullableString(),
     gradeValue: nullableNumber(),
     imdbId: z.string(),
     releaseSequence: z.string(),
+    releaseYear: z.string().optional(),
     reviewDate: nullableString(),
     reviewSequence: nullableString(),
     slug: nullableString(),
     sortTitle: z.string(),
     title: z.string(),
+    watchlistCollectionNames: z.array(z.string()).optional(),
     watchlistDirectorNames: z.array(z.string()),
     watchlistPerformerNames: z.array(z.string()),
     watchlistWriterNames: z.array(z.string()),
-    year: z.string(),
+    year: z.string().optional(),
   })
-  .transform(
-    ({
-      collectionNames,
-      creditedAs,
-      grade,
-      gradeValue,
-      imdbId,
-      releaseSequence,
-      reviewDate,
-      reviewSequence,
-      slug,
-      sortTitle,
-      title,
-      watchlistDirectorNames,
-      watchlistPerformerNames,
-      watchlistWriterNames,
-      year,
-    }) => {
-      // fix zod making anything with undefined optional
-      return {
-        collectionNames,
-        creditedAs,
-        grade,
-        gradeValue,
-        imdbId,
-        releaseSequence,
-        releaseYear: year,
-        reviewDate,
-        reviewSequence,
-        slug,
-        sortTitle,
-        title,
-        watchlistDirectorNames,
-        watchlistPerformerNames,
-        watchlistWriterNames,
-      };
-    },
-  );
+  .transform((data) => {
+    // Handle both old and new field names
+    const releaseYear = data.releaseYear || data.year || "";
+    const genres = data.genres || [];
+    const watchlistCollectionNames =
+      data.watchlistCollectionNames || data.collectionNames || [];
 
-const CastAndCrewJsonSchema = z.object({
-  creditedAs: z.array(z.string()),
-  name: z.string(),
-  reviewCount: z.number(),
-  slug: z.string(),
-  titles: z.array(TitleSchema),
-  totalCount: z.number(),
-});
+    // fix zod making anything with undefined optional
+    return {
+      creditedAs: data.creditedAs,
+      genres,
+      grade: data.grade,
+      gradeValue: data.gradeValue,
+      imdbId: data.imdbId,
+      releaseSequence: data.releaseSequence,
+      releaseYear,
+      reviewDate: data.reviewDate,
+      reviewSequence: data.reviewSequence,
+      slug: data.slug,
+      sortTitle: data.sortTitle,
+      title: data.title,
+      watchlistCollectionNames,
+      watchlistDirectorNames: data.watchlistDirectorNames,
+      watchlistPerformerNames: data.watchlistPerformerNames,
+      watchlistWriterNames: data.watchlistWriterNames,
+    };
+  });
+
+const CastAndCrewJsonSchema = z
+  .object({
+    creditedAs: z.array(z.string()),
+    description: z.string().optional(),
+    name: z.string(),
+    reviewCount: z.number(),
+    slug: z.string(),
+    titleCount: z.number().optional(),
+    titles: z.array(TitleSchema),
+    totalCount: z.number().optional(),
+  })
+  .transform((data) => {
+    // Handle both old and new field names
+    const titleCount = data.titleCount ?? data.totalCount ?? data.titles.length;
+
+    // fix zod making anything with undefined optional
+    return {
+      creditedAs: data.creditedAs,
+      name: data.name,
+      reviewCount: data.reviewCount,
+      slug: data.slug,
+      titleCount,
+      titles: data.titles,
+    };
+  });
 
 export type CastAndCrewMemberJson = z.infer<typeof CastAndCrewJsonSchema>;
 

@@ -6,11 +6,11 @@ export const MostWatchedTitleSchema = z
   .object({
     count: z.number(),
     imdbId: z.string(),
+    releaseYear: z.string(),
     slug: nullableString(),
     title: z.string(),
-    year: z.string(),
   })
-  .transform(({ count, imdbId, slug, title, year }) => {
+  .transform((data) => {
     // fix zod making anything with undefined optional
-    return { count, imdbId, releaseYear: year, slug, title };
+    return data;
   });

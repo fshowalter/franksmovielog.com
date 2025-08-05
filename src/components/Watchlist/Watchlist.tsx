@@ -22,16 +22,16 @@ import { Actions, initState, reducer } from "./Watchlist.reducer";
 
 export type ListItemValue = Pick<
   WatchlistTitle,
-  | "collectionNames"
-  | "directorNames"
   | "imdbId"
-  | "performerNames"
   | "releaseSequence"
   | "releaseYear"
   | "sortTitle"
   | "title"
   | "viewed"
-  | "writerNames"
+  | "watchlistCollectionNames"
+  | "watchlistDirectorNames"
+  | "watchlistPerformerNames"
+  | "watchlistWriterNames"
 >;
 
 export type Props = {
@@ -148,10 +148,10 @@ function WatchlistListItem({
       >
         <ListItemTitle title={value.title} year={value.releaseYear} />
         <WatchlistTitleSlug
-          collectionNames={value.collectionNames}
-          directorNames={value.directorNames}
-          performerNames={value.performerNames}
-          writerNames={value.writerNames}
+          collectionNames={value.watchlistCollectionNames}
+          directorNames={value.watchlistDirectorNames}
+          performerNames={value.watchlistPerformerNames}
+          writerNames={value.watchlistWriterNames}
         />
       </div>
       {value.viewed && (

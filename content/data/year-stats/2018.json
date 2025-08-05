@@ -95,18 +95,40 @@
   ],
   "mostWatchedTitles": [
     {
-      "title": "Avengers: Infinity War",
       "imdbId": "tt4154756",
-      "year": "2018",
-      "count": 4,
-      "slug": "avengers-infinity-war-2018"
+      "title": "Avengers: Infinity War",
+      "releaseYear": "2018",
+      "sortTitle": "avengers-infinity-war-2018",
+      "releaseSequence": "2018-04-23tt4154756",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "slug": "avengers-infinity-war-2018",
+      "grade": "A+",
+      "gradeValue": 13,
+      "reviewDate": "2020-10-17",
+      "reviewSequence": "2020-10-17-1",
+      "count": 4
     },
     {
-      "title": "Mandy",
       "imdbId": "tt6998518",
-      "year": "2018",
-      "count": 2,
-      "slug": "mandy-2018"
+      "title": "Mandy",
+      "releaseYear": "2018",
+      "sortTitle": "mandy-2018",
+      "releaseSequence": "2018-01-19tt6998518",
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Horror"
+      ],
+      "slug": "mandy-2018",
+      "grade": "A+",
+      "gradeValue": 13,
+      "reviewDate": "2024-04-13",
+      "reviewSequence": "2024-04-13-1",
+      "count": 2
     }
   ],
   "mostWatchedDirectors": [
@@ -116,40 +138,88 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-05-18",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-18",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2018-05-22",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-22",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 3,
-          "date": "2018-05-27",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-27",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 4,
-          "date": "2018-06-13",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-06-13",
+          "viewingSequence": 4,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -159,31 +229,67 @@
       "slug": "dario-argento",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-03-10",
-          "slug": null,
+          "imdbId": "tt0084777",
           "title": "Tenebrae",
+          "releaseYear": "1982",
+          "sortTitle": "tenebrae-1982",
+          "releaseSequence": "1982-10-27tt0084777",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2018-03-10",
+          "viewingSequence": 1,
           "medium": "Shudder",
-          "venue": null,
-          "year": "1982"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2018-03-23",
-          "slug": "the-bird-with-the-crystal-plumage-1970",
+          "imdbId": "tt0065143",
           "title": "The Bird with the Crystal Plumage",
+          "releaseYear": "1970",
+          "sortTitle": "bird-with-the-crystal-plumage-1970",
+          "releaseSequence": "1970-02-27tt0065143",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-bird-with-the-crystal-plumage-1970",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2021-01-22",
+          "reviewSequence": "2021-01-22-1",
+          "viewingDate": "2018-03-23",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "AFI Silver",
-          "year": "1970"
+          "venue": "AFI Silver"
         },
         {
-          "sequence": 3,
-          "date": "2018-10-27",
-          "slug": "deep-red-1975",
+          "imdbId": "tt0073582",
           "title": "Deep Red",
+          "releaseYear": "1975",
+          "sortTitle": "deep-red-1975",
+          "releaseSequence": "1975-03-07tt0073582",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "deep-red-1975",
+          "grade": "A-",
+          "gradeValue": 11,
+          "reviewDate": "2007-10-17",
+          "reviewSequence": "2007-10-17-1",
+          "viewingDate": "2018-10-27",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - Woodbridge",
-          "year": "1975"
+          "venue": "Alamo Drafthouse Cinema - Woodbridge"
         }
       ]
     },
@@ -193,31 +299,65 @@
       "slug": "howard-hawks",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-03-28",
-          "slug": "the-crowd-roars-1932",
+          "imdbId": "tt0022792",
           "title": "The Crowd Roars",
+          "releaseYear": "1932",
+          "sortTitle": "crowd-roars-1932",
+          "releaseSequence": "1932-04-13tt0022792",
+          "genres": [
+            "Action",
+            "Drama",
+            "Sport"
+          ],
+          "slug": "the-crowd-roars-1932",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2021-12-22",
+          "reviewSequence": "2021-12-22-1",
+          "viewingDate": "2018-03-28",
+          "viewingSequence": 1,
           "medium": "TCM",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2018-05-01",
-          "slug": null,
+          "imdbId": "tt0048283",
           "title": "Land of the Pharaohs",
+          "releaseYear": "1955",
+          "sortTitle": "land-of-the-pharaohs-1955",
+          "releaseSequence": "1955-06-24tt0048283",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "History"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2018-05-01",
+          "viewingSequence": 2,
           "medium": "DVD",
-          "venue": null,
-          "year": "1955"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2018-06-17",
-          "slug": "rio-bravo-1959",
+          "imdbId": "tt0053221",
           "title": "Rio Bravo",
+          "releaseYear": "1959",
+          "sortTitle": "rio-bravo-1959",
+          "releaseSequence": "1959-03-08tt0053221",
+          "genres": [
+            "Western"
+          ],
+          "slug": "rio-bravo-1959",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2025-03-22",
+          "reviewSequence": "2025-03-22-2",
+          "viewingDate": "2018-06-17",
+          "viewingSequence": 3,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1959"
+          "venue": null
         }
       ]
     },
@@ -227,22 +367,44 @@
       "slug": "lucio-fulci",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-01-20",
-          "slug": null,
+          "imdbId": "tt0096511",
           "title": "Zombie 3",
+          "releaseYear": "1988",
+          "sortTitle": "zombie-3-1988",
+          "releaseSequence": "1988-06-01tt0096511",
+          "genres": [
+            "Action",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2018-01-20",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1988"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2018-10-13",
-          "slug": "zombie-1979",
+          "imdbId": "tt0080057",
           "title": "Zombie",
+          "releaseYear": "1979",
+          "sortTitle": "zombie-1979",
+          "releaseSequence": "1979-08-25tt0080057",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "zombie-1979",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2007-11-24",
+          "reviewSequence": "2007-11-24-4",
+          "viewingDate": "2018-10-13",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1979"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -252,22 +414,45 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-01-31",
-          "slug": "wolfcop-2014",
+          "imdbId": "tt2781516",
           "title": "Wolfcop",
+          "releaseYear": "2014",
+          "sortTitle": "wolfcop-2014",
+          "releaseSequence": "2014-06-06tt2781516",
+          "genres": [
+            "Comedy",
+            "Horror"
+          ],
+          "slug": "wolfcop-2014",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2020-10-02",
+          "reviewSequence": "2020-10-02-1",
+          "viewingDate": "2018-01-31",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2014"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2018-01-31",
-          "slug": "another-wolfcop-2017",
+          "imdbId": "tt4515762",
           "title": "Another WolfCop",
+          "releaseYear": "2017",
+          "sortTitle": "another-wolfcop-2017",
+          "releaseSequence": "2016-09-25tt4515762",
+          "genres": [
+            "Comedy",
+            "Fantasy",
+            "Horror"
+          ],
+          "slug": "another-wolfcop-2017",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2020-10-04",
+          "reviewSequence": "2020-10-04-2",
+          "viewingDate": "2018-01-31",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2017"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -277,22 +462,46 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-03-25",
-          "slug": "kid-galahad-1937",
+          "imdbId": "tt0029080",
           "title": "Kid Galahad",
+          "releaseYear": "1937",
+          "sortTitle": "kid-galahad-1937",
+          "releaseSequence": "1937-05-26tt0029080",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Romance",
+            "Sport"
+          ],
+          "slug": "kid-galahad-1937",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2008-12-12",
+          "reviewSequence": "2008-12-12-2",
+          "viewingDate": "2018-03-25",
+          "viewingSequence": 1,
           "medium": "TCM",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2018-08-05",
-          "slug": "private-detective-62-1933",
+          "imdbId": "tt0024471",
           "title": "Private Detective 62",
+          "releaseYear": "1933",
+          "sortTitle": "private-detective-62-1933",
+          "releaseSequence": "1933-06-10tt0024471",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "private-detective-62-1933",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2023-05-20",
+          "reviewSequence": "2023-05-20-1",
+          "viewingDate": "2018-08-05",
+          "viewingSequence": 2,
           "medium": "TCM",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         }
       ]
     },
@@ -302,22 +511,45 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-04-13",
-          "slug": "friday-the-13th-the-final-chapter-1984",
+          "imdbId": "tt0087298",
           "title": "Friday the 13th: The Final Chapter",
+          "releaseYear": "1984",
+          "sortTitle": "friday-the-13th-the-final-chapter-1984",
+          "releaseSequence": "1984-04-13tt0087298",
+          "genres": [
+            "Horror",
+            "Thriller"
+          ],
+          "slug": "friday-the-13th-the-final-chapter-1984",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2021-04-02",
+          "reviewSequence": "2021-04-02-1",
+          "viewingDate": "2018-04-13",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1984"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2018-09-15",
-          "slug": null,
+          "imdbId": "tt0082951",
           "title": "The Prowler",
+          "releaseYear": "1981",
+          "sortTitle": "prowler-1981",
+          "releaseSequence": "1981-06-26tt0082951",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2018-09-15",
+          "viewingSequence": 2,
           "medium": "Amazon",
-          "venue": null,
-          "year": "1981"
+          "venue": null
         }
       ]
     },
@@ -327,22 +559,45 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-04-14",
-          "slug": "the-wagons-roll-at-night-1941",
+          "imdbId": "tt0034370",
           "title": "The Wagons Roll at Night",
+          "releaseYear": "1941",
+          "sortTitle": "wagons-roll-at-night-1941",
+          "releaseSequence": "1941-04-25tt0034370",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "the-wagons-roll-at-night-1941",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2012-06-13",
+          "reviewSequence": "2012-06-13-1",
+          "viewingDate": "2018-04-14",
+          "viewingSequence": 1,
           "medium": "TCM",
-          "venue": null,
-          "year": "1941"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2018-05-02",
-          "slug": "china-clipper-1936",
+          "imdbId": "tt0027445",
           "title": "China Clipper",
+          "releaseYear": "1936",
+          "sortTitle": "china-clipper-1936",
+          "releaseSequence": "1936-08-11tt0027445",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Romance"
+          ],
+          "slug": "china-clipper-1936",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2022-10-01",
+          "reviewSequence": "2022-10-01-1",
+          "viewingDate": "2018-05-02",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1936"
+          "venue": null
         }
       ]
     },
@@ -352,22 +607,49 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-05-09",
-          "slug": "the-endless-2017",
+          "imdbId": "tt3986820",
           "title": "The Endless",
+          "releaseYear": "2017",
+          "sortTitle": "endless-2017",
+          "releaseSequence": "2017-04-21tt3986820",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "the-endless-2017",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2023-04-13",
+          "reviewSequence": "2023-04-13-2",
+          "viewingDate": "2018-05-09",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2017"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2018-05-19",
-          "slug": "resolution-2012",
+          "imdbId": "tt1977895",
           "title": "Resolution",
+          "releaseYear": "2012",
+          "sortTitle": "resolution-2012",
+          "releaseSequence": "2012-04-22tt1977895",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "resolution-2012",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2023-04-07",
+          "reviewSequence": "2023-04-07-1",
+          "viewingDate": "2018-05-19",
+          "viewingSequence": 2,
           "medium": "Shudder",
-          "venue": null,
-          "year": "2012"
+          "venue": null
         }
       ]
     },
@@ -377,22 +659,49 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-05-09",
-          "slug": "the-endless-2017",
+          "imdbId": "tt3986820",
           "title": "The Endless",
+          "releaseYear": "2017",
+          "sortTitle": "endless-2017",
+          "releaseSequence": "2017-04-21tt3986820",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "the-endless-2017",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2023-04-13",
+          "reviewSequence": "2023-04-13-2",
+          "viewingDate": "2018-05-09",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2017"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2018-05-19",
-          "slug": "resolution-2012",
+          "imdbId": "tt1977895",
           "title": "Resolution",
+          "releaseYear": "2012",
+          "sortTitle": "resolution-2012",
+          "releaseSequence": "2012-04-22tt1977895",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "resolution-2012",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2023-04-07",
+          "reviewSequence": "2023-04-07-1",
+          "viewingDate": "2018-05-19",
+          "viewingSequence": 2,
           "medium": "Shudder",
-          "venue": null,
-          "year": "2012"
+          "venue": null
         }
       ]
     }
@@ -404,58 +713,132 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-02-22",
-          "slug": "black-panther-2018",
+          "imdbId": "tt1825683",
           "title": "Black Panther",
+          "releaseYear": "2018",
+          "sortTitle": "black-panther-2018",
+          "releaseSequence": "2018-01-29tt1825683",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "black-panther-2018",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-10-03",
+          "reviewSequence": "2020-10-03-1",
+          "viewingDate": "2018-02-22",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2018-05-18",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
-        },
-        {
-          "sequence": 3,
-          "date": "2018-05-22",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
           "slug": "avengers-infinity-war-2018",
-          "title": "Avengers: Infinity War",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-18",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 4,
-          "date": "2018-05-27",
+          "imdbId": "tt4154756",
+          "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
           "slug": "avengers-infinity-war-2018",
-          "title": "Avengers: Infinity War",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-22",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 5,
-          "date": "2018-06-13",
+          "imdbId": "tt4154756",
+          "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
           "slug": "avengers-infinity-war-2018",
-          "title": "Avengers: Infinity War",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-27",
+          "viewingSequence": 4,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 6,
-          "date": "2018-09-08",
-          "slug": null,
+          "imdbId": "tt4154756",
+          "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-06-13",
+          "viewingSequence": 5,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+        },
+        {
+          "imdbId": "tt0451279",
           "title": "Wonder Woman",
+          "releaseYear": "2017",
+          "sortTitle": "wonder-woman-2017",
+          "releaseSequence": "2017-05-15tt0451279",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Sci-Fi",
+            "War"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2018-09-08",
+          "viewingSequence": 6,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "2017"
+          "venue": null
         }
       ]
     },
@@ -465,58 +848,133 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-03-10",
-          "slug": null,
+          "imdbId": "tt1182345",
           "title": "Moon",
-          "medium": "Netflix",
-          "venue": null,
-          "year": "2009"
-        },
-        {
-          "sequence": 2,
-          "date": "2018-03-19",
+          "releaseYear": "2009",
+          "sortTitle": "moon-2009",
+          "releaseSequence": "2009-01-23tt1182345",
+          "genres": [
+            "Drama",
+            "Mystery",
+            "Sci-Fi"
+          ],
           "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2018-03-10",
+          "viewingSequence": 1,
+          "medium": "Netflix",
+          "venue": null
+        },
+        {
+          "imdbId": "tt2798920",
           "title": "Annihilation",
+          "releaseYear": "2018",
+          "sortTitle": "annihilation-2018",
+          "releaseSequence": "2018-02-13tt2798920",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2018-03-19",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 3,
-          "date": "2018-05-18",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-18",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 4,
-          "date": "2018-05-22",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-22",
+          "viewingSequence": 4,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 5,
-          "date": "2018-05-27",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-27",
+          "viewingSequence": 5,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 6,
-          "date": "2018-06-13",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-06-13",
+          "viewingSequence": 6,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -526,49 +984,109 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-02-22",
-          "slug": "black-panther-2018",
+          "imdbId": "tt1825683",
           "title": "Black Panther",
+          "releaseYear": "2018",
+          "sortTitle": "black-panther-2018",
+          "releaseSequence": "2018-01-29tt1825683",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "black-panther-2018",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-10-03",
+          "reviewSequence": "2020-10-03-1",
+          "viewingDate": "2018-02-22",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2018-05-18",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-18",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 3,
-          "date": "2018-05-22",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-22",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 4,
-          "date": "2018-05-27",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-27",
+          "viewingSequence": 4,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 5,
-          "date": "2018-06-13",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-06-13",
+          "viewingSequence": 5,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -578,49 +1096,109 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-02-22",
-          "slug": "black-panther-2018",
+          "imdbId": "tt1825683",
           "title": "Black Panther",
+          "releaseYear": "2018",
+          "sortTitle": "black-panther-2018",
+          "releaseSequence": "2018-01-29tt1825683",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "black-panther-2018",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-10-03",
+          "reviewSequence": "2020-10-03-1",
+          "viewingDate": "2018-02-22",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2018-05-18",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-18",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 3,
-          "date": "2018-05-22",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-22",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 4,
-          "date": "2018-05-27",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-27",
+          "viewingSequence": 4,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 5,
-          "date": "2018-06-13",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-06-13",
+          "viewingSequence": 5,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -630,49 +1208,109 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-02-22",
-          "slug": "black-panther-2018",
+          "imdbId": "tt1825683",
           "title": "Black Panther",
+          "releaseYear": "2018",
+          "sortTitle": "black-panther-2018",
+          "releaseSequence": "2018-01-29tt1825683",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "black-panther-2018",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-10-03",
+          "reviewSequence": "2020-10-03-1",
+          "viewingDate": "2018-02-22",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2018-05-18",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-18",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 3,
-          "date": "2018-05-22",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-22",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 4,
-          "date": "2018-05-27",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-27",
+          "viewingSequence": 4,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 5,
-          "date": "2018-06-13",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-06-13",
+          "viewingSequence": 5,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -682,49 +1320,109 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-02-22",
-          "slug": "black-panther-2018",
+          "imdbId": "tt1825683",
           "title": "Black Panther",
+          "releaseYear": "2018",
+          "sortTitle": "black-panther-2018",
+          "releaseSequence": "2018-01-29tt1825683",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "black-panther-2018",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-10-03",
+          "reviewSequence": "2020-10-03-1",
+          "viewingDate": "2018-02-22",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2018-05-18",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-18",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 3,
-          "date": "2018-05-22",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-22",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 4,
-          "date": "2018-05-27",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-27",
+          "viewingSequence": 4,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 5,
-          "date": "2018-06-13",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-06-13",
+          "viewingSequence": 5,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -734,49 +1432,109 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-02-22",
-          "slug": "black-panther-2018",
+          "imdbId": "tt1825683",
           "title": "Black Panther",
+          "releaseYear": "2018",
+          "sortTitle": "black-panther-2018",
+          "releaseSequence": "2018-01-29tt1825683",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "black-panther-2018",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-10-03",
+          "reviewSequence": "2020-10-03-1",
+          "viewingDate": "2018-02-22",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2018-05-18",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-18",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 3,
-          "date": "2018-05-22",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-22",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 4,
-          "date": "2018-05-27",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-27",
+          "viewingSequence": 4,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 5,
-          "date": "2018-06-13",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-06-13",
+          "viewingSequence": 5,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -786,49 +1544,115 @@
       "slug": "humphrey-bogart",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-03-25",
-          "slug": "kid-galahad-1937",
+          "imdbId": "tt0029080",
           "title": "Kid Galahad",
+          "releaseYear": "1937",
+          "sortTitle": "kid-galahad-1937",
+          "releaseSequence": "1937-05-26tt0029080",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Romance",
+            "Sport"
+          ],
+          "slug": "kid-galahad-1937",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2008-12-12",
+          "reviewSequence": "2008-12-12-2",
+          "viewingDate": "2018-03-25",
+          "viewingSequence": 1,
           "medium": "TCM",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2018-04-14",
-          "slug": "the-wagons-roll-at-night-1941",
+          "imdbId": "tt0034370",
           "title": "The Wagons Roll at Night",
+          "releaseYear": "1941",
+          "sortTitle": "wagons-roll-at-night-1941",
+          "releaseSequence": "1941-04-25tt0034370",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "the-wagons-roll-at-night-1941",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2012-06-13",
+          "reviewSequence": "2012-06-13-1",
+          "viewingDate": "2018-04-14",
+          "viewingSequence": 2,
           "medium": "TCM",
-          "venue": null,
-          "year": "1941"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2018-04-19",
-          "slug": null,
+          "imdbId": "tt0046414",
           "title": "Beat the Devil",
+          "releaseYear": "1953",
+          "sortTitle": "beat-the-devil-1953",
+          "releaseSequence": "1953-11-24tt0046414",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Crime",
+            "Drama",
+            "Romance"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2018-04-19",
+          "viewingSequence": 3,
           "medium": "Amazon",
-          "venue": null,
-          "year": "1953"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2018-05-02",
-          "slug": "china-clipper-1936",
+          "imdbId": "tt0027445",
           "title": "China Clipper",
+          "releaseYear": "1936",
+          "sortTitle": "china-clipper-1936",
+          "releaseSequence": "1936-08-11tt0027445",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Romance"
+          ],
+          "slug": "china-clipper-1936",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2022-10-01",
+          "reviewSequence": "2022-10-01-1",
+          "viewingDate": "2018-05-02",
+          "viewingSequence": 4,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1936"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2018-08-04",
-          "slug": "dead-reckoning-1946",
+          "imdbId": "tt0039305",
           "title": "Dead Reckoning",
+          "releaseYear": "1946",
+          "sortTitle": "dead-reckoning-1946",
+          "releaseSequence": "1946-12-31tt0039305",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "dead-reckoning-1946",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2022-09-14",
+          "reviewSequence": "2022-09-14-1",
+          "viewingDate": "2018-08-04",
+          "viewingSequence": 5,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1946"
+          "venue": null
         }
       ]
     },
@@ -838,49 +1662,110 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-05-18",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-18",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2018-05-22",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-22",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 3,
-          "date": "2018-05-27",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-27",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 4,
-          "date": "2018-06-13",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-06-13",
+          "viewingSequence": 4,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 5,
-          "date": "2018-10-21",
-          "slug": null,
+          "imdbId": "tt6628394",
           "title": "Bad Times at the El Royale",
+          "releaseYear": "2018",
+          "sortTitle": "bad-times-at-the-el-royale-2018",
+          "releaseSequence": "2018-09-22tt6628394",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2018-10-21",
+          "viewingSequence": 5,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -890,49 +1775,110 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-05-18",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-18",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2018-05-22",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-22",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 3,
-          "date": "2018-05-27",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-27",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 4,
-          "date": "2018-06-13",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-06-13",
+          "viewingSequence": 4,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 5,
-          "date": "2018-06-14",
-          "slug": "deadpool-2-2018",
+          "imdbId": "tt5463162",
           "title": "Deadpool 2",
+          "releaseYear": "2018",
+          "sortTitle": "deadpool-2-2018",
+          "releaseSequence": "2018-05-01tt5463162",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Sci-Fi"
+          ],
+          "slug": "deadpool-2-2018",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2021-03-20",
+          "reviewSequence": "2021-03-20-1",
+          "viewingDate": "2018-06-14",
+          "viewingSequence": 5,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     }
@@ -944,40 +1890,88 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-05-18",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-18",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2018-05-22",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-22",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 3,
-          "date": "2018-05-27",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-27",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 4,
-          "date": "2018-06-13",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-06-13",
+          "viewingSequence": 4,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -987,40 +1981,88 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-05-18",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-18",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2018-05-22",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-22",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 3,
-          "date": "2018-05-27",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-05-27",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 4,
-          "date": "2018-06-13",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2018-06-13",
+          "viewingSequence": 4,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2018"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -1030,31 +2072,67 @@
       "slug": "dario-argento",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-03-10",
-          "slug": null,
+          "imdbId": "tt0084777",
           "title": "Tenebrae",
+          "releaseYear": "1982",
+          "sortTitle": "tenebrae-1982",
+          "releaseSequence": "1982-10-27tt0084777",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2018-03-10",
+          "viewingSequence": 1,
           "medium": "Shudder",
-          "venue": null,
-          "year": "1982"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2018-03-23",
-          "slug": "the-bird-with-the-crystal-plumage-1970",
+          "imdbId": "tt0065143",
           "title": "The Bird with the Crystal Plumage",
+          "releaseYear": "1970",
+          "sortTitle": "bird-with-the-crystal-plumage-1970",
+          "releaseSequence": "1970-02-27tt0065143",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-bird-with-the-crystal-plumage-1970",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2021-01-22",
+          "reviewSequence": "2021-01-22-1",
+          "viewingDate": "2018-03-23",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "AFI Silver",
-          "year": "1970"
+          "venue": "AFI Silver"
         },
         {
-          "sequence": 3,
-          "date": "2018-10-27",
-          "slug": "deep-red-1975",
+          "imdbId": "tt0073582",
           "title": "Deep Red",
+          "releaseYear": "1975",
+          "sortTitle": "deep-red-1975",
+          "releaseSequence": "1975-03-07tt0073582",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "deep-red-1975",
+          "grade": "A-",
+          "gradeValue": 11,
+          "reviewDate": "2007-10-17",
+          "reviewSequence": "2007-10-17-1",
+          "viewingDate": "2018-10-27",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - Woodbridge",
-          "year": "1975"
+          "venue": "Alamo Drafthouse Cinema - Woodbridge"
         }
       ]
     },
@@ -1064,22 +2142,45 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-01-31",
-          "slug": "wolfcop-2014",
+          "imdbId": "tt2781516",
           "title": "Wolfcop",
+          "releaseYear": "2014",
+          "sortTitle": "wolfcop-2014",
+          "releaseSequence": "2014-06-06tt2781516",
+          "genres": [
+            "Comedy",
+            "Horror"
+          ],
+          "slug": "wolfcop-2014",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2020-10-02",
+          "reviewSequence": "2020-10-02-1",
+          "viewingDate": "2018-01-31",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2014"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2018-01-31",
-          "slug": "another-wolfcop-2017",
+          "imdbId": "tt4515762",
           "title": "Another WolfCop",
+          "releaseYear": "2017",
+          "sortTitle": "another-wolfcop-2017",
+          "releaseSequence": "2016-09-25tt4515762",
+          "genres": [
+            "Comedy",
+            "Fantasy",
+            "Horror"
+          ],
+          "slug": "another-wolfcop-2017",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2020-10-04",
+          "reviewSequence": "2020-10-04-2",
+          "viewingDate": "2018-01-31",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2017"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -1089,22 +2190,45 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-03-25",
-          "slug": "the-hoodlum-saint-1946",
+          "imdbId": "tt0038615",
           "title": "The Hoodlum Saint",
+          "releaseYear": "1946",
+          "sortTitle": "hoodlum-saint-1946",
+          "releaseSequence": "1946-04-04tt0038615",
+          "genres": [
+            "Drama",
+            "Music"
+          ],
+          "slug": "the-hoodlum-saint-1946",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2022-08-19",
+          "reviewSequence": "2022-08-19-1",
+          "viewingDate": "2018-03-25",
+          "viewingSequence": 1,
           "medium": "TCM",
-          "venue": null,
-          "year": "1946"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2018-05-02",
-          "slug": "china-clipper-1936",
+          "imdbId": "tt0027445",
           "title": "China Clipper",
+          "releaseYear": "1936",
+          "sortTitle": "china-clipper-1936",
+          "releaseSequence": "1936-08-11tt0027445",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Romance"
+          ],
+          "slug": "china-clipper-1936",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2022-10-01",
+          "reviewSequence": "2022-10-01-1",
+          "viewingDate": "2018-05-02",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1936"
+          "venue": null
         }
       ]
     },
@@ -1114,22 +2238,48 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-03-25",
-          "slug": "kid-galahad-1937",
+          "imdbId": "tt0029080",
           "title": "Kid Galahad",
+          "releaseYear": "1937",
+          "sortTitle": "kid-galahad-1937",
+          "releaseSequence": "1937-05-26tt0029080",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Romance",
+            "Sport"
+          ],
+          "slug": "kid-galahad-1937",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2008-12-12",
+          "reviewSequence": "2008-12-12-2",
+          "viewingDate": "2018-03-25",
+          "viewingSequence": 1,
           "medium": "TCM",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2018-03-28",
-          "slug": "the-crowd-roars-1932",
+          "imdbId": "tt0022792",
           "title": "The Crowd Roars",
+          "releaseYear": "1932",
+          "sortTitle": "crowd-roars-1932",
+          "releaseSequence": "1932-04-13tt0022792",
+          "genres": [
+            "Action",
+            "Drama",
+            "Sport"
+          ],
+          "slug": "the-crowd-roars-1932",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2021-12-22",
+          "reviewSequence": "2021-12-22-1",
+          "viewingDate": "2018-03-28",
+          "viewingSequence": 2,
           "medium": "TCM",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         }
       ]
     },
@@ -1139,22 +2289,47 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-03-25",
-          "slug": "kid-galahad-1937",
+          "imdbId": "tt0029080",
           "title": "Kid Galahad",
+          "releaseYear": "1937",
+          "sortTitle": "kid-galahad-1937",
+          "releaseSequence": "1937-05-26tt0029080",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Romance",
+            "Sport"
+          ],
+          "slug": "kid-galahad-1937",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2008-12-12",
+          "reviewSequence": "2008-12-12-2",
+          "viewingDate": "2018-03-25",
+          "viewingSequence": 1,
           "medium": "TCM",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2018-04-14",
-          "slug": "the-wagons-roll-at-night-1941",
+          "imdbId": "tt0034370",
           "title": "The Wagons Roll at Night",
+          "releaseYear": "1941",
+          "sortTitle": "wagons-roll-at-night-1941",
+          "releaseSequence": "1941-04-25tt0034370",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "the-wagons-roll-at-night-1941",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2012-06-13",
+          "reviewSequence": "2012-06-13-1",
+          "viewingDate": "2018-04-14",
+          "viewingSequence": 2,
           "medium": "TCM",
-          "venue": null,
-          "year": "1941"
+          "venue": null
         }
       ]
     },
@@ -1164,22 +2339,47 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-03-25",
-          "slug": "its-a-big-country-an-american-anthology-1951",
+          "imdbId": "tt0043680",
           "title": "It's a Big Country: An American Anthology",
+          "releaseYear": "1951",
+          "sortTitle": "its-a-big-country-an-american-anthology-1951",
+          "releaseSequence": "1951-11-20tt0043680",
+          "genres": [
+            "Comedy",
+            "Drama"
+          ],
+          "slug": "its-a-big-country-an-american-anthology-1951",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-06-28",
+          "reviewSequence": "2023-06-28-1",
+          "viewingDate": "2018-03-25",
+          "viewingSequence": 1,
           "medium": "TCM",
-          "venue": null,
-          "year": "1951"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2018-08-04",
-          "slug": "dead-reckoning-1946",
+          "imdbId": "tt0039305",
           "title": "Dead Reckoning",
+          "releaseYear": "1946",
+          "sortTitle": "dead-reckoning-1946",
+          "releaseSequence": "1946-12-31tt0039305",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "dead-reckoning-1946",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2022-09-14",
+          "reviewSequence": "2022-09-14-1",
+          "viewingDate": "2018-08-04",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1946"
+          "venue": null
         }
       ]
     },
@@ -1189,22 +2389,49 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-05-09",
-          "slug": "the-endless-2017",
+          "imdbId": "tt3986820",
           "title": "The Endless",
+          "releaseYear": "2017",
+          "sortTitle": "endless-2017",
+          "releaseSequence": "2017-04-21tt3986820",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "the-endless-2017",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2023-04-13",
+          "reviewSequence": "2023-04-13-2",
+          "viewingDate": "2018-05-09",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2017"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2018-05-19",
-          "slug": "resolution-2012",
+          "imdbId": "tt1977895",
           "title": "Resolution",
+          "releaseYear": "2012",
+          "sortTitle": "resolution-2012",
+          "releaseSequence": "2012-04-22tt1977895",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "resolution-2012",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2023-04-07",
+          "reviewSequence": "2023-04-07-1",
+          "viewingDate": "2018-05-19",
+          "viewingSequence": 2,
           "medium": "Shudder",
-          "venue": null,
-          "year": "2012"
+          "venue": null
         }
       ]
     },
@@ -1214,22 +2441,45 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2018-07-28",
-          "slug": null,
+          "imdbId": "tt1316536",
           "title": "The Loved Ones",
+          "releaseYear": "2009",
+          "sortTitle": "loved-ones-2009",
+          "releaseSequence": "2009-09-13tt1316536",
+          "genres": [
+            "Crime",
+            "Horror"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2018-07-28",
+          "viewingSequence": 1,
           "medium": "Amazon",
-          "venue": null,
-          "year": "2009"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2018-07-28",
-          "slug": null,
+          "imdbId": "tt4935372",
           "title": "The Devil's Candy",
+          "releaseYear": "2015",
+          "sortTitle": "devils-candy-2015",
+          "releaseSequence": "2015-09-13tt4935372",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2018-07-28",
+          "viewingSequence": 2,
           "medium": "Netflix",
-          "venue": null,
-          "year": "2015"
+          "venue": null
         }
       ]
     }
