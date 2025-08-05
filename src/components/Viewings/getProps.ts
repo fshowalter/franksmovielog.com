@@ -27,6 +27,7 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
           ListItemPosterImageConfig,
         ),
         releaseSequence: viewing.releaseSequence,
+        releaseYear: viewing.releaseYear,
         sequence: viewing.sequence,
         slug: viewing.slug,
         sortTitle: viewing.sortTitle,
@@ -49,7 +50,6 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
           timeZone: "UTC",
         }),
         viewingYear: viewing.viewingYear,
-        year: viewing.year,
       };
 
       return value;

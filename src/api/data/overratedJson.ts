@@ -5,19 +5,47 @@ import { getContentPath } from "./utils/getContentPath";
 
 const overratedJsonFile = getContentPath("data", "overrated.json");
 
-const OverratedJsonSchema = z.object({
-  genres: z.array(z.string()),
-  grade: z.string(),
-  gradeValue: z.number(),
-  imdbId: z.string(),
-  releaseSequence: z.string(),
-  reviewDate: z.date({ coerce: true }),
-  reviewSequence: z.string(),
-  slug: z.string(),
-  sortTitle: z.string(),
-  title: z.string(),
-  year: z.string(),
-});
+const OverratedJsonSchema = z
+  .object({
+    genres: z.array(z.string()),
+    grade: z.string(),
+    gradeValue: z.number(),
+    imdbId: z.string(),
+    releaseSequence: z.string(),
+    reviewDate: z.date({ coerce: true }),
+    reviewSequence: z.string(),
+    slug: z.string(),
+    sortTitle: z.string(),
+    title: z.string(),
+    year: z.string(),
+  })
+  .transform(
+    ({
+      genres,
+      grade,
+      gradeValue,
+      imdbId,
+      releaseSequence,
+      reviewDate,
+      reviewSequence,
+      slug,
+      sortTitle,
+      title,
+      year,
+    }) => ({
+      genres,
+      grade,
+      gradeValue,
+      imdbId,
+      releaseSequence,
+      releaseYear: year,
+      reviewDate,
+      reviewSequence,
+      slug,
+      sortTitle,
+      title,
+    }),
+  );
 
 export type OverratedJson = z.infer<typeof OverratedJsonSchema>;
 

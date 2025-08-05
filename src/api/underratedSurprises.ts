@@ -19,7 +19,7 @@ export async function allUnderratedSurprises(): Promise<UnderratedSurprises> {
 
   const underratedSurprises = underratedJson.map((title) => {
     for (const genre of title.genres) distinctGenres.add(genre);
-    distinctReleaseYears.add(title.year);
+    distinctReleaseYears.add(title.releaseYear);
     distinctReviewYears.add(
       title.reviewDate.toLocaleDateString("en-US", {
         timeZone: "UTC",

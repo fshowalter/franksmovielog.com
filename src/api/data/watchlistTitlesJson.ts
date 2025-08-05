@@ -5,18 +5,44 @@ import { getContentPath } from "./utils/getContentPath";
 
 const watchlistTitlesJsonFile = getContentPath("data", "watchlist-titles.json");
 
-const WatchlistTitleJsonSchema = z.object({
-  collectionNames: z.array(z.string()),
-  directorNames: z.array(z.string()),
-  imdbId: z.string(),
-  performerNames: z.array(z.string()),
-  releaseSequence: z.string(),
-  sortTitle: z.string(),
-  title: z.string(),
-  viewed: z.boolean(),
-  writerNames: z.array(z.string()),
-  year: z.string(),
-});
+const WatchlistTitleJsonSchema = z
+  .object({
+    collectionNames: z.array(z.string()),
+    directorNames: z.array(z.string()),
+    imdbId: z.string(),
+    performerNames: z.array(z.string()),
+    releaseSequence: z.string(),
+    sortTitle: z.string(),
+    title: z.string(),
+    viewed: z.boolean(),
+    writerNames: z.array(z.string()),
+    year: z.string(),
+  })
+  .transform(
+    ({
+      collectionNames,
+      directorNames,
+      imdbId,
+      performerNames,
+      releaseSequence,
+      sortTitle,
+      title,
+      viewed,
+      writerNames,
+      year,
+    }) => ({
+      collectionNames,
+      directorNames,
+      imdbId,
+      performerNames,
+      releaseSequence,
+      releaseYear: year,
+      sortTitle,
+      title,
+      viewed,
+      writerNames,
+    }),
+  );
 
 export type WatchlistTitleJson = z.infer<typeof WatchlistTitleJsonSchema>;
 

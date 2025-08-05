@@ -17,11 +17,11 @@ type ViewingSubListItemValue = {
   displayDate: string;
   medium: string | undefined;
   posterImageProps: PosterImageProps;
+  releaseYear: string;
   sequence: number;
   slug: string | undefined;
   title: string;
   venue: string | undefined;
-  year: string;
 };
 
 export function MostWatchedPeople({
@@ -159,7 +159,7 @@ function MostWatchedPersonViewingListItem({
         <ListItemTitle
           slug={value.slug}
           title={value.title}
-          year={value.year}
+          year={value.releaseYear}
         />
         <div className="-mt-px font-sans text-xs font-light text-muted">
           {value.displayDate}

@@ -50,6 +50,7 @@ const TitleSchema = z
         gradeValue,
         imdbId,
         releaseSequence,
+        releaseYear: year,
         reviewDate,
         reviewSequence,
         slug,
@@ -58,7 +59,6 @@ const TitleSchema = z
         watchlistDirectorNames,
         watchlistPerformerNames,
         watchlistWriterNames,
-        year,
       };
     },
   );

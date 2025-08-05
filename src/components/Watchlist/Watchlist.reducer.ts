@@ -132,7 +132,7 @@ export function reducer(state: State, action: ActionType): State {
     }
     case Actions.FILTER_RELEASE_YEAR: {
       return updateFilter(state, "releaseYear", (value) => {
-        const releaseYear = value.year;
+        const releaseYear = value.releaseYear;
         return (
           releaseYear >= action.values[0] && releaseYear <= action.values[1]
         );
@@ -206,7 +206,7 @@ function groupForValue(value: ListItemValue, sortValue: Sort): string {
   switch (sortValue) {
     case "release-date-asc":
     case "release-date-desc": {
-      return value.year;
+      return value.releaseYear;
     }
     case "title": {
       return getGroupLetter(value.sortTitle);

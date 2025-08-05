@@ -2,7 +2,7 @@ import type { Review } from "~/api/reviews";
 
 type Props = Pick<
   Review,
-  "directorNames" | "grade" | "imdbId" | "title" | "year"
+  "directorNames" | "grade" | "imdbId" | "releaseYear" | "title"
 > & {
   seoImageSrc: string;
 };
@@ -19,9 +19,9 @@ export function StructuredData({
   directorNames,
   grade,
   imdbId,
+  releaseYear,
   seoImageSrc,
   title,
-  year,
 }: Props) {
   const structuredData = {
     "@context": "http://schema.org",
@@ -32,7 +32,7 @@ export function StructuredData({
     },
     itemReviewed: {
       "@type": "Movie",
-      dateCreated: year,
+      dateCreated: releaseYear,
       director: {
         "@type": "Person",
         name: directorNames[0],

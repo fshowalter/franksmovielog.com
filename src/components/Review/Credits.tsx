@@ -18,10 +18,10 @@ type Props = Pick<
   | "directorNames"
   | "originalTitle"
   | "principalCastNames"
+  | "releaseYear"
   | "runtimeMinutes"
   | "title"
   | "writerNames"
-  | "year"
 > & {
   className?: string;
   posterImageProps: PosterImageProps;
@@ -34,10 +34,10 @@ export function Credits({
   originalTitle,
   posterImageProps,
   principalCastNames,
+  releaseYear,
   runtimeMinutes,
   title,
   writerNames,
-  year,
 }: Props): JSX.Element {
   return (
     <aside
@@ -75,7 +75,7 @@ export function Credits({
           {originalTitle && (
             <Credit term="Original Title" value={originalTitle} />
           )}
-          <Credit term="Year" value={year} />
+          <Credit term="Year" value={releaseYear} />
           <Credit term="Financing" value={toSentence(countries)} />
           <Credit term="Running Time" value={`${runtimeMinutes} min`} />
           <Credit

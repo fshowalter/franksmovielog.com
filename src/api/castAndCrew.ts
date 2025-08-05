@@ -27,7 +27,7 @@ export async function castAndCrewMember(slug: string): Promise<{
   const distinctReviewYears = new Set<string>();
 
   for (const title of member.titles) {
-    releaseYears.add(title.year);
+    releaseYears.add(title.releaseYear);
 
     if (title.reviewDate) {
       distinctReviewYears.add(

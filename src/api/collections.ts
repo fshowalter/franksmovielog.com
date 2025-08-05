@@ -28,7 +28,7 @@ export async function allCollections(): Promise<{
 
   for (const collection of collections) {
     for (const title of collection.titles) {
-      releaseYears.add(title.year);
+      releaseYears.add(title.releaseYear);
     }
   }
 
@@ -50,7 +50,7 @@ export async function collectionDetails(slug: string): Promise<{
   const reviewYears = new Set<string>();
 
   for (const title of collection.titles) {
-    releaseYears.add(title.year);
+    releaseYears.add(title.releaseYear);
 
     if (title.reviewDate) {
       reviewYears.add(

@@ -39,6 +39,7 @@ const ViewingJsonSchema = z
         genres,
         medium,
         releaseSequence,
+        releaseYear: year,
         sequence,
         slug,
         sortTitle,
@@ -46,7 +47,6 @@ const ViewingJsonSchema = z
         venue,
         viewingDate,
         viewingYear,
-        year,
       };
     },
   );

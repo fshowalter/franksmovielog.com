@@ -27,11 +27,11 @@ export type ListItemValue = Pick<
   | "imdbId"
   | "performerNames"
   | "releaseSequence"
+  | "releaseYear"
   | "sortTitle"
   | "title"
   | "viewed"
   | "writerNames"
-  | "year"
 >;
 
 export type Props = {
@@ -146,7 +146,7 @@ function WatchlistListItem({
           tablet:w-full
         `}
       >
-        <ListItemTitle title={value.title} year={value.year} />
+        <ListItemTitle title={value.title} year={value.releaseYear} />
         <WatchlistTitleSlug
           collectionNames={value.collectionNames}
           directorNames={value.directorNames}

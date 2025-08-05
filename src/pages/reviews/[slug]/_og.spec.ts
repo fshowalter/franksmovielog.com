@@ -34,7 +34,7 @@ describe("/reviews/:slug/og.jpg", () => {
           grade: review.grade,
           slug: review.slug,
           title: review.title,
-          year: review.year,
+          year: review.releaseYear,
         },
         routeType: "endpoint",
       });

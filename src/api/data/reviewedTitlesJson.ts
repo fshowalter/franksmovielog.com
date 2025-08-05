@@ -17,14 +17,23 @@ const CollectionSchema = z.object({
   slug: z.string(),
 });
 
-const MoreTitleSchema = z.object({
-  genres: z.array(z.string()),
-  grade: z.string(),
-  imdbId: z.string(),
-  slug: z.string(),
-  title: z.string(),
-  year: z.string(),
-});
+const MoreTitleSchema = z
+  .object({
+    genres: z.array(z.string()),
+    grade: z.string(),
+    imdbId: z.string(),
+    slug: z.string(),
+    title: z.string(),
+    year: z.string(),
+  })
+  .transform(({ genres, grade, imdbId, slug, title, year }) => ({
+    genres,
+    grade,
+    imdbId,
+    releaseYear: year,
+    slug,
+    title,
+  }));
 
 const CreditKindSchema = z.enum(["writer", "director", "performer"]);
 
@@ -102,13 +111,13 @@ const ReviewedTitleJsonSchema = z
         originalTitle,
         principalCastNames,
         releaseSequence,
+        releaseYear: year,
         runtimeMinutes,
         sequence,
         slug,
         sortTitle,
         title,
         writerNames,
-        year,
       };
     },
   );
