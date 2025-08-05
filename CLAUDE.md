@@ -127,6 +127,7 @@ This site uses Astro's partial hydration strategy:
 - Follow existing component structure and naming
 - Test on mobile viewports
 - Keep bundle size minimal
+- Avoid casts unless absolutely necessary
 
 ## Key Dependencies
 

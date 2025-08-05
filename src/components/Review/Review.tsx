@@ -250,18 +250,15 @@ function OriginalTitle({
 }
 
 function ViewingHistory({ value }: Pick<Props, "value">) {
+  const viewings: ReviewContent["viewings"] = value.viewings;
   return (
     <aside className="w-full max-w-popout">
       <SubHeading as="h2" className="text-center shadow-bottom">
         Viewing History
       </SubHeading>
       <ul className="bg-default">
-        {value.viewings.map((viewing, index) => (
-          <ViewingHistoryListItem
-            key={index}
-            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-            value={viewing as any}
-          />
+        {viewings.map((viewing, index) => (
+          <ViewingHistoryListItem key={index} value={viewing} />
         ))}
       </ul>
     </aside>
