@@ -1,67 +1,83 @@
 {
   "name": "Ridley Scott",
   "slug": "ridley-scott",
+  "titleCount": 3,
+  "reviewCount": 3,
   "titles": [
     {
-      "creditedAs": [
-        "director"
-      ],
       "imdbId": "tt0765429",
       "title": "American Gangster",
-      "year": "2007",
+      "releaseYear": "2007",
+      "sortTitle": "american-gangster-2007",
+      "releaseSequence": "2007-10-19tt0765429",
+      "genres": [
+        "Biography",
+        "Crime",
+        "Drama"
+      ],
       "slug": "american-gangster-2007",
       "grade": "B+",
-      "sortTitle": "american-gangster-2007",
       "gradeValue": 10,
-      "releaseSequence": "2007-10-19tt0765429",
       "reviewDate": "2007-12-06",
       "reviewSequence": "2007-12-06-2",
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "collectionNames": []
-    },
-    {
       "creditedAs": [
         "director"
       ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0758774",
       "title": "Body of Lies",
-      "year": "2008",
+      "releaseYear": "2008",
+      "sortTitle": "body-of-lies-2008",
+      "releaseSequence": "2008-10-05tt0758774",
+      "genres": [
+        "Action",
+        "Drama",
+        "Thriller"
+      ],
       "slug": "body-of-lies-2008",
       "grade": "B",
-      "sortTitle": "body-of-lies-2008",
       "gradeValue": 9,
-      "releaseSequence": "2008-10-05tt0758774",
       "reviewDate": "2008-10-16",
       "reviewSequence": "2008-10-16-2",
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "collectionNames": []
-    },
-    {
       "creditedAs": [
         "director"
       ],
-      "imdbId": "tt1446714",
-      "title": "Prometheus",
-      "year": "2012",
-      "slug": "prometheus-2012",
-      "grade": "B",
-      "sortTitle": "prometheus-2012",
-      "gradeValue": 9,
-      "releaseSequence": "2012-04-11tt1446714",
-      "reviewDate": "2012-06-21",
-      "reviewSequence": "2012-06-21-1",
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt1446714",
+      "title": "Prometheus",
+      "releaseYear": "2012",
+      "sortTitle": "prometheus-2012",
+      "releaseSequence": "2012-04-11tt1446714",
+      "genres": [
+        "Adventure",
+        "Mystery",
+        "Sci-Fi"
+      ],
+      "slug": "prometheus-2012",
+      "grade": "B",
+      "gradeValue": 9,
+      "reviewDate": "2012-06-21",
+      "reviewSequence": "2012-06-21-1",
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
     }
   ],
-  "reviewCount": 3,
-  "totalCount": 3,
+  "description": "Director with 3 reviewed titles.",
   "creditedAs": [
     "director"
   ]

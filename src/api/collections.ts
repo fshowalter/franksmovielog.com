@@ -16,7 +16,7 @@ import { rootAsSpan } from "./utils/markdown/rootAsSpan";
 export type Collection = CollectionJson & {};
 
 export type CollectionWithDetails = Collection & {
-  descriptionHtml: null | string;
+  descriptionHtml: string;
 };
 
 export async function allCollections(): Promise<{

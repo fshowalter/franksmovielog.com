@@ -1,70 +1,85 @@
 {
   "name": "Wes Anderson",
   "slug": "wes-anderson",
+  "titleCount": 3,
+  "reviewCount": 3,
   "titles": [
     {
-      "creditedAs": [
-        "director",
-        "writer"
-      ],
       "imdbId": "tt0128445",
       "title": "Rushmore",
-      "year": "1998",
+      "releaseYear": "1998",
+      "sortTitle": "rushmore-1998",
+      "releaseSequence": "1998-09-17tt0128445",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
       "slug": "rushmore-1998",
       "grade": "A+",
-      "sortTitle": "rushmore-1998",
       "gradeValue": 13,
-      "releaseSequence": "1998-09-17tt0128445",
       "reviewDate": "2007-12-29",
       "reviewSequence": "2007-12-29-1",
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "collectionNames": []
-    },
-    {
       "creditedAs": [
         "director",
         "writer"
       ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0265666",
       "title": "The Royal Tenenbaums",
-      "year": "2001",
+      "releaseYear": "2001",
+      "sortTitle": "royal-tenenbaums-2001",
+      "releaseSequence": "2001-10-05tt0265666",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
       "slug": "the-royal-tenenbaums-2001",
       "grade": "B+",
-      "sortTitle": "royal-tenenbaums-2001",
       "gradeValue": 10,
-      "releaseSequence": "2001-10-05tt0265666",
       "reviewDate": "2003-11-11",
       "reviewSequence": "2003-11-11-1",
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "collectionNames": []
-    },
-    {
       "creditedAs": [
         "director",
         "writer"
       ],
-      "imdbId": "tt0838221",
-      "title": "The Darjeeling Limited",
-      "year": "2007",
-      "slug": "the-darjeeling-limited-2007",
-      "grade": "B",
-      "sortTitle": "darjeeling-limited-2007",
-      "gradeValue": 9,
-      "releaseSequence": "2007-08-01tt0838221",
-      "reviewDate": "2007-10-06",
-      "reviewSequence": "2007-10-06-2",
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0838221",
+      "title": "The Darjeeling Limited",
+      "releaseYear": "2007",
+      "sortTitle": "darjeeling-limited-2007",
+      "releaseSequence": "2007-08-01tt0838221",
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Drama"
+      ],
+      "slug": "the-darjeeling-limited-2007",
+      "grade": "B",
+      "gradeValue": 9,
+      "reviewDate": "2007-10-06",
+      "reviewSequence": "2007-10-06-2",
+      "creditedAs": [
+        "director",
+        "writer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
     }
   ],
-  "reviewCount": 3,
-  "totalCount": 3,
+  "description": "Writer and director with 3 reviewed titles.",
   "creditedAs": [
     "writer",
     "director"

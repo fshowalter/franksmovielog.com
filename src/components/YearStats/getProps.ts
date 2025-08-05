@@ -26,7 +26,7 @@ export async function getProps(
           ...person,
           viewings: await Promise.all(
             person.viewings.map(async (viewing) => {
-              const viewingDate = new Date(viewing.date);
+              const viewingDate = new Date(viewing.viewingDate);
               return {
                 ...viewing,
                 displayDate: `${viewingDate.toLocaleDateString("en-US", {
@@ -66,7 +66,7 @@ export async function getProps(
           ...person,
           viewings: await Promise.all(
             person.viewings.map(async (viewing) => {
-              const viewingDate = new Date(viewing.date);
+              const viewingDate = new Date(viewing.viewingDate);
               return {
                 ...viewing,
                 displayDate: `${viewingDate.toLocaleDateString("en-US", {
@@ -95,7 +95,7 @@ export async function getProps(
           ...person,
           viewings: await Promise.all(
             person.viewings.map(async (viewing) => {
-              const viewingDate = new Date(viewing.date);
+              const viewingDate = new Date(viewing.viewingDate);
               return {
                 ...viewing,
                 displayDate: `${viewingDate.toLocaleDateString("en-US", {

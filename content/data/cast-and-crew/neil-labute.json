@@ -1,50 +1,60 @@
 {
   "name": "Neil LaBute",
   "slug": "neil-labute",
+  "titleCount": 2,
+  "reviewCount": 2,
   "titles": [
     {
-      "creditedAs": [
-        "director",
-        "writer"
-      ],
       "imdbId": "tt0119361",
       "title": "In the Company of Men",
-      "year": "1997",
+      "releaseYear": "1997",
+      "sortTitle": "in-the-company-of-men-1997",
+      "releaseSequence": "1997-01-19tt0119361",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
       "slug": "in-the-company-of-men-1997",
       "grade": "A-",
-      "sortTitle": "in-the-company-of-men-1997",
       "gradeValue": 11,
-      "releaseSequence": "1997-01-19tt0119361",
       "reviewDate": "2022-08-11",
       "reviewSequence": "2022-08-11-1",
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "collectionNames": []
-    },
-    {
       "creditedAs": [
         "director",
         "writer"
       ],
-      "imdbId": "tt0308878",
-      "title": "The Shape of Things",
-      "year": "2003",
-      "slug": "the-shape-of-things-2003",
-      "grade": "B+",
-      "sortTitle": "shape-of-things-2003",
-      "gradeValue": 10,
-      "releaseSequence": "2003-01-18tt0308878",
-      "reviewDate": "2008-12-19",
-      "reviewSequence": "2008-12-19-2",
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0308878",
+      "title": "The Shape of Things",
+      "releaseYear": "2003",
+      "sortTitle": "shape-of-things-2003",
+      "releaseSequence": "2003-01-18tt0308878",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "slug": "the-shape-of-things-2003",
+      "grade": "B+",
+      "gradeValue": 10,
+      "reviewDate": "2008-12-19",
+      "reviewSequence": "2008-12-19-2",
+      "creditedAs": [
+        "director",
+        "writer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
     }
   ],
-  "reviewCount": 2,
-  "totalCount": 2,
+  "description": "Writer and director with 2 reviewed titles.",
   "creditedAs": [
     "writer",
     "director"

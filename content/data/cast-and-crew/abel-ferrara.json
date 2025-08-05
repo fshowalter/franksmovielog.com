@@ -1,50 +1,61 @@
 {
   "name": "Abel Ferrara",
   "slug": "abel-ferrara",
+  "titleCount": 2,
+  "reviewCount": 2,
   "titles": [
     {
+      "imdbId": "tt0079082",
+      "title": "The Driller Killer",
+      "releaseYear": "1979",
+      "sortTitle": "driller-killer-1979",
+      "releaseSequence": "1979-06-15tt0079082",
+      "genres": [
+        "Drama",
+        "Horror",
+        "Thriller"
+      ],
+      "slug": "the-driller-killer-1979",
+      "grade": "B-",
+      "gradeValue": 8,
+      "reviewDate": "2021-02-19",
+      "reviewSequence": "2021-02-19-1",
       "creditedAs": [
         "director",
         "performer"
       ],
-      "imdbId": "tt0079082",
-      "title": "The Driller Killer",
-      "year": "1979",
-      "slug": "the-driller-killer-1979",
-      "grade": "B-",
-      "sortTitle": "driller-killer-1979",
-      "gradeValue": 8,
-      "releaseSequence": "1979-06-15tt0079082",
-      "reviewDate": "2021-02-19",
-      "reviewSequence": "2021-02-19-1",
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0103759",
+      "title": "Bad Lieutenant",
+      "releaseYear": "1992",
+      "sortTitle": "bad-lieutenant-1992",
+      "releaseSequence": "1992-05-14tt0103759",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "slug": "bad-lieutenant-1992",
+      "grade": "C",
+      "gradeValue": 6,
+      "reviewDate": "2004-09-03",
+      "reviewSequence": "2004-09-03-1",
       "creditedAs": [
         "director",
         "writer"
       ],
-      "imdbId": "tt0103759",
-      "title": "Bad Lieutenant",
-      "year": "1992",
-      "slug": "bad-lieutenant-1992",
-      "grade": "C",
-      "sortTitle": "bad-lieutenant-1992",
-      "gradeValue": 6,
-      "releaseSequence": "1992-05-14tt0103759",
-      "reviewDate": "2004-09-03",
-      "reviewSequence": "2004-09-03-1",
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     }
   ],
-  "reviewCount": 2,
-  "totalCount": 2,
+  "description": "Director, writer, and performer with 2 reviewed titles.",
   "creditedAs": [
     "director",
     "writer",

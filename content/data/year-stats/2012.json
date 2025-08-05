@@ -87,18 +87,40 @@
   ],
   "mostWatchedTitles": [
     {
-      "title": "Fright Night",
       "imdbId": "tt0089175",
-      "year": "1985",
-      "count": 4,
-      "slug": "fright-night-1985"
+      "title": "Fright Night",
+      "releaseYear": "1985",
+      "sortTitle": "fright-night-1985",
+      "releaseSequence": "1985-08-02tt0089175",
+      "genres": [
+        "Horror"
+      ],
+      "slug": "fright-night-1985",
+      "grade": "A+",
+      "gradeValue": 13,
+      "reviewDate": "2020-10-31",
+      "reviewSequence": "2020-10-31-4",
+      "count": 4
     },
     {
-      "title": "The Big Sleep",
       "imdbId": "tt0038355",
-      "year": "1946",
-      "count": 2,
-      "slug": "the-big-sleep-1946"
+      "title": "The Big Sleep",
+      "releaseYear": "1946",
+      "sortTitle": "big-sleep-1946",
+      "releaseSequence": "1946-08-22tt0038355",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Film-Noir",
+        "Mystery",
+        "Thriller"
+      ],
+      "slug": "the-big-sleep-1946",
+      "grade": "A+",
+      "gradeValue": 13,
+      "reviewDate": "2012-04-28",
+      "reviewSequence": "2012-04-28-1",
+      "count": 2
     }
   ],
   "mostWatchedDirectors": [
@@ -108,112 +130,252 @@
       "slug": "john-ford",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-01-25",
-          "slug": "the-world-moves-on-1934",
+          "imdbId": "tt0026008",
           "title": "The World Moves On",
+          "releaseYear": "1934",
+          "sortTitle": "world-moves-on-1934",
+          "releaseSequence": "1934-06-27tt0026008",
+          "genres": [
+            "Drama",
+            "History",
+            "Romance",
+            "War"
+          ],
+          "slug": "the-world-moves-on-1934",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2012-01-25",
+          "reviewSequence": "2012-01-25-1",
+          "viewingDate": "2012-01-25",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-01-28",
-          "slug": "sergeant-rutledge-1960",
+          "imdbId": "tt0054292",
           "title": "Sergeant Rutledge",
+          "releaseYear": "1960",
+          "sortTitle": "sergeant-rutledge-1960",
+          "releaseSequence": "1960-05-25tt0054292",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Western"
+          ],
+          "slug": "sergeant-rutledge-1960",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2012-01-28",
+          "reviewSequence": "2012-01-28-2",
+          "viewingDate": "2012-01-28",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1960"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-02-10",
-          "slug": "the-long-voyage-home-1940",
+          "imdbId": "tt0032728",
           "title": "The Long Voyage Home",
+          "releaseYear": "1940",
+          "sortTitle": "long-voyage-home-1940",
+          "releaseSequence": "1940-10-08tt0032728",
+          "genres": [
+            "Drama",
+            "War"
+          ],
+          "slug": "the-long-voyage-home-1940",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2008-05-18",
+          "reviewSequence": "2008-05-18-1",
+          "viewingDate": "2012-02-10",
+          "viewingSequence": 3,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1940"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-02-15",
-          "slug": "they-were-expendable-1945",
+          "imdbId": "tt0038160",
           "title": "They Were Expendable",
+          "releaseYear": "1945",
+          "sortTitle": "they-were-expendable-1945",
+          "releaseSequence": "1945-12-07tt0038160",
+          "genres": [
+            "Drama",
+            "War"
+          ],
+          "slug": "they-were-expendable-1945",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2008-06-13",
+          "reviewSequence": "2008-06-13-3",
+          "viewingDate": "2012-02-15",
+          "viewingSequence": 4,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1945"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2012-02-19",
-          "slug": "mogambo-1953",
+          "imdbId": "tt0046085",
           "title": "Mogambo",
+          "releaseYear": "1953",
+          "sortTitle": "mogambo-1953",
+          "releaseSequence": "1953-09-23tt0046085",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Romance"
+          ],
+          "slug": "mogambo-1953",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2008-05-23",
+          "reviewSequence": "2008-05-23-1",
+          "viewingDate": "2012-02-19",
+          "viewingSequence": 5,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1953"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2012-02-24",
-          "slug": "arrowsmith-1931",
+          "imdbId": "tt0021622",
           "title": "Arrowsmith",
+          "releaseYear": "1931",
+          "sortTitle": "arrowsmith-1931",
+          "releaseSequence": "1931-12-07tt0021622",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "arrowsmith-1931",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2021-04-21",
+          "reviewSequence": "2021-04-21-1",
+          "viewingDate": "2012-02-24",
+          "viewingSequence": 6,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1931"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2012-03-12",
-          "slug": "the-hurricane-1937",
+          "imdbId": "tt0029030",
           "title": "The Hurricane",
+          "releaseYear": "1937",
+          "sortTitle": "hurricane-1937",
+          "releaseSequence": "1937-11-05tt0029030",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Romance"
+          ],
+          "slug": "the-hurricane-1937",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2008-11-22",
+          "reviewSequence": "2008-11-22-2",
+          "viewingDate": "2012-03-12",
+          "viewingSequence": 7,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2012-03-30",
-          "slug": "the-whole-towns-talking-1935",
+          "imdbId": "tt0027214",
           "title": "The Whole Town's Talking",
+          "releaseYear": "1935",
+          "sortTitle": "whole-towns-talking-1935",
+          "releaseSequence": "1935-02-21tt0027214",
+          "genres": [
+            "Comedy",
+            "Crime",
+            "Drama"
+          ],
+          "slug": "the-whole-towns-talking-1935",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2009-02-19",
+          "reviewSequence": "2009-02-19-2",
+          "viewingDate": "2012-03-30",
+          "viewingSequence": 8,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1935"
+          "venue": null
         },
         {
-          "sequence": 9,
-          "date": "2012-03-31",
-          "slug": "mary-of-scotland-1936",
+          "imdbId": "tt0027948",
           "title": "Mary of Scotland",
+          "releaseYear": "1936",
+          "sortTitle": "mary-of-scotland-1936",
+          "releaseSequence": "1936-07-28tt0027948",
+          "genres": [
+            "Biography",
+            "Drama",
+            "History",
+            "Romance"
+          ],
+          "slug": "mary-of-scotland-1936",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2008-12-13",
+          "reviewSequence": "2008-12-13-1",
+          "viewingDate": "2012-03-31",
+          "viewingSequence": 9,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1936"
+          "venue": null
         },
         {
-          "sequence": 10,
-          "date": "2012-03-31",
-          "slug": "the-rising-of-the-moon-1957",
+          "imdbId": "tt0050902",
           "title": "The Rising of the Moon",
+          "releaseYear": "1957",
+          "sortTitle": "rising-of-the-moon-1957",
+          "releaseSequence": "1957-05-17tt0050902",
+          "genres": [
+            "Comedy",
+            "Drama"
+          ],
+          "slug": "the-rising-of-the-moon-1957",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2012-03-31",
+          "reviewSequence": "2012-03-31-2",
+          "viewingDate": "2012-03-31",
+          "viewingSequence": 10,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1957"
+          "venue": null
         },
         {
-          "sequence": 11,
-          "date": "2012-04-01",
-          "slug": "the-last-hurrah-1958",
+          "imdbId": "tt0051845",
           "title": "The Last Hurrah",
+          "releaseYear": "1958",
+          "sortTitle": "last-hurrah-1958",
+          "releaseSequence": "1958-10-22tt0051845",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "the-last-hurrah-1958",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2008-07-26",
+          "reviewSequence": "2008-07-26-1",
+          "viewingDate": "2012-04-01",
+          "viewingSequence": 11,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1958"
+          "venue": null
         },
         {
-          "sequence": 12,
-          "date": "2012-04-06",
-          "slug": "stagecoach-1939",
+          "imdbId": "tt0031971",
           "title": "Stagecoach",
+          "releaseYear": "1939",
+          "sortTitle": "stagecoach-1939",
+          "releaseSequence": "1939-??-??tt0031971",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Western"
+          ],
+          "slug": "stagecoach-1939",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2008-01-22",
+          "reviewSequence": "2008-01-22-1",
+          "viewingDate": "2012-04-06",
+          "viewingSequence": 12,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1939"
+          "venue": null
         }
       ]
     },
@@ -223,94 +385,214 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-02-25",
-          "slug": "riders-of-destiny-1933",
+          "imdbId": "tt0024500",
           "title": "Riders of Destiny",
+          "releaseYear": "1933",
+          "sortTitle": "riders-of-destiny-1933",
+          "releaseSequence": "1933-10-10tt0024500",
+          "genres": [
+            "Music",
+            "Romance",
+            "Western"
+          ],
+          "slug": "riders-of-destiny-1933",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2016-09-17",
+          "reviewSequence": "2016-09-17-2",
+          "viewingDate": "2012-02-25",
+          "viewingSequence": 1,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-02-26",
-          "slug": "the-lawless-frontier-1934",
+          "imdbId": "tt0025373",
           "title": "The Lawless Frontier",
+          "releaseYear": "1934",
+          "sortTitle": "lawless-frontier-1934",
+          "releaseSequence": "1934-11-22tt0025373",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-lawless-frontier-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2022-11-07",
+          "reviewSequence": "2022-11-07-1",
+          "viewingDate": "2012-02-26",
+          "viewingSequence": 2,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-02-27",
-          "slug": "the-man-from-utah-1934",
+          "imdbId": "tt0025455",
           "title": "The Man from Utah",
+          "releaseYear": "1934",
+          "sortTitle": "man-from-utah-1934",
+          "releaseSequence": "1934-05-15tt0025455",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-man-from-utah-1934",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2008-02-10",
+          "reviewSequence": "2008-02-10-1",
+          "viewingDate": "2012-02-27",
+          "viewingSequence": 3,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-02-27",
-          "slug": "west-of-the-divide-1934",
+          "imdbId": "tt0025969",
           "title": "West of the Divide",
+          "releaseYear": "1934",
+          "sortTitle": "west-of-the-divide-1934",
+          "releaseSequence": "1934-02-15tt0025969",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Romance",
+            "Western"
+          ],
+          "slug": "west-of-the-divide-1934",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2007-12-01",
+          "reviewSequence": "2007-12-01-2",
+          "viewingDate": "2012-02-27",
+          "viewingSequence": 4,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2012-02-28",
-          "slug": "the-star-packer-1934",
+          "imdbId": "tt0025830",
           "title": "The Star Packer",
+          "releaseYear": "1934",
+          "sortTitle": "star-packer-1934",
+          "releaseSequence": "1934-07-30tt0025830",
+          "genres": [
+            "Action",
+            "Drama",
+            "Mystery",
+            "Romance",
+            "Western"
+          ],
+          "slug": "the-star-packer-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-02-04",
+          "reviewSequence": "2023-02-04-1",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 5,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2012-02-28",
-          "slug": "the-trail-beyond-1934",
+          "imdbId": "tt0025903",
           "title": "The Trail Beyond",
+          "releaseYear": "1934",
+          "sortTitle": "trail-beyond-1934",
+          "releaseSequence": "1934-10-22tt0025903",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-trail-beyond-1934",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2008-03-30",
+          "reviewSequence": "2008-03-30-3",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 6,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2012-02-28",
-          "slug": "the-lucky-texan-1934",
+          "imdbId": "tt0025440",
           "title": "The Lucky Texan",
+          "releaseYear": "1934",
+          "sortTitle": "lucky-texan-1934",
+          "releaseSequence": "1934-01-22tt0025440",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Romance",
+            "Western"
+          ],
+          "slug": "the-lucky-texan-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2012-02-28",
+          "reviewSequence": "2012-02-28-4",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 7,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2012-02-28",
-          "slug": "texas-terror-1935",
+          "imdbId": "tt0027087",
           "title": "Texas Terror",
+          "releaseYear": "1935",
+          "sortTitle": "texas-terror-1935",
+          "releaseSequence": "1935-02-01tt0027087",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "texas-terror-1935",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2008-05-26",
+          "reviewSequence": "2008-05-26-5",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 8,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1935"
+          "venue": null
         },
         {
-          "sequence": 9,
-          "date": "2012-02-28",
-          "slug": "blue-steel-1934",
+          "imdbId": "tt0024902",
           "title": "Blue Steel",
+          "releaseYear": "1934",
+          "sortTitle": "blue-steel-1934",
+          "releaseSequence": "1934-05-10tt0024902",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "blue-steel-1934",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2007-12-04",
+          "reviewSequence": "2007-12-04-8",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 9,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 10,
-          "date": "2012-02-28",
-          "slug": "the-dawn-rider-1935",
+          "imdbId": "tt0026267",
           "title": "The Dawn Rider",
+          "releaseYear": "1935",
+          "sortTitle": "dawn-rider-1935",
+          "releaseSequence": "1935-06-20tt0026267",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-dawn-rider-1935",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2008-02-04",
+          "reviewSequence": "2008-02-04-9",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 10,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1935"
+          "venue": null
         }
       ]
     },
@@ -320,58 +602,133 @@
       "slug": "john-carpenter",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-01-20",
-          "slug": "they-live-1988",
+          "imdbId": "tt0096256",
           "title": "They Live",
+          "releaseYear": "1988",
+          "sortTitle": "they-live-1988",
+          "releaseSequence": "1988-11-04tt0096256",
+          "genres": [
+            "Action",
+            "Horror",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "they-live-1988",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2008-08-02",
+          "reviewSequence": "2008-08-02-1",
+          "viewingDate": "2012-01-20",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1988"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-03-24",
-          "slug": "big-trouble-in-little-china-1986",
+          "imdbId": "tt0090728",
           "title": "Big Trouble in Little China",
+          "releaseYear": "1986",
+          "sortTitle": "big-trouble-in-little-china-1986",
+          "releaseSequence": "1986-07-02tt0090728",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Fantasy"
+          ],
+          "slug": "big-trouble-in-little-china-1986",
+          "grade": "A-",
+          "gradeValue": 11,
+          "reviewDate": "2007-08-18",
+          "reviewSequence": "2007-08-18-3",
+          "viewingDate": "2012-03-24",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1986"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-03-24",
-          "slug": "in-the-mouth-of-madness-1994",
+          "imdbId": "tt0113409",
           "title": "In the Mouth of Madness",
+          "releaseYear": "1994",
+          "sortTitle": "in-the-mouth-of-madness-1994",
+          "releaseSequence": "1994-08-10tt0113409",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "in-the-mouth-of-madness-1994",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2012-03-24",
+          "reviewSequence": "2012-03-24-4",
+          "viewingDate": "2012-03-24",
+          "viewingSequence": 3,
           "medium": "Encore HD",
-          "venue": null,
-          "year": "1994"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-05-05",
-          "slug": "escape-from-new-york-1981",
+          "imdbId": "tt0082340",
           "title": "Escape from New York",
+          "releaseYear": "1981",
+          "sortTitle": "escape-from-new-york-1981",
+          "releaseSequence": "1981-04-01tt0082340",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "escape-from-new-york-1981",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2012-05-05",
+          "reviewSequence": "2012-05-05-1",
+          "viewingDate": "2012-05-05",
+          "viewingSequence": 4,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1981"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2012-07-02",
-          "slug": "the-thing-1982",
+          "imdbId": "tt0084787",
           "title": "The Thing",
+          "releaseYear": "1982",
+          "sortTitle": "thing-1982",
+          "releaseSequence": "1982-06-25tt0084787",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Sci-Fi"
+          ],
+          "slug": "the-thing-1982",
+          "grade": "A-",
+          "gradeValue": 11,
+          "reviewDate": "2008-08-08",
+          "reviewSequence": "2008-08-08-1",
+          "viewingDate": "2012-07-02",
+          "viewingSequence": 5,
           "medium": null,
-          "venue": "The Black Cat",
-          "year": "1982"
+          "venue": "The Black Cat"
         },
         {
-          "sequence": 6,
-          "date": "2012-10-30",
-          "slug": "halloween-1978",
+          "imdbId": "tt0077651",
           "title": "Halloween",
+          "releaseYear": "1978",
+          "sortTitle": "halloween-1978",
+          "releaseSequence": "1978-10-25tt0077651",
+          "genres": [
+            "Horror",
+            "Thriller"
+          ],
+          "slug": "halloween-1978",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2021-10-30",
+          "reviewSequence": "2021-10-30-4",
+          "viewingDate": "2012-10-30",
+          "viewingSequence": 6,
           "medium": null,
-          "venue": "Landmark E Street Cinema",
-          "year": "1978"
+          "venue": "Landmark E Street Cinema"
         }
       ]
     },
@@ -381,58 +738,133 @@
       "slug": "alfred-hitchcock",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-02-04",
-          "slug": "suspicion-1941",
+          "imdbId": "tt0034248",
           "title": "Suspicion",
+          "releaseYear": "1941",
+          "sortTitle": "suspicion-1941",
+          "releaseSequence": "1941-11-08tt0034248",
+          "genres": [
+            "Drama",
+            "Film-Noir",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "suspicion-1941",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2008-02-10",
+          "reviewSequence": "2008-02-10-1",
+          "viewingDate": "2012-02-04",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1941"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-02-14",
-          "slug": "rear-window-1954",
+          "imdbId": "tt0047396",
           "title": "Rear Window",
+          "releaseYear": "1954",
+          "sortTitle": "rear-window-1954",
+          "releaseSequence": "1954-08-01tt0047396",
+          "genres": [
+            "Drama",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "rear-window-1954",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2007-06-30",
+          "reviewSequence": "2007-06-30-1",
+          "viewingDate": "2012-02-14",
+          "viewingSequence": 2,
           "medium": "Encore HD",
-          "venue": null,
-          "year": "1954"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-04-08",
-          "slug": "i-confess-1953",
+          "imdbId": "tt0045897",
           "title": "I Confess",
+          "releaseYear": "1953",
+          "sortTitle": "i-confess-1953",
+          "releaseSequence": "1953-02-12tt0045897",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+          ],
+          "slug": "i-confess-1953",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2008-10-31",
+          "reviewSequence": "2008-10-31-1",
+          "viewingDate": "2012-04-08",
+          "viewingSequence": 3,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1953"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-06-10",
-          "slug": "foreign-correspondent-1940",
+          "imdbId": "tt0032484",
           "title": "Foreign Correspondent",
+          "releaseYear": "1940",
+          "sortTitle": "foreign-correspondent-1940",
+          "releaseSequence": "1940-08-16tt0032484",
+          "genres": [
+            "Action",
+            "Drama",
+            "Romance",
+            "Thriller",
+            "War"
+          ],
+          "slug": "foreign-correspondent-1940",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2008-06-07",
+          "reviewSequence": "2008-06-07-2",
+          "viewingDate": "2012-06-10",
+          "viewingSequence": 4,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1940"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2012-06-12",
-          "slug": "under-capricorn-1949",
+          "imdbId": "tt0042004",
           "title": "Under Capricorn",
+          "releaseYear": "1949",
+          "sortTitle": "under-capricorn-1949",
+          "releaseSequence": "1949-09-08tt0042004",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Romance"
+          ],
+          "slug": "under-capricorn-1949",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2012-06-12",
+          "reviewSequence": "2012-06-12-2",
+          "viewingDate": "2012-06-12",
+          "viewingSequence": 5,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1949"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2012-07-08",
-          "slug": "vertigo-1958",
+          "imdbId": "tt0052357",
           "title": "Vertigo",
+          "releaseYear": "1958",
+          "sortTitle": "vertigo-1958",
+          "releaseSequence": "1958-05-09tt0052357",
+          "genres": [
+            "Mystery",
+            "Romance",
+            "Thriller"
+          ],
+          "slug": "vertigo-1958",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2008-03-23",
+          "reviewSequence": "2008-03-23-1",
+          "viewingDate": "2012-07-08",
+          "viewingSequence": 6,
           "medium": "70mm",
-          "venue": "AFI Silver",
-          "year": "1958"
+          "venue": "AFI Silver"
         }
       ]
     },
@@ -442,58 +874,135 @@
       "slug": "howard-hawks",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-02-10",
-          "slug": "the-big-sky-1952",
+          "imdbId": "tt0044419",
           "title": "The Big Sky",
+          "releaseYear": "1952",
+          "sortTitle": "big-sky-1952",
+          "releaseSequence": "1952-07-29tt0044419",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-big-sky-1952",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2008-10-20",
+          "reviewSequence": "2008-10-20-2",
+          "viewingDate": "2012-02-10",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1952"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-02-15",
-          "slug": "air-force-1943",
+          "imdbId": "tt0035616",
           "title": "Air Force",
+          "releaseYear": "1943",
+          "sortTitle": "air-force-1943",
+          "releaseSequence": "1943-02-03tt0035616",
+          "genres": [
+            "Action",
+            "Drama",
+            "History",
+            "War"
+          ],
+          "slug": "air-force-1943",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2007-09-30",
+          "reviewSequence": "2007-09-30-2",
+          "viewingDate": "2012-02-15",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1943"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-02-25",
-          "slug": "only-angels-have-wings-1939",
+          "imdbId": "tt0031762",
           "title": "Only Angels Have Wings",
+          "releaseYear": "1939",
+          "sortTitle": "only-angels-have-wings-1939",
+          "releaseSequence": "1939-05-12tt0031762",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Romance"
+          ],
+          "slug": "only-angels-have-wings-1939",
+          "grade": "A-",
+          "gradeValue": 11,
+          "reviewDate": "2025-06-15",
+          "reviewSequence": "2025-06-15-1",
+          "viewingDate": "2012-02-25",
+          "viewingSequence": 3,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1939"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-03-26",
-          "slug": "i-was-a-male-war-bride-1949",
+          "imdbId": "tt0041498",
           "title": "I Was a Male War Bride",
+          "releaseYear": "1949",
+          "sortTitle": "i-was-a-male-war-bride-1949",
+          "releaseSequence": "1949-08-19tt0041498",
+          "genres": [
+            "Comedy",
+            "Romance",
+            "War"
+          ],
+          "slug": "i-was-a-male-war-bride-1949",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2008-08-16",
+          "reviewSequence": "2008-08-16-4",
+          "viewingDate": "2012-03-26",
+          "viewingSequence": 4,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1949"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2012-04-27",
-          "slug": "the-big-sleep-1946",
+          "imdbId": "tt0038355",
           "title": "The Big Sleep",
+          "releaseYear": "1946",
+          "sortTitle": "big-sleep-1946",
+          "releaseSequence": "1946-08-22tt0038355",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-big-sleep-1946",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2012-04-28",
+          "reviewSequence": "2012-04-28-1",
+          "viewingDate": "2012-04-27",
+          "viewingSequence": 5,
           "medium": null,
-          "venue": "Landmark E Street Cinema",
-          "year": "1946"
+          "venue": "Landmark E Street Cinema"
         },
         {
-          "sequence": 6,
-          "date": "2012-04-28",
-          "slug": "the-big-sleep-1946",
+          "imdbId": "tt0038355",
           "title": "The Big Sleep",
+          "releaseYear": "1946",
+          "sortTitle": "big-sleep-1946",
+          "releaseSequence": "1946-08-22tt0038355",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-big-sleep-1946",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2012-04-28",
+          "reviewSequence": "2012-04-28-1",
+          "viewingDate": "2012-04-28",
+          "viewingSequence": 6,
           "medium": null,
-          "venue": "Landmark E Street Cinema",
-          "year": "1946"
+          "venue": "Landmark E Street Cinema"
         }
       ]
     },
@@ -503,49 +1012,101 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-01-15",
-          "slug": "the-gorgon-1964",
+          "imdbId": "tt0058155",
           "title": "The Gorgon",
+          "releaseYear": "1964",
+          "sortTitle": "gorgon-1964",
+          "releaseSequence": "1964-08-21tt0058155",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-gorgon-1964",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2008-09-07",
+          "reviewSequence": "2008-09-07-1",
+          "viewingDate": "2012-01-15",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1964"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-08-10",
-          "slug": null,
+          "imdbId": "tt0071519",
           "title": "Frankenstein and the Monster from Hell",
+          "releaseYear": "1974",
+          "sortTitle": "frankenstein-and-the-monster-from-hell-1974",
+          "releaseSequence": "1974-04-01tt0071519",
+          "genres": [
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2012-08-10",
+          "viewingSequence": 2,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1974"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-10-28",
-          "slug": "the-hound-of-the-baskervilles-1959",
+          "imdbId": "tt0052905",
           "title": "The Hound of the Baskervilles",
+          "releaseYear": "1959",
+          "sortTitle": "hound-of-the-baskervilles-1959",
+          "releaseSequence": "1959-03-28tt0052905",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "the-hound-of-the-baskervilles-1959",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2025-05-24",
+          "reviewSequence": "2025-05-24-2",
+          "viewingDate": "2012-10-28",
+          "viewingSequence": 3,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1959"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-11-02",
-          "slug": "the-devil-rides-out-1968",
+          "imdbId": "tt0062885",
           "title": "The Devil Rides Out",
+          "releaseYear": "1968",
+          "sortTitle": "devil-rides-out-1968",
+          "releaseSequence": "1968-05-19tt0062885",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-devil-rides-out-1968",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2015-01-17",
+          "reviewSequence": "2015-01-17-1",
+          "viewingDate": "2012-11-02",
+          "viewingSequence": 4,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1968"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2012-11-03",
-          "slug": "dracula-prince-of-darkness-1966",
+          "imdbId": "tt0059127",
           "title": "Dracula: Prince of Darkness",
+          "releaseYear": "1966",
+          "sortTitle": "dracula-prince-of-darkness-1966",
+          "releaseSequence": "1966-01-02tt0059127",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "dracula-prince-of-darkness-1966",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2003-10-16",
+          "reviewSequence": "2003-10-16-2",
+          "viewingDate": "2012-11-03",
+          "viewingSequence": 5,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1966"
+          "venue": null
         }
       ]
     },
@@ -555,49 +1116,107 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-01-21",
-          "slug": "the-key-1934",
+          "imdbId": "tt0025346",
           "title": "The Key",
+          "releaseYear": "1934",
+          "sortTitle": "key-1934",
+          "releaseSequence": "1934-05-31tt0025346",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "the-key-1934",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2023-06-03",
+          "reviewSequence": "2023-06-03-1",
+          "viewingDate": "2012-01-21",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-01-25",
-          "slug": "kid-galahad-1937",
+          "imdbId": "tt0029080",
           "title": "Kid Galahad",
+          "releaseYear": "1937",
+          "sortTitle": "kid-galahad-1937",
+          "releaseSequence": "1937-05-26tt0029080",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Romance",
+            "Sport"
+          ],
+          "slug": "kid-galahad-1937",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2008-12-12",
+          "reviewSequence": "2008-12-12-2",
+          "viewingDate": "2012-01-25",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-01-28",
-          "slug": "passage-to-marseille-1944",
+          "imdbId": "tt0037166",
           "title": "Passage to Marseille",
+          "releaseYear": "1944",
+          "sortTitle": "passage-to-marseille-1944",
+          "releaseSequence": "1944-02-16tt0037166",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Romance",
+            "War"
+          ],
+          "slug": "passage-to-marseille-1944",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2012-01-28",
+          "reviewSequence": "2012-01-28-1",
+          "viewingDate": "2012-01-28",
+          "viewingSequence": 3,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1944"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-02-15",
-          "slug": "life-with-father-1947",
+          "imdbId": "tt0039566",
           "title": "Life with Father",
+          "releaseYear": "1947",
+          "sortTitle": "life-with-father-1947",
+          "releaseSequence": "1947-08-14tt0039566",
+          "genres": [
+            "Comedy",
+            "Family"
+          ],
+          "slug": "life-with-father-1947",
+          "grade": "F",
+          "gradeValue": 1,
+          "reviewDate": "2023-07-15",
+          "reviewSequence": "2023-07-15-1",
+          "viewingDate": "2012-02-15",
+          "viewingSequence": 4,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1947"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2012-03-18",
-          "slug": "virginia-city-1940",
+          "imdbId": "tt0033226",
           "title": "Virginia City",
+          "releaseYear": "1940",
+          "sortTitle": "virginia-city-1940",
+          "releaseSequence": "1940-03-16tt0033226",
+          "genres": [
+            "Western"
+          ],
+          "slug": "virginia-city-1940",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2022-08-20",
+          "reviewSequence": "2022-08-20-1",
+          "viewingDate": "2012-03-18",
+          "viewingSequence": 5,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1940"
+          "venue": null
         }
       ]
     },
@@ -607,49 +1226,110 @@
       "slug": "john-huston",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-02-04",
-          "slug": "key-largo-1948",
+          "imdbId": "tt0040506",
           "title": "Key Largo",
+          "releaseYear": "1948",
+          "sortTitle": "key-largo-1948",
+          "releaseSequence": "1948-07-16tt0040506",
+          "genres": [
+            "Action",
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Thriller"
+          ],
+          "slug": "key-largo-1948",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2007-07-15",
+          "reviewSequence": "2007-07-15-3",
+          "viewingDate": "2012-02-04",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1948"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-02-05",
-          "slug": "under-the-volcano-1984",
+          "imdbId": "tt0088322",
           "title": "Under the Volcano",
+          "releaseYear": "1984",
+          "sortTitle": "under-the-volcano-1984",
+          "releaseSequence": "1984-05-18tt0088322",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "under-the-volcano-1984",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2008-09-15",
+          "reviewSequence": "2008-09-15-2",
+          "viewingDate": "2012-02-05",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1984"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-02-05",
-          "slug": "the-night-of-the-iguana-1964",
+          "imdbId": "tt0058404",
           "title": "The Night of the Iguana",
+          "releaseYear": "1964",
+          "sortTitle": "night-of-the-iguana-1964",
+          "releaseSequence": "1964-06-09tt0058404",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "the-night-of-the-iguana-1964",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2007-08-06",
+          "reviewSequence": "2007-08-06-3",
+          "viewingDate": "2012-02-05",
+          "viewingSequence": 3,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1964"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-03-10",
-          "slug": "the-maltese-falcon-1941",
+          "imdbId": "tt0033870",
           "title": "The Maltese Falcon",
+          "releaseYear": "1941",
+          "sortTitle": "maltese-falcon-1941",
+          "releaseSequence": "1941-10-03tt0033870",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Mystery",
+            "Romance"
+          ],
+          "slug": "the-maltese-falcon-1941",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2007-07-06",
+          "reviewSequence": "2007-07-06-1",
+          "viewingDate": "2012-03-10",
+          "viewingSequence": 4,
           "medium": null,
-          "venue": "Landmark E Street Cinema",
-          "year": "1941"
+          "venue": "Landmark E Street Cinema"
         },
         {
-          "sequence": 5,
-          "date": "2012-04-01",
-          "slug": "the-asphalt-jungle-1950",
+          "imdbId": "tt0042208",
           "title": "The Asphalt Jungle",
+          "releaseYear": "1950",
+          "sortTitle": "asphalt-jungle-1950",
+          "releaseSequence": "1950-05-12tt0042208",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Thriller"
+          ],
+          "slug": "the-asphalt-jungle-1950",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2007-07-15",
+          "reviewSequence": "2007-07-15-4",
+          "viewingDate": "2012-04-01",
+          "viewingSequence": 5,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1950"
+          "venue": null
         }
       ]
     },
@@ -659,40 +1339,80 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-01-28",
-          "slug": "fright-night-1985",
+          "imdbId": "tt0089175",
           "title": "Fright Night",
+          "releaseYear": "1985",
+          "sortTitle": "fright-night-1985",
+          "releaseSequence": "1985-08-02tt0089175",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "fright-night-1985",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-31",
+          "reviewSequence": "2020-10-31-4",
+          "viewingDate": "2012-01-28",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1985"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-07-07",
-          "slug": "fright-night-1985",
+          "imdbId": "tt0089175",
           "title": "Fright Night",
+          "releaseYear": "1985",
+          "sortTitle": "fright-night-1985",
+          "releaseSequence": "1985-08-02tt0089175",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "fright-night-1985",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-31",
+          "reviewSequence": "2020-10-31-4",
+          "viewingDate": "2012-07-07",
+          "viewingSequence": 2,
           "medium": "35mm",
-          "venue": "AFI Silver",
-          "year": "1985"
+          "venue": "AFI Silver"
         },
         {
-          "sequence": 3,
-          "date": "2012-07-08",
-          "slug": "fright-night-1985",
+          "imdbId": "tt0089175",
           "title": "Fright Night",
+          "releaseYear": "1985",
+          "sortTitle": "fright-night-1985",
+          "releaseSequence": "1985-08-02tt0089175",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "fright-night-1985",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-31",
+          "reviewSequence": "2020-10-31-4",
+          "viewingDate": "2012-07-08",
+          "viewingSequence": 3,
           "medium": "35mm",
-          "venue": "AFI Silver",
-          "year": "1985"
+          "venue": "AFI Silver"
         },
         {
-          "sequence": 4,
-          "date": "2012-07-30",
-          "slug": "fright-night-1985",
+          "imdbId": "tt0089175",
           "title": "Fright Night",
+          "releaseYear": "1985",
+          "sortTitle": "fright-night-1985",
+          "releaseSequence": "1985-08-02tt0089175",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "fright-night-1985",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-31",
+          "reviewSequence": "2020-10-31-4",
+          "viewingDate": "2012-07-30",
+          "viewingSequence": 4,
           "medium": "Blu-ray",
-          "venue": "The Black Cat",
-          "year": "1985"
+          "venue": "The Black Cat"
         }
       ]
     },
@@ -702,31 +1422,66 @@
       "slug": "roger-corman",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-01-12",
-          "slug": "the-pit-and-the-pendulum-1961",
+          "imdbId": "tt0055304",
           "title": "The Pit and the Pendulum",
+          "releaseYear": "1961",
+          "sortTitle": "pit-and-the-pendulum-1961",
+          "releaseSequence": "1961-08-23tt0055304",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "the-pit-and-the-pendulum-1961",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2007-07-23",
+          "reviewSequence": "2007-07-23-2",
+          "viewingDate": "2012-01-12",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1961"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-01-12",
-          "slug": "the-masque-of-the-red-death-1964",
+          "imdbId": "tt0058333",
           "title": "The Masque of the Red Death",
+          "releaseYear": "1964",
+          "sortTitle": "masque-of-the-red-death-1964",
+          "releaseSequence": "1964-06-24tt0058333",
+          "genres": [
+            "Drama",
+            "Horror"
+          ],
+          "slug": "the-masque-of-the-red-death-1964",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2007-12-17",
+          "reviewSequence": "2007-12-17-3",
+          "viewingDate": "2012-01-12",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1964"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-03-24",
-          "slug": "frankenstein-unbound-1990",
+          "imdbId": "tt0099612",
           "title": "Frankenstein Unbound",
+          "releaseYear": "1990",
+          "sortTitle": "frankenstein-unbound-1990",
+          "releaseSequence": "1990-11-01tt0099612",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "frankenstein-unbound-1990",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2012-03-24",
+          "reviewSequence": "2012-03-24-5",
+          "viewingDate": "2012-03-24",
+          "viewingSequence": 3,
           "medium": "Encore HD",
-          "venue": null,
-          "year": "1990"
+          "venue": null
         }
       ]
     }
@@ -738,202 +1493,463 @@
       "slug": "john-wayne",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-01-29",
-          "slug": "tycoon-1947",
+          "imdbId": "tt0039927",
           "title": "Tycoon",
+          "releaseYear": "1947",
+          "sortTitle": "tycoon-1947",
+          "releaseSequence": "1947-12-27tt0039927",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Romance"
+          ],
+          "slug": "tycoon-1947",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2012-01-29",
+          "reviewSequence": "2012-01-29-3",
+          "viewingDate": "2012-01-29",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1947"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-02-04",
-          "slug": "reap-the-wild-wind-1942",
+          "imdbId": "tt0035244",
           "title": "Reap the Wild Wind",
+          "releaseYear": "1942",
+          "sortTitle": "reap-the-wild-wind-1942",
+          "releaseSequence": "1942-03-18tt0035244",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Romance"
+          ],
+          "slug": "reap-the-wild-wind-1942",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2012-02-04",
+          "reviewSequence": "2012-02-04-2",
+          "viewingDate": "2012-02-04",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1942"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-02-10",
-          "slug": "the-long-voyage-home-1940",
+          "imdbId": "tt0032728",
           "title": "The Long Voyage Home",
+          "releaseYear": "1940",
+          "sortTitle": "long-voyage-home-1940",
+          "releaseSequence": "1940-10-08tt0032728",
+          "genres": [
+            "Drama",
+            "War"
+          ],
+          "slug": "the-long-voyage-home-1940",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2008-05-18",
+          "reviewSequence": "2008-05-18-1",
+          "viewingDate": "2012-02-10",
+          "viewingSequence": 3,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1940"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-02-15",
-          "slug": "they-were-expendable-1945",
+          "imdbId": "tt0038160",
           "title": "They Were Expendable",
+          "releaseYear": "1945",
+          "sortTitle": "they-were-expendable-1945",
+          "releaseSequence": "1945-12-07tt0038160",
+          "genres": [
+            "Drama",
+            "War"
+          ],
+          "slug": "they-were-expendable-1945",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2008-06-13",
+          "reviewSequence": "2008-06-13-3",
+          "viewingDate": "2012-02-15",
+          "viewingSequence": 4,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1945"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2012-02-25",
-          "slug": "riders-of-destiny-1933",
+          "imdbId": "tt0024500",
           "title": "Riders of Destiny",
+          "releaseYear": "1933",
+          "sortTitle": "riders-of-destiny-1933",
+          "releaseSequence": "1933-10-10tt0024500",
+          "genres": [
+            "Music",
+            "Romance",
+            "Western"
+          ],
+          "slug": "riders-of-destiny-1933",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2016-09-17",
+          "reviewSequence": "2016-09-17-2",
+          "viewingDate": "2012-02-25",
+          "viewingSequence": 5,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2012-02-25",
-          "slug": "his-private-secretary-1933",
+          "imdbId": "tt0024124",
           "title": "His Private Secretary",
+          "releaseYear": "1933",
+          "sortTitle": "his-private-secretary-1933",
+          "releaseSequence": "1933-06-10tt0024124",
+          "genres": [
+            "Comedy",
+            "Romance"
+          ],
+          "slug": "his-private-secretary-1933",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2012-02-25",
+          "reviewSequence": "2012-02-25-4",
+          "viewingDate": "2012-02-25",
+          "viewingSequence": 6,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2012-02-26",
-          "slug": "the-lawless-frontier-1934",
+          "imdbId": "tt0025373",
           "title": "The Lawless Frontier",
+          "releaseYear": "1934",
+          "sortTitle": "lawless-frontier-1934",
+          "releaseSequence": "1934-11-22tt0025373",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-lawless-frontier-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2022-11-07",
+          "reviewSequence": "2022-11-07-1",
+          "viewingDate": "2012-02-26",
+          "viewingSequence": 7,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2012-02-26",
-          "slug": "sagebrush-trail-1933",
+          "imdbId": "tt0024516",
           "title": "Sagebrush Trail",
+          "releaseYear": "1933",
+          "sortTitle": "sagebrush-trail-1933",
+          "releaseSequence": "1933-12-15tt0024516",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "sagebrush-trail-1933",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2016-11-09",
+          "reviewSequence": "2016-11-09-1",
+          "viewingDate": "2012-02-26",
+          "viewingSequence": 8,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         },
         {
-          "sequence": 9,
-          "date": "2012-02-27",
-          "slug": "the-man-from-utah-1934",
+          "imdbId": "tt0025455",
           "title": "The Man from Utah",
+          "releaseYear": "1934",
+          "sortTitle": "man-from-utah-1934",
+          "releaseSequence": "1934-05-15tt0025455",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-man-from-utah-1934",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2008-02-10",
+          "reviewSequence": "2008-02-10-1",
+          "viewingDate": "2012-02-27",
+          "viewingSequence": 9,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 10,
-          "date": "2012-02-27",
-          "slug": "west-of-the-divide-1934",
+          "imdbId": "tt0025969",
           "title": "West of the Divide",
+          "releaseYear": "1934",
+          "sortTitle": "west-of-the-divide-1934",
+          "releaseSequence": "1934-02-15tt0025969",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Romance",
+            "Western"
+          ],
+          "slug": "west-of-the-divide-1934",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2007-12-01",
+          "reviewSequence": "2007-12-01-2",
+          "viewingDate": "2012-02-27",
+          "viewingSequence": 10,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 11,
-          "date": "2012-02-27",
-          "slug": "paradise-canyon-1935",
+          "imdbId": "tt0026846",
           "title": "Paradise Canyon",
+          "releaseYear": "1935",
+          "sortTitle": "paradise-canyon-1935",
+          "releaseSequence": "1935-07-20tt0026846",
+          "genres": [
+            "Action",
+            "Drama",
+            "Western"
+          ],
+          "slug": "paradise-canyon-1935",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2007-09-10",
+          "reviewSequence": "2007-09-10-3",
+          "viewingDate": "2012-02-27",
+          "viewingSequence": 11,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1935"
+          "venue": null
         },
         {
-          "sequence": 12,
-          "date": "2012-02-28",
-          "slug": "neath-the-arizona-skies-1934",
+          "imdbId": "tt0024805",
           "title": "'Neath the Arizona Skies",
+          "releaseYear": "1934",
+          "sortTitle": "neath-the-arizona-skies-1934",
+          "releaseSequence": "1934-12-05tt0024805",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "neath-the-arizona-skies-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2009-01-18",
+          "reviewSequence": "2009-01-18-1",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 12,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 13,
-          "date": "2012-02-28",
-          "slug": "the-star-packer-1934",
+          "imdbId": "tt0025830",
           "title": "The Star Packer",
+          "releaseYear": "1934",
+          "sortTitle": "star-packer-1934",
+          "releaseSequence": "1934-07-30tt0025830",
+          "genres": [
+            "Action",
+            "Drama",
+            "Mystery",
+            "Romance",
+            "Western"
+          ],
+          "slug": "the-star-packer-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-02-04",
+          "reviewSequence": "2023-02-04-1",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 13,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 14,
-          "date": "2012-02-28",
-          "slug": "the-trail-beyond-1934",
+          "imdbId": "tt0025903",
           "title": "The Trail Beyond",
+          "releaseYear": "1934",
+          "sortTitle": "trail-beyond-1934",
+          "releaseSequence": "1934-10-22tt0025903",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-trail-beyond-1934",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2008-03-30",
+          "reviewSequence": "2008-03-30-3",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 14,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 15,
-          "date": "2012-02-28",
-          "slug": "the-lucky-texan-1934",
+          "imdbId": "tt0025440",
           "title": "The Lucky Texan",
+          "releaseYear": "1934",
+          "sortTitle": "lucky-texan-1934",
+          "releaseSequence": "1934-01-22tt0025440",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Romance",
+            "Western"
+          ],
+          "slug": "the-lucky-texan-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2012-02-28",
+          "reviewSequence": "2012-02-28-4",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 15,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 16,
-          "date": "2012-02-28",
-          "slug": "texas-terror-1935",
+          "imdbId": "tt0027087",
           "title": "Texas Terror",
+          "releaseYear": "1935",
+          "sortTitle": "texas-terror-1935",
+          "releaseSequence": "1935-02-01tt0027087",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "texas-terror-1935",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2008-05-26",
+          "reviewSequence": "2008-05-26-5",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 16,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1935"
+          "venue": null
         },
         {
-          "sequence": 17,
-          "date": "2012-02-28",
-          "slug": "the-desert-trail-1935",
+          "imdbId": "tt0026273",
           "title": "The Desert Trail",
+          "releaseYear": "1935",
+          "sortTitle": "desert-trail-1935",
+          "releaseSequence": "1935-04-22tt0026273",
+          "genres": [
+            "Western"
+          ],
+          "slug": "the-desert-trail-1935",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2007-12-08",
+          "reviewSequence": "2007-12-08-6",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 17,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1935"
+          "venue": null
         },
         {
-          "sequence": 18,
-          "date": "2012-02-28",
-          "slug": "randy-rides-alone-1934",
+          "imdbId": "tt0025699",
           "title": "Randy Rides Alone",
+          "releaseYear": "1934",
+          "sortTitle": "randy-rides-alone-1934",
+          "releaseSequence": "1934-06-18tt0025699",
+          "genres": [
+            "Action",
+            "Drama",
+            "Mystery",
+            "Romance",
+            "Western"
+          ],
+          "slug": "randy-rides-alone-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2012-02-28",
+          "reviewSequence": "2012-02-28-7",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 18,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 19,
-          "date": "2012-02-28",
-          "slug": "blue-steel-1934",
+          "imdbId": "tt0024902",
           "title": "Blue Steel",
+          "releaseYear": "1934",
+          "sortTitle": "blue-steel-1934",
+          "releaseSequence": "1934-05-10tt0024902",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "blue-steel-1934",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2007-12-04",
+          "reviewSequence": "2007-12-04-8",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 19,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 20,
-          "date": "2012-02-28",
-          "slug": "the-dawn-rider-1935",
+          "imdbId": "tt0026267",
           "title": "The Dawn Rider",
+          "releaseYear": "1935",
+          "sortTitle": "dawn-rider-1935",
+          "releaseSequence": "1935-06-20tt0026267",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-dawn-rider-1935",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2008-02-04",
+          "reviewSequence": "2008-02-04-9",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 20,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1935"
+          "venue": null
         },
         {
-          "sequence": 21,
-          "date": "2012-03-17",
-          "slug": "flying-tigers-1942",
+          "imdbId": "tt0034742",
           "title": "Flying Tigers",
+          "releaseYear": "1942",
+          "sortTitle": "flying-tigers-1942",
+          "releaseSequence": "1942-10-08tt0034742",
+          "genres": [
+            "Action",
+            "Drama",
+            "Romance",
+            "War"
+          ],
+          "slug": "flying-tigers-1942",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2007-12-05",
+          "reviewSequence": "2007-12-05-1",
+          "viewingDate": "2012-03-17",
+          "viewingSequence": 21,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1942"
+          "venue": null
         },
         {
-          "sequence": 22,
-          "date": "2012-04-06",
-          "slug": "stagecoach-1939",
+          "imdbId": "tt0031971",
           "title": "Stagecoach",
+          "releaseYear": "1939",
+          "sortTitle": "stagecoach-1939",
+          "releaseSequence": "1939-??-??tt0031971",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Western"
+          ],
+          "slug": "stagecoach-1939",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2008-01-22",
+          "reviewSequence": "2008-01-22-1",
+          "viewingDate": "2012-04-06",
+          "viewingSequence": 22,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1939"
+          "venue": null
         }
       ]
     },
@@ -943,184 +1959,439 @@
       "slug": "humphrey-bogart",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-01-25",
-          "slug": "kid-galahad-1937",
+          "imdbId": "tt0029080",
           "title": "Kid Galahad",
+          "releaseYear": "1937",
+          "sortTitle": "kid-galahad-1937",
+          "releaseSequence": "1937-05-26tt0029080",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Romance",
+            "Sport"
+          ],
+          "slug": "kid-galahad-1937",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2008-12-12",
+          "reviewSequence": "2008-12-12-2",
+          "viewingDate": "2012-01-25",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-01-25",
-          "slug": "crime-school-1938",
+          "imdbId": "tt0030026",
           "title": "Crime School",
+          "releaseYear": "1938",
+          "sortTitle": "crime-school-1938",
+          "releaseSequence": "1938-05-10tt0030026",
+          "genres": [
+            "Crime",
+            "Drama"
+          ],
+          "slug": "crime-school-1938",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2008-04-06",
+          "reviewSequence": "2008-04-06-1",
+          "viewingDate": "2012-01-25",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1938"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-01-28",
-          "slug": "passage-to-marseille-1944",
+          "imdbId": "tt0037166",
           "title": "Passage to Marseille",
+          "releaseYear": "1944",
+          "sortTitle": "passage-to-marseille-1944",
+          "releaseSequence": "1944-02-16tt0037166",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Romance",
+            "War"
+          ],
+          "slug": "passage-to-marseille-1944",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2012-01-28",
+          "reviewSequence": "2012-01-28-1",
+          "viewingDate": "2012-01-28",
+          "viewingSequence": 3,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1944"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-01-30",
-          "slug": "conflict-1945",
+          "imdbId": "tt0037611",
           "title": "Conflict",
+          "releaseYear": "1945",
+          "sortTitle": "conflict-1945",
+          "releaseSequence": "1945-05-13tt0037611",
+          "genres": [
+            "Drama",
+            "Film-Noir",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "conflict-1945",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2022-10-05",
+          "reviewSequence": "2022-10-05-1",
+          "viewingDate": "2012-01-30",
+          "viewingSequence": 4,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1945"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2012-01-30",
-          "slug": "all-through-the-night-1942",
+          "imdbId": "tt0034449",
           "title": "All Through the Night",
+          "releaseYear": "1942",
+          "sortTitle": "all-through-the-night-1942",
+          "releaseSequence": "1942-01-10tt0034449",
+          "genres": [
+            "Action",
+            "Comedy",
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Thriller",
+            "War"
+          ],
+          "slug": "all-through-the-night-1942",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2007-11-21",
+          "reviewSequence": "2007-11-21-3",
+          "viewingDate": "2012-01-30",
+          "viewingSequence": 5,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1942"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2012-02-04",
-          "slug": "key-largo-1948",
+          "imdbId": "tt0040506",
           "title": "Key Largo",
+          "releaseYear": "1948",
+          "sortTitle": "key-largo-1948",
+          "releaseSequence": "1948-07-16tt0040506",
+          "genres": [
+            "Action",
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Thriller"
+          ],
+          "slug": "key-largo-1948",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2007-07-15",
+          "reviewSequence": "2007-07-15-3",
+          "viewingDate": "2012-02-04",
+          "viewingSequence": 6,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1948"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2012-02-17",
-          "slug": "the-caine-mutiny-1954",
+          "imdbId": "tt0046816",
           "title": "The Caine Mutiny",
+          "releaseYear": "1954",
+          "sortTitle": "caine-mutiny-1954",
+          "releaseSequence": "1954-06-24tt0046816",
+          "genres": [
+            "Drama",
+            "War"
+          ],
+          "slug": "the-caine-mutiny-1954",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2008-04-20",
+          "reviewSequence": "2008-04-20-1",
+          "viewingDate": "2012-02-17",
+          "viewingSequence": 7,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1954"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2012-03-10",
-          "slug": "the-maltese-falcon-1941",
+          "imdbId": "tt0033870",
           "title": "The Maltese Falcon",
+          "releaseYear": "1941",
+          "sortTitle": "maltese-falcon-1941",
+          "releaseSequence": "1941-10-03tt0033870",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Mystery",
+            "Romance"
+          ],
+          "slug": "the-maltese-falcon-1941",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2007-07-06",
+          "reviewSequence": "2007-07-06-1",
+          "viewingDate": "2012-03-10",
+          "viewingSequence": 8,
           "medium": null,
-          "venue": "Landmark E Street Cinema",
-          "year": "1941"
+          "venue": "Landmark E Street Cinema"
         },
         {
-          "sequence": 9,
-          "date": "2012-03-18",
-          "slug": "virginia-city-1940",
+          "imdbId": "tt0033226",
           "title": "Virginia City",
+          "releaseYear": "1940",
+          "sortTitle": "virginia-city-1940",
+          "releaseSequence": "1940-03-16tt0033226",
+          "genres": [
+            "Western"
+          ],
+          "slug": "virginia-city-1940",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2022-08-20",
+          "reviewSequence": "2022-08-20-1",
+          "viewingDate": "2012-03-18",
+          "viewingSequence": 9,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1940"
+          "venue": null
         },
         {
-          "sequence": 10,
-          "date": "2012-03-18",
-          "slug": "racket-busters-1938",
+          "imdbId": "tt0030650",
           "title": "Racket Busters",
+          "releaseYear": "1938",
+          "sortTitle": "racket-busters-1938",
+          "releaseSequence": "1938-07-16tt0030650",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Crime",
+            "Drama"
+          ],
+          "slug": "racket-busters-1938",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2012-03-18",
+          "reviewSequence": "2012-03-18-1",
+          "viewingDate": "2012-03-18",
+          "viewingSequence": 10,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1938"
+          "venue": null
         },
         {
-          "sequence": 11,
-          "date": "2012-04-09",
-          "slug": "the-amazing-dr-clitterhouse-1938",
+          "imdbId": "tt0029864",
           "title": "The Amazing Dr. Clitterhouse",
+          "releaseYear": "1938",
+          "sortTitle": "amazing-dr-clitterhouse-1938",
+          "releaseSequence": "1938-07-20tt0029864",
+          "genres": [
+            "Crime",
+            "Drama"
+          ],
+          "slug": "the-amazing-dr-clitterhouse-1938",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2008-04-22",
+          "reviewSequence": "2008-04-22-1",
+          "viewingDate": "2012-04-09",
+          "viewingSequence": 11,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1938"
+          "venue": null
         },
         {
-          "sequence": 12,
-          "date": "2012-04-09",
-          "slug": "they-drive-by-night-1940",
+          "imdbId": "tt0033149",
           "title": "They Drive by Night",
+          "releaseYear": "1940",
+          "sortTitle": "they-drive-by-night-1940",
+          "releaseSequence": "1940-07-26tt0033149",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Thriller"
+          ],
+          "slug": "they-drive-by-night-1940",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2022-10-04",
+          "reviewSequence": "2022-10-04-2",
+          "viewingDate": "2012-04-09",
+          "viewingSequence": 12,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1940"
+          "venue": null
         },
         {
-          "sequence": 13,
-          "date": "2012-04-23",
-          "slug": "invisible-stripes-1939",
+          "imdbId": "tt0032636",
           "title": "Invisible Stripes",
+          "releaseYear": "1939",
+          "sortTitle": "invisible-stripes-1939",
+          "releaseSequence": "1939-12-30tt0032636",
+          "genres": [
+            "Action",
+            "Crime",
+            "Drama",
+            "Film-Noir"
+          ],
+          "slug": "invisible-stripes-1939",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2022-09-07",
+          "reviewSequence": "2022-09-07-1",
+          "viewingDate": "2012-04-23",
+          "viewingSequence": 13,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1939"
+          "venue": null
         },
         {
-          "sequence": 14,
-          "date": "2012-04-27",
-          "slug": "the-big-sleep-1946",
+          "imdbId": "tt0038355",
           "title": "The Big Sleep",
-          "medium": null,
-          "venue": "Landmark E Street Cinema",
-          "year": "1946"
-        },
-        {
-          "sequence": 15,
-          "date": "2012-04-28",
+          "releaseYear": "1946",
+          "sortTitle": "big-sleep-1946",
+          "releaseSequence": "1946-08-22tt0038355",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Mystery",
+            "Thriller"
+          ],
           "slug": "the-big-sleep-1946",
-          "title": "The Big Sleep",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2012-04-28",
+          "reviewSequence": "2012-04-28-1",
+          "viewingDate": "2012-04-27",
+          "viewingSequence": 14,
           "medium": null,
-          "venue": "Landmark E Street Cinema",
-          "year": "1946"
+          "venue": "Landmark E Street Cinema"
         },
         {
-          "sequence": 16,
-          "date": "2012-06-13",
-          "slug": "the-wagons-roll-at-night-1941",
+          "imdbId": "tt0038355",
+          "title": "The Big Sleep",
+          "releaseYear": "1946",
+          "sortTitle": "big-sleep-1946",
+          "releaseSequence": "1946-08-22tt0038355",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-big-sleep-1946",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2012-04-28",
+          "reviewSequence": "2012-04-28-1",
+          "viewingDate": "2012-04-28",
+          "viewingSequence": 15,
+          "medium": null,
+          "venue": "Landmark E Street Cinema"
+        },
+        {
+          "imdbId": "tt0034370",
           "title": "The Wagons Roll at Night",
+          "releaseYear": "1941",
+          "sortTitle": "wagons-roll-at-night-1941",
+          "releaseSequence": "1941-04-25tt0034370",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "the-wagons-roll-at-night-1941",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2012-06-13",
+          "reviewSequence": "2012-06-13-1",
+          "viewingDate": "2012-06-13",
+          "viewingSequence": 16,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1941"
+          "venue": null
         },
         {
-          "sequence": 17,
-          "date": "2012-06-14",
-          "slug": "black-legion-1937",
+          "imdbId": "tt0027367",
           "title": "Black Legion",
+          "releaseYear": "1937",
+          "sortTitle": "black-legion-1937",
+          "releaseSequence": "1937-01-16tt0027367",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir"
+          ],
+          "slug": "black-legion-1937",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2023-02-13",
+          "reviewSequence": "2023-02-13-1",
+          "viewingDate": "2012-06-14",
+          "viewingSequence": 17,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         },
         {
-          "sequence": 18,
-          "date": "2012-06-14",
-          "slug": "men-are-such-fools-1938",
+          "imdbId": "tt0030433",
           "title": "Men Are Such Fools",
+          "releaseYear": "1938",
+          "sortTitle": "men-are-such-fools-1938",
+          "releaseSequence": "1938-06-15tt0030433",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "men-are-such-fools-1938",
+          "grade": "F",
+          "gradeValue": 1,
+          "reviewDate": "2022-09-24",
+          "reviewSequence": "2022-09-24-2",
+          "viewingDate": "2012-06-14",
+          "viewingSequence": 18,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1938"
+          "venue": null
         },
         {
-          "sequence": 19,
-          "date": "2012-11-01",
-          "slug": "dead-reckoning-1946",
+          "imdbId": "tt0039305",
           "title": "Dead Reckoning",
+          "releaseYear": "1946",
+          "sortTitle": "dead-reckoning-1946",
+          "releaseSequence": "1946-12-31tt0039305",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "dead-reckoning-1946",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2022-09-14",
+          "reviewSequence": "2022-09-14-1",
+          "viewingDate": "2012-11-01",
+          "viewingSequence": 19,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1946"
+          "venue": null
         },
         {
-          "sequence": 20,
-          "date": "2012-12-30",
-          "slug": "the-barefoot-contessa-1954",
+          "imdbId": "tt0046754",
           "title": "The Barefoot Contessa",
+          "releaseYear": "1954",
+          "sortTitle": "barefoot-contessa-1954",
+          "releaseSequence": "1954-09-29tt0046754",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Mystery",
+            "Romance"
+          ],
+          "slug": "the-barefoot-contessa-1954",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2007-07-17",
+          "reviewSequence": "2007-07-17-2",
+          "viewingDate": "2012-12-30",
+          "viewingSequence": 20,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1954"
+          "venue": null
         }
       ]
     },
@@ -1130,121 +2401,279 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-02-25",
-          "slug": "riders-of-destiny-1933",
+          "imdbId": "tt0024500",
           "title": "Riders of Destiny",
+          "releaseYear": "1933",
+          "sortTitle": "riders-of-destiny-1933",
+          "releaseSequence": "1933-10-10tt0024500",
+          "genres": [
+            "Music",
+            "Romance",
+            "Western"
+          ],
+          "slug": "riders-of-destiny-1933",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2016-09-17",
+          "reviewSequence": "2016-09-17-2",
+          "viewingDate": "2012-02-25",
+          "viewingSequence": 1,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-02-26",
-          "slug": "the-lawless-frontier-1934",
+          "imdbId": "tt0025373",
           "title": "The Lawless Frontier",
+          "releaseYear": "1934",
+          "sortTitle": "lawless-frontier-1934",
+          "releaseSequence": "1934-11-22tt0025373",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-lawless-frontier-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2022-11-07",
+          "reviewSequence": "2022-11-07-1",
+          "viewingDate": "2012-02-26",
+          "viewingSequence": 2,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-02-26",
-          "slug": "sagebrush-trail-1933",
+          "imdbId": "tt0024516",
           "title": "Sagebrush Trail",
+          "releaseYear": "1933",
+          "sortTitle": "sagebrush-trail-1933",
+          "releaseSequence": "1933-12-15tt0024516",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "sagebrush-trail-1933",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2016-11-09",
+          "reviewSequence": "2016-11-09-1",
+          "viewingDate": "2012-02-26",
+          "viewingSequence": 3,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-02-27",
-          "slug": "the-man-from-utah-1934",
+          "imdbId": "tt0025455",
           "title": "The Man from Utah",
+          "releaseYear": "1934",
+          "sortTitle": "man-from-utah-1934",
+          "releaseSequence": "1934-05-15tt0025455",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-man-from-utah-1934",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2008-02-10",
+          "reviewSequence": "2008-02-10-1",
+          "viewingDate": "2012-02-27",
+          "viewingSequence": 4,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2012-02-27",
-          "slug": "west-of-the-divide-1934",
+          "imdbId": "tt0025969",
           "title": "West of the Divide",
+          "releaseYear": "1934",
+          "sortTitle": "west-of-the-divide-1934",
+          "releaseSequence": "1934-02-15tt0025969",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Romance",
+            "Western"
+          ],
+          "slug": "west-of-the-divide-1934",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2007-12-01",
+          "reviewSequence": "2007-12-01-2",
+          "viewingDate": "2012-02-27",
+          "viewingSequence": 5,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2012-02-27",
-          "slug": "paradise-canyon-1935",
+          "imdbId": "tt0026846",
           "title": "Paradise Canyon",
+          "releaseYear": "1935",
+          "sortTitle": "paradise-canyon-1935",
+          "releaseSequence": "1935-07-20tt0026846",
+          "genres": [
+            "Action",
+            "Drama",
+            "Western"
+          ],
+          "slug": "paradise-canyon-1935",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2007-09-10",
+          "reviewSequence": "2007-09-10-3",
+          "viewingDate": "2012-02-27",
+          "viewingSequence": 6,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1935"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2012-02-28",
-          "slug": "neath-the-arizona-skies-1934",
+          "imdbId": "tt0024805",
           "title": "'Neath the Arizona Skies",
+          "releaseYear": "1934",
+          "sortTitle": "neath-the-arizona-skies-1934",
+          "releaseSequence": "1934-12-05tt0024805",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "neath-the-arizona-skies-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2009-01-18",
+          "reviewSequence": "2009-01-18-1",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 7,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2012-02-28",
-          "slug": "the-star-packer-1934",
+          "imdbId": "tt0025830",
           "title": "The Star Packer",
+          "releaseYear": "1934",
+          "sortTitle": "star-packer-1934",
+          "releaseSequence": "1934-07-30tt0025830",
+          "genres": [
+            "Action",
+            "Drama",
+            "Mystery",
+            "Romance",
+            "Western"
+          ],
+          "slug": "the-star-packer-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-02-04",
+          "reviewSequence": "2023-02-04-1",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 8,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 9,
-          "date": "2012-02-28",
-          "slug": "the-lucky-texan-1934",
+          "imdbId": "tt0025440",
           "title": "The Lucky Texan",
+          "releaseYear": "1934",
+          "sortTitle": "lucky-texan-1934",
+          "releaseSequence": "1934-01-22tt0025440",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Romance",
+            "Western"
+          ],
+          "slug": "the-lucky-texan-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2012-02-28",
+          "reviewSequence": "2012-02-28-4",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 9,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 10,
-          "date": "2012-02-28",
-          "slug": "randy-rides-alone-1934",
+          "imdbId": "tt0025699",
           "title": "Randy Rides Alone",
+          "releaseYear": "1934",
+          "sortTitle": "randy-rides-alone-1934",
+          "releaseSequence": "1934-06-18tt0025699",
+          "genres": [
+            "Action",
+            "Drama",
+            "Mystery",
+            "Romance",
+            "Western"
+          ],
+          "slug": "randy-rides-alone-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2012-02-28",
+          "reviewSequence": "2012-02-28-7",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 10,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 11,
-          "date": "2012-02-28",
-          "slug": "blue-steel-1934",
+          "imdbId": "tt0024902",
           "title": "Blue Steel",
+          "releaseYear": "1934",
+          "sortTitle": "blue-steel-1934",
+          "releaseSequence": "1934-05-10tt0024902",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "blue-steel-1934",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2007-12-04",
+          "reviewSequence": "2007-12-04-8",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 11,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 12,
-          "date": "2012-02-28",
-          "slug": "the-dawn-rider-1935",
+          "imdbId": "tt0026267",
           "title": "The Dawn Rider",
+          "releaseYear": "1935",
+          "sortTitle": "dawn-rider-1935",
+          "releaseSequence": "1935-06-20tt0026267",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-dawn-rider-1935",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2008-02-04",
+          "reviewSequence": "2008-02-04-9",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 12,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1935"
+          "venue": null
         },
         {
-          "sequence": 13,
-          "date": "2012-04-06",
-          "slug": "stagecoach-1939",
+          "imdbId": "tt0031971",
           "title": "Stagecoach",
+          "releaseYear": "1939",
+          "sortTitle": "stagecoach-1939",
+          "releaseSequence": "1939-??-??tt0031971",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Western"
+          ],
+          "slug": "stagecoach-1939",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2008-01-22",
+          "reviewSequence": "2008-01-22-1",
+          "viewingDate": "2012-04-06",
+          "viewingSequence": 13,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1939"
+          "venue": null
         }
       ]
     },
@@ -1254,103 +2683,225 @@
       "slug": "christopher-lee",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-01-15",
-          "slug": "the-gorgon-1964",
+          "imdbId": "tt0058155",
           "title": "The Gorgon",
+          "releaseYear": "1964",
+          "sortTitle": "gorgon-1964",
+          "releaseSequence": "1964-08-21tt0058155",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-gorgon-1964",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2008-09-07",
+          "reviewSequence": "2008-09-07-1",
+          "viewingDate": "2012-01-15",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1964"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-01-15",
-          "slug": "the-crimson-cult-1968",
+          "imdbId": "tt0062833",
           "title": "The Crimson Cult",
+          "releaseYear": "1968",
+          "sortTitle": "crimson-cult-1968",
+          "releaseSequence": "1968-12-01tt0062833",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-crimson-cult-1968",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2025-05-03",
+          "reviewSequence": "2025-05-03-1",
+          "viewingDate": "2012-01-15",
+          "viewingSequence": 2,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1968"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-01-29",
-          "slug": "she-1965",
+          "imdbId": "tt0059710",
           "title": "She",
+          "releaseYear": "1965",
+          "sortTitle": "she-1965",
+          "releaseSequence": "1965-04-18tt0059710",
+          "genres": [
+            "Adventure",
+            "Fantasy"
+          ],
+          "slug": "she-1965",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2012-01-29",
+          "reviewSequence": "2012-01-29-1",
+          "viewingDate": "2012-01-29",
+          "viewingSequence": 3,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1965"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-03-25",
-          "slug": "horror-express-1972",
+          "imdbId": "tt0068713",
           "title": "Horror Express",
+          "releaseYear": "1972",
+          "sortTitle": "horror-express-1972",
+          "releaseSequence": "1972-09-30tt0068713",
+          "genres": [
+            "Adventure",
+            "Horror",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "horror-express-1972",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2024-04-27",
+          "reviewSequence": "2024-04-27-2",
+          "viewingDate": "2012-03-25",
+          "viewingSequence": 4,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1972"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2012-03-25",
-          "slug": "death-line-1972",
+          "imdbId": "tt0068458",
           "title": "Death Line",
+          "releaseYear": "1972",
+          "sortTitle": "death-line-1972",
+          "releaseSequence": "1972-10-13tt0068458",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "death-line-1972",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2008-10-31",
+          "reviewSequence": "2008-10-31-2",
+          "viewingDate": "2012-03-25",
+          "viewingSequence": 5,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1972"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2012-06-07",
-          "slug": "dark-shadows-2012",
+          "imdbId": "tt1077368",
           "title": "Dark Shadows",
+          "releaseYear": "2012",
+          "sortTitle": "dark-shadows-2012",
+          "releaseSequence": "2012-05-09tt1077368",
+          "genres": [
+            "Comedy",
+            "Fantasy",
+            "Horror"
+          ],
+          "slug": "dark-shadows-2012",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2012-06-07",
+          "reviewSequence": "2012-06-07-1",
+          "viewingDate": "2012-06-07",
+          "viewingSequence": 6,
           "medium": null,
-          "venue": "AMC Tysons Corner 16",
-          "year": "2012"
+          "venue": "AMC Tysons Corner 16"
         },
         {
-          "sequence": 7,
-          "date": "2012-10-28",
-          "slug": "the-hound-of-the-baskervilles-1959",
+          "imdbId": "tt0052905",
           "title": "The Hound of the Baskervilles",
+          "releaseYear": "1959",
+          "sortTitle": "hound-of-the-baskervilles-1959",
+          "releaseSequence": "1959-03-28tt0052905",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "the-hound-of-the-baskervilles-1959",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2025-05-24",
+          "reviewSequence": "2025-05-24-2",
+          "viewingDate": "2012-10-28",
+          "viewingSequence": 7,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1959"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2012-11-02",
-          "slug": "the-devil-rides-out-1968",
+          "imdbId": "tt0062885",
           "title": "The Devil Rides Out",
+          "releaseYear": "1968",
+          "sortTitle": "devil-rides-out-1968",
+          "releaseSequence": "1968-05-19tt0062885",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-devil-rides-out-1968",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2015-01-17",
+          "reviewSequence": "2015-01-17-1",
+          "viewingDate": "2012-11-02",
+          "viewingSequence": 8,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1968"
+          "venue": null
         },
         {
-          "sequence": 9,
-          "date": "2012-11-03",
-          "slug": "dracula-prince-of-darkness-1966",
+          "imdbId": "tt0059127",
           "title": "Dracula: Prince of Darkness",
+          "releaseYear": "1966",
+          "sortTitle": "dracula-prince-of-darkness-1966",
+          "releaseSequence": "1966-01-02tt0059127",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "dracula-prince-of-darkness-1966",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2003-10-16",
+          "reviewSequence": "2003-10-16-2",
+          "viewingDate": "2012-11-03",
+          "viewingSequence": 9,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1966"
+          "venue": null
         },
         {
-          "sequence": 10,
-          "date": "2012-11-09",
-          "slug": null,
+          "imdbId": "tt0062909",
           "title": "Dracula Has Risen from the Grave",
+          "releaseYear": "1968",
+          "sortTitle": "dracula-has-risen-from-the-grave-1968",
+          "releaseSequence": "1968-11-07tt0062909",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Romance"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2012-11-09",
+          "viewingSequence": 10,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1968"
+          "venue": null
         },
         {
-          "sequence": 11,
-          "date": "2012-12-13",
-          "slug": null,
+          "imdbId": "tt0903624",
           "title": "The Hobbit: An Unexpected Journey",
+          "releaseYear": "2012",
+          "sortTitle": "hobbit-an-unexpected-journey-2012",
+          "releaseSequence": "2012-11-28tt0903624",
+          "genres": [
+            "Adventure",
+            "Fantasy"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2012-12-13",
+          "viewingSequence": 11,
           "medium": null,
-          "venue": "AMC Tysons Corner 16",
-          "year": "2012"
+          "venue": "AMC Tysons Corner 16"
         }
       ]
     },
@@ -1360,103 +2911,236 @@
       "slug": "robert-mitchum",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-01-27",
-          "slug": "bandido-1956",
+          "imdbId": "tt0048983",
           "title": "Bandido!",
+          "releaseYear": "1956",
+          "sortTitle": "bandido-1956",
+          "releaseSequence": "1956-09-01tt0048983",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "War",
+            "Western"
+          ],
+          "slug": "bandido-1956",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2012-01-27",
+          "reviewSequence": "2012-01-27-1",
+          "viewingDate": "2012-01-27",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1956"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-01-27",
-          "slug": "undercurrent-1946",
+          "imdbId": "tt0039066",
           "title": "Undercurrent",
+          "releaseYear": "1946",
+          "sortTitle": "undercurrent-1946",
+          "releaseSequence": "1946-11-11tt0039066",
+          "genres": [
+            "Drama",
+            "Film-Noir",
+            "Thriller"
+          ],
+          "slug": "undercurrent-1946",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2012-01-27",
+          "reviewSequence": "2012-01-27-2",
+          "viewingDate": "2012-01-27",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1946"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-02-25",
-          "slug": "the-sundowners-1960",
+          "imdbId": "tt0054353",
           "title": "The Sundowners",
+          "releaseYear": "1960",
+          "sortTitle": "sundowners-1960",
+          "releaseSequence": "1960-12-08tt0054353",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-sundowners-1960",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2008-04-06",
+          "reviewSequence": "2008-04-06-1",
+          "viewingDate": "2012-02-25",
+          "viewingSequence": 3,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1960"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-03-17",
-          "slug": "desire-me-1947",
+          "imdbId": "tt0039312",
           "title": "Desire Me",
+          "releaseYear": "1947",
+          "sortTitle": "desire-me-1947",
+          "releaseSequence": "1947-10-31tt0039312",
+          "genres": [
+            "Drama",
+            "Romance",
+            "War"
+          ],
+          "slug": "desire-me-1947",
+          "grade": "F",
+          "gradeValue": 1,
+          "reviewDate": "2012-03-17",
+          "reviewSequence": "2012-03-17-2",
+          "viewingDate": "2012-03-17",
+          "viewingSequence": 4,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1947"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2012-03-30",
-          "slug": "cape-fear-1962",
+          "imdbId": "tt0055824",
           "title": "Cape Fear",
+          "releaseYear": "1962",
+          "sortTitle": "cape-fear-1962",
+          "releaseSequence": "1962-04-12tt0055824",
+          "genres": [
+            "Drama",
+            "Thriller"
+          ],
+          "slug": "cape-fear-1962",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2012-03-30",
+          "reviewSequence": "2012-03-30-4",
+          "viewingDate": "2012-03-30",
+          "viewingSequence": 5,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1962"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2012-04-01",
-          "slug": "going-home-1971",
+          "imdbId": "tt0067146",
           "title": "Going Home",
+          "releaseYear": "1971",
+          "sortTitle": "going-home-1971",
+          "releaseSequence": "1971-11-17tt0067146",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "going-home-1971",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2012-04-01",
+          "reviewSequence": "2012-04-01-3",
+          "viewingDate": "2012-04-01",
+          "viewingSequence": 6,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1971"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2012-04-09",
-          "slug": "crossfire-1947",
+          "imdbId": "tt0039286",
           "title": "Crossfire",
+          "releaseYear": "1947",
+          "sortTitle": "crossfire-1947",
+          "releaseSequence": "1947-07-22tt0039286",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Mystery"
+          ],
+          "slug": "crossfire-1947",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2008-07-21",
+          "reviewSequence": "2008-07-21-4",
+          "viewingDate": "2012-04-09",
+          "viewingSequence": 7,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1947"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2012-04-13",
-          "slug": "river-of-no-return-1954",
+          "imdbId": "tt0047422",
           "title": "River of No Return",
+          "releaseYear": "1954",
+          "sortTitle": "river-of-no-return-1954",
+          "releaseSequence": "1954-04-29tt0047422",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Music",
+            "Romance",
+            "Western"
+          ],
+          "slug": "river-of-no-return-1954",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2012-04-13",
+          "reviewSequence": "2012-04-13-1",
+          "viewingDate": "2012-04-13",
+          "viewingSequence": 8,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1954"
+          "venue": null
         },
         {
-          "sequence": 9,
-          "date": "2012-04-14",
-          "slug": "rampage-1963",
+          "imdbId": "tt0057447",
           "title": "Rampage",
+          "releaseYear": "1963",
+          "sortTitle": "rampage-1963",
+          "releaseSequence": "1963-09-12tt0057447",
+          "genres": [
+            "Adventure",
+            "Romance"
+          ],
+          "slug": "rampage-1963",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2012-04-14",
+          "reviewSequence": "2012-04-14-1",
+          "viewingDate": "2012-04-14",
+          "viewingSequence": 9,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1963"
+          "venue": null
         },
         {
-          "sequence": 10,
-          "date": "2012-04-21",
-          "slug": "home-from-the-hill-1960",
+          "imdbId": "tt0053917",
           "title": "Home from the Hill",
+          "releaseYear": "1960",
+          "sortTitle": "home-from-the-hill-1960",
+          "releaseSequence": "1960-03-03tt0053917",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "home-from-the-hill-1960",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2012-04-21",
+          "reviewSequence": "2012-04-21-2",
+          "viewingDate": "2012-04-21",
+          "viewingSequence": 10,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1960"
+          "venue": null
         },
         {
-          "sequence": 11,
-          "date": "2012-04-25",
-          "slug": "the-night-fighters-1960",
+          "imdbId": "tt0054120",
           "title": "The Night Fighters",
+          "releaseYear": "1960",
+          "sortTitle": "night-fighters-1960",
+          "releaseSequence": "1960-05-01tt0054120",
+          "genres": [
+            "Action",
+            "Drama",
+            "Romance",
+            "War"
+          ],
+          "slug": "the-night-fighters-1960",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2012-04-25",
+          "reviewSequence": "2012-04-25-1",
+          "viewingDate": "2012-04-25",
+          "viewingSequence": 11,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1960"
+          "venue": null
         }
       ]
     },
@@ -1466,94 +3150,216 @@
       "slug": "boris-karloff",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-01-12",
-          "slug": "the-ghoul-1933",
+          "imdbId": "tt0024055",
           "title": "The Ghoul",
+          "releaseYear": "1933",
+          "sortTitle": "ghoul-1933",
+          "releaseSequence": "1933-08-06tt0024055",
+          "genres": [
+            "Action",
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Romance"
+          ],
+          "slug": "the-ghoul-1933",
+          "grade": "F",
+          "gradeValue": 1,
+          "reviewDate": "2012-01-12",
+          "reviewSequence": "2012-01-12-1",
+          "viewingDate": "2012-01-12",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-01-12",
-          "slug": "the-body-snatcher-1945",
+          "imdbId": "tt0037549",
           "title": "The Body Snatcher",
+          "releaseYear": "1945",
+          "sortTitle": "body-snatcher-1945",
+          "releaseSequence": "1945-02-14tt0037549",
+          "genres": [
+            "Horror",
+            "Thriller"
+          ],
+          "slug": "the-body-snatcher-1945",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2012-01-12",
+          "reviewSequence": "2012-01-12-4",
+          "viewingDate": "2012-01-12",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1945"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-01-13",
-          "slug": "isle-of-the-dead-1945",
+          "imdbId": "tt0037820",
           "title": "Isle of the Dead",
+          "releaseYear": "1945",
+          "sortTitle": "isle-of-the-dead-1945",
+          "releaseSequence": "1945-09-01tt0037820",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "isle-of-the-dead-1945",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2008-02-20",
+          "reviewSequence": "2008-02-20-3",
+          "viewingDate": "2012-01-13",
+          "viewingSequence": 3,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1945"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-01-13",
-          "slug": "the-comedy-of-terrors-1963",
+          "imdbId": "tt0056943",
           "title": "The Comedy of Terrors",
+          "releaseYear": "1963",
+          "sortTitle": "comedy-of-terrors-1963",
+          "releaseSequence": "1963-12-25tt0056943",
+          "genres": [
+            "Comedy",
+            "Horror"
+          ],
+          "slug": "the-comedy-of-terrors-1963",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2012-01-13",
+          "reviewSequence": "2012-01-13-4",
+          "viewingDate": "2012-01-13",
+          "viewingSequence": 4,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1963"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2012-01-14",
-          "slug": "bedlam-1946",
+          "imdbId": "tt0038343",
           "title": "Bedlam",
+          "releaseYear": "1946",
+          "sortTitle": "bedlam-1946",
+          "releaseSequence": "1946-04-19tt0038343",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Thriller"
+          ],
+          "slug": "bedlam-1946",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2008-02-19",
+          "reviewSequence": "2008-02-19-3",
+          "viewingDate": "2012-01-14",
+          "viewingSequence": 5,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1946"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2012-01-15",
-          "slug": "the-crimson-cult-1968",
+          "imdbId": "tt0062833",
           "title": "The Crimson Cult",
+          "releaseYear": "1968",
+          "sortTitle": "crimson-cult-1968",
+          "releaseSequence": "1968-12-01tt0062833",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-crimson-cult-1968",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2025-05-03",
+          "reviewSequence": "2025-05-03-1",
+          "viewingDate": "2012-01-15",
+          "viewingSequence": 6,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1968"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2012-01-26",
-          "slug": "the-black-cat-1934",
+          "imdbId": "tt0024894",
           "title": "The Black Cat",
+          "releaseYear": "1934",
+          "sortTitle": "black-cat-1934",
+          "releaseSequence": "1934-05-03tt0024894",
+          "genres": [
+            "Crime",
+            "Horror",
+            "Romance",
+            "Thriller"
+          ],
+          "slug": "the-black-cat-1934",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2025-02-16",
+          "reviewSequence": "2025-02-16-1",
+          "viewingDate": "2012-01-26",
+          "viewingSequence": 7,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2012-02-05",
-          "slug": "die-monster-die-1965",
+          "imdbId": "tt0059465",
           "title": "Die, Monster, Die!",
+          "releaseYear": "1965",
+          "sortTitle": "die-monster-die-1965",
+          "releaseSequence": "1965-10-27tt0059465",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "die-monster-die-1965",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2008-02-20",
+          "reviewSequence": "2008-02-20-4",
+          "viewingDate": "2012-02-05",
+          "viewingSequence": 8,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1965"
+          "venue": null
         },
         {
-          "sequence": 9,
-          "date": "2012-10-24",
-          "slug": "frankenstein-1931",
+          "imdbId": "tt0021884",
           "title": "Frankenstein",
+          "releaseYear": "1931",
+          "sortTitle": "frankenstein-1931",
+          "releaseSequence": "1931-11-19tt0021884",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "frankenstein-1931",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2021-04-20",
+          "reviewSequence": "2021-04-20-1",
+          "viewingDate": "2012-10-24",
+          "viewingSequence": 9,
           "medium": null,
-          "venue": "AMC Tysons Corner 16",
-          "year": "1931"
+          "venue": "AMC Tysons Corner 16"
         },
         {
-          "sequence": 10,
-          "date": "2012-10-24",
-          "slug": null,
+          "imdbId": "tt0026138",
           "title": "Bride of Frankenstein",
+          "releaseYear": "1935",
+          "sortTitle": "bride-of-frankenstein-1935",
+          "releaseSequence": "1935-04-19tt0026138",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2012-10-24",
+          "viewingSequence": 10,
           "medium": null,
-          "venue": "AMC Tysons Corner 16",
-          "year": "1935"
+          "venue": "AMC Tysons Corner 16"
         }
       ]
     },
@@ -1563,94 +3369,217 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-02-25",
-          "slug": "riders-of-destiny-1933",
+          "imdbId": "tt0024500",
           "title": "Riders of Destiny",
+          "releaseYear": "1933",
+          "sortTitle": "riders-of-destiny-1933",
+          "releaseSequence": "1933-10-10tt0024500",
+          "genres": [
+            "Music",
+            "Romance",
+            "Western"
+          ],
+          "slug": "riders-of-destiny-1933",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2016-09-17",
+          "reviewSequence": "2016-09-17-2",
+          "viewingDate": "2012-02-25",
+          "viewingSequence": 1,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-02-26",
-          "slug": "the-lawless-frontier-1934",
+          "imdbId": "tt0025373",
           "title": "The Lawless Frontier",
+          "releaseYear": "1934",
+          "sortTitle": "lawless-frontier-1934",
+          "releaseSequence": "1934-11-22tt0025373",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-lawless-frontier-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2022-11-07",
+          "reviewSequence": "2022-11-07-1",
+          "viewingDate": "2012-02-26",
+          "viewingSequence": 2,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-02-27",
-          "slug": "the-man-from-utah-1934",
+          "imdbId": "tt0025455",
           "title": "The Man from Utah",
+          "releaseYear": "1934",
+          "sortTitle": "man-from-utah-1934",
+          "releaseSequence": "1934-05-15tt0025455",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-man-from-utah-1934",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2008-02-10",
+          "reviewSequence": "2008-02-10-1",
+          "viewingDate": "2012-02-27",
+          "viewingSequence": 3,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-02-27",
-          "slug": "west-of-the-divide-1934",
+          "imdbId": "tt0025969",
           "title": "West of the Divide",
+          "releaseYear": "1934",
+          "sortTitle": "west-of-the-divide-1934",
+          "releaseSequence": "1934-02-15tt0025969",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Romance",
+            "Western"
+          ],
+          "slug": "west-of-the-divide-1934",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2007-12-01",
+          "reviewSequence": "2007-12-01-2",
+          "viewingDate": "2012-02-27",
+          "viewingSequence": 4,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2012-02-28",
-          "slug": "neath-the-arizona-skies-1934",
+          "imdbId": "tt0024805",
           "title": "'Neath the Arizona Skies",
+          "releaseYear": "1934",
+          "sortTitle": "neath-the-arizona-skies-1934",
+          "releaseSequence": "1934-12-05tt0024805",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "neath-the-arizona-skies-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2009-01-18",
+          "reviewSequence": "2009-01-18-1",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 5,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2012-02-28",
-          "slug": "the-star-packer-1934",
+          "imdbId": "tt0025830",
           "title": "The Star Packer",
+          "releaseYear": "1934",
+          "sortTitle": "star-packer-1934",
+          "releaseSequence": "1934-07-30tt0025830",
+          "genres": [
+            "Action",
+            "Drama",
+            "Mystery",
+            "Romance",
+            "Western"
+          ],
+          "slug": "the-star-packer-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-02-04",
+          "reviewSequence": "2023-02-04-1",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 6,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2012-02-28",
-          "slug": "the-lucky-texan-1934",
+          "imdbId": "tt0025440",
           "title": "The Lucky Texan",
+          "releaseYear": "1934",
+          "sortTitle": "lucky-texan-1934",
+          "releaseSequence": "1934-01-22tt0025440",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Romance",
+            "Western"
+          ],
+          "slug": "the-lucky-texan-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2012-02-28",
+          "reviewSequence": "2012-02-28-4",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 7,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2012-02-28",
-          "slug": "texas-terror-1935",
+          "imdbId": "tt0027087",
           "title": "Texas Terror",
+          "releaseYear": "1935",
+          "sortTitle": "texas-terror-1935",
+          "releaseSequence": "1935-02-01tt0027087",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "texas-terror-1935",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2008-05-26",
+          "reviewSequence": "2008-05-26-5",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 8,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1935"
+          "venue": null
         },
         {
-          "sequence": 9,
-          "date": "2012-02-28",
-          "slug": "randy-rides-alone-1934",
+          "imdbId": "tt0025699",
           "title": "Randy Rides Alone",
+          "releaseYear": "1934",
+          "sortTitle": "randy-rides-alone-1934",
+          "releaseSequence": "1934-06-18tt0025699",
+          "genres": [
+            "Action",
+            "Drama",
+            "Mystery",
+            "Romance",
+            "Western"
+          ],
+          "slug": "randy-rides-alone-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2012-02-28",
+          "reviewSequence": "2012-02-28-7",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 9,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 10,
-          "date": "2012-02-28",
-          "slug": "blue-steel-1934",
+          "imdbId": "tt0024902",
           "title": "Blue Steel",
+          "releaseYear": "1934",
+          "sortTitle": "blue-steel-1934",
+          "releaseSequence": "1934-05-10tt0024902",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "blue-steel-1934",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2007-12-04",
+          "reviewSequence": "2007-12-04-8",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 10,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         }
       ]
     },
@@ -1660,85 +3589,191 @@
       "slug": "vincent-price",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-01-11",
-          "slug": "the-tingler-1959",
+          "imdbId": "tt0053363",
           "title": "The Tingler",
+          "releaseYear": "1959",
+          "sortTitle": "tingler-1959",
+          "releaseSequence": "1959-07-29tt0053363",
+          "genres": [
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "the-tingler-1959",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2012-01-11",
+          "reviewSequence": "2012-01-11-1",
+          "viewingDate": "2012-01-11",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1959"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-01-12",
-          "slug": "the-pit-and-the-pendulum-1961",
+          "imdbId": "tt0055304",
           "title": "The Pit and the Pendulum",
+          "releaseYear": "1961",
+          "sortTitle": "pit-and-the-pendulum-1961",
+          "releaseSequence": "1961-08-23tt0055304",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "the-pit-and-the-pendulum-1961",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2007-07-23",
+          "reviewSequence": "2007-07-23-2",
+          "viewingDate": "2012-01-12",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1961"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-01-12",
-          "slug": "the-masque-of-the-red-death-1964",
+          "imdbId": "tt0058333",
           "title": "The Masque of the Red Death",
+          "releaseYear": "1964",
+          "sortTitle": "masque-of-the-red-death-1964",
+          "releaseSequence": "1964-06-24tt0058333",
+          "genres": [
+            "Drama",
+            "Horror"
+          ],
+          "slug": "the-masque-of-the-red-death-1964",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2007-12-17",
+          "reviewSequence": "2007-12-17-3",
+          "viewingDate": "2012-01-12",
+          "viewingSequence": 3,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1964"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-01-13",
-          "slug": "the-comedy-of-terrors-1963",
+          "imdbId": "tt0056943",
           "title": "The Comedy of Terrors",
+          "releaseYear": "1963",
+          "sortTitle": "comedy-of-terrors-1963",
+          "releaseSequence": "1963-12-25tt0056943",
+          "genres": [
+            "Comedy",
+            "Horror"
+          ],
+          "slug": "the-comedy-of-terrors-1963",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2012-01-13",
+          "reviewSequence": "2012-01-13-4",
+          "viewingDate": "2012-01-13",
+          "viewingSequence": 4,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1963"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2012-01-30",
-          "slug": "the-las-vegas-story-1952",
+          "imdbId": "tt0044825",
           "title": "The Las Vegas Story",
+          "releaseYear": "1952",
+          "sortTitle": "las-vegas-story-1952",
+          "releaseSequence": "1952-01-27tt0044825",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir"
+          ],
+          "slug": "the-las-vegas-story-1952",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2025-05-30",
+          "reviewSequence": "2025-05-30-1",
+          "viewingDate": "2012-01-30",
+          "viewingSequence": 5,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1952"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2012-02-18",
-          "slug": "the-three-musketeers-1948",
+          "imdbId": "tt0040876",
           "title": "The Three Musketeers",
+          "releaseYear": "1948",
+          "sortTitle": "three-musketeers-1948",
+          "releaseSequence": "1948-10-19tt0040876",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Romance"
+          ],
+          "slug": "the-three-musketeers-1948",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2022-09-05",
+          "reviewSequence": "2022-09-05-1",
+          "viewingDate": "2012-02-18",
+          "viewingSequence": 6,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1948"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2012-03-14",
-          "slug": "the-house-of-the-seven-gables-1940",
+          "imdbId": "tt0032610",
           "title": "The House of the Seven Gables",
+          "releaseYear": "1940",
+          "sortTitle": "house-of-the-seven-gables-1940",
+          "releaseSequence": "1940-02-29tt0032610",
+          "genres": [
+            "Drama",
+            "Thriller"
+          ],
+          "slug": "the-house-of-the-seven-gables-1940",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2012-03-14",
+          "reviewSequence": "2012-03-14-1",
+          "viewingDate": "2012-03-14",
+          "viewingSequence": 7,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1940"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2012-04-07",
-          "slug": "the-baron-of-arizona-1950",
+          "imdbId": "tt0042229",
           "title": "The Baron of Arizona",
+          "releaseYear": "1950",
+          "sortTitle": "baron-of-arizona-1950",
+          "releaseSequence": "1950-03-01tt0042229",
+          "genres": [
+            "Biography",
+            "Crime",
+            "Drama",
+            "History",
+            "Western"
+          ],
+          "slug": "the-baron-of-arizona-1950",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2012-04-07",
+          "reviewSequence": "2012-04-07-3",
+          "viewingDate": "2012-04-07",
+          "viewingSequence": 8,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1950"
+          "venue": null
         },
         {
-          "sequence": 9,
-          "date": "2012-11-01",
-          "slug": null,
+          "imdbId": "tt0052626",
           "title": "The Big Circus",
+          "releaseYear": "1959",
+          "sortTitle": "big-circus-1959",
+          "releaseSequence": "1959-07-05tt0052626",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2012-11-01",
+          "viewingSequence": 9,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1959"
+          "venue": null
         }
       ]
     },
@@ -1748,85 +3783,186 @@
       "slug": "william-powell",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-01-13",
-          "slug": "fashions-of-1934-1934",
+          "imdbId": "tt0025101",
           "title": "Fashions of 1934",
+          "releaseYear": "1934",
+          "sortTitle": "fashions-of-1934-1934",
+          "releaseSequence": "1934-??-??tt0025101",
+          "genres": [
+            "Comedy",
+            "Drama",
+            "Musical"
+          ],
+          "slug": "fashions-of-1934-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-05-02",
+          "reviewSequence": "2023-05-02-1",
+          "viewingDate": "2012-01-13",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-01-21",
-          "slug": "high-pressure-1932",
+          "imdbId": "tt0023007",
           "title": "High Pressure",
+          "releaseYear": "1932",
+          "sortTitle": "high-pressure-1932",
+          "releaseSequence": "1932-01-10tt0023007",
+          "genres": [
+            "Comedy"
+          ],
+          "slug": "high-pressure-1932",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2021-05-12",
+          "reviewSequence": "2021-05-12-1",
+          "viewingDate": "2012-01-21",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-01-21",
-          "slug": "the-road-to-singapore-1931",
+          "imdbId": "tt0022321",
           "title": "The Road to Singapore",
+          "releaseYear": "1931",
+          "sortTitle": "road-to-singapore-1931",
+          "releaseSequence": "1931-09-02tt0022321",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "the-road-to-singapore-1931",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2021-03-02",
+          "reviewSequence": "2021-03-02-1",
+          "viewingDate": "2012-01-21",
+          "viewingSequence": 3,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1931"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-01-21",
-          "slug": "the-key-1934",
+          "imdbId": "tt0025346",
           "title": "The Key",
+          "releaseYear": "1934",
+          "sortTitle": "key-1934",
+          "releaseSequence": "1934-05-31tt0025346",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "the-key-1934",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2023-06-03",
+          "reviewSequence": "2023-06-03-1",
+          "viewingDate": "2012-01-21",
+          "viewingSequence": 4,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2012-01-26",
-          "slug": "the-girl-who-had-everything-1953",
+          "imdbId": "tt0045816",
           "title": "The Girl Who Had Everything",
+          "releaseYear": "1953",
+          "sortTitle": "girl-who-had-everything-1953",
+          "releaseSequence": "1953-03-27tt0045816",
+          "genres": [
+            "Romance",
+            "Drama"
+          ],
+          "slug": "the-girl-who-had-everything-1953",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2023-06-27",
+          "reviewSequence": "2023-06-27-1",
+          "viewingDate": "2012-01-26",
+          "viewingSequence": 5,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1953"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2012-02-15",
-          "slug": "life-with-father-1947",
+          "imdbId": "tt0039566",
           "title": "Life with Father",
+          "releaseYear": "1947",
+          "sortTitle": "life-with-father-1947",
+          "releaseSequence": "1947-08-14tt0039566",
+          "genres": [
+            "Comedy",
+            "Family"
+          ],
+          "slug": "life-with-father-1947",
+          "grade": "F",
+          "gradeValue": 1,
+          "reviewDate": "2023-07-15",
+          "reviewSequence": "2023-07-15-1",
+          "viewingDate": "2012-02-15",
+          "viewingSequence": 6,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1947"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2012-04-06",
-          "slug": "jewel-robbery-1932",
+          "imdbId": "tt0023074",
           "title": "Jewel Robbery",
+          "releaseYear": "1932",
+          "sortTitle": "jewel-robbery-1932",
+          "releaseSequence": "1932-07-08tt0023074",
+          "genres": [
+            "Comedy",
+            "Crime",
+            "Romance"
+          ],
+          "slug": "jewel-robbery-1932",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2022-06-19",
+          "reviewSequence": "2022-06-19-3",
+          "viewingDate": "2012-04-06",
+          "viewingSequence": 7,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2012-04-07",
-          "slug": "the-ex-mrs-bradford-1936",
+          "imdbId": "tt0027593",
           "title": "The Ex-Mrs. Bradford",
+          "releaseYear": "1936",
+          "sortTitle": "ex-mrs-bradford-1936",
+          "releaseSequence": "1936-04-23tt0027593",
+          "genres": [
+            "Comedy",
+            "Mystery"
+          ],
+          "slug": "the-ex-mrs-bradford-1936",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2008-05-11",
+          "reviewSequence": "2008-05-11-1",
+          "viewingDate": "2012-04-07",
+          "viewingSequence": 8,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1936"
+          "venue": null
         },
         {
-          "sequence": 9,
-          "date": "2012-07-06",
-          "slug": "the-thin-man-1934",
+          "imdbId": "tt0025878",
           "title": "The Thin Man",
+          "releaseYear": "1934",
+          "sortTitle": "thin-man-1934",
+          "releaseSequence": "1934-05-25tt0025878",
+          "genres": [
+            "Comedy",
+            "Crime",
+            "Mystery",
+            "Romance"
+          ],
+          "slug": "the-thin-man-1934",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2012-07-06",
+          "reviewSequence": "2012-07-06-1",
+          "viewingDate": "2012-07-06",
+          "viewingSequence": 9,
           "medium": null,
-          "venue": "Landmark E Street Cinema",
-          "year": "1934"
+          "venue": "Landmark E Street Cinema"
         }
       ]
     },
@@ -1836,85 +3972,192 @@
       "slug": "cary-grant",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-01-14",
-          "slug": "crisis-1950",
+          "imdbId": "tt0042352",
           "title": "Crisis",
+          "releaseYear": "1950",
+          "sortTitle": "crisis-1950",
+          "releaseSequence": "1950-07-03tt0042352",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Romance",
+            "Thriller"
+          ],
+          "slug": "crisis-1950",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2012-01-14",
+          "reviewSequence": "2012-01-14-4",
+          "viewingDate": "2012-01-14",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1950"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-02-04",
-          "slug": "suspicion-1941",
+          "imdbId": "tt0034248",
           "title": "Suspicion",
+          "releaseYear": "1941",
+          "sortTitle": "suspicion-1941",
+          "releaseSequence": "1941-11-08tt0034248",
+          "genres": [
+            "Drama",
+            "Film-Noir",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "suspicion-1941",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2008-02-10",
+          "reviewSequence": "2008-02-10-1",
+          "viewingDate": "2012-02-04",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1941"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-02-05",
-          "slug": "the-philadelphia-story-1940",
+          "imdbId": "tt0032904",
           "title": "The Philadelphia Story",
+          "releaseYear": "1940",
+          "sortTitle": "philadelphia-story-1940",
+          "releaseSequence": "1940-12-05tt0032904",
+          "genres": [
+            "Comedy",
+            "Romance"
+          ],
+          "slug": "the-philadelphia-story-1940",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2007-09-30",
+          "reviewSequence": "2007-09-30-1",
+          "viewingDate": "2012-02-05",
+          "viewingSequence": 3,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1940"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-02-12",
-          "slug": "the-awful-truth-1937",
+          "imdbId": "tt0028597",
           "title": "The Awful Truth",
+          "releaseYear": "1937",
+          "sortTitle": "awful-truth-1937",
+          "releaseSequence": "1937-10-20tt0028597",
+          "genres": [
+            "Comedy",
+            "Romance"
+          ],
+          "slug": "the-awful-truth-1937",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2008-04-05",
+          "reviewSequence": "2008-04-05-1",
+          "viewingDate": "2012-02-12",
+          "viewingSequence": 4,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2012-02-25",
-          "slug": "only-angels-have-wings-1939",
+          "imdbId": "tt0031762",
           "title": "Only Angels Have Wings",
+          "releaseYear": "1939",
+          "sortTitle": "only-angels-have-wings-1939",
+          "releaseSequence": "1939-05-12tt0031762",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Romance"
+          ],
+          "slug": "only-angels-have-wings-1939",
+          "grade": "A-",
+          "gradeValue": 11,
+          "reviewDate": "2025-06-15",
+          "reviewSequence": "2025-06-15-1",
+          "viewingDate": "2012-02-25",
+          "viewingSequence": 5,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1939"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2012-03-26",
-          "slug": "i-was-a-male-war-bride-1949",
+          "imdbId": "tt0041498",
           "title": "I Was a Male War Bride",
+          "releaseYear": "1949",
+          "sortTitle": "i-was-a-male-war-bride-1949",
+          "releaseSequence": "1949-08-19tt0041498",
+          "genres": [
+            "Comedy",
+            "Romance",
+            "War"
+          ],
+          "slug": "i-was-a-male-war-bride-1949",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2008-08-16",
+          "reviewSequence": "2008-08-16-4",
+          "viewingDate": "2012-03-26",
+          "viewingSequence": 6,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1949"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2012-04-07",
-          "slug": "that-touch-of-mink-1962",
+          "imdbId": "tt0056575",
           "title": "That Touch of Mink",
+          "releaseYear": "1962",
+          "sortTitle": "that-touch-of-mink-1962",
+          "releaseSequence": "1962-05-31tt0056575",
+          "genres": [
+            "Comedy",
+            "Romance"
+          ],
+          "slug": "that-touch-of-mink-1962",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2007-09-17",
+          "reviewSequence": "2007-09-17-2",
+          "viewingDate": "2012-04-07",
+          "viewingSequence": 7,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1962"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2012-04-20",
-          "slug": "charade-1963",
+          "imdbId": "tt0056923",
           "title": "Charade",
+          "releaseYear": "1963",
+          "sortTitle": "charade-1963",
+          "releaseSequence": "1963-09-24tt0056923",
+          "genres": [
+            "Comedy",
+            "Mystery",
+            "Romance",
+            "Thriller"
+          ],
+          "slug": "charade-1963",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2012-04-20",
+          "reviewSequence": "2012-04-20-2",
+          "viewingDate": "2012-04-20",
+          "viewingSequence": 8,
           "medium": null,
-          "venue": "Landmark E Street Cinema",
-          "year": "1963"
+          "venue": "Landmark E Street Cinema"
         },
         {
-          "sequence": 9,
-          "date": "2012-07-21",
-          "slug": "mr-blandings-builds-his-dream-house-1948",
+          "imdbId": "tt0040613",
           "title": "Mr. Blandings Builds His Dream House",
+          "releaseYear": "1948",
+          "sortTitle": "mr-blandings-builds-his-dream-house-1948",
+          "releaseSequence": "1948-03-25tt0040613",
+          "genres": [
+            "Comedy",
+            "Romance"
+          ],
+          "slug": "mr-blandings-builds-his-dream-house-1948",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2008-03-01",
+          "reviewSequence": "2008-03-01-1",
+          "viewingDate": "2012-07-21",
+          "viewingSequence": 9,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1948"
+          "venue": null
         }
       ]
     }
@@ -1926,67 +4169,154 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-02-25",
-          "slug": "riders-of-destiny-1933",
+          "imdbId": "tt0024500",
           "title": "Riders of Destiny",
+          "releaseYear": "1933",
+          "sortTitle": "riders-of-destiny-1933",
+          "releaseSequence": "1933-10-10tt0024500",
+          "genres": [
+            "Music",
+            "Romance",
+            "Western"
+          ],
+          "slug": "riders-of-destiny-1933",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2016-09-17",
+          "reviewSequence": "2016-09-17-2",
+          "viewingDate": "2012-02-25",
+          "viewingSequence": 1,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-02-26",
-          "slug": "the-lawless-frontier-1934",
+          "imdbId": "tt0025373",
           "title": "The Lawless Frontier",
+          "releaseYear": "1934",
+          "sortTitle": "lawless-frontier-1934",
+          "releaseSequence": "1934-11-22tt0025373",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-lawless-frontier-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2022-11-07",
+          "reviewSequence": "2022-11-07-1",
+          "viewingDate": "2012-02-26",
+          "viewingSequence": 2,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-02-27",
-          "slug": "west-of-the-divide-1934",
+          "imdbId": "tt0025969",
           "title": "West of the Divide",
+          "releaseYear": "1934",
+          "sortTitle": "west-of-the-divide-1934",
+          "releaseSequence": "1934-02-15tt0025969",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Romance",
+            "Western"
+          ],
+          "slug": "west-of-the-divide-1934",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2007-12-01",
+          "reviewSequence": "2007-12-01-2",
+          "viewingDate": "2012-02-27",
+          "viewingSequence": 3,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-02-28",
-          "slug": "the-star-packer-1934",
+          "imdbId": "tt0025830",
           "title": "The Star Packer",
+          "releaseYear": "1934",
+          "sortTitle": "star-packer-1934",
+          "releaseSequence": "1934-07-30tt0025830",
+          "genres": [
+            "Action",
+            "Drama",
+            "Mystery",
+            "Romance",
+            "Western"
+          ],
+          "slug": "the-star-packer-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-02-04",
+          "reviewSequence": "2023-02-04-1",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 4,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2012-02-28",
-          "slug": "the-lucky-texan-1934",
+          "imdbId": "tt0025440",
           "title": "The Lucky Texan",
+          "releaseYear": "1934",
+          "sortTitle": "lucky-texan-1934",
+          "releaseSequence": "1934-01-22tt0025440",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Romance",
+            "Western"
+          ],
+          "slug": "the-lucky-texan-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2012-02-28",
+          "reviewSequence": "2012-02-28-4",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 5,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2012-02-28",
-          "slug": "texas-terror-1935",
+          "imdbId": "tt0027087",
           "title": "Texas Terror",
+          "releaseYear": "1935",
+          "sortTitle": "texas-terror-1935",
+          "releaseSequence": "1935-02-01tt0027087",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "texas-terror-1935",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2008-05-26",
+          "reviewSequence": "2008-05-26-5",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 6,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1935"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2012-02-28",
-          "slug": "blue-steel-1934",
+          "imdbId": "tt0024902",
           "title": "Blue Steel",
+          "releaseYear": "1934",
+          "sortTitle": "blue-steel-1934",
+          "releaseSequence": "1934-05-10tt0024902",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "blue-steel-1934",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2007-12-04",
+          "reviewSequence": "2007-12-04-8",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 7,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         }
       ]
     },
@@ -1996,58 +4326,133 @@
       "slug": "john-huston",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-01-25",
-          "slug": "murders-in-the-rue-morgue-1932",
+          "imdbId": "tt0023249",
           "title": "Murders in the Rue Morgue",
+          "releaseYear": "1932",
+          "sortTitle": "murders-in-the-rue-morgue-1932",
+          "releaseSequence": "1932-01-27tt0023249",
+          "genres": [
+            "Crime",
+            "Horror",
+            "Mystery",
+            "Romance"
+          ],
+          "slug": "murders-in-the-rue-morgue-1932",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2021-07-15",
+          "reviewSequence": "2021-07-15-1",
+          "viewingDate": "2012-01-25",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-02-04",
-          "slug": "key-largo-1948",
+          "imdbId": "tt0040506",
           "title": "Key Largo",
+          "releaseYear": "1948",
+          "sortTitle": "key-largo-1948",
+          "releaseSequence": "1948-07-16tt0040506",
+          "genres": [
+            "Action",
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Thriller"
+          ],
+          "slug": "key-largo-1948",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2007-07-15",
+          "reviewSequence": "2007-07-15-3",
+          "viewingDate": "2012-02-04",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1948"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-02-05",
-          "slug": "the-night-of-the-iguana-1964",
+          "imdbId": "tt0058404",
           "title": "The Night of the Iguana",
+          "releaseYear": "1964",
+          "sortTitle": "night-of-the-iguana-1964",
+          "releaseSequence": "1964-06-09tt0058404",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "the-night-of-the-iguana-1964",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2007-08-06",
+          "reviewSequence": "2007-08-06-3",
+          "viewingDate": "2012-02-05",
+          "viewingSequence": 3,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1964"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-03-10",
-          "slug": "the-maltese-falcon-1941",
+          "imdbId": "tt0033870",
           "title": "The Maltese Falcon",
+          "releaseYear": "1941",
+          "sortTitle": "maltese-falcon-1941",
+          "releaseSequence": "1941-10-03tt0033870",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Mystery",
+            "Romance"
+          ],
+          "slug": "the-maltese-falcon-1941",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2007-07-06",
+          "reviewSequence": "2007-07-06-1",
+          "viewingDate": "2012-03-10",
+          "viewingSequence": 4,
           "medium": null,
-          "venue": "Landmark E Street Cinema",
-          "year": "1941"
+          "venue": "Landmark E Street Cinema"
         },
         {
-          "sequence": 5,
-          "date": "2012-04-01",
-          "slug": "the-asphalt-jungle-1950",
+          "imdbId": "tt0042208",
           "title": "The Asphalt Jungle",
+          "releaseYear": "1950",
+          "sortTitle": "asphalt-jungle-1950",
+          "releaseSequence": "1950-05-12tt0042208",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Thriller"
+          ],
+          "slug": "the-asphalt-jungle-1950",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2007-07-15",
+          "reviewSequence": "2007-07-15-4",
+          "viewingDate": "2012-04-01",
+          "viewingSequence": 5,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1950"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2012-04-09",
-          "slug": "the-amazing-dr-clitterhouse-1938",
+          "imdbId": "tt0029864",
           "title": "The Amazing Dr. Clitterhouse",
+          "releaseYear": "1938",
+          "sortTitle": "amazing-dr-clitterhouse-1938",
+          "releaseSequence": "1938-07-20tt0029864",
+          "genres": [
+            "Crime",
+            "Drama"
+          ],
+          "slug": "the-amazing-dr-clitterhouse-1938",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2008-04-22",
+          "reviewSequence": "2008-04-22-1",
+          "viewingDate": "2012-04-09",
+          "viewingSequence": 6,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1938"
+          "venue": null
         }
       ]
     },
@@ -2057,58 +4462,132 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-02-10",
-          "slug": "the-long-voyage-home-1940",
+          "imdbId": "tt0032728",
           "title": "The Long Voyage Home",
+          "releaseYear": "1940",
+          "sortTitle": "long-voyage-home-1940",
+          "releaseSequence": "1940-10-08tt0032728",
+          "genres": [
+            "Drama",
+            "War"
+          ],
+          "slug": "the-long-voyage-home-1940",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2008-05-18",
+          "reviewSequence": "2008-05-18-1",
+          "viewingDate": "2012-02-10",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1940"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-02-10",
-          "slug": "the-big-sky-1952",
+          "imdbId": "tt0044419",
           "title": "The Big Sky",
+          "releaseYear": "1952",
+          "sortTitle": "big-sky-1952",
+          "releaseSequence": "1952-07-29tt0044419",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-big-sky-1952",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2008-10-20",
+          "reviewSequence": "2008-10-20-2",
+          "viewingDate": "2012-02-10",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1952"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-02-15",
-          "slug": "air-force-1943",
+          "imdbId": "tt0035616",
           "title": "Air Force",
+          "releaseYear": "1943",
+          "sortTitle": "air-force-1943",
+          "releaseSequence": "1943-02-03tt0035616",
+          "genres": [
+            "Action",
+            "Drama",
+            "History",
+            "War"
+          ],
+          "slug": "air-force-1943",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2007-09-30",
+          "reviewSequence": "2007-09-30-2",
+          "viewingDate": "2012-02-15",
+          "viewingSequence": 3,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1943"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-03-12",
-          "slug": "the-hurricane-1937",
+          "imdbId": "tt0029030",
           "title": "The Hurricane",
+          "releaseYear": "1937",
+          "sortTitle": "hurricane-1937",
+          "releaseSequence": "1937-11-05tt0029030",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Romance"
+          ],
+          "slug": "the-hurricane-1937",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2008-11-22",
+          "reviewSequence": "2008-11-22-2",
+          "viewingDate": "2012-03-12",
+          "viewingSequence": 4,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2012-03-31",
-          "slug": "mary-of-scotland-1936",
+          "imdbId": "tt0027948",
           "title": "Mary of Scotland",
+          "releaseYear": "1936",
+          "sortTitle": "mary-of-scotland-1936",
+          "releaseSequence": "1936-07-28tt0027948",
+          "genres": [
+            "Biography",
+            "Drama",
+            "History",
+            "Romance"
+          ],
+          "slug": "mary-of-scotland-1936",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2008-12-13",
+          "reviewSequence": "2008-12-13-1",
+          "viewingDate": "2012-03-31",
+          "viewingSequence": 5,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1936"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2012-04-06",
-          "slug": "stagecoach-1939",
+          "imdbId": "tt0031971",
           "title": "Stagecoach",
+          "releaseYear": "1939",
+          "sortTitle": "stagecoach-1939",
+          "releaseSequence": "1939-??-??tt0031971",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Western"
+          ],
+          "slug": "stagecoach-1939",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2008-01-22",
+          "reviewSequence": "2008-01-22-1",
+          "viewingDate": "2012-04-06",
+          "viewingSequence": 6,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1939"
+          "venue": null
         }
       ]
     },
@@ -2118,58 +4597,127 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-02-26",
-          "slug": "sagebrush-trail-1933",
+          "imdbId": "tt0024516",
           "title": "Sagebrush Trail",
+          "releaseYear": "1933",
+          "sortTitle": "sagebrush-trail-1933",
+          "releaseSequence": "1933-12-15tt0024516",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "sagebrush-trail-1933",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2016-11-09",
+          "reviewSequence": "2016-11-09-1",
+          "viewingDate": "2012-02-26",
+          "viewingSequence": 1,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-02-27",
-          "slug": "the-man-from-utah-1934",
+          "imdbId": "tt0025455",
           "title": "The Man from Utah",
+          "releaseYear": "1934",
+          "sortTitle": "man-from-utah-1934",
+          "releaseSequence": "1934-05-15tt0025455",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-man-from-utah-1934",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2008-02-10",
+          "reviewSequence": "2008-02-10-1",
+          "viewingDate": "2012-02-27",
+          "viewingSequence": 2,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-02-27",
-          "slug": "paradise-canyon-1935",
+          "imdbId": "tt0026846",
           "title": "Paradise Canyon",
+          "releaseYear": "1935",
+          "sortTitle": "paradise-canyon-1935",
+          "releaseSequence": "1935-07-20tt0026846",
+          "genres": [
+            "Action",
+            "Drama",
+            "Western"
+          ],
+          "slug": "paradise-canyon-1935",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2007-09-10",
+          "reviewSequence": "2007-09-10-3",
+          "viewingDate": "2012-02-27",
+          "viewingSequence": 3,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1935"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-02-28",
-          "slug": "the-trail-beyond-1934",
+          "imdbId": "tt0025903",
           "title": "The Trail Beyond",
+          "releaseYear": "1934",
+          "sortTitle": "trail-beyond-1934",
+          "releaseSequence": "1934-10-22tt0025903",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-trail-beyond-1934",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2008-03-30",
+          "reviewSequence": "2008-03-30-3",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 4,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2012-02-28",
-          "slug": "the-desert-trail-1935",
+          "imdbId": "tt0026273",
           "title": "The Desert Trail",
+          "releaseYear": "1935",
+          "sortTitle": "desert-trail-1935",
+          "releaseSequence": "1935-04-22tt0026273",
+          "genres": [
+            "Western"
+          ],
+          "slug": "the-desert-trail-1935",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2007-12-08",
+          "reviewSequence": "2007-12-08-6",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 5,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1935"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2012-02-28",
-          "slug": "randy-rides-alone-1934",
+          "imdbId": "tt0025699",
           "title": "Randy Rides Alone",
+          "releaseYear": "1934",
+          "sortTitle": "randy-rides-alone-1934",
+          "releaseSequence": "1934-06-18tt0025699",
+          "genres": [
+            "Action",
+            "Drama",
+            "Mystery",
+            "Romance",
+            "Western"
+          ],
+          "slug": "randy-rides-alone-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2012-02-28",
+          "reviewSequence": "2012-02-28-7",
+          "viewingDate": "2012-02-28",
+          "viewingSequence": 6,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         }
       ]
     },
@@ -2179,40 +4727,91 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-01-11",
-          "slug": "curse-of-the-demon-1957",
+          "imdbId": "tt0050766",
           "title": "Curse of the Demon",
+          "releaseYear": "1957",
+          "sortTitle": "curse-of-the-demon-1957",
+          "releaseSequence": "1957-11-09tt0050766",
+          "genres": [
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "curse-of-the-demon-1957",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2020-10-19",
+          "reviewSequence": "2020-10-19-1",
+          "viewingDate": "2012-01-11",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1957"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-02-04",
-          "slug": "reap-the-wild-wind-1942",
+          "imdbId": "tt0035244",
           "title": "Reap the Wild Wind",
+          "releaseYear": "1942",
+          "sortTitle": "reap-the-wild-wind-1942",
+          "releaseSequence": "1942-03-18tt0035244",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Romance"
+          ],
+          "slug": "reap-the-wild-wind-1942",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2012-02-04",
+          "reviewSequence": "2012-02-04-2",
+          "viewingDate": "2012-02-04",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1942"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-06-10",
-          "slug": "foreign-correspondent-1940",
+          "imdbId": "tt0032484",
           "title": "Foreign Correspondent",
+          "releaseYear": "1940",
+          "sortTitle": "foreign-correspondent-1940",
+          "releaseSequence": "1940-08-16tt0032484",
+          "genres": [
+            "Action",
+            "Drama",
+            "Romance",
+            "Thriller",
+            "War"
+          ],
+          "slug": "foreign-correspondent-1940",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2008-06-07",
+          "reviewSequence": "2008-06-07-2",
+          "viewingDate": "2012-06-10",
+          "viewingSequence": 3,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1940"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-11-01",
-          "slug": null,
+          "imdbId": "tt0052626",
           "title": "The Big Circus",
+          "releaseYear": "1959",
+          "sortTitle": "big-circus-1959",
+          "releaseSequence": "1959-07-05tt0052626",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2012-11-01",
+          "viewingSequence": 4,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1959"
+          "venue": null
         }
       ]
     },
@@ -2222,40 +4821,83 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-01-12",
-          "slug": "the-pit-and-the-pendulum-1961",
+          "imdbId": "tt0055304",
           "title": "The Pit and the Pendulum",
+          "releaseYear": "1961",
+          "sortTitle": "pit-and-the-pendulum-1961",
+          "releaseSequence": "1961-08-23tt0055304",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "the-pit-and-the-pendulum-1961",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2007-07-23",
+          "reviewSequence": "2007-07-23-2",
+          "viewingDate": "2012-01-12",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1961"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-01-13",
-          "slug": "the-comedy-of-terrors-1963",
+          "imdbId": "tt0056943",
           "title": "The Comedy of Terrors",
+          "releaseYear": "1963",
+          "sortTitle": "comedy-of-terrors-1963",
+          "releaseSequence": "1963-12-25tt0056943",
+          "genres": [
+            "Comedy",
+            "Horror"
+          ],
+          "slug": "the-comedy-of-terrors-1963",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2012-01-13",
+          "reviewSequence": "2012-01-13-4",
+          "viewingDate": "2012-01-13",
+          "viewingSequence": 2,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1963"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-09-08",
-          "slug": null,
+          "imdbId": "tt0070294",
           "title": "The Legend of Hell House",
+          "releaseYear": "1973",
+          "sortTitle": "legend-of-hell-house-1973",
+          "releaseSequence": "1973-??-??tt0070294",
+          "genres": [
+            "Horror"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2012-09-08",
+          "viewingSequence": 3,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1973"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-11-02",
-          "slug": "the-devil-rides-out-1968",
+          "imdbId": "tt0062885",
           "title": "The Devil Rides Out",
+          "releaseYear": "1968",
+          "sortTitle": "devil-rides-out-1968",
+          "releaseSequence": "1968-05-19tt0062885",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-devil-rides-out-1968",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2015-01-17",
+          "reviewSequence": "2015-01-17-1",
+          "viewingDate": "2012-11-02",
+          "viewingSequence": 4,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1968"
+          "venue": null
         }
       ]
     },
@@ -2265,40 +4907,89 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-01-12",
-          "slug": "the-pit-and-the-pendulum-1961",
+          "imdbId": "tt0055304",
           "title": "The Pit and the Pendulum",
+          "releaseYear": "1961",
+          "sortTitle": "pit-and-the-pendulum-1961",
+          "releaseSequence": "1961-08-23tt0055304",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "the-pit-and-the-pendulum-1961",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2007-07-23",
+          "reviewSequence": "2007-07-23-2",
+          "viewingDate": "2012-01-12",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1961"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-01-12",
-          "slug": "the-masque-of-the-red-death-1964",
+          "imdbId": "tt0058333",
           "title": "The Masque of the Red Death",
+          "releaseYear": "1964",
+          "sortTitle": "masque-of-the-red-death-1964",
+          "releaseSequence": "1964-06-24tt0058333",
+          "genres": [
+            "Drama",
+            "Horror"
+          ],
+          "slug": "the-masque-of-the-red-death-1964",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2007-12-17",
+          "reviewSequence": "2007-12-17-3",
+          "viewingDate": "2012-01-12",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1964"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2012-01-25",
-          "slug": "murders-in-the-rue-morgue-1932",
+          "imdbId": "tt0023249",
           "title": "Murders in the Rue Morgue",
+          "releaseYear": "1932",
+          "sortTitle": "murders-in-the-rue-morgue-1932",
+          "releaseSequence": "1932-01-27tt0023249",
+          "genres": [
+            "Crime",
+            "Horror",
+            "Mystery",
+            "Romance"
+          ],
+          "slug": "murders-in-the-rue-morgue-1932",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2021-07-15",
+          "reviewSequence": "2021-07-15-1",
+          "viewingDate": "2012-01-25",
+          "viewingSequence": 3,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2012-01-26",
-          "slug": "the-black-cat-1934",
+          "imdbId": "tt0024894",
           "title": "The Black Cat",
+          "releaseYear": "1934",
+          "sortTitle": "black-cat-1934",
+          "releaseSequence": "1934-05-03tt0024894",
+          "genres": [
+            "Crime",
+            "Horror",
+            "Romance",
+            "Thriller"
+          ],
+          "slug": "the-black-cat-1934",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2025-02-16",
+          "reviewSequence": "2025-02-16-1",
+          "viewingDate": "2012-01-26",
+          "viewingSequence": 4,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         }
       ]
     },
@@ -2308,40 +4999,96 @@
       "slug": "raymond-chandler",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-01-13",
-          "slug": "murder-my-sweet-1944",
+          "imdbId": "tt0037101",
           "title": "Murder, My Sweet",
+          "releaseYear": "1944",
+          "sortTitle": "murder-my-sweet-1944",
+          "releaseSequence": "1944-12-14tt0037101",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "murder-my-sweet-1944",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2012-01-13",
+          "reviewSequence": "2012-01-13-1",
+          "viewingDate": "2012-01-13",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1944"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-04-27",
-          "slug": "the-big-sleep-1946",
+          "imdbId": "tt0038355",
           "title": "The Big Sleep",
-          "medium": null,
-          "venue": "Landmark E Street Cinema",
-          "year": "1946"
-        },
-        {
-          "sequence": 3,
-          "date": "2012-04-28",
+          "releaseYear": "1946",
+          "sortTitle": "big-sleep-1946",
+          "releaseSequence": "1946-08-22tt0038355",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Mystery",
+            "Thriller"
+          ],
           "slug": "the-big-sleep-1946",
-          "title": "The Big Sleep",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2012-04-28",
+          "reviewSequence": "2012-04-28-1",
+          "viewingDate": "2012-04-27",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Landmark E Street Cinema",
-          "year": "1946"
+          "venue": "Landmark E Street Cinema"
         },
         {
-          "sequence": 4,
-          "date": "2012-12-30",
-          "slug": null,
+          "imdbId": "tt0038355",
+          "title": "The Big Sleep",
+          "releaseYear": "1946",
+          "sortTitle": "big-sleep-1946",
+          "releaseSequence": "1946-08-22tt0038355",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-big-sleep-1946",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2012-04-28",
+          "reviewSequence": "2012-04-28-1",
+          "viewingDate": "2012-04-28",
+          "viewingSequence": 3,
+          "medium": null,
+          "venue": "Landmark E Street Cinema"
+        },
+        {
+          "imdbId": "tt0070334",
           "title": "The Long Goodbye",
+          "releaseYear": "1973",
+          "sortTitle": "long-goodbye-1973",
+          "releaseSequence": "1973-03-07tt0070334",
+          "genres": [
+            "Comedy",
+            "Crime",
+            "Drama",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2012-12-30",
+          "viewingSequence": 4,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1973"
+          "venue": null
         }
       ]
     },
@@ -2351,40 +5098,84 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-01-13",
-          "slug": "the-reptile-1966",
+          "imdbId": "tt0060893",
           "title": "The Reptile",
+          "releaseYear": "1966",
+          "sortTitle": "reptile-1966",
+          "releaseSequence": "1966-02-20tt0060893",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-reptile-1966",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2012-01-13",
+          "reviewSequence": "2012-01-13-5",
+          "viewingDate": "2012-01-13",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1966"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-08-10",
-          "slug": null,
+          "imdbId": "tt0071519",
           "title": "Frankenstein and the Monster from Hell",
-          "medium": "Netflix",
-          "venue": null,
-          "year": "1974"
-        },
-        {
-          "sequence": 3,
-          "date": "2012-11-03",
-          "slug": "dracula-prince-of-darkness-1966",
-          "title": "Dracula: Prince of Darkness",
-          "medium": "TCM HD",
-          "venue": null,
-          "year": "1966"
-        },
-        {
-          "sequence": 4,
-          "date": "2012-11-09",
+          "releaseYear": "1974",
+          "sortTitle": "frankenstein-and-the-monster-from-hell-1974",
+          "releaseSequence": "1974-04-01tt0071519",
+          "genres": [
+            "Horror",
+            "Sci-Fi"
+          ],
           "slug": null,
-          "title": "Dracula Has Risen from the Grave",
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2012-08-10",
+          "viewingSequence": 2,
+          "medium": "Netflix",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0059127",
+          "title": "Dracula: Prince of Darkness",
+          "releaseYear": "1966",
+          "sortTitle": "dracula-prince-of-darkness-1966",
+          "releaseSequence": "1966-01-02tt0059127",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "dracula-prince-of-darkness-1966",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2003-10-16",
+          "reviewSequence": "2003-10-16-2",
+          "viewingDate": "2012-11-03",
+          "viewingSequence": 3,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1968"
+          "venue": null
+        },
+        {
+          "imdbId": "tt0062909",
+          "title": "Dracula Has Risen from the Grave",
+          "releaseYear": "1968",
+          "sortTitle": "dracula-has-risen-from-the-grave-1968",
+          "releaseSequence": "1968-11-07tt0062909",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Romance"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2012-11-09",
+          "viewingSequence": 4,
+          "medium": "TCM HD",
+          "venue": null
         }
       ]
     },
@@ -2394,40 +5185,80 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2012-01-28",
-          "slug": "fright-night-1985",
+          "imdbId": "tt0089175",
           "title": "Fright Night",
+          "releaseYear": "1985",
+          "sortTitle": "fright-night-1985",
+          "releaseSequence": "1985-08-02tt0089175",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "fright-night-1985",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-31",
+          "reviewSequence": "2020-10-31-4",
+          "viewingDate": "2012-01-28",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1985"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2012-07-07",
-          "slug": "fright-night-1985",
+          "imdbId": "tt0089175",
           "title": "Fright Night",
+          "releaseYear": "1985",
+          "sortTitle": "fright-night-1985",
+          "releaseSequence": "1985-08-02tt0089175",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "fright-night-1985",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-31",
+          "reviewSequence": "2020-10-31-4",
+          "viewingDate": "2012-07-07",
+          "viewingSequence": 2,
           "medium": "35mm",
-          "venue": "AFI Silver",
-          "year": "1985"
+          "venue": "AFI Silver"
         },
         {
-          "sequence": 3,
-          "date": "2012-07-08",
-          "slug": "fright-night-1985",
+          "imdbId": "tt0089175",
           "title": "Fright Night",
+          "releaseYear": "1985",
+          "sortTitle": "fright-night-1985",
+          "releaseSequence": "1985-08-02tt0089175",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "fright-night-1985",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-31",
+          "reviewSequence": "2020-10-31-4",
+          "viewingDate": "2012-07-08",
+          "viewingSequence": 3,
           "medium": "35mm",
-          "venue": "AFI Silver",
-          "year": "1985"
+          "venue": "AFI Silver"
         },
         {
-          "sequence": 4,
-          "date": "2012-07-30",
-          "slug": "fright-night-1985",
+          "imdbId": "tt0089175",
           "title": "Fright Night",
+          "releaseYear": "1985",
+          "sortTitle": "fright-night-1985",
+          "releaseSequence": "1985-08-02tt0089175",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "fright-night-1985",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-31",
+          "reviewSequence": "2020-10-31-4",
+          "viewingDate": "2012-07-30",
+          "viewingSequence": 4,
           "medium": "Blu-ray",
-          "venue": "The Black Cat",
-          "year": "1985"
+          "venue": "The Black Cat"
         }
       ]
     }

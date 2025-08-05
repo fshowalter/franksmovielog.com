@@ -1,30 +1,35 @@
 {
   "name": "Luis Bu\u00f1uel",
   "slug": "luis-bunuel",
+  "titleCount": 1,
+  "reviewCount": 1,
   "titles": [
     {
+      "imdbId": "tt0021577",
+      "title": "The Golden Age",
+      "releaseYear": "1930",
+      "sortTitle": "golden-age-1930",
+      "releaseSequence": "1930-11-07tt0021577",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "slug": "the-golden-age-1930",
+      "grade": "C+",
+      "gradeValue": 7,
+      "reviewDate": "2020-11-09",
+      "reviewSequence": "2020-11-09-1",
       "creditedAs": [
         "director",
         "writer"
       ],
-      "imdbId": "tt0021577",
-      "title": "The Golden Age",
-      "year": "1930",
-      "slug": "the-golden-age-1930",
-      "grade": "C+",
-      "sortTitle": "golden-age-1930",
-      "gradeValue": 7,
-      "releaseSequence": "1930-11-07tt0021577",
-      "reviewDate": "2020-11-09",
-      "reviewSequence": "2020-11-09-1",
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     }
   ],
-  "reviewCount": 1,
-  "totalCount": 1,
+  "description": "Writer and director with 1 reviewed title.",
   "creditedAs": [
     "writer",
     "director"

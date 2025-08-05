@@ -2,7 +2,7 @@ import { promises as fs } from "node:fs";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
-import { nullableString } from "./utils/nullable";
+import { nullableNumber, nullableString } from "./utils/nullable";
 
 const reviewedTitlesJsonFile = getContentPath("data", "reviewed-titles.json");
 
@@ -22,18 +22,21 @@ const MoreTitleSchema = z
     genres: z.array(z.string()),
     grade: z.string(),
     imdbId: z.string(),
+    releaseYear: z.string(),
     slug: z.string(),
     title: z.string(),
-    year: z.string(),
   })
-  .transform(({ genres, grade, imdbId, slug, title, year }) => ({
-    genres,
-    grade,
-    imdbId,
-    releaseYear: year,
-    slug,
-    title,
-  }));
+  .transform((data) => {
+    // fix zod making anything with undefined optional
+    return {
+      genres: data.genres,
+      grade: data.grade,
+      imdbId: data.imdbId,
+      releaseYear: data.releaseYear,
+      slug: data.slug,
+      title: data.title,
+    };
+  });
 
 const CreditKindSchema = z.enum(["writer", "director", "performer"]);
 
@@ -50,6 +53,49 @@ const MoreCollectionsSchema = z.object({
   titles: z.array(MoreTitleSchema),
 });
 
+const ViewingSchema = z
+  .object({
+    genres: z.array(z.string()),
+    grade: nullableString(),
+    gradeValue: nullableNumber(),
+    imdbId: z.string(),
+    medium: nullableString(),
+    mediumNotes: nullableString(),
+    releaseSequence: z.string(),
+    releaseYear: z.string(),
+    reviewDate: nullableString(),
+    reviewSequence: nullableString(),
+    slug: nullableString(),
+    sortTitle: z.string(),
+    title: z.string(),
+    venue: nullableString(),
+    venueNotes: nullableString(),
+    viewingDate: z.string(),
+    viewingSequence: z.number(),
+  })
+  .transform((data) => {
+    // fix zod making anything with undefined optional
+    return {
+      genres: data.genres,
+      grade: data.grade,
+      gradeValue: data.gradeValue,
+      imdbId: data.imdbId,
+      medium: data.medium,
+      mediumNotes: data.mediumNotes,
+      releaseSequence: data.releaseSequence,
+      releaseYear: data.releaseYear,
+      reviewDate: data.reviewDate,
+      reviewSequence: data.reviewSequence,
+      slug: data.slug,
+      sortTitle: data.sortTitle,
+      title: data.title,
+      venue: data.venue,
+      venueNotes: data.venueNotes,
+      viewingDate: data.viewingDate,
+      viewingSequence: data.viewingSequence,
+    };
+  });
+
 const ReviewedTitleJsonSchema = z
   .object({
     castAndCrew: z.array(CastAndCrewMemberSchema),
@@ -57,6 +103,7 @@ const ReviewedTitleJsonSchema = z
     countries: z.array(z.string()),
     directorNames: z.array(z.string()),
     genres: z.array(z.string()),
+    grade: z.string(),
     gradeValue: z.number(),
     imdbId: z.string(),
     moreCastAndCrew: z.array(MoreCastAndCrewMemberSchema),
@@ -65,62 +112,44 @@ const ReviewedTitleJsonSchema = z
     originalTitle: nullableString(),
     principalCastNames: z.array(z.string()),
     releaseSequence: z.string(),
+    releaseYear: z.string(),
+    reviewDate: z.string(),
+    reviewSequence: z.string(),
     runtimeMinutes: z.number(),
-    sequence: z.string(),
     slug: z.string(),
     sortTitle: z.string(),
     title: z.string(),
+    viewings: z.array(ViewingSchema),
     writerNames: z.array(z.string()),
-    year: z.string(),
   })
-  .transform(
-    ({
-      castAndCrew,
-      collections,
-      countries,
-      directorNames,
-      genres,
-      gradeValue,
-      imdbId,
-      moreCastAndCrew,
-      moreCollections,
-      moreReviews,
-      originalTitle,
-      principalCastNames,
-      releaseSequence,
-      runtimeMinutes,
-      sequence,
-      slug,
-      sortTitle,
-      title,
-      writerNames,
-      year,
-    }) => {
-      // fix zod making anything with undefined optional
-      return {
-        castAndCrew,
-        collections,
-        countries,
-        directorNames,
-        genres,
-        gradeValue,
-        imdbId,
-        moreCastAndCrew,
-        moreCollections,
-        moreReviews,
-        originalTitle,
-        principalCastNames,
-        releaseSequence,
-        releaseYear: year,
-        runtimeMinutes,
-        sequence,
-        slug,
-        sortTitle,
-        title,
-        writerNames,
-      };
-    },
-  );
+  .transform((data) => {
+    // fix zod making anything with undefined optional
+    return {
+      castAndCrew: data.castAndCrew,
+      collections: data.collections,
+      countries: data.countries,
+      directorNames: data.directorNames,
+      genres: data.genres,
+      grade: data.grade,
+      gradeValue: data.gradeValue,
+      imdbId: data.imdbId,
+      moreCastAndCrew: data.moreCastAndCrew,
+      moreCollections: data.moreCollections,
+      moreReviews: data.moreReviews,
+      originalTitle: data.originalTitle,
+      principalCastNames: data.principalCastNames,
+      releaseSequence: data.releaseSequence,
+      releaseYear: data.releaseYear,
+      reviewDate: data.reviewDate,
+      reviewSequence: data.reviewSequence,
+      runtimeMinutes: data.runtimeMinutes,
+      slug: data.slug,
+      sortTitle: data.sortTitle,
+      title: data.title,
+      viewings: data.viewings,
+      writerNames: data.writerNames,
+    };
+  });
 
 export type ReviewedTitleJson = z.infer<typeof ReviewedTitleJsonSchema>;
 

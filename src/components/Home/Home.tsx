@@ -39,7 +39,7 @@ export function Home({ backdropImageProps, deck, values }: Props): JSX.Element {
           `}
         >
           {values.map((value) => {
-            return <HomeListItem key={value.sequence} value={value} />;
+            return <HomeListItem key={value.reviewSequence} value={value} />;
           })}
         </ul>
         <div className="flex px-container py-10">

@@ -1,49 +1,60 @@
 {
   "name": "Paul Verhoeven",
   "slug": "paul-verhoeven",
+  "titleCount": 2,
+  "reviewCount": 2,
   "titles": [
     {
+      "imdbId": "tt0089153",
+      "title": "Flesh+Blood",
+      "releaseYear": "1985",
+      "sortTitle": "flesh-blood-1985",
+      "releaseSequence": "1985-06-10tt0089153",
+      "genres": [
+        "Adventure",
+        "Drama"
+      ],
+      "slug": "flesh-blood-1985",
+      "grade": "C+",
+      "gradeValue": 7,
+      "reviewDate": "2025-05-10",
+      "reviewSequence": "2025-05-10-1",
       "creditedAs": [
         "director",
         "writer"
       ],
-      "imdbId": "tt0089153",
-      "title": "Flesh+Blood",
-      "year": "1985",
-      "slug": "flesh-blood-1985",
-      "grade": "C+",
-      "sortTitle": "flesh-blood-1985",
-      "gradeValue": 7,
-      "releaseSequence": "1985-06-10tt0089153",
-      "reviewDate": "2025-05-10",
-      "reviewSequence": "2025-05-10-1",
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0093870",
+      "title": "RoboCop",
+      "releaseYear": "1987",
+      "sortTitle": "robocop-1987",
+      "releaseSequence": "1987-07-02tt0093870",
+      "genres": [
+        "Action",
+        "Crime",
+        "Sci-Fi",
+        "Thriller"
+      ],
+      "slug": "robocop-1987",
+      "grade": "B+",
+      "gradeValue": 10,
+      "reviewDate": "2007-06-15",
+      "reviewSequence": "2007-06-15-2",
       "creditedAs": [
         "director"
       ],
-      "imdbId": "tt0093870",
-      "title": "RoboCop",
-      "year": "1987",
-      "slug": "robocop-1987",
-      "grade": "B+",
-      "sortTitle": "robocop-1987",
-      "gradeValue": 10,
-      "releaseSequence": "1987-07-02tt0093870",
-      "reviewDate": "2007-06-15",
-      "reviewSequence": "2007-06-15-2",
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     }
   ],
-  "reviewCount": 2,
-  "totalCount": 2,
+  "description": "Director and writer with 2 reviewed titles.",
   "creditedAs": [
     "director",
     "writer"

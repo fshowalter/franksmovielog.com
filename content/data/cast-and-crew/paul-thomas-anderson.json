@@ -1,70 +1,81 @@
 {
   "name": "Paul Thomas Anderson",
   "slug": "paul-thomas-anderson",
+  "titleCount": 3,
+  "reviewCount": 3,
   "titles": [
     {
-      "creditedAs": [
-        "director",
-        "writer"
-      ],
       "imdbId": "tt0119256",
       "title": "Hard Eight",
-      "year": "1996",
+      "releaseYear": "1996",
+      "sortTitle": "hard-eight-1996",
+      "releaseSequence": "1996-01-20tt0119256",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
       "slug": "hard-eight-1996",
       "grade": "A-",
-      "sortTitle": "hard-eight-1996",
       "gradeValue": 11,
-      "releaseSequence": "1996-01-20tt0119256",
       "reviewDate": "2021-07-08",
-      "reviewSequence": "2021-07-08-1",
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "collectionNames": []
-    },
-    {
+      "reviewSequence": "2021-07-08-2",
       "creditedAs": [
         "director",
         "writer"
       ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0118749",
       "title": "Boogie Nights",
-      "year": "1997",
+      "releaseYear": "1997",
+      "sortTitle": "boogie-nights-1997",
+      "releaseSequence": "1997-09-11tt0118749",
+      "genres": [
+        "Drama"
+      ],
       "slug": "boogie-nights-1997",
       "grade": "A+",
-      "sortTitle": "boogie-nights-1997",
       "gradeValue": 13,
-      "releaseSequence": "1997-09-11tt0118749",
       "reviewDate": "2007-11-18",
       "reviewSequence": "2007-11-18-2",
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "collectionNames": []
-    },
-    {
       "creditedAs": [
         "director",
         "writer"
       ],
-      "imdbId": "tt0469494",
-      "title": "There Will Be Blood",
-      "year": "2007",
-      "slug": "there-will-be-blood-2007",
-      "grade": "A+",
-      "sortTitle": "there-will-be-blood-2007",
-      "gradeValue": 13,
-      "releaseSequence": "2007-09-27tt0469494",
-      "reviewDate": "2008-01-11",
-      "reviewSequence": "2008-01-11-1",
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0469494",
+      "title": "There Will Be Blood",
+      "releaseYear": "2007",
+      "sortTitle": "there-will-be-blood-2007",
+      "releaseSequence": "2007-09-27tt0469494",
+      "genres": [
+        "Drama"
+      ],
+      "slug": "there-will-be-blood-2007",
+      "grade": "A+",
+      "gradeValue": 13,
+      "reviewDate": "2008-01-11",
+      "reviewSequence": "2008-01-11-1",
+      "creditedAs": [
+        "director",
+        "writer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
     }
   ],
-  "reviewCount": 3,
-  "totalCount": 3,
+  "description": "Writer and director with 3 reviewed titles.",
   "creditedAs": [
     "writer",
     "director"

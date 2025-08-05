@@ -103,11 +103,20 @@
   ],
   "mostWatchedTitles": [
     {
-      "title": "The Beyond",
       "imdbId": "tt0082307",
-      "year": "1981",
-      "count": 2,
-      "slug": "the-beyond-1981"
+      "title": "The Beyond",
+      "releaseYear": "1981",
+      "sortTitle": "beyond-1981",
+      "releaseSequence": "1981-04-29tt0082307",
+      "genres": [
+        "Horror"
+      ],
+      "slug": "the-beyond-1981",
+      "grade": "A",
+      "gradeValue": 12,
+      "reviewDate": "2015-06-23",
+      "reviewSequence": "2015-06-23-2",
+      "count": 2
     }
   ],
   "mostWatchedDirectors": [
@@ -117,22 +126,44 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-01-17",
-          "slug": "the-devil-rides-out-1968",
+          "imdbId": "tt0062885",
           "title": "The Devil Rides Out",
+          "releaseYear": "1968",
+          "sortTitle": "devil-rides-out-1968",
+          "releaseSequence": "1968-05-19tt0062885",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-devil-rides-out-1968",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2015-01-17",
+          "reviewSequence": "2015-01-17-1",
+          "viewingDate": "2015-01-17",
+          "viewingSequence": 1,
           "medium": "DVD",
-          "venue": null,
-          "year": "1968"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2015-10-24",
-          "slug": "the-curse-of-frankenstein-1957",
+          "imdbId": "tt0050280",
           "title": "The Curse of Frankenstein",
+          "releaseYear": "1957",
+          "sortTitle": "curse-of-frankenstein-1957",
+          "releaseSequence": "1957-05-02tt0050280",
+          "genres": [
+            "Horror",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "the-curse-of-frankenstein-1957",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-09-19",
+          "reviewSequence": "2020-09-19-2",
+          "viewingDate": "2015-10-24",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1957"
+          "venue": null
         }
       ]
     },
@@ -142,22 +173,46 @@
       "slug": "don-siegel",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-01-31",
-          "slug": "the-big-steal-1949",
+          "imdbId": "tt0041178",
           "title": "The Big Steal",
+          "releaseYear": "1949",
+          "sortTitle": "big-steal-1949",
+          "releaseSequence": "1949-06-29tt0041178",
+          "genres": [
+            "Crime",
+            "Film-Noir",
+            "Romance",
+            "Thriller"
+          ],
+          "slug": "the-big-steal-1949",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2022-10-20",
+          "reviewSequence": "2022-10-20-2",
+          "viewingDate": "2015-01-31",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1949"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2015-07-11",
-          "slug": "hell-is-for-heroes-1962",
+          "imdbId": "tt0056062",
           "title": "Hell Is for Heroes",
+          "releaseYear": "1962",
+          "sortTitle": "hell-is-for-heroes-1962",
+          "releaseSequence": "1962-??-??tt0056062",
+          "genres": [
+            "Drama",
+            "War"
+          ],
+          "slug": "hell-is-for-heroes-1962",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2015-07-11",
+          "reviewSequence": "2015-07-11-1",
+          "viewingDate": "2015-07-11",
+          "viewingSequence": 2,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1962"
+          "venue": null
         }
       ]
     },
@@ -167,22 +222,45 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-03-07",
-          "slug": "three-on-a-match-1932",
+          "imdbId": "tt0023590",
           "title": "Three on a Match",
+          "releaseYear": "1932",
+          "sortTitle": "three-on-a-match-1932",
+          "releaseSequence": "1932-10-28tt0023590",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Romance"
+          ],
+          "slug": "three-on-a-match-1932",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2022-09-30",
+          "reviewSequence": "2022-09-30-1",
+          "viewingDate": "2015-03-07",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2015-08-08",
-          "slug": "big-city-blues-1932",
+          "imdbId": "tt0022676",
           "title": "Big City Blues",
+          "releaseYear": "1932",
+          "sortTitle": "big-city-blues-1932",
+          "releaseSequence": "1932-09-10tt0022676",
+          "genres": [
+            "Comedy",
+            "Drama"
+          ],
+          "slug": "big-city-blues-1932",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-10-16",
+          "reviewSequence": "2020-10-16-2",
+          "viewingDate": "2015-08-08",
+          "viewingSequence": 2,
           "medium": "TCM",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         }
       ]
     },
@@ -192,22 +270,42 @@
       "slug": "lucio-fulci",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-06-23",
-          "slug": "the-beyond-1981",
+          "imdbId": "tt0082307",
           "title": "The Beyond",
+          "releaseYear": "1981",
+          "sortTitle": "beyond-1981",
+          "releaseSequence": "1981-04-29tt0082307",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-beyond-1981",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2015-06-23",
+          "reviewSequence": "2015-06-23-2",
+          "viewingDate": "2015-06-23",
+          "viewingSequence": 1,
           "medium": "35mm",
-          "venue": "Alamo Drafthouse Cinema - Winchester",
-          "year": "1981"
+          "venue": "Alamo Drafthouse Cinema - Winchester"
         },
         {
-          "sequence": 2,
-          "date": "2015-11-05",
-          "slug": "the-beyond-1981",
+          "imdbId": "tt0082307",
           "title": "The Beyond",
+          "releaseYear": "1981",
+          "sortTitle": "beyond-1981",
+          "releaseSequence": "1981-04-29tt0082307",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-beyond-1981",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2015-06-23",
+          "reviewSequence": "2015-06-23-2",
+          "viewingDate": "2015-11-05",
+          "viewingSequence": 2,
           "medium": "35mm",
-          "venue": "AFI Silver",
-          "year": "1981"
+          "venue": "AFI Silver"
         }
       ]
     },
@@ -217,22 +315,42 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-08-13",
-          "slug": "and-now-the-screaming-starts-1973",
+          "imdbId": "tt0069715",
           "title": "And Now the Screaming Starts!",
+          "releaseYear": "1973",
+          "sortTitle": "and-now-the-screaming-starts-1973",
+          "releaseSequence": "1973-04-27tt0069715",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "and-now-the-screaming-starts-1973",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2015-08-13",
+          "reviewSequence": "2015-08-13-1",
+          "viewingDate": "2015-08-13",
+          "viewingSequence": 1,
           "medium": "Shudder",
-          "venue": null,
-          "year": "1973"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2015-09-19",
-          "slug": "asylum-1972",
+          "imdbId": "tt0068230",
           "title": "Asylum",
+          "releaseYear": "1972",
+          "sortTitle": "asylum-1972",
+          "releaseSequence": "1972-07-06tt0068230",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "asylum-1972",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2025-02-22",
+          "reviewSequence": "2025-02-22-1",
+          "viewingDate": "2015-09-19",
+          "viewingSequence": 2,
           "medium": "Amazon",
-          "venue": null,
-          "year": "1972"
+          "venue": null
         }
       ]
     }
@@ -244,103 +362,226 @@
       "slug": "christopher-lee",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-01-08",
-          "slug": null,
+          "imdbId": "tt2310332",
           "title": "The Hobbit: The Battle of the Five Armies",
+          "releaseYear": "2014",
+          "sortTitle": "hobbit-the-battle-of-the-five-armies-2014",
+          "releaseSequence": "2014-12-01tt2310332",
+          "genres": [
+            "Adventure",
+            "Fantasy"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2015-01-08",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "AMC Tysons Corner 16",
-          "year": "2014"
+          "venue": "AMC Tysons Corner 16"
         },
         {
-          "sequence": 2,
-          "date": "2015-01-17",
-          "slug": "the-devil-rides-out-1968",
+          "imdbId": "tt0062885",
           "title": "The Devil Rides Out",
+          "releaseYear": "1968",
+          "sortTitle": "devil-rides-out-1968",
+          "releaseSequence": "1968-05-19tt0062885",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-devil-rides-out-1968",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2015-01-17",
+          "reviewSequence": "2015-01-17-1",
+          "viewingDate": "2015-01-17",
+          "viewingSequence": 2,
           "medium": "DVD",
-          "venue": null,
-          "year": "1968"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2015-01-17",
-          "slug": "rasputin-the-mad-monk-1966",
+          "imdbId": "tt0059635",
           "title": "Rasputin: The Mad Monk",
+          "releaseYear": "1966",
+          "sortTitle": "rasputin-the-mad-monk-1966",
+          "releaseSequence": "1966-02-20tt0059635",
+          "genres": [
+            "Biography",
+            "Drama",
+            "Horror"
+          ],
+          "slug": "rasputin-the-mad-monk-1966",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2015-01-17",
+          "reviewSequence": "2015-01-17-2",
+          "viewingDate": "2015-01-17",
+          "viewingSequence": 3,
           "medium": "DVD",
-          "venue": null,
-          "year": "1966"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2015-01-31",
-          "slug": "the-crimson-cult-1968",
+          "imdbId": "tt0062833",
           "title": "The Crimson Cult",
+          "releaseYear": "1968",
+          "sortTitle": "crimson-cult-1968",
+          "releaseSequence": "1968-12-01tt0062833",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-crimson-cult-1968",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2025-05-03",
+          "reviewSequence": "2025-05-03-1",
+          "viewingDate": "2015-01-31",
+          "viewingSequence": 4,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1968"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2015-02-21",
-          "slug": "to-the-devil-a-daughter-1976",
+          "imdbId": "tt0075334",
           "title": "To the Devil a Daughter",
+          "releaseYear": "1976",
+          "sortTitle": "to-the-devil-a-daughter-1976",
+          "releaseSequence": "1976-02-22tt0075334",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "to-the-devil-a-daughter-1976",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2015-02-21",
+          "reviewSequence": "2015-02-21-1",
+          "viewingDate": "2015-02-21",
+          "viewingSequence": 5,
           "medium": "DVD",
-          "venue": null,
-          "year": "1976"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2015-06-06",
-          "slug": "the-city-of-the-dead-1960",
+          "imdbId": "tt0053719",
           "title": "The City of the Dead",
+          "releaseYear": "1960",
+          "sortTitle": "city-of-the-dead-1960",
+          "releaseSequence": "1960-09-09tt0053719",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-city-of-the-dead-1960",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2015-06-06",
+          "reviewSequence": "2015-06-06-1",
+          "viewingDate": "2015-06-06",
+          "viewingSequence": 6,
           "medium": "DVD",
-          "venue": null,
-          "year": "1960"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2015-08-11",
-          "slug": "i-monster-1971",
+          "imdbId": "tt0068727",
           "title": "I, Monster",
+          "releaseYear": "1971",
+          "sortTitle": "i-monster-1971",
+          "releaseSequence": "1971-11-01tt0068727",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "i-monster-1971",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2015-08-11",
+          "reviewSequence": "2015-08-11-1",
+          "viewingDate": "2015-08-11",
+          "viewingSequence": 7,
           "medium": "Shudder",
-          "venue": null,
-          "year": "1971"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2015-08-29",
-          "slug": "the-whip-and-the-body-1963",
+          "imdbId": "tt0057078",
           "title": "The Whip and the Body",
+          "releaseYear": "1963",
+          "sortTitle": "whip-and-the-body-1963",
+          "releaseSequence": "1963-08-29tt0057078",
+          "genres": [
+            "Horror",
+            "Romance"
+          ],
+          "slug": "the-whip-and-the-body-1963",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2015-08-29",
+          "reviewSequence": "2015-08-29-1",
+          "viewingDate": "2015-08-29",
+          "viewingSequence": 8,
           "medium": "Shudder",
-          "venue": null,
-          "year": "1963"
+          "venue": null
         },
         {
-          "sequence": 9,
-          "date": "2015-09-05",
-          "slug": "the-house-that-dripped-blood-1971",
+          "imdbId": "tt0065854",
           "title": "The House That Dripped Blood",
+          "releaseYear": "1971",
+          "sortTitle": "house-that-dripped-blood-1971",
+          "releaseSequence": "1971-02-21tt0065854",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-house-that-dripped-blood-1971",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2015-09-05",
+          "reviewSequence": "2015-09-05-1",
+          "viewingDate": "2015-09-05",
+          "viewingSequence": 9,
           "medium": "Amazon",
-          "venue": null,
-          "year": "1971"
+          "venue": null
         },
         {
-          "sequence": 10,
-          "date": "2015-10-13",
-          "slug": "the-creeping-flesh-1973",
+          "imdbId": "tt0068424",
           "title": "The Creeping Flesh",
+          "releaseYear": "1973",
+          "sortTitle": "creeping-flesh-1973",
+          "releaseSequence": "1973-??-??tt0068424",
+          "genres": [
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "the-creeping-flesh-1973",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2004-07-31",
+          "reviewSequence": "2004-07-31-1",
+          "viewingDate": "2015-10-13",
+          "viewingSequence": 10,
           "medium": null,
-          "venue": "AFI Silver",
-          "year": "1973"
+          "venue": "AFI Silver"
         },
         {
-          "sequence": 11,
-          "date": "2015-10-24",
-          "slug": "the-curse-of-frankenstein-1957",
+          "imdbId": "tt0050280",
           "title": "The Curse of Frankenstein",
+          "releaseYear": "1957",
+          "sortTitle": "curse-of-frankenstein-1957",
+          "releaseSequence": "1957-05-02tt0050280",
+          "genres": [
+            "Horror",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "the-curse-of-frankenstein-1957",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-09-19",
+          "reviewSequence": "2020-09-19-2",
+          "viewingDate": "2015-10-24",
+          "viewingSequence": 11,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1957"
+          "venue": null
         }
       ]
     },
@@ -350,67 +591,147 @@
       "slug": "peter-cushing",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-08-11",
-          "slug": "i-monster-1971",
+          "imdbId": "tt0068727",
           "title": "I, Monster",
+          "releaseYear": "1971",
+          "sortTitle": "i-monster-1971",
+          "releaseSequence": "1971-11-01tt0068727",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "i-monster-1971",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2015-08-11",
+          "reviewSequence": "2015-08-11-1",
+          "viewingDate": "2015-08-11",
+          "viewingSequence": 1,
           "medium": "Shudder",
-          "venue": null,
-          "year": "1971"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2015-08-13",
-          "slug": "and-now-the-screaming-starts-1973",
+          "imdbId": "tt0069715",
           "title": "And Now the Screaming Starts!",
+          "releaseYear": "1973",
+          "sortTitle": "and-now-the-screaming-starts-1973",
+          "releaseSequence": "1973-04-27tt0069715",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "and-now-the-screaming-starts-1973",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2015-08-13",
+          "reviewSequence": "2015-08-13-1",
+          "viewingDate": "2015-08-13",
+          "viewingSequence": 2,
           "medium": "Shudder",
-          "venue": null,
-          "year": "1973"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2015-08-15",
-          "slug": "shock-waves-1977",
+          "imdbId": "tt0076704",
           "title": "Shock Waves",
+          "releaseYear": "1977",
+          "sortTitle": "shock-waves-1977",
+          "releaseSequence": "1977-06-22tt0076704",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Sci-Fi"
+          ],
+          "slug": "shock-waves-1977",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2015-08-15",
+          "reviewSequence": "2015-08-15-2",
+          "viewingDate": "2015-08-15",
+          "viewingSequence": 3,
           "medium": "Shudder",
-          "venue": null,
-          "year": "1977"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2015-09-05",
-          "slug": "the-house-that-dripped-blood-1971",
+          "imdbId": "tt0065854",
           "title": "The House That Dripped Blood",
+          "releaseYear": "1971",
+          "sortTitle": "house-that-dripped-blood-1971",
+          "releaseSequence": "1971-02-21tt0065854",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-house-that-dripped-blood-1971",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2015-09-05",
+          "reviewSequence": "2015-09-05-1",
+          "viewingDate": "2015-09-05",
+          "viewingSequence": 4,
           "medium": "Amazon",
-          "venue": null,
-          "year": "1971"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2015-09-19",
-          "slug": "asylum-1972",
+          "imdbId": "tt0068230",
           "title": "Asylum",
+          "releaseYear": "1972",
+          "sortTitle": "asylum-1972",
+          "releaseSequence": "1972-07-06tt0068230",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "asylum-1972",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2025-02-22",
+          "reviewSequence": "2025-02-22-1",
+          "viewingDate": "2015-09-19",
+          "viewingSequence": 5,
           "medium": "Amazon",
-          "venue": null,
-          "year": "1972"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2015-10-13",
-          "slug": "the-creeping-flesh-1973",
+          "imdbId": "tt0068424",
           "title": "The Creeping Flesh",
+          "releaseYear": "1973",
+          "sortTitle": "creeping-flesh-1973",
+          "releaseSequence": "1973-??-??tt0068424",
+          "genres": [
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "the-creeping-flesh-1973",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2004-07-31",
+          "reviewSequence": "2004-07-31-1",
+          "viewingDate": "2015-10-13",
+          "viewingSequence": 6,
           "medium": null,
-          "venue": "AFI Silver",
-          "year": "1973"
+          "venue": "AFI Silver"
         },
         {
-          "sequence": 7,
-          "date": "2015-10-24",
-          "slug": "the-curse-of-frankenstein-1957",
+          "imdbId": "tt0050280",
           "title": "The Curse of Frankenstein",
+          "releaseYear": "1957",
+          "sortTitle": "curse-of-frankenstein-1957",
+          "releaseSequence": "1957-05-02tt0050280",
+          "genres": [
+            "Horror",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "the-curse-of-frankenstein-1957",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-09-19",
+          "reviewSequence": "2020-09-19-2",
+          "viewingDate": "2015-10-24",
+          "viewingSequence": 7,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1957"
+          "venue": null
         }
       ]
     },
@@ -420,58 +741,134 @@
       "slug": "robert-mitchum",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-01-03",
-          "slug": "she-couldnt-say-no-1953",
+          "imdbId": "tt0047476",
           "title": "She Couldn't Say No",
+          "releaseYear": "1953",
+          "sortTitle": "she-couldnt-say-no-1953",
+          "releaseSequence": "1953-06-28tt0047476",
+          "genres": [
+            "Comedy",
+            "Drama"
+          ],
+          "slug": "she-couldnt-say-no-1953",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2015-01-03",
+          "reviewSequence": "2015-01-03-1",
+          "viewingDate": "2015-01-03",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1953"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2015-01-09",
-          "slug": "rachel-and-the-stranger-1948",
+          "imdbId": "tt0040720",
           "title": "Rachel and the Stranger",
+          "releaseYear": "1948",
+          "sortTitle": "rachel-and-the-stranger-1948",
+          "releaseSequence": "1948-09-18tt0040720",
+          "genres": [
+            "Adventure",
+            "Comedy",
+            "Drama",
+            "Romance",
+            "Western"
+          ],
+          "slug": "rachel-and-the-stranger-1948",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2022-09-06",
+          "reviewSequence": "2022-09-06-2",
+          "viewingDate": "2015-01-09",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1948"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2015-01-10",
-          "slug": "the-angry-hills-1959",
+          "imdbId": "tt0052563",
           "title": "The Angry Hills",
+          "releaseYear": "1959",
+          "sortTitle": "angry-hills-1959",
+          "releaseSequence": "1959-02-19tt0052563",
+          "genres": [
+            "Drama",
+            "War",
+            "Thriller"
+          ],
+          "slug": "the-angry-hills-1959",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2015-01-10",
+          "reviewSequence": "2015-01-10-1",
+          "viewingDate": "2015-01-10",
+          "viewingSequence": 3,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1959"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2015-01-31",
-          "slug": "the-big-steal-1949",
+          "imdbId": "tt0041178",
           "title": "The Big Steal",
+          "releaseYear": "1949",
+          "sortTitle": "big-steal-1949",
+          "releaseSequence": "1949-06-29tt0041178",
+          "genres": [
+            "Crime",
+            "Film-Noir",
+            "Romance",
+            "Thriller"
+          ],
+          "slug": "the-big-steal-1949",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2022-10-20",
+          "reviewSequence": "2022-10-20-2",
+          "viewingDate": "2015-01-31",
+          "viewingSequence": 4,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1949"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2015-02-07",
-          "slug": "where-danger-lives-1950",
+          "imdbId": "tt0043131",
           "title": "Where Danger Lives",
+          "releaseYear": "1950",
+          "sortTitle": "where-danger-lives-1950",
+          "releaseSequence": "1950-11-15tt0043131",
+          "genres": [
+            "Crime",
+            "Film-Noir",
+            "Thriller"
+          ],
+          "slug": "where-danger-lives-1950",
+          "grade": "F",
+          "gradeValue": 1,
+          "reviewDate": "2015-02-07",
+          "reviewSequence": "2015-02-07-1",
+          "viewingDate": "2015-02-07",
+          "viewingSequence": 5,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1950"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2015-06-06",
-          "slug": "out-of-the-past-1947",
+          "imdbId": "tt0039689",
           "title": "Out of the Past",
+          "releaseYear": "1947",
+          "sortTitle": "out-of-the-past-1947",
+          "releaseSequence": "1947-11-25tt0039689",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Romance",
+            "Thriller"
+          ],
+          "slug": "out-of-the-past-1947",
+          "grade": "A-",
+          "gradeValue": 11,
+          "reviewDate": "2007-12-10",
+          "reviewSequence": "2007-12-10-2",
+          "viewingDate": "2015-06-06",
+          "viewingSequence": 6,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1947"
+          "venue": null
         }
       ]
     },
@@ -481,40 +878,92 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-01-04",
-          "slug": null,
+          "imdbId": "tt1843866",
           "title": "Captain America: The Winter Soldier",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "2014"
-        },
-        {
-          "sequence": 2,
-          "date": "2015-02-12",
-          "slug": "kingsman-the-secret-service-2014",
-          "title": "Kingsman: The Secret Service",
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2014"
-        },
-        {
-          "sequence": 3,
-          "date": "2015-04-30",
-          "slug": "avengers-age-of-ultron-2015",
-          "title": "Avengers: Age of Ultron",
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
-        },
-        {
-          "sequence": 4,
-          "date": "2015-12-29",
+          "releaseYear": "2014",
+          "sortTitle": "captain-america-the-winter-soldier-2014",
+          "releaseSequence": "2014-03-13tt1843866",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi",
+            "Thriller"
+          ],
           "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2015-01-04",
+          "viewingSequence": 1,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt2802144",
+          "title": "Kingsman: The Secret Service",
+          "releaseYear": "2014",
+          "sortTitle": "kingsman-the-secret-service-2014",
+          "releaseSequence": "2014-12-13tt2802144",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Thriller"
+          ],
+          "slug": "kingsman-the-secret-service-2014",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2015-02-12",
+          "reviewSequence": "2015-02-12-1",
+          "viewingDate": "2015-02-12",
+          "viewingSequence": 2,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+        },
+        {
+          "imdbId": "tt2395427",
+          "title": "Avengers: Age of Ultron",
+          "releaseYear": "2015",
+          "sortTitle": "avengers-age-of-ultron-2015",
+          "releaseSequence": "2015-04-13tt2395427",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-age-of-ultron-2015",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-07-11",
+          "reviewSequence": "2020-07-11-1",
+          "viewingDate": "2015-04-30",
+          "viewingSequence": 3,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+        },
+        {
+          "imdbId": "tt3460252",
           "title": "The Hateful Eight",
+          "releaseYear": "2015",
+          "sortTitle": "hateful-eight-2015",
+          "releaseSequence": "2015-12-07tt3460252",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Mystery",
+            "Thriller",
+            "Western"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2015-12-29",
+          "viewingSequence": 4,
           "medium": "70mm",
-          "venue": "AFI Silver",
-          "year": "2015"
+          "venue": "AFI Silver"
         }
       ]
     },
@@ -524,40 +973,90 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-01-04",
-          "slug": null,
+          "imdbId": "tt1843866",
           "title": "Captain America: The Winter Soldier",
-          "medium": "Blu-ray",
-          "venue": null,
-          "year": "2014"
-        },
-        {
-          "sequence": 2,
-          "date": "2015-01-11",
+          "releaseYear": "2014",
+          "sortTitle": "captain-america-the-winter-soldier-2014",
+          "releaseSequence": "2014-03-13tt1843866",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi",
+            "Thriller"
+          ],
           "slug": null,
-          "title": "Guardians of the Galaxy",
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2015-01-04",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "2014"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2015-04-30",
-          "slug": "avengers-age-of-ultron-2015",
+          "imdbId": "tt2015381",
+          "title": "Guardians of the Galaxy",
+          "releaseYear": "2014",
+          "sortTitle": "guardians-of-the-galaxy-2014",
+          "releaseSequence": "2014-07-21tt2015381",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2015-01-11",
+          "viewingSequence": 2,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt2395427",
           "title": "Avengers: Age of Ultron",
+          "releaseYear": "2015",
+          "sortTitle": "avengers-age-of-ultron-2015",
+          "releaseSequence": "2015-04-13tt2395427",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-age-of-ultron-2015",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-07-11",
+          "reviewSequence": "2020-07-11-1",
+          "viewingDate": "2015-04-30",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 4,
-          "date": "2015-07-30",
-          "slug": "ant-man-2015",
+          "imdbId": "tt0478970",
           "title": "Ant-Man",
+          "releaseYear": "2015",
+          "sortTitle": "ant-man-2015",
+          "releaseSequence": "2015-06-29tt0478970",
+          "genres": [
+            "Action",
+            "Comedy",
+            "Sci-Fi"
+          ],
+          "slug": "ant-man-2015",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2020-07-18",
+          "reviewSequence": "2020-07-18-1",
+          "viewingDate": "2015-07-30",
+          "viewingSequence": 4,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -567,40 +1066,88 @@
       "slug": "vincent-price",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-02-14",
-          "slug": "the-long-night-1947",
+          "imdbId": "tt0039581",
           "title": "The Long Night",
+          "releaseYear": "1947",
+          "sortTitle": "long-night-1947",
+          "releaseSequence": "1947-05-28tt0039581",
+          "genres": [
+            "Drama",
+            "Film-Noir"
+          ],
+          "slug": "the-long-night-1947",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2015-02-14",
+          "reviewSequence": "2015-02-14-1",
+          "viewingDate": "2015-02-14",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1947"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2015-02-28",
-          "slug": "dangerous-mission-1954",
+          "imdbId": "tt0046891",
           "title": "Dangerous Mission",
+          "releaseYear": "1954",
+          "sortTitle": "dangerous-mission-1954",
+          "releaseSequence": "1954-02-25tt0046891",
+          "genres": [
+            "Action",
+            "Crime",
+            "Film-Noir",
+            "Mystery",
+            "Romance",
+            "Thriller"
+          ],
+          "slug": "dangerous-mission-1954",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2022-08-22",
+          "reviewSequence": "2022-08-22-1",
+          "viewingDate": "2015-02-28",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1954"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2015-03-26",
-          "slug": null,
+          "imdbId": "tt0051744",
           "title": "House on Haunted Hill",
+          "releaseYear": "1959",
+          "sortTitle": "house-on-haunted-hill-1959",
+          "releaseSequence": "1959-??-??tt0051744",
+          "genres": [
+            "Crime",
+            "Horror",
+            "Mystery"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2015-03-26",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1959"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 4,
-          "date": "2015-10-08",
-          "slug": null,
+          "imdbId": "tt0045888",
           "title": "House of Wax",
+          "releaseYear": "1953",
+          "sortTitle": "house-of-wax-1953",
+          "releaseSequence": "1953-04-10tt0045888",
+          "genres": [
+            "Horror"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2015-10-08",
+          "viewingSequence": 4,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1953"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -610,31 +1157,68 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-01-04",
-          "slug": null,
+          "imdbId": "tt1843866",
           "title": "Captain America: The Winter Soldier",
+          "releaseYear": "2014",
+          "sortTitle": "captain-america-the-winter-soldier-2014",
+          "releaseSequence": "2014-03-13tt1843866",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2015-01-04",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "2014"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2015-04-30",
-          "slug": "avengers-age-of-ultron-2015",
+          "imdbId": "tt2395427",
           "title": "Avengers: Age of Ultron",
+          "releaseYear": "2015",
+          "sortTitle": "avengers-age-of-ultron-2015",
+          "releaseSequence": "2015-04-13tt2395427",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-age-of-ultron-2015",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-07-11",
+          "reviewSequence": "2020-07-11-1",
+          "viewingDate": "2015-04-30",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 3,
-          "date": "2015-07-30",
-          "slug": "ant-man-2015",
+          "imdbId": "tt0478970",
           "title": "Ant-Man",
+          "releaseYear": "2015",
+          "sortTitle": "ant-man-2015",
+          "releaseSequence": "2015-06-29tt0478970",
+          "genres": [
+            "Action",
+            "Comedy",
+            "Sci-Fi"
+          ],
+          "slug": "ant-man-2015",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2020-07-18",
+          "reviewSequence": "2020-07-18-1",
+          "viewingDate": "2015-07-30",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -644,31 +1228,68 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-01-04",
-          "slug": null,
+          "imdbId": "tt1843866",
           "title": "Captain America: The Winter Soldier",
+          "releaseYear": "2014",
+          "sortTitle": "captain-america-the-winter-soldier-2014",
+          "releaseSequence": "2014-03-13tt1843866",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2015-01-04",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "2014"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2015-04-30",
-          "slug": "avengers-age-of-ultron-2015",
+          "imdbId": "tt2395427",
           "title": "Avengers: Age of Ultron",
+          "releaseYear": "2015",
+          "sortTitle": "avengers-age-of-ultron-2015",
+          "releaseSequence": "2015-04-13tt2395427",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-age-of-ultron-2015",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-07-11",
+          "reviewSequence": "2020-07-11-1",
+          "viewingDate": "2015-04-30",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 3,
-          "date": "2015-07-30",
-          "slug": "ant-man-2015",
+          "imdbId": "tt0478970",
           "title": "Ant-Man",
+          "releaseYear": "2015",
+          "sortTitle": "ant-man-2015",
+          "releaseSequence": "2015-06-29tt0478970",
+          "genres": [
+            "Action",
+            "Comedy",
+            "Sci-Fi"
+          ],
+          "slug": "ant-man-2015",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2020-07-18",
+          "reviewSequence": "2020-07-18-1",
+          "viewingDate": "2015-07-30",
+          "viewingSequence": 3,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -678,31 +1299,66 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-02-14",
-          "slug": null,
+          "imdbId": "tt0082971",
           "title": "Raiders of the Lost Ark",
+          "releaseYear": "1981",
+          "sortTitle": "raiders-of-the-lost-ark-1981",
+          "releaseSequence": "1981-06-12tt0082971",
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2015-02-14",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1981"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2015-02-21",
-          "slug": "to-the-devil-a-daughter-1976",
+          "imdbId": "tt0075334",
           "title": "To the Devil a Daughter",
+          "releaseYear": "1976",
+          "sortTitle": "to-the-devil-a-daughter-1976",
+          "releaseSequence": "1976-02-22tt0075334",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "to-the-devil-a-daughter-1976",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2015-02-21",
+          "reviewSequence": "2015-02-21-1",
+          "viewingDate": "2015-02-21",
+          "viewingSequence": 2,
           "medium": "DVD",
-          "venue": null,
-          "year": "1976"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2015-09-05",
-          "slug": "the-house-that-dripped-blood-1971",
+          "imdbId": "tt0065854",
           "title": "The House That Dripped Blood",
+          "releaseYear": "1971",
+          "sortTitle": "house-that-dripped-blood-1971",
+          "releaseSequence": "1971-02-21tt0065854",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-house-that-dripped-blood-1971",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2015-09-05",
+          "reviewSequence": "2015-09-05-1",
+          "viewingDate": "2015-09-05",
+          "viewingSequence": 3,
           "medium": "Amazon",
-          "venue": null,
-          "year": "1971"
+          "venue": null
         }
       ]
     },
@@ -712,22 +1368,45 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-01-03",
-          "slug": "she-couldnt-say-no-1953",
+          "imdbId": "tt0047476",
           "title": "She Couldn't Say No",
+          "releaseYear": "1953",
+          "sortTitle": "she-couldnt-say-no-1953",
+          "releaseSequence": "1953-06-28tt0047476",
+          "genres": [
+            "Comedy",
+            "Drama"
+          ],
+          "slug": "she-couldnt-say-no-1953",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2015-01-03",
+          "reviewSequence": "2015-01-03-1",
+          "viewingDate": "2015-01-03",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1953"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2015-02-07",
-          "slug": "where-danger-lives-1950",
+          "imdbId": "tt0043131",
           "title": "Where Danger Lives",
+          "releaseYear": "1950",
+          "sortTitle": "where-danger-lives-1950",
+          "releaseSequence": "1950-11-15tt0043131",
+          "genres": [
+            "Crime",
+            "Film-Noir",
+            "Thriller"
+          ],
+          "slug": "where-danger-lives-1950",
+          "grade": "F",
+          "gradeValue": 1,
+          "reviewDate": "2015-02-07",
+          "reviewSequence": "2015-02-07-1",
+          "viewingDate": "2015-02-07",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1950"
+          "venue": null
         }
       ]
     }
@@ -739,31 +1418,61 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-06-23",
-          "slug": "the-beyond-1981",
+          "imdbId": "tt0082307",
           "title": "The Beyond",
+          "releaseYear": "1981",
+          "sortTitle": "beyond-1981",
+          "releaseSequence": "1981-04-29tt0082307",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-beyond-1981",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2015-06-23",
+          "reviewSequence": "2015-06-23-2",
+          "viewingDate": "2015-06-23",
+          "viewingSequence": 1,
           "medium": "35mm",
-          "venue": "Alamo Drafthouse Cinema - Winchester",
-          "year": "1981"
+          "venue": "Alamo Drafthouse Cinema - Winchester"
         },
         {
-          "sequence": 2,
-          "date": "2015-10-31",
-          "slug": null,
+          "imdbId": "tt0089013",
           "title": "Demons",
+          "releaseYear": "1985",
+          "sortTitle": "demons-1985",
+          "releaseSequence": "1985-10-04tt0089013",
+          "genres": [
+            "Horror"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2015-10-31",
+          "viewingSequence": 2,
           "medium": "Shudder",
-          "venue": null,
-          "year": "1985"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2015-11-05",
-          "slug": "the-beyond-1981",
+          "imdbId": "tt0082307",
           "title": "The Beyond",
+          "releaseYear": "1981",
+          "sortTitle": "beyond-1981",
+          "releaseSequence": "1981-04-29tt0082307",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-beyond-1981",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2015-06-23",
+          "reviewSequence": "2015-06-23-2",
+          "viewingDate": "2015-11-05",
+          "viewingSequence": 3,
           "medium": "35mm",
-          "venue": "AFI Silver",
-          "year": "1981"
+          "venue": "AFI Silver"
         }
       ]
     },
@@ -773,22 +1482,42 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-01-17",
-          "slug": "the-devil-rides-out-1968",
+          "imdbId": "tt0062885",
           "title": "The Devil Rides Out",
+          "releaseYear": "1968",
+          "sortTitle": "devil-rides-out-1968",
+          "releaseSequence": "1968-05-19tt0062885",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-devil-rides-out-1968",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2015-01-17",
+          "reviewSequence": "2015-01-17-1",
+          "viewingDate": "2015-01-17",
+          "viewingSequence": 1,
           "medium": "DVD",
-          "venue": null,
-          "year": "1968"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2015-02-21",
-          "slug": "to-the-devil-a-daughter-1976",
+          "imdbId": "tt0075334",
           "title": "To the Devil a Daughter",
+          "releaseYear": "1976",
+          "sortTitle": "to-the-devil-a-daughter-1976",
+          "releaseSequence": "1976-02-22tt0075334",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "to-the-devil-a-daughter-1976",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2015-02-21",
+          "reviewSequence": "2015-02-21-1",
+          "viewingDate": "2015-02-21",
+          "viewingSequence": 2,
           "medium": "DVD",
-          "venue": null,
-          "year": "1976"
+          "venue": null
         }
       ]
     },
@@ -798,22 +1527,49 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-01-31",
-          "slug": "the-big-steal-1949",
+          "imdbId": "tt0041178",
           "title": "The Big Steal",
+          "releaseYear": "1949",
+          "sortTitle": "big-steal-1949",
+          "releaseSequence": "1949-06-29tt0041178",
+          "genres": [
+            "Crime",
+            "Film-Noir",
+            "Romance",
+            "Thriller"
+          ],
+          "slug": "the-big-steal-1949",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2022-10-20",
+          "reviewSequence": "2022-10-20-2",
+          "viewingDate": "2015-01-31",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1949"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2015-06-06",
-          "slug": "out-of-the-past-1947",
+          "imdbId": "tt0039689",
           "title": "Out of the Past",
+          "releaseYear": "1947",
+          "sortTitle": "out-of-the-past-1947",
+          "releaseSequence": "1947-11-25tt0039689",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Romance",
+            "Thriller"
+          ],
+          "slug": "out-of-the-past-1947",
+          "grade": "A-",
+          "gradeValue": 11,
+          "reviewDate": "2007-12-10",
+          "reviewSequence": "2007-12-10-2",
+          "viewingDate": "2015-06-06",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1947"
+          "venue": null
         }
       ]
     },
@@ -823,22 +1579,49 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-02-07",
-          "slug": "where-danger-lives-1950",
+          "imdbId": "tt0043131",
           "title": "Where Danger Lives",
+          "releaseYear": "1950",
+          "sortTitle": "where-danger-lives-1950",
+          "releaseSequence": "1950-11-15tt0043131",
+          "genres": [
+            "Crime",
+            "Film-Noir",
+            "Thriller"
+          ],
+          "slug": "where-danger-lives-1950",
+          "grade": "F",
+          "gradeValue": 1,
+          "reviewDate": "2015-02-07",
+          "reviewSequence": "2015-02-07-1",
+          "viewingDate": "2015-02-07",
+          "viewingSequence": 1,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1950"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2015-02-28",
-          "slug": "dangerous-mission-1954",
+          "imdbId": "tt0046891",
           "title": "Dangerous Mission",
+          "releaseYear": "1954",
+          "sortTitle": "dangerous-mission-1954",
+          "releaseSequence": "1954-02-25tt0046891",
+          "genres": [
+            "Action",
+            "Crime",
+            "Film-Noir",
+            "Mystery",
+            "Romance",
+            "Thriller"
+          ],
+          "slug": "dangerous-mission-1954",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2022-08-22",
+          "reviewSequence": "2022-08-22-1",
+          "viewingDate": "2015-02-28",
+          "viewingSequence": 2,
           "medium": "TCM HD",
-          "venue": null,
-          "year": "1954"
+          "venue": null
         }
       ]
     },
@@ -848,22 +1631,45 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-02-14",
-          "slug": null,
+          "imdbId": "tt0082971",
           "title": "Raiders of the Lost Ark",
+          "releaseYear": "1981",
+          "sortTitle": "raiders-of-the-lost-ark-1981",
+          "releaseSequence": "1981-06-12tt0082971",
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2015-02-14",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1981"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2015-12-21",
-          "slug": null,
+          "imdbId": "tt2488496",
           "title": "Star Wars: Episode VII - The Force Awakens",
+          "releaseYear": "2015",
+          "sortTitle": "star-wars-episode-vii-the-force-awakens-2015",
+          "releaseSequence": "2015-12-14tt2488496",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2015-12-21",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -873,22 +1679,46 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-04-30",
-          "slug": "avengers-age-of-ultron-2015",
+          "imdbId": "tt2395427",
           "title": "Avengers: Age of Ultron",
+          "releaseYear": "2015",
+          "sortTitle": "avengers-age-of-ultron-2015",
+          "releaseSequence": "2015-04-13tt2395427",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-age-of-ultron-2015",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-07-11",
+          "reviewSequence": "2020-07-11-1",
+          "viewingDate": "2015-04-30",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2015-10-31",
-          "slug": "the-cabin-in-the-woods-2011",
+          "imdbId": "tt1259521",
           "title": "The Cabin in the Woods",
+          "releaseYear": "2011",
+          "sortTitle": "cabin-in-the-woods-2011",
+          "releaseSequence": "2011-12-11tt1259521",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-cabin-in-the-woods-2011",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-12-22",
+          "reviewSequence": "2020-12-22-1",
+          "viewingDate": "2015-10-31",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "2011"
+          "venue": null
         }
       ]
     },
@@ -898,22 +1728,44 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-06-06",
-          "slug": "the-city-of-the-dead-1960",
+          "imdbId": "tt0053719",
           "title": "The City of the Dead",
+          "releaseYear": "1960",
+          "sortTitle": "city-of-the-dead-1960",
+          "releaseSequence": "1960-09-09tt0053719",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-city-of-the-dead-1960",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2015-06-06",
+          "reviewSequence": "2015-06-06-1",
+          "viewingDate": "2015-06-06",
+          "viewingSequence": 1,
           "medium": "DVD",
-          "venue": null,
-          "year": "1960"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2015-08-11",
-          "slug": "i-monster-1971",
+          "imdbId": "tt0068727",
           "title": "I, Monster",
+          "releaseYear": "1971",
+          "sortTitle": "i-monster-1971",
+          "releaseSequence": "1971-11-01tt0068727",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "i-monster-1971",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2015-08-11",
+          "reviewSequence": "2015-08-11-1",
+          "viewingDate": "2015-08-11",
+          "viewingSequence": 2,
           "medium": "Shudder",
-          "venue": null,
-          "year": "1971"
+          "venue": null
         }
       ]
     },
@@ -923,22 +1775,49 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-06-22",
-          "slug": "inside-out-2015",
+          "imdbId": "tt2096673",
           "title": "Inside Out",
+          "releaseYear": "2015",
+          "sortTitle": "inside-out-2015",
+          "releaseSequence": "2015-05-18tt2096673",
+          "genres": [
+            "Animation",
+            "Adventure",
+            "Comedy",
+            "Drama",
+            "Family",
+            "Fantasy"
+          ],
+          "slug": "inside-out-2015",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2015-06-22",
+          "reviewSequence": "2015-06-22-1",
+          "viewingDate": "2015-06-22",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2015-12-21",
-          "slug": null,
+          "imdbId": "tt2488496",
           "title": "Star Wars: Episode VII - The Force Awakens",
+          "releaseYear": "2015",
+          "sortTitle": "star-wars-episode-vii-the-force-awakens-2015",
+          "releaseSequence": "2015-12-14tt2488496",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2015-12-21",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "2015"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -948,22 +1827,42 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-06-23",
-          "slug": "the-beyond-1981",
+          "imdbId": "tt0082307",
           "title": "The Beyond",
+          "releaseYear": "1981",
+          "sortTitle": "beyond-1981",
+          "releaseSequence": "1981-04-29tt0082307",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-beyond-1981",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2015-06-23",
+          "reviewSequence": "2015-06-23-2",
+          "viewingDate": "2015-06-23",
+          "viewingSequence": 1,
           "medium": "35mm",
-          "venue": "Alamo Drafthouse Cinema - Winchester",
-          "year": "1981"
+          "venue": "Alamo Drafthouse Cinema - Winchester"
         },
         {
-          "sequence": 2,
-          "date": "2015-11-05",
-          "slug": "the-beyond-1981",
+          "imdbId": "tt0082307",
           "title": "The Beyond",
+          "releaseYear": "1981",
+          "sortTitle": "beyond-1981",
+          "releaseSequence": "1981-04-29tt0082307",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-beyond-1981",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2015-06-23",
+          "reviewSequence": "2015-06-23-2",
+          "viewingDate": "2015-11-05",
+          "viewingSequence": 2,
           "medium": "35mm",
-          "venue": "AFI Silver",
-          "year": "1981"
+          "venue": "AFI Silver"
         }
       ]
     },
@@ -973,22 +1872,42 @@
       "slug": "lucio-fulci",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2015-06-23",
-          "slug": "the-beyond-1981",
+          "imdbId": "tt0082307",
           "title": "The Beyond",
+          "releaseYear": "1981",
+          "sortTitle": "beyond-1981",
+          "releaseSequence": "1981-04-29tt0082307",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-beyond-1981",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2015-06-23",
+          "reviewSequence": "2015-06-23-2",
+          "viewingDate": "2015-06-23",
+          "viewingSequence": 1,
           "medium": "35mm",
-          "venue": "Alamo Drafthouse Cinema - Winchester",
-          "year": "1981"
+          "venue": "Alamo Drafthouse Cinema - Winchester"
         },
         {
-          "sequence": 2,
-          "date": "2015-11-05",
-          "slug": "the-beyond-1981",
+          "imdbId": "tt0082307",
           "title": "The Beyond",
+          "releaseYear": "1981",
+          "sortTitle": "beyond-1981",
+          "releaseSequence": "1981-04-29tt0082307",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-beyond-1981",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2015-06-23",
+          "reviewSequence": "2015-06-23-2",
+          "viewingDate": "2015-11-05",
+          "viewingSequence": 2,
           "medium": "35mm",
-          "venue": "AFI Silver",
-          "year": "1981"
+          "venue": "AFI Silver"
         }
       ]
     }

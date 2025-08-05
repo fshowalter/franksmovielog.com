@@ -95,18 +95,39 @@
   ],
   "mostWatchedTitles": [
     {
-      "title": "Nightmare Beach",
       "imdbId": "tt0095740",
-      "year": "1989",
-      "count": 2,
-      "slug": "nightmare-beach-1989"
+      "title": "Nightmare Beach",
+      "releaseYear": "1989",
+      "sortTitle": "nightmare-beach-1989",
+      "releaseSequence": "1989-07-14tt0095740",
+      "genres": [
+        "Horror"
+      ],
+      "slug": "nightmare-beach-1989",
+      "grade": "D",
+      "gradeValue": 3,
+      "reviewDate": "2023-03-28",
+      "reviewSequence": "2023-03-28-1",
+      "count": 2
     },
     {
-      "title": "The Last of Sheila",
       "imdbId": "tt0070291",
-      "year": "1973",
-      "count": 2,
-      "slug": "the-last-of-sheila-1973"
+      "title": "The Last of Sheila",
+      "releaseYear": "1973",
+      "sortTitle": "last-of-sheila-1973",
+      "releaseSequence": "1973-06-14tt0070291",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "slug": "the-last-of-sheila-1973",
+      "grade": "B",
+      "gradeValue": 9,
+      "reviewDate": "2023-04-27",
+      "reviewSequence": "2023-04-27-2",
+      "count": 2
     }
   ],
   "mostWatchedDirectors": [
@@ -116,58 +137,123 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-04-23",
-          "slug": "the-cabin-in-the-cotton-1932",
+          "imdbId": "tt0022735",
           "title": "The Cabin in the Cotton",
+          "releaseYear": "1932",
+          "sortTitle": "cabin-in-the-cotton-1932",
+          "releaseSequence": "1932-09-26tt0022735",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "the-cabin-in-the-cotton-1932",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-04-23",
+          "reviewSequence": "2023-04-23-1",
+          "viewingDate": "2023-04-23",
+          "viewingSequence": 1,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-05-09",
-          "slug": "20000-years-in-sing-sing-1932",
+          "imdbId": "tt0023731",
           "title": "20,000 Years in Sing Sing",
+          "releaseYear": "1932",
+          "sortTitle": "20000-years-in-sing-sing-1932",
+          "releaseSequence": "1932-12-24tt0023731",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir"
+          ],
+          "slug": "20000-years-in-sing-sing-1932",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2023-05-09",
+          "reviewSequence": "2023-05-09-1",
+          "viewingDate": "2023-05-09",
+          "viewingSequence": 2,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2023-05-20",
-          "slug": "private-detective-62-1933",
+          "imdbId": "tt0024471",
           "title": "Private Detective 62",
+          "releaseYear": "1933",
+          "sortTitle": "private-detective-62-1933",
+          "releaseSequence": "1933-06-10tt0024471",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "private-detective-62-1933",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2023-05-20",
+          "reviewSequence": "2023-05-20-1",
+          "viewingDate": "2023-05-20",
+          "viewingSequence": 3,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2023-06-03",
-          "slug": "the-key-1934",
+          "imdbId": "tt0025346",
           "title": "The Key",
+          "releaseYear": "1934",
+          "sortTitle": "key-1934",
+          "releaseSequence": "1934-05-31tt0025346",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "the-key-1934",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2023-06-03",
+          "reviewSequence": "2023-06-03-1",
+          "viewingDate": "2023-06-03",
+          "viewingSequence": 4,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2023-06-29",
-          "slug": "the-kennel-murder-case-1933",
+          "imdbId": "tt0024210",
           "title": "The Kennel Murder Case",
+          "releaseYear": "1933",
+          "sortTitle": "kennel-murder-case-1933",
+          "releaseSequence": "1933-10-28tt0024210",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Mystery"
+          ],
+          "slug": "the-kennel-murder-case-1933",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2023-06-29",
+          "reviewSequence": "2023-06-29-1",
+          "viewingDate": "2023-06-29",
+          "viewingSequence": 5,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2023-07-15",
-          "slug": "life-with-father-1947",
+          "imdbId": "tt0039566",
           "title": "Life with Father",
+          "releaseYear": "1947",
+          "sortTitle": "life-with-father-1947",
+          "releaseSequence": "1947-08-14tt0039566",
+          "genres": [
+            "Comedy",
+            "Family"
+          ],
+          "slug": "life-with-father-1947",
+          "grade": "F",
+          "gradeValue": 1,
+          "reviewDate": "2023-07-15",
+          "reviewSequence": "2023-07-15-1",
+          "viewingDate": "2023-07-15",
+          "viewingSequence": 6,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1947"
+          "venue": null
         }
       ]
     },
@@ -177,31 +263,64 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-04-06",
-          "slug": "the-great-omalley-1937",
+          "imdbId": "tt0028955",
           "title": "The Great O'Malley",
+          "releaseYear": "1937",
+          "sortTitle": "great-omalley-1937",
+          "releaseSequence": "1937-02-05tt0028955",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "the-great-omalley-1937",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2023-04-06",
+          "reviewSequence": "2023-04-06-1",
+          "viewingDate": "2023-04-06",
+          "viewingSequence": 1,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-05-02",
-          "slug": "fashions-of-1934-1934",
+          "imdbId": "tt0025101",
           "title": "Fashions of 1934",
+          "releaseYear": "1934",
+          "sortTitle": "fashions-of-1934-1934",
+          "releaseSequence": "1934-??-??tt0025101",
+          "genres": [
+            "Comedy",
+            "Drama",
+            "Musical"
+          ],
+          "slug": "fashions-of-1934-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-05-02",
+          "reviewSequence": "2023-05-02-1",
+          "viewingDate": "2023-05-02",
+          "viewingSequence": 2,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2023-05-19",
-          "slug": "lawyer-man-1932",
+          "imdbId": "tt0023125",
           "title": "Lawyer Man",
+          "releaseYear": "1932",
+          "sortTitle": "lawyer-man-1932",
+          "releaseSequence": "1932-12-10tt0023125",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "lawyer-man-1932",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-05-19",
+          "reviewSequence": "2023-05-19-1",
+          "viewingDate": "2023-05-19",
+          "viewingSequence": 3,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         }
       ]
     },
@@ -211,22 +330,47 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-01-26",
-          "slug": "the-goonies-1985",
+          "imdbId": "tt0089218",
           "title": "The Goonies",
+          "releaseYear": "1985",
+          "sortTitle": "goonies-1985",
+          "releaseSequence": "1985-06-07tt0089218",
+          "genres": [
+            "Adventure",
+            "Comedy",
+            "Family"
+          ],
+          "slug": "the-goonies-1985",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2008-07-05",
+          "reviewSequence": "2008-07-05-1",
+          "viewingDate": "2023-01-26",
+          "viewingSequence": 1,
           "medium": "iTunes",
-          "venue": null,
-          "year": "1985"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-05-12",
-          "slug": "superman-ii-the-richard-donner-cut-1980",
+          "imdbId": "tt0839995",
           "title": "Superman II: The Richard Donner Cut",
+          "releaseYear": "1980",
+          "sortTitle": "superman-ii-the-richard-donner-cut-1980",
+          "releaseSequence": "2006-11-01tt0839995",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Romance",
+            "Sci-Fi"
+          ],
+          "slug": "superman-ii-the-richard-donner-cut-1980",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2023-05-12",
+          "reviewSequence": "2023-05-12-1",
+          "viewingDate": "2023-05-12",
+          "viewingSequence": 2,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1980"
+          "venue": null
         }
       ]
     },
@@ -236,22 +380,45 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-02-09",
-          "slug": "the-life-of-jimmy-dolan-1933",
+          "imdbId": "tt0024257",
           "title": "The Life of Jimmy Dolan",
+          "releaseYear": "1933",
+          "sortTitle": "life-of-jimmy-dolan-1933",
+          "releaseSequence": "1933-06-02tt0024257",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "the-life-of-jimmy-dolan-1933",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2023-02-09",
+          "reviewSequence": "2023-02-09-1",
+          "viewingDate": "2023-02-09",
+          "viewingSequence": 1,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-02-13",
-          "slug": "black-legion-1937",
+          "imdbId": "tt0027367",
           "title": "Black Legion",
+          "releaseYear": "1937",
+          "sortTitle": "black-legion-1937",
+          "releaseSequence": "1937-01-16tt0027367",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir"
+          ],
+          "slug": "black-legion-1937",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2023-02-13",
+          "reviewSequence": "2023-02-13-1",
+          "viewingDate": "2023-02-13",
+          "viewingSequence": 2,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         }
       ]
     },
@@ -261,22 +428,48 @@
       "slug": "lucio-fulci",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-03-11",
-          "slug": "the-new-york-ripper-1982",
+          "imdbId": "tt0084719",
           "title": "The New York Ripper",
+          "releaseYear": "1982",
+          "sortTitle": "new-york-ripper-1982",
+          "releaseSequence": "1982-03-04tt0084719",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-new-york-ripper-1982",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2023-03-11",
+          "reviewSequence": "2023-03-11-2",
+          "viewingDate": "2023-03-11",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1982"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-04-03",
-          "slug": "the-psychic-1977",
+          "imdbId": "tt0075614",
           "title": "The Psychic",
+          "releaseYear": "1977",
+          "sortTitle": "psychic-1977",
+          "releaseSequence": "1977-08-10tt0075614",
+          "genres": [
+            "Comedy",
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-psychic-1977",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-04-03",
+          "reviewSequence": "2023-04-03-1",
+          "viewingDate": "2023-04-03",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1977"
+          "venue": null
         }
       ]
     },
@@ -286,22 +479,44 @@
       "slug": "william-friedkin",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-03-19",
-          "slug": "the-birthday-party-1968",
+          "imdbId": "tt0062732",
           "title": "The Birthday Party",
+          "releaseYear": "1968",
+          "sortTitle": "birthday-party-1968",
+          "releaseSequence": "1968-12-09tt0062732",
+          "genres": [
+            "Drama",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-birthday-party-1968",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2023-03-19",
+          "reviewSequence": "2023-03-19-1",
+          "viewingDate": "2023-03-19",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1968"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-09-25",
-          "slug": "the-night-they-raided-minskys-1968",
+          "imdbId": "tt0063348",
           "title": "The Night They Raided Minsky's",
+          "releaseYear": "1968",
+          "sortTitle": "night-they-raided-minskys-1968",
+          "releaseSequence": "1968-12-21tt0063348",
+          "genres": [
+            "Comedy"
+          ],
+          "slug": "the-night-they-raided-minskys-1968",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-09-25",
+          "reviewSequence": "2023-09-25-1",
+          "viewingDate": "2023-09-25",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1968"
+          "venue": null
         }
       ]
     },
@@ -311,22 +526,42 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-03-28",
-          "slug": "nightmare-beach-1989",
+          "imdbId": "tt0095740",
           "title": "Nightmare Beach",
+          "releaseYear": "1989",
+          "sortTitle": "nightmare-beach-1989",
+          "releaseSequence": "1989-07-14tt0095740",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "nightmare-beach-1989",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-03-28",
+          "reviewSequence": "2023-03-28-1",
+          "viewingDate": "2023-03-28",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1989"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-10-28",
-          "slug": "nightmare-beach-1989",
+          "imdbId": "tt0095740",
           "title": "Nightmare Beach",
+          "releaseYear": "1989",
+          "sortTitle": "nightmare-beach-1989",
+          "releaseSequence": "1989-07-14tt0095740",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "nightmare-beach-1989",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-03-28",
+          "reviewSequence": "2023-03-28-1",
+          "viewingDate": "2023-10-28",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1989"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -336,22 +571,42 @@
       "slug": "umberto-lenzi",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-03-28",
-          "slug": "nightmare-beach-1989",
+          "imdbId": "tt0095740",
           "title": "Nightmare Beach",
+          "releaseYear": "1989",
+          "sortTitle": "nightmare-beach-1989",
+          "releaseSequence": "1989-07-14tt0095740",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "nightmare-beach-1989",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-03-28",
+          "reviewSequence": "2023-03-28-1",
+          "viewingDate": "2023-03-28",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1989"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-10-28",
-          "slug": "nightmare-beach-1989",
+          "imdbId": "tt0095740",
           "title": "Nightmare Beach",
+          "releaseYear": "1989",
+          "sortTitle": "nightmare-beach-1989",
+          "releaseSequence": "1989-07-14tt0095740",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "nightmare-beach-1989",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-03-28",
+          "reviewSequence": "2023-03-28-1",
+          "viewingDate": "2023-10-28",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1989"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -361,22 +616,49 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-04-07",
-          "slug": "resolution-2012",
+          "imdbId": "tt1977895",
           "title": "Resolution",
+          "releaseYear": "2012",
+          "sortTitle": "resolution-2012",
+          "releaseSequence": "2012-04-22tt1977895",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "resolution-2012",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2023-04-07",
+          "reviewSequence": "2023-04-07-1",
+          "viewingDate": "2023-04-07",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "2012"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-04-13",
-          "slug": "the-endless-2017",
+          "imdbId": "tt3986820",
           "title": "The Endless",
+          "releaseYear": "2017",
+          "sortTitle": "endless-2017",
+          "releaseSequence": "2017-04-21tt3986820",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "the-endless-2017",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2023-04-13",
+          "reviewSequence": "2023-04-13-2",
+          "viewingDate": "2023-04-13",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "2017"
+          "venue": null
         }
       ]
     },
@@ -386,22 +668,49 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-04-07",
-          "slug": "resolution-2012",
+          "imdbId": "tt1977895",
           "title": "Resolution",
+          "releaseYear": "2012",
+          "sortTitle": "resolution-2012",
+          "releaseSequence": "2012-04-22tt1977895",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "resolution-2012",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2023-04-07",
+          "reviewSequence": "2023-04-07-1",
+          "viewingDate": "2023-04-07",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "2012"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-04-13",
-          "slug": "the-endless-2017",
+          "imdbId": "tt3986820",
           "title": "The Endless",
+          "releaseYear": "2017",
+          "sortTitle": "endless-2017",
+          "releaseSequence": "2017-04-21tt3986820",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "the-endless-2017",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2023-04-13",
+          "reviewSequence": "2023-04-13-2",
+          "viewingDate": "2023-04-13",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "2017"
+          "venue": null
         }
       ]
     }
@@ -413,112 +722,245 @@
       "slug": "william-powell",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-04-05",
-          "slug": "one-way-passage-1932",
+          "imdbId": "tt0023305",
           "title": "One Way Passage",
+          "releaseYear": "1932",
+          "sortTitle": "one-way-passage-1932",
+          "releaseSequence": "1932-10-04tt0023305",
+          "genres": [
+            "Comedy",
+            "Drama",
+            "Romance"
+          ],
+          "slug": "one-way-passage-1932",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2023-04-05",
+          "reviewSequence": "2023-04-05-1",
+          "viewingDate": "2023-04-05",
+          "viewingSequence": 1,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-05-02",
-          "slug": "fashions-of-1934-1934",
+          "imdbId": "tt0025101",
           "title": "Fashions of 1934",
+          "releaseYear": "1934",
+          "sortTitle": "fashions-of-1934-1934",
+          "releaseSequence": "1934-??-??tt0025101",
+          "genres": [
+            "Comedy",
+            "Drama",
+            "Musical"
+          ],
+          "slug": "fashions-of-1934-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-05-02",
+          "reviewSequence": "2023-05-02-1",
+          "viewingDate": "2023-05-02",
+          "viewingSequence": 2,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2023-05-19",
-          "slug": "lawyer-man-1932",
+          "imdbId": "tt0023125",
           "title": "Lawyer Man",
+          "releaseYear": "1932",
+          "sortTitle": "lawyer-man-1932",
+          "releaseSequence": "1932-12-10tt0023125",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "lawyer-man-1932",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-05-19",
+          "reviewSequence": "2023-05-19-1",
+          "viewingDate": "2023-05-19",
+          "viewingSequence": 3,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2023-05-20",
-          "slug": "private-detective-62-1933",
+          "imdbId": "tt0024471",
           "title": "Private Detective 62",
+          "releaseYear": "1933",
+          "sortTitle": "private-detective-62-1933",
+          "releaseSequence": "1933-06-10tt0024471",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "private-detective-62-1933",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2023-05-20",
+          "reviewSequence": "2023-05-20-1",
+          "viewingDate": "2023-05-20",
+          "viewingSequence": 4,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2023-06-03",
-          "slug": "the-key-1934",
+          "imdbId": "tt0025346",
           "title": "The Key",
+          "releaseYear": "1934",
+          "sortTitle": "key-1934",
+          "releaseSequence": "1934-05-31tt0025346",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "the-key-1934",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2023-06-03",
+          "reviewSequence": "2023-06-03-1",
+          "viewingDate": "2023-06-03",
+          "viewingSequence": 5,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2023-06-23",
-          "slug": "the-heavenly-body-1944",
+          "imdbId": "tt0035980",
           "title": "The Heavenly Body",
+          "releaseYear": "1944",
+          "sortTitle": "heavenly-body-1944",
+          "releaseSequence": "1944-03-23tt0035980",
+          "genres": [
+            "Comedy",
+            "Romance"
+          ],
+          "slug": "the-heavenly-body-1944",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2023-06-23",
+          "reviewSequence": "2023-06-23-1",
+          "viewingDate": "2023-06-23",
+          "viewingSequence": 6,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1944"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2023-06-27",
-          "slug": "the-girl-who-had-everything-1953",
+          "imdbId": "tt0045816",
           "title": "The Girl Who Had Everything",
+          "releaseYear": "1953",
+          "sortTitle": "girl-who-had-everything-1953",
+          "releaseSequence": "1953-03-27tt0045816",
+          "genres": [
+            "Romance",
+            "Drama"
+          ],
+          "slug": "the-girl-who-had-everything-1953",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2023-06-27",
+          "reviewSequence": "2023-06-27-1",
+          "viewingDate": "2023-06-27",
+          "viewingSequence": 7,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1953"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2023-06-28",
-          "slug": "its-a-big-country-an-american-anthology-1951",
+          "imdbId": "tt0043680",
           "title": "It's a Big Country: An American Anthology",
+          "releaseYear": "1951",
+          "sortTitle": "its-a-big-country-an-american-anthology-1951",
+          "releaseSequence": "1951-11-20tt0043680",
+          "genres": [
+            "Comedy",
+            "Drama"
+          ],
+          "slug": "its-a-big-country-an-american-anthology-1951",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-06-28",
+          "reviewSequence": "2023-06-28-1",
+          "viewingDate": "2023-06-28",
+          "viewingSequence": 8,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1951"
+          "venue": null
         },
         {
-          "sequence": 9,
-          "date": "2023-06-29",
-          "slug": "the-kennel-murder-case-1933",
+          "imdbId": "tt0024210",
           "title": "The Kennel Murder Case",
+          "releaseYear": "1933",
+          "sortTitle": "kennel-murder-case-1933",
+          "releaseSequence": "1933-10-28tt0024210",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Mystery"
+          ],
+          "slug": "the-kennel-murder-case-1933",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2023-06-29",
+          "reviewSequence": "2023-06-29-1",
+          "viewingDate": "2023-06-29",
+          "viewingSequence": 9,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         },
         {
-          "sequence": 10,
-          "date": "2023-07-15",
-          "slug": "life-with-father-1947",
+          "imdbId": "tt0039566",
           "title": "Life with Father",
+          "releaseYear": "1947",
+          "sortTitle": "life-with-father-1947",
+          "releaseSequence": "1947-08-14tt0039566",
+          "genres": [
+            "Comedy",
+            "Family"
+          ],
+          "slug": "life-with-father-1947",
+          "grade": "F",
+          "gradeValue": 1,
+          "reviewDate": "2023-07-15",
+          "reviewSequence": "2023-07-15-1",
+          "viewingDate": "2023-07-15",
+          "viewingSequence": 10,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1947"
+          "venue": null
         },
         {
-          "sequence": 11,
-          "date": "2023-09-23",
-          "slug": "street-of-chance-1930",
+          "imdbId": "tt0021420",
           "title": "Street of Chance",
+          "releaseYear": "1930",
+          "sortTitle": "street-of-chance-1930",
+          "releaseSequence": "1930-01-26tt0021420",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Romance"
+          ],
+          "slug": "street-of-chance-1930",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2023-09-23",
+          "reviewSequence": "2023-09-23-1",
+          "viewingDate": "2023-09-23",
+          "viewingSequence": 11,
           "medium": "Criterion Channel",
-          "venue": null,
-          "year": "1930"
+          "venue": null
         },
         {
-          "sequence": 12,
-          "date": "2023-10-31",
-          "slug": "ladies-man-1931",
+          "imdbId": "tt0022043",
           "title": "Ladies' Man",
+          "releaseYear": "1931",
+          "sortTitle": "ladies-man-1931",
+          "releaseSequence": "1931-04-16tt0022043",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "ladies-man-1931",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2020-11-25",
+          "reviewSequence": "2020-11-25-1",
+          "viewingDate": "2023-10-31",
+          "viewingSequence": 12,
           "medium": "Criterion Channel",
-          "venue": null,
-          "year": "1931"
+          "venue": null
         }
       ]
     },
@@ -528,67 +970,149 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-04-06",
-          "slug": "the-great-omalley-1937",
+          "imdbId": "tt0028955",
           "title": "The Great O'Malley",
+          "releaseYear": "1937",
+          "sortTitle": "great-omalley-1937",
+          "releaseSequence": "1937-02-05tt0028955",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "the-great-omalley-1937",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2023-04-06",
+          "reviewSequence": "2023-04-06-1",
+          "viewingDate": "2023-04-06",
+          "viewingSequence": 1,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-04-06",
-          "slug": "bullets-or-ballots-1936",
+          "imdbId": "tt0027407",
           "title": "Bullets or Ballots",
+          "releaseYear": "1936",
+          "sortTitle": "bullets-or-ballots-1936",
+          "releaseSequence": "1936-05-26tt0027407",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Thriller"
+          ],
+          "slug": "bullets-or-ballots-1936",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2023-04-06",
+          "reviewSequence": "2023-04-06-2",
+          "viewingDate": "2023-04-06",
+          "viewingSequence": 2,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1936"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2023-04-08",
-          "slug": "midnight-1934",
+          "imdbId": "tt0025499",
           "title": "Midnight",
+          "releaseYear": "1934",
+          "sortTitle": "midnight-1934",
+          "releaseSequence": "1934-03-07tt0025499",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Romance"
+          ],
+          "slug": "midnight-1934",
+          "grade": "F",
+          "gradeValue": 1,
+          "reviewDate": "2023-04-08",
+          "reviewSequence": "2023-04-08-1",
+          "viewingDate": "2023-04-08",
+          "viewingSequence": 3,
           "medium": "Amazon",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2023-05-02",
-          "slug": "fashions-of-1934-1934",
+          "imdbId": "tt0025101",
           "title": "Fashions of 1934",
+          "releaseYear": "1934",
+          "sortTitle": "fashions-of-1934-1934",
+          "releaseSequence": "1934-??-??tt0025101",
+          "genres": [
+            "Comedy",
+            "Drama",
+            "Musical"
+          ],
+          "slug": "fashions-of-1934-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-05-02",
+          "reviewSequence": "2023-05-02-1",
+          "viewingDate": "2023-05-02",
+          "viewingSequence": 4,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2023-06-03",
-          "slug": "the-key-1934",
+          "imdbId": "tt0025346",
           "title": "The Key",
+          "releaseYear": "1934",
+          "sortTitle": "key-1934",
+          "releaseSequence": "1934-05-31tt0025346",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "the-key-1934",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2023-06-03",
+          "reviewSequence": "2023-06-03-1",
+          "viewingDate": "2023-06-03",
+          "viewingSequence": 5,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2023-06-04",
-          "slug": "marked-woman-1937",
+          "imdbId": "tt0029217",
           "title": "Marked Woman",
+          "releaseYear": "1937",
+          "sortTitle": "marked-woman-1937",
+          "releaseSequence": "1937-04-03tt0029217",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Thriller"
+          ],
+          "slug": "marked-woman-1937",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2023-06-04",
+          "reviewSequence": "2023-06-04-1",
+          "viewingDate": "2023-06-04",
+          "viewingSequence": 6,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2023-06-23",
-          "slug": "the-heavenly-body-1944",
+          "imdbId": "tt0035980",
           "title": "The Heavenly Body",
+          "releaseYear": "1944",
+          "sortTitle": "heavenly-body-1944",
+          "releaseSequence": "1944-03-23tt0035980",
+          "genres": [
+            "Comedy",
+            "Romance"
+          ],
+          "slug": "the-heavenly-body-1944",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2023-06-23",
+          "reviewSequence": "2023-06-23-1",
+          "viewingDate": "2023-06-23",
+          "viewingSequence": 7,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1944"
+          "venue": null
         }
       ]
     },
@@ -598,49 +1122,110 @@
       "slug": "humphrey-bogart",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-02-13",
-          "slug": "black-legion-1937",
+          "imdbId": "tt0027367",
           "title": "Black Legion",
+          "releaseYear": "1937",
+          "sortTitle": "black-legion-1937",
+          "releaseSequence": "1937-01-16tt0027367",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir"
+          ],
+          "slug": "black-legion-1937",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2023-02-13",
+          "reviewSequence": "2023-02-13-1",
+          "viewingDate": "2023-02-13",
+          "viewingSequence": 1,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-04-06",
-          "slug": "the-great-omalley-1937",
+          "imdbId": "tt0028955",
           "title": "The Great O'Malley",
+          "releaseYear": "1937",
+          "sortTitle": "great-omalley-1937",
+          "releaseSequence": "1937-02-05tt0028955",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "the-great-omalley-1937",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2023-04-06",
+          "reviewSequence": "2023-04-06-1",
+          "viewingDate": "2023-04-06",
+          "viewingSequence": 2,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2023-04-06",
-          "slug": "bullets-or-ballots-1936",
+          "imdbId": "tt0027407",
           "title": "Bullets or Ballots",
+          "releaseYear": "1936",
+          "sortTitle": "bullets-or-ballots-1936",
+          "releaseSequence": "1936-05-26tt0027407",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Thriller"
+          ],
+          "slug": "bullets-or-ballots-1936",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2023-04-06",
+          "reviewSequence": "2023-04-06-2",
+          "viewingDate": "2023-04-06",
+          "viewingSequence": 3,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1936"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2023-04-08",
-          "slug": "midnight-1934",
+          "imdbId": "tt0025499",
           "title": "Midnight",
+          "releaseYear": "1934",
+          "sortTitle": "midnight-1934",
+          "releaseSequence": "1934-03-07tt0025499",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Romance"
+          ],
+          "slug": "midnight-1934",
+          "grade": "F",
+          "gradeValue": 1,
+          "reviewDate": "2023-04-08",
+          "reviewSequence": "2023-04-08-1",
+          "viewingDate": "2023-04-08",
+          "viewingSequence": 4,
           "medium": "Amazon",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2023-06-04",
-          "slug": "marked-woman-1937",
+          "imdbId": "tt0029217",
           "title": "Marked Woman",
+          "releaseYear": "1937",
+          "sortTitle": "marked-woman-1937",
+          "releaseSequence": "1937-04-03tt0029217",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Thriller"
+          ],
+          "slug": "marked-woman-1937",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2023-06-04",
+          "reviewSequence": "2023-06-04-1",
+          "viewingDate": "2023-06-04",
+          "viewingSequence": 5,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         }
       ]
     },
@@ -650,49 +1235,107 @@
       "slug": "bette-davis",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-04-08",
-          "slug": "so-big-1932",
+          "imdbId": "tt0023491",
           "title": "So Big!",
+          "releaseYear": "1932",
+          "sortTitle": "so-big-1932",
+          "releaseSequence": "1932-04-29tt0023491",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "so-big-1932",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-04-08",
+          "reviewSequence": "2023-04-08-2",
+          "viewingDate": "2023-04-08",
+          "viewingSequence": 1,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-04-23",
-          "slug": "the-cabin-in-the-cotton-1932",
+          "imdbId": "tt0022735",
           "title": "The Cabin in the Cotton",
+          "releaseYear": "1932",
+          "sortTitle": "cabin-in-the-cotton-1932",
+          "releaseSequence": "1932-09-26tt0022735",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "the-cabin-in-the-cotton-1932",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-04-23",
+          "reviewSequence": "2023-04-23-1",
+          "viewingDate": "2023-04-23",
+          "viewingSequence": 2,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2023-05-02",
-          "slug": "fashions-of-1934-1934",
+          "imdbId": "tt0025101",
           "title": "Fashions of 1934",
+          "releaseYear": "1934",
+          "sortTitle": "fashions-of-1934-1934",
+          "releaseSequence": "1934-??-??tt0025101",
+          "genres": [
+            "Comedy",
+            "Drama",
+            "Musical"
+          ],
+          "slug": "fashions-of-1934-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-05-02",
+          "reviewSequence": "2023-05-02-1",
+          "viewingDate": "2023-05-02",
+          "viewingSequence": 3,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2023-05-09",
-          "slug": "20000-years-in-sing-sing-1932",
+          "imdbId": "tt0023731",
           "title": "20,000 Years in Sing Sing",
+          "releaseYear": "1932",
+          "sortTitle": "20000-years-in-sing-sing-1932",
+          "releaseSequence": "1932-12-24tt0023731",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir"
+          ],
+          "slug": "20000-years-in-sing-sing-1932",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2023-05-09",
+          "reviewSequence": "2023-05-09-1",
+          "viewingDate": "2023-05-09",
+          "viewingSequence": 4,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2023-06-04",
-          "slug": "marked-woman-1937",
+          "imdbId": "tt0029217",
           "title": "Marked Woman",
+          "releaseYear": "1937",
+          "sortTitle": "marked-woman-1937",
+          "releaseSequence": "1937-04-03tt0029217",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Thriller"
+          ],
+          "slug": "marked-woman-1937",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2023-06-04",
+          "reviewSequence": "2023-06-04-1",
+          "viewingDate": "2023-06-04",
+          "viewingSequence": 5,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         }
       ]
     },
@@ -702,40 +1345,88 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-04-13",
-          "slug": "phantasm-iii-lord-of-the-dead-1994",
+          "imdbId": "tt0110823",
           "title": "Phantasm III: Lord of the Dead",
+          "releaseYear": "1994",
+          "sortTitle": "phantasm-iii-lord-of-the-dead-1994",
+          "releaseSequence": "1994-02-25tt0110823",
+          "genres": [
+            "Action",
+            "Fantasy",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "phantasm-iii-lord-of-the-dead-1994",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2023-04-13",
+          "reviewSequence": "2023-04-13-1",
+          "viewingDate": "2023-04-13",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1994"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-04-27",
-          "slug": "phantasm-iv-oblivion-1998",
+          "imdbId": "tt0138703",
           "title": "Phantasm IV: Oblivion",
+          "releaseYear": "1998",
+          "sortTitle": "phantasm-iv-oblivion-1998",
+          "releaseSequence": "1998-07-31tt0138703",
+          "genres": [
+            "Fantasy",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "phantasm-iv-oblivion-1998",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2023-04-27",
+          "reviewSequence": "2023-04-27-1",
+          "viewingDate": "2023-04-27",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1998"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2023-08-31",
-          "slug": "phantasm-ravager-2016",
+          "imdbId": "tt3627704",
           "title": "Phantasm: Ravager",
+          "releaseYear": "2016",
+          "sortTitle": "phantasm-ravager-2016",
+          "releaseSequence": "2016-09-25tt3627704",
+          "genres": [
+            "Action",
+            "Fantasy",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "phantasm-ravager-2016",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2023-08-31",
+          "reviewSequence": "2023-08-31-1",
+          "viewingDate": "2023-08-31",
+          "viewingSequence": 3,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "2016"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2023-12-17",
-          "slug": null,
+          "imdbId": "tt0100618",
           "title": "Silent Night, Deadly Night 4: Initiation",
+          "releaseYear": "1990",
+          "sortTitle": "silent-night-deadly-night-4-initiation-1990",
+          "releaseSequence": "1990-11-21tt0100618",
+          "genres": [
+            "Horror"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2023-12-17",
+          "viewingSequence": 4,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1990"
+          "venue": null
         }
       ]
     },
@@ -745,40 +1436,91 @@
       "slug": "james-coburn",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-04-25",
-          "slug": "the-last-of-sheila-1973",
+          "imdbId": "tt0070291",
           "title": "The Last of Sheila",
+          "releaseYear": "1973",
+          "sortTitle": "last-of-sheila-1973",
+          "releaseSequence": "1973-06-14tt0070291",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-last-of-sheila-1973",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2023-04-27",
+          "reviewSequence": "2023-04-27-2",
+          "viewingDate": "2023-04-25",
+          "viewingSequence": 1,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1973"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-04-27",
-          "slug": "the-last-of-sheila-1973",
+          "imdbId": "tt0070291",
           "title": "The Last of Sheila",
+          "releaseYear": "1973",
+          "sortTitle": "last-of-sheila-1973",
+          "releaseSequence": "1973-06-14tt0070291",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-last-of-sheila-1973",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2023-04-27",
+          "reviewSequence": "2023-04-27-2",
+          "viewingDate": "2023-04-27",
+          "viewingSequence": 2,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1973"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2023-06-19",
-          "slug": "the-carey-treatment-1972",
+          "imdbId": "tt0068337",
           "title": "The Carey Treatment",
+          "releaseYear": "1972",
+          "sortTitle": "carey-treatment-1972",
+          "releaseSequence": "1972-03-29tt0068337",
+          "genres": [
+            "Crime",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-carey-treatment-1972",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2023-06-19",
+          "reviewSequence": "2023-06-19-1",
+          "viewingDate": "2023-06-19",
+          "viewingSequence": 3,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1972"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2023-08-23",
-          "slug": "the-magnificent-seven-1960",
+          "imdbId": "tt0054047",
           "title": "The Magnificent Seven",
+          "releaseYear": "1960",
+          "sortTitle": "magnificent-seven-1960",
+          "releaseSequence": "1960-10-12tt0054047",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-magnificent-seven-1960",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2023-08-23",
+          "reviewSequence": "2023-08-23-1",
+          "viewingDate": "2023-08-23",
+          "viewingSequence": 4,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1960"
+          "venue": null
         }
       ]
     },
@@ -788,31 +1530,69 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-01-09",
-          "slug": "the-falcon-takes-over-1942",
+          "imdbId": "tt0034716",
           "title": "The Falcon Takes Over",
+          "releaseYear": "1942",
+          "sortTitle": "falcon-takes-over-1942",
+          "releaseSequence": "1942-05-29tt0034716",
+          "genres": [
+            "Comedy",
+            "Crime",
+            "Mystery",
+            "Romance",
+            "Thriller"
+          ],
+          "slug": "the-falcon-takes-over-1942",
+          "grade": "F",
+          "gradeValue": 1,
+          "reviewDate": "2023-01-09",
+          "reviewSequence": "2023-01-09-1",
+          "viewingDate": "2023-01-09",
+          "viewingSequence": 1,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1942"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-05-19",
-          "slug": "lawyer-man-1932",
+          "imdbId": "tt0023125",
           "title": "Lawyer Man",
+          "releaseYear": "1932",
+          "sortTitle": "lawyer-man-1932",
+          "releaseSequence": "1932-12-10tt0023125",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "lawyer-man-1932",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-05-19",
+          "reviewSequence": "2023-05-19-1",
+          "viewingDate": "2023-05-19",
+          "viewingSequence": 2,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2023-06-04",
-          "slug": "marked-woman-1937",
+          "imdbId": "tt0029217",
           "title": "Marked Woman",
+          "releaseYear": "1937",
+          "sortTitle": "marked-woman-1937",
+          "releaseSequence": "1937-04-03tt0029217",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Thriller"
+          ],
+          "slug": "marked-woman-1937",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2023-06-04",
+          "reviewSequence": "2023-06-04-1",
+          "viewingDate": "2023-06-04",
+          "viewingSequence": 3,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         }
       ]
     },
@@ -822,31 +1602,64 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-01-13",
-          "slug": "freddy-vs-jason-2003",
+          "imdbId": "tt0329101",
           "title": "Freddy vs. Jason",
+          "releaseYear": "2003",
+          "sortTitle": "freddy-vs-jason-2003",
+          "releaseSequence": "2003-08-13tt0329101",
+          "genres": [
+            "Action",
+            "Horror"
+          ],
+          "slug": "freddy-vs-jason-2003",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-01-13",
+          "reviewSequence": "2023-01-13-1",
+          "viewingDate": "2023-01-13",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "2003"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-06-08",
-          "slug": "behind-the-mask-the-rise-of-leslie-vernon-2006",
+          "imdbId": "tt0437857",
           "title": "Behind the Mask: The Rise of Leslie Vernon",
+          "releaseYear": "2006",
+          "sortTitle": "behind-the-mask-the-rise-of-leslie-vernon-2006",
+          "releaseSequence": "2006-07-08tt0437857",
+          "genres": [
+            "Comedy",
+            "Horror",
+            "Thriller"
+          ],
+          "slug": "behind-the-mask-the-rise-of-leslie-vernon-2006",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2023-06-08",
+          "reviewSequence": "2023-06-08-2",
+          "viewingDate": "2023-06-08",
+          "viewingSequence": 2,
           "medium": "iTunes",
-          "venue": null,
-          "year": "2006"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2023-06-19",
-          "slug": "a-nightmare-on-elm-street-2-freddys-revenge-1985",
+          "imdbId": "tt0089686",
           "title": "A Nightmare on Elm Street 2: Freddy's Revenge",
+          "releaseYear": "1985",
+          "sortTitle": "nightmare-on-elm-street-2-freddys-revenge-1985",
+          "releaseSequence": "1985-10-01tt0089686",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "a-nightmare-on-elm-street-2-freddys-revenge-1985",
+          "grade": "F",
+          "gradeValue": 1,
+          "reviewDate": "2023-06-19",
+          "reviewSequence": "2023-06-19-2",
+          "viewingDate": "2023-06-19",
+          "viewingSequence": 3,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1985"
+          "venue": null
         }
       ]
     },
@@ -856,31 +1669,70 @@
       "slug": "john-wayne",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-02-04",
-          "slug": "the-star-packer-1934",
+          "imdbId": "tt0025830",
           "title": "The Star Packer",
+          "releaseYear": "1934",
+          "sortTitle": "star-packer-1934",
+          "releaseSequence": "1934-07-30tt0025830",
+          "genres": [
+            "Action",
+            "Drama",
+            "Mystery",
+            "Romance",
+            "Western"
+          ],
+          "slug": "the-star-packer-1934",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-02-04",
+          "reviewSequence": "2023-02-04-1",
+          "viewingDate": "2023-02-04",
+          "viewingSequence": 1,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1934"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-02-09",
-          "slug": "the-life-of-jimmy-dolan-1933",
+          "imdbId": "tt0024257",
           "title": "The Life of Jimmy Dolan",
+          "releaseYear": "1933",
+          "sortTitle": "life-of-jimmy-dolan-1933",
+          "releaseSequence": "1933-06-02tt0024257",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "the-life-of-jimmy-dolan-1933",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2023-02-09",
+          "reviewSequence": "2023-02-09-1",
+          "viewingDate": "2023-02-09",
+          "viewingSequence": 2,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2023-07-31",
-          "slug": "big-jim-mclain-1952",
+          "imdbId": "tt0044418",
           "title": "Big Jim McLain",
+          "releaseYear": "1952",
+          "sortTitle": "big-jim-mclain-1952",
+          "releaseSequence": "1952-08-30tt0044418",
+          "genres": [
+            "Crime",
+            "Drama",
+            "History",
+            "Romance",
+            "Thriller"
+          ],
+          "slug": "big-jim-mclain-1952",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2023-07-31",
+          "reviewSequence": "2023-07-31-1",
+          "viewingDate": "2023-07-31",
+          "viewingSequence": 3,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1952"
+          "venue": null
         }
       ]
     },
@@ -890,31 +1742,65 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-02-09",
-          "slug": "the-life-of-jimmy-dolan-1933",
+          "imdbId": "tt0024257",
           "title": "The Life of Jimmy Dolan",
+          "releaseYear": "1933",
+          "sortTitle": "life-of-jimmy-dolan-1933",
+          "releaseSequence": "1933-06-02tt0024257",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "the-life-of-jimmy-dolan-1933",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2023-02-09",
+          "reviewSequence": "2023-02-09-1",
+          "viewingDate": "2023-02-09",
+          "viewingSequence": 1,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1933"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-04-08",
-          "slug": "so-big-1932",
+          "imdbId": "tt0023491",
           "title": "So Big!",
+          "releaseYear": "1932",
+          "sortTitle": "so-big-1932",
+          "releaseSequence": "1932-04-29tt0023491",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "so-big-1932",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-04-08",
+          "reviewSequence": "2023-04-08-2",
+          "viewingDate": "2023-04-08",
+          "viewingSequence": 2,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2023-04-11",
-          "slug": "our-town-1940",
+          "imdbId": "tt0032881",
           "title": "Our Town",
+          "releaseYear": "1940",
+          "sortTitle": "our-town-1940",
+          "releaseSequence": "1940-05-09tt0032881",
+          "genres": [
+            "Drama",
+            "Family",
+            "Romance"
+          ],
+          "slug": "our-town-1940",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2023-04-11",
+          "reviewSequence": "2023-04-11-1",
+          "viewingDate": "2023-04-11",
+          "viewingSequence": 3,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1940"
+          "venue": null
         }
       ]
     }
@@ -926,40 +1812,87 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-02-13",
-          "slug": "black-legion-1937",
+          "imdbId": "tt0027367",
           "title": "Black Legion",
+          "releaseYear": "1937",
+          "sortTitle": "black-legion-1937",
+          "releaseSequence": "1937-01-16tt0027367",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir"
+          ],
+          "slug": "black-legion-1937",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2023-02-13",
+          "reviewSequence": "2023-02-13-1",
+          "viewingDate": "2023-02-13",
+          "viewingSequence": 1,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-04-05",
-          "slug": "one-way-passage-1932",
+          "imdbId": "tt0023305",
           "title": "One Way Passage",
+          "releaseYear": "1932",
+          "sortTitle": "one-way-passage-1932",
+          "releaseSequence": "1932-10-04tt0023305",
+          "genres": [
+            "Comedy",
+            "Drama",
+            "Romance"
+          ],
+          "slug": "one-way-passage-1932",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2023-04-05",
+          "reviewSequence": "2023-04-05-1",
+          "viewingDate": "2023-04-05",
+          "viewingSequence": 2,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2023-04-08",
-          "slug": "so-big-1932",
+          "imdbId": "tt0023491",
           "title": "So Big!",
+          "releaseYear": "1932",
+          "sortTitle": "so-big-1932",
+          "releaseSequence": "1932-04-29tt0023491",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "so-big-1932",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-04-08",
+          "reviewSequence": "2023-04-08-2",
+          "viewingDate": "2023-04-08",
+          "viewingSequence": 3,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2023-05-09",
-          "slug": "20000-years-in-sing-sing-1932",
+          "imdbId": "tt0023731",
           "title": "20,000 Years in Sing Sing",
+          "releaseYear": "1932",
+          "sortTitle": "20000-years-in-sing-sing-1932",
+          "releaseSequence": "1932-12-24tt0023731",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir"
+          ],
+          "slug": "20000-years-in-sing-sing-1932",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2023-05-09",
+          "reviewSequence": "2023-05-09-1",
+          "viewingDate": "2023-05-09",
+          "viewingSequence": 4,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1932"
+          "venue": null
         }
       ]
     },
@@ -969,31 +1902,63 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-02-02",
-          "slug": "from-beyond-1986",
+          "imdbId": "tt0091083",
           "title": "From Beyond",
+          "releaseYear": "1986",
+          "sortTitle": "from-beyond-1986",
+          "releaseSequence": "1986-10-01tt0091083",
+          "genres": [
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "from-beyond-1986",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2021-09-05",
+          "reviewSequence": "2021-09-05-2",
+          "viewingDate": "2023-02-02",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1986"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-12-17",
-          "slug": null,
+          "imdbId": "tt0100618",
           "title": "Silent Night, Deadly Night 4: Initiation",
+          "releaseYear": "1990",
+          "sortTitle": "silent-night-deadly-night-4-initiation-1990",
+          "releaseSequence": "1990-11-21tt0100618",
+          "genres": [
+            "Horror"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2023-12-17",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1990"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2023-12-21",
-          "slug": null,
+          "imdbId": "tt0105410",
           "title": "Silent Night, Deadly Night 5: The Toy Maker",
+          "releaseYear": "1991",
+          "sortTitle": "silent-night-deadly-night-5-the-toy-maker-1991",
+          "releaseSequence": "1991-11-06tt0105410",
+          "genres": [
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2023-12-21",
+          "viewingSequence": 3,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1991"
+          "venue": null
         }
       ]
     },
@@ -1003,31 +1968,69 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-04-13",
-          "slug": "phantasm-iii-lord-of-the-dead-1994",
+          "imdbId": "tt0110823",
           "title": "Phantasm III: Lord of the Dead",
+          "releaseYear": "1994",
+          "sortTitle": "phantasm-iii-lord-of-the-dead-1994",
+          "releaseSequence": "1994-02-25tt0110823",
+          "genres": [
+            "Action",
+            "Fantasy",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "phantasm-iii-lord-of-the-dead-1994",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2023-04-13",
+          "reviewSequence": "2023-04-13-1",
+          "viewingDate": "2023-04-13",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1994"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-04-27",
-          "slug": "phantasm-iv-oblivion-1998",
+          "imdbId": "tt0138703",
           "title": "Phantasm IV: Oblivion",
+          "releaseYear": "1998",
+          "sortTitle": "phantasm-iv-oblivion-1998",
+          "releaseSequence": "1998-07-31tt0138703",
+          "genres": [
+            "Fantasy",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "phantasm-iv-oblivion-1998",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2023-04-27",
+          "reviewSequence": "2023-04-27-1",
+          "viewingDate": "2023-04-27",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1998"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2023-08-31",
-          "slug": "phantasm-ravager-2016",
+          "imdbId": "tt3627704",
           "title": "Phantasm: Ravager",
+          "releaseYear": "2016",
+          "sortTitle": "phantasm-ravager-2016",
+          "releaseSequence": "2016-09-25tt3627704",
+          "genres": [
+            "Action",
+            "Fantasy",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "phantasm-ravager-2016",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2023-08-31",
+          "reviewSequence": "2023-08-31-1",
+          "viewingDate": "2023-08-31",
+          "viewingSequence": 3,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "2016"
+          "venue": null
         }
       ]
     },
@@ -1037,22 +2040,47 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-02-13",
-          "slug": "black-legion-1937",
+          "imdbId": "tt0027367",
           "title": "Black Legion",
+          "releaseYear": "1937",
+          "sortTitle": "black-legion-1937",
+          "releaseSequence": "1937-01-16tt0027367",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir"
+          ],
+          "slug": "black-legion-1937",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2023-02-13",
+          "reviewSequence": "2023-02-13-1",
+          "viewingDate": "2023-02-13",
+          "viewingSequence": 1,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-06-04",
-          "slug": "marked-woman-1937",
+          "imdbId": "tt0029217",
           "title": "Marked Woman",
+          "releaseYear": "1937",
+          "sortTitle": "marked-woman-1937",
+          "releaseSequence": "1937-04-03tt0029217",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Thriller"
+          ],
+          "slug": "marked-woman-1937",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2023-06-04",
+          "reviewSequence": "2023-06-04-1",
+          "viewingDate": "2023-06-04",
+          "viewingSequence": 2,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         }
       ]
     },
@@ -1062,22 +2090,47 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-02-13",
-          "slug": "black-legion-1937",
+          "imdbId": "tt0027367",
           "title": "Black Legion",
+          "releaseYear": "1937",
+          "sortTitle": "black-legion-1937",
+          "releaseSequence": "1937-01-16tt0027367",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir"
+          ],
+          "slug": "black-legion-1937",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2023-02-13",
+          "reviewSequence": "2023-02-13-1",
+          "viewingDate": "2023-02-13",
+          "viewingSequence": 1,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1937"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-07-11",
-          "slug": "the-racket-1951",
+          "imdbId": "tt0043955",
           "title": "The Racket",
+          "releaseYear": "1951",
+          "sortTitle": "racket-1951",
+          "releaseSequence": "1951-10-25tt0043955",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Thriller"
+          ],
+          "slug": "the-racket-1951",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2023-07-11",
+          "reviewSequence": "2023-07-11-1",
+          "viewingDate": "2023-07-11",
+          "viewingSequence": 2,
           "medium": "Watch TCM",
-          "venue": null,
-          "year": "1951"
+          "venue": null
         }
       ]
     },
@@ -1087,22 +2140,48 @@
       "slug": "lucio-fulci",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-03-11",
-          "slug": "the-new-york-ripper-1982",
+          "imdbId": "tt0084719",
           "title": "The New York Ripper",
+          "releaseYear": "1982",
+          "sortTitle": "new-york-ripper-1982",
+          "releaseSequence": "1982-03-04tt0084719",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-new-york-ripper-1982",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2023-03-11",
+          "reviewSequence": "2023-03-11-2",
+          "viewingDate": "2023-03-11",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1982"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-04-03",
-          "slug": "the-psychic-1977",
+          "imdbId": "tt0075614",
           "title": "The Psychic",
+          "releaseYear": "1977",
+          "sortTitle": "psychic-1977",
+          "releaseSequence": "1977-08-10tt0075614",
+          "genres": [
+            "Comedy",
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-psychic-1977",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-04-03",
+          "reviewSequence": "2023-04-03-1",
+          "viewingDate": "2023-04-03",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1977"
+          "venue": null
         }
       ]
     },
@@ -1112,22 +2191,48 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-03-11",
-          "slug": "the-new-york-ripper-1982",
+          "imdbId": "tt0084719",
           "title": "The New York Ripper",
+          "releaseYear": "1982",
+          "sortTitle": "new-york-ripper-1982",
+          "releaseSequence": "1982-03-04tt0084719",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-new-york-ripper-1982",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2023-03-11",
+          "reviewSequence": "2023-03-11-2",
+          "viewingDate": "2023-03-11",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "1982"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-04-03",
-          "slug": "the-psychic-1977",
+          "imdbId": "tt0075614",
           "title": "The Psychic",
+          "releaseYear": "1977",
+          "sortTitle": "psychic-1977",
+          "releaseSequence": "1977-08-10tt0075614",
+          "genres": [
+            "Comedy",
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-psychic-1977",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-04-03",
+          "reviewSequence": "2023-04-03-1",
+          "viewingDate": "2023-04-03",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1977"
+          "venue": null
         }
       ]
     },
@@ -1137,22 +2242,42 @@
       "slug": "umberto-lenzi",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-03-28",
-          "slug": "nightmare-beach-1989",
+          "imdbId": "tt0095740",
           "title": "Nightmare Beach",
+          "releaseYear": "1989",
+          "sortTitle": "nightmare-beach-1989",
+          "releaseSequence": "1989-07-14tt0095740",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "nightmare-beach-1989",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-03-28",
+          "reviewSequence": "2023-03-28-1",
+          "viewingDate": "2023-03-28",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1989"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-10-28",
-          "slug": "nightmare-beach-1989",
+          "imdbId": "tt0095740",
           "title": "Nightmare Beach",
+          "releaseYear": "1989",
+          "sortTitle": "nightmare-beach-1989",
+          "releaseSequence": "1989-07-14tt0095740",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "nightmare-beach-1989",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-03-28",
+          "reviewSequence": "2023-03-28-1",
+          "viewingDate": "2023-10-28",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1989"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -1162,22 +2287,42 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-03-28",
-          "slug": "nightmare-beach-1989",
+          "imdbId": "tt0095740",
           "title": "Nightmare Beach",
+          "releaseYear": "1989",
+          "sortTitle": "nightmare-beach-1989",
+          "releaseSequence": "1989-07-14tt0095740",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "nightmare-beach-1989",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-03-28",
+          "reviewSequence": "2023-03-28-1",
+          "viewingDate": "2023-03-28",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1989"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-10-28",
-          "slug": "nightmare-beach-1989",
+          "imdbId": "tt0095740",
           "title": "Nightmare Beach",
+          "releaseYear": "1989",
+          "sortTitle": "nightmare-beach-1989",
+          "releaseSequence": "1989-07-14tt0095740",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "nightmare-beach-1989",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-03-28",
+          "reviewSequence": "2023-03-28-1",
+          "viewingDate": "2023-10-28",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1989"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -1187,22 +2332,42 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2023-03-28",
-          "slug": "nightmare-beach-1989",
+          "imdbId": "tt0095740",
           "title": "Nightmare Beach",
+          "releaseYear": "1989",
+          "sortTitle": "nightmare-beach-1989",
+          "releaseSequence": "1989-07-14tt0095740",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "nightmare-beach-1989",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-03-28",
+          "reviewSequence": "2023-03-28-1",
+          "viewingDate": "2023-03-28",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1989"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2023-10-28",
-          "slug": "nightmare-beach-1989",
+          "imdbId": "tt0095740",
           "title": "Nightmare Beach",
+          "releaseYear": "1989",
+          "sortTitle": "nightmare-beach-1989",
+          "releaseSequence": "1989-07-14tt0095740",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "nightmare-beach-1989",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-03-28",
+          "reviewSequence": "2023-03-28-1",
+          "viewingDate": "2023-10-28",
+          "viewingSequence": 2,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1989"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     }

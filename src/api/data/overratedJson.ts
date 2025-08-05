@@ -12,40 +12,29 @@ const OverratedJsonSchema = z
     gradeValue: z.number(),
     imdbId: z.string(),
     releaseSequence: z.string(),
+    releaseYear: z.string(),
     reviewDate: z.date({ coerce: true }),
     reviewSequence: z.string(),
     slug: z.string(),
     sortTitle: z.string(),
     title: z.string(),
-    year: z.string(),
   })
-  .transform(
-    ({
-      genres,
-      grade,
-      gradeValue,
-      imdbId,
-      releaseSequence,
-      reviewDate,
-      reviewSequence,
-      slug,
-      sortTitle,
-      title,
-      year,
-    }) => ({
-      genres,
-      grade,
-      gradeValue,
-      imdbId,
-      releaseSequence,
-      releaseYear: year,
-      reviewDate,
-      reviewSequence,
-      slug,
-      sortTitle,
-      title,
-    }),
-  );
+  .transform((data) => {
+    // fix zod making anything with undefined optional
+    return {
+      genres: data.genres,
+      grade: data.grade,
+      gradeValue: data.gradeValue,
+      imdbId: data.imdbId,
+      releaseSequence: data.releaseSequence,
+      releaseYear: data.releaseYear,
+      reviewDate: data.reviewDate,
+      reviewSequence: data.reviewSequence,
+      slug: data.slug,
+      sortTitle: data.sortTitle,
+      title: data.title,
+    };
+  });
 
 export type OverratedJson = z.infer<typeof OverratedJsonSchema>;
 

@@ -7,42 +7,34 @@ const watchlistTitlesJsonFile = getContentPath("data", "watchlist-titles.json");
 
 const WatchlistTitleJsonSchema = z
   .object({
-    collectionNames: z.array(z.string()),
-    directorNames: z.array(z.string()),
+    genres: z.array(z.string()),
     imdbId: z.string(),
-    performerNames: z.array(z.string()),
     releaseSequence: z.string(),
+    releaseYear: z.string(),
     sortTitle: z.string(),
     title: z.string(),
     viewed: z.boolean(),
-    writerNames: z.array(z.string()),
-    year: z.string(),
+    watchlistCollectionNames: z.array(z.string()),
+    watchlistDirectorNames: z.array(z.string()),
+    watchlistPerformerNames: z.array(z.string()),
+    watchlistWriterNames: z.array(z.string()),
   })
-  .transform(
-    ({
-      collectionNames,
-      directorNames,
-      imdbId,
-      performerNames,
-      releaseSequence,
-      sortTitle,
-      title,
-      viewed,
-      writerNames,
-      year,
-    }) => ({
-      collectionNames,
-      directorNames,
-      imdbId,
-      performerNames,
-      releaseSequence,
-      releaseYear: year,
-      sortTitle,
-      title,
-      viewed,
-      writerNames,
-    }),
-  );
+  .transform((data) => {
+    // fix zod making anything with undefined optional
+    return {
+      genres: data.genres,
+      imdbId: data.imdbId,
+      releaseSequence: data.releaseSequence,
+      releaseYear: data.releaseYear,
+      sortTitle: data.sortTitle,
+      title: data.title,
+      viewed: data.viewed,
+      watchlistCollectionNames: data.watchlistCollectionNames,
+      watchlistDirectorNames: data.watchlistDirectorNames,
+      watchlistPerformerNames: data.watchlistPerformerNames,
+      watchlistWriterNames: data.watchlistWriterNames,
+    };
+  });
 
 export type WatchlistTitleJson = z.infer<typeof WatchlistTitleJsonSchema>;
 

@@ -1,161 +1,203 @@
 {
   "name": "Sam Peckinpah",
   "slug": "sam-peckinpah",
+  "titleCount": 17,
+  "reviewCount": 9,
   "titles": [
     {
-      "creditedAs": [
-        "director"
-      ],
       "imdbId": "tt0054795",
       "title": "The Deadly Companions",
-      "year": "1961",
+      "releaseYear": "1961",
+      "sortTitle": "deadly-companions-1961",
+      "releaseSequence": "1961-06-06tt0054795",
+      "genres": [
+        "Adventure",
+        "Western"
+      ],
       "slug": "the-deadly-companions-1961",
       "grade": "C-",
-      "sortTitle": "deadly-companions-1961",
       "gradeValue": 5,
-      "releaseSequence": "1961-06-06tt0054795",
       "reviewDate": "2021-01-25",
       "reviewSequence": "2021-01-25-1",
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "collectionNames": []
-    },
-    {
       "creditedAs": [
         "director"
       ],
-      "imdbId": "tt0056412",
-      "title": "Ride the High Country",
-      "year": "1962",
-      "slug": "ride-the-high-country-1962",
-      "grade": "A",
-      "sortTitle": "ride-the-high-country-1962",
-      "gradeValue": 12,
-      "releaseSequence": "1962-05-09tt0056412",
-      "reviewDate": "2007-12-01",
-      "reviewSequence": "2007-12-01-1",
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0056412",
+      "title": "Ride the High Country",
+      "releaseYear": "1962",
+      "sortTitle": "ride-the-high-country-1962",
+      "releaseSequence": "1962-05-09tt0056412",
+      "genres": [
+        "Drama",
+        "Western"
+      ],
+      "slug": "ride-the-high-country-1962",
+      "grade": "A",
+      "gradeValue": 12,
+      "reviewDate": "2007-12-01",
+      "reviewSequence": "2007-12-01-3",
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0059418",
+      "title": "Major Dundee",
+      "releaseYear": "1965",
+      "sortTitle": "major-dundee-1965",
+      "releaseSequence": "1965-03-15tt0059418",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "War",
+        "Western"
+      ],
+      "slug": "major-dundee-1965",
+      "grade": "B-",
+      "gradeValue": 8,
+      "reviewDate": "2008-05-27",
+      "reviewSequence": "2008-05-27-1",
       "creditedAs": [
         "director",
         "writer"
       ],
-      "imdbId": "tt0059418",
-      "title": "Major Dundee",
-      "year": "1965",
-      "slug": "major-dundee-1965",
-      "grade": "B-",
-      "sortTitle": "major-dundee-1965",
-      "gradeValue": 8,
-      "releaseSequence": "1965-03-15tt0059418",
-      "reviewDate": "2008-05-27",
-      "reviewSequence": "2008-05-27-1",
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0063775",
+      "title": "Villa Rides",
+      "releaseYear": "1968",
+      "sortTitle": "villa-rides-1968",
+      "releaseSequence": "1968-05-29tt0063775",
+      "genres": [
+        "Drama",
+        "War",
+        "Western"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
       "creditedAs": [
         "writer"
       ],
-      "imdbId": "tt0063775",
-      "title": "Villa Rides",
-      "year": "1968",
-      "slug": null,
-      "grade": null,
-      "sortTitle": "villa-rides-1968",
-      "gradeValue": null,
-      "releaseSequence": "1968-05-29tt0063775",
-      "reviewDate": null,
-      "reviewSequence": null,
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [
         "Robert Mitchum"
       ],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0065214",
+      "title": "The Wild Bunch",
+      "releaseYear": "1969",
+      "sortTitle": "wild-bunch-1969",
+      "releaseSequence": "1969-05-01tt0065214",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama",
+        "Western"
+      ],
+      "slug": "the-wild-bunch-1969",
+      "grade": "A+",
+      "gradeValue": 13,
+      "reviewDate": "2008-11-30",
+      "reviewSequence": "2008-11-30-1",
       "creditedAs": [
         "director",
         "writer"
       ],
-      "imdbId": "tt0065214",
-      "title": "The Wild Bunch",
-      "year": "1969",
-      "slug": "the-wild-bunch-1969",
-      "grade": "A+",
-      "sortTitle": "wild-bunch-1969",
-      "gradeValue": 13,
-      "releaseSequence": "1969-05-01tt0065214",
-      "reviewDate": "2008-11-30",
-      "reviewSequence": "2008-11-30-1",
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0065446",
+      "title": "The Ballad of Cable Hogue",
+      "releaseYear": "1970",
+      "sortTitle": "ballad-of-cable-hogue-1970",
+      "releaseSequence": "1970-03-18tt0065446",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance",
+        "Western"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
       "creditedAs": [
         "director"
       ],
-      "imdbId": "tt0065446",
-      "title": "The Ballad of Cable Hogue",
-      "year": "1970",
-      "slug": null,
-      "grade": null,
-      "sortTitle": "ballad-of-cable-hogue-1970",
-      "gradeValue": null,
-      "releaseSequence": "1970-03-18tt0065446",
-      "reviewDate": null,
-      "reviewSequence": null,
       "watchlistDirectorNames": [
         "Sam Peckinpah"
       ],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0067800",
+      "title": "Straw Dogs",
+      "releaseYear": "1971",
+      "sortTitle": "straw-dogs-1971",
+      "releaseSequence": "1971-11-25tt0067800",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "slug": "straw-dogs-1971",
+      "grade": "A+",
+      "gradeValue": 13,
+      "reviewDate": "2016-12-02",
+      "reviewSequence": "2016-12-02-1",
       "creditedAs": [
         "director",
         "writer"
       ],
-      "imdbId": "tt0067800",
-      "title": "Straw Dogs",
-      "year": "1971",
-      "slug": "straw-dogs-1971",
-      "grade": "A+",
-      "sortTitle": "straw-dogs-1971",
-      "gradeValue": 13,
-      "releaseSequence": "1971-11-25tt0067800",
-      "reviewDate": "2016-12-02",
-      "reviewSequence": "2016-12-02-1",
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0068786",
+      "title": "Junior Bonner",
+      "releaseYear": "1972",
+      "sortTitle": "junior-bonner-1972",
+      "releaseSequence": "1972-06-20tt0068786",
+      "genres": [
+        "Drama",
+        "Western"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
       "creditedAs": [
         "director"
       ],
-      "imdbId": "tt0068786",
-      "title": "Junior Bonner",
-      "year": "1972",
-      "slug": null,
-      "grade": null,
-      "sortTitle": "junior-bonner-1972",
-      "gradeValue": null,
-      "releaseSequence": "1972-06-20tt0068786",
-      "reviewDate": null,
-      "reviewSequence": null,
       "watchlistDirectorNames": [
         "Sam Peckinpah"
       ],
@@ -163,41 +205,51 @@
         "Steve McQueen"
       ],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0068638",
+      "title": "The Getaway",
+      "releaseYear": "1972",
+      "sortTitle": "getaway-1972",
+      "releaseSequence": "1972-12-13tt0068638",
+      "genres": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "slug": "the-getaway-1972",
+      "grade": "B+",
+      "gradeValue": 10,
+      "reviewDate": "2016-11-27",
+      "reviewSequence": "2016-11-27-1",
       "creditedAs": [
         "director"
       ],
-      "imdbId": "tt0068638",
-      "title": "The Getaway",
-      "year": "1972",
-      "slug": "the-getaway-1972",
-      "grade": "B+",
-      "sortTitle": "getaway-1972",
-      "gradeValue": 10,
-      "releaseSequence": "1972-12-13tt0068638",
-      "reviewDate": "2016-11-27",
-      "reviewSequence": "2016-11-27-1",
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0070518",
+      "title": "Pat Garrett & Billy the Kid",
+      "releaseYear": "1973",
+      "sortTitle": "pat-garrett-and-billy-the-kid-1973",
+      "releaseSequence": "1973-05-23tt0070518",
+      "genres": [
+        "Biography",
+        "Drama",
+        "Western"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
       "creditedAs": [
         "director"
       ],
-      "imdbId": "tt0070518",
-      "title": "Pat Garrett & Billy the Kid",
-      "year": "1973",
-      "slug": null,
-      "grade": null,
-      "sortTitle": "pat-garrett-and-billy-the-kid-1973",
-      "gradeValue": null,
-      "releaseSequence": "1973-05-23tt0070518",
-      "reviewDate": null,
-      "reviewSequence": null,
       "watchlistDirectorNames": [
         "Sam Peckinpah"
       ],
@@ -205,23 +257,30 @@
         "James Coburn"
       ],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0071249",
+      "title": "Bring Me the Head of Alfredo Garcia",
+      "releaseYear": "1974",
+      "sortTitle": "bring-me-the-head-of-alfredo-garcia-1974",
+      "releaseSequence": "1974-08-01tt0071249",
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama",
+        "Thriller",
+        "Western"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
       "creditedAs": [
         "director",
         "writer"
       ],
-      "imdbId": "tt0071249",
-      "title": "Bring Me the Head of Alfredo Garcia",
-      "year": "1974",
-      "slug": null,
-      "grade": null,
-      "sortTitle": "bring-me-the-head-of-alfredo-garcia-1974",
-      "gradeValue": null,
-      "releaseSequence": "1974-08-01tt0071249",
-      "reviewDate": null,
-      "reviewSequence": null,
       "watchlistDirectorNames": [
         "Sam Peckinpah"
       ],
@@ -229,41 +288,50 @@
         "Warren Oates"
       ],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0073240",
+      "title": "The Killer Elite",
+      "releaseYear": "1975",
+      "sortTitle": "killer-elite-1975",
+      "releaseSequence": "1975-12-17tt0073240",
+      "genres": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "slug": "the-killer-elite-1975",
+      "grade": "D+",
+      "gradeValue": 4,
+      "reviewDate": "2008-01-10",
+      "reviewSequence": "2008-01-10-2",
       "creditedAs": [
         "director"
       ],
-      "imdbId": "tt0073240",
-      "title": "The Killer Elite",
-      "year": "1975",
-      "slug": "the-killer-elite-1975",
-      "grade": "D+",
-      "sortTitle": "killer-elite-1975",
-      "gradeValue": 4,
-      "releaseSequence": "1975-12-17tt0073240",
-      "reviewDate": "2008-01-10",
-      "reviewSequence": "2008-01-10-2",
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0074695",
+      "title": "Cross of Iron",
+      "releaseYear": "1977",
+      "sortTitle": "cross-of-iron-1977",
+      "releaseSequence": "1977-01-28tt0074695",
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
       "creditedAs": [
         "director"
       ],
-      "imdbId": "tt0074695",
-      "title": "Cross of Iron",
-      "year": "1977",
-      "slug": null,
-      "grade": null,
-      "sortTitle": "cross-of-iron-1977",
-      "gradeValue": null,
-      "releaseSequence": "1977-01-28tt0074695",
-      "reviewDate": null,
-      "reviewSequence": null,
       "watchlistDirectorNames": [
         "Sam Peckinpah"
       ],
@@ -271,91 +339,108 @@
         "James Coburn"
       ],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0077369",
+      "title": "Convoy",
+      "releaseYear": "1978",
+      "sortTitle": "convoy-1978",
+      "releaseSequence": "1978-06-10tt0077369",
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
       "creditedAs": [
         "director"
       ],
-      "imdbId": "tt0077369",
-      "title": "Convoy",
-      "year": "1978",
-      "slug": null,
-      "grade": null,
-      "sortTitle": "convoy-1978",
-      "gradeValue": null,
-      "releaseSequence": "1978-06-10tt0077369",
-      "reviewDate": null,
-      "reviewSequence": null,
       "watchlistDirectorNames": [
         "Sam Peckinpah"
       ],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0077327",
+      "title": "China 9, Liberty 37",
+      "releaseYear": "1978",
+      "sortTitle": "china-9-liberty-37-1978",
+      "releaseSequence": "1978-08-04tt0077327",
+      "genres": [
+        "Drama",
+        "Romance",
+        "Western"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
       "creditedAs": [
         "performer"
       ],
-      "imdbId": "tt0077327",
-      "title": "China 9, Liberty 37",
-      "year": "1978",
-      "slug": null,
-      "grade": null,
-      "sortTitle": "china-9-liberty-37-1978",
-      "gradeValue": null,
-      "releaseSequence": "1978-08-04tt0077327",
-      "reviewDate": null,
-      "reviewSequence": null,
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [
         "Warren Oates"
       ],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0080100",
+      "title": "The Visitor",
+      "releaseYear": "1979",
+      "sortTitle": "visitor-1979",
+      "releaseSequence": "1979-03-22tt0080100",
+      "genres": [
+        "Horror",
+        "Sci-Fi"
+      ],
+      "slug": "the-visitor-1979",
+      "grade": "D+",
+      "gradeValue": 4,
+      "reviewDate": "2015-03-07",
+      "reviewSequence": "2015-03-07-2",
       "creditedAs": [
         "performer"
       ],
-      "imdbId": "tt0080100",
-      "title": "The Visitor",
-      "year": "1979",
-      "slug": "the-visitor-1979",
-      "grade": "D+",
-      "sortTitle": "visitor-1979",
-      "gradeValue": 4,
-      "releaseSequence": "1979-03-22tt0080100",
-      "reviewDate": "2015-03-07",
-      "reviewSequence": "2015-03-07-2",
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0086058",
+      "title": "The Osterman Weekend",
+      "releaseYear": "1983",
+      "sortTitle": "osterman-weekend-1983",
+      "releaseSequence": "1983-09-30tt0086058",
+      "genres": [
+        "Action",
+        "Drama",
+        "Thriller"
+      ],
+      "slug": "the-osterman-weekend-1983",
+      "grade": "D+",
+      "gradeValue": 4,
+      "reviewDate": "2007-11-14",
+      "reviewSequence": "2007-11-14-1",
       "creditedAs": [
         "director"
       ],
-      "imdbId": "tt0086058",
-      "title": "The Osterman Weekend",
-      "year": "1983",
-      "slug": "the-osterman-weekend-1983",
-      "grade": "D+",
-      "sortTitle": "osterman-weekend-1983",
-      "gradeValue": 4,
-      "releaseSequence": "1983-09-30tt0086058",
-      "reviewDate": "2007-11-14",
-      "reviewSequence": "2007-11-14-1",
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     }
   ],
-  "reviewCount": 9,
-  "totalCount": 17,
+  "description": "Director, writer, and performer with 9 reviewed and 8 watchlist titles.",
   "creditedAs": [
     "director",
     "writer",

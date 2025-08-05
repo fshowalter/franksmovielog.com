@@ -23,10 +23,13 @@ export async function allWatchlistTitles(): Promise<WatchlistTitles> {
   const distinctReleaseYears = new Set<string>();
 
   const watchlistTitles = watchlistTitlesJson.map((title) => {
-    for (const name of title.directorNames) distinctDirectors.add(name);
-    for (const name of title.performerNames) distinctPerformers.add(name);
-    for (const name of title.writerNames) distinctWriters.add(name);
-    for (const name of title.collectionNames) distinctCollections.add(name);
+    for (const name of title.watchlistDirectorNames)
+      distinctDirectors.add(name);
+    for (const name of title.watchlistPerformerNames)
+      distinctPerformers.add(name);
+    for (const name of title.watchlistWriterNames) distinctWriters.add(name);
+    for (const name of title.watchlistCollectionNames)
+      distinctCollections.add(name);
     distinctReleaseYears.add(title.releaseYear);
 
     return {

@@ -99,18 +99,40 @@
   ],
   "mostWatchedTitles": [
     {
-      "title": "The Cabin in the Woods",
       "imdbId": "tt1259521",
-      "year": "2011",
-      "count": 2,
-      "slug": "the-cabin-in-the-woods-2011"
+      "title": "The Cabin in the Woods",
+      "releaseYear": "2011",
+      "sortTitle": "cabin-in-the-woods-2011",
+      "releaseSequence": "2011-12-11tt1259521",
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "slug": "the-cabin-in-the-woods-2011",
+      "grade": "A+",
+      "gradeValue": 13,
+      "reviewDate": "2020-12-22",
+      "reviewSequence": "2020-12-22-1",
+      "count": 2
     },
     {
-      "title": "Avengers: Infinity War",
       "imdbId": "tt4154756",
-      "year": "2018",
-      "count": 2,
-      "slug": "avengers-infinity-war-2018"
+      "title": "Avengers: Infinity War",
+      "releaseYear": "2018",
+      "sortTitle": "avengers-infinity-war-2018",
+      "releaseSequence": "2018-04-23tt4154756",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "slug": "avengers-infinity-war-2018",
+      "grade": "A+",
+      "gradeValue": 13,
+      "reviewDate": "2020-10-17",
+      "reviewSequence": "2020-10-17-1",
+      "count": 2
     }
   ],
   "mostWatchedDirectors": [
@@ -120,49 +142,109 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-03-28",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-03-28",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-06-13",
-          "slug": null,
+          "imdbId": "tt1843866",
           "title": "Captain America: The Winter Soldier",
+          "releaseYear": "2014",
+          "sortTitle": "captain-america-the-winter-soldier-2014",
+          "releaseSequence": "2014-03-13tt1843866",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-06-13",
+          "viewingSequence": 2,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2014"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2020-07-25",
-          "slug": "captain-america-civil-war-2016",
+          "imdbId": "tt3498820",
           "title": "Captain America: Civil War",
+          "releaseYear": "2016",
+          "sortTitle": "captain-america-civil-war-2016",
+          "releaseSequence": "2016-04-12tt3498820",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
+          "slug": "captain-america-civil-war-2016",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2020-07-25",
+          "reviewSequence": "2020-07-25-1",
+          "viewingDate": "2020-07-25",
+          "viewingSequence": 3,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2016"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2020-10-17",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-10-17",
+          "viewingSequence": 4,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2020-11-14",
-          "slug": "avengers-endgame-2019",
+          "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
+          "releaseYear": "2019",
+          "sortTitle": "avengers-endgame-2019",
+          "releaseSequence": "2019-04-18tt4154796",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-endgame-2019",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-11-14",
+          "reviewSequence": "2020-11-14-1",
+          "viewingDate": "2020-11-14",
+          "viewingSequence": 5,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2019"
+          "venue": null
         }
       ]
     },
@@ -172,49 +254,111 @@
       "slug": "lucio-fulci",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-09-21",
-          "slug": "massacre-time-1966",
+          "imdbId": "tt0061074",
           "title": "Massacre Time",
+          "releaseYear": "1966",
+          "sortTitle": "massacre-time-1966",
+          "releaseSequence": "1966-08-10tt0061074",
+          "genres": [
+            "Action",
+            "Drama",
+            "Thriller",
+            "Western"
+          ],
+          "slug": "massacre-time-1966",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2025-06-09",
+          "reviewSequence": "2025-06-09-1",
+          "viewingDate": "2020-09-21",
+          "viewingSequence": 1,
           "medium": "DVD",
-          "venue": null,
-          "year": "1966"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-09-24",
-          "slug": "one-on-top-of-the-other-1969",
+          "imdbId": "tt0065148",
           "title": "One on Top of the Other",
+          "releaseYear": "1969",
+          "sortTitle": "one-on-top-of-the-other-1969",
+          "releaseSequence": "1969-08-15tt0065148",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "one-on-top-of-the-other-1969",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2020-09-24",
+          "reviewSequence": "2020-09-24-1",
+          "viewingDate": "2020-09-24",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1969"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2020-10-22",
-          "slug": "the-conspiracy-of-torture-1969",
+          "imdbId": "tt0064073",
           "title": "The Conspiracy of Torture",
+          "releaseYear": "1969",
+          "sortTitle": "conspiracy-of-torture-1969",
+          "releaseSequence": "1969-11-14tt0064073",
+          "genres": [
+            "Drama",
+            "History",
+            "Horror"
+          ],
+          "slug": "the-conspiracy-of-torture-1969",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2024-11-15",
+          "reviewSequence": "2024-11-15-1",
+          "viewingDate": "2020-10-22",
+          "viewingSequence": 3,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1969"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2020-10-23",
-          "slug": "a-lizard-in-a-womans-skin-1971",
+          "imdbId": "tt0067361",
           "title": "A Lizard in a Woman's Skin",
+          "releaseYear": "1971",
+          "sortTitle": "lizard-in-a-womans-skin-1971",
+          "releaseSequence": "1971-02-18tt0067361",
+          "genres": [
+            "Drama",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "a-lizard-in-a-womans-skin-1971",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-10-23",
+          "reviewSequence": "2020-10-23-1",
+          "viewingDate": "2020-10-23",
+          "viewingSequence": 4,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1971"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2020-10-27",
-          "slug": "dont-torture-a-duckling-1972",
+          "imdbId": "tt0069019",
           "title": "Don't Torture a Duckling",
+          "releaseYear": "1972",
+          "sortTitle": "dont-torture-a-duckling-1972",
+          "releaseSequence": "1972-09-29tt0069019",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "dont-torture-a-duckling-1972",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2020-10-27",
+          "reviewSequence": "2020-10-27-1",
+          "viewingDate": "2020-10-27",
+          "viewingSequence": 5,
           "medium": "iTunes",
-          "venue": null,
-          "year": "1972"
+          "venue": null
         }
       ]
     },
@@ -224,40 +368,86 @@
       "slug": "john-ford",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-07-12",
-          "slug": "the-black-watch-1929",
+          "imdbId": "tt0019699",
           "title": "The Black Watch",
+          "releaseYear": "1929",
+          "sortTitle": "black-watch-1929",
+          "releaseSequence": "1929-05-08tt0019699",
+          "genres": [
+            "Adventure",
+            "Drama"
+          ],
+          "slug": "the-black-watch-1929",
+          "grade": "F",
+          "gradeValue": 1,
+          "reviewDate": "2020-07-12",
+          "reviewSequence": "2020-07-12-1",
+          "viewingDate": "2020-07-12",
+          "viewingSequence": 1,
           "medium": "iTunes",
-          "venue": null,
-          "year": "1929"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-09-11",
-          "slug": "born-reckless-1930",
+          "imdbId": "tt0020702",
           "title": "Born Reckless",
+          "releaseYear": "1930",
+          "sortTitle": "born-reckless-1930",
+          "releaseSequence": "1930-05-11tt0020702",
+          "genres": [
+            "Crime",
+            "Drama",
+            "War"
+          ],
+          "slug": "born-reckless-1930",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2020-09-11",
+          "reviewSequence": "2020-09-11-1",
+          "viewingDate": "2020-09-11",
+          "viewingSequence": 2,
           "medium": "iTunes",
-          "venue": null,
-          "year": "1930"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2020-09-11",
-          "slug": "men-without-women-1930",
+          "imdbId": "tt0021140",
           "title": "Men Without Women",
+          "releaseYear": "1930",
+          "sortTitle": "men-without-women-1930",
+          "releaseSequence": "1930-01-31tt0021140",
+          "genres": [
+            "Action",
+            "Drama"
+          ],
+          "slug": "men-without-women-1930",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-09-11",
+          "reviewSequence": "2020-09-11-2",
+          "viewingDate": "2020-09-11",
+          "viewingSequence": 3,
           "medium": "iTunes",
-          "venue": null,
-          "year": "1930"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2020-11-06",
-          "slug": "up-the-river-1930",
+          "imdbId": "tt0021508",
           "title": "Up the River",
+          "releaseYear": "1930",
+          "sortTitle": "up-the-river-1930",
+          "releaseSequence": "1930-10-10tt0021508",
+          "genres": [
+            "Comedy",
+            "Crime",
+            "Drama"
+          ],
+          "slug": "up-the-river-1930",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2020-11-06",
+          "reviewSequence": "2020-11-06-1",
+          "viewingDate": "2020-11-06",
+          "viewingSequence": 4,
           "medium": "iTunes",
-          "venue": null,
-          "year": "1930"
+          "venue": null
         }
       ]
     },
@@ -267,40 +457,86 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-08-19",
-          "slug": "the-quatermass-xperiment-1955",
+          "imdbId": "tt0049646",
           "title": "The Quatermass Xperiment",
+          "releaseYear": "1955",
+          "sortTitle": "quatermass-xperiment-1955",
+          "releaseSequence": "1955-08-26tt0049646",
+          "genres": [
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "the-quatermass-xperiment-1955",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2020-08-19",
+          "reviewSequence": "2020-08-19-1",
+          "viewingDate": "2020-08-19",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1955"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-08-27",
-          "slug": "the-abominable-snowman-1957",
+          "imdbId": "tt0050095",
           "title": "The Abominable Snowman",
+          "releaseYear": "1957",
+          "sortTitle": "abominable-snowman-1957",
+          "releaseSequence": "1957-08-10tt0050095",
+          "genres": [
+            "Adventure",
+            "Horror"
+          ],
+          "slug": "the-abominable-snowman-1957",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2020-08-27",
+          "reviewSequence": "2020-08-27-1",
+          "viewingDate": "2020-08-27",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1957"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2020-11-05",
-          "slug": "quatermass-2-1957",
+          "imdbId": "tt0050873",
           "title": "Quatermass 2",
+          "releaseYear": "1957",
+          "sortTitle": "quatermass-2-1957",
+          "releaseSequence": "1957-05-10tt0050873",
+          "genres": [
+            "Sci-Fi",
+            "Horror"
+          ],
+          "slug": "quatermass-2-1957",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2020-11-05",
+          "reviewSequence": "2020-11-05-1",
+          "viewingDate": "2020-11-05",
+          "viewingSequence": 3,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1957"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2020-11-10",
-          "slug": "the-camp-on-blood-island-1958",
+          "imdbId": "tt0051444",
           "title": "The Camp on Blood Island",
+          "releaseYear": "1958",
+          "sortTitle": "camp-on-blood-island-1958",
+          "releaseSequence": "1958-04-15tt0051444",
+          "genres": [
+            "Action",
+            "Drama",
+            "History",
+            "War"
+          ],
+          "slug": "the-camp-on-blood-island-1958",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2020-11-10",
+          "reviewSequence": "2020-11-10-1",
+          "viewingDate": "2020-11-10",
+          "viewingSequence": 4,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1958"
+          "venue": null
         }
       ]
     },
@@ -310,31 +546,68 @@
       "slug": "alfred-hitchcock",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-07-10",
-          "slug": "blackmail-1929",
+          "imdbId": "tt0019702",
           "title": "Blackmail",
+          "releaseYear": "1929",
+          "sortTitle": "blackmail-1929",
+          "releaseSequence": "1929-07-28tt0019702",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "blackmail-1929",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-07-10",
+          "reviewSequence": "2020-07-10-1",
+          "viewingDate": "2020-07-10",
+          "viewingSequence": 1,
           "medium": "Kanopy",
-          "venue": null,
-          "year": "1929"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-09-28",
-          "slug": "murder-1930",
+          "imdbId": "tt0021165",
           "title": "Murder!",
+          "releaseYear": "1930",
+          "sortTitle": "murder-1930",
+          "releaseSequence": "1930-07-31tt0021165",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "murder-1930",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2020-09-28",
+          "reviewSequence": "2020-09-28-1",
+          "viewingDate": "2020-09-28",
+          "viewingSequence": 2,
           "medium": "iTunes",
-          "venue": null,
-          "year": "1930"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2020-11-02",
-          "slug": "juno-and-the-paycock-1930",
+          "imdbId": "tt0021015",
           "title": "Juno and the Paycock",
+          "releaseYear": "1930",
+          "sortTitle": "juno-and-the-paycock-1930",
+          "releaseSequence": "1930-02-22tt0021015",
+          "genres": [
+            "Comedy",
+            "Drama"
+          ],
+          "slug": "juno-and-the-paycock-1930",
+          "grade": "F",
+          "gradeValue": 1,
+          "reviewDate": "2020-11-02",
+          "reviewSequence": "2020-11-02-1",
+          "viewingDate": "2020-11-02",
+          "viewingSequence": 3,
           "medium": "DVD",
-          "venue": null,
-          "year": "1930"
+          "venue": null
         }
       ]
     },
@@ -344,31 +617,63 @@
       "slug": "ingmar-bergman",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-12-13",
-          "slug": "crisis-1946",
+          "imdbId": "tt0038675",
           "title": "Crisis",
+          "releaseYear": "1946",
+          "sortTitle": "crisis-1946",
+          "releaseSequence": "1946-02-25tt0038675",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "crisis-1946",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2020-12-13",
+          "reviewSequence": "2020-12-13-1",
+          "viewingDate": "2020-12-13",
+          "viewingSequence": 1,
           "medium": "Criterion Channel",
-          "venue": null,
-          "year": "1946"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-12-16",
-          "slug": "it-rains-on-our-love-1946",
+          "imdbId": "tt0038468",
           "title": "It Rains on Our Love",
+          "releaseYear": "1946",
+          "sortTitle": "it-rains-on-our-love-1946",
+          "releaseSequence": "1946-11-09tt0038468",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "it-rains-on-our-love-1946",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2020-12-16",
+          "reviewSequence": "2020-12-16-2",
+          "viewingDate": "2020-12-16",
+          "viewingSequence": 2,
           "medium": "DVD",
-          "venue": null,
-          "year": "1946"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2020-12-20",
-          "slug": "a-ship-to-india-1947",
+          "imdbId": "tt0039834",
           "title": "A Ship to India",
+          "releaseYear": "1947",
+          "sortTitle": "ship-to-india-1947",
+          "releaseSequence": "1947-09-01tt0039834",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "a-ship-to-india-1947",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2020-12-20",
+          "reviewSequence": "2020-12-20-1",
+          "viewingDate": "2020-12-20",
+          "viewingSequence": 3,
           "medium": "Criterion Channel",
-          "venue": null,
-          "year": "1947"
+          "venue": null
         }
       ]
     },
@@ -378,22 +683,46 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-01-01",
-          "slug": null,
+          "imdbId": "tt1074638",
           "title": "Skyfall",
+          "releaseYear": "2012",
+          "sortTitle": "skyfall-2012",
+          "releaseSequence": "2012-10-23tt1074638",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-01-01",
+          "viewingSequence": 1,
           "medium": "iTunes",
-          "venue": null,
-          "year": "2012"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-01-01",
-          "slug": null,
+          "imdbId": "tt2379713",
           "title": "Spectre",
+          "releaseYear": "2015",
+          "sortTitle": "spectre-2015",
+          "releaseSequence": "2015-10-26tt2379713",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-01-01",
+          "viewingSequence": 2,
           "medium": "iTunes",
-          "venue": null,
-          "year": "2015"
+          "venue": null
         }
       ]
     },
@@ -403,22 +732,46 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-01-28",
-          "slug": null,
+          "imdbId": "tt0081617",
           "title": "Terror Train",
+          "releaseYear": "1980",
+          "sortTitle": "terror-train-1980",
+          "releaseSequence": "1980-10-03tt0081617",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-01-28",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1980"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2020-08-06",
-          "slug": "tomorrow-never-dies-1997",
+          "imdbId": "tt0120347",
           "title": "Tomorrow Never Dies",
+          "releaseYear": "1997",
+          "sortTitle": "tomorrow-never-dies-1997",
+          "releaseSequence": "1997-12-09tt0120347",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Thriller"
+          ],
+          "slug": "tomorrow-never-dies-1997",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2020-08-06",
+          "reviewSequence": "2020-08-06-1",
+          "viewingDate": "2020-08-06",
+          "viewingSequence": 2,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1997"
+          "venue": null
         }
       ]
     },
@@ -428,22 +781,46 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-02-08",
-          "slug": "the-cabin-in-the-woods-2011",
+          "imdbId": "tt1259521",
           "title": "The Cabin in the Woods",
+          "releaseYear": "2011",
+          "sortTitle": "cabin-in-the-woods-2011",
+          "releaseSequence": "2011-12-11tt1259521",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-cabin-in-the-woods-2011",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-12-22",
+          "reviewSequence": "2020-12-22-1",
+          "viewingDate": "2020-02-08",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2011"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-12-22",
-          "slug": "the-cabin-in-the-woods-2011",
+          "imdbId": "tt1259521",
           "title": "The Cabin in the Woods",
+          "releaseYear": "2011",
+          "sortTitle": "cabin-in-the-woods-2011",
+          "releaseSequence": "2011-12-11tt1259521",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-cabin-in-the-woods-2011",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-12-22",
+          "reviewSequence": "2020-12-22-1",
+          "viewingDate": "2020-12-22",
+          "viewingSequence": 2,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2011"
+          "venue": null
         }
       ]
     },
@@ -453,22 +830,45 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-04-04",
-          "slug": "iron-man-2008",
+          "imdbId": "tt0371746",
           "title": "Iron Man",
+          "releaseYear": "2008",
+          "sortTitle": "iron-man-2008",
+          "releaseSequence": "2008-04-14tt0371746",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "iron-man-2008",
+          "grade": "A-",
+          "gradeValue": 11,
+          "reviewDate": "2008-05-01",
+          "reviewSequence": "2008-05-01-1",
+          "viewingDate": "2020-04-04",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2008"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-05-02",
-          "slug": null,
+          "imdbId": "tt1228705",
           "title": "Iron Man 2",
+          "releaseYear": "2010",
+          "sortTitle": "iron-man-2-2010",
+          "releaseSequence": "2010-04-26tt1228705",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-05-02",
+          "viewingSequence": 2,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2010"
+          "venue": null
         }
       ]
     }
@@ -480,184 +880,426 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-03-28",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-03-28",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-04-04",
-          "slug": "iron-man-2008",
+          "imdbId": "tt0371746",
           "title": "Iron Man",
+          "releaseYear": "2008",
+          "sortTitle": "iron-man-2008",
+          "releaseSequence": "2008-04-14tt0371746",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "iron-man-2008",
+          "grade": "A-",
+          "gradeValue": 11,
+          "reviewDate": "2008-05-01",
+          "reviewSequence": "2008-05-01-1",
+          "viewingDate": "2020-04-04",
+          "viewingSequence": 2,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2008"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2020-05-02",
-          "slug": null,
+          "imdbId": "tt1228705",
           "title": "Iron Man 2",
+          "releaseYear": "2010",
+          "sortTitle": "iron-man-2-2010",
+          "releaseSequence": "2010-04-26tt1228705",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-05-02",
+          "viewingSequence": 3,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2010"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2020-05-09",
-          "slug": null,
+          "imdbId": "tt0800369",
           "title": "Thor",
+          "releaseYear": "2011",
+          "sortTitle": "thor-2011",
+          "releaseSequence": "2011-04-17tt0800369",
+          "genres": [
+            "Action",
+            "Fantasy"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-05-09",
+          "viewingSequence": 4,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2011"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2020-05-23",
-          "slug": "the-avengers-2012",
+          "imdbId": "tt0848228",
           "title": "The Avengers",
+          "releaseYear": "2012",
+          "sortTitle": "avengers-2012",
+          "releaseSequence": "2012-04-11tt0848228",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
+          "slug": "the-avengers-2012",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2012-05-03",
+          "reviewSequence": "2012-05-03-1",
+          "viewingDate": "2020-05-23",
+          "viewingSequence": 5,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2012"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2020-05-31",
-          "slug": null,
+          "imdbId": "tt1300854",
           "title": "Iron Man 3",
+          "releaseYear": "2013",
+          "sortTitle": "iron-man-3-2013",
+          "releaseSequence": "2013-04-14tt1300854",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-05-31",
+          "viewingSequence": 6,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2013"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2020-06-06",
-          "slug": null,
+          "imdbId": "tt1981115",
           "title": "Thor: The Dark World",
+          "releaseYear": "2013",
+          "sortTitle": "thor-the-dark-world-2013",
+          "releaseSequence": "2013-10-22tt1981115",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-06-06",
+          "viewingSequence": 7,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2013"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2020-06-13",
-          "slug": null,
+          "imdbId": "tt1843866",
           "title": "Captain America: The Winter Soldier",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2014"
-        },
-        {
-          "sequence": 9,
-          "date": "2020-07-05",
+          "releaseYear": "2014",
+          "sortTitle": "captain-america-the-winter-soldier-2014",
+          "releaseSequence": "2014-03-13tt1843866",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi",
+            "Thriller"
+          ],
           "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-06-13",
+          "viewingSequence": 8,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt2015381",
           "title": "Guardians of the Galaxy",
+          "releaseYear": "2014",
+          "sortTitle": "guardians-of-the-galaxy-2014",
+          "releaseSequence": "2014-07-21tt2015381",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-07-05",
+          "viewingSequence": 9,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2014"
+          "venue": null
         },
         {
-          "sequence": 10,
-          "date": "2020-07-11",
-          "slug": "avengers-age-of-ultron-2015",
+          "imdbId": "tt2395427",
           "title": "Avengers: Age of Ultron",
+          "releaseYear": "2015",
+          "sortTitle": "avengers-age-of-ultron-2015",
+          "releaseSequence": "2015-04-13tt2395427",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-age-of-ultron-2015",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-07-11",
+          "reviewSequence": "2020-07-11-1",
+          "viewingDate": "2020-07-11",
+          "viewingSequence": 10,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2015"
+          "venue": null
         },
         {
-          "sequence": 11,
-          "date": "2020-07-18",
-          "slug": "ant-man-2015",
+          "imdbId": "tt0478970",
           "title": "Ant-Man",
+          "releaseYear": "2015",
+          "sortTitle": "ant-man-2015",
+          "releaseSequence": "2015-06-29tt0478970",
+          "genres": [
+            "Action",
+            "Comedy",
+            "Sci-Fi"
+          ],
+          "slug": "ant-man-2015",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2020-07-18",
+          "reviewSequence": "2020-07-18-1",
+          "viewingDate": "2020-07-18",
+          "viewingSequence": 11,
           "medium": "Disney+",
-          "venue": null,
-          "year": "2015"
+          "venue": null
         },
         {
-          "sequence": 12,
-          "date": "2020-07-25",
-          "slug": "captain-america-civil-war-2016",
+          "imdbId": "tt3498820",
           "title": "Captain America: Civil War",
+          "releaseYear": "2016",
+          "sortTitle": "captain-america-civil-war-2016",
+          "releaseSequence": "2016-04-12tt3498820",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
+          "slug": "captain-america-civil-war-2016",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2020-07-25",
+          "reviewSequence": "2020-07-25-1",
+          "viewingDate": "2020-07-25",
+          "viewingSequence": 12,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2016"
+          "venue": null
         },
         {
-          "sequence": 13,
-          "date": "2020-08-22",
-          "slug": "doctor-strange-2016",
+          "imdbId": "tt1211837",
           "title": "Doctor Strange",
+          "releaseYear": "2016",
+          "sortTitle": "doctor-strange-2016",
+          "releaseSequence": "2016-10-13tt1211837",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Sci-Fi"
+          ],
+          "slug": "doctor-strange-2016",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2020-08-22",
+          "reviewSequence": "2020-08-22-1",
+          "viewingDate": "2020-08-22",
+          "viewingSequence": 13,
           "medium": "Disney+",
-          "venue": null,
-          "year": "2016"
+          "venue": null
         },
         {
-          "sequence": 14,
-          "date": "2020-08-29",
-          "slug": "guardians-of-the-galaxy-vol-2-2017",
+          "imdbId": "tt3896198",
           "title": "Guardians of the Galaxy Vol. 2",
+          "releaseYear": "2017",
+          "sortTitle": "guardians-of-the-galaxy-vol-2-2017",
+          "releaseSequence": "2017-04-10tt3896198",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Sci-Fi"
+          ],
+          "slug": "guardians-of-the-galaxy-vol-2-2017",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-08-29",
+          "reviewSequence": "2020-08-29-1",
+          "viewingDate": "2020-08-29",
+          "viewingSequence": 14,
           "medium": "Disney+",
-          "venue": null,
-          "year": "2017"
+          "venue": null
         },
         {
-          "sequence": 15,
-          "date": "2020-09-05",
-          "slug": "spider-man-homecoming-2017",
+          "imdbId": "tt2250912",
           "title": "Spider-Man: Homecoming",
+          "releaseYear": "2017",
+          "sortTitle": "spider-man-homecoming-2017",
+          "releaseSequence": "2017-06-28tt2250912",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "spider-man-homecoming-2017",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2020-09-05",
+          "reviewSequence": "2020-09-05-1",
+          "viewingDate": "2020-09-05",
+          "viewingSequence": 15,
           "medium": "iTunes",
-          "venue": null,
-          "year": "2017"
+          "venue": null
         },
         {
-          "sequence": 16,
-          "date": "2020-10-03",
-          "slug": "black-panther-2018",
+          "imdbId": "tt1825683",
           "title": "Black Panther",
+          "releaseYear": "2018",
+          "sortTitle": "black-panther-2018",
+          "releaseSequence": "2018-01-29tt1825683",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "black-panther-2018",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-10-03",
+          "reviewSequence": "2020-10-03-1",
+          "viewingDate": "2020-10-03",
+          "viewingSequence": 16,
           "medium": "Disney+",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 17,
-          "date": "2020-10-17",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-10-17",
+          "viewingSequence": 17,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 18,
-          "date": "2020-10-24",
-          "slug": "ant-man-and-the-wasp-2018",
+          "imdbId": "tt5095030",
           "title": "Ant-Man and the Wasp",
+          "releaseYear": "2018",
+          "sortTitle": "ant-man-and-the-wasp-2018",
+          "releaseSequence": "2018-06-25tt5095030",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Sci-Fi"
+          ],
+          "slug": "ant-man-and-the-wasp-2018",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2020-10-24",
+          "reviewSequence": "2020-10-24-1",
+          "viewingDate": "2020-10-24",
+          "viewingSequence": 18,
           "medium": "Disney+",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 19,
-          "date": "2020-11-08",
-          "slug": "captain-marvel-2019",
+          "imdbId": "tt4154664",
           "title": "Captain Marvel",
+          "releaseYear": "2019",
+          "sortTitle": "captain-marvel-2019",
+          "releaseSequence": "2019-02-27tt4154664",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "captain-marvel-2019",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-11-08",
+          "reviewSequence": "2020-11-08-1",
+          "viewingDate": "2020-11-08",
+          "viewingSequence": 19,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2019"
+          "venue": null
         },
         {
-          "sequence": 20,
-          "date": "2020-11-14",
-          "slug": "avengers-endgame-2019",
+          "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
+          "releaseYear": "2019",
+          "sortTitle": "avengers-endgame-2019",
+          "releaseSequence": "2019-04-18tt4154796",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-endgame-2019",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-11-14",
+          "reviewSequence": "2020-11-14-1",
+          "viewingDate": "2020-11-14",
+          "viewingSequence": 20,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2019"
+          "venue": null
         }
       ]
     },
@@ -667,103 +1309,229 @@
       "slug": "william-powell",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-07-17",
-          "slug": "the-canary-murder-case-1929",
+          "imdbId": "tt0019745",
           "title": "The Canary Murder Case",
+          "releaseYear": "1929",
+          "sortTitle": "canary-murder-case-1929",
+          "releaseSequence": "1929-??-??tt0019745",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Mystery"
+          ],
+          "slug": "the-canary-murder-case-1929",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2020-07-17",
+          "reviewSequence": "2020-07-17-1",
+          "viewingDate": "2020-07-17",
+          "viewingSequence": 1,
           "medium": "YouTube",
-          "venue": null,
-          "year": "1929"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-07-30",
-          "slug": "charming-sinners-1929",
+          "imdbId": "tt0019758",
           "title": "Charming Sinners",
+          "releaseYear": "1929",
+          "sortTitle": "charming-sinners-1929",
+          "releaseSequence": "1929-08-17tt0019758",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "charming-sinners-1929",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2020-07-30",
+          "reviewSequence": "2020-07-30-1",
+          "viewingDate": "2020-07-30",
+          "viewingSequence": 2,
           "medium": "OK.ru",
-          "venue": null,
-          "year": "1929"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2020-07-30",
-          "slug": "the-greene-murder-case-1929",
+          "imdbId": "tt0019949",
           "title": "The Greene Murder Case",
+          "releaseYear": "1929",
+          "sortTitle": "greene-murder-case-1929",
+          "releaseSequence": "1929-08-11tt0019949",
+          "genres": [
+            "Crime",
+            "Mystery"
+          ],
+          "slug": "the-greene-murder-case-1929",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2020-07-30",
+          "reviewSequence": "2020-07-30-2",
+          "viewingDate": "2020-07-30",
+          "viewingSequence": 3,
           "medium": "YouTube",
-          "venue": null,
-          "year": "1929"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2020-08-02",
-          "slug": "pointed-heels-1929",
+          "imdbId": "tt0020278",
           "title": "Pointed Heels",
+          "releaseYear": "1929",
+          "sortTitle": "pointed-heels-1929",
+          "releaseSequence": "1929-12-21tt0020278",
+          "genres": [
+            "Comedy",
+            "Musical"
+          ],
+          "slug": "pointed-heels-1929",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2020-08-02",
+          "reviewSequence": "2020-08-02-2",
+          "viewingDate": "2020-08-02",
+          "viewingSequence": 4,
           "medium": "OK.ru",
-          "venue": null,
-          "year": "1929"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2020-08-22",
-          "slug": "behind-the-make-up-1930",
+          "imdbId": "tt0020677",
           "title": "Behind the Make-Up",
+          "releaseYear": "1930",
+          "sortTitle": "behind-the-make-up-1930",
+          "releaseSequence": "1930-01-11tt0020677",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "behind-the-make-up-1930",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-08-22",
+          "reviewSequence": "2020-08-22-2",
+          "viewingDate": "2020-08-22",
+          "viewingSequence": 5,
           "medium": "archive.org",
-          "venue": null,
-          "year": "1930"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2020-08-22",
-          "slug": "interference-1928",
+          "imdbId": "tt0019035",
           "title": "Interference",
+          "releaseYear": "1928",
+          "sortTitle": "interference-1928",
+          "releaseSequence": "1928-11-05tt0019035",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+          ],
+          "slug": "interference-1928",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2020-08-22",
+          "reviewSequence": "2020-08-22-3",
+          "viewingDate": "2020-08-22",
+          "viewingSequence": 6,
           "medium": "OK.ru",
-          "venue": null,
-          "year": "1928"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2020-08-26",
-          "slug": "the-benson-murder-case-1930",
+          "imdbId": "tt0020679",
           "title": "The Benson Murder Case",
+          "releaseYear": "1930",
+          "sortTitle": "benson-murder-case-1930",
+          "releaseSequence": "1930-03-31tt0020679",
+          "genres": [
+            "Crime",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-benson-murder-case-1930",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2020-08-26",
+          "reviewSequence": "2020-08-26-1",
+          "viewingDate": "2020-08-26",
+          "viewingSequence": 7,
           "medium": "OK.ru",
-          "venue": null,
-          "year": "1930"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2020-09-13",
-          "slug": "for-the-defense-1930",
+          "imdbId": "tt0020896",
           "title": "For the Defense",
+          "releaseYear": "1930",
+          "sortTitle": "for-the-defense-1930",
+          "releaseSequence": "1930-07-19tt0020896",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Romance"
+          ],
+          "slug": "for-the-defense-1930",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2020-09-13",
+          "reviewSequence": "2020-09-13-2",
+          "viewingDate": "2020-09-13",
+          "viewingSequence": 8,
           "medium": "OK.ru",
-          "venue": null,
-          "year": "1930"
+          "venue": null
         },
         {
-          "sequence": 9,
-          "date": "2020-09-30",
-          "slug": "street-of-chance-1930",
+          "imdbId": "tt0021420",
           "title": "Street of Chance",
+          "releaseYear": "1930",
+          "sortTitle": "street-of-chance-1930",
+          "releaseSequence": "1930-01-26tt0021420",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Romance"
+          ],
+          "slug": "street-of-chance-1930",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2023-09-23",
+          "reviewSequence": "2023-09-23-1",
+          "viewingDate": "2020-09-30",
+          "viewingSequence": 9,
           "medium": "OK.ru",
-          "venue": null,
-          "year": "1930"
+          "venue": null
         },
         {
-          "sequence": 10,
-          "date": "2020-10-10",
-          "slug": "shadow-of-the-law-1930",
+          "imdbId": "tt0021359",
           "title": "Shadow of the Law",
+          "releaseYear": "1930",
+          "sortTitle": "shadow-of-the-law-1930",
+          "releaseSequence": "1930-06-06tt0021359",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Mystery",
+            "Romance"
+          ],
+          "slug": "shadow-of-the-law-1930",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-10-10",
+          "reviewSequence": "2020-10-10-2",
+          "viewingDate": "2020-10-10",
+          "viewingSequence": 10,
           "medium": "OK.ru",
-          "venue": null,
-          "year": "1930"
+          "venue": null
         },
         {
-          "sequence": 11,
-          "date": "2020-11-25",
-          "slug": "ladies-man-1931",
+          "imdbId": "tt0022043",
           "title": "Ladies' Man",
+          "releaseYear": "1931",
+          "sortTitle": "ladies-man-1931",
+          "releaseSequence": "1931-04-16tt0022043",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "ladies-man-1931",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2020-11-25",
+          "reviewSequence": "2020-11-25-1",
+          "viewingDate": "2020-11-25",
+          "viewingSequence": 11,
           "medium": "OK.ru",
-          "venue": null,
-          "year": "1931"
+          "venue": null
         }
       ]
     },
@@ -773,94 +1541,215 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-02-08",
-          "slug": "the-cabin-in-the-woods-2011",
+          "imdbId": "tt1259521",
           "title": "The Cabin in the Woods",
+          "releaseYear": "2011",
+          "sortTitle": "cabin-in-the-woods-2011",
+          "releaseSequence": "2011-12-11tt1259521",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-cabin-in-the-woods-2011",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-12-22",
+          "reviewSequence": "2020-12-22-1",
+          "viewingDate": "2020-02-08",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2011"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-03-28",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-03-28",
+          "viewingSequence": 2,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2020-05-09",
-          "slug": null,
+          "imdbId": "tt0800369",
           "title": "Thor",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2011"
-        },
-        {
-          "sequence": 4,
-          "date": "2020-05-23",
-          "slug": "the-avengers-2012",
-          "title": "The Avengers",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2012"
-        },
-        {
-          "sequence": 5,
-          "date": "2020-06-06",
+          "releaseYear": "2011",
+          "sortTitle": "thor-2011",
+          "releaseSequence": "2011-04-17tt0800369",
+          "genres": [
+            "Action",
+            "Fantasy"
+          ],
           "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-05-09",
+          "viewingSequence": 3,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0848228",
+          "title": "The Avengers",
+          "releaseYear": "2012",
+          "sortTitle": "avengers-2012",
+          "releaseSequence": "2012-04-11tt0848228",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
+          "slug": "the-avengers-2012",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2012-05-03",
+          "reviewSequence": "2012-05-03-1",
+          "viewingDate": "2020-05-23",
+          "viewingSequence": 4,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt1981115",
           "title": "Thor: The Dark World",
+          "releaseYear": "2013",
+          "sortTitle": "thor-the-dark-world-2013",
+          "releaseSequence": "2013-10-22tt1981115",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-06-06",
+          "viewingSequence": 5,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2013"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2020-07-11",
-          "slug": "avengers-age-of-ultron-2015",
+          "imdbId": "tt2395427",
           "title": "Avengers: Age of Ultron",
+          "releaseYear": "2015",
+          "sortTitle": "avengers-age-of-ultron-2015",
+          "releaseSequence": "2015-04-13tt2395427",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-age-of-ultron-2015",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-07-11",
+          "reviewSequence": "2020-07-11-1",
+          "viewingDate": "2020-07-11",
+          "viewingSequence": 6,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2015"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2020-09-26",
-          "slug": "thor-ragnarok-2017",
+          "imdbId": "tt3501632",
           "title": "Thor: Ragnarok",
+          "releaseYear": "2017",
+          "sortTitle": "thor-ragnarok-2017",
+          "releaseSequence": "2017-10-10tt3501632",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Fantasy",
+            "Sci-Fi"
+          ],
+          "slug": "thor-ragnarok-2017",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-09-26",
+          "reviewSequence": "2020-09-26-1",
+          "viewingDate": "2020-09-26",
+          "viewingSequence": 7,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2017"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2020-10-17",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-10-17",
+          "viewingSequence": 8,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 9,
-          "date": "2020-11-14",
-          "slug": "avengers-endgame-2019",
+          "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
+          "releaseYear": "2019",
+          "sortTitle": "avengers-endgame-2019",
+          "releaseSequence": "2019-04-18tt4154796",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-endgame-2019",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-11-14",
+          "reviewSequence": "2020-11-14-1",
+          "viewingDate": "2020-11-14",
+          "viewingSequence": 9,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2019"
+          "venue": null
         },
         {
-          "sequence": 10,
-          "date": "2020-12-22",
-          "slug": "the-cabin-in-the-woods-2011",
+          "imdbId": "tt1259521",
           "title": "The Cabin in the Woods",
+          "releaseYear": "2011",
+          "sortTitle": "cabin-in-the-woods-2011",
+          "releaseSequence": "2011-12-11tt1259521",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-cabin-in-the-woods-2011",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-12-22",
+          "reviewSequence": "2020-12-22-1",
+          "viewingDate": "2020-12-22",
+          "viewingSequence": 10,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2011"
+          "venue": null
         }
       ]
     },
@@ -870,94 +1759,211 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-03-28",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-03-28",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-04-04",
-          "slug": "iron-man-2008",
+          "imdbId": "tt0371746",
           "title": "Iron Man",
+          "releaseYear": "2008",
+          "sortTitle": "iron-man-2008",
+          "releaseSequence": "2008-04-14tt0371746",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "iron-man-2008",
+          "grade": "A-",
+          "gradeValue": 11,
+          "reviewDate": "2008-05-01",
+          "reviewSequence": "2008-05-01-1",
+          "viewingDate": "2020-04-04",
+          "viewingSequence": 2,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2008"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2020-05-02",
-          "slug": null,
+          "imdbId": "tt1228705",
           "title": "Iron Man 2",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2010"
-        },
-        {
-          "sequence": 4,
-          "date": "2020-05-23",
-          "slug": "the-avengers-2012",
-          "title": "The Avengers",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2012"
-        },
-        {
-          "sequence": 5,
-          "date": "2020-05-31",
+          "releaseYear": "2010",
+          "sortTitle": "iron-man-2-2010",
+          "releaseSequence": "2010-04-26tt1228705",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
           "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-05-02",
+          "viewingSequence": 3,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0848228",
+          "title": "The Avengers",
+          "releaseYear": "2012",
+          "sortTitle": "avengers-2012",
+          "releaseSequence": "2012-04-11tt0848228",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
+          "slug": "the-avengers-2012",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2012-05-03",
+          "reviewSequence": "2012-05-03-1",
+          "viewingDate": "2020-05-23",
+          "viewingSequence": 4,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt1300854",
           "title": "Iron Man 3",
+          "releaseYear": "2013",
+          "sortTitle": "iron-man-3-2013",
+          "releaseSequence": "2013-04-14tt1300854",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-05-31",
+          "viewingSequence": 5,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2013"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2020-07-11",
-          "slug": "avengers-age-of-ultron-2015",
+          "imdbId": "tt2395427",
           "title": "Avengers: Age of Ultron",
+          "releaseYear": "2015",
+          "sortTitle": "avengers-age-of-ultron-2015",
+          "releaseSequence": "2015-04-13tt2395427",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-age-of-ultron-2015",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-07-11",
+          "reviewSequence": "2020-07-11-1",
+          "viewingDate": "2020-07-11",
+          "viewingSequence": 6,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2015"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2020-07-25",
-          "slug": "captain-america-civil-war-2016",
+          "imdbId": "tt3498820",
           "title": "Captain America: Civil War",
+          "releaseYear": "2016",
+          "sortTitle": "captain-america-civil-war-2016",
+          "releaseSequence": "2016-04-12tt3498820",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
+          "slug": "captain-america-civil-war-2016",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2020-07-25",
+          "reviewSequence": "2020-07-25-1",
+          "viewingDate": "2020-07-25",
+          "viewingSequence": 7,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2016"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2020-09-05",
-          "slug": "spider-man-homecoming-2017",
+          "imdbId": "tt2250912",
           "title": "Spider-Man: Homecoming",
+          "releaseYear": "2017",
+          "sortTitle": "spider-man-homecoming-2017",
+          "releaseSequence": "2017-06-28tt2250912",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "spider-man-homecoming-2017",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2020-09-05",
+          "reviewSequence": "2020-09-05-1",
+          "viewingDate": "2020-09-05",
+          "viewingSequence": 8,
           "medium": "iTunes",
-          "venue": null,
-          "year": "2017"
+          "venue": null
         },
         {
-          "sequence": 9,
-          "date": "2020-10-17",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-10-17",
+          "viewingSequence": 9,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 10,
-          "date": "2020-11-14",
-          "slug": "avengers-endgame-2019",
+          "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
+          "releaseYear": "2019",
+          "sortTitle": "avengers-endgame-2019",
+          "releaseSequence": "2019-04-18tt4154796",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-endgame-2019",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-11-14",
+          "reviewSequence": "2020-11-14-1",
+          "viewingDate": "2020-11-14",
+          "viewingSequence": 10,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2019"
+          "venue": null
         }
       ]
     },
@@ -967,85 +1973,192 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-03-28",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-03-28",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-05-16",
-          "slug": null,
+          "imdbId": "tt0458339",
           "title": "Captain America: The First Avenger",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2011"
-        },
-        {
-          "sequence": 3,
-          "date": "2020-05-23",
-          "slug": "the-avengers-2012",
-          "title": "The Avengers",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2012"
-        },
-        {
-          "sequence": 4,
-          "date": "2020-06-13",
+          "releaseYear": "2011",
+          "sortTitle": "captain-america-the-first-avenger-2011",
+          "releaseSequence": "2011-07-19tt0458339",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
           "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-05-16",
+          "viewingSequence": 2,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0848228",
+          "title": "The Avengers",
+          "releaseYear": "2012",
+          "sortTitle": "avengers-2012",
+          "releaseSequence": "2012-04-11tt0848228",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
+          "slug": "the-avengers-2012",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2012-05-03",
+          "reviewSequence": "2012-05-03-1",
+          "viewingDate": "2020-05-23",
+          "viewingSequence": 3,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt1843866",
           "title": "Captain America: The Winter Soldier",
+          "releaseYear": "2014",
+          "sortTitle": "captain-america-the-winter-soldier-2014",
+          "releaseSequence": "2014-03-13tt1843866",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-06-13",
+          "viewingSequence": 4,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2014"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2020-07-11",
-          "slug": "avengers-age-of-ultron-2015",
+          "imdbId": "tt2395427",
           "title": "Avengers: Age of Ultron",
+          "releaseYear": "2015",
+          "sortTitle": "avengers-age-of-ultron-2015",
+          "releaseSequence": "2015-04-13tt2395427",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-age-of-ultron-2015",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-07-11",
+          "reviewSequence": "2020-07-11-1",
+          "viewingDate": "2020-07-11",
+          "viewingSequence": 5,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2015"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2020-07-25",
-          "slug": "captain-america-civil-war-2016",
+          "imdbId": "tt3498820",
           "title": "Captain America: Civil War",
+          "releaseYear": "2016",
+          "sortTitle": "captain-america-civil-war-2016",
+          "releaseSequence": "2016-04-12tt3498820",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
+          "slug": "captain-america-civil-war-2016",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2020-07-25",
+          "reviewSequence": "2020-07-25-1",
+          "viewingDate": "2020-07-25",
+          "viewingSequence": 6,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2016"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2020-09-05",
-          "slug": "spider-man-homecoming-2017",
+          "imdbId": "tt2250912",
           "title": "Spider-Man: Homecoming",
+          "releaseYear": "2017",
+          "sortTitle": "spider-man-homecoming-2017",
+          "releaseSequence": "2017-06-28tt2250912",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "spider-man-homecoming-2017",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2020-09-05",
+          "reviewSequence": "2020-09-05-1",
+          "viewingDate": "2020-09-05",
+          "viewingSequence": 7,
           "medium": "iTunes",
-          "venue": null,
-          "year": "2017"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2020-10-17",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-10-17",
+          "viewingSequence": 8,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 9,
-          "date": "2020-11-14",
-          "slug": "avengers-endgame-2019",
+          "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
+          "releaseYear": "2019",
+          "sortTitle": "avengers-endgame-2019",
+          "releaseSequence": "2019-04-18tt4154796",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-endgame-2019",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-11-14",
+          "reviewSequence": "2020-11-14-1",
+          "viewingDate": "2020-11-14",
+          "viewingSequence": 9,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2019"
+          "venue": null
         }
       ]
     },
@@ -1055,85 +2168,195 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-05-02",
-          "slug": null,
+          "imdbId": "tt1228705",
           "title": "Iron Man 2",
+          "releaseYear": "2010",
+          "sortTitle": "iron-man-2-2010",
+          "releaseSequence": "2010-04-26tt1228705",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-05-02",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2010"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-05-16",
-          "slug": null,
+          "imdbId": "tt0458339",
           "title": "Captain America: The First Avenger",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2011"
-        },
-        {
-          "sequence": 3,
-          "date": "2020-05-23",
-          "slug": "the-avengers-2012",
-          "title": "The Avengers",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2012"
-        },
-        {
-          "sequence": 4,
-          "date": "2020-06-13",
+          "releaseYear": "2011",
+          "sortTitle": "captain-america-the-first-avenger-2011",
+          "releaseSequence": "2011-07-19tt0458339",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
           "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-05-16",
+          "viewingSequence": 2,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0848228",
+          "title": "The Avengers",
+          "releaseYear": "2012",
+          "sortTitle": "avengers-2012",
+          "releaseSequence": "2012-04-11tt0848228",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
+          "slug": "the-avengers-2012",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2012-05-03",
+          "reviewSequence": "2012-05-03-1",
+          "viewingDate": "2020-05-23",
+          "viewingSequence": 3,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt1843866",
           "title": "Captain America: The Winter Soldier",
+          "releaseYear": "2014",
+          "sortTitle": "captain-america-the-winter-soldier-2014",
+          "releaseSequence": "2014-03-13tt1843866",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-06-13",
+          "viewingSequence": 4,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2014"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2020-07-11",
-          "slug": "avengers-age-of-ultron-2015",
+          "imdbId": "tt2395427",
           "title": "Avengers: Age of Ultron",
+          "releaseYear": "2015",
+          "sortTitle": "avengers-age-of-ultron-2015",
+          "releaseSequence": "2015-04-13tt2395427",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-age-of-ultron-2015",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-07-11",
+          "reviewSequence": "2020-07-11-1",
+          "viewingDate": "2020-07-11",
+          "viewingSequence": 5,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2015"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2020-11-08",
-          "slug": "captain-marvel-2019",
+          "imdbId": "tt4154664",
           "title": "Captain Marvel",
+          "releaseYear": "2019",
+          "sortTitle": "captain-marvel-2019",
+          "releaseSequence": "2019-02-27tt4154664",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "captain-marvel-2019",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-11-08",
+          "reviewSequence": "2020-11-08-1",
+          "viewingDate": "2020-11-08",
+          "viewingSequence": 6,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2019"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2020-11-14",
-          "slug": "avengers-endgame-2019",
+          "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
+          "releaseYear": "2019",
+          "sortTitle": "avengers-endgame-2019",
+          "releaseSequence": "2019-04-18tt4154796",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-endgame-2019",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-11-14",
+          "reviewSequence": "2020-11-14-1",
+          "viewingDate": "2020-11-14",
+          "viewingSequence": 7,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2019"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2020-11-21",
-          "slug": "spider-man-far-from-home-2019",
+          "imdbId": "tt6320628",
           "title": "Spider-Man: Far from Home",
+          "releaseYear": "2019",
+          "sortTitle": "spider-man-far-from-home-2019",
+          "releaseSequence": "2019-06-26tt6320628",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Fantasy",
+            "Sci-Fi"
+          ],
+          "slug": "spider-man-far-from-home-2019",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2020-11-21",
+          "reviewSequence": "2020-11-21-1",
+          "viewingDate": "2020-11-21",
+          "viewingSequence": 8,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2019"
+          "venue": null
         },
         {
-          "sequence": 9,
-          "date": "2020-12-31",
-          "slug": "glass-2019",
+          "imdbId": "tt6823368",
           "title": "Glass",
+          "releaseYear": "2019",
+          "sortTitle": "glass-2019",
+          "releaseSequence": "2019-01-07tt6823368",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "glass-2019",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2020-12-31",
+          "reviewSequence": "2020-12-31-2",
+          "viewingDate": "2020-12-31",
+          "viewingSequence": 9,
           "medium": "HBO Max",
-          "venue": null,
-          "year": "2019"
+          "venue": null
         }
       ]
     },
@@ -1143,76 +2366,170 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-03-28",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-03-28",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-05-02",
-          "slug": null,
+          "imdbId": "tt1228705",
           "title": "Iron Man 2",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2010"
-        },
-        {
-          "sequence": 3,
-          "date": "2020-05-23",
-          "slug": "the-avengers-2012",
-          "title": "The Avengers",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2012"
-        },
-        {
-          "sequence": 4,
-          "date": "2020-06-13",
+          "releaseYear": "2010",
+          "sortTitle": "iron-man-2-2010",
+          "releaseSequence": "2010-04-26tt1228705",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
           "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-05-02",
+          "viewingSequence": 2,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0848228",
+          "title": "The Avengers",
+          "releaseYear": "2012",
+          "sortTitle": "avengers-2012",
+          "releaseSequence": "2012-04-11tt0848228",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
+          "slug": "the-avengers-2012",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2012-05-03",
+          "reviewSequence": "2012-05-03-1",
+          "viewingDate": "2020-05-23",
+          "viewingSequence": 3,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt1843866",
           "title": "Captain America: The Winter Soldier",
+          "releaseYear": "2014",
+          "sortTitle": "captain-america-the-winter-soldier-2014",
+          "releaseSequence": "2014-03-13tt1843866",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-06-13",
+          "viewingSequence": 4,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2014"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2020-07-11",
-          "slug": "avengers-age-of-ultron-2015",
+          "imdbId": "tt2395427",
           "title": "Avengers: Age of Ultron",
+          "releaseYear": "2015",
+          "sortTitle": "avengers-age-of-ultron-2015",
+          "releaseSequence": "2015-04-13tt2395427",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-age-of-ultron-2015",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-07-11",
+          "reviewSequence": "2020-07-11-1",
+          "viewingDate": "2020-07-11",
+          "viewingSequence": 5,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2015"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2020-07-25",
-          "slug": "captain-america-civil-war-2016",
+          "imdbId": "tt3498820",
           "title": "Captain America: Civil War",
+          "releaseYear": "2016",
+          "sortTitle": "captain-america-civil-war-2016",
+          "releaseSequence": "2016-04-12tt3498820",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
+          "slug": "captain-america-civil-war-2016",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2020-07-25",
+          "reviewSequence": "2020-07-25-1",
+          "viewingDate": "2020-07-25",
+          "viewingSequence": 6,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2016"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2020-10-17",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-10-17",
+          "viewingSequence": 7,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2020-11-14",
-          "slug": "avengers-endgame-2019",
+          "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
+          "releaseYear": "2019",
+          "sortTitle": "avengers-endgame-2019",
+          "releaseSequence": "2019-04-18tt4154796",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-endgame-2019",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-11-14",
+          "reviewSequence": "2020-11-14-1",
+          "viewingDate": "2020-11-14",
+          "viewingSequence": 8,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2019"
+          "venue": null
         }
       ]
     },
@@ -1222,76 +2539,170 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-03-28",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-03-28",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-04-04",
-          "slug": "iron-man-2008",
+          "imdbId": "tt0371746",
           "title": "Iron Man",
+          "releaseYear": "2008",
+          "sortTitle": "iron-man-2008",
+          "releaseSequence": "2008-04-14tt0371746",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "iron-man-2008",
+          "grade": "A-",
+          "gradeValue": 11,
+          "reviewDate": "2008-05-01",
+          "reviewSequence": "2008-05-01-1",
+          "viewingDate": "2020-04-04",
+          "viewingSequence": 2,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2008"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2020-05-02",
-          "slug": null,
+          "imdbId": "tt1228705",
           "title": "Iron Man 2",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2010"
-        },
-        {
-          "sequence": 4,
-          "date": "2020-05-23",
-          "slug": "the-avengers-2012",
-          "title": "The Avengers",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2012"
-        },
-        {
-          "sequence": 5,
-          "date": "2020-05-31",
+          "releaseYear": "2010",
+          "sortTitle": "iron-man-2-2010",
+          "releaseSequence": "2010-04-26tt1228705",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
           "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-05-02",
+          "viewingSequence": 3,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0848228",
+          "title": "The Avengers",
+          "releaseYear": "2012",
+          "sortTitle": "avengers-2012",
+          "releaseSequence": "2012-04-11tt0848228",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
+          "slug": "the-avengers-2012",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2012-05-03",
+          "reviewSequence": "2012-05-03-1",
+          "viewingDate": "2020-05-23",
+          "viewingSequence": 4,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt1300854",
           "title": "Iron Man 3",
+          "releaseYear": "2013",
+          "sortTitle": "iron-man-3-2013",
+          "releaseSequence": "2013-04-14tt1300854",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-05-31",
+          "viewingSequence": 5,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2013"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2020-09-05",
-          "slug": "spider-man-homecoming-2017",
+          "imdbId": "tt2250912",
           "title": "Spider-Man: Homecoming",
+          "releaseYear": "2017",
+          "sortTitle": "spider-man-homecoming-2017",
+          "releaseSequence": "2017-06-28tt2250912",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "spider-man-homecoming-2017",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2020-09-05",
+          "reviewSequence": "2020-09-05-1",
+          "viewingDate": "2020-09-05",
+          "viewingSequence": 6,
           "medium": "iTunes",
-          "venue": null,
-          "year": "2017"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2020-10-17",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-10-17",
+          "viewingSequence": 7,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 8,
-          "date": "2020-11-14",
-          "slug": "avengers-endgame-2019",
+          "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
+          "releaseYear": "2019",
+          "sortTitle": "avengers-endgame-2019",
+          "releaseSequence": "2019-04-18tt4154796",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-endgame-2019",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-11-14",
+          "reviewSequence": "2020-11-14-1",
+          "viewingDate": "2020-11-14",
+          "viewingSequence": 8,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2019"
+          "venue": null
         }
       ]
     },
@@ -1301,67 +2712,149 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-03-28",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-03-28",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-05-02",
-          "slug": null,
+          "imdbId": "tt1228705",
           "title": "Iron Man 2",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2010"
-        },
-        {
-          "sequence": 3,
-          "date": "2020-05-31",
+          "releaseYear": "2010",
+          "sortTitle": "iron-man-2-2010",
+          "releaseSequence": "2010-04-26tt1228705",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
           "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-05-02",
+          "viewingSequence": 2,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt1300854",
           "title": "Iron Man 3",
+          "releaseYear": "2013",
+          "sortTitle": "iron-man-3-2013",
+          "releaseSequence": "2013-04-14tt1300854",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-05-31",
+          "viewingSequence": 3,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2013"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2020-07-11",
-          "slug": "avengers-age-of-ultron-2015",
+          "imdbId": "tt2395427",
           "title": "Avengers: Age of Ultron",
+          "releaseYear": "2015",
+          "sortTitle": "avengers-age-of-ultron-2015",
+          "releaseSequence": "2015-04-13tt2395427",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-age-of-ultron-2015",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-07-11",
+          "reviewSequence": "2020-07-11-1",
+          "viewingDate": "2020-07-11",
+          "viewingSequence": 4,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2015"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2020-07-25",
-          "slug": "captain-america-civil-war-2016",
+          "imdbId": "tt3498820",
           "title": "Captain America: Civil War",
+          "releaseYear": "2016",
+          "sortTitle": "captain-america-civil-war-2016",
+          "releaseSequence": "2016-04-12tt3498820",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
+          "slug": "captain-america-civil-war-2016",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2020-07-25",
+          "reviewSequence": "2020-07-25-1",
+          "viewingDate": "2020-07-25",
+          "viewingSequence": 5,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2016"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2020-10-17",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-10-17",
+          "viewingSequence": 6,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2020-11-14",
-          "slug": "avengers-endgame-2019",
+          "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
+          "releaseYear": "2019",
+          "sortTitle": "avengers-endgame-2019",
+          "releaseSequence": "2019-04-18tt4154796",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-endgame-2019",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-11-14",
+          "reviewSequence": "2020-11-14-1",
+          "viewingDate": "2020-11-14",
+          "viewingSequence": 7,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2019"
+          "venue": null
         }
       ]
     },
@@ -1371,67 +2864,152 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-03-28",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-03-28",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-05-09",
-          "slug": null,
+          "imdbId": "tt0800369",
           "title": "Thor",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2011"
-        },
-        {
-          "sequence": 3,
-          "date": "2020-05-23",
-          "slug": "the-avengers-2012",
-          "title": "The Avengers",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2012"
-        },
-        {
-          "sequence": 4,
-          "date": "2020-06-06",
+          "releaseYear": "2011",
+          "sortTitle": "thor-2011",
+          "releaseSequence": "2011-04-17tt0800369",
+          "genres": [
+            "Action",
+            "Fantasy"
+          ],
           "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-05-09",
+          "viewingSequence": 2,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0848228",
+          "title": "The Avengers",
+          "releaseYear": "2012",
+          "sortTitle": "avengers-2012",
+          "releaseSequence": "2012-04-11tt0848228",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
+          "slug": "the-avengers-2012",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2012-05-03",
+          "reviewSequence": "2012-05-03-1",
+          "viewingDate": "2020-05-23",
+          "viewingSequence": 3,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt1981115",
           "title": "Thor: The Dark World",
+          "releaseYear": "2013",
+          "sortTitle": "thor-the-dark-world-2013",
+          "releaseSequence": "2013-10-22tt1981115",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-06-06",
+          "viewingSequence": 4,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2013"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2020-09-26",
-          "slug": "thor-ragnarok-2017",
+          "imdbId": "tt3501632",
           "title": "Thor: Ragnarok",
+          "releaseYear": "2017",
+          "sortTitle": "thor-ragnarok-2017",
+          "releaseSequence": "2017-10-10tt3501632",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Fantasy",
+            "Sci-Fi"
+          ],
+          "slug": "thor-ragnarok-2017",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-09-26",
+          "reviewSequence": "2020-09-26-1",
+          "viewingDate": "2020-09-26",
+          "viewingSequence": 5,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2017"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2020-10-17",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-10-17",
+          "viewingSequence": 6,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2020-11-14",
-          "slug": "avengers-endgame-2019",
+          "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
+          "releaseYear": "2019",
+          "sortTitle": "avengers-endgame-2019",
+          "releaseSequence": "2019-04-18tt4154796",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-endgame-2019",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-11-14",
+          "reviewSequence": "2020-11-14-1",
+          "viewingDate": "2020-11-14",
+          "viewingSequence": 7,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2019"
+          "venue": null
         }
       ]
     }
@@ -1443,67 +3021,152 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-03-28",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-03-28",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-05-16",
-          "slug": null,
+          "imdbId": "tt0458339",
           "title": "Captain America: The First Avenger",
+          "releaseYear": "2011",
+          "sortTitle": "captain-america-the-first-avenger-2011",
+          "releaseSequence": "2011-07-19tt0458339",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-05-16",
+          "viewingSequence": 2,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2011"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2020-06-06",
-          "slug": null,
+          "imdbId": "tt1981115",
           "title": "Thor: The Dark World",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2013"
-        },
-        {
-          "sequence": 4,
-          "date": "2020-06-13",
+          "releaseYear": "2013",
+          "sortTitle": "thor-the-dark-world-2013",
+          "releaseSequence": "2013-10-22tt1981115",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Sci-Fi"
+          ],
           "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-06-06",
+          "viewingSequence": 3,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt1843866",
           "title": "Captain America: The Winter Soldier",
+          "releaseYear": "2014",
+          "sortTitle": "captain-america-the-winter-soldier-2014",
+          "releaseSequence": "2014-03-13tt1843866",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-06-13",
+          "viewingSequence": 4,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2014"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2020-07-25",
-          "slug": "captain-america-civil-war-2016",
+          "imdbId": "tt3498820",
           "title": "Captain America: Civil War",
+          "releaseYear": "2016",
+          "sortTitle": "captain-america-civil-war-2016",
+          "releaseSequence": "2016-04-12tt3498820",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
+          "slug": "captain-america-civil-war-2016",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2020-07-25",
+          "reviewSequence": "2020-07-25-1",
+          "viewingDate": "2020-07-25",
+          "viewingSequence": 5,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2016"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2020-10-17",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-10-17",
+          "viewingSequence": 6,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2020-11-14",
-          "slug": "avengers-endgame-2019",
+          "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
+          "releaseYear": "2019",
+          "sortTitle": "avengers-endgame-2019",
+          "releaseSequence": "2019-04-18tt4154796",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-endgame-2019",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-11-14",
+          "reviewSequence": "2020-11-14-1",
+          "viewingDate": "2020-11-14",
+          "viewingSequence": 7,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2019"
+          "venue": null
         }
       ]
     },
@@ -1513,67 +3176,152 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-03-28",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-03-28",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-05-16",
-          "slug": null,
+          "imdbId": "tt0458339",
           "title": "Captain America: The First Avenger",
+          "releaseYear": "2011",
+          "sortTitle": "captain-america-the-first-avenger-2011",
+          "releaseSequence": "2011-07-19tt0458339",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-05-16",
+          "viewingSequence": 2,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2011"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2020-06-06",
-          "slug": null,
+          "imdbId": "tt1981115",
           "title": "Thor: The Dark World",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2013"
-        },
-        {
-          "sequence": 4,
-          "date": "2020-06-13",
+          "releaseYear": "2013",
+          "sortTitle": "thor-the-dark-world-2013",
+          "releaseSequence": "2013-10-22tt1981115",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Sci-Fi"
+          ],
           "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-06-06",
+          "viewingSequence": 3,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt1843866",
           "title": "Captain America: The Winter Soldier",
+          "releaseYear": "2014",
+          "sortTitle": "captain-america-the-winter-soldier-2014",
+          "releaseSequence": "2014-03-13tt1843866",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-06-13",
+          "viewingSequence": 4,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2014"
+          "venue": null
         },
         {
-          "sequence": 5,
-          "date": "2020-07-25",
-          "slug": "captain-america-civil-war-2016",
+          "imdbId": "tt3498820",
           "title": "Captain America: Civil War",
+          "releaseYear": "2016",
+          "sortTitle": "captain-america-civil-war-2016",
+          "releaseSequence": "2016-04-12tt3498820",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
+          "slug": "captain-america-civil-war-2016",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2020-07-25",
+          "reviewSequence": "2020-07-25-1",
+          "viewingDate": "2020-07-25",
+          "viewingSequence": 5,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2016"
+          "venue": null
         },
         {
-          "sequence": 6,
-          "date": "2020-10-17",
-          "slug": "avengers-infinity-war-2018",
+          "imdbId": "tt4154756",
           "title": "Avengers: Infinity War",
+          "releaseYear": "2018",
+          "sortTitle": "avengers-infinity-war-2018",
+          "releaseSequence": "2018-04-23tt4154756",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-infinity-war-2018",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-17",
+          "reviewSequence": "2020-10-17-1",
+          "viewingDate": "2020-10-17",
+          "viewingSequence": 6,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         },
         {
-          "sequence": 7,
-          "date": "2020-11-14",
-          "slug": "avengers-endgame-2019",
+          "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
+          "releaseYear": "2019",
+          "sortTitle": "avengers-endgame-2019",
+          "releaseSequence": "2019-04-18tt4154796",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-endgame-2019",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-11-14",
+          "reviewSequence": "2020-11-14-1",
+          "viewingDate": "2020-11-14",
+          "viewingSequence": 7,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2019"
+          "venue": null
         }
       ]
     },
@@ -1583,40 +3331,87 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-02-08",
-          "slug": "the-cabin-in-the-woods-2011",
+          "imdbId": "tt1259521",
           "title": "The Cabin in the Woods",
+          "releaseYear": "2011",
+          "sortTitle": "cabin-in-the-woods-2011",
+          "releaseSequence": "2011-12-11tt1259521",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-cabin-in-the-woods-2011",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-12-22",
+          "reviewSequence": "2020-12-22-1",
+          "viewingDate": "2020-02-08",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2011"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-05-23",
-          "slug": "the-avengers-2012",
+          "imdbId": "tt0848228",
           "title": "The Avengers",
+          "releaseYear": "2012",
+          "sortTitle": "avengers-2012",
+          "releaseSequence": "2012-04-11tt0848228",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
+          "slug": "the-avengers-2012",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2012-05-03",
+          "reviewSequence": "2012-05-03-1",
+          "viewingDate": "2020-05-23",
+          "viewingSequence": 2,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2012"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2020-07-11",
-          "slug": "avengers-age-of-ultron-2015",
+          "imdbId": "tt2395427",
           "title": "Avengers: Age of Ultron",
+          "releaseYear": "2015",
+          "sortTitle": "avengers-age-of-ultron-2015",
+          "releaseSequence": "2015-04-13tt2395427",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-age-of-ultron-2015",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-07-11",
+          "reviewSequence": "2020-07-11-1",
+          "viewingDate": "2020-07-11",
+          "viewingSequence": 3,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2015"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2020-12-22",
-          "slug": "the-cabin-in-the-woods-2011",
+          "imdbId": "tt1259521",
           "title": "The Cabin in the Woods",
+          "releaseYear": "2011",
+          "sortTitle": "cabin-in-the-woods-2011",
+          "releaseSequence": "2011-12-11tt1259521",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-cabin-in-the-woods-2011",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-12-22",
+          "reviewSequence": "2020-12-22-1",
+          "viewingDate": "2020-12-22",
+          "viewingSequence": 4,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2011"
+          "venue": null
         }
       ]
     },
@@ -1626,40 +3421,90 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-05-31",
-          "slug": null,
+          "imdbId": "tt1300854",
           "title": "Iron Man 3",
-          "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2013"
-        },
-        {
-          "sequence": 2,
-          "date": "2020-06-06",
+          "releaseYear": "2013",
+          "sortTitle": "iron-man-3-2013",
+          "releaseSequence": "2013-04-14tt1300854",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
           "slug": null,
-          "title": "Thor: The Dark World",
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-05-31",
+          "viewingSequence": 1,
           "medium": "4k UHD Blu-ray",
-          "venue": null,
-          "year": "2013"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2020-07-18",
-          "slug": "ant-man-2015",
+          "imdbId": "tt1981115",
+          "title": "Thor: The Dark World",
+          "releaseYear": "2013",
+          "sortTitle": "thor-the-dark-world-2013",
+          "releaseSequence": "2013-10-22tt1981115",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-06-06",
+          "viewingSequence": 2,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0478970",
           "title": "Ant-Man",
+          "releaseYear": "2015",
+          "sortTitle": "ant-man-2015",
+          "releaseSequence": "2015-06-29tt0478970",
+          "genres": [
+            "Action",
+            "Comedy",
+            "Sci-Fi"
+          ],
+          "slug": "ant-man-2015",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2020-07-18",
+          "reviewSequence": "2020-07-18-1",
+          "viewingDate": "2020-07-18",
+          "viewingSequence": 3,
           "medium": "Disney+",
-          "venue": null,
-          "year": "2015"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2020-10-24",
-          "slug": "ant-man-and-the-wasp-2018",
+          "imdbId": "tt5095030",
           "title": "Ant-Man and the Wasp",
+          "releaseYear": "2018",
+          "sortTitle": "ant-man-and-the-wasp-2018",
+          "releaseSequence": "2018-06-25tt5095030",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Sci-Fi"
+          ],
+          "slug": "ant-man-and-the-wasp-2018",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2020-10-24",
+          "reviewSequence": "2020-10-24-1",
+          "viewingDate": "2020-10-24",
+          "viewingSequence": 4,
           "medium": "Disney+",
-          "venue": null,
-          "year": "2018"
+          "venue": null
         }
       ]
     },
@@ -1669,40 +3514,89 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-09-24",
-          "slug": "one-on-top-of-the-other-1969",
+          "imdbId": "tt0065148",
           "title": "One on Top of the Other",
+          "releaseYear": "1969",
+          "sortTitle": "one-on-top-of-the-other-1969",
+          "releaseSequence": "1969-08-15tt0065148",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "one-on-top-of-the-other-1969",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2020-09-24",
+          "reviewSequence": "2020-09-24-1",
+          "viewingDate": "2020-09-24",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1969"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-10-22",
-          "slug": "the-conspiracy-of-torture-1969",
+          "imdbId": "tt0064073",
           "title": "The Conspiracy of Torture",
+          "releaseYear": "1969",
+          "sortTitle": "conspiracy-of-torture-1969",
+          "releaseSequence": "1969-11-14tt0064073",
+          "genres": [
+            "Drama",
+            "History",
+            "Horror"
+          ],
+          "slug": "the-conspiracy-of-torture-1969",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2024-11-15",
+          "reviewSequence": "2024-11-15-1",
+          "viewingDate": "2020-10-22",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1969"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2020-10-23",
-          "slug": "a-lizard-in-a-womans-skin-1971",
+          "imdbId": "tt0067361",
           "title": "A Lizard in a Woman's Skin",
+          "releaseYear": "1971",
+          "sortTitle": "lizard-in-a-womans-skin-1971",
+          "releaseSequence": "1971-02-18tt0067361",
+          "genres": [
+            "Drama",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "a-lizard-in-a-womans-skin-1971",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-10-23",
+          "reviewSequence": "2020-10-23-1",
+          "viewingDate": "2020-10-23",
+          "viewingSequence": 3,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1971"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2020-10-27",
-          "slug": "dont-torture-a-duckling-1972",
+          "imdbId": "tt0069019",
           "title": "Don't Torture a Duckling",
+          "releaseYear": "1972",
+          "sortTitle": "dont-torture-a-duckling-1972",
+          "releaseSequence": "1972-09-29tt0069019",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "dont-torture-a-duckling-1972",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2020-10-27",
+          "reviewSequence": "2020-10-27-1",
+          "viewingDate": "2020-10-27",
+          "viewingSequence": 4,
           "medium": "iTunes",
-          "venue": null,
-          "year": "1972"
+          "venue": null
         }
       ]
     },
@@ -1712,40 +3606,89 @@
       "slug": "lucio-fulci",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-09-24",
-          "slug": "one-on-top-of-the-other-1969",
+          "imdbId": "tt0065148",
           "title": "One on Top of the Other",
+          "releaseYear": "1969",
+          "sortTitle": "one-on-top-of-the-other-1969",
+          "releaseSequence": "1969-08-15tt0065148",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "one-on-top-of-the-other-1969",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2020-09-24",
+          "reviewSequence": "2020-09-24-1",
+          "viewingDate": "2020-09-24",
+          "viewingSequence": 1,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1969"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-10-22",
-          "slug": "the-conspiracy-of-torture-1969",
+          "imdbId": "tt0064073",
           "title": "The Conspiracy of Torture",
+          "releaseYear": "1969",
+          "sortTitle": "conspiracy-of-torture-1969",
+          "releaseSequence": "1969-11-14tt0064073",
+          "genres": [
+            "Drama",
+            "History",
+            "Horror"
+          ],
+          "slug": "the-conspiracy-of-torture-1969",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2024-11-15",
+          "reviewSequence": "2024-11-15-1",
+          "viewingDate": "2020-10-22",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1969"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2020-10-23",
-          "slug": "a-lizard-in-a-womans-skin-1971",
+          "imdbId": "tt0067361",
           "title": "A Lizard in a Woman's Skin",
+          "releaseYear": "1971",
+          "sortTitle": "lizard-in-a-womans-skin-1971",
+          "releaseSequence": "1971-02-18tt0067361",
+          "genres": [
+            "Drama",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "a-lizard-in-a-womans-skin-1971",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-10-23",
+          "reviewSequence": "2020-10-23-1",
+          "viewingDate": "2020-10-23",
+          "viewingSequence": 3,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1971"
+          "venue": null
         },
         {
-          "sequence": 4,
-          "date": "2020-10-27",
-          "slug": "dont-torture-a-duckling-1972",
+          "imdbId": "tt0069019",
           "title": "Don't Torture a Duckling",
+          "releaseYear": "1972",
+          "sortTitle": "dont-torture-a-duckling-1972",
+          "releaseSequence": "1972-09-29tt0069019",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "dont-torture-a-duckling-1972",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2020-10-27",
+          "reviewSequence": "2020-10-27-1",
+          "viewingDate": "2020-10-27",
+          "viewingSequence": 4,
           "medium": "iTunes",
-          "venue": null,
-          "year": "1972"
+          "venue": null
         }
       ]
     },
@@ -1755,31 +3698,67 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-01-01",
-          "slug": null,
+          "imdbId": "tt1074638",
           "title": "Skyfall",
-          "medium": "iTunes",
-          "venue": null,
-          "year": "2012"
-        },
-        {
-          "sequence": 2,
-          "date": "2020-01-01",
+          "releaseYear": "2012",
+          "sortTitle": "skyfall-2012",
+          "releaseSequence": "2012-10-23tt1074638",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Thriller"
+          ],
           "slug": null,
-          "title": "Spectre",
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-01-01",
+          "viewingSequence": 1,
           "medium": "iTunes",
-          "venue": null,
-          "year": "2015"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2020-08-06",
-          "slug": "the-world-is-not-enough-1999",
+          "imdbId": "tt2379713",
+          "title": "Spectre",
+          "releaseYear": "2015",
+          "sortTitle": "spectre-2015",
+          "releaseSequence": "2015-10-26tt2379713",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-01-01",
+          "viewingSequence": 2,
+          "medium": "iTunes",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0143145",
           "title": "The World Is Not Enough",
+          "releaseYear": "1999",
+          "sortTitle": "world-is-not-enough-1999",
+          "releaseSequence": "1999-11-08tt0143145",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Thriller"
+          ],
+          "slug": "the-world-is-not-enough-1999",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2020-08-06",
+          "reviewSequence": "2020-08-06-2",
+          "viewingDate": "2020-08-06",
+          "viewingSequence": 3,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1999"
+          "venue": null
         }
       ]
     },
@@ -1789,31 +3768,67 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-01-01",
-          "slug": null,
+          "imdbId": "tt1074638",
           "title": "Skyfall",
-          "medium": "iTunes",
-          "venue": null,
-          "year": "2012"
-        },
-        {
-          "sequence": 2,
-          "date": "2020-01-01",
+          "releaseYear": "2012",
+          "sortTitle": "skyfall-2012",
+          "releaseSequence": "2012-10-23tt1074638",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Thriller"
+          ],
           "slug": null,
-          "title": "Spectre",
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-01-01",
+          "viewingSequence": 1,
           "medium": "iTunes",
-          "venue": null,
-          "year": "2015"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2020-08-06",
-          "slug": "the-world-is-not-enough-1999",
+          "imdbId": "tt2379713",
+          "title": "Spectre",
+          "releaseYear": "2015",
+          "sortTitle": "spectre-2015",
+          "releaseSequence": "2015-10-26tt2379713",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2020-01-01",
+          "viewingSequence": 2,
+          "medium": "iTunes",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0143145",
           "title": "The World Is Not Enough",
+          "releaseYear": "1999",
+          "sortTitle": "world-is-not-enough-1999",
+          "releaseSequence": "1999-11-08tt0143145",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Thriller"
+          ],
+          "slug": "the-world-is-not-enough-1999",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2020-08-06",
+          "reviewSequence": "2020-08-06-2",
+          "viewingDate": "2020-08-06",
+          "viewingSequence": 3,
           "medium": "Netflix",
-          "venue": null,
-          "year": "1999"
+          "venue": null
         }
       ]
     },
@@ -1823,31 +3838,66 @@
       "slug": null,
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-02-25",
-          "slug": "bram-stokers-dracula-1992",
+          "imdbId": "tt0103874",
           "title": "Bram Stoker's Dracula",
+          "releaseYear": "1992",
+          "sortTitle": "bram-stokers-dracula-1992",
+          "releaseSequence": "1992-11-10tt0103874",
+          "genres": [
+            "Fantasy",
+            "Horror",
+            "Romance"
+          ],
+          "slug": "bram-stokers-dracula-1992",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2022-07-30",
+          "reviewSequence": "2022-07-30-1",
+          "viewingDate": "2020-02-25",
+          "viewingSequence": 1,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun",
-          "year": "1992"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "sequence": 2,
-          "date": "2020-10-04",
-          "slug": "dracula-1931",
+          "imdbId": "tt0021814",
           "title": "Dracula",
+          "releaseYear": "1931",
+          "sortTitle": "dracula-1931",
+          "releaseSequence": "1931-02-09tt0021814",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror"
+          ],
+          "slug": "dracula-1931",
+          "grade": "A-",
+          "gradeValue": 11,
+          "reviewDate": "2020-10-04",
+          "reviewSequence": "2020-10-04-1",
+          "viewingDate": "2020-10-04",
+          "viewingSequence": 2,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1931"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2020-12-08",
-          "slug": "horror-of-dracula-1958",
+          "imdbId": "tt0051554",
           "title": "Horror of Dracula",
+          "releaseYear": "1958",
+          "sortTitle": "horror-of-dracula-1958",
+          "releaseSequence": "1958-05-08tt0051554",
+          "genres": [
+            "Drama",
+            "Horror"
+          ],
+          "slug": "horror-of-dracula-1958",
+          "grade": "A-",
+          "gradeValue": 11,
+          "reviewDate": "2020-12-08",
+          "reviewSequence": "2020-12-08-1",
+          "viewingDate": "2020-12-08",
+          "viewingSequence": 3,
           "medium": "Blu-ray",
-          "venue": null,
-          "year": "1958"
+          "venue": null
         }
       ]
     },
@@ -1857,31 +3907,68 @@
       "slug": "alfred-hitchcock",
       "viewings": [
         {
-          "sequence": 1,
-          "date": "2020-07-10",
-          "slug": "blackmail-1929",
+          "imdbId": "tt0019702",
           "title": "Blackmail",
+          "releaseYear": "1929",
+          "sortTitle": "blackmail-1929",
+          "releaseSequence": "1929-07-28tt0019702",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "blackmail-1929",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-07-10",
+          "reviewSequence": "2020-07-10-1",
+          "viewingDate": "2020-07-10",
+          "viewingSequence": 1,
           "medium": "Kanopy",
-          "venue": null,
-          "year": "1929"
+          "venue": null
         },
         {
-          "sequence": 2,
-          "date": "2020-09-28",
-          "slug": "murder-1930",
+          "imdbId": "tt0021165",
           "title": "Murder!",
+          "releaseYear": "1930",
+          "sortTitle": "murder-1930",
+          "releaseSequence": "1930-07-31tt0021165",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "murder-1930",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2020-09-28",
+          "reviewSequence": "2020-09-28-1",
+          "viewingDate": "2020-09-28",
+          "viewingSequence": 2,
           "medium": "iTunes",
-          "venue": null,
-          "year": "1930"
+          "venue": null
         },
         {
-          "sequence": 3,
-          "date": "2020-11-02",
-          "slug": "juno-and-the-paycock-1930",
+          "imdbId": "tt0021015",
           "title": "Juno and the Paycock",
+          "releaseYear": "1930",
+          "sortTitle": "juno-and-the-paycock-1930",
+          "releaseSequence": "1930-02-22tt0021015",
+          "genres": [
+            "Comedy",
+            "Drama"
+          ],
+          "slug": "juno-and-the-paycock-1930",
+          "grade": "F",
+          "gradeValue": 1,
+          "reviewDate": "2020-11-02",
+          "reviewSequence": "2020-11-02-1",
+          "viewingDate": "2020-11-02",
+          "viewingSequence": 3,
           "medium": "DVD",
-          "venue": null,
-          "year": "1930"
+          "venue": null
         }
       ]
     }

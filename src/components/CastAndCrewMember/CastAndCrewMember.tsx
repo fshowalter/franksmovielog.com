@@ -22,7 +22,6 @@ import { Filters, SortOptions } from "./Filters";
 
 export type ListItemValue = Pick<
   CastAndCrewMember["titles"][0],
-  | "collectionNames"
   | "creditedAs"
   | "grade"
   | "gradeValue"
@@ -32,6 +31,7 @@ export type ListItemValue = Pick<
   | "slug"
   | "sortTitle"
   | "title"
+  | "watchlistCollectionNames"
   | "watchlistDirectorNames"
   | "watchlistPerformerNames"
   | "watchlistWriterNames"
@@ -52,7 +52,7 @@ export type Props = {
   titles: ListItemValue[];
   value: Pick<
     CastAndCrewMember,
-    "creditedAs" | "name" | "reviewCount" | "totalCount"
+    "creditedAs" | "name" | "reviewCount" | "titleCount"
   >;
 };
 
@@ -158,7 +158,7 @@ function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
         )}
         {!value.grade && (
           <WatchlistTitleSlug
-            collectionNames={value.collectionNames}
+            collectionNames={value.watchlistCollectionNames}
             directorNames={value.watchlistDirectorNames}
             performerNames={value.watchlistPerformerNames}
             writerNames={value.watchlistWriterNames}

@@ -1,106 +1,132 @@
 {
   "name": "Clive Barker",
   "slug": "clive-barker",
+  "titleCount": 5,
+  "reviewCount": 5,
   "titles": [
     {
-      "creditedAs": [
-        "writer"
-      ],
       "imdbId": "tt0090233",
       "title": "Underworld",
-      "year": "1985",
+      "releaseYear": "1985",
+      "sortTitle": "underworld-1985",
+      "releaseSequence": "1985-11-29tt0090233",
+      "genres": [
+        "Action",
+        "Horror",
+        "Sci-Fi",
+        "Thriller"
+      ],
       "slug": "underworld-1985",
       "grade": "D-",
-      "sortTitle": "underworld-1985",
       "gradeValue": 2,
-      "releaseSequence": "1985-11-29tt0090233",
       "reviewDate": "2022-02-20",
       "reviewSequence": "2022-02-20-1",
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "collectionNames": []
-    },
-    {
       "creditedAs": [
         "writer"
       ],
-      "imdbId": "tt0091829",
-      "title": "Rawhead Rex",
-      "year": "1986",
-      "slug": "rawhead-rex-1986",
-      "grade": "D",
-      "sortTitle": "rawhead-rex-1986",
-      "gradeValue": 3,
-      "releaseSequence": "1986-03-14tt0091829",
-      "reviewDate": "2022-02-20",
-      "reviewSequence": "2022-02-20-2",
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0091829",
+      "title": "Rawhead Rex",
+      "releaseYear": "1986",
+      "sortTitle": "rawhead-rex-1986",
+      "releaseSequence": "1986-03-14tt0091829",
+      "genres": [
+        "Fantasy",
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "slug": "rawhead-rex-1986",
+      "grade": "D",
+      "gradeValue": 3,
+      "reviewDate": "2022-02-20",
+      "reviewSequence": "2022-02-20-2",
+      "creditedAs": [
+        "writer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0093177",
+      "title": "Hellraiser",
+      "releaseYear": "1987",
+      "sortTitle": "hellraiser-1987",
+      "releaseSequence": "1987-09-11tt0093177",
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "slug": "hellraiser-1987",
+      "grade": "A",
+      "gradeValue": 12,
+      "reviewDate": "2020-11-04",
+      "reviewSequence": "2020-11-04-1",
       "creditedAs": [
         "director",
         "writer"
       ],
-      "imdbId": "tt0093177",
-      "title": "Hellraiser",
-      "year": "1987",
-      "slug": "hellraiser-1987",
-      "grade": "A",
-      "sortTitle": "hellraiser-1987",
-      "gradeValue": 12,
-      "releaseSequence": "1987-09-11tt0093177",
-      "reviewDate": "2020-11-04",
-      "reviewSequence": "2020-11-04-1",
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
     },
     {
-      "creditedAs": [
-        "writer"
-      ],
       "imdbId": "tt0095294",
       "title": "Hellbound: Hellraiser II",
-      "year": "1988",
+      "releaseYear": "1988",
+      "sortTitle": "hellbound-hellraiser-ii-1988",
+      "releaseSequence": "1988-09-09tt0095294",
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
       "slug": "hellbound-hellraiser-ii-1988",
       "grade": "C",
-      "sortTitle": "hellbound-hellraiser-ii-1988",
       "gradeValue": 6,
-      "releaseSequence": "1988-09-09tt0095294",
       "reviewDate": "2021-01-21",
       "reviewSequence": "2021-01-21-1",
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "collectionNames": []
-    },
-    {
       "creditedAs": [
         "writer"
       ],
-      "imdbId": "tt0805570",
-      "title": "The Midnight Meat Train",
-      "year": "2008",
-      "slug": "the-midnight-meat-train-2008",
-      "grade": "D",
-      "sortTitle": "midnight-meat-train-2008",
-      "gradeValue": 3,
-      "releaseSequence": "2008-05-16tt0805570",
-      "reviewDate": "2024-04-27",
-      "reviewSequence": "2024-04-27-3",
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "collectionNames": []
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0805570",
+      "title": "The Midnight Meat Train",
+      "releaseYear": "2008",
+      "sortTitle": "midnight-meat-train-2008",
+      "releaseSequence": "2008-05-16tt0805570",
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "slug": "the-midnight-meat-train-2008",
+      "grade": "D",
+      "gradeValue": 3,
+      "reviewDate": "2024-04-27",
+      "reviewSequence": "2024-04-27-3",
+      "creditedAs": [
+        "writer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
     }
   ],
-  "reviewCount": 5,
-  "totalCount": 5,
+  "description": "Writer and director with 5 reviewed titles.",
   "creditedAs": [
     "writer",
     "director"
