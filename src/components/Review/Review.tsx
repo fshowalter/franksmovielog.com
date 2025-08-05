@@ -256,8 +256,12 @@ function ViewingHistory({ value }: Pick<Props, "value">) {
         Viewing History
       </SubHeading>
       <ul className="bg-default">
-        {value.viewings.map((viewing) => (
-          <ViewingHistoryListItem key={viewing.sequence} value={viewing} />
+        {value.viewings.map((viewing, index) => (
+          <ViewingHistoryListItem 
+            key={index} 
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+            value={viewing as any}
+          />
         ))}
       </ul>
     </aside>

@@ -143,7 +143,7 @@ async function buildReviewListItemValues(
     imdbId: string;
     releaseSequence: string;
     releaseYear: string;
-    reviewDate?: Date;
+    reviewDate?: Date | string;
     reviewSequence?: string;
     sequence?: string;
     slug: string;
@@ -153,7 +153,10 @@ async function buildReviewListItemValues(
 ): Promise<ReviewListItemValue[]> {
   return Promise.all(
     reviews.map(async (review) => {
-      const date = review.date || review.reviewDate!;
+      const dateValue = review.date || review.reviewDate!;
+      const date = typeof dateValue === 'string' 
+        ? new Date(`${dateValue}T00:00:00.000Z`)
+        : dateValue;
       const sequence = review.sequence || review.reviewSequence!;
 
       const value: ReviewListItemValue = {
