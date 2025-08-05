@@ -7,49 +7,32 @@ const watchlistTitlesJsonFile = getContentPath("data", "watchlist-titles.json");
 
 const WatchlistTitleJsonSchema = z
   .object({
-    collectionNames: z.array(z.string()).optional(),
-    directorNames: z.array(z.string()).optional(),
-    genres: z.array(z.string()).optional(),
+    genres: z.array(z.string()),
     imdbId: z.string(),
-    performerNames: z.array(z.string()).optional(),
     releaseSequence: z.string(),
-    releaseYear: z.string().optional(),
+    releaseYear: z.string(),
     sortTitle: z.string(),
     title: z.string(),
     viewed: z.boolean(),
-    watchlistCollectionNames: z.array(z.string()).optional(),
-    watchlistDirectorNames: z.array(z.string()).optional(),
-    watchlistPerformerNames: z.array(z.string()).optional(),
-    watchlistWriterNames: z.array(z.string()).optional(),
-    writerNames: z.array(z.string()).optional(),
-    year: z.string().optional(),
+    watchlistCollectionNames: z.array(z.string()),
+    watchlistDirectorNames: z.array(z.string()),
+    watchlistPerformerNames: z.array(z.string()),
+    watchlistWriterNames: z.array(z.string()),
   })
   .transform((data) => {
-    // Handle both old and new field names
-    const releaseYear = data.releaseYear || data.year || "";
-    const genres = data.genres || [];
-    const watchlistDirectorNames =
-      data.watchlistDirectorNames || data.directorNames || [];
-    const watchlistPerformerNames =
-      data.watchlistPerformerNames || data.performerNames || [];
-    const watchlistWriterNames =
-      data.watchlistWriterNames || data.writerNames || [];
-    const watchlistCollectionNames =
-      data.watchlistCollectionNames || data.collectionNames || [];
-
     // fix zod making anything with undefined optional
     return {
-      genres,
+      genres: data.genres,
       imdbId: data.imdbId,
       releaseSequence: data.releaseSequence,
-      releaseYear,
+      releaseYear: data.releaseYear,
       sortTitle: data.sortTitle,
       title: data.title,
       viewed: data.viewed,
-      watchlistCollectionNames,
-      watchlistDirectorNames,
-      watchlistPerformerNames,
-      watchlistWriterNames,
+      watchlistCollectionNames: data.watchlistCollectionNames,
+      watchlistDirectorNames: data.watchlistDirectorNames,
+      watchlistPerformerNames: data.watchlistPerformerNames,
+      watchlistWriterNames: data.watchlistWriterNames,
     };
   });
 

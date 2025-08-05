@@ -9,55 +9,41 @@ const viewingsJsonFile = getContentPath("data", "viewings.json");
 const ViewingJsonSchema = z
   .object({
     genres: z.array(z.string()),
-    grade: nullableString().optional(),
-    gradeValue: nullableNumber().optional(),
-    imdbId: z.string().optional(),
+    grade: nullableString(),
+    gradeValue: nullableNumber(),
+    imdbId: z.string(),
     medium: nullableString(),
     releaseSequence: z.string(),
-    releaseYear: z.string().optional(),
-    reviewDate: nullableString().optional(),
-    reviewSequence: nullableString().optional(),
-    sequence: z.number().optional(),
+    releaseYear: z.string(),
+    reviewDate: nullableString(),
+    reviewSequence: nullableString(),
     slug: nullableString(),
     sortTitle: z.string(),
     title: z.string(),
     venue: nullableString(),
     viewingDate: z.string(),
-    viewingSequence: z.number().optional(),
-    viewingYear: z.string().optional(),
-    year: z.string().optional(),
+    viewingSequence: z.number(),
+    viewingYear: z.string(),
   })
   .transform((data) => {
-    // Handle both old and new field names
-    const releaseYear = data.releaseYear || data.year || "";
-    const viewingSequence = data.viewingSequence || data.sequence || 0;
-    const imdbId = data.imdbId || "";
-    const grade = data.grade || undefined;
-    const gradeValue = data.gradeValue || undefined;
-    const reviewDate = data.reviewDate || undefined;
-    const reviewSequence = data.reviewSequence || undefined;
-
-    // Extract viewingYear from viewingDate if not provided
-    const viewingYear = data.viewingYear || data.viewingDate.split("-")[0];
-
     // fix zod making anything with undefined optional
     return {
       genres: data.genres,
-      grade,
-      gradeValue,
-      imdbId,
+      grade: data.grade,
+      gradeValue: data.gradeValue,
+      imdbId: data.imdbId,
       medium: data.medium,
       releaseSequence: data.releaseSequence,
-      releaseYear,
-      reviewDate,
-      reviewSequence,
+      releaseYear: data.releaseYear,
+      reviewDate: data.reviewDate,
+      reviewSequence: data.reviewSequence,
       slug: data.slug,
       sortTitle: data.sortTitle,
       title: data.title,
       venue: data.venue,
       viewingDate: data.viewingDate,
-      viewingSequence,
-      viewingYear,
+      viewingSequence: data.viewingSequence,
+      viewingYear: data.viewingYear,
     };
   });
 

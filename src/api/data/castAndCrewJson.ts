@@ -8,47 +8,39 @@ const castAndCrewJsonDirectory = getContentPath("data", "cast-and-crew");
 
 const TitleSchema = z
   .object({
-    collectionNames: z.array(z.string()).optional(),
     creditedAs: z.array(z.string()),
-    genres: z.array(z.string()).optional(),
+    genres: z.array(z.string()),
     grade: nullableString(),
     gradeValue: nullableNumber(),
     imdbId: z.string(),
     releaseSequence: z.string(),
-    releaseYear: z.string().optional(),
+    releaseYear: z.string(),
     reviewDate: nullableString(),
     reviewSequence: nullableString(),
     slug: nullableString(),
     sortTitle: z.string(),
     title: z.string(),
-    watchlistCollectionNames: z.array(z.string()).optional(),
+    watchlistCollectionNames: z.array(z.string()),
     watchlistDirectorNames: z.array(z.string()),
     watchlistPerformerNames: z.array(z.string()),
     watchlistWriterNames: z.array(z.string()),
-    year: z.string().optional(),
   })
   .transform((data) => {
-    // Handle both old and new field names
-    const releaseYear = data.releaseYear || data.year || "";
-    const genres = data.genres || [];
-    const watchlistCollectionNames =
-      data.watchlistCollectionNames || data.collectionNames || [];
-
     // fix zod making anything with undefined optional
     return {
       creditedAs: data.creditedAs,
-      genres,
+      genres: data.genres,
       grade: data.grade,
       gradeValue: data.gradeValue,
       imdbId: data.imdbId,
       releaseSequence: data.releaseSequence,
-      releaseYear,
+      releaseYear: data.releaseYear,
       reviewDate: data.reviewDate,
       reviewSequence: data.reviewSequence,
       slug: data.slug,
       sortTitle: data.sortTitle,
       title: data.title,
-      watchlistCollectionNames,
+      watchlistCollectionNames: data.watchlistCollectionNames,
       watchlistDirectorNames: data.watchlistDirectorNames,
       watchlistPerformerNames: data.watchlistPerformerNames,
       watchlistWriterNames: data.watchlistWriterNames,
@@ -62,21 +54,17 @@ const CastAndCrewJsonSchema = z
     name: z.string(),
     reviewCount: z.number(),
     slug: z.string(),
-    titleCount: z.number().optional(),
+    titleCount: z.number(),
     titles: z.array(TitleSchema),
-    totalCount: z.number().optional(),
   })
   .transform((data) => {
-    // Handle both old and new field names
-    const titleCount = data.titleCount ?? data.totalCount ?? data.titles.length;
-
     // fix zod making anything with undefined optional
     return {
       creditedAs: data.creditedAs,
       name: data.name,
       reviewCount: data.reviewCount,
       slug: data.slug,
-      titleCount,
+      titleCount: data.titleCount,
       titles: data.titles,
     };
   });

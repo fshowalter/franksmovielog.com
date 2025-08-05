@@ -22,21 +22,17 @@ const MoreTitleSchema = z
     genres: z.array(z.string()),
     grade: z.string(),
     imdbId: z.string(),
-    releaseYear: z.string().optional(),
+    releaseYear: z.string(),
     slug: z.string(),
     title: z.string(),
-    year: z.string().optional(),
   })
   .transform((data) => {
-    // Handle both old and new field names
-    const releaseYear = data.releaseYear || data.year || "";
-
     // fix zod making anything with undefined optional
     return {
       genres: data.genres,
       grade: data.grade,
       imdbId: data.imdbId,
-      releaseYear,
+      releaseYear: data.releaseYear,
       slug: data.slug,
       title: data.title,
     };
@@ -72,21 +68,15 @@ const ReviewedTitleJsonSchema = z
     originalTitle: nullableString(),
     principalCastNames: z.array(z.string()),
     releaseSequence: z.string(),
-    releaseYear: z.string().optional(),
-    reviewSequence: z.string().optional(),
+    releaseYear: z.string(),
+    reviewSequence: z.string(),
     runtimeMinutes: z.number(),
-    sequence: z.string().optional(),
     slug: z.string(),
     sortTitle: z.string(),
     title: z.string(),
     writerNames: z.array(z.string()),
-    year: z.string().optional(),
   })
   .transform((data) => {
-    // Handle both old and new field names
-    const releaseYear = data.releaseYear || data.year || "";
-    const reviewSequence = data.reviewSequence || data.sequence || "";
-
     // fix zod making anything with undefined optional
     return {
       castAndCrew: data.castAndCrew,
@@ -102,8 +92,8 @@ const ReviewedTitleJsonSchema = z
       originalTitle: data.originalTitle,
       principalCastNames: data.principalCastNames,
       releaseSequence: data.releaseSequence,
-      releaseYear,
-      reviewSequence,
+      releaseYear: data.releaseYear,
+      reviewSequence: data.reviewSequence,
       runtimeMinutes: data.runtimeMinutes,
       slug: data.slug,
       sortTitle: data.sortTitle,
