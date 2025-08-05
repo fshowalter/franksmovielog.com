@@ -23,7 +23,6 @@ const ViewingJsonSchema = z
     venue: nullableString(),
     viewingDate: z.string(),
     viewingSequence: z.number(),
-    viewingYear: z.string(),
   })
   .transform((data) => {
     // fix zod making anything with undefined optional
@@ -43,7 +42,6 @@ const ViewingJsonSchema = z
       venue: data.venue,
       viewingDate: data.viewingDate,
       viewingSequence: data.viewingSequence,
-      viewingYear: data.viewingYear,
     };
   });
 

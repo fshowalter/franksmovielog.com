@@ -2,7 +2,9 @@ import type { ViewingJson } from "./data/viewingsJson";
 
 import { allViewingsJson } from "./data/viewingsJson";
 
-export type Viewing = ViewingJson & {};
+export type Viewing = ViewingJson & {
+  viewingYear: string;
+};
 
 type Viewings = {
   distinctMedia: string[];
@@ -20,8 +22,9 @@ export async function allViewings(): Promise<Viewings> {
   const distinctVenues = new Set<string>();
 
   const viewings = viewingsJson.map((title) => {
+    const viewingYear = title.viewingDate.slice(0, 4);
     distinctReleaseYears.add(title.releaseYear);
-    distinctViewingYears.add(title.viewingYear);
+    distinctViewingYears.add(viewingYear);
     if (title.medium) {
       distinctMedia.add(title.medium);
     }
@@ -31,6 +34,7 @@ export async function allViewings(): Promise<Viewings> {
 
     return {
       ...title,
+      viewingYear,
     };
   });
 

@@ -12,18 +12,14 @@ const OverratedJsonSchema = z
     gradeValue: z.number(),
     imdbId: z.string(),
     releaseSequence: z.string(),
-    releaseYear: z.string().optional(),
+    releaseYear: z.string(),
     reviewDate: z.date({ coerce: true }),
     reviewSequence: z.string(),
     slug: z.string(),
     sortTitle: z.string(),
     title: z.string(),
-    year: z.string().optional(),
   })
   .transform((data) => {
-    // Handle both old and new field names
-    const releaseYear = data.releaseYear || data.year || "";
-
     // fix zod making anything with undefined optional
     return {
       genres: data.genres,
@@ -31,7 +27,7 @@ const OverratedJsonSchema = z
       gradeValue: data.gradeValue,
       imdbId: data.imdbId,
       releaseSequence: data.releaseSequence,
-      releaseYear,
+      releaseYear: data.releaseYear,
       reviewDate: data.reviewDate,
       reviewSequence: data.reviewSequence,
       slug: data.slug,

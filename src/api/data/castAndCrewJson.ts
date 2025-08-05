@@ -50,7 +50,7 @@ const TitleSchema = z
 const CastAndCrewJsonSchema = z
   .object({
     creditedAs: z.array(z.string()),
-    description: z.string().optional(),
+    description: z.string(),
     name: z.string(),
     reviewCount: z.number(),
     slug: z.string(),
@@ -61,6 +61,7 @@ const CastAndCrewJsonSchema = z
     // fix zod making anything with undefined optional
     return {
       creditedAs: data.creditedAs,
+      description: data.description,
       name: data.name,
       reviewCount: data.reviewCount,
       slug: data.slug,
