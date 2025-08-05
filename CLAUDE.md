@@ -69,6 +69,12 @@ This site uses Astro's partial hydration strategy:
 - Page tests use snapshot testing
 - Test files follow \*.spec.tsx pattern
 - Run specific tests with: `npm test <pattern>`
+- **IMPORTANT**: Only run one vitest instance at a time (each uses ~2GB RAM)
+  - Use `npm test -- <specific-test-file> --run` for single test files
+  - Avoid running multiple test commands in parallel
+- **Test Runner Best Practices**:
+  - Always run vitest (or npm test) with max-workers=2 to prevent spawning a bunch of threads
+  - Never have more than one instance of vitest running (always wait for the last run to end before running again)
 
 ## Common Patterns
 
