@@ -1,23 +1,9 @@
-import type { WatchlistTitle } from "~/api/watchlistTitles";
-
 import { buildGroupValues } from "~/utils/buildGroupValues";
 import { type FilterableState, filterTools } from "~/utils/filterTools";
 import { getGroupLetter } from "~/utils/getGroupLetter";
 import { collator, sortString } from "~/utils/sortTools";
 
-export type ListItemValue = Pick<
-  WatchlistTitle,
-  | "imdbId"
-  | "releaseSequence"
-  | "releaseYear"
-  | "sortTitle"
-  | "title"
-  | "viewed"
-  | "watchlistCollectionNames"
-  | "watchlistDirectorNames"
-  | "watchlistPerformerNames"
-  | "watchlistWriterNames"
->;
+import type { ListItemValue } from "./Watchlist";
 
 export type Sort = "release-date-asc" | "release-date-desc" | "title";
 
