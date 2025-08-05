@@ -154,9 +154,10 @@ async function buildReviewListItemValues(
   return Promise.all(
     reviews.map(async (review) => {
       const dateValue = review.date || review.reviewDate!;
-      const date = typeof dateValue === 'string' 
-        ? new Date(`${dateValue}T00:00:00.000Z`)
-        : dateValue;
+      const date =
+        typeof dateValue === "string"
+          ? new Date(`${dateValue}T00:00:00.000Z`)
+          : dateValue;
       const sequence = review.sequence || review.reviewSequence!;
 
       const value: ReviewListItemValue = {
