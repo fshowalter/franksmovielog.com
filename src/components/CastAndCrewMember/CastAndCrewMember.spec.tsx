@@ -92,6 +92,32 @@ describe("CastAndCrewMember", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
+  it("can sort by review date with oldest first", async ({ expect }) => {
+    expect.hasAssertions();
+
+    render(<CastAndCrewMember {...props} />);
+
+    await userEvent.selectOptions(
+      screen.getByLabelText("Sort"),
+      "Review Date (Oldest First)",
+    );
+
+    expect(screen.getByTestId("list")).toMatchSnapshot();
+  });
+
+  it("can sort by review date with newest first", async ({ expect }) => {
+    expect.hasAssertions();
+
+    render(<CastAndCrewMember {...props} />);
+
+    await userEvent.selectOptions(
+      screen.getByLabelText("Sort"),
+      "Review Date (Newest First)",
+    );
+
+    expect(screen.getByTestId("list")).toMatchSnapshot();
+  });
+
   it("can filter by release year", async ({ expect }) => {
     expect.hasAssertions();
 
@@ -103,6 +129,21 @@ describe("CastAndCrewMember", () => {
 
     await userEvent.selectOptions(fromInput, "1970");
     await userEvent.selectOptions(toInput, "1980");
+
+    expect(screen.getByTestId("list")).toMatchSnapshot();
+  });
+
+  it("can filter by review year", async ({ expect }) => {
+    expect.hasAssertions();
+
+    render(<CastAndCrewMember {...props} />);
+
+    const fieldset = screen.getByRole("group", { name: "Review Year" });
+    const fromInput = within(fieldset).getByLabelText("From");
+    const toInput = within(fieldset).getByLabelText("to");
+
+    await userEvent.selectOptions(fromInput, "2021");
+    await userEvent.selectOptions(toInput, "2022");
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
