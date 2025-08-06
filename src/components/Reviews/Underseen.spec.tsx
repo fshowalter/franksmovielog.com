@@ -107,6 +107,32 @@ describe("Underseen", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
+  it("can sort by review date with oldest first", async ({ expect }) => {
+    expect.hasAssertions();
+
+    render(<Underseen {...props} />);
+
+    await userEvent.selectOptions(
+      screen.getByLabelText("Sort"),
+      "Review Date (Oldest First)",
+    );
+
+    expect(screen.getByTestId("list")).toMatchSnapshot();
+  });
+
+  it("can sort by review date with newest first", async ({ expect }) => {
+    expect.hasAssertions();
+
+    render(<Underseen {...props} />);
+
+    await userEvent.selectOptions(
+      screen.getByLabelText("Sort"),
+      "Review Date (Newest First)",
+    );
+
+    expect(screen.getByTestId("list")).toMatchSnapshot();
+  });
+
   it("can filter by release year", async ({ expect }) => {
     expect.hasAssertions();
 
