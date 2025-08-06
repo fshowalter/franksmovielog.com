@@ -123,7 +123,7 @@ describe("Viewings", () => {
     const fromInput = within(fieldset).getByLabelText("From");
     const toInput = within(fieldset).getByLabelText("to");
 
-    await userEvent.selectOptions(fromInput, "1945");
+    await userEvent.selectOptions(fromInput, "1946");
     await userEvent.selectOptions(toInput, "1959");
     await userEvent.selectOptions(fromInput, "1976");
     await userEvent.selectOptions(toInput, "1950");

@@ -10,7 +10,7 @@ import * as OgEndpoint from "./og.jpg.ts";
 const { castAndCrew } = await allCastAndCrew();
 
 const testMembers = castAndCrew.filter(
-  (member) => member.slug === "paul-thomas-anderson",
+  (member) => member.slug === "burt-reynolds",
 );
 
 describe("/cast-and-crew/:slug/og.jpg", () => {

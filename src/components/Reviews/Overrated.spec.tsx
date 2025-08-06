@@ -133,7 +133,7 @@ describe("Overrated", () => {
     await userEvent.selectOptions(fromInput, "1984");
     await userEvent.selectOptions(toInput, "2018");
     await userEvent.selectOptions(fromInput, "2020");
-    await userEvent.selectOptions(toInput, "1981");
+    await userEvent.selectOptions(toInput, "1982");
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });

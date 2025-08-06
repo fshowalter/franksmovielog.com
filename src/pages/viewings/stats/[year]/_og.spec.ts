@@ -6,7 +6,7 @@ import { describe, it } from "vitest";
 import * as OgEndpoint from "./og.jpg.ts";
 
 describe("/viewings/stats/:year/og.jpg", () => {
-  it.for(["2012", "2024", "2022"])(
+  it.for(["2012", "2023", "2022"])(
     "matches snapshot for year %i",
     { timeout: 40_000 },
     async (year, { expect }) => {

@@ -11,7 +11,7 @@ import { normalizeScriptSrc } from "~/utils/normalizeScriptSrc";
 import YearStats from "./index.astro";
 
 describe("/viewings/stats/:year", () => {
-  it.for(["2012", "2024", "2022"])(
+  it.for(["2012", "2023", "2022"])(
     "matches snapshot for year %i",
     { timeout: 20_000 },
     async (year, { expect }) => {

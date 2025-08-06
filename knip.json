@@ -12,7 +12,8 @@
     "!public/**",
     "!**/__snapshots__/**",
     "!**/__image_snapshots__/**",
-    "!src/**/fixtures/**"
+    "!src/**/fixtures/**",
+    "!scripts/**"
   ],
   "ignoreDependencies": [
     "@anthropic-ai/claude-code",
