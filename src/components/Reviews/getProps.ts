@@ -20,7 +20,7 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
 
   reviews.sort((a, b) => a.sortTitle.localeCompare(b.sortTitle));
 
-  const values = await buildReviewListItemValues(reviews);
+  const values = await buildReviewListItemValues(reviews, true);
 
   return {
     backdropImageProps: await getBackdropImageProps(
@@ -52,7 +52,7 @@ export async function getPropsForOverrated(): Promise<
     b.releaseSequence.localeCompare(a.releaseSequence),
   );
 
-  const values = await buildReviewListItemValues(overratedDisappointments);
+  const values = await buildReviewListItemValues(overratedDisappointments, false);
 
   return {
     backdropImageProps: await getBackdropImageProps(
@@ -84,7 +84,7 @@ export async function getPropsForUnderrated(): Promise<
     b.releaseSequence.localeCompare(a.releaseSequence),
   );
 
-  const values = await buildReviewListItemValues(underratedSurprises);
+  const values = await buildReviewListItemValues(underratedSurprises, false);
 
   return {
     backdropImageProps: await getBackdropImageProps(
@@ -116,7 +116,7 @@ export async function getPropsForUnderseen(): Promise<
     b.releaseSequence.localeCompare(a.releaseSequence),
   );
 
-  const values = await buildReviewListItemValues(underseenGems);
+  const values = await buildReviewListItemValues(underseenGems, false);
 
   return {
     backdropImageProps: await getBackdropImageProps(
@@ -150,6 +150,7 @@ async function buildReviewListItemValues(
     sortTitle: string;
     title: string;
   }[],
+  includeReviewMonth: boolean,
 ): Promise<ReviewListItemValue[]> {
   return Promise.all(
     reviews.map(async (review) => {
@@ -181,9 +182,11 @@ async function buildReviewListItemValues(
           day: "2-digit",
           timeZone: "UTC",
         })}`,
-        reviewMonth: date.toLocaleDateString("en-US", {
-          month: "long",
-          timeZone: "UTC",
+        ...(includeReviewMonth && {
+          reviewMonth: date.toLocaleDateString("en-US", {
+            month: "long",
+            timeZone: "UTC",
+          }),
         }),
         reviewSequence: sequence,
         reviewYear: date.toLocaleDateString("en-US", {
