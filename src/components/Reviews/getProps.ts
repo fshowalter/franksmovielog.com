@@ -52,7 +52,10 @@ export async function getPropsForOverrated(): Promise<
     b.releaseSequence.localeCompare(a.releaseSequence),
   );
 
-  const values = await buildReviewListItemValues(overratedDisappointments, false);
+  const values = await buildReviewListItemValues(
+    overratedDisappointments,
+    false,
+  );
 
   return {
     backdropImageProps: await getBackdropImageProps(
