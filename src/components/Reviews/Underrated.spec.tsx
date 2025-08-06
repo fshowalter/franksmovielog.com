@@ -133,7 +133,7 @@ describe("Underrated", () => {
     await userEvent.selectOptions(fromInput, "1984");
     await userEvent.selectOptions(toInput, "2018");
     await userEvent.selectOptions(fromInput, "2021");
-    await userEvent.selectOptions(toInput, "1980");
+    await userEvent.selectOptions(toInput, "1984");
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });

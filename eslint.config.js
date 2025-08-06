@@ -15,7 +15,14 @@ import tsEslint from "typescript-eslint";
 
 export default tsEslint.config(
   {
-    ignores: ["dist/", ".astro/", "coverage/", "content/", "public/"],
+    ignores: [
+      "dist/",
+      ".astro/",
+      "coverage/",
+      "content/",
+      "public/",
+      "scripts/",
+    ],
   },
   eslint.configs.recommended,
   eslintPluginUnicorn.configs.recommended,
