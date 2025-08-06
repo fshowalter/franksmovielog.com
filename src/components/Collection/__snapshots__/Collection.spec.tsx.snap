@@ -70399,6 +70399,979 @@ exports[`Collection > can sort by title 1`] = `
 </ol>
 `;
 
+exports[`Collection > opens and closes filter drawer on mobile 1`] = `
+<div
+  aria-label="Filters"
+  class="
+            fixed top-0 right-0 z-filter-drawer flex h-full max-w-[380px]
+            flex-col items-start gap-y-5 bg-default text-left text-inverse
+            duration-200 ease-in-out
+            w-0 transform-[translateX(100%)] overflow-y-hidden
+            tablet:gap-y-10
+            tablet-landscape:relative tablet-landscape:z-auto
+            tablet-landscape:col-start-4 tablet-landscape:block
+            tablet-landscape:w-auto tablet-landscape:max-w-unset
+            tablet-landscape:min-w-[320px] tablet-landscape:transform-none
+            tablet-landscape:bg-inherit tablet-landscape:py-24
+            tablet-landscape:pb-12 tablet-landscape:drop-shadow-none
+          "
+  id="filters"
+>
+  <div
+    class="
+              flex h-full w-full flex-col text-sm
+              tablet:pt-12 tablet:text-base
+              tablet-landscape:h-auto tablet-landscape:overflow-visible
+              tablet-landscape:bg-default tablet-landscape:px-container
+              tablet-landscape:pt-0
+              laptop:px-8
+            "
+  >
+    <fieldset
+      class="
+                flex grow flex-col gap-5 px-container pb-4
+                tablet:gap-8
+                tablet-landscape:mt-0 tablet-landscape:gap-12
+                tablet-landscape:px-0 tablet-landscape:py-10
+              "
+    >
+      <legend
+        class="
+                  mb-5 block w-full pt-4 pb-4 text-lg text-subtle shadow-bottom
+                  tablet-landscape:mb-0 tablet-landscape:pt-10
+                  tablet-landscape:pb-0 tablet-landscape:font-sans
+                  tablet-landscape:text-xxs tablet-landscape:font-semibold
+                  tablet-landscape:tracking-wide tablet-landscape:uppercase
+                  tablet-landscape:shadow-none
+                "
+      >
+        Filter
+      </legend>
+      <div
+        class="flex basis-full flex-col items-center justify-end"
+      >
+        <button
+          class="
+          mx-auto w-full max-w-button cursor-pointer bg-canvas py-5 text-center
+          font-sans text-xs font-semibold tracking-wide uppercase
+          hover:bg-inverse hover:text-inverse
+        "
+          type="button"
+        >
+          Hide Reviewed
+        </button>
+      </div>
+      <label
+        class="flex flex-col text-subtle"
+      >
+        <span
+          class="
+        inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide
+        text-subtle uppercase
+      "
+        >
+          Title
+        </span>
+        <input
+          class="
+          border-0 bg-default px-4 py-2 text-base text-default shadow-all
+          outline-accent
+          placeholder:text-default placeholder:opacity-50
+        "
+          placeholder="Enter all or part of a title"
+          type="text"
+        />
+      </label>
+      <fieldset
+        class="text-subtle"
+      >
+        <legend
+          class="
+        inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide
+        text-subtle uppercase
+      "
+        >
+          Release Year
+        </legend>
+        <div
+          class="flex items-baseline"
+        >
+          <label
+            class="flex flex-1 items-center gap-x-[.5ch]"
+          >
+            <span
+              class="min-w-10 text-left text-sm tracking-serif-wide"
+            >
+              From
+            </span>
+            <select
+              class="
+          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
+          leading-6 text-subtle shadow-all outline-accent
+        "
+            >
+              <option
+                value="1966"
+              >
+                1966
+              </option>
+              <option
+                value="1967"
+              >
+                1967
+              </option>
+              <option
+                value="1968"
+              >
+                1968
+              </option>
+              <option
+                value="1969"
+              >
+                1969
+              </option>
+              <option
+                value="1970"
+              >
+                1970
+              </option>
+              <option
+                value="1971"
+              >
+                1971
+              </option>
+              <option
+                value="1972"
+              >
+                1972
+              </option>
+              <option
+                value="1973"
+              >
+                1973
+              </option>
+              <option
+                value="1974"
+              >
+                1974
+              </option>
+              <option
+                value="1975"
+              >
+                1975
+              </option>
+              <option
+                value="1976"
+              >
+                1976
+              </option>
+              <option
+                value="1977"
+              >
+                1977
+              </option>
+              <option
+                value="1978"
+              >
+                1978
+              </option>
+              <option
+                value="1979"
+              >
+                1979
+              </option>
+              <option
+                value="1980"
+              >
+                1980
+              </option>
+              <option
+                value="1981"
+              >
+                1981
+              </option>
+              <option
+                value="1982"
+              >
+                1982
+              </option>
+              <option
+                value="1983"
+              >
+                1983
+              </option>
+              <option
+                value="1984"
+              >
+                1984
+              </option>
+              <option
+                value="1985"
+              >
+                1985
+              </option>
+              <option
+                value="1986"
+              >
+                1986
+              </option>
+              <option
+                value="1988"
+              >
+                1988
+              </option>
+            </select>
+          </label>
+          <label
+            class="flex flex-1 items-center"
+          >
+            <span
+              class="min-w-10 text-center text-sm tracking-serif-wide"
+            >
+              to
+            </span>
+            <select
+              class="
+          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
+          leading-6 text-subtle shadow-all outline-accent
+        "
+            >
+              <option
+                value="1988"
+              >
+                1988
+              </option>
+              <option
+                value="1986"
+              >
+                1986
+              </option>
+              <option
+                value="1985"
+              >
+                1985
+              </option>
+              <option
+                value="1984"
+              >
+                1984
+              </option>
+              <option
+                value="1983"
+              >
+                1983
+              </option>
+              <option
+                value="1982"
+              >
+                1982
+              </option>
+              <option
+                value="1981"
+              >
+                1981
+              </option>
+              <option
+                value="1980"
+              >
+                1980
+              </option>
+              <option
+                value="1979"
+              >
+                1979
+              </option>
+              <option
+                value="1978"
+              >
+                1978
+              </option>
+              <option
+                value="1977"
+              >
+                1977
+              </option>
+              <option
+                value="1976"
+              >
+                1976
+              </option>
+              <option
+                value="1975"
+              >
+                1975
+              </option>
+              <option
+                value="1974"
+              >
+                1974
+              </option>
+              <option
+                value="1973"
+              >
+                1973
+              </option>
+              <option
+                value="1972"
+              >
+                1972
+              </option>
+              <option
+                value="1971"
+              >
+                1971
+              </option>
+              <option
+                value="1970"
+              >
+                1970
+              </option>
+              <option
+                value="1969"
+              >
+                1969
+              </option>
+              <option
+                value="1968"
+              >
+                1968
+              </option>
+              <option
+                value="1967"
+              >
+                1967
+              </option>
+              <option
+                value="1966"
+              >
+                1966
+              </option>
+            </select>
+          </label>
+        </div>
+      </fieldset>
+      <fieldset
+        class="text-subtle"
+      >
+        <legend
+          class="
+        inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide
+        text-subtle uppercase
+      "
+        >
+          Review Year
+        </legend>
+        <div
+          class="flex items-baseline"
+        >
+          <label
+            class="flex flex-1 items-center gap-x-[.5ch]"
+          >
+            <span
+              class="min-w-10 text-left text-sm tracking-serif-wide"
+            >
+              From
+            </span>
+            <select
+              class="
+          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
+          leading-6 text-subtle shadow-all outline-accent
+        "
+            >
+              <option
+                value="2004"
+              >
+                2004
+              </option>
+              <option
+                value="2021"
+              >
+                2021
+              </option>
+              <option
+                value="2022"
+              >
+                2022
+              </option>
+              <option
+                value="2023"
+              >
+                2023
+              </option>
+              <option
+                value="2024"
+              >
+                2024
+              </option>
+              <option
+                value="2025"
+              >
+                2025
+              </option>
+            </select>
+          </label>
+          <label
+            class="flex flex-1 items-center"
+          >
+            <span
+              class="min-w-10 text-center text-sm tracking-serif-wide"
+            >
+              to
+            </span>
+            <select
+              class="
+          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
+          leading-6 text-subtle shadow-all outline-accent
+        "
+            >
+              <option
+                value="2025"
+              >
+                2025
+              </option>
+              <option
+                value="2024"
+              >
+                2024
+              </option>
+              <option
+                value="2023"
+              >
+                2023
+              </option>
+              <option
+                value="2022"
+              >
+                2022
+              </option>
+              <option
+                value="2021"
+              >
+                2021
+              </option>
+              <option
+                value="2004"
+              >
+                2004
+              </option>
+            </select>
+          </label>
+        </div>
+      </fieldset>
+    </fieldset>
+    <div
+      class="
+                sticky bottom-0 z-filter-footer mt-auto w-full self-end border-t
+                border-t-default bg-default px-8 py-4 drop-shadow-2xl
+                tablet-landscape:hidden
+              "
+    >
+      <button
+        class="
+                  flex w-full cursor-pointer items-center justify-center gap-x-4
+                  bg-footer px-4 py-3 font-sans text-xs text-nowrap text-inverse
+                  uppercase
+                  tablet-landscape:hidden
+                "
+        type="button"
+      >
+        View 
+        210
+         Results
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Collection > opens and closes filter drawer on mobile 2`] = `
+<div
+  aria-label="Filters"
+  class="
+            fixed top-0 right-0 z-filter-drawer flex h-full max-w-[380px]
+            flex-col items-start gap-y-5 bg-default text-left text-inverse
+            duration-200 ease-in-out
+            
+                  bottom-0 w-full transform-[translateX(0)] overflow-y-auto
+                  drop-shadow-2xl
+                
+            tablet:gap-y-10
+            tablet-landscape:relative tablet-landscape:z-auto
+            tablet-landscape:col-start-4 tablet-landscape:block
+            tablet-landscape:w-auto tablet-landscape:max-w-unset
+            tablet-landscape:min-w-[320px] tablet-landscape:transform-none
+            tablet-landscape:bg-inherit tablet-landscape:py-24
+            tablet-landscape:pb-12 tablet-landscape:drop-shadow-none
+          "
+  id="filters"
+>
+  <div
+    class="
+              flex h-full w-full flex-col text-sm
+              tablet:pt-12 tablet:text-base
+              tablet-landscape:h-auto tablet-landscape:overflow-visible
+              tablet-landscape:bg-default tablet-landscape:px-container
+              tablet-landscape:pt-0
+              laptop:px-8
+            "
+  >
+    <fieldset
+      class="
+                flex grow flex-col gap-5 px-container pb-4
+                tablet:gap-8
+                tablet-landscape:mt-0 tablet-landscape:gap-12
+                tablet-landscape:px-0 tablet-landscape:py-10
+              "
+    >
+      <legend
+        class="
+                  mb-5 block w-full pt-4 pb-4 text-lg text-subtle shadow-bottom
+                  tablet-landscape:mb-0 tablet-landscape:pt-10
+                  tablet-landscape:pb-0 tablet-landscape:font-sans
+                  tablet-landscape:text-xxs tablet-landscape:font-semibold
+                  tablet-landscape:tracking-wide tablet-landscape:uppercase
+                  tablet-landscape:shadow-none
+                "
+      >
+        Filter
+      </legend>
+      <div
+        class="flex basis-full flex-col items-center justify-end"
+      >
+        <button
+          class="
+          mx-auto w-full max-w-button cursor-pointer bg-canvas py-5 text-center
+          font-sans text-xs font-semibold tracking-wide uppercase
+          hover:bg-inverse hover:text-inverse
+        "
+          type="button"
+        >
+          Hide Reviewed
+        </button>
+      </div>
+      <label
+        class="flex flex-col text-subtle"
+      >
+        <span
+          class="
+        inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide
+        text-subtle uppercase
+      "
+        >
+          Title
+        </span>
+        <input
+          class="
+          border-0 bg-default px-4 py-2 text-base text-default shadow-all
+          outline-accent
+          placeholder:text-default placeholder:opacity-50
+        "
+          placeholder="Enter all or part of a title"
+          type="text"
+        />
+      </label>
+      <fieldset
+        class="text-subtle"
+      >
+        <legend
+          class="
+        inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide
+        text-subtle uppercase
+      "
+        >
+          Release Year
+        </legend>
+        <div
+          class="flex items-baseline"
+        >
+          <label
+            class="flex flex-1 items-center gap-x-[.5ch]"
+          >
+            <span
+              class="min-w-10 text-left text-sm tracking-serif-wide"
+            >
+              From
+            </span>
+            <select
+              class="
+          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
+          leading-6 text-subtle shadow-all outline-accent
+        "
+            >
+              <option
+                value="1966"
+              >
+                1966
+              </option>
+              <option
+                value="1967"
+              >
+                1967
+              </option>
+              <option
+                value="1968"
+              >
+                1968
+              </option>
+              <option
+                value="1969"
+              >
+                1969
+              </option>
+              <option
+                value="1970"
+              >
+                1970
+              </option>
+              <option
+                value="1971"
+              >
+                1971
+              </option>
+              <option
+                value="1972"
+              >
+                1972
+              </option>
+              <option
+                value="1973"
+              >
+                1973
+              </option>
+              <option
+                value="1974"
+              >
+                1974
+              </option>
+              <option
+                value="1975"
+              >
+                1975
+              </option>
+              <option
+                value="1976"
+              >
+                1976
+              </option>
+              <option
+                value="1977"
+              >
+                1977
+              </option>
+              <option
+                value="1978"
+              >
+                1978
+              </option>
+              <option
+                value="1979"
+              >
+                1979
+              </option>
+              <option
+                value="1980"
+              >
+                1980
+              </option>
+              <option
+                value="1981"
+              >
+                1981
+              </option>
+              <option
+                value="1982"
+              >
+                1982
+              </option>
+              <option
+                value="1983"
+              >
+                1983
+              </option>
+              <option
+                value="1984"
+              >
+                1984
+              </option>
+              <option
+                value="1985"
+              >
+                1985
+              </option>
+              <option
+                value="1986"
+              >
+                1986
+              </option>
+              <option
+                value="1988"
+              >
+                1988
+              </option>
+            </select>
+          </label>
+          <label
+            class="flex flex-1 items-center"
+          >
+            <span
+              class="min-w-10 text-center text-sm tracking-serif-wide"
+            >
+              to
+            </span>
+            <select
+              class="
+          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
+          leading-6 text-subtle shadow-all outline-accent
+        "
+            >
+              <option
+                value="1988"
+              >
+                1988
+              </option>
+              <option
+                value="1986"
+              >
+                1986
+              </option>
+              <option
+                value="1985"
+              >
+                1985
+              </option>
+              <option
+                value="1984"
+              >
+                1984
+              </option>
+              <option
+                value="1983"
+              >
+                1983
+              </option>
+              <option
+                value="1982"
+              >
+                1982
+              </option>
+              <option
+                value="1981"
+              >
+                1981
+              </option>
+              <option
+                value="1980"
+              >
+                1980
+              </option>
+              <option
+                value="1979"
+              >
+                1979
+              </option>
+              <option
+                value="1978"
+              >
+                1978
+              </option>
+              <option
+                value="1977"
+              >
+                1977
+              </option>
+              <option
+                value="1976"
+              >
+                1976
+              </option>
+              <option
+                value="1975"
+              >
+                1975
+              </option>
+              <option
+                value="1974"
+              >
+                1974
+              </option>
+              <option
+                value="1973"
+              >
+                1973
+              </option>
+              <option
+                value="1972"
+              >
+                1972
+              </option>
+              <option
+                value="1971"
+              >
+                1971
+              </option>
+              <option
+                value="1970"
+              >
+                1970
+              </option>
+              <option
+                value="1969"
+              >
+                1969
+              </option>
+              <option
+                value="1968"
+              >
+                1968
+              </option>
+              <option
+                value="1967"
+              >
+                1967
+              </option>
+              <option
+                value="1966"
+              >
+                1966
+              </option>
+            </select>
+          </label>
+        </div>
+      </fieldset>
+      <fieldset
+        class="text-subtle"
+      >
+        <legend
+          class="
+        inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide
+        text-subtle uppercase
+      "
+        >
+          Review Year
+        </legend>
+        <div
+          class="flex items-baseline"
+        >
+          <label
+            class="flex flex-1 items-center gap-x-[.5ch]"
+          >
+            <span
+              class="min-w-10 text-left text-sm tracking-serif-wide"
+            >
+              From
+            </span>
+            <select
+              class="
+          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
+          leading-6 text-subtle shadow-all outline-accent
+        "
+            >
+              <option
+                value="2004"
+              >
+                2004
+              </option>
+              <option
+                value="2021"
+              >
+                2021
+              </option>
+              <option
+                value="2022"
+              >
+                2022
+              </option>
+              <option
+                value="2023"
+              >
+                2023
+              </option>
+              <option
+                value="2024"
+              >
+                2024
+              </option>
+              <option
+                value="2025"
+              >
+                2025
+              </option>
+            </select>
+          </label>
+          <label
+            class="flex flex-1 items-center"
+          >
+            <span
+              class="min-w-10 text-center text-sm tracking-serif-wide"
+            >
+              to
+            </span>
+            <select
+              class="
+          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
+          leading-6 text-subtle shadow-all outline-accent
+        "
+            >
+              <option
+                value="2025"
+              >
+                2025
+              </option>
+              <option
+                value="2024"
+              >
+                2024
+              </option>
+              <option
+                value="2023"
+              >
+                2023
+              </option>
+              <option
+                value="2022"
+              >
+                2022
+              </option>
+              <option
+                value="2021"
+              >
+                2021
+              </option>
+              <option
+                value="2004"
+              >
+                2004
+              </option>
+            </select>
+          </label>
+        </div>
+      </fieldset>
+    </fieldset>
+    <div
+      class="
+                sticky bottom-0 z-filter-footer mt-auto w-full self-end border-t
+                border-t-default bg-default px-8 py-4 drop-shadow-2xl
+                tablet-landscape:hidden
+              "
+    >
+      <button
+        class="
+                  flex w-full cursor-pointer items-center justify-center gap-x-4
+                  bg-footer px-4 py-3 font-sans text-xs text-nowrap text-inverse
+                  uppercase
+                  tablet-landscape:hidden
+                "
+        type="button"
+      >
+        View 
+        210
+         Results
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Collection > renders 1`] = `
 <DocumentFragment>
   <div

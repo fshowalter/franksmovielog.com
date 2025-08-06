@@ -76,6 +76,23 @@ This site uses Astro's partial hydration strategy:
   - Always run vitest (or npm test) with max-workers=2 to prevent spawning a bunch of threads
   - Never have more than one instance of vitest running (always wait for the last run to end before running again)
 
+## Testing Principles
+
+- The purpose of tests is to tell me two things:
+  1. Will this dependency update break the site?
+  2. Will this change cause other, unintended changes?
+- Rely on snapshot tests as all websites boil down to text output
+- Two primary testing strategies:
+  - **Pure Static Pages**:
+    - Simple snapshot tests at both Astro page level and page component level
+    - Astro level checks Astro code
+    - Page-component level checks prop permutations
+  - **Interactive Pages**:
+    - Snapshots at Astro level
+    - Snapshot tests at page component level using testing library
+    - Exercise interactive elements like a user
+  - Goal: By exercising all options and rendering all permutations, any uncovered code must be dead code safe to remove
+
 ## Common Patterns
 
 1. **Data Loading**: Use getProps functions to fetch data at build time
@@ -138,3 +155,11 @@ This site uses Astro's partial hydration strategy:
 - typescript: Type safety
 - zod: Runtime type validation
 - pagefind: Search functionality
+
+## Test Runner Notes
+
+- When running test:coverage, make sure and run with max-workers=2
+
+## TypeScript Best Practices
+
+- Don't use the `any` type. The linter will error on it.
