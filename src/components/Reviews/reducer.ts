@@ -107,10 +107,6 @@ function groupForValue(
     case "title-desc": {
       return getGroupLetter(value.sortTitle);
     }
-    // should never get here
-    default: {
-      return "";
-    }
   }
 }
 
@@ -183,11 +179,10 @@ export function reducer(state: State, action: ActionType): State {
     }
     case Actions.FILTER_GRADE: {
       return updateFilter(state, "grade", (value) => {
-        const gradeValue = value.gradeValue;
-        if (gradeValue === undefined) {
-          return false;
-        }
-        return gradeValue >= action.values[0] && gradeValue <= action.values[1];
+        return (
+          value.gradeValue >= action.values[0] &&
+          value.gradeValue <= action.values[1]
+        );
       });
     }
     case Actions.FILTER_RELEASE_YEAR: {
@@ -237,9 +232,6 @@ export function reducer(state: State, action: ActionType): State {
         groupedValues,
         sortValue: action.value,
       };
-    }
-    default: {
-      return state;
     }
   }
 }
