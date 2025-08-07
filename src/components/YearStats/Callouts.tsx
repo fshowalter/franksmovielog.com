@@ -2,7 +2,7 @@ import type { JSX } from "react";
 
 import type { YearStats } from "~/api/yearStats";
 
-import { StatsCallout } from "~/components/StatsCallout";
+import { StatsCalloutsGrid } from "~/components/StatsCalloutsGrid";
 
 type Props = Pick<YearStats, "newTitleCount" | "titleCount" | "viewingCount">;
 
@@ -11,16 +11,11 @@ export function Callouts({
   titleCount,
   viewingCount,
 }: Props): JSX.Element {
-  return (
-    <div
-      className={`
-        flex flex-wrap justify-center gap-6 px-container
-        laptop:flex-nowrap
-      `}
-    >
-      <StatsCallout label="Viewings" value={viewingCount} />
-      <StatsCallout label="Movies" value={titleCount} />
-      <StatsCallout label="New Movies" value={newTitleCount} />
-    </div>
-  );
+  const stats = [
+    { label: "Viewings", value: viewingCount },
+    { label: "Movies", value: titleCount },
+    { label: "New Movies", value: newTitleCount },
+  ];
+
+  return <StatsCalloutsGrid stats={stats} />;
 }

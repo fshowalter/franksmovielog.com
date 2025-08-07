@@ -2,7 +2,7 @@ import type { JSX } from "react";
 
 import type { AlltimeStats } from "~/api/alltimeStats";
 
-import { StatsCallout } from "~/components/StatsCallout";
+import { StatsCalloutsGrid } from "~/components/StatsCalloutsGrid";
 
 type Props = Pick<
   AlltimeStats,
@@ -15,21 +15,21 @@ export function Callouts({
   viewingCount,
   watchlistTitlesReviewedCount,
 }: Props): JSX.Element {
+  const stats = [
+    { label: "Viewings", value: viewingCount },
+    { label: "Movies", value: titleCount },
+    { label: "Reviews", value: reviewCount },
+    { label: "From Watchlist", value: watchlistTitlesReviewedCount },
+  ];
+
   return (
-    <div
+    <StatsCalloutsGrid
       className={`
         flex flex-wrap justify-center gap-4 px-container
         tablet:gap-6
         laptop:flex-nowrap
       `}
-    >
-      <StatsCallout label="Viewings" value={viewingCount} />
-      <StatsCallout label="Movies" value={titleCount} />
-      <StatsCallout label="Reviews" value={reviewCount} />
-      <StatsCallout
-        label="From Watchlist"
-        value={watchlistTitlesReviewedCount}
-      />
-    </div>
+      stats={stats}
+    />
   );
 }
