@@ -55,8 +55,8 @@ export function CastAndCrew({
           title="Cast & Crew"
         />
       }
+      className="[--scroll-offset:52px]"
       filters={<Filters dispatch={dispatch} />}
-      headerClasses={`top-[52px] scroll-mt-[52px]`}
       list={
         <GroupedList
           data-testid="list"

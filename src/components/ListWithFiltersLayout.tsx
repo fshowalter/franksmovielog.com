@@ -8,7 +8,6 @@ type Props<T extends string> = {
   backdrop: React.ReactNode;
   className?: string;
   filters: React.ReactNode;
-  headerClasses?: string;
   list: React.ReactNode;
   listHeaderButtons?: React.ReactNode;
   mastGradient?: boolean;
@@ -53,7 +52,6 @@ export function ListWithFiltersLayout<T extends string>({
   backdrop,
   className,
   filters,
-  headerClasses,
   list,
   listHeaderButtons,
   mastGradient,
@@ -148,7 +146,10 @@ export function ListWithFiltersLayout<T extends string>({
 
   return (
     <Layout
-      className={className || "bg-subtle"}
+      className={`
+        bg-subtle
+        ${className || ""}
+      `}
       {...rest}
       addGradient={mastGradient}
     >
@@ -157,9 +158,10 @@ export function ListWithFiltersLayout<T extends string>({
       <div className={`group/list-with-filters mx-auto bg-subtle`}>
         <div
           className={`
-            sticky top-0 z-sticky border-b border-default bg-default text-xs
+            sticky top-[calc(0px_+_var(--scroll-offset,0px))] z-sticky
+            scroll-mt-[calc(0px_+__var(--scroll-offset,0px))] border-b
+            border-default bg-default text-xs
             tablet:col-span-full
-            ${headerClasses ?? ""}
           `}
         >
           <ListHeader
@@ -181,9 +183,9 @@ export function ListWithFiltersLayout<T extends string>({
         >
           <div
             className={`
-              mx-auto max-w-[var(--breakpoint-desktop)] grow scroll-mt-[181px]
-              pb-10
-              tablet:scroll-mt-[121px]
+              mx-auto max-w-[var(--breakpoint-desktop)] grow
+              scroll-mt-[calc(181px_+_var(--scroll-offset,0))] pb-10
+              tablet:scroll-mt-[calc(121px_+_var(--scroll-offset,0px))]
             `}
             id="list"
           >
@@ -225,9 +227,9 @@ export function ListWithFiltersLayout<T extends string>({
               tablet-landscape:col-start-4 tablet-landscape:block
               tablet-landscape:w-auto tablet-landscape:max-w-unset
               tablet-landscape:min-w-[320px] tablet-landscape:transform-none
-              tablet-landscape:scroll-mt-[25px] tablet-landscape:bg-inherit
-              tablet-landscape:py-24 tablet-landscape:pb-12
-              tablet-landscape:drop-shadow-none
+              tablet-landscape:scroll-mt-[calc(25px_+_var(--scroll-offset,0px))]
+              tablet-landscape:bg-inherit tablet-landscape:py-24
+              tablet-landscape:pb-12 tablet-landscape:drop-shadow-none
               laptop:w-[33%]
             `}
             id="filters"
