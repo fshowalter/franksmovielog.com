@@ -68,7 +68,7 @@ export function ListWithFiltersLayout<T extends string>({
 
   const onFilterClick = useCallback(
     (event: React.MouseEvent) => {
-      const documentSize = document.documentElement.clientWidth;
+      const documentSize = window.innerWidth;
       const tabletLandscapeBreakpoint = Number.parseFloat(
         globalThis
           .getComputedStyle(document.body)
@@ -154,13 +154,7 @@ export function ListWithFiltersLayout<T extends string>({
     >
       {backdrop}
       {subNav && subNav}
-      <div
-        className={`
-          group/list-with-filters mx-auto grid bg-subtle
-          tablet:grid-cols-[var(--container-padding)_1fr_var(--container-padding)]
-          tablet-landscape:grid-cols-[var(--container-padding)_1fr_var(--container-padding)_minmax(398px,calc(33%_-_96px))_var(--container-padding)]
-        `}
-      >
+      <div className={`group/list-with-filters mx-auto bg-subtle`}>
         <div
           className={`
             sticky top-0 z-sticky border-b border-default bg-default text-xs
@@ -177,109 +171,124 @@ export function ListWithFiltersLayout<T extends string>({
             totalCount={totalCount}
           />
         </div>
-
         <div
           className={`
-            scroll-mt-[181px] pb-10
-            tablet:col-start-2 tablet:row-start-2 tablet:scroll-mt-[121px]
+            mx-auto max-w-[var(--breakpoint-desktop)]
+            gap-x-[var(--container-padding)]
+            tablet:px-container
+            tablet-landscape:flex
           `}
-          id="list"
-        >
-          {list}
-        </div>
-
-        {/* Backdrop for mobile filters */}
-        <div
-          aria-hidden="true"
-          className={`
-            invisible fixed inset-0 bg-[rgba(0,0,0,.4)] opacity-0
-            transition-opacity duration-200
-            tablet-landscape:hidden
-            ${filterDrawerVisible ? "visible z-side-drawer-backdrop opacity-100" : ""}
-          `}
-          onClick={() => setFilterDrawerVisible(false)}
-        />
-
-        <div
-          aria-label="Filters"
-          className={`
-            fixed top-0 right-0 z-filter-drawer flex h-full max-w-[380px]
-            flex-col items-start gap-y-5 bg-default text-left text-inverse
-            duration-200 ease-in-out
-            ${
-              filterDrawerVisible
-                ? `
-                  bottom-0 w-full transform-[translateX(0)] overflow-y-auto
-                  drop-shadow-2xl
-                `
-                : `w-0 transform-[translateX(100%)] overflow-y-hidden`
-            }
-            tablet:gap-y-10
-            tablet-landscape:relative tablet-landscape:z-auto
-            tablet-landscape:col-start-4 tablet-landscape:block
-            tablet-landscape:w-auto tablet-landscape:max-w-unset
-            tablet-landscape:min-w-[320px] tablet-landscape:transform-none
-            tablet-landscape:scroll-mt-[25px] tablet-landscape:bg-inherit
-            tablet-landscape:py-24 tablet-landscape:pb-12
-            tablet-landscape:drop-shadow-none
-          `}
-          id="filters"
-          ref={filtersRef}
         >
           <div
             className={`
-              flex h-full w-full flex-col text-sm
-              tablet:pt-12 tablet:text-base
-              tablet-landscape:h-auto tablet-landscape:overflow-visible
-              tablet-landscape:bg-default tablet-landscape:px-container
-              tablet-landscape:pt-0
-              laptop:px-8
+              mx-auto max-w-[var(--breakpoint-desktop)] grow scroll-mt-[181px]
+              pb-10
+              tablet:scroll-mt-[121px]
             `}
+            id="list"
           >
-            <fieldset
-              className={`
-                flex grow flex-col gap-5 px-container pb-4
-                tablet:gap-8
-                tablet-landscape:mt-0 tablet-landscape:gap-12
-                tablet-landscape:px-0 tablet-landscape:py-10
-              `}
-            >
-              <legend
-                className={`
-                  mb-5 block w-full pt-4 pb-4 text-lg text-subtle shadow-bottom
-                  tablet-landscape:mb-0 tablet-landscape:pt-10
-                  tablet-landscape:pb-8 tablet-landscape:font-sans
-                  tablet-landscape:text-xxs tablet-landscape:font-semibold
-                  tablet-landscape:tracking-wide tablet-landscape:uppercase
-                `}
-              >
-                Filter
-              </legend>
-              {filters}
-            </fieldset>
+            {list}
+          </div>
+
+          {/* Backdrop for mobile filters */}
+          <div
+            aria-hidden="true"
+            className={`
+              invisible fixed inset-0 bg-[rgba(0,0,0,.4)] opacity-0
+              transition-opacity duration-200
+              tablet-landscape:hidden
+              ${
+                filterDrawerVisible
+                  ? `visible z-side-drawer-backdrop opacity-100`
+                  : ""
+              }
+            `}
+            onClick={() => setFilterDrawerVisible(false)}
+          />
+
+          <div
+            aria-label="Filters"
+            className={`
+              fixed top-0 right-0 z-filter-drawer flex h-full max-w-[380px]
+              flex-col items-start gap-y-5 bg-default text-left text-inverse
+              duration-200 ease-in-out
+              ${
+                filterDrawerVisible
+                  ? `
+                    bottom-0 w-full transform-[translateX(0)] overflow-y-auto
+                    drop-shadow-2xl
+                  `
+                  : `w-0 transform-[translateX(100%)] overflow-y-hidden`
+              }
+              tablet:gap-y-10
+              tablet-landscape:relative tablet-landscape:z-auto
+              tablet-landscape:col-start-4 tablet-landscape:block
+              tablet-landscape:w-auto tablet-landscape:max-w-unset
+              tablet-landscape:min-w-[320px] tablet-landscape:transform-none
+              tablet-landscape:scroll-mt-[25px] tablet-landscape:bg-inherit
+              tablet-landscape:py-24 tablet-landscape:pb-12
+              tablet-landscape:drop-shadow-none
+              laptop:w-[33%]
+            `}
+            id="filters"
+            ref={filtersRef}
+          >
             <div
               className={`
-                sticky bottom-0 z-filter-footer mt-auto w-full self-end border-t
-                border-t-default bg-default px-8 py-4 drop-shadow-2xl
-                tablet-landscape:hidden
+                flex h-full w-full flex-col text-sm
+                tablet:pt-12 tablet:text-base
+                tablet-landscape:h-auto tablet-landscape:overflow-visible
+                tablet-landscape:bg-default tablet-landscape:px-container
+                tablet-landscape:pt-0
+                laptop:px-8
               `}
             >
-              <button
+              <fieldset
                 className={`
-                  flex w-full cursor-pointer items-center justify-center gap-x-4
-                  bg-footer px-4 py-3 font-sans text-xs text-nowrap text-inverse
-                  uppercase
+                  flex grow flex-col gap-5 px-container pb-4
+                  tablet:gap-8
+                  tablet-landscape:mt-0 tablet-landscape:gap-12
+                  tablet-landscape:px-0 tablet-landscape:py-10
+                `}
+              >
+                <legend
+                  className={`
+                    mb-5 block w-full pt-4 pb-4 text-lg text-subtle
+                    shadow-bottom
+                    tablet-landscape:mb-0 tablet-landscape:pt-10
+                    tablet-landscape:pb-8 tablet-landscape:font-sans
+                    tablet-landscape:text-xxs tablet-landscape:font-semibold
+                    tablet-landscape:tracking-wide tablet-landscape:uppercase
+                  `}
+                >
+                  Filter
+                </legend>
+                {filters}
+              </fieldset>
+              <div
+                className={`
+                  sticky bottom-0 z-filter-footer mt-auto w-full self-end
+                  border-t border-t-default bg-default px-8 py-4 drop-shadow-2xl
                   tablet-landscape:hidden
                 `}
-                onClick={() => {
-                  setFilterDrawerVisible(false);
-                  document.body.classList.remove("overflow-hidden");
-                  document.querySelector("#list")?.scrollIntoView();
-                }}
-                type="button"
               >
-                View {totalCount} Results
-              </button>
+                <button
+                  className={`
+                    flex w-full cursor-pointer items-center justify-center
+                    gap-x-4 bg-footer px-4 py-3 font-sans text-xs text-nowrap
+                    text-inverse uppercase
+                    tablet-landscape:hidden
+                  `}
+                  onClick={() => {
+                    setFilterDrawerVisible(false);
+                    document.body.classList.remove("overflow-hidden");
+                    document.querySelector("#list")?.scrollIntoView();
+                  }}
+                  type="button"
+                >
+                  View {totalCount} Results
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -308,10 +317,12 @@ function ListHeader<T extends string>({
   return (
     <div
       className={`
-        grid grid-cols-[auto_auto_1fr_auto] items-baseline gap-y-7 px-container
-        py-10 font-sans font-medium tracking-wide text-subtle uppercase
+        mx-auto grid max-w-[var(--breakpoint-desktop)]
+        grid-cols-[auto_auto_1fr_auto] items-baseline gap-y-7 px-container py-10
+        font-sans font-medium tracking-wide text-subtle uppercase
         tablet:grid-cols-[auto_auto_1fr_auto_auto] tablet:gap-x-4
         tablet-landscape:grid-cols-[auto_auto_1fr_minmax(302px,calc(33%_-_192px))_auto]
+        desktop:grid-cols-[auto_auto_1fr_calc(33%_-_96px)_auto]
       `}
     >
       <span className={`text-nowrap`}>
