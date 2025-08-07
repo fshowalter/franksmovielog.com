@@ -61,7 +61,7 @@ export const filterDrawerTests = {
     expect.hasAssertions();
 
     // Mock desktop viewport
-    Object.defineProperty(document.documentElement, "clientWidth", {
+    Object.defineProperty(globalThis, "innerWidth", {
       configurable: true,
       value: 1440,
     });
@@ -93,7 +93,7 @@ export const filterDrawerTests = {
     expect.hasAssertions();
 
     // Mock mobile viewport
-    Object.defineProperty(document.documentElement, "clientWidth", {
+    Object.defineProperty(globalThis, "innerWidth", {
       configurable: true,
       value: 375,
     });
@@ -120,7 +120,7 @@ export const filterDrawerTests = {
     expect.hasAssertions();
 
     // Mock mobile viewport
-    Object.defineProperty(document.documentElement, "clientWidth", {
+    Object.defineProperty(globalThis, "innerWidth", {
       configurable: true,
       value: 375,
     });
@@ -154,7 +154,7 @@ export const filterDrawerTests = {
     expect.hasAssertions();
 
     // Mock mobile viewport
-    Object.defineProperty(document.documentElement, "clientWidth", {
+    Object.defineProperty(globalThis, "innerWidth", {
       configurable: true,
       value: 375,
     });
