@@ -219,8 +219,9 @@ export function ListWithFiltersLayout<T extends string>({
             tablet-landscape:col-start-4 tablet-landscape:block
             tablet-landscape:w-auto tablet-landscape:max-w-unset
             tablet-landscape:min-w-[320px] tablet-landscape:transform-none
-            tablet-landscape:bg-inherit tablet-landscape:py-24
-            tablet-landscape:pb-12 tablet-landscape:drop-shadow-none
+            tablet-landscape:scroll-mt-[25px] tablet-landscape:bg-inherit
+            tablet-landscape:py-24 tablet-landscape:pb-12
+            tablet-landscape:drop-shadow-none
           `}
           id="filters"
           ref={filtersRef}
@@ -247,10 +248,9 @@ export function ListWithFiltersLayout<T extends string>({
                 className={`
                   mb-5 block w-full pt-4 pb-4 text-lg text-subtle shadow-bottom
                   tablet-landscape:mb-0 tablet-landscape:pt-10
-                  tablet-landscape:pb-0 tablet-landscape:font-sans
+                  tablet-landscape:pb-8 tablet-landscape:font-sans
                   tablet-landscape:text-xxs tablet-landscape:font-semibold
                   tablet-landscape:tracking-wide tablet-landscape:uppercase
-                  tablet-landscape:shadow-none
                 `}
               >
                 Filter
