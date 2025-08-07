@@ -25,6 +25,7 @@ export function ListItem({
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
         laptop:px-6
+        desktop:has-[a:hover]:scale-[102.5%]
         ${className ?? ""}
       `}
     >
