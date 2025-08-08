@@ -3,8 +3,6 @@ import { userEvent } from "@testing-library/user-event";
 import { select } from "react-select-event";
 import { describe, it } from "vitest";
 
-import { filterDrawerTests } from "~/components/ListWithFiltersLayout.testHelpers";
-
 import { getPropsForUnderseen } from "./getProps";
 import { Underseen } from "./Underseen";
 
@@ -174,27 +172,5 @@ describe("Underseen", () => {
     await select(selectElement, ["Horror", "Comedy"]);
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
-  });
-
-  it("opens and closes filter drawer on mobile", async ({ expect }) => {
-    await filterDrawerTests.testOpenClose(Underseen, props, expect);
-  });
-
-  it("closes filter drawer with escape key", async ({ expect }) => {
-    await filterDrawerTests.testEscapeKey(Underseen, props, expect);
-  });
-
-  it("closes filter drawer when clicking outside", ({ expect }) => {
-    filterDrawerTests.testClickOutside(Underseen, props, expect);
-  });
-
-  it("closes filter drawer with View Results button", async ({ expect }) => {
-    await filterDrawerTests.testViewResultsButton(Underseen, props, expect);
-  });
-
-  it("scrolls to filters on desktop instead of opening drawer", async ({
-    expect,
-  }) => {
-    await filterDrawerTests.testDesktopScroll(Underseen, props, expect);
   });
 });

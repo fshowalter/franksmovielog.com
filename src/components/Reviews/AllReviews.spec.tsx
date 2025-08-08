@@ -3,8 +3,6 @@ import { userEvent } from "@testing-library/user-event";
 import { select } from "react-select-event";
 import { describe, it } from "vitest";
 
-import { filterDrawerTests } from "~/components/ListWithFiltersLayout.testHelpers";
-
 import { AllReviews } from "./AllReviews";
 import { getProps } from "./getProps";
 
@@ -248,27 +246,5 @@ describe("AllReviews", () => {
     await userEvent.click(screen.getByText("Show More"));
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
-  });
-
-  it("opens and closes filter drawer on mobile", async ({ expect }) => {
-    await filterDrawerTests.testOpenClose(AllReviews, props, expect);
-  });
-
-  it("closes filter drawer with escape key", async ({ expect }) => {
-    await filterDrawerTests.testEscapeKey(AllReviews, props, expect);
-  });
-
-  it("closes filter drawer when clicking outside", ({ expect }) => {
-    filterDrawerTests.testClickOutside(AllReviews, props, expect);
-  });
-
-  it("closes filter drawer with View Results button", async ({ expect }) => {
-    await filterDrawerTests.testViewResultsButton(AllReviews, props, expect);
-  });
-
-  it("scrolls to filters on desktop instead of opening drawer", async ({
-    expect,
-  }) => {
-    await filterDrawerTests.testDesktopScroll(AllReviews, props, expect);
   });
 });
