@@ -5,9 +5,6 @@ import { getContainerRenderer as reactContainerRenderer } from "@astrojs/react";
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import { loadRenderers } from "astro:container";
 import { JSDOM } from "jsdom";
-import { readFileSync } from "node:fs";
-import { fileURLToPath } from "node:url";
-import * as ts from "typescript";
 import { afterEach, beforeEach, describe, it } from "vitest";
 
 describe("Layout navigation menu", () => {
@@ -51,25 +48,18 @@ describe("Layout navigation menu", () => {
       value: window.navigator,
       writable: true,
     });
+    
+    // Set requestAnimationFrame globally before importing navMenu
+    globalThis.requestAnimationFrame = window.requestAnimationFrame;
 
-    // Since the container API doesn't bundle scripts, we need to manually inject the navMenu script
-    // Read and transpile the navMenu.ts file using TypeScript's transpile API
-    const navMenuPath = fileURLToPath(new URL("navMenu.ts", import.meta.url));
-    const navMenuContent = readFileSync(navMenuPath, "utf8");
-
-    // Use TypeScript to transpile to JavaScript
-    const transpileResult = ts.transpileModule(navMenuContent, {
-      compilerOptions: {
-        module: ts.ModuleKind.None,
-        removeComments: true,
-        target: ts.ScriptTarget.ES2020,
-      },
-    });
-
-    // Execute the transpiled navMenu script in the JSDOM context
-    const scriptEl = document.createElement("script");
-    scriptEl.textContent = transpileResult.outputText;
-    document.body.append(scriptEl);
+    // Import the initNavMenu function directly
+    // This ensures Vitest instruments it for coverage
+    const { initNavMenu } = await import("./navMenu.ts");
+    
+    // Call the function in the JSDOM context
+    // The import will execute the module's top-level code which auto-initializes
+    // But we need to manually call it since JSDOM's document.readyState might not trigger it
+    initNavMenu();
 
     cleanup = () => {
       // Clean up body classes
