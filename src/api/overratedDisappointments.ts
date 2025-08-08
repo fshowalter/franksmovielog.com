@@ -1,3 +1,5 @@
+import { collator } from "~/utils/reducerUtils";
+
 import type { OverratedJson } from "./data/overratedJson";
 
 import { allOverratedJson } from "./data/overratedJson";
@@ -33,9 +35,13 @@ export async function allOverratedDisappointments(): Promise<OverratedDisappoint
   });
 
   return {
-    distinctGenres: [...distinctGenres].toSorted(),
-    distinctReleaseYears: [...distinctReleaseYears].toSorted(),
-    distinctReviewYears: [...distinctReviewYears].toSorted(),
+    distinctGenres: [...distinctGenres].sort((a, b) => collator.compare(a, b)),
+    distinctReleaseYears: [...distinctReleaseYears].sort((a, b) =>
+      collator.compare(a, b),
+    ),
+    distinctReviewYears: [...distinctReviewYears].sort((a, b) =>
+      collator.compare(a, b),
+    ),
     overratedDisappointments: overratedDisappointments,
   };
 }
