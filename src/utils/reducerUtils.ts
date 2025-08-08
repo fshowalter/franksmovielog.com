@@ -82,7 +82,7 @@ export function createReleaseYearFilter(
   minYear: number | string,
   maxYear: number | string,
 ) {
-  return <T extends { releaseYear: number | string }>(item: T) => {
+  return <T extends { releaseYear: string }>(item: T) => {
     return item.releaseYear >= minYear && item.releaseYear <= maxYear;
   };
 }
@@ -91,7 +91,7 @@ export function createReviewYearFilter(
   minYear: number | string,
   maxYear: number | string,
 ) {
-  return <T extends { reviewYear?: number | string }>(item: T) => {
+  return <T extends { reviewYear?: string }>(item: T) => {
     const year = item.reviewYear;
     if (!year) return false;
     return year >= minYear && year <= maxYear;
