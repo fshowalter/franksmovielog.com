@@ -80,11 +80,13 @@ export function initState({
   initialSort: Sort;
   values: ListItemValue[];
 }): State {
+  const initialValues = sortValues(values, initialSort);
+
   return {
-    allValues: values,
-    filteredValues: values,
+    allValues: initialValues,
+    filteredValues: initialValues,
     filters: {},
-    groupedValues: groupValues(values.slice(0, SHOW_COUNT_DEFAULT)),
+    groupedValues: groupValues(initialValues.slice(0, SHOW_COUNT_DEFAULT)),
     showCount: SHOW_COUNT_DEFAULT,
     sortValue: initialSort,
   };

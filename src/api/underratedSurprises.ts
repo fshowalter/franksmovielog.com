@@ -1,4 +1,4 @@
-import { collator } from "~/utils/reducerUtils";
+import { collator } from "~/utils/collator";
 
 import type { UnderratedJson } from "./data/underratedJson";
 
@@ -36,12 +36,8 @@ export async function allUnderratedSurprises(): Promise<UnderratedSurprises> {
 
   return {
     distinctGenres: [...distinctGenres].sort((a, b) => collator.compare(a, b)),
-    distinctReleaseYears: [...distinctReleaseYears].sort((a, b) =>
-      collator.compare(a, b),
-    ),
-    distinctReviewYears: [...distinctReviewYears].sort((a, b) =>
-      collator.compare(a, b),
-    ),
+    distinctReleaseYears: [...distinctReleaseYears].toSorted(),
+    distinctReviewYears: [...distinctReviewYears].toSorted(),
     underratedSurprises,
   };
 }

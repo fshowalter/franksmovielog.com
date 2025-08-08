@@ -10,8 +10,6 @@ import type { ListItemValue } from "./CastAndCrew";
 export async function getProps(): Promise<Props & { metaDescription: string }> {
   const { castAndCrew } = await allCastAndCrew();
 
-  castAndCrew.sort((a, b) => a.name.localeCompare(b.name));
-
   const values = await Promise.all(
     castAndCrew.map(async (member) => {
       const value: ListItemValue = {

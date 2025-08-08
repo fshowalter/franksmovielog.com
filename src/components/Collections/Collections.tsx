@@ -25,7 +25,7 @@ export type Props = {
   backdropImageProps: BackdropImageProps;
   deck: string;
   initialSort: Sort;
-  values: readonly ListItemValue[];
+  values: ListItemValue[];
 };
 
 export function Collections({

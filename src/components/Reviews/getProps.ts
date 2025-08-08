@@ -18,8 +18,6 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
   const { distinctGenres, distinctReleaseYears, distinctReviewYears, reviews } =
     await allReviews();
 
-  reviews.sort((a, b) => a.sortTitle.localeCompare(b.sortTitle));
-
   const values = await buildReviewListItemValues(reviews, true);
 
   return {
@@ -47,10 +45,6 @@ export async function getPropsForOverrated(): Promise<
     distinctReviewYears,
     overratedDisappointments,
   } = await allOverratedDisappointments();
-
-  overratedDisappointments.sort((a, b) =>
-    b.releaseSequence.localeCompare(a.releaseSequence),
-  );
 
   const values = await buildReviewListItemValues(
     overratedDisappointments,
@@ -83,10 +77,6 @@ export async function getPropsForUnderrated(): Promise<
     underratedSurprises,
   } = await allUnderratedSurprises();
 
-  underratedSurprises.sort((a, b) =>
-    b.releaseSequence.localeCompare(a.releaseSequence),
-  );
-
   const values = await buildReviewListItemValues(underratedSurprises, false);
 
   return {
@@ -114,10 +104,6 @@ export async function getPropsForUnderseen(): Promise<
     distinctReviewYears,
     underseenGems,
   } = await allUnderseenGems();
-
-  underseenGems.sort((a, b) =>
-    b.releaseSequence.localeCompare(a.releaseSequence),
-  );
 
   const values = await buildReviewListItemValues(underseenGems, false);
 

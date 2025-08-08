@@ -21,10 +21,6 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
     ListItemPosterImageConfig,
   );
 
-  watchlistTitles.sort((a, b) =>
-    a.releaseSequence.localeCompare(b.releaseSequence),
-  );
-
   return {
     backdropImageProps: await getBackdropImageProps(
       "watchlist",

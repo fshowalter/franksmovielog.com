@@ -1,4 +1,4 @@
-import { collator } from "~/utils/reducerUtils";
+import { collator } from "~/utils/collator";
 
 import {
   allWatchlistTitlesJson,
@@ -49,9 +49,7 @@ export async function allWatchlistTitles(): Promise<WatchlistTitles> {
     distinctPerformers: [...distinctPerformers].sort((a, b) =>
       collator.compare(a, b),
     ),
-    distinctReleaseYears: [...distinctReleaseYears].sort((a, b) =>
-      collator.compare(a, b),
-    ),
+    distinctReleaseYears: [...distinctReleaseYears].toSorted(),
     distinctWriters: [...distinctWriters].sort((a, b) =>
       collator.compare(a, b),
     ),

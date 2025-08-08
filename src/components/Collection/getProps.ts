@@ -13,10 +13,6 @@ export async function getProps(slug: string): Promise<Props> {
   const { collection, distinctReleaseYears, distinctReviewYears } =
     await collectionDetails(slug);
 
-  collection.titles.sort((a, b) =>
-    a.releaseSequence.localeCompare(b.releaseSequence),
-  );
-
   return {
     avatarImageProps: await getAvatarImageProps(
       collection.slug,
@@ -30,34 +26,36 @@ export async function getProps(slug: string): Promise<Props> {
     distinctReviewYears,
     initialSort: "release-date-asc",
     titles: await Promise.all(
-      collection.titles.map(async (title) => {
-        return {
-          ...title,
-          posterImageProps: await getFluidWidthPosterImageProps(
-            title.slug,
-            ListItemPosterImageConfig,
-          ),
-          reviewDisplayDate: title.reviewDate
-            ? `${new Date(title.reviewDate).toLocaleDateString("en-US", {
-                timeZone: "UTC",
-                year: "numeric",
-              })}-${new Date(title.reviewDate).toLocaleDateString("en-US", {
-                month: "short",
-                timeZone: "UTC",
-              })}-${new Date(title.reviewDate).toLocaleDateString("en-US", {
-                day: "2-digit",
-                timeZone: "UTC",
-              })}`
-            : "",
-          reviewSequence: title.reviewSequence,
-          reviewYear: title.reviewDate
-            ? new Date(title.reviewDate).toLocaleDateString("en-US", {
-                timeZone: "UTC",
-                year: "numeric",
-              })
-            : "",
-        };
-      }),
+      collection.titles
+        .sort((a, b) => a.releaseSequence.localeCompare(b.releaseSequence))
+        .map(async (title) => {
+          return {
+            ...title,
+            posterImageProps: await getFluidWidthPosterImageProps(
+              title.slug,
+              ListItemPosterImageConfig,
+            ),
+            reviewDisplayDate: title.reviewDate
+              ? `${new Date(title.reviewDate).toLocaleDateString("en-US", {
+                  timeZone: "UTC",
+                  year: "numeric",
+                })}-${new Date(title.reviewDate).toLocaleDateString("en-US", {
+                  month: "short",
+                  timeZone: "UTC",
+                })}-${new Date(title.reviewDate).toLocaleDateString("en-US", {
+                  day: "2-digit",
+                  timeZone: "UTC",
+                })}`
+              : "",
+            reviewSequence: title.reviewSequence,
+            reviewYear: title.reviewDate
+              ? new Date(title.reviewDate).toLocaleDateString("en-US", {
+                  timeZone: "UTC",
+                  year: "numeric",
+                })
+              : "",
+          };
+        }),
     ),
     value: collection,
   };

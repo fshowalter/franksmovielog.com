@@ -1,7 +1,6 @@
 import {
   applyShowMore,
   buildGroupValues,
-  collator,
   createReleaseYearFilter,
   createReviewYearFilter,
   createTitleFilter,
@@ -21,7 +20,8 @@ export type Sort =
   | "release-date-desc"
   | "review-date-asc"
   | "review-date-desc"
-  | "title";
+  | "title-asc"
+  | "title-desc";
 
 const SHOW_COUNT_DEFAULT = 100;
 
@@ -178,7 +178,8 @@ function groupForValue(value: ListItemValue, sortValue: Sort): string {
     case "review-date-desc": {
       return value.reviewYear.toString();
     }
-    case "title": {
+    case "title-asc":
+    case "title-desc": {
       return getGroupLetter(value.sortTitle);
     }
     // no default
@@ -199,7 +200,8 @@ function sortValues(values: ListItemValue[], sortOrder: Sort) {
         sortString(a.reviewSequence ?? "9999", b.reviewSequence ?? "9999"),
       "review-date-desc": (a, b) =>
         sortString(a.reviewSequence ?? "0", b.reviewSequence ?? "0") * -1,
-      title: (a, b) => collator.compare(a.sortTitle, b.sortTitle),
+      "title-asc": (a, b) => sortString(a.sortTitle, b.sortTitle),
+      "title-desc": (a, b) => sortString(a.sortTitle, b.sortTitle) * -1,
     };
 
   const comparer = sortMap[sortOrder];

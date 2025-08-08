@@ -9,13 +9,7 @@
  * - TSortValue: The type of sort values
  * - TGroupedValues: The type of grouped values structure
  */
-
-// Sorting utilities
-export const collator = new Intl.Collator("en", {
-  ignorePunctuation: true,
-  numeric: true,
-  sensitivity: "base",
-});
+import { collator } from "./collator";
 
 // Core types
 export type FilterableState<TItem, TSortValue, TGroupedValues> = {
@@ -190,15 +184,7 @@ export function sortNumber(a: number, b: number): number {
 }
 
 export function sortString(a: string, b: string): number {
-  if (a > b) {
-    return 1;
-  }
-
-  if (a < b) {
-    return -1;
-  }
-
-  return 0;
+  return collator.compare(a, b);
 }
 
 // Build apply filters helper

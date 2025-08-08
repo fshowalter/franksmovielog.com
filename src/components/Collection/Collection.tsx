@@ -73,11 +73,7 @@ export function Collection({
             <BreadcrumbLink href="/collections/">Collections</BreadcrumbLink>
           }
           deck={
-            value.descriptionHtml ? (
-              <span
-                dangerouslySetInnerHTML={{ __html: value.descriptionHtml }}
-              />
-            ) : undefined
+            <span dangerouslySetInnerHTML={{ __html: value.descriptionHtml }} />
           }
           imageProps={backdropImageProps}
           title={value.name}
