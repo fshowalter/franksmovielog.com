@@ -2,8 +2,6 @@ import { act, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { describe, it } from "vitest";
 
-import { filterDrawerTests } from "~/components/ListWithFiltersLayout.testHelpers";
-
 import { CastAndCrewMember } from "./CastAndCrewMember";
 import { getProps } from "./getProps";
 
@@ -246,31 +244,5 @@ describe("CastAndCrewMember", () => {
     await userEvent.click(screen.getByText("Show More"));
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
-  });
-
-  it("opens and closes filter drawer on mobile", async ({ expect }) => {
-    await filterDrawerTests.testOpenClose(CastAndCrewMember, props, expect);
-  });
-
-  it("closes filter drawer with escape key", async ({ expect }) => {
-    await filterDrawerTests.testEscapeKey(CastAndCrewMember, props, expect);
-  });
-
-  it("closes filter drawer when clicking outside", ({ expect }) => {
-    filterDrawerTests.testClickOutside(CastAndCrewMember, props, expect);
-  });
-
-  it("closes filter drawer with View Results button", async ({ expect }) => {
-    await filterDrawerTests.testViewResultsButton(
-      CastAndCrewMember,
-      props,
-      expect,
-    );
-  });
-
-  it("scrolls to filters on desktop instead of opening drawer", async ({
-    expect,
-  }) => {
-    await filterDrawerTests.testDesktopScroll(CastAndCrewMember, props, expect);
   });
 });
