@@ -22,16 +22,15 @@ describe("Layout navigation menu", () => {
     const container = await AstroContainer.create({ renderers });
 
     // Import our test page that uses the Layout
-    const TestPageModule = await import("./TestPage.astro") as { default: AstroComponentFactory };
+    const TestPageModule = (await import("./TestPage.astro")) as {
+      default: AstroComponentFactory;
+    };
     const TestPage = TestPageModule.default;
 
-    const result = await container.renderToString(
-      TestPage,
-      {
-        partial: false,
-        request: new Request(`https://www.franksmovielog.com/test`),
-      },
-    );
+    const result = await container.renderToString(TestPage, {
+      partial: false,
+      request: new Request(`https://www.franksmovielog.com/test`),
+    });
 
     // Create JSDOM instance with the rendered HTML
     dom = new JSDOM(result, {
