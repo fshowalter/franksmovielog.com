@@ -3,7 +3,7 @@
  *
  * These functions provide reusable logic for common reducer patterns
  * like filtering, sorting, and pagination while maintaining full type safety.
- * 
+ *
  * Uses consistent generic type parameters:
  * - TItem: The type of items in the list
  * - TSortValue: The type of sort values
