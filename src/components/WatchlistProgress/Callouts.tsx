@@ -96,11 +96,11 @@ function Callout({
           h-auto w-32
           tablet:w-36
         `}
-        complete={reviewed ?? 0}
+        complete={reviewed}
         height={144}
         label={label}
         subLabel={subLabel}
-        total={total ?? 0}
+        total={total}
         width={144}
       />
       <div
@@ -108,7 +108,7 @@ function Callout({
           pt-2 text-center font-sans text-base font-semibold text-muted
         `}
       >
-        {reviewed?.toLocaleString()} / {total?.toLocaleString()}
+        {reviewed.toLocaleString()} / {total.toLocaleString()}
         <div className="font-sans text-sm leading-4 font-light">Reviewed</div>
       </div>
     </div>
