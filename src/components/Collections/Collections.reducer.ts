@@ -1,4 +1,4 @@
-import { filterValues } from "~/utils/reducerUtils";
+import { createNameFilter, filterValues } from "~/utils/reducerUtils";
 import { sortNumber, sortString } from "~/utils/sortTools";
 
 import type { ListItemValue } from "./Collections";
@@ -56,12 +56,9 @@ export function reducer(state: State, action: ActionType): State {
 
   switch (action.type) {
     case Actions.FILTER_NAME: {
-      const regex = new RegExp(action.value, "i");
       filters = {
         ...state.filters,
-        name: (person: ListItemValue) => {
-          return regex.test(person.name);
-        },
+        name: createNameFilter(action.value),
       };
       filteredValues = sortValues(
         filterValues<ListItemValue>({

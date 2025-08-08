@@ -20,6 +20,34 @@ export type FilterableState<TItem, TSortValue, TGroupedValues> = {
   sortValue: TSortValue;
 };
 
+// Common state update patterns
+export function applyShowMore<
+  TItem,
+  TSortValue,
+  TGroupedValues,
+  TState extends { 
+    filteredValues: TItem[]; 
+    groupedValues: TGroupedValues; 
+    showCount: number; 
+    sortValue: TSortValue; 
+  }
+>(
+  state: TState,
+  increment: number,
+  groupValues: (items: TItem[], sortValue: TSortValue) => TGroupedValues,
+): TState {
+  const showCount = state.showCount + increment;
+  const groupedValues = groupValues(
+    state.filteredValues.slice(0, showCount),
+    state.sortValue,
+  );
+  return {
+    ...state,
+    groupedValues,
+    showCount,
+  };
+}
+
 // Build group values factory
 export function buildGroupValues<TItem, TSortValue>(
   valueGrouper: (item: TItem, sortValue: TSortValue) => string,
@@ -43,6 +71,33 @@ export function buildGroupValues<TItem, TSortValue>(
 
     return groupedValues;
   };
+}
+
+export function createNameFilter(value: string) {
+  const regex = new RegExp(value, "i");
+  return <T extends { name: string }>(item: T) => regex.test(item.name);
+}
+
+export function createReleaseYearFilter(minYear: number | string, maxYear: number | string) {
+  return <T extends { releaseYear?: number | string; year?: number | string }>(item: T) => {
+    const year = item.releaseYear || item.year;
+    if (!year) return false;
+    return year >= minYear && year <= maxYear;
+  };
+}
+
+export function createReviewYearFilter(minYear: number | string, maxYear: number | string) {
+  return <T extends { reviewYear?: number | string }>(item: T) => {
+    const year = item.reviewYear;
+    if (!year) return false;
+    return year >= minYear && year <= maxYear;
+  };
+}
+
+// Common filter patterns as simple functions that create filter functions
+export function createTitleFilter(value: string) {
+  const regex = new RegExp(value, "i");
+  return <T extends { title: string }>(item: T) => regex.test(item.title);
 }
 
 // Filter tools factory
@@ -104,7 +159,6 @@ export function filterValues<TItem>({
     });
   });
 }
-
 
 // Build apply filters helper
 function buildApplyFilters<TItem, TSortValue, TGroupedValues>(

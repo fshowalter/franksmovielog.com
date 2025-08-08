@@ -1,6 +1,7 @@
 import { getGroupLetter } from "~/utils/getGroupLetter";
 import {
   buildGroupValues,
+  createNameFilter,
   type FilterableState,
   filterTools,
 } from "~/utils/reducerUtils";
@@ -107,10 +108,7 @@ export function reducer(state: State, action: ActionType): State {
       );
     }
     case Actions.FILTER_NAME: {
-      const regex = new RegExp(action.value, "i");
-      return updateFilter(state, "name", (value) => {
-        return regex.test(value.name);
-      });
+      return updateFilter(state, "name", createNameFilter(action.value));
     }
     case Actions.SORT: {
       filteredValues = sortValues(state.filteredValues, action.value);
