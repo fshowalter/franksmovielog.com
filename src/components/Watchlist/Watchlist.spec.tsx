@@ -93,7 +93,7 @@ describe("/watchlist", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it.skip("can filter by writer", async ({ expect }) => {
+  it("can filter by writer", async ({ expect }) => {
     expect.hasAssertions();
     render(<Watchlist {...props} />);
 
@@ -105,7 +105,7 @@ describe("/watchlist", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it.skip("can filter by writer then show all", async ({ expect }) => {
+  it("can filter by writer then show all", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Watchlist {...props} />);
