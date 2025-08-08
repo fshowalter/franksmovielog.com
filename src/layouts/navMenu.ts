@@ -1,4 +1,4 @@
-function initNavMenu(): void {
+export function initNavMenu(): void {
   const body = document.body;
   const navToggle =
     document.querySelector<HTMLButtonElement>("[data-nav-toggle]");
