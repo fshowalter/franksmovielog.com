@@ -1,9 +1,9 @@
+import { getGroupLetter } from "~/utils/getGroupLetter";
 import {
   buildGroupValues,
   type FilterableState,
   filterTools,
 } from "~/utils/reducerUtils";
-import { getGroupLetter } from "~/utils/getGroupLetter";
 import { collator, sortNumber, sortString } from "~/utils/sortTools";
 
 import type { ListItemValue } from "./CastAndCrewMember";
