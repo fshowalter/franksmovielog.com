@@ -46,7 +46,7 @@ describe("Layout navigation menu", () => {
     global.window = window;
     global.document = document;
     // Navigator is read-only in Node, so we need to define it differently
-    Object.defineProperty(global, 'navigator', {
+    Object.defineProperty(global, "navigator", {
       value: window.navigator,
       writable: true,
       configurable: true,
@@ -54,9 +54,9 @@ describe("Layout navigation menu", () => {
 
     // Since the container API doesn't bundle scripts, we need to manually inject the navMenu script
     // Read and transpile the navMenu.ts file using TypeScript's transpile API
-    const navMenuPath = fileURLToPath(new URL('./navMenu.ts', import.meta.url));
-    const navMenuContent = readFileSync(navMenuPath, 'utf-8');
-    
+    const navMenuPath = fileURLToPath(new URL("./navMenu.ts", import.meta.url));
+    const navMenuContent = readFileSync(navMenuPath, "utf-8");
+
     // Use TypeScript to transpile to JavaScript
     const transpileResult = ts.transpileModule(navMenuContent, {
       compilerOptions: {
@@ -67,7 +67,7 @@ describe("Layout navigation menu", () => {
     });
 
     // Execute the transpiled navMenu script in the JSDOM context
-    const scriptEl = dom.window.document.createElement('script');
+    const scriptEl = dom.window.document.createElement("script");
     scriptEl.textContent = transpileResult.outputText;
     dom.window.document.body.appendChild(scriptEl);
 
@@ -97,11 +97,13 @@ describe("Layout navigation menu", () => {
     const navMenu = document.querySelector("[data-nav-menu]");
     expect(navMenu).toBeTruthy();
     // The aria-label is on the parent nav element, not the ul with data-nav-menu
-    const navElement = navMenu?.closest('nav');
+    const navElement = navMenu?.closest("nav");
     expect(navElement?.getAttribute("aria-label")).toBe("Main navigation");
   });
 
-  it("opens and closes navigation menu on toggle button click", ({ expect }) => {
+  it("opens and closes navigation menu on toggle button click", ({
+    expect,
+  }) => {
     const toggleButton = document.querySelector(
       "[data-nav-toggle]",
     ) as HTMLButtonElement;
@@ -180,7 +182,7 @@ describe("Layout navigation menu", () => {
       bubbles: true,
       cancelable: true,
     });
-    
+
     // Find an element that's outside the nav menu and toggle button
     const mainContent = document.querySelector("main");
     if (mainContent) {
@@ -258,7 +260,9 @@ describe("Layout navigation menu", () => {
     expect(document.activeElement).toBe(toggleButton);
   });
 
-  it("traps focus within menu when open - Tab from toggle button", ({ expect }) => {
+  it("traps focus within menu when open - Tab from toggle button", ({
+    expect,
+  }) => {
     const toggleButton = document.querySelector(
       "[data-nav-toggle]",
     ) as HTMLButtonElement;
@@ -277,19 +281,21 @@ describe("Layout navigation menu", () => {
       bubbles: true,
       cancelable: true,
     });
-    
+
     // The event handler will prevent default and move focus
     const defaultPrevented = !document.dispatchEvent(tabEvent);
-    
+
     // Check that default was prevented
     expect(defaultPrevented).toBe(true);
-    
+
     // First menu item should be focused
     const firstLink = navMenu.querySelector("a[href]") as HTMLAnchorElement;
     expect(document.activeElement).toBe(firstLink);
   });
 
-  it("traps focus within menu when open - Shift+Tab from first element", ({ expect }) => {
+  it("traps focus within menu when open - Shift+Tab from first element", ({
+    expect,
+  }) => {
     const toggleButton = document.querySelector(
       "[data-nav-toggle]",
     ) as HTMLButtonElement;
@@ -310,13 +316,13 @@ describe("Layout navigation menu", () => {
       bubbles: true,
       cancelable: true,
     });
-    
+
     // The event handler will prevent default and move focus
     const defaultPrevented = !document.dispatchEvent(shiftTabEvent);
-    
+
     // Check that default was prevented
     expect(defaultPrevented).toBe(true);
-    
+
     // Toggle button should be focused
     expect(document.activeElement).toBe(toggleButton);
   });
