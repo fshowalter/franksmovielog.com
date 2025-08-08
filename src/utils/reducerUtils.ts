@@ -25,12 +25,12 @@ export function applyShowMore<
   TItem,
   TSortValue,
   TGroupedValues,
-  TState extends { 
-    filteredValues: TItem[]; 
-    groupedValues: TGroupedValues; 
-    showCount: number; 
-    sortValue: TSortValue; 
-  }
+  TState extends {
+    filteredValues: TItem[];
+    groupedValues: TGroupedValues;
+    showCount: number;
+    sortValue: TSortValue;
+  },
 >(
   state: TState,
   increment: number,
@@ -78,15 +78,21 @@ export function createNameFilter(value: string) {
   return <T extends { name: string }>(item: T) => regex.test(item.name);
 }
 
-export function createReleaseYearFilter(minYear: number | string, maxYear: number | string) {
-  return <T extends { releaseYear?: number | string; year?: number | string }>(item: T) => {
-    const year = item.releaseYear || item.year;
+export function createReleaseYearFilter(
+  minYear: number | string,
+  maxYear: number | string,
+) {
+  return <T extends { releaseYear?: number | string }>(item: T) => {
+    const year = item.releaseYear;
     if (!year) return false;
     return year >= minYear && year <= maxYear;
   };
 }
 
-export function createReviewYearFilter(minYear: number | string, maxYear: number | string) {
+export function createReviewYearFilter(
+  minYear: number | string,
+  maxYear: number | string,
+) {
   return <T extends { reviewYear?: number | string }>(item: T) => {
     const year = item.reviewYear;
     if (!year) return false;
