@@ -198,10 +198,30 @@ describe("/watchlist", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it.skip("can show more titles", async ({ expect }) => {
+  it("can show more titles", async ({ expect }) => {
     expect.hasAssertions();
 
-    render(<Watchlist {...props} />);
+    // Create props with more than 100 items to trigger pagination
+    const manyValues = Array.from({ length: 150 }, (_, i) => ({
+      genres: [],
+      imdbId: `tt${String(i).padStart(7, "0")}`,
+      releaseSequence: `1930-01-${String(i + 1).padStart(2, "0")}tt${String(i).padStart(7, "0")}`,
+      releaseYear: "1930",
+      sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
+      title: `Test Movie ${i + 1}`,
+      viewed: false,
+      watchlistCollectionNames: [],
+      watchlistDirectorNames: [],
+      watchlistPerformerNames: [],
+      watchlistWriterNames: [],
+    }));
+
+    const propsWithManyValues = {
+      ...props,
+      values: manyValues,
+    };
+
+    render(<Watchlist {...propsWithManyValues} />);
 
     await userEvent.click(screen.getByText("Show More"));
 
