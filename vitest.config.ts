@@ -41,6 +41,14 @@ export default getViteConfig({
           name: "components-jsdom",
         },
       },
+      {
+        extends: true,
+        test: {
+          environment: "node",
+          include: ["src/layouts/**/*.spec.ts"],
+          name: "layouts-node",
+        },
+      },
     ],
     // Vitest configuration options
     setupFiles: ["setupTests.ts"],
