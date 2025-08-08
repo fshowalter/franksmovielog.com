@@ -1,3 +1,5 @@
+import { collator } from "~/utils/reducerUtils";
+
 import type { ViewingJson } from "./data/viewingsJson";
 
 import { allViewingsJson } from "./data/viewingsJson";
@@ -39,10 +41,14 @@ export async function allViewings(): Promise<Viewings> {
   });
 
   return {
-    distinctMedia: [...distinctMedia].toSorted(),
-    distinctReleaseYears: [...distinctReleaseYears].toSorted(),
-    distinctVenues: [...distinctVenues].toSorted(),
-    distinctViewingYears: [...distinctViewingYears].toSorted(),
+    distinctMedia: [...distinctMedia].sort((a, b) => collator.compare(a, b)),
+    distinctReleaseYears: [...distinctReleaseYears].sort((a, b) =>
+      collator.compare(a, b),
+    ),
+    distinctVenues: [...distinctVenues].sort((a, b) => collator.compare(a, b)),
+    distinctViewingYears: [...distinctViewingYears].sort((a, b) =>
+      collator.compare(a, b),
+    ),
     viewings: viewings,
   };
 }

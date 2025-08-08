@@ -1,9 +1,12 @@
-import type { FilterableState } from "~/utils/filterTools";
-
-import { buildGroupValues } from "~/utils/buildGroupValues";
-import { filterTools } from "~/utils/filterTools";
-import { getGroupLetter } from "~/utils/getGroupLetter";
-import { sortNumber, sortString } from "~/utils/sortTools";
+import {
+  buildGroupValues,
+  createNameFilter,
+  type FilterableState,
+  filterTools,
+  getGroupLetter,
+  sortNumber,
+  sortString,
+} from "~/utils/reducerUtils";
 
 import type { ListItemValue } from "./CastAndCrew";
 
@@ -106,10 +109,7 @@ export function reducer(state: State, action: ActionType): State {
       );
     }
     case Actions.FILTER_NAME: {
-      const regex = new RegExp(action.value, "i");
-      return updateFilter(state, "name", (value) => {
-        return regex.test(value.name);
-      });
+      return updateFilter(state, "name", createNameFilter(action.value));
     }
     case Actions.SORT: {
       filteredValues = sortValues(state.filteredValues, action.value);

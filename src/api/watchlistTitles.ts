@@ -1,3 +1,5 @@
+import { collator } from "~/utils/reducerUtils";
+
 import {
   allWatchlistTitlesJson,
   type WatchlistTitleJson,
@@ -38,11 +40,21 @@ export async function allWatchlistTitles(): Promise<WatchlistTitles> {
   });
 
   return {
-    distinctCollections: [...distinctCollections].toSorted(),
-    distinctDirectors: [...distinctDirectors].toSorted(),
-    distinctPerformers: [...distinctPerformers].toSorted(),
-    distinctReleaseYears: [...distinctReleaseYears].toSorted(),
-    distinctWriters: [...distinctWriters].toSorted(),
+    distinctCollections: [...distinctCollections].sort((a, b) =>
+      collator.compare(a, b),
+    ),
+    distinctDirectors: [...distinctDirectors].sort((a, b) =>
+      collator.compare(a, b),
+    ),
+    distinctPerformers: [...distinctPerformers].sort((a, b) =>
+      collator.compare(a, b),
+    ),
+    distinctReleaseYears: [...distinctReleaseYears].sort((a, b) =>
+      collator.compare(a, b),
+    ),
+    distinctWriters: [...distinctWriters].sort((a, b) =>
+      collator.compare(a, b),
+    ),
     watchlistTitles,
   };
 }

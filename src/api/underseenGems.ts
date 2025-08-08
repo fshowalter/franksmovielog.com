@@ -1,3 +1,5 @@
+import { collator } from "~/utils/reducerUtils";
+
 import type { UnderseenJson } from "./data/underseenJson";
 
 import { allUnderseenJson } from "./data/underseenJson";
@@ -33,9 +35,13 @@ export async function allUnderseenGems(): Promise<UnderseenGems> {
   });
 
   return {
-    distinctGenres: [...distinctGenres].toSorted(),
-    distinctReleaseYears: [...distinctReleaseYears].toSorted(),
-    distinctReviewYears: [...distinctReviewYears].toSorted(),
+    distinctGenres: [...distinctGenres].sort((a, b) => collator.compare(a, b)),
+    distinctReleaseYears: [...distinctReleaseYears].sort((a, b) =>
+      collator.compare(a, b),
+    ),
+    distinctReviewYears: [...distinctReviewYears].sort((a, b) =>
+      collator.compare(a, b),
+    ),
     underseenGems: underseenGems,
   };
 }

@@ -1,7 +1,14 @@
-import { buildGroupValues } from "~/utils/buildGroupValues";
-import { type FilterableState, filterTools } from "~/utils/filterTools";
-import { getGroupLetter } from "~/utils/getGroupLetter";
-import { collator, sortString } from "~/utils/sortTools";
+import {
+  applyShowMore,
+  buildGroupValues,
+  collator,
+  createReleaseYearFilter,
+  createTitleFilter,
+  type FilterableState,
+  filterTools,
+  getGroupLetter,
+  sortString,
+} from "~/utils/reducerUtils";
 
 import type { ListItemValue } from "./Watchlist";
 
@@ -131,18 +138,14 @@ export function reducer(state: State, action: ActionType): State {
       );
     }
     case Actions.FILTER_RELEASE_YEAR: {
-      return updateFilter(state, "releaseYear", (value) => {
-        const releaseYear = value.releaseYear;
-        return (
-          releaseYear >= action.values[0] && releaseYear <= action.values[1]
-        );
-      });
+      return updateFilter(
+        state,
+        "releaseYear",
+        createReleaseYearFilter(action.values[0], action.values[1]),
+      );
     }
     case Actions.FILTER_TITLE: {
-      const regex = new RegExp(action.value, "i");
-      return updateFilter(state, "title", (value) => {
-        return regex.test(value.title);
-      });
+      return updateFilter(state, "title", createTitleFilter(action.value));
     }
     case Actions.FILTER_WRITER: {
       return (
@@ -153,18 +156,7 @@ export function reducer(state: State, action: ActionType): State {
       );
     }
     case Actions.SHOW_MORE: {
-      const showCount = state.showCount + SHOW_COUNT_DEFAULT;
-
-      groupedValues = groupValues(
-        state.filteredValues.slice(0, showCount),
-        state.sortValue,
-      );
-
-      return {
-        ...state,
-        groupedValues,
-        showCount,
-      };
+      return applyShowMore(state, SHOW_COUNT_DEFAULT, groupValues);
     }
     case Actions.SORT: {
       filteredValues = sortValues(state.filteredValues, action.value);
