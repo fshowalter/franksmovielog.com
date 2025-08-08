@@ -6,8 +6,6 @@ import remarkRehype from "remark-rehype";
 import smartypants from "remark-smartypants";
 import strip from "strip-markdown";
 
-import { collator } from "~/utils/reducerUtils";
-
 import {
   allCollectionsJson,
   type CollectionJson,
@@ -23,22 +21,11 @@ export type CollectionWithDetails = Collection & {
 
 export async function allCollections(): Promise<{
   collections: Collection[];
-  distinctReleaseYears: string[];
 }> {
   const collections = await allCollectionsJson();
-  const releaseYears = new Set<string>();
-
-  for (const collection of collections) {
-    for (const title of collection.titles) {
-      releaseYears.add(title.releaseYear);
-    }
-  }
 
   return {
     collections: collections,
-    distinctReleaseYears: [...releaseYears].sort((a, b) =>
-      collator.compare(a, b),
-    ),
   };
 }
 
@@ -72,12 +59,8 @@ export async function collectionDetails(slug: string): Promise<{
       description: descriptionToString(collection.description),
       descriptionHtml: descriptionToHtml(collection.description),
     },
-    distinctReleaseYears: [...releaseYears].sort((a, b) =>
-      collator.compare(a, b),
-    ),
-    distinctReviewYears: [...reviewYears].sort((a, b) =>
-      collator.compare(a, b),
-    ),
+    distinctReleaseYears: [...releaseYears].toSorted(),
+    distinctReviewYears: [...reviewYears].toSorted(),
   };
 }
 

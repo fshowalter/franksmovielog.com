@@ -1,5 +1,3 @@
-import { collator } from "~/utils/reducerUtils";
-
 import type { YearStatsJson } from "./data/yearStatsJson";
 
 import { allYearStatsJson } from "./data/yearStatsJson";
@@ -11,7 +9,7 @@ const statYears = new Set<string>();
 
 export async function allStatYears() {
   if (statYears.size > 0) {
-    return [...statYears].sort((a, b) => collator.compare(a, b));
+    return [...statYears].toSorted();
   }
 
   const yearStats = await allYearStatsJson();
@@ -22,7 +20,7 @@ export async function allStatYears() {
     }
   }
 
-  return [...statYears].sort((a, b) => collator.compare(a, b));
+  return [...statYears].toSorted();
 }
 
 export async function statsForYear(year: string): Promise<YearStats> {

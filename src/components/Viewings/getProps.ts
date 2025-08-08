@@ -15,8 +15,6 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
     viewings,
   } = await allViewings();
 
-  viewings.sort((a, b) => b.viewingSequence - a.viewingSequence);
-
   const values = await Promise.all(
     viewings.map(async (viewing) => {
       const viewingDate = new Date(viewing.viewingDate);

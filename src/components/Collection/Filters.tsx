@@ -61,7 +61,8 @@ export function SortOptions() {
     <>
       <option value="release-date-desc">Release Date (Newest First)</option>
       <option value="release-date-asc">Release Date (Oldest First)</option>
-      <option value="title">Title</option>
+      <option value="title-asc">Title (A &rarr; Z)</option>
+      <option value="title-desc">Title (Z &rarr; A)</option>
       <option value="grade-desc">Grade (Best First)</option>
       <option value="grade-asc">Grade (Worst First)</option>
       <option value="review-date-desc">Review Date (Newest First)</option>

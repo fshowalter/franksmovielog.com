@@ -26,12 +26,28 @@ describe("Collection", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by title", async ({ expect }) => {
+  it("can sort by title A → Z", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Collection {...props} />);
 
-    await userEvent.selectOptions(screen.getByLabelText("Sort"), "Title");
+    await userEvent.selectOptions(
+      screen.getByLabelText("Sort"),
+      "Title (A → Z)",
+    );
+
+    expect(screen.getByTestId("list")).toMatchSnapshot();
+  });
+
+  it("can sort by title Z → A", async ({ expect }) => {
+    expect.hasAssertions();
+
+    render(<Collection {...props} />);
+
+    await userEvent.selectOptions(
+      screen.getByLabelText("Sort"),
+      "Title (Z → A)",
+    );
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });

@@ -3,7 +3,6 @@ import type { ReviewListItemValue } from "~/components/ReviewListItem";
 import {
   applyShowMore,
   buildGroupValues,
-  collator,
   createReleaseYearFilter,
   createTitleFilter,
   type FilterableState,
@@ -136,8 +135,8 @@ function sortValues(
     "review-date-asc": (a, b) => sortString(a.reviewSequence, b.reviewSequence),
     "review-date-desc": (a, b) =>
       sortString(a.reviewSequence, b.reviewSequence) * -1,
-    "title-asc": (a, b) => collator.compare(a.sortTitle, b.sortTitle),
-    "title-desc": (a, b) => collator.compare(a.sortTitle, b.sortTitle) * -1,
+    "title-asc": (a, b) => sortString(a.sortTitle, b.sortTitle),
+    "title-desc": (a, b) => sortString(a.sortTitle, b.sortTitle) * -1,
   };
 
   const comparer = sortMap[sortOrder];
@@ -161,12 +160,14 @@ export function initState({
   initialSort: ReviewsSort;
   values: ReviewListItemValue[];
 }): State {
+  const initialValues = sortValues(values, initialSort);
+
   return {
-    allValues: values,
-    filteredValues: values,
+    allValues: initialValues,
+    filteredValues: initialValues,
     filters: {},
     groupedValues: groupValues(
-      values.slice(0, SHOW_COUNT_DEFAULT),
+      initialValues.slice(0, SHOW_COUNT_DEFAULT),
       initialSort,
     ),
     showCount: SHOW_COUNT_DEFAULT,

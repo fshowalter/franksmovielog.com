@@ -15,10 +15,6 @@ export async function getProps(
   const { distinctReleaseYears, distinctReviewYears, member } =
     await castAndCrewMember(slug);
 
-  member.titles.sort((a, b) =>
-    a.releaseSequence.localeCompare(b.releaseSequence),
-  );
-
   return {
     avatarImageProps: await getAvatarImageProps(
       member.slug,

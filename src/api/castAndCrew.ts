@@ -1,5 +1,3 @@
-import { collator } from "~/utils/reducerUtils";
-
 import {
   allCastAndCrewJson,
   type CastAndCrewMemberJson,
@@ -42,12 +40,8 @@ export async function castAndCrewMember(slug: string): Promise<{
   }
 
   return {
-    distinctReleaseYears: [...releaseYears].sort((a, b) =>
-      collator.compare(a, b),
-    ),
-    distinctReviewYears: [...distinctReviewYears].sort((a, b) =>
-      collator.compare(a, b),
-    ),
+    distinctReleaseYears: [...releaseYears].toSorted(),
+    distinctReviewYears: [...distinctReviewYears].toSorted(),
     member,
   };
 }

@@ -6,7 +6,7 @@ import remarkRehype from "remark-rehype";
 import smartypants from "remark-smartypants";
 import strip from "strip-markdown";
 
-import { collator } from "~/utils/reducerUtils";
+import { collator } from "~/utils/collator";
 
 import type { ReviewedTitleJson } from "./data/reviewedTitlesJson";
 import type { MarkdownReview } from "./data/reviewsMarkdown";
@@ -215,12 +215,8 @@ async function parseReviewedTitlesJson(
 
   return {
     distinctGenres: [...distinctGenres].sort((a, b) => collator.compare(a, b)),
-    distinctReleaseYears: [...distinctReleaseYears].sort((a, b) =>
-      collator.compare(a, b),
-    ),
-    distinctReviewYears: [...distinctReviewYears].sort((a, b) =>
-      collator.compare(a, b),
-    ),
+    distinctReleaseYears: [...distinctReleaseYears].toSorted(),
+    distinctReviewYears: [...distinctReviewYears].toSorted(),
     reviews,
   };
 }

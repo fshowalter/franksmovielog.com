@@ -11,8 +11,6 @@ import { type ListItemValue } from "./Collections";
 export async function getProps(): Promise<Props> {
   const { collections } = await allCollections();
 
-  collections.sort((a, b) => a.name.localeCompare(b.name));
-
   const values = await Promise.all(
     collections.map(async (collection) => {
       const listItemValue: ListItemValue = {

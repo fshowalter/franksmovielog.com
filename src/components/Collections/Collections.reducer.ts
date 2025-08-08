@@ -44,11 +44,13 @@ export function initState({
   values,
 }: {
   initialSort: Sort;
-  values: readonly ListItemValue[];
+  values: ListItemValue[];
 }): State {
+  const initialValues = sortValues(values, initialSort);
+
   return {
-    allValues: [...values],
-    filteredValues: [...values],
+    allValues: [...initialValues],
+    filteredValues: [...initialValues],
     filters: {},
     sortValue: initialSort,
   };

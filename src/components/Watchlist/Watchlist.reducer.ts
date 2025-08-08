@@ -1,7 +1,6 @@
 import {
   applyShowMore,
   buildGroupValues,
-  collator,
   createReleaseYearFilter,
   createTitleFilter,
   type FilterableState,
@@ -12,7 +11,11 @@ import {
 
 import type { ListItemValue } from "./Watchlist";
 
-export type Sort = "release-date-asc" | "release-date-desc" | "title";
+export type Sort =
+  | "release-date-asc"
+  | "release-date-desc"
+  | "title-asc"
+  | "title-desc";
 
 const SHOW_COUNT_DEFAULT = 100;
 
@@ -94,12 +97,14 @@ export function initState({
   initialSort: Sort;
   values: ListItemValue[];
 }): State {
+  const initialValues = sortValues(values, initialSort);
+
   return {
-    allValues: values,
-    filteredValues: values,
+    allValues: initialValues,
+    filteredValues: initialValues,
     filters: {},
     groupedValues: groupValues(
-      values.slice(0, SHOW_COUNT_DEFAULT),
+      initialValues.slice(0, SHOW_COUNT_DEFAULT),
       initialSort,
     ),
     hideReviewed: false,
@@ -200,7 +205,8 @@ function groupForValue(value: ListItemValue, sortValue: Sort): string {
     case "release-date-desc": {
       return value.releaseYear;
     }
-    case "title": {
+    case "title-asc":
+    case "title-desc": {
       return getGroupLetter(value.sortTitle);
     }
     // no default
@@ -214,7 +220,8 @@ function sortValues(values: ListItemValue[], sortOrder: Sort) {
         sortString(a.releaseSequence, b.releaseSequence),
       "release-date-desc": (a, b) =>
         sortString(a.releaseSequence, b.releaseSequence) * -1,
-      title: (a, b) => collator.compare(a.sortTitle, b.sortTitle),
+      "title-asc": (a, b) => sortString(a.sortTitle, b.sortTitle),
+      "title-desc": (a, b) => sortString(a.sortTitle, b.sortTitle) * -1,
     };
 
   const comparer = sortMap[sortOrder];
