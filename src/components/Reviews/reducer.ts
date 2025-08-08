@@ -125,9 +125,8 @@ function sortValues(
     ReviewsSort,
     (a: ReviewListItemValue, b: ReviewListItemValue) => number
   > = {
-    "grade-asc": (a, b) => sortNumber(a.gradeValue ?? 0, b.gradeValue ?? 0),
-    "grade-desc": (a, b) =>
-      sortNumber(a.gradeValue ?? 0, b.gradeValue ?? 0) * -1,
+    "grade-asc": (a, b) => sortNumber(a.gradeValue, b.gradeValue),
+    "grade-desc": (a, b) => sortNumber(a.gradeValue, b.gradeValue) * -1,
     "release-date-asc": (a, b) =>
       sortString(a.releaseSequence, b.releaseSequence),
     "release-date-desc": (a, b) =>
