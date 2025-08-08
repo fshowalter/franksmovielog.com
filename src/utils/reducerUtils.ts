@@ -98,7 +98,7 @@ export function createReviewYearFilter(
   };
 }
 
-// Common filter patterns as simple functions that create filter functions
+// Common filter creators - simple functions that create filter functions
 export function createTitleFilter(value: string) {
   const regex = new RegExp(value, "i");
   return <T extends { title: string }>(item: T) => regex.test(item.title);
@@ -110,6 +110,21 @@ export function filterTools<TItem, TSortValue, TGroupedValues>(
   grouper: (items: TItem[], sortOrder: TSortValue) => TGroupedValues,
 ) {
   const applyFilters = buildApplyFilters(sorter, grouper);
+
+  const updateFilter = <
+    TState extends FilterableState<TItem, TSortValue, TGroupedValues>,
+  >(
+    currentState: TState,
+    key: string,
+    handler: (item: TItem) => boolean,
+  ): TState => {
+    const filters = {
+      ...currentState.filters,
+      [key]: handler,
+    };
+
+    return applyFilters(filters, currentState);
+  };
 
   return {
     applyFilters,
@@ -132,20 +147,7 @@ export function filterTools<TItem, TSortValue, TGroupedValues>(
 
       return applyFilters(filters, currentState);
     },
-    updateFilter: <
-      TState extends FilterableState<TItem, TSortValue, TGroupedValues>,
-    >(
-      currentState: TState,
-      key: string,
-      handler: (item: TItem) => boolean,
-    ): TState => {
-      const filters = {
-        ...currentState.filters,
-        [key]: handler,
-      };
-
-      return applyFilters(filters, currentState);
-    },
+    updateFilter,
   };
 }
 
