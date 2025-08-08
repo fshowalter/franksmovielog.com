@@ -1,13 +1,14 @@
-import { getGroupLetter } from "~/utils/getGroupLetter";
 import {
   applyShowMore,
   buildGroupValues,
+  collator,
   createReleaseYearFilter,
   createTitleFilter,
   type FilterableState,
   filterTools,
+  getGroupLetter,
+  sortString,
 } from "~/utils/reducerUtils";
-import { collator, sortString } from "~/utils/sortTools";
 
 import type { ListItemValue } from "./Watchlist";
 

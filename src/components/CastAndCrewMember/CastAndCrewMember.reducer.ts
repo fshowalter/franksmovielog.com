@@ -1,14 +1,16 @@
-import { getGroupLetter } from "~/utils/getGroupLetter";
 import {
   applyShowMore,
   buildGroupValues,
+  collator,
   createReleaseYearFilter,
   createReviewYearFilter,
   createTitleFilter,
   type FilterableState,
   filterTools,
+  getGroupLetter,
+  sortNumber,
+  sortString,
 } from "~/utils/reducerUtils";
-import { collator, sortNumber, sortString } from "~/utils/sortTools";
 
 import type { ListItemValue } from "./CastAndCrewMember";
 

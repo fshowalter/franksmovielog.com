@@ -3,8 +3,8 @@ import {
   createTitleFilter,
   type FilterableState,
   filterTools,
+  sortNumber,
 } from "~/utils/reducerUtils";
-import { sortNumber } from "~/utils/sortTools";
 
 import type { ListItemValue } from "./Viewings";
 

@@ -1,15 +1,17 @@
 import type { ReviewListItemValue } from "~/components/ReviewListItem";
 
-import { getGroupLetter } from "~/utils/getGroupLetter";
 import {
   applyShowMore,
   buildGroupValues,
+  collator,
   createReleaseYearFilter,
   createTitleFilter,
   type FilterableState,
   filterTools,
+  getGroupLetter,
+  sortNumber,
+  sortString,
 } from "~/utils/reducerUtils";
-import { collator, sortNumber, sortString } from "~/utils/sortTools";
 
 const SHOW_COUNT_DEFAULT = 100;
 

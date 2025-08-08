@@ -10,6 +10,13 @@
  * - TGroupedValues: The type of grouped values structure
  */
 
+// Sorting utilities
+export const collator = new Intl.Collator("en", {
+  ignorePunctuation: true,
+  numeric: true,
+  sensitivity: "base",
+});
+
 // Core types
 export type FilterableState<TItem, TSortValue, TGroupedValues> = {
   allValues: TItem[];
@@ -158,6 +165,40 @@ export function filterValues<TItem>({
       return filter(item);
     });
   });
+}
+
+/**
+ * Gets the group letter for a given string, typically used for alphabetical grouping.
+ * Non-alphabetic characters are grouped under "#".
+ *
+ * @param str - The string to get the group letter from
+ * @returns The uppercase first letter or "#" for non-alphabetic characters
+ */
+export function getGroupLetter(str: string): string {
+  const letter = str.slice(0, 1);
+
+  // Check if the character is non-alphabetic (same in upper and lower case)
+  if (letter.toLowerCase() === letter.toUpperCase()) {
+    return "#";
+  }
+
+  return letter.toLocaleUpperCase();
+}
+
+export function sortNumber(a: number, b: number): number {
+  return a - b;
+}
+
+export function sortString(a: string, b: string): number {
+  if (a > b) {
+    return 1;
+  }
+
+  if (a < b) {
+    return -1;
+  }
+
+  return 0;
 }
 
 // Build apply filters helper
