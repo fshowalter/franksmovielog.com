@@ -82,10 +82,8 @@ export function createReleaseYearFilter(
   minYear: number | string,
   maxYear: number | string,
 ) {
-  return <T extends { releaseYear?: number | string }>(item: T) => {
-    const year = item.releaseYear;
-    if (!year) return false;
-    return year >= minYear && year <= maxYear;
+  return <T extends { releaseYear: number | string }>(item: T) => {
+    return item.releaseYear >= minYear && item.releaseYear <= maxYear;
   };
 }
 
