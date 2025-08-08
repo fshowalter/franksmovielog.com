@@ -1,6 +1,7 @@
-import type { FilterableState } from "~/utils/filterTools";
-
-import { filterTools } from "~/utils/filterTools";
+import {
+  type FilterableState,
+  filterTools,
+} from "~/utils/reducerUtils";
 import { sortNumber } from "~/utils/sortTools";
 
 import type { ListItemValue } from "./Viewings";
