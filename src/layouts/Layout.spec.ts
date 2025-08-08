@@ -48,14 +48,14 @@ describe("Layout navigation menu", () => {
       value: window.navigator,
       writable: true,
     });
-    
+
     // Set requestAnimationFrame globally before importing navMenu
     globalThis.requestAnimationFrame = window.requestAnimationFrame;
 
     // Import the initNavMenu function directly
     // This ensures Vitest instruments it for coverage
     const { initNavMenu } = await import("./navMenu.ts");
-    
+
     // Call the function in the JSDOM context
     // The import will execute the module's top-level code which auto-initializes
     // But we need to manually call it since JSDOM's document.readyState might not trigger it
