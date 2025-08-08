@@ -1,19 +1,19 @@
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
-
-import { readFileSync } from "node:fs";
-import { fileURLToPath } from "node:url";
+import type { DOMWindow, JSDOM as JSDOMType } from "jsdom";
 
 import { getContainerRenderer as reactContainerRenderer } from "@astrojs/react";
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import { loadRenderers } from "astro:container";
 import { JSDOM } from "jsdom";
+import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import * as ts from "typescript";
 import { afterEach, beforeEach, describe, it } from "vitest";
 
 describe("Layout navigation menu", () => {
-  let dom: JSDOM;
+  let dom: JSDOMType;
   let document: Document;
-  let window: Window;
+  let window: DOMWindow;
   let cleanup: () => void;
 
   beforeEach(async () => {
@@ -22,10 +22,11 @@ describe("Layout navigation menu", () => {
     const container = await AstroContainer.create({ renderers });
 
     // Import our test page that uses the Layout
-    const { default: TestPage } = await import("./TestPage.astro");
+    const TestPageModule = await import("./TestPage.astro") as { default: AstroComponentFactory };
+    const TestPage = TestPageModule.default;
 
     const result = await container.renderToString(
-      TestPage as AstroComponentFactory,
+      TestPage,
       {
         partial: false,
         request: new Request(`https://www.franksmovielog.com/test`),
@@ -34,42 +35,42 @@ describe("Layout navigation menu", () => {
 
     // Create JSDOM instance with the rendered HTML
     dom = new JSDOM(result, {
-      url: "https://www.franksmovielog.com/test",
-      runScripts: "dangerously", // Execute inline scripts
       pretendToBeVisual: true, // Provides requestAnimationFrame and other browser APIs
+      runScripts: "dangerously", // Execute inline scripts
+      url: "https://www.franksmovielog.com/test",
     });
 
     document = dom.window.document;
-    window = dom.window as unknown as Window;
+    window = dom.window;
 
     // Make JSDOM's window and document available globally for testing-library
-    global.window = window;
-    global.document = document;
+    globalThis.window = window as unknown as typeof globalThis & Window;
+    globalThis.document = document;
     // Navigator is read-only in Node, so we need to define it differently
-    Object.defineProperty(global, "navigator", {
+    Object.defineProperty(globalThis, "navigator", {
+      configurable: true,
       value: window.navigator,
       writable: true,
-      configurable: true,
     });
 
     // Since the container API doesn't bundle scripts, we need to manually inject the navMenu script
     // Read and transpile the navMenu.ts file using TypeScript's transpile API
-    const navMenuPath = fileURLToPath(new URL("./navMenu.ts", import.meta.url));
-    const navMenuContent = readFileSync(navMenuPath, "utf-8");
+    const navMenuPath = fileURLToPath(new URL("navMenu.ts", import.meta.url));
+    const navMenuContent = readFileSync(navMenuPath, "utf8");
 
     // Use TypeScript to transpile to JavaScript
     const transpileResult = ts.transpileModule(navMenuContent, {
       compilerOptions: {
         module: ts.ModuleKind.None,
-        target: ts.ScriptTarget.ES2020,
         removeComments: true,
+        target: ts.ScriptTarget.ES2020,
       },
     });
 
     // Execute the transpiled navMenu script in the JSDOM context
-    const scriptEl = dom.window.document.createElement("script");
+    const scriptEl = document.createElement("script");
     scriptEl.textContent = transpileResult.outputText;
-    dom.window.document.body.appendChild(scriptEl);
+    document.body.append(scriptEl);
 
     cleanup = () => {
       // Clean up body classes
@@ -81,7 +82,7 @@ describe("Layout navigation menu", () => {
 
   afterEach(() => {
     cleanup();
-    dom.window.close();
+    window.close();
   });
 
   it("renders navigation toggle button", ({ expect }) => {
@@ -170,7 +171,6 @@ describe("Layout navigation menu", () => {
     const toggleButton = document.querySelector(
       "[data-nav-toggle]",
     ) as HTMLButtonElement;
-    const navMenu = document.querySelector("[data-nav-menu]") as HTMLElement;
     const body = document.body;
 
     // Open menu
@@ -208,8 +208,8 @@ describe("Layout navigation menu", () => {
 
     // Press Escape
     const event = new window.KeyboardEvent("keydown", {
-      key: "Escape",
       bubbles: true,
+      key: "Escape",
     });
     document.dispatchEvent(event);
 
@@ -251,8 +251,8 @@ describe("Layout navigation menu", () => {
 
     // Press Escape
     const event = new window.KeyboardEvent("keydown", {
-      key: "Escape",
       bubbles: true,
+      key: "Escape",
     });
     document.dispatchEvent(event);
 
@@ -277,9 +277,9 @@ describe("Layout navigation menu", () => {
 
     // Simulate Tab key - the handler should prevent default and move focus
     const tabEvent = new window.KeyboardEvent("keydown", {
-      key: "Tab",
       bubbles: true,
       cancelable: true,
+      key: "Tab",
     });
 
     // The event handler will prevent default and move focus
@@ -311,10 +311,10 @@ describe("Layout navigation menu", () => {
 
     // Simulate Shift+Tab
     const shiftTabEvent = new window.KeyboardEvent("keydown", {
-      key: "Tab",
-      shiftKey: true,
       bubbles: true,
       cancelable: true,
+      key: "Tab",
+      shiftKey: true,
     });
 
     // The event handler will prevent default and move focus
