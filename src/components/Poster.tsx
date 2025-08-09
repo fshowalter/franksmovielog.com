@@ -15,9 +15,9 @@ type PosterProps = React.ImgHTMLAttributes<HTMLImageElement> & {
 
 export function Poster({
   className,
-  decoding = "async",
+  decoding,
   imageProps,
-  loading = "lazy",
+  loading,
   ...rest
 }: PosterProps): JSX.Element {
   return (
