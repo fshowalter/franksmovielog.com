@@ -14,6 +14,7 @@ const testSlugs = new Set([
   "horror-express-1972",
   "night-train-to-terror-1985",
   "rio-bravo-1959",
+  "the-bloody-judge-1970", // Has originalTitle AND 4 countries
   "the-curse-of-frankenstein-1957",
 ]);
 

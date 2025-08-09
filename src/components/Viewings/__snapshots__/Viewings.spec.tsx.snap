@@ -610,335 +610,11 @@ exports[`Viewings > can filter by medium then show all 1`] = `
         block
         
       "
-    id="November 2014"
-  >
-    <div
-      class="pt-0 text-md"
-      style="z-index: 1;"
-    >
-      <div
-        class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-      >
-        November 2014
-      </div>
-    </div>
-    <div
-      class="bg-subtle"
-    >
-      <ol>
-        <li
-          class="
-        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
-        last-of-type:pb-12
-        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
-        tablet:last-of-type:pb-4
-      "
-        >
-          <div
-            class="
-          px-container py-4
-          tablet:px-4 tablet:py-0 tablet:text-muted
-        "
-          >
-            <div
-              class="
-            flex items-center gap-1
-            tablet:h-full tablet:flex-col tablet:justify-center
-          "
-            >
-              <div
-                class="
-              mr-1 py-2 text-center font-sans text-xxs/none font-light
-              text-subtle uppercase
-              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
-            "
-              >
-                Nov
-              </div>
-              <div
-                class="
-              text-center text-2xl text-muted
-              tablet:text-2.5xl/8
-            "
-              >
-                6
-              </div>
-              <div
-                class="
-              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
-              text-subtle uppercase
-              tablet:w-12 tablet:px-0 tablet:py-1
-            "
-              >
-                2014
-              </div>
-              <div
-                class="
-              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
-              uppercase
-              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
-            "
-              >
-                Thu
-              </div>
-            </div>
-          </div>
-          <ul
-            class="
-          flex h-full grow flex-col
-          tablet:gap-y-0
-        "
-          >
-            <li
-              class="
-        group/list-item relative mb-1 flex transform-gpu flex-row items-center
-        gap-x-4 transition-transform
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-105
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        bg-default
-        px-container py-4
-        last-of-type:mb-0
-        tablet:gap-x-6 tablet:pl-4
-      "
-              data-has-review="true"
-            >
-              <div
-                class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-              >
-                <div
-                  class="w-list-item-poster shrink-0"
-                >
-                  <img
-                    alt=""
-                    class="aspect-poster drop-shadow-sm"
-                    decoding="async"
-                    height="113"
-                    loading="lazy"
-                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                    width="80"
-                  />
-                </div>
-              </div>
-              <div
-                class="flex grow flex-col gap-1"
-              >
-                <a
-                  class="
-          block font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:opacity-0
-        "
-                  href="/reviews/nightcrawler-2014/"
-                >
-                  Nightcrawler
-                   
-                   
-                  <span
-                    class="
-        text-xxs font-light text-subtle
-        tablet:text-xs
-      "
-                  >
-                    2014
-                  </span>
-                </a>
-                <div
-                  class="font-sans text-xs font-light text-subtle"
-                >
-                  Alamo Drafthouse Cinema - One Loudoun
-                </div>
-              </div>
-            </li>
-          </ul>
-        </li>
-      </ol>
-    </div>
-  </li>
-  <li
-    class="
-        block
-        
-      "
-    id="September 2014"
-  >
-    <div
-      class="pt-0 text-md"
-      style="z-index: 2;"
-    >
-      <div
-        class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-      >
-        September 2014
-      </div>
-    </div>
-    <div
-      class="bg-subtle"
-    >
-      <ol>
-        <li
-          class="
-        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
-        last-of-type:pb-12
-        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
-        tablet:last-of-type:pb-4
-      "
-        >
-          <div
-            class="
-          px-container py-4
-          tablet:px-4 tablet:py-0 tablet:text-muted
-        "
-          >
-            <div
-              class="
-            flex items-center gap-1
-            tablet:h-full tablet:flex-col tablet:justify-center
-          "
-            >
-              <div
-                class="
-              mr-1 py-2 text-center font-sans text-xxs/none font-light
-              text-subtle uppercase
-              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
-            "
-              >
-                Sep
-              </div>
-              <div
-                class="
-              text-center text-2xl text-muted
-              tablet:text-2.5xl/8
-            "
-              >
-                25
-              </div>
-              <div
-                class="
-              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
-              text-subtle uppercase
-              tablet:w-12 tablet:px-0 tablet:py-1
-            "
-              >
-                2014
-              </div>
-              <div
-                class="
-              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
-              uppercase
-              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
-            "
-              >
-                Thu
-              </div>
-            </div>
-          </div>
-          <ul
-            class="
-          flex h-full grow flex-col
-          tablet:gap-y-0
-        "
-          >
-            <li
-              class="
-        group/list-item relative mb-1 flex transform-gpu flex-row items-center
-        gap-x-4 transition-transform
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-105
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        bg-default
-        px-container py-4
-        last-of-type:mb-0
-        tablet:gap-x-6 tablet:pl-4
-      "
-              data-has-review="true"
-            >
-              <div
-                class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-              >
-                <div
-                  class="w-list-item-poster shrink-0"
-                >
-                  <img
-                    alt=""
-                    class="aspect-poster drop-shadow-sm"
-                    decoding="async"
-                    height="113"
-                    loading="lazy"
-                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                    width="80"
-                  />
-                </div>
-              </div>
-              <div
-                class="flex grow flex-col gap-1"
-              >
-                <a
-                  class="
-          block font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:opacity-0
-        "
-                  href="/reviews/a-walk-among-the-tombstones-2014/"
-                >
-                  A Walk Among the Tombstones
-                   
-                   
-                  <span
-                    class="
-        text-xxs font-light text-subtle
-        tablet:text-xs
-      "
-                  >
-                    2014
-                  </span>
-                </a>
-                <div
-                  class="font-sans text-xs font-light text-subtle"
-                >
-                  AMC Tysons Corner 16
-                </div>
-              </div>
-            </li>
-          </ul>
-        </li>
-      </ol>
-    </div>
-  </li>
-  <li
-    class="
-        block
-        
-      "
     id="August 2014"
   >
     <div
       class="pt-0 text-md"
-      style="z-index: 3;"
+      style="z-index: 1;"
     >
       <div
         class="
@@ -954,6 +630,140 @@ exports[`Viewings > can filter by medium then show all 1`] = `
       class="bg-subtle"
     >
       <ol>
+        <li
+          class="
+        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
+        last-of-type:pb-12
+        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
+        tablet:last-of-type:pb-4
+      "
+        >
+          <div
+            class="
+          px-container py-4
+          tablet:px-4 tablet:py-0 tablet:text-muted
+        "
+          >
+            <div
+              class="
+            flex items-center gap-1
+            tablet:h-full tablet:flex-col tablet:justify-center
+          "
+            >
+              <div
+                class="
+              mr-1 py-2 text-center font-sans text-xxs/none font-light
+              text-subtle uppercase
+              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
+            "
+              >
+                Aug
+              </div>
+              <div
+                class="
+              text-center text-2xl text-muted
+              tablet:text-2.5xl/8
+            "
+              >
+                2
+              </div>
+              <div
+                class="
+              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
+              text-subtle uppercase
+              tablet:w-12 tablet:px-0 tablet:py-1
+            "
+              >
+                2014
+              </div>
+              <div
+                class="
+              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
+              uppercase
+              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
+            "
+              >
+                Sat
+              </div>
+            </div>
+          </div>
+          <ul
+            class="
+          flex h-full grow flex-col
+          tablet:gap-y-0
+        "
+          >
+            <li
+              class="
+        group/list-item relative mb-1 flex transform-gpu flex-row items-center
+        gap-x-4 transition-transform
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        bg-default
+        px-container py-4
+        last-of-type:mb-0
+        tablet:gap-x-6 tablet:pl-4
+      "
+              data-has-review="true"
+            >
+              <div
+                class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+              >
+                <div
+                  class="w-list-item-poster shrink-0"
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster drop-shadow-sm"
+                    decoding="async"
+                    height="113"
+                    loading="lazy"
+                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                    width="80"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex grow flex-col gap-1"
+              >
+                <a
+                  class="
+          block font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:opacity-0
+        "
+                  href="/reviews/the-bloody-judge-1970/"
+                >
+                  The Bloody Judge
+                   
+                   
+                  <span
+                    class="
+        text-xxs font-light text-subtle
+        tablet:text-xs
+      "
+                  >
+                    1970
+                  </span>
+                </a>
+                <div
+                  class="font-sans text-xs font-light text-subtle"
+                >
+                  DVD
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
         <li
           class="
         relative flex max-w-(--breakpoint-desktop) flex-col bg-group
@@ -1222,6 +1032,34 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             </li>
           </ul>
         </li>
+      </ol>
+    </div>
+  </li>
+  <li
+    class="
+        block
+        
+      "
+    id="November 2014"
+  >
+    <div
+      class="pt-0 text-md"
+      style="z-index: 2;"
+    >
+      <div
+        class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+      >
+        November 2014
+      </div>
+    </div>
+    <div
+      class="bg-subtle"
+    >
+      <ol>
         <li
           class="
         relative flex max-w-(--breakpoint-desktop) flex-col bg-group
@@ -1249,7 +1087,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
               tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
             "
               >
-                Aug
+                Nov
               </div>
               <div
                 class="
@@ -1257,7 +1095,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
               tablet:text-2.5xl/8
             "
               >
-                2
+                6
               </div>
               <div
                 class="
@@ -1275,7 +1113,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
               tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
             "
               >
-                Sat
+                Thu
               </div>
             </div>
           </div>
@@ -1318,8 +1156,8 @@ exports[`Viewings > can filter by medium then show all 1`] = `
                     height="113"
                     loading="lazy"
                     sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
                     width="80"
                   />
                 </div>
@@ -1333,9 +1171,9 @@ exports[`Viewings > can filter by medium then show all 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:opacity-0
         "
-                  href="/reviews/the-bloody-judge-1970/"
+                  href="/reviews/nightcrawler-2014/"
                 >
-                  The Bloody Judge
+                  Nightcrawler
                    
                    
                   <span
@@ -1344,13 +1182,175 @@ exports[`Viewings > can filter by medium then show all 1`] = `
         tablet:text-xs
       "
                   >
-                    1970
+                    2014
                   </span>
                 </a>
                 <div
                   class="font-sans text-xs font-light text-subtle"
                 >
-                  DVD
+                  Alamo Drafthouse Cinema - One Loudoun
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </li>
+  <li
+    class="
+        block
+        
+      "
+    id="September 2014"
+  >
+    <div
+      class="pt-0 text-md"
+      style="z-index: 3;"
+    >
+      <div
+        class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+      >
+        September 2014
+      </div>
+    </div>
+    <div
+      class="bg-subtle"
+    >
+      <ol>
+        <li
+          class="
+        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
+        last-of-type:pb-12
+        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
+        tablet:last-of-type:pb-4
+      "
+        >
+          <div
+            class="
+          px-container py-4
+          tablet:px-4 tablet:py-0 tablet:text-muted
+        "
+          >
+            <div
+              class="
+            flex items-center gap-1
+            tablet:h-full tablet:flex-col tablet:justify-center
+          "
+            >
+              <div
+                class="
+              mr-1 py-2 text-center font-sans text-xxs/none font-light
+              text-subtle uppercase
+              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
+            "
+              >
+                Sep
+              </div>
+              <div
+                class="
+              text-center text-2xl text-muted
+              tablet:text-2.5xl/8
+            "
+              >
+                25
+              </div>
+              <div
+                class="
+              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
+              text-subtle uppercase
+              tablet:w-12 tablet:px-0 tablet:py-1
+            "
+              >
+                2014
+              </div>
+              <div
+                class="
+              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
+              uppercase
+              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
+            "
+              >
+                Thu
+              </div>
+            </div>
+          </div>
+          <ul
+            class="
+          flex h-full grow flex-col
+          tablet:gap-y-0
+        "
+          >
+            <li
+              class="
+        group/list-item relative mb-1 flex transform-gpu flex-row items-center
+        gap-x-4 transition-transform
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        bg-default
+        px-container py-4
+        last-of-type:mb-0
+        tablet:gap-x-6 tablet:pl-4
+      "
+              data-has-review="true"
+            >
+              <div
+                class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+              >
+                <div
+                  class="w-list-item-poster shrink-0"
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster drop-shadow-sm"
+                    decoding="async"
+                    height="113"
+                    loading="lazy"
+                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                    width="80"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex grow flex-col gap-1"
+              >
+                <a
+                  class="
+          block font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:opacity-0
+        "
+                  href="/reviews/a-walk-among-the-tombstones-2014/"
+                >
+                  A Walk Among the Tombstones
+                   
+                   
+                  <span
+                    class="
+        text-xxs font-light text-subtle
+        tablet:text-xs
+      "
+                  >
+                    2014
+                  </span>
+                </a>
+                <div
+                  class="font-sans text-xs font-light text-subtle"
+                >
+                  AMC Tysons Corner 16
                 </div>
               </div>
             </li>
@@ -4797,6 +4797,140 @@ exports[`Viewings > can filter by release year 1`] = `
               tablet:text-2.5xl/8
             "
               >
+                2
+              </div>
+              <div
+                class="
+              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
+              text-subtle uppercase
+              tablet:w-12 tablet:px-0 tablet:py-1
+            "
+              >
+                2014
+              </div>
+              <div
+                class="
+              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
+              uppercase
+              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
+            "
+              >
+                Sat
+              </div>
+            </div>
+          </div>
+          <ul
+            class="
+          flex h-full grow flex-col
+          tablet:gap-y-0
+        "
+          >
+            <li
+              class="
+        group/list-item relative mb-1 flex transform-gpu flex-row items-center
+        gap-x-4 transition-transform
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        bg-default
+        px-container py-4
+        last-of-type:mb-0
+        tablet:gap-x-6 tablet:pl-4
+      "
+              data-has-review="true"
+            >
+              <div
+                class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+              >
+                <div
+                  class="w-list-item-poster shrink-0"
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster drop-shadow-sm"
+                    decoding="async"
+                    height="113"
+                    loading="lazy"
+                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                    width="80"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex grow flex-col gap-1"
+              >
+                <a
+                  class="
+          block font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:opacity-0
+        "
+                  href="/reviews/the-bloody-judge-1970/"
+                >
+                  The Bloody Judge
+                   
+                   
+                  <span
+                    class="
+        text-xxs font-light text-subtle
+        tablet:text-xs
+      "
+                  >
+                    1970
+                  </span>
+                </a>
+                <div
+                  class="font-sans text-xs font-light text-subtle"
+                >
+                  DVD
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li
+          class="
+        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
+        last-of-type:pb-12
+        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
+        tablet:last-of-type:pb-4
+      "
+        >
+          <div
+            class="
+          px-container py-4
+          tablet:px-4 tablet:py-0 tablet:text-muted
+        "
+          >
+            <div
+              class="
+            flex items-center gap-1
+            tablet:h-full tablet:flex-col tablet:justify-center
+          "
+            >
+              <div
+                class="
+              mr-1 py-2 text-center font-sans text-xxs/none font-light
+              text-subtle uppercase
+              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
+            "
+              >
+                Aug
+              </div>
+              <div
+                class="
+              text-center text-2xl text-muted
+              tablet:text-2.5xl/8
+            "
+              >
                 16
               </div>
               <div
@@ -5019,140 +5153,6 @@ exports[`Viewings > can filter by release year 1`] = `
       "
                   >
                     1966
-                  </span>
-                </a>
-                <div
-                  class="font-sans text-xs font-light text-subtle"
-                >
-                  DVD
-                </div>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li
-          class="
-        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
-        last-of-type:pb-12
-        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
-        tablet:last-of-type:pb-4
-      "
-        >
-          <div
-            class="
-          px-container py-4
-          tablet:px-4 tablet:py-0 tablet:text-muted
-        "
-          >
-            <div
-              class="
-            flex items-center gap-1
-            tablet:h-full tablet:flex-col tablet:justify-center
-          "
-            >
-              <div
-                class="
-              mr-1 py-2 text-center font-sans text-xxs/none font-light
-              text-subtle uppercase
-              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
-            "
-              >
-                Aug
-              </div>
-              <div
-                class="
-              text-center text-2xl text-muted
-              tablet:text-2.5xl/8
-            "
-              >
-                2
-              </div>
-              <div
-                class="
-              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
-              text-subtle uppercase
-              tablet:w-12 tablet:px-0 tablet:py-1
-            "
-              >
-                2014
-              </div>
-              <div
-                class="
-              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
-              uppercase
-              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
-            "
-              >
-                Sat
-              </div>
-            </div>
-          </div>
-          <ul
-            class="
-          flex h-full grow flex-col
-          tablet:gap-y-0
-        "
-          >
-            <li
-              class="
-        group/list-item relative mb-1 flex transform-gpu flex-row items-center
-        gap-x-4 transition-transform
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-105
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        bg-default
-        px-container py-4
-        last-of-type:mb-0
-        tablet:gap-x-6 tablet:pl-4
-      "
-              data-has-review="true"
-            >
-              <div
-                class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-              >
-                <div
-                  class="w-list-item-poster shrink-0"
-                >
-                  <img
-                    alt=""
-                    class="aspect-poster drop-shadow-sm"
-                    decoding="async"
-                    height="113"
-                    loading="lazy"
-                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                    width="80"
-                  />
-                </div>
-              </div>
-              <div
-                class="flex grow flex-col gap-1"
-              >
-                <a
-                  class="
-          block font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:opacity-0
-        "
-                  href="/reviews/the-bloody-judge-1970/"
-                >
-                  The Bloody Judge
-                   
-                   
-                  <span
-                    class="
-        text-xxs font-light text-subtle
-        tablet:text-xs
-      "
-                  >
-                    1970
                   </span>
                 </a>
                 <div
@@ -5693,6 +5693,140 @@ exports[`Viewings > can filter by release year reversed 1`] = `
               tablet:text-2.5xl/8
             "
               >
+                2
+              </div>
+              <div
+                class="
+              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
+              text-subtle uppercase
+              tablet:w-12 tablet:px-0 tablet:py-1
+            "
+              >
+                2014
+              </div>
+              <div
+                class="
+              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
+              uppercase
+              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
+            "
+              >
+                Sat
+              </div>
+            </div>
+          </div>
+          <ul
+            class="
+          flex h-full grow flex-col
+          tablet:gap-y-0
+        "
+          >
+            <li
+              class="
+        group/list-item relative mb-1 flex transform-gpu flex-row items-center
+        gap-x-4 transition-transform
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        bg-default
+        px-container py-4
+        last-of-type:mb-0
+        tablet:gap-x-6 tablet:pl-4
+      "
+              data-has-review="true"
+            >
+              <div
+                class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+              >
+                <div
+                  class="w-list-item-poster shrink-0"
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster drop-shadow-sm"
+                    decoding="async"
+                    height="113"
+                    loading="lazy"
+                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                    width="80"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex grow flex-col gap-1"
+              >
+                <a
+                  class="
+          block font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:opacity-0
+        "
+                  href="/reviews/the-bloody-judge-1970/"
+                >
+                  The Bloody Judge
+                   
+                   
+                  <span
+                    class="
+        text-xxs font-light text-subtle
+        tablet:text-xs
+      "
+                  >
+                    1970
+                  </span>
+                </a>
+                <div
+                  class="font-sans text-xs font-light text-subtle"
+                >
+                  DVD
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li
+          class="
+        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
+        last-of-type:pb-12
+        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
+        tablet:last-of-type:pb-4
+      "
+        >
+          <div
+            class="
+          px-container py-4
+          tablet:px-4 tablet:py-0 tablet:text-muted
+        "
+          >
+            <div
+              class="
+            flex items-center gap-1
+            tablet:h-full tablet:flex-col tablet:justify-center
+          "
+            >
+              <div
+                class="
+              mr-1 py-2 text-center font-sans text-xxs/none font-light
+              text-subtle uppercase
+              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
+            "
+              >
+                Aug
+              </div>
+              <div
+                class="
+              text-center text-2xl text-muted
+              tablet:text-2.5xl/8
+            "
+              >
                 16
               </div>
               <div
@@ -5915,140 +6049,6 @@ exports[`Viewings > can filter by release year reversed 1`] = `
       "
                   >
                     1966
-                  </span>
-                </a>
-                <div
-                  class="font-sans text-xs font-light text-subtle"
-                >
-                  DVD
-                </div>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li
-          class="
-        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
-        last-of-type:pb-12
-        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
-        tablet:last-of-type:pb-4
-      "
-        >
-          <div
-            class="
-          px-container py-4
-          tablet:px-4 tablet:py-0 tablet:text-muted
-        "
-          >
-            <div
-              class="
-            flex items-center gap-1
-            tablet:h-full tablet:flex-col tablet:justify-center
-          "
-            >
-              <div
-                class="
-              mr-1 py-2 text-center font-sans text-xxs/none font-light
-              text-subtle uppercase
-              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
-            "
-              >
-                Aug
-              </div>
-              <div
-                class="
-              text-center text-2xl text-muted
-              tablet:text-2.5xl/8
-            "
-              >
-                2
-              </div>
-              <div
-                class="
-              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
-              text-subtle uppercase
-              tablet:w-12 tablet:px-0 tablet:py-1
-            "
-              >
-                2014
-              </div>
-              <div
-                class="
-              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
-              uppercase
-              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
-            "
-              >
-                Sat
-              </div>
-            </div>
-          </div>
-          <ul
-            class="
-          flex h-full grow flex-col
-          tablet:gap-y-0
-        "
-          >
-            <li
-              class="
-        group/list-item relative mb-1 flex transform-gpu flex-row items-center
-        gap-x-4 transition-transform
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-105
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        bg-default
-        px-container py-4
-        last-of-type:mb-0
-        tablet:gap-x-6 tablet:pl-4
-      "
-              data-has-review="true"
-            >
-              <div
-                class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-              >
-                <div
-                  class="w-list-item-poster shrink-0"
-                >
-                  <img
-                    alt=""
-                    class="aspect-poster drop-shadow-sm"
-                    decoding="async"
-                    height="113"
-                    loading="lazy"
-                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                    width="80"
-                  />
-                </div>
-              </div>
-              <div
-                class="flex grow flex-col gap-1"
-              >
-                <a
-                  class="
-          block font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:opacity-0
-        "
-                  href="/reviews/the-bloody-judge-1970/"
-                >
-                  The Bloody Judge
-                   
-                   
-                  <span
-                    class="
-        text-xxs font-light text-subtle
-        tablet:text-xs
-      "
-                  >
-                    1970
                   </span>
                 </a>
                 <div
@@ -7409,335 +7409,11 @@ exports[`Viewings > can filter by venue then show all 1`] = `
         block
         
       "
-    id="November 2014"
-  >
-    <div
-      class="pt-0 text-md"
-      style="z-index: 1;"
-    >
-      <div
-        class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-      >
-        November 2014
-      </div>
-    </div>
-    <div
-      class="bg-subtle"
-    >
-      <ol>
-        <li
-          class="
-        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
-        last-of-type:pb-12
-        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
-        tablet:last-of-type:pb-4
-      "
-        >
-          <div
-            class="
-          px-container py-4
-          tablet:px-4 tablet:py-0 tablet:text-muted
-        "
-          >
-            <div
-              class="
-            flex items-center gap-1
-            tablet:h-full tablet:flex-col tablet:justify-center
-          "
-            >
-              <div
-                class="
-              mr-1 py-2 text-center font-sans text-xxs/none font-light
-              text-subtle uppercase
-              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
-            "
-              >
-                Nov
-              </div>
-              <div
-                class="
-              text-center text-2xl text-muted
-              tablet:text-2.5xl/8
-            "
-              >
-                6
-              </div>
-              <div
-                class="
-              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
-              text-subtle uppercase
-              tablet:w-12 tablet:px-0 tablet:py-1
-            "
-              >
-                2014
-              </div>
-              <div
-                class="
-              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
-              uppercase
-              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
-            "
-              >
-                Thu
-              </div>
-            </div>
-          </div>
-          <ul
-            class="
-          flex h-full grow flex-col
-          tablet:gap-y-0
-        "
-          >
-            <li
-              class="
-        group/list-item relative mb-1 flex transform-gpu flex-row items-center
-        gap-x-4 transition-transform
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-105
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        bg-default
-        px-container py-4
-        last-of-type:mb-0
-        tablet:gap-x-6 tablet:pl-4
-      "
-              data-has-review="true"
-            >
-              <div
-                class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-              >
-                <div
-                  class="w-list-item-poster shrink-0"
-                >
-                  <img
-                    alt=""
-                    class="aspect-poster drop-shadow-sm"
-                    decoding="async"
-                    height="113"
-                    loading="lazy"
-                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                    width="80"
-                  />
-                </div>
-              </div>
-              <div
-                class="flex grow flex-col gap-1"
-              >
-                <a
-                  class="
-          block font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:opacity-0
-        "
-                  href="/reviews/nightcrawler-2014/"
-                >
-                  Nightcrawler
-                   
-                   
-                  <span
-                    class="
-        text-xxs font-light text-subtle
-        tablet:text-xs
-      "
-                  >
-                    2014
-                  </span>
-                </a>
-                <div
-                  class="font-sans text-xs font-light text-subtle"
-                >
-                  Alamo Drafthouse Cinema - One Loudoun
-                </div>
-              </div>
-            </li>
-          </ul>
-        </li>
-      </ol>
-    </div>
-  </li>
-  <li
-    class="
-        block
-        
-      "
-    id="September 2014"
-  >
-    <div
-      class="pt-0 text-md"
-      style="z-index: 2;"
-    >
-      <div
-        class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-      >
-        September 2014
-      </div>
-    </div>
-    <div
-      class="bg-subtle"
-    >
-      <ol>
-        <li
-          class="
-        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
-        last-of-type:pb-12
-        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
-        tablet:last-of-type:pb-4
-      "
-        >
-          <div
-            class="
-          px-container py-4
-          tablet:px-4 tablet:py-0 tablet:text-muted
-        "
-          >
-            <div
-              class="
-            flex items-center gap-1
-            tablet:h-full tablet:flex-col tablet:justify-center
-          "
-            >
-              <div
-                class="
-              mr-1 py-2 text-center font-sans text-xxs/none font-light
-              text-subtle uppercase
-              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
-            "
-              >
-                Sep
-              </div>
-              <div
-                class="
-              text-center text-2xl text-muted
-              tablet:text-2.5xl/8
-            "
-              >
-                25
-              </div>
-              <div
-                class="
-              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
-              text-subtle uppercase
-              tablet:w-12 tablet:px-0 tablet:py-1
-            "
-              >
-                2014
-              </div>
-              <div
-                class="
-              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
-              uppercase
-              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
-            "
-              >
-                Thu
-              </div>
-            </div>
-          </div>
-          <ul
-            class="
-          flex h-full grow flex-col
-          tablet:gap-y-0
-        "
-          >
-            <li
-              class="
-        group/list-item relative mb-1 flex transform-gpu flex-row items-center
-        gap-x-4 transition-transform
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-105
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        bg-default
-        px-container py-4
-        last-of-type:mb-0
-        tablet:gap-x-6 tablet:pl-4
-      "
-              data-has-review="true"
-            >
-              <div
-                class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-              >
-                <div
-                  class="w-list-item-poster shrink-0"
-                >
-                  <img
-                    alt=""
-                    class="aspect-poster drop-shadow-sm"
-                    decoding="async"
-                    height="113"
-                    loading="lazy"
-                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                    width="80"
-                  />
-                </div>
-              </div>
-              <div
-                class="flex grow flex-col gap-1"
-              >
-                <a
-                  class="
-          block font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:opacity-0
-        "
-                  href="/reviews/a-walk-among-the-tombstones-2014/"
-                >
-                  A Walk Among the Tombstones
-                   
-                   
-                  <span
-                    class="
-        text-xxs font-light text-subtle
-        tablet:text-xs
-      "
-                  >
-                    2014
-                  </span>
-                </a>
-                <div
-                  class="font-sans text-xs font-light text-subtle"
-                >
-                  AMC Tysons Corner 16
-                </div>
-              </div>
-            </li>
-          </ul>
-        </li>
-      </ol>
-    </div>
-  </li>
-  <li
-    class="
-        block
-        
-      "
     id="August 2014"
   >
     <div
       class="pt-0 text-md"
-      style="z-index: 3;"
+      style="z-index: 1;"
     >
       <div
         class="
@@ -7753,6 +7429,140 @@ exports[`Viewings > can filter by venue then show all 1`] = `
       class="bg-subtle"
     >
       <ol>
+        <li
+          class="
+        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
+        last-of-type:pb-12
+        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
+        tablet:last-of-type:pb-4
+      "
+        >
+          <div
+            class="
+          px-container py-4
+          tablet:px-4 tablet:py-0 tablet:text-muted
+        "
+          >
+            <div
+              class="
+            flex items-center gap-1
+            tablet:h-full tablet:flex-col tablet:justify-center
+          "
+            >
+              <div
+                class="
+              mr-1 py-2 text-center font-sans text-xxs/none font-light
+              text-subtle uppercase
+              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
+            "
+              >
+                Aug
+              </div>
+              <div
+                class="
+              text-center text-2xl text-muted
+              tablet:text-2.5xl/8
+            "
+              >
+                2
+              </div>
+              <div
+                class="
+              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
+              text-subtle uppercase
+              tablet:w-12 tablet:px-0 tablet:py-1
+            "
+              >
+                2014
+              </div>
+              <div
+                class="
+              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
+              uppercase
+              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
+            "
+              >
+                Sat
+              </div>
+            </div>
+          </div>
+          <ul
+            class="
+          flex h-full grow flex-col
+          tablet:gap-y-0
+        "
+          >
+            <li
+              class="
+        group/list-item relative mb-1 flex transform-gpu flex-row items-center
+        gap-x-4 transition-transform
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        bg-default
+        px-container py-4
+        last-of-type:mb-0
+        tablet:gap-x-6 tablet:pl-4
+      "
+              data-has-review="true"
+            >
+              <div
+                class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+              >
+                <div
+                  class="w-list-item-poster shrink-0"
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster drop-shadow-sm"
+                    decoding="async"
+                    height="113"
+                    loading="lazy"
+                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                    width="80"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex grow flex-col gap-1"
+              >
+                <a
+                  class="
+          block font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:opacity-0
+        "
+                  href="/reviews/the-bloody-judge-1970/"
+                >
+                  The Bloody Judge
+                   
+                   
+                  <span
+                    class="
+        text-xxs font-light text-subtle
+        tablet:text-xs
+      "
+                  >
+                    1970
+                  </span>
+                </a>
+                <div
+                  class="font-sans text-xs font-light text-subtle"
+                >
+                  DVD
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
         <li
           class="
         relative flex max-w-(--breakpoint-desktop) flex-col bg-group
@@ -8021,6 +7831,34 @@ exports[`Viewings > can filter by venue then show all 1`] = `
             </li>
           </ul>
         </li>
+      </ol>
+    </div>
+  </li>
+  <li
+    class="
+        block
+        
+      "
+    id="November 2014"
+  >
+    <div
+      class="pt-0 text-md"
+      style="z-index: 2;"
+    >
+      <div
+        class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+      >
+        November 2014
+      </div>
+    </div>
+    <div
+      class="bg-subtle"
+    >
+      <ol>
         <li
           class="
         relative flex max-w-(--breakpoint-desktop) flex-col bg-group
@@ -8048,7 +7886,7 @@ exports[`Viewings > can filter by venue then show all 1`] = `
               tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
             "
               >
-                Aug
+                Nov
               </div>
               <div
                 class="
@@ -8056,7 +7894,7 @@ exports[`Viewings > can filter by venue then show all 1`] = `
               tablet:text-2.5xl/8
             "
               >
-                2
+                6
               </div>
               <div
                 class="
@@ -8074,7 +7912,7 @@ exports[`Viewings > can filter by venue then show all 1`] = `
               tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
             "
               >
-                Sat
+                Thu
               </div>
             </div>
           </div>
@@ -8117,8 +7955,8 @@ exports[`Viewings > can filter by venue then show all 1`] = `
                     height="113"
                     loading="lazy"
                     sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
                     width="80"
                   />
                 </div>
@@ -8132,9 +7970,9 @@ exports[`Viewings > can filter by venue then show all 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:opacity-0
         "
-                  href="/reviews/the-bloody-judge-1970/"
+                  href="/reviews/nightcrawler-2014/"
                 >
-                  The Bloody Judge
+                  Nightcrawler
                    
                    
                   <span
@@ -8143,13 +7981,175 @@ exports[`Viewings > can filter by venue then show all 1`] = `
         tablet:text-xs
       "
                   >
-                    1970
+                    2014
                   </span>
                 </a>
                 <div
                   class="font-sans text-xs font-light text-subtle"
                 >
-                  DVD
+                  Alamo Drafthouse Cinema - One Loudoun
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </li>
+  <li
+    class="
+        block
+        
+      "
+    id="September 2014"
+  >
+    <div
+      class="pt-0 text-md"
+      style="z-index: 3;"
+    >
+      <div
+        class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+      >
+        September 2014
+      </div>
+    </div>
+    <div
+      class="bg-subtle"
+    >
+      <ol>
+        <li
+          class="
+        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
+        last-of-type:pb-12
+        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
+        tablet:last-of-type:pb-4
+      "
+        >
+          <div
+            class="
+          px-container py-4
+          tablet:px-4 tablet:py-0 tablet:text-muted
+        "
+          >
+            <div
+              class="
+            flex items-center gap-1
+            tablet:h-full tablet:flex-col tablet:justify-center
+          "
+            >
+              <div
+                class="
+              mr-1 py-2 text-center font-sans text-xxs/none font-light
+              text-subtle uppercase
+              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
+            "
+              >
+                Sep
+              </div>
+              <div
+                class="
+              text-center text-2xl text-muted
+              tablet:text-2.5xl/8
+            "
+              >
+                25
+              </div>
+              <div
+                class="
+              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
+              text-subtle uppercase
+              tablet:w-12 tablet:px-0 tablet:py-1
+            "
+              >
+                2014
+              </div>
+              <div
+                class="
+              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
+              uppercase
+              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
+            "
+              >
+                Thu
+              </div>
+            </div>
+          </div>
+          <ul
+            class="
+          flex h-full grow flex-col
+          tablet:gap-y-0
+        "
+          >
+            <li
+              class="
+        group/list-item relative mb-1 flex transform-gpu flex-row items-center
+        gap-x-4 transition-transform
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        bg-default
+        px-container py-4
+        last-of-type:mb-0
+        tablet:gap-x-6 tablet:pl-4
+      "
+              data-has-review="true"
+            >
+              <div
+                class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+              >
+                <div
+                  class="w-list-item-poster shrink-0"
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster drop-shadow-sm"
+                    decoding="async"
+                    height="113"
+                    loading="lazy"
+                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                    width="80"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex grow flex-col gap-1"
+              >
+                <a
+                  class="
+          block font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:opacity-0
+        "
+                  href="/reviews/a-walk-among-the-tombstones-2014/"
+                >
+                  A Walk Among the Tombstones
+                   
+                   
+                  <span
+                    class="
+        text-xxs font-light text-subtle
+        tablet:text-xs
+      "
+                  >
+                    2014
+                  </span>
+                </a>
+                <div
+                  class="font-sans text-xs font-light text-subtle"
+                >
+                  AMC Tysons Corner 16
                 </div>
               </div>
             </li>
@@ -11541,335 +11541,11 @@ exports[`Viewings > can filter by viewing year 1`] = `
         block
         
       "
-    id="November 2014"
-  >
-    <div
-      class="pt-0 text-md"
-      style="z-index: 1;"
-    >
-      <div
-        class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-      >
-        November 2014
-      </div>
-    </div>
-    <div
-      class="bg-subtle"
-    >
-      <ol>
-        <li
-          class="
-        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
-        last-of-type:pb-12
-        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
-        tablet:last-of-type:pb-4
-      "
-        >
-          <div
-            class="
-          px-container py-4
-          tablet:px-4 tablet:py-0 tablet:text-muted
-        "
-          >
-            <div
-              class="
-            flex items-center gap-1
-            tablet:h-full tablet:flex-col tablet:justify-center
-          "
-            >
-              <div
-                class="
-              mr-1 py-2 text-center font-sans text-xxs/none font-light
-              text-subtle uppercase
-              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
-            "
-              >
-                Nov
-              </div>
-              <div
-                class="
-              text-center text-2xl text-muted
-              tablet:text-2.5xl/8
-            "
-              >
-                6
-              </div>
-              <div
-                class="
-              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
-              text-subtle uppercase
-              tablet:w-12 tablet:px-0 tablet:py-1
-            "
-              >
-                2014
-              </div>
-              <div
-                class="
-              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
-              uppercase
-              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
-            "
-              >
-                Thu
-              </div>
-            </div>
-          </div>
-          <ul
-            class="
-          flex h-full grow flex-col
-          tablet:gap-y-0
-        "
-          >
-            <li
-              class="
-        group/list-item relative mb-1 flex transform-gpu flex-row items-center
-        gap-x-4 transition-transform
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-105
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        bg-default
-        px-container py-4
-        last-of-type:mb-0
-        tablet:gap-x-6 tablet:pl-4
-      "
-              data-has-review="true"
-            >
-              <div
-                class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-              >
-                <div
-                  class="w-list-item-poster shrink-0"
-                >
-                  <img
-                    alt=""
-                    class="aspect-poster drop-shadow-sm"
-                    decoding="async"
-                    height="113"
-                    loading="lazy"
-                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                    width="80"
-                  />
-                </div>
-              </div>
-              <div
-                class="flex grow flex-col gap-1"
-              >
-                <a
-                  class="
-          block font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:opacity-0
-        "
-                  href="/reviews/nightcrawler-2014/"
-                >
-                  Nightcrawler
-                   
-                   
-                  <span
-                    class="
-        text-xxs font-light text-subtle
-        tablet:text-xs
-      "
-                  >
-                    2014
-                  </span>
-                </a>
-                <div
-                  class="font-sans text-xs font-light text-subtle"
-                >
-                  Alamo Drafthouse Cinema - One Loudoun
-                </div>
-              </div>
-            </li>
-          </ul>
-        </li>
-      </ol>
-    </div>
-  </li>
-  <li
-    class="
-        block
-        
-      "
-    id="September 2014"
-  >
-    <div
-      class="pt-0 text-md"
-      style="z-index: 2;"
-    >
-      <div
-        class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-      >
-        September 2014
-      </div>
-    </div>
-    <div
-      class="bg-subtle"
-    >
-      <ol>
-        <li
-          class="
-        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
-        last-of-type:pb-12
-        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
-        tablet:last-of-type:pb-4
-      "
-        >
-          <div
-            class="
-          px-container py-4
-          tablet:px-4 tablet:py-0 tablet:text-muted
-        "
-          >
-            <div
-              class="
-            flex items-center gap-1
-            tablet:h-full tablet:flex-col tablet:justify-center
-          "
-            >
-              <div
-                class="
-              mr-1 py-2 text-center font-sans text-xxs/none font-light
-              text-subtle uppercase
-              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
-            "
-              >
-                Sep
-              </div>
-              <div
-                class="
-              text-center text-2xl text-muted
-              tablet:text-2.5xl/8
-            "
-              >
-                25
-              </div>
-              <div
-                class="
-              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
-              text-subtle uppercase
-              tablet:w-12 tablet:px-0 tablet:py-1
-            "
-              >
-                2014
-              </div>
-              <div
-                class="
-              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
-              uppercase
-              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
-            "
-              >
-                Thu
-              </div>
-            </div>
-          </div>
-          <ul
-            class="
-          flex h-full grow flex-col
-          tablet:gap-y-0
-        "
-          >
-            <li
-              class="
-        group/list-item relative mb-1 flex transform-gpu flex-row items-center
-        gap-x-4 transition-transform
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-105
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        bg-default
-        px-container py-4
-        last-of-type:mb-0
-        tablet:gap-x-6 tablet:pl-4
-      "
-              data-has-review="true"
-            >
-              <div
-                class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-              >
-                <div
-                  class="w-list-item-poster shrink-0"
-                >
-                  <img
-                    alt=""
-                    class="aspect-poster drop-shadow-sm"
-                    decoding="async"
-                    height="113"
-                    loading="lazy"
-                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                    width="80"
-                  />
-                </div>
-              </div>
-              <div
-                class="flex grow flex-col gap-1"
-              >
-                <a
-                  class="
-          block font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:opacity-0
-        "
-                  href="/reviews/a-walk-among-the-tombstones-2014/"
-                >
-                  A Walk Among the Tombstones
-                   
-                   
-                  <span
-                    class="
-        text-xxs font-light text-subtle
-        tablet:text-xs
-      "
-                  >
-                    2014
-                  </span>
-                </a>
-                <div
-                  class="font-sans text-xs font-light text-subtle"
-                >
-                  AMC Tysons Corner 16
-                </div>
-              </div>
-            </li>
-          </ul>
-        </li>
-      </ol>
-    </div>
-  </li>
-  <li
-    class="
-        block
-        
-      "
     id="August 2014"
   >
     <div
       class="pt-0 text-md"
-      style="z-index: 3;"
+      style="z-index: 1;"
     >
       <div
         class="
@@ -11885,6 +11561,140 @@ exports[`Viewings > can filter by viewing year 1`] = `
       class="bg-subtle"
     >
       <ol>
+        <li
+          class="
+        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
+        last-of-type:pb-12
+        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
+        tablet:last-of-type:pb-4
+      "
+        >
+          <div
+            class="
+          px-container py-4
+          tablet:px-4 tablet:py-0 tablet:text-muted
+        "
+          >
+            <div
+              class="
+            flex items-center gap-1
+            tablet:h-full tablet:flex-col tablet:justify-center
+          "
+            >
+              <div
+                class="
+              mr-1 py-2 text-center font-sans text-xxs/none font-light
+              text-subtle uppercase
+              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
+            "
+              >
+                Aug
+              </div>
+              <div
+                class="
+              text-center text-2xl text-muted
+              tablet:text-2.5xl/8
+            "
+              >
+                2
+              </div>
+              <div
+                class="
+              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
+              text-subtle uppercase
+              tablet:w-12 tablet:px-0 tablet:py-1
+            "
+              >
+                2014
+              </div>
+              <div
+                class="
+              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
+              uppercase
+              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
+            "
+              >
+                Sat
+              </div>
+            </div>
+          </div>
+          <ul
+            class="
+          flex h-full grow flex-col
+          tablet:gap-y-0
+        "
+          >
+            <li
+              class="
+        group/list-item relative mb-1 flex transform-gpu flex-row items-center
+        gap-x-4 transition-transform
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        bg-default
+        px-container py-4
+        last-of-type:mb-0
+        tablet:gap-x-6 tablet:pl-4
+      "
+              data-has-review="true"
+            >
+              <div
+                class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+              >
+                <div
+                  class="w-list-item-poster shrink-0"
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster drop-shadow-sm"
+                    decoding="async"
+                    height="113"
+                    loading="lazy"
+                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                    width="80"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex grow flex-col gap-1"
+              >
+                <a
+                  class="
+          block font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:opacity-0
+        "
+                  href="/reviews/the-bloody-judge-1970/"
+                >
+                  The Bloody Judge
+                   
+                   
+                  <span
+                    class="
+        text-xxs font-light text-subtle
+        tablet:text-xs
+      "
+                  >
+                    1970
+                  </span>
+                </a>
+                <div
+                  class="font-sans text-xs font-light text-subtle"
+                >
+                  DVD
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
         <li
           class="
         relative flex max-w-(--breakpoint-desktop) flex-col bg-group
@@ -12153,6 +11963,34 @@ exports[`Viewings > can filter by viewing year 1`] = `
             </li>
           </ul>
         </li>
+      </ol>
+    </div>
+  </li>
+  <li
+    class="
+        block
+        
+      "
+    id="November 2014"
+  >
+    <div
+      class="pt-0 text-md"
+      style="z-index: 2;"
+    >
+      <div
+        class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+      >
+        November 2014
+      </div>
+    </div>
+    <div
+      class="bg-subtle"
+    >
+      <ol>
         <li
           class="
         relative flex max-w-(--breakpoint-desktop) flex-col bg-group
@@ -12180,7 +12018,7 @@ exports[`Viewings > can filter by viewing year 1`] = `
               tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
             "
               >
-                Aug
+                Nov
               </div>
               <div
                 class="
@@ -12188,7 +12026,7 @@ exports[`Viewings > can filter by viewing year 1`] = `
               tablet:text-2.5xl/8
             "
               >
-                2
+                6
               </div>
               <div
                 class="
@@ -12206,7 +12044,7 @@ exports[`Viewings > can filter by viewing year 1`] = `
               tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
             "
               >
-                Sat
+                Thu
               </div>
             </div>
           </div>
@@ -12249,8 +12087,8 @@ exports[`Viewings > can filter by viewing year 1`] = `
                     height="113"
                     loading="lazy"
                     sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
                     width="80"
                   />
                 </div>
@@ -12264,9 +12102,9 @@ exports[`Viewings > can filter by viewing year 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:opacity-0
         "
-                  href="/reviews/the-bloody-judge-1970/"
+                  href="/reviews/nightcrawler-2014/"
                 >
-                  The Bloody Judge
+                  Nightcrawler
                    
                    
                   <span
@@ -12275,13 +12113,175 @@ exports[`Viewings > can filter by viewing year 1`] = `
         tablet:text-xs
       "
                   >
-                    1970
+                    2014
                   </span>
                 </a>
                 <div
                   class="font-sans text-xs font-light text-subtle"
                 >
-                  DVD
+                  Alamo Drafthouse Cinema - One Loudoun
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </li>
+  <li
+    class="
+        block
+        
+      "
+    id="September 2014"
+  >
+    <div
+      class="pt-0 text-md"
+      style="z-index: 3;"
+    >
+      <div
+        class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+      >
+        September 2014
+      </div>
+    </div>
+    <div
+      class="bg-subtle"
+    >
+      <ol>
+        <li
+          class="
+        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
+        last-of-type:pb-12
+        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
+        tablet:last-of-type:pb-4
+      "
+        >
+          <div
+            class="
+          px-container py-4
+          tablet:px-4 tablet:py-0 tablet:text-muted
+        "
+          >
+            <div
+              class="
+            flex items-center gap-1
+            tablet:h-full tablet:flex-col tablet:justify-center
+          "
+            >
+              <div
+                class="
+              mr-1 py-2 text-center font-sans text-xxs/none font-light
+              text-subtle uppercase
+              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
+            "
+              >
+                Sep
+              </div>
+              <div
+                class="
+              text-center text-2xl text-muted
+              tablet:text-2.5xl/8
+            "
+              >
+                25
+              </div>
+              <div
+                class="
+              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
+              text-subtle uppercase
+              tablet:w-12 tablet:px-0 tablet:py-1
+            "
+              >
+                2014
+              </div>
+              <div
+                class="
+              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
+              uppercase
+              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
+            "
+              >
+                Thu
+              </div>
+            </div>
+          </div>
+          <ul
+            class="
+          flex h-full grow flex-col
+          tablet:gap-y-0
+        "
+          >
+            <li
+              class="
+        group/list-item relative mb-1 flex transform-gpu flex-row items-center
+        gap-x-4 transition-transform
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        bg-default
+        px-container py-4
+        last-of-type:mb-0
+        tablet:gap-x-6 tablet:pl-4
+      "
+              data-has-review="true"
+            >
+              <div
+                class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+              >
+                <div
+                  class="w-list-item-poster shrink-0"
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster drop-shadow-sm"
+                    decoding="async"
+                    height="113"
+                    loading="lazy"
+                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                    width="80"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex grow flex-col gap-1"
+              >
+                <a
+                  class="
+          block font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:opacity-0
+        "
+                  href="/reviews/a-walk-among-the-tombstones-2014/"
+                >
+                  A Walk Among the Tombstones
+                   
+                   
+                  <span
+                    class="
+        text-xxs font-light text-subtle
+        tablet:text-xs
+      "
+                  >
+                    2014
+                  </span>
+                </a>
+                <div
+                  class="font-sans text-xs font-light text-subtle"
+                >
+                  AMC Tysons Corner 16
                 </div>
               </div>
             </li>
@@ -39487,335 +39487,11 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
         block
         
       "
-    id="November 2014"
-  >
-    <div
-      class="pt-0 text-md"
-      style="z-index: 1;"
-    >
-      <div
-        class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-      >
-        November 2014
-      </div>
-    </div>
-    <div
-      class="bg-subtle"
-    >
-      <ol>
-        <li
-          class="
-        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
-        last-of-type:pb-12
-        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
-        tablet:last-of-type:pb-4
-      "
-        >
-          <div
-            class="
-          px-container py-4
-          tablet:px-4 tablet:py-0 tablet:text-muted
-        "
-          >
-            <div
-              class="
-            flex items-center gap-1
-            tablet:h-full tablet:flex-col tablet:justify-center
-          "
-            >
-              <div
-                class="
-              mr-1 py-2 text-center font-sans text-xxs/none font-light
-              text-subtle uppercase
-              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
-            "
-              >
-                Nov
-              </div>
-              <div
-                class="
-              text-center text-2xl text-muted
-              tablet:text-2.5xl/8
-            "
-              >
-                6
-              </div>
-              <div
-                class="
-              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
-              text-subtle uppercase
-              tablet:w-12 tablet:px-0 tablet:py-1
-            "
-              >
-                2014
-              </div>
-              <div
-                class="
-              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
-              uppercase
-              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
-            "
-              >
-                Thu
-              </div>
-            </div>
-          </div>
-          <ul
-            class="
-          flex h-full grow flex-col
-          tablet:gap-y-0
-        "
-          >
-            <li
-              class="
-        group/list-item relative mb-1 flex transform-gpu flex-row items-center
-        gap-x-4 transition-transform
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-105
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        bg-default
-        px-container py-4
-        last-of-type:mb-0
-        tablet:gap-x-6 tablet:pl-4
-      "
-              data-has-review="true"
-            >
-              <div
-                class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-              >
-                <div
-                  class="w-list-item-poster shrink-0"
-                >
-                  <img
-                    alt=""
-                    class="aspect-poster drop-shadow-sm"
-                    decoding="async"
-                    height="113"
-                    loading="lazy"
-                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                    width="80"
-                  />
-                </div>
-              </div>
-              <div
-                class="flex grow flex-col gap-1"
-              >
-                <a
-                  class="
-          block font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:opacity-0
-        "
-                  href="/reviews/nightcrawler-2014/"
-                >
-                  Nightcrawler
-                   
-                   
-                  <span
-                    class="
-        text-xxs font-light text-subtle
-        tablet:text-xs
-      "
-                  >
-                    2014
-                  </span>
-                </a>
-                <div
-                  class="font-sans text-xs font-light text-subtle"
-                >
-                  Alamo Drafthouse Cinema - One Loudoun
-                </div>
-              </div>
-            </li>
-          </ul>
-        </li>
-      </ol>
-    </div>
-  </li>
-  <li
-    class="
-        block
-        
-      "
-    id="September 2014"
-  >
-    <div
-      class="pt-0 text-md"
-      style="z-index: 2;"
-    >
-      <div
-        class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-      >
-        September 2014
-      </div>
-    </div>
-    <div
-      class="bg-subtle"
-    >
-      <ol>
-        <li
-          class="
-        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
-        last-of-type:pb-12
-        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
-        tablet:last-of-type:pb-4
-      "
-        >
-          <div
-            class="
-          px-container py-4
-          tablet:px-4 tablet:py-0 tablet:text-muted
-        "
-          >
-            <div
-              class="
-            flex items-center gap-1
-            tablet:h-full tablet:flex-col tablet:justify-center
-          "
-            >
-              <div
-                class="
-              mr-1 py-2 text-center font-sans text-xxs/none font-light
-              text-subtle uppercase
-              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
-            "
-              >
-                Sep
-              </div>
-              <div
-                class="
-              text-center text-2xl text-muted
-              tablet:text-2.5xl/8
-            "
-              >
-                25
-              </div>
-              <div
-                class="
-              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
-              text-subtle uppercase
-              tablet:w-12 tablet:px-0 tablet:py-1
-            "
-              >
-                2014
-              </div>
-              <div
-                class="
-              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
-              uppercase
-              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
-            "
-              >
-                Thu
-              </div>
-            </div>
-          </div>
-          <ul
-            class="
-          flex h-full grow flex-col
-          tablet:gap-y-0
-        "
-          >
-            <li
-              class="
-        group/list-item relative mb-1 flex transform-gpu flex-row items-center
-        gap-x-4 transition-transform
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-105
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        bg-default
-        px-container py-4
-        last-of-type:mb-0
-        tablet:gap-x-6 tablet:pl-4
-      "
-              data-has-review="true"
-            >
-              <div
-                class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-              >
-                <div
-                  class="w-list-item-poster shrink-0"
-                >
-                  <img
-                    alt=""
-                    class="aspect-poster drop-shadow-sm"
-                    decoding="async"
-                    height="113"
-                    loading="lazy"
-                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                    width="80"
-                  />
-                </div>
-              </div>
-              <div
-                class="flex grow flex-col gap-1"
-              >
-                <a
-                  class="
-          block font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:opacity-0
-        "
-                  href="/reviews/a-walk-among-the-tombstones-2014/"
-                >
-                  A Walk Among the Tombstones
-                   
-                   
-                  <span
-                    class="
-        text-xxs font-light text-subtle
-        tablet:text-xs
-      "
-                  >
-                    2014
-                  </span>
-                </a>
-                <div
-                  class="font-sans text-xs font-light text-subtle"
-                >
-                  AMC Tysons Corner 16
-                </div>
-              </div>
-            </li>
-          </ul>
-        </li>
-      </ol>
-    </div>
-  </li>
-  <li
-    class="
-        block
-        
-      "
     id="August 2014"
   >
     <div
       class="pt-0 text-md"
-      style="z-index: 3;"
+      style="z-index: 1;"
     >
       <div
         class="
@@ -39831,6 +39507,140 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
       class="bg-subtle"
     >
       <ol>
+        <li
+          class="
+        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
+        last-of-type:pb-12
+        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
+        tablet:last-of-type:pb-4
+      "
+        >
+          <div
+            class="
+          px-container py-4
+          tablet:px-4 tablet:py-0 tablet:text-muted
+        "
+          >
+            <div
+              class="
+            flex items-center gap-1
+            tablet:h-full tablet:flex-col tablet:justify-center
+          "
+            >
+              <div
+                class="
+              mr-1 py-2 text-center font-sans text-xxs/none font-light
+              text-subtle uppercase
+              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
+            "
+              >
+                Aug
+              </div>
+              <div
+                class="
+              text-center text-2xl text-muted
+              tablet:text-2.5xl/8
+            "
+              >
+                2
+              </div>
+              <div
+                class="
+              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
+              text-subtle uppercase
+              tablet:w-12 tablet:px-0 tablet:py-1
+            "
+              >
+                2014
+              </div>
+              <div
+                class="
+              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
+              uppercase
+              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
+            "
+              >
+                Sat
+              </div>
+            </div>
+          </div>
+          <ul
+            class="
+          flex h-full grow flex-col
+          tablet:gap-y-0
+        "
+          >
+            <li
+              class="
+        group/list-item relative mb-1 flex transform-gpu flex-row items-center
+        gap-x-4 transition-transform
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        bg-default
+        px-container py-4
+        last-of-type:mb-0
+        tablet:gap-x-6 tablet:pl-4
+      "
+              data-has-review="true"
+            >
+              <div
+                class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+              >
+                <div
+                  class="w-list-item-poster shrink-0"
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster drop-shadow-sm"
+                    decoding="async"
+                    height="113"
+                    loading="lazy"
+                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                    width="80"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex grow flex-col gap-1"
+              >
+                <a
+                  class="
+          block font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:opacity-0
+        "
+                  href="/reviews/the-bloody-judge-1970/"
+                >
+                  The Bloody Judge
+                   
+                   
+                  <span
+                    class="
+        text-xxs font-light text-subtle
+        tablet:text-xs
+      "
+                  >
+                    1970
+                  </span>
+                </a>
+                <div
+                  class="font-sans text-xs font-light text-subtle"
+                >
+                  DVD
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
         <li
           class="
         relative flex max-w-(--breakpoint-desktop) flex-col bg-group
@@ -40099,6 +39909,34 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
             </li>
           </ul>
         </li>
+      </ol>
+    </div>
+  </li>
+  <li
+    class="
+        block
+        
+      "
+    id="November 2014"
+  >
+    <div
+      class="pt-0 text-md"
+      style="z-index: 2;"
+    >
+      <div
+        class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+      >
+        November 2014
+      </div>
+    </div>
+    <div
+      class="bg-subtle"
+    >
+      <ol>
         <li
           class="
         relative flex max-w-(--breakpoint-desktop) flex-col bg-group
@@ -40126,7 +39964,7 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
               tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
             "
               >
-                Aug
+                Nov
               </div>
               <div
                 class="
@@ -40134,7 +39972,7 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
               tablet:text-2.5xl/8
             "
               >
-                2
+                6
               </div>
               <div
                 class="
@@ -40152,7 +39990,7 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
               tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
             "
               >
-                Sat
+                Thu
               </div>
             </div>
           </div>
@@ -40195,8 +40033,8 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
                     height="113"
                     loading="lazy"
                     sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
                     width="80"
                   />
                 </div>
@@ -40210,9 +40048,9 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:opacity-0
         "
-                  href="/reviews/the-bloody-judge-1970/"
+                  href="/reviews/nightcrawler-2014/"
                 >
-                  The Bloody Judge
+                  Nightcrawler
                    
                    
                   <span
@@ -40221,13 +40059,175 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
         tablet:text-xs
       "
                   >
-                    1970
+                    2014
                   </span>
                 </a>
                 <div
                   class="font-sans text-xs font-light text-subtle"
                 >
-                  DVD
+                  Alamo Drafthouse Cinema - One Loudoun
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </li>
+  <li
+    class="
+        block
+        
+      "
+    id="September 2014"
+  >
+    <div
+      class="pt-0 text-md"
+      style="z-index: 3;"
+    >
+      <div
+        class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+      >
+        September 2014
+      </div>
+    </div>
+    <div
+      class="bg-subtle"
+    >
+      <ol>
+        <li
+          class="
+        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
+        last-of-type:pb-12
+        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
+        tablet:last-of-type:pb-4
+      "
+        >
+          <div
+            class="
+          px-container py-4
+          tablet:px-4 tablet:py-0 tablet:text-muted
+        "
+          >
+            <div
+              class="
+            flex items-center gap-1
+            tablet:h-full tablet:flex-col tablet:justify-center
+          "
+            >
+              <div
+                class="
+              mr-1 py-2 text-center font-sans text-xxs/none font-light
+              text-subtle uppercase
+              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
+            "
+              >
+                Sep
+              </div>
+              <div
+                class="
+              text-center text-2xl text-muted
+              tablet:text-2.5xl/8
+            "
+              >
+                25
+              </div>
+              <div
+                class="
+              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
+              text-subtle uppercase
+              tablet:w-12 tablet:px-0 tablet:py-1
+            "
+              >
+                2014
+              </div>
+              <div
+                class="
+              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
+              uppercase
+              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
+            "
+              >
+                Thu
+              </div>
+            </div>
+          </div>
+          <ul
+            class="
+          flex h-full grow flex-col
+          tablet:gap-y-0
+        "
+          >
+            <li
+              class="
+        group/list-item relative mb-1 flex transform-gpu flex-row items-center
+        gap-x-4 transition-transform
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        bg-default
+        px-container py-4
+        last-of-type:mb-0
+        tablet:gap-x-6 tablet:pl-4
+      "
+              data-has-review="true"
+            >
+              <div
+                class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+              >
+                <div
+                  class="w-list-item-poster shrink-0"
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster drop-shadow-sm"
+                    decoding="async"
+                    height="113"
+                    loading="lazy"
+                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                    width="80"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex grow flex-col gap-1"
+              >
+                <a
+                  class="
+          block font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:opacity-0
+        "
+                  href="/reviews/a-walk-among-the-tombstones-2014/"
+                >
+                  A Walk Among the Tombstones
+                   
+                   
+                  <span
+                    class="
+        text-xxs font-light text-subtle
+        tablet:text-xs
+      "
+                  >
+                    2014
+                  </span>
+                </a>
+                <div
+                  class="font-sans text-xs font-light text-subtle"
+                >
+                  AMC Tysons Corner 16
                 </div>
               </div>
             </li>
@@ -47044,140 +47044,6 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
               tablet:text-2.5xl/8
             "
               >
-                2
-              </div>
-              <div
-                class="
-              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
-              text-subtle uppercase
-              tablet:w-12 tablet:px-0 tablet:py-1
-            "
-              >
-                2014
-              </div>
-              <div
-                class="
-              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
-              uppercase
-              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
-            "
-              >
-                Sat
-              </div>
-            </div>
-          </div>
-          <ul
-            class="
-          flex h-full grow flex-col
-          tablet:gap-y-0
-        "
-          >
-            <li
-              class="
-        group/list-item relative mb-1 flex transform-gpu flex-row items-center
-        gap-x-4 transition-transform
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-105
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        bg-default
-        px-container py-4
-        last-of-type:mb-0
-        tablet:gap-x-6 tablet:pl-4
-      "
-              data-has-review="true"
-            >
-              <div
-                class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-              >
-                <div
-                  class="w-list-item-poster shrink-0"
-                >
-                  <img
-                    alt=""
-                    class="aspect-poster drop-shadow-sm"
-                    decoding="async"
-                    height="113"
-                    loading="lazy"
-                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                    width="80"
-                  />
-                </div>
-              </div>
-              <div
-                class="flex grow flex-col gap-1"
-              >
-                <a
-                  class="
-          block font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:opacity-0
-        "
-                  href="/reviews/the-bloody-judge-1970/"
-                >
-                  The Bloody Judge
-                   
-                   
-                  <span
-                    class="
-        text-xxs font-light text-subtle
-        tablet:text-xs
-      "
-                  >
-                    1970
-                  </span>
-                </a>
-                <div
-                  class="font-sans text-xs font-light text-subtle"
-                >
-                  DVD
-                </div>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li
-          class="
-        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
-        last-of-type:pb-12
-        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
-        tablet:last-of-type:pb-4
-      "
-        >
-          <div
-            class="
-          px-container py-4
-          tablet:px-4 tablet:py-0 tablet:text-muted
-        "
-          >
-            <div
-              class="
-            flex items-center gap-1
-            tablet:h-full tablet:flex-col tablet:justify-center
-          "
-            >
-              <div
-                class="
-              mr-1 py-2 text-center font-sans text-xxs/none font-light
-              text-subtle uppercase
-              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
-            "
-              >
-                Aug
-              </div>
-              <div
-                class="
-              text-center text-2xl text-muted
-              tablet:text-2.5xl/8
-            "
-              >
                 9
               </div>
               <div
@@ -47400,6 +47266,140 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
       "
                   >
                     1958
+                  </span>
+                </a>
+                <div
+                  class="font-sans text-xs font-light text-subtle"
+                >
+                  DVD
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li
+          class="
+        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
+        last-of-type:pb-12
+        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
+        tablet:last-of-type:pb-4
+      "
+        >
+          <div
+            class="
+          px-container py-4
+          tablet:px-4 tablet:py-0 tablet:text-muted
+        "
+          >
+            <div
+              class="
+            flex items-center gap-1
+            tablet:h-full tablet:flex-col tablet:justify-center
+          "
+            >
+              <div
+                class="
+              mr-1 py-2 text-center font-sans text-xxs/none font-light
+              text-subtle uppercase
+              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
+            "
+              >
+                Aug
+              </div>
+              <div
+                class="
+              text-center text-2xl text-muted
+              tablet:text-2.5xl/8
+            "
+              >
+                2
+              </div>
+              <div
+                class="
+              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
+              text-subtle uppercase
+              tablet:w-12 tablet:px-0 tablet:py-1
+            "
+              >
+                2014
+              </div>
+              <div
+                class="
+              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
+              uppercase
+              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
+            "
+              >
+                Sat
+              </div>
+            </div>
+          </div>
+          <ul
+            class="
+          flex h-full grow flex-col
+          tablet:gap-y-0
+        "
+          >
+            <li
+              class="
+        group/list-item relative mb-1 flex transform-gpu flex-row items-center
+        gap-x-4 transition-transform
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        bg-default
+        px-container py-4
+        last-of-type:mb-0
+        tablet:gap-x-6 tablet:pl-4
+      "
+              data-has-review="true"
+            >
+              <div
+                class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+              >
+                <div
+                  class="w-list-item-poster shrink-0"
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster drop-shadow-sm"
+                    decoding="async"
+                    height="113"
+                    loading="lazy"
+                    sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                    width="80"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex grow flex-col gap-1"
+              >
+                <a
+                  class="
+          block font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:opacity-0
+        "
+                  href="/reviews/the-bloody-judge-1970/"
+                >
+                  The Bloody Judge
+                   
+                   
+                  <span
+                    class="
+        text-xxs font-light text-subtle
+        tablet:text-xs
+      "
+                  >
+                    1970
                   </span>
                 </a>
                 <div
@@ -48393,331 +48393,11 @@ exports[`Viewings > renders 1`] = `
         block
         
       "
-                  id="November 2014"
-                >
-                  <div
-                    class="pt-0 text-md"
-                    style="z-index: 1;"
-                  >
-                    <div
-                      class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-                    >
-                      November 2014
-                    </div>
-                  </div>
-                  <div
-                    class="bg-subtle"
-                  >
-                    <ol>
-                      <li
-                        class="
-        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
-        last-of-type:pb-12
-        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
-        tablet:last-of-type:pb-4
-      "
-                      >
-                        <div
-                          class="
-          px-container py-4
-          tablet:px-4 tablet:py-0 tablet:text-muted
-        "
-                        >
-                          <div
-                            class="
-            flex items-center gap-1
-            tablet:h-full tablet:flex-col tablet:justify-center
-          "
-                          >
-                            <div
-                              class="
-              mr-1 py-2 text-center font-sans text-xxs/none font-light
-              text-subtle uppercase
-              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
-            "
-                            >
-                              Nov
-                            </div>
-                            <div
-                              class="
-              text-center text-2xl text-muted
-              tablet:text-2.5xl/8
-            "
-                            >
-                              6
-                            </div>
-                            <div
-                              class="
-              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
-              text-subtle uppercase
-              tablet:w-12 tablet:px-0 tablet:py-1
-            "
-                            >
-                              2014
-                            </div>
-                            <div
-                              class="
-              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
-              uppercase
-              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
-            "
-                            >
-                              Thu
-                            </div>
-                          </div>
-                        </div>
-                        <ul
-                          class="
-          flex h-full grow flex-col
-          tablet:gap-y-0
-        "
-                        >
-                          <li
-                            class="
-        group/list-item relative mb-1 flex transform-gpu flex-row items-center
-        gap-x-4 transition-transform
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-105
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        bg-default
-        px-container py-4
-        last-of-type:mb-0
-        tablet:gap-x-6 tablet:pl-4
-      "
-                            data-has-review="true"
-                          >
-                            <div
-                              class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-                            >
-                              <div
-                                class="w-list-item-poster shrink-0"
-                              >
-                                <img
-                                  alt=""
-                                  class="aspect-poster drop-shadow-sm"
-                                  decoding="async"
-                                  height="113"
-                                  loading="lazy"
-                                  sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                                  src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                                  srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                                  width="80"
-                                />
-                              </div>
-                            </div>
-                            <div
-                              class="flex grow flex-col gap-1"
-                            >
-                              <a
-                                class="
-          block font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:opacity-0
-        "
-                                href="/reviews/nightcrawler-2014/"
-                              >
-                                Nightcrawler  
-                                <span
-                                  class="
-        text-xxs font-light text-subtle
-        tablet:text-xs
-      "
-                                >
-                                  2014
-                                </span>
-                              </a>
-                              <div
-                                class="font-sans text-xs font-light text-subtle"
-                              >
-                                Alamo Drafthouse Cinema - One Loudoun
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                      </li>
-                    </ol>
-                  </div>
-                </li>
-                <li
-                  class="
-        block
-        
-      "
-                  id="September 2014"
-                >
-                  <div
-                    class="pt-0 text-md"
-                    style="z-index: 2;"
-                  >
-                    <div
-                      class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-                    >
-                      September 2014
-                    </div>
-                  </div>
-                  <div
-                    class="bg-subtle"
-                  >
-                    <ol>
-                      <li
-                        class="
-        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
-        last-of-type:pb-12
-        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
-        tablet:last-of-type:pb-4
-      "
-                      >
-                        <div
-                          class="
-          px-container py-4
-          tablet:px-4 tablet:py-0 tablet:text-muted
-        "
-                        >
-                          <div
-                            class="
-            flex items-center gap-1
-            tablet:h-full tablet:flex-col tablet:justify-center
-          "
-                          >
-                            <div
-                              class="
-              mr-1 py-2 text-center font-sans text-xxs/none font-light
-              text-subtle uppercase
-              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
-            "
-                            >
-                              Sep
-                            </div>
-                            <div
-                              class="
-              text-center text-2xl text-muted
-              tablet:text-2.5xl/8
-            "
-                            >
-                              25
-                            </div>
-                            <div
-                              class="
-              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
-              text-subtle uppercase
-              tablet:w-12 tablet:px-0 tablet:py-1
-            "
-                            >
-                              2014
-                            </div>
-                            <div
-                              class="
-              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
-              uppercase
-              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
-            "
-                            >
-                              Thu
-                            </div>
-                          </div>
-                        </div>
-                        <ul
-                          class="
-          flex h-full grow flex-col
-          tablet:gap-y-0
-        "
-                        >
-                          <li
-                            class="
-        group/list-item relative mb-1 flex transform-gpu flex-row items-center
-        gap-x-4 transition-transform
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-105
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        bg-default
-        px-container py-4
-        last-of-type:mb-0
-        tablet:gap-x-6 tablet:pl-4
-      "
-                            data-has-review="true"
-                          >
-                            <div
-                              class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-                            >
-                              <div
-                                class="w-list-item-poster shrink-0"
-                              >
-                                <img
-                                  alt=""
-                                  class="aspect-poster drop-shadow-sm"
-                                  decoding="async"
-                                  height="113"
-                                  loading="lazy"
-                                  sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                                  src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                                  srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                                  width="80"
-                                />
-                              </div>
-                            </div>
-                            <div
-                              class="flex grow flex-col gap-1"
-                            >
-                              <a
-                                class="
-          block font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:opacity-0
-        "
-                                href="/reviews/a-walk-among-the-tombstones-2014/"
-                              >
-                                A Walk Among the Tombstones  
-                                <span
-                                  class="
-        text-xxs font-light text-subtle
-        tablet:text-xs
-      "
-                                >
-                                  2014
-                                </span>
-                              </a>
-                              <div
-                                class="font-sans text-xs font-light text-subtle"
-                              >
-                                AMC Tysons Corner 16
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                      </li>
-                    </ol>
-                  </div>
-                </li>
-                <li
-                  class="
-        block
-        
-      "
                   id="August 2014"
                 >
                   <div
                     class="pt-0 text-md"
-                    style="z-index: 3;"
+                    style="z-index: 1;"
                   >
                     <div
                       class="
@@ -48733,6 +48413,138 @@ exports[`Viewings > renders 1`] = `
                     class="bg-subtle"
                   >
                     <ol>
+                      <li
+                        class="
+        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
+        last-of-type:pb-12
+        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
+        tablet:last-of-type:pb-4
+      "
+                      >
+                        <div
+                          class="
+          px-container py-4
+          tablet:px-4 tablet:py-0 tablet:text-muted
+        "
+                        >
+                          <div
+                            class="
+            flex items-center gap-1
+            tablet:h-full tablet:flex-col tablet:justify-center
+          "
+                          >
+                            <div
+                              class="
+              mr-1 py-2 text-center font-sans text-xxs/none font-light
+              text-subtle uppercase
+              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
+            "
+                            >
+                              Aug
+                            </div>
+                            <div
+                              class="
+              text-center text-2xl text-muted
+              tablet:text-2.5xl/8
+            "
+                            >
+                              2
+                            </div>
+                            <div
+                              class="
+              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
+              text-subtle uppercase
+              tablet:w-12 tablet:px-0 tablet:py-1
+            "
+                            >
+                              2014
+                            </div>
+                            <div
+                              class="
+              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
+              uppercase
+              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
+            "
+                            >
+                              Sat
+                            </div>
+                          </div>
+                        </div>
+                        <ul
+                          class="
+          flex h-full grow flex-col
+          tablet:gap-y-0
+        "
+                        >
+                          <li
+                            class="
+        group/list-item relative mb-1 flex transform-gpu flex-row items-center
+        gap-x-4 transition-transform
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        bg-default
+        px-container py-4
+        last-of-type:mb-0
+        tablet:gap-x-6 tablet:pl-4
+      "
+                            data-has-review="true"
+                          >
+                            <div
+                              class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+                            >
+                              <div
+                                class="w-list-item-poster shrink-0"
+                              >
+                                <img
+                                  alt=""
+                                  class="aspect-poster drop-shadow-sm"
+                                  decoding="async"
+                                  height="113"
+                                  loading="lazy"
+                                  sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                                  src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                                  srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                                  width="80"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              class="flex grow flex-col gap-1"
+                            >
+                              <a
+                                class="
+          block font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:opacity-0
+        "
+                                href="/reviews/the-bloody-judge-1970/"
+                              >
+                                The Bloody Judge  
+                                <span
+                                  class="
+        text-xxs font-light text-subtle
+        tablet:text-xs
+      "
+                                >
+                                  1970
+                                </span>
+                              </a>
+                              <div
+                                class="font-sans text-xs font-light text-subtle"
+                              >
+                                DVD
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
                       <li
                         class="
         relative flex max-w-(--breakpoint-desktop) flex-col bg-group
@@ -48997,6 +48809,34 @@ exports[`Viewings > renders 1`] = `
                           </li>
                         </ul>
                       </li>
+                    </ol>
+                  </div>
+                </li>
+                <li
+                  class="
+        block
+        
+      "
+                  id="November 2014"
+                >
+                  <div
+                    class="pt-0 text-md"
+                    style="z-index: 2;"
+                  >
+                    <div
+                      class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+                    >
+                      November 2014
+                    </div>
+                  </div>
+                  <div
+                    class="bg-subtle"
+                  >
+                    <ol>
                       <li
                         class="
         relative flex max-w-(--breakpoint-desktop) flex-col bg-group
@@ -49024,7 +48864,7 @@ exports[`Viewings > renders 1`] = `
               tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
             "
                             >
-                              Aug
+                              Nov
                             </div>
                             <div
                               class="
@@ -49032,7 +48872,7 @@ exports[`Viewings > renders 1`] = `
               tablet:text-2.5xl/8
             "
                             >
-                              2
+                              6
                             </div>
                             <div
                               class="
@@ -49050,7 +48890,7 @@ exports[`Viewings > renders 1`] = `
               tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
             "
                             >
-                              Sat
+                              Thu
                             </div>
                           </div>
                         </div>
@@ -49093,8 +48933,8 @@ exports[`Viewings > renders 1`] = `
                                   height="113"
                                   loading="lazy"
                                   sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                                  src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                                  srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                                  src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                                  srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
                                   width="80"
                                 />
                               </div>
@@ -49108,22 +48948,182 @@ exports[`Viewings > renders 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:opacity-0
         "
-                                href="/reviews/the-bloody-judge-1970/"
+                                href="/reviews/nightcrawler-2014/"
                               >
-                                The Bloody Judge  
+                                Nightcrawler  
                                 <span
                                   class="
         text-xxs font-light text-subtle
         tablet:text-xs
       "
                                 >
-                                  1970
+                                  2014
                                 </span>
                               </a>
                               <div
                                 class="font-sans text-xs font-light text-subtle"
                               >
-                                DVD
+                                Alamo Drafthouse Cinema - One Loudoun
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+                    </ol>
+                  </div>
+                </li>
+                <li
+                  class="
+        block
+        
+      "
+                  id="September 2014"
+                >
+                  <div
+                    class="pt-0 text-md"
+                    style="z-index: 3;"
+                  >
+                    <div
+                      class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+                    >
+                      September 2014
+                    </div>
+                  </div>
+                  <div
+                    class="bg-subtle"
+                  >
+                    <ol>
+                      <li
+                        class="
+        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
+        last-of-type:pb-12
+        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
+        tablet:last-of-type:pb-4
+      "
+                      >
+                        <div
+                          class="
+          px-container py-4
+          tablet:px-4 tablet:py-0 tablet:text-muted
+        "
+                        >
+                          <div
+                            class="
+            flex items-center gap-1
+            tablet:h-full tablet:flex-col tablet:justify-center
+          "
+                          >
+                            <div
+                              class="
+              mr-1 py-2 text-center font-sans text-xxs/none font-light
+              text-subtle uppercase
+              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
+            "
+                            >
+                              Sep
+                            </div>
+                            <div
+                              class="
+              text-center text-2xl text-muted
+              tablet:text-2.5xl/8
+            "
+                            >
+                              25
+                            </div>
+                            <div
+                              class="
+              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
+              text-subtle uppercase
+              tablet:w-12 tablet:px-0 tablet:py-1
+            "
+                            >
+                              2014
+                            </div>
+                            <div
+                              class="
+              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
+              uppercase
+              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
+            "
+                            >
+                              Thu
+                            </div>
+                          </div>
+                        </div>
+                        <ul
+                          class="
+          flex h-full grow flex-col
+          tablet:gap-y-0
+        "
+                        >
+                          <li
+                            class="
+        group/list-item relative mb-1 flex transform-gpu flex-row items-center
+        gap-x-4 transition-transform
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        bg-default
+        px-container py-4
+        last-of-type:mb-0
+        tablet:gap-x-6 tablet:pl-4
+      "
+                            data-has-review="true"
+                          >
+                            <div
+                              class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+                            >
+                              <div
+                                class="w-list-item-poster shrink-0"
+                              >
+                                <img
+                                  alt=""
+                                  class="aspect-poster drop-shadow-sm"
+                                  decoding="async"
+                                  height="113"
+                                  loading="lazy"
+                                  sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                                  src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                                  srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                                  width="80"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              class="flex grow flex-col gap-1"
+                            >
+                              <a
+                                class="
+          block font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:opacity-0
+        "
+                                href="/reviews/a-walk-among-the-tombstones-2014/"
+                              >
+                                A Walk Among the Tombstones  
+                                <span
+                                  class="
+        text-xxs font-light text-subtle
+        tablet:text-xs
+      "
+                                >
+                                  2014
+                                </span>
+                              </a>
+                              <div
+                                class="font-sans text-xs font-light text-subtle"
+                              >
+                                AMC Tysons Corner 16
                               </div>
                             </div>
                           </li>

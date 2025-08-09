@@ -12,6 +12,7 @@ This is Frank's Movie Log, a personal movie review and tracking website built wi
 - **Data**: JSON files in content/data/
 - **Build**: Vite
 - **Testing**: Vitest with React Testing Library
+- **Browser Support**: Same as Tailwind https://tailwindcss.com/docs/compatibility
 
 ## Key Architectural Decision: Hybrid Static/Interactive
 

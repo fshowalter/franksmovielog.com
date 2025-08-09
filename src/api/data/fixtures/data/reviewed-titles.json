@@ -789,8 +789,8 @@
     "writerNames": [
       "Jan Lustig",
       "Billy Wilder",
-      "Max Kolpé",
-      "Claude-André Puget"
+      "Max Kolp\u00e9",
+      "Claude-Andr\u00e9 Puget"
     ],
     "principalCastNames": [
       "Danielle Darrieux",
@@ -1099,9 +1099,9 @@
       "Leck Fischer"
     ],
     "principalCastNames": [
-      "Inga Landgré",
+      "Inga Landgr\u00e9",
       "Stig Olin",
-      "Marianne Löfgren",
+      "Marianne L\u00f6fgren",
       "Dagny Lind"
     ],
     "reviewDate": "2020-12-13",
@@ -1491,48 +1491,55 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "The Man in the Iron Mask",
-            "imdbId": "tt0031619",
-            "releaseYear": "1939",
-            "slug": "the-man-in-the-iron-mask-1939",
-            "grade": "C",
-            "genres": [
-              "Adventure",
-              "History",
-              "Romance"
-            ]
-          },
-          {
-            "title": "A Chump at Oxford",
-            "imdbId": "tt0032339",
-            "releaseYear": "1940",
-            "slug": "a-chump-at-oxford-1940",
+            "title": "3 from Hell",
+            "imdbId": "tt8134742",
+            "releaseYear": "2019",
+            "slug": "3-from-hell-2019",
             "grade": "D+",
             "genres": [
-              "Comedy",
-              "Family"
-            ]
-          },
-          {
-            "title": "The Abominable Snowman",
-            "imdbId": "tt0050095",
-            "releaseYear": "1957",
-            "slug": "the-abominable-snowman-1957",
-            "grade": "D+",
-            "genres": [
-              "Adventure",
+              "Action",
               "Horror"
             ]
           },
           {
-            "title": "Violent Playground",
-            "imdbId": "tt0052367",
-            "releaseYear": "1958",
-            "slug": "violent-playground-1958",
-            "grade": "B-",
+            "title": "A Walk Among the Tombstones",
+            "imdbId": "tt0365907",
+            "releaseYear": "2014",
+            "slug": "a-walk-among-the-tombstones-2014",
+            "grade": "F",
+            "genres": [
+              "Action",
+              "Crime",
+              "Drama",
+              "Mystery",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Frankenstein",
+            "imdbId": "tt0021884",
+            "releaseYear": "1931",
+            "slug": "frankenstein-1931",
+            "grade": "B+",
             "genres": [
               "Drama",
-              "Crime"
+              "Horror",
+              "Sci-Fi",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Apostle",
+            "imdbId": "tt6217306",
+            "releaseYear": "2018",
+            "slug": "apostle-2018",
+            "grade": "C+",
+            "genres": [
+              "Drama",
+              "Fantasy",
+              "Horror",
+              "Mystery",
+              "Thriller"
             ]
           }
         ]
@@ -1543,48 +1550,51 @@
         "creditKind": "performer",
         "titles": [
           {
-            "title": "Howling II: ... Your Sister Is a Werewolf",
-            "imdbId": "tt0089308",
-            "releaseYear": "1985",
-            "slug": "howling-ii-your-sister-is-a-werewolf-1985",
-            "grade": "F",
+            "title": "Aqua Teen Forever: Plantasm",
+            "imdbId": "tt14636190",
+            "releaseYear": "2022",
+            "slug": "aqua-teen-forever-plantasm-2022",
+            "grade": "C+",
             "genres": [
-              "Horror",
-              "Thriller"
+              "Animation",
+              "Comedy"
             ]
           },
           {
-            "title": "Corridor of Mirrors",
-            "imdbId": "tt0040246",
-            "releaseYear": "1948",
-            "slug": "corridor-of-mirrors-1948",
-            "grade": "D+",
+            "title": "Avengers: Endgame",
+            "imdbId": "tt4154796",
+            "releaseYear": "2019",
+            "slug": "avengers-endgame-2019",
+            "grade": "A",
             "genres": [
+              "Action",
+              "Adventure",
               "Drama",
-              "Mystery"
+              "Sci-Fi"
             ]
           },
           {
-            "title": "Horror of Dracula",
-            "imdbId": "tt0051554",
-            "releaseYear": "1958",
-            "slug": "horror-of-dracula-1958",
-            "grade": "A-",
+            "title": "Avengers: Infinity War",
+            "imdbId": "tt4154756",
+            "releaseYear": "2018",
+            "slug": "avengers-infinity-war-2018",
+            "grade": "A+",
             "genres": [
+              "Action",
+              "Adventure",
+              "Sci-Fi"
+            ]
+          },
+          {
+            "title": "Bad Seed",
+            "imdbId": "tt0025480",
+            "releaseYear": "1934",
+            "slug": "bad-seed-1934",
+            "grade": "C",
+            "genres": [
+              "Comedy",
               "Drama",
-              "Horror"
-            ]
-          },
-          {
-            "title": "The City of the Dead",
-            "imdbId": "tt0053719",
-            "releaseYear": "1960",
-            "slug": "the-city-of-the-dead-1960",
-            "grade": "B",
-            "genres": [
-              "Horror",
-              "Mystery",
-              "Thriller"
+              "Romance"
             ]
           }
         ]
@@ -1596,47 +1606,52 @@
         "slug": "hammer-films",
         "titles": [
           {
-            "title": "The Quatermass Xperiment",
-            "imdbId": "tt0049646",
-            "releaseYear": "1955",
-            "slug": "the-quatermass-xperiment-1955",
+            "title": "Big Jim McLain",
+            "imdbId": "tt0044418",
+            "releaseYear": "1952",
+            "slug": "big-jim-mclain-1952",
+            "grade": "C",
+            "genres": [
+              "Crime",
+              "Drama",
+              "History",
+              "Romance",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Crisis",
+            "imdbId": "tt0038675",
+            "releaseYear": "1946",
+            "slug": "crisis-1946",
             "grade": "B-",
             "genres": [
-              "Horror",
-              "Sci-Fi"
+              "Drama",
+              "Romance"
             ]
           },
           {
-            "title": "X the Unknown",
-            "imdbId": "tt0049967",
-            "releaseYear": "1956",
-            "slug": "x-the-unknown-1956",
-            "grade": "C+",
+            "title": "Croupier",
+            "imdbId": "tt0159382",
+            "releaseYear": "1998",
+            "slug": "croupier-1998",
+            "grade": "B",
             "genres": [
-              "Horror",
-              "Sci-Fi"
+              "Crime",
+              "Drama"
             ]
           },
           {
-            "title": "Quatermass 2",
-            "imdbId": "tt0050873",
-            "releaseYear": "1957",
-            "slug": "quatermass-2-1957",
-            "grade": "D+",
+            "title": "Frankenstein",
+            "imdbId": "tt0021884",
+            "releaseYear": "1931",
+            "slug": "frankenstein-1931",
+            "grade": "B+",
             "genres": [
+              "Drama",
+              "Horror",
               "Sci-Fi",
-              "Horror"
-            ]
-          },
-          {
-            "title": "The Abominable Snowman",
-            "imdbId": "tt0050095",
-            "releaseYear": "1957",
-            "slug": "the-abominable-snowman-1957",
-            "grade": "D+",
-            "genres": [
-              "Adventure",
-              "Horror"
+              "Thriller"
             ]
           }
         ]
@@ -2721,7 +2736,7 @@
       "Michael Arlen",
       "Walter Reisch",
       "Harry Kurnitz",
-      "Jacques Théry"
+      "Jacques Th\u00e9ry"
     ],
     "principalCastNames": [
       "William Powell",
@@ -3343,7 +3358,7 @@
     "runtimeMinutes": 100,
     "releaseSequence": "2008-05-16tt0805570",
     "directorNames": [
-      "Ryûhei Kitamura"
+      "Ry\u00fbhei Kitamura"
     ],
     "writerNames": [
       "Jeff Buhler",
@@ -3535,7 +3550,7 @@
     ],
     "principalCastNames": [
       "Daniel Craig",
-      "Léa Seydoux",
+      "L\u00e9a Seydoux",
       "Rami Malek",
       "Lashana Lynch"
     ],
@@ -4518,6 +4533,617 @@
         "genres": [
           "Drama",
           "Romance"
+        ]
+      }
+    ]
+  },
+  {
+    "imdbId": "tt0064727",
+    "title": "The Bloody Judge",
+    "releaseYear": "1970",
+    "slug": "the-bloody-judge-1970",
+    "grade": "D",
+    "gradeValue": 3,
+    "reviewDate": "2014-08-02",
+    "reviewSequence": "2014-08-02-1",
+    "sortTitle": "bloody-judge-1970",
+    "releaseSequence": "1970-02-05tt0064727",
+    "genres": [
+      "Biography",
+      "Horror"
+    ],
+    "countries": [
+      "Italy",
+      "West Germany",
+      "Spain",
+      "Liechtenstein"
+    ],
+    "originalTitle": "Il trono di fuoco",
+    "runtimeMinutes": 84,
+    "directorNames": [
+      "Jes\u00fas Franco"
+    ],
+    "writerNames": [
+      "Anthony Scott Veitch",
+      "Harry Alan Towers",
+      "Jes\u00fas Franco",
+      "Enrico Colombo",
+      "Michael Haller"
+    ],
+    "principalCastNames": [
+      "Christopher Lee",
+      "Maria Schell",
+      "Leo Genn",
+      "Hans Hass Jr."
+    ],
+    "viewings": [
+      {
+        "imdbId": "tt0064727",
+        "title": "The Bloody Judge",
+        "releaseYear": "1970",
+        "sortTitle": "bloody-judge-1970",
+        "releaseSequence": "1970-02-05tt0064727",
+        "genres": [
+          "Biography",
+          "Horror"
+        ],
+        "slug": "the-bloody-judge-1970",
+        "grade": "D",
+        "gradeValue": 3,
+        "reviewDate": "2014-08-02",
+        "reviewSequence": "2014-08-02-1",
+        "viewingDate": "2014-08-02",
+        "viewingSequence": 1,
+        "medium": "DVD",
+        "venue": null,
+        "venueNotes": null,
+        "mediumNotes": null
+      }
+    ],
+    "castAndCrew": [
+      {
+        "name": "Christopher Lee",
+        "slug": "christopher-lee",
+        "creditedAs": [
+          "performer"
+        ]
+      }
+    ],
+    "collections": [],
+    "moreCastAndCrew": [],
+    "moreCollections": [],
+    "moreReviews": [
+      {
+        "imdbId": "tt8134742",
+        "title": "3 from Hell",
+        "releaseYear": "2019",
+        "slug": "3-from-hell-2019",
+        "grade": "D+",
+        "countries": [
+          "United States"
+        ],
+        "genres": [
+          "Action",
+          "Horror"
+        ],
+        "sortTitle": "3 from Hell (2019)",
+        "originalTitle": null,
+        "gradeValue": 4,
+        "runtimeMinutes": 115,
+        "releaseSequence": "2019-09-15tt8134742",
+        "directorNames": [
+          "Rob Zombie"
+        ],
+        "writerNames": [
+          "Rob Zombie"
+        ],
+        "principalCastNames": [
+          "Sheri Moon Zombie",
+          "Bill Moseley",
+          "Sid Haig",
+          "Jeff Daniel Phillips"
+        ],
+        "reviewDate": "2022-01-17",
+        "reviewYear": "2022",
+        "reviewSequence": "2022-01-17-1231",
+        "viewings": [
+          {
+            "genres": [
+              "Action",
+              "Horror"
+            ],
+            "grade": "D+",
+            "gradeValue": 4,
+            "imdbId": "tt8134742",
+            "releaseSequence": "2019-09-15tt8134742",
+            "releaseYear": "2019",
+            "reviewDate": "2022-01-17",
+            "reviewSequence": "2022-01-17-1231",
+            "slug": "3-from-hell-2019",
+            "sortTitle": "3 from Hell (2019)",
+            "title": "3 from Hell",
+            "viewingDate": "2022-01-17",
+            "medium": "iTunes",
+            "mediumNotes": null,
+            "venue": null,
+            "venueNotes": null,
+            "viewingSequence": 1231
+          }
+        ],
+        "castAndCrew": [],
+        "collections": [],
+        "moreCastAndCrew": [],
+        "moreCollections": [],
+        "moreReviews": [
+          {
+            "title": "20,000 Years in Sing Sing",
+            "imdbId": "tt0023731",
+            "releaseYear": "1932",
+            "slug": "20000-years-in-sing-sing-1932",
+            "grade": "B",
+            "genres": [
+              "Crime",
+              "Drama",
+              "Film-Noir"
+            ]
+          },
+          {
+            "title": "24 Hour Party People",
+            "imdbId": "tt0274309",
+            "releaseYear": "2002",
+            "slug": "24-hour-party-people-2002",
+            "grade": "B+",
+            "genres": [
+              "Biography",
+              "Comedy",
+              "Drama",
+              "Music"
+            ]
+          },
+          {
+            "title": "71 Fragments of a Chronology of Chance",
+            "imdbId": "tt0109020",
+            "releaseYear": "1994",
+            "slug": "71-fragments-of-a-chronology-of-chance-1994",
+            "grade": "C+",
+            "genres": [
+              "Drama"
+            ]
+          },
+          {
+            "title": "8-Bit Christmas",
+            "imdbId": "tt11540284",
+            "releaseYear": "2021",
+            "slug": "8-bit-christmas-2021",
+            "grade": "D-",
+            "genres": [
+              "Comedy",
+              "Family"
+            ]
+          }
+        ]
+      },
+      {
+        "imdbId": "tt6217306",
+        "title": "Apostle",
+        "releaseYear": "2018",
+        "slug": "apostle-2018",
+        "grade": "C+",
+        "countries": [
+          "United Kingdom",
+          "United States"
+        ],
+        "genres": [
+          "Drama",
+          "Fantasy",
+          "Horror",
+          "Mystery",
+          "Thriller"
+        ],
+        "sortTitle": "Apostle (2018)",
+        "originalTitle": null,
+        "gradeValue": 7,
+        "runtimeMinutes": 130,
+        "releaseSequence": "2018-09-21tt6217306",
+        "directorNames": [
+          "Gareth Evans"
+        ],
+        "writerNames": [
+          "Gareth Evans"
+        ],
+        "principalCastNames": [
+          "Dan Stevens",
+          "Richard Elfyn",
+          "Paul Higgins",
+          "Bill Milner"
+        ],
+        "reviewDate": "2021-01-01",
+        "reviewYear": "2021",
+        "reviewSequence": "2021-01-01-968",
+        "viewings": [
+          {
+            "genres": [
+              "Drama",
+              "Fantasy",
+              "Horror",
+              "Mystery",
+              "Thriller"
+            ],
+            "grade": "C+",
+            "gradeValue": 7,
+            "imdbId": "tt6217306",
+            "releaseSequence": "2018-09-21tt6217306",
+            "releaseYear": "2018",
+            "reviewDate": "2021-01-01",
+            "reviewSequence": "2021-01-01-968",
+            "slug": "apostle-2018",
+            "sortTitle": "Apostle (2018)",
+            "title": "Apostle",
+            "viewingDate": "2021-01-01",
+            "medium": "Netflix",
+            "mediumNotes": null,
+            "venue": null,
+            "venueNotes": null,
+            "viewingSequence": 968
+          }
+        ],
+        "castAndCrew": [],
+        "collections": [],
+        "moreCastAndCrew": [],
+        "moreCollections": [],
+        "moreReviews": [
+          {
+            "title": "Ant-Man",
+            "imdbId": "tt0478970",
+            "releaseYear": "2015",
+            "slug": "ant-man-2015",
+            "grade": "D+",
+            "genres": [
+              "Action",
+              "Comedy",
+              "Sci-Fi"
+            ]
+          },
+          {
+            "title": "Ant-Man and the Wasp",
+            "imdbId": "tt5095030",
+            "releaseYear": "2018",
+            "slug": "ant-man-and-the-wasp-2018",
+            "grade": "D",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Comedy",
+              "Sci-Fi"
+            ]
+          },
+          {
+            "title": "April Fool's Day",
+            "imdbId": "tt0090655",
+            "releaseYear": "1986",
+            "slug": "april-fools-day-1986",
+            "grade": "D+",
+            "genres": [
+              "Horror",
+              "Mystery"
+            ]
+          },
+          {
+            "title": "Aqua Teen Forever: Plantasm",
+            "imdbId": "tt14636190",
+            "releaseYear": "2022",
+            "slug": "aqua-teen-forever-plantasm-2022",
+            "grade": "C+",
+            "genres": [
+              "Animation",
+              "Comedy"
+            ]
+          }
+        ]
+      },
+      {
+        "imdbId": "tt14636190",
+        "title": "Aqua Teen Forever: Plantasm",
+        "releaseYear": "2022",
+        "slug": "aqua-teen-forever-plantasm-2022",
+        "grade": "C+",
+        "countries": [
+          "United States"
+        ],
+        "genres": [
+          "Animation",
+          "Comedy"
+        ],
+        "sortTitle": "Aqua Teen Forever: Plantasm (2022)",
+        "originalTitle": null,
+        "gradeValue": 7,
+        "runtimeMinutes": 79,
+        "releaseSequence": "2022-11-08tt14636190",
+        "directorNames": [
+          "Matt Maiellaro",
+          "Dave Willis"
+        ],
+        "writerNames": [
+          "Matt Maiellaro",
+          "Dave Willis"
+        ],
+        "principalCastNames": [
+          "Dave Willis",
+          "Matt Maiellaro",
+          "Peter Serafinowicz",
+          "Christopher Powell"
+        ],
+        "reviewDate": "2023-08-31",
+        "reviewYear": "2023",
+        "reviewSequence": "2023-08-31-1525",
+        "viewings": [
+          {
+            "genres": [
+              "Animation",
+              "Comedy"
+            ],
+            "grade": "C+",
+            "gradeValue": 7,
+            "imdbId": "tt14636190",
+            "releaseSequence": "2022-11-08tt14636190",
+            "releaseYear": "2022",
+            "reviewDate": "2023-08-31",
+            "reviewSequence": "2023-08-31-1525",
+            "slug": "aqua-teen-forever-plantasm-2022",
+            "sortTitle": "Aqua Teen Forever: Plantasm (2022)",
+            "title": "Aqua Teen Forever: Plantasm",
+            "viewingDate": "2023-08-31",
+            "medium": "Max",
+            "mediumNotes": null,
+            "venue": null,
+            "venueNotes": null,
+            "viewingSequence": 1525
+          }
+        ],
+        "castAndCrew": [],
+        "collections": [],
+        "moreCastAndCrew": [],
+        "moreCollections": [],
+        "moreReviews": [
+          {
+            "title": "Apostle",
+            "imdbId": "tt6217306",
+            "releaseYear": "2018",
+            "slug": "apostle-2018",
+            "grade": "C+",
+            "genres": [
+              "Drama",
+              "Fantasy",
+              "Horror",
+              "Mystery",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "April Fool's Day",
+            "imdbId": "tt0090655",
+            "releaseYear": "1986",
+            "slug": "april-fools-day-1986",
+            "grade": "D+",
+            "genres": [
+              "Horror",
+              "Mystery"
+            ]
+          },
+          {
+            "title": "Arizona",
+            "imdbId": "tt0022134",
+            "releaseYear": "1931",
+            "slug": "arizona-1931",
+            "grade": "C-",
+            "genres": [
+              "Drama",
+              "Romance"
+            ]
+          },
+          {
+            "title": "Arrebato",
+            "imdbId": "tt0078797",
+            "releaseYear": "1979",
+            "slug": "arrebato-1979",
+            "grade": "B-",
+            "genres": [
+              "Drama",
+              "Fantasy",
+              "Horror",
+              "Mystery"
+            ]
+          }
+        ]
+      },
+      {
+        "imdbId": "tt4154796",
+        "title": "Avengers: Endgame",
+        "releaseYear": "2019",
+        "slug": "avengers-endgame-2019",
+        "grade": "A",
+        "countries": [
+          "United States"
+        ],
+        "genres": [
+          "Action",
+          "Adventure",
+          "Drama",
+          "Sci-Fi"
+        ],
+        "sortTitle": "Avengers: Endgame (2019)",
+        "originalTitle": null,
+        "gradeValue": 12,
+        "runtimeMinutes": 181,
+        "releaseSequence": "2019-04-18tt4154796",
+        "directorNames": [
+          "Anthony Russo",
+          "Joe Russo"
+        ],
+        "writerNames": [
+          "Christopher Markus",
+          "Stephen McFeely"
+        ],
+        "principalCastNames": [
+          "Robert Downey Jr.",
+          "Chris Evans",
+          "Mark Ruffalo",
+          "Chris Hemsworth"
+        ],
+        "reviewDate": "2020-11-14",
+        "reviewYear": "2020",
+        "reviewSequence": "2020-11-14-918",
+        "viewings": [
+          {
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "Sci-Fi"
+            ],
+            "grade": "A",
+            "gradeValue": 12,
+            "imdbId": "tt4154796",
+            "releaseSequence": "2019-04-18tt4154796",
+            "releaseYear": "2019",
+            "reviewDate": "2020-11-14",
+            "reviewSequence": "2020-11-14-918",
+            "slug": "avengers-endgame-2019",
+            "sortTitle": "Avengers: Endgame (2019)",
+            "title": "Avengers: Endgame",
+            "viewingDate": "2020-11-14",
+            "medium": "4k UHD Blu-ray",
+            "mediumNotes": "2019 | Disney / Buena Vista",
+            "venue": null,
+            "venueNotes": null,
+            "viewingSequence": 918
+          },
+          {
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "Sci-Fi"
+            ],
+            "grade": "A",
+            "gradeValue": 12,
+            "imdbId": "tt4154796",
+            "releaseSequence": "2019-04-18tt4154796",
+            "releaseYear": "2019",
+            "reviewDate": "2020-11-14",
+            "reviewSequence": "2020-11-14-918",
+            "slug": "avengers-endgame-2019",
+            "sortTitle": "Avengers: Endgame (2019)",
+            "title": "Avengers: Endgame",
+            "viewingDate": "2019-06-03",
+            "medium": null,
+            "mediumNotes": null,
+            "venue": "Alamo Drafthouse Cinema - One Loudoun",
+            "venueNotes": null,
+            "viewingSequence": 756
+          },
+          {
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "Sci-Fi"
+            ],
+            "grade": "A",
+            "gradeValue": 12,
+            "imdbId": "tt4154796",
+            "releaseSequence": "2019-04-18tt4154796",
+            "releaseYear": "2019",
+            "reviewDate": "2020-11-14",
+            "reviewSequence": "2020-11-14-918",
+            "slug": "avengers-endgame-2019",
+            "sortTitle": "Avengers: Endgame (2019)",
+            "title": "Avengers: Endgame",
+            "viewingDate": "2019-05-16",
+            "medium": null,
+            "mediumNotes": null,
+            "venue": "Alamo Drafthouse Cinema - One Loudoun",
+            "venueNotes": null,
+            "viewingSequence": 751
+          },
+          {
+            "genres": [
+              "Action",
+              "Adventure",
+              "Drama",
+              "Sci-Fi"
+            ],
+            "grade": "A",
+            "gradeValue": 12,
+            "imdbId": "tt4154796",
+            "releaseSequence": "2019-04-18tt4154796",
+            "releaseYear": "2019",
+            "reviewDate": "2020-11-14",
+            "reviewSequence": "2020-11-14-918",
+            "slug": "avengers-endgame-2019",
+            "sortTitle": "Avengers: Endgame (2019)",
+            "title": "Avengers: Endgame",
+            "viewingDate": "2019-05-13",
+            "medium": null,
+            "mediumNotes": null,
+            "venue": "Alamo Drafthouse Cinema - One Loudoun",
+            "venueNotes": null,
+            "viewingSequence": 750
+          }
+        ],
+        "castAndCrew": [],
+        "collections": [],
+        "moreCastAndCrew": [],
+        "moreCollections": [],
+        "moreReviews": [
+          {
+            "title": "The Autopsy of Jane Doe",
+            "imdbId": "tt3289956",
+            "releaseYear": "2016",
+            "slug": "the-autopsy-of-jane-doe-2016",
+            "grade": "C+",
+            "genres": [
+              "Horror",
+              "Mystery",
+              "Thriller"
+            ]
+          },
+          {
+            "title": "Avengers: Age of Ultron",
+            "imdbId": "tt2395427",
+            "releaseYear": "2015",
+            "slug": "avengers-age-of-ultron-2015",
+            "grade": "C+",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Sci-Fi"
+            ]
+          },
+          {
+            "title": "Avengers: Infinity War",
+            "imdbId": "tt4154756",
+            "releaseYear": "2018",
+            "slug": "avengers-infinity-war-2018",
+            "grade": "A+",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Sci-Fi"
+            ]
+          },
+          {
+            "title": "Bad Seed",
+            "imdbId": "tt0025480",
+            "releaseYear": "1934",
+            "slug": "bad-seed-1934",
+            "grade": "C",
+            "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+            ]
+          }
         ]
       }
     ]
