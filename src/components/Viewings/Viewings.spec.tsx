@@ -185,9 +185,14 @@ describe("Viewings", () => {
       viewingSequence: i,
       viewingYear: "2023",
     }));
-    const { metaDescription, ...viewingsProps } = props;
     const propsWithManyValues = {
-      ...viewingsProps,
+      backdropImageProps: props.backdropImageProps,
+      deck: props.deck,
+      distinctMedia: props.distinctMedia,
+      distinctReleaseYears: props.distinctReleaseYears,
+      distinctVenues: props.distinctVenues,
+      distinctViewingYears: props.distinctViewingYears,
+      initialSort: props.initialSort,
       values: manyValues,
     };
     render(<Viewings {...propsWithManyValues} />);
