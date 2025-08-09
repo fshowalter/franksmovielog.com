@@ -183,11 +183,25 @@ describe("Collection", () => {
 
   it("can show more titles", async ({ expect }) => {
     expect.hasAssertions();
-
-    render(<Collection {...props} />);
-
+    // Create props with more than 100 items to trigger pagination
+    const manyValues = Array.from({ length: 150 }, (_, i) => ({
+      imdbId: `tt${String(i).padStart(7, "0")}`,
+      releaseSequence: `1970-01-${String(i + 1).padStart(2, "0")}tt${String(i).padStart(7, "0")}`,
+      releaseYear: "1970",
+      slug: `test-movie-${i + 1}`,
+      sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
+      title: `Test Movie ${i + 1}`,
+      grade: i % 2 === 0 ? "B+" : undefined,
+      gradeValue: i % 2 === 0 ? 8 : undefined,
+      reviewed: i % 2 === 0,
+      posterImageProps: undefined,
+    }));
+    const propsWithManyValues = {
+      ...props,
+      values: manyValues,
+    };
+    render(<Collection {...propsWithManyValues} />);
     await userEvent.click(screen.getByText("Show More"));
-
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 });

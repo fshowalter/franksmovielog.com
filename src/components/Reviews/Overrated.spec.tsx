@@ -20,10 +20,36 @@ describe("Overrated", () => {
     render(<Overrated {...props} />);
 
     await act(async () => {
-      await userEvent.type(screen.getByLabelText("Title"), "Arrebato");
+      await userEvent.type(screen.getByLabelText("Title"), "Bad Seed");
       await new Promise((r) => setTimeout(r, 500));
     });
 
+    expect(screen.getByTestId("list")).toMatchSnapshot();
+  });
+
+  it("can show more titles", async ({ expect }) => {
+    expect.hasAssertions();
+    // Create props with more than 100 items to trigger pagination
+    const manyValues = Array.from({ length: 150 }, (_, i) => ({
+      genres: [],
+      grade: "B+",
+      gradeValue: 8,
+      imdbId: `tt${String(i).padStart(7, "0")}`,
+      posterImageProps: undefined,
+      releaseSequence: `1930-01-${String(i + 1).padStart(2, "0")}tt${String(i).padStart(7, "0")}`,
+      releaseYear: "1930",
+      reviewDate: "2023-01-01",
+      reviewYear: "2023",
+      slug: `test-movie-${i + 1}`,
+      sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
+      title: `Test Movie ${i + 1}`,
+    }));
+    const propsWithManyValues = {
+      ...props,
+      values: manyValues,
+    };
+    render(<Overrated {...propsWithManyValues} />);
+    await userEvent.click(screen.getByText("Show More"));
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
@@ -113,8 +139,8 @@ describe("Overrated", () => {
     const fromInput = within(fieldset).getByLabelText("From");
     const toInput = within(fieldset).getByLabelText("to");
 
-    await userEvent.selectOptions(fromInput, "1984");
-    await userEvent.selectOptions(toInput, "2020");
+    await userEvent.selectOptions(fromInput, "1982");
+    await userEvent.selectOptions(toInput, "2021");
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
@@ -128,9 +154,9 @@ describe("Overrated", () => {
     const fromInput = within(fieldset).getByLabelText("From");
     const toInput = within(fieldset).getByLabelText("to");
 
-    await userEvent.selectOptions(fromInput, "1984");
+    await userEvent.selectOptions(fromInput, "1982");
     await userEvent.selectOptions(toInput, "2018");
-    await userEvent.selectOptions(fromInput, "2020");
+    await userEvent.selectOptions(fromInput, "2021");
     await userEvent.selectOptions(toInput, "1982");
 
     expect(screen.getByTestId("list")).toMatchSnapshot();

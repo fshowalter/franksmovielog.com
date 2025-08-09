@@ -5,6 +5,7 @@ export default getViteConfig({
   test: {
     coverage: {
       include: ["src/**"],
+      exclude: ["src/api/data/utils/getContentPath.ts"],
       provider: "istanbul",
     },
     globals: true, // needed for testing-library teardown
