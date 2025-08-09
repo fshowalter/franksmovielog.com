@@ -5,7 +5,12 @@ import { getContainerRenderer as reactContainerRenderer } from "@astrojs/react";
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import { loadRenderers } from "astro:container";
 import { JSDOM } from "jsdom";
-import { afterEach, beforeEach, describe, it } from "vitest";
+import { afterEach, beforeEach, describe, it, vi } from "vitest";
+
+// Mock the PagefindUI module
+vi.mock("@pagefind/default-ui", () => ({
+  PagefindUI: vi.fn().mockImplementation(() => ({})),
+}));
 
 describe("Layout navigation menu", () => {
   let dom: JSDOMType;
@@ -51,15 +56,47 @@ describe("Layout navigation menu", () => {
 
     // Set requestAnimationFrame globally before importing navMenu
     globalThis.requestAnimationFrame = window.requestAnimationFrame;
+    
+    // Mock requestIdleCallback for pageFind
+    globalThis.requestIdleCallback =
+      window.requestIdleCallback ||
+      ((cb: IdleRequestCallback) => setTimeout(cb, 1));
+    
+    // Set up globalThis.addEventListener for pageFind
+    globalThis.addEventListener = window.addEventListener.bind(window);
+    globalThis.removeEventListener = window.removeEventListener.bind(window);
+    
+    // Add HTMLInputElement to global scope for pageFind
+    globalThis.HTMLInputElement = window.HTMLInputElement;
+    globalThis.HTMLButtonElement = window.HTMLButtonElement;
+    
+    // Mock import.meta.env for pageFind
+    vi.stubGlobal("import.meta.env", {
+      BASE_URL: "/",
+    });
+    
+    // Mock dialog methods since JSDOM doesn't fully support them
+    const dialog = document.querySelector("dialog");
+    if (dialog) {
+      dialog.showModal = vi.fn().mockImplementation(function (this: any) {
+        this.open = true;
+      });
+      dialog.close = vi.fn().mockImplementation(function (this: any) {
+        this.open = false;
+        this.dispatchEvent(new window.Event("close"));
+      });
+    }
 
-    // Import the initNavMenu function directly
-    // This ensures Vitest instruments it for coverage
+    // Import the init functions directly
+    // This ensures Vitest instruments them for coverage
     const { initNavMenu } = await import("./navMenu.ts");
+    const { initPageFind } = await import("./pageFind.ts");
 
-    // Call the function in the JSDOM context
-    // The import will execute the module's top-level code which auto-initializes
-    // But we need to manually call it since JSDOM's document.readyState might not trigger it
+    // Call the functions in the JSDOM context
+    // The imports will execute the module's top-level code which auto-initializes
+    // But we need to manually call them since JSDOM's document.readyState might not trigger them
     initNavMenu();
+    initPageFind();
 
     cleanup = () => {
       // Clean up body classes
@@ -72,6 +109,7 @@ describe("Layout navigation menu", () => {
   afterEach(() => {
     cleanup();
     window.close();
+    vi.clearAllMocks();
   });
 
   it("renders navigation toggle button", ({ expect }) => {
@@ -314,5 +352,359 @@ describe("Layout navigation menu", () => {
 
     // Toggle button should be focused
     expect(document.activeElement).toBe(toggleButton);
+  });
+});
+
+describe("Layout search modal (pageFind)", () => {
+  let dom: JSDOMType;
+  let document: Document;
+  let window: DOMWindow;
+  let cleanup: () => void;
+
+  beforeEach(async () => {
+    // Render the test page using Astro's container API
+    const renderers = await loadRenderers([reactContainerRenderer()]);
+    const container = await AstroContainer.create({ renderers });
+
+    // Import our test page that uses the Layout
+    const TestPageModule = (await import("./TestPage.astro")) as {
+      default: AstroComponentFactory;
+    };
+    const TestPage = TestPageModule.default;
+
+    const result = await container.renderToString(TestPage, {
+      partial: false,
+      request: new Request(`https://www.franksmovielog.com/test`),
+    });
+
+    // Create JSDOM instance with the rendered HTML
+    dom = new JSDOM(result, {
+      pretendToBeVisual: true,
+      runScripts: "dangerously",
+      url: "https://www.franksmovielog.com/test",
+    });
+
+    document = dom.window.document;
+    window = dom.window;
+
+    // Make JSDOM's window and document available globally
+    globalThis.window = window as unknown as typeof globalThis & Window;
+    globalThis.document = document;
+    Object.defineProperty(globalThis, "navigator", {
+      configurable: true,
+      value: window.navigator,
+      writable: true,
+    });
+
+    // Set up mocks
+    globalThis.requestAnimationFrame = window.requestAnimationFrame;
+    globalThis.requestIdleCallback =
+      window.requestIdleCallback ||
+      ((cb: IdleRequestCallback) => setTimeout(cb, 1));
+    
+    // Set up globalThis event listeners
+    globalThis.addEventListener = window.addEventListener.bind(window);
+    globalThis.removeEventListener = window.removeEventListener.bind(window);
+    globalThis.dispatchEvent = window.dispatchEvent.bind(window);
+    
+    // Add HTMLInputElement to global scope for pageFind
+    globalThis.HTMLInputElement = window.HTMLInputElement;
+    globalThis.HTMLButtonElement = window.HTMLButtonElement;
+    
+    vi.stubGlobal("import.meta.env", {
+      BASE_URL: "/",
+    });
+    
+    // Mock dialog methods
+    const dialog = document.querySelector("dialog");
+    if (dialog) {
+      dialog.showModal = vi.fn().mockImplementation(function (this: any) {
+        this.open = true;
+      });
+      dialog.close = vi.fn().mockImplementation(function (this: any) {
+        this.open = false;
+        this.dispatchEvent(new window.Event("close"));
+      });
+    }
+
+    // Import and initialize pageFind
+    const { initPageFind } = await import("./pageFind.ts");
+    initPageFind();
+
+    cleanup = () => {
+      document.body.removeAttribute("data-search-modal-open");
+      const dialog = document.querySelector("dialog");
+      if (dialog) {
+        dialog.open = false;
+      }
+    };
+  });
+
+  afterEach(() => {
+    cleanup();
+    window.close();
+    vi.clearAllMocks();
+  });
+
+  it("renders search button", ({ expect }) => {
+    const openBtn = document.querySelector("[data-open-modal]");
+    expect(openBtn).toBeTruthy();
+  });
+
+  it("renders close button", ({ expect }) => {
+    const closeBtn = document.querySelector("[data-close-modal]");
+    expect(closeBtn).toBeTruthy();
+  });
+
+  it("renders dialog element", ({ expect }) => {
+    const dialog = document.querySelector("dialog");
+    expect(dialog).toBeTruthy();
+  });
+
+  it("enables search button after initialization", ({ expect }) => {
+    const openBtn = document.querySelector<HTMLButtonElement>("[data-open-modal]");
+    expect(openBtn?.disabled).toBe(false);
+  });
+
+  it("sets Mac keyboard shortcut for Mac users", async ({ expect }) => {
+    // Re-initialize with Mac user agent
+    const originalUserAgent = Object.getOwnPropertyDescriptor(
+      window.navigator,
+      "userAgent",
+    );
+    Object.defineProperty(window.navigator, "userAgent", {
+      value:
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+      configurable: true,
+    });
+
+    // Re-import and initialize
+    vi.resetModules();
+    const { initPageFind } = await import("./pageFind.ts");
+    initPageFind();
+
+    const openBtn = document.querySelector("[data-open-modal]");
+    expect(openBtn?.getAttribute("aria-keyshortcuts")).toBe("Meta+K");
+    expect(openBtn?.getAttribute("title")).toBe("Search: ⌘K");
+
+    // Restore original user agent
+    if (originalUserAgent) {
+      Object.defineProperty(window.navigator, "userAgent", originalUserAgent);
+    }
+  });
+
+  it("opens modal when search button is clicked", ({ expect }) => {
+    const openBtn = document.querySelector<HTMLButtonElement>(
+      "[data-open-modal]",
+    );
+    const dialog = document.querySelector<HTMLDialogElement>("dialog");
+
+    openBtn?.click();
+
+    expect(dialog?.showModal).toHaveBeenCalled();
+    expect(document.body.hasAttribute("data-search-modal-open")).toBe(true);
+  });
+
+  it("closes modal when close button is clicked", ({ expect }) => {
+    const openBtn = document.querySelector<HTMLButtonElement>(
+      "[data-open-modal]",
+    );
+    const closeBtn = document.querySelector<HTMLButtonElement>(
+      "[data-close-modal]",
+    );
+    const dialog = document.querySelector<HTMLDialogElement>("dialog");
+
+    // First open the modal
+    openBtn?.click();
+    expect(dialog?.open).toBe(true);
+
+    // Then close it
+    closeBtn?.click();
+    expect(dialog?.close).toHaveBeenCalled();
+  });
+
+  it("closes modal when clicking outside dialog frame", ({ expect }) => {
+    const openBtn = document.querySelector<HTMLButtonElement>(
+      "[data-open-modal]",
+    );
+    const dialog = document.querySelector<HTMLDialogElement>("dialog");
+
+    // Open the modal
+    openBtn?.click();
+    expect(dialog?.open).toBe(true);
+
+    // Click outside the dialog frame (on body)
+    const clickEvent = new window.MouseEvent("click", {
+      bubbles: true,
+      cancelable: true,
+    });
+    document.body.dispatchEvent(clickEvent);
+
+    expect(dialog?.close).toHaveBeenCalled();
+  });
+
+  it("does not close modal when clicking inside dialog frame", ({ expect }) => {
+    const openBtn = document.querySelector<HTMLButtonElement>(
+      "[data-open-modal]",
+    );
+    const dialog = document.querySelector<HTMLDialogElement>("dialog");
+    const dialogFrame = document.querySelector("[data-dialog-frame]");
+
+    // Open the modal
+    openBtn?.click();
+    expect(dialog?.open).toBe(true);
+
+    // Click inside the dialog frame
+    const clickEvent = new window.MouseEvent("click", {
+      bubbles: true,
+      cancelable: true,
+    });
+    dialogFrame?.dispatchEvent(clickEvent);
+
+    expect(dialog?.close).not.toHaveBeenCalled();
+    expect(dialog?.open).toBe(true);
+  });
+
+  it("opens modal with Cmd+K keyboard shortcut", ({ expect }) => {
+    const dialog = document.querySelector<HTMLDialogElement>("dialog");
+
+    const keyEvent = new window.KeyboardEvent("keydown", {
+      key: "k",
+      metaKey: true,
+      bubbles: true,
+    });
+    globalThis.dispatchEvent(keyEvent);
+
+    expect(dialog?.showModal).toHaveBeenCalled();
+  });
+
+  it("opens modal with Ctrl+K keyboard shortcut", ({ expect }) => {
+    const dialog = document.querySelector<HTMLDialogElement>("dialog");
+
+    const keyEvent = new window.KeyboardEvent("keydown", {
+      key: "k",
+      ctrlKey: true,
+      bubbles: true,
+    });
+    globalThis.dispatchEvent(keyEvent);
+
+    expect(dialog?.showModal).toHaveBeenCalled();
+  });
+
+  it("closes modal with Cmd+K when already open", ({ expect }) => {
+    const openBtn = document.querySelector<HTMLButtonElement>(
+      "[data-open-modal]",
+    );
+    const dialog = document.querySelector<HTMLDialogElement>("dialog");
+
+    // Open the modal first
+    openBtn?.click();
+    expect(dialog?.open).toBe(true);
+
+    // Press Cmd+K to close
+    const keyEvent = new window.KeyboardEvent("keydown", {
+      key: "k",
+      metaKey: true,
+      bubbles: true,
+    });
+    globalThis.dispatchEvent(keyEvent);
+
+    expect(dialog?.close).toHaveBeenCalled();
+  });
+
+  it("removes data-search-modal-open attribute when dialog closes", ({
+    expect,
+  }) => {
+    const openBtn = document.querySelector<HTMLButtonElement>(
+      "[data-open-modal]",
+    );
+    const dialog = document.querySelector<HTMLDialogElement>("dialog");
+
+    // Open the modal
+    openBtn?.click();
+    expect(document.body.hasAttribute("data-search-modal-open")).toBe(true);
+
+    // Trigger the close event (the mock close() already dispatches it)
+    dialog?.close();
+
+    expect(document.body.hasAttribute("data-search-modal-open")).toBe(false);
+  });
+
+  it("closes modal when clicking on a link", ({ expect }) => {
+    const openBtn = document.querySelector<HTMLButtonElement>(
+      "[data-open-modal]",
+    );
+    const dialog = document.querySelector<HTMLDialogElement>("dialog");
+
+    // Open the modal
+    openBtn?.click();
+    expect(dialog?.open).toBe(true);
+
+    // Create and click a link
+    const link = document.createElement("a");
+    link.href = "/test";
+    document.body.append(link);
+
+    const clickEvent = new window.MouseEvent("click", {
+      bubbles: true,
+      cancelable: true,
+    });
+    Object.defineProperty(clickEvent, "target", {
+      value: link,
+      writable: false,
+    });
+    globalThis.dispatchEvent(clickEvent);
+
+    expect(dialog?.close).toHaveBeenCalled();
+  });
+
+  it("blurs search input when Enter is pressed", ({ expect }) => {
+    const input = document.createElement("input");
+    input.classList.add("pagefind-ui__search-input");
+    document.body.append(input);
+
+    const blurSpy = vi.spyOn(input, "blur");
+    input.focus();
+
+    const keyEvent = new window.KeyboardEvent("keydown", {
+      key: "Enter",
+      bubbles: true,
+    });
+    Object.defineProperty(keyEvent, "target", {
+      value: input,
+      writable: false,
+    });
+    globalThis.dispatchEvent(keyEvent);
+
+    expect(blurSpy).toHaveBeenCalled();
+  });
+
+  it("focuses search input when clear button is clicked", ({ expect }) => {
+    const clearBtn = document.createElement("button");
+    clearBtn.classList.add("pagefind-ui__search-clear");
+    const searchInput = document.createElement("input");
+    searchInput.classList.add("pagefind-ui__search-input");
+    document.body.append(clearBtn, searchInput);
+
+    const focusSpy = vi.spyOn(searchInput, "focus");
+
+    // Open modal first to set up click listener
+    const openBtn = document.querySelector<HTMLButtonElement>(
+      "[data-open-modal]",
+    );
+    openBtn?.click();
+
+    // Click the clear button
+    const clickEvent = new window.MouseEvent("click", {
+      bubbles: true,
+      cancelable: true,
+    });
+    Object.defineProperty(clickEvent, "target", {
+      value: clearBtn,
+      writable: false,
+    });
+    globalThis.dispatchEvent(clickEvent);
+
+    expect(focusSpy).toHaveBeenCalled();
   });
 });
