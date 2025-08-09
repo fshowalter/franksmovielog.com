@@ -32,7 +32,7 @@ if (import.meta.env.MODE !== "development") {
   cachedMarkdownReviews = await allReviewsMarkdown();
 }
 
-export type Review = MarkdownReview & ReviewedTitleJson & {};
+export type Review = Omit<MarkdownReview, "date"> & ReviewedTitleJson;
 
 export type ReviewContent = {
   content: string | undefined;
@@ -191,14 +191,14 @@ async function parseReviewedTitlesJson(
     for (const genre of title.genres) distinctGenres.add(genre);
     distinctReleaseYears.add(title.releaseYear);
 
-    const { date, grade, rawContent, synopsis } = reviewsMarkdown.find(
+    const { grade, rawContent, synopsis } = reviewsMarkdown.find(
       (reviewsmarkdown) => {
         return reviewsmarkdown.slug === title.slug;
       },
     )!;
 
     distinctReviewYears.add(
-      date.toLocaleDateString("en-US", {
+      title.reviewDate.toLocaleDateString("en-US", {
         timeZone: "UTC",
         year: "numeric",
       }),
@@ -206,7 +206,6 @@ async function parseReviewedTitlesJson(
 
     return {
       ...title,
-      date,
       grade,
       rawContent,
       synopsis,

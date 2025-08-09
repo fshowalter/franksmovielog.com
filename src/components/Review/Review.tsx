@@ -123,7 +123,7 @@ export function Review({
             tablet:mt-12
           `}
         >
-          Reviewed {dateFormat.format(value.date)}
+          Reviewed {dateFormat.format(value.reviewDate)}
         </div>
       </header>
       <div
