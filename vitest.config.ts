@@ -4,6 +4,7 @@ import { getViteConfig } from "astro/config";
 export default getViteConfig({
   test: {
     coverage: {
+      exclude: ["src/api/data/utils/getContentPath.ts"],
       include: ["src/**"],
       provider: "istanbul",
     },
