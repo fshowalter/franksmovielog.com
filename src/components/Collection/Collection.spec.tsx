@@ -185,16 +185,16 @@ describe("Collection", () => {
     expect.hasAssertions();
     // Create props with more than 100 items to trigger pagination
     const manyValues = Array.from({ length: 150 }, (_, i) => ({
+      grade: i % 2 === 0 ? "B+" : undefined,
+      gradeValue: i % 2 === 0 ? 8 : undefined,
       imdbId: `tt${String(i).padStart(7, "0")}`,
+      posterImageProps: undefined,
       releaseSequence: `1970-01-${String(i + 1).padStart(2, "0")}tt${String(i).padStart(7, "0")}`,
       releaseYear: "1970",
+      reviewed: i % 2 === 0,
       slug: `test-movie-${i + 1}`,
       sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
       title: `Test Movie ${i + 1}`,
-      grade: i % 2 === 0 ? "B+" : undefined,
-      gradeValue: i % 2 === 0 ? 8 : undefined,
-      reviewed: i % 2 === 0,
-      posterImageProps: undefined,
     }));
     const propsWithManyValues = {
       ...props,

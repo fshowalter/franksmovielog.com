@@ -256,18 +256,18 @@ describe("CastAndCrewMember", () => {
     expect.hasAssertions();
     // Create props with more than 100 items to trigger pagination
     const manyValues = Array.from({ length: 150 }, (_, i) => ({
-      imdbId: `tt${String(i).padStart(7, "0")}`,
-      releaseSequence: `1970-01-${String(i + 1).padStart(2, "0")}tt${String(i).padStart(7, "0")}`,
-      releaseYear: "1970",
-      slug: `test-movie-${i + 1}`,
-      sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
-      title: `Test Movie ${i + 1}`,
       creditedAs: ["Performer"],
       grade: i % 2 === 0 ? "B+" : undefined,
       gradeValue: i % 2 === 0 ? 8 : undefined,
-      reviewed: i % 2 === 0,
-      viewingSequence: i % 3 === 0 ? `2023-01-01-${i}` : undefined,
+      imdbId: `tt${String(i).padStart(7, "0")}`,
       posterImageProps: undefined,
+      releaseSequence: `1970-01-${String(i + 1).padStart(2, "0")}tt${String(i).padStart(7, "0")}`,
+      releaseYear: "1970",
+      reviewed: i % 2 === 0,
+      slug: `test-movie-${i + 1}`,
+      sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
+      title: `Test Movie ${i + 1}`,
+      viewingSequence: i % 3 === 0 ? `2023-01-01-${i}` : undefined,
     }));
     const propsWithManyValues = {
       ...props,

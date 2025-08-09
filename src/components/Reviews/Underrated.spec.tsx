@@ -31,14 +31,18 @@ describe("Underrated", () => {
     expect.hasAssertions();
     // Create props with more than 100 items to trigger pagination
     const manyValues = Array.from({ length: 150 }, (_, i) => ({
-      genres: [],
-      grade: "B+",
+      genres: ["Drama"],
+      grade: "B+" as const,
       gradeValue: 8,
       imdbId: `tt${String(i).padStart(7, "0")}`,
-      posterImageProps: undefined,
+      posterImageProps: {
+        src: "test.jpg",
+        srcSet: "test.jpg 1x",
+      },
       releaseSequence: `1930-01-${String(i + 1).padStart(2, "0")}tt${String(i).padStart(7, "0")}`,
       releaseYear: "1930",
-      reviewDate: "2023-01-01",
+      reviewDisplayDate: "Jan 01, 2023",
+      reviewSequence: `2023-01-01-${i}`,
       reviewYear: "2023",
       slug: `test-movie-${i + 1}`,
       sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,

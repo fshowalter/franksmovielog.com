@@ -2,6 +2,8 @@ import { act, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { describe, it } from "vitest";
 
+import type { ListItemValue } from "./Viewings";
+
 import { getProps } from "./getProps";
 import { Viewings } from "./Viewings";
 
@@ -164,21 +166,28 @@ describe("Viewings", () => {
   it("can show more titles", async ({ expect }) => {
     expect.hasAssertions();
     // Create props with more than 100 items to trigger pagination
-    const manyValues = Array.from({ length: 150 }, (_, i) => ({
-      imdbId: `tt${String(i).padStart(7, "0")}`,
-      sequence: `2023-01-${String(i + 1).padStart(2, "0")}-1`,
+    const manyValues: ListItemValue[] = Array.from({ length: 150 }, (_, i) => ({
+      medium: "Blu-ray",
+      posterImageProps: {
+        src: "test.jpg",
+        srcSet: "test.jpg 1x",
+      },
+      releaseSequence: `2020-01-${String(i + 1).padStart(2, "0")}tt${String(i).padStart(7, "0")}`,
+      releaseYear: "2020",
       slug: `test-movie-${i + 1}`,
       sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
       title: `Test Movie ${i + 1}`,
-      viewingDate: `2023-01-${String(i + 1).padStart(2, "0")}`,
-      viewingYear: "2023",
       venue: "Home",
-      medium: "Blu-ray",
-      releaseYear: "2020",
-      posterImageProps: undefined,
+      viewingDate: `2023-01-${String(i + 1).padStart(2, "0")}`,
+      viewingDay: String(i + 1).padStart(2, "0"),
+      viewingMonth: "January",
+      viewingMonthShort: "Jan",
+      viewingSequence: i,
+      viewingYear: "2023",
     }));
+    const { metaDescription, ...viewingsProps } = props;
     const propsWithManyValues = {
-      ...props,
+      ...viewingsProps,
       values: manyValues,
     };
     render(<Viewings {...propsWithManyValues} />);
