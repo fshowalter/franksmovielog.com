@@ -33,11 +33,11 @@ So we're left with a horror film that isn't scary, makes no internal sense, and 
 
 In another 1997 interview, Sholder confesses he and the studio didn't realize Freddy was the franchise, saying:
 
-> Look at Jason the movie’s not about Jason. Nobody gives a shit about Jason really, he’s just a thing that pops up with a spear and its... does the kid get--you know--impaled with a spear or get their head chopped off or--you know--how do they end up?[^1]
+> Look at Jason the movie's not about Jason. Nobody gives a shit about Jason really, he's just a thing that pops up with a spear and it's... does the kid get--you know--impaled with a spear or get their head chopped off or--you know--how do they end up?[^1]
 
 Considering <span data-imdb-id="tt0085636">_Halloween III_</span>'s attempt to move on from Michael Myers just a few years prior had killed that franchise, this attitude surprises. In 1997, Sholder was just then connecting Jason, Freddy, and Michael Myers to the Universal monsters of the 1930s and 1940s, and realizing the slasher killers of the '80s were that generation's monsters. In that light, of course, they matter.
 
-Sholder also bears responsibility for casting Mark Patton as Jesse and crafting the muddled sexual overtones. I don't buy ignorance or even a subconscious motive. Scenes like the shower murder required too much pre-planning and orchestration to be written off as spontaneous improvisations. Injecting these elements with no resolution or through-line makes them laughable, conveying an accurate sense that both Shaye and Sholder cared more about cashing in on the first film's success than crafting a quality product.
+Sholder also bears responsibility for casting Mark Patton as Jesse and crafting the muddled sexual overtones. I don't buy ignorance or even a subconscious motive. Scenes like the shower murder required too much preplanning and orchestration to be written off as spontaneous improvisations. Injecting these elements with no resolution or through-line makes them laughable, conveying an accurate sense that both Shaye and Sholder cared more about cashing in on the first film's success than crafting a quality product.
 
 The sequel's lone bright spot lies in the Freddy makeup, which shines, as illustrated by an early sequence between Freddy and Jesse. "You've got the body," Freddy says to Jesse as he removes his hat and peels the skin off the top of his skull, "and I've got the brain." A clever way of explaining possession that proves to be the film's singular memorable sequence.
 

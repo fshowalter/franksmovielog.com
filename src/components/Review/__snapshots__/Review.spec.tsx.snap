@@ -1,5 +1,1825 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
+<DocumentFragment>
+  <div
+    class="group"
+  >
+    <a
+      class="
+          absolute top-0.5 left-1/2 z-skip-link mx-auto
+          [transform:translate(-50%,calc(-100%-2px))]
+          bg-subtle px-6 py-2 text-center text-accent
+          focus:[transform:translate(-50%,0%)]
+        "
+      href="#content"
+    >
+      Skip to content
+    </a>
+    <div
+      class="flex min-h-full w-full flex-col bg-default"
+    >
+      <header
+        class="
+        group z-30 flex w-full items-center justify-between px-container py-4
+        tablet:py-6
+        laptop:inset-x-0 laptop:z-40 laptop:flex-row laptop:flex-wrap
+        laptop:px-16 laptop:py-8 laptop:text-left
+      "
+        style="color: var(--fg-default); position: static;"
+      >
+        <div
+          class="
+        flex transform-gpu flex-col transition-transform
+        has-[a:hover]:scale-105
+        
+      "
+        >
+          <div
+            class="
+          text-[1.375rem] leading-8 font-normal whitespace-nowrap
+          tablet:text-[1.5625rem]
+        "
+          >
+            <a
+              href="/"
+            >
+              Frank's Movie Log
+            </a>
+          </div>
+          <p
+            class="w-full pl-px text-sm leading-4 italic opacity-85"
+          >
+            by Frank Showalter
+          </p>
+        </div>
+        <div
+          class="flex items-center"
+        >
+          <nav
+            class="
+            hidden w-full
+            laptop:block laptop:w-auto
+          "
+          >
+            <ul
+              class="flex flex-wrap justify-start gap-x-6 text-xl"
+            >
+              <li
+                class="
+        block leading-10 tracking-serif-wide whitespace-nowrap
+        transition-transform
+        has-[a:hover]:scale-105
+        [body.nav-open_&]:opacity-0
+      "
+              >
+                <a
+                  class="relative text-inherit transition-colors"
+                  href="/"
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                class="
+        block leading-10 tracking-serif-wide whitespace-nowrap
+        transition-transform
+        has-[a:hover]:scale-105
+        [body.nav-open_&]:opacity-0
+      "
+              >
+                <a
+                  class="relative text-inherit transition-colors"
+                  href="/how-i-grade/"
+                >
+                  How I Grade
+                </a>
+              </li>
+              <li
+                class="
+        block leading-10 tracking-serif-wide whitespace-nowrap
+        transition-transform
+        has-[a:hover]:scale-105
+        [body.nav-open_&]:opacity-0
+      "
+              >
+                <a
+                  class="relative text-inherit transition-colors"
+                  href="/reviews/"
+                >
+                  Reviews
+                </a>
+              </li>
+              <li
+                class="
+        block leading-10 tracking-serif-wide whitespace-nowrap
+        transition-transform
+        has-[a:hover]:scale-105
+        [body.nav-open_&]:opacity-0
+      "
+              >
+                <a
+                  class="relative text-inherit transition-colors"
+                  href="/viewings/"
+                >
+                  Viewing Log
+                </a>
+              </li>
+              <li
+                class="
+        block leading-10 tracking-serif-wide whitespace-nowrap
+        transition-transform
+        has-[a:hover]:scale-105
+        [body.nav-open_&]:opacity-0
+      "
+              >
+                <a
+                  class="relative text-inherit transition-colors"
+                  href="/watchlist/"
+                >
+                  Watchlist
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div
+            class="
+        z-1000 transform-gpu transition-transform
+        hover:scale-105
+        [body.nav-open_&]:!text-[#fff]
+      "
+          >
+            <button
+              aria-keyshortcuts="Control+K"
+              aria-label="Search"
+              class="
+          flex size-10 items-center justify-center overflow-hidden text-sm
+          leading-6 ring-default
+          laptop:ml-6
+        "
+              data-open-modal="true"
+              disabled=""
+              title="Search: Control+K"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="size-7"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="
+          invisible fixed inset-0 bg-[rgba(0,0,0,.4)] opacity-0
+          transition-opacity duration-200
+          [body.nav-open_&]:tablet:visible
+          [body.nav-open_&]:tablet:z-nav-backdrop
+          [body.nav-open_&]:tablet:opacity-100
+        "
+            data-nav-backdrop="true"
+          />
+          <button
+            aria-controls="nav-menu"
+            aria-expanded="false"
+            aria-label="Toggle navigation menu"
+            class="
+          relative z-40 ml-2 flex h-10 w-10 transform-gpu cursor-pointer
+          items-center justify-center transition-transform
+          hover:scale-110
+        "
+            data-nav-toggle="true"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="
+            relative flex h-0.5 w-6 origin-center transform-gpu
+            transition-[top,bottom,transform] duration-200 ease-in-out
+            before:absolute before:-top-2 before:block before:h-0.5 before:w-6
+            before:bg-inherit before:transition before:duration-200
+            before:ease-in-out
+            after:absolute after:-bottom-2 after:block after:h-0.5 after:w-6
+            after:bg-inherit after:transition after:duration-200
+            after:ease-in-out
+            [body.nav-open_&]:transform-[rotate(45deg)]
+            [body.nav-open_&]:!bg-[#fff] [body.nav-open_&]:before:top-0
+            [body.nav-open_&]:before:transform-[rotate(90deg)]
+            [body.nav-open_&]:after:bottom-0
+            [body.nav-open_&]:after:transform-[rotate(90deg)]
+          "
+              style="background-color: var(--fg-default);"
+            />
+          </button>
+          <nav
+            aria-label="Main navigation"
+          >
+            <ul
+              class="
+            invisible fixed top-0 right-0 flex h-full w-0
+            transform-[translateX(100%)] flex-col items-start gap-y-5
+            overflow-hidden bg-footer text-left text-inverse opacity-0
+            duration-200 ease-in-out
+            tablet:max-w-[35vw] tablet:gap-y-10
+            laptop:max-w-[25vw]
+            [body.nav-open_&]:visible [body.nav-open_&]:bottom-0
+            [body.nav-open_&]:z-nav-menu [body.nav-open_&]:h-full
+            [body.nav-open_&]:w-full [body.nav-open_&]:transform-[translateX(0)]
+            [body.nav-open_&]:overflow-y-auto [body.nav-open_&]:pt-20
+            [body.nav-open_&]:pr-[16%] [body.nav-open_&]:pb-5
+            [body.nav-open_&]:pl-[12%] [body.nav-open_&]:opacity-100
+            [body.nav-open_&]:drop-shadow-2xl [body.nav-open_&]:tablet:px-10
+            [body.nav-open_&]:tablet:pt-40 [body.nav-open_&]:laptop:px-20
+          "
+              data-nav-menu="true"
+              id="nav-menu"
+            >
+              <li
+                class="
+        block w-1/2 text-2xl whitespace-nowrap
+        laptop:w-full
+      "
+              >
+                <a
+                  class="
+          inline-block origin-left transform-gpu transition-all
+          hover:scale-105
+        "
+                  href="/"
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                class="
+        block w-1/2 text-2xl whitespace-nowrap
+        laptop:w-full
+      "
+              >
+                <a
+                  class="
+          inline-block origin-left transform-gpu transition-all
+          hover:scale-105
+        "
+                  href="/how-i-grade/"
+                >
+                  How I Grade
+                </a>
+              </li>
+              <li
+                class="
+        block w-1/2 text-2xl whitespace-nowrap
+        laptop:w-full
+      "
+              >
+                <a
+                  class="
+          inline-block origin-left transform-gpu transition-all
+          hover:scale-105
+        "
+                  href="/reviews/"
+                >
+                  Reviews
+                </a>
+                <ol
+                  class="mt-4"
+                >
+                  <li
+                    class="
+              mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
+                  >
+                    <a
+                      class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
+                      href="/cast-and-crew/"
+                    >
+                      Cast & Crew
+                    </a>
+                  </li>
+                  <li
+                    class="
+              mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
+                  >
+                    <a
+                      class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
+                      href="/collections/"
+                    >
+                      Collections
+                    </a>
+                  </li>
+                  <li
+                    class="
+              mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
+                  >
+                    <a
+                      class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
+                      href="/reviews/overrated/"
+                    >
+                      Overrated
+                    </a>
+                  </li>
+                  <li
+                    class="
+              mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
+                  >
+                    <a
+                      class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
+                      href="/reviews/underrated/"
+                    >
+                      Underrated
+                    </a>
+                  </li>
+                  <li
+                    class="
+              mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
+                  >
+                    <a
+                      class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
+                      href="/reviews/underseen/"
+                    >
+                      Underseen
+                    </a>
+                  </li>
+                </ol>
+              </li>
+              <li
+                class="
+        block w-1/2 text-2xl whitespace-nowrap
+        laptop:w-full
+      "
+              >
+                <a
+                  class="
+          inline-block origin-left transform-gpu transition-all
+          hover:scale-105
+        "
+                  href="/viewings/"
+                >
+                  Viewing Log
+                </a>
+                <ol
+                  class="mt-4"
+                >
+                  <li
+                    class="
+              mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
+                  >
+                    <a
+                      class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
+                      href="/viewings/stats/"
+                    >
+                      Stats
+                    </a>
+                  </li>
+                </ol>
+              </li>
+              <li
+                class="
+        block w-1/2 text-2xl whitespace-nowrap
+        laptop:w-full
+      "
+              >
+                <a
+                  class="
+          inline-block origin-left transform-gpu transition-all
+          hover:scale-105
+        "
+                  href="/watchlist/"
+                >
+                  Watchlist
+                </a>
+                <ol
+                  class="mt-4"
+                >
+                  <li
+                    class="
+              mb-4 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
+                  >
+                    <a
+                      class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
+                      href="/watchlist/progress/"
+                    >
+                      Progress
+                    </a>
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main
+        class="grow flex flex-col"
+        data-pagefind-body="true"
+        data-pagefind-meta="image:/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+        id="content"
+      >
+        <header
+          class="
+          relative z-base mb-8 flex flex-col items-center px-[8%] pt-10
+        "
+        >
+          <nav
+            class="
+            transform-gpu pb-3 transition-transform
+            has-[a:hover]:scale-110
+          "
+          >
+            <a
+              class="
+              font-sans text-xs tracking-wider text-subtle uppercase
+              transition-all
+              hover:text-accent
+            "
+              href="/reviews/"
+            >
+              Reviews
+            </a>
+          </nav>
+          <h1
+            class="
+            text-center text-4xl
+            laptop:text-7xl laptop:tracking-[-1px]
+          "
+            data-pagefind-meta="title"
+            data-pagefind-weight="10"
+          >
+            The Bloody Judge
+          </h1>
+          <div
+            class="mb-4 text-muted"
+          >
+            (Il trono di fuoco)
+          </div>
+          <picture>
+            <source
+              media="(prefers-color-scheme: dark)"
+              srcset="/svg/2-stars-dark.svg"
+            />
+            <img
+              alt="D: 2 stars (out of 5)"
+              class="mb-6"
+              height="24"
+              src="/svg/2-stars.svg"
+              width="120"
+            />
+          </picture>
+          <div
+            class="text-center font-sans text-xs tracking-wide text-subtle uppercase 
+            mb-10
+            tablet:mb-12
+          "
+          >
+            1970 
+            <span>
+              |
+            </span>
+             Italy
+            <span>
+              –
+            </span>
+            West Germany
+            <span>
+              –
+            </span>
+            Spain
+            <span>
+              –
+            </span>
+            Liechtenstein 
+            <span>
+              |
+            </span>
+             84 min 
+            <span>
+              <span>
+                |
+              </span>
+               
+              <a
+                class="
+            inline-block origin-bottom-left transform-gpu text-accent
+            transition-transform
+            hover:scale-105
+          "
+                href="#credits"
+              >
+                More...
+              </a>
+            </span>
+          </div>
+          <img
+            alt=""
+            class="aspect-video mx-auto mb-[.191px]"
+            decoding="sync"
+            height="540"
+            loading="eager"
+            sizes="(min-width: 1143px) 960px, calc(79.57vw + 13px)"
+            src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fthe-bloody-judge-1970.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=960&h=540&q=80&f=avif"
+            srcset="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fthe-bloody-judge-1970.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=240&h=135&q=80&f=avif 240w, /_image/?href=%2Fcontent%2Fassets%2Fstills%2Fthe-bloody-judge-1970.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=480&h=270&q=80&f=avif 480w, /_image/?href=%2Fcontent%2Fassets%2Fstills%2Fthe-bloody-judge-1970.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=960&h=540&q=80&f=avif 960w, /_image/?href=%2Fcontent%2Fassets%2Fstills%2Fthe-bloody-judge-1970.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1920&h=1080&q=80&f=avif 1920w"
+            width="960"
+          />
+          <div
+            class="
+            relative mt-10 bg-default px-[1ch] font-sans text-xs tracking-wide
+            text-subtle uppercase
+            after:absolute after:top-1/2 after:left-[-11%] after:z-behind
+            after:w-[122%] after:border-t after:border-(--fg-subtle)
+            tablet:mt-12
+          "
+          >
+            Reviewed Aug 2, 2014
+          </div>
+        </header>
+        <div
+          class="
+          flex flex-col items-center gap-16 px-container pb-20
+          laptop:gap-20 laptop:pb-32
+        "
+        >
+          <div>
+            <div
+              class="rendered-markdown 
+          text-md/7 tracking-prose
+          tablet:text-xl/8
+         
+          max-w-prose
+          first-letter:leading-[.8] first-letter:text-default
+          tablet:first-letter:pr-3
+          laptop:first-letter:text-[64px]
+          dark:font-light
+          [&>p:first-child]:first-letter:float-left
+          [&>p:first-child]:first-letter:mt-[6px]
+          [&>p:first-child]:first-letter:pr-2
+          [&>p:first-child]:first-letter:font-sans
+          [&>p:first-child]:first-letter:text-[56px]
+          [&>p:first-child]:first-letter:font-bold
+        "
+            >
+              <p>
+                The extras on 
+                <em>
+                  The Bloody Judge
+                </em>
+                 DVD are more interesting than the feature film.
+              </p>
+              
+
+              <p>
+                The story takes place in England during the final days of King James II. Christopher Lee plays George Jeffreys, an infamous judge who meted out death sentences to suppress the burgeoning rebellion. These sham trials became known as the Bloody Assizes.
+              </p>
+              
+
+              <p>
+                In the aforementioned DVD extras, Lee describes Jeffreys as a Jekyll-and-Hyde figure: a brilliant legal mind but also a merciless executioner. Had the film focused on this dichotomy, it might have worked.
+              </p>
+              
+
+              <p>
+                Instead, the film revolves around a fictitious love triangle. Jeffreys obsesses over Mary, a young peasant girl. Mary’s lover, Harry, is part of the rebellion. Jeffreys longs to arrest Harry, but Harry’s father is a political ally of Jeffreys. Instead, Jeffreys arrests Mary. Harry frees her. Jeffreys captures them both. They escape. Then the revolution happens.
+              </p>
+              
+
+              <p>
+                There’s also a blind oracle who may be psychic, and a man dressed like Boris Karloff in 
+                <em>
+                  The Tower of London
+                </em>
+                , torturing a semi-nude woman covered in Technicolor blood.
+              </p>
+              
+
+              <p>
+                This mess of disparate plot-points has its roots in money. The production had multiple financiers, and each wanted a different film. One wanted a horror movie. Another wanted a historical drama. Yet another wanted an exploitation picture. The filmmakers tried to please everyone. At least no one wanted a comedy.
+              </p>
+              
+
+              <p>
+                This compromise results in a string of overlong, exposition-leaden scenes interrupted by occasional bits of exploitation. Things pick up when the revolution gets underway, but not enough to recapture our interest. I can forgive stiff dialogue, convoluted plotting, gratuitous nudity and violence. I can’t forgive boring.
+              </p>
+              
+
+              <p>
+                Compounding matters, Lee and director Jesús Franco disagreed on how to portray Jeffreys. Lee wanted historical accuracy. Franco wanted something more “dynamic.” I don’t know what Franco meant by “dynamic” and, judging by his performance, Lee didn’t either.
+              </p>
+              
+
+              <p>
+                Consider how Lee shifts his weight and looks uncomfortable whenever he sits down. In the DVD extras, Lee explains that Jeffreys suffered from kidney stones. Lee was a fine actor, but without script help, kidney stones is an impossible charade.
+              </p>
+              
+
+              <p>
+                The financing amalgam also explains the myriad of alternate titles. In the United States it was 
+                <em>
+                  Night of the Blood Monster
+                </em>
+                 and 
+                <em>
+                  Witch Killer of Broadmoor
+                </em>
+                . There’s no Broadmoor in the film. Granted, there’s no Blood Monster either, but why Broadmoor? That’s one question the DVD extras couldn’t answer.
+              </p>
+            </div>
+          </div>
+          <aside
+            class="w-full max-w-popout"
+          >
+            <h2
+              class="
+          py-10 font-sans text-xs font-semibold tracking-wide text-subtle
+          uppercase
+         text-center shadow-bottom"
+            >
+              Viewing History
+            </h2>
+            <ul
+              class="bg-default"
+            >
+              <li
+                class="
+        mb-1 flex flex-col bg-subtle px-container font-sans text-xs font-light
+        tablet:px-6
+      "
+              >
+                <div
+                  class="
+          flex items-center gap-x-4 py-4
+          tablet:gap-x-6
+        "
+                >
+                  <div
+                    class="size-auto"
+                  >
+                    <div
+                      class="bg-subtle py-2 text-center"
+                    >
+                      <div
+                        class="px-4 pb-2 font-serif text-md font-normal text-subtle"
+                      >
+                        2014
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Aug
+                      </div>
+                      <div
+                        class="bg-default font-serif text-md font-normal text-default"
+                      >
+                        2
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Sat
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="grow"
+                  >
+                    <span
+                      class="font-serif text-base font-normal text-default"
+                    >
+                      DVD
+                    </span>
+                     
+                  </div>
+                </div>
+                <div />
+              </li>
+              <li
+                class="
+        mb-1 flex flex-col bg-subtle px-container font-sans text-xs font-light
+        tablet:px-6
+      "
+              >
+                <div
+                  class="
+          flex items-center gap-x-4 py-4
+          tablet:gap-x-6
+        "
+                >
+                  <div
+                    class="size-auto"
+                  >
+                    <div
+                      class="bg-subtle py-2 text-center"
+                    >
+                      <div
+                        class="px-4 pb-2 font-serif text-md font-normal text-subtle"
+                      >
+                        2014
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Aug
+                      </div>
+                      <div
+                        class="bg-default font-serif text-md font-normal text-default"
+                      >
+                        2
+                      </div>
+                      <div
+                        class="bg-default py-1 text-subtle"
+                      >
+                        Sat
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="grow"
+                  >
+                    <span
+                      class="font-serif text-base font-normal text-default"
+                    >
+                      DVD
+                    </span>
+                     
+                  </div>
+                </div>
+                <div />
+              </li>
+            </ul>
+          </aside>
+          <aside
+            class="
+          bg-subtle px-container pt-8 pb-8
+          tablet:pt-12
+         w-full max-w-popout"
+            data-pagefind-meta="image:/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=248&h=372&q=80&f=avif"
+            id="credits"
+          >
+            <div
+              class="
+          flex flex-wrap justify-center gap-8
+          tablet:flex-nowrap
+        "
+            >
+              <div
+                class="shrink-0"
+              >
+                <div
+                  class="block"
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster h-auto"
+                    decoding="async"
+                    height="372"
+                    loading="lazy"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=248&h=372&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=248&h=372&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=496&h=744&q=80&f=avif 2x"
+                    width="248"
+                  />
+                </div>
+              </div>
+              <dl
+                class="flex min-w-0 shrink flex-col items-start gap-y-4"
+              >
+                <div>
+                  <dt
+                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                  >
+                    Title
+                  </dt>
+                  <dd
+                    class="font-normal text-wrap text-muted"
+                  >
+                    The Bloody Judge
+                  </dd>
+                </div>
+                <div>
+                  <dt
+                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                  >
+                    Original Title
+                  </dt>
+                  <dd
+                    class="font-normal text-wrap text-muted"
+                  >
+                    Il trono di fuoco
+                  </dd>
+                </div>
+                <div>
+                  <dt
+                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                  >
+                    Year
+                  </dt>
+                  <dd
+                    class="font-normal text-wrap text-muted"
+                  >
+                    1970
+                  </dd>
+                </div>
+                <div>
+                  <dt
+                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                  >
+                    Financing
+                  </dt>
+                  <dd
+                    class="font-normal text-wrap text-muted"
+                  >
+                    Italy, West Germany, Spain, and Liechtenstein
+                  </dd>
+                </div>
+                <div>
+                  <dt
+                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                  >
+                    Running Time
+                  </dt>
+                  <dd
+                    class="font-normal text-wrap text-muted"
+                  >
+                    84 min
+                  </dd>
+                </div>
+                <div>
+                  <dt
+                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                  >
+                    Directed by
+                  </dt>
+                  <dd
+                    class="font-normal text-wrap text-muted"
+                  >
+                    <div>
+                      Jesús Franco
+                    </div>
+                  </dd>
+                </div>
+                <div>
+                  <dt
+                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                  >
+                    Written by
+                  </dt>
+                  <dd
+                    class="font-normal text-wrap text-muted"
+                  >
+                    <div>
+                      Anthony Scott Veitch
+                    </div>
+                    <div>
+                      Harry Alan Towers
+                    </div>
+                    <div>
+                      Jesús Franco
+                    </div>
+                    <div>
+                      Enrico Colombo
+                    </div>
+                    <div>
+                      Michael Haller
+                    </div>
+                  </dd>
+                </div>
+                <div>
+                  <dt
+                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                  >
+                    Starring
+                  </dt>
+                  <dd
+                    class="font-normal text-wrap text-muted"
+                  >
+                    Christopher Lee, Maria Schell, Leo Genn, and Hans Hass Jr.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+            <a
+              class="
+          mx-auto mt-8 flex w-full max-w-button transform-gpu cursor-pointer
+          place-content-center items-center py-5 font-sans text-xs tracking-wide
+          uppercase shadow-all transition-all
+          hover:scale-105 hover:bg-inverse hover:text-inverse
+        "
+              href="#top"
+            >
+              Back to Top
+            </a>
+          </aside>
+        </div>
+        <div
+          class="
+          flex w-full flex-col items-center gap-y-12 bg-subtle pt-16 pb-32
+          tablet:pt-8
+          laptop:gap-y-24
+        "
+          data-pagefind-ignore="true"
+        >
+          <nav
+            data-pagefind-ignore="true"
+          >
+            <div
+              class="
+          relative mx-auto w-full max-w-(--breakpoint-desktop) px-container
+          laptop:px-20
+        "
+            >
+              <h2
+                class="
+          py-10 font-sans text-xs font-semibold tracking-wide text-subtle
+          uppercase
+        "
+              >
+                <a
+                  class="
+                inline-block transform-gpu transition-transform
+                hover:scale-110
+              "
+                  href="/reviews/"
+                >
+                  More 
+                  <span
+                    class="text-accent"
+                  >
+                    Reviews
+                  </span>
+                </a>
+              </h2>
+              <ul
+                class="
+            flex w-full flex-col gap-[3%] gap-y-[6vw]
+            tablet:flex-row tablet:flex-wrap tablet:justify-between
+            laptop:flex-nowrap
+          "
+              >
+                <li
+                  class="
+        group/list-item relative w-full transform-gpu transition-transform
+        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
+        has-[a:hover]:drop-shadow-2xl
+        tablet:w-[47%]
+      "
+                >
+                  <div
+                    class="bg-default"
+                  >
+                    <div
+                      class="
+            block
+            after:absolute after:inset-x-0 after:top-0 after:aspect-video
+            after:bg-default after:opacity-15
+            group-has-[a:hover]/list-item:after:opacity-0
+          "
+                    >
+                      <img
+                        alt=""
+                        class="aspect-video h-auto w-full"
+                        decoding="async"
+                        height="360"
+                        loading="lazy"
+                        sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160px) * .22735), 350px"
+                        src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2F3-from-hell-2019.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                        srcset="/_image/?href=%2Fcontent%2Fassets%2Fstills%2F3-from-hell-2019.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&h=90&q=80&f=avif 160w, /_image/?href=%2Fcontent%2Fassets%2Fstills%2F3-from-hell-2019.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&h=180&q=80&f=avif 320w, /_image/?href=%2Fcontent%2Fassets%2Fstills%2F3-from-hell-2019.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif 640w, /_image/?href=%2Fcontent%2Fassets%2Fstills%2F3-from-hell-2019.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&h=720&q=80&f=avif 1280w"
+                        width="640"
+                      />
+                    </div>
+                    <div
+                      class="
+            flex flex-col px-6 pt-6 pb-6
+            laptop:pr-[14%] laptop:pl-[12%]
+          "
+                    >
+                      <a
+                        class="
+              mb-3 block text-xl leading-6 font-medium text-default
+              after:absolute after:top-0 after:left-0 after:z-sticky
+              after:size-full after:opacity-0
+              hover:text-accent hover:before:opacity-0
+            "
+                        href="/reviews/3-from-hell-2019/"
+                      >
+                        3 from Hell 
+                        <span
+                          class="text-sm leading-none font-normal text-muted"
+                        >
+                          2019
+                        </span>
+                      </a>
+                      <picture>
+                        <source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/2-stars-dark.svg"
+                        />
+                        <img
+                          alt="D+: 2 stars (out of 5)"
+                          class="mb-4"
+                          height="18"
+                          src="/svg/2-stars.svg"
+                          width="90"
+                        />
+                      </picture>
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-prose text-muted"
+                      >
+                        <p>
+                          Ten years after 
+                          <span
+                            data-imdb-id="tt0395584"
+                          >
+                            <em>
+                              The Devil’s Rejects
+                            </em>
+                          </span>
+                          , Baby and Otis escape jail with help from Otis’ half brother Foxy, played by Richard Brake. The trio flee to Mexico, where they’re targeted for revenge by a masked gangster.
+                        </p>
+                      </div>
+                      <div
+                        class="
+              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              laptop:tracking-wide
+            "
+                      >
+                        <span>
+                          Action
+                        </span>
+                        <span>
+                           | Horror
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="
+        group/list-item relative w-full transform-gpu transition-transform
+        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
+        has-[a:hover]:drop-shadow-2xl
+        tablet:w-[47%]
+      "
+                >
+                  <div
+                    class="bg-default"
+                  >
+                    <div
+                      class="
+            block
+            after:absolute after:inset-x-0 after:top-0 after:aspect-video
+            after:bg-default after:opacity-15
+            group-has-[a:hover]/list-item:after:opacity-0
+          "
+                    >
+                      <img
+                        alt=""
+                        class="aspect-video h-auto w-full"
+                        decoding="async"
+                        height="360"
+                        loading="lazy"
+                        sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160px) * .22735), 350px"
+                        src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fapostle-2018.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                        srcset="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fapostle-2018.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&h=90&q=80&f=avif 160w, /_image/?href=%2Fcontent%2Fassets%2Fstills%2Fapostle-2018.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&h=180&q=80&f=avif 320w, /_image/?href=%2Fcontent%2Fassets%2Fstills%2Fapostle-2018.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif 640w, /_image/?href=%2Fcontent%2Fassets%2Fstills%2Fapostle-2018.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&h=720&q=80&f=avif 1280w"
+                        width="640"
+                      />
+                    </div>
+                    <div
+                      class="
+            flex flex-col px-6 pt-6 pb-6
+            laptop:pr-[14%] laptop:pl-[12%]
+          "
+                    >
+                      <a
+                        class="
+              mb-3 block text-xl leading-6 font-medium text-default
+              after:absolute after:top-0 after:left-0 after:z-sticky
+              after:size-full after:opacity-0
+              hover:text-accent hover:before:opacity-0
+            "
+                        href="/reviews/apostle-2018/"
+                      >
+                        Apostle 
+                        <span
+                          class="text-sm leading-none font-normal text-muted"
+                        >
+                          2018
+                        </span>
+                      </a>
+                      <picture>
+                        <source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/3-stars-dark.svg"
+                        />
+                        <img
+                          alt="C+: 3 stars (out of 5)"
+                          class="mb-4"
+                          height="18"
+                          src="/svg/3-stars.svg"
+                          width="90"
+                        />
+                      </picture>
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-prose text-muted"
+                      >
+                        <p>
+                          In 1905 England, Dan Stevens plays a drifter searching for his kidnapped sister inside a mysterious religious cult.
+                        </p>
+                      </div>
+                      <div
+                        class="
+              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              laptop:tracking-wide
+            "
+                      >
+                        <span>
+                          Drama
+                        </span>
+                        <span>
+                           | Fantasy
+                        </span>
+                        <span>
+                           | Horror
+                        </span>
+                        <span>
+                           | Mystery
+                        </span>
+                        <span>
+                           | Thriller
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="
+        group/list-item relative w-full transform-gpu transition-transform
+        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
+        has-[a:hover]:drop-shadow-2xl
+        tablet:w-[47%]
+      "
+                >
+                  <div
+                    class="bg-default"
+                  >
+                    <div
+                      class="
+            block
+            after:absolute after:inset-x-0 after:top-0 after:aspect-video
+            after:bg-default after:opacity-15
+            group-has-[a:hover]/list-item:after:opacity-0
+          "
+                    >
+                      <img
+                        alt=""
+                        class="aspect-video h-auto w-full"
+                        decoding="async"
+                        height="360"
+                        loading="lazy"
+                        sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160px) * .22735), 350px"
+                        src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Faqua-teen-forever-plantasm-2022.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                        srcset="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Faqua-teen-forever-plantasm-2022.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&h=90&q=80&f=avif 160w, /_image/?href=%2Fcontent%2Fassets%2Fstills%2Faqua-teen-forever-plantasm-2022.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&h=180&q=80&f=avif 320w, /_image/?href=%2Fcontent%2Fassets%2Fstills%2Faqua-teen-forever-plantasm-2022.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif 640w, /_image/?href=%2Fcontent%2Fassets%2Fstills%2Faqua-teen-forever-plantasm-2022.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&h=720&q=80&f=avif 1280w"
+                        width="640"
+                      />
+                    </div>
+                    <div
+                      class="
+            flex flex-col px-6 pt-6 pb-6
+            laptop:pr-[14%] laptop:pl-[12%]
+          "
+                    >
+                      <a
+                        class="
+              mb-3 block text-xl leading-6 font-medium text-default
+              after:absolute after:top-0 after:left-0 after:z-sticky
+              after:size-full after:opacity-0
+              hover:text-accent hover:before:opacity-0
+            "
+                        href="/reviews/aqua-teen-forever-plantasm-2022/"
+                      >
+                        Aqua Teen Forever: Plantasm 
+                        <span
+                          class="text-sm leading-none font-normal text-muted"
+                        >
+                          2022
+                        </span>
+                      </a>
+                      <picture>
+                        <source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/3-stars-dark.svg"
+                        />
+                        <img
+                          alt="C+: 3 stars (out of 5)"
+                          class="mb-4"
+                          height="18"
+                          src="/svg/3-stars.svg"
+                          width="90"
+                        />
+                      </picture>
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-prose text-muted"
+                      >
+                        <p>
+                          For better and worse, it plays like an extended episode of the series.
+                        </p>
+                      </div>
+                      <div
+                        class="
+              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              laptop:tracking-wide
+            "
+                      >
+                        <span>
+                          Animation
+                        </span>
+                        <span>
+                           | Comedy
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="
+        group/list-item relative w-full transform-gpu transition-transform
+        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
+        has-[a:hover]:drop-shadow-2xl
+        tablet:w-[47%]
+      "
+                >
+                  <div
+                    class="bg-default"
+                  >
+                    <div
+                      class="
+            block
+            after:absolute after:inset-x-0 after:top-0 after:aspect-video
+            after:bg-default after:opacity-15
+            group-has-[a:hover]/list-item:after:opacity-0
+          "
+                    >
+                      <img
+                        alt=""
+                        class="aspect-video h-auto w-full"
+                        decoding="async"
+                        height="360"
+                        loading="lazy"
+                        sizes="(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160px) * .22735), 350px"
+                        src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Favengers-endgame-2019.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif"
+                        srcset="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Favengers-endgame-2019.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=160&h=90&q=80&f=avif 160w, /_image/?href=%2Fcontent%2Fassets%2Fstills%2Favengers-endgame-2019.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=320&h=180&q=80&f=avif 320w, /_image/?href=%2Fcontent%2Fassets%2Fstills%2Favengers-endgame-2019.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=640&h=360&q=80&f=avif 640w, /_image/?href=%2Fcontent%2Fassets%2Fstills%2Favengers-endgame-2019.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1280&h=720&q=80&f=avif 1280w"
+                        width="640"
+                      />
+                    </div>
+                    <div
+                      class="
+            flex flex-col px-6 pt-6 pb-6
+            laptop:pr-[14%] laptop:pl-[12%]
+          "
+                    >
+                      <a
+                        class="
+              mb-3 block text-xl leading-6 font-medium text-default
+              after:absolute after:top-0 after:left-0 after:z-sticky
+              after:size-full after:opacity-0
+              hover:text-accent hover:before:opacity-0
+            "
+                        href="/reviews/avengers-endgame-2019/"
+                      >
+                        Avengers: Endgame 
+                        <span
+                          class="text-sm leading-none font-normal text-muted"
+                        >
+                          2019
+                        </span>
+                      </a>
+                      <picture>
+                        <source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/5-stars-dark.svg"
+                        />
+                        <img
+                          alt="A: 5 stars (out of 5)"
+                          class="mb-4"
+                          height="18"
+                          src="/svg/5-stars.svg"
+                          width="90"
+                        />
+                      </picture>
+                      <div
+                        class="rendered-markdown mb-8 text-base leading-[1.6] tracking-prose text-muted"
+                      >
+                        <p>
+                          <strong>
+                            A satisfying conclusion to 11-years of Marvel films.
+                          </strong>
+                           The “time heist” plot proves secondary to a series of images and moments recreating the pre-adolescent awe I experienced reading the source comics. Not as resonant as 
+                          <span
+                            data-imdb-id="tt4154756"
+                          >
+                            <em>
+                              Infinity War
+                            </em>
+                          </span>
+                          , but just as entertaining.
+                        </p>
+                      </div>
+                      <div
+                        class="
+              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              laptop:tracking-wide
+            "
+                      >
+                        <span>
+                          Action
+                        </span>
+                        <span>
+                           | Adventure
+                        </span>
+                        <span>
+                           | Drama
+                        </span>
+                        <span>
+                           | Sci-Fi
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <script
+          type="application/ld+json"
+        >
+          {"@context":"http://schema.org","@type":"Review","author":{"@type":"Person","name":"Frank Showalter"},"itemReviewed":{"@type":"Movie","dateCreated":"1970","director":{"@type":"Person","name":"Jesús Franco"},"image":"/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fthe-bloody-judge-1970.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&w=1200&h=675&q=80&f=jpeg","name":"The Bloody Judge","sameAs":"http://www.imdb.com/title/tt0064727/"},"reviewRating":{"@type":"Rating","ratingValue":2}}
+        </script>
+      </main>
+      <footer
+        class="bg-footer text-inverse"
+      >
+        <div
+          class="mx-auto max-w-(--breakpoint-laptop) px-container py-20"
+        >
+          <div
+            class="
+            flex w-full flex-col
+            tablet:flex-row-reverse tablet:justify-between
+          "
+          >
+            <a
+              class="
+              mx-auto mb-8 w-full max-w-button bg-canvas py-5 text-center
+              font-sans text-xs tracking-wide text-default uppercase
+              transition-all
+              hover:scale-105 hover:bg-inverse hover:text-inverse
+              tablet:mx-0
+            "
+              href="#top"
+            >
+              To the top
+            </a>
+            <div
+              class="
+        flex transform-gpu flex-col transition-transform
+        has-[a:hover]:scale-105
+        
+      "
+            >
+              <div
+                class="
+          text-[1.375rem] leading-8 font-normal whitespace-nowrap
+          tablet:text-[1.5625rem]
+        "
+              >
+                <a
+                  href="/"
+                >
+                  Frank's Movie Log
+                </a>
+              </div>
+              <p
+                class="w-full pl-px text-sm leading-4 italic opacity-85"
+              >
+                by Frank Showalter
+              </p>
+            </div>
+          </div>
+          <div
+            class="
+            justify-between
+            tablet:flex
+          "
+          >
+            <div
+              class="
+              flex max-w-[640px] flex-col pb-12
+              tablet:pr-32
+            "
+            >
+              <div
+                class="
+                pt-10 font-sans text-sm font-light text-inverse-subtle
+              "
+              >
+                <p
+                  class="
+                  mb-6 text-pretty
+                  first-letter:float-left first-letter:mt-[6px]
+                  first-letter:pr-1 first-letter:font-sans
+                  first-letter:text-[40px] first-letter:leading-[.8]
+                  first-letter:font-bold first-letter:text-inverse
+                "
+                >
+                  Hi there, I'm Frank, a husband and father old enough to have sat wide-eyed during 
+                  <em>
+                    E.T
+                  </em>
+                  's first theatrical run, I've been watching, absorbing, and dissecting films ever since.
+                </p>
+                <p
+                  class="mb-6 text-pretty"
+                >
+                  This site began in 2003 when I realized two things: I had become the designated “movie guy” among my friends (you know, the one everyone asks about every new release), and I was frequently experiencing the peculiar déjà vu of realizing, halfway through a film, that I'd already seen it. Clearly, I needed a system.
+                </p>
+                <p
+                  class="mb-6 text-pretty"
+                >
+                  What began as personal record-keeping evolved into this little corner of the internet where I share my thoughts on everything from blockbusters to obscure indies that deserved better.
+                </p>
+                <p
+                  class="mb-6 text-pretty"
+                >
+                  New visitors might want to start by reading about 
+                  <a
+                    class="
+        underline
+        hover:text-inverse
+      "
+                    href="/how-i-grade/"
+                  >
+                    how I grade
+                  </a>
+                   films. After that, feel free to browse 
+                  <a
+                    class="
+        underline
+        hover:text-inverse
+      "
+                    href="/reviews/"
+                  >
+                    my reviews
+                  </a>
+                  . If you're looking for something that flew under the radar but deserves your attention, I recommend my 
+                  <a
+                    class="
+        underline
+        hover:text-inverse
+      "
+                    href="/reviews/underseen/"
+                  >
+                    underseen gems
+                  </a>
+                   section. Or, for those moments when you want to feel righteously contrarian, I maintain an list of 
+                  <a
+                    class="
+        underline
+        hover:text-inverse
+      "
+                    href="/reviews/overrated/"
+                  >
+                    overrated disappointments
+                  </a>
+                  .
+                </p>
+                <p
+                  class="mb-6 text-pretty"
+                >
+                  I also keep a 
+                  <a
+                    class="
+        underline
+        hover:text-inverse
+      "
+                    href="/viewings/"
+                  >
+                    viewing log
+                  </a>
+                   that tracks everything I watch, whether it gets a full review or not, complete with 
+                  <a
+                    class="
+        underline
+        hover:text-inverse
+      "
+                    href="/viewings/stats/"
+                  >
+                    stats
+                  </a>
+                  . In an age of endless content, sometimes the act of remembering what we've seen becomes as important as the seeing itself.
+                </p>
+                <p
+                  class="mb-6 text-pretty"
+                >
+                  And finally, if you're curious about what's on my critical horizon, 
+                  <a
+                    class="
+        underline
+        hover:text-inverse
+      "
+                    href="/watchlist/"
+                  >
+                    my watchlist
+                  </a>
+                   details the films I plan to review and why they've caught my interest.
+                </p>
+                <p
+                  class="text-pretty"
+                >
+                  In an era of algorithmic recommendations and corporate marketing machines, consider this site a human alternative—one person's attempt to catalog the vast ocean of cinema and maybe help a few fellow travelers along the way.
+                </p>
+              </div>
+            </div>
+            <div
+              class="
+              flex grow-0 flex-col gap-20 pt-10 pb-20
+              tablet:basis-button tablet:pr-10
+            "
+            >
+              <ul
+                class="
+                flex w-full flex-col gap-y-10 text-inverse
+                desktop:w-auto
+              "
+              >
+                <li
+                  class="block w-1/2 text-2xl whitespace-nowrap"
+                >
+                  <a
+                    class="
+          inline-block origin-left transform-gpu transition-transform
+          hover:scale-105
+        "
+                    href="/"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li
+                  class="block w-1/2 text-2xl whitespace-nowrap"
+                >
+                  <a
+                    class="
+          inline-block origin-left transform-gpu transition-transform
+          hover:scale-105
+        "
+                    href="/how-i-grade/"
+                  >
+                    How I Grade
+                  </a>
+                </li>
+                <li
+                  class="block w-1/2 text-2xl whitespace-nowrap"
+                >
+                  <a
+                    class="
+          inline-block origin-left transform-gpu transition-transform
+          hover:scale-105
+        "
+                    href="/reviews/"
+                  >
+                    Reviews
+                  </a>
+                  <ol
+                    class="mt-4"
+                  >
+                    <li
+                      class="
+              mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
+                    >
+                      <a
+                        class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
+                        href="/cast-and-crew/"
+                      >
+                        Cast & Crew
+                      </a>
+                    </li>
+                    <li
+                      class="
+              mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
+                    >
+                      <a
+                        class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
+                        href="/collections/"
+                      >
+                        Collections
+                      </a>
+                    </li>
+                    <li
+                      class="
+              mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
+                    >
+                      <a
+                        class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
+                        href="/reviews/overrated/"
+                      >
+                        Overrated
+                      </a>
+                    </li>
+                    <li
+                      class="
+              mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
+                    >
+                      <a
+                        class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
+                        href="/reviews/underrated/"
+                      >
+                        Underrated
+                      </a>
+                    </li>
+                    <li
+                      class="
+              mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
+                    >
+                      <a
+                        class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
+                        href="/reviews/underseen/"
+                      >
+                        Underseen
+                      </a>
+                    </li>
+                  </ol>
+                </li>
+                <li
+                  class="block w-1/2 text-2xl whitespace-nowrap"
+                >
+                  <a
+                    class="
+          inline-block origin-left transform-gpu transition-transform
+          hover:scale-105
+        "
+                    href="/viewings/"
+                  >
+                    Viewing Log
+                  </a>
+                  <ol
+                    class="mt-4"
+                  >
+                    <li
+                      class="
+              mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
+                    >
+                      <a
+                        class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
+                        href="/viewings/stats/"
+                      >
+                        Stats
+                      </a>
+                    </li>
+                  </ol>
+                </li>
+                <li
+                  class="block w-1/2 text-2xl whitespace-nowrap"
+                >
+                  <a
+                    class="
+          inline-block origin-left transform-gpu transition-transform
+          hover:scale-105
+        "
+                    href="/watchlist/"
+                  >
+                    Watchlist
+                  </a>
+                  <ol
+                    class="mt-4"
+                  >
+                    <li
+                      class="
+              mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
+              uppercase
+              last:mb-0
+            "
+                    >
+                      <a
+                        class="
+                inline-block origin-left transform-gpu transition-all
+                hover:scale-105 hover:text-inverse
+              "
+                        href="/watchlist/progress/"
+                      >
+                        Progress
+                      </a>
+                    </li>
+                  </ol>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p
+          class="
+          w-full bg-canvas px-container py-10 text-center leading-5 font-normal
+          text-default
+        "
+        >
+          All reviews by Frank Showalter. All images used in accordance with the 
+          <a
+            class="text-inherit underline"
+            href="http://www.copyright.gov/title17/92chap1.html#107"
+            rel="nofollow"
+          >
+            Fair Use Law
+          </a>
+          .
+        </p>
+      </footer>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`] = `
 <DocumentFragment>
   <div

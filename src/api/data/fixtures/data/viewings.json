@@ -546,27 +546,6 @@
     "viewingSequence": 345
   },
   {
-    "reviewSequence": "414",
-    "viewingYear": "2014",
-    "viewingDate": "2014-08-02",
-    "title": "The Bloody Judge",
-    "sortTitle": "Bloody Judge (1970)",
-    "medium": "DVD",
-    "venue": null,
-    "releaseYear": "1970",
-    "slug": "the-bloody-judge-1970",
-    "genres": [
-      "Biography",
-      "Horror"
-    ],
-    "releaseSequence": "1970-02-05tt0064727",
-    "imdbId": "tt0000413",
-    "grade": null,
-    "gradeValue": null,
-    "reviewDate": null,
-    "viewingSequence": 414
-  },
-  {
     "reviewSequence": "416",
     "viewingYear": "2014",
     "viewingDate": "2014-08-09",
@@ -654,5 +633,25 @@
     "gradeValue": null,
     "reviewDate": null,
     "viewingSequence": 444
+  },
+  {
+    "imdbId": "tt0064727",
+    "title": "The Bloody Judge",
+    "releaseYear": "1970",
+    "sortTitle": "bloody-judge-1970",
+    "releaseSequence": "1970-02-05tt0064727",
+    "genres": [
+      "Biography",
+      "Horror"
+    ],
+    "slug": "the-bloody-judge-1970",
+    "grade": "D",
+    "gradeValue": 3,
+    "reviewDate": "2014-08-02",
+    "reviewSequence": "2014-08-02-1",
+    "viewingDate": "2014-08-02",
+    "viewingSequence": 1539,
+    "medium": "DVD",
+    "venue": null
   }
 ]
