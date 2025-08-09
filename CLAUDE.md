@@ -117,11 +117,12 @@ This site uses Astro's partial hydration strategy:
 2. Make changes with proper types
 3. Run tests and linting
 4. **IMPORTANT**: Before creating any PR, run:
-   - `npm run format` - Must pass with no errors
+   - `npm run test` - Must pass with no errors
    - `npm run lint` - Must pass with no errors
    - `npm run lint:spelling` - Must pass with no errors
    - `npm run check` - Must pass with no errors
    - `npm run knip` - Must pass with no errors
+   - `npm run format` - Must pass with no errors
 5. **IMPORTANT**: Always rebase on origin/main before pushing:
    - `git pull --rebase origin main`
    - This ensures your PR is based on the latest code
@@ -158,7 +159,7 @@ This site uses Astro's partial hydration strategy:
 
 ## Test Runner Notes
 
-- When running test:coverage, make sure and run with max-workers=2
+- When running test or test:coverage, make sure and run with max-workers=2
 
 ## TypeScript Best Practices
 
