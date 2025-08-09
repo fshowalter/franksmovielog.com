@@ -5,6 +5,6 @@ imdbId: tt0050280
 slug: the-curse-of-frankenstein-1957
 venue: null
 venueNotes: null
-medium: Blu-ray
+medium: null
 mediumNotes: null
 ---
