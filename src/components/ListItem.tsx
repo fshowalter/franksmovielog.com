@@ -21,11 +21,10 @@ export function ListItem({
         transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
         laptop:px-6
-        desktop:has-[a:hover]:scale-[102.5%]
         ${className ?? ""}
       `}
     >
