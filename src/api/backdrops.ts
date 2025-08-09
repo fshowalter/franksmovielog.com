@@ -52,15 +52,13 @@ export async function getOpenGraphBackdropAsBase64String(slug: string) {
 }
 
 async function getBackdropFile(slug: string) {
-  let backdropFilePath = Object.keys(images).find((path) => {
+  const backdropFilePath = Object.keys(images).find((path) => {
     return path.endsWith(`${slug}.png`);
-  })!;
+  });
 
-  backdropFilePath =
-    backdropFilePath ||
-    Object.keys(images).find((path) => {
-      return path.endsWith(`default.png`);
-    })!;
+  if (!backdropFilePath) {
+    throw new Error(`Backdrop not found: ${slug}`);
+  }
 
   return await images[backdropFilePath]();
 }
