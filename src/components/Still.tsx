@@ -16,9 +16,9 @@ type Props = React.ImgHTMLAttributes<HTMLImageElement> & {
 
 export function Still({
   className,
-  decoding = "async",
+  decoding,
   imageProps,
-  loading = "lazy",
+  loading,
   ...rest
 }: Props): JSX.Element {
   return (
