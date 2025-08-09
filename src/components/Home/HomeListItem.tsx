@@ -14,13 +14,13 @@ export const StillImageConfig = {
 
 export type ListItemValue = Pick<
   Review,
-  | "date"
   | "directorNames"
   | "genres"
   | "grade"
   | "imdbId"
   | "principalCastNames"
   | "releaseYear"
+  | "reviewDate"
   | "reviewSequence"
   | "slug"
   | "title"
@@ -64,7 +64,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
             laptop:tracking-wide
           `}
         >
-          {formatDate(value.date)}
+          {formatDate(value.reviewDate)}
         </div>
         <a
           className={`

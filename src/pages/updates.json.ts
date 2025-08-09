@@ -27,7 +27,7 @@ export async function GET() {
       const posterProps = await getUpdatePosterProps(review.slug);
 
       return {
-        date: review.date,
+        date: review.reviewDate,
         image: posterProps.src,
         slug: review.slug,
         stars: gradeToStars[review.grade],

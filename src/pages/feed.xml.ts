@@ -49,7 +49,7 @@ export async function GET() {
             item.grade,
           )}</p>${excerptHtml}`,
           link: `https://www.franksmovielog.com/reviews/${item.slug}/`,
-          pubDate: item.date,
+          pubDate: item.reviewDate,
           title: `${item.title} (${item.releaseYear})`,
         };
       }),

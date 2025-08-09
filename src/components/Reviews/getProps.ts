@@ -125,16 +125,14 @@ export async function getPropsForUnderseen(): Promise<
 
 async function buildReviewListItemValues(
   reviews: {
-    date?: Date;
     genres: string[];
     grade: string;
     gradeValue: number;
     imdbId: string;
     releaseSequence: string;
     releaseYear: string;
-    reviewDate?: Date | string;
-    reviewSequence?: string;
-    sequence?: string;
+    reviewDate: Date;
+    reviewSequence: string;
     slug: string;
     sortTitle: string;
     title: string;
@@ -143,12 +141,7 @@ async function buildReviewListItemValues(
 ): Promise<ReviewListItemValue[]> {
   return Promise.all(
     reviews.map(async (review) => {
-      const dateValue = review.date || review.reviewDate!;
-      const date =
-        typeof dateValue === "string"
-          ? new Date(`${dateValue}T00:00:00.000Z`)
-          : dateValue;
-      const sequence = review.sequence || review.reviewSequence!;
+      const date = review.reviewDate;
 
       const value: ReviewListItemValue = {
         genres: review.genres,
@@ -177,7 +170,7 @@ async function buildReviewListItemValues(
             timeZone: "UTC",
           }),
         }),
-        reviewSequence: sequence,
+        reviewSequence: review.reviewSequence,
         reviewYear: date.toLocaleDateString("en-US", {
           timeZone: "UTC",
           year: "numeric",

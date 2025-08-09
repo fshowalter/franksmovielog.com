@@ -113,7 +113,7 @@ const ReviewedTitleJsonSchema = z
     principalCastNames: z.array(z.string()),
     releaseSequence: z.string(),
     releaseYear: z.string(),
-    reviewDate: z.string(),
+    reviewDate: z.date({ coerce: true }),
     reviewSequence: z.string(),
     runtimeMinutes: z.number(),
     slug: z.string(),
