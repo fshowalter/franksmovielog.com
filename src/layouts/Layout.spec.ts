@@ -56,32 +56,32 @@ describe("Layout navigation menu", () => {
 
     // Set requestAnimationFrame globally before importing navMenu
     globalThis.requestAnimationFrame = window.requestAnimationFrame;
-    
+
     // Mock requestIdleCallback for pageFind
     globalThis.requestIdleCallback =
       window.requestIdleCallback ||
       ((cb: IdleRequestCallback) => setTimeout(cb, 1));
-    
+
     // Set up globalThis.addEventListener for pageFind
     globalThis.addEventListener = window.addEventListener.bind(window);
     globalThis.removeEventListener = window.removeEventListener.bind(window);
-    
+
     // Add HTMLInputElement to global scope for pageFind
     globalThis.HTMLInputElement = window.HTMLInputElement;
     globalThis.HTMLButtonElement = window.HTMLButtonElement;
-    
+
     // Mock import.meta.env for pageFind
     vi.stubGlobal("import.meta.env", {
       BASE_URL: "/",
     });
-    
+
     // Mock dialog methods since JSDOM doesn't fully support them
-    const dialog = document.querySelector("dialog");
+    const dialog = document.querySelector("dialog") as HTMLDialogElement;
     if (dialog) {
-      dialog.showModal = vi.fn().mockImplementation(function (this: any) {
+      dialog.showModal = vi.fn().mockImplementation(function (this: HTMLDialogElement) {
         this.open = true;
       });
-      dialog.close = vi.fn().mockImplementation(function (this: any) {
+      dialog.close = vi.fn().mockImplementation(function (this: HTMLDialogElement) {
         this.open = false;
         this.dispatchEvent(new window.Event("close"));
       });
@@ -401,27 +401,27 @@ describe("Layout search modal (pageFind)", () => {
     globalThis.requestIdleCallback =
       window.requestIdleCallback ||
       ((cb: IdleRequestCallback) => setTimeout(cb, 1));
-    
+
     // Set up globalThis event listeners
     globalThis.addEventListener = window.addEventListener.bind(window);
     globalThis.removeEventListener = window.removeEventListener.bind(window);
     globalThis.dispatchEvent = window.dispatchEvent.bind(window);
-    
+
     // Add HTMLInputElement to global scope for pageFind
     globalThis.HTMLInputElement = window.HTMLInputElement;
     globalThis.HTMLButtonElement = window.HTMLButtonElement;
-    
+
     vi.stubGlobal("import.meta.env", {
       BASE_URL: "/",
     });
-    
+
     // Mock dialog methods
-    const dialog = document.querySelector("dialog");
+    const dialog = document.querySelector("dialog") as HTMLDialogElement;
     if (dialog) {
-      dialog.showModal = vi.fn().mockImplementation(function (this: any) {
+      dialog.showModal = vi.fn().mockImplementation(function (this: HTMLDialogElement) {
         this.open = true;
       });
-      dialog.close = vi.fn().mockImplementation(function (this: any) {
+      dialog.close = vi.fn().mockImplementation(function (this: HTMLDialogElement) {
         this.open = false;
         this.dispatchEvent(new window.Event("close"));
       });
@@ -432,7 +432,7 @@ describe("Layout search modal (pageFind)", () => {
     initPageFind();
 
     cleanup = () => {
-      document.body.removeAttribute("data-search-modal-open");
+      delete document.body.dataset.searchModalOpen;
       const dialog = document.querySelector("dialog");
       if (dialog) {
         dialog.open = false;
@@ -462,7 +462,8 @@ describe("Layout search modal (pageFind)", () => {
   });
 
   it("enables search button after initialization", ({ expect }) => {
-    const openBtn = document.querySelector<HTMLButtonElement>("[data-open-modal]");
+    const openBtn =
+      document.querySelector<HTMLButtonElement>("[data-open-modal]");
     expect(openBtn?.disabled).toBe(false);
   });
 
@@ -473,9 +474,9 @@ describe("Layout search modal (pageFind)", () => {
       "userAgent",
     );
     Object.defineProperty(window.navigator, "userAgent", {
+      configurable: true,
       value:
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
-      configurable: true,
     });
 
     // Re-import and initialize
@@ -494,24 +495,22 @@ describe("Layout search modal (pageFind)", () => {
   });
 
   it("opens modal when search button is clicked", ({ expect }) => {
-    const openBtn = document.querySelector<HTMLButtonElement>(
-      "[data-open-modal]",
-    );
+    const openBtn =
+      document.querySelector<HTMLButtonElement>("[data-open-modal]");
     const dialog = document.querySelector<HTMLDialogElement>("dialog");
 
     openBtn?.click();
 
+    // eslint-disable-next-line @typescript-eslint/unbound-method
     expect(dialog?.showModal).toHaveBeenCalled();
-    expect(document.body.hasAttribute("data-search-modal-open")).toBe(true);
+    expect(Object.hasOwn(document.body.dataset, "searchModalOpen")).toBe(true);
   });
 
   it("closes modal when close button is clicked", ({ expect }) => {
-    const openBtn = document.querySelector<HTMLButtonElement>(
-      "[data-open-modal]",
-    );
-    const closeBtn = document.querySelector<HTMLButtonElement>(
-      "[data-close-modal]",
-    );
+    const openBtn =
+      document.querySelector<HTMLButtonElement>("[data-open-modal]");
+    const closeBtn =
+      document.querySelector<HTMLButtonElement>("[data-close-modal]");
     const dialog = document.querySelector<HTMLDialogElement>("dialog");
 
     // First open the modal
@@ -520,13 +519,13 @@ describe("Layout search modal (pageFind)", () => {
 
     // Then close it
     closeBtn?.click();
+    // eslint-disable-next-line @typescript-eslint/unbound-method
     expect(dialog?.close).toHaveBeenCalled();
   });
 
   it("closes modal when clicking outside dialog frame", ({ expect }) => {
-    const openBtn = document.querySelector<HTMLButtonElement>(
-      "[data-open-modal]",
-    );
+    const openBtn =
+      document.querySelector<HTMLButtonElement>("[data-open-modal]");
     const dialog = document.querySelector<HTMLDialogElement>("dialog");
 
     // Open the modal
@@ -540,13 +539,13 @@ describe("Layout search modal (pageFind)", () => {
     });
     document.body.dispatchEvent(clickEvent);
 
+    // eslint-disable-next-line @typescript-eslint/unbound-method
     expect(dialog?.close).toHaveBeenCalled();
   });
 
   it("does not close modal when clicking inside dialog frame", ({ expect }) => {
-    const openBtn = document.querySelector<HTMLButtonElement>(
-      "[data-open-modal]",
-    );
+    const openBtn =
+      document.querySelector<HTMLButtonElement>("[data-open-modal]");
     const dialog = document.querySelector<HTMLDialogElement>("dialog");
     const dialogFrame = document.querySelector("[data-dialog-frame]");
 
@@ -561,6 +560,7 @@ describe("Layout search modal (pageFind)", () => {
     });
     dialogFrame?.dispatchEvent(clickEvent);
 
+    // eslint-disable-next-line @typescript-eslint/unbound-method
     expect(dialog?.close).not.toHaveBeenCalled();
     expect(dialog?.open).toBe(true);
   });
@@ -569,12 +569,13 @@ describe("Layout search modal (pageFind)", () => {
     const dialog = document.querySelector<HTMLDialogElement>("dialog");
 
     const keyEvent = new window.KeyboardEvent("keydown", {
+      bubbles: true,
       key: "k",
       metaKey: true,
-      bubbles: true,
     });
     globalThis.dispatchEvent(keyEvent);
 
+    // eslint-disable-next-line @typescript-eslint/unbound-method
     expect(dialog?.showModal).toHaveBeenCalled();
   });
 
@@ -582,19 +583,19 @@ describe("Layout search modal (pageFind)", () => {
     const dialog = document.querySelector<HTMLDialogElement>("dialog");
 
     const keyEvent = new window.KeyboardEvent("keydown", {
-      key: "k",
-      ctrlKey: true,
       bubbles: true,
+      ctrlKey: true,
+      key: "k",
     });
     globalThis.dispatchEvent(keyEvent);
 
+    // eslint-disable-next-line @typescript-eslint/unbound-method
     expect(dialog?.showModal).toHaveBeenCalled();
   });
 
   it("closes modal with Cmd+K when already open", ({ expect }) => {
-    const openBtn = document.querySelector<HTMLButtonElement>(
-      "[data-open-modal]",
-    );
+    const openBtn =
+      document.querySelector<HTMLButtonElement>("[data-open-modal]");
     const dialog = document.querySelector<HTMLDialogElement>("dialog");
 
     // Open the modal first
@@ -603,37 +604,36 @@ describe("Layout search modal (pageFind)", () => {
 
     // Press Cmd+K to close
     const keyEvent = new window.KeyboardEvent("keydown", {
+      bubbles: true,
       key: "k",
       metaKey: true,
-      bubbles: true,
     });
     globalThis.dispatchEvent(keyEvent);
 
+    // eslint-disable-next-line @typescript-eslint/unbound-method
     expect(dialog?.close).toHaveBeenCalled();
   });
 
   it("removes data-search-modal-open attribute when dialog closes", ({
     expect,
   }) => {
-    const openBtn = document.querySelector<HTMLButtonElement>(
-      "[data-open-modal]",
-    );
+    const openBtn =
+      document.querySelector<HTMLButtonElement>("[data-open-modal]");
     const dialog = document.querySelector<HTMLDialogElement>("dialog");
 
     // Open the modal
     openBtn?.click();
-    expect(document.body.hasAttribute("data-search-modal-open")).toBe(true);
+    expect(Object.hasOwn(document.body.dataset, "searchModalOpen")).toBe(true);
 
     // Trigger the close event (the mock close() already dispatches it)
     dialog?.close();
 
-    expect(document.body.hasAttribute("data-search-modal-open")).toBe(false);
+    expect(Object.hasOwn(document.body.dataset, "searchModalOpen")).toBe(false);
   });
 
   it("closes modal when clicking on a link", ({ expect }) => {
-    const openBtn = document.querySelector<HTMLButtonElement>(
-      "[data-open-modal]",
-    );
+    const openBtn =
+      document.querySelector<HTMLButtonElement>("[data-open-modal]");
     const dialog = document.querySelector<HTMLDialogElement>("dialog");
 
     // Open the modal
@@ -655,6 +655,7 @@ describe("Layout search modal (pageFind)", () => {
     });
     globalThis.dispatchEvent(clickEvent);
 
+    // eslint-disable-next-line @typescript-eslint/unbound-method
     expect(dialog?.close).toHaveBeenCalled();
   });
 
@@ -667,8 +668,8 @@ describe("Layout search modal (pageFind)", () => {
     input.focus();
 
     const keyEvent = new window.KeyboardEvent("keydown", {
-      key: "Enter",
       bubbles: true,
+      key: "Enter",
     });
     Object.defineProperty(keyEvent, "target", {
       value: input,
@@ -689,9 +690,8 @@ describe("Layout search modal (pageFind)", () => {
     const focusSpy = vi.spyOn(searchInput, "focus");
 
     // Open modal first to set up click listener
-    const openBtn = document.querySelector<HTMLButtonElement>(
-      "[data-open-modal]",
-    );
+    const openBtn =
+      document.querySelector<HTMLButtonElement>("[data-open-modal]");
     openBtn?.click();
 
     // Click the clear button
