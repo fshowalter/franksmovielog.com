@@ -78,10 +78,14 @@ describe("Layout navigation menu", () => {
     // Mock dialog methods since JSDOM doesn't fully support them
     const dialog = document.querySelector("dialog") as HTMLDialogElement;
     if (dialog) {
-      dialog.showModal = vi.fn().mockImplementation(function (this: HTMLDialogElement) {
+      dialog.showModal = vi.fn().mockImplementation(function (
+        this: HTMLDialogElement,
+      ) {
         this.open = true;
       });
-      dialog.close = vi.fn().mockImplementation(function (this: HTMLDialogElement) {
+      dialog.close = vi.fn().mockImplementation(function (
+        this: HTMLDialogElement,
+      ) {
         this.open = false;
         this.dispatchEvent(new window.Event("close"));
       });
@@ -418,10 +422,14 @@ describe("Layout search modal (pageFind)", () => {
     // Mock dialog methods
     const dialog = document.querySelector("dialog") as HTMLDialogElement;
     if (dialog) {
-      dialog.showModal = vi.fn().mockImplementation(function (this: HTMLDialogElement) {
+      dialog.showModal = vi.fn().mockImplementation(function (
+        this: HTMLDialogElement,
+      ) {
         this.open = true;
       });
-      dialog.close = vi.fn().mockImplementation(function (this: HTMLDialogElement) {
+      dialog.close = vi.fn().mockImplementation(function (
+        this: HTMLDialogElement,
+      ) {
         this.open = false;
         this.dispatchEvent(new window.Event("close"));
       });
