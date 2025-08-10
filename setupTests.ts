@@ -1,9 +1,28 @@
 import "@testing-library/jest-dom/vitest";
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import { afterAll, vi } from "vitest";
+import { afterAll, beforeAll, vi } from "vitest";
 
 vi.mock("src/api/data/utils/getContentPath");
+
+// Fail tests on hydration errors
+const originalError = console.error;
+beforeAll(() => {
+  console.error = (...args: unknown[]) => {
+    const errorMessage = args[0]?.toString() || "";
+    // Fail on hydration errors
+    if (errorMessage.includes("hydration") || 
+        errorMessage.includes("cannot be a descendant of") ||
+        errorMessage.includes("cannot contain a nested")) {
+      throw new Error(`Hydration error detected: ${errorMessage}`);
+    }
+    originalError.apply(console, args);
+  };
+});
+
+afterAll(() => {
+  console.error = originalError;
+});
 
 // Mock ResizeObserver for Headless UI components
 globalThis.ResizeObserver = vi.fn().mockImplementation(() => ({

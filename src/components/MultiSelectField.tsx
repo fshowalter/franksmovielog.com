@@ -295,7 +295,7 @@ export function MultiSelectField({
                   key={option}
                 >
                   <span>{option}</span>
-                  <button
+                  <span
                     aria-label={`Remove ${option}`}
                     className={`
                       -mr-1 ml-0.5 cursor-pointer text-subtle
@@ -314,8 +314,8 @@ export function MultiSelectField({
                         removeOption(option, false);
                       }
                     }}
+                    role="button"
                     tabIndex={-1}
-                    type="button"
                   >
                     <svg
                       aria-hidden="true"
@@ -329,7 +329,7 @@ export function MultiSelectField({
                         fillRule="evenodd"
                       />
                     </svg>
-                  </button>
+                  </span>
                 </span>
               ))
             )}
