@@ -1,26 +1,13 @@
-import { remark } from "remark";
-import remarkGfm from "remark-gfm";
-import smartypants from "remark-smartypants";
-import strip from "strip-markdown";
-
 import { allPagesMarkdown } from "./data/pagesMarkdown";
 import { allReviewedTitlesJson } from "./data/reviewedTitlesJson";
 import { getHtml } from "./utils/markdown/getHtml";
-import { removeFootnotes } from "./utils/markdown/removeFootnotes";
 
 type MarkdownPage = {
   content: string | undefined;
+  contentPlainText: string;
   rawContent: string;
   title: string;
 };
-
-export function getContentPlainText(rawContent: string): string {
-  return getMastProcessor()
-    .use(removeFootnotes)
-    .use(strip)
-    .processSync(rawContent)
-    .toString();
-}
 
 export async function getPage(slug: string): Promise<MarkdownPage> {
   const pages = await allPagesMarkdown();
@@ -33,11 +20,8 @@ export async function getPage(slug: string): Promise<MarkdownPage> {
 
   return {
     content: getHtml(matchingPage?.rawContent, reviewedTitlesJson),
+    contentPlainText: matchingPage.contentPlainText,
     rawContent: matchingPage?.rawContent || "",
     title: matchingPage.title,
   };
-}
-
-function getMastProcessor() {
-  return remark().use(remarkGfm).use(smartypants);
 }

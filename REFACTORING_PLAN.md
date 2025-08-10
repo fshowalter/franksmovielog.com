@@ -131,6 +131,7 @@ Historic performance here: https://github.com/fshowalter/franksmovielog.com/acti
 ## Summary of Completed Work
 
 ### ✅ **Full Cache Implementation**
+
 - **13 data loaders** now use ContentCache for performance
 - **Content-based hashing** using xxhash-wasm (same as Astro)
 - **Schema-based invalidation** - cache invalidates when data schemas change
@@ -138,23 +139,72 @@ Historic performance here: https://github.com/fshowalter/franksmovielog.com/acti
 - **Automatic cleanup** of test cache directories
 
 ### ✅ **Data Loaders Updated**
+
 1. **Markdown loaders** (3): reviews, pages, viewings
 2. **Single-file JSON loaders** (8): overrated, underrated, underseen, watchlist titles/progress, alltime stats, reviewed titles, viewings
 3. **Multi-file JSON loaders** (3): cast-and-crew, collections, year-stats
 
 ### ✅ **Quality Assurance**
+
 - **All tests pass**: 231/231 tests ✅
 - **No regressions**: Identical functionality with caching benefits
 - **Code quality**: All linting, TypeScript, and formatting checks pass
 - **Type safety**: All existing type definitions preserved
 
 ### ✅ **Performance Benefits**
+
 The cache will avoid re-parsing:
+
 - **1,700+ review markdown files**
 - **All JSON data files** (reviewed titles, collections, cast/crew, etc.)
 - **Page and viewing markdown files**
 
 **Expected Impact**: Significant build time reduction on incremental builds where content hasn't changed.
+
+## Phase 5: Excerpt HTML Caching (IN PROGRESS)
+
+### Problem
+
+- Individual review pages call `loadExcerptHtml()` multiple times for related reviews
+- Each call processes markdown to HTML using the remark/rehype pipeline
+- This processing happens repeatedly for the same content across builds
+
+### Solution
+
+- Move excerpt HTML generation into `reviewsMarkdown.ts`
+- Cache the processed HTML alongside the raw markdown content
+- Eliminate redundant markdown-to-HTML processing
+
+### Implementation Plan
+
+1. **Update `MarkdownReview` type** in `reviewsMarkdown.ts`:
+   - Add `excerptHtml: string` field
+   - Process excerpt HTML during initial parsing
+   - Include in cached data structure
+
+2. \*\*Modify `loadExcerptHtml()` in `reviews.ts`:
+   - Return pre-computed `excerptHtml` from cached data
+   - Remove redundant markdown processing
+
+3. **Update schema hash**:
+   - Schema change will invalidate cache automatically
+   - Ensures all reviews get new excerpt HTML field
+
+### Expected Benefits
+
+- **Faster individual review pages**: No markdown processing for related reviews
+- **Faster review listing pages**: Excerpts already available
+- **Reduced CPU usage**: Process each excerpt once, not on every build
+
+### Status
+
+- ✅ Documentation added
+- ✅ Implementation completed
+- ✅ Testing - all 231 tests pass
+- ✅ Extended to cache all text processing:
+  - `excerptHtml` - HTML version of review excerpts
+  - `excerptPlainText` - Plain text version of review excerpts
+  - `contentPlainText` - Plain text version of full content (reviews and pages)
 
 ## Key Files
 

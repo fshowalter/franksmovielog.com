@@ -2,7 +2,17 @@ import matter from "gray-matter";
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import pLimit from "p-limit";
+import rehypeRaw from "rehype-raw";
+import rehypeStringify from "rehype-stringify";
+import { remark } from "remark";
+import remarkGfm from "remark-gfm";
+import remarkRehype from "remark-rehype";
+import smartypants from "remark-smartypants";
+import strip from "strip-markdown";
 import { z } from "zod";
+
+import { removeFootnotes } from "~/api/utils/markdown/removeFootnotes";
+import { trimToExcerpt } from "~/api/utils/markdown/trimToExcerpt";
 
 import { ContentCache, generateSchemaHash } from "./utils/cache";
 import { getContentPath } from "./utils/getContentPath";
@@ -10,7 +20,10 @@ import { getContentPath } from "./utils/getContentPath";
 const reviewsMarkdownDirectory = getContentPath("reviews");
 
 export type MarkdownReview = {
+  contentPlainText: string;
   date: Date;
+  excerptHtml: string;
+  excerptPlainText: string;
   grade: string;
   imdbId: string;
   rawContent: string;
@@ -36,8 +49,9 @@ export async function allReviewsMarkdown(): Promise<MarkdownReview[]> {
 async function getCache(): Promise<ContentCache<MarkdownReview>> {
   if (!cacheInstance) {
     // Generate schema hash from the Zod schema
+    // v4: Added excerptHtml, excerptPlainText and contentPlainText fields to cached data
     const schemaHash = await generateSchemaHash(
-      JSON.stringify(DataSchema.shape),
+      JSON.stringify(DataSchema.shape) + "-v4-all-text-fields",
     );
     cacheInstance = new ContentCache<MarkdownReview>(
       "reviews-markdown",
@@ -48,6 +62,10 @@ async function getCache(): Promise<ContentCache<MarkdownReview>> {
 }
 
 const limit = pLimit(10);
+
+function getMastProcessor() {
+  return remark().use(remarkGfm).use(smartypants);
+}
 
 async function parseAllReviewsMarkdown(): Promise<MarkdownReview[]> {
   const dirents = await fs.readdir(reviewsMarkdownDirectory, {
@@ -68,8 +86,37 @@ async function parseAllReviewsMarkdown(): Promise<MarkdownReview[]> {
             const { content: rawContent, data } = matter(content);
             const greyMatter = DataSchema.parse(data);
 
+            // Generate excerpt HTML
+            const excerptContent = greyMatter.synopsis || rawContent;
+            const excerptHtml = getMastProcessor()
+              .use(removeFootnotes)
+              .use(trimToExcerpt)
+              .use(remarkRehype, { allowDangerousHtml: true })
+              .use(rehypeRaw)
+              .use(rehypeStringify)
+              .processSync(excerptContent)
+              .toString();
+
+            // Generate excerpt plain text
+            const excerptPlainText = getMastProcessor()
+              .use(removeFootnotes)
+              .use(trimToExcerpt)
+              .use(strip)
+              .processSync(rawContent)
+              .toString();
+
+            // Generate plain text content
+            const contentPlainText = getMastProcessor()
+              .use(removeFootnotes)
+              .use(strip)
+              .processSync(rawContent)
+              .toString();
+
             return {
+              contentPlainText,
               date: greyMatter.date,
+              excerptHtml,
+              excerptPlainText,
               grade: greyMatter.grade,
               imdbId: greyMatter.imdb_id,
               rawContent,
