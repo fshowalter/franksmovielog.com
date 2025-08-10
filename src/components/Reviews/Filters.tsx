@@ -50,10 +50,10 @@ export function Filters({
       />
       <MultiSelectField
         label="Genres"
-        onChange={(e) =>
+        onChange={(values) =>
           dispatch({
             type: Actions.FILTER_GENRES,
-            values: e.map((selection) => selection.value),
+            values,
           })
         }
         options={distinctGenres}

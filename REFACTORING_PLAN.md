@@ -1,213 +1,210 @@
-# Refactoring Plan - Build Time Improvements
+# Refactoring Plan - Reduce Client Bundle Size by Extracting Non-Interactive Components
 
 ## Overview
 
-The goal of this refactor is to improve the execution times of the build-and-deploy action by implementing a custom content-based caching solution.
+Currently, non-interactive layout components (Backdrop, Footer, Mast) are being included in client-side JavaScript bundles because they're rendered as part of hydrated interactive components. This adds ~26KB (7.9KB gzipped) of unnecessary JavaScript to every interactive page.
 
-Source here: /.github/workflows/build-and-deploy.yml
-Historic performance here: https://github.com/fshowalter/franksmovielog.com/actions/workflows/build-and-deploy.yml
+## Problem
 
-### Guardrails
+The architecture has interactive list components (AllReviews, Collections, etc.) that receive a `backdrop` prop containing JSX. This forces the entire Backdrop component tree into the client bundle, even though these components:
 
-- We must preserve our existing type safety, including our existing nuance around undefined vs optional.
-- Caching must work in all environments (dev, prod, test)
-- Test fixtures must remain separate and functional
+- Are purely presentational
+- Have no interactivity
+- Should only render server-side
 
-### Definition of Success
+### Current Architecture
 
-- The change will be successful if we can reduce build-and-deploy execution time through incremental builds that avoid re-parsing unchanged content files.
-
-## Custom Caching Solution
-
-### Why Custom Cache?
-
-**Initial Attempt - Astro Content Collections:**
-
-- Content Collections are fundamentally incompatible with testing frameworks
-- They require either a dev server with HMR or a full build process to generate the virtual module `astro:data-layer-content`
-- This module doesn't exist in test environments, making it impossible to test components that rely on Content Collections
-
-**Solution - Custom Content-Based Cache:**
-
-- Implement our own content-based caching on top of the existing file system implementation
-- Use the same strategy as Astro's cache but with full control
-- Works identically in dev, prod, and test environments
-
-### Cache Design
-
-**Architecture:**
-
-- Add persistent disk cache layer on top of existing file system code
-- Keep all schemas in `src/api/data/` (our source of truth)
-- Cache works identically in dev, prod, and test environments
-
-**Implementation Details:**
-
-- Use **xxhash-wasm** for content digests (same as Astro)
-- Use **devalue** for serialization (handles Dates, undefined, etc.)
-- Store cache in `.cache/content-cache.json` (persists between builds)
-- Test mode uses separate cache directory to avoid conflicts
-
-**Cache Structure:**
-
-```json
-{
-  "schemaVersion": "hash-of-all-schemas",
-  "entries": {
-    "[filePath]": {
-      "digest": "xxhash-of-file-content",
-      "data": {
-        /* parsed data */
-      },
-      "timestamp": 1234567890
-    }
-  }
-}
+```tsx
+// Page component (hydrated with client:load)
+<AllReviews
+  backdrop={<Backdrop ... />}  // ❌ Forces Backdrop into client bundle
+  filters={...}
+  list={...}
+/>
 ```
 
-### Cache Invalidation Logic
+### Impact
 
-1. **Schema changes**: Hash all schemas → if different, invalidate entire cache
-2. **File changes**: Hash file content → if digest differs from cached, invalidate entry
-3. **Missing cache**: First build creates cache, subsequent builds reuse
+- **TextFilter chunk**: 26KB contains layout/backdrop components that should be server-only
+- **Every interactive page** downloads and parses this unnecessary JavaScript
+- **Affects**: Reviews, Collections, CastAndCrew, Viewings, Watchlist pages
 
-### Implementation Flow
+## Solution
 
+Split the layout so non-interactive components remain server-side only, while interactive components are hydrated separately.
+
+### New Architecture
+
+```astro
+<!-- Astro page (server-rendered) -->
+<Layout>
+  <Backdrop {...backdropProps} />
+  <!-- ✅ Server-only -->
+  <InteractiveList client:load {...listProps} />
+  <!-- ✅ Client hydrated -->
+</Layout>
 ```
-1. Check if cache exists and schema version matches
-2. For each file:
-   - Read file content
-   - Generate xxhash digest
-   - If digest matches cached: return cached data
-   - If digest differs: parse file, update cache
-3. Write updated cache to disk
-```
 
-### Test Mode
+## Implementation Plan
 
-- Uses separate cache directory: `.cache-test-${process.pid}-${Date.now()}`
-- Prevents race conditions between parallel test runs
-- Automatically cleaned up after tests complete
-- Uses fixture paths from `src/api/data/fixtures/`
+### Phase 1: Create New Layout Structure
 
-### Expected Benefits
+1. **Create `ListPageLayout.astro`**
+   - Server-side wrapper for list pages
+   - Renders Backdrop server-side
+   - Slot for interactive content
 
-1. **Performance**: Avoid re-parsing unchanged files between builds (faster incremental builds)
-2. **Compatibility**: Works in ALL environments (dev, prod, test)
-3. **Control**: Full control over caching logic
-4. **Testability**: Cache works with test fixtures
+2. **Update `ListWithFiltersLayout`**
+   - Remove `backdrop` prop
+   - Focus only on interactive filters/list
+   - Simplify to just handle the interactive portions
 
-## Implementation Status
+### Phase 2: Refactor Interactive Components
 
-### ✅ Phase 1: Cache Utilities (COMPLETED)
+Update each interactive list component to remove backdrop rendering:
 
-- ✅ Install xxhash-wasm and devalue dependencies
-- ✅ Create cache utilities in `src/api/data/utils/cache.ts`
-- ✅ Add cache to `.gitignore`
+1. **AllReviews.tsx**
+   - Remove backdrop prop and rendering
+   - Export only interactive portions
 
-### ✅ Phase 2: Integrate with Data Loading (COMPLETED)
+2. **Collections.tsx**
+   - Remove backdrop prop and rendering
+   - Export only interactive portions
 
-- ✅ Update `reviewsMarkdown.ts` to use cache
-- ✅ Update `pagesMarkdown.ts` to use cache
-- ✅ Update `viewingsMarkdown.ts` to use cache
-- ✅ Update all JSON loaders to use cache:
-  - ✅ Single-file loaders: `overratedJson.ts`, `underratedJson.ts`, `underseenJson.ts`, `watchlistTitlesJson.ts`, `watchlistProgressJson.ts`, `alltimeStatsJson.ts`, `reviewedTitlesJson.ts`, `viewingsJson.ts`
-  - ✅ Multi-file loaders: `castAndCrewJson.ts`, `collectionsJson.ts`, `yearStatsJson.ts`
+3. **CastAndCrew.tsx**
+   - Remove backdrop prop and rendering
+   - Export only interactive portions
 
-### ✅ Phase 3: Testing & Quality (COMPLETED)
+4. **Viewings.tsx**
+   - Remove backdrop prop and rendering
+   - Export only interactive portions
 
-- ✅ Ensure cache works with test fixtures
-- ✅ All 231 tests pass with no regressions
-- ✅ Test cache isolation and cleanup working properly
-- ✅ All quality checks pass (ESLint, TypeScript, Prettier, spelling)
-- ✅ Removed unused `getStats` method to keep implementation lean
+5. **Watchlist.tsx**
+   - Remove backdrop prop and rendering
+   - Export only interactive portions
 
-### 🚀 Phase 4: Deployment (READY)
+6. **Collection.tsx** (individual collection pages)
+   - Remove backdrop prop and rendering
+   - Export only interactive portions
 
-- ✅ Pull Request created: [#2291](https://github.com/fshowalter/franksmovielog.com/pull/2291)
-- ⏳ Update `.github/workflows/build-and-deploy.yml` to cache `.cache` directory (post-merge)
-- ⏳ Measure performance improvements vs baseline (post-deployment)
+7. **CastAndCrewMember.tsx** (individual member pages)
+   - Remove backdrop prop and rendering
+   - Export only interactive portions
 
-## Summary of Completed Work
+### Phase 3: Update Astro Pages
 
-### ✅ **Full Cache Implementation**
+Update each Astro page to use the new structure:
 
-- **13 data loaders** now use ContentCache for performance
-- **Content-based hashing** using xxhash-wasm (same as Astro)
-- **Schema-based invalidation** - cache invalidates when data schemas change
-- **Environment isolation** - separate cache directories for test/prod
-- **Automatic cleanup** of test cache directories
+1. **reviews/index.astro**
 
-### ✅ **Data Loaders Updated**
+   ```astro
+   <Layout>
+     <Backdrop {...backdropProps} />
+     <AllReviews client:load {...interactiveProps} />
+   </Layout>
+   ```
 
-1. **Markdown loaders** (3): reviews, pages, viewings
-2. **Single-file JSON loaders** (8): overrated, underrated, underseen, watchlist titles/progress, alltime stats, reviewed titles, viewings
-3. **Multi-file JSON loaders** (3): cast-and-crew, collections, year-stats
+2. **collections/index.astro**
+   - Similar pattern
 
-### ✅ **Quality Assurance**
+3. **cast-and-crew/index.astro**
+   - Similar pattern
 
-- **All tests pass**: 231/231 tests ✅
-- **No regressions**: Identical functionality with caching benefits
-- **Code quality**: All linting, TypeScript, and formatting checks pass
-- **Type safety**: All existing type definitions preserved
+4. **viewings/index.astro**
+   - Similar pattern
 
-### ✅ **Performance Benefits**
+5. **watchlist/index.astro**
+   - Similar pattern
 
-The cache will avoid re-parsing:
+6. **Individual pages** (collection/[slug], cast-and-crew/[slug])
+   - Similar pattern
 
-- **1,700+ review markdown files**
-- **All JSON data files** (reviewed titles, collections, cast/crew, etc.)
-- **Page and viewing markdown files**
+### Phase 4: Update Props and Types
 
-**Expected Impact**: Significant build time reduction on incremental builds where content hasn't changed.
+1. **Update getProps functions**
+   - Separate backdrop props from interactive props
+   - Return structured object with clear separation
 
-## Phase 5: Excerpt HTML Caching (IN PROGRESS)
+2. **Update component Props types**
+   - Remove backdrop-related props from interactive components
+   - Keep only data needed for interactivity
 
-### Problem
+### Phase 5: Testing
 
-- Individual review pages call `loadExcerptHtml()` multiple times for related reviews
-- Each call processes markdown to HTML using the remark/rehype pipeline
-- This processing happens repeatedly for the same content across builds
+1. **Update component tests**
+   - Remove backdrop from test setup
+   - Focus tests on interactive behavior
 
-### Solution
+2. **Update snapshot tests**
+   - Regenerate snapshots for new structure
+   - Verify no visual regressions
 
-- Move excerpt HTML generation into `reviewsMarkdown.ts`
-- Cache the processed HTML alongside the raw markdown content
-- Eliminate redundant markdown-to-HTML processing
+## Expected Benefits
 
-### Implementation Plan
+### Bundle Size Reduction
 
-1. **Update `MarkdownReview` type** in `reviewsMarkdown.ts`:
-   - Add `excerptHtml: string` field
-   - Process excerpt HTML during initial parsing
-   - Include in cached data structure
+- **TextFilter chunk**: Should reduce from 26KB to ~1-2KB
+- **Overall savings**: ~24KB uncompressed (~7KB gzipped) per page load
+- **Affected pages**: All interactive list pages
 
-2. \*\*Modify `loadExcerptHtml()` in `reviews.ts`:
-   - Return pre-computed `excerptHtml` from cached data
-   - Remove redundant markdown processing
+### Performance Improvements
 
-3. **Update schema hash**:
-   - Schema change will invalidate cache automatically
-   - Ensures all reviews get new excerpt HTML field
+- Faster initial JavaScript parse/execution
+- Less memory usage
+- Faster hydration
 
-### Expected Benefits
+### Architecture Benefits
 
-- **Faster individual review pages**: No markdown processing for related reviews
-- **Faster review listing pages**: Excerpts already available
-- **Reduced CPU usage**: Process each excerpt once, not on every build
+- Clearer separation of concerns
+- Server-only components stay server-only
+- Easier to reason about what gets bundled
 
-### Status
+## Implementation Order
 
-- ✅ Documentation added
-- ✅ Implementation completed
-- ✅ Testing - all 231 tests pass
-- ✅ Extended to cache all text processing:
-  - `excerptHtml` - HTML version of review excerpts
-  - `excerptPlainText` - Plain text version of review excerpts
-  - `contentPlainText` - Plain text version of full content (reviews and pages)
+1. Start with one page as proof of concept (e.g., AllReviews)
+2. Verify bundle size reduction
+3. Apply pattern to remaining pages
+4. Update tests
+5. Clean up unused code
 
-## Key Files
+## Success Metrics
 
-- `/src/api/data/utils/cache.ts` - Core cache implementation
-- `/src/api/data/utils/getContentPath.ts` - Path resolution for fixtures vs production
-- `/setupTests.ts` - Mock setup for test fixtures
+- TextFilter chunk reduces to <3KB
+- No Backdrop/Footer/Mast code in any client bundle
+- All tests pass
+- No visual regressions
+- Page functionality unchanged
+
+## Risks and Mitigations
+
+### Risk: Breaking existing functionality
+
+**Mitigation**: Implement one page at a time, test thoroughly
+
+### Risk: Type mismatches
+
+**Mitigation**: Carefully update types alongside components
+
+### Risk: Test failures
+
+**Mitigation**: Update tests incrementally as components change
+
+## Alternative Approaches Considered
+
+1. **Keep current architecture, optimize components**
+   - ❌ Would require significant changes to how props are passed
+   - ❌ Doesn't solve root issue
+
+2. **Use dynamic imports**
+   - ❌ Backdrop is needed at render time
+   - ❌ Adds complexity without solving the problem
+
+3. **Server Components (when available in Astro)**
+   - ✅ Would be ideal future solution
+   - ❌ Not available yet
+
+## Notes
+
+- This refactoring aligns with Astro's philosophy of shipping less JavaScript
+- The pattern can be applied to other pages that may have similar issues
+- Consider documenting this pattern for future development

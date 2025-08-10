@@ -228,8 +228,9 @@ export function ListWithFiltersLayout<T extends string>({
               tablet-landscape:w-auto tablet-landscape:max-w-unset
               tablet-landscape:min-w-[320px] tablet-landscape:transform-none
               tablet-landscape:scroll-mt-[calc(25px_+_var(--scroll-offset,0px))]
-              tablet-landscape:bg-inherit tablet-landscape:py-24
-              tablet-landscape:pb-12 tablet-landscape:drop-shadow-none
+              tablet-landscape:overflow-y-visible tablet-landscape:bg-inherit
+              tablet-landscape:py-24 tablet-landscape:pb-12
+              tablet-landscape:drop-shadow-none
               laptop:w-[33%]
             `}
             id="filters"
@@ -248,6 +249,7 @@ export function ListWithFiltersLayout<T extends string>({
               <fieldset
                 className={`
                   flex grow flex-col gap-5 px-container pb-4
+                  [--control-scroll-offset:calc(181px_+_var(--scroll-offset,0px))]
                   tablet:gap-8
                   tablet-landscape:mt-0 tablet-landscape:gap-12
                   tablet-landscape:px-0 tablet-landscape:py-10

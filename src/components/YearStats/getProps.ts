@@ -4,7 +4,7 @@ import { allStatYears, statsForYear } from "~/api/yearStats";
 import { BackdropImageConfig } from "~/components/Backdrop";
 import { MostWatchedMoviesPosterConfig } from "~/components/MostWatchedMovies";
 
-import { type Props } from "./YearStats";
+import type { Props } from "./YearStats";
 
 export async function getProps(
   year: string,

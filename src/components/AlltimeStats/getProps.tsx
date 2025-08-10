@@ -5,7 +5,7 @@ import { allStatYears } from "~/api/yearStats";
 import { BackdropImageConfig } from "~/components/Backdrop";
 import { MostWatchedMoviesPosterConfig } from "~/components/MostWatchedMovies";
 
-import { type Props } from "./AlltimeStats";
+import type { Props } from "./AlltimeStats";
 
 export async function getProps(): Promise<Props & { metaDescription: string }> {
   const stats = await alltimeStats();
