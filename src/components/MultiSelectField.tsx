@@ -36,7 +36,7 @@ export function MultiSelectField({
       setTimeout(() => {
         setListboxKey(prev => prev + 1);
         selectionMadeRef.current = false;
-      }, 50); // Small delay to allow state to update
+      }, 150); // Delay to allow state to update and tests to work
     }
   };
 

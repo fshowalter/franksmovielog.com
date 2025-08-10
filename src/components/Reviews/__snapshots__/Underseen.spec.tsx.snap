@@ -31346,6 +31346,7 @@ exports[`Underseen > renders 1`] = `
                 <fieldset
                   class="
                   flex grow flex-col gap-5 px-container pb-4
+                  [--control-scroll-offset:calc(181px_+_var(--scroll-offset,0px))]
                   tablet:gap-8
                   tablet-landscape:mt-0 tablet-landscape:gap-12
                   tablet-landscape:px-0 tablet-landscape:py-10
@@ -31901,8 +31902,10 @@ exports[`Underseen > renders 1`] = `
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           class="
-                    relative w-full cursor-default rounded border border-default
-                    bg-default pr-10 pl-3 text-left text-base text-subtle
+                    relative w-full cursor-default
+                    scroll-mt-[var(--control-scroll-offset,0)] rounded border
+                    border-default bg-default pr-10 pl-3 text-left text-base
+                    text-subtle
                     focus:border-[rgb(38,132,255)]
                     focus:shadow-[0px_0px_0px_1px_rgb(38,132,255)]
                     focus:outline-none
