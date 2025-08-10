@@ -1,4 +1,5 @@
 import type { KeyboardEvent } from "react";
+
 import { useEffect, useRef, useState } from "react";
 
 import { LabelText } from "~/components/LabelText";
@@ -377,9 +378,7 @@ export function MultiSelectField({
                 </button>
                 <span
                   aria-hidden="true"
-                  className={`
-                  mx-1 h-5 border-l border-default
-                `}
+                  className={`mx-1 h-5 border-l border-default`}
                 />
               </>
             )}

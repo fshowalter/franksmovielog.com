@@ -1,4 +1,5 @@
 import type { JSX } from "react";
+
 import { useReducer } from "react";
 
 import type { BackdropImageProps } from "~/api/backdrops";

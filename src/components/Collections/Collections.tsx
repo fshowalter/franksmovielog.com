@@ -1,4 +1,5 @@
 import type { JSX } from "react";
+
 import { useReducer } from "react";
 
 import type { AvatarImageProps } from "~/api/avatars";

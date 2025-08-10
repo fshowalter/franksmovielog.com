@@ -8,8 +8,9 @@ import { allReviews, loadContent, loadExcerptHtml } from "~/api/reviews";
 import { getOpenGraphStillSrc, getStillImageProps } from "~/api/stills";
 import { MoreReviewsImageConfig } from "~/components/MoreReviews";
 
-import { PosterImageConfig } from "./Credits";
 import type { Props } from "./Review";
+
+import { PosterImageConfig } from "./Credits";
 import { StillImageConfig } from "./Review";
 
 export async function getProps(slug: string): Promise<Props> {
