@@ -6,7 +6,7 @@ import { ListItemAvatarImageConfig } from "~/components/ListItemAvatar";
 
 import type { Props } from "./Collections";
 
-import { type ListItemValue } from "./Collections";
+import type { ListItemValue } from "./Collections";
 
 export async function getProps(): Promise<Props> {
   const { collections } = await allCollections();

@@ -1,4 +1,5 @@
-import { type KeyboardEvent, useEffect, useRef, useState } from "react";
+import type { KeyboardEvent } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { LabelText } from "~/components/LabelText";
 

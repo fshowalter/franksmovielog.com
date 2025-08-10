@@ -1,4 +1,5 @@
-import { type JSX, useState } from "react";
+import type { JSX } from "react";
+import { useState } from "react";
 
 import { LabelText } from "./LabelText";
 import { SelectInput } from "./SelectInput";
