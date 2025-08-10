@@ -146,7 +146,7 @@ export function ListWithFilters<T extends string>({
         <div
           className={`
             sticky top-[calc(0px_+_var(--scroll-offset,0px))] z-sticky
-            scroll-mt-[calc(0px_+__var(--scroll-offset,0px))] border-b
+            scroll-mt-[calc(0px_+_var(--scroll-offset,0px))] border-b
             border-default bg-default text-xs
             tablet:col-span-full
           `}
