@@ -1,10 +1,11 @@
 ---
+import React from "react";
+
+import { Backdrop } from "~/components/Backdrop";
+import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 import { getProps } from "~/components/Watchlist/getProps";
 import { Watchlist } from "~/components/Watchlist/Watchlist";
-import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
-import { Backdrop } from "~/components/Backdrop";
 import Layout from "~/layouts/Layout.astro";
-import React from "react";
 
 const props = await getProps();
 

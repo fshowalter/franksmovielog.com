@@ -28,10 +28,7 @@ export type Props = {
   values: ListItemValue[];
 };
 
-export function CastAndCrew({
-  initialSort,
-  values,
-}: Props): JSX.Element {
+export function CastAndCrew({ initialSort, values }: Props): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
@@ -43,7 +40,6 @@ export function CastAndCrew({
 
   return (
     <ListWithFilters
-      className="[--scroll-offset:52px]"
       dynamicSubNav={
         <AlphabetSubNav
           groupedValues={state.groupedValues}
@@ -55,7 +51,7 @@ export function CastAndCrew({
         <GroupedList
           data-testid="list"
           groupedValues={state.groupedValues}
-          groupItemClassName={`scroll-mt-[52px]`}
+          groupItemClassName={`scroll-mt-[calc(52px_+_var(--scroll-offset))]`}
           totalCount={state.filteredValues.length}
           visibleCount={state.showCount}
         >

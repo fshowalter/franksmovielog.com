@@ -48,7 +48,7 @@ export type Props = {
 };
 
 export function Collection({
-  avatarImageProps,
+  avatarImageProps: _avatarImageProps,
   distinctReleaseYears,
   distinctReviewYears,
   initialSort,

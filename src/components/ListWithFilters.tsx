@@ -142,8 +142,8 @@ export function ListWithFilters<T extends string>({
   return (
     <div
       className={`
-      ${className || ""}
-    `}
+        ${className || ""}
+      `}
     >
       {dynamicSubNav}
       <div className={`group/list-with-filters mx-auto bg-subtle`} {...rest}>

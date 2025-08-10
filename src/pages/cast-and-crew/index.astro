@@ -1,10 +1,11 @@
 ---
+import React from "react";
+
+import { Backdrop } from "~/components/Backdrop";
 import { CastAndCrew } from "~/components/CastAndCrew/CastAndCrew";
 import { getProps } from "~/components/CastAndCrew/getProps";
 import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
-import { Backdrop } from "~/components/Backdrop";
 import Layout from "~/layouts/Layout.astro";
-import React from "react";
 
 const props = await getProps();
 

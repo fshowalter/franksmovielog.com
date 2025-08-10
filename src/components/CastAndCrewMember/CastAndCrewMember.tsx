@@ -55,7 +55,7 @@ export type Props = {
 };
 
 export function CastAndCrewMember({
-  avatarImageProps,
+  avatarImageProps: _avatarImageProps,
   distinctReleaseYears,
   distinctReviewYears,
   initialSort,

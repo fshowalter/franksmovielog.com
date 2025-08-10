@@ -1,11 +1,12 @@
 ---
+import React from "react";
+
+import { Backdrop } from "~/components/Backdrop";
+import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 import { getPropsForOverrated as getProps } from "~/components/Reviews/getProps";
 import { Overrated } from "~/components/Reviews/Overrated";
-import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
-import { Backdrop } from "~/components/Backdrop";
 import { ReviewsSubNav } from "~/components/ReviewsSubNav";
 import Layout from "~/layouts/Layout.astro";
-import React from "react";
 
 const props = await getProps();
 

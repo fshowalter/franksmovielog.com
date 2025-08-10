@@ -1,11 +1,12 @@
 ---
+import React from "react";
+
 import { allCastAndCrew } from "~/api/castAndCrew";
+import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
 import { CastAndCrewMember } from "~/components/CastAndCrewMember/CastAndCrewMember";
 import { getProps } from "~/components/CastAndCrewMember/getProps";
 import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
-import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
 import Layout from "~/layouts/Layout.astro";
-import React from "react";
 
 interface Props {
   slug: string;

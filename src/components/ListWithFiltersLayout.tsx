@@ -24,11 +24,11 @@ export function ListWithFiltersLayout({
 }: Props) {
   return (
     <Layout
+      addGradient={mastGradient}
       className={`
         bg-subtle
         ${className || ""}
       `}
-      addGradient={mastGradient}
     >
       {backdrop}
       {subNav && subNav}

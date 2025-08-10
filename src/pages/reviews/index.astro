@@ -1,11 +1,12 @@
 ---
-import { AllReviews } from "~/components/Reviews/AllReviews";
-import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
-import { Backdrop } from "~/components/Backdrop";
-import { ReviewsSubNav } from "~/components/ReviewsSubNav";
-import { getProps } from "~/components/Reviews/getProps";
-import Layout from "~/layouts/Layout.astro";
 import React from "react";
+
+import { Backdrop } from "~/components/Backdrop";
+import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
+import { AllReviews } from "~/components/Reviews/AllReviews";
+import { getProps } from "~/components/Reviews/getProps";
+import { ReviewsSubNav } from "~/components/ReviewsSubNav";
+import Layout from "~/layouts/Layout.astro";
 
 const props = await getProps();
 

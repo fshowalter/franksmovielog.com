@@ -24,7 +24,7 @@ globalThis.getComputedStyle = (element: Element) => {
   };
 };
 
-// Test props for ListWithFiltersLayout
+// Test props for ListWithFilters
 const mockProps = {
   backdrop: <div data-testid="backdrop">Test Backdrop</div>,
   filters: (
@@ -49,7 +49,7 @@ const mockProps = {
 
 describe("ListWithFilters", () => {
   it("renders", ({ expect }) => {
-    const { asFragment } = render(<ListWithFiltersLayout {...mockProps} />);
+    const { asFragment } = render(<ListWithFilters {...mockProps} />);
 
     expect(asFragment()).toMatchSnapshot();
   });
@@ -57,7 +57,7 @@ describe("ListWithFilters", () => {
   it("displays the correct total count", ({ expect }) => {
     expect.hasAssertions();
 
-    render(<ListWithFiltersLayout {...mockProps} totalCount={250} />);
+    render(<ListWithFilters {...mockProps} totalCount={250} />);
 
     expect(screen.getByText("250")).toBeInTheDocument();
     expect(screen.getByText("Results")).toBeInTheDocument();
@@ -75,7 +75,7 @@ describe("ListWithFilters", () => {
       },
     };
 
-    render(<ListWithFiltersLayout {...props} />);
+    render(<ListWithFilters {...props} />);
 
     const sortSelect = screen.getByLabelText("Sort");
 
@@ -108,7 +108,7 @@ describe("ListWithFilters", () => {
 
     const subNav = <nav data-testid="sub-nav">Sub Navigation</nav>;
 
-    render(<ListWithFiltersLayout {...mockProps} subNav={subNav} />);
+    render(<ListWithFilters {...mockProps} subNav={subNav} />);
 
     expect(screen.getByTestId("sub-nav")).toBeInTheDocument();
   });
@@ -141,7 +141,7 @@ describe("ListWithFilters", () => {
     it("opens and closes filter drawer", async ({ expect }) => {
       expect.hasAssertions();
 
-      render(<ListWithFiltersLayout {...mockProps} />);
+      render(<ListWithFilters {...mockProps} />);
 
       const filterButton = screen.getByRole("button", {
         name: "Toggle filters",
@@ -167,7 +167,7 @@ describe("ListWithFilters", () => {
     it("closes filter drawer with escape key", async ({ expect }) => {
       expect.hasAssertions();
 
-      render(<ListWithFiltersLayout {...mockProps} />);
+      render(<ListWithFilters {...mockProps} />);
 
       const filterButton = screen.getByRole("button", {
         name: "Toggle filters",
@@ -188,7 +188,7 @@ describe("ListWithFilters", () => {
     }) => {
       expect.hasAssertions();
 
-      const { container } = render(<ListWithFiltersLayout {...mockProps} />);
+      const { container } = render(<ListWithFilters {...mockProps} />);
       const filterButton = screen.getByRole("button", {
         name: "Toggle filters",
       });
@@ -224,7 +224,7 @@ describe("ListWithFilters", () => {
     it("closes filter drawer with View Results button", async ({ expect }) => {
       expect.hasAssertions();
 
-      render(<ListWithFiltersLayout {...mockProps} />);
+      render(<ListWithFilters {...mockProps} />);
 
       const filterButton = screen.getByRole("button", {
         name: "Toggle filters",
@@ -255,7 +255,7 @@ describe("ListWithFilters", () => {
           return 0;
         });
 
-      render(<ListWithFiltersLayout {...mockProps} />);
+      render(<ListWithFilters {...mockProps} />);
 
       const filterButton = screen.getByRole("button", {
         name: "Toggle filters",
@@ -287,7 +287,7 @@ describe("ListWithFilters", () => {
       const scrollIntoViewMock = vi.fn();
       Element.prototype.scrollIntoView = scrollIntoViewMock;
 
-      render(<ListWithFiltersLayout {...mockProps} />);
+      render(<ListWithFilters {...mockProps} />);
 
       const filterButton = screen.getByRole("button", {
         name: "Toggle filters",
@@ -312,7 +312,7 @@ describe("ListWithFilters", () => {
       // Mock setTimeout
       const setTimeoutSpy = vi.spyOn(globalThis, "setTimeout");
 
-      render(<ListWithFiltersLayout {...mockProps} />);
+      render(<ListWithFilters {...mockProps} />);
 
       const filterButton = screen.getByRole("button", {
         name: "Toggle filters",

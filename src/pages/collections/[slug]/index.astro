@@ -1,11 +1,12 @@
 ---
+import React from "react";
+
 import { allCollections } from "~/api/collections";
+import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
 import { Collection } from "~/components/Collection/Collection";
 import { getProps } from "~/components/Collection/getProps";
 import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
-import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
 import Layout from "~/layouts/Layout.astro";
-import React from "react";
 
 interface Props {
   slug: string;
