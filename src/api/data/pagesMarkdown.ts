@@ -7,10 +7,9 @@ import smartypants from "remark-smartypants";
 import strip from "strip-markdown";
 import { z } from "zod";
 
-import { removeFootnotes } from "~/api/utils/markdown/removeFootnotes";
-
 import { ContentCache, generateSchemaHash } from "./utils/cache";
 import { getContentPath } from "./utils/getContentPath";
+import { removeFootnotes } from "./utils/markdown/removeFootnotes";
 
 const pagesMarkdownDirectory = getContentPath("pages");
 

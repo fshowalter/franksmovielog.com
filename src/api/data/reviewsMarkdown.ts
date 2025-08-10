@@ -11,11 +11,10 @@ import smartypants from "remark-smartypants";
 import strip from "strip-markdown";
 import { z } from "zod";
 
-import { removeFootnotes } from "~/api/utils/markdown/removeFootnotes";
-import { trimToExcerpt } from "~/api/utils/markdown/trimToExcerpt";
-
 import { ContentCache, generateSchemaHash } from "./utils/cache";
 import { getContentPath } from "./utils/getContentPath";
+import { removeFootnotes } from "./utils/markdown/removeFootnotes";
+import { trimToExcerpt } from "./utils/markdown/trimToExcerpt";
 
 const reviewsMarkdownDirectory = getContentPath("reviews");
 
