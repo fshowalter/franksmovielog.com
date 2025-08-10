@@ -95,34 +95,6 @@ export class ContentCache<T> {
     return hash.toString();
   }
 
-  async getStats(): Promise<{
-    cacheSize: number;
-    newestEntry: number | undefined;
-    oldestEntry: number | undefined;
-    totalEntries: number;
-  }> {
-    const cache = await this.loadCache();
-    const entries = Object.values(cache.entries);
-    
-    if (entries.length === 0) {
-      return {
-        cacheSize: 0,
-        newestEntry: undefined,
-        oldestEntry: undefined,
-        totalEntries: 0,
-      };
-    }
-    
-    const timestamps = entries.map(e => e.timestamp);
-    const cacheSize = JSON.stringify(cache).length;
-    
-    return {
-      cacheSize,
-      newestEntry: Math.max(...timestamps),
-      oldestEntry: Math.min(...timestamps),
-      totalEntries: entries.length,
-    };
-  }
 
   async invalidate(filePath?: string): Promise<void> {
     const cache = await this.loadCache();
