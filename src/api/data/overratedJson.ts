@@ -45,7 +45,7 @@ let cacheInstance: ContentCache<OverratedJson[]> | undefined;
 export async function allOverratedJson(): Promise<OverratedJson[]> {
   const cache = await getCache();
   const fileContents = await fs.readFile(overratedJsonFile, "utf8");
-  
+
   return cache.get(overratedJsonFile, fileContents, (content) => {
     const data = JSON.parse(content) as unknown[];
     return data.map((item) => OverratedJsonSchema.parse(item));
@@ -54,8 +54,13 @@ export async function allOverratedJson(): Promise<OverratedJson[]> {
 
 async function getCache(): Promise<ContentCache<OverratedJson[]>> {
   if (!cacheInstance) {
-    const schemaHash = await generateSchemaHash(JSON.stringify(OverratedJsonSchema._def.schema.shape));
-    cacheInstance = new ContentCache<OverratedJson[]>("overrated-json", schemaHash);
+    const schemaHash = await generateSchemaHash(
+      JSON.stringify(OverratedJsonSchema._def.schema.shape),
+    );
+    cacheInstance = new ContentCache<OverratedJson[]>(
+      "overrated-json",
+      schemaHash,
+    );
   }
   return cacheInstance;
 }

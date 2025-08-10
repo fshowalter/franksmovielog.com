@@ -34,7 +34,9 @@ export async function allYearStatsJson(): Promise<YearStatsJson[]> {
     withFileTypes: true,
   });
 
-  const jsonFiles = dirents.filter((item) => !item.isDirectory() && item.name.endsWith(".json"));
+  const jsonFiles = dirents.filter(
+    (item) => !item.isDirectory() && item.name.endsWith(".json"),
+  );
   const allFileContents = await Promise.all(
     jsonFiles.map(async (item) => {
       const filePath = `${yearStatsJsonDirectory}/${item.name}`;
@@ -58,8 +60,13 @@ export async function allYearStatsJson(): Promise<YearStatsJson[]> {
 
 async function getCache(): Promise<ContentCache<YearStatsJson[]>> {
   if (!cacheInstance) {
-    const schemaHash = await generateSchemaHash(JSON.stringify(YearStatsJsonSchema.shape));
-    cacheInstance = new ContentCache<YearStatsJson[]>("year-stats-json", schemaHash);
+    const schemaHash = await generateSchemaHash(
+      JSON.stringify(YearStatsJsonSchema.shape),
+    );
+    cacheInstance = new ContentCache<YearStatsJson[]>(
+      "year-stats-json",
+      schemaHash,
+    );
   }
   return cacheInstance;
 }

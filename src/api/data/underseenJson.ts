@@ -45,7 +45,7 @@ let cacheInstance: ContentCache<UnderseenJson[]> | undefined;
 export async function allUnderseenJson(): Promise<UnderseenJson[]> {
   const cache = await getCache();
   const fileContents = await fs.readFile(underseenJsonFile, "utf8");
-  
+
   return cache.get(underseenJsonFile, fileContents, (content) => {
     const data = JSON.parse(content) as unknown[];
     return data.map((item) => UnderseenJsonSchema.parse(item));
@@ -54,8 +54,13 @@ export async function allUnderseenJson(): Promise<UnderseenJson[]> {
 
 async function getCache(): Promise<ContentCache<UnderseenJson[]>> {
   if (!cacheInstance) {
-    const schemaHash = await generateSchemaHash(JSON.stringify(UnderseenJsonSchema._def.schema.shape));
-    cacheInstance = new ContentCache<UnderseenJson[]>("underseen-json", schemaHash);
+    const schemaHash = await generateSchemaHash(
+      JSON.stringify(UnderseenJsonSchema._def.schema.shape),
+    );
+    cacheInstance = new ContentCache<UnderseenJson[]>(
+      "underseen-json",
+      schemaHash,
+    );
   }
   return cacheInstance;
 }

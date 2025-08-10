@@ -28,8 +28,13 @@ export async function allPagesMarkdown(): Promise<MarkdownPage[]> {
 
 async function getCache(): Promise<ContentCache<MarkdownPage>> {
   if (!cacheInstance) {
-    const schemaHash = await generateSchemaHash(JSON.stringify(DataSchema.shape));
-    cacheInstance = new ContentCache<MarkdownPage>("pages-markdown", schemaHash);
+    const schemaHash = await generateSchemaHash(
+      JSON.stringify(DataSchema.shape),
+    );
+    cacheInstance = new ContentCache<MarkdownPage>(
+      "pages-markdown",
+      schemaHash,
+    );
   }
   return cacheInstance;
 }

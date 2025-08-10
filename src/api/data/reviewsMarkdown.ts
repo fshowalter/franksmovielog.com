@@ -36,8 +36,13 @@ export async function allReviewsMarkdown(): Promise<MarkdownReview[]> {
 async function getCache(): Promise<ContentCache<MarkdownReview>> {
   if (!cacheInstance) {
     // Generate schema hash from the Zod schema
-    const schemaHash = await generateSchemaHash(JSON.stringify(DataSchema.shape));
-    cacheInstance = new ContentCache<MarkdownReview>("reviews-markdown", schemaHash);
+    const schemaHash = await generateSchemaHash(
+      JSON.stringify(DataSchema.shape),
+    );
+    cacheInstance = new ContentCache<MarkdownReview>(
+      "reviews-markdown",
+      schemaHash,
+    );
   }
   return cacheInstance;
 }

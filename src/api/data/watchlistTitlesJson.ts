@@ -45,7 +45,7 @@ let cacheInstance: ContentCache<WatchlistTitleJson[]> | undefined;
 export async function allWatchlistTitlesJson(): Promise<WatchlistTitleJson[]> {
   const cache = await getCache();
   const fileContents = await fs.readFile(watchlistTitlesJsonFile, "utf8");
-  
+
   return cache.get(watchlistTitlesJsonFile, fileContents, (content) => {
     const data = JSON.parse(content) as unknown[];
     return data.map((title) => WatchlistTitleJsonSchema.parse(title));
@@ -54,8 +54,13 @@ export async function allWatchlistTitlesJson(): Promise<WatchlistTitleJson[]> {
 
 async function getCache(): Promise<ContentCache<WatchlistTitleJson[]>> {
   if (!cacheInstance) {
-    const schemaHash = await generateSchemaHash(JSON.stringify(WatchlistTitleJsonSchema._def.schema.shape));
-    cacheInstance = new ContentCache<WatchlistTitleJson[]>("watchlist-titles-json", schemaHash);
+    const schemaHash = await generateSchemaHash(
+      JSON.stringify(WatchlistTitleJsonSchema._def.schema.shape),
+    );
+    cacheInstance = new ContentCache<WatchlistTitleJson[]>(
+      "watchlist-titles-json",
+      schemaHash,
+    );
   }
   return cacheInstance;
 }

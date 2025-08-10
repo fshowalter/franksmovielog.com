@@ -45,7 +45,7 @@ let cacheInstance: ContentCache<UnderratedJson[]> | undefined;
 export async function allUnderratedJson(): Promise<UnderratedJson[]> {
   const cache = await getCache();
   const fileContents = await fs.readFile(underratedJsonFile, "utf8");
-  
+
   return cache.get(underratedJsonFile, fileContents, (content) => {
     const data = JSON.parse(content) as unknown[];
     return data.map((item) => UnderratedJsonSchema.parse(item));
@@ -54,8 +54,13 @@ export async function allUnderratedJson(): Promise<UnderratedJson[]> {
 
 async function getCache(): Promise<ContentCache<UnderratedJson[]>> {
   if (!cacheInstance) {
-    const schemaHash = await generateSchemaHash(JSON.stringify(UnderratedJsonSchema._def.schema.shape));
-    cacheInstance = new ContentCache<UnderratedJson[]>("underrated-json", schemaHash);
+    const schemaHash = await generateSchemaHash(
+      JSON.stringify(UnderratedJsonSchema._def.schema.shape),
+    );
+    cacheInstance = new ContentCache<UnderratedJson[]>(
+      "underrated-json",
+      schemaHash,
+    );
   }
   return cacheInstance;
 }

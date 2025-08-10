@@ -54,7 +54,7 @@ let cacheInstance: ContentCache<ViewingJson[]> | undefined;
 export async function allViewingsJson(): Promise<ViewingJson[]> {
   const cache = await getCache();
   const fileContents = await fs.readFile(viewingsJsonFile, "utf8");
-  
+
   return cache.get(viewingsJsonFile, fileContents, (content) => {
     const data = JSON.parse(content) as unknown[];
     return data.map((item) => ViewingJsonSchema.parse(item));
@@ -63,8 +63,13 @@ export async function allViewingsJson(): Promise<ViewingJson[]> {
 
 async function getCache(): Promise<ContentCache<ViewingJson[]>> {
   if (!cacheInstance) {
-    const schemaHash = await generateSchemaHash(JSON.stringify(ViewingJsonSchema._def.schema.shape));
-    cacheInstance = new ContentCache<ViewingJson[]>("viewings-json", schemaHash);
+    const schemaHash = await generateSchemaHash(
+      JSON.stringify(ViewingJsonSchema._def.schema.shape),
+    );
+    cacheInstance = new ContentCache<ViewingJson[]>(
+      "viewings-json",
+      schemaHash,
+    );
   }
   return cacheInstance;
 }

@@ -47,7 +47,7 @@ let cacheInstance: ContentCache<WatchlistProgressJson> | undefined;
 export async function watchlistProgressJson(): Promise<WatchlistProgressJson> {
   const cache = await getCache();
   const fileContents = await fs.readFile(watchlistProgressJsonFile, "utf8");
-  
+
   return cache.get(watchlistProgressJsonFile, fileContents, (content) => {
     const data = JSON.parse(content) as unknown;
     return WatchlistProgressJsonSchema.parse(data);
@@ -56,8 +56,13 @@ export async function watchlistProgressJson(): Promise<WatchlistProgressJson> {
 
 async function getCache(): Promise<ContentCache<WatchlistProgressJson>> {
   if (!cacheInstance) {
-    const schemaHash = await generateSchemaHash(JSON.stringify(WatchlistProgressJsonSchema.shape));
-    cacheInstance = new ContentCache<WatchlistProgressJson>("watchlist-progress-json", schemaHash);
+    const schemaHash = await generateSchemaHash(
+      JSON.stringify(WatchlistProgressJsonSchema.shape),
+    );
+    cacheInstance = new ContentCache<WatchlistProgressJson>(
+      "watchlist-progress-json",
+      schemaHash,
+    );
   }
   return cacheInstance;
 }

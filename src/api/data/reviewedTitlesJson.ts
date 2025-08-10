@@ -160,7 +160,7 @@ let cacheInstance: ContentCache<ReviewedTitleJson[]> | undefined;
 export async function allReviewedTitlesJson(): Promise<ReviewedTitleJson[]> {
   const cache = await getCache();
   const fileContents = await fs.readFile(reviewedTitlesJsonFile, "utf8");
-  
+
   return cache.get(reviewedTitlesJsonFile, fileContents, (content) => {
     const data = JSON.parse(content) as unknown[];
     return data.map((item) => ReviewedTitleJsonSchema.parse(item));
@@ -169,8 +169,13 @@ export async function allReviewedTitlesJson(): Promise<ReviewedTitleJson[]> {
 
 async function getCache(): Promise<ContentCache<ReviewedTitleJson[]>> {
   if (!cacheInstance) {
-    const schemaHash = await generateSchemaHash(JSON.stringify(ReviewedTitleJsonSchema._def.schema.shape));
-    cacheInstance = new ContentCache<ReviewedTitleJson[]>("reviewed-titles-json", schemaHash);
+    const schemaHash = await generateSchemaHash(
+      JSON.stringify(ReviewedTitleJsonSchema._def.schema.shape),
+    );
+    cacheInstance = new ContentCache<ReviewedTitleJson[]>(
+      "reviewed-titles-json",
+      schemaHash,
+    );
   }
   return cacheInstance;
 }

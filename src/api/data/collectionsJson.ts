@@ -70,7 +70,9 @@ export async function allCollectionsJson(): Promise<CollectionJson[]> {
     withFileTypes: true,
   });
 
-  const jsonFiles = dirents.filter((item) => !item.isDirectory() && item.name.endsWith(".json"));
+  const jsonFiles = dirents.filter(
+    (item) => !item.isDirectory() && item.name.endsWith(".json"),
+  );
   const allFileContents = await Promise.all(
     jsonFiles.map(async (item) => {
       const filePath = `${collectionsJsonDirectory}/${item.name}`;
@@ -94,8 +96,13 @@ export async function allCollectionsJson(): Promise<CollectionJson[]> {
 
 async function getCache(): Promise<ContentCache<CollectionJson[]>> {
   if (!cacheInstance) {
-    const schemaHash = await generateSchemaHash(JSON.stringify(CollectionJsonSchema._def.schema.shape));
-    cacheInstance = new ContentCache<CollectionJson[]>("collections-json", schemaHash);
+    const schemaHash = await generateSchemaHash(
+      JSON.stringify(CollectionJsonSchema._def.schema.shape),
+    );
+    cacheInstance = new ContentCache<CollectionJson[]>(
+      "collections-json",
+      schemaHash,
+    );
   }
   return cacheInstance;
 }

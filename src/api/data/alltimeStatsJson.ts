@@ -37,7 +37,7 @@ let cacheInstance: ContentCache<AlltimeStatsJson> | undefined;
 export async function alltimeStatsJson(): Promise<AlltimeStatsJson> {
   const cache = await getCache();
   const fileContents = await fs.readFile(alltimeStatsFile, "utf8");
-  
+
   return cache.get(alltimeStatsFile, fileContents, (content) => {
     const data = JSON.parse(content) as unknown;
     return AlltimeStatsJsonSchema.parse(data);
@@ -46,8 +46,13 @@ export async function alltimeStatsJson(): Promise<AlltimeStatsJson> {
 
 async function getCache(): Promise<ContentCache<AlltimeStatsJson>> {
   if (!cacheInstance) {
-    const schemaHash = await generateSchemaHash(JSON.stringify(AlltimeStatsJsonSchema.shape));
-    cacheInstance = new ContentCache<AlltimeStatsJson>("alltime-stats-json", schemaHash);
+    const schemaHash = await generateSchemaHash(
+      JSON.stringify(AlltimeStatsJsonSchema.shape),
+    );
+    cacheInstance = new ContentCache<AlltimeStatsJson>(
+      "alltime-stats-json",
+      schemaHash,
+    );
   }
   return cacheInstance;
 }

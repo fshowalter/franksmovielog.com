@@ -22,11 +22,13 @@ Historic performance here: https://github.com/fshowalter/franksmovielog.com/acti
 ### Why Custom Cache?
 
 **Initial Attempt - Astro Content Collections:**
+
 - Content Collections are fundamentally incompatible with testing frameworks
 - They require either a dev server with HMR or a full build process to generate the virtual module `astro:data-layer-content`
 - This module doesn't exist in test environments, making it impossible to test components that rely on Content Collections
 
 **Solution - Custom Content-Based Cache:**
+
 - Implement our own content-based caching on top of the existing file system implementation
 - Use the same strategy as Astro's cache but with full control
 - Works identically in dev, prod, and test environments
@@ -34,24 +36,29 @@ Historic performance here: https://github.com/fshowalter/franksmovielog.com/acti
 ### Cache Design
 
 **Architecture:**
+
 - Add persistent disk cache layer on top of existing file system code
 - Keep all schemas in `src/api/data/` (our source of truth)
 - Cache works identically in dev, prod, and test environments
 
 **Implementation Details:**
+
 - Use **xxhash-wasm** for content digests (same as Astro)
 - Use **devalue** for serialization (handles Dates, undefined, etc.)
 - Store cache in `.cache/content-cache.json` (persists between builds)
 - Test mode uses separate cache directory to avoid conflicts
 
 **Cache Structure:**
+
 ```json
 {
   "schemaVersion": "hash-of-all-schemas",
   "entries": {
     "[filePath]": {
       "digest": "xxhash-of-file-content",
-      "data": { /* parsed data */ },
+      "data": {
+        /* parsed data */
+      },
       "timestamp": 1234567890
     }
   }

@@ -43,8 +43,13 @@ let cacheInstance: ContentCache<MarkdownViewing> | undefined;
 
 async function getCache(): Promise<ContentCache<MarkdownViewing>> {
   if (!cacheInstance) {
-    const schemaHash = await generateSchemaHash(JSON.stringify(DataSchema._def.schema.shape));
-    cacheInstance = new ContentCache<MarkdownViewing>("viewings-markdown", schemaHash);
+    const schemaHash = await generateSchemaHash(
+      JSON.stringify(DataSchema._def.schema.shape),
+    );
+    cacheInstance = new ContentCache<MarkdownViewing>(
+      "viewings-markdown",
+      schemaHash,
+    );
   }
   return cacheInstance;
 }

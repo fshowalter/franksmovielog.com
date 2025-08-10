@@ -82,7 +82,9 @@ export async function allCastAndCrewJson(): Promise<CastAndCrewMemberJson[]> {
     withFileTypes: true,
   });
 
-  const jsonFiles = dirents.filter((item) => !item.isDirectory() && item.name.endsWith(".json"));
+  const jsonFiles = dirents.filter(
+    (item) => !item.isDirectory() && item.name.endsWith(".json"),
+  );
   const allFileContents = await Promise.all(
     jsonFiles.map(async (item) => {
       const filePath = `${castAndCrewJsonDirectory}/${item.name}`;
@@ -106,8 +108,13 @@ export async function allCastAndCrewJson(): Promise<CastAndCrewMemberJson[]> {
 
 async function getCache(): Promise<ContentCache<CastAndCrewMemberJson[]>> {
   if (!cacheInstance) {
-    const schemaHash = await generateSchemaHash(JSON.stringify(CastAndCrewJsonSchema._def.schema.shape));
-    cacheInstance = new ContentCache<CastAndCrewMemberJson[]>("cast-and-crew-json", schemaHash);
+    const schemaHash = await generateSchemaHash(
+      JSON.stringify(CastAndCrewJsonSchema._def.schema.shape),
+    );
+    cacheInstance = new ContentCache<CastAndCrewMemberJson[]>(
+      "cast-and-crew-json",
+      schemaHash,
+    );
   }
   return cacheInstance;
 }
