@@ -11,9 +11,11 @@ beforeAll(() => {
   console.error = (...args: unknown[]) => {
     const errorMessage = args[0]?.toString() || "";
     // Fail on hydration errors
-    if (errorMessage.includes("hydration") || 
-        errorMessage.includes("cannot be a descendant of") ||
-        errorMessage.includes("cannot contain a nested")) {
+    if (
+      errorMessage.includes("hydration") ||
+      errorMessage.includes("cannot be a descendant of") ||
+      errorMessage.includes("cannot contain a nested")
+    ) {
       throw new Error(`Hydration error detected: ${errorMessage}`);
     }
     originalError.apply(console, args);

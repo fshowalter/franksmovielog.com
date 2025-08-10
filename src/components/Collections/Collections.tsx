@@ -26,10 +26,7 @@ export type Props = {
   values: ListItemValue[];
 };
 
-export function Collections({
-  initialSort,
-  values,
-}: Props): JSX.Element {
+export function Collections({ initialSort, values }: Props): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {

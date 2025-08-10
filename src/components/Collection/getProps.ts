@@ -1,5 +1,8 @@
 import { ListItemAvatarImageConfig } from "src/components/ListItemAvatar";
 
+import type { AvatarImageProps } from "~/api/avatars";
+import type { BackdropImageProps } from "~/api/backdrops";
+
 import { getAvatarImageProps } from "~/api/avatars";
 import { getBackdropImageProps } from "~/api/backdrops";
 import { collectionDetails } from "~/api/collections";
@@ -9,7 +12,12 @@ import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
 
 import type { Props } from "./Collection";
 
-export async function getProps(slug: string): Promise<Props> {
+type PageProps = Props & {
+  avatarImageProps: AvatarImageProps | undefined;
+  backdropImageProps: BackdropImageProps;
+};
+
+export async function getProps(slug: string): Promise<PageProps> {
   const { collection, distinctReleaseYears, distinctReviewYears } =
     await collectionDetails(slug);
 

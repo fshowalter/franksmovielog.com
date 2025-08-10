@@ -1,3 +1,5 @@
+import type { BackdropImageProps } from "~/api/backdrops";
+
 import { getBackdropImageProps } from "~/api/backdrops";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
 import { allViewings } from "~/api/viewings";
@@ -6,7 +8,13 @@ import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
 
 import type { ListItemValue, Props } from "./Viewings";
 
-export async function getProps(): Promise<Props & { metaDescription: string }> {
+type PageProps = Props & {
+  backdropImageProps: BackdropImageProps;
+  deck: string;
+  metaDescription: string;
+};
+
+export async function getProps(): Promise<PageProps> {
   const {
     distinctMedia,
     distinctReleaseYears,

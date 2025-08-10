@@ -40,6 +40,7 @@ export function CastAndCrew({ initialSort, values }: Props): JSX.Element {
 
   return (
     <ListWithFilters
+      className="[--scroll-offset:52px]"
       dynamicSubNav={
         <AlphabetSubNav
           groupedValues={state.groupedValues}
@@ -51,7 +52,7 @@ export function CastAndCrew({ initialSort, values }: Props): JSX.Element {
         <GroupedList
           data-testid="list"
           groupedValues={state.groupedValues}
-          groupItemClassName={`scroll-mt-[calc(52px_+_var(--scroll-offset))]`}
+          groupItemClassName={`scroll-mt-[calc(52px_+_var(--list-scroll-offset))]`}
           totalCount={state.filteredValues.length}
           visibleCount={state.showCount}
         >

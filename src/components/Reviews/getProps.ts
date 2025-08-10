@@ -1,3 +1,4 @@
+import type { BackdropImageProps } from "~/api/backdrops";
 import type { ReviewListItemValue } from "~/components/ReviewListItem";
 
 import { getBackdropImageProps } from "~/api/backdrops";
@@ -14,7 +15,13 @@ import type { Props as OverratedProps } from "./Overrated";
 import type { Props as UnderratedProps } from "./Underrated";
 import type { Props as UnderseenProps } from "./Underseen";
 
-export async function getProps(): Promise<Props & { metaDescription: string }> {
+type PageProps<T> = T & {
+  backdropImageProps: BackdropImageProps;
+  deck: string;
+  metaDescription: string;
+};
+
+export async function getProps(): Promise<PageProps<Props>> {
   const { distinctGenres, distinctReleaseYears, distinctReviewYears, reviews } =
     await allReviews();
 
@@ -37,7 +44,7 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
 }
 
 export async function getPropsForOverrated(): Promise<
-  OverratedProps & { metaDescription: string }
+  PageProps<OverratedProps>
 > {
   const {
     distinctGenres,
@@ -68,7 +75,7 @@ export async function getPropsForOverrated(): Promise<
 }
 
 export async function getPropsForUnderrated(): Promise<
-  UnderratedProps & { metaDescription: string }
+  PageProps<UnderratedProps>
 > {
   const {
     distinctGenres,
@@ -96,7 +103,7 @@ export async function getPropsForUnderrated(): Promise<
 }
 
 export async function getPropsForUnderseen(): Promise<
-  UnderseenProps & { metaDescription: string }
+  PageProps<UnderseenProps>
 > {
   const {
     distinctGenres,

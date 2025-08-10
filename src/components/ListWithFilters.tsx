@@ -53,7 +53,6 @@ export function ListWithFilters<T extends string>({
   listHeaderButtons,
   sortProps,
   totalCount,
-  ...rest
 }: Props<T>): JSX.Element {
   const [filterDrawerVisible, setFilterDrawerVisible] = useState(false);
   const filtersRef = useRef<HTMLDivElement | null>(null);
@@ -146,7 +145,7 @@ export function ListWithFilters<T extends string>({
       `}
     >
       {dynamicSubNav}
-      <div className={`group/list-with-filters mx-auto bg-subtle`} {...rest}>
+      <div className={`group/list-with-filters mx-auto bg-subtle`}>
         <div
           className={`
             sticky top-[calc(0px_+_var(--scroll-offset,0px))] z-sticky
@@ -175,8 +174,10 @@ export function ListWithFilters<T extends string>({
           <div
             className={`
               mx-auto max-w-[var(--breakpoint-desktop)] grow
-              scroll-mt-[calc(181px_+_var(--scroll-offset,0))] pb-10
-              tablet:scroll-mt-[calc(121px_+_var(--scroll-offset,0px))]
+              scroll-mt-[calc(var(--list-scroll-offset)_+_var(--scroll-offset,0px))]
+              pb-10
+              [--list-scroll-offset:181px]
+              tablet:[--list-scroll-offset:121px]
             `}
             id="list"
           >

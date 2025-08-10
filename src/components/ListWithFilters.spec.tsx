@@ -94,10 +94,7 @@ describe("ListWithFilters", () => {
     );
 
     render(
-      <ListWithFilters
-        {...mockProps}
-        listHeaderButtons={listHeaderButtons}
-      />,
+      <ListWithFilters {...mockProps} listHeaderButtons={listHeaderButtons} />,
     );
 
     expect(screen.getByTestId("header-button")).toBeInTheDocument();
@@ -106,9 +103,9 @@ describe("ListWithFilters", () => {
   it("renders optional sub navigation", ({ expect }) => {
     expect.hasAssertions();
 
-    const subNav = <nav data-testid="sub-nav">Sub Navigation</nav>;
+    const dynamicSubNav = <nav data-testid="sub-nav">Sub Navigation</nav>;
 
-    render(<ListWithFilters {...mockProps} subNav={subNav} />);
+    render(<ListWithFilters {...mockProps} dynamicSubNav={dynamicSubNav} />);
 
     expect(screen.getByTestId("sub-nav")).toBeInTheDocument();
   });

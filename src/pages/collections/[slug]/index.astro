@@ -2,7 +2,7 @@
 import React from "react";
 
 import { allCollections } from "~/api/collections";
-import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
+import { Backdrop } from "~/components/Backdrop";
 import { Collection } from "~/components/Collection/Collection";
 import { getProps } from "~/components/Collection/getProps";
 import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
@@ -36,12 +36,11 @@ const { backdropImageProps, ...interactiveProps } = props;
 
 // Create React elements in frontmatter
 const backdropElement = React.createElement(Backdrop, {
-  breadcrumb: React.createElement(BreadcrumbLink, { href: "/collections/" }, "Collections"),
-  deck: React.createElement("span", { 
-    dangerouslySetInnerHTML: { __html: props.value.descriptionHtml } 
+  deck: React.createElement("span", {
+    dangerouslySetInnerHTML: { __html: props.value.descriptionHtml },
   }),
   imageProps: backdropImageProps,
-  title: props.value.name
+  title: props.value.name,
 });
 ---
 

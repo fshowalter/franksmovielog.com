@@ -29200,18 +29200,23 @@ exports[`Underrated > can sort by title (Z → A) 1`] = `
 exports[`Underrated > renders 1`] = `
 <DocumentFragment>
   <div
-    class="group/list-with-filters mx-auto bg-subtle "
+    class="
+        
+      "
   >
     <div
-      class="
+      class="group/list-with-filters mx-auto bg-subtle"
+    >
+      <div
+        class="
             sticky top-[calc(0px_+_var(--scroll-offset,0px))] z-sticky
             scroll-mt-[calc(0px_+_var(--scroll-offset,0px))] border-b
             border-default bg-default text-xs
             tablet:col-span-full
           "
-    >
-      <div
-        class="
+      >
+        <div
+          class="
         mx-auto grid max-w-[var(--breakpoint-desktop)]
         grid-cols-[auto_auto_1fr_auto] items-baseline gap-y-7 px-container py-10
         font-sans font-medium tracking-wide text-subtle uppercase
@@ -29219,1988 +29224,1990 @@ exports[`Underrated > renders 1`] = `
         tablet-landscape:grid-cols-[auto_auto_1fr_minmax(302px,calc(33%_-_192px))_auto]
         desktop:grid-cols-[auto_auto_1fr_calc(33%_-_96px)_auto]
       "
-      >
-        <span
-          class="text-nowrap"
         >
           <span
-            class="font-semibold text-default"
+            class="text-nowrap"
           >
-            15
+            <span
+              class="font-semibold text-default"
+            >
+              15
+            </span>
+            <span
+              class="text-xxs leading-none tracking-wide"
+            >
+               Results
+            </span>
           </span>
-          <span
-            class="text-xxs leading-none tracking-wide"
-          >
-             Results
-          </span>
-        </span>
-        <div
-          class=""
-        />
-        <div
-          class="
+          <div
+            class=""
+          />
+          <div
+            class="
           col-span-full
           tablet:col-span-1 tablet:col-start-4
           desktop:pl-8
         "
-        >
-          <label
-            class="
+          >
+            <label
+              class="
             flex items-baseline gap-x-4 text-xxs font-semibold tracking-wide
             text-subtle
           "
-          >
-            Sort 
-            <select
-              class="
+            >
+              Sort 
+              <select
+                class="
               flex w-full appearance-none border-none bg-default py-2 pr-4 pl-4
               font-serif text-base font-normal tracking-normal overflow-ellipsis
               text-default shadow-all outline-accent
             "
-            >
-              <option
-                value="title-asc"
               >
-                Title (A → Z)
-              </option>
-              <option
-                value="title-desc"
-              >
-                Title (Z → A)
-              </option>
-              <option
-                value="grade-desc"
-              >
-                Grade (Best First)
-              </option>
-              <option
-                value="grade-asc"
-              >
-                Grade (Worst First)
-              </option>
-              <option
-                value="release-date-desc"
-              >
-                Release Date (Newest First)
-              </option>
-              <option
-                value="release-date-asc"
-              >
-                Release Date (Oldest First)
-              </option>
-              <option
-                value="review-date-desc"
-              >
-                Review Date (Newest First)
-              </option>
-              <option
-                value="review-date-asc"
-              >
-                Review Date (Oldest First)
-              </option>
-            </select>
-          </label>
-        </div>
-        <button
-          aria-controls="filters"
-          aria-expanded="false"
-          aria-label="Toggle filters"
-          class="
+                <option
+                  value="title-asc"
+                >
+                  Title (A → Z)
+                </option>
+                <option
+                  value="title-desc"
+                >
+                  Title (Z → A)
+                </option>
+                <option
+                  value="grade-desc"
+                >
+                  Grade (Best First)
+                </option>
+                <option
+                  value="grade-asc"
+                >
+                  Grade (Worst First)
+                </option>
+                <option
+                  value="release-date-desc"
+                >
+                  Release Date (Newest First)
+                </option>
+                <option
+                  value="release-date-asc"
+                >
+                  Release Date (Oldest First)
+                </option>
+                <option
+                  value="review-date-desc"
+                >
+                  Review Date (Newest First)
+                </option>
+                <option
+                  value="review-date-asc"
+                >
+                  Review Date (Oldest First)
+                </option>
+              </select>
+            </label>
+          </div>
+          <button
+            aria-controls="filters"
+            aria-expanded="false"
+            aria-label="Toggle filters"
+            class="
           col-start-4 row-start-1 flex transform-gpu cursor-pointer items-center
           justify-center gap-x-4 bg-canvas px-4 py-2 text-nowrap text-muted
           uppercase shadow-all transition-transform
           hover:scale-110
           tablet:col-start-5 tablet:w-20
         "
-          type="button"
-        >
-          Filter
-        </button>
+            type="button"
+          >
+            Filter
+          </button>
+        </div>
       </div>
-    </div>
-    <div
-      class="
+      <div
+        class="
             mx-auto max-w-[var(--breakpoint-desktop)]
             gap-x-[var(--container-padding)]
             tablet:px-container
             tablet-landscape:flex
           "
-    >
-      <div
-        class="
-              mx-auto max-w-[var(--breakpoint-desktop)] grow
-              scroll-mt-[calc(181px_+_var(--scroll-offset,0))] pb-10
-              tablet:scroll-mt-[calc(121px_+_var(--scroll-offset,0px))]
-            "
-        id="list"
       >
-        <ol
-          class="bg-default"
-          data-testid="list"
-        >
-          <li
-            class="
-        block
-        
-      "
-            id="2022"
-          >
-            <div
-              class="pt-0 text-md"
-              style="z-index: 1;"
-            >
-              <div
-                class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-              >
-                2022
-              </div>
-            </div>
-            <div
-              class="bg-subtle"
-            >
-              <ol>
-                <li
-                  class="
-        bg-default
-        
-        
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-[102.5%]
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
-        
-      "
-                >
-                  <div
-                    class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-                  >
-                    <div
-                      class="w-list-item-poster shrink-0"
-                    >
-                      <img
-                        alt=""
-                        class="aspect-poster drop-shadow-sm"
-                        decoding="async"
-                        height="113"
-                        loading="lazy"
-                        sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrimes-of-the-future-2022.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                        srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrimes-of-the-future-2022.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrimes-of-the-future-2022.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrimes-of-the-future-2022.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrimes-of-the-future-2022.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                        width="80"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="
-          flex grow flex-col items-start gap-y-2
-          tablet:w-full
-          laptop:pr-4
-        "
-                  >
-                    <a
-                      class="
-          font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-        "
-                      href="/reviews/crimes-of-the-future-2022/"
-                    >
-                      Crimes of the Future  
-                      <span
-                        class="
-        text-xxs leading-none font-light text-subtle
-        tablet:text-xs
-      "
-                      >
-                        2022
-                      </span>
-                    </a>
-                    <picture>
-                      <source
-                        media="(prefers-color-scheme: dark)"
-                        srcset="/svg/3-half-stars-dark.svg"
-                      />
-                      <img
-                        alt="B-: 3.5 stars (out of 5)"
-                        class="mb-1"
-                        height="16"
-                        src="/svg/3-half-stars.svg"
-                        width="80"
-                      />
-                    </picture>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      2025-Jan-09
-                    </div>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      <span>
-                        Drama
-                      </span>
-                      <span>
-                         | Horror
-                      </span>
-                      <span>
-                         | Sci-Fi
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li
-            class="
-        block
-        
-      "
-            id="2021"
-          >
-            <div
-              class="pt-0 text-md"
-              style="z-index: 2;"
-            >
-              <div
-                class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-              >
-                2021
-              </div>
-            </div>
-            <div
-              class="bg-subtle"
-            >
-              <ol>
-                <li
-                  class="
-        bg-default
-        
-        
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-[102.5%]
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
-        
-      "
-                >
-                  <div
-                    class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-                  >
-                    <div
-                      class="w-list-item-poster shrink-0"
-                    >
-                      <img
-                        alt=""
-                        class="aspect-poster drop-shadow-sm"
-                        decoding="async"
-                        height="113"
-                        loading="lazy"
-                        sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fmortal-kombat-2021.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                        srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fmortal-kombat-2021.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fmortal-kombat-2021.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fmortal-kombat-2021.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fmortal-kombat-2021.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                        width="80"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="
-          flex grow flex-col items-start gap-y-2
-          tablet:w-full
-          laptop:pr-4
-        "
-                  >
-                    <a
-                      class="
-          font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-        "
-                      href="/reviews/mortal-kombat-2021/"
-                    >
-                      Mortal Kombat  
-                      <span
-                        class="
-        text-xxs leading-none font-light text-subtle
-        tablet:text-xs
-      "
-                      >
-                        2021
-                      </span>
-                    </a>
-                    <picture>
-                      <source
-                        media="(prefers-color-scheme: dark)"
-                        srcset="/svg/3-half-stars-dark.svg"
-                      />
-                      <img
-                        alt="B-: 3.5 stars (out of 5)"
-                        class="mb-1"
-                        height="16"
-                        src="/svg/3-half-stars.svg"
-                        width="80"
-                      />
-                    </picture>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      2021-May-13
-                    </div>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      <span>
-                        Action
-                      </span>
-                      <span>
-                         | Adventure
-                      </span>
-                      <span>
-                         | Fantasy
-                      </span>
-                      <span>
-                         | Sci-Fi
-                      </span>
-                      <span>
-                         | Thriller
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li
-            class="
-        block
-        
-      "
-            id="2020"
-          >
-            <div
-              class="pt-0 text-md"
-              style="z-index: 3;"
-            >
-              <div
-                class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-              >
-                2020
-              </div>
-            </div>
-            <div
-              class="bg-subtle"
-            >
-              <ol>
-                <li
-                  class="
-        bg-default
-        
-        
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-[102.5%]
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
-        
-      "
-                >
-                  <div
-                    class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-                  >
-                    <div
-                      class="w-list-item-poster shrink-0"
-                    >
-                      <img
-                        alt=""
-                        class="aspect-poster drop-shadow-sm"
-                        decoding="async"
-                        height="113"
-                        loading="lazy"
-                        sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-goreman-2020.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                        srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-goreman-2020.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-goreman-2020.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-goreman-2020.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-goreman-2020.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                        width="80"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="
-          flex grow flex-col items-start gap-y-2
-          tablet:w-full
-          laptop:pr-4
-        "
-                  >
-                    <a
-                      class="
-          font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-        "
-                      href="/reviews/psycho-goreman-2020/"
-                    >
-                      Psycho Goreman  
-                      <span
-                        class="
-        text-xxs leading-none font-light text-subtle
-        tablet:text-xs
-      "
-                      >
-                        2020
-                      </span>
-                    </a>
-                    <picture>
-                      <source
-                        media="(prefers-color-scheme: dark)"
-                        srcset="/svg/4-stars-dark.svg"
-                      />
-                      <img
-                        alt="B: 4 stars (out of 5)"
-                        class="mb-1"
-                        height="16"
-                        src="/svg/4-stars.svg"
-                        width="80"
-                      />
-                    </picture>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      2021-Jun-24
-                    </div>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      <span>
-                        Comedy
-                      </span>
-                      <span>
-                         | Horror
-                      </span>
-                      <span>
-                         | Sci-Fi
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li
-            class="
-        block
-        
-      "
-            id="2019"
-          >
-            <div
-              class="pt-0 text-md"
-              style="z-index: 4;"
-            >
-              <div
-                class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-              >
-                2019
-              </div>
-            </div>
-            <div
-              class="bg-subtle"
-            >
-              <ol>
-                <li
-                  class="
-        bg-default
-        
-        
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-[102.5%]
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
-        
-      "
-                >
-                  <div
-                    class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-                  >
-                    <div
-                      class="w-list-item-poster shrink-0"
-                    >
-                      <img
-                        alt=""
-                        class="aspect-poster drop-shadow-sm"
-                        decoding="async"
-                        height="113"
-                        loading="lazy"
-                        sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcolor-out-of-space-2019.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                        srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcolor-out-of-space-2019.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcolor-out-of-space-2019.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcolor-out-of-space-2019.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcolor-out-of-space-2019.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                        width="80"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="
-          flex grow flex-col items-start gap-y-2
-          tablet:w-full
-          laptop:pr-4
-        "
-                  >
-                    <a
-                      class="
-          font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-        "
-                      href="/reviews/color-out-of-space-2019/"
-                    >
-                      Color Out of Space  
-                      <span
-                        class="
-        text-xxs leading-none font-light text-subtle
-        tablet:text-xs
-      "
-                      >
-                        2019
-                      </span>
-                    </a>
-                    <picture>
-                      <source
-                        media="(prefers-color-scheme: dark)"
-                        srcset="/svg/3-half-stars-dark.svg"
-                      />
-                      <img
-                        alt="B-: 3.5 stars (out of 5)"
-                        class="mb-1"
-                        height="16"
-                        src="/svg/3-half-stars.svg"
-                        width="80"
-                      />
-                    </picture>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      2021-May-27
-                    </div>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      <span>
-                        Horror
-                      </span>
-                      <span>
-                         | Mystery
-                      </span>
-                      <span>
-                         | Sci-Fi
-                      </span>
-                      <span>
-                         | Thriller
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li
-            class="
-        block
-        
-      "
-            id="2018"
-          >
-            <div
-              class="pt-0 text-md"
-              style="z-index: 5;"
-            >
-              <div
-                class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-              >
-                2018
-              </div>
-            </div>
-            <div
-              class="bg-subtle"
-            >
-              <ol>
-                <li
-                  class="
-        bg-default
-        
-        
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-[102.5%]
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
-        
-      "
-                >
-                  <div
-                    class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-                  >
-                    <div
-                      class="w-list-item-poster shrink-0"
-                    >
-                      <img
-                        alt=""
-                        class="aspect-poster drop-shadow-sm"
-                        decoding="async"
-                        height="113"
-                        loading="lazy"
-                        sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-perfection-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                        srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-perfection-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-perfection-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-perfection-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-perfection-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                        width="80"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="
-          flex grow flex-col items-start gap-y-2
-          tablet:w-full
-          laptop:pr-4
-        "
-                  >
-                    <a
-                      class="
-          font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-        "
-                      href="/reviews/the-perfection-2018/"
-                    >
-                      The Perfection  
-                      <span
-                        class="
-        text-xxs leading-none font-light text-subtle
-        tablet:text-xs
-      "
-                      >
-                        2018
-                      </span>
-                    </a>
-                    <picture>
-                      <source
-                        media="(prefers-color-scheme: dark)"
-                        srcset="/svg/3-half-stars-dark.svg"
-                      />
-                      <img
-                        alt="B-: 3.5 stars (out of 5)"
-                        class="mb-1"
-                        height="16"
-                        src="/svg/3-half-stars.svg"
-                        width="80"
-                      />
-                    </picture>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      2021-Feb-07
-                    </div>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      <span>
-                        Drama
-                      </span>
-                      <span>
-                         | Horror
-                      </span>
-                      <span>
-                         | Thriller
-                      </span>
-                    </div>
-                  </div>
-                </li>
-                <li
-                  class="
-        bg-default
-        
-        
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-[102.5%]
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
-        
-      "
-                >
-                  <div
-                    class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-                  >
-                    <div
-                      class="w-list-item-poster shrink-0"
-                    >
-                      <img
-                        alt=""
-                        class="aspect-poster drop-shadow-sm"
-                        decoding="async"
-                        height="113"
-                        loading="lazy"
-                        sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fin-fabric-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                        srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fin-fabric-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fin-fabric-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fin-fabric-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fin-fabric-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                        width="80"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="
-          flex grow flex-col items-start gap-y-2
-          tablet:w-full
-          laptop:pr-4
-        "
-                  >
-                    <a
-                      class="
-          font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-        "
-                      href="/reviews/in-fabric-2018/"
-                    >
-                      In Fabric  
-                      <span
-                        class="
-        text-xxs leading-none font-light text-subtle
-        tablet:text-xs
-      "
-                      >
-                        2018
-                      </span>
-                    </a>
-                    <picture>
-                      <source
-                        media="(prefers-color-scheme: dark)"
-                        srcset="/svg/4-stars-dark.svg"
-                      />
-                      <img
-                        alt="B: 4 stars (out of 5)"
-                        class="mb-1"
-                        height="16"
-                        src="/svg/4-stars.svg"
-                        width="80"
-                      />
-                    </picture>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      2021-Mar-10
-                    </div>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      <span>
-                        Comedy
-                      </span>
-                      <span>
-                         | Drama
-                      </span>
-                      <span>
-                         | Fantasy
-                      </span>
-                      <span>
-                         | Horror
-                      </span>
-                      <span>
-                         | Mystery
-                      </span>
-                      <span>
-                         | Thriller
-                      </span>
-                    </div>
-                  </div>
-                </li>
-                <li
-                  class="
-        bg-default
-        
-        
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-[102.5%]
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
-        
-      "
-                >
-                  <div
-                    class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-                  >
-                    <div
-                      class="w-list-item-poster shrink-0"
-                    >
-                      <img
-                        alt=""
-                        class="aspect-poster drop-shadow-sm"
-                        decoding="async"
-                        height="113"
-                        loading="lazy"
-                        sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpiercing-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                        srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpiercing-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpiercing-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpiercing-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpiercing-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                        width="80"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="
-          flex grow flex-col items-start gap-y-2
-          tablet:w-full
-          laptop:pr-4
-        "
-                  >
-                    <a
-                      class="
-          font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-        "
-                      href="/reviews/piercing-2018/"
-                    >
-                      Piercing  
-                      <span
-                        class="
-        text-xxs leading-none font-light text-subtle
-        tablet:text-xs
-      "
-                      >
-                        2018
-                      </span>
-                    </a>
-                    <picture>
-                      <source
-                        media="(prefers-color-scheme: dark)"
-                        srcset="/svg/4-stars-dark.svg"
-                      />
-                      <img
-                        alt="B: 4 stars (out of 5)"
-                        class="mb-1"
-                        height="16"
-                        src="/svg/4-stars.svg"
-                        width="80"
-                      />
-                    </picture>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      2021-Jan-13
-                    </div>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      <span>
-                        Horror
-                      </span>
-                      <span>
-                         | Mystery
-                      </span>
-                      <span>
-                         | Thriller
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li
-            class="
-        block
-        
-      "
-            id="2001"
-          >
-            <div
-              class="pt-0 text-md"
-              style="z-index: 6;"
-            >
-              <div
-                class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-              >
-                2001
-              </div>
-            </div>
-            <div
-              class="bg-subtle"
-            >
-              <ol>
-                <li
-                  class="
-        bg-default
-        
-        
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-[102.5%]
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
-        
-      "
-                >
-                  <div
-                    class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-                  >
-                    <div
-                      class="w-list-item-poster shrink-0"
-                    >
-                      <img
-                        alt=""
-                        class="aspect-poster drop-shadow-sm"
-                        decoding="async"
-                        height="113"
-                        loading="lazy"
-                        sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdagon-2001.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                        srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdagon-2001.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdagon-2001.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdagon-2001.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdagon-2001.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                        width="80"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="
-          flex grow flex-col items-start gap-y-2
-          tablet:w-full
-          laptop:pr-4
-        "
-                  >
-                    <a
-                      class="
-          font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-        "
-                      href="/reviews/dagon-2001/"
-                    >
-                      Dagon  
-                      <span
-                        class="
-        text-xxs leading-none font-light text-subtle
-        tablet:text-xs
-      "
-                      >
-                        2001
-                      </span>
-                    </a>
-                    <picture>
-                      <source
-                        media="(prefers-color-scheme: dark)"
-                        srcset="/svg/4-stars-dark.svg"
-                      />
-                      <img
-                        alt="B: 4 stars (out of 5)"
-                        class="mb-1"
-                        height="16"
-                        src="/svg/4-stars.svg"
-                        width="80"
-                      />
-                    </picture>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      2021-Oct-06
-                    </div>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      <span>
-                        Fantasy
-                      </span>
-                      <span>
-                         | Horror
-                      </span>
-                      <span>
-                         | Mystery
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li
-            class="
-        block
-        
-      "
-            id="1990"
-          >
-            <div
-              class="pt-0 text-md"
-              style="z-index: 7;"
-            >
-              <div
-                class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-              >
-                1990
-              </div>
-            </div>
-            <div
-              class="bg-subtle"
-            >
-              <ol>
-                <li
-                  class="
-        bg-default
-        
-        
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-[102.5%]
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
-        
-      "
-                >
-                  <div
-                    class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-                  >
-                    <div
-                      class="w-list-item-poster shrink-0"
-                    >
-                      <img
-                        alt=""
-                        class="aspect-poster drop-shadow-sm"
-                        decoding="async"
-                        height="113"
-                        loading="lazy"
-                        sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffrankenhooker-1990.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                        srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffrankenhooker-1990.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffrankenhooker-1990.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffrankenhooker-1990.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffrankenhooker-1990.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                        width="80"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="
-          flex grow flex-col items-start gap-y-2
-          tablet:w-full
-          laptop:pr-4
-        "
-                  >
-                    <a
-                      class="
-          font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-        "
-                      href="/reviews/frankenhooker-1990/"
-                    >
-                      Frankenhooker  
-                      <span
-                        class="
-        text-xxs leading-none font-light text-subtle
-        tablet:text-xs
-      "
-                      >
-                        1990
-                      </span>
-                    </a>
-                    <picture>
-                      <source
-                        media="(prefers-color-scheme: dark)"
-                        srcset="/svg/3-half-stars-dark.svg"
-                      />
-                      <img
-                        alt="B-: 3.5 stars (out of 5)"
-                        class="mb-1"
-                        height="16"
-                        src="/svg/3-half-stars.svg"
-                        width="80"
-                      />
-                    </picture>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      2024-Feb-29
-                    </div>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      <span>
-                        Comedy
-                      </span>
-                      <span>
-                         | Horror
-                      </span>
-                      <span>
-                         | Sci-Fi
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li
-            class="
-        block
-        
-      "
-            id="1986"
-          >
-            <div
-              class="pt-0 text-md"
-              style="z-index: 8;"
-            >
-              <div
-                class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-              >
-                1986
-              </div>
-            </div>
-            <div
-              class="bg-subtle"
-            >
-              <ol>
-                <li
-                  class="
-        bg-default
-        
-        
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-[102.5%]
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
-        
-      "
-                >
-                  <div
-                    class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-                  >
-                    <div
-                      class="w-list-item-poster shrink-0"
-                    >
-                      <img
-                        alt=""
-                        class="aspect-poster drop-shadow-sm"
-                        decoding="async"
-                        height="113"
-                        loading="lazy"
-                        sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffriday-the-13th-part-vi-jason-lives-1986.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                        srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffriday-the-13th-part-vi-jason-lives-1986.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffriday-the-13th-part-vi-jason-lives-1986.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffriday-the-13th-part-vi-jason-lives-1986.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffriday-the-13th-part-vi-jason-lives-1986.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                        width="80"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="
-          flex grow flex-col items-start gap-y-2
-          tablet:w-full
-          laptop:pr-4
-        "
-                  >
-                    <a
-                      class="
-          font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-        "
-                      href="/reviews/friday-the-13th-part-vi-jason-lives-1986/"
-                    >
-                      Friday the 13th Part VI: Jason Lives  
-                      <span
-                        class="
-        text-xxs leading-none font-light text-subtle
-        tablet:text-xs
-      "
-                      >
-                        1986
-                      </span>
-                    </a>
-                    <picture>
-                      <source
-                        media="(prefers-color-scheme: dark)"
-                        srcset="/svg/3-half-stars-dark.svg"
-                      />
-                      <img
-                        alt="B-: 3.5 stars (out of 5)"
-                        class="mb-1"
-                        height="16"
-                        src="/svg/3-half-stars.svg"
-                        width="80"
-                      />
-                    </picture>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      2021-Apr-16
-                    </div>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      <span>
-                        Horror
-                      </span>
-                      <span>
-                         | Thriller
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li
-            class="
-        block
-        
-      "
-            id="1984"
-          >
-            <div
-              class="pt-0 text-md"
-              style="z-index: 9;"
-            >
-              <div
-                class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-              >
-                1984
-              </div>
-            </div>
-            <div
-              class="bg-subtle"
-            >
-              <ol>
-                <li
-                  class="
-        bg-default
-        
-        
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-[102.5%]
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
-        
-      "
-                >
-                  <div
-                    class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-                  >
-                    <div
-                      class="w-list-item-poster shrink-0"
-                    >
-                      <img
-                        alt=""
-                        class="aspect-poster drop-shadow-sm"
-                        decoding="async"
-                        height="113"
-                        loading="lazy"
-                        sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffriday-the-13th-the-final-chapter-1984.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                        srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffriday-the-13th-the-final-chapter-1984.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffriday-the-13th-the-final-chapter-1984.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffriday-the-13th-the-final-chapter-1984.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffriday-the-13th-the-final-chapter-1984.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                        width="80"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="
-          flex grow flex-col items-start gap-y-2
-          tablet:w-full
-          laptop:pr-4
-        "
-                  >
-                    <a
-                      class="
-          font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-        "
-                      href="/reviews/friday-the-13th-the-final-chapter-1984/"
-                    >
-                      Friday the 13th: The Final Chapter  
-                      <span
-                        class="
-        text-xxs leading-none font-light text-subtle
-        tablet:text-xs
-      "
-                      >
-                        1984
-                      </span>
-                    </a>
-                    <picture>
-                      <source
-                        media="(prefers-color-scheme: dark)"
-                        srcset="/svg/4-stars-dark.svg"
-                      />
-                      <img
-                        alt="B: 4 stars (out of 5)"
-                        class="mb-1"
-                        height="16"
-                        src="/svg/4-stars.svg"
-                        width="80"
-                      />
-                    </picture>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      2021-Apr-02
-                    </div>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      <span>
-                        Horror
-                      </span>
-                      <span>
-                         | Thriller
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li
-            class="
-        block
-        
-      "
-            id="1971"
-          >
-            <div
-              class="pt-0 text-md"
-              style="z-index: 10;"
-            >
-              <div
-                class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-              >
-                1971
-              </div>
-            </div>
-            <div
-              class="bg-subtle"
-            >
-              <ol>
-                <li
-                  class="
-        bg-default
-        
-        
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-[102.5%]
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
-        
-      "
-                >
-                  <div
-                    class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-                  >
-                    <div
-                      class="w-list-item-poster shrink-0"
-                    >
-                      <img
-                        alt=""
-                        class="aspect-poster drop-shadow-sm"
-                        decoding="async"
-                        height="113"
-                        loading="lazy"
-                        sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhannie-caulder-1971.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                        srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhannie-caulder-1971.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhannie-caulder-1971.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhannie-caulder-1971.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhannie-caulder-1971.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                        width="80"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="
-          flex grow flex-col items-start gap-y-2
-          tablet:w-full
-          laptop:pr-4
-        "
-                  >
-                    <a
-                      class="
-          font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-        "
-                      href="/reviews/hannie-caulder-1971/"
-                    >
-                      Hannie Caulder  
-                      <span
-                        class="
-        text-xxs leading-none font-light text-subtle
-        tablet:text-xs
-      "
-                      >
-                        1971
-                      </span>
-                    </a>
-                    <picture>
-                      <source
-                        media="(prefers-color-scheme: dark)"
-                        srcset="/svg/4-stars-dark.svg"
-                      />
-                      <img
-                        alt="B: 4 stars (out of 5)"
-                        class="mb-1"
-                        height="16"
-                        src="/svg/4-stars.svg"
-                        width="80"
-                      />
-                    </picture>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      2022-Aug-20
-                    </div>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      <span>
-                        Crime
-                      </span>
-                      <span>
-                         | Drama
-                      </span>
-                      <span>
-                         | Western
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li
-            class="
-        block
-        
-      "
-            id="1965"
-          >
-            <div
-              class="pt-0 text-md"
-              style="z-index: 11;"
-            >
-              <div
-                class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-              >
-                1965
-              </div>
-            </div>
-            <div
-              class="bg-subtle"
-            >
-              <ol>
-                <li
-                  class="
-        bg-default
-        
-        
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-[102.5%]
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
-        
-      "
-                >
-                  <div
-                    class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-                  >
-                    <div
-                      class="w-list-item-poster shrink-0"
-                    >
-                      <img
-                        alt=""
-                        class="aspect-poster drop-shadow-sm"
-                        decoding="async"
-                        height="113"
-                        loading="lazy"
-                        sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhaving-a-wild-weekend-1965.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                        srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhaving-a-wild-weekend-1965.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhaving-a-wild-weekend-1965.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhaving-a-wild-weekend-1965.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhaving-a-wild-weekend-1965.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                        width="80"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="
-          flex grow flex-col items-start gap-y-2
-          tablet:w-full
-          laptop:pr-4
-        "
-                  >
-                    <a
-                      class="
-          font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-        "
-                      href="/reviews/having-a-wild-weekend-1965/"
-                    >
-                      Having a Wild Weekend  
-                      <span
-                        class="
-        text-xxs leading-none font-light text-subtle
-        tablet:text-xs
-      "
-                      >
-                        1965
-                      </span>
-                    </a>
-                    <picture>
-                      <source
-                        media="(prefers-color-scheme: dark)"
-                        srcset="/svg/3-half-stars-dark.svg"
-                      />
-                      <img
-                        alt="B-: 3.5 stars (out of 5)"
-                        class="mb-1"
-                        height="16"
-                        src="/svg/3-half-stars.svg"
-                        width="80"
-                      />
-                    </picture>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      2023-Jun-18
-                    </div>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      <span>
-                        Comedy
-                      </span>
-                      <span>
-                         | Music
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li
-            class="
-        block
-        
-      "
-            id="1956"
-          >
-            <div
-              class="pt-0 text-md"
-              style="z-index: 12;"
-            >
-              <div
-                class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-              >
-                1956
-              </div>
-            </div>
-            <div
-              class="bg-subtle"
-            >
-              <ol>
-                <li
-                  class="
-        bg-default
-        
-        
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-[102.5%]
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
-        
-      "
-                >
-                  <div
-                    class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-                  >
-                    <div
-                      class="w-list-item-poster shrink-0"
-                    >
-                      <img
-                        alt=""
-                        class="aspect-poster drop-shadow-sm"
-                        decoding="async"
-                        height="113"
-                        loading="lazy"
-                        sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fbandido-1956.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                        srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fbandido-1956.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fbandido-1956.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fbandido-1956.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fbandido-1956.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                        width="80"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="
-          flex grow flex-col items-start gap-y-2
-          tablet:w-full
-          laptop:pr-4
-        "
-                  >
-                    <a
-                      class="
-          font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-        "
-                      href="/reviews/bandido-1956/"
-                    >
-                      Bandido!  
-                      <span
-                        class="
-        text-xxs leading-none font-light text-subtle
-        tablet:text-xs
-      "
-                      >
-                        1956
-                      </span>
-                    </a>
-                    <picture>
-                      <source
-                        media="(prefers-color-scheme: dark)"
-                        srcset="/svg/3-half-stars-dark.svg"
-                      />
-                      <img
-                        alt="B-: 3.5 stars (out of 5)"
-                        class="mb-1"
-                        height="16"
-                        src="/svg/3-half-stars.svg"
-                        width="80"
-                      />
-                    </picture>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      2012-Jan-27
-                    </div>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      <span>
-                        Action
-                      </span>
-                      <span>
-                         | Adventure
-                      </span>
-                      <span>
-                         | Drama
-                      </span>
-                      <span>
-                         | War
-                      </span>
-                      <span>
-                         | Western
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li
-            class="
-        block
-        
-      "
-            id="1946"
-          >
-            <div
-              class="pt-0 text-md"
-              style="z-index: 13;"
-            >
-              <div
-                class="
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          "
-              >
-                1946
-              </div>
-            </div>
-            <div
-              class="bg-subtle"
-            >
-              <ol>
-                <li
-                  class="
-        bg-default
-        
-        
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-[102.5%]
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
-        
-      "
-                >
-                  <div
-                    class="
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        "
-                  >
-                    <div
-                      class="w-list-item-poster shrink-0"
-                    >
-                      <img
-                        alt=""
-                        class="aspect-poster drop-shadow-sm"
-                        decoding="async"
-                        height="113"
-                        loading="lazy"
-                        sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
-                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrisis-1946.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
-                        srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrisis-1946.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrisis-1946.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrisis-1946.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrisis-1946.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
-                        width="80"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="
-          flex grow flex-col items-start gap-y-2
-          tablet:w-full
-          laptop:pr-4
-        "
-                  >
-                    <a
-                      class="
-          font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-        "
-                      href="/reviews/crisis-1946/"
-                    >
-                      Crisis  
-                      <span
-                        class="
-        text-xxs leading-none font-light text-subtle
-        tablet:text-xs
-      "
-                      >
-                        1946
-                      </span>
-                    </a>
-                    <picture>
-                      <source
-                        media="(prefers-color-scheme: dark)"
-                        srcset="/svg/3-half-stars-dark.svg"
-                      />
-                      <img
-                        alt="B-: 3.5 stars (out of 5)"
-                        class="mb-1"
-                        height="16"
-                        src="/svg/3-half-stars.svg"
-                        width="80"
-                      />
-                    </picture>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      2020-Dec-13
-                    </div>
-                    <div
-                      class="font-sans text-xs leading-4 font-light text-subtle"
-                    >
-                      <span>
-                        Drama
-                      </span>
-                      <span>
-                         | Romance
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-        </ol>
         <div
-          class="flex flex-col items-center px-container py-10"
-        />
-      </div>
-      <div
-        aria-hidden="true"
-        class="
+          class="
+              mx-auto max-w-[var(--breakpoint-desktop)] grow
+              scroll-mt-[calc(var(--list-scroll-offset)_+_var(--scroll-offset,0px))]
+              pb-10
+              [--list-scroll-offset:181px]
+              tablet:[--list-scroll-offset:121px]
+            "
+          id="list"
+        >
+          <ol
+            class="bg-default"
+            data-testid="list"
+          >
+            <li
+              class="
+        block
+        
+      "
+              id="2022"
+            >
+              <div
+                class="pt-0 text-md"
+                style="z-index: 1;"
+              >
+                <div
+                  class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+                >
+                  2022
+                </div>
+              </div>
+              <div
+                class="bg-subtle"
+              >
+                <ol>
+                  <li
+                    class="
+        bg-default
+        
+        
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        laptop:px-6
+        
+      "
+                  >
+                    <div
+                      class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+                    >
+                      <div
+                        class="w-list-item-poster shrink-0"
+                      >
+                        <img
+                          alt=""
+                          class="aspect-poster drop-shadow-sm"
+                          decoding="async"
+                          height="113"
+                          loading="lazy"
+                          sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                          src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrimes-of-the-future-2022.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                          srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrimes-of-the-future-2022.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrimes-of-the-future-2022.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrimes-of-the-future-2022.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrimes-of-the-future-2022.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                          width="80"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="
+          flex grow flex-col items-start gap-y-2
+          tablet:w-full
+          laptop:pr-4
+        "
+                    >
+                      <a
+                        class="
+          font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                        href="/reviews/crimes-of-the-future-2022/"
+                      >
+                        Crimes of the Future  
+                        <span
+                          class="
+        text-xxs leading-none font-light text-subtle
+        tablet:text-xs
+      "
+                        >
+                          2022
+                        </span>
+                      </a>
+                      <picture>
+                        <source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/3-half-stars-dark.svg"
+                        />
+                        <img
+                          alt="B-: 3.5 stars (out of 5)"
+                          class="mb-1"
+                          height="16"
+                          src="/svg/3-half-stars.svg"
+                          width="80"
+                        />
+                      </picture>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        2025-Jan-09
+                      </div>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        <span>
+                          Drama
+                        </span>
+                        <span>
+                           | Horror
+                        </span>
+                        <span>
+                           | Sci-Fi
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </li>
+            <li
+              class="
+        block
+        
+      "
+              id="2021"
+            >
+              <div
+                class="pt-0 text-md"
+                style="z-index: 2;"
+              >
+                <div
+                  class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+                >
+                  2021
+                </div>
+              </div>
+              <div
+                class="bg-subtle"
+              >
+                <ol>
+                  <li
+                    class="
+        bg-default
+        
+        
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        laptop:px-6
+        
+      "
+                  >
+                    <div
+                      class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+                    >
+                      <div
+                        class="w-list-item-poster shrink-0"
+                      >
+                        <img
+                          alt=""
+                          class="aspect-poster drop-shadow-sm"
+                          decoding="async"
+                          height="113"
+                          loading="lazy"
+                          sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                          src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fmortal-kombat-2021.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                          srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fmortal-kombat-2021.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fmortal-kombat-2021.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fmortal-kombat-2021.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fmortal-kombat-2021.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                          width="80"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="
+          flex grow flex-col items-start gap-y-2
+          tablet:w-full
+          laptop:pr-4
+        "
+                    >
+                      <a
+                        class="
+          font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                        href="/reviews/mortal-kombat-2021/"
+                      >
+                        Mortal Kombat  
+                        <span
+                          class="
+        text-xxs leading-none font-light text-subtle
+        tablet:text-xs
+      "
+                        >
+                          2021
+                        </span>
+                      </a>
+                      <picture>
+                        <source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/3-half-stars-dark.svg"
+                        />
+                        <img
+                          alt="B-: 3.5 stars (out of 5)"
+                          class="mb-1"
+                          height="16"
+                          src="/svg/3-half-stars.svg"
+                          width="80"
+                        />
+                      </picture>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        2021-May-13
+                      </div>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        <span>
+                          Action
+                        </span>
+                        <span>
+                           | Adventure
+                        </span>
+                        <span>
+                           | Fantasy
+                        </span>
+                        <span>
+                           | Sci-Fi
+                        </span>
+                        <span>
+                           | Thriller
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </li>
+            <li
+              class="
+        block
+        
+      "
+              id="2020"
+            >
+              <div
+                class="pt-0 text-md"
+                style="z-index: 3;"
+              >
+                <div
+                  class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+                >
+                  2020
+                </div>
+              </div>
+              <div
+                class="bg-subtle"
+              >
+                <ol>
+                  <li
+                    class="
+        bg-default
+        
+        
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        laptop:px-6
+        
+      "
+                  >
+                    <div
+                      class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+                    >
+                      <div
+                        class="w-list-item-poster shrink-0"
+                      >
+                        <img
+                          alt=""
+                          class="aspect-poster drop-shadow-sm"
+                          decoding="async"
+                          height="113"
+                          loading="lazy"
+                          sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                          src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-goreman-2020.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                          srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-goreman-2020.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-goreman-2020.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-goreman-2020.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-goreman-2020.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                          width="80"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="
+          flex grow flex-col items-start gap-y-2
+          tablet:w-full
+          laptop:pr-4
+        "
+                    >
+                      <a
+                        class="
+          font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                        href="/reviews/psycho-goreman-2020/"
+                      >
+                        Psycho Goreman  
+                        <span
+                          class="
+        text-xxs leading-none font-light text-subtle
+        tablet:text-xs
+      "
+                        >
+                          2020
+                        </span>
+                      </a>
+                      <picture>
+                        <source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/4-stars-dark.svg"
+                        />
+                        <img
+                          alt="B: 4 stars (out of 5)"
+                          class="mb-1"
+                          height="16"
+                          src="/svg/4-stars.svg"
+                          width="80"
+                        />
+                      </picture>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        2021-Jun-24
+                      </div>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        <span>
+                          Comedy
+                        </span>
+                        <span>
+                           | Horror
+                        </span>
+                        <span>
+                           | Sci-Fi
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </li>
+            <li
+              class="
+        block
+        
+      "
+              id="2019"
+            >
+              <div
+                class="pt-0 text-md"
+                style="z-index: 4;"
+              >
+                <div
+                  class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+                >
+                  2019
+                </div>
+              </div>
+              <div
+                class="bg-subtle"
+              >
+                <ol>
+                  <li
+                    class="
+        bg-default
+        
+        
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        laptop:px-6
+        
+      "
+                  >
+                    <div
+                      class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+                    >
+                      <div
+                        class="w-list-item-poster shrink-0"
+                      >
+                        <img
+                          alt=""
+                          class="aspect-poster drop-shadow-sm"
+                          decoding="async"
+                          height="113"
+                          loading="lazy"
+                          sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                          src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcolor-out-of-space-2019.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                          srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcolor-out-of-space-2019.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcolor-out-of-space-2019.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcolor-out-of-space-2019.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcolor-out-of-space-2019.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                          width="80"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="
+          flex grow flex-col items-start gap-y-2
+          tablet:w-full
+          laptop:pr-4
+        "
+                    >
+                      <a
+                        class="
+          font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                        href="/reviews/color-out-of-space-2019/"
+                      >
+                        Color Out of Space  
+                        <span
+                          class="
+        text-xxs leading-none font-light text-subtle
+        tablet:text-xs
+      "
+                        >
+                          2019
+                        </span>
+                      </a>
+                      <picture>
+                        <source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/3-half-stars-dark.svg"
+                        />
+                        <img
+                          alt="B-: 3.5 stars (out of 5)"
+                          class="mb-1"
+                          height="16"
+                          src="/svg/3-half-stars.svg"
+                          width="80"
+                        />
+                      </picture>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        2021-May-27
+                      </div>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        <span>
+                          Horror
+                        </span>
+                        <span>
+                           | Mystery
+                        </span>
+                        <span>
+                           | Sci-Fi
+                        </span>
+                        <span>
+                           | Thriller
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </li>
+            <li
+              class="
+        block
+        
+      "
+              id="2018"
+            >
+              <div
+                class="pt-0 text-md"
+                style="z-index: 5;"
+              >
+                <div
+                  class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+                >
+                  2018
+                </div>
+              </div>
+              <div
+                class="bg-subtle"
+              >
+                <ol>
+                  <li
+                    class="
+        bg-default
+        
+        
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        laptop:px-6
+        
+      "
+                  >
+                    <div
+                      class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+                    >
+                      <div
+                        class="w-list-item-poster shrink-0"
+                      >
+                        <img
+                          alt=""
+                          class="aspect-poster drop-shadow-sm"
+                          decoding="async"
+                          height="113"
+                          loading="lazy"
+                          sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                          src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-perfection-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                          srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-perfection-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-perfection-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-perfection-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-perfection-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                          width="80"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="
+          flex grow flex-col items-start gap-y-2
+          tablet:w-full
+          laptop:pr-4
+        "
+                    >
+                      <a
+                        class="
+          font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                        href="/reviews/the-perfection-2018/"
+                      >
+                        The Perfection  
+                        <span
+                          class="
+        text-xxs leading-none font-light text-subtle
+        tablet:text-xs
+      "
+                        >
+                          2018
+                        </span>
+                      </a>
+                      <picture>
+                        <source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/3-half-stars-dark.svg"
+                        />
+                        <img
+                          alt="B-: 3.5 stars (out of 5)"
+                          class="mb-1"
+                          height="16"
+                          src="/svg/3-half-stars.svg"
+                          width="80"
+                        />
+                      </picture>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        2021-Feb-07
+                      </div>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        <span>
+                          Drama
+                        </span>
+                        <span>
+                           | Horror
+                        </span>
+                        <span>
+                           | Thriller
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="
+        bg-default
+        
+        
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        laptop:px-6
+        
+      "
+                  >
+                    <div
+                      class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+                    >
+                      <div
+                        class="w-list-item-poster shrink-0"
+                      >
+                        <img
+                          alt=""
+                          class="aspect-poster drop-shadow-sm"
+                          decoding="async"
+                          height="113"
+                          loading="lazy"
+                          sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                          src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fin-fabric-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                          srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fin-fabric-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fin-fabric-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fin-fabric-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fin-fabric-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                          width="80"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="
+          flex grow flex-col items-start gap-y-2
+          tablet:w-full
+          laptop:pr-4
+        "
+                    >
+                      <a
+                        class="
+          font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                        href="/reviews/in-fabric-2018/"
+                      >
+                        In Fabric  
+                        <span
+                          class="
+        text-xxs leading-none font-light text-subtle
+        tablet:text-xs
+      "
+                        >
+                          2018
+                        </span>
+                      </a>
+                      <picture>
+                        <source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/4-stars-dark.svg"
+                        />
+                        <img
+                          alt="B: 4 stars (out of 5)"
+                          class="mb-1"
+                          height="16"
+                          src="/svg/4-stars.svg"
+                          width="80"
+                        />
+                      </picture>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        2021-Mar-10
+                      </div>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        <span>
+                          Comedy
+                        </span>
+                        <span>
+                           | Drama
+                        </span>
+                        <span>
+                           | Fantasy
+                        </span>
+                        <span>
+                           | Horror
+                        </span>
+                        <span>
+                           | Mystery
+                        </span>
+                        <span>
+                           | Thriller
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="
+        bg-default
+        
+        
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        laptop:px-6
+        
+      "
+                  >
+                    <div
+                      class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+                    >
+                      <div
+                        class="w-list-item-poster shrink-0"
+                      >
+                        <img
+                          alt=""
+                          class="aspect-poster drop-shadow-sm"
+                          decoding="async"
+                          height="113"
+                          loading="lazy"
+                          sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                          src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpiercing-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                          srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpiercing-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpiercing-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpiercing-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpiercing-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                          width="80"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="
+          flex grow flex-col items-start gap-y-2
+          tablet:w-full
+          laptop:pr-4
+        "
+                    >
+                      <a
+                        class="
+          font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                        href="/reviews/piercing-2018/"
+                      >
+                        Piercing  
+                        <span
+                          class="
+        text-xxs leading-none font-light text-subtle
+        tablet:text-xs
+      "
+                        >
+                          2018
+                        </span>
+                      </a>
+                      <picture>
+                        <source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/4-stars-dark.svg"
+                        />
+                        <img
+                          alt="B: 4 stars (out of 5)"
+                          class="mb-1"
+                          height="16"
+                          src="/svg/4-stars.svg"
+                          width="80"
+                        />
+                      </picture>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        2021-Jan-13
+                      </div>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        <span>
+                          Horror
+                        </span>
+                        <span>
+                           | Mystery
+                        </span>
+                        <span>
+                           | Thriller
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </li>
+            <li
+              class="
+        block
+        
+      "
+              id="2001"
+            >
+              <div
+                class="pt-0 text-md"
+                style="z-index: 6;"
+              >
+                <div
+                  class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+                >
+                  2001
+                </div>
+              </div>
+              <div
+                class="bg-subtle"
+              >
+                <ol>
+                  <li
+                    class="
+        bg-default
+        
+        
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        laptop:px-6
+        
+      "
+                  >
+                    <div
+                      class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+                    >
+                      <div
+                        class="w-list-item-poster shrink-0"
+                      >
+                        <img
+                          alt=""
+                          class="aspect-poster drop-shadow-sm"
+                          decoding="async"
+                          height="113"
+                          loading="lazy"
+                          sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                          src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdagon-2001.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                          srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdagon-2001.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdagon-2001.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdagon-2001.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdagon-2001.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                          width="80"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="
+          flex grow flex-col items-start gap-y-2
+          tablet:w-full
+          laptop:pr-4
+        "
+                    >
+                      <a
+                        class="
+          font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                        href="/reviews/dagon-2001/"
+                      >
+                        Dagon  
+                        <span
+                          class="
+        text-xxs leading-none font-light text-subtle
+        tablet:text-xs
+      "
+                        >
+                          2001
+                        </span>
+                      </a>
+                      <picture>
+                        <source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/4-stars-dark.svg"
+                        />
+                        <img
+                          alt="B: 4 stars (out of 5)"
+                          class="mb-1"
+                          height="16"
+                          src="/svg/4-stars.svg"
+                          width="80"
+                        />
+                      </picture>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        2021-Oct-06
+                      </div>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        <span>
+                          Fantasy
+                        </span>
+                        <span>
+                           | Horror
+                        </span>
+                        <span>
+                           | Mystery
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </li>
+            <li
+              class="
+        block
+        
+      "
+              id="1990"
+            >
+              <div
+                class="pt-0 text-md"
+                style="z-index: 7;"
+              >
+                <div
+                  class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+                >
+                  1990
+                </div>
+              </div>
+              <div
+                class="bg-subtle"
+              >
+                <ol>
+                  <li
+                    class="
+        bg-default
+        
+        
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        laptop:px-6
+        
+      "
+                  >
+                    <div
+                      class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+                    >
+                      <div
+                        class="w-list-item-poster shrink-0"
+                      >
+                        <img
+                          alt=""
+                          class="aspect-poster drop-shadow-sm"
+                          decoding="async"
+                          height="113"
+                          loading="lazy"
+                          sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                          src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffrankenhooker-1990.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                          srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffrankenhooker-1990.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffrankenhooker-1990.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffrankenhooker-1990.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffrankenhooker-1990.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                          width="80"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="
+          flex grow flex-col items-start gap-y-2
+          tablet:w-full
+          laptop:pr-4
+        "
+                    >
+                      <a
+                        class="
+          font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                        href="/reviews/frankenhooker-1990/"
+                      >
+                        Frankenhooker  
+                        <span
+                          class="
+        text-xxs leading-none font-light text-subtle
+        tablet:text-xs
+      "
+                        >
+                          1990
+                        </span>
+                      </a>
+                      <picture>
+                        <source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/3-half-stars-dark.svg"
+                        />
+                        <img
+                          alt="B-: 3.5 stars (out of 5)"
+                          class="mb-1"
+                          height="16"
+                          src="/svg/3-half-stars.svg"
+                          width="80"
+                        />
+                      </picture>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        2024-Feb-29
+                      </div>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        <span>
+                          Comedy
+                        </span>
+                        <span>
+                           | Horror
+                        </span>
+                        <span>
+                           | Sci-Fi
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </li>
+            <li
+              class="
+        block
+        
+      "
+              id="1986"
+            >
+              <div
+                class="pt-0 text-md"
+                style="z-index: 8;"
+              >
+                <div
+                  class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+                >
+                  1986
+                </div>
+              </div>
+              <div
+                class="bg-subtle"
+              >
+                <ol>
+                  <li
+                    class="
+        bg-default
+        
+        
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        laptop:px-6
+        
+      "
+                  >
+                    <div
+                      class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+                    >
+                      <div
+                        class="w-list-item-poster shrink-0"
+                      >
+                        <img
+                          alt=""
+                          class="aspect-poster drop-shadow-sm"
+                          decoding="async"
+                          height="113"
+                          loading="lazy"
+                          sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                          src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffriday-the-13th-part-vi-jason-lives-1986.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                          srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffriday-the-13th-part-vi-jason-lives-1986.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffriday-the-13th-part-vi-jason-lives-1986.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffriday-the-13th-part-vi-jason-lives-1986.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffriday-the-13th-part-vi-jason-lives-1986.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                          width="80"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="
+          flex grow flex-col items-start gap-y-2
+          tablet:w-full
+          laptop:pr-4
+        "
+                    >
+                      <a
+                        class="
+          font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                        href="/reviews/friday-the-13th-part-vi-jason-lives-1986/"
+                      >
+                        Friday the 13th Part VI: Jason Lives  
+                        <span
+                          class="
+        text-xxs leading-none font-light text-subtle
+        tablet:text-xs
+      "
+                        >
+                          1986
+                        </span>
+                      </a>
+                      <picture>
+                        <source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/3-half-stars-dark.svg"
+                        />
+                        <img
+                          alt="B-: 3.5 stars (out of 5)"
+                          class="mb-1"
+                          height="16"
+                          src="/svg/3-half-stars.svg"
+                          width="80"
+                        />
+                      </picture>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        2021-Apr-16
+                      </div>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        <span>
+                          Horror
+                        </span>
+                        <span>
+                           | Thriller
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </li>
+            <li
+              class="
+        block
+        
+      "
+              id="1984"
+            >
+              <div
+                class="pt-0 text-md"
+                style="z-index: 9;"
+              >
+                <div
+                  class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+                >
+                  1984
+                </div>
+              </div>
+              <div
+                class="bg-subtle"
+              >
+                <ol>
+                  <li
+                    class="
+        bg-default
+        
+        
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        laptop:px-6
+        
+      "
+                  >
+                    <div
+                      class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+                    >
+                      <div
+                        class="w-list-item-poster shrink-0"
+                      >
+                        <img
+                          alt=""
+                          class="aspect-poster drop-shadow-sm"
+                          decoding="async"
+                          height="113"
+                          loading="lazy"
+                          sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                          src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffriday-the-13th-the-final-chapter-1984.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                          srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffriday-the-13th-the-final-chapter-1984.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffriday-the-13th-the-final-chapter-1984.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffriday-the-13th-the-final-chapter-1984.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffriday-the-13th-the-final-chapter-1984.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                          width="80"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="
+          flex grow flex-col items-start gap-y-2
+          tablet:w-full
+          laptop:pr-4
+        "
+                    >
+                      <a
+                        class="
+          font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                        href="/reviews/friday-the-13th-the-final-chapter-1984/"
+                      >
+                        Friday the 13th: The Final Chapter  
+                        <span
+                          class="
+        text-xxs leading-none font-light text-subtle
+        tablet:text-xs
+      "
+                        >
+                          1984
+                        </span>
+                      </a>
+                      <picture>
+                        <source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/4-stars-dark.svg"
+                        />
+                        <img
+                          alt="B: 4 stars (out of 5)"
+                          class="mb-1"
+                          height="16"
+                          src="/svg/4-stars.svg"
+                          width="80"
+                        />
+                      </picture>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        2021-Apr-02
+                      </div>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        <span>
+                          Horror
+                        </span>
+                        <span>
+                           | Thriller
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </li>
+            <li
+              class="
+        block
+        
+      "
+              id="1971"
+            >
+              <div
+                class="pt-0 text-md"
+                style="z-index: 10;"
+              >
+                <div
+                  class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+                >
+                  1971
+                </div>
+              </div>
+              <div
+                class="bg-subtle"
+              >
+                <ol>
+                  <li
+                    class="
+        bg-default
+        
+        
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        laptop:px-6
+        
+      "
+                  >
+                    <div
+                      class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+                    >
+                      <div
+                        class="w-list-item-poster shrink-0"
+                      >
+                        <img
+                          alt=""
+                          class="aspect-poster drop-shadow-sm"
+                          decoding="async"
+                          height="113"
+                          loading="lazy"
+                          sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                          src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhannie-caulder-1971.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                          srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhannie-caulder-1971.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhannie-caulder-1971.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhannie-caulder-1971.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhannie-caulder-1971.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                          width="80"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="
+          flex grow flex-col items-start gap-y-2
+          tablet:w-full
+          laptop:pr-4
+        "
+                    >
+                      <a
+                        class="
+          font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                        href="/reviews/hannie-caulder-1971/"
+                      >
+                        Hannie Caulder  
+                        <span
+                          class="
+        text-xxs leading-none font-light text-subtle
+        tablet:text-xs
+      "
+                        >
+                          1971
+                        </span>
+                      </a>
+                      <picture>
+                        <source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/4-stars-dark.svg"
+                        />
+                        <img
+                          alt="B: 4 stars (out of 5)"
+                          class="mb-1"
+                          height="16"
+                          src="/svg/4-stars.svg"
+                          width="80"
+                        />
+                      </picture>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        2022-Aug-20
+                      </div>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        <span>
+                          Crime
+                        </span>
+                        <span>
+                           | Drama
+                        </span>
+                        <span>
+                           | Western
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </li>
+            <li
+              class="
+        block
+        
+      "
+              id="1965"
+            >
+              <div
+                class="pt-0 text-md"
+                style="z-index: 11;"
+              >
+                <div
+                  class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+                >
+                  1965
+                </div>
+              </div>
+              <div
+                class="bg-subtle"
+              >
+                <ol>
+                  <li
+                    class="
+        bg-default
+        
+        
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        laptop:px-6
+        
+      "
+                  >
+                    <div
+                      class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+                    >
+                      <div
+                        class="w-list-item-poster shrink-0"
+                      >
+                        <img
+                          alt=""
+                          class="aspect-poster drop-shadow-sm"
+                          decoding="async"
+                          height="113"
+                          loading="lazy"
+                          sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                          src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhaving-a-wild-weekend-1965.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                          srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhaving-a-wild-weekend-1965.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhaving-a-wild-weekend-1965.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhaving-a-wild-weekend-1965.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhaving-a-wild-weekend-1965.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                          width="80"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="
+          flex grow flex-col items-start gap-y-2
+          tablet:w-full
+          laptop:pr-4
+        "
+                    >
+                      <a
+                        class="
+          font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                        href="/reviews/having-a-wild-weekend-1965/"
+                      >
+                        Having a Wild Weekend  
+                        <span
+                          class="
+        text-xxs leading-none font-light text-subtle
+        tablet:text-xs
+      "
+                        >
+                          1965
+                        </span>
+                      </a>
+                      <picture>
+                        <source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/3-half-stars-dark.svg"
+                        />
+                        <img
+                          alt="B-: 3.5 stars (out of 5)"
+                          class="mb-1"
+                          height="16"
+                          src="/svg/3-half-stars.svg"
+                          width="80"
+                        />
+                      </picture>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        2023-Jun-18
+                      </div>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        <span>
+                          Comedy
+                        </span>
+                        <span>
+                           | Music
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </li>
+            <li
+              class="
+        block
+        
+      "
+              id="1956"
+            >
+              <div
+                class="pt-0 text-md"
+                style="z-index: 12;"
+              >
+                <div
+                  class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+                >
+                  1956
+                </div>
+              </div>
+              <div
+                class="bg-subtle"
+              >
+                <ol>
+                  <li
+                    class="
+        bg-default
+        
+        
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        laptop:px-6
+        
+      "
+                  >
+                    <div
+                      class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+                    >
+                      <div
+                        class="w-list-item-poster shrink-0"
+                      >
+                        <img
+                          alt=""
+                          class="aspect-poster drop-shadow-sm"
+                          decoding="async"
+                          height="113"
+                          loading="lazy"
+                          sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                          src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fbandido-1956.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                          srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fbandido-1956.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fbandido-1956.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fbandido-1956.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fbandido-1956.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                          width="80"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="
+          flex grow flex-col items-start gap-y-2
+          tablet:w-full
+          laptop:pr-4
+        "
+                    >
+                      <a
+                        class="
+          font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                        href="/reviews/bandido-1956/"
+                      >
+                        Bandido!  
+                        <span
+                          class="
+        text-xxs leading-none font-light text-subtle
+        tablet:text-xs
+      "
+                        >
+                          1956
+                        </span>
+                      </a>
+                      <picture>
+                        <source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/3-half-stars-dark.svg"
+                        />
+                        <img
+                          alt="B-: 3.5 stars (out of 5)"
+                          class="mb-1"
+                          height="16"
+                          src="/svg/3-half-stars.svg"
+                          width="80"
+                        />
+                      </picture>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        2012-Jan-27
+                      </div>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        <span>
+                          Action
+                        </span>
+                        <span>
+                           | Adventure
+                        </span>
+                        <span>
+                           | Drama
+                        </span>
+                        <span>
+                           | War
+                        </span>
+                        <span>
+                           | Western
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </li>
+            <li
+              class="
+        block
+        
+      "
+              id="1946"
+            >
+              <div
+                class="pt-0 text-md"
+                style="z-index: 13;"
+              >
+                <div
+                  class="
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            leading-8
+            tablet:px-1
+          "
+                >
+                  1946
+                </div>
+              </div>
+              <div
+                class="bg-subtle"
+              >
+                <ol>
+                  <li
+                    class="
+        bg-default
+        
+        
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        laptop:px-6
+        
+      "
+                  >
+                    <div
+                      class="
+          relative
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+        "
+                    >
+                      <div
+                        class="w-list-item-poster shrink-0"
+                      >
+                        <img
+                          alt=""
+                          class="aspect-poster drop-shadow-sm"
+                          decoding="async"
+                          height="113"
+                          loading="lazy"
+                          sizes="(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px"
+                          src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrisis-1946.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif"
+                          srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrisis-1946.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=20&h=28&q=80&f=avif 20w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrisis-1946.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=40&h=57&q=80&f=avif 40w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrisis-1946.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=80&h=113&q=80&f=avif 80w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrisis-1946.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=160&h=226&q=80&f=avif 160w"
+                          width="80"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="
+          flex grow flex-col items-start gap-y-2
+          tablet:w-full
+          laptop:pr-4
+        "
+                    >
+                      <a
+                        class="
+          font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                        href="/reviews/crisis-1946/"
+                      >
+                        Crisis  
+                        <span
+                          class="
+        text-xxs leading-none font-light text-subtle
+        tablet:text-xs
+      "
+                        >
+                          1946
+                        </span>
+                      </a>
+                      <picture>
+                        <source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/3-half-stars-dark.svg"
+                        />
+                        <img
+                          alt="B-: 3.5 stars (out of 5)"
+                          class="mb-1"
+                          height="16"
+                          src="/svg/3-half-stars.svg"
+                          width="80"
+                        />
+                      </picture>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        2020-Dec-13
+                      </div>
+                      <div
+                        class="font-sans text-xs leading-4 font-light text-subtle"
+                      >
+                        <span>
+                          Drama
+                        </span>
+                        <span>
+                           | Romance
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </li>
+          </ol>
+          <div
+            class="flex flex-col items-center px-container py-10"
+          />
+        </div>
+        <div
+          aria-hidden="true"
+          class="
               invisible fixed inset-0 bg-[rgba(0,0,0,.4)] opacity-0
               transition-opacity duration-200
               tablet-landscape:hidden
               
             "
-      />
-      <div
-        aria-label="Filters"
-        class="
+        />
+        <div
+          aria-label="Filters"
+          class="
               fixed top-0 right-0 z-filter-drawer flex h-full max-w-[380px]
               flex-col items-start gap-y-5 bg-default text-left text-inverse
               duration-200 ease-in-out
@@ -31216,10 +31223,10 @@ exports[`Underrated > renders 1`] = `
               tablet-landscape:drop-shadow-none
               laptop:w-[33%]
             "
-        id="filters"
-      >
-        <div
-          class="
+          id="filters"
+        >
+          <div
+            class="
                 flex h-full w-full flex-col text-sm
                 tablet:pt-12 tablet:text-base
                 tablet-landscape:h-auto tablet-landscape:overflow-visible
@@ -31227,18 +31234,18 @@ exports[`Underrated > renders 1`] = `
                 tablet-landscape:pt-0
                 laptop:px-8
               "
-        >
-          <fieldset
-            class="
+          >
+            <fieldset
+              class="
                   flex grow flex-col gap-5 px-container pb-4
                   [--control-scroll-offset:calc(181px_+_var(--scroll-offset,0px))]
                   tablet:gap-8
                   tablet-landscape:mt-0 tablet-landscape:gap-12
                   tablet-landscape:px-0 tablet-landscape:py-10
                 "
-          >
-            <legend
-              class="
+            >
+              <legend
+                class="
                     mb-5 block w-full pt-4 pb-4 text-lg text-subtle
                     shadow-bottom
                     tablet-landscape:mb-0 tablet-landscape:pt-10
@@ -31246,587 +31253,588 @@ exports[`Underrated > renders 1`] = `
                     tablet-landscape:text-xxs tablet-landscape:font-semibold
                     tablet-landscape:tracking-wide tablet-landscape:uppercase
                   "
-            >
-              Filter
-            </legend>
-            <label
-              class="flex flex-col text-subtle"
-            >
-              <span
-                class="
+              >
+                Filter
+              </legend>
+              <label
+                class="flex flex-col text-subtle"
+              >
+                <span
+                  class="
         inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide
         text-subtle uppercase
       "
-              >
-                Title
-              </span>
-              <input
-                class="
+                >
+                  Title
+                </span>
+                <input
+                  class="
           border-0 bg-default px-4 py-2 text-base text-default shadow-all
           outline-accent
           placeholder:text-default placeholder:opacity-50
         "
-                placeholder="Enter all or part of a title"
-                type="text"
-              />
-            </label>
-            <fieldset
-              class="text-subtle"
-            >
-              <legend
-                class="
-        inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide
-        text-subtle uppercase
-      "
-              >
-                Release Year
-              </legend>
-              <div
-                class="flex items-baseline"
-              >
-                <label
-                  class="flex flex-1 items-center gap-x-[.5ch]"
-                >
-                  <span
-                    class="min-w-10 text-left text-sm tracking-serif-wide"
-                  >
-                    From
-                  </span>
-                  <select
-                    class="
-          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
-          leading-6 text-subtle shadow-all outline-accent
-        "
-                  >
-                    <option
-                      value="1946"
-                    >
-                      1946
-                    </option>
-                    <option
-                      value="1956"
-                    >
-                      1956
-                    </option>
-                    <option
-                      value="1965"
-                    >
-                      1965
-                    </option>
-                    <option
-                      value="1971"
-                    >
-                      1971
-                    </option>
-                    <option
-                      value="1984"
-                    >
-                      1984
-                    </option>
-                    <option
-                      value="1986"
-                    >
-                      1986
-                    </option>
-                    <option
-                      value="1990"
-                    >
-                      1990
-                    </option>
-                    <option
-                      value="2001"
-                    >
-                      2001
-                    </option>
-                    <option
-                      value="2018"
-                    >
-                      2018
-                    </option>
-                    <option
-                      value="2019"
-                    >
-                      2019
-                    </option>
-                    <option
-                      value="2020"
-                    >
-                      2020
-                    </option>
-                    <option
-                      value="2021"
-                    >
-                      2021
-                    </option>
-                    <option
-                      value="2022"
-                    >
-                      2022
-                    </option>
-                  </select>
-                </label>
-                <label
-                  class="flex flex-1 items-center"
-                >
-                  <span
-                    class="min-w-10 text-center text-sm tracking-serif-wide"
-                  >
-                    to
-                  </span>
-                  <select
-                    class="
-          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
-          leading-6 text-subtle shadow-all outline-accent
-        "
-                  >
-                    <option
-                      value="2022"
-                    >
-                      2022
-                    </option>
-                    <option
-                      value="2021"
-                    >
-                      2021
-                    </option>
-                    <option
-                      value="2020"
-                    >
-                      2020
-                    </option>
-                    <option
-                      value="2019"
-                    >
-                      2019
-                    </option>
-                    <option
-                      value="2018"
-                    >
-                      2018
-                    </option>
-                    <option
-                      value="2001"
-                    >
-                      2001
-                    </option>
-                    <option
-                      value="1990"
-                    >
-                      1990
-                    </option>
-                    <option
-                      value="1986"
-                    >
-                      1986
-                    </option>
-                    <option
-                      value="1984"
-                    >
-                      1984
-                    </option>
-                    <option
-                      value="1971"
-                    >
-                      1971
-                    </option>
-                    <option
-                      value="1965"
-                    >
-                      1965
-                    </option>
-                    <option
-                      value="1956"
-                    >
-                      1956
-                    </option>
-                    <option
-                      value="1946"
-                    >
-                      1946
-                    </option>
-                  </select>
-                </label>
-              </div>
-            </fieldset>
-            <fieldset
-              class="text-subtle"
-            >
-              <legend
-                class="
-        inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide
-        text-subtle uppercase
-      "
-              >
-                Review Year
-              </legend>
-              <div
-                class="flex items-baseline"
-              >
-                <label
-                  class="flex flex-1 items-center gap-x-[.5ch]"
-                >
-                  <span
-                    class="min-w-10 text-left text-sm tracking-serif-wide"
-                  >
-                    From
-                  </span>
-                  <select
-                    class="
-          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
-          leading-6 text-subtle shadow-all outline-accent
-        "
-                  >
-                    <option
-                      value="2012"
-                    >
-                      2012
-                    </option>
-                    <option
-                      value="2020"
-                    >
-                      2020
-                    </option>
-                    <option
-                      value="2021"
-                    >
-                      2021
-                    </option>
-                    <option
-                      value="2022"
-                    >
-                      2022
-                    </option>
-                    <option
-                      value="2023"
-                    >
-                      2023
-                    </option>
-                    <option
-                      value="2024"
-                    >
-                      2024
-                    </option>
-                    <option
-                      value="2025"
-                    >
-                      2025
-                    </option>
-                  </select>
-                </label>
-                <label
-                  class="flex flex-1 items-center"
-                >
-                  <span
-                    class="min-w-10 text-center text-sm tracking-serif-wide"
-                  >
-                    to
-                  </span>
-                  <select
-                    class="
-          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
-          leading-6 text-subtle shadow-all outline-accent
-        "
-                  >
-                    <option
-                      value="2025"
-                    >
-                      2025
-                    </option>
-                    <option
-                      value="2024"
-                    >
-                      2024
-                    </option>
-                    <option
-                      value="2023"
-                    >
-                      2023
-                    </option>
-                    <option
-                      value="2022"
-                    >
-                      2022
-                    </option>
-                    <option
-                      value="2021"
-                    >
-                      2021
-                    </option>
-                    <option
-                      value="2020"
-                    >
-                      2020
-                    </option>
-                    <option
-                      value="2012"
-                    >
-                      2012
-                    </option>
-                  </select>
-                </label>
-              </div>
-            </fieldset>
-            <fieldset
-              class="text-subtle"
-            >
-              <legend
-                class="
-        inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide
-        text-subtle uppercase
-      "
-              >
-                Grade
-              </legend>
-              <div
-                class="flex flex-wrap items-baseline"
-              >
-                <label
-                  class="flex flex-1 items-center gap-x-[.5ch]"
-                >
-                  <span
-                    class="min-w-10 text-left text-sm tracking-serif-wide"
-                  >
-                    From
-                  </span>
-                  <select
-                    class="
-          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
-          leading-6 text-subtle shadow-all outline-accent
-        "
-                  >
-                    <option
-                      value="1"
-                    >
-                      F
-                    </option>
-                    <option
-                      value="2"
-                    >
-                      D-
-                    </option>
-                    <option
-                      value="3"
-                    >
-                      D
-                    </option>
-                    <option
-                      value="4"
-                    >
-                      D+
-                    </option>
-                    <option
-                      value="5"
-                    >
-                      C-
-                    </option>
-                    <option
-                      value="6"
-                    >
-                      C
-                    </option>
-                    <option
-                      value="7"
-                    >
-                      C+
-                    </option>
-                    <option
-                      value="8"
-                    >
-                      B-
-                    </option>
-                    <option
-                      value="9"
-                    >
-                      B
-                    </option>
-                    <option
-                      value="10"
-                    >
-                      B+
-                    </option>
-                    <option
-                      value="11"
-                    >
-                      A-
-                    </option>
-                    <option
-                      value="12"
-                    >
-                      A
-                    </option>
-                    <option
-                      value="13"
-                    >
-                      A+
-                    </option>
-                  </select>
-                </label>
-                <label
-                  class="flex flex-1 items-center"
-                >
-                  <span
-                    class="min-w-10 text-center text-sm tracking-serif-wide"
-                  >
-                    to
-                  </span>
-                  <select
-                    class="
-          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
-          leading-6 text-subtle shadow-all outline-accent
-        "
-                  >
-                    <option
-                      value="13"
-                    >
-                      A+
-                    </option>
-                    <option
-                      value="12"
-                    >
-                      A
-                    </option>
-                    <option
-                      value="11"
-                    >
-                      A-
-                    </option>
-                    <option
-                      value="10"
-                    >
-                      B+
-                    </option>
-                    <option
-                      value="9"
-                    >
-                      B
-                    </option>
-                    <option
-                      value="8"
-                    >
-                      B-
-                    </option>
-                    <option
-                      value="7"
-                    >
-                      C+
-                    </option>
-                    <option
-                      value="6"
-                    >
-                      C
-                    </option>
-                    <option
-                      value="5"
-                    >
-                      C-
-                    </option>
-                    <option
-                      value="4"
-                    >
-                      D+
-                    </option>
-                    <option
-                      value="3"
-                    >
-                      D
-                    </option>
-                    <option
-                      value="2"
-                    >
-                      D-
-                    </option>
-                    <option
-                      value="1"
-                    >
-                      F
-                    </option>
-                  </select>
-                </label>
-              </div>
-            </fieldset>
-            <div
-              class="flex flex-col text-left text-subtle"
-            >
-              <label
-                class="
-        inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide
-        text-subtle uppercase
-      "
-                for="button-genres"
-              >
-                Genres
+                  placeholder="Enter all or part of a title"
+                  type="text"
+                />
               </label>
-              <div
-                class="relative"
+              <fieldset
+                class="text-subtle"
               >
-                <button
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  aria-label="Genres"
+                <legend
                   class="
+        inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide
+        text-subtle uppercase
+      "
+                >
+                  Release Year
+                </legend>
+                <div
+                  class="flex items-baseline"
+                >
+                  <label
+                    class="flex flex-1 items-center gap-x-[.5ch]"
+                  >
+                    <span
+                      class="min-w-10 text-left text-sm tracking-serif-wide"
+                    >
+                      From
+                    </span>
+                    <select
+                      class="
+          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
+          leading-6 text-subtle shadow-all outline-accent
+        "
+                    >
+                      <option
+                        value="1946"
+                      >
+                        1946
+                      </option>
+                      <option
+                        value="1956"
+                      >
+                        1956
+                      </option>
+                      <option
+                        value="1965"
+                      >
+                        1965
+                      </option>
+                      <option
+                        value="1971"
+                      >
+                        1971
+                      </option>
+                      <option
+                        value="1984"
+                      >
+                        1984
+                      </option>
+                      <option
+                        value="1986"
+                      >
+                        1986
+                      </option>
+                      <option
+                        value="1990"
+                      >
+                        1990
+                      </option>
+                      <option
+                        value="2001"
+                      >
+                        2001
+                      </option>
+                      <option
+                        value="2018"
+                      >
+                        2018
+                      </option>
+                      <option
+                        value="2019"
+                      >
+                        2019
+                      </option>
+                      <option
+                        value="2020"
+                      >
+                        2020
+                      </option>
+                      <option
+                        value="2021"
+                      >
+                        2021
+                      </option>
+                      <option
+                        value="2022"
+                      >
+                        2022
+                      </option>
+                    </select>
+                  </label>
+                  <label
+                    class="flex flex-1 items-center"
+                  >
+                    <span
+                      class="min-w-10 text-center text-sm tracking-serif-wide"
+                    >
+                      to
+                    </span>
+                    <select
+                      class="
+          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
+          leading-6 text-subtle shadow-all outline-accent
+        "
+                    >
+                      <option
+                        value="2022"
+                      >
+                        2022
+                      </option>
+                      <option
+                        value="2021"
+                      >
+                        2021
+                      </option>
+                      <option
+                        value="2020"
+                      >
+                        2020
+                      </option>
+                      <option
+                        value="2019"
+                      >
+                        2019
+                      </option>
+                      <option
+                        value="2018"
+                      >
+                        2018
+                      </option>
+                      <option
+                        value="2001"
+                      >
+                        2001
+                      </option>
+                      <option
+                        value="1990"
+                      >
+                        1990
+                      </option>
+                      <option
+                        value="1986"
+                      >
+                        1986
+                      </option>
+                      <option
+                        value="1984"
+                      >
+                        1984
+                      </option>
+                      <option
+                        value="1971"
+                      >
+                        1971
+                      </option>
+                      <option
+                        value="1965"
+                      >
+                        1965
+                      </option>
+                      <option
+                        value="1956"
+                      >
+                        1956
+                      </option>
+                      <option
+                        value="1946"
+                      >
+                        1946
+                      </option>
+                    </select>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset
+                class="text-subtle"
+              >
+                <legend
+                  class="
+        inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide
+        text-subtle uppercase
+      "
+                >
+                  Review Year
+                </legend>
+                <div
+                  class="flex items-baseline"
+                >
+                  <label
+                    class="flex flex-1 items-center gap-x-[.5ch]"
+                  >
+                    <span
+                      class="min-w-10 text-left text-sm tracking-serif-wide"
+                    >
+                      From
+                    </span>
+                    <select
+                      class="
+          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
+          leading-6 text-subtle shadow-all outline-accent
+        "
+                    >
+                      <option
+                        value="2012"
+                      >
+                        2012
+                      </option>
+                      <option
+                        value="2020"
+                      >
+                        2020
+                      </option>
+                      <option
+                        value="2021"
+                      >
+                        2021
+                      </option>
+                      <option
+                        value="2022"
+                      >
+                        2022
+                      </option>
+                      <option
+                        value="2023"
+                      >
+                        2023
+                      </option>
+                      <option
+                        value="2024"
+                      >
+                        2024
+                      </option>
+                      <option
+                        value="2025"
+                      >
+                        2025
+                      </option>
+                    </select>
+                  </label>
+                  <label
+                    class="flex flex-1 items-center"
+                  >
+                    <span
+                      class="min-w-10 text-center text-sm tracking-serif-wide"
+                    >
+                      to
+                    </span>
+                    <select
+                      class="
+          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
+          leading-6 text-subtle shadow-all outline-accent
+        "
+                    >
+                      <option
+                        value="2025"
+                      >
+                        2025
+                      </option>
+                      <option
+                        value="2024"
+                      >
+                        2024
+                      </option>
+                      <option
+                        value="2023"
+                      >
+                        2023
+                      </option>
+                      <option
+                        value="2022"
+                      >
+                        2022
+                      </option>
+                      <option
+                        value="2021"
+                      >
+                        2021
+                      </option>
+                      <option
+                        value="2020"
+                      >
+                        2020
+                      </option>
+                      <option
+                        value="2012"
+                      >
+                        2012
+                      </option>
+                    </select>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset
+                class="text-subtle"
+              >
+                <legend
+                  class="
+        inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide
+        text-subtle uppercase
+      "
+                >
+                  Grade
+                </legend>
+                <div
+                  class="flex flex-wrap items-baseline"
+                >
+                  <label
+                    class="flex flex-1 items-center gap-x-[.5ch]"
+                  >
+                    <span
+                      class="min-w-10 text-left text-sm tracking-serif-wide"
+                    >
+                      From
+                    </span>
+                    <select
+                      class="
+          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
+          leading-6 text-subtle shadow-all outline-accent
+        "
+                    >
+                      <option
+                        value="1"
+                      >
+                        F
+                      </option>
+                      <option
+                        value="2"
+                      >
+                        D-
+                      </option>
+                      <option
+                        value="3"
+                      >
+                        D
+                      </option>
+                      <option
+                        value="4"
+                      >
+                        D+
+                      </option>
+                      <option
+                        value="5"
+                      >
+                        C-
+                      </option>
+                      <option
+                        value="6"
+                      >
+                        C
+                      </option>
+                      <option
+                        value="7"
+                      >
+                        C+
+                      </option>
+                      <option
+                        value="8"
+                      >
+                        B-
+                      </option>
+                      <option
+                        value="9"
+                      >
+                        B
+                      </option>
+                      <option
+                        value="10"
+                      >
+                        B+
+                      </option>
+                      <option
+                        value="11"
+                      >
+                        A-
+                      </option>
+                      <option
+                        value="12"
+                      >
+                        A
+                      </option>
+                      <option
+                        value="13"
+                      >
+                        A+
+                      </option>
+                    </select>
+                  </label>
+                  <label
+                    class="flex flex-1 items-center"
+                  >
+                    <span
+                      class="min-w-10 text-center text-sm tracking-serif-wide"
+                    >
+                      to
+                    </span>
+                    <select
+                      class="
+          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
+          leading-6 text-subtle shadow-all outline-accent
+        "
+                    >
+                      <option
+                        value="13"
+                      >
+                        A+
+                      </option>
+                      <option
+                        value="12"
+                      >
+                        A
+                      </option>
+                      <option
+                        value="11"
+                      >
+                        A-
+                      </option>
+                      <option
+                        value="10"
+                      >
+                        B+
+                      </option>
+                      <option
+                        value="9"
+                      >
+                        B
+                      </option>
+                      <option
+                        value="8"
+                      >
+                        B-
+                      </option>
+                      <option
+                        value="7"
+                      >
+                        C+
+                      </option>
+                      <option
+                        value="6"
+                      >
+                        C
+                      </option>
+                      <option
+                        value="5"
+                      >
+                        C-
+                      </option>
+                      <option
+                        value="4"
+                      >
+                        D+
+                      </option>
+                      <option
+                        value="3"
+                      >
+                        D
+                      </option>
+                      <option
+                        value="2"
+                      >
+                        D-
+                      </option>
+                      <option
+                        value="1"
+                      >
+                        F
+                      </option>
+                    </select>
+                  </label>
+                </div>
+              </fieldset>
+              <div
+                class="flex flex-col text-left text-subtle"
+              >
+                <label
+                  class="
+        inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide
+        text-subtle uppercase
+      "
+                  for="button-genres"
+                >
+                  Genres
+                </label>
+                <div
+                  class="relative"
+                >
+                  <button
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-label="Genres"
+                    class="
             relative w-full cursor-default
             scroll-mt-[var(--control-scroll-offset,0)] rounded border
             border-default bg-default pr-10 pl-3 text-left text-base text-subtle
             focus:border-[rgb(38,132,255)]
             focus:shadow-[0px_0px_0px_1px_rgb(38,132,255)] focus:outline-none
           "
-                  id="button-genres"
-                  type="button"
-                >
-                  <div
-                    class="
+                    id="button-genres"
+                    type="button"
+                  >
+                    <div
+                      class="
               flex min-h-[36px] flex-wrap items-center gap-1 py-2
               pr-10
             "
-                  >
-                    <span
-                      class="text-subtle"
                     >
-                      Select...
-                    </span>
-                  </div>
-                  <span
-                    class="
+                      <span
+                        class="text-subtle"
+                      >
+                        Select...
+                      </span>
+                    </div>
+                    <span
+                      class="
               absolute top-1/2 right-0 flex -translate-y-1/2 items-center pr-2
             "
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="pointer-events-none h-5 w-5 text-subtle"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
                     >
-                      <path
-                        d="M19 9l-7 7-7-7"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        aria-hidden="true"
+                        class="pointer-events-none h-5 w-5 text-subtle"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 9l-7 7-7-7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
               </div>
-            </div>
-          </fieldset>
-          <div
-            class="
+            </fieldset>
+            <div
+              class="
                   sticky bottom-0 z-filter-footer mt-auto w-full self-end
                   border-t border-t-default bg-default px-8 py-4 drop-shadow-2xl
                   tablet-landscape:hidden
                 "
-          >
-            <button
-              class="
+            >
+              <button
+                class="
                     flex w-full cursor-pointer items-center justify-center
                     gap-x-4 bg-footer px-4 py-3 font-sans text-xs text-nowrap
                     text-inverse uppercase
                     tablet-landscape:hidden
                   "
-              type="button"
-            >
-              View 15 Results
-            </button>
+                type="button"
+              >
+                View 15 Results
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -2,7 +2,6 @@ import type { JSX } from "react";
 
 import { useReducer } from "react";
 
-import type { AvatarImageProps } from "~/api/avatars";
 import type { CastAndCrewMember } from "~/api/castAndCrew";
 import type { PosterImageProps } from "~/api/posters";
 
@@ -43,7 +42,6 @@ export type ListItemValue = Pick<
 };
 
 export type Props = {
-  avatarImageProps: AvatarImageProps | undefined;
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   initialSort: Sort;
@@ -55,7 +53,6 @@ export type Props = {
 };
 
 export function CastAndCrewMember({
-  avatarImageProps: _avatarImageProps,
   distinctReleaseYears,
   distinctReviewYears,
   initialSort,

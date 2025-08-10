@@ -2,7 +2,6 @@ import type { JSX } from "react";
 
 import { useReducer } from "react";
 
-import type { AvatarImageProps } from "~/api/avatars";
 import type { Collection, CollectionWithDetails } from "~/api/collections";
 import type { PosterImageProps } from "~/api/posters";
 
@@ -36,7 +35,6 @@ export type ListItemValue = Pick<
 };
 
 export type Props = {
-  avatarImageProps: AvatarImageProps | undefined;
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   initialSort: Sort;
@@ -48,7 +46,6 @@ export type Props = {
 };
 
 export function Collection({
-  avatarImageProps: _avatarImageProps,
   distinctReleaseYears,
   distinctReviewYears,
   initialSort,
