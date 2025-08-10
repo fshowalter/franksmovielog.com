@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 
 import { LabelText } from "~/components/LabelText";
 
@@ -14,12 +14,23 @@ export function MultiSelectField({
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownMaxHeight, setDropdownMaxHeight] = useState("15rem");
+  const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const optionsRef = useRef<HTMLUListElement>(null);
+  const optionsRef = useRef<(HTMLLIElement | null)[]>([]);
+  const listboxId = `listbox-${label.toLowerCase().replace(/\s+/g, '-')}`;
+  const buttonId = `button-${label.toLowerCase().replace(/\s+/g, '-')}`;
+
+  const availableOptions = options.filter(
+    (option) => !selectedOptions.includes(option)
+  );
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
+    if (!isOpen) {
+      // Reset highlighted index when opening
+      setHighlightedIndex(0);
+    }
   };
 
   const handleSelect = (option: string) => {
@@ -27,20 +38,28 @@ export function MultiSelectField({
     setSelectedOptions(newValues);
     onChange(newValues);
     
+    // Reset highlighted index for remaining options
+    setHighlightedIndex(0);
+    
     // Close dropdown after selection
     setTimeout(() => {
       setIsOpen(false);
+      buttonRef.current?.focus();
     }, 150);
   };
 
-  const removeOption = (optionToRemove: string) => {
+  const removeOption = (optionToRemove: string, focusButton = true) => {
     const newValues = selectedOptions.filter((o) => o !== optionToRemove);
     setSelectedOptions(newValues);
     onChange(newValues);
 
+    // Return focus to button after removal
+    if (focusButton && buttonRef.current) {
+      buttonRef.current.focus();
+    }
+
     // On desktop, scroll to keep control in view if removing items might cause layout shift
     if (window.innerWidth >= 1024 && buttonRef.current) {
-      // Small delay to allow DOM to update
       setTimeout(() => {
         buttonRef.current?.scrollIntoView({
           behavior: "smooth",
@@ -53,6 +72,7 @@ export function MultiSelectField({
   const clearAll = () => {
     setSelectedOptions([]);
     onChange([]);
+    buttonRef.current?.focus();
     
     // On desktop, scroll to keep control in view after clearing
     if (window.innerWidth >= 1024 && buttonRef.current) {
@@ -65,36 +85,101 @@ export function MultiSelectField({
     }
   };
 
+  // Handle keyboard navigation on the button
+  const handleButtonKeyDown = (e: KeyboardEvent<HTMLButtonElement>) => {
+    switch (e.key) {
+      case "ArrowDown":
+      case "ArrowUp":
+        e.preventDefault();
+        if (!isOpen) {
+          setIsOpen(true);
+          setHighlightedIndex(0);
+        }
+        break;
+      case "Enter":
+      case " ":
+        e.preventDefault();
+        handleToggle();
+        break;
+    }
+  };
+
+  // Handle keyboard navigation in the listbox
+  const handleListboxKeyDown = (e: KeyboardEvent) => {
+    if (!isOpen) return;
+
+    switch (e.key) {
+      case "ArrowDown":
+        e.preventDefault();
+        setHighlightedIndex((prev) => 
+          prev < availableOptions.length - 1 ? prev + 1 : prev
+        );
+        break;
+      case "ArrowUp":
+        e.preventDefault();
+        setHighlightedIndex((prev) => (prev > 0 ? prev - 1 : prev));
+        break;
+      case "Home":
+        e.preventDefault();
+        setHighlightedIndex(0);
+        break;
+      case "End":
+        e.preventDefault();
+        setHighlightedIndex(availableOptions.length - 1);
+        break;
+      case "Enter":
+      case " ":
+        e.preventDefault();
+        if (highlightedIndex >= 0 && highlightedIndex < availableOptions.length) {
+          handleSelect(availableOptions[highlightedIndex]);
+        }
+        break;
+      case "Escape":
+        e.preventDefault();
+        setIsOpen(false);
+        buttonRef.current?.focus();
+        break;
+      case "Tab":
+        // Allow tab to close the dropdown and move focus naturally
+        setIsOpen(false);
+        break;
+    }
+  };
+
   // Calculate available space when dropdown opens
   const calculateDropdownHeight = () => {
-    // Check if we're in mobile/drawer mode
-    const isMobileDrawer = window.innerWidth < 1024; // tablet-landscape breakpoint
+    const isMobileDrawer = window.innerWidth < 1024;
 
     if (isMobileDrawer && buttonRef.current) {
-      // Only adjust height in drawer mode
       const buttonRect = buttonRef.current.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
-
-      // Account for the footer button (approximately 80px) and some buffer
       const footerHeight = 100;
       const availableSpace = viewportHeight - buttonRect.bottom - footerHeight;
-
-      // Ensure minimum usable height
       const minHeight = 120;
       const maxHeight = 300;
 
       if (availableSpace < minHeight) {
-        // If very little space, just use what we have
         setDropdownMaxHeight(`${Math.max(availableSpace, 80)}px`);
       } else {
-        // Use available space up to maxHeight
         setDropdownMaxHeight(`${Math.min(availableSpace, maxHeight)}px`);
       }
     } else {
-      // Desktop mode - use default height (15rem = 240px)
       setDropdownMaxHeight("15rem");
     }
   };
+
+  // Scroll highlighted option into view
+  useEffect(() => {
+    if (isOpen && highlightedIndex >= 0 && optionsRef.current[highlightedIndex]) {
+      // Check if scrollIntoView exists (it doesn't in jsdom test environment)
+      if (typeof optionsRef.current[highlightedIndex]?.scrollIntoView === 'function') {
+        optionsRef.current[highlightedIndex].scrollIntoView({
+          block: "nearest",
+          behavior: "smooth",
+        });
+      }
+    }
+  }, [highlightedIndex, isOpen]);
 
   // Handle clicks outside to close dropdown
   useEffect(() => {
@@ -111,7 +196,6 @@ export function MultiSelectField({
       }
     };
 
-    // Small delay to avoid immediate closure on open
     const timer = setTimeout(() => {
       document.addEventListener("mousedown", handleClickOutside);
     }, 0);
@@ -120,21 +204,6 @@ export function MultiSelectField({
       clearTimeout(timer);
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isOpen]);
-
-  // Handle keyboard navigation
-  useEffect(() => {
-    if (!isOpen) return;
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setIsOpen(false);
-        buttonRef.current?.focus();
-      }
-    };
-
-    document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
   }, [isOpen]);
 
   // Calculate dropdown height when it opens
@@ -156,24 +225,22 @@ export function MultiSelectField({
     return () => window.removeEventListener("resize", handleResize);
   }, [isOpen]);
 
-  const availableOptions = options.filter(
-    (option) => !selectedOptions.includes(option)
-  );
+  // Generate option ID for aria-activedescendant
+  const getOptionId = (index: number) => `${listboxId}-option-${index}`;
 
   return (
     <div className="flex flex-col text-left text-subtle">
-      <LabelText as="label" htmlFor={label} value={label} />
+      <LabelText as="label" htmlFor={buttonId} value={label} />
 
       <div
         className="relative"
         onClick={(e) => {
-          // Prevent clicks within the listbox from bubbling up and closing the drawer
           e.stopPropagation();
         }}
       >
         <button
           ref={buttonRef}
-          id={label}
+          id={buttonId}
           type="button"
           className={`
             relative w-full cursor-default
@@ -185,9 +252,16 @@ export function MultiSelectField({
             focus:outline-none
           `}
           onClick={handleToggle}
+          onKeyDown={handleButtonKeyDown}
           aria-expanded={isOpen}
           aria-haspopup="listbox"
           aria-label={label}
+          aria-controls={isOpen ? listboxId : undefined}
+          aria-activedescendant={
+            isOpen && highlightedIndex >= 0 
+              ? getOptionId(highlightedIndex)
+              : undefined
+          }
         >
           <div
             className={`
@@ -206,29 +280,34 @@ export function MultiSelectField({
                     px-2 py-0.5 text-sm text-default
                   `}
                 >
-                  {option}
-                  <span
-                    role="button"
+                  <span>{option}</span>
+                  <button
+                    type="button"
                     tabIndex={-1}
                     aria-label={`Remove ${option}`}
                     className={`
                       -mr-1 ml-0.5 cursor-pointer text-subtle
-                      hover:text-accent
+                      hover:text-accent focus:text-accent
+                      focus:outline-none
                     `}
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
-                      removeOption(option);
+                      removeOption(option, false);
                     }}
-                    onMouseDown={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        removeOption(option, false);
+                      }
                     }}
                   >
                     <svg
                       className="h-3 w-3"
                       fill="currentColor"
                       viewBox="0 0 20 20"
+                      aria-hidden="true"
                     >
                       <path
                         fillRule="evenodd"
@@ -236,7 +315,7 @@ export function MultiSelectField({
                         clipRule="evenodd"
                       />
                     </svg>
-                  </span>
+                  </button>
                 </span>
               ))
             )}
@@ -249,28 +328,33 @@ export function MultiSelectField({
           >
             {selectedOptions.length > 0 && (
               <>
-                <span
-                  role="button"
+                <button
+                  type="button"
                   tabIndex={-1}
-                  aria-label="Clear all"
+                  aria-label="Clear all selections"
                   className={`
                     cursor-pointer p-1 text-subtle
-                    hover:text-accent
+                    hover:text-accent focus:text-accent
+                    focus:outline-none
                   `}
                   onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
                     clearAll();
                   }}
-                  onMouseDown={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      clearAll();
+                    }
                   }}
                 >
                   <svg
                     className="h-4 w-4"
                     fill="currentColor"
                     viewBox="0 0 20 20"
+                    aria-hidden="true"
                   >
                     <path
                       fillRule="evenodd"
@@ -278,13 +362,13 @@ export function MultiSelectField({
                       clipRule="evenodd"
                     />
                   </svg>
-                </span>
-                <span className="mx-1 h-5 border-l border-default" />
+                </button>
+                <span className="mx-1 h-5 border-l border-default" aria-hidden="true" />
               </>
             )}
             <svg
               aria-hidden="true"
-              className="h-5 w-5 text-subtle"
+              className="h-5 w-5 text-subtle pointer-events-none"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -309,31 +393,43 @@ export function MultiSelectField({
               focus:outline-none
             `}
             style={{ maxHeight: dropdownMaxHeight }}
+            onKeyDown={handleListboxKeyDown}
           >
             <ul
-              ref={optionsRef}
+              id={listboxId}
               role="listbox"
-              aria-labelledby={label}
+              aria-labelledby={`label-${buttonId}`}
               aria-multiselectable="true"
+              tabIndex={-1}
             >
-              {availableOptions.map((option) => (
-                <li
-                  key={option}
-                  role="option"
-                  aria-selected={false}
-                  className={`
-                    relative cursor-default select-none py-2 px-4
-                    hover:bg-stripe hover:text-subtle
-                    cursor-pointer
-                  `}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleSelect(option);
-                  }}
-                >
-                  <span className="block truncate">{option}</span>
+              {availableOptions.length === 0 ? (
+                <li className="py-2 px-4 text-subtle italic">
+                  No options available
                 </li>
-              ))}
+              ) : (
+                availableOptions.map((option, index) => (
+                  <li
+                    key={option}
+                    ref={(el) => { optionsRef.current[index] = el; }}
+                    id={getOptionId(index)}
+                    role="option"
+                    aria-selected={false}
+                    className={`
+                      relative cursor-pointer select-none py-2 px-4
+                      ${highlightedIndex === index 
+                        ? "bg-stripe text-default" 
+                        : "hover:bg-stripe hover:text-subtle"}
+                    `}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleSelect(option);
+                    }}
+                    onMouseEnter={() => setHighlightedIndex(index)}
+                  >
+                    <span className="block truncate">{option}</span>
+                  </li>
+                ))
+              )}
             </ul>
           </div>
         )}
