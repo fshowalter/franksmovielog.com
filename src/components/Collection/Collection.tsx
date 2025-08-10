@@ -3,17 +3,15 @@ import type { JSX } from "react";
 import { useReducer } from "react";
 
 import type { AvatarImageProps } from "~/api/avatars";
-import type { BackdropImageProps } from "~/api/backdrops";
 import type { Collection, CollectionWithDetails } from "~/api/collections";
 import type { PosterImageProps } from "~/api/posters";
 
-import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
 import { Grade } from "~/components/Grade";
 import { GroupedList } from "~/components/GroupedList";
 import { ListItem } from "~/components/ListItem";
 import { ListItemPoster } from "~/components/ListItemPoster";
 import { ListItemTitle } from "~/components/ListItemTitle";
-import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
+import { ListWithFilters } from "~/components/ListWithFilters";
 
 import type { Sort } from "./Collection.reducer";
 
@@ -39,7 +37,6 @@ export type ListItemValue = Pick<
 
 export type Props = {
   avatarImageProps: AvatarImageProps | undefined;
-  backdropImageProps: BackdropImageProps;
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   initialSort: Sort;
@@ -52,7 +49,6 @@ export type Props = {
 
 export function Collection({
   avatarImageProps,
-  backdropImageProps,
   distinctReleaseYears,
   distinctReviewYears,
   initialSort,
@@ -68,23 +64,7 @@ export function Collection({
     initState,
   );
   return (
-    <ListWithFiltersLayout
-      backdrop={
-        <Backdrop
-          breadcrumb={
-            <BreadcrumbLink href="/collections/">Collections</BreadcrumbLink>
-          }
-          deck={
-            <span dangerouslySetInnerHTML={{ __html: value.descriptionHtml }} />
-          }
-          imageProps={backdropImageProps}
-          title={value.name}
-        />
-      }
-      data-pagefind-body
-      data-pagefind-meta={
-        avatarImageProps ? `image:${avatarImageProps.src}` : ""
-      }
+    <ListWithFilters
       filters={
         <Filters
           dispatch={dispatch}

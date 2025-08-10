@@ -2,7 +2,10 @@
 import { allCastAndCrew } from "~/api/castAndCrew";
 import { CastAndCrewMember } from "~/components/CastAndCrewMember/CastAndCrewMember";
 import { getProps } from "~/components/CastAndCrewMember/getProps";
+import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
+import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
 import Layout from "~/layouts/Layout.astro";
+import React from "react";
 
 interface Props {
   slug: string;
@@ -25,16 +28,30 @@ export async function getStaticPaths() {
 
 const { slug } = Astro.props;
 const props = await getProps(slug);
+
+// Separate layout props from interactive props
+const { backdropImageProps, deck, ...interactiveProps } = props;
+
+// Create React elements in frontmatter
+const backdropElement = React.createElement(Backdrop, {
+  bottomShadow: true,
+  breadcrumb: React.createElement(BreadcrumbLink, { href: "/cast-and-crew/" }, "Cast & Crew"),
+  deck,
+  imageProps: backdropImageProps,
+  title: props.value.name
+});
 ---
 
 <Layout
   canonical={true}
   meta={{ description: props.metaDescription }}
   openGraph={{
-    description: props.deck,
+    description: deck,
     type: "website",
   }}
   title={`${props.value.name} movie reviews`}
 >
-  <CastAndCrewMember client:load {...props} />
+  <ListWithFiltersLayout backdrop={backdropElement}>
+    <CastAndCrewMember client:load {...interactiveProps} />
+  </ListWithFiltersLayout>
 </Layout>

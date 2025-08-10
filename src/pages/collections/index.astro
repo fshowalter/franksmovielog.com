@@ -1,9 +1,22 @@
 ---
 import { Collections } from "~/components/Collections/Collections";
 import { getProps } from "~/components/Collections/getProps";
+import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
+import { Backdrop } from "~/components/Backdrop";
 import Layout from "~/layouts/Layout.astro";
+import React from "react";
 
 const props = await getProps();
+
+// Separate layout props from interactive props
+const { backdropImageProps, deck, ...interactiveProps } = props;
+
+// Create React elements in frontmatter
+const backdropElement = React.createElement(Backdrop, {
+  deck,
+  imageProps: backdropImageProps,
+  title: "Collections"
+});
 ---
 
 <Layout
@@ -12,8 +25,10 @@ const props = await getProps();
     description:
       "A sortable index of movie collections reviewed on this site. Sort by name, review count, or title count.",
   }}
-  openGraph={{ description: props.deck, type: "website" }}
+  openGraph={{ description: deck, type: "website" }}
   title="Collections"
 >
-  <Collections client:load {...props} />
+  <ListWithFiltersLayout backdrop={backdropElement}>
+    <Collections client:load {...interactiveProps} />
+  </ListWithFiltersLayout>
 </Layout>

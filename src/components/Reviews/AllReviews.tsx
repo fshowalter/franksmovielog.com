@@ -2,21 +2,16 @@ import type { JSX } from "react";
 
 import { useReducer } from "react";
 
-import type { BackdropImageProps } from "~/api/backdrops";
 import type { ReviewListItemValue } from "~/components/ReviewListItem";
 
-import { Backdrop } from "~/components/Backdrop";
 import { GroupedList } from "~/components/GroupedList";
-import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
+import { ListWithFilters } from "~/components/ListWithFilters";
 import { ReviewListItem } from "~/components/ReviewListItem";
-import { ReviewsSubNav } from "~/components/ReviewsSubNav";
 
 import { Filters, SortOptions } from "./Filters";
 import { Actions, initState, reducer, type Sort } from "./reducer";
 
 export type Props = {
-  backdropImageProps: BackdropImageProps;
-  deck: string;
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
@@ -25,8 +20,6 @@ export type Props = {
 };
 
 export function AllReviews({
-  backdropImageProps,
-  deck,
   distinctGenres,
   distinctReleaseYears,
   distinctReviewYears,
@@ -43,10 +36,7 @@ export function AllReviews({
   );
 
   return (
-    <ListWithFiltersLayout
-      backdrop={
-        <Backdrop deck={deck} imageProps={backdropImageProps} title="Reviews" />
-      }
+    <ListWithFilters
       filters={
         <Filters
           dispatch={dispatch}
@@ -76,7 +66,6 @@ export function AllReviews({
           }),
         sortOptions: <SortOptions />,
       }}
-      subNav={<ReviewsSubNav active="all" />}
       totalCount={state.filteredValues.length}
     />
   );

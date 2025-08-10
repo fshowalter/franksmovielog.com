@@ -3,13 +3,11 @@ import type { JSX } from "react";
 import { useReducer } from "react";
 
 import type { AvatarImageProps } from "~/api/avatars";
-import type { BackdropImageProps } from "~/api/backdrops";
 import type { Collection } from "~/api/collections";
 
-import { Backdrop } from "~/components/Backdrop";
 import { ListItem } from "~/components/ListItem";
 import { ListItemAvatar } from "~/components/ListItemAvatar";
-import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
+import { ListWithFilters } from "~/components/ListWithFilters";
 
 import type { Sort } from "./Collections.reducer";
 
@@ -24,15 +22,11 @@ export type ListItemValue = Pick<
 };
 
 export type Props = {
-  backdropImageProps: BackdropImageProps;
-  deck: string;
   initialSort: Sort;
   values: ListItemValue[];
 };
 
 export function Collections({
-  backdropImageProps,
-  deck,
   initialSort,
   values,
 }: Props): JSX.Element {
@@ -46,14 +40,7 @@ export function Collections({
   );
 
   return (
-    <ListWithFiltersLayout
-      backdrop={
-        <Backdrop
-          deck={deck}
-          imageProps={backdropImageProps}
-          title="Collections"
-        />
-      }
+    <ListWithFilters
       filters={<Filters dispatch={dispatch} />}
       list={
         <ol

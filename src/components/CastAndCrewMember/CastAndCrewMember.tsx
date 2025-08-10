@@ -3,18 +3,16 @@ import type { JSX } from "react";
 import { useReducer } from "react";
 
 import type { AvatarImageProps } from "~/api/avatars";
-import type { BackdropImageProps } from "~/api/backdrops";
 import type { CastAndCrewMember } from "~/api/castAndCrew";
 import type { PosterImageProps } from "~/api/posters";
 
-import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
 import { CreditedAs } from "~/components/CreditedAs";
 import { Grade } from "~/components/Grade";
 import { GroupedList } from "~/components/GroupedList";
 import { ListItem } from "~/components/ListItem";
 import { ListItemPoster } from "~/components/ListItemPoster";
 import { ListItemTitle } from "~/components/ListItemTitle";
-import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
+import { ListWithFilters } from "~/components/ListWithFilters";
 import { WatchlistTitleSlug } from "~/components/WatchlistTitleSlug";
 
 import type { Sort } from "./CastAndCrewMember.reducer";
@@ -46,8 +44,6 @@ export type ListItemValue = Pick<
 
 export type Props = {
   avatarImageProps: AvatarImageProps | undefined;
-  backdropImageProps: BackdropImageProps;
-  deck: string;
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   initialSort: Sort;
@@ -60,8 +56,6 @@ export type Props = {
 
 export function CastAndCrewMember({
   avatarImageProps,
-  backdropImageProps,
-  deck,
   distinctReleaseYears,
   distinctReviewYears,
   initialSort,
@@ -77,22 +71,7 @@ export function CastAndCrewMember({
     initState,
   );
   return (
-    <ListWithFiltersLayout
-      backdrop={
-        <Backdrop
-          bottomShadow={true}
-          breadcrumb={
-            <BreadcrumbLink href="/cast-and-crew/">Cast & Crew</BreadcrumbLink>
-          }
-          deck={deck}
-          imageProps={backdropImageProps}
-          title={value.name}
-        />
-      }
-      data-pagefind-body
-      data-pagefind-meta={
-        avatarImageProps ? `image:${avatarImageProps.src}` : ""
-      }
+    <ListWithFilters
       filters={
         <Filters
           creditedAs={value.creditedAs}

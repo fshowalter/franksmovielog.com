@@ -2,7 +2,10 @@
 import { allCollections } from "~/api/collections";
 import { Collection } from "~/components/Collection/Collection";
 import { getProps } from "~/components/Collection/getProps";
+import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
+import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
 import Layout from "~/layouts/Layout.astro";
+import React from "react";
 
 interface Props {
   slug: string;
@@ -26,6 +29,19 @@ export async function getStaticPaths() {
 const { slug } = Astro.props;
 
 const props = await getProps(slug);
+
+// Separate layout props from interactive props
+const { backdropImageProps, ...interactiveProps } = props;
+
+// Create React elements in frontmatter
+const backdropElement = React.createElement(Backdrop, {
+  breadcrumb: React.createElement(BreadcrumbLink, { href: "/collections/" }, "Collections"),
+  deck: React.createElement("span", { 
+    dangerouslySetInnerHTML: { __html: props.value.descriptionHtml } 
+  }),
+  imageProps: backdropImageProps,
+  title: props.value.name
+});
 ---
 
 <Layout
@@ -39,5 +55,7 @@ const props = await getProps(slug);
   }}
   title={`${props.value.name} movie reviews`}
 >
-  <Collection client:load {...props} />
+  <ListWithFiltersLayout backdrop={backdropElement}>
+    <Collection client:load {...interactiveProps} />
+  </ListWithFiltersLayout>
 </Layout>

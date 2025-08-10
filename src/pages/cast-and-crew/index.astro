@@ -1,19 +1,35 @@
 ---
 import { CastAndCrew } from "~/components/CastAndCrew/CastAndCrew";
 import { getProps } from "~/components/CastAndCrew/getProps";
+import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
+import { Backdrop } from "~/components/Backdrop";
 import Layout from "~/layouts/Layout.astro";
+import React from "react";
 
 const props = await getProps();
+
+// Separate layout props from interactive props
+const { backdropImageProps, deck, ...interactiveProps } = props;
+
+// Create React elements in frontmatter
+const backdropElement = React.createElement(Backdrop, {
+  bottomShadow: true,
+  deck,
+  imageProps: backdropImageProps,
+  title: "Cast & Crew"
+});
 ---
 
 <Layout
   canonical={true}
   meta={{ description: props.metaDescription }}
   openGraph={{
-    description: props.deck,
+    description: deck,
     type: "website",
   }}
   title="Cast and Crew"
 >
-  <CastAndCrew client:load {...props} />
+  <ListWithFiltersLayout backdrop={backdropElement}>
+    <CastAndCrew client:load {...interactiveProps} />
+  </ListWithFiltersLayout>
 </Layout>

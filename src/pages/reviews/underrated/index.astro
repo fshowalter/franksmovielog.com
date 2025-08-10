@@ -1,16 +1,37 @@
 ---
 import { getPropsForUnderrated as getProps } from "~/components/Reviews/getProps";
 import { Underrated } from "~/components/Reviews/Underrated";
+import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
+import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
+import { ReviewsSubNav } from "~/components/ReviewsSubNav";
 import Layout from "~/layouts/Layout.astro";
+import React from "react";
 
 const props = await getProps();
+
+// Separate layout props from interactive props
+const { backdropImageProps, deck, ...interactiveProps } = props;
+
+// Create React elements in frontmatter
+const backdropElement = React.createElement(Backdrop, {
+  breadcrumb: React.createElement(BreadcrumbLink, { href: "/reviews/" }, "Reviews"),
+  deck,
+  imageProps: backdropImageProps,
+  title: "Underrated Surprises"
+});
+
+const subNavElement = React.createElement(ReviewsSubNav, {
+  active: "underrated"
+});
 ---
 
 <Layout
   canonical={true}
   meta={{ description: props.metaDescription }}
-  openGraph={{ description: props.deck, type: "website" }}
+  openGraph={{ description: deck, type: "website" }}
   title="Underrated Surprises"
 >
-  <Underrated client:load {...props} />
+  <ListWithFiltersLayout backdrop={backdropElement} subNav={subNavElement}>
+    <Underrated client:load {...interactiveProps} />
+  </ListWithFiltersLayout>
 </Layout>
