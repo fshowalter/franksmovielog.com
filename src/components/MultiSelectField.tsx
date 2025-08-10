@@ -341,7 +341,7 @@ export function MultiSelectField({
           >
             {selectedOptions.length > 0 && (
               <>
-                <button
+                <span
                   aria-label="Clear all selections"
                   className={`
                     cursor-pointer p-1 text-subtle
@@ -360,8 +360,8 @@ export function MultiSelectField({
                       clearAll();
                     }
                   }}
+                  role="button"
                   tabIndex={-1}
-                  type="button"
                 >
                   <svg
                     aria-hidden="true"
@@ -375,7 +375,7 @@ export function MultiSelectField({
                       fillRule="evenodd"
                     />
                   </svg>
-                </button>
+                </span>
                 <span
                   aria-hidden="true"
                   className={`mx-1 h-5 border-l border-default`}
