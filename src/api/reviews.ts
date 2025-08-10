@@ -70,7 +70,12 @@ export async function allReviews(): Promise<Reviews> {
 }
 
 export async function loadContent<
-  T extends { excerptPlainText: string; imdbId: string; rawContent: string; title: string },
+  T extends {
+    excerptPlainText: string;
+    imdbId: string;
+    rawContent: string;
+    title: string;
+  },
 >(review: T): Promise<ReviewContent & T> {
   const viewingsMarkdown =
     cachedViewingsMarkdown || (await allViewingsMarkdown());
