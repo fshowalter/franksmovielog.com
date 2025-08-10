@@ -9,7 +9,6 @@ export default getViteConfig({
       provider: "istanbul",
     },
     globals: true, // needed for testing-library teardown
-    maxWorkers: 2,
     projects: [
       {
         extends: true,
