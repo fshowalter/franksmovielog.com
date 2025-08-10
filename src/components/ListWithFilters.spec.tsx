@@ -2,7 +2,7 @@ import { act, render, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
-import { ListWithFiltersLayout } from "./ListWithFiltersLayout";
+import { ListWithFilters } from "./ListWithFilters";
 
 // Mock scrollIntoView for all tests
 if (!Element.prototype.scrollIntoView) {
@@ -47,7 +47,7 @@ const mockProps = {
   totalCount: 100,
 };
 
-describe("ListWithFiltersLayout", () => {
+describe("ListWithFilters", () => {
   it("renders", ({ expect }) => {
     const { asFragment } = render(<ListWithFiltersLayout {...mockProps} />);
 
@@ -94,7 +94,7 @@ describe("ListWithFiltersLayout", () => {
     );
 
     render(
-      <ListWithFiltersLayout
+      <ListWithFilters
         {...mockProps}
         listHeaderButtons={listHeaderButtons}
       />,
@@ -117,7 +117,7 @@ describe("ListWithFiltersLayout", () => {
     expect.hasAssertions();
 
     const { container } = render(
-      <ListWithFiltersLayout {...mockProps} className="transform-3d" />,
+      <ListWithFilters {...mockProps} className="transform-3d" />,
     );
 
     const layoutElement = container.querySelector(".transform-3d");

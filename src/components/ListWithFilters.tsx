@@ -140,9 +140,13 @@ export function ListWithFilters<T extends string>({
   }, [filterDrawerVisible]);
 
   return (
-    <>
+    <div
+      className={`
+      ${className || ""}
+    `}
+    >
       {dynamicSubNav}
-      <div className={`group/list-with-filters mx-auto bg-subtle ${className || ""}`} {...rest}>
+      <div className={`group/list-with-filters mx-auto bg-subtle`} {...rest}>
         <div
           className={`
             sticky top-[calc(0px_+_var(--scroll-offset,0px))] z-sticky
@@ -284,7 +288,7 @@ export function ListWithFilters<T extends string>({
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
