@@ -24,6 +24,10 @@ export function MultiSelectField({
   const handleChange = (values: string[]) => {
     setSelectedOptions(values);
     onChange(values);
+    // Close dropdown after selection by clicking the button to toggle it
+    setTimeout(() => {
+      buttonRef.current?.click();
+    }, 0);
   };
 
   const removeOption = (optionToRemove: string) => {
