@@ -1,6 +1,7 @@
 import { promises as fs } from "node:fs";
 import { z } from "zod";
 
+import { ContentCache, generateSchemaHash } from "./utils/cache";
 import { getContentPath } from "./utils/getContentPath";
 import { nullableNumber, nullableString } from "./utils/nullable";
 
@@ -72,26 +73,41 @@ const CastAndCrewJsonSchema = z
 
 export type CastAndCrewMemberJson = z.infer<typeof CastAndCrewJsonSchema>;
 
-export async function allCastAndCrewJson(): Promise<CastAndCrewMemberJson[]> {
-  return await parseAllCastAndCrewJson();
-}
+// Create cache instance with schema hash
+let cacheInstance: ContentCache<CastAndCrewMemberJson[]> | undefined;
 
-async function parseAllCastAndCrewJson() {
+export async function allCastAndCrewJson(): Promise<CastAndCrewMemberJson[]> {
+  const cache = await getCache();
   const dirents = await fs.readdir(castAndCrewJsonDirectory, {
     withFileTypes: true,
   });
 
-  return Promise.all(
-    dirents
-      .filter((item) => !item.isDirectory() && item.name.endsWith(".json"))
-      .map(async (item) => {
-        const fileContents = await fs.readFile(
-          `${castAndCrewJsonDirectory}/${item.name}`,
-          "utf8",
-        );
-
-        const json = JSON.parse(fileContents) as unknown;
-        return CastAndCrewJsonSchema.parse(json);
-      }),
+  const jsonFiles = dirents.filter((item) => !item.isDirectory() && item.name.endsWith(".json"));
+  const allFileContents = await Promise.all(
+    jsonFiles.map(async (item) => {
+      const filePath = `${castAndCrewJsonDirectory}/${item.name}`;
+      const content = await fs.readFile(filePath, "utf8");
+      return { content, filePath };
+    }),
   );
+
+  // Create a combined cache key from all file contents
+  const combinedContent = allFileContents
+    .map(({ content, filePath }) => `${filePath}:${content}`)
+    .join("\n---\n");
+
+  return cache.get(castAndCrewJsonDirectory, combinedContent, () => {
+    return allFileContents.map(({ content }) => {
+      const json = JSON.parse(content) as unknown;
+      return CastAndCrewJsonSchema.parse(json);
+    });
+  });
+}
+
+async function getCache(): Promise<ContentCache<CastAndCrewMemberJson[]>> {
+  if (!cacheInstance) {
+    const schemaHash = await generateSchemaHash(JSON.stringify(CastAndCrewJsonSchema._def.schema.shape));
+    cacheInstance = new ContentCache<CastAndCrewMemberJson[]>("cast-and-crew-json", schemaHash);
+  }
+  return cacheInstance;
 }

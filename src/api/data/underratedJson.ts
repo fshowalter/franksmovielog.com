@@ -1,6 +1,7 @@
 import { promises as fs } from "node:fs";
 import { z } from "zod";
 
+import { ContentCache, generateSchemaHash } from "./utils/cache";
 import { getContentPath } from "./utils/getContentPath";
 
 const underratedJsonFile = getContentPath("data", "underrated.json");
@@ -38,11 +39,23 @@ const UnderratedJsonSchema = z
 
 export type UnderratedJson = z.infer<typeof UnderratedJsonSchema>;
 
-export async function allUnderratedJson(): Promise<UnderratedJson[]> {
-  const json = await fs.readFile(underratedJsonFile, "utf8");
-  const data = JSON.parse(json) as unknown[];
+// Create cache instance with schema hash
+let cacheInstance: ContentCache<UnderratedJson[]> | undefined;
 
-  return data.map((item) => {
-    return UnderratedJsonSchema.parse(item);
+export async function allUnderratedJson(): Promise<UnderratedJson[]> {
+  const cache = await getCache();
+  const fileContents = await fs.readFile(underratedJsonFile, "utf8");
+  
+  return cache.get(underratedJsonFile, fileContents, (content) => {
+    const data = JSON.parse(content) as unknown[];
+    return data.map((item) => UnderratedJsonSchema.parse(item));
   });
+}
+
+async function getCache(): Promise<ContentCache<UnderratedJson[]>> {
+  if (!cacheInstance) {
+    const schemaHash = await generateSchemaHash(JSON.stringify(UnderratedJsonSchema._def.schema.shape));
+    cacheInstance = new ContentCache<UnderratedJson[]>("underrated-json", schemaHash);
+  }
+  return cacheInstance;
 }
