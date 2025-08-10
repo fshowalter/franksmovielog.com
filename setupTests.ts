@@ -5,6 +5,13 @@ import { afterAll, vi } from "vitest";
 
 vi.mock("src/api/data/utils/getContentPath");
 
+// Mock ResizeObserver for Headless UI components
+globalThis.ResizeObserver = vi.fn().mockImplementation(() => ({
+  disconnect: vi.fn(),
+  observe: vi.fn(),
+  unobserve: vi.fn(),
+}));
+
 // Store the cache directory for this test run
 let testCacheDir: string | undefined;
 

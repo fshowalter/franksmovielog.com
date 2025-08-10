@@ -1,6 +1,5 @@
 import { act, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { select } from "react-select-event";
 import { describe, it } from "vitest";
 
 import { getPropsForUnderseen } from "./getProps";
@@ -197,9 +196,21 @@ describe("Underseen", () => {
     expect.hasAssertions();
     render(<Underseen {...props} />);
 
-    const selectElement = screen.getByLabelText("Genres");
+    const genresButton = screen.getByLabelText("Genres");
 
-    await select(selectElement, ["Horror", "Comedy"]);
+    // Click to open the dropdown
+    await userEvent.click(genresButton);
+
+    // Select Horror
+    const horrorOption = await screen.findByRole("option", { name: "Horror" });
+    await userEvent.click(horrorOption);
+
+    // Select Comedy
+    const comedyOption = await screen.findByRole("option", { name: "Comedy" });
+    await userEvent.click(comedyOption);
+
+    // Click outside to close the dropdown
+    await userEvent.click(document.body);
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
