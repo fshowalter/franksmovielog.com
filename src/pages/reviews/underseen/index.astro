@@ -13,7 +13,7 @@ const props = await getProps();
 // Separate layout props from interactive props
 const { backdropImageProps, deck, ...interactiveProps } = props;
 
-// Create React elements in frontmatter
+// Create React elements in front matter
 const backdropElement = React.createElement(Backdrop, {
   deck,
   imageProps: backdropImageProps,

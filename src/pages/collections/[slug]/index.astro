@@ -34,7 +34,7 @@ const props = await getProps(slug);
 // Separate layout props from interactive props
 const { backdropImageProps, ...interactiveProps } = props;
 
-// Create React elements in frontmatter
+// Create React elements in front matter
 const backdropElement = React.createElement(Backdrop, {
   deck: React.createElement("span", {
     dangerouslySetInnerHTML: { __html: props.value.descriptionHtml },
