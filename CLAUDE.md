@@ -47,7 +47,7 @@ This site uses Astro's partial hydration strategy:
 ## Important Commands
 
 - `npm run dev` - Start development server
-- `npm run build` - Build for production
+- `npm run build` - Build for production (⚠️ TAKES HOURS - generates 1,800+ static pages)
 - `npm test` - Run tests
 - `npm run lint` - Run ESLint
 - `npm run lint:fix` - Fix linting issues

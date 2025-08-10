@@ -4,7 +4,6 @@ import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import smartypants from "remark-smartypants";
-import strip from "strip-markdown";
 
 import { collator } from "~/utils/collator";
 
@@ -17,9 +16,7 @@ import { allReviewsMarkdown } from "./data/reviewsMarkdown";
 import { allViewingsMarkdown } from "./data/viewingsMarkdown";
 import { linkReviewedTitles } from "./utils/linkReviewedTitles";
 import { getHtml } from "./utils/markdown/getHtml";
-import { removeFootnotes } from "./utils/markdown/removeFootnotes";
 import { rootAsSpan } from "./utils/markdown/rootAsSpan";
-import { trimToExcerpt } from "./utils/markdown/trimToExcerpt";
 
 let cachedViewingsMarkdown: MarkdownViewing[];
 let cachedMarkdownReviews: MarkdownReview[];
@@ -72,27 +69,17 @@ export async function allReviews(): Promise<Reviews> {
   return reviews;
 }
 
-export function getContentPlainText(rawContent: string): string {
-  return getMastProcessor()
-    .use(removeFootnotes)
-    .use(strip)
-    .processSync(rawContent)
-    .toString();
-}
-
 export async function loadContent<
-  T extends { imdbId: string; rawContent: string; title: string },
+  T extends {
+    excerptPlainText: string;
+    imdbId: string;
+    rawContent: string;
+    title: string;
+  },
 >(review: T): Promise<ReviewContent & T> {
   const viewingsMarkdown =
     cachedViewingsMarkdown || (await allViewingsMarkdown());
   const reviewedTitlesJson = await allReviewedTitlesJson();
-
-  const excerptPlainText = getMastProcessor()
-    .use(removeFootnotes)
-    .use(trimToExcerpt)
-    .use(strip)
-    .processSync(review.rawContent)
-    .toString();
 
   const viewings = viewingsMarkdown
     .filter((viewing) => {
@@ -111,7 +98,7 @@ export async function loadContent<
   return {
     ...review,
     content: getHtml(review.rawContent, reviewedTitlesJson),
-    excerptPlainText,
+    excerptPlainText: review.excerptPlainText,
     viewings,
   };
 }
@@ -121,20 +108,9 @@ export async function loadExcerptHtml<T extends { slug: string }>(
 ): Promise<ReviewExcerpt & T> {
   const reviewsMarkdown = cachedMarkdownReviews || (await allReviewsMarkdown());
 
-  const { rawContent, synopsis } = reviewsMarkdown.find((markdown) => {
+  const { excerptHtml } = reviewsMarkdown.find((markdown) => {
     return markdown.slug === review.slug;
   })!;
-
-  const excerptContent = synopsis || rawContent;
-
-  const excerptHtml = getMastProcessor()
-    .use(removeFootnotes)
-    .use(trimToExcerpt)
-    .use(remarkRehype, { allowDangerousHtml: true })
-    .use(rehypeRaw)
-    .use(rehypeStringify)
-    .processSync(excerptContent)
-    .toString();
 
   return {
     ...review,
@@ -191,11 +167,16 @@ async function parseReviewedTitlesJson(
     for (const genre of title.genres) distinctGenres.add(genre);
     distinctReleaseYears.add(title.releaseYear);
 
-    const { grade, rawContent, synopsis } = reviewsMarkdown.find(
-      (reviewsmarkdown) => {
-        return reviewsmarkdown.slug === title.slug;
-      },
-    )!;
+    const {
+      contentPlainText,
+      excerptHtml,
+      excerptPlainText,
+      grade,
+      rawContent,
+      synopsis,
+    } = reviewsMarkdown.find((reviewsmarkdown) => {
+      return reviewsmarkdown.slug === title.slug;
+    })!;
 
     distinctReviewYears.add(
       title.reviewDate.toLocaleDateString("en-US", {
@@ -206,6 +187,9 @@ async function parseReviewedTitlesJson(
 
     return {
       ...title,
+      contentPlainText,
+      excerptHtml,
+      excerptPlainText,
       grade,
       rawContent,
       synopsis,

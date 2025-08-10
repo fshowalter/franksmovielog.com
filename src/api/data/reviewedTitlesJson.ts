@@ -1,6 +1,7 @@
 import { promises as fs } from "node:fs";
 import { z } from "zod";
 
+import { ContentCache, generateSchemaHash } from "./utils/cache";
 import { getContentPath } from "./utils/getContentPath";
 import { nullableNumber, nullableString } from "./utils/nullable";
 
@@ -153,15 +154,28 @@ const ReviewedTitleJsonSchema = z
 
 export type ReviewedTitleJson = z.infer<typeof ReviewedTitleJsonSchema>;
 
+// Create cache instance with schema hash
+let cacheInstance: ContentCache<ReviewedTitleJson[]> | undefined;
+
 export async function allReviewedTitlesJson(): Promise<ReviewedTitleJson[]> {
-  return await parseAllReviewedTitlesJson();
+  const cache = await getCache();
+  const fileContents = await fs.readFile(reviewedTitlesJsonFile, "utf8");
+
+  return cache.get(reviewedTitlesJsonFile, fileContents, (content) => {
+    const data = JSON.parse(content) as unknown[];
+    return data.map((item) => ReviewedTitleJsonSchema.parse(item));
+  });
 }
 
-async function parseAllReviewedTitlesJson() {
-  const json = await fs.readFile(reviewedTitlesJsonFile, "utf8");
-  const data = JSON.parse(json) as unknown[];
-
-  return data.map((item) => {
-    return ReviewedTitleJsonSchema.parse(item);
-  });
+async function getCache(): Promise<ContentCache<ReviewedTitleJson[]>> {
+  if (!cacheInstance) {
+    const schemaHash = await generateSchemaHash(
+      JSON.stringify(ReviewedTitleJsonSchema._def.schema.shape),
+    );
+    cacheInstance = new ContentCache<ReviewedTitleJson[]>(
+      "reviewed-titles-json",
+      schemaHash,
+    );
+  }
+  return cacheInstance;
 }

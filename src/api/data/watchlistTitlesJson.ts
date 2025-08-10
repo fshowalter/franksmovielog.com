@@ -1,6 +1,7 @@
 import { promises as fs } from "node:fs";
 import { z } from "zod";
 
+import { ContentCache, generateSchemaHash } from "./utils/cache";
 import { getContentPath } from "./utils/getContentPath";
 
 const watchlistTitlesJsonFile = getContentPath("data", "watchlist-titles.json");
@@ -38,11 +39,28 @@ const WatchlistTitleJsonSchema = z
 
 export type WatchlistTitleJson = z.infer<typeof WatchlistTitleJsonSchema>;
 
-export async function allWatchlistTitlesJson(): Promise<WatchlistTitleJson[]> {
-  const json = await fs.readFile(watchlistTitlesJsonFile, "utf8");
-  const data = JSON.parse(json) as unknown[];
+// Create cache instance with schema hash
+let cacheInstance: ContentCache<WatchlistTitleJson[]> | undefined;
 
-  return data.map((title) => {
-    return WatchlistTitleJsonSchema.parse(title);
+export async function allWatchlistTitlesJson(): Promise<WatchlistTitleJson[]> {
+  const cache = await getCache();
+  const fileContents = await fs.readFile(watchlistTitlesJsonFile, "utf8");
+
+  return cache.get(watchlistTitlesJsonFile, fileContents, (content) => {
+    const data = JSON.parse(content) as unknown[];
+    return data.map((title) => WatchlistTitleJsonSchema.parse(title));
   });
+}
+
+async function getCache(): Promise<ContentCache<WatchlistTitleJson[]>> {
+  if (!cacheInstance) {
+    const schemaHash = await generateSchemaHash(
+      JSON.stringify(WatchlistTitleJsonSchema._def.schema.shape),
+    );
+    cacheInstance = new ContentCache<WatchlistTitleJson[]>(
+      "watchlist-titles-json",
+      schemaHash,
+    );
+  }
+  return cacheInstance;
 }

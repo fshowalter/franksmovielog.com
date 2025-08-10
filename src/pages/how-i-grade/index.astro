@@ -1,5 +1,4 @@
 ---
-import { getContentPlainText } from "~/api/pages";
 import { Article } from "~/components/Article/Article";
 import { getProps } from "~/components/Article/getProps";
 import Layout from "~/layouts/Layout.astro";
@@ -12,7 +11,7 @@ const props = await getProps({
   slug,
 });
 
-const contextPlainText = getContentPlainText(props.rawContent);
+const contextPlainText = props.contentPlainText;
 
 //trim the string to the maximum length
 var description = contextPlainText

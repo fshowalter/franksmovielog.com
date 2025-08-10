@@ -24,3 +24,7 @@ pnpm-debug.log*
 .idea/
 
 coverage/
+
+# cache directories
+.cache/
+.cache-test-*/

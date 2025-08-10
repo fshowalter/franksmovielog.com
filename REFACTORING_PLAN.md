@@ -1,181 +1,213 @@
-# Refactoring Plan - Code Duplication Reduction
+# Refactoring Plan - Build Time Improvements
 
 ## Overview
 
-This document outlines opportunities to reduce code duplication and minimize LOC count in the franksmovielog.com codebase. Estimated total reduction: 3,500-4,500 lines (~30-40% of component code).
+The goal of this refactor is to improve the execution times of the build-and-deploy action by implementing a custom content-based caching solution.
 
-## Completed Tasks ✅
+Source here: /.github/workflows/build-and-deploy.yml
+Historic performance here: https://github.com/fshowalter/franksmovielog.com/actions/workflows/build-and-deploy.yml
 
-### 1. Create Reviews Reducer and Filters
+### Guardrails
 
-- **Status**: COMPLETED
-- **Impact**: ~1,200 lines reduction
-- **Changes Made**:
-  - Created shared `Reviews.reducer.ts` for Reviews, Overrated, Underrated, and Underseen
-  - Created shared `Reviews.Filters.tsx` with all common filters
-  - Removed 4 duplicate reducer files
-  - Removed 4 duplicate filter files
-  - All components now use the shared implementation
+- We must preserve our existing type safety, including our existing nuance around undefined vs optional.
+- Caching must work in all environments (dev, prod, test)
+- Test fixtures must remain separate and functional
 
-### 2. Replace DebouncedInput with TextFilter
+### Definition of Success
 
-- **Status**: COMPLETED (PR #2231)
-- **Impact**: 19 lines reduction
-- **Changes Made**:
-  - Created `TextFilter` component with cleaner implementation
-  - Removed unused ref and useImperativeHandle code
-  - Updated all 7 components to use TextFilter
-  - More semantic naming
+- The change will be successful if we can reduce build-and-deploy execution time through incremental builds that avoid re-parsing unchanged content files.
 
-### 3. Extract getGroupLetter Utility
+## Custom Caching Solution
 
-- **Status**: COMPLETED (PR #2232)
-- **Impact**: ~40 lines reduction
-- **Changes Made**:
-  - Created `getGroupLetter` utility function
-  - Updated 5 reducers to use the utility
-  - Centralized letter extraction logic
+### Why Custom Cache?
 
-## High Priority Tasks (Biggest Impact)
+**Initial Attempt - Astro Content Collections:**
 
-### 1. Create Generic Reducer Factory for Remaining Components
+- Content Collections are fundamentally incompatible with testing frameworks
+- They require either a dev server with HMR or a full build process to generate the virtual module `astro:data-layer-content`
+- This module doesn't exist in test environments, making it impossible to test components that rely on Content Collections
 
-- **Impact**: ~1,500-2,000 lines reduction
-- **Details**: Create factory for Viewings, Watchlist, Collection, and Cast/Staff components
-  - SHOW_MORE action (identical in remaining files)
-  - SORT action (identical in remaining files)
-  - FILTER_TITLE action (identical in remaining files)
-  - Year range filters (identical in remaining files)
-  - Standard state initialization
-  - Common sorting and grouping functions
+**Solution - Custom Content-Based Cache:**
 
-### 2. Extract Common Filter Components
+- Implement our own content-based caching on top of the existing file system implementation
+- Use the same strategy as Astro's cache but with full control
+- Works identically in dev, prod, and test environments
 
-- **YearRangeFilter**: Used in remaining 4+ components
-- **DropdownFilter**: Used in 5+ components
+### Cache Design
 
-### 3. Create FilteredListLayout HOC
+**Architecture:**
 
-- **Impact**: ~800-1,000 lines reduction
-- **Pattern**: Encapsulate common list structure
-  - useReducer setup
-  - ListWithFiltersLayout structure
-  - Common sorting/filtering logic
+- Add persistent disk cache layer on top of existing file system code
+- Keep all schemas in `src/api/data/` (our source of truth)
+- Cache works identically in dev, prod, and test environments
 
-## Medium Priority Tasks
+**Implementation Details:**
 
-### 4. Create StandardFilters Composition
+- Use **xxhash-wasm** for content digests (same as Astro)
+- Use **devalue** for serialization (handles Dates, undefined, etc.)
+- Store cache in `.cache/content-cache.json` (persists between builds)
+- Test mode uses separate cache directory to avoid conflicts
 
-- Compose common filter sets into reusable component
-- Parameters: showTitle, showReleaseYear, showReviewYear, etc.
+**Cache Structure:**
 
-### 5. Consolidate Sort Comparators
-
-- Title sorting (with collator)
-- Date sorting
-- Grade sorting
-- Sequence sorting
-
-### 6. Standardize Type Definitions
-
-- Create shared ListItemValue type
-- Standardize Sort type definitions
-- Common filter action types
-
-### 7. Apply New Abstractions
-
-- Refactor Viewings, Watchlist, Collection components
-- Update remaining list components to use new patterns
-
-## Low Priority Tasks
-
-### 8. Create ListItemWithHover Component
-
-- Extract common hover effect pattern:
-  ```tsx
-  className={`
-    group/list-item relative transform-gpu transition-transform
-    tablet-landscape:has-[a:hover]:z-hover
-    tablet-landscape:has-[a:hover]:scale-105
-    tablet-landscape:has-[a:hover]:shadow-all
-    tablet-landscape:has-[a:hover]:drop-shadow-2xl
-  `}
-  ```
-
-### 9. Standardize Backdrop Components
-
-- Similar structure across multiple components
-- Extract common backdrop pattern
-
-### 10. Extract Constants
-
-- SHOW_COUNT_DEFAULT = 100 (appears in 9 files)
-- Other repeated constants
-
-## Implementation Strategy
-
-1. **Start with highest ROI**: Generic reducer factory
-2. **Test thoroughly**: Each refactoring should maintain existing functionality
-3. **Incremental approach**: Refactor one component type at a time
-4. **Maintain backwards compatibility**: Ensure existing tests pass
-
-## Specific Duplication Examples
-
-### Reducer Pattern (10 files)
-
-```typescript
-export function initState({ initialSort, values }) {
-  return {
-    allValues: values,
-    filteredValues: values,
-    filters: {},
-    groupedValues: groupValues(
-      values.slice(0, SHOW_COUNT_DEFAULT),
-      initialSort,
-    ),
-    showCount: SHOW_COUNT_DEFAULT,
-    sortValue: initialSort,
-  };
+```json
+{
+  "schemaVersion": "hash-of-all-schemas",
+  "entries": {
+    "[filePath]": {
+      "digest": "xxhash-of-file-content",
+      "data": {
+        /* parsed data */
+      },
+      "timestamp": 1234567890
+    }
+  }
 }
 ```
 
-### List Component Pattern
+### Cache Invalidation Logic
 
-```tsx
-export function ComponentName({ props }): JSX.Element {
-  const [state, dispatch] = useReducer(reducer, { initialSort, values }, initState);
+1. **Schema changes**: Hash all schemas → if different, invalidate entire cache
+2. **File changes**: Hash file content → if digest differs from cached, invalidate entry
+3. **Missing cache**: First build creates cache, subsequent builds reuse
 
-  return (
-    <ListWithFiltersLayout
-      backdrop={<Backdrop />}
-      filters={<Filters dispatch={dispatch} distinctValues={...} />}
-      list={<GroupedList />}
-      sortProps={{
-        currentSortValue: state.sortValue,
-        onSortChange: (e) => dispatch({ type: Actions.SORT, value: e.target.value }),
-        sortOptions: <SortOptions />,
-      }}
-      totalCount={state.filteredValues.length}
-    />
-  );
-}
+### Implementation Flow
+
+```
+1. Check if cache exists and schema version matches
+2. For each file:
+   - Read file content
+   - Generate xxhash digest
+   - If digest matches cached: return cached data
+   - If digest differs: parse file, update cache
+3. Write updated cache to disk
 ```
 
-## Progress Summary
+### Test Mode
 
-### Completed
+- Uses separate cache directory: `.cache-test-${process.pid}-${Date.now()}`
+- Prevents race conditions between parallel test runs
+- Automatically cleaned up after tests complete
+- Uses fixture paths from `src/api/data/fixtures/`
 
-- ✅ Reviews reducer consolidation: ~1,200 lines saved
-- ✅ Reviews filters unification: ~400 lines saved
-- ✅ Removed 8 redundant files
-- ✅ TextFilter component: 19 lines saved
-- ✅ getGroupLetter utility: ~40 lines saved
-- **Total saved so far**: ~1,659 lines
+### Expected Benefits
 
-### Remaining Potential
+1. **Performance**: Avoid re-parsing unchanged files between builds (faster incremental builds)
+2. **Compatibility**: Works in ALL environments (dev, prod, test)
+3. **Control**: Full control over caching logic
+4. **Testability**: Cache works with test fixtures
 
-- **Code reduction**: 1,841-2,841 additional lines
-- **Maintenance improvement**: Changes need updates in only one place
-- **Better testability**: Test generic components once
-- **Improved consistency**: Standardized patterns across codebase
-- **Easier onboarding**: Less duplicate code to understand
+## Implementation Status
+
+### ✅ Phase 1: Cache Utilities (COMPLETED)
+
+- ✅ Install xxhash-wasm and devalue dependencies
+- ✅ Create cache utilities in `src/api/data/utils/cache.ts`
+- ✅ Add cache to `.gitignore`
+
+### ✅ Phase 2: Integrate with Data Loading (COMPLETED)
+
+- ✅ Update `reviewsMarkdown.ts` to use cache
+- ✅ Update `pagesMarkdown.ts` to use cache
+- ✅ Update `viewingsMarkdown.ts` to use cache
+- ✅ Update all JSON loaders to use cache:
+  - ✅ Single-file loaders: `overratedJson.ts`, `underratedJson.ts`, `underseenJson.ts`, `watchlistTitlesJson.ts`, `watchlistProgressJson.ts`, `alltimeStatsJson.ts`, `reviewedTitlesJson.ts`, `viewingsJson.ts`
+  - ✅ Multi-file loaders: `castAndCrewJson.ts`, `collectionsJson.ts`, `yearStatsJson.ts`
+
+### ✅ Phase 3: Testing & Quality (COMPLETED)
+
+- ✅ Ensure cache works with test fixtures
+- ✅ All 231 tests pass with no regressions
+- ✅ Test cache isolation and cleanup working properly
+- ✅ All quality checks pass (ESLint, TypeScript, Prettier, spelling)
+- ✅ Removed unused `getStats` method to keep implementation lean
+
+### 🚀 Phase 4: Deployment (READY)
+
+- ✅ Pull Request created: [#2291](https://github.com/fshowalter/franksmovielog.com/pull/2291)
+- ⏳ Update `.github/workflows/build-and-deploy.yml` to cache `.cache` directory (post-merge)
+- ⏳ Measure performance improvements vs baseline (post-deployment)
+
+## Summary of Completed Work
+
+### ✅ **Full Cache Implementation**
+
+- **13 data loaders** now use ContentCache for performance
+- **Content-based hashing** using xxhash-wasm (same as Astro)
+- **Schema-based invalidation** - cache invalidates when data schemas change
+- **Environment isolation** - separate cache directories for test/prod
+- **Automatic cleanup** of test cache directories
+
+### ✅ **Data Loaders Updated**
+
+1. **Markdown loaders** (3): reviews, pages, viewings
+2. **Single-file JSON loaders** (8): overrated, underrated, underseen, watchlist titles/progress, alltime stats, reviewed titles, viewings
+3. **Multi-file JSON loaders** (3): cast-and-crew, collections, year-stats
+
+### ✅ **Quality Assurance**
+
+- **All tests pass**: 231/231 tests ✅
+- **No regressions**: Identical functionality with caching benefits
+- **Code quality**: All linting, TypeScript, and formatting checks pass
+- **Type safety**: All existing type definitions preserved
+
+### ✅ **Performance Benefits**
+
+The cache will avoid re-parsing:
+
+- **1,700+ review markdown files**
+- **All JSON data files** (reviewed titles, collections, cast/crew, etc.)
+- **Page and viewing markdown files**
+
+**Expected Impact**: Significant build time reduction on incremental builds where content hasn't changed.
+
+## Phase 5: Excerpt HTML Caching (IN PROGRESS)
+
+### Problem
+
+- Individual review pages call `loadExcerptHtml()` multiple times for related reviews
+- Each call processes markdown to HTML using the remark/rehype pipeline
+- This processing happens repeatedly for the same content across builds
+
+### Solution
+
+- Move excerpt HTML generation into `reviewsMarkdown.ts`
+- Cache the processed HTML alongside the raw markdown content
+- Eliminate redundant markdown-to-HTML processing
+
+### Implementation Plan
+
+1. **Update `MarkdownReview` type** in `reviewsMarkdown.ts`:
+   - Add `excerptHtml: string` field
+   - Process excerpt HTML during initial parsing
+   - Include in cached data structure
+
+2. \*\*Modify `loadExcerptHtml()` in `reviews.ts`:
+   - Return pre-computed `excerptHtml` from cached data
+   - Remove redundant markdown processing
+
+3. **Update schema hash**:
+   - Schema change will invalidate cache automatically
+   - Ensures all reviews get new excerpt HTML field
+
+### Expected Benefits
+
+- **Faster individual review pages**: No markdown processing for related reviews
+- **Faster review listing pages**: Excerpts already available
+- **Reduced CPU usage**: Process each excerpt once, not on every build
+
+### Status
+
+- ✅ Documentation added
+- ✅ Implementation completed
+- ✅ Testing - all 231 tests pass
+- ✅ Extended to cache all text processing:
+  - `excerptHtml` - HTML version of review excerpts
+  - `excerptPlainText` - Plain text version of review excerpts
+  - `contentPlainText` - Plain text version of full content (reviews and pages)
+
+## Key Files
+
+- `/src/api/data/utils/cache.ts` - Core cache implementation
+- `/src/api/data/utils/getContentPath.ts` - Path resolution for fixtures vs production
+- `/setupTests.ts` - Mock setup for test fixtures
