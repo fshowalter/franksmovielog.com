@@ -19,15 +19,25 @@ export function MultiSelectField({
 }) {
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [dropdownMaxHeight, setDropdownMaxHeight] = useState("15rem"); // Default max-h-60
+  const [listboxKey, setListboxKey] = useState(0);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const selectionMadeRef = useRef(false);
 
   const handleChange = (values: string[]) => {
+    // Check if this is an addition (not a removal)
+    if (values.length > selectedOptions.length) {
+      selectionMadeRef.current = true;
+    }
     setSelectedOptions(values);
     onChange(values);
-    // Close dropdown after selection by clicking the button to toggle it
-    setTimeout(() => {
-      buttonRef.current?.click();
-    }, 0);
+    
+    // Only close dropdown if we added an item
+    if (selectionMadeRef.current) {
+      setTimeout(() => {
+        setListboxKey(prev => prev + 1);
+        selectionMadeRef.current = false;
+      }, 50); // Small delay to allow state to update
+    }
   };
 
   const removeOption = (optionToRemove: string) => {
@@ -105,7 +115,7 @@ export function MultiSelectField({
           e.stopPropagation();
         }}
       >
-        <Listbox multiple onChange={handleChange} value={selectedOptions}>
+        <Listbox key={listboxKey} multiple onChange={handleChange} value={selectedOptions}>
           {({ open }) => {
             // Calculate dropdown height when it opens - using requestAnimationFrame to avoid React warning
             if (open) {
@@ -118,8 +128,10 @@ export function MultiSelectField({
               <div className="relative">
                 <ListboxButton
                   className={`
-                    relative w-full cursor-default rounded border border-default
-                    bg-default pr-10 pl-3 text-left text-base text-subtle
+                    relative w-full cursor-default
+                    scroll-mt-[var(--control-scroll-offset,0)] rounded border
+                    border-default bg-default pr-10 pl-3 text-left text-base
+                    text-subtle
                     focus:border-[rgb(38,132,255)]
                     focus:shadow-[0px_0px_0px_1px_rgb(38,132,255)]
                     focus:outline-none

@@ -249,6 +249,7 @@ export function ListWithFiltersLayout<T extends string>({
               <fieldset
                 className={`
                   flex grow flex-col gap-5 px-container pb-4
+                  [--control-scroll-offset:calc(25px_+_var(--scroll-offset,0px))]
                   tablet:gap-8
                   tablet-landscape:mt-0 tablet-landscape:gap-12
                   tablet-landscape:px-0 tablet-landscape:py-10
