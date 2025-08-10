@@ -1,3 +1,5 @@
+import type { BackdropImageProps } from "~/api/backdrops";
+
 import { getAvatarImageProps } from "~/api/avatars";
 import { getBackdropImageProps } from "~/api/backdrops";
 import { allCastAndCrew } from "~/api/castAndCrew";
@@ -7,7 +9,13 @@ import { ListItemAvatarImageConfig } from "~/components/ListItemAvatar";
 import type { Props } from "./CastAndCrew";
 import type { ListItemValue } from "./CastAndCrew";
 
-export async function getProps(): Promise<Props & { metaDescription: string }> {
+type PageProps = Props & {
+  backdropImageProps: BackdropImageProps;
+  deck: string;
+  metaDescription: string;
+};
+
+export async function getProps(): Promise<PageProps> {
   const { castAndCrew } = await allCastAndCrew();
 
   const values = await Promise.all(

@@ -186,13 +186,7 @@ describe("Viewings", () => {
       viewingYear: "2023",
     }));
     const propsWithManyValues = {
-      backdropImageProps: props.backdropImageProps,
-      deck: props.deck,
-      distinctMedia: props.distinctMedia,
-      distinctReleaseYears: props.distinctReleaseYears,
-      distinctVenues: props.distinctVenues,
-      distinctViewingYears: props.distinctViewingYears,
-      initialSort: props.initialSort,
+      ...props,
       values: manyValues,
     };
     render(<Viewings {...propsWithManyValues} />);

@@ -1,3 +1,5 @@
+import type { BackdropImageProps } from "~/api/backdrops";
+
 import { getBackdropImageProps } from "~/api/backdrops";
 import { getFixedWidthPosterImageProps } from "~/api/posters";
 import { allWatchlistTitles } from "~/api/watchlistTitles";
@@ -6,7 +8,13 @@ import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
 
 import type { Props } from "./Watchlist";
 
-export async function getProps(): Promise<Props & { metaDescription: string }> {
+type PageProps = Props & {
+  backdropImageProps: BackdropImageProps;
+  deck: string;
+  metaDescription: string;
+};
+
+export async function getProps(): Promise<PageProps> {
   const {
     distinctCollections,
     distinctDirectors,

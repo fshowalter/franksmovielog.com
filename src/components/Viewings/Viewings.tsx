@@ -2,18 +2,16 @@ import type { JSX } from "react";
 
 import { useReducer } from "react";
 
-import type { BackdropImageProps } from "~/api/backdrops";
 import type { PosterImageProps } from "~/api/posters";
 import type { Viewing } from "~/api/viewings";
 
-import { Backdrop } from "~/components/Backdrop";
 import { GroupedList } from "~/components/GroupedList";
 import { ListItemMediumAndVenue } from "~/components/ListItemMediumAndVenue";
 import { ListItemPoster } from "~/components/ListItemPoster";
 import {
   ListHeaderButton,
-  ListWithFiltersLayout,
-} from "~/components/ListWithFiltersLayout";
+  ListWithFilters,
+} from "~/components/ListWithFilters";
 
 import type { Sort } from "./Viewings.reducer";
 
@@ -40,8 +38,6 @@ export type ListItemValue = Pick<
 };
 
 export type Props = {
-  backdropImageProps: BackdropImageProps;
-  deck: string;
   distinctMedia: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctVenues: readonly string[];
@@ -51,8 +47,6 @@ export type Props = {
 };
 
 export function Viewings({
-  backdropImageProps,
-  deck,
   distinctMedia,
   distinctReleaseYears,
   distinctVenues,
@@ -70,14 +64,7 @@ export function Viewings({
   );
 
   return (
-    <ListWithFiltersLayout
-      backdrop={
-        <Backdrop
-          deck={deck}
-          imageProps={backdropImageProps}
-          title="Viewing Log"
-        />
-      }
+    <ListWithFilters
       filters={
         <Filters
           dispatch={dispatch}

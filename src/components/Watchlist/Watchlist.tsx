@@ -2,18 +2,16 @@ import type { JSX } from "react";
 
 import { useReducer } from "react";
 
-import type { BackdropImageProps } from "~/api/backdrops";
 import type { PosterImageProps } from "~/api/posters";
 import type { WatchlistTitle } from "~/api/watchlistTitles";
 
-import { Backdrop } from "~/components/Backdrop";
 import { GroupedList } from "~/components/GroupedList";
 import { ListItemPoster } from "~/components/ListItemPoster";
 import { ListItemTitle } from "~/components/ListItemTitle";
 import {
   ListHeaderButton,
-  ListWithFiltersLayout,
-} from "~/components/ListWithFiltersLayout";
+  ListWithFilters,
+} from "~/components/ListWithFilters";
 import { SvgIcon } from "~/components/SvgIcon";
 import { WatchlistTitleSlug } from "~/components/WatchlistTitleSlug";
 
@@ -37,8 +35,6 @@ export type ListItemValue = Pick<
 >;
 
 export type Props = {
-  backdropImageProps: BackdropImageProps;
-  deck: string;
   defaultPosterImageProps: PosterImageProps;
   distinctCollections: string[];
   distinctDirectors: string[];
@@ -50,8 +46,6 @@ export type Props = {
 };
 
 export function Watchlist({
-  backdropImageProps,
-  deck,
   defaultPosterImageProps,
   distinctCollections,
   distinctDirectors,
@@ -71,14 +65,7 @@ export function Watchlist({
   );
 
   return (
-    <ListWithFiltersLayout
-      backdrop={
-        <Backdrop
-          deck={deck}
-          imageProps={backdropImageProps}
-          title="Watchlist"
-        />
-      }
+    <ListWithFilters
       filters={
         <Filters
           dispatch={dispatch}

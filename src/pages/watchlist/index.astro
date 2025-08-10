@@ -1,19 +1,35 @@
 ---
+import React from "react";
+
+import { Backdrop } from "~/components/Backdrop";
+import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 import { getProps } from "~/components/Watchlist/getProps";
 import { Watchlist } from "~/components/Watchlist/Watchlist";
 import Layout from "~/layouts/Layout.astro";
 
 const props = await getProps();
+
+// Separate layout props from interactive props
+const { backdropImageProps, deck, ...interactiveProps } = props;
+
+// Create React elements in front matter
+const backdropElement = React.createElement(Backdrop, {
+  deck,
+  imageProps: backdropImageProps,
+  title: "Watchlist",
+});
 ---
 
 <Layout
   canonical={true}
   meta={{ description: props.metaDescription }}
   openGraph={{
-    description: props.deck,
+    description: deck,
     type: "website",
   }}
   title="Watchlist"
 >
-  <Watchlist client:load {...props} />
+  <ListWithFiltersLayout backdrop={backdropElement}>
+    <Watchlist client:load {...interactiveProps} />
+  </ListWithFiltersLayout>
 </Layout>

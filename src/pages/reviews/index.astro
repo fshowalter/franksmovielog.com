@@ -1,16 +1,37 @@
 ---
+import React from "react";
+
+import { Backdrop } from "~/components/Backdrop";
+import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 import { AllReviews } from "~/components/Reviews/AllReviews";
 import { getProps } from "~/components/Reviews/getProps";
+import { ReviewsSubNav } from "~/components/ReviewsSubNav";
 import Layout from "~/layouts/Layout.astro";
 
 const props = await getProps();
+
+// Separate layout props from interactive props
+const { backdropImageProps, deck, ...interactiveProps } = props;
+
+// Create React elements in front matter
+const backdropElement = React.createElement(Backdrop, {
+  deck,
+  imageProps: backdropImageProps,
+  title: "Reviews",
+});
+
+const subNavElement = React.createElement(ReviewsSubNav, {
+  active: "all",
+});
 ---
 
 <Layout
   canonical={true}
   meta={{ description: props.metaDescription }}
-  openGraph={{ description: props.deck, type: "website" }}
+  openGraph={{ description: deck, type: "website" }}
   title="All Reviews"
 >
-  <AllReviews client:load {...props} />
+  <ListWithFiltersLayout backdrop={backdropElement} subNav={subNavElement}>
+    <AllReviews client:load {...interactiveProps} />
+  </ListWithFiltersLayout>
 </Layout>

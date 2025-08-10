@@ -1,5 +1,8 @@
 import { ListItemAvatarImageConfig } from "src/components/ListItemAvatar";
 
+import type { AvatarImageProps } from "~/api/avatars";
+import type { BackdropImageProps } from "~/api/backdrops";
+
 import { getAvatarImageProps } from "~/api/avatars";
 import { getBackdropImageProps } from "~/api/backdrops";
 import { castAndCrewMember } from "~/api/castAndCrew";
@@ -9,9 +12,14 @@ import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
 
 import type { Props } from "./CastAndCrewMember";
 
-export async function getProps(
-  slug: string,
-): Promise<Props & { metaDescription: string }> {
+type PageProps = Props & {
+  avatarImageProps: AvatarImageProps | undefined;
+  backdropImageProps: BackdropImageProps;
+  deck: string;
+  metaDescription: string;
+};
+
+export async function getProps(slug: string): Promise<PageProps> {
   const { distinctReleaseYears, distinctReviewYears, member } =
     await castAndCrewMember(slug);
 

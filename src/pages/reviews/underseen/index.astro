@@ -1,16 +1,37 @@
 ---
+import React from "react";
+
+import { Backdrop } from "~/components/Backdrop";
+import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 import { getPropsForUnderseen as getProps } from "~/components/Reviews/getProps";
 import { Underseen } from "~/components/Reviews/Underseen";
+import { ReviewsSubNav } from "~/components/ReviewsSubNav";
 import Layout from "~/layouts/Layout.astro";
 
 const props = await getProps();
+
+// Separate layout props from interactive props
+const { backdropImageProps, deck, ...interactiveProps } = props;
+
+// Create React elements in front matter
+const backdropElement = React.createElement(Backdrop, {
+  deck,
+  imageProps: backdropImageProps,
+  title: "Underseen Gems",
+});
+
+const subNavElement = React.createElement(ReviewsSubNav, {
+  active: "underseen",
+});
 ---
 
 <Layout
   canonical={true}
   meta={{ description: props.metaDescription }}
-  openGraph={{ description: props.deck, type: "website" }}
+  openGraph={{ description: deck, type: "website" }}
   title="Underseen Gems"
 >
-  <Underseen client:load {...props} />
+  <ListWithFiltersLayout backdrop={backdropElement} subNav={subNavElement}>
+    <Underseen client:load {...interactiveProps} />
+  </ListWithFiltersLayout>
 </Layout>

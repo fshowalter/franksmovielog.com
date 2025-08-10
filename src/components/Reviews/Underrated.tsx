@@ -2,12 +2,10 @@ import type { JSX } from "react";
 
 import { useReducer } from "react";
 
-import type { BackdropImageProps } from "~/api/backdrops";
 import type { ReviewListItemValue } from "~/components/ReviewListItem";
 
-import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
 import { GroupedList } from "~/components/GroupedList";
-import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
+import { ListWithFilters } from "~/components/ListWithFilters";
 import { ReviewListItem } from "~/components/ReviewListItem";
 import { Filters, SortOptions } from "~/components/Reviews/Filters";
 import {
@@ -16,11 +14,8 @@ import {
   reducer,
   type Sort,
 } from "~/components/Reviews/reducer";
-import { ReviewsSubNav } from "~/components/ReviewsSubNav";
 
 export type Props = {
-  backdropImageProps: BackdropImageProps;
-  deck: string;
   distinctGenres: string[];
   distinctReleaseYears: string[];
   distinctReviewYears: string[];
@@ -29,8 +24,6 @@ export type Props = {
 };
 
 export function Underrated({
-  backdropImageProps,
-  deck,
   distinctGenres,
   distinctReleaseYears,
   distinctReviewYears,
@@ -47,15 +40,7 @@ export function Underrated({
   );
 
   return (
-    <ListWithFiltersLayout
-      backdrop={
-        <Backdrop
-          breadcrumb={<BreadcrumbLink href="/reviews/">Reviews</BreadcrumbLink>}
-          deck={deck}
-          imageProps={backdropImageProps}
-          title="Underrated Surprises"
-        />
-      }
+    <ListWithFilters
       filters={
         <Filters
           dispatch={dispatch}
@@ -76,7 +61,6 @@ export function Underrated({
           {(value) => <ReviewListItem key={value.imdbId} value={value} />}
         </GroupedList>
       }
-      mastGradient={false}
       sortProps={{
         currentSortValue: state.sortValue,
         onSortChange: (e) =>
@@ -86,7 +70,6 @@ export function Underrated({
           }),
         sortOptions: <SortOptions />,
       }}
-      subNav={<ReviewsSubNav active="underrated" />}
       totalCount={state.filteredValues.length}
     />
   );

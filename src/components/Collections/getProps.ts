@@ -1,3 +1,5 @@
+import type { BackdropImageProps } from "~/api/backdrops";
+
 import { getAvatarImageProps } from "~/api/avatars";
 import { getBackdropImageProps } from "~/api/backdrops";
 import { allCollections } from "~/api/collections";
@@ -7,7 +9,12 @@ import { ListItemAvatarImageConfig } from "~/components/ListItemAvatar";
 import type { Props } from "./Collections";
 import type { ListItemValue } from "./Collections";
 
-export async function getProps(): Promise<Props> {
+type PageProps = Props & {
+  backdropImageProps: BackdropImageProps;
+  deck: string;
+};
+
+export async function getProps(): Promise<PageProps> {
   const { collections } = await allCollections();
 
   const values = await Promise.all(

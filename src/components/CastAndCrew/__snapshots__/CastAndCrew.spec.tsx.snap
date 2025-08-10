@@ -8,7 +8,7 @@ exports[`CastAndCrew > can filter by name 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="J"
   >
@@ -113,7 +113,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="B"
   >
@@ -211,7 +211,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="C"
   >
@@ -309,7 +309,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="H"
   >
@@ -406,7 +406,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="I"
   >
@@ -504,7 +504,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="J"
   >
@@ -678,7 +678,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="B"
   >
@@ -844,7 +844,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="C"
   >
@@ -1010,7 +1010,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="H"
   >
@@ -1107,7 +1107,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="I"
   >
@@ -1205,7 +1205,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="J"
   >
@@ -1371,7 +1371,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="P"
   >
@@ -1467,7 +1467,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="W"
   >
@@ -1571,7 +1571,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="B"
   >
@@ -1737,7 +1737,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="C"
   >
@@ -1903,7 +1903,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="I"
   >
@@ -2001,7 +2001,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="J"
   >
@@ -2098,7 +2098,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="P"
   >
@@ -2194,7 +2194,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="W"
   >
@@ -2298,7 +2298,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="B"
   >
@@ -2464,7 +2464,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="C"
   >
@@ -2630,7 +2630,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="H"
   >
@@ -2727,7 +2727,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="I"
   >
@@ -2825,7 +2825,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="J"
   >
@@ -2991,7 +2991,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="P"
   >
@@ -3087,7 +3087,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="W"
   >
@@ -3191,7 +3191,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="B"
   >
@@ -3289,7 +3289,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="C"
   >
@@ -3387,7 +3387,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="H"
   >
@@ -3484,7 +3484,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="I"
   >
@@ -3582,7 +3582,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="J"
   >
@@ -3687,7 +3687,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="B"
   >
@@ -3853,7 +3853,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="C"
   >
@@ -4019,7 +4019,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="H"
   >
@@ -4116,7 +4116,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="I"
   >
@@ -4214,7 +4214,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="J"
   >
@@ -4380,7 +4380,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="P"
   >
@@ -4476,7 +4476,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="W"
   >
@@ -4580,7 +4580,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="B"
   >
@@ -4746,7 +4746,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="C"
   >
@@ -4912,7 +4912,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="H"
   >
@@ -5009,7 +5009,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="I"
   >
@@ -5107,7 +5107,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="J"
   >
@@ -5273,7 +5273,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="P"
   >
@@ -5369,7 +5369,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="W"
   >
@@ -5473,7 +5473,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="W"
   >
@@ -5569,7 +5569,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="P"
   >
@@ -5665,7 +5665,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="J"
   >
@@ -5831,7 +5831,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="I"
   >
@@ -5929,7 +5929,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="H"
   >
@@ -6026,7 +6026,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="C"
   >
@@ -6192,7 +6192,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id="B"
   >
@@ -6366,7 +6366,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id=""
   >
@@ -7089,7 +7089,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
   <li
     class="
         block
-        scroll-mt-[52px]
+        scroll-mt-[calc(52px_+_var(--list-scroll-offset))]
       "
     id=""
   >

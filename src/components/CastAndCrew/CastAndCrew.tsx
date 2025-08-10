@@ -3,15 +3,13 @@ import type { JSX } from "react";
 import { useReducer } from "react";
 
 import type { AvatarImageProps } from "~/api/avatars";
-import type { BackdropImageProps } from "~/api/backdrops";
 import type { CastAndCrewMember } from "~/api/castAndCrew";
 
-import { Backdrop } from "~/components/Backdrop";
 import { CreditedAs } from "~/components/CreditedAs";
 import { GroupedList } from "~/components/GroupedList";
 import { ListItem } from "~/components/ListItem";
 import { ListItemAvatar } from "~/components/ListItemAvatar";
-import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
+import { ListWithFilters } from "~/components/ListWithFilters";
 
 import type { Sort } from "./CastAndCrew.reducer";
 
@@ -26,18 +24,11 @@ export type ListItemValue = Pick<
 };
 
 export type Props = {
-  backdropImageProps: BackdropImageProps;
-  deck: string;
   initialSort: Sort;
   values: ListItemValue[];
 };
 
-export function CastAndCrew({
-  backdropImageProps,
-  deck,
-  initialSort,
-  values,
-}: Props): JSX.Element {
+export function CastAndCrew({ initialSort, values }: Props): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
@@ -48,22 +39,20 @@ export function CastAndCrew({
   );
 
   return (
-    <ListWithFiltersLayout
-      backdrop={
-        <Backdrop
-          bottomShadow={true}
-          deck={deck}
-          imageProps={backdropImageProps}
-          title="Cast & Crew"
+    <ListWithFilters
+      className="[--scroll-offset:52px]"
+      dynamicSubNav={
+        <AlphabetSubNav
+          groupedValues={state.groupedValues}
+          sortValue={state.sortValue}
         />
       }
-      className="[--scroll-offset:52px]"
       filters={<Filters dispatch={dispatch} />}
       list={
         <GroupedList
           data-testid="list"
           groupedValues={state.groupedValues}
-          groupItemClassName={`scroll-mt-[52px]`}
+          groupItemClassName={`scroll-mt-[calc(52px_+_var(--list-scroll-offset))]`}
           totalCount={state.filteredValues.length}
           visibleCount={state.showCount}
         >
@@ -81,12 +70,6 @@ export function CastAndCrew({
           }),
         sortOptions: <SortOptions />,
       }}
-      subNav={
-        <AlphabetSubNav
-          groupedValues={state.groupedValues}
-          sortValue={state.sortValue}
-        />
-      }
       totalCount={state.filteredValues.length}
     />
   );

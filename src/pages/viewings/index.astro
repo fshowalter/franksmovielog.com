@@ -1,16 +1,32 @@
 ---
+import React from "react";
+
+import { Backdrop } from "~/components/Backdrop";
+import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 import { getProps } from "~/components/Viewings/getProps";
 import { Viewings } from "~/components/Viewings/Viewings";
 import Layout from "~/layouts/Layout.astro";
 
 const props = await getProps();
+
+// Separate layout props from interactive props
+const { backdropImageProps, deck, ...interactiveProps } = props;
+
+// Create React elements in front matter
+const backdropElement = React.createElement(Backdrop, {
+  deck,
+  imageProps: backdropImageProps,
+  title: "Viewing Log",
+});
 ---
 
 <Layout
   canonical={true}
   meta={{ description: props.metaDescription }}
-  openGraph={{ description: props.deck, type: "website" }}
+  openGraph={{ description: deck, type: "website" }}
   title="Viewing Log"
 >
-  <Viewings client:load {...props} />
+  <ListWithFiltersLayout backdrop={backdropElement}>
+    <Viewings client:load {...interactiveProps} />
+  </ListWithFiltersLayout>
 </Layout>
