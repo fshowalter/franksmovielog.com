@@ -1,9 +1,3 @@
-import {
-  Listbox,
-  ListboxButton,
-  ListboxOption,
-  ListboxOptions,
-} from "@headlessui/react";
 import { useEffect, useRef, useState } from "react";
 
 import { LabelText } from "~/components/LabelText";
@@ -18,26 +12,25 @@ export function MultiSelectField({
   options: readonly string[];
 }) {
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
-  const [dropdownMaxHeight, setDropdownMaxHeight] = useState("15rem"); // Default max-h-60
-  const [listboxKey, setListboxKey] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const [dropdownMaxHeight, setDropdownMaxHeight] = useState("15rem");
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const selectionMadeRef = useRef(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const optionsRef = useRef<HTMLUListElement>(null);
 
-  const handleChange = (values: string[]) => {
-    // Check if this is an addition (not a removal)
-    if (values.length > selectedOptions.length) {
-      selectionMadeRef.current = true;
-    }
-    setSelectedOptions(values);
-    onChange(values);
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleSelect = (option: string) => {
+    const newValues = [...selectedOptions, option];
+    setSelectedOptions(newValues);
+    onChange(newValues);
     
-    // Only close dropdown if we added an item
-    if (selectionMadeRef.current) {
-      setTimeout(() => {
-        setListboxKey(prev => prev + 1);
-        selectionMadeRef.current = false;
-      }, 150); // Delay to allow state to update and tests to work
-    }
+    // Close dropdown after selection
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 150);
   };
 
   const removeOption = (optionToRemove: string) => {
@@ -48,6 +41,21 @@ export function MultiSelectField({
     // On desktop, scroll to keep control in view if removing items might cause layout shift
     if (window.innerWidth >= 1024 && buttonRef.current) {
       // Small delay to allow DOM to update
+      setTimeout(() => {
+        buttonRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+        });
+      }, 50);
+    }
+  };
+
+  const clearAll = () => {
+    setSelectedOptions([]);
+    onChange([]);
+    
+    // On desktop, scroll to keep control in view after clearing
+    if (window.innerWidth >= 1024 && buttonRef.current) {
       setTimeout(() => {
         buttonRef.current?.scrollIntoView({
           behavior: "smooth",
@@ -88,21 +96,69 @@ export function MultiSelectField({
     }
   };
 
+  // Handle clicks outside to close dropdown
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    // Small delay to avoid immediate closure on open
+    const timer = setTimeout(() => {
+      document.addEventListener("mousedown", handleClickOutside);
+    }, 0);
+
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
+
+  // Handle keyboard navigation
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+        buttonRef.current?.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen]);
+
+  // Calculate dropdown height when it opens
+  useEffect(() => {
+    if (isOpen) {
+      calculateDropdownHeight();
+    }
+  }, [isOpen]);
+
   // Add resize listener
   useEffect(() => {
     const handleResize = () => {
-      // Only recalculate if a dropdown is potentially visible
-      const listbox = buttonRef.current?.closest(
-        '[data-headlessui-state*="open"]',
-      );
-      if (listbox) {
+      if (isOpen) {
         calculateDropdownHeight();
       }
     };
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [isOpen]);
+
+  const availableOptions = options.filter(
+    (option) => !selectedOptions.includes(option)
+  );
 
   return (
     <div className="flex flex-col text-left text-subtle">
@@ -115,198 +171,172 @@ export function MultiSelectField({
           e.stopPropagation();
         }}
       >
-        <Listbox key={listboxKey} multiple onChange={handleChange} value={selectedOptions}>
-          {({ open }) => {
-            // Calculate dropdown height when it opens - using requestAnimationFrame to avoid React warning
-            if (open) {
-              requestAnimationFrame(() => {
-                calculateDropdownHeight();
-              });
-            }
-
-            return (
-              <div className="relative">
-                <ListboxButton
+        <button
+          ref={buttonRef}
+          id={label}
+          type="button"
+          className={`
+            relative w-full cursor-default
+            scroll-mt-[var(--control-scroll-offset,0)] rounded border
+            border-default bg-default pr-10 pl-3 text-left text-base
+            text-subtle
+            focus:border-[rgb(38,132,255)]
+            focus:shadow-[0px_0px_0px_1px_rgb(38,132,255)]
+            focus:outline-none
+          `}
+          onClick={handleToggle}
+          aria-expanded={isOpen}
+          aria-haspopup="listbox"
+          aria-label={label}
+        >
+          <div
+            className={`
+              flex min-h-[36px] flex-wrap items-center gap-1 py-2
+              ${selectedOptions.length > 0 ? "pr-16" : "pr-10"}
+            `}
+          >
+            {selectedOptions.length === 0 ? (
+              <span className="text-subtle">Select...</span>
+            ) : (
+              selectedOptions.map((option) => (
+                <span
+                  key={option}
                   className={`
-                    relative w-full cursor-default
-                    scroll-mt-[var(--control-scroll-offset,0)] rounded border
-                    border-default bg-default pr-10 pl-3 text-left text-base
-                    text-subtle
-                    focus:border-[rgb(38,132,255)]
-                    focus:shadow-[0px_0px_0px_1px_rgb(38,132,255)]
-                    focus:outline-none
+                    inline-flex items-center gap-1 rounded bg-canvas
+                    px-2 py-0.5 text-sm text-default
                   `}
-                  id={label}
-                  ref={buttonRef}
                 >
-                  <div
-                    className={`
-                      flex min-h-[36px] flex-wrap items-center gap-1 py-2
-                      ${selectedOptions.length > 0 ? "pr-16" : "pr-10"}
-                    `}
-                  >
-                    {selectedOptions.length === 0 ? (
-                      <span className="text-subtle">Select...</span>
-                    ) : (
-                      selectedOptions.map((option) => (
-                        <span
-                          className={`
-                            inline-flex items-center gap-1 rounded bg-canvas
-                            px-2 py-0.5 text-sm text-default
-                          `}
-                          key={option}
-                        >
-                          {option}
-                          <span
-                            aria-label={`Remove ${option}`}
-                            className={`
-                              -mr-1 ml-0.5 cursor-pointer text-subtle
-                              hover:text-accent
-                            `}
-                            onClick={(e) => {
-                              // First prevent the dropdown from opening
-                              e.preventDefault();
-                              e.stopPropagation();
-                              // Then remove the item after a microtask to avoid focus issues
-                              setTimeout(() => removeOption(option), 0);
-                            }}
-                            onMouseDown={(e) => {
-                              // Prevent the button from receiving focus
-                              e.preventDefault();
-                              e.stopPropagation();
-                            }}
-                            onPointerDown={(e) => {
-                              // Also prevent pointer events
-                              e.preventDefault();
-                              e.stopPropagation();
-                            }}
-                            role="button"
-                            tabIndex={-1}
-                          >
-                            <svg
-                              className="h-3 w-3"
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
-                            >
-                              <path
-                                clipRule="evenodd"
-                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                fillRule="evenodd"
-                              />
-                            </svg>
-                          </span>
-                        </span>
-                      ))
-                    )}
-                  </div>
+                  {option}
                   <span
+                    role="button"
+                    tabIndex={-1}
+                    aria-label={`Remove ${option}`}
                     className={`
-                      absolute top-1/2 right-0 flex -translate-y-1/2
-                      items-center pr-2
+                      -mr-1 ml-0.5 cursor-pointer text-subtle
+                      hover:text-accent
                     `}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      removeOption(option);
+                    }}
+                    onMouseDown={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                    }}
                   >
-                    {selectedOptions.length > 0 && (
-                      <>
-                        <span
-                          aria-label="Clear all"
-                          className={`
-                            cursor-pointer p-1 text-subtle
-                            hover:text-accent
-                          `}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            handleChange([]);
-
-                            // On desktop, scroll to keep control in view after clearing
-                            if (
-                              window.innerWidth >= 1024 &&
-                              buttonRef.current
-                            ) {
-                              setTimeout(() => {
-                                buttonRef.current?.scrollIntoView({
-                                  behavior: "smooth",
-                                  block: "nearest",
-                                });
-                              }, 50);
-                            }
-                          }}
-                          onMouseDown={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                          }}
-                          onPointerDown={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                          }}
-                          role="button"
-                          tabIndex={-1}
-                        >
-                          <svg
-                            className="h-4 w-4"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path
-                              clipRule="evenodd"
-                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                              fillRule="evenodd"
-                            />
-                          </svg>
-                        </span>
-                        <span className="mx-1 h-5 border-l border-default" />
-                      </>
-                    )}
                     <svg
-                      aria-hidden="true"
-                      className="h-5 w-5 text-subtle"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                      className="h-3 w-3"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
                     >
                       <path
-                        d="M19 9l-7 7-7-7"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
+                        fillRule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clipRule="evenodd"
                       />
                     </svg>
                   </span>
-                </ListboxButton>
-
-                <ListboxOptions
+                </span>
+              ))
+            )}
+          </div>
+          <span
+            className={`
+              absolute top-1/2 right-0 flex -translate-y-1/2
+              items-center pr-2
+            `}
+          >
+            {selectedOptions.length > 0 && (
+              <>
+                <span
+                  role="button"
+                  tabIndex={-1}
+                  aria-label="Clear all"
                   className={`
-                    absolute z-10 mt-1 w-full overflow-auto rounded-sm
-                    bg-default py-1 text-base text-subtle
-                    shadow-[0px_0px_0px_1px_rgba(0,0,0,0.1),0px_4px_11px_rgba(0,0,0,0.1)]
-                    focus:outline-none
+                    cursor-pointer p-1 text-subtle
+                    hover:text-accent
                   `}
-                  style={{ maxHeight: dropdownMaxHeight }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    clearAll();
+                  }}
+                  onMouseDown={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                  }}
                 >
-                  {options
-                    .filter((option) => !selectedOptions.includes(option))
-                    .map((option) => (
-                      <ListboxOption
-                        className={({ focus }) =>
-                          `relative cursor-default select-none py-2 px-4 ${
-                            focus ? "bg-stripe text-subtle" : "text-subtle"
-                          }`
-                        }
-                        key={option}
-                        onClick={(e: React.MouseEvent) => {
-                          // Stop propagation to prevent closing the filter drawer
-                          e.stopPropagation();
-                        }}
-                        value={option}
-                      >
-                        <span className="block truncate">{option}</span>
-                      </ListboxOption>
-                    ))}
-                </ListboxOptions>
-              </div>
-            );
-          }}
-        </Listbox>
+                  <svg
+                    className="h-4 w-4"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span className="mx-1 h-5 border-l border-default" />
+              </>
+            )}
+            <svg
+              aria-hidden="true"
+              className="h-5 w-5 text-subtle"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d={isOpen ? "M5 15l7-7 7 7" : "M19 9l-7 7-7-7"}
+              />
+            </svg>
+          </span>
+        </button>
+
+        {isOpen && (
+          <div
+            ref={dropdownRef}
+            className={`
+              absolute z-10 mt-1 w-full overflow-auto rounded-sm
+              bg-default py-1 text-base text-subtle
+              shadow-[0px_0px_0px_1px_rgba(0,0,0,0.1),0px_4px_11px_rgba(0,0,0,0.1)]
+              focus:outline-none
+            `}
+            style={{ maxHeight: dropdownMaxHeight }}
+          >
+            <ul
+              ref={optionsRef}
+              role="listbox"
+              aria-labelledby={label}
+              aria-multiselectable="true"
+            >
+              {availableOptions.map((option) => (
+                <li
+                  key={option}
+                  role="option"
+                  aria-selected={false}
+                  className={`
+                    relative cursor-default select-none py-2 px-4
+                    hover:bg-stripe hover:text-subtle
+                    cursor-pointer
+                  `}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleSelect(option);
+                  }}
+                >
+                  <span className="block truncate">{option}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );

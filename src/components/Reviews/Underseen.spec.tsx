@@ -1,4 +1,4 @@
-import { act, render, screen, waitFor, within } from "@testing-library/react";
+import { render, screen, waitFor, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { describe, it } from "vitest";
 
@@ -18,10 +18,10 @@ describe("Underseen", () => {
     expect.hasAssertions();
     render(<Underseen {...props} />);
 
-    await act(async () => {
-      await userEvent.type(screen.getByLabelText("Title"), "Bad Seed");
-      await new Promise((r) => setTimeout(r, 500));
-    });
+    await userEvent.type(screen.getByLabelText("Title"), "Bad Seed");
+    await waitFor(() => {
+      expect(screen.getByTestId("list")).toBeInTheDocument();
+    }, { timeout: 600 });
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
@@ -205,16 +205,16 @@ describe("Underseen", () => {
     const horrorOption = await screen.findByRole("option", { name: "Horror" });
     await userEvent.click(horrorOption);
 
-    // Wait for dropdown to close and component to remount
-    await act(async () => {
-      await new Promise(r => setTimeout(r, 200));
-    });
+    // Wait for dropdown to close (150ms timeout in component)
+    await waitFor(() => {
+      expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
+    }, { timeout: 300 });
 
-    // Re-get the button after remount
-    const genresButtonAfterRemount = screen.getByLabelText("Genres");
-    
-    // Click to open the dropdown
-    await userEvent.click(genresButtonAfterRemount);
+    // Small additional wait to ensure state is settled
+    await new Promise(r => setTimeout(r, 50));
+
+    // Click to open the dropdown again
+    await userEvent.click(genresButton);
 
     // Select Comedy
     const comedyOption = await screen.findByRole("option", { name: "Comedy" });
