@@ -19,9 +19,12 @@ describe("Overrated", () => {
     render(<Overrated {...props} />);
 
     await userEvent.type(screen.getByLabelText("Title"), "Bad Seed");
-    await waitFor(() => {
-      expect(screen.getByTestId("list")).toBeInTheDocument();
-    }, { timeout: 600 });
+    await waitFor(
+      () => {
+        expect(screen.getByTestId("list")).toBeInTheDocument();
+      },
+      { timeout: 600 },
+    );
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
@@ -180,12 +183,15 @@ describe("Overrated", () => {
     await userEvent.click(horrorOption);
 
     // Wait for dropdown to close (150ms timeout in component)
-    await waitFor(() => {
-      expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
-    }, { timeout: 300 });
+    await waitFor(
+      () => {
+        expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
+      },
+      { timeout: 300 },
+    );
 
     // Small additional wait to ensure state is settled
-    await new Promise(r => setTimeout(r, 50));
+    await new Promise((r) => setTimeout(r, 50));
 
     // Click to open the dropdown again
     await userEvent.click(genresButton);

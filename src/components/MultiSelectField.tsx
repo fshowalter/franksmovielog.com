@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type KeyboardEvent } from "react";
+import { type KeyboardEvent, useEffect, useRef, useState } from "react";
 
 import { LabelText } from "~/components/LabelText";
 
@@ -18,11 +18,11 @@ export function MultiSelectField({
   const buttonRef = useRef<HTMLButtonElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const optionsRef = useRef<(HTMLLIElement | null)[]>([]);
-  const listboxId = `listbox-${label.toLowerCase().replace(/\s+/g, '-')}`;
-  const buttonId = `button-${label.toLowerCase().replace(/\s+/g, '-')}`;
+  const listboxId = `listbox-${label.toLowerCase().replaceAll(/\s+/g, "-")}`;
+  const buttonId = `button-${label.toLowerCase().replaceAll(/\s+/g, "-")}`;
 
   const availableOptions = options.filter(
-    (option) => !selectedOptions.includes(option)
+    (option) => !selectedOptions.includes(option),
   );
 
   const handleToggle = () => {
@@ -37,10 +37,10 @@ export function MultiSelectField({
     const newValues = [...selectedOptions, option];
     setSelectedOptions(newValues);
     onChange(newValues);
-    
+
     // Reset highlighted index for remaining options
     setHighlightedIndex(0);
-    
+
     // Close dropdown after selection
     setTimeout(() => {
       setIsOpen(false);
@@ -73,7 +73,7 @@ export function MultiSelectField({
     setSelectedOptions([]);
     onChange([]);
     buttonRef.current?.focus();
-    
+
     // On desktop, scroll to keep control in view after clearing
     if (window.innerWidth >= 1024 && buttonRef.current) {
       setTimeout(() => {
@@ -88,19 +88,21 @@ export function MultiSelectField({
   // Handle keyboard navigation on the button
   const handleButtonKeyDown = (e: KeyboardEvent<HTMLButtonElement>) => {
     switch (e.key) {
+      case " ":
+      case "Enter": {
+        e.preventDefault();
+        handleToggle();
+        break;
+      }
       case "ArrowDown":
-      case "ArrowUp":
+      case "ArrowUp": {
         e.preventDefault();
         if (!isOpen) {
           setIsOpen(true);
           setHighlightedIndex(0);
         }
         break;
-      case "Enter":
-      case " ":
-        e.preventDefault();
-        handleToggle();
-        break;
+      }
     }
   };
 
@@ -109,40 +111,50 @@ export function MultiSelectField({
     if (!isOpen) return;
 
     switch (e.key) {
-      case "ArrowDown":
-        e.preventDefault();
-        setHighlightedIndex((prev) => 
-          prev < availableOptions.length - 1 ? prev + 1 : prev
-        );
-        break;
-      case "ArrowUp":
-        e.preventDefault();
-        setHighlightedIndex((prev) => (prev > 0 ? prev - 1 : prev));
-        break;
-      case "Home":
-        e.preventDefault();
-        setHighlightedIndex(0);
-        break;
-      case "End":
-        e.preventDefault();
-        setHighlightedIndex(availableOptions.length - 1);
-        break;
-      case "Enter":
       case " ":
+      case "Enter": {
         e.preventDefault();
-        if (highlightedIndex >= 0 && highlightedIndex < availableOptions.length) {
+        if (
+          highlightedIndex >= 0 &&
+          highlightedIndex < availableOptions.length
+        ) {
           handleSelect(availableOptions[highlightedIndex]);
         }
         break;
-      case "Escape":
+      }
+      case "ArrowDown": {
+        e.preventDefault();
+        setHighlightedIndex((prev) =>
+          prev < availableOptions.length - 1 ? prev + 1 : prev,
+        );
+        break;
+      }
+      case "ArrowUp": {
+        e.preventDefault();
+        setHighlightedIndex((prev) => (prev > 0 ? prev - 1 : prev));
+        break;
+      }
+      case "End": {
+        e.preventDefault();
+        setHighlightedIndex(availableOptions.length - 1);
+        break;
+      }
+      case "Escape": {
         e.preventDefault();
         setIsOpen(false);
         buttonRef.current?.focus();
         break;
-      case "Tab":
+      }
+      case "Home": {
+        e.preventDefault();
+        setHighlightedIndex(0);
+        break;
+      }
+      case "Tab": {
         // Allow tab to close the dropdown and move focus naturally
         setIsOpen(false);
         break;
+      }
     }
   };
 
@@ -170,14 +182,16 @@ export function MultiSelectField({
 
   // Scroll highlighted option into view
   useEffect(() => {
-    if (isOpen && highlightedIndex >= 0 && optionsRef.current[highlightedIndex]) {
-      // Check if scrollIntoView exists (it doesn't in jsdom test environment)
-      if (typeof optionsRef.current[highlightedIndex]?.scrollIntoView === 'function') {
-        optionsRef.current[highlightedIndex].scrollIntoView({
-          block: "nearest",
-          behavior: "smooth",
-        });
-      }
+    if (
+      isOpen &&
+      highlightedIndex >= 0 &&
+      optionsRef.current[highlightedIndex] && // Check if scrollIntoView exists (it doesn't in jsdom test environment)
+      typeof optionsRef.current[highlightedIndex]?.scrollIntoView === "function"
+    ) {
+      optionsRef.current[highlightedIndex].scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+      });
     }
   }, [highlightedIndex, isOpen]);
 
@@ -239,29 +253,27 @@ export function MultiSelectField({
         }}
       >
         <button
-          ref={buttonRef}
-          id={buttonId}
-          type="button"
-          className={`
-            relative w-full cursor-default
-            scroll-mt-[var(--control-scroll-offset,0)] rounded border
-            border-default bg-default pr-10 pl-3 text-left text-base
-            text-subtle
-            focus:border-[rgb(38,132,255)]
-            focus:shadow-[0px_0px_0px_1px_rgb(38,132,255)]
-            focus:outline-none
-          `}
-          onClick={handleToggle}
-          onKeyDown={handleButtonKeyDown}
-          aria-expanded={isOpen}
-          aria-haspopup="listbox"
-          aria-label={label}
-          aria-controls={isOpen ? listboxId : undefined}
           aria-activedescendant={
-            isOpen && highlightedIndex >= 0 
+            isOpen && highlightedIndex >= 0
               ? getOptionId(highlightedIndex)
               : undefined
           }
+          aria-controls={isOpen ? listboxId : undefined}
+          aria-expanded={isOpen}
+          aria-haspopup="listbox"
+          aria-label={label}
+          className={`
+            relative w-full cursor-default
+            scroll-mt-[var(--control-scroll-offset,0)] rounded border
+            border-default bg-default pr-10 pl-3 text-left text-base text-subtle
+            focus:border-[rgb(38,132,255)]
+            focus:shadow-[0px_0px_0px_1px_rgb(38,132,255)] focus:outline-none
+          `}
+          id={buttonId}
+          onClick={handleToggle}
+          onKeyDown={handleButtonKeyDown}
+          ref={buttonRef}
+          type="button"
         >
           <div
             className={`
@@ -274,21 +286,19 @@ export function MultiSelectField({
             ) : (
               selectedOptions.map((option) => (
                 <span
-                  key={option}
                   className={`
-                    inline-flex items-center gap-1 rounded bg-canvas
-                    px-2 py-0.5 text-sm text-default
+                    inline-flex items-center gap-1 rounded bg-canvas px-2 py-0.5
+                    text-sm text-default
                   `}
+                  key={option}
                 >
                   <span>{option}</span>
                   <button
-                    type="button"
-                    tabIndex={-1}
                     aria-label={`Remove ${option}`}
                     className={`
                       -mr-1 ml-0.5 cursor-pointer text-subtle
-                      hover:text-accent focus:text-accent
-                      focus:outline-none
+                      hover:text-accent
+                      focus:text-accent focus:outline-none
                     `}
                     onClick={(e) => {
                       e.preventDefault();
@@ -302,17 +312,19 @@ export function MultiSelectField({
                         removeOption(option, false);
                       }
                     }}
+                    tabIndex={-1}
+                    type="button"
                   >
                     <svg
+                      aria-hidden="true"
                       className="h-3 w-3"
                       fill="currentColor"
                       viewBox="0 0 20 20"
-                      aria-hidden="true"
                     >
                       <path
-                        fillRule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                         clipRule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        fillRule="evenodd"
                       />
                     </svg>
                   </button>
@@ -322,20 +334,17 @@ export function MultiSelectField({
           </div>
           <span
             className={`
-              absolute top-1/2 right-0 flex -translate-y-1/2
-              items-center pr-2
+              absolute top-1/2 right-0 flex -translate-y-1/2 items-center pr-2
             `}
           >
             {selectedOptions.length > 0 && (
               <>
                 <button
-                  type="button"
-                  tabIndex={-1}
                   aria-label="Clear all selections"
                   className={`
                     cursor-pointer p-1 text-subtle
-                    hover:text-accent focus:text-accent
-                    focus:outline-none
+                    hover:text-accent
+                    focus:text-accent focus:outline-none
                   `}
                   onClick={(e) => {
                     e.preventDefault();
@@ -349,35 +358,42 @@ export function MultiSelectField({
                       clearAll();
                     }
                   }}
+                  tabIndex={-1}
+                  type="button"
                 >
                   <svg
+                    aria-hidden="true"
                     className="h-4 w-4"
                     fill="currentColor"
                     viewBox="0 0 20 20"
-                    aria-hidden="true"
                   >
                     <path
-                      fillRule="evenodd"
-                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                       clipRule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      fillRule="evenodd"
                     />
                   </svg>
                 </button>
-                <span className="mx-1 h-5 border-l border-default" aria-hidden="true" />
+                <span
+                  aria-hidden="true"
+                  className={`
+                  mx-1 h-5 border-l border-default
+                `}
+                />
               </>
             )}
             <svg
               aria-hidden="true"
-              className="h-5 w-5 text-subtle pointer-events-none"
+              className="pointer-events-none h-5 w-5 text-subtle"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
             >
               <path
+                d={isOpen ? "M5 15l7-7 7 7" : "M19 9l-7 7-7-7"}
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d={isOpen ? "M5 15l7-7 7 7" : "M19 9l-7 7-7-7"}
               />
             </svg>
           </span>
@@ -385,46 +401,50 @@ export function MultiSelectField({
 
         {isOpen && (
           <div
-            ref={dropdownRef}
             className={`
-              absolute z-10 mt-1 w-full overflow-auto rounded-sm
-              bg-default py-1 text-base text-subtle
+              absolute z-10 mt-1 w-full overflow-auto rounded-sm bg-default py-1
+              text-base text-subtle
               shadow-[0px_0px_0px_1px_rgba(0,0,0,0.1),0px_4px_11px_rgba(0,0,0,0.1)]
               focus:outline-none
             `}
-            style={{ maxHeight: dropdownMaxHeight }}
             onKeyDown={handleListboxKeyDown}
+            ref={dropdownRef}
+            style={{ maxHeight: dropdownMaxHeight }}
           >
             <ul
-              id={listboxId}
-              role="listbox"
               aria-labelledby={`label-${buttonId}`}
               aria-multiselectable="true"
+              id={listboxId}
+              role="listbox"
               tabIndex={-1}
             >
               {availableOptions.length === 0 ? (
-                <li className="py-2 px-4 text-subtle italic">
+                <li className="px-4 py-2 text-subtle italic">
                   No options available
                 </li>
               ) : (
                 availableOptions.map((option, index) => (
                   <li
-                    key={option}
-                    ref={(el) => { optionsRef.current[index] = el; }}
-                    id={getOptionId(index)}
-                    role="option"
                     aria-selected={false}
                     className={`
-                      relative cursor-pointer select-none py-2 px-4
-                      ${highlightedIndex === index 
-                        ? "bg-stripe text-default" 
-                        : "hover:bg-stripe hover:text-subtle"}
+                      relative cursor-pointer px-4 py-2 select-none
+                      ${
+                        highlightedIndex === index
+                          ? "bg-stripe text-default"
+                          : "hover:bg-stripe hover:text-subtle"
+                      }
                     `}
+                    id={getOptionId(index)}
+                    key={option}
                     onClick={(e) => {
                       e.stopPropagation();
                       handleSelect(option);
                     }}
                     onMouseEnter={() => setHighlightedIndex(index)}
+                    ref={(el) => {
+                      optionsRef.current[index] = el;
+                    }}
+                    role="option"
                   >
                     <span className="block truncate">{option}</span>
                   </li>
