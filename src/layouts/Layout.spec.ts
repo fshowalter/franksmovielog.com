@@ -7,10 +7,8 @@ import { loadRenderers } from "astro:container";
 import { JSDOM } from "jsdom";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
-// Mock the PagefindUI module
-vi.mock("@pagefind/default-ui", () => ({
-  PagefindUI: vi.fn().mockImplementation(() => ({})),
-}));
+// Mock the search-ui module to avoid Pagefind errors in tests
+vi.mock("./search-ui");
 
 describe("Layout navigation menu", () => {
   let dom: JSDOMType;
@@ -57,20 +55,20 @@ describe("Layout navigation menu", () => {
     // Set requestAnimationFrame globally before importing navMenu
     globalThis.requestAnimationFrame = window.requestAnimationFrame;
 
-    // Mock requestIdleCallback for pageFind
+    // Mock requestIdleCallback for customSearch
     globalThis.requestIdleCallback =
       window.requestIdleCallback ||
       ((cb: IdleRequestCallback) => setTimeout(cb, 1));
 
-    // Set up globalThis.addEventListener for pageFind
+    // Set up globalThis.addEventListener for customSearch
     globalThis.addEventListener = window.addEventListener.bind(window);
     globalThis.removeEventListener = window.removeEventListener.bind(window);
 
-    // Add HTMLInputElement to global scope for pageFind
+    // Add HTMLInputElement to global scope for customSearch
     globalThis.HTMLInputElement = window.HTMLInputElement;
     globalThis.HTMLButtonElement = window.HTMLButtonElement;
 
-    // Mock import.meta.env for pageFind
+    // Mock import.meta.env for customSearch
     vi.stubGlobal("import.meta.env", {
       BASE_URL: "/",
     });
@@ -94,13 +92,13 @@ describe("Layout navigation menu", () => {
     // Import the init functions directly
     // This ensures Vitest instruments them for coverage
     const { initNavMenu } = await import("./navMenu.ts");
-    const { initPageFind } = await import("./pageFind.ts");
+    const { initSearch } = await import("./search.ts");
 
     // Call the functions in the JSDOM context
     // The imports will execute the module's top-level code which auto-initializes
     // But we need to manually call them since JSDOM's document.readyState might not trigger them
     initNavMenu();
-    initPageFind();
+    initSearch();
 
     cleanup = () => {
       // Clean up body classes
@@ -359,7 +357,7 @@ describe("Layout navigation menu", () => {
   });
 });
 
-describe("Layout search modal (pageFind)", () => {
+describe("Layout search modal (customSearch)", () => {
   let dom: JSDOMType;
   let document: Document;
   let window: DOMWindow;
@@ -411,7 +409,7 @@ describe("Layout search modal (pageFind)", () => {
     globalThis.removeEventListener = window.removeEventListener.bind(window);
     globalThis.dispatchEvent = window.dispatchEvent.bind(window);
 
-    // Add HTMLInputElement to global scope for pageFind
+    // Add HTMLInputElement to global scope for customSearch
     globalThis.HTMLInputElement = window.HTMLInputElement;
     globalThis.HTMLButtonElement = window.HTMLButtonElement;
 
@@ -436,7 +434,7 @@ describe("Layout search modal (pageFind)", () => {
     }
 
     // Import and initialize pageFind
-    const { initPageFind } = await import("./pageFind.ts");
+    const { initPageFind } = await import("./search.ts");
     initPageFind();
 
     cleanup = () => {
@@ -489,7 +487,7 @@ describe("Layout search modal (pageFind)", () => {
 
     // Re-import and initialize
     vi.resetModules();
-    const { initPageFind } = await import("./pageFind.ts");
+    const { initPageFind } = await import("./search.ts");
     initPageFind();
 
     const openBtn = document.querySelector("[data-open-modal]");
@@ -531,7 +529,7 @@ describe("Layout search modal (pageFind)", () => {
     expect(dialog?.close).toHaveBeenCalled();
   });
 
-  it("closes modal when clicking outside dialog frame", ({ expect }) => {
+  it("closes modal when clicking outside dialog frame", async ({ expect }) => {
     const openBtn =
       document.querySelector<HTMLButtonElement>("[data-open-modal]");
     const dialog = document.querySelector<HTMLDialogElement>("dialog");
@@ -539,6 +537,9 @@ describe("Layout search modal (pageFind)", () => {
     // Open the modal
     openBtn?.click();
     expect(dialog?.open).toBe(true);
+
+    // Wait for async operations to complete (openModal is async now)
+    await new Promise((resolve) => setTimeout(resolve, 100));
 
     // Click outside the dialog frame (on body)
     const clickEvent = new window.MouseEvent("click", {
@@ -639,7 +640,7 @@ describe("Layout search modal (pageFind)", () => {
     expect(Object.hasOwn(document.body.dataset, "searchModalOpen")).toBe(false);
   });
 
-  it("closes modal when clicking on a link", ({ expect }) => {
+  it("closes modal when clicking on a link", async ({ expect }) => {
     const openBtn =
       document.querySelector<HTMLButtonElement>("[data-open-modal]");
     const dialog = document.querySelector<HTMLDialogElement>("dialog");
@@ -663,17 +664,22 @@ describe("Layout search modal (pageFind)", () => {
     });
     globalThis.dispatchEvent(clickEvent);
 
+    // Wait for the 100ms delay before modal closes
+    await new Promise((resolve) => setTimeout(resolve, 110));
+
     // eslint-disable-next-line @typescript-eslint/unbound-method
     expect(dialog?.close).toHaveBeenCalled();
   });
 
   it("blurs search input when Enter is pressed", ({ expect }) => {
-    const input = document.createElement("input");
-    input.classList.add("pagefind-ui__search-input");
-    document.body.append(input);
+    // Use the actual input element from the rendered layout
+    const input = document.querySelector<HTMLInputElement>(
+      "#pagefind-search-input",
+    );
+    expect(input).toBeTruthy();
 
-    const blurSpy = vi.spyOn(input, "blur");
-    input.focus();
+    const blurSpy = vi.spyOn(input!, "blur");
+    input!.focus();
 
     const keyEvent = new window.KeyboardEvent("keydown", {
       bubbles: true,
@@ -689,13 +695,18 @@ describe("Layout search modal (pageFind)", () => {
   });
 
   it("focuses search input when clear button is clicked", ({ expect }) => {
-    const clearBtn = document.createElement("button");
-    clearBtn.classList.add("pagefind-ui__search-clear");
-    const searchInput = document.createElement("input");
-    searchInput.classList.add("pagefind-ui__search-input");
-    document.body.append(clearBtn, searchInput);
+    // Use the actual elements from the rendered layout
+    const clearBtn = document.querySelector<HTMLButtonElement>(
+      "#pagefind-clear-button",
+    );
+    const searchInput = document.querySelector<HTMLInputElement>(
+      "#pagefind-search-input",
+    );
 
-    const focusSpy = vi.spyOn(searchInput, "focus");
+    expect(clearBtn).toBeTruthy();
+    expect(searchInput).toBeTruthy();
+
+    const focusSpy = vi.spyOn(searchInput!, "focus");
 
     // Open modal first to set up click listener
     const openBtn =
