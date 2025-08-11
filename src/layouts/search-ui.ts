@@ -385,8 +385,6 @@ export class SearchUI {
         }),
       );
 
-      const firstNewResultIndex = this.state.results.length;
-
       this.updateState({
         results: [...this.state.results, ...resultData],
         visibleResults: this.state.visibleResults + resultData.length,
@@ -457,7 +455,7 @@ export class SearchUI {
           }
           <div class="min-w-0 flex-1">
             <h3 class="font-sans text-base font-semibold text-accent">
-              <a href="${result.url}" class="block" role="listitem">
+              <a href="${result.url}" class="block">
                 ${title}
               </a>
             </h3>

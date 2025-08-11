@@ -50,10 +50,20 @@ export function initPageFind(): void {
     }
 
     const isLink = "href" in (event.target || {});
+    if (isLink) {
+      // For links, only close modal after a small delay to allow navigation
+      // This handles both click and Enter key navigation
+      const target = event.target as HTMLAnchorElement;
+      if (target.href) {
+        setTimeout(() => closeModal(), 100);
+        return;
+      }
+    }
+
+    // Close if clicked outside the dialog frame
     if (
-      isLink ||
-      (document.body.contains(event.target as Node) &&
-        !dialogFrame.contains(event.target as Node))
+      document.body.contains(event.target as Node) &&
+      !dialogFrame.contains(event.target as Node)
     ) {
       closeModal();
     }

@@ -7,6 +7,8 @@ import { loadRenderers } from "astro:container";
 import { JSDOM } from "jsdom";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
+// Mock the search-ui module to avoid Pagefind errors in tests
+vi.mock("./search-ui");
 
 describe("Layout navigation menu", () => {
   let dom: JSDOMType;
@@ -15,17 +17,6 @@ describe("Layout navigation menu", () => {
   let cleanup: () => void;
 
   beforeEach(async () => {
-    // Mock console.error to suppress Pagefind initialization errors in tests
-    const originalConsoleError = console.error;
-    vi.spyOn(console, 'error').mockImplementation((...args) => {
-      // Suppress Pagefind-related errors in tests
-      if (args[0]?.toString().includes('Failed to initialize') || 
-          args[1]?.toString().includes('Cannot find module')) {
-        return;
-      }
-      originalConsoleError(...args);
-    });
-
     // Render the test page using Astro's container API
     const renderers = await loadRenderers([reactContainerRenderer()]);
     const container = await AstroContainer.create({ renderers });
@@ -373,17 +364,6 @@ describe("Layout search modal (customSearch)", () => {
   let cleanup: () => void;
 
   beforeEach(async () => {
-    // Mock console.error to suppress Pagefind initialization errors in tests
-    const originalConsoleError = console.error;
-    vi.spyOn(console, 'error').mockImplementation((...args) => {
-      // Suppress Pagefind-related errors in tests
-      if (args[0]?.toString().includes('Failed to initialize') || 
-          args[1]?.toString().includes('Cannot find module')) {
-        return;
-      }
-      originalConsoleError(...args);
-    });
-
     // Render the test page using Astro's container API
     const renderers = await loadRenderers([reactContainerRenderer()]);
     const container = await AstroContainer.create({ renderers });
@@ -559,7 +539,7 @@ describe("Layout search modal (customSearch)", () => {
     expect(dialog?.open).toBe(true);
 
     // Wait for async operations to complete (openModal is async now)
-    await new Promise((resolve) => setTimeout(resolve, 50));
+    await new Promise((resolve) => setTimeout(resolve, 100));
 
     // Click outside the dialog frame (on body)
     const clickEvent = new window.MouseEvent("click", {
@@ -660,7 +640,7 @@ describe("Layout search modal (customSearch)", () => {
     expect(Object.hasOwn(document.body.dataset, "searchModalOpen")).toBe(false);
   });
 
-  it("closes modal when clicking on a link", ({ expect }) => {
+  it("closes modal when clicking on a link", async ({ expect }) => {
     const openBtn =
       document.querySelector<HTMLButtonElement>("[data-open-modal]");
     const dialog = document.querySelector<HTMLDialogElement>("dialog");
@@ -683,6 +663,9 @@ describe("Layout search modal (customSearch)", () => {
       writable: false,
     });
     globalThis.dispatchEvent(clickEvent);
+
+    // Wait for the 100ms delay before modal closes
+    await new Promise((resolve) => setTimeout(resolve, 110));
 
     // eslint-disable-next-line @typescript-eslint/unbound-method
     expect(dialog?.close).toHaveBeenCalled();
