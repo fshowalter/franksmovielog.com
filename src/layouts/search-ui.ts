@@ -1,5 +1,12 @@
 import { debounce } from "~/utils/debounce";
 
+type PagefindAnchor = {
+  element: string;
+  id: string;
+  location: number;
+  text: string;
+};
+
 // Types for Pagefind API
 type PagefindAPI = {
   debouncedSearch(
@@ -15,6 +22,20 @@ type PagefindAPI = {
     query: string,
     options?: PagefindSearchOptions,
   ): Promise<PagefindSearchResults>;
+};
+
+type PagefindDocument = {
+  anchors?: PagefindAnchor[];
+  excerpt: string;
+  filters: Record<string, string>;
+  meta: {
+    image?: string;
+    image_alt?: string;
+    title: string;
+  };
+  sub_results?: PagefindSubResult[];
+  url: string;
+  weighted_locations: WeightedLocation[];
 };
 
 type PagefindResult = {
@@ -40,27 +61,6 @@ type PagefindSearchResults = {
   };
   totalFilters: Record<string, Record<string, number>>;
   unfilteredResultCount: number;
-};
-
-type PagefindAnchor = {
-  element: string;
-  id: string;
-  location: number;
-  text: string;
-};
-
-type PagefindDocument = {
-  anchors?: PagefindAnchor[];
-  excerpt: string;
-  filters: Record<string, string>;
-  meta: {
-    image?: string;
-    image_alt?: string;
-    title: string;
-  };
-  sub_results?: PagefindSubResult[];
-  url: string;
-  weighted_locations: WeightedLocation[];
 };
 
 type PagefindSubResult = {
