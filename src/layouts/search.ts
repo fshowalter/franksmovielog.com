@@ -63,15 +63,10 @@ export function initPageFind(): void {
     dialog.showModal();
     document.body.toggleAttribute("data-search-modal-open", true);
 
-    // Lazy-load SearchUI and SearchAPI on first open
+    // Lazy-load SearchUI on first open
     if (!searchUIInstance) {
-      const [{ SearchAPI }, { SearchUI }] = await Promise.all([
-        import("./search-api"),
-        import("./search-ui"),
-      ]);
-      
-      const searchAPI = new SearchAPI();
-      searchUIInstance = new SearchUI(searchAPI);
+      const { SearchUI } = await import("./search-ui");
+      searchUIInstance = new SearchUI();
       await searchUIInstance.init();
     }
 
@@ -136,13 +131,8 @@ export function initSearchUI(): void {
 
   onIdle(() => {
     void (async () => {
-      const [{ SearchAPI }, { SearchUI }] = await Promise.all([
-        import("./search-api"),
-        import("./search-ui"),
-      ]);
-      
-      const searchAPI = new SearchAPI();
-      const searchUI = new SearchUI(searchAPI);
+      const { SearchUI } = await import("./search-ui");
+      const searchUI = new SearchUI();
       await searchUI.init();
     })();
   });

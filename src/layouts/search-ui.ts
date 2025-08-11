@@ -1,8 +1,55 @@
 import { debounce } from "~/utils/debounce";
 
-import type { SearchAPI } from "./search-api";
+// Types for Pagefind API
+type PagefindAPI = {
+  debouncedSearch(
+    query: string,
+    options?: PagefindSearchOptions,
+    debounceTimeoutMs?: number,
+  ): Promise<PagefindSearchResults>;
+  destroy(): Promise<void>;
+  filters(): Promise<Record<string, Record<string, number>>>;
+  init(): Promise<void>;
+  preload(term: string, options?: PagefindSearchOptions): Promise<void>;
+  search(
+    query: string,
+    options?: PagefindSearchOptions,
+  ): Promise<PagefindSearchResults>;
+};
 
-export type PagefindDocument = {
+type PagefindResult = {
+  data(): Promise<PagefindDocument>;
+  id: string;
+  score: number;
+  words: number[];
+};
+
+type PagefindSearchOptions = {
+  filters?: Record<string, string | string[]>;
+  sort?: Record<string, "asc" | "desc">;
+  verbose?: boolean;
+};
+
+type PagefindSearchResults = {
+  filters: Record<string, Record<string, number>>;
+  results: PagefindResult[];
+  timings: {
+    preload: number;
+    search: number;
+    total: number;
+  };
+  totalFilters: Record<string, Record<string, number>>;
+  unfilteredResultCount: number;
+};
+
+type PagefindAnchor = {
+  element: string;
+  id: string;
+  location: number;
+  text: string;
+};
+
+type PagefindDocument = {
   anchors?: PagefindAnchor[];
   excerpt: string;
   filters: Record<string, string>;
@@ -14,21 +61,6 @@ export type PagefindDocument = {
   sub_results?: PagefindSubResult[];
   url: string;
   weighted_locations: WeightedLocation[];
-};
-
-// Re-export types that might be needed
-export type PagefindResult = {
-  data(): Promise<PagefindDocument>;
-  id: string;
-  score: number;
-  words: number[];
-};
-
-type PagefindAnchor = {
-  element: string;
-  id: string;
-  location: number;
-  text: string;
 };
 
 type PagefindSubResult = {
@@ -70,6 +102,97 @@ type WeightedLocation = {
 };
 
 /**
+ * Wrapper for the Pagefind search API
+ */
+class SearchAPI {
+  private api: PagefindAPI | undefined = undefined;
+  private isInitialized = false;
+
+  /**
+   * Clean up the API
+   */
+  async destroy(): Promise<void> {
+    if (this.api) {
+      await this.api.destroy();
+      this.api = undefined;
+      this.isInitialized = false;
+    }
+  }
+
+  /**
+   * Initialize the Pagefind API
+   */
+  async init(bundlePath: string): Promise<void> {
+    if (this.isInitialized) return;
+
+    try {
+      // Dynamically import Pagefind
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      const pagefindModule = await import(
+        /* @vite-ignore */ `${bundlePath}pagefind.js`
+      );
+
+      // Initialize Pagefind with options
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
+      await pagefindModule.options({
+        baseUrl: import.meta.env.BASE_URL,
+        bundlePath,
+      });
+
+      // Store the API reference
+      this.api = pagefindModule as PagefindAPI;
+
+      // Initialize the API
+      await this.api.init();
+      this.isInitialized = true;
+    } catch (error) {
+      // In test environment, silently fail
+      if (import.meta.env.MODE === "test") {
+        console.warn("Pagefind not available in test environment");
+        return;
+      }
+      console.error("Failed to initialize Pagefind:", error);
+      throw new Error("Search functionality could not be loaded");
+    }
+  }
+
+  /**
+   * Perform a search
+   */
+  async search(
+    query: string,
+    options?: PagefindSearchOptions & { signal?: AbortSignal },
+  ): Promise<PagefindSearchResults> {
+    if (!this.api) {
+      throw new Error("Search API not initialized");
+    }
+
+    // Extract signal from options
+    const { signal, ...searchOptions } = options || {};
+
+    // Create a promise that rejects on abort
+    const abortPromise = signal
+      ? new Promise<never>((_, reject) => {
+          signal.addEventListener("abort", () => {
+            reject(new DOMException("Search aborted", "AbortError"));
+          });
+        })
+      : undefined;
+
+    // Race between search and abort
+    const searchPromise = this.api.debouncedSearch
+      ? this.api.debouncedSearch(query, searchOptions, 0)
+      : this.api.search(query, searchOptions);
+
+    if (abortPromise) {
+      return Promise.race([searchPromise, abortPromise]);
+    }
+
+    return searchPromise;
+  }
+}
+
+/**
  * Search UI implementation
  */
 export class SearchUI {
@@ -94,17 +217,14 @@ export class SearchUI {
 
   private state: SearchState;
 
-  constructor(api: SearchAPI) {
-    this.api = api;
+  constructor() {
+    this.api = new SearchAPI();
     this.state = this.getInitialState();
 
     // Create debounced search function once during construction
-    this.debouncedSearch = debounce(
-      (query: string) => {
-        void this.handleSearch(query);
-      },
-      this.config.debounceTimeoutMs,
-    );
+    this.debouncedSearch = debounce((query: string) => {
+      void this.handleSearch(query);
+    }, this.config.debounceTimeoutMs);
   }
 
   /**
@@ -216,7 +336,9 @@ export class SearchUI {
       });
 
       // Store remaining results for "load more"
-      this.storeRemainingResults(searchResults.results.slice(this.config.pageSize));
+      this.storeRemainingResults(
+        searchResults.results.slice(this.config.pageSize),
+      );
     } catch (error) {
       if (error instanceof Error && error.name === "AbortError") {
         // Search was cancelled, ignore
@@ -409,50 +531,52 @@ export class SearchUI {
    */
   private setupElements(): void {
     const container = document.querySelector("#pagefind__search");
-    this.elements = container ? {
-        clearButton: container.querySelector(
-          ".pagefind-ui__search-clear",
-        ) as HTMLButtonElement,
-        container: container as HTMLElement,
-        filtersContainer: container.querySelector(
-          ".pagefind-ui__filters",
-        ) as HTMLElement,
-        input: container.querySelector(
-          ".pagefind-ui__search-input",
-        ) as HTMLInputElement,
-        loadMoreButton: container.querySelector(
-          ".pagefind-ui__button",
-        ) as HTMLButtonElement,
-        loadMoreWrapper: container.querySelector(
-          ".pagefind-ui__results-footer",
-        ) as HTMLElement,
-        resultsContainer: container.querySelector(
-          ".pagefind-ui__results",
-        ) as HTMLElement,
-        resultsCounter: container.querySelector(
-          ".pagefind-ui__results-count",
-        ) as HTMLElement,
-      } : {
-        clearButton: document.querySelector(
-          "#pagefind-clear-button",
-        ) as HTMLButtonElement,
-        container: document.body,
-        input: document.querySelector(
-          "#pagefind-search-input",
-        ) as HTMLInputElement,
-        loadMoreButton: document.querySelector(
-          "#pagefind-load-more",
-        ) as HTMLButtonElement,
-        loadMoreWrapper: document.querySelector(
-          "#pagefind-load-more-wrapper",
-        ) as HTMLElement,
-        resultsContainer: document.querySelector(
-          "#pagefind-results",
-        ) as HTMLElement,
-        resultsCounter: document.querySelector(
-          "#pagefind-results-counter",
-        ) as HTMLElement,
-      };
+    this.elements = container
+      ? {
+          clearButton: container.querySelector(
+            ".pagefind-ui__search-clear",
+          ) as HTMLButtonElement,
+          container: container as HTMLElement,
+          filtersContainer: container.querySelector(
+            ".pagefind-ui__filters",
+          ) as HTMLElement,
+          input: container.querySelector(
+            ".pagefind-ui__search-input",
+          ) as HTMLInputElement,
+          loadMoreButton: container.querySelector(
+            ".pagefind-ui__button",
+          ) as HTMLButtonElement,
+          loadMoreWrapper: container.querySelector(
+            ".pagefind-ui__results-footer",
+          ) as HTMLElement,
+          resultsContainer: container.querySelector(
+            ".pagefind-ui__results",
+          ) as HTMLElement,
+          resultsCounter: container.querySelector(
+            ".pagefind-ui__results-count",
+          ) as HTMLElement,
+        }
+      : {
+          clearButton: document.querySelector(
+            "#pagefind-clear-button",
+          ) as HTMLButtonElement,
+          container: document.body,
+          input: document.querySelector(
+            "#pagefind-search-input",
+          ) as HTMLInputElement,
+          loadMoreButton: document.querySelector(
+            "#pagefind-load-more",
+          ) as HTMLButtonElement,
+          loadMoreWrapper: document.querySelector(
+            "#pagefind-load-more-wrapper",
+          ) as HTMLElement,
+          resultsContainer: document.querySelector(
+            "#pagefind-results",
+          ) as HTMLElement,
+          resultsCounter: document.querySelector(
+            "#pagefind-results-counter",
+          ) as HTMLElement,
+        };
 
     if (!this.elements.input || !this.elements.resultsContainer) {
       throw new Error("Required search elements not found");

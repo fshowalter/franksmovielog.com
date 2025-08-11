@@ -534,9 +534,9 @@ describe("Layout search modal (customSearch)", () => {
     // Open the modal
     openBtn?.click();
     expect(dialog?.open).toBe(true);
-    
-    // Wait for async operations to complete
-    await new Promise((resolve) => setTimeout(resolve, 10));
+
+    // Wait for async operations to complete (openModal is async now)
+    await new Promise((resolve) => setTimeout(resolve, 50));
 
     // Click outside the dialog frame (on body)
     const clickEvent = new window.MouseEvent("click", {

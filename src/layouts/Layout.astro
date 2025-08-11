@@ -144,29 +144,29 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
                 type="search"
               />
 
-            <!-- Clear button -->
-            <button
-              aria-label="Clear search"
-              class={`
+              <!-- Clear button -->
+              <button
+                aria-label="Clear search"
+                class={`
                 absolute top-6 right-24 hidden h-4 w-4 rounded-full bg-subtle
                 text-subtle
                 hover:text-default
                 focus:outline-accent
               `}
-              id="pagefind-clear-button"
-              type="button"
-            >
-              <svg
-                class="h-full w-full"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+                id="pagefind-clear-button"
+                type="button"
               >
-                <path
-                  d="m13.41 12 6.3-6.29a1 1 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1 1 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 .33 1.64 1 1 0 0 0 1.09-.22l6.29-6.3 6.29 6.3a1 1 0 0 0 1.64-.33 1 1 0 0 0-.22-1.09L13.41 12Z"
-                ></path>
-              </svg>
-            </button>
+                <svg
+                  class="h-full w-full"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m13.41 12 6.3-6.29a1 1 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1 1 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 .33 1.64 1 1 0 0 0 1.09-.22l6.29-6.3 6.29 6.3a1 1 0 0 0 1.64-.33 1 1 0 0 0-.22-1.09L13.41 12Z"
+                  ></path>
+                </svg>
+              </button>
 
               <!-- Border line after input -->
               <div
