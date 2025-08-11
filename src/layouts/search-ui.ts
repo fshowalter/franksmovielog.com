@@ -375,6 +375,8 @@ export class SearchUI {
         }),
       );
 
+      const firstNewResultIndex = this.state.results.length;
+
       this.updateState({
         results: [...this.state.results, ...resultData],
         visibleResults: this.state.visibleResults + resultData.length,
@@ -383,6 +385,10 @@ export class SearchUI {
 
       // Restore scroll position
       this.elements.resultsContainer.scrollTop = scrollPosition;
+
+      // Announce to screen readers that new results were loaded
+      const announcement = `${resultData.length} more results loaded`;
+      this.announceToScreenReader(announcement);
     } catch (error) {
       console.error("Failed to load more results:", error);
       this.showError("Failed to load more results.");
@@ -632,5 +638,20 @@ export class SearchUI {
    */
   private updateState(updates: Partial<SearchState>): void {
     this.state = { ...this.state, ...updates };
+  }
+
+  /**
+   * Announce message to screen readers
+   */
+  private announceToScreenReader(message: string): void {
+    const announcement = document.createElement("div");
+    announcement.setAttribute("role", "status");
+    announcement.setAttribute("aria-live", "polite");
+    announcement.className = "sr-only";
+    announcement.textContent = message;
+    document.body.appendChild(announcement);
+    setTimeout(() => {
+      document.body.removeChild(announcement);
+    }, 1000);
   }
 }

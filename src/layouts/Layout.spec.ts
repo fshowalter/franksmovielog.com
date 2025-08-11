@@ -68,6 +68,7 @@ describe("Layout navigation menu", () => {
     // Mock import.meta.env for customSearch
     vi.stubGlobal("import.meta.env", {
       BASE_URL: "/",
+      MODE: "test",
     });
 
     // Mock dialog methods since JSDOM doesn't fully support them
@@ -412,6 +413,7 @@ describe("Layout search modal (customSearch)", () => {
 
     vi.stubGlobal("import.meta.env", {
       BASE_URL: "/",
+      MODE: "test",
     });
 
     // Mock dialog methods
