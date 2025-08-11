@@ -2,6 +2,7 @@ import type { SearchUI } from "./search-ui";
 
 // Store reference to SearchUI instance for lazy loading
 let searchUIInstance: SearchUI | undefined;
+let searchUILoading = false;
 
 /**
  * Initialize the search modal controls
@@ -49,15 +50,15 @@ export function initPageFind(): void {
       return; // Don't close the modal for clear button
     }
 
-    const isLink = "href" in (event.target || {});
-    if (isLink) {
+    // Check if the target is an anchor element or contained within one
+    const target = event.target as HTMLElement;
+    const link = target.closest("a");
+
+    if (link?.href) {
       // For links, only close modal after a small delay to allow navigation
       // This handles both click and Enter key navigation
-      const target = event.target as HTMLAnchorElement;
-      if (target.href) {
-        setTimeout(() => closeModal(), 100);
-        return;
-      }
+      setTimeout(() => closeModal(), 100);
+      return;
     }
 
     // Close if clicked outside the dialog frame
@@ -73,11 +74,16 @@ export function initPageFind(): void {
     dialog.showModal();
     document.body.toggleAttribute("data-search-modal-open", true);
 
-    // Lazy-load SearchUI on first open
-    if (!searchUIInstance) {
-      const { SearchUI } = await import("./search-ui");
-      searchUIInstance = new SearchUI();
-      await searchUIInstance.init();
+    // Lazy-load SearchUI on first open, prevent race condition with loading flag
+    if (!searchUIInstance && !searchUILoading) {
+      searchUILoading = true;
+      try {
+        const { SearchUI } = await import("./search-ui");
+        searchUIInstance = new SearchUI();
+        await searchUIInstance.init();
+      } finally {
+        searchUILoading = false;
+      }
     }
 
     // Focus the search input after modal opens

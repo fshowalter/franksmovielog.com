@@ -126,21 +126,24 @@ class SearchAPI {
     if (this.isInitialized) return;
 
     try {
-      // Dynamically import Pagefind
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      const pagefindModule = await import(
+      // Dynamically import Pagefind with proper typing
+      const pagefindModule = (await import(
         /* @vite-ignore */ `${bundlePath}pagefind.js`
-      );
+      )) as PagefindAPI & {
+        options: (config: {
+          baseUrl: string;
+          bundlePath: string;
+        }) => Promise<void>;
+      };
 
       // Initialize Pagefind with options
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
       await pagefindModule.options({
         baseUrl: import.meta.env.BASE_URL,
         bundlePath,
       });
 
       // Store the API reference
-      this.api = pagefindModule as PagefindAPI;
+      this.api = pagefindModule;
 
       // Initialize the API
       await this.api.init();
@@ -221,6 +224,24 @@ export class SearchUI {
     this.debouncedSearch = debounce((query: string) => {
       void this.handleSearch(query);
     }, this.config.debounceTimeoutMs);
+  }
+
+  /**
+   * Clean up the search UI
+   */
+  async destroy(): Promise<void> {
+    // Abort any pending search
+    if (this.abortController) {
+      this.abortController.abort();
+      this.abortController = undefined;
+    }
+
+    // Clean up the API
+    await this.api.destroy();
+
+    // Clear results
+    this.currentSearchResults = [];
+    this.state = this.getInitialState();
   }
 
   /**
