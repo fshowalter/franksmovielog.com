@@ -7,6 +7,7 @@ import { loadRenderers } from "astro:container";
 import { JSDOM } from "jsdom";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
+
 describe("Layout navigation menu", () => {
   let dom: JSDOMType;
   let document: Document;
@@ -14,6 +15,17 @@ describe("Layout navigation menu", () => {
   let cleanup: () => void;
 
   beforeEach(async () => {
+    // Mock console.error to suppress Pagefind initialization errors in tests
+    const originalConsoleError = console.error;
+    vi.spyOn(console, 'error').mockImplementation((...args) => {
+      // Suppress Pagefind-related errors in tests
+      if (args[0]?.toString().includes('Failed to initialize') || 
+          args[1]?.toString().includes('Cannot find module')) {
+        return;
+      }
+      originalConsoleError(...args);
+    });
+
     // Render the test page using Astro's container API
     const renderers = await loadRenderers([reactContainerRenderer()]);
     const container = await AstroContainer.create({ renderers });
@@ -68,7 +80,6 @@ describe("Layout navigation menu", () => {
     // Mock import.meta.env for customSearch
     vi.stubGlobal("import.meta.env", {
       BASE_URL: "/",
-      MODE: "test",
     });
 
     // Mock dialog methods since JSDOM doesn't fully support them
@@ -362,6 +373,17 @@ describe("Layout search modal (customSearch)", () => {
   let cleanup: () => void;
 
   beforeEach(async () => {
+    // Mock console.error to suppress Pagefind initialization errors in tests
+    const originalConsoleError = console.error;
+    vi.spyOn(console, 'error').mockImplementation((...args) => {
+      // Suppress Pagefind-related errors in tests
+      if (args[0]?.toString().includes('Failed to initialize') || 
+          args[1]?.toString().includes('Cannot find module')) {
+        return;
+      }
+      originalConsoleError(...args);
+    });
+
     // Render the test page using Astro's container API
     const renderers = await loadRenderers([reactContainerRenderer()]);
     const container = await AstroContainer.create({ renderers });
@@ -413,7 +435,6 @@ describe("Layout search modal (customSearch)", () => {
 
     vi.stubGlobal("import.meta.env", {
       BASE_URL: "/",
-      MODE: "test",
     });
 
     // Mock dialog methods

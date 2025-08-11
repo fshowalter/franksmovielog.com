@@ -146,11 +146,6 @@ class SearchAPI {
       await this.api.init();
       this.isInitialized = true;
     } catch (error) {
-      // In test environment, silently fail
-      if (import.meta.env.MODE === "test") {
-        console.warn("Pagefind not available in test environment");
-        return;
-      }
       console.error("Failed to initialize Pagefind:", error);
       throw new Error("Search functionality could not be loaded");
     }
