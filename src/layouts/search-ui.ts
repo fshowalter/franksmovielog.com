@@ -257,6 +257,8 @@ export class SearchUI {
     this.elements.input.value = "";
     this.elements.clearButton.classList.add("hidden");
     this.updateState(this.getInitialState());
+    // Clear stored results when clearing search
+    sessionStorage.removeItem("pagefind-remaining");
     this.renderResults();
   }
 
@@ -442,7 +444,7 @@ export class SearchUI {
               : ""
           }
           <div class="min-w-0 flex-1">
-            <h3 class="mb-2 font-serif text-base font-medium text-default">
+            <h3 class="mb-2 font-sans text-sm font-medium text-accent">
               ${title}
             </h3>
             <p class="font-sans text-xs leading-4 text-subtle">
