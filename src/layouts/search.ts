@@ -307,7 +307,7 @@ class SearchUI {
   async init(): Promise<void> {
     try {
       this.setupElements();
-    } catch (error) {
+    } catch {
       // Search elements not found - likely in test environment or page without search
       return;
     }
