@@ -305,7 +305,13 @@ class SearchUI {
    * Initialize the search UI
    */
   async init(): Promise<void> {
-    this.setupElements();
+    try {
+      this.setupElements();
+    } catch (error) {
+      // Search elements not found - likely in test environment or page without search
+      return;
+    }
+    
     this.setupEventListeners();
 
     try {
@@ -835,9 +841,9 @@ export function initSearch(): void {
 }
 
 /**
- * Initialize the search UI
+ * Initialize the search UI (PagefindUI replacement)
  */
-function initSearchUI(): void {
+export function initSearchUI(): void {
   const onIdle = globalThis.requestIdleCallback || ((cb) => setTimeout(cb, 1));
 
   onIdle(() => {
@@ -848,9 +854,11 @@ function initSearchUI(): void {
   });
 }
 
-// Initialize when DOM is ready
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initSearch);
-} else {
-  initSearch();
+// Initialize when DOM is ready (skip in test environment)
+if (typeof process === "undefined" || !process.env?.VITEST) {
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initSearch);
+  } else {
+    initSearch();
+  }
 }
