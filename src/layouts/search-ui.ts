@@ -193,7 +193,6 @@ class SearchAPI {
 export class SearchUI {
   private abortController: AbortController | undefined = undefined;
   private api: SearchAPI;
-  private currentSearchResults: PagefindResult[] = [];
   // Configuration
   private readonly config = {
     bundlePath: import.meta.env.BASE_URL.replace(/\/$/, "") + "/pagefind/",
@@ -206,6 +205,7 @@ export class SearchUI {
     },
     showImages: true,
   };
+  private currentSearchResults: PagefindResult[] = [];
   // Debounced search function to prevent memory leak
   private readonly debouncedSearch: (query: string) => void;
 
@@ -242,6 +242,21 @@ export class SearchUI {
       console.error("Failed to initialize search API:", error);
       this.showError("Search functionality could not be loaded.");
     }
+  }
+
+  /**
+   * Announce message to screen readers
+   */
+  private announceToScreenReader(message: string): void {
+    const announcement = document.createElement("div");
+    announcement.setAttribute("role", "status");
+    announcement.setAttribute("aria-live", "polite");
+    announcement.className = "sr-only";
+    announcement.textContent = message;
+    document.body.append(announcement);
+    setTimeout(() => {
+      announcement.remove();
+    }, 1000);
   }
 
   /**
@@ -425,7 +440,7 @@ export class SearchUI {
     const { image, image_alt, title } = result.meta;
 
     return `
-        <li class="gap-x-6 tablet:px-6 laptop:px-8 py-6 px-[8%] hover:bg-subtle border-t border-default last-of-type:border-b grid grid-cols-[min(25%,80px)_1fr] focus-within:bg-subtle focus-within:outline-accent focus-within:outline-1 focus-within:-outline-offset-2">
+        <li class="gap-x-6 tablet:px-6 laptop:px-8 py-6 px-[8%] hover:bg-subtle border-t border-default last-of-type:border-b grid grid-cols-[min(25%,80px)_1fr] focus-within:bg-subtle focus-within:outline-[rgb(38,132,255)] focus-within:outline-1 focus-within:-outline-offset-2">
           ${
             this.config.showImages && image
               ? `
@@ -633,20 +648,5 @@ export class SearchUI {
    */
   private updateState(updates: Partial<SearchState>): void {
     this.state = { ...this.state, ...updates };
-  }
-
-  /**
-   * Announce message to screen readers
-   */
-  private announceToScreenReader(message: string): void {
-    const announcement = document.createElement("div");
-    announcement.setAttribute("role", "status");
-    announcement.setAttribute("aria-live", "polite");
-    announcement.className = "sr-only";
-    announcement.textContent = message;
-    document.body.appendChild(announcement);
-    setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
   }
 }
