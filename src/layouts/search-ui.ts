@@ -198,6 +198,7 @@ class SearchAPI {
 export class SearchUI {
   private abortController: AbortController | undefined = undefined;
   private api: SearchAPI;
+  private currentSearchResults: PagefindResult[] = [];
   // Configuration
   private readonly config = {
     bundlePath: import.meta.env.BASE_URL.replace(/\/$/, "") + "/pagefind/",
@@ -258,7 +259,7 @@ export class SearchUI {
     this.elements.clearButton.classList.add("hidden");
     this.updateState(this.getInitialState());
     // Clear stored results when clearing search
-    sessionStorage.removeItem("pagefind-remaining");
+    this.currentSearchResults = [];
     this.renderResults();
   }
 
@@ -279,10 +280,10 @@ export class SearchUI {
     };
   }
 
-  // Utility methods for storing remaining results in sessionStorage
+  // Get remaining results from current search
   private getRemainingResults(): PagefindResult[] {
-    const stored = sessionStorage.getItem("pagefind-remaining");
-    return stored ? (JSON.parse(stored) as PagefindResult[]) : [];
+    // Return results that haven't been displayed yet
+    return this.currentSearchResults.slice(this.state.visibleResults);
   }
 
   /**
@@ -329,6 +330,9 @@ export class SearchUI {
         }),
       );
 
+      // Store the full results array for "load more" functionality
+      this.currentSearchResults = searchResults.results;
+
       this.updateState({
         filters: searchResults.filters,
         isSearching: false,
@@ -336,11 +340,6 @@ export class SearchUI {
         totalResults: searchResults.results.length,
         visibleResults: resultData.length,
       });
-
-      // Store remaining results for "load more"
-      this.storeRemainingResults(
-        searchResults.results.slice(this.config.pageSize),
-      );
     } catch (error) {
       if (error instanceof Error && error.name === "AbortError") {
         // Search was cancelled, ignore
@@ -372,7 +371,6 @@ export class SearchUI {
     try {
       const resultData = await Promise.all(
         nextBatch.map((r) => {
-          console.log(r);
           return r.data();
         }),
       );
@@ -381,8 +379,6 @@ export class SearchUI {
         results: [...this.state.results, ...resultData],
         visibleResults: this.state.visibleResults + resultData.length,
       });
-
-      this.storeRemainingResults(remainingResults.slice(this.config.pageSize));
       this.renderResults();
 
       // Restore scroll position
@@ -629,10 +625,6 @@ export class SearchUI {
       isSearching: false,
     });
     this.renderResults();
-  }
-
-  private storeRemainingResults(results: PagefindResult[]): void {
-    sessionStorage.setItem("pagefind-remaining", JSON.stringify(results));
   }
 
   /**
