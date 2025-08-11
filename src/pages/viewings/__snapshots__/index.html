@@ -3419,17 +3419,17 @@
         <!-- Fixed Search Input Section -->
         <div class="flex-shrink-0">
           <!-- Search Form with magnifying glass icon -->
-          <form role="search" aria-label="Site search" onsubmit="return false">
+          <form aria-label="Site search" onsubmit="return false" role="search">
             <div class="relative">
               <!-- Magnifying glass icon -->
               <svg
+                aria-hidden="true"
                 class="pointer-events-none absolute top-[18px] left-4 h-5 w-5 text-default opacity-70"
                 fill="none"
                 height="18"
                 viewBox="0 0 18 18"
                 width="18"
                 xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
               >
                 <path
                   d="M12.7549 11.255H11.9649L11.6849 10.985C12.6649 9.845 13.2549 8.365 13.2549 6.755C13.2549 3.165 10.3449 0.255005 6.75488 0.255005C3.16488 0.255005 0.254883 3.165 0.254883 6.755C0.254883 10.345 3.16488 13.255 6.75488 13.255C8.36488 13.255 9.84488 12.665 10.9849 11.685L11.2549 11.965V12.755L16.2549 17.745L17.7449 16.255L12.7549 11.255ZM6.75488 11.255C4.26488 11.255 2.25488 9.245 2.25488 6.755C2.25488 4.26501 4.26488 2.255 6.75488 2.255C9.24488 2.255 11.2549 4.26501 11.2549 6.755C11.2549 9.245 9.24488 11.255 6.75488 11.255Z"
@@ -3438,14 +3438,14 @@
               </svg>
               <!-- Search input -->
               <input
+                aria-describedby="pagefind-results-counter"
+                aria-label="Search query"
                 autocapitalize="off"
                 autocomplete="off"
                 autocorrect="off"
                 class="h-14 w-full border-0 bg-transparent pr-[70px] pl-[54px] font-serif text-lg font-normal text-default outline-none placeholder:text-muted placeholder:opacity-50 focus:outline-none"
                 enterkeyhint="search"
                 id="pagefind-search-input"
-                aria-label="Search query"
-                aria-describedby="pagefind-results-counter"
                 placeholder="Search"
                 spellcheck="false"
                 type="search"
@@ -3476,19 +3476,19 @@
           </form>
           <!-- Results message/counter -->
           <div
+            aria-atomic="true"
+            aria-live="polite"
             class="px-4 py-4 font-sans text-xs font-normal text-subtle empty:hidden"
             id="pagefind-results-counter"
-            aria-live="polite"
-            aria-atomic="true"
             role="status"
           ></div>
         </div>
         <!-- Scrollable Results Area -->
         <div
+          aria-label="Search results"
           class="min-h-0 flex-1 overflow-y-auto overscroll-contain outline-offset-[-2px] focus:outline-accent"
           id="pagefind-results-wrapper"
           role="region"
-          aria-label="Search results"
         >
           <div id="pagefind-results" role="list"></div>
           <!-- Load More Button -->
