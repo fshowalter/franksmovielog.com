@@ -311,7 +311,7 @@ class SearchUI {
       // Search elements not found - likely in test environment or page without search
       return;
     }
-    
+
     this.setupEventListeners();
 
     try {
