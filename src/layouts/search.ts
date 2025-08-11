@@ -292,13 +292,24 @@ class SearchUI {
     },
     showImages: true,
   };
-  private elements: SearchElements | undefined = undefined;
+  // Debounced search function to prevent memory leak
+  private readonly debouncedSearch: (query: string) => void;
 
+  private elements: SearchElements | undefined = undefined;
+  
   private state: SearchState;
 
   constructor() {
     this.api = new SearchAPI();
     this.state = this.getInitialState();
+    
+    // Create debounced search function once during construction
+    this.debouncedSearch = debounce(
+      (query: string) => {
+        void this.handleSearch(query);
+      },
+      this.config.debounceTimeoutMs,
+    );
   }
 
   /**
@@ -673,12 +684,6 @@ class SearchUI {
 
     const { clearButton, input, loadMoreButton } = this.elements;
 
-    // Search input with debouncing
-    const debouncedSearch = debounce(
-      (query: string) => void this.handleSearch(query),
-      this.config.debounceTimeoutMs,
-    );
-
     input.addEventListener("input", (e) => {
       const target = e.target as HTMLInputElement;
       this.updateState({ query: target.value });
@@ -690,7 +695,7 @@ class SearchUI {
         clearButton.classList.add("hidden");
       }
 
-      debouncedSearch(target.value);
+      this.debouncedSearch(target.value);
     });
 
     // Clear button
@@ -727,6 +732,9 @@ class SearchUI {
     this.state = { ...this.state, ...updates };
   }
 }
+
+// Store reference to SearchUI instance for lazy loading
+let searchUIInstance: SearchUI | undefined;
 
 /**
  * Initialize the search modal controls
@@ -784,9 +792,15 @@ export function initPageFind(): void {
     }
   };
 
-  const openModal = (event?: MouseEvent) => {
+  const openModal = async (event?: MouseEvent) => {
     dialog.showModal();
     document.body.toggleAttribute("data-search-modal-open", true);
+
+    // Lazy-load SearchUI on first open
+    if (!searchUIInstance) {
+      searchUIInstance = new SearchUI();
+      await searchUIInstance.init();
+    }
 
     // Focus the search input after modal opens
     requestAnimationFrame(() => {
@@ -802,7 +816,7 @@ export function initPageFind(): void {
 
   const closeModal = () => dialog.close();
 
-  openBtn.addEventListener("click", openModal);
+  openBtn.addEventListener("click", (e) => void openModal(e));
   openBtn.disabled = false;
   closeBtn.addEventListener("click", closeModal);
 
@@ -816,7 +830,7 @@ export function initPageFind(): void {
     if ((e.metaKey === true || e.ctrlKey === true) && e.key === "k") {
       if (dialog.open) closeModal();
       else {
-        openModal();
+        void openModal();
       }
       e.preventDefault();
     }
@@ -837,11 +851,12 @@ export function initPageFind(): void {
  */
 export function initSearch(): void {
   initPageFind();
-  initSearchUI();
+  // SearchUI is now lazy-loaded when the modal opens
 }
 
 /**
  * Initialize the search UI (PagefindUI replacement)
+ * @deprecated Use lazy loading via initPageFind instead
  */
 export function initSearchUI(): void {
   const onIdle = globalThis.requestIdleCallback || ((cb) => setTimeout(cb, 1));
