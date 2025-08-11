@@ -372,6 +372,7 @@ export class SearchUI {
     try {
       const resultData = await Promise.all(
         nextBatch.map((r) => {
+          console.log(r);
           return r.data();
         }),
       );
@@ -398,11 +399,11 @@ export class SearchUI {
   private renderLoadingSkeleton(): string {
     const skeletonItem = `
       <div class="animate-pulse px-4 py-4">
-        <div class="flex gap-4">
+        <div class="gap-x-6 tablet:px-6 laptop:px-8 py-6 px-[8%] grid grid-cols-[min(25%,80px)_1fr]">
           ${
             this.config.showImages
               ? `
-            <div class="h-12 w-16 flex-shrink-0 bg-subtle"></div>
+            <div class="h-12 w-full shrink-0 bg-subtle"></div>
           `
               : ""
           }
@@ -427,12 +428,11 @@ export class SearchUI {
     const { image, image_alt, title } = result.meta;
 
     return `
-      <a href="${result.url}" class="block" role="listitem">
-        <article class="flex gap-4 px-4 py-4 hover:bg-subtle">
+        <li class="gap-x-6 tablet:px-6 laptop:px-8 py-6 px-[8%] hover:bg-subtle border-t border-default last-of-type:border-b grid grid-cols-[min(25%,80px)_1fr] focus-within:bg-subtle focus-within:outline-accent focus-within:outline-1 focus-within:-outline-offset-2">
           ${
             this.config.showImages && image
               ? `
-            <div class="w-16 flex-shrink-0">
+            <div class="shrink-0 drop-shadow-md">
               <img 
                 src="${image}" 
                 alt="${image_alt || ""}"
@@ -444,15 +444,16 @@ export class SearchUI {
               : ""
           }
           <div class="min-w-0 flex-1">
-            <h3 class="mb-2 font-sans text-sm font-medium text-accent">
-              ${title}
+            <h3 class="font-sans text-base font-semibold text-accent">
+              <a href="${result.url}" class="block" role="listitem">
+                ${title}
+              </a>
             </h3>
-            <p class="font-sans text-xs leading-4 text-subtle">
+            <p class="text-sm leading-normal text-default">
               ${result.excerpt}
             </p>
           </div>
-        </article>
-      </a>
+        </li>
     `;
   }
 
@@ -502,9 +503,9 @@ export class SearchUI {
     } else if (isSearching) {
       this.elements.resultsContainer.innerHTML = this.renderLoadingSkeleton();
     } else if (results.length > 0) {
-      this.elements.resultsContainer.innerHTML = results
+      this.elements.resultsContainer.innerHTML = `<ol>${results
         .map((result) => this.renderResultItem(result))
-        .join("");
+        .join("")}</ol>`;
     } else if (hasSearched) {
       this.elements.resultsContainer.innerHTML = `
         <div class="px-4 py-8 text-center font-sans text-sm text-subtle">
