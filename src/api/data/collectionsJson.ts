@@ -2,6 +2,7 @@ import { promises as fs } from "node:fs";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
+import { perfLogger } from "./utils/performanceLogger";
 import { nullableNumber, nullableString } from "./utils/nullable";
 
 const collectionsJsonDirectory = getContentPath("data", "collections");
@@ -61,7 +62,9 @@ const CollectionJsonSchema = z
 export type CollectionJson = z.infer<typeof CollectionJsonSchema>;
 
 export async function allCollectionsJson(): Promise<CollectionJson[]> {
-  return await parseAllCollectionsJson();
+  return await perfLogger.measure("allCollectionsJson", async () => {
+    return await parseAllCollectionsJson();
+  });
 }
 
 async function parseAllCollectionsJson() {

@@ -4,6 +4,7 @@ import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import smartypants from "remark-smartypants";
+import strip from "strip-markdown";
 
 import { collator } from "~/utils/collator";
 
@@ -17,15 +18,16 @@ import { perfLogger } from "./data/utils/performanceLogger";
 import { allViewingsMarkdown } from "./data/viewingsMarkdown";
 import { linkReviewedTitles } from "./utils/linkReviewedTitles";
 import { getHtml } from "./utils/markdown/getHtml";
+import { removeFootnotes } from "./utils/markdown/removeFootnotes";
 import { rootAsSpan } from "./utils/markdown/rootAsSpan";
+import { trimToExcerpt } from "./utils/markdown/trimToExcerpt";
 
-// Cache at API level - works better with Astro's build process
+// Cache at API level - lazy caching for better build performance
 let cachedViewingsMarkdown: MarkdownViewing[];
 let cachedMarkdownReviews: MarkdownReview[];
 let cachedReviewedTitlesJson: ReviewedTitleJson[];
 let cachedReviews: Reviews;
-const cachedExcerpts: Record<string, string> = {};
-const cachedMostRecent: Record<number, Review[]> = {};
+const cachedExcerptHtml: Map<string, string> = new Map();
 
 // Enable caching during builds but not in dev mode
 const ENABLE_CACHE = !import.meta.env.DEV;
@@ -60,29 +62,52 @@ export async function allReviews(): Promise<Reviews> {
     if (cachedReviews) {
       return cachedReviews;
     }
-
+    
     const reviewedTitlesJson =
       cachedReviewedTitlesJson || (await allReviewedTitlesJson());
-    if (ENABLE_CACHE) cachedReviewedTitlesJson = reviewedTitlesJson;
-
+    if (ENABLE_CACHE && !cachedReviewedTitlesJson) {
+      cachedReviewedTitlesJson = reviewedTitlesJson;
+    }
+    
     const reviews = await parseReviewedTitlesJson(reviewedTitlesJson);
-    if (ENABLE_CACHE) cachedReviews = reviews;
+    if (ENABLE_CACHE) {
+      cachedReviews = reviews;
+    }
+    
     return reviews;
   });
 }
 
+export function getContentPlainText(rawContent: string): string {
+  return getMastProcessor()
+    .use(removeFootnotes)
+    .use(strip)
+    .processSync(rawContent)
+    .toString();
+}
+
 export async function loadContent<
-  T extends {
-    excerptPlainText: string;
-    imdbId: string;
-    rawContent: string;
-    title: string;
-  },
+  T extends { imdbId: string; rawContent: string; title: string },
 >(review: T): Promise<ReviewContent & T> {
   return await perfLogger.measure("loadContent", async () => {
     const viewingsMarkdown =
       cachedViewingsMarkdown || (await allViewingsMarkdown());
-    const reviewedTitlesJson = await allReviewedTitlesJson();
+    if (ENABLE_CACHE && !cachedViewingsMarkdown) {
+      cachedViewingsMarkdown = viewingsMarkdown;
+    }
+    
+    const reviewedTitlesJson = 
+      cachedReviewedTitlesJson || (await allReviewedTitlesJson());
+    if (ENABLE_CACHE && !cachedReviewedTitlesJson) {
+      cachedReviewedTitlesJson = reviewedTitlesJson;
+    }
+
+    const excerptPlainText = getMastProcessor()
+      .use(removeFootnotes)
+      .use(trimToExcerpt)
+      .use(strip)
+      .processSync(review.rawContent)
+      .toString();
 
     const viewings = viewingsMarkdown
       .filter((viewing) => {
@@ -101,7 +126,7 @@ export async function loadContent<
     return {
       ...review,
       content: getHtml(review.rawContent, reviewedTitlesJson),
-      excerptPlainText: review.excerptPlainText,
+      excerptPlainText,
       viewings,
     };
   });
@@ -111,11 +136,38 @@ export async function loadExcerptHtml<T extends { slug: string }>(
   review: T,
 ): Promise<ReviewExcerpt & T> {
   return await perfLogger.measure("loadExcerptHtml", async () => {
-    const reviewsMarkdown = cachedMarkdownReviews || (await allReviewsMarkdown());
+    // Check cache first
+    if (ENABLE_CACHE && cachedExcerptHtml.has(review.slug)) {
+      return {
+        ...review,
+        excerpt: cachedExcerptHtml.get(review.slug)!,
+      };
+    }
 
-    const { excerptHtml } = reviewsMarkdown.find((markdown) => {
+    const reviewsMarkdown = cachedMarkdownReviews || (await allReviewsMarkdown());
+    if (ENABLE_CACHE && !cachedMarkdownReviews) {
+      cachedMarkdownReviews = reviewsMarkdown;
+    }
+
+    const { rawContent, synopsis } = reviewsMarkdown.find((markdown) => {
       return markdown.slug === review.slug;
     })!;
+
+    const excerptContent = synopsis || rawContent;
+
+    const excerptHtml = getMastProcessor()
+      .use(removeFootnotes)
+      .use(trimToExcerpt)
+      .use(remarkRehype, { allowDangerousHtml: true })
+      .use(rehypeRaw)
+      .use(rehypeStringify)
+      .processSync(excerptContent)
+      .toString();
+
+    // Cache the result
+    if (ENABLE_CACHE) {
+      cachedExcerptHtml.set(review.slug, excerptHtml);
+    }
 
     return {
       ...review,
@@ -128,6 +180,9 @@ export async function mostRecentReviews(limit: number) {
   return await perfLogger.measure("mostRecentReviews", async () => {
     const reviewedTitlesJson =
       cachedReviewedTitlesJson || (await allReviewedTitlesJson());
+    if (ENABLE_CACHE && !cachedReviewedTitlesJson) {
+      cachedReviewedTitlesJson = reviewedTitlesJson;
+    }
 
     reviewedTitlesJson.sort((a, b) =>
       b.reviewSequence.localeCompare(a.reviewSequence),
@@ -170,21 +225,19 @@ async function parseReviewedTitlesJson(
   const distinctReleaseYears = new Set<string>();
   const distinctGenres = new Set<string>();
   const reviewsMarkdown = cachedMarkdownReviews || (await allReviewsMarkdown());
+  if (ENABLE_CACHE && !cachedMarkdownReviews) {
+    cachedMarkdownReviews = reviewsMarkdown;
+  }
 
   const reviews = reviewedTitlesJson.map((title) => {
     for (const genre of title.genres) distinctGenres.add(genre);
     distinctReleaseYears.add(title.releaseYear);
 
-    const {
-      contentPlainText,
-      excerptHtml,
-      excerptPlainText,
-      grade,
-      rawContent,
-      synopsis,
-    } = reviewsMarkdown.find((reviewsmarkdown) => {
-      return reviewsmarkdown.slug === title.slug;
-    })!;
+    const { grade, rawContent, synopsis } = reviewsMarkdown.find(
+      (reviewsmarkdown) => {
+        return reviewsmarkdown.slug === title.slug;
+      },
+    )!;
 
     distinctReviewYears.add(
       title.reviewDate.toLocaleDateString("en-US", {
@@ -195,9 +248,6 @@ async function parseReviewedTitlesJson(
 
     return {
       ...title,
-      contentPlainText,
-      excerptHtml,
-      excerptPlainText,
       grade,
       rawContent,
       synopsis,

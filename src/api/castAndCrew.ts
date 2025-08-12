@@ -4,40 +4,24 @@ import {
 } from "./data/castAndCrewJson";
 import { perfLogger } from "./data/utils/performanceLogger";
 
-export type CastAndCrewMember = CastAndCrewMemberJson & {};
-
-// Cache at API level - works better with Astro's build process
+// Cache at API level - lazy caching for better build performance
 let cachedCastAndCrewJson: CastAndCrewMemberJson[];
-let cachedAllCastAndCrew: { castAndCrew: CastAndCrewMember[] };
-const cachedCastAndCrewMember: Record<string, {
-  distinctReleaseYears: string[];
-  distinctReviewYears: string[];
-  member: CastAndCrewMember;
-}> = {};
-
-// Enable caching during builds but not in dev mode
 const ENABLE_CACHE = !import.meta.env.DEV;
+
+export type CastAndCrewMember = CastAndCrewMemberJson & {};
 
 export async function allCastAndCrew(): Promise<{
   castAndCrew: CastAndCrewMember[];
 }> {
   return await perfLogger.measure("allCastAndCrew", async () => {
-    if (cachedAllCastAndCrew) {
-      return cachedAllCastAndCrew;
+    const castAndCrewJson = cachedCastAndCrewJson || (await allCastAndCrewJson());
+    if (ENABLE_CACHE && !cachedCastAndCrewJson) {
+      cachedCastAndCrewJson = castAndCrewJson;
     }
 
-    const castAndCrewJson = cachedCastAndCrewJson || await allCastAndCrewJson();
-    if (ENABLE_CACHE) cachedCastAndCrewJson = castAndCrewJson;
-
-    const result = {
+    return {
       castAndCrew: castAndCrewJson,
     };
-
-    if (ENABLE_CACHE) {
-      cachedAllCastAndCrew = result;
-    }
-
-    return result;
   });
 }
 
@@ -46,15 +30,12 @@ export async function castAndCrewMember(slug: string): Promise<{
   distinctReviewYears: string[];
   member: CastAndCrewMember;
 }> {
-  return await perfLogger.measure(`castAndCrewMember.${slug}`, async () => {
-    if (cachedCastAndCrewMember[slug]) {
-      return cachedCastAndCrewMember[slug];
+  return await perfLogger.measure("castAndCrewMember", async () => {
+    const castAndCrewJson = cachedCastAndCrewJson || (await allCastAndCrewJson());
+    if (ENABLE_CACHE && !cachedCastAndCrewJson) {
+      cachedCastAndCrewJson = castAndCrewJson;
     }
-
-  const castAndCrewJson = cachedCastAndCrewJson || await allCastAndCrewJson();
-  if (ENABLE_CACHE) cachedCastAndCrewJson = castAndCrewJson;
-  
-  const member = castAndCrewJson.find((value) => value.slug === slug)!;
+    const member = castAndCrewJson.find((value) => value.slug === slug)!;
 
   const releaseYears = new Set<string>();
   const distinctReviewYears = new Set<string>();
@@ -72,17 +53,10 @@ export async function castAndCrewMember(slug: string): Promise<{
     }
   }
 
-  const result = {
-    distinctReleaseYears: [...releaseYears].toSorted(),
-    distinctReviewYears: [...distinctReviewYears].toSorted(),
-    member,
-  };
-
-  // Cache the result
-  if (ENABLE_CACHE) {
-    cachedCastAndCrewMember[slug] = result;
-  }
-
-  return result;
+    return {
+      distinctReleaseYears: [...releaseYears].toSorted(),
+      distinctReviewYears: [...distinctReviewYears].toSorted(),
+      member,
+    };
   });
 }

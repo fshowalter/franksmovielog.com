@@ -4,6 +4,7 @@ import pLimit from "p-limit";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
+import { perfLogger } from "./utils/performanceLogger";
 
 const reviewsMarkdownDirectory = getContentPath("reviews");
 
@@ -25,7 +26,9 @@ const DataSchema = z.object({
 });
 
 export async function allReviewsMarkdown(): Promise<MarkdownReview[]> {
-  return await parseAllReviewsMarkdown();
+  return await perfLogger.measure("allReviewsMarkdown", async () => {
+    return await parseAllReviewsMarkdown();
+  });
 }
 
 const limit = pLimit(10);

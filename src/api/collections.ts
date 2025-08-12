@@ -14,44 +14,28 @@ import { perfLogger } from "./data/utils/performanceLogger";
 import { emToQuotes } from "./utils/markdown/emToQuotes";
 import { rootAsSpan } from "./utils/markdown/rootAsSpan";
 
+// Cache at API level - lazy caching for better build performance
+let cachedCollectionsJson: CollectionJson[];
+const ENABLE_CACHE = !import.meta.env.DEV;
+
 export type Collection = CollectionJson & {};
 
 export type CollectionWithDetails = Collection & {
   descriptionHtml: string;
 };
 
-// Cache at API level - works better with Astro's build process
-let cachedCollectionsJson: CollectionJson[];
-let cachedAllCollections: { collections: Collection[] };
-const cachedCollectionDetails: Record<string, {
-  collection: CollectionWithDetails;
-  distinctReleaseYears: string[];
-  distinctReviewYears: string[];
-}> = {};
-
-// Enable caching during builds but not in dev mode
-const ENABLE_CACHE = !import.meta.env.DEV;
-
 export async function allCollections(): Promise<{
   collections: Collection[];
 }> {
   return await perfLogger.measure("allCollections", async () => {
-    if (cachedAllCollections) {
-      return cachedAllCollections;
+    const collections = cachedCollectionsJson || (await allCollectionsJson());
+    if (ENABLE_CACHE && !cachedCollectionsJson) {
+      cachedCollectionsJson = collections;
     }
 
-    const collections = cachedCollectionsJson || await allCollectionsJson();
-    if (ENABLE_CACHE) cachedCollectionsJson = collections;
-
-    const result = {
+    return {
       collections: collections,
     };
-
-    if (ENABLE_CACHE) {
-      cachedAllCollections = result;
-    }
-
-    return result;
   });
 }
 
@@ -60,15 +44,12 @@ export async function collectionDetails(slug: string): Promise<{
   distinctReleaseYears: string[];
   distinctReviewYears: string[];
 }> {
-  return await perfLogger.measure(`collectionDetails.${slug}`, async () => {
-    if (cachedCollectionDetails[slug]) {
-      return cachedCollectionDetails[slug];
+  return await perfLogger.measure("collectionDetails", async () => {
+    const collections = cachedCollectionsJson || (await allCollectionsJson());
+    if (ENABLE_CACHE && !cachedCollectionsJson) {
+      cachedCollectionsJson = collections;
     }
-
-  const collections = cachedCollectionsJson || await allCollectionsJson();
-  if (ENABLE_CACHE) cachedCollectionsJson = collections;
-  
-  const collection = collections.find((value) => value.slug === slug)!;
+    const collection = collections.find((value) => value.slug === slug)!;
 
   const releaseYears = new Set<string>();
   const reviewYears = new Set<string>();
@@ -86,22 +67,15 @@ export async function collectionDetails(slug: string): Promise<{
     }
   }
 
-  const result = {
-    collection: {
-      ...collection,
-      description: descriptionToString(collection.description),
-      descriptionHtml: descriptionToHtml(collection.description),
-    },
-    distinctReleaseYears: [...releaseYears].toSorted(),
-    distinctReviewYears: [...reviewYears].toSorted(),
-  };
-
-  // Cache the result
-  if (ENABLE_CACHE) {
-    cachedCollectionDetails[slug] = result;
-  }
-
-  return result;
+    return {
+      collection: {
+        ...collection,
+        description: descriptionToString(collection.description),
+        descriptionHtml: descriptionToHtml(collection.description),
+      },
+      distinctReleaseYears: [...releaseYears].toSorted(),
+      distinctReviewYears: [...reviewYears].toSorted(),
+    };
   });
 }
 

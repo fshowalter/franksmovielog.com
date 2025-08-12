@@ -2,6 +2,7 @@ import { promises as fs } from "node:fs";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
+import { perfLogger } from "./utils/performanceLogger";
 
 const underseenJsonFile = getContentPath("data", "underseen.json");
 
@@ -39,10 +40,12 @@ const UnderseenJsonSchema = z
 export type UnderseenJson = z.infer<typeof UnderseenJsonSchema>;
 
 export async function allUnderseenJson(): Promise<UnderseenJson[]> {
-  const json = await fs.readFile(underseenJsonFile, "utf8");
-  const data = JSON.parse(json) as unknown[];
+  return await perfLogger.measure("allUnderseenJson", async () => {
+    const json = await fs.readFile(underseenJsonFile, "utf8");
+    const data = JSON.parse(json) as unknown[];
 
-  return data.map((item) => {
-    return UnderseenJsonSchema.parse(item);
+    return data.map((item) => {
+      return UnderseenJsonSchema.parse(item);
+    });
   });
 }

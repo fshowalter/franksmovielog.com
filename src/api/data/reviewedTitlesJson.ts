@@ -2,6 +2,7 @@ import { promises as fs } from "node:fs";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
+import { perfLogger } from "./utils/performanceLogger";
 import { nullableNumber, nullableString } from "./utils/nullable";
 
 const reviewedTitlesJsonFile = getContentPath("data", "reviewed-titles.json");
@@ -154,7 +155,9 @@ const ReviewedTitleJsonSchema = z
 export type ReviewedTitleJson = z.infer<typeof ReviewedTitleJsonSchema>;
 
 export async function allReviewedTitlesJson(): Promise<ReviewedTitleJson[]> {
-  return await parseAllReviewedTitlesJson();
+  return await perfLogger.measure("allReviewedTitlesJson", async () => {
+    return await parseAllReviewedTitlesJson();
+  });
 }
 
 async function parseAllReviewedTitlesJson() {

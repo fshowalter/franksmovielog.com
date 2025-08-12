@@ -3,6 +3,7 @@ import { promises as fs } from "node:fs";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
+import { perfLogger } from "./utils/performanceLogger";
 
 const pagesMarkdownDirectory = getContentPath("pages");
 
@@ -18,7 +19,9 @@ const DataSchema = z.object({
 });
 
 export async function allPagesMarkdown(): Promise<MarkdownPage[]> {
-  return await parseAllPagesMarkdown();
+  return await perfLogger.measure("allPagesMarkdown", async () => {
+    return await parseAllPagesMarkdown();
+  });
 }
 
 async function parseAllPagesMarkdown() {

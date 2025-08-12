@@ -2,6 +2,7 @@ import { promises as fs } from "node:fs";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
+import { perfLogger } from "./utils/performanceLogger";
 
 const underratedJsonFile = getContentPath("data", "underrated.json");
 
@@ -39,10 +40,12 @@ const UnderratedJsonSchema = z
 export type UnderratedJson = z.infer<typeof UnderratedJsonSchema>;
 
 export async function allUnderratedJson(): Promise<UnderratedJson[]> {
-  const json = await fs.readFile(underratedJsonFile, "utf8");
-  const data = JSON.parse(json) as unknown[];
+  return await perfLogger.measure("allUnderratedJson", async () => {
+    const json = await fs.readFile(underratedJsonFile, "utf8");
+    const data = JSON.parse(json) as unknown[];
 
-  return data.map((item) => {
-    return UnderratedJsonSchema.parse(item);
+    return data.map((item) => {
+      return UnderratedJsonSchema.parse(item);
+    });
   });
 }

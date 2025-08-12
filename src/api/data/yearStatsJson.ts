@@ -5,6 +5,7 @@ import { DistributionSchema } from "./DistributionSchema";
 import { MostWatchedPersonSchema } from "./MostWatchedPersonSchema";
 import { MostWatchedTitleSchema } from "./MostWatchedTitleSchema";
 import { getContentPath } from "./utils/getContentPath";
+import { perfLogger } from "./utils/performanceLogger";
 
 const yearStatsJsonDirectory = getContentPath("data", "year-stats");
 
@@ -25,7 +26,9 @@ const YearStatsJsonSchema = z.object({
 export type YearStatsJson = z.infer<typeof YearStatsJsonSchema>;
 
 export async function allYearStatsJson(): Promise<YearStatsJson[]> {
-  return await parseAllYearStatsJson();
+  return await perfLogger.measure("allYearStatsJson", async () => {
+    return await parseAllYearStatsJson();
+  });
 }
 
 async function parseAllYearStatsJson() {

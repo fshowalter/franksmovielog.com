@@ -2,6 +2,7 @@ import { promises as fs } from "node:fs";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
+import { perfLogger } from "./utils/performanceLogger";
 import { nullableNumber, nullableString } from "./utils/nullable";
 
 const viewingsJsonFile = getContentPath("data", "viewings.json");
@@ -48,10 +49,12 @@ const ViewingJsonSchema = z
 export type ViewingJson = z.infer<typeof ViewingJsonSchema>;
 
 export async function allViewingsJson(): Promise<ViewingJson[]> {
-  const json = await fs.readFile(viewingsJsonFile, "utf8");
-  const data = JSON.parse(json) as unknown[];
+  return await perfLogger.measure("allViewingsJson", async () => {
+    const json = await fs.readFile(viewingsJsonFile, "utf8");
+    const data = JSON.parse(json) as unknown[];
 
-  return data.map((item) => {
-    return ViewingJsonSchema.parse(item);
+    return data.map((item) => {
+      return ViewingJsonSchema.parse(item);
+    });
   });
 }

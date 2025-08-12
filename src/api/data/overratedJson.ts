@@ -2,6 +2,7 @@ import { promises as fs } from "node:fs";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
+import { perfLogger } from "./utils/performanceLogger";
 
 const overratedJsonFile = getContentPath("data", "overrated.json");
 
@@ -39,10 +40,12 @@ const OverratedJsonSchema = z
 export type OverratedJson = z.infer<typeof OverratedJsonSchema>;
 
 export async function allOverratedJson(): Promise<OverratedJson[]> {
-  const json = await fs.readFile(overratedJsonFile, "utf8");
-  const data = JSON.parse(json) as unknown[];
+  return await perfLogger.measure("allOverratedJson", async () => {
+    const json = await fs.readFile(overratedJsonFile, "utf8");
+    const data = JSON.parse(json) as unknown[];
 
-  return data.map((item) => {
-    return OverratedJsonSchema.parse(item);
+    return data.map((item) => {
+      return OverratedJsonSchema.parse(item);
+    });
   });
 }

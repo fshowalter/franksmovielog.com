@@ -4,6 +4,7 @@ import pLimit from "p-limit";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
+import { perfLogger } from "./utils/performanceLogger";
 import { nullableString } from "./utils/nullable";
 
 const viewingsMarkdownDirectory = getContentPath("viewings");
@@ -39,7 +40,9 @@ export type MarkdownViewing = {
 const limit = pLimit(10);
 
 export async function allViewingsMarkdown(): Promise<MarkdownViewing[]> {
-  return await parseAllViewingsMarkdown();
+  return await perfLogger.measure("allViewingsMarkdown", async () => {
+    return await parseAllViewingsMarkdown();
+  });
 }
 
 async function parseAllViewingsMarkdown() {

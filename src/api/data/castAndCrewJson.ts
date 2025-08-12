@@ -2,6 +2,7 @@ import { promises as fs } from "node:fs";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
+import { perfLogger } from "./utils/performanceLogger";
 import { nullableNumber, nullableString } from "./utils/nullable";
 
 const castAndCrewJsonDirectory = getContentPath("data", "cast-and-crew");
@@ -73,7 +74,9 @@ const CastAndCrewJsonSchema = z
 export type CastAndCrewMemberJson = z.infer<typeof CastAndCrewJsonSchema>;
 
 export async function allCastAndCrewJson(): Promise<CastAndCrewMemberJson[]> {
-  return await parseAllCastAndCrewJson();
+  return await perfLogger.measure("allCastAndCrewJson", async () => {
+    return await parseAllCastAndCrewJson();
+  });
 }
 
 async function parseAllCastAndCrewJson() {

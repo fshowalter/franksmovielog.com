@@ -2,6 +2,7 @@ import { promises as fs } from "node:fs";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
+import { perfLogger } from "./utils/performanceLogger";
 
 const watchlistTitlesJsonFile = getContentPath("data", "watchlist-titles.json");
 
@@ -39,10 +40,12 @@ const WatchlistTitleJsonSchema = z
 export type WatchlistTitleJson = z.infer<typeof WatchlistTitleJsonSchema>;
 
 export async function allWatchlistTitlesJson(): Promise<WatchlistTitleJson[]> {
-  const json = await fs.readFile(watchlistTitlesJsonFile, "utf8");
-  const data = JSON.parse(json) as unknown[];
+  return await perfLogger.measure("allWatchlistTitlesJson", async () => {
+    const json = await fs.readFile(watchlistTitlesJsonFile, "utf8");
+    const data = JSON.parse(json) as unknown[];
 
-  return data.map((title) => {
-    return WatchlistTitleJsonSchema.parse(title);
+    return data.map((title) => {
+      return WatchlistTitleJsonSchema.parse(title);
+    });
   });
 }
