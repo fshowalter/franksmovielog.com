@@ -5,7 +5,7 @@ import type { JSX } from "react";
  * This captures the component structure, props, and children.
  */
 export function serializeJsx(element: JSX.Element | null | undefined): string {
-  if (element == null) {
+  if (element == undefined) {
     return "null";
   }
 
@@ -21,17 +21,18 @@ export function serializeJsx(element: JSX.Element | null | undefined): string {
 
   // Handle React elements
   if (element.$$typeof) {
-    const type = typeof element.type === "function" 
-      ? element.type.name || "Anonymous"
-      : String(element.type);
-    
+    const type =
+      typeof element.type === "function"
+        ? element.type.name || "Anonymous"
+        : String(element.type);
+
     const props: Record<string, any> = {};
-    
+
     // Process props, excluding children
     if (element.props) {
       for (const [key, value] of Object.entries(element.props)) {
         if (key === "children") continue;
-        
+
         // Serialize prop values
         if (value === null || value === undefined) {
           props[key] = "null";
@@ -47,14 +48,14 @@ export function serializeJsx(element: JSX.Element | null | undefined): string {
         }
       }
     }
-    
+
     // Sort props for deterministic output
     const sortedPropsStr = JSON.stringify(props, Object.keys(props).sort());
-    
+
     // Serialize children
     const children = element.props?.children;
     const childrenStr = children ? serializeJsx(children) : "";
-    
+
     // Combine into a stable string representation
     return `<${type}:${sortedPropsStr}>${childrenStr}</${type}>`;
   }

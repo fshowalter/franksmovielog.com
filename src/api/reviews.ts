@@ -62,18 +62,18 @@ export async function allReviews(): Promise<Reviews> {
     if (cachedReviews) {
       return cachedReviews;
     }
-    
+
     const reviewedTitlesJson =
       cachedReviewedTitlesJson || (await allReviewedTitlesJson());
     if (ENABLE_CACHE && !cachedReviewedTitlesJson) {
       cachedReviewedTitlesJson = reviewedTitlesJson;
     }
-    
+
     const reviews = await parseReviewedTitlesJson(reviewedTitlesJson);
     if (ENABLE_CACHE) {
       cachedReviews = reviews;
     }
-    
+
     return reviews;
   });
 }
@@ -95,8 +95,8 @@ export async function loadContent<
     if (ENABLE_CACHE && !cachedViewingsMarkdown) {
       cachedViewingsMarkdown = viewingsMarkdown;
     }
-    
-    const reviewedTitlesJson = 
+
+    const reviewedTitlesJson =
       cachedReviewedTitlesJson || (await allReviewedTitlesJson());
     if (ENABLE_CACHE && !cachedReviewedTitlesJson) {
       cachedReviewedTitlesJson = reviewedTitlesJson;
@@ -117,7 +117,10 @@ export async function loadContent<
       .map((viewing) => {
         return {
           ...viewing,
-          mediumNotes: getHtmlAsSpan(viewing.mediumNotesRaw, reviewedTitlesJson),
+          mediumNotes: getHtmlAsSpan(
+            viewing.mediumNotesRaw,
+            reviewedTitlesJson,
+          ),
           venueNotes: getHtmlAsSpan(viewing.venueNotesRaw, reviewedTitlesJson),
           viewingNotes: getHtml(viewing.viewingNotesRaw, reviewedTitlesJson),
         };
@@ -144,7 +147,8 @@ export async function loadExcerptHtml<T extends { slug: string }>(
       };
     }
 
-    const reviewsMarkdown = cachedMarkdownReviews || (await allReviewsMarkdown());
+    const reviewsMarkdown =
+      cachedMarkdownReviews || (await allReviewsMarkdown());
     if (ENABLE_CACHE && !cachedMarkdownReviews) {
       cachedMarkdownReviews = reviewsMarkdown;
     }

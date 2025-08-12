@@ -4,8 +4,8 @@ import pLimit from "p-limit";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
-import { perfLogger } from "./utils/performanceLogger";
 import { nullableString } from "./utils/nullable";
+import { perfLogger } from "./utils/performanceLogger";
 
 const viewingsMarkdownDirectory = getContentPath("viewings");
 

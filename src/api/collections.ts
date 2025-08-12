@@ -51,21 +51,21 @@ export async function collectionDetails(slug: string): Promise<{
     }
     const collection = collections.find((value) => value.slug === slug)!;
 
-  const releaseYears = new Set<string>();
-  const reviewYears = new Set<string>();
+    const releaseYears = new Set<string>();
+    const reviewYears = new Set<string>();
 
-  for (const title of collection.titles) {
-    releaseYears.add(title.releaseYear);
+    for (const title of collection.titles) {
+      releaseYears.add(title.releaseYear);
 
-    if (title.reviewDate) {
-      reviewYears.add(
-        new Date(title.reviewDate).toLocaleDateString("en-US", {
-          timeZone: "UTC",
-          year: "numeric",
-        }),
-      );
+      if (title.reviewDate) {
+        reviewYears.add(
+          new Date(title.reviewDate).toLocaleDateString("en-US", {
+            timeZone: "UTC",
+            year: "numeric",
+          }),
+        );
+      }
     }
-  }
 
     return {
       collection: {

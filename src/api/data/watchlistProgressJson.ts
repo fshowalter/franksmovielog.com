@@ -2,8 +2,8 @@ import { promises as fs } from "node:fs";
 import { z } from "zod";
 
 import { getContentPath } from "./utils/getContentPath";
-import { perfLogger } from "./utils/performanceLogger";
 import { nullableString } from "./utils/nullable";
+import { perfLogger } from "./utils/performanceLogger";
 
 const watchlistProgressJsonFile = getContentPath(
   "data",

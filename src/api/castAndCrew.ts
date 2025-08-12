@@ -14,7 +14,8 @@ export async function allCastAndCrew(): Promise<{
   castAndCrew: CastAndCrewMember[];
 }> {
   return await perfLogger.measure("allCastAndCrew", async () => {
-    const castAndCrewJson = cachedCastAndCrewJson || (await allCastAndCrewJson());
+    const castAndCrewJson =
+      cachedCastAndCrewJson || (await allCastAndCrewJson());
     if (ENABLE_CACHE && !cachedCastAndCrewJson) {
       cachedCastAndCrewJson = castAndCrewJson;
     }
@@ -31,27 +32,28 @@ export async function castAndCrewMember(slug: string): Promise<{
   member: CastAndCrewMember;
 }> {
   return await perfLogger.measure("castAndCrewMember", async () => {
-    const castAndCrewJson = cachedCastAndCrewJson || (await allCastAndCrewJson());
+    const castAndCrewJson =
+      cachedCastAndCrewJson || (await allCastAndCrewJson());
     if (ENABLE_CACHE && !cachedCastAndCrewJson) {
       cachedCastAndCrewJson = castAndCrewJson;
     }
     const member = castAndCrewJson.find((value) => value.slug === slug)!;
 
-  const releaseYears = new Set<string>();
-  const distinctReviewYears = new Set<string>();
+    const releaseYears = new Set<string>();
+    const distinctReviewYears = new Set<string>();
 
-  for (const title of member.titles) {
-    releaseYears.add(title.releaseYear);
+    for (const title of member.titles) {
+      releaseYears.add(title.releaseYear);
 
-    if (title.reviewDate) {
-      distinctReviewYears.add(
-        new Date(title.reviewDate).toLocaleDateString("en-US", {
-          timeZone: "UTC",
-          year: "numeric",
-        }),
-      );
+      if (title.reviewDate) {
+        distinctReviewYears.add(
+          new Date(title.reviewDate).toLocaleDateString("en-US", {
+            timeZone: "UTC",
+            year: "numeric",
+          }),
+        );
+      }
     }
-  }
 
     return {
       distinctReleaseYears: [...releaseYears].toSorted(),

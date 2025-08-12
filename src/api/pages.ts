@@ -4,8 +4,8 @@ import smartypants from "remark-smartypants";
 import strip from "strip-markdown";
 
 import { allPagesMarkdown } from "./data/pagesMarkdown";
-import { perfLogger } from "./data/utils/performanceLogger";
 import { allReviewedTitlesJson } from "./data/reviewedTitlesJson";
+import { perfLogger } from "./data/utils/performanceLogger";
 import { getHtml } from "./utils/markdown/getHtml";
 import { removeFootnotes } from "./utils/markdown/removeFootnotes";
 
