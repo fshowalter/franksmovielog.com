@@ -1,4 +1,13 @@
-import type { JSX } from "react";
+import type { JSX, ReactElement } from "react";
+
+type ReactElementWithType = ReactElement & {
+  $$typeof?: symbol;
+  props?: {
+    [key: string]: unknown;
+    children?: unknown;
+  };
+  type: ((props: unknown) => JSX.Element) | string | { name?: string };
+};
 
 /**
  * Serialize a JSX element to a stable string representation for hashing.
@@ -16,21 +25,34 @@ export function serializeJsx(element: JSX.Element | null | undefined): string {
 
   // Handle arrays
   if (Array.isArray(element)) {
-    return `[${element.map(serializeJsx).join(",")}]`;
+    return `[${element.map((item) => serializeJsx(item as JSX.Element)).join(",")}]`;
   }
 
   // Handle React elements
-  if (element.$$typeof) {
-    const type =
-      typeof element.type === "function"
-        ? element.type.name || "Anonymous"
-        : String(element.type);
+  const reactElement = element as ReactElementWithType;
+  if (reactElement.$$typeof) {
+    let typeName = "Unknown";
+    if (typeof reactElement.type === "function") {
+      typeName = reactElement.type.name || "Anonymous";
+    } else if (typeof reactElement.type === "string") {
+      typeName = reactElement.type;
+    } else if (
+      typeof reactElement.type === "object" &&
+      reactElement.type !== null &&
+      "name" in reactElement.type
+    ) {
+      const typeWithName = reactElement.type as { name?: string };
+      typeName = typeWithName.name || "Unknown";
+    } else {
+      typeName = "Component";
+    }
 
-    const props: Record<string, any> = {};
+    const props: Record<string, unknown> = {};
 
     // Process props, excluding children
-    if (element.props) {
-      for (const [key, value] of Object.entries(element.props)) {
+    if (reactElement.props) {
+      const elementProps = reactElement.props as Record<string, unknown>;
+      for (const [key, value] of Object.entries(elementProps)) {
         if (key === "children") continue;
 
         // Serialize prop values
@@ -38,7 +60,8 @@ export function serializeJsx(element: JSX.Element | null | undefined): string {
           props[key] = "null";
         } else if (typeof value === "function") {
           // For functions, use their name or a placeholder
-          props[key] = `[Function:${value.name || "anonymous"}]`;
+          const funcValue = value as { name?: string };
+          props[key] = `[Function:${funcValue.name || "anonymous"}]`;
         } else if (typeof value === "object") {
           // For objects and arrays, serialize recursively
           props[key] = JSON.stringify(value);
@@ -53,11 +76,11 @@ export function serializeJsx(element: JSX.Element | null | undefined): string {
     const sortedPropsStr = JSON.stringify(props, Object.keys(props).sort());
 
     // Serialize children
-    const children = element.props?.children;
-    const childrenStr = children ? serializeJsx(children) : "";
+    const children = reactElement.props?.children;
+    const childrenStr = children ? serializeJsx(children as JSX.Element) : "";
 
     // Combine into a stable string representation
-    return `<${type}:${sortedPropsStr}>${childrenStr}</${type}>`;
+    return `<${typeName}:${sortedPropsStr}>${childrenStr}</${typeName}>`;
   }
 
   // Fallback for other objects

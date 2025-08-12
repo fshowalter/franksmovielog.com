@@ -1,3 +1,6 @@
+import { writeFileSync } from "node:fs";
+import path from "node:path";
+
 type TimingEntry = {
   duration?: number;
   endTime?: number;
@@ -16,13 +19,10 @@ class PerformanceLogger {
   end(name: string): number {
     // For backward compatibility, try to find by name pattern
     const entry = [...this.timings.entries()].find(
-      ([id, timing]) => timing.name === name,
+      ([, timing]) => timing.name === name,
     );
     if (!entry) {
-      // Only warn in non-test environments
-      if (process.env.NODE_ENV !== "test" && typeof process !== "undefined") {
-        console.warn(`No timing found for: ${name}`);
-      }
+      console.warn(`No timing found for: ${name}`);
       return 0;
     }
     return this.endWithId(entry[0]);
@@ -117,7 +117,7 @@ class PerformanceLogger {
     metadata?: Record<string, unknown>,
   ): Promise<T> {
     // Skip performance tracking in test environments to avoid timing conflicts
-    if (process.env.NODE_ENV === "test" || import.meta.env?.MODE === "test") {
+    if (import.meta.env.MODE === "test") {
       return await fn();
     }
 
@@ -138,7 +138,7 @@ class PerformanceLogger {
     metadata?: Record<string, unknown>,
   ): T {
     // Skip performance tracking in test environments to avoid timing conflicts
-    if (process.env.NODE_ENV === "test" || import.meta.env?.MODE === "test") {
+    if (import.meta.env.MODE === "test") {
       return fn();
     }
 
@@ -174,11 +174,9 @@ class PerformanceLogger {
     this.callCounts.set(name, (this.callCounts.get(name) || 0) + 1);
   }
 
-  async writeReportToFile(): Promise<void> {
-    if (typeof process !== "undefined" && process.env.DEBUG_PERF === "true") {
-      const { writeFileSync } = await import("node:fs");
-      const { join } = await import("node:path");
-      const reportPath = join(process.cwd(), "performance-report.txt");
+  writeReportToFile(): void {
+    if (process.env.DEBUG_PERF === "true") {
+      const reportPath = path.join(process.cwd(), "performance-report.txt");
       writeFileSync(reportPath, this.getReport());
       console.log(`\nPerformance report written to: ${reportPath}`);
     }
@@ -188,14 +186,13 @@ class PerformanceLogger {
 export const perfLogger = new PerformanceLogger();
 
 // Write report on process exit
-if (typeof process !== "undefined") {
-  process.on("exit", () => {
-    if (process.env.DEBUG_PERF === "true") {
-      console.log(perfLogger.getReport());
-      // Use Promise.resolve to handle async writeReportToFile
-      Promise.resolve(perfLogger.writeReportToFile()).catch((error) => {
-        console.error("Failed to write performance report:", error);
-      });
+process.on("exit", () => {
+  if (process.env.DEBUG_PERF === "true") {
+    console.log(perfLogger.getReport());
+    try {
+      perfLogger.writeReportToFile();
+    } catch (error) {
+      console.error("Failed to write performance report:", error);
     }
-  });
-}
+  }
+});
