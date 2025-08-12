@@ -10,8 +10,13 @@ import {
   allCollectionsJson,
   type CollectionJson,
 } from "./data/collectionsJson";
+import { perfLogger } from "./data/utils/performanceLogger";
 import { emToQuotes } from "./utils/markdown/emToQuotes";
 import { rootAsSpan } from "./utils/markdown/rootAsSpan";
+
+// Cache at API level - lazy caching for better build performance
+let cachedCollectionsJson: CollectionJson[];
+const ENABLE_CACHE = !import.meta.env.DEV;
 
 export type Collection = CollectionJson & {};
 
@@ -22,11 +27,16 @@ export type CollectionWithDetails = Collection & {
 export async function allCollections(): Promise<{
   collections: Collection[];
 }> {
-  const collections = await allCollectionsJson();
+  return await perfLogger.measure("allCollections", async () => {
+    const collections = cachedCollectionsJson || (await allCollectionsJson());
+    if (ENABLE_CACHE && !cachedCollectionsJson) {
+      cachedCollectionsJson = collections;
+    }
 
-  return {
-    collections: collections,
-  };
+    return {
+      collections: collections,
+    };
+  });
 }
 
 export async function collectionDetails(slug: string): Promise<{
@@ -34,34 +44,39 @@ export async function collectionDetails(slug: string): Promise<{
   distinctReleaseYears: string[];
   distinctReviewYears: string[];
 }> {
-  const collections = await allCollectionsJson();
-  const collection = collections.find((value) => value.slug === slug)!;
-
-  const releaseYears = new Set<string>();
-  const reviewYears = new Set<string>();
-
-  for (const title of collection.titles) {
-    releaseYears.add(title.releaseYear);
-
-    if (title.reviewDate) {
-      reviewYears.add(
-        new Date(title.reviewDate).toLocaleDateString("en-US", {
-          timeZone: "UTC",
-          year: "numeric",
-        }),
-      );
+  return await perfLogger.measure("collectionDetails", async () => {
+    const collections = cachedCollectionsJson || (await allCollectionsJson());
+    if (ENABLE_CACHE && !cachedCollectionsJson) {
+      cachedCollectionsJson = collections;
     }
-  }
+    const collection = collections.find((value) => value.slug === slug)!;
 
-  return {
-    collection: {
-      ...collection,
-      description: descriptionToString(collection.description),
-      descriptionHtml: descriptionToHtml(collection.description),
-    },
-    distinctReleaseYears: [...releaseYears].toSorted(),
-    distinctReviewYears: [...reviewYears].toSorted(),
-  };
+    const releaseYears = new Set<string>();
+    const reviewYears = new Set<string>();
+
+    for (const title of collection.titles) {
+      releaseYears.add(title.releaseYear);
+
+      if (title.reviewDate) {
+        reviewYears.add(
+          new Date(title.reviewDate).toLocaleDateString("en-US", {
+            timeZone: "UTC",
+            year: "numeric",
+          }),
+        );
+      }
+    }
+
+    return {
+      collection: {
+        ...collection,
+        description: descriptionToString(collection.description),
+        descriptionHtml: descriptionToHtml(collection.description),
+      },
+      distinctReleaseYears: [...releaseYears].toSorted(),
+      distinctReviewYears: [...reviewYears].toSorted(),
+    };
+  });
 }
 
 function descriptionToHtml(description: string) {

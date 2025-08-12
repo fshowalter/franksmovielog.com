@@ -5,6 +5,7 @@
   "scripts": {
     "astro": "astro",
     "build": "astro build",
+    "build:perf": "DEBUG_PERF=true DEBUG_CACHE=true astro build 2>&1 | tee build-perf.log",
     "check": "astro check",
     "dev": "astro dev",
     "format": "prettier . --check",
@@ -33,7 +34,6 @@
     "astro": "5.12.9",
     "astro-compressor": "1.1.2",
     "babel-plugin-react-compiler": "19.0.0-beta-ebf51a3-20250411",
-    "devalue": "5.1.1",
     "gray-matter": "4.0.3",
     "p-limit": "6.2.0",
     "pagefind": "1.3.0",
@@ -51,7 +51,6 @@
     "tailwindcss": "4.1.11",
     "unist-util-visit": "5.0.0",
     "vite": "6.3.5",
-    "xxhash-wasm": "1.1.0",
     "zod": "3.25.76"
   },
   "devDependencies": {

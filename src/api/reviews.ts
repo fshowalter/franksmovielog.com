@@ -4,6 +4,7 @@ import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import smartypants from "remark-smartypants";
+import strip from "strip-markdown";
 
 import { collator } from "~/utils/collator";
 
@@ -13,21 +14,23 @@ import type { MarkdownViewing } from "./data/viewingsMarkdown";
 
 import { allReviewedTitlesJson } from "./data/reviewedTitlesJson";
 import { allReviewsMarkdown } from "./data/reviewsMarkdown";
+import { perfLogger } from "./data/utils/performanceLogger";
 import { allViewingsMarkdown } from "./data/viewingsMarkdown";
 import { linkReviewedTitles } from "./utils/linkReviewedTitles";
 import { getHtml } from "./utils/markdown/getHtml";
+import { removeFootnotes } from "./utils/markdown/removeFootnotes";
 import { rootAsSpan } from "./utils/markdown/rootAsSpan";
+import { trimToExcerpt } from "./utils/markdown/trimToExcerpt";
 
+// Cache at API level - lazy caching for better build performance
 let cachedViewingsMarkdown: MarkdownViewing[];
 let cachedMarkdownReviews: MarkdownReview[];
 let cachedReviewedTitlesJson: ReviewedTitleJson[];
 let cachedReviews: Reviews;
+const cachedExcerptHtml: Map<string, string> = new Map();
 
-if (import.meta.env.MODE !== "development") {
-  cachedViewingsMarkdown = await allViewingsMarkdown();
-  cachedReviewedTitlesJson = await allReviewedTitlesJson();
-  cachedMarkdownReviews = await allReviewsMarkdown();
-}
+// Enable caching during builds but not in dev mode
+const ENABLE_CACHE = !import.meta.env.DEV;
 
 export type Review = Omit<MarkdownReview, "date"> & ReviewedTitleJson;
 
@@ -55,81 +58,145 @@ type ReviewViewing = MarkdownViewing & {
 };
 
 export async function allReviews(): Promise<Reviews> {
-  if (cachedReviews) {
-    return cachedReviews;
-  }
-  const reviewedTitlesJson =
-    cachedReviewedTitlesJson || (await allReviewedTitlesJson());
-  const reviews = await parseReviewedTitlesJson(reviewedTitlesJson);
+  return await perfLogger.measure("allReviews", async () => {
+    if (cachedReviews) {
+      return cachedReviews;
+    }
 
-  if (!import.meta.env.DEV) {
-    cachedReviews = reviews;
-  }
+    const reviewedTitlesJson =
+      cachedReviewedTitlesJson || (await allReviewedTitlesJson());
+    if (ENABLE_CACHE && !cachedReviewedTitlesJson) {
+      cachedReviewedTitlesJson = reviewedTitlesJson;
+    }
 
-  return reviews;
+    const reviews = await parseReviewedTitlesJson(reviewedTitlesJson);
+    if (ENABLE_CACHE) {
+      cachedReviews = reviews;
+    }
+
+    return reviews;
+  });
+}
+
+export function getContentPlainText(rawContent: string): string {
+  return getMastProcessor()
+    .use(removeFootnotes)
+    .use(strip)
+    .processSync(rawContent)
+    .toString();
 }
 
 export async function loadContent<
-  T extends {
-    excerptPlainText: string;
-    imdbId: string;
-    rawContent: string;
-    title: string;
-  },
+  T extends { imdbId: string; rawContent: string; title: string },
 >(review: T): Promise<ReviewContent & T> {
-  const viewingsMarkdown =
-    cachedViewingsMarkdown || (await allViewingsMarkdown());
-  const reviewedTitlesJson = await allReviewedTitlesJson();
+  return await perfLogger.measure("loadContent", async () => {
+    const viewingsMarkdown =
+      cachedViewingsMarkdown || (await allViewingsMarkdown());
+    if (ENABLE_CACHE && !cachedViewingsMarkdown) {
+      cachedViewingsMarkdown = viewingsMarkdown;
+    }
 
-  const viewings = viewingsMarkdown
-    .filter((viewing) => {
-      return viewing.imdbId === review.imdbId;
-    })
-    .reverse()
-    .map((viewing) => {
-      return {
-        ...viewing,
-        mediumNotes: getHtmlAsSpan(viewing.mediumNotesRaw, reviewedTitlesJson),
-        venueNotes: getHtmlAsSpan(viewing.venueNotesRaw, reviewedTitlesJson),
-        viewingNotes: getHtml(viewing.viewingNotesRaw, reviewedTitlesJson),
-      };
-    });
+    const reviewedTitlesJson =
+      cachedReviewedTitlesJson || (await allReviewedTitlesJson());
+    if (ENABLE_CACHE && !cachedReviewedTitlesJson) {
+      cachedReviewedTitlesJson = reviewedTitlesJson;
+    }
 
-  return {
-    ...review,
-    content: getHtml(review.rawContent, reviewedTitlesJson),
-    excerptPlainText: review.excerptPlainText,
-    viewings,
-  };
+    const excerptPlainText = getMastProcessor()
+      .use(removeFootnotes)
+      .use(trimToExcerpt)
+      .use(strip)
+      .processSync(review.rawContent)
+      .toString();
+
+    const viewings = viewingsMarkdown
+      .filter((viewing) => {
+        return viewing.imdbId === review.imdbId;
+      })
+      .reverse()
+      .map((viewing) => {
+        return {
+          ...viewing,
+          mediumNotes: getHtmlAsSpan(
+            viewing.mediumNotesRaw,
+            reviewedTitlesJson,
+          ),
+          venueNotes: getHtmlAsSpan(viewing.venueNotesRaw, reviewedTitlesJson),
+          viewingNotes: getHtml(viewing.viewingNotesRaw, reviewedTitlesJson),
+        };
+      });
+
+    return {
+      ...review,
+      content: getHtml(review.rawContent, reviewedTitlesJson),
+      excerptPlainText,
+      viewings,
+    };
+  });
 }
 
 export async function loadExcerptHtml<T extends { slug: string }>(
   review: T,
 ): Promise<ReviewExcerpt & T> {
-  const reviewsMarkdown = cachedMarkdownReviews || (await allReviewsMarkdown());
+  return await perfLogger.measure("loadExcerptHtml", async () => {
+    // Check cache first
+    if (ENABLE_CACHE && cachedExcerptHtml.has(review.slug)) {
+      return {
+        ...review,
+        excerpt: cachedExcerptHtml.get(review.slug)!,
+      };
+    }
 
-  const { excerptHtml } = reviewsMarkdown.find((markdown) => {
-    return markdown.slug === review.slug;
-  })!;
+    const reviewsMarkdown =
+      cachedMarkdownReviews || (await allReviewsMarkdown());
+    if (ENABLE_CACHE && !cachedMarkdownReviews) {
+      cachedMarkdownReviews = reviewsMarkdown;
+    }
 
-  return {
-    ...review,
-    excerpt: excerptHtml,
-  };
+    const { rawContent, synopsis } = reviewsMarkdown.find((markdown) => {
+      return markdown.slug === review.slug;
+    })!;
+
+    const excerptContent = synopsis || rawContent;
+
+    const excerptHtml = getMastProcessor()
+      .use(removeFootnotes)
+      .use(trimToExcerpt)
+      .use(remarkRehype, { allowDangerousHtml: true })
+      .use(rehypeRaw)
+      .use(rehypeStringify)
+      .processSync(excerptContent)
+      .toString();
+
+    // Cache the result
+    if (ENABLE_CACHE) {
+      cachedExcerptHtml.set(review.slug, excerptHtml);
+    }
+
+    return {
+      ...review,
+      excerpt: excerptHtml,
+    };
+  });
 }
 
 export async function mostRecentReviews(limit: number) {
-  const reviewedTitlesJson =
-    cachedReviewedTitlesJson || (await allReviewedTitlesJson());
+  return await perfLogger.measure("mostRecentReviews", async () => {
+    const reviewedTitlesJson =
+      cachedReviewedTitlesJson || (await allReviewedTitlesJson());
+    if (ENABLE_CACHE && !cachedReviewedTitlesJson) {
+      cachedReviewedTitlesJson = reviewedTitlesJson;
+    }
 
-  reviewedTitlesJson.sort((a, b) =>
-    b.reviewSequence.localeCompare(a.reviewSequence),
-  );
-  const slicedTitles = reviewedTitlesJson.slice(0, limit);
+    reviewedTitlesJson.sort((a, b) =>
+      b.reviewSequence.localeCompare(a.reviewSequence),
+    );
+    const slicedTitles = reviewedTitlesJson.slice(0, limit);
 
-  const { reviews } = await parseReviewedTitlesJson(slicedTitles);
+    const { reviews } = await parseReviewedTitlesJson(slicedTitles);
 
-  return reviews;
+    return reviews;
+  });
 }
 
 function getHtmlAsSpan(
@@ -162,21 +229,19 @@ async function parseReviewedTitlesJson(
   const distinctReleaseYears = new Set<string>();
   const distinctGenres = new Set<string>();
   const reviewsMarkdown = cachedMarkdownReviews || (await allReviewsMarkdown());
+  if (ENABLE_CACHE && !cachedMarkdownReviews) {
+    cachedMarkdownReviews = reviewsMarkdown;
+  }
 
   const reviews = reviewedTitlesJson.map((title) => {
     for (const genre of title.genres) distinctGenres.add(genre);
     distinctReleaseYears.add(title.releaseYear);
 
-    const {
-      contentPlainText,
-      excerptHtml,
-      excerptPlainText,
-      grade,
-      rawContent,
-      synopsis,
-    } = reviewsMarkdown.find((reviewsmarkdown) => {
-      return reviewsmarkdown.slug === title.slug;
-    })!;
+    const { grade, rawContent, synopsis } = reviewsMarkdown.find(
+      (reviewsmarkdown) => {
+        return reviewsmarkdown.slug === title.slug;
+      },
+    )!;
 
     distinctReviewYears.add(
       title.reviewDate.toLocaleDateString("en-US", {
@@ -187,9 +252,6 @@ async function parseReviewedTitlesJson(
 
     return {
       ...title,
-      contentPlainText,
-      excerptHtml,
-      excerptPlainText,
       grade,
       rawContent,
       synopsis,

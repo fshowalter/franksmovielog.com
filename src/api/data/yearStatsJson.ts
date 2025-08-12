@@ -4,8 +4,8 @@ import { z } from "zod";
 import { DistributionSchema } from "./DistributionSchema";
 import { MostWatchedPersonSchema } from "./MostWatchedPersonSchema";
 import { MostWatchedTitleSchema } from "./MostWatchedTitleSchema";
-import { ContentCache, generateSchemaHash } from "./utils/cache";
 import { getContentPath } from "./utils/getContentPath";
+import { perfLogger } from "./utils/performanceLogger";
 
 const yearStatsJsonDirectory = getContentPath("data", "year-stats");
 
@@ -25,48 +25,28 @@ const YearStatsJsonSchema = z.object({
 
 export type YearStatsJson = z.infer<typeof YearStatsJsonSchema>;
 
-// Create cache instance with schema hash
-let cacheInstance: ContentCache<YearStatsJson[]> | undefined;
-
 export async function allYearStatsJson(): Promise<YearStatsJson[]> {
-  const cache = await getCache();
+  return await perfLogger.measure("allYearStatsJson", async () => {
+    return await parseAllYearStatsJson();
+  });
+}
+
+async function parseAllYearStatsJson() {
   const dirents = await fs.readdir(yearStatsJsonDirectory, {
     withFileTypes: true,
   });
 
-  const jsonFiles = dirents.filter(
-    (item) => !item.isDirectory() && item.name.endsWith(".json"),
+  return Promise.all(
+    dirents
+      .filter((item) => !item.isDirectory() && item.name.endsWith(".json"))
+      .map(async (item) => {
+        const fileContents = await fs.readFile(
+          `${yearStatsJsonDirectory}/${item.name}`,
+          "utf8",
+        );
+
+        const json = JSON.parse(fileContents) as unknown;
+        return YearStatsJsonSchema.parse(json);
+      }),
   );
-  const allFileContents = await Promise.all(
-    jsonFiles.map(async (item) => {
-      const filePath = `${yearStatsJsonDirectory}/${item.name}`;
-      const content = await fs.readFile(filePath, "utf8");
-      return { content, filePath };
-    }),
-  );
-
-  // Create a combined cache key from all file contents
-  const combinedContent = allFileContents
-    .map(({ content, filePath }) => `${filePath}:${content}`)
-    .join("\n---\n");
-
-  return cache.get(yearStatsJsonDirectory, combinedContent, () => {
-    return allFileContents.map(({ content }) => {
-      const json = JSON.parse(content) as unknown;
-      return YearStatsJsonSchema.parse(json);
-    });
-  });
-}
-
-async function getCache(): Promise<ContentCache<YearStatsJson[]>> {
-  if (!cacheInstance) {
-    const schemaHash = await generateSchemaHash(
-      JSON.stringify(YearStatsJsonSchema.shape),
-    );
-    cacheInstance = new ContentCache<YearStatsJson[]>(
-      "year-stats-json",
-      schemaHash,
-    );
-  }
-  return cacheInstance;
 }

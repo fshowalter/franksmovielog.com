@@ -1,8 +1,8 @@
 import { promises as fs } from "node:fs";
 import { z } from "zod";
 
-import { ContentCache, generateSchemaHash } from "./utils/cache";
 import { getContentPath } from "./utils/getContentPath";
+import { perfLogger } from "./utils/performanceLogger";
 
 const overratedJsonFile = getContentPath("data", "overrated.json");
 
@@ -39,28 +39,13 @@ const OverratedJsonSchema = z
 
 export type OverratedJson = z.infer<typeof OverratedJsonSchema>;
 
-// Create cache instance with schema hash
-let cacheInstance: ContentCache<OverratedJson[]> | undefined;
-
 export async function allOverratedJson(): Promise<OverratedJson[]> {
-  const cache = await getCache();
-  const fileContents = await fs.readFile(overratedJsonFile, "utf8");
+  return await perfLogger.measure("allOverratedJson", async () => {
+    const json = await fs.readFile(overratedJsonFile, "utf8");
+    const data = JSON.parse(json) as unknown[];
 
-  return cache.get(overratedJsonFile, fileContents, (content) => {
-    const data = JSON.parse(content) as unknown[];
-    return data.map((item) => OverratedJsonSchema.parse(item));
+    return data.map((item) => {
+      return OverratedJsonSchema.parse(item);
+    });
   });
-}
-
-async function getCache(): Promise<ContentCache<OverratedJson[]>> {
-  if (!cacheInstance) {
-    const schemaHash = await generateSchemaHash(
-      JSON.stringify(OverratedJsonSchema._def.schema.shape),
-    );
-    cacheInstance = new ContentCache<OverratedJson[]>(
-      "overrated-json",
-      schemaHash,
-    );
-  }
-  return cacheInstance;
 }

@@ -1,9 +1,9 @@
 import { promises as fs } from "node:fs";
 import { z } from "zod";
 
-import { ContentCache, generateSchemaHash } from "./utils/cache";
 import { getContentPath } from "./utils/getContentPath";
 import { nullableNumber, nullableString } from "./utils/nullable";
+import { perfLogger } from "./utils/performanceLogger";
 
 const collectionsJsonDirectory = getContentPath("data", "collections");
 
@@ -61,48 +61,28 @@ const CollectionJsonSchema = z
 
 export type CollectionJson = z.infer<typeof CollectionJsonSchema>;
 
-// Create cache instance with schema hash
-let cacheInstance: ContentCache<CollectionJson[]> | undefined;
-
 export async function allCollectionsJson(): Promise<CollectionJson[]> {
-  const cache = await getCache();
+  return await perfLogger.measure("allCollectionsJson", async () => {
+    return await parseAllCollectionsJson();
+  });
+}
+
+async function parseAllCollectionsJson() {
   const dirents = await fs.readdir(collectionsJsonDirectory, {
     withFileTypes: true,
   });
 
-  const jsonFiles = dirents.filter(
-    (item) => !item.isDirectory() && item.name.endsWith(".json"),
+  return Promise.all(
+    dirents
+      .filter((item) => !item.isDirectory() && item.name.endsWith(".json"))
+      .map(async (item) => {
+        const fileContents = await fs.readFile(
+          `${collectionsJsonDirectory}/${item.name}`,
+          "utf8",
+        );
+
+        const json = JSON.parse(fileContents) as unknown;
+        return CollectionJsonSchema.parse(json);
+      }),
   );
-  const allFileContents = await Promise.all(
-    jsonFiles.map(async (item) => {
-      const filePath = `${collectionsJsonDirectory}/${item.name}`;
-      const content = await fs.readFile(filePath, "utf8");
-      return { content, filePath };
-    }),
-  );
-
-  // Create a combined cache key from all file contents
-  const combinedContent = allFileContents
-    .map(({ content, filePath }) => `${filePath}:${content}`)
-    .join("\n---\n");
-
-  return cache.get(collectionsJsonDirectory, combinedContent, () => {
-    return allFileContents.map(({ content }) => {
-      const json = JSON.parse(content) as unknown;
-      return CollectionJsonSchema.parse(json);
-    });
-  });
-}
-
-async function getCache(): Promise<ContentCache<CollectionJson[]>> {
-  if (!cacheInstance) {
-    const schemaHash = await generateSchemaHash(
-      JSON.stringify(CollectionJsonSchema._def.schema.shape),
-    );
-    cacheInstance = new ContentCache<CollectionJson[]>(
-      "collections-json",
-      schemaHash,
-    );
-  }
-  return cacheInstance;
 }
