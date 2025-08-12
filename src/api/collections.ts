@@ -10,6 +10,7 @@ import {
   allCollectionsJson,
   type CollectionJson,
 } from "./data/collectionsJson";
+import { perfLogger } from "./data/utils/performanceLogger";
 import { emToQuotes } from "./utils/markdown/emToQuotes";
 import { rootAsSpan } from "./utils/markdown/rootAsSpan";
 
@@ -19,14 +20,39 @@ export type CollectionWithDetails = Collection & {
   descriptionHtml: string;
 };
 
+// Cache at API level - works better with Astro's build process
+let cachedCollectionsJson: CollectionJson[];
+let cachedAllCollections: { collections: Collection[] };
+const cachedCollectionDetails: Record<string, {
+  collection: CollectionWithDetails;
+  distinctReleaseYears: string[];
+  distinctReviewYears: string[];
+}> = {};
+
+// Enable caching during builds but not in dev mode
+const ENABLE_CACHE = !import.meta.env.DEV;
+
 export async function allCollections(): Promise<{
   collections: Collection[];
 }> {
-  const collections = await allCollectionsJson();
+  return await perfLogger.measure("allCollections", async () => {
+    if (cachedAllCollections) {
+      return cachedAllCollections;
+    }
 
-  return {
-    collections: collections,
-  };
+    const collections = cachedCollectionsJson || await allCollectionsJson();
+    if (ENABLE_CACHE) cachedCollectionsJson = collections;
+
+    const result = {
+      collections: collections,
+    };
+
+    if (ENABLE_CACHE) {
+      cachedAllCollections = result;
+    }
+
+    return result;
+  });
 }
 
 export async function collectionDetails(slug: string): Promise<{
@@ -34,7 +60,14 @@ export async function collectionDetails(slug: string): Promise<{
   distinctReleaseYears: string[];
   distinctReviewYears: string[];
 }> {
-  const collections = await allCollectionsJson();
+  return await perfLogger.measure(`collectionDetails.${slug}`, async () => {
+    if (cachedCollectionDetails[slug]) {
+      return cachedCollectionDetails[slug];
+    }
+
+  const collections = cachedCollectionsJson || await allCollectionsJson();
+  if (ENABLE_CACHE) cachedCollectionsJson = collections;
+  
   const collection = collections.find((value) => value.slug === slug)!;
 
   const releaseYears = new Set<string>();
@@ -53,7 +86,7 @@ export async function collectionDetails(slug: string): Promise<{
     }
   }
 
-  return {
+  const result = {
     collection: {
       ...collection,
       description: descriptionToString(collection.description),
@@ -62,6 +95,14 @@ export async function collectionDetails(slug: string): Promise<{
     distinctReleaseYears: [...releaseYears].toSorted(),
     distinctReviewYears: [...reviewYears].toSorted(),
   };
+
+  // Cache the result
+  if (ENABLE_CACHE) {
+    cachedCollectionDetails[slug] = result;
+  }
+
+  return result;
+  });
 }
 
 function descriptionToHtml(description: string) {

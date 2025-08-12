@@ -2,17 +2,43 @@ import {
   allCastAndCrewJson,
   type CastAndCrewMemberJson,
 } from "./data/castAndCrewJson";
+import { perfLogger } from "./data/utils/performanceLogger";
 
 export type CastAndCrewMember = CastAndCrewMemberJson & {};
+
+// Cache at API level - works better with Astro's build process
+let cachedCastAndCrewJson: CastAndCrewMemberJson[];
+let cachedAllCastAndCrew: { castAndCrew: CastAndCrewMember[] };
+const cachedCastAndCrewMember: Record<string, {
+  distinctReleaseYears: string[];
+  distinctReviewYears: string[];
+  member: CastAndCrewMember;
+}> = {};
+
+// Enable caching during builds but not in dev mode
+const ENABLE_CACHE = !import.meta.env.DEV;
 
 export async function allCastAndCrew(): Promise<{
   castAndCrew: CastAndCrewMember[];
 }> {
-  const castAndCrewJson = await allCastAndCrewJson();
+  return await perfLogger.measure("allCastAndCrew", async () => {
+    if (cachedAllCastAndCrew) {
+      return cachedAllCastAndCrew;
+    }
 
-  return {
-    castAndCrew: castAndCrewJson,
-  };
+    const castAndCrewJson = cachedCastAndCrewJson || await allCastAndCrewJson();
+    if (ENABLE_CACHE) cachedCastAndCrewJson = castAndCrewJson;
+
+    const result = {
+      castAndCrew: castAndCrewJson,
+    };
+
+    if (ENABLE_CACHE) {
+      cachedAllCastAndCrew = result;
+    }
+
+    return result;
+  });
 }
 
 export async function castAndCrewMember(slug: string): Promise<{
@@ -20,7 +46,14 @@ export async function castAndCrewMember(slug: string): Promise<{
   distinctReviewYears: string[];
   member: CastAndCrewMember;
 }> {
-  const castAndCrewJson = await allCastAndCrewJson();
+  return await perfLogger.measure(`castAndCrewMember.${slug}`, async () => {
+    if (cachedCastAndCrewMember[slug]) {
+      return cachedCastAndCrewMember[slug];
+    }
+
+  const castAndCrewJson = cachedCastAndCrewJson || await allCastAndCrewJson();
+  if (ENABLE_CACHE) cachedCastAndCrewJson = castAndCrewJson;
+  
   const member = castAndCrewJson.find((value) => value.slug === slug)!;
 
   const releaseYears = new Set<string>();
@@ -39,9 +72,17 @@ export async function castAndCrewMember(slug: string): Promise<{
     }
   }
 
-  return {
+  const result = {
     distinctReleaseYears: [...releaseYears].toSorted(),
     distinctReviewYears: [...distinctReviewYears].toSorted(),
     member,
   };
+
+  // Cache the result
+  if (ENABLE_CACHE) {
+    cachedCastAndCrewMember[slug] = result;
+  }
+
+  return result;
+  });
 }
