@@ -6,7 +6,7 @@ import { loadRenderers } from "astro:container";
 import * as prettier from "prettier";
 import { describe, it } from "vitest";
 
-import { allReviews } from "~/api/reviews";
+import { allReviews, getContentPlainText } from "~/api/reviews";
 import { normalizeScriptSrc } from "~/utils/normalizeScriptSrc";
 
 import Review from "./index.astro";
@@ -37,7 +37,7 @@ describe("/reviews/:slug", () => {
         {
           partial: false,
           props: {
-            contentPlainText: review.contentPlainText,
+            contentPlainText: getContentPlainText(review.rawContent),
             slug: review.slug,
           },
           request: new Request(

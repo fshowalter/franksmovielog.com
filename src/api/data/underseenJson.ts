@@ -1,7 +1,6 @@
 import { promises as fs } from "node:fs";
 import { z } from "zod";
 
-import { ContentCache, generateSchemaHash } from "./utils/cache";
 import { getContentPath } from "./utils/getContentPath";
 
 const underseenJsonFile = getContentPath("data", "underseen.json");
@@ -39,28 +38,11 @@ const UnderseenJsonSchema = z
 
 export type UnderseenJson = z.infer<typeof UnderseenJsonSchema>;
 
-// Create cache instance with schema hash
-let cacheInstance: ContentCache<UnderseenJson[]> | undefined;
-
 export async function allUnderseenJson(): Promise<UnderseenJson[]> {
-  const cache = await getCache();
-  const fileContents = await fs.readFile(underseenJsonFile, "utf8");
+  const json = await fs.readFile(underseenJsonFile, "utf8");
+  const data = JSON.parse(json) as unknown[];
 
-  return cache.get(underseenJsonFile, fileContents, (content) => {
-    const data = JSON.parse(content) as unknown[];
-    return data.map((item) => UnderseenJsonSchema.parse(item));
+  return data.map((item) => {
+    return UnderseenJsonSchema.parse(item);
   });
-}
-
-async function getCache(): Promise<ContentCache<UnderseenJson[]>> {
-  if (!cacheInstance) {
-    const schemaHash = await generateSchemaHash(
-      JSON.stringify(UnderseenJsonSchema._def.schema.shape),
-    );
-    cacheInstance = new ContentCache<UnderseenJson[]>(
-      "underseen-json",
-      schemaHash,
-    );
-  }
-  return cacheInstance;
 }

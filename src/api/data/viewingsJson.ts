@@ -1,7 +1,6 @@
 import { promises as fs } from "node:fs";
 import { z } from "zod";
 
-import { ContentCache, generateSchemaHash } from "./utils/cache";
 import { getContentPath } from "./utils/getContentPath";
 import { nullableNumber, nullableString } from "./utils/nullable";
 
@@ -48,28 +47,11 @@ const ViewingJsonSchema = z
 
 export type ViewingJson = z.infer<typeof ViewingJsonSchema>;
 
-// Create cache instance with schema hash
-let cacheInstance: ContentCache<ViewingJson[]> | undefined;
-
 export async function allViewingsJson(): Promise<ViewingJson[]> {
-  const cache = await getCache();
-  const fileContents = await fs.readFile(viewingsJsonFile, "utf8");
+  const json = await fs.readFile(viewingsJsonFile, "utf8");
+  const data = JSON.parse(json) as unknown[];
 
-  return cache.get(viewingsJsonFile, fileContents, (content) => {
-    const data = JSON.parse(content) as unknown[];
-    return data.map((item) => ViewingJsonSchema.parse(item));
+  return data.map((item) => {
+    return ViewingJsonSchema.parse(item);
   });
-}
-
-async function getCache(): Promise<ContentCache<ViewingJson[]>> {
-  if (!cacheInstance) {
-    const schemaHash = await generateSchemaHash(
-      JSON.stringify(ViewingJsonSchema._def.schema.shape),
-    );
-    cacheInstance = new ContentCache<ViewingJson[]>(
-      "viewings-json",
-      schemaHash,
-    );
-  }
-  return cacheInstance;
 }

@@ -1,7 +1,6 @@
 import { promises as fs } from "node:fs";
 import { z } from "zod";
 
-import { ContentCache, generateSchemaHash } from "./utils/cache";
 import { getContentPath } from "./utils/getContentPath";
 
 const alltimeStatsFile = getContentPath("data", "all-time-stats.json");
@@ -31,28 +30,9 @@ const AlltimeStatsJsonSchema = z.object({
 
 export type AlltimeStatsJson = z.infer<typeof AlltimeStatsJsonSchema>;
 
-// Create cache instance with schema hash
-let cacheInstance: ContentCache<AlltimeStatsJson> | undefined;
-
 export async function alltimeStatsJson(): Promise<AlltimeStatsJson> {
-  const cache = await getCache();
-  const fileContents = await fs.readFile(alltimeStatsFile, "utf8");
+  const json = await fs.readFile(alltimeStatsFile, "utf8");
+  const data = JSON.parse(json) as unknown[];
 
-  return cache.get(alltimeStatsFile, fileContents, (content) => {
-    const data = JSON.parse(content) as unknown;
-    return AlltimeStatsJsonSchema.parse(data);
-  });
-}
-
-async function getCache(): Promise<ContentCache<AlltimeStatsJson>> {
-  if (!cacheInstance) {
-    const schemaHash = await generateSchemaHash(
-      JSON.stringify(AlltimeStatsJsonSchema.shape),
-    );
-    cacheInstance = new ContentCache<AlltimeStatsJson>(
-      "alltime-stats-json",
-      schemaHash,
-    );
-  }
-  return cacheInstance;
+  return AlltimeStatsJsonSchema.parse(data);
 }
