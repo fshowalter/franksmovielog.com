@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
@@ -28,6 +29,8 @@ let cachedMarkdownReviews: MarkdownReview[];
 let cachedReviewedTitlesJson: ReviewedTitleJson[];
 let cachedReviews: Reviews;
 const cachedExcerptHtml: Map<string, string> = new Map();
+const cachedContentWithoutFootnotes: Map<string, string> = new Map();
+const cachedExcerpts: Map<string, string> = new Map();
 
 // Enable caching during builds but not in dev mode
 const ENABLE_CACHE = !import.meta.env.DEV;
@@ -79,10 +82,10 @@ export async function allReviews(): Promise<Reviews> {
 }
 
 export function getContentPlainText(rawContent: string): string {
+  const contentWithoutFootnotes = getContentWithoutFootnotes(rawContent);
   return getMastProcessor()
-    .use(removeFootnotes)
     .use(strip)
-    .processSync(rawContent)
+    .processSync(contentWithoutFootnotes)
     .toString();
 }
 
@@ -102,11 +105,10 @@ export async function loadContent<
       cachedReviewedTitlesJson = reviewedTitlesJson;
     }
 
+    const excerpt = getExcerpt(review.rawContent);
     const excerptPlainText = getMastProcessor()
-      .use(removeFootnotes)
-      .use(trimToExcerpt)
       .use(strip)
-      .processSync(review.rawContent)
+      .processSync(excerpt)
       .toString();
 
     const viewings = viewingsMarkdown
@@ -159,13 +161,12 @@ export async function loadExcerptHtml<T extends { slug: string }>(
 
     const excerptContent = synopsis || rawContent;
 
+    const excerpt = getExcerpt(excerptContent);
     const excerptHtml = getMastProcessor()
-      .use(removeFootnotes)
-      .use(trimToExcerpt)
       .use(remarkRehype, { allowDangerousHtml: true })
       .use(rehypeRaw)
       .use(rehypeStringify)
-      .processSync(excerptContent)
+      .processSync(excerpt)
       .toString();
 
     // Cache the result
@@ -197,6 +198,51 @@ export async function mostRecentReviews(limit: number) {
 
     return reviews;
   });
+}
+
+function getContentWithoutFootnotes(rawContent: string): string {
+  // Hash the content for cache key
+  const contentHash = createHash("md5").update(rawContent).digest("hex");
+
+  // Check cache first
+  if (ENABLE_CACHE && cachedContentWithoutFootnotes.has(contentHash)) {
+    return cachedContentWithoutFootnotes.get(contentHash)!;
+  }
+
+  const result = getMastProcessor()
+    .use(removeFootnotes)
+    .processSync(rawContent)
+    .toString();
+
+  // Cache the result
+  if (ENABLE_CACHE) {
+    cachedContentWithoutFootnotes.set(contentHash, result);
+  }
+
+  return result;
+}
+
+function getExcerpt(rawContent: string): string {
+  // Hash the content for cache key
+  const contentHash = createHash("md5").update(rawContent).digest("hex");
+
+  // Check cache first
+  if (ENABLE_CACHE && cachedExcerpts.has(contentHash)) {
+    return cachedExcerpts.get(contentHash)!;
+  }
+
+  const contentWithoutFootnotes = getContentWithoutFootnotes(rawContent);
+  const result = getMastProcessor()
+    .use(trimToExcerpt)
+    .processSync(contentWithoutFootnotes)
+    .toString();
+
+  // Cache the result
+  if (ENABLE_CACHE) {
+    cachedExcerpts.set(contentHash, result);
+  }
+
+  return result;
 }
 
 function getHtmlAsSpan(
