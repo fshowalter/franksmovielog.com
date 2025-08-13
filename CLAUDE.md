@@ -115,18 +115,18 @@ This site uses Astro's partial hydration strategy:
    - `git checkout -b feat/feature-name` for features
    - `git checkout -b fix/bug-name` for bug fixes
    - `git checkout -b chore/task-name` for maintenance tasks
-2. Make changes with proper types
-3. Run tests and linting
-4. **IMPORTANT**: Before creating any PR, run:
+2. **IMPORTANT**: Always rebase on origin/main before pushing:
+   - `git pull --rebase origin main`
+   - This ensures your PR is based on the latest code
+3. Make changes with proper types
+4. Run tests and linting
+5. **IMPORTANT**: Before creating any PR, run:
    - `npm run test` - Must pass with no errors
    - `npm run lint` - Must pass with no errors
    - `npm run lint:spelling` - Must pass with no errors
    - `npm run check` - Must pass with no errors
    - `npm run knip` - Must pass with no errors
    - `npm run format` - Must pass with no errors
-5. **IMPORTANT**: Always rebase on origin/main before pushing:
-   - `git pull --rebase origin main`
-   - This ensures your PR is based on the latest code
 6. Create PR with descriptive title
 7. Ensure all CI checks pass
 
