@@ -1,4 +1,3 @@
-import { createHash } from "node:crypto";
 import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
@@ -81,8 +80,8 @@ export async function allReviews(): Promise<Reviews> {
   });
 }
 
-export function getContentPlainText(rawContent: string): string {
-  const contentWithoutFootnotes = getContentWithoutFootnotes(rawContent);
+export function getContentPlainText(rawContent: string, slug: string): string {
+  const contentWithoutFootnotes = getContentWithoutFootnotes(rawContent, slug);
   return getMastProcessor()
     .use(strip)
     .processSync(contentWithoutFootnotes)
@@ -90,7 +89,7 @@ export function getContentPlainText(rawContent: string): string {
 }
 
 export async function loadContent<
-  T extends { imdbId: string; rawContent: string; title: string },
+  T extends { imdbId: string; rawContent: string; slug: string; title: string },
 >(review: T): Promise<ReviewContent & T> {
   return await perfLogger.measure("loadContent", async () => {
     const viewingsMarkdown =
@@ -105,7 +104,7 @@ export async function loadContent<
       cachedReviewedTitlesJson = reviewedTitlesJson;
     }
 
-    const excerpt = getExcerpt(review.rawContent);
+    const excerpt = getExcerptBySlug(review.slug, review.rawContent);
     const excerptPlainText = getMastProcessor()
       .use(strip)
       .processSync(excerpt)
@@ -161,7 +160,7 @@ export async function loadExcerptHtml<T extends { slug: string }>(
 
     const excerptContent = synopsis || rawContent;
 
-    const excerpt = getExcerpt(excerptContent);
+    const excerpt = getExcerptBySlug(review.slug, excerptContent);
     const excerptHtml = getMastProcessor()
       .use(remarkRehype, { allowDangerousHtml: true })
       .use(rehypeRaw)
@@ -200,13 +199,10 @@ export async function mostRecentReviews(limit: number) {
   });
 }
 
-function getContentWithoutFootnotes(rawContent: string): string {
-  // Hash the content for cache key
-  const contentHash = createHash("md5").update(rawContent).digest("hex");
-
+function getContentWithoutFootnotes(rawContent: string, slug: string): string {
   // Check cache first
-  if (ENABLE_CACHE && cachedContentWithoutFootnotes.has(contentHash)) {
-    return cachedContentWithoutFootnotes.get(contentHash)!;
+  if (ENABLE_CACHE && cachedContentWithoutFootnotes.has(slug)) {
+    return cachedContentWithoutFootnotes.get(slug)!;
   }
 
   const result = getMastProcessor()
@@ -216,22 +212,19 @@ function getContentWithoutFootnotes(rawContent: string): string {
 
   // Cache the result
   if (ENABLE_CACHE) {
-    cachedContentWithoutFootnotes.set(contentHash, result);
+    cachedContentWithoutFootnotes.set(slug, result);
   }
 
   return result;
 }
 
-function getExcerpt(rawContent: string): string {
-  // Hash the content for cache key
-  const contentHash = createHash("md5").update(rawContent).digest("hex");
-
+function getExcerptBySlug(slug: string, rawContent: string): string {
   // Check cache first
-  if (ENABLE_CACHE && cachedExcerpts.has(contentHash)) {
-    return cachedExcerpts.get(contentHash)!;
+  if (ENABLE_CACHE && cachedExcerpts.has(slug)) {
+    return cachedExcerpts.get(slug)!;
   }
 
-  const contentWithoutFootnotes = getContentWithoutFootnotes(rawContent);
+  const contentWithoutFootnotes = getContentWithoutFootnotes(rawContent, slug);
   const result = getMastProcessor()
     .use(trimToExcerpt)
     .processSync(contentWithoutFootnotes)
@@ -239,7 +232,7 @@ function getExcerpt(rawContent: string): string {
 
   // Cache the result
   if (ENABLE_CACHE) {
-    cachedExcerpts.set(contentHash, result);
+    cachedExcerpts.set(slug, result);
   }
 
   return result;

@@ -1,0 +1,60 @@
+
+=== Performance Report ===
+
+Top 50 Slowest Operations (by max duration):
+----------------------------------------------------------------------------------------------------
+Rank | Operation                                         | Max (ms)      | Calls | Total (ms)
+----------------------------------------------------------------------------------------------------
+   1 | mostRecentReviews                                  |        420.25 |     6 |     424.95
+   2 | loadContent                                        |        344.73 |  1801 |    5331.85
+   3 | allViewingsMarkdown                                |        335.83 |     1 |     335.83
+   4 | allReviewsMarkdown                                 |        309.46 |     1 |     309.46
+   5 | getPage                                            |        130.94 |     3 |     307.69
+   6 | allReviewedTitlesJson                              |        112.57 |     4 |     375.12
+   7 | allReviews                                         |         69.28 |  1804 |      73.08
+   8 | allCastAndCrew                                     |         37.17 |     3 |      37.18
+   9 | allCastAndCrewJson                                 |         37.08 |     1 |      37.08
+  10 | loadExcerptHtml                                    |         29.23 | 12622 |    8514.76
+  11 | allViewingsJson                                    |         26.27 |     1 |      26.27
+  12 | alltimeStatsJson                                   |         15.68 |     1 |      15.68
+  13 | allYearStatsJson                                   |         14.71 |     2 |      28.39
+  14 | allWatchlistTitlesJson                             |          7.99 |     1 |       7.99
+  15 | allCollections                                     |          3.25 |     3 |       3.26
+  16 | allCollectionsJson                                 |          3.20 |     1 |       3.20
+  17 | allPagesMarkdown                                   |          3.04 |     3 |       4.18
+  18 | collectionDetails                                  |          2.62 |    10 |      15.06
+  19 | castAndCrewMember                                  |          2.37 |    87 |      39.49
+  20 | allOverratedJson                                   |          0.77 |     1 |       0.77
+  21 | allUnderratedJson                                  |          0.72 |     1 |       0.72
+  22 | allUnderseenJson                                   |          0.55 |     1 |       0.55
+  23 | watchlistProgressJson                              |          0.48 |     1 |       0.48
+
+----------------------------------------------------------------------------------------------------
+
+Operation Call Frequency (Top 20):
+------------------------------------------------------------
+loadExcerptHtml                          | Calls:  12622 | Total:    8514.76ms
+allReviews                               | Calls:   1804 | Total:      73.08ms
+loadContent                              | Calls:   1801 | Total:    5331.85ms
+castAndCrewMember                        | Calls:     87 | Total:      39.49ms
+collectionDetails                        | Calls:     10 | Total:      15.06ms
+mostRecentReviews                        | Calls:      6 | Total:     424.95ms
+allReviewedTitlesJson                    | Calls:      4 | Total:     375.12ms
+getPage                                  | Calls:      3 | Total:     307.69ms
+allPagesMarkdown                         | Calls:      3 | Total:       4.18ms
+allCastAndCrew                           | Calls:      3 | Total:      37.18ms
+allCollections                           | Calls:      3 | Total:       3.26ms
+allYearStatsJson                         | Calls:      2 | Total:      28.39ms
+allReviewsMarkdown                       | Calls:      1 | Total:     309.46ms
+allCastAndCrewJson                       | Calls:      1 | Total:      37.08ms
+allCollectionsJson                       | Calls:      1 | Total:       3.20ms
+allOverratedJson                         | Calls:      1 | Total:       0.77ms
+allUnderratedJson                        | Calls:      1 | Total:       0.72ms
+allUnderseenJson                         | Calls:      1 | Total:       0.55ms
+allViewingsMarkdown                      | Calls:      1 | Total:     335.83ms
+alltimeStatsJson                         | Calls:      1 | Total:      15.68ms
+
+----------------------------------------------------------------------------------------------------
+Total operations measured: 16359
+Total unique operation types: 23
+Total time: 15893.06ms
