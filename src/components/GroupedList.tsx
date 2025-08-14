@@ -39,9 +39,11 @@ export function GroupedList<T>({
                 className={
                   isGrid
                     ? `
-                      tablet-landscape:grid
-                      tablet-landscape:grid-cols-[repeat(auto-fill,minmax(200px,1fr))]
-                      tablet-landscape:gap-x-10 tablet-landscape:gap-y-12
+                      tablet:-mx-6 tablet:grid
+                      tablet:grid-cols-[repeat(auto-fill,minmax(33%,1fr))]
+                      tablet:gap-y-12
+                      min-[872px]:grid-cols-[repeat(auto-fill,minmax(25%,1fr))]
+                      laptop:grid-cols-[repeat(auto-fill,minmax(20%,1fr))]
                     `
                     : ""
                 }

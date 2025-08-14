@@ -20,11 +20,11 @@ export function ListItemGenres({ values }: { values: readonly string[] }) {
               `}
               key={value}
             >
-              , {value}
+              , <span className="whitespace-nowrap">{value}</span>
             </span>
             <span className={`tablet-landscape:hidden`} key={value}>
               {" "}
-              | {value}
+              | <span className="whitespace-nowrap">{value}</span>
             </span>
           </>
         );

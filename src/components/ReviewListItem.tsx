@@ -26,17 +26,21 @@ export function ReviewListItem({ value }: { value: ReviewListItemValue }) {
   return (
     <li
       className={`
-        group/list-item relative
-        tablet-landscape:flex-col
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
+        transition-transform
+        tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6
+        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        tablet:has-[a:hover]:drop-shadow-2xl
       `}
     >
       <div
         className={`
-          relative transition-transform
+          relative w-1/4 max-w-[250px] transition-transform
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
-          tablet-landscape:group-has-[a:hover]/list-item:-translate-y-2
+          tablet:w-auto
         `}
       >
         <ListItemPoster imageProps={value.posterImageProps} />
@@ -44,8 +48,7 @@ export function ReviewListItem({ value }: { value: ReviewListItemValue }) {
       <div
         className={`
           flex grow flex-col items-start gap-y-2
-          tablet:w-full
-          tablet-landscape:mt-2
+          tablet:mt-2 tablet:w-full
         `}
       >
         <ListItemTitle
@@ -57,7 +60,7 @@ export function ReviewListItem({ value }: { value: ReviewListItemValue }) {
         <div
           className={`
             font-sans text-xs leading-4 font-light text-subtle
-            tablet-landscape:text-xxs
+            tablet:text-xxs
           `}
         >
           {value.reviewDisplayDate}
