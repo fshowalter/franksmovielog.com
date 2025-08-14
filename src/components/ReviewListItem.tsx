@@ -1,7 +1,6 @@
 import type { PosterImageProps } from "~/api/posters";
 
 import { Grade } from "~/components/Grade";
-import { ListItem } from "~/components/ListItem";
 import { ListItemGenres } from "~/components/ListItemGenres";
 import { ListItemPoster } from "~/components/ListItemPoster";
 import { ListItemTitle } from "~/components/ListItemTitle";
@@ -25,13 +24,19 @@ export type ReviewListItemValue = {
 
 export function ReviewListItem({ value }: { value: ReviewListItemValue }) {
   return (
-    <ListItem>
+    <li
+      className={`
+        group/list-item relative
+        tablet-landscape:flex-col
+      `}
+    >
       <div
         className={`
-          relative
+          relative transition-transform
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          tablet-landscape:group-has-[a:hover]/list-item:-translate-y-2
         `}
       >
         <ListItemPoster imageProps={value.posterImageProps} />
@@ -40,7 +45,7 @@ export function ReviewListItem({ value }: { value: ReviewListItemValue }) {
         className={`
           flex grow flex-col items-start gap-y-2
           tablet:w-full
-          laptop:pr-4
+          tablet-landscape:mt-2
         `}
       >
         <ListItemTitle
@@ -49,11 +54,16 @@ export function ReviewListItem({ value }: { value: ReviewListItemValue }) {
           year={value.releaseYear}
         />
         <Grade className="mb-1" height={16} value={value.grade} />
-        <div className="font-sans text-xs leading-4 font-light text-subtle">
+        <div
+          className={`
+            font-sans text-xs leading-4 font-light text-subtle
+            tablet-landscape:text-xxs
+          `}
+        >
           {value.reviewDisplayDate}
         </div>
         <ListItemGenres values={value.genres} />
       </div>
-    </ListItem>
+    </li>
   );
 }
