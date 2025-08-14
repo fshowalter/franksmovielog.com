@@ -12,14 +12,12 @@ export function ListItemPoster({
   imageProps: PosterImageProps;
 }) {
   return (
-    <div
-      className={`relative mb-2 max-w-[250px] overflow-hidden rounded shadow-md`}
-    >
+    <div className={`relative mb-2 max-w-[250px]`}>
       <img
         {...imageProps}
         alt=""
         {...ListItemPosterImageConfig}
-        className="aspect-poster w-full object-cover drop-shadow-sm"
+        className="aspect-poster w-full object-cover"
         decoding="async"
         loading="lazy"
       />
