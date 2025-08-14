@@ -15,7 +15,13 @@ export function getHtml(
     return;
   }
 
-  const html = remark()
+  const html = getHtmlProcessor().processSync(content).toString();
+
+  return linkReviewedTitles(html, reviewedTitles);
+}
+
+function getHtmlProcessor() {
+  return remark()
     .use(remarkGfm)
     .use(smartypants)
     .use(remarkRehype, {
@@ -24,9 +30,5 @@ export function getHtml(
       footnoteLabel: "Notes",
     })
     .use(rehypeRaw)
-    .use(rehypeStringify)
-    .processSync(content)
-    .toString();
-
-  return linkReviewedTitles(html, reviewedTitles);
+    .use(rehypeStringify);
 }
