@@ -7,6 +7,7 @@ export function GroupedList<T>({
   className,
   groupedValues,
   groupItemClassName,
+  isGrid = true,
   onShowMore,
   totalCount,
   visibleCount,
@@ -16,6 +17,7 @@ export function GroupedList<T>({
   className?: string;
   groupedValues: Map<string, Iterable<T>>;
   groupItemClassName?: string;
+  isGrid?: boolean;
   onShowMore?: () => void;
   totalCount: number;
   visibleCount: number;
@@ -33,7 +35,19 @@ export function GroupedList<T>({
               key={group}
               zIndex={index + 1}
             >
-              <ol>{[...groupValues].map((value) => children(value))}</ol>
+              <ol
+                className={
+                  isGrid
+                    ? `
+                      tablet-landscape:grid
+                      tablet-landscape:grid-cols-[repeat(auto-fill,minmax(200px,1fr))]
+                      tablet-landscape:gap-x-10 tablet-landscape:gap-y-12
+                    `
+                    : ""
+                }
+              >
+                {[...groupValues].map((value) => children(value))}
+              </ol>
             </GroupingListItem>
           );
         })}
