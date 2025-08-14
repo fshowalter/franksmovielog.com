@@ -60,31 +60,6 @@ export function ListWithFilters<T extends string>({
 
   const onFilterClick = useCallback(
     (event: React.MouseEvent) => {
-      const documentSize = window.innerWidth;
-      const tabletLandscapeBreakpoint = Number.parseFloat(
-        globalThis
-          .getComputedStyle(document.body)
-          .getPropertyValue("--breakpoint-tablet-landscape"),
-      );
-
-      if (documentSize >= tabletLandscapeBreakpoint) {
-        setFilterDrawerVisible(false);
-        event.preventDefault();
-
-        // Scroll to the filters and focus first input
-        document.querySelector("#filters")?.scrollIntoView();
-
-        // Delay focus to allow smooth scroll to complete
-        setTimeout(() => {
-          const firstFocusable = filtersRef.current?.querySelector<HTMLElement>(
-            'button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
-          );
-          firstFocusable?.focus();
-        }, 500); // Wait for scroll animation to complete
-
-        return;
-      }
-
       event.preventDefault();
 
       if (filterDrawerVisible) {
@@ -166,9 +141,7 @@ export function ListWithFilters<T extends string>({
         <div
           className={`
             mx-auto max-w-[var(--breakpoint-desktop)]
-            gap-x-[var(--container-padding)]
             tablet:px-container
-            tablet-landscape:flex
           `}
         >
           <div
@@ -184,13 +157,12 @@ export function ListWithFilters<T extends string>({
             {list}
           </div>
 
-          {/* Backdrop for mobile filters */}
+          {/* Backdrop for filters */}
           <div
             aria-hidden="true"
             className={`
               invisible fixed inset-0 bg-[rgba(0,0,0,.4)] opacity-0
               transition-opacity duration-200
-              tablet-landscape:hidden
               ${
                 filterDrawerVisible
                   ? `visible z-side-drawer-backdrop opacity-100`
@@ -215,15 +187,6 @@ export function ListWithFilters<T extends string>({
                   : `w-0 transform-[translateX(100%)] overflow-y-hidden`
               }
               tablet:gap-y-10
-              tablet-landscape:relative tablet-landscape:z-auto
-              tablet-landscape:col-start-4 tablet-landscape:block
-              tablet-landscape:w-auto tablet-landscape:max-w-unset
-              tablet-landscape:min-w-[320px] tablet-landscape:transform-none
-              tablet-landscape:scroll-mt-[calc(25px_+_var(--scroll-offset,0px))]
-              tablet-landscape:overflow-y-visible tablet-landscape:bg-inherit
-              tablet-landscape:py-24 tablet-landscape:pb-12
-              tablet-landscape:drop-shadow-none
-              laptop:w-[33%]
             `}
             id="filters"
             ref={filtersRef}
@@ -232,10 +195,6 @@ export function ListWithFilters<T extends string>({
               className={`
                 flex h-full w-full flex-col text-sm
                 tablet:pt-12 tablet:text-base
-                tablet-landscape:h-auto tablet-landscape:overflow-visible
-                tablet-landscape:bg-default tablet-landscape:px-container
-                tablet-landscape:pt-0
-                laptop:px-8
               `}
             >
               <fieldset
@@ -243,18 +202,12 @@ export function ListWithFilters<T extends string>({
                   flex grow flex-col gap-5 px-container pb-4
                   [--control-scroll-offset:calc(181px_+_var(--scroll-offset,0px))]
                   tablet:gap-8
-                  tablet-landscape:mt-0 tablet-landscape:gap-12
-                  tablet-landscape:px-0 tablet-landscape:py-10
                 `}
               >
                 <legend
                   className={`
                     mb-5 block w-full pt-4 pb-4 text-lg text-subtle
                     shadow-bottom
-                    tablet-landscape:mb-0 tablet-landscape:pt-10
-                    tablet-landscape:pb-8 tablet-landscape:font-sans
-                    tablet-landscape:text-xxs tablet-landscape:font-semibold
-                    tablet-landscape:tracking-wide tablet-landscape:uppercase
                   `}
                 >
                   Filter
@@ -265,7 +218,6 @@ export function ListWithFilters<T extends string>({
                 className={`
                   sticky bottom-0 z-filter-footer mt-auto w-full self-end
                   border-t border-t-default bg-default px-8 py-4 drop-shadow-2xl
-                  tablet-landscape:hidden
                 `}
               >
                 <button
@@ -273,7 +225,6 @@ export function ListWithFilters<T extends string>({
                     flex w-full cursor-pointer items-center justify-center
                     gap-x-4 bg-footer px-4 py-3 font-sans text-xs text-nowrap
                     text-inverse uppercase
-                    tablet-landscape:hidden
                   `}
                   onClick={() => {
                     setFilterDrawerVisible(false);
@@ -317,8 +268,6 @@ function ListHeader<T extends string>({
         grid-cols-[auto_auto_1fr_auto] items-baseline gap-y-7 px-container py-10
         font-sans font-medium tracking-wide text-subtle uppercase
         tablet:grid-cols-[auto_auto_1fr_auto_auto] tablet:gap-x-4
-        tablet-landscape:grid-cols-[auto_auto_1fr_minmax(302px,calc(33%_-_192px))_auto]
-        desktop:grid-cols-[auto_auto_1fr_calc(33%_-_96px)_auto]
       `}
     >
       <span className={`text-nowrap`}>
@@ -332,7 +281,6 @@ function ListHeader<T extends string>({
         className={`
           col-span-full
           tablet:col-span-1 tablet:col-start-4
-          desktop:pl-8
         `}
       >
         <label

@@ -1,11 +1,12 @@
 import type { JSX } from "react";
 
-import { useReducer } from "react";
+import { useEffect, useReducer, useState } from "react";
 
 import type { ReviewListItemValue } from "~/components/ReviewListItem";
 
 import { GroupedList } from "~/components/GroupedList";
 import { ListWithFilters } from "~/components/ListWithFilters";
+import { ReviewGridItem } from "~/components/ReviewGridItem";
 import { ReviewListItem } from "~/components/ReviewListItem";
 
 import { Filters, SortOptions } from "./Filters";
@@ -35,6 +36,23 @@ export function AllReviews({
     initState,
   );
 
+  const [isGridLayout, setIsGridLayout] = useState(false);
+
+  useEffect(() => {
+    const checkViewport = () => {
+      const tabletLandscapeBreakpoint = Number.parseFloat(
+        globalThis
+          .getComputedStyle(document.body)
+          .getPropertyValue("--breakpoint-tablet-landscape"),
+      );
+      setIsGridLayout(window.innerWidth >= tabletLandscapeBreakpoint);
+    };
+
+    checkViewport();
+    window.addEventListener("resize", checkViewport);
+    return () => window.removeEventListener("resize", checkViewport);
+  }, []);
+
   return (
     <ListWithFilters
       filters={
@@ -47,14 +65,21 @@ export function AllReviews({
       }
       list={
         <GroupedList
-          className="bg-default"
+          className=""
           data-testid="list"
           groupedValues={state.groupedValues}
+          isGrid={isGridLayout}
           onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
           totalCount={state.filteredValues.length}
           visibleCount={state.showCount}
         >
-          {(value) => <ReviewListItem key={value.imdbId} value={value} />}
+          {(value) =>
+            isGridLayout ? (
+              <ReviewGridItem key={value.imdbId} value={value} />
+            ) : (
+              <ReviewListItem key={value.imdbId} value={value} />
+            )
+          }
         </GroupedList>
       }
       sortProps={{

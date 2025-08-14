@@ -1,9 +1,9 @@
 import type { PosterImageProps } from "~/api/posters";
 
 export const ListItemPosterImageConfig = {
-  height: 113,
+  height: 375,
   sizes: "(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px",
-  width: 80,
+  width: 250,
 };
 
 export function ListItemPoster({
