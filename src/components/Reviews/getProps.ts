@@ -1,5 +1,5 @@
 import type { BackdropImageProps } from "~/api/backdrops";
-import type { ReviewListItemValue } from "~/components/ReviewListItem";
+import type { ReviewsListItemValue } from "~/components/Reviews/ReviewsListItem";
 
 import { getBackdropImageProps } from "~/api/backdrops";
 import { allOverratedDisappointments } from "~/api/overratedDisappointments";
@@ -145,12 +145,12 @@ async function buildReviewListItemValues(
     title: string;
   }[],
   includeReviewMonth: boolean,
-): Promise<ReviewListItemValue[]> {
+): Promise<ReviewsListItemValue[]> {
   return Promise.all(
     reviews.map(async (review) => {
       const date = review.reviewDate;
 
-      const value: ReviewListItemValue = {
+      const value: ReviewsListItemValue = {
         genres: review.genres,
         grade: review.grade,
         gradeValue: review.gradeValue,

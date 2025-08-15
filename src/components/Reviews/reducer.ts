@@ -1,4 +1,4 @@
-import type { ReviewListItemValue } from "~/components/ReviewListItem";
+import type { ReviewsListItemValue } from "~/components/Reviews/ReviewsListItem";
 
 import {
   applyShowMore,
@@ -80,13 +80,13 @@ type SortAction = {
 
 // Define state type
 type State = FilterableState<
-  ReviewListItemValue,
+  ReviewsListItemValue,
   ReviewsSort,
-  Map<string, ReviewListItemValue[]>
+  Map<string, ReviewsListItemValue[]>
 >;
 
 // Helper functions
-function getReviewDateGroup(value: ReviewListItemValue): string {
+function getReviewDateGroup(value: ReviewsListItemValue): string {
   if (value.reviewMonth) {
     return `${value.reviewMonth} ${value.reviewYear}`;
   }
@@ -94,7 +94,7 @@ function getReviewDateGroup(value: ReviewListItemValue): string {
 }
 
 function groupForValue(
-  value: ReviewListItemValue,
+  value: ReviewsListItemValue,
   sortValue: ReviewsSort,
 ): string {
   switch (sortValue) {
@@ -118,12 +118,12 @@ function groupForValue(
 }
 
 function sortValues(
-  values: ReviewListItemValue[],
+  values: ReviewsListItemValue[],
   sortOrder: ReviewsSort,
-): ReviewListItemValue[] {
+): ReviewsListItemValue[] {
   const sortMap: Record<
     ReviewsSort,
-    (a: ReviewListItemValue, b: ReviewListItemValue) => number
+    (a: ReviewsListItemValue, b: ReviewsListItemValue) => number
   > = {
     "grade-asc": (a, b) => sortNumber(a.gradeValue, b.gradeValue),
     "grade-desc": (a, b) => sortNumber(a.gradeValue, b.gradeValue) * -1,
@@ -157,7 +157,7 @@ export function initState({
   values,
 }: {
   initialSort: ReviewsSort;
-  values: ReviewListItemValue[];
+  values: ReviewsListItemValue[];
 }): State {
   const initialValues = sortValues(values, initialSort);
 

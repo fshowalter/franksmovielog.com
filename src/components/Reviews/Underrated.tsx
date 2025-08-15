@@ -2,25 +2,22 @@ import type { JSX } from "react";
 
 import { useReducer } from "react";
 
-import type { ReviewListItemValue } from "~/components/ReviewListItem";
-
-import { GroupedList } from "~/components/GroupedList";
 import { ListWithFilters } from "~/components/ListWithFilters";
-import { ReviewListItem } from "~/components/ReviewListItem";
-import { Filters, SortOptions } from "~/components/Reviews/Filters";
-import {
-  Actions,
-  initState,
-  reducer,
-  type Sort,
-} from "~/components/Reviews/reducer";
+
+import type { Sort } from "./reducer";
+import type { ReviewsListItemValue } from "./ReviewsListItem";
+
+import { Filters, SortOptions } from "./Filters";
+import { Actions, initState, reducer } from "./reducer";
+import { ReviewsGroupedList } from "./ReviewsGroupedList";
+import { ReviewsListItem } from "./ReviewsListItem";
 
 export type Props = {
   distinctGenres: string[];
   distinctReleaseYears: string[];
   distinctReviewYears: string[];
   initialSort: Sort;
-  values: ReviewListItemValue[];
+  values: ReviewsListItemValue[];
 };
 
 export function Underrated({
@@ -50,16 +47,14 @@ export function Underrated({
         />
       }
       list={
-        <GroupedList
-          className="bg-default"
-          data-testid="list"
+        <ReviewsGroupedList
           groupedValues={state.groupedValues}
           onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
           totalCount={state.filteredValues.length}
           visibleCount={state.showCount}
         >
-          {(value) => <ReviewListItem key={value.imdbId} value={value} />}
-        </GroupedList>
+          {(value) => <ReviewsListItem key={value.imdbId} value={value} />}
+        </ReviewsGroupedList>
       }
       sortProps={{
         currentSortValue: state.sortValue,

@@ -24,26 +24,26 @@ export function GroupedList<T>({
 }): JSX.Element {
   return (
     <>
-      <ol className={className ?? ""} {...rest}>
-        {[...groupedValues].map((groupedValue, index) => {
+      <ol
+        className={`
+          ${className ?? ""}
+        `}
+        {...rest}
+      >
+        {[...groupedValues].map((groupedValue) => {
           const [group, groupValues] = groupedValue;
-
           return (
             <GroupingListItem
               className={groupItemClassName ?? groupItemClassName}
               groupText={group}
               key={group}
-              zIndex={index + 1}
             >
               <ol
                 className={
                   isGrid
                     ? `
-                      tablet:-mx-6 tablet:grid
-                      tablet:grid-cols-[repeat(auto-fill,minmax(33%,1fr))]
-                      tablet:gap-y-12
-                      min-[872px]:grid-cols-[repeat(auto-fill,minmax(25%,1fr))]
-                      laptop:grid-cols-[repeat(auto-fill,minmax(20%,1fr))]
+                      grid-cols-[repeat(auto-fill,minmax(calc(100%_/_var(--grouped-list-number-of-columns,1)),1fr))]
+                      tablet:-mx-6 tablet:grid tablet:gap-y-12
                     `
                     : ""
                 }
@@ -69,25 +69,24 @@ function GroupingListItem({
   children,
   className,
   groupText,
-  zIndex,
 }: {
   children: React.ReactNode;
   className?: string;
   groupText: string;
-  zIndex: number;
 }) {
   return (
     <li
       className={`
         block
+        first-of-type:mt-4
         ${className ?? ""}
       `}
       id={groupText}
     >
-      <div className={`pt-0 text-md`} style={{ zIndex: zIndex }}>
+      <div className={`pt-0 text-md`}>
         <div
           className={`
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
+            max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl
             leading-8
             tablet:px-1
           `}
