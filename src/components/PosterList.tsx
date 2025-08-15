@@ -90,11 +90,8 @@ export function PosterListItem({
   className,
   posterImageProps,
 }: {
-  background?: string;
   children: React.ReactNode;
   className?: string;
-  extraVerticalPadding?: boolean;
-  itemsCenter?: boolean;
   posterImageProps: PosterImageProps;
 }) {
   return (

@@ -9,6 +9,7 @@ import { collectionDetails } from "~/api/collections";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
 import { BackdropImageConfig } from "~/components/Backdrop";
 import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
+import { displayDate } from "~/utils/displayDate";
 
 import type { Props } from "./Collection";
 
@@ -43,18 +44,7 @@ export async function getProps(slug: string): Promise<PageProps> {
               title.slug,
               ListItemPosterImageConfig,
             ),
-            reviewDisplayDate: title.reviewDate
-              ? `${new Date(title.reviewDate).toLocaleDateString("en-US", {
-                  timeZone: "UTC",
-                  year: "numeric",
-                })}-${new Date(title.reviewDate).toLocaleDateString("en-US", {
-                  month: "short",
-                  timeZone: "UTC",
-                })}-${new Date(title.reviewDate).toLocaleDateString("en-US", {
-                  day: "2-digit",
-                  timeZone: "UTC",
-                })}`
-              : "",
+            reviewDisplayDate: displayDate(title.reviewDate),
             reviewSequence: title.reviewSequence,
             reviewYear: title.reviewDate
               ? new Date(title.reviewDate).toLocaleDateString("en-US", {

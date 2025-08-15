@@ -7,11 +7,9 @@ import type { PosterImageProps } from "~/api/posters";
 
 import { CreditedAs } from "~/components/CreditedAs";
 import { Grade } from "~/components/Grade";
-import { GroupedList } from "~/components/GroupedList";
-import { ListItem } from "~/components/ListItem";
-import { ListItemPoster } from "~/components/ListItemPoster";
 import { ListItemTitle } from "~/components/ListItemTitle";
 import { ListWithFilters } from "~/components/ListWithFilters";
+import { GroupedPosterList, PosterListItem } from "~/components/PosterList";
 import { WatchlistTitleSlug } from "~/components/WatchlistTitleSlug";
 
 import type { Sort } from "./CastAndCrewMember.reducer";
@@ -79,7 +77,7 @@ export function CastAndCrewMember({
         />
       }
       list={
-        <GroupedList
+        <GroupedPosterList
           data-testid="list"
           groupedValues={state.groupedValues}
           onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
@@ -89,7 +87,7 @@ export function CastAndCrewMember({
           {(value) => {
             return <TitleListItem key={value.imdbId} value={value} />;
           }}
-        </GroupedList>
+        </GroupedPosterList>
       }
       sortProps={{
         currentSortValue: state.sortValue,
@@ -107,30 +105,22 @@ export function CastAndCrewMember({
 
 function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
-    <ListItem background={value.slug ? "bg-default" : "bg-unreviewed"}>
+    <PosterListItem
+      className={value.slug ? "bg-default" : "bg-unreviewed"}
+      posterImageProps={value.posterImageProps}
+    >
       <div
         className={`
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
+          flex grow flex-col items-start gap-y-2 px-1
+          tablet:mt-2 tablet:w-full
         `}
       >
-        <ListItemPoster imageProps={value.posterImageProps} />
-      </div>
-      <div
-        className={`
-          flex grow flex-col items-start gap-y-2
-          tablet:w-full
-          laptop:pr-4
-        `}
-      >
-        <CreditedAs values={value.creditedAs} />
         <ListItemTitle
           slug={value.slug}
           title={value.title}
           year={value.releaseYear}
         />
+        <CreditedAs values={value.creditedAs} />
         {value.grade && (
           <Grade className="mb-1" height={16} value={value.grade} />
         )}
@@ -146,6 +136,6 @@ function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
           {value.reviewDisplayDate}
         </div>
       </div>
-    </ListItem>
+    </PosterListItem>
   );
 }

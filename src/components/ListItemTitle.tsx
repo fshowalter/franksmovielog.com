@@ -36,7 +36,7 @@ export function ListItemTitle({
   }
 
   return (
-    <span className="block font-sans text-sm font-normal text-muted">
+    <span className="block font-sans text-xs font-normal text-muted">
       {title}
       &#x202F;&#x202F;
       {yearBox}
