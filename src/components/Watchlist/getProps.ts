@@ -41,7 +41,7 @@ export async function getProps(): Promise<PageProps> {
     distinctPerformers,
     distinctReleaseYears,
     distinctWriters,
-    initialSort: "release-date-asc",
+    initialSort: "title-asc",
     metaDescription:
       "My to-review bucket list. See what I've yet to review. Sort or filter titles by reason, release date, or title.",
     values: watchlistTitles,

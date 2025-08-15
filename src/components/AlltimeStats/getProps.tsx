@@ -26,19 +26,9 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
           ...person,
           viewings: await Promise.all(
             person.viewings.map(async (viewing) => {
-              const viewingDate = new Date(viewing.viewingDate);
               return {
                 ...viewing,
-                displayDate: `${viewingDate.toLocaleDateString("en-US", {
-                  timeZone: "UTC",
-                  year: "numeric",
-                })}-${viewingDate.toLocaleDateString("en-US", {
-                  month: "short",
-                  timeZone: "UTC",
-                })}-${viewingDate.toLocaleDateString("en-US", {
-                  day: "2-digit",
-                  timeZone: "UTC",
-                })}`,
+                displayDate: displayDate(viewing.viewingDate),
                 posterImageProps: await getFluidWidthPosterImageProps(
                   viewing.slug,
                   MostWatchedMoviesPosterConfig,
@@ -66,19 +56,9 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
           ...person,
           viewings: await Promise.all(
             person.viewings.map(async (viewing) => {
-              const viewingDate = new Date(viewing.viewingDate);
               return {
                 ...viewing,
-                displayDate: `${viewingDate.toLocaleDateString("en-US", {
-                  timeZone: "UTC",
-                  year: "numeric",
-                })}-${viewingDate.toLocaleDateString("en-US", {
-                  month: "short",
-                  timeZone: "UTC",
-                })}-${viewingDate.toLocaleDateString("en-US", {
-                  day: "2-digit",
-                  timeZone: "UTC",
-                })}`,
+                displayDate: displayDate(viewing.viewingDate),
                 posterImageProps: await getFluidWidthPosterImageProps(
                   viewing.slug,
                   MostWatchedMoviesPosterConfig,
@@ -95,19 +75,9 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
           ...person,
           viewings: await Promise.all(
             person.viewings.map(async (viewing) => {
-              const viewingDate = new Date(viewing.viewingDate);
               return {
                 ...viewing,
-                displayDate: `${viewingDate.toLocaleDateString("en-US", {
-                  timeZone: "UTC",
-                  year: "numeric",
-                })}-${viewingDate.toLocaleDateString("en-US", {
-                  month: "short",
-                  timeZone: "UTC",
-                })}-${viewingDate.toLocaleDateString("en-US", {
-                  day: "2-digit",
-                  timeZone: "UTC",
-                })}`,
+                displayDate: displayDate(viewing.viewingDate),
                 posterImageProps: await getFluidWidthPosterImageProps(
                   viewing.slug,
                   MostWatchedMoviesPosterConfig,
@@ -120,4 +90,22 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
     ),
     stats,
   };
+}
+
+function displayDate(date: string) {
+  const viewingDate = new Date(date);
+
+  return `${viewingDate.toLocaleDateString("en-US", {
+    timeZone: "UTC",
+    weekday: "short",
+  })}, ${viewingDate.toLocaleDateString("en-US", {
+    month: "short",
+    timeZone: "UTC",
+  })} ${viewingDate.toLocaleDateString("en-US", {
+    day: "2-digit",
+    timeZone: "UTC",
+  })}, ${viewingDate.toLocaleDateString("en-US", {
+    timeZone: "UTC",
+    year: "numeric",
+  })}`;
 }

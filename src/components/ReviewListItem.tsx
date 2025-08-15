@@ -48,7 +48,7 @@ export function ReviewListItem({ value }: { value: ReviewListItemValue }) {
       <div
         className={`
           flex grow flex-col items-start gap-y-2
-          tablet:mt-2 tablet:w-full
+          tablet:mt-2 tablet:w-full tablet:px-1
         `}
       >
         <ListItemTitle

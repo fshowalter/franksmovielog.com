@@ -81,20 +81,18 @@ export function YearStats({
         />
         <div
           className={`
-            mx-auto flex w-full flex-col items-start gap-y-8
-            laptop:flex-row laptop:gap-x-8
+            mx-auto flex w-full max-w-popout grid-cols-2 flex-col items-start
+            gap-y-8
+            laptop:grid laptop:max-w-unset laptop:gap-x-8
           `}
         >
           <DecadeDistribution values={stats.decadeDistribution} />
           <MediaDistribution values={stats.mediaDistribution} />
+        </div>
+        <div className="mx-auto w-full max-w-popout">
           <VenueDistribution values={stats.venueDistribution} />
         </div>
-        <div
-          className={`
-            mx-auto flex w-full flex-col gap-y-8
-            laptop:max-w-[calc(66%+24px)]
-          `}
-        >
+        <div className={`mx-auto flex w-full max-w-popout flex-col gap-y-8`}>
           <MostWatchedDirectors values={mostWatchedDirectors} />
           <MostWatchedPerformers values={mostWatchedPerformers} />
           <MostWatchedWriters values={mostWatchedWriters} />
