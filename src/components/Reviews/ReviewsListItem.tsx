@@ -3,7 +3,7 @@ import type { PosterImageProps } from "~/api/posters";
 import { Grade } from "~/components/Grade";
 import { ListItemGenres } from "~/components/ListItemGenres";
 import { ListItemTitle } from "~/components/ListItemTitle";
-import { ListItemWithPoster } from "~/components/ListItemWithPoster";
+import { PosterListItem } from "~/components/PosterList";
 
 export type ReviewsListItemValue = {
   genres: string[];
@@ -24,7 +24,7 @@ export type ReviewsListItemValue = {
 
 export function ReviewsListItem({ value }: { value: ReviewsListItemValue }) {
   return (
-    <ListItemWithPoster posterImageProps={value.posterImageProps}>
+    <PosterListItem posterImageProps={value.posterImageProps}>
       <div
         className={`
           flex grow flex-col items-start gap-y-2
@@ -47,6 +47,6 @@ export function ReviewsListItem({ value }: { value: ReviewsListItemValue }) {
         </div>
         <ListItemGenres values={value.genres} />
       </div>
-    </ListItemWithPoster>
+    </PosterListItem>
   );
 }

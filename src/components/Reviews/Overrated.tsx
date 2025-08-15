@@ -3,13 +3,13 @@ import type { JSX } from "react";
 import { useReducer } from "react";
 
 import { ListWithFilters } from "~/components/ListWithFilters";
+import { GroupedPosterList } from "~/components/PosterList";
 
 import type { Sort } from "./reducer";
 import type { ReviewsListItemValue } from "./ReviewsListItem";
 
 import { Filters, SortOptions } from "./Filters";
 import { Actions, initState, reducer } from "./reducer";
-import { ReviewsGroupedList } from "./ReviewsGroupedList";
 import { ReviewsListItem } from "./ReviewsListItem";
 
 export type Props = {
@@ -47,14 +47,14 @@ export function Overrated({
         />
       }
       list={
-        <ReviewsGroupedList
+        <GroupedPosterList
           groupedValues={state.groupedValues}
           onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
           totalCount={state.filteredValues.length}
           visibleCount={state.showCount}
         >
           {(value) => <ReviewsListItem key={value.imdbId} value={value} />}
-        </ReviewsGroupedList>
+        </GroupedPosterList>
       }
       sortProps={{
         currentSortValue: state.sortValue,
