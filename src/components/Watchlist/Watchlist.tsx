@@ -6,8 +6,8 @@ import type { PosterImageProps } from "~/api/posters";
 import type { WatchlistTitle } from "~/api/watchlistTitles";
 
 import { GroupedList } from "~/components/GroupedList";
-import { ListItemPoster } from "~/components/ListItemPoster";
 import { ListItemTitle } from "~/components/ListItemTitle";
+import { ListItemWithPoster } from "~/components/ListItemWithPoster";
 import {
   ListHeaderButton,
   ListWithFilters,
@@ -76,23 +76,33 @@ export function Watchlist({
         />
       }
       list={
-        <GroupedList
-          data-testid="list"
-          groupedValues={state.groupedValues}
-          onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
-          totalCount={state.filteredValues.length}
-          visibleCount={state.showCount}
-        >
-          {(value) => {
-            return (
-              <WatchlistListItem
-                defaultPosterImageProps={defaultPosterImageProps}
-                key={value.imdbId}
-                value={value}
-              />
-            );
-          }}
-        </GroupedList>
+        <div className="@container/list">
+          <GroupedList
+            className={`
+              bg-default
+              [--grouped-list-number-of-columns:2]
+              @min-[calc(298px_*_2)]/list:[--grouped-list-number-of-columns:3]
+              @min-[calc(298px_*_3)]/list:[--grouped-list-number-of-columns:4]
+              @min-[calc(298px_*_4)]/list:[--grouped-list-number-of-columns:5]
+              @min-[calc(298px_*_5)]/list:[--grouped-list-number-of-columns:6]
+            `}
+            data-testid="list"
+            groupedValues={state.groupedValues}
+            onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
+            totalCount={state.filteredValues.length}
+            visibleCount={state.showCount}
+          >
+            {(value) => {
+              return (
+                <WatchlistListItem
+                  defaultPosterImageProps={defaultPosterImageProps}
+                  key={value.imdbId}
+                  value={value}
+                />
+              );
+            }}
+          </GroupedList>
+        </div>
       }
       listHeaderButtons={
         <ListHeaderButton href="/watchlist/progress/" text="progress" />
@@ -119,19 +129,14 @@ function WatchlistListItem({
   value: ListItemValue;
 }): JSX.Element {
   return (
-    <li
-      className={`
-        relative mb-1 flex max-w-(--breakpoint-desktop) flex-row items-center
-        gap-x-4 bg-unreviewed px-container py-4
-        tablet:flex-col tablet:gap-x-6 tablet:px-4
-        laptop:px-6
-      `}
+    <ListItemWithPoster
+      className={`bg-unreviewed`}
+      posterImageProps={defaultPosterImageProps}
     >
-      <ListItemPoster imageProps={defaultPosterImageProps} />
       <div
         className={`
-          mt-1 flex flex-1 flex-col gap-y-1
-          tablet:w-full
+          mt-1 flex flex-1 flex-col justify-center gap-y-1
+          tablet:w-full tablet:justify-normal tablet:px-1
         `}
       >
         <ListItemTitle title={value.title} year={value.releaseYear} />
@@ -142,6 +147,6 @@ function WatchlistListItem({
           writerNames={value.watchlistWriterNames}
         />
       </div>
-    </li>
+    </ListItemWithPoster>
   );
 }

@@ -4,7 +4,7 @@ import type { PosterImageProps } from "~/api/posters";
 
 import { ccn } from "~/utils/concatClassNames";
 
-import { Poster } from "./Poster";
+import { ListItemWithPoster } from "./ListItemWithPoster";
 
 export const MostWatchedMoviesPosterConfig = {
   height: 375,
@@ -36,7 +36,7 @@ export function MostWatchedMovies({
     <section
       className={ccn(
         `
-          max-w-(--breakpoint-laptop) pb-5
+          max-w-[calc(298px_*_4)] pb-5
           laptop:pb-10
         `,
         className,
@@ -60,42 +60,21 @@ export function MostWatchedMovies({
   );
 }
 
-function FluidListItemPoster({
-  className,
-  imageProps,
-}: {
-  className?: string;
-  imageProps: PosterImageProps;
-  slug: string | undefined;
-  title: string;
-  year: string;
-}) {
-  return (
-    <div className={ccn(``, className)}>
-      <Poster
-        className="h-auto rounded-[2.5px]"
-        decoding="async"
-        height={MostWatchedMoviesPosterConfig.height}
-        imageProps={imageProps}
-        loading="lazy"
-        sizes={MostWatchedMoviesPosterConfig.sizes}
-        width={MostWatchedMoviesPosterConfig.width}
-      />
-    </div>
-  );
-}
-
 function List({ children }: { children: React.ReactNode }): JSX.Element {
   return (
-    <ol
-      className={`
-        grid-cols-[repeat(auto-fit,minmax(128px,248px))] items-center
-        justify-center gap-y-8 bg-subtle
-        tablet:grid tablet:items-start
-      `}
-    >
-      {children}
-    </ol>
+    <div className="@container/most-watched-movies">
+      <ol
+        className={`
+          items-center justify-center gap-y-8 bg-subtle
+          [--most-watched-movies-list-item-width:50%]
+          tablet:flex tablet:flex-wrap tablet:items-start
+          @min-[calc(298px_*_2)]/most-watched-movies:[--most-watched-movies-list-item-width:33.33%]
+          @min-[calc(298px_*_3)]/most-watched-movies:[--most-watched-movies-list-item-width:25%]
+        `}
+      >
+        {children}
+      </ol>
+    </div>
   );
 }
 
@@ -105,37 +84,16 @@ function ListItem({
   value: MostWatchedMoviesListItemValue;
 }): JSX.Element {
   return (
-    <li
-      className={`
-        group/list-item relative mb-1 flex h-full transform-gpu items-center
-        gap-x-4 px-container py-4 transition-transform
-        has-[a:hover]:bg-default
-        tablet:w-auto tablet:flex-col tablet:p-6
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-105
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:w-auto
-      `}
+    <ListItemWithPoster
+      className={`tablet:w-(--most-watched-movies-list-item-width)`}
+      posterImageProps={value.posterImageProps}
     >
       <div
         className={`
-          w-1/4 shrink-0 transform-gpu
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:rounded-[2.5px] after:bg-default after:opacity-15
-          after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-          tablet:w-auto tablet:max-w-[248px]
+          flex flex-col justify-center
+          tablet:w-full
         `}
       >
-        <FluidListItemPoster
-          imageProps={value.posterImageProps}
-          slug={value.slug}
-          title={value.title}
-          year={value.releaseYear}
-        />
-      </div>
-      <div className={`tablet:w-full`}>
         <Title slug={value.slug} title={value.title} year={value.releaseYear} />
         <div
           className={`
@@ -146,7 +104,7 @@ function ListItem({
           {value.count.toLocaleString()} times
         </div>
       </div>
-    </li>
+    </ListItemWithPoster>
   );
 }
 

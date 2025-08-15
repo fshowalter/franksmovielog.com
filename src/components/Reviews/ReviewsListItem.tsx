@@ -2,10 +2,10 @@ import type { PosterImageProps } from "~/api/posters";
 
 import { Grade } from "~/components/Grade";
 import { ListItemGenres } from "~/components/ListItemGenres";
-import { ListItemPoster } from "~/components/ListItemPoster";
 import { ListItemTitle } from "~/components/ListItemTitle";
+import { ListItemWithPoster } from "~/components/ListItemWithPoster";
 
-export type ReviewListItemValue = {
+export type ReviewsListItemValue = {
   genres: string[];
   grade: string;
   gradeValue: number;
@@ -22,29 +22,9 @@ export type ReviewListItemValue = {
   title: string;
 };
 
-export function ReviewListItem({ value }: { value: ReviewListItemValue }) {
+export function ReviewsListItem({ value }: { value: ReviewsListItemValue }) {
   return (
-    <li
-      className={`
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
-        tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
-        tablet:has-[a:hover]:drop-shadow-2xl
-      `}
-    >
-      <div
-        className={`
-          relative w-1/4 max-w-[250px] transition-transform
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-          tablet:w-auto
-        `}
-      >
-        <ListItemPoster imageProps={value.posterImageProps} />
-      </div>
+    <ListItemWithPoster posterImageProps={value.posterImageProps}>
       <div
         className={`
           flex grow flex-col items-start gap-y-2
@@ -67,6 +47,6 @@ export function ReviewListItem({ value }: { value: ReviewListItemValue }) {
         </div>
         <ListItemGenres values={value.genres} />
       </div>
-    </li>
+    </ListItemWithPoster>
   );
 }
