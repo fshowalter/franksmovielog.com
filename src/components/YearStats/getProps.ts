@@ -3,6 +3,7 @@ import { getFluidWidthPosterImageProps } from "~/api/posters";
 import { allStatYears, statsForYear } from "~/api/yearStats";
 import { BackdropImageConfig } from "~/components/Backdrop";
 import { MostWatchedMoviesPosterConfig } from "~/components/MostWatchedMovies";
+import { displayDate } from "~/utils/displayDate";
 
 import type { Props } from "./YearStats";
 
@@ -91,22 +92,4 @@ export async function getProps(
     stats,
     year,
   };
-}
-
-function displayDate(date: string) {
-  const viewingDate = new Date(date);
-
-  return `${viewingDate.toLocaleDateString("en-US", {
-    timeZone: "UTC",
-    weekday: "short",
-  })}, ${viewingDate.toLocaleDateString("en-US", {
-    month: "short",
-    timeZone: "UTC",
-  })} ${viewingDate.toLocaleDateString("en-US", {
-    day: "2-digit",
-    timeZone: "UTC",
-  })}, ${viewingDate.toLocaleDateString("en-US", {
-    timeZone: "UTC",
-    year: "numeric",
-  })}`;
 }

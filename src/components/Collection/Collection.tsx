@@ -6,11 +6,9 @@ import type { Collection, CollectionWithDetails } from "~/api/collections";
 import type { PosterImageProps } from "~/api/posters";
 
 import { Grade } from "~/components/Grade";
-import { GroupedList } from "~/components/GroupedList";
-import { ListItem } from "~/components/ListItem";
-import { ListItemPoster } from "~/components/ListItemPoster";
 import { ListItemTitle } from "~/components/ListItemTitle";
 import { ListWithFilters } from "~/components/ListWithFilters";
+import { GroupedPosterList, PosterListItem } from "~/components/PosterList";
 
 import type { Sort } from "./Collection.reducer";
 
@@ -72,7 +70,7 @@ export function Collection({
         />
       }
       list={
-        <GroupedList
+        <GroupedPosterList
           data-testid="list"
           groupedValues={state.groupedValues}
           onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
@@ -82,7 +80,7 @@ export function Collection({
           {(value) => {
             return <CollectionListItem key={value.imdbId} value={value} />;
           }}
-        </GroupedList>
+        </GroupedPosterList>
       }
       sortProps={{
         currentSortValue: state.sortValue,
@@ -100,22 +98,14 @@ export function Collection({
 
 function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
-    <ListItem background={value.slug ? "bg-default" : "bg-unreviewed"}>
-      <div
-        className={`
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        `}
-      >
-        <ListItemPoster imageProps={value.posterImageProps} />
-      </div>
+    <PosterListItem
+      className={value.slug ? "bg-default" : "bg-unreviewed"}
+      posterImageProps={value.posterImageProps}
+    >
       <div
         className={`
           flex grow flex-col items-start gap-y-2
-          tablet:w-full
-          laptop:pr-4
+          tablet:mt-2 tablet:w-full
         `}
       >
         <ListItemTitle
@@ -130,6 +120,6 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
           {value.reviewDisplayDate}
         </div>
       </div>
-    </ListItem>
+    </PosterListItem>
   );
 }
