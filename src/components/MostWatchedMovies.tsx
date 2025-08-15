@@ -7,9 +7,9 @@ import { ccn } from "~/utils/concatClassNames";
 import { Poster } from "./Poster";
 
 export const MostWatchedMoviesPosterConfig = {
-  height: 354,
+  height: 375,
   sizes: "(min-width: 780px) 248px, 64px",
-  width: 236,
+  width: 250,
 };
 
 export type MostWatchedMoviesListItemValue = {
@@ -71,15 +71,7 @@ function FluidListItemPoster({
   year: string;
 }) {
   return (
-    <div
-      className={ccn(
-        `
-          w-list-item-poster shrink-0
-          tablet:w-auto tablet:max-w-[248px]
-        `,
-        className,
-      )}
-    >
+    <div className={ccn(``, className)}>
       <Poster
         className="h-auto rounded-[2.5px]"
         decoding="async"
@@ -98,7 +90,7 @@ function List({ children }: { children: React.ReactNode }): JSX.Element {
     <ol
       className={`
         grid-cols-[repeat(auto-fit,minmax(128px,248px))] items-center
-        justify-center gap-x-6 gap-y-8 bg-subtle
+        justify-center gap-y-8 bg-subtle
         tablet:grid tablet:items-start
       `}
     >
@@ -116,7 +108,8 @@ function ListItem({
     <li
       className={`
         group/list-item relative mb-1 flex h-full transform-gpu items-center
-        gap-x-4 bg-default px-container py-4 transition-transform
+        gap-x-4 px-container py-4 transition-transform
+        has-[a:hover]:bg-default
         tablet:w-auto tablet:flex-col tablet:p-6
         tablet-landscape:has-[a:hover]:z-hover
         tablet-landscape:has-[a:hover]:scale-105
@@ -127,11 +120,12 @@ function ListItem({
     >
       <div
         className={`
-          transform-gpu
+          w-1/4 shrink-0 transform-gpu
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:rounded-[2.5px] after:bg-default after:opacity-15
           after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          tablet:w-auto tablet:max-w-[248px]
         `}
       >
         <FluidListItemPoster
@@ -145,8 +139,8 @@ function ListItem({
         <Title slug={value.slug} title={value.title} year={value.releaseYear} />
         <div
           className={`
-            flex justify-start font-sans text-xs font-light text-subtle
-            tablet:mt-1 tablet:justify-center
+            mt-1 flex justify-start font-sans text-xs font-light text-subtle
+            tablet:justify-center
           `}
         >
           {value.count.toLocaleString()} times
@@ -166,12 +160,7 @@ function Title({
   year: string;
 }) {
   const yearBox = (
-    <span
-      className={`
-        text-xxs leading-none font-light text-subtle
-        tablet:text-xs
-      `}
-    >
+    <span className={`text-xs leading-none font-light text-subtle`}>
       {year}
     </span>
   );
@@ -180,11 +169,11 @@ function Title({
     return (
       <a
         className={`
-          block pt-2 font-sans text-xs leading-4 font-normal text-accent
+          block pt-2 font-sans text-sm leading-4 font-medium text-accent
           decoration-accent
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
-          tablet:text-center tablet:text-sm
+          tablet:text-center
         `}
         href={`/reviews/${slug}/`}
       >

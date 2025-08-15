@@ -125,14 +125,14 @@ function DateListItem({
       className={`
         relative flex max-w-(--breakpoint-desktop) flex-col bg-group
         last-of-type:pb-12
-        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
+        tablet:mb-12 tablet:contents tablet:flex-row tablet:py-4 tablet:pr-4
         tablet:last-of-type:pb-4
       `}
     >
       <div
         className={`
           px-container py-4
-          tablet:px-4 tablet:py-0 tablet:text-muted
+          tablet:hidden tablet:px-4 tablet:py-0 tablet:text-muted
         `}
       >
         <div
@@ -181,7 +181,7 @@ function DateListItem({
       <ul
         className={`
           flex h-full grow flex-col
-          tablet:gap-y-0
+          tablet:contents tablet:gap-y-0
         `}
       >
         {values.map((value) => {
@@ -249,35 +249,50 @@ function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
     <li
       className={`
-        group/list-item relative mb-1 flex transform-gpu flex-row items-center
-        gap-x-4 transition-transform
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-105
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        group/list-item relative mb-px flex transform-gpu flex-row items-center
+        gap-x-[5%] transition-transform
+        tablet:items-start tablet:has-[a:hover]:-translate-y-2
+        tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl
         ${value.slug ? `bg-default` : `bg-unreviewed`}
         px-container py-4
         last-of-type:mb-0
-        tablet:gap-x-6 tablet:pl-4
+        tablet:flex-col tablet:gap-x-6 tablet:bg-transparent tablet:px-6
       `}
       {...rest}
     >
       <div
         className={`
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          relative w-1/4 max-w-[250px] shadow-sm
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:bg-default after:opacity-15 after:transition-all
           group-has-[a:hover]/list-item:after:opacity-0
+          tablet:w-auto
         `}
       >
         <ListItemPoster imageProps={value.posterImageProps} />
       </div>
-      <div className="flex grow flex-col gap-1">
+      <div
+        className={`
+          flex grow flex-col gap-1 px-1
+          tablet:mt-2 tablet:grow-0
+        `}
+      >
         <ListItemTitle
           slug={value.slug}
           title={value.title}
           year={value.releaseYear}
         />
+        <div
+          className={`
+            hidden font-sans text-xs leading-8 font-light text-muted
+            tablet:flex
+          `}
+        >
+          <span>
+            {value.viewingDay}, {value.viewingMonth} {value.viewingDate},{" "}
+            {value.viewingYear}
+          </span>
+        </div>
         <ListItemMediumAndVenue medium={value.medium} venue={value.venue} />
       </div>
     </li>

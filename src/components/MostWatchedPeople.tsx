@@ -4,7 +4,6 @@ import type { PosterImageProps } from "~/api/posters";
 
 import { ListItemMediumAndVenue } from "./ListItemMediumAndVenue";
 import { ListItemPoster } from "./ListItemPoster";
-import { ListItemTitle } from "./ListItemTitle";
 
 export type MostWatchedPeopleListItemValue = {
   count: number;
@@ -92,7 +91,7 @@ export function MostWatchedPeople({
               >
                 <details
                   className={`
-                    bg-group
+                    bg-subtle
                     tablet:px-2
                   `}
                 >
@@ -105,7 +104,11 @@ export function MostWatchedPeople({
                     Details
                   </summary>
                   <ol
-                    className={`tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5`}
+                    className={`
+                      tablet:grid
+                      tablet:grid-cols-[repeat(auto-fill,minmax(33%,1fr))]
+                      tablet:pt-2 tablet:pb-5
+                    `}
                   >
                     {value.viewings.map((viewing) => {
                       return (
@@ -126,6 +129,60 @@ export function MostWatchedPeople({
   );
 }
 
+function ListItemTitle({
+  slug,
+  title,
+  year,
+}: {
+  slug?: string;
+  title: string;
+  year: string;
+}) {
+  const yearBox = (
+    <span
+      className={`
+        text-xxs font-light text-subtle
+        tablet:text-xs
+      `}
+    >
+      {year}
+    </span>
+  );
+
+  if (slug) {
+    return (
+      <a
+        className={`
+          block font-sans text-sm font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:opacity-0
+          tablet:text-xs
+        `}
+        href={`/reviews/${slug}/`}
+      >
+        {title}
+        {"\u202F"}
+        {"\u202F"}
+        {yearBox}
+      </a>
+    );
+  }
+
+  return (
+    <span
+      className={`
+        block font-sans text-sm font-normal text-muted
+        tablet:text-xs
+      `}
+    >
+      {title}
+      {"\u202F"}
+      {"\u202F"}
+      {yearBox}
+    </span>
+  );
+}
+
 function MostWatchedPersonViewingListItem({
   value,
 }: {
@@ -135,27 +192,31 @@ function MostWatchedPersonViewingListItem({
     <li
       className={`
         ${value.slug ? "bg-default" : "bg-unreviewed"}
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 py-4 transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-105
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        group/list-item relative mb-1 flex transform-gpu flex-row gap-x-[5%]
+        py-4 text-wrap transition-transform
+        tablet:flex-col tablet:gap-x-6 tablet:bg-transparent tablet:px-4
+        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        tablet:has-[a:hover]:drop-shadow-2xl
         laptop:px-6
       `}
     >
       <div
         className={`
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          relative w-1/4 max-w-[250px]
+          after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          tablet:w-auto
         `}
       >
         <ListItemPoster imageProps={value.posterImageProps} />
       </div>
-      <div className="flex grow flex-col gap-2">
+      <div
+        className={`
+          flex grow flex-col gap-2 px-1
+          tablet:mt-2 tablet:grow-0
+        `}
+      >
         <ListItemTitle
           slug={value.slug}
           title={value.title}

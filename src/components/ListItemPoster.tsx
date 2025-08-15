@@ -12,7 +12,12 @@ export function ListItemPoster({
   imageProps: PosterImageProps;
 }) {
   return (
-    <div className={`relative mb-2 max-w-[250px]`}>
+    <div
+      className={`
+        relative mb-2 max-w-[250px]
+        tablet:mb-0
+      `}
+    >
       <img
         {...imageProps}
         alt=""

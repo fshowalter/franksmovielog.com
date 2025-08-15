@@ -178,7 +178,8 @@ export function ListWithFilters<T extends string>({
             <div
               className={`
                 flex h-full w-full flex-col text-sm
-                tablet:pt-12 tablet:text-base
+                tablet:text-base
+                [@media(min-height:815px)]:pt-12
               `}
             >
               <fieldset
@@ -205,10 +206,13 @@ export function ListWithFilters<T extends string>({
                 className={`
                   sticky bottom-0 z-filter-footer mt-auto w-full self-end
                   border-t border-t-default bg-default px-8 py-4 drop-shadow-2xl
-                  tablet-landscape:static tablet-landscape:bottom-auto
-                  tablet-landscape:mt-0 tablet-landscape:self-auto
-                  tablet-landscape:border-t-0 tablet-landscape:px-12
-                  tablet-landscape:drop-shadow-none
+                  tablet-landscape:px-12
+                  [@media(min-height:815px)]:static
+                  [@media(min-height:815px)]:bottom-auto
+                  [@media(min-height:815px)]:mt-0
+                  [@media(min-height:815px)]:self-auto
+                  [@media(min-height:815px)]:border-t-0
+                  [@media(min-height:815px)]:drop-shadow-none
                 `}
               >
                 <button
