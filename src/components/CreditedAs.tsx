@@ -8,7 +8,7 @@ export function CreditedAs({ values }: { values: readonly string[] }) {
           return `${capitalize(value)}`;
         }
 
-        return ` | ${capitalize(value)}`;
+        return `, ${capitalize(value)}`;
       })}
     </div>
   );

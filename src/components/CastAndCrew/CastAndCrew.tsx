@@ -53,6 +53,7 @@ export function CastAndCrew({ initialSort, values }: Props): JSX.Element {
           data-testid="list"
           groupedValues={state.groupedValues}
           groupItemClassName={`scroll-mt-[calc(52px_+_var(--list-scroll-offset))]`}
+          isGrid={false}
           totalCount={state.filteredValues.length}
           visibleCount={state.showCount}
         >
@@ -171,14 +172,6 @@ function MemberListItem({ value }: { value: ListItemValue }): JSX.Element {
         <ListItemAvatar imageProps={value.avatarImageProps} name={value.name} />
       </div>
       <MemberName value={value} />
-      <div
-        className={`
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
-        `}
-      >
-        {value.reviewCount}
-      </div>
     </ListItem>
   );
 }
