@@ -3,6 +3,7 @@ import type { JSX } from "react";
 import { useReducer } from "react";
 
 import { ListWithFilters } from "~/components/ListWithFilters";
+import { GroupedPosterList } from "~/components/PosterList";
 import { ReviewsListItem } from "~/components/Reviews/ReviewsListItem";
 
 import type { Sort } from "./reducer";
@@ -10,7 +11,6 @@ import type { ReviewsListItemValue } from "./ReviewsListItem";
 
 import { Filters, SortOptions } from "./Filters";
 import { Actions, initState, reducer } from "./reducer";
-import { ReviewsGroupedList } from "./ReviewsGroupedList";
 
 export type Props = {
   distinctGenres: readonly string[];
@@ -47,14 +47,14 @@ export function Underseen({
         />
       }
       list={
-        <ReviewsGroupedList
+        <GroupedPosterList
           groupedValues={state.groupedValues}
           onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
           totalCount={state.filteredValues.length}
           visibleCount={state.showCount}
         >
           {(value) => <ReviewsListItem key={value.imdbId} value={value} />}
-        </ReviewsGroupedList>
+        </GroupedPosterList>
       }
       sortProps={{
         currentSortValue: state.sortValue,

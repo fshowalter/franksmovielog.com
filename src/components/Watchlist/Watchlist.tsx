@@ -5,13 +5,12 @@ import { useReducer } from "react";
 import type { PosterImageProps } from "~/api/posters";
 import type { WatchlistTitle } from "~/api/watchlistTitles";
 
-import { GroupedList } from "~/components/GroupedList";
 import { ListItemTitle } from "~/components/ListItemTitle";
-import { ListItemWithPoster } from "~/components/ListItemWithPoster";
 import {
   ListHeaderButton,
   ListWithFilters,
 } from "~/components/ListWithFilters";
+import { GroupedPosterList, PosterListItem } from "~/components/PosterList";
 import { WatchlistTitleSlug } from "~/components/WatchlistTitleSlug";
 
 import type { Sort } from "./Watchlist.reducer";
@@ -77,15 +76,7 @@ export function Watchlist({
       }
       list={
         <div className="@container/list">
-          <GroupedList
-            className={`
-              bg-default
-              [--grouped-list-number-of-columns:2]
-              @min-[calc(298px_*_2)]/list:[--grouped-list-number-of-columns:3]
-              @min-[calc(298px_*_3)]/list:[--grouped-list-number-of-columns:4]
-              @min-[calc(298px_*_4)]/list:[--grouped-list-number-of-columns:5]
-              @min-[calc(298px_*_5)]/list:[--grouped-list-number-of-columns:6]
-            `}
+          <GroupedPosterList
             data-testid="list"
             groupedValues={state.groupedValues}
             onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
@@ -101,7 +92,7 @@ export function Watchlist({
                 />
               );
             }}
-          </GroupedList>
+          </GroupedPosterList>
         </div>
       }
       listHeaderButtons={
@@ -129,7 +120,7 @@ function WatchlistListItem({
   value: ListItemValue;
 }): JSX.Element {
   return (
-    <ListItemWithPoster
+    <PosterListItem
       className={`bg-unreviewed`}
       posterImageProps={defaultPosterImageProps}
     >
@@ -147,6 +138,6 @@ function WatchlistListItem({
           writerNames={value.watchlistWriterNames}
         />
       </div>
-    </ListItemWithPoster>
+    </PosterListItem>
   );
 }
