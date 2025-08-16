@@ -72,7 +72,7 @@ export async function getFluidWidthPosterImageProps(
     quality: 80,
     src: posterFile.default,
     width: width,
-    widths: [0.25, 0.5, 1, 2].map((w) => w * width),
+    widths: [0.25, 0.5, 1, 2].map((w) => Math.ceil(w * width)),
   });
 
   return {
