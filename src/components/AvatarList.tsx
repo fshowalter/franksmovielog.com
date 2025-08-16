@@ -50,7 +50,7 @@ export function AvatarListItem({
   );
 }
 
-export function ListItemAvatar({
+function ListItemAvatar({
   className,
   imageProps,
 }: {

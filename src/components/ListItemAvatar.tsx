@@ -11,7 +11,6 @@ export const ListItemAvatarImageConfig = {
 export function ListItemAvatar({
   className,
   imageProps,
-  name,
 }: {
   className?: string;
   imageProps: AvatarImageProps | undefined;
@@ -23,7 +22,6 @@ export function ListItemAvatar({
       height={ListItemAvatarImageConfig.height}
       imageProps={imageProps}
       loading="lazy"
-      name={name}
       width={ListItemAvatarImageConfig.width}
     />
   );

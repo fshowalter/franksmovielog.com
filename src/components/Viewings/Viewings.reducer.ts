@@ -1,7 +1,5 @@
 import type { ListItemValue } from "./Viewings";
 
-export const SHOW_COUNT_DEFAULT = 100;
-
 export enum Actions {
   FILTER_MEDIUM = "FILTER_MEDIUM",
   FILTER_RELEASE_YEAR = "FILTER_RELEASE_YEAR",
@@ -10,7 +8,6 @@ export enum Actions {
   FILTER_VIEWING_YEAR = "FILTER_VIEWING_YEAR",
   NEXT_MONTH = "NEXT_MONTH",
   PREV_MONTH = "PREV_MONTH",
-  SHOW_MORE = "SHOW_MORE",
   SORT = "SORT",
 }
 
@@ -22,12 +19,9 @@ export type ActionType =
   | FilterViewingYearAction
   | NextMonthAction
   | PrevMonthAction
-  | ShowMoreAction
   | SortAction;
 
-export type Sort =
-  | "viewing-date-asc"
-  | "viewing-date-desc";
+export type Sort = "viewing-date-asc" | "viewing-date-desc";
 
 export type State = {
   allValues: ListItemValue[];
@@ -43,7 +37,6 @@ export type State = {
   hasNextMonth: boolean;
   hasPrevMonth: boolean;
   monthViewings: ListItemValue[];
-  showCount: number;
   sortValue: Sort;
 };
 
@@ -80,10 +73,6 @@ type PrevMonthAction = {
   type: Actions.PREV_MONTH;
 };
 
-type ShowMoreAction = {
-  type: Actions.SHOW_MORE;
-};
-
 type SortAction = {
   type: Actions.SORT;
   value: Sort;
@@ -111,10 +100,11 @@ export function initState({
       venues: [],
       viewingYears: [],
     },
-    hasNextMonth: getNextMonthWithViewings(currentMonth, sortedValues) !== undefined,
-    hasPrevMonth: getPrevMonthWithViewings(currentMonth, sortedValues) !== undefined,
+    hasNextMonth:
+      getNextMonthWithViewings(currentMonth, sortedValues) !== undefined,
+    hasPrevMonth:
+      getPrevMonthWithViewings(currentMonth, sortedValues) !== undefined,
     monthViewings,
-    showCount: SHOW_COUNT_DEFAULT,
     sortValue: initialSort,
   };
 }
@@ -145,7 +135,6 @@ export function reducer(state: State, action: ActionType): State {
         hasPrevMonth:
           getPrevMonthWithViewings(newMonth, filteredValues) !== undefined,
         monthViewings: getMonthViewings(filteredValues, newMonth),
-        showCount: SHOW_COUNT_DEFAULT,
       };
     }
     case Actions.FILTER_RELEASE_YEAR: {
@@ -166,7 +155,6 @@ export function reducer(state: State, action: ActionType): State {
         hasPrevMonth:
           getPrevMonthWithViewings(newMonth, filteredValues) !== undefined,
         monthViewings: getMonthViewings(filteredValues, newMonth),
-        showCount: SHOW_COUNT_DEFAULT,
       };
     }
     case Actions.FILTER_TITLE: {
@@ -187,7 +175,6 @@ export function reducer(state: State, action: ActionType): State {
         hasPrevMonth:
           getPrevMonthWithViewings(newMonth, filteredValues) !== undefined,
         monthViewings: getMonthViewings(filteredValues, newMonth),
-        showCount: SHOW_COUNT_DEFAULT,
       };
     }
     case Actions.FILTER_VENUE: {
@@ -208,7 +195,6 @@ export function reducer(state: State, action: ActionType): State {
         hasPrevMonth:
           getPrevMonthWithViewings(newMonth, filteredValues) !== undefined,
         monthViewings: getMonthViewings(filteredValues, newMonth),
-        showCount: SHOW_COUNT_DEFAULT,
       };
     }
     case Actions.FILTER_VIEWING_YEAR: {
@@ -229,7 +215,6 @@ export function reducer(state: State, action: ActionType): State {
         hasPrevMonth:
           getPrevMonthWithViewings(newMonth, filteredValues) !== undefined,
         monthViewings: getMonthViewings(filteredValues, newMonth),
-        showCount: SHOW_COUNT_DEFAULT,
       };
     }
     case Actions.NEXT_MONTH: {
@@ -268,21 +253,16 @@ export function reducer(state: State, action: ActionType): State {
         monthViewings: getMonthViewings(state.filteredValues, newMonth),
       };
     }
-    case Actions.SHOW_MORE: {
-      return {
-        ...state,
-        showCount: state.showCount + SHOW_COUNT_DEFAULT,
-      };
-    }
     case Actions.SORT: {
       // First filter, then sort
       filteredValues = filterValues(state.allValues, state.filters);
       filteredValues = sortValues(filteredValues, action.value);
 
       // Determine which month to show based on sort order
-      newMonth = action.value === "viewing-date-asc"
-        ? getOldestMonth(filteredValues) // For ascending sort, go to oldest month
-        : getMostRecentMonth(filteredValues); // For descending sort, go to most recent month
+      newMonth =
+        action.value === "viewing-date-asc"
+          ? getOldestMonth(filteredValues) // For ascending sort, go to oldest month
+          : getMostRecentMonth(filteredValues); // For descending sort, go to most recent month
 
       mostRecentMonth = getMostRecentMonth(filteredValues);
       oldestMonth = getOldestMonth(filteredValues);
@@ -294,7 +274,6 @@ export function reducer(state: State, action: ActionType): State {
         hasNextMonth: newMonth < mostRecentMonth,
         hasPrevMonth: newMonth > oldestMonth,
         monthViewings: getMonthViewings(filteredValues, newMonth),
-        showCount: SHOW_COUNT_DEFAULT,
         sortValue: action.value,
       };
     }
@@ -323,11 +302,19 @@ function filterValues(
       return false;
     }
 
-    if (filters.media.length > 0 && value.medium && !filters.media.includes(value.medium)) {
+    if (
+      filters.media.length > 0 &&
+      value.medium &&
+      !filters.media.includes(value.medium)
+    ) {
       return false;
     }
 
-    if (filters.venues.length > 0 && value.venue && !filters.venues.includes(value.venue)) {
+    if (
+      filters.venues.length > 0 &&
+      value.venue &&
+      !filters.venues.includes(value.venue)
+    ) {
       return false;
     }
 
