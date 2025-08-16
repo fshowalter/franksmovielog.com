@@ -64,7 +64,10 @@ export function Filters({
         onChange={(e) =>
           dispatch({
             type: Actions.PENDING_FILTER_MEDIUM,
-            values: e.target.value ? [e.target.value] : [],
+            values:
+              e.target.value === "All" || !e.target.value
+                ? []
+                : [e.target.value],
           })
         }
         value={pendingFilters.media[0] || ""}
@@ -76,7 +79,10 @@ export function Filters({
         onChange={(e) =>
           dispatch({
             type: Actions.PENDING_FILTER_VENUE,
-            values: e.target.value ? [e.target.value] : [],
+            values:
+              e.target.value === "All" || !e.target.value
+                ? []
+                : [e.target.value],
           })
         }
         value={pendingFilters.venues[0] || ""}
