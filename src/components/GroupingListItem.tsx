@@ -1,9 +1,11 @@
+import type { ReactNode } from "react";
+
 export function GroupingListItem({
   children,
   className,
   groupText,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
   groupText: string;
 }) {
