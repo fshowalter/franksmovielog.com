@@ -77,7 +77,6 @@ export function Watchlist({
       list={
         <div className="@container/list">
           <GroupedPosterList
-            data-testid="list"
             groupedValues={state.groupedValues}
             onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
             totalCount={state.filteredValues.length}

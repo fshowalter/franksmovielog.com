@@ -10,13 +10,11 @@ exports[`Collections > can filter by name 1`] = `
 >
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -30,6 +28,7 @@ exports[`Collections > can filter by name 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -40,7 +39,7 @@ exports[`Collections > can filter by name 1`] = `
         "
       >
         <img
-          alt="Friday the 13th"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -50,37 +49,38 @@ exports[`Collections > can filter by name 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/friday-the-13th/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Friday the 13th
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      11
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/friday-the-13th/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Friday the 13th
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        11
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -94,6 +94,7 @@ exports[`Collections > can filter by name 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -104,7 +105,7 @@ exports[`Collections > can filter by name 1`] = `
         "
       >
         <img
-          alt="Hammer Films"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -114,37 +115,38 @@ exports[`Collections > can filter by name 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/hammer-films/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Hammer Films
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      41
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/hammer-films/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Hammer Films
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        41
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -158,6 +160,7 @@ exports[`Collections > can filter by name 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -168,7 +171,7 @@ exports[`Collections > can filter by name 1`] = `
         "
       >
         <img
-          alt="Hatchet"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -178,37 +181,38 @@ exports[`Collections > can filter by name 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/hatchet/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Hatchet
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      4
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/hatchet/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Hatchet
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        4
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -222,6 +226,7 @@ exports[`Collections > can filter by name 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -232,7 +237,7 @@ exports[`Collections > can filter by name 1`] = `
         "
       >
         <img
-          alt="James Bond"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -242,37 +247,38 @@ exports[`Collections > can filter by name 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/james-bond/"
-    >
-      <div
-        class="leading-normal"
-      >
-        James Bond
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      24
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/james-bond/"
+      >
+        <div
+          class="leading-normal"
+        >
+          James Bond
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        24
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -286,6 +292,7 @@ exports[`Collections > can filter by name 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -296,7 +303,7 @@ exports[`Collections > can filter by name 1`] = `
         "
       >
         <img
-          alt="Shaw Brothers"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -306,26 +313,29 @@ exports[`Collections > can filter by name 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/shaw-brothers/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Shaw Brothers
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      14
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/shaw-brothers/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Shaw Brothers
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        14
+         Reviewed Titles
+      </div>
     </div>
   </li>
 </ol>
@@ -341,13 +351,11 @@ exports[`Collections > can sort by name asc 1`] = `
 >
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -361,6 +369,7 @@ exports[`Collections > can sort by name asc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -371,7 +380,7 @@ exports[`Collections > can sort by name asc 1`] = `
         "
       >
         <img
-          alt="Friday the 13th"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -381,37 +390,38 @@ exports[`Collections > can sort by name asc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/friday-the-13th/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Friday the 13th
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      11
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/friday-the-13th/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Friday the 13th
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        11
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -425,6 +435,7 @@ exports[`Collections > can sort by name asc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -435,7 +446,7 @@ exports[`Collections > can sort by name asc 1`] = `
         "
       >
         <img
-          alt="Hammer Films"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -445,37 +456,38 @@ exports[`Collections > can sort by name asc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/hammer-films/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Hammer Films
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      41
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/hammer-films/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Hammer Films
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        41
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -489,6 +501,7 @@ exports[`Collections > can sort by name asc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -499,7 +512,7 @@ exports[`Collections > can sort by name asc 1`] = `
         "
       >
         <img
-          alt="Hatchet"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -509,37 +522,38 @@ exports[`Collections > can sort by name asc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/hatchet/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Hatchet
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      4
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/hatchet/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Hatchet
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        4
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -553,6 +567,7 @@ exports[`Collections > can sort by name asc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -563,7 +578,7 @@ exports[`Collections > can sort by name asc 1`] = `
         "
       >
         <img
-          alt="James Bond"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -573,37 +588,38 @@ exports[`Collections > can sort by name asc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/james-bond/"
-    >
-      <div
-        class="leading-normal"
-      >
-        James Bond
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      24
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/james-bond/"
+      >
+        <div
+          class="leading-normal"
+        >
+          James Bond
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        24
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -617,6 +633,7 @@ exports[`Collections > can sort by name asc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -627,7 +644,7 @@ exports[`Collections > can sort by name asc 1`] = `
         "
       >
         <img
-          alt="Shaw Brothers"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -637,26 +654,29 @@ exports[`Collections > can sort by name asc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/shaw-brothers/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Shaw Brothers
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      14
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/shaw-brothers/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Shaw Brothers
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        14
+         Reviewed Titles
+      </div>
     </div>
   </li>
 </ol>
@@ -672,13 +692,11 @@ exports[`Collections > can sort by name desc 1`] = `
 >
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -692,6 +710,7 @@ exports[`Collections > can sort by name desc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -702,7 +721,7 @@ exports[`Collections > can sort by name desc 1`] = `
         "
       >
         <img
-          alt="Friday the 13th"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -712,37 +731,38 @@ exports[`Collections > can sort by name desc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/friday-the-13th/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Friday the 13th
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      11
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/friday-the-13th/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Friday the 13th
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        11
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -756,6 +776,7 @@ exports[`Collections > can sort by name desc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -766,7 +787,7 @@ exports[`Collections > can sort by name desc 1`] = `
         "
       >
         <img
-          alt="Hammer Films"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -776,37 +797,38 @@ exports[`Collections > can sort by name desc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/hammer-films/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Hammer Films
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      41
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/hammer-films/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Hammer Films
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        41
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -820,6 +842,7 @@ exports[`Collections > can sort by name desc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -830,7 +853,7 @@ exports[`Collections > can sort by name desc 1`] = `
         "
       >
         <img
-          alt="Hatchet"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -840,37 +863,38 @@ exports[`Collections > can sort by name desc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/hatchet/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Hatchet
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      4
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/hatchet/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Hatchet
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        4
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -884,6 +908,7 @@ exports[`Collections > can sort by name desc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -894,7 +919,7 @@ exports[`Collections > can sort by name desc 1`] = `
         "
       >
         <img
-          alt="James Bond"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -904,37 +929,38 @@ exports[`Collections > can sort by name desc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/james-bond/"
-    >
-      <div
-        class="leading-normal"
-      >
-        James Bond
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      24
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/james-bond/"
+      >
+        <div
+          class="leading-normal"
+        >
+          James Bond
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        24
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -948,6 +974,7 @@ exports[`Collections > can sort by name desc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -958,7 +985,7 @@ exports[`Collections > can sort by name desc 1`] = `
         "
       >
         <img
-          alt="Shaw Brothers"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -968,26 +995,29 @@ exports[`Collections > can sort by name desc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/shaw-brothers/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Shaw Brothers
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      14
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/shaw-brothers/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Shaw Brothers
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        14
+         Reviewed Titles
+      </div>
     </div>
   </li>
 </ol>
@@ -1003,13 +1033,11 @@ exports[`Collections > can sort by review count asc 1`] = `
 >
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -1023,6 +1051,7 @@ exports[`Collections > can sort by review count asc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -1033,7 +1062,7 @@ exports[`Collections > can sort by review count asc 1`] = `
         "
       >
         <img
-          alt="Friday the 13th"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -1043,37 +1072,38 @@ exports[`Collections > can sort by review count asc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/friday-the-13th/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Friday the 13th
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      11
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/friday-the-13th/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Friday the 13th
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        11
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -1087,6 +1117,7 @@ exports[`Collections > can sort by review count asc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -1097,7 +1128,7 @@ exports[`Collections > can sort by review count asc 1`] = `
         "
       >
         <img
-          alt="Hammer Films"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -1107,37 +1138,38 @@ exports[`Collections > can sort by review count asc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/hammer-films/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Hammer Films
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      41
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/hammer-films/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Hammer Films
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        41
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -1151,6 +1183,7 @@ exports[`Collections > can sort by review count asc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -1161,7 +1194,7 @@ exports[`Collections > can sort by review count asc 1`] = `
         "
       >
         <img
-          alt="Hatchet"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -1171,37 +1204,38 @@ exports[`Collections > can sort by review count asc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/hatchet/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Hatchet
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      4
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/hatchet/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Hatchet
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        4
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -1215,6 +1249,7 @@ exports[`Collections > can sort by review count asc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -1225,7 +1260,7 @@ exports[`Collections > can sort by review count asc 1`] = `
         "
       >
         <img
-          alt="James Bond"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -1235,37 +1270,38 @@ exports[`Collections > can sort by review count asc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/james-bond/"
-    >
-      <div
-        class="leading-normal"
-      >
-        James Bond
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      24
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/james-bond/"
+      >
+        <div
+          class="leading-normal"
+        >
+          James Bond
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        24
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -1279,6 +1315,7 @@ exports[`Collections > can sort by review count asc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -1289,7 +1326,7 @@ exports[`Collections > can sort by review count asc 1`] = `
         "
       >
         <img
-          alt="Shaw Brothers"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -1299,26 +1336,29 @@ exports[`Collections > can sort by review count asc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/shaw-brothers/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Shaw Brothers
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      14
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/shaw-brothers/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Shaw Brothers
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        14
+         Reviewed Titles
+      </div>
     </div>
   </li>
 </ol>
@@ -1334,13 +1374,11 @@ exports[`Collections > can sort by review count desc 1`] = `
 >
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -1354,6 +1392,7 @@ exports[`Collections > can sort by review count desc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -1364,7 +1403,7 @@ exports[`Collections > can sort by review count desc 1`] = `
         "
       >
         <img
-          alt="Friday the 13th"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -1374,37 +1413,38 @@ exports[`Collections > can sort by review count desc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/friday-the-13th/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Friday the 13th
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      11
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/friday-the-13th/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Friday the 13th
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        11
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -1418,6 +1458,7 @@ exports[`Collections > can sort by review count desc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -1428,7 +1469,7 @@ exports[`Collections > can sort by review count desc 1`] = `
         "
       >
         <img
-          alt="Hammer Films"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -1438,37 +1479,38 @@ exports[`Collections > can sort by review count desc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/hammer-films/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Hammer Films
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      41
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/hammer-films/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Hammer Films
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        41
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -1482,6 +1524,7 @@ exports[`Collections > can sort by review count desc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -1492,7 +1535,7 @@ exports[`Collections > can sort by review count desc 1`] = `
         "
       >
         <img
-          alt="Hatchet"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -1502,37 +1545,38 @@ exports[`Collections > can sort by review count desc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/hatchet/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Hatchet
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      4
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/hatchet/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Hatchet
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        4
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -1546,6 +1590,7 @@ exports[`Collections > can sort by review count desc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -1556,7 +1601,7 @@ exports[`Collections > can sort by review count desc 1`] = `
         "
       >
         <img
-          alt="James Bond"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -1566,37 +1611,38 @@ exports[`Collections > can sort by review count desc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/james-bond/"
-    >
-      <div
-        class="leading-normal"
-      >
-        James Bond
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      24
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/james-bond/"
+      >
+        <div
+          class="leading-normal"
+        >
+          James Bond
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        24
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -1610,6 +1656,7 @@ exports[`Collections > can sort by review count desc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -1620,7 +1667,7 @@ exports[`Collections > can sort by review count desc 1`] = `
         "
       >
         <img
-          alt="Shaw Brothers"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -1630,26 +1677,29 @@ exports[`Collections > can sort by review count desc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/shaw-brothers/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Shaw Brothers
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      14
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/shaw-brothers/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Shaw Brothers
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        14
+         Reviewed Titles
+      </div>
     </div>
   </li>
 </ol>
@@ -1665,13 +1715,11 @@ exports[`Collections > can sort by title count asc 1`] = `
 >
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -1685,6 +1733,7 @@ exports[`Collections > can sort by title count asc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -1695,7 +1744,7 @@ exports[`Collections > can sort by title count asc 1`] = `
         "
       >
         <img
-          alt="Friday the 13th"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -1705,37 +1754,38 @@ exports[`Collections > can sort by title count asc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/friday-the-13th/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Friday the 13th
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      11
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/friday-the-13th/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Friday the 13th
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        11
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -1749,6 +1799,7 @@ exports[`Collections > can sort by title count asc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -1759,7 +1810,7 @@ exports[`Collections > can sort by title count asc 1`] = `
         "
       >
         <img
-          alt="Hammer Films"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -1769,37 +1820,38 @@ exports[`Collections > can sort by title count asc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/hammer-films/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Hammer Films
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      41
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/hammer-films/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Hammer Films
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        41
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -1813,6 +1865,7 @@ exports[`Collections > can sort by title count asc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -1823,7 +1876,7 @@ exports[`Collections > can sort by title count asc 1`] = `
         "
       >
         <img
-          alt="Hatchet"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -1833,37 +1886,38 @@ exports[`Collections > can sort by title count asc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/hatchet/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Hatchet
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      4
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/hatchet/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Hatchet
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        4
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -1877,6 +1931,7 @@ exports[`Collections > can sort by title count asc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -1887,7 +1942,7 @@ exports[`Collections > can sort by title count asc 1`] = `
         "
       >
         <img
-          alt="James Bond"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -1897,37 +1952,38 @@ exports[`Collections > can sort by title count asc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/james-bond/"
-    >
-      <div
-        class="leading-normal"
-      >
-        James Bond
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      24
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/james-bond/"
+      >
+        <div
+          class="leading-normal"
+        >
+          James Bond
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        24
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -1941,6 +1997,7 @@ exports[`Collections > can sort by title count asc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -1951,7 +2008,7 @@ exports[`Collections > can sort by title count asc 1`] = `
         "
       >
         <img
-          alt="Shaw Brothers"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -1961,26 +2018,29 @@ exports[`Collections > can sort by title count asc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/shaw-brothers/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Shaw Brothers
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      14
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/shaw-brothers/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Shaw Brothers
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        14
+         Reviewed Titles
+      </div>
     </div>
   </li>
 </ol>
@@ -1996,13 +2056,11 @@ exports[`Collections > can sort by title count desc 1`] = `
 >
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -2016,6 +2074,7 @@ exports[`Collections > can sort by title count desc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -2026,7 +2085,7 @@ exports[`Collections > can sort by title count desc 1`] = `
         "
       >
         <img
-          alt="Friday the 13th"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -2036,37 +2095,38 @@ exports[`Collections > can sort by title count desc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/friday-the-13th/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Friday the 13th
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      11
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/friday-the-13th/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Friday the 13th
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        11
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -2080,6 +2140,7 @@ exports[`Collections > can sort by title count desc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -2090,7 +2151,7 @@ exports[`Collections > can sort by title count desc 1`] = `
         "
       >
         <img
-          alt="Hammer Films"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -2100,37 +2161,38 @@ exports[`Collections > can sort by title count desc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/hammer-films/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Hammer Films
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      41
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/hammer-films/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Hammer Films
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        41
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -2144,6 +2206,7 @@ exports[`Collections > can sort by title count desc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -2154,7 +2217,7 @@ exports[`Collections > can sort by title count desc 1`] = `
         "
       >
         <img
-          alt="Hatchet"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -2164,37 +2227,38 @@ exports[`Collections > can sort by title count desc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/hatchet/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Hatchet
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      4
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/hatchet/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Hatchet
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        4
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -2208,6 +2272,7 @@ exports[`Collections > can sort by title count desc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -2218,7 +2283,7 @@ exports[`Collections > can sort by title count desc 1`] = `
         "
       >
         <img
-          alt="James Bond"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -2228,37 +2293,38 @@ exports[`Collections > can sort by title count desc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/james-bond/"
-    >
-      <div
-        class="leading-normal"
-      >
-        James Bond
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      24
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/james-bond/"
+      >
+        <div
+          class="leading-normal"
+        >
+          James Bond
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        24
+         Reviewed Titles
+      </div>
     </div>
   </li>
   <li
     class="
-        bg-default
-        items-center
-        tablet:py-6
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 px-container py-4 transition-transform
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
         tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
+        tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -2272,6 +2338,7 @@ exports[`Collections > can sort by title count desc 1`] = `
           after:absolute after:top-0 after:left-0 after:size-full
           after:bg-default after:opacity-15 after:transition-opacity
           group-has-[a:hover]/list-item:after:opacity-0
+          
         "
     >
       <div
@@ -2282,7 +2349,7 @@ exports[`Collections > can sort by title count desc 1`] = `
         "
       >
         <img
-          alt="Shaw Brothers"
+          alt=""
           class="w-full"
           height="80"
           loading="lazy"
@@ -2292,26 +2359,29 @@ exports[`Collections > can sort by title count desc 1`] = `
         />
       </div>
     </div>
-    <a
-      class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:size-full after:opacity-0
-      "
-      href="/collections/shaw-brothers/"
-    >
-      <div
-        class="leading-normal"
-      >
-        Shaw Brothers
-      </div>
-    </a>
     <div
-      class="
-          mr-2 ml-auto font-sans text-xs text-nowrap text-subtle
-          tablet:text-sm
-        "
+      class="flex flex-col justify-center"
     >
-      14
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/shaw-brothers/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Shaw Brothers
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        14
+         Reviewed Titles
+      </div>
     </div>
   </li>
 </ol>

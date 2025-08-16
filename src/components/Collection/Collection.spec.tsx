@@ -23,7 +23,7 @@ describe("Collection", () => {
       await new Promise((r) => setTimeout(r, 500));
     });
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by title A → Z", async ({ expect }) => {
@@ -36,7 +36,7 @@ describe("Collection", () => {
       "Title (A → Z)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by title Z → A", async ({ expect }) => {
@@ -49,7 +49,7 @@ describe("Collection", () => {
       "Title (Z → A)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by release date with oldest first", async ({ expect }) => {
@@ -62,7 +62,7 @@ describe("Collection", () => {
       "Release Date (Oldest First)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by release date with newest first", async ({ expect }) => {
@@ -75,7 +75,7 @@ describe("Collection", () => {
       "Release Date (Newest First)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by grade with best first", async ({ expect }) => {
@@ -88,7 +88,7 @@ describe("Collection", () => {
       "Grade (Best First)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by grade with worst first", async ({ expect }) => {
@@ -101,7 +101,7 @@ describe("Collection", () => {
       "Grade (Worst First)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by review date with oldest first", async ({ expect }) => {
@@ -114,7 +114,7 @@ describe("Collection", () => {
       "Review Date (Oldest First)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by review date with newest first", async ({ expect }) => {
@@ -127,7 +127,7 @@ describe("Collection", () => {
       "Review Date (Newest First)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can filter by release year", async ({ expect }) => {
@@ -142,7 +142,7 @@ describe("Collection", () => {
     await userEvent.selectOptions(fromInput, "1970");
     await userEvent.selectOptions(toInput, "1980");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can filter by review year", async ({ expect }) => {
@@ -157,7 +157,7 @@ describe("Collection", () => {
     await userEvent.selectOptions(fromInput, "2021");
     await userEvent.selectOptions(toInput, "2022");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can hide reviewed titles", async ({ expect }) => {
@@ -167,7 +167,7 @@ describe("Collection", () => {
 
     await userEvent.click(screen.getByText("Hide Reviewed"));
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can show hidden reviewed titles", async ({ expect }) => {
@@ -178,7 +178,7 @@ describe("Collection", () => {
     await userEvent.click(screen.getByText("Hide Reviewed"));
     await userEvent.click(screen.getByText("Show Reviewed"));
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can show more titles", async ({ expect }) => {
@@ -202,6 +202,6 @@ describe("Collection", () => {
     };
     render(<Collection {...propsWithManyValues} />);
     await userEvent.click(screen.getByText("Show More"));
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 });

@@ -23,7 +23,7 @@ describe("/watchlist", () => {
       await new Promise((r) => setTimeout(r, 500));
     });
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can filter by not-found title", async ({ expect }) => {
@@ -38,7 +38,7 @@ describe("/watchlist", () => {
       await new Promise((r) => setTimeout(r, 500));
     });
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can filter by director", async ({ expect }) => {
@@ -50,7 +50,7 @@ describe("/watchlist", () => {
       "Howard Hawks",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can filter by director then show all", async ({ expect }) => {
@@ -64,7 +64,7 @@ describe("/watchlist", () => {
     );
     await userEvent.selectOptions(screen.getByLabelText("Director"), "All");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can filter by performer", async ({ expect }) => {
@@ -76,7 +76,7 @@ describe("/watchlist", () => {
       "Bette Davis",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can filter by performer then show all", async ({ expect }) => {
@@ -90,7 +90,7 @@ describe("/watchlist", () => {
     );
     await userEvent.selectOptions(screen.getByLabelText("Performer"), "All");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can filter by writer", async ({ expect }) => {
@@ -102,7 +102,7 @@ describe("/watchlist", () => {
       "Leigh Brackett",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can filter by writer then show all", async ({ expect }) => {
@@ -117,7 +117,7 @@ describe("/watchlist", () => {
 
     await userEvent.selectOptions(screen.getByLabelText("Writer"), "All");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can filter by collection", async ({ expect }) => {
@@ -130,7 +130,7 @@ describe("/watchlist", () => {
       "Universal Monsters",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can filter by collection then show all", async ({ expect }) => {
@@ -144,7 +144,7 @@ describe("/watchlist", () => {
     );
     await userEvent.selectOptions(screen.getByLabelText("Collection"), "All");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by title A → Z", async ({ expect }) => {
@@ -157,7 +157,7 @@ describe("/watchlist", () => {
       "Title (A → Z)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by title Z → A", async ({ expect }) => {
@@ -170,7 +170,7 @@ describe("/watchlist", () => {
       "Title (Z → A)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by release date with oldest first", async ({ expect }) => {
@@ -183,7 +183,7 @@ describe("/watchlist", () => {
       "Release Date (Oldest First)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by release date with newest first", async ({ expect }) => {
@@ -196,7 +196,7 @@ describe("/watchlist", () => {
       "Release Date (Newest First)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can filter by release year", async ({ expect }) => {
@@ -211,7 +211,7 @@ describe("/watchlist", () => {
     await userEvent.selectOptions(fromInput, "1930");
     await userEvent.selectOptions(toInput, "1935");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can show more titles", async ({ expect }) => {
@@ -241,6 +241,6 @@ describe("/watchlist", () => {
 
     await userEvent.click(screen.getByText("Show More"));
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 });

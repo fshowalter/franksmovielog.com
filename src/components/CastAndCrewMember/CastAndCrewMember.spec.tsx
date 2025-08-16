@@ -25,7 +25,7 @@ describe("CastAndCrewMember", () => {
       await new Promise((r) => setTimeout(r, 500));
     });
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by title A → Z", async ({ expect }) => {
@@ -38,7 +38,7 @@ describe("CastAndCrewMember", () => {
       "Title (A → Z)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by title Z → A", async ({ expect }) => {
@@ -51,7 +51,7 @@ describe("CastAndCrewMember", () => {
       "Title (Z → A)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by release date with oldest first", async ({ expect }) => {
@@ -64,7 +64,7 @@ describe("CastAndCrewMember", () => {
       "Release Date (Oldest First)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by release date with newest first", async ({ expect }) => {
@@ -77,7 +77,7 @@ describe("CastAndCrewMember", () => {
       "Release Date (Newest First)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by grade with best first", async ({ expect }) => {
@@ -90,7 +90,7 @@ describe("CastAndCrewMember", () => {
       "Grade (Best First)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by grade with worst first", async ({ expect }) => {
@@ -103,7 +103,7 @@ describe("CastAndCrewMember", () => {
       "Grade (Worst First)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by review date with oldest first", async ({ expect }) => {
@@ -116,7 +116,7 @@ describe("CastAndCrewMember", () => {
       "Review Date (Oldest First)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by review date with newest first", async ({ expect }) => {
@@ -129,7 +129,7 @@ describe("CastAndCrewMember", () => {
       "Review Date (Newest First)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can filter by release year", async ({ expect }) => {
@@ -144,7 +144,7 @@ describe("CastAndCrewMember", () => {
     await userEvent.selectOptions(fromInput, "1970");
     await userEvent.selectOptions(toInput, "1980");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can filter by review year", async ({ expect }) => {
@@ -159,7 +159,7 @@ describe("CastAndCrewMember", () => {
     await userEvent.selectOptions(fromInput, "2021");
     await userEvent.selectOptions(toInput, "2022");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can hide reviewed titles", async ({ expect }) => {
@@ -169,7 +169,7 @@ describe("CastAndCrewMember", () => {
 
     await userEvent.click(screen.getByText("Hide Reviewed"));
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can show hidden reviewed titles", async ({ expect }) => {
@@ -180,7 +180,7 @@ describe("CastAndCrewMember", () => {
     await userEvent.click(screen.getByText("Hide Reviewed"));
     await userEvent.click(screen.getByText("Show Reviewed"));
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can show director titles", async ({ expect }) => {
@@ -190,7 +190,7 @@ describe("CastAndCrewMember", () => {
 
     await userEvent.selectOptions(screen.getByLabelText("Credits"), "Director");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can show director titles then show all", async ({ expect }) => {
@@ -201,7 +201,7 @@ describe("CastAndCrewMember", () => {
     await userEvent.selectOptions(screen.getByLabelText("Credits"), "Director");
     await userEvent.selectOptions(screen.getByLabelText("Credits"), "All");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can show writer titles", async ({ expect }) => {
@@ -211,7 +211,7 @@ describe("CastAndCrewMember", () => {
 
     await userEvent.selectOptions(screen.getByLabelText("Credits"), "Writer");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can show writer titles then show all", async ({ expect }) => {
@@ -222,7 +222,7 @@ describe("CastAndCrewMember", () => {
     await userEvent.selectOptions(screen.getByLabelText("Credits"), "Writer");
     await userEvent.selectOptions(screen.getByLabelText("Credits"), "All");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can show performer titles", async ({ expect }) => {
@@ -235,7 +235,7 @@ describe("CastAndCrewMember", () => {
       "Performer",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can show performer titles then show all", async ({ expect }) => {
@@ -249,7 +249,7 @@ describe("CastAndCrewMember", () => {
     );
     await userEvent.selectOptions(screen.getByLabelText("Credits"), "All");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can show more credits", async ({ expect }) => {
@@ -275,6 +275,6 @@ describe("CastAndCrewMember", () => {
     };
     render(<CastAndCrewMember {...propsWithManyValues} />);
     await userEvent.click(screen.getByText("Show More"));
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 });

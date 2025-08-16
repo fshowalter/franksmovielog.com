@@ -12,11 +12,9 @@ export function ListItemGenres({ values }: { values: readonly string[] }) {
         }
 
         return (
-          <>
-            <span key={value}>
-              , <span className="whitespace-nowrap">{value}</span>
-            </span>
-          </>
+          <span key={value}>
+            , <span className="whitespace-nowrap">{value}</span>
+          </span>
         );
       })}
     </div>
