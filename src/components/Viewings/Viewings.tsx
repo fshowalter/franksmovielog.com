@@ -404,14 +404,17 @@ function getCalendarDays(
     const currentDate = new Date(year, monthIndex, date);
     const weekday = weekdays[currentDate.getDay()];
 
-    const dayViewings = viewings.filter((v) => {
-      const viewingDate = new Date(v.viewingDate);
-      return (
-        viewingDate.getUTCDate() === date &&
-        viewingDate.getUTCMonth() === monthIndex &&
-        viewingDate.getUTCFullYear() === year
-      );
-    });
+    const dayViewings = viewings
+      .filter((v) => {
+        const viewingDate = new Date(v.viewingDate);
+        return (
+          viewingDate.getUTCDate() === date &&
+          viewingDate.getUTCMonth() === monthIndex &&
+          viewingDate.getUTCFullYear() === year
+        );
+      })
+      // Always sort viewings within a day from oldest to newest
+      .sort((a, b) => a.viewingSequence - b.viewingSequence);
 
     days.push({
       date,
