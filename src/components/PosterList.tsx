@@ -35,7 +35,7 @@ export function GroupedPosterList<T>({
           const [group, groupValues] = groupedValue;
           return (
             <GroupingListItem
-              className={groupItemClassName ?? groupItemClassName}
+              className={groupItemClassName}
               groupText={group}
               key={group}
             >
