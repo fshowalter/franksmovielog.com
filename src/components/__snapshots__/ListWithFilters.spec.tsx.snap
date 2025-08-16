@@ -97,6 +97,7 @@ exports[`ListWithFilters > filter drawer > opens and closes filter drawer 1`] = 
         class="flex gap-x-4"
       >
         <button
+          aria-label="Clear all filters"
           class="
                       flex items-center justify-center gap-x-4 px-4 py-3
                       font-sans text-xs text-nowrap uppercase
@@ -227,6 +228,7 @@ exports[`ListWithFilters > filter drawer > opens and closes filter drawer 2`] = 
         class="flex gap-x-4"
       >
         <button
+          aria-label="Clear all filters"
           class="
                       flex items-center justify-center gap-x-4 px-4 py-3
                       font-sans text-xs text-nowrap uppercase
@@ -479,6 +481,7 @@ exports[`ListWithFilters > renders 1`] = `
                 class="flex gap-x-4"
               >
                 <button
+                  aria-label="Clear all filters"
                   class="
                       flex items-center justify-center gap-x-4 px-4 py-3
                       font-sans text-xs text-nowrap uppercase

@@ -289,6 +289,7 @@ export function ListWithFilters<T extends string>({
               >
                 <div className="flex gap-x-4">
                   <button
+                    aria-label="Clear all filters"
                     className={`
                       flex items-center justify-center gap-x-4 px-4 py-3
                       font-sans text-xs text-nowrap uppercase
