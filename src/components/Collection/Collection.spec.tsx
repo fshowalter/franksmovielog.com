@@ -1,6 +1,8 @@
-import { act, render, screen, within } from "@testing-library/react";
+import { act, render, screen, waitFor, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { describe, it } from "vitest";
+import { afterEach, beforeEach, describe, it, vi } from "vitest";
+
+import { TEXT_FILTER_DEBOUNCE_MS } from "~/components/TextFilter";
 
 import { Collection } from "./Collection";
 import { getProps } from "./getProps";
@@ -8,6 +10,14 @@ import { getProps } from "./getProps";
 const props = await getProps("shaw-brothers");
 
 describe("Collection", () => {
+  beforeEach(() => {
+    vi.useFakeTimers({ shouldAdvanceTime: true });
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
   it("renders", ({ expect }) => {
     const { asFragment } = render(<Collection {...props} />);
 
@@ -16,11 +26,33 @@ describe("Collection", () => {
 
   it("can filter by title", async ({ expect }) => {
     expect.hasAssertions();
+
+    // Setup userEvent with advanceTimers
+    const user = userEvent.setup({
+      advanceTimers: vi.advanceTimersByTime,
+    });
+
     render(<Collection {...props} />);
 
-    await act(async () => {
-      await userEvent.type(screen.getByLabelText("Title"), "Dracula");
-      await new Promise((r) => setTimeout(r, 500));
+    // Get initial list content for comparison
+    const initialList = screen.getByTestId("grouped-poster-list").textContent;
+
+    // Open filter drawer
+    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+
+    // Type the filter text
+    await user.type(screen.getByLabelText("Title"), "Dracula");
+    act(() => {
+      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
+    });
+
+    // Apply the filter
+    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+
+    // Wait for the list to update (filters to be applied)
+    await waitFor(() => {
+      const currentList = screen.getByTestId("grouped-poster-list").textContent;
+      expect(currentList).not.toBe(initialList);
     });
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
@@ -135,12 +167,31 @@ describe("Collection", () => {
 
     render(<Collection {...props} />);
 
+    // Open filter drawer
+    await userEvent.click(
+      screen.getByRole("button", { name: "Toggle filters" }),
+    );
+
     const fieldset = screen.getByRole("group", { name: "Release Year" });
     const fromInput = within(fieldset).getByLabelText("From");
     const toInput = within(fieldset).getByLabelText("to");
 
     await userEvent.selectOptions(fromInput, "1970");
     await userEvent.selectOptions(toInput, "1980");
+
+    // Get initial list content for comparison
+    const initialList = screen.getByTestId("grouped-poster-list").textContent;
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    // Wait for the list to update (filters to be applied)
+    await waitFor(() => {
+      const currentList = screen.getByTestId("grouped-poster-list").textContent;
+      expect(currentList).not.toBe(initialList);
+    });
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
@@ -150,12 +201,31 @@ describe("Collection", () => {
 
     render(<Collection {...props} />);
 
+    // Open filter drawer
+    await userEvent.click(
+      screen.getByRole("button", { name: "Toggle filters" }),
+    );
+
     const fieldset = screen.getByRole("group", { name: "Review Year" });
     const fromInput = within(fieldset).getByLabelText("From");
     const toInput = within(fieldset).getByLabelText("to");
 
     await userEvent.selectOptions(fromInput, "2021");
     await userEvent.selectOptions(toInput, "2022");
+
+    // Get initial list content for comparison
+    const initialList = screen.getByTestId("grouped-poster-list").textContent;
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    // Wait for the list to update (filters to be applied)
+    await waitFor(() => {
+      const currentList = screen.getByTestId("grouped-poster-list").textContent;
+      expect(currentList).not.toBe(initialList);
+    });
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });

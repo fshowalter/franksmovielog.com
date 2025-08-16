@@ -1,6 +1,8 @@
-import { render, screen, waitFor, within } from "@testing-library/react";
+import { act, render, screen, waitFor, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { describe, it } from "vitest";
+import { afterEach, beforeEach, describe, it, vi } from "vitest";
+
+import { TEXT_FILTER_DEBOUNCE_MS } from "~/components/TextFilter";
 
 import { getPropsForUnderseen } from "./getProps";
 import { Underseen } from "./Underseen";
@@ -8,6 +10,13 @@ import { Underseen } from "./Underseen";
 const props = await getPropsForUnderseen();
 
 describe("Underseen", () => {
+  beforeEach(() => {
+    vi.useFakeTimers({ shouldAdvanceTime: true });
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
   it("renders", ({ expect }) => {
     const { asFragment } = render(<Underseen {...props} />);
 
@@ -16,15 +25,33 @@ describe("Underseen", () => {
 
   it("can filter by title", async ({ expect }) => {
     expect.hasAssertions();
+
+    // Setup userEvent with advanceTimers
+    const user = userEvent.setup({
+      advanceTimers: vi.advanceTimersByTime,
+    });
+
     render(<Underseen {...props} />);
 
-    await userEvent.type(screen.getByLabelText("Title"), "Bad Seed");
-    await waitFor(
-      () => {
-        expect(screen.getByTestId("grouped-poster-list")).toBeInTheDocument();
-      },
-      { timeout: 600 },
-    );
+    // Get the list content before applying filter
+    const beforeFilter = screen.getByTestId("grouped-poster-list").textContent;
+
+    // Open filter drawer
+    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+
+    // Type the filter text
+    await user.type(screen.getByLabelText("Title"), "Bad Seed");
+    act(() => {
+      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
+    });
+
+    // Apply the filter - should show "View 0 Results" since Bad Seed doesn't exist
+    const viewButton = screen.getByRole("button", { name: /View \d+ Results/ });
+    await user.click(viewButton);
+
+    // Check that the list has been filtered
+    const currentList = screen.getByTestId("grouped-poster-list").textContent;
+    expect(currentList).not.toBe(beforeFilter);
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
@@ -168,12 +195,27 @@ describe("Underseen", () => {
 
     render(<Underseen {...props} />);
 
+    // Open filter drawer
+    await userEvent.click(
+      screen.getByRole("button", { name: "Toggle filters" }),
+    );
+
     const fieldset = screen.getByRole("group", { name: "Release Year" });
     const fromInput = within(fieldset).getByLabelText("From");
     const toInput = within(fieldset).getByLabelText("to");
 
     await userEvent.selectOptions(fromInput, "1983");
     await userEvent.selectOptions(toInput, "1987");
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    // Wait for the list to update (filters to be applied)
+    await waitFor(() => {
+      expect(screen.getByTestId("grouped-poster-list")).toBeInTheDocument();
+    });
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
@@ -182,6 +224,11 @@ describe("Underseen", () => {
     expect.hasAssertions();
 
     render(<Underseen {...props} />);
+
+    // Open filter drawer
+    await userEvent.click(
+      screen.getByRole("button", { name: "Toggle filters" }),
+    );
 
     const fieldset = screen.getByRole("group", { name: "Release Year" });
     const fromInput = within(fieldset).getByLabelText("From");
@@ -192,12 +239,27 @@ describe("Underseen", () => {
     await userEvent.selectOptions(fromInput, "1989");
     await userEvent.selectOptions(toInput, "1986");
 
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    // Wait for the list to update (filters to be applied)
+    await waitFor(() => {
+      expect(screen.getByTestId("grouped-poster-list")).toBeInTheDocument();
+    });
+
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can filter by genres", async ({ expect }) => {
     expect.hasAssertions();
     render(<Underseen {...props} />);
+
+    // Open filter drawer
+    await userEvent.click(
+      screen.getByRole("button", { name: "Toggle filters" }),
+    );
 
     const genresButton = screen.getByLabelText("Genres");
 
@@ -208,16 +270,13 @@ describe("Underseen", () => {
     const horrorOption = await screen.findByRole("option", { name: "Horror" });
     await userEvent.click(horrorOption);
 
-    // Wait for dropdown to close (150ms timeout in component)
+    // Wait for dropdown to close
     await waitFor(
       () => {
         expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
       },
       { timeout: 300 },
     );
-
-    // Small additional wait to ensure state is settled
-    await new Promise((r) => setTimeout(r, 50));
 
     // Click to open the dropdown again
     await userEvent.click(genresButton);
@@ -226,8 +285,23 @@ describe("Underseen", () => {
     const comedyOption = await screen.findByRole("option", { name: "Comedy" });
     await userEvent.click(comedyOption);
 
-    // Click outside to close the dropdown
-    await userEvent.click(document.body);
+    // Wait for dropdown to close again
+    await waitFor(
+      () => {
+        expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
+      },
+      { timeout: 300 },
+    );
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    // Wait for the list to update (filters to be applied)
+    await waitFor(() => {
+      expect(screen.getByTestId("grouped-poster-list")).toBeInTheDocument();
+    });
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });

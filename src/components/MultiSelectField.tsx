@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 
 import { LabelText } from "~/components/LabelText";
 
+export const DROPDOWN_CLOSE_DELAY_MS = 150;
+
 export function MultiSelectField({
   label,
   onChange,
@@ -20,6 +22,7 @@ export function MultiSelectField({
   const buttonRef = useRef<HTMLButtonElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const optionsRef = useRef<(HTMLLIElement | null)[]>([]);
+  const timeoutRefs = useRef<Set<NodeJS.Timeout>>(new Set());
   const listboxId = `listbox-${label.toLowerCase().replaceAll(/\s+/g, "-")}`;
   const buttonId = `button-${label.toLowerCase().replaceAll(/\s+/g, "-")}`;
 
@@ -44,10 +47,12 @@ export function MultiSelectField({
     setHighlightedIndex(0);
 
     // Close dropdown after selection
-    setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       setIsOpen(false);
       buttonRef.current?.focus();
-    }, 150);
+      timeoutRefs.current.delete(timeoutId);
+    }, DROPDOWN_CLOSE_DELAY_MS);
+    timeoutRefs.current.add(timeoutId);
   };
 
   const removeOption = (optionToRemove: string, focusButton = true) => {
@@ -61,13 +66,19 @@ export function MultiSelectField({
     }
 
     // On desktop, scroll to keep control in view if removing items might cause layout shift
-    if (window.innerWidth >= 1024 && buttonRef.current) {
-      setTimeout(() => {
+    if (
+      globalThis.window !== undefined &&
+      window.innerWidth >= 1024 &&
+      buttonRef.current
+    ) {
+      const timeoutId = setTimeout(() => {
         buttonRef.current?.scrollIntoView({
           behavior: "smooth",
           block: "nearest",
         });
+        timeoutRefs.current.delete(timeoutId);
       }, 50);
+      timeoutRefs.current.add(timeoutId);
     }
   };
 
@@ -77,13 +88,19 @@ export function MultiSelectField({
     buttonRef.current?.focus();
 
     // On desktop, scroll to keep control in view after clearing
-    if (window.innerWidth >= 1024 && buttonRef.current) {
-      setTimeout(() => {
+    if (
+      globalThis.window !== undefined &&
+      window.innerWidth >= 1024 &&
+      buttonRef.current
+    ) {
+      const timeoutId = setTimeout(() => {
         buttonRef.current?.scrollIntoView({
           behavior: "smooth",
           block: "nearest",
         });
+        timeoutRefs.current.delete(timeoutId);
       }, 50);
+      timeoutRefs.current.add(timeoutId);
     }
   };
 
@@ -213,12 +230,19 @@ export function MultiSelectField({
     };
 
     const timer = setTimeout(() => {
-      document.addEventListener("mousedown", handleClickOutside);
+      if (typeof document !== "undefined") {
+        document.addEventListener("mousedown", handleClickOutside);
+      }
+      timeoutRefs.current.delete(timer);
     }, 0);
+    timeoutRefs.current.add(timer);
 
     return () => {
       clearTimeout(timer);
-      document.removeEventListener("mousedown", handleClickOutside);
+      timeoutRefs.current.delete(timer);
+      if (typeof document !== "undefined") {
+        document.removeEventListener("mousedown", handleClickOutside);
+      }
     };
   }, [isOpen]);
 
@@ -237,9 +261,19 @@ export function MultiSelectField({
       }
     };
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    if (globalThis.window !== undefined) {
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
   }, [isOpen]);
+
+  // Cleanup timeouts on unmount
+  useEffect(() => {
+    return () => {
+      for (const timeoutId of timeoutRefs.current) clearTimeout(timeoutId);
+      timeoutRefs.current.clear();
+    };
+  }, []);
 
   // Generate option ID for aria-activedescendant
   const getOptionId = (index: number) => `${listboxId}-option-${index}`;

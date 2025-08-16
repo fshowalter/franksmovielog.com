@@ -1,6 +1,9 @@
-import { render, screen, waitFor, within } from "@testing-library/react";
+import { act, render, screen, waitFor, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { describe, it } from "vitest";
+import { afterEach, beforeEach, describe, it, vi } from "vitest";
+
+import { DROPDOWN_CLOSE_DELAY_MS } from "~/components/MultiSelectField";
+import { TEXT_FILTER_DEBOUNCE_MS } from "~/components/TextFilter";
 
 import { getPropsForUnderrated } from "./getProps";
 import { Underrated } from "./Underrated";
@@ -8,6 +11,14 @@ import { Underrated } from "./Underrated";
 const props = await getPropsForUnderrated();
 
 describe("Underrated", () => {
+  beforeEach(() => {
+    vi.useFakeTimers({ shouldAdvanceTime: true });
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
   it("renders", ({ expect }) => {
     const { asFragment } = render(<Underrated {...props} />);
 
@@ -16,15 +27,32 @@ describe("Underrated", () => {
 
   it("can filter by title", async ({ expect }) => {
     expect.hasAssertions();
+
+    // Setup userEvent with advanceTimers
+    const user = userEvent.setup({
+      advanceTimers: vi.advanceTimersByTime,
+    });
+
     render(<Underrated {...props} />);
 
-    await userEvent.type(screen.getByLabelText("Title"), "Bad Seed");
-    await waitFor(
-      () => {
-        expect(screen.getByTestId("grouped-poster-list")).toBeInTheDocument();
-      },
-      { timeout: 600 },
-    );
+    // Get the list content before applying filter
+    const beforeFilter = screen.getByTestId("grouped-poster-list").textContent;
+
+    // Open filter drawer
+    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+
+    // Type the filter text
+    await user.type(screen.getByLabelText("Title"), "Bad Seed");
+    act(() => {
+      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
+    });
+
+    // Apply the filter
+    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+
+    // Check that the list has been filtered
+    const currentList = screen.getByTestId("grouped-poster-list").textContent;
+    expect(currentList).not.toBe(beforeFilter);
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
@@ -141,12 +169,27 @@ describe("Underrated", () => {
     expect.hasAssertions();
     render(<Underrated {...props} />);
 
+    // Open filter drawer
+    await userEvent.click(
+      screen.getByRole("button", { name: "Toggle filters" }),
+    );
+
     const fieldset = screen.getByRole("group", { name: "Release Year" });
     const fromInput = within(fieldset).getByLabelText("From");
     const toInput = within(fieldset).getByLabelText("to");
 
     await userEvent.selectOptions(fromInput, "1984");
     await userEvent.selectOptions(toInput, "2019");
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    // Wait for the list to update (filters to be applied)
+    await waitFor(() => {
+      expect(screen.getByTestId("grouped-poster-list")).toBeInTheDocument();
+    });
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
@@ -155,6 +198,11 @@ describe("Underrated", () => {
     expect.hasAssertions();
 
     render(<Underrated {...props} />);
+
+    // Open filter drawer
+    await userEvent.click(
+      screen.getByRole("button", { name: "Toggle filters" }),
+    );
 
     const fieldset = screen.getByRole("group", { name: "Release Year" });
     const fromInput = within(fieldset).getByLabelText("From");
@@ -165,22 +213,40 @@ describe("Underrated", () => {
     await userEvent.selectOptions(fromInput, "2022");
     await userEvent.selectOptions(toInput, "1984");
 
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    // Wait for the list to update (filters to be applied)
+    await waitFor(() => {
+      expect(screen.getByTestId("grouped-poster-list")).toBeInTheDocument();
+    });
+
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can filter by genres", async ({ expect }) => {
     expect.hasAssertions();
 
+    // Setup userEvent with advanceTimers
+    const user = userEvent.setup({
+      advanceTimers: vi.advanceTimersByTime,
+    });
+
     render(<Underrated {...props} />);
+
+    // Open filter drawer
+    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
 
     const genresButton = screen.getByLabelText("Genres");
 
     // Click to open the dropdown
-    await userEvent.click(genresButton);
+    await user.click(genresButton);
 
     // Select Horror
     const horrorOption = await screen.findByRole("option", { name: "Horror" });
-    await userEvent.click(horrorOption);
+    await user.click(horrorOption);
 
     // Wait for dropdown to close (150ms timeout in component)
     await waitFor(
@@ -190,18 +256,36 @@ describe("Underrated", () => {
       { timeout: 300 },
     );
 
-    // Small additional wait to ensure state is settled
-    await new Promise((r) => setTimeout(r, 50));
+    // Advance timers for dropdown to close
+    act(() => {
+      vi.advanceTimersByTime(DROPDOWN_CLOSE_DELAY_MS);
+    });
 
     // Click to open the dropdown again
-    await userEvent.click(genresButton);
+    await user.click(genresButton);
 
     // Select Comedy
     const comedyOption = await screen.findByRole("option", { name: "Comedy" });
-    await userEvent.click(comedyOption);
+    await user.click(comedyOption);
 
     // Click outside to close the dropdown
-    await userEvent.click(document.body);
+    await user.click(document.body);
+
+    // Wait for dropdown to close
+    await waitFor(
+      () => {
+        expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
+      },
+      { timeout: 300 },
+    );
+
+    // Apply the filter
+    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+
+    // Wait for the list to update (filters to be applied)
+    await waitFor(() => {
+      expect(screen.getByTestId("grouped-poster-list")).toBeInTheDocument();
+    });
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });

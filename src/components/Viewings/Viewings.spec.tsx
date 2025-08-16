@@ -1,6 +1,8 @@
-import { act, render, screen, within } from "@testing-library/react";
+import { act, render, screen, waitFor, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { describe, it } from "vitest";
+import { afterEach, beforeEach, describe, it, vi } from "vitest";
+
+import { TEXT_FILTER_DEBOUNCE_MS } from "~/components/TextFilter";
 
 import { getProps } from "./getProps";
 import { Viewings } from "./Viewings";
@@ -8,6 +10,14 @@ import { Viewings } from "./Viewings";
 export const props = await getProps();
 
 describe("Viewings", () => {
+  beforeEach(() => {
+    vi.useFakeTimers({ shouldAdvanceTime: true });
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
   it("renders", ({ expect }) => {
     const { asFragment } = render(<Viewings {...props} />);
 
@@ -16,11 +26,33 @@ describe("Viewings", () => {
 
   it("can filter by title", async ({ expect }) => {
     expect.hasAssertions();
+
+    // Setup userEvent with advanceTimers
+    const user = userEvent.setup({
+      advanceTimers: vi.advanceTimersByTime,
+    });
+
     render(<Viewings {...props} />);
 
-    await act(async () => {
-      await userEvent.type(screen.getByLabelText("Title"), "Rio Bravo");
-      await new Promise((r) => setTimeout(r, 500));
+    // Get initial calendar content for comparison
+    const initialCalendar = screen.getByTestId("calendar").textContent;
+
+    // Open filter drawer
+    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+
+    // Type the filter text
+    await user.type(screen.getByLabelText("Title"), "Rio Bravo");
+    act(() => {
+      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
+    });
+
+    // Apply the filter
+    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+
+    // Wait for the list to update (filters to be applied)
+    await waitFor(() => {
+      const currentCalendar = screen.getByTestId("calendar").textContent;
+      expect(currentCalendar).not.toBe(initialCalendar);
     });
 
     expect(screen.getByTestId("calendar")).toMatchSnapshot();
@@ -30,7 +62,26 @@ describe("Viewings", () => {
     expect.hasAssertions();
     render(<Viewings {...props} />);
 
+    // Open filter drawer
+    await userEvent.click(
+      screen.getByRole("button", { name: "Toggle filters" }),
+    );
+
     await userEvent.selectOptions(screen.getByLabelText("Medium"), "Blu-ray");
+
+    // Get initial calendar content for comparison
+    const initialCalendar = screen.getByTestId("calendar").textContent;
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    // Wait for the list to update (filters to be applied)
+    await waitFor(() => {
+      const currentCalendar = screen.getByTestId("calendar").textContent;
+      expect(currentCalendar).not.toBe(initialCalendar);
+    });
 
     expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
@@ -40,8 +91,38 @@ describe("Viewings", () => {
 
     render(<Viewings {...props} />);
 
+    // Open filter drawer
+    await userEvent.click(
+      screen.getByRole("button", { name: "Toggle filters" }),
+    );
+
     await userEvent.selectOptions(screen.getByLabelText("Medium"), "Blu-ray");
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    // Open filter drawer again
+    await userEvent.click(
+      screen.getByRole("button", { name: "Toggle filters" }),
+    );
+
     await userEvent.selectOptions(screen.getByLabelText("Medium"), "All");
+
+    // Get initial calendar content for comparison
+    const initialCalendar = screen.getByTestId("calendar").textContent;
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    // Wait for the list to update (filters to be applied)
+    await waitFor(() => {
+      const currentCalendar = screen.getByTestId("calendar").textContent;
+      expect(currentCalendar).not.toBe(initialCalendar);
+    });
 
     expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
@@ -50,10 +131,29 @@ describe("Viewings", () => {
     expect.hasAssertions();
     render(<Viewings {...props} />);
 
+    // Open filter drawer
+    await userEvent.click(
+      screen.getByRole("button", { name: "Toggle filters" }),
+    );
+
     await userEvent.selectOptions(
       screen.getByLabelText("Venue"),
       "Alamo Drafthouse Cinema - One Loudoun",
     );
+
+    // Get initial calendar content for comparison
+    const initialCalendar = screen.getByTestId("calendar").textContent;
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    // Wait for the list to update (filters to be applied)
+    await waitFor(() => {
+      const currentCalendar = screen.getByTestId("calendar").textContent;
+      expect(currentCalendar).not.toBe(initialCalendar);
+    });
 
     expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
@@ -62,11 +162,41 @@ describe("Viewings", () => {
     expect.hasAssertions();
     render(<Viewings {...props} />);
 
+    // Open filter drawer
+    await userEvent.click(
+      screen.getByRole("button", { name: "Toggle filters" }),
+    );
+
     await userEvent.selectOptions(
       screen.getByLabelText("Venue"),
       "Alamo Drafthouse Cinema - One Loudoun",
     );
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    // Open filter drawer again
+    await userEvent.click(
+      screen.getByRole("button", { name: "Toggle filters" }),
+    );
+
     await userEvent.selectOptions(screen.getByLabelText("Venue"), "All");
+
+    // Get initial calendar content for comparison
+    const initialCalendar = screen.getByTestId("calendar").textContent;
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    // Wait for the list to update (filters to be applied)
+    await waitFor(() => {
+      const currentCalendar = screen.getByTestId("calendar").textContent;
+      expect(currentCalendar).not.toBe(initialCalendar);
+    });
 
     expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
@@ -102,12 +232,31 @@ describe("Viewings", () => {
 
     render(<Viewings {...props} />);
 
+    // Open filter drawer
+    await userEvent.click(
+      screen.getByRole("button", { name: "Toggle filters" }),
+    );
+
     const fieldset = screen.getByRole("group", { name: "Release Year" });
     const fromInput = within(fieldset).getByLabelText("From");
     const toInput = within(fieldset).getByLabelText("to");
 
     await userEvent.selectOptions(fromInput, "1957");
     await userEvent.selectOptions(toInput, "1970");
+
+    // Get initial calendar content for comparison
+    const initialCalendar = screen.getByTestId("calendar").textContent;
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    // Wait for the list to update (filters to be applied)
+    await waitFor(() => {
+      const currentCalendar = screen.getByTestId("calendar").textContent;
+      expect(currentCalendar).not.toBe(initialCalendar);
+    });
 
     expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
@@ -116,6 +265,11 @@ describe("Viewings", () => {
     expect.hasAssertions();
 
     render(<Viewings {...props} />);
+
+    // Open filter drawer
+    await userEvent.click(
+      screen.getByRole("button", { name: "Toggle filters" }),
+    );
 
     const fieldset = screen.getByRole("group", { name: "Release Year" });
     const fromInput = within(fieldset).getByLabelText("From");
@@ -126,6 +280,20 @@ describe("Viewings", () => {
     await userEvent.selectOptions(fromInput, "1973");
     await userEvent.selectOptions(toInput, "1950");
 
+    // Get initial calendar content for comparison
+    const initialCalendar = screen.getByTestId("calendar").textContent;
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    // Wait for the list to update (filters to be applied)
+    await waitFor(() => {
+      const currentCalendar = screen.getByTestId("calendar").textContent;
+      expect(currentCalendar).not.toBe(initialCalendar);
+    });
+
     expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
 
@@ -134,12 +302,32 @@ describe("Viewings", () => {
 
     render(<Viewings {...props} />);
 
+    // Get initial calendar content for comparison (before any filters)
+    const initialCalendar = screen.getByTestId("calendar").textContent;
+
+    // Open filter drawer
+    await userEvent.click(
+      screen.getByRole("button", { name: "Toggle filters" }),
+    );
+
     const fieldset = screen.getByRole("group", { name: "Viewing Year" });
     const fromInput = within(fieldset).getByLabelText("From");
     const toInput = within(fieldset).getByLabelText("to");
 
+    // Use a narrower range that will actually filter out some data
     await userEvent.selectOptions(fromInput, "2012");
-    await userEvent.selectOptions(toInput, "2014");
+    await userEvent.selectOptions(toInput, "2012");
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    // Wait for the list to update (filters to be applied)
+    await waitFor(() => {
+      const currentCalendar = screen.getByTestId("calendar").textContent;
+      expect(currentCalendar).not.toBe(initialCalendar);
+    });
 
     expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
@@ -149,6 +337,11 @@ describe("Viewings", () => {
 
     render(<Viewings {...props} />);
 
+    // Open filter drawer
+    await userEvent.click(
+      screen.getByRole("button", { name: "Toggle filters" }),
+    );
+
     const fieldset = screen.getByRole("group", { name: "Viewing Year" });
     const fromInput = within(fieldset).getByLabelText("From");
     const toInput = within(fieldset).getByLabelText("to");
@@ -157,6 +350,20 @@ describe("Viewings", () => {
     await userEvent.selectOptions(toInput, "2014");
     await userEvent.selectOptions(fromInput, "2013");
     await userEvent.selectOptions(toInput, "2012");
+
+    // Get initial calendar content for comparison
+    const initialCalendar = screen.getByTestId("calendar").textContent;
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    // Wait for the list to update (filters to be applied)
+    await waitFor(() => {
+      const currentCalendar = screen.getByTestId("calendar").textContent;
+      expect(currentCalendar).not.toBe(initialCalendar);
+    });
 
     expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
