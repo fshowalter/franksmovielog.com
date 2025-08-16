@@ -2,7 +2,7 @@ import { getBackdropImageProps } from "~/api/backdrops";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
 import { allStatYears, statsForYear } from "~/api/yearStats";
 import { BackdropImageConfig } from "~/components/Backdrop";
-import { MostWatchedMoviesPosterConfig } from "~/components/MostWatchedMovies";
+import { PosterListItemImageConfig } from "~/components/PosterList";
 import { displayDate } from "~/utils/displayDate";
 
 import type { Props } from "./YearStats";
@@ -32,7 +32,7 @@ export async function getProps(
                 displayDate: displayDate(viewing.viewingDate),
                 posterImageProps: await getFluidWidthPosterImageProps(
                   viewing.slug,
-                  MostWatchedMoviesPosterConfig,
+                  PosterListItemImageConfig,
                 ),
               };
             }),
@@ -46,7 +46,7 @@ export async function getProps(
           ...title,
           posterImageProps: await getFluidWidthPosterImageProps(
             title.slug,
-            MostWatchedMoviesPosterConfig,
+            PosterListItemImageConfig,
           ),
         };
       }),
@@ -62,7 +62,7 @@ export async function getProps(
                 displayDate: displayDate(viewing.viewingDate),
                 posterImageProps: await getFluidWidthPosterImageProps(
                   viewing.slug,
-                  MostWatchedMoviesPosterConfig,
+                  PosterListItemImageConfig,
                 ),
               };
             }),
@@ -81,7 +81,7 @@ export async function getProps(
                 displayDate: displayDate(viewing.viewingDate),
                 posterImageProps: await getFluidWidthPosterImageProps(
                   viewing.slug,
-                  MostWatchedMoviesPosterConfig,
+                  PosterListItemImageConfig,
                 ),
               };
             }),

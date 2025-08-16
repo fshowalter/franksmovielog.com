@@ -3,7 +3,8 @@ import { getBackdropImageProps } from "~/api/backdrops";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
 import { allStatYears } from "~/api/yearStats";
 import { BackdropImageConfig } from "~/components/Backdrop";
-import { MostWatchedMoviesPosterConfig } from "~/components/MostWatchedMovies";
+import { PosterListItemImageConfig } from "~/components/PosterList";
+import { displayDate } from "~/utils/displayDate";
 
 import type { Props } from "./AlltimeStats";
 
@@ -31,7 +32,7 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
                 displayDate: displayDate(viewing.viewingDate),
                 posterImageProps: await getFluidWidthPosterImageProps(
                   viewing.slug,
-                  MostWatchedMoviesPosterConfig,
+                  PosterListItemImageConfig,
                 ),
               };
             }),
@@ -45,7 +46,7 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
           ...title,
           posterImageProps: await getFluidWidthPosterImageProps(
             title.slug,
-            MostWatchedMoviesPosterConfig,
+            PosterListItemImageConfig,
           ),
         };
       }),
@@ -61,7 +62,7 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
                 displayDate: displayDate(viewing.viewingDate),
                 posterImageProps: await getFluidWidthPosterImageProps(
                   viewing.slug,
-                  MostWatchedMoviesPosterConfig,
+                  PosterListItemImageConfig,
                 ),
               };
             }),
@@ -80,7 +81,7 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
                 displayDate: displayDate(viewing.viewingDate),
                 posterImageProps: await getFluidWidthPosterImageProps(
                   viewing.slug,
-                  MostWatchedMoviesPosterConfig,
+                  PosterListItemImageConfig,
                 ),
               };
             }),
@@ -90,22 +91,4 @@ export async function getProps(): Promise<Props & { metaDescription: string }> {
     ),
     stats,
   };
-}
-
-function displayDate(date: string) {
-  const viewingDate = new Date(date);
-
-  return `${viewingDate.toLocaleDateString("en-US", {
-    timeZone: "UTC",
-    weekday: "short",
-  })}, ${viewingDate.toLocaleDateString("en-US", {
-    month: "short",
-    timeZone: "UTC",
-  })} ${viewingDate.toLocaleDateString("en-US", {
-    day: "2-digit",
-    timeZone: "UTC",
-  })}, ${viewingDate.toLocaleDateString("en-US", {
-    timeZone: "UTC",
-    year: "numeric",
-  })}`;
 }

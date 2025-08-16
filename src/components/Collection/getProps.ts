@@ -8,7 +8,7 @@ import { getBackdropImageProps } from "~/api/backdrops";
 import { collectionDetails } from "~/api/collections";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
 import { BackdropImageConfig } from "~/components/Backdrop";
-import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
+import { PosterListItemImageConfig } from "~/components/PosterList";
 import { displayDate } from "~/utils/displayDate";
 
 import type { Props } from "./Collection";
@@ -42,7 +42,7 @@ export async function getProps(slug: string): Promise<PageProps> {
             ...title,
             posterImageProps: await getFluidWidthPosterImageProps(
               title.slug,
-              ListItemPosterImageConfig,
+              PosterListItemImageConfig,
             ),
             reviewDisplayDate: displayDate(title.reviewDate),
             reviewSequence: title.reviewSequence,

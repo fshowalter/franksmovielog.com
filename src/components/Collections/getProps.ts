@@ -3,8 +3,8 @@ import type { BackdropImageProps } from "~/api/backdrops";
 import { getAvatarImageProps } from "~/api/avatars";
 import { getBackdropImageProps } from "~/api/backdrops";
 import { allCollections } from "~/api/collections";
+import { AvatarListItemImageConfig } from "~/components/AvatarList";
 import { BackdropImageConfig } from "~/components/Backdrop";
-import { ListItemAvatarImageConfig } from "~/components/ListItemAvatar";
 
 import type { Props } from "./Collections";
 import type { ListItemValue } from "./Collections";
@@ -22,7 +22,7 @@ export async function getProps(): Promise<PageProps> {
       const listItemValue: ListItemValue = {
         avatarImageProps: await getAvatarImageProps(
           collection.slug,
-          ListItemAvatarImageConfig,
+          AvatarListItemImageConfig,
         ),
         name: collection.name,
         reviewCount: collection.reviewCount,

@@ -8,7 +8,7 @@ import { allReviews } from "~/api/reviews";
 import { allUnderratedSurprises } from "~/api/underratedSurprises";
 import { allUnderseenGems } from "~/api/underseenGems";
 import { BackdropImageConfig } from "~/components/Backdrop";
-import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
+import { PosterListItemImageConfig } from "~/components/PosterList";
 
 import type { Props } from "./AllReviews";
 import type { Props as OverratedProps } from "./Overrated";
@@ -157,7 +157,7 @@ async function buildReviewListItemValues(
         imdbId: review.imdbId,
         posterImageProps: await getFluidWidthPosterImageProps(
           review.slug,
-          ListItemPosterImageConfig,
+          PosterListItemImageConfig,
         ),
         releaseSequence: review.releaseSequence,
         releaseYear: review.releaseYear,

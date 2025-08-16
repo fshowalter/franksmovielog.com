@@ -1,4 +1,4 @@
-import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
+import { PosterListItemImageConfig } from "src/components/PosterList";
 
 import {
   getFixedWidthPosterImageProps,
@@ -77,7 +77,7 @@ export async function getProps(slug: string): Promise<Props> {
     ),
     searchPosterImageProps: await getFluidWidthPosterImageProps(
       review.slug,
-      ListItemPosterImageConfig,
+      PosterListItemImageConfig,
     ),
     seoImageSrc: await getOpenGraphStillSrc(slug),
     stillImageProps: await getStillImageProps(slug, StillImageConfig),

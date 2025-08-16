@@ -3,8 +3,8 @@ import type { BackdropImageProps } from "~/api/backdrops";
 import { getAvatarImageProps } from "~/api/avatars";
 import { getBackdropImageProps } from "~/api/backdrops";
 import { allCastAndCrew } from "~/api/castAndCrew";
+import { AvatarListItemImageConfig } from "~/components/AvatarList";
 import { BackdropImageConfig } from "~/components/Backdrop";
-import { ListItemAvatarImageConfig } from "~/components/ListItemAvatar";
 
 import type { Props } from "./CastAndCrew";
 import type { ListItemValue } from "./CastAndCrew";
@@ -23,7 +23,7 @@ export async function getProps(): Promise<PageProps> {
       const value: ListItemValue = {
         avatarImageProps: await getAvatarImageProps(
           member.slug,
-          ListItemAvatarImageConfig,
+          AvatarListItemImageConfig,
         ),
         creditedAs: member.creditedAs,
         name: member.name,

@@ -5,7 +5,7 @@ import type { AvatarImageProps } from "~/api/avatars";
 import { Avatar } from "~/components/Avatar";
 import { ccn } from "~/utils/concatClassNames";
 
-export const ListItemAvatarImageConfig = {
+export const AvatarListItemImageConfig = {
   height: 80,
   width: 80,
 };
