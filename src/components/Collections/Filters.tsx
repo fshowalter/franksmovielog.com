@@ -8,15 +8,21 @@ import { Actions } from "./Collections.reducer";
 
 export function Filters({
   dispatch,
+  filterKey,
+  pendingNameFilter,
 }: {
   dispatch: React.Dispatch<ActionType>;
+  filterKey?: string;
+  pendingNameFilter?: string;
 }): JSX.Element {
   return (
     <>
       <TextFilter
+        initialValue={pendingNameFilter}
+        key={`name-${filterKey}`}
         label="Name"
         onInputChange={(value) =>
-          dispatch({ type: Actions.FILTER_NAME, value })
+          dispatch({ type: Actions.PENDING_FILTER_NAME, value })
         }
         placeholder="Enter all or part of a name"
       />

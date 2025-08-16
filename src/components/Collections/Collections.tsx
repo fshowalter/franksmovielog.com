@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 
-import { useReducer } from "react";
+import { useReducer, useState } from "react";
 
 import type { AvatarImageProps } from "~/api/avatars";
 import type { Collection } from "~/api/collections";
@@ -35,10 +35,17 @@ export function Collections({ initialSort, values }: Props): JSX.Element {
     },
     initState,
   );
+  const [filterKey, setFilterKey] = useState(0);
 
   return (
     <ListWithFilters
-      filters={<Filters dispatch={dispatch} />}
+      filters={
+        <Filters
+          dispatch={dispatch}
+          filterKey={String(filterKey)}
+          pendingNameFilter={state.pendingFilterValues.name}
+        />
+      }
       list={
         <ol
           className={`
@@ -47,11 +54,19 @@ export function Collections({ initialSort, values }: Props): JSX.Element {
           `}
           data-testid="list"
         >
-          {values.map((value) => {
+          {state.filteredValues.map((value) => {
             return <CollectionListItem key={value.name} value={value} />;
           })}
         </ol>
       }
+      onApplyFilters={() => dispatch({ type: Actions.APPLY_PENDING_FILTERS })}
+      onFilterDrawerOpen={() => {
+        // Increment key to force remount of filter components
+        setFilterKey((prev) => prev + 1);
+        dispatch({ type: Actions.RESET_PENDING_FILTERS });
+      }}
+      onResetFilters={() => dispatch({ type: Actions.RESET_PENDING_FILTERS })}
+      pendingFilteredCount={state.pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sortValue,
         onSortChange: (e) =>
