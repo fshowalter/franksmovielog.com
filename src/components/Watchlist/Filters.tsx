@@ -9,6 +9,15 @@ import type { ActionType } from "./Watchlist.reducer";
 
 import { Actions } from "./Watchlist.reducer";
 
+type FilterValues = {
+  collection?: string;
+  director?: string;
+  performer?: string;
+  releaseYear?: [string, string];
+  title?: string;
+  writer?: string;
+};
+
 export function Filters({
   dispatch,
   distinctCollections,
@@ -24,12 +33,12 @@ export function Filters({
   distinctPerformers: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctWriters: readonly string[];
-  filterValues?: Record<string, any>;
+  filterValues?: FilterValues;
 }): JSX.Element {
   return (
     <>
       <TextFilter
-        initialValue={filterValues.title || ""}
+        initialValue={filterValues.title ?? ""}
         label="Title"
         onInputChange={(value) =>
           dispatch({ type: Actions.PENDING_FILTER_TITLE, value })
@@ -39,33 +48,33 @@ export function Filters({
       <CreditSelectField
         actionType={Actions.PENDING_FILTER_DIRECTOR}
         dispatch={dispatch}
-        initialValue={filterValues.director || "All"}
+        initialValue={filterValues.director ?? "All"}
         label="Director"
         options={distinctDirectors}
       />
       <CreditSelectField
         actionType={Actions.PENDING_FILTER_PERFORMER}
         dispatch={dispatch}
-        initialValue={filterValues.performer || "All"}
+        initialValue={filterValues.performer ?? "All"}
         label="Performer"
         options={distinctPerformers}
       />
       <CreditSelectField
         actionType={Actions.PENDING_FILTER_WRITER}
         dispatch={dispatch}
-        initialValue={filterValues.writer || "All"}
+        initialValue={filterValues.writer ?? "All"}
         label="Writer"
         options={distinctWriters}
       />
       <CreditSelectField
         actionType={Actions.PENDING_FILTER_COLLECTION}
         dispatch={dispatch}
-        initialValue={filterValues.collection || "All"}
+        initialValue={filterValues.collection ?? "All"}
         label="Collection"
         options={distinctCollections}
       />
       <YearInput
-        initialValues={filterValues.releaseYear || []}
+        initialValues={filterValues.releaseYear ?? []}
         label="Release Year"
         onYearChange={(values) =>
           dispatch({ type: Actions.PENDING_FILTER_RELEASE_YEAR, values })

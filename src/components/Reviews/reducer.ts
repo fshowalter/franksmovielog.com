@@ -4,14 +4,6 @@
 import type { ReviewsListItemValue } from "~/components/Reviews/ReviewsListItem";
 
 import {
-  createReleaseYearFilter,
-  createTitleFilter,
-  getGroupLetter,
-  sortNumber,
-  sortString,
-} from "~/utils/reducerUtils";
-
-import {
   applyPendingFilters,
   buildGroupValues,
   clearPendingFilters,
@@ -22,6 +14,13 @@ import {
   updatePendingFilter,
   updateSort,
 } from "~/utils/pendingFilters";
+import {
+  createReleaseYearFilter,
+  createTitleFilter,
+  getGroupLetter,
+  sortNumber,
+  sortString,
+} from "~/utils/reducerUtils";
 
 const SHOW_COUNT_DEFAULT = 100;
 
@@ -59,6 +58,9 @@ export type ActionType =
   | ResetPendingFiltersAction
   | ShowMoreAction
   | SortAction;
+
+// Re-export sort type for convenience
+export type Sort = ReviewsSort;
 
 type ApplyPendingFiltersAction = {
   type: typeof Actions.APPLY_PENDING_FILTERS;
@@ -107,9 +109,6 @@ type SortAction = {
 };
 
 type State = PendingFiltersState<ReviewsListItemValue, ReviewsSort>;
-
-// Re-export sort type for convenience
-export type Sort = ReviewsSort;
 
 // Helper functions
 function getReviewDateGroup(value: ReviewsListItemValue): string {
@@ -180,11 +179,11 @@ export function initState({
   values: ReviewsListItemValue[];
 }): State {
   return createInitialState({
-    values,
-    initialSort,
-    sortFn: sortValues,
     groupFn: groupValues,
+    initialSort,
     showCount: SHOW_COUNT_DEFAULT,
+    sortFn: sortValues,
+    values,
   });
 }
 
@@ -200,10 +199,11 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_GENRES: {
-      const filterFn = action.values.length > 0
-        ? (value: ReviewsListItemValue) =>
-            action.values.every((genre) => value.genres.includes(genre))
-        : undefined;
+      const filterFn =
+        action.values.length > 0
+          ? (value: ReviewsListItemValue) =>
+              action.values.every((genre) => value.genres.includes(genre))
+          : undefined;
       return updatePendingFilter(state, "genres", filterFn, action.values);
     }
 
@@ -232,7 +232,9 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_TITLE: {
-      const filterFn = action.value ? createTitleFilter(action.value) : undefined;
+      const filterFn = action.value
+        ? createTitleFilter(action.value)
+        : undefined;
       return updatePendingFilter(state, "title", filterFn, action.value);
     }
 

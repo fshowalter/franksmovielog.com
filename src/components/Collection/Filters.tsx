@@ -8,6 +8,12 @@ import type { ActionType } from "./Collection.reducer";
 
 import { Actions } from "./Collection.reducer";
 
+type FilterValues = {
+  releaseYear?: [string, string];
+  reviewYear?: [string, string];
+  title?: string;
+};
+
 export function Filters({
   dispatch,
   distinctReleaseYears,
@@ -19,7 +25,7 @@ export function Filters({
   dispatch: React.Dispatch<ActionType>;
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
-  filterValues?: Record<string, any>;
+  filterValues?: FilterValues;
   hideReviewed: boolean;
   showHideReviewed: boolean;
 }): JSX.Element {
@@ -33,7 +39,7 @@ export function Filters({
         </div>
       )}
       <TextFilter
-        initialValue={filterValues.title || ""}
+        initialValue={filterValues.title ?? ""}
         label="Title"
         onInputChange={(value) =>
           dispatch({ type: Actions.PENDING_FILTER_TITLE, value })
@@ -42,7 +48,7 @@ export function Filters({
       />
 
       <YearInput
-        initialValues={filterValues.releaseYear || []}
+        initialValues={filterValues.releaseYear ?? []}
         label="Release Year"
         onYearChange={(values) =>
           dispatch({ type: Actions.PENDING_FILTER_RELEASE_YEAR, values })
@@ -50,7 +56,7 @@ export function Filters({
         years={distinctReleaseYears}
       />
       <YearInput
-        initialValues={filterValues.reviewYear || []}
+        initialValues={filterValues.reviewYear ?? []}
         label="Review Year"
         onYearChange={(values) =>
           dispatch({ type: Actions.PENDING_FILTER_REVIEW_YEAR, values })

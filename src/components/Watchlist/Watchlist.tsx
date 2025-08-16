@@ -67,7 +67,6 @@ export function Watchlist({
     <ListWithFilters
       filters={
         <Filters
-          key={filterKey}
           dispatch={dispatch}
           distinctCollections={distinctCollections}
           distinctDirectors={distinctDirectors}
@@ -75,8 +74,10 @@ export function Watchlist({
           distinctReleaseYears={distinctReleaseYears}
           distinctWriters={distinctWriters}
           filterValues={state.pendingFilterValues}
+          key={filterKey}
         />
       }
+      hasActiveFilters={Object.keys(state.pendingFilterValues).length > 0}
       list={
         <div className="@container/list">
           <GroupedPosterList
@@ -97,7 +98,6 @@ export function Watchlist({
           </GroupedPosterList>
         </div>
       }
-      hasActiveFilters={Object.keys(state.pendingFilterValues).length > 0}
       listHeaderButtons={
         <ListHeaderButton href="/watchlist/progress/" text="progress" />
       }
@@ -106,7 +106,9 @@ export function Watchlist({
         dispatch({ type: Actions.CLEAR_PENDING_FILTERS });
         setFilterKey((k) => k + 1);
       }}
-      onFilterDrawerOpen={() => dispatch({ type: Actions.RESET_PENDING_FILTERS })}
+      onFilterDrawerOpen={() =>
+        dispatch({ type: Actions.RESET_PENDING_FILTERS })
+      }
       onResetFilters={() => {
         dispatch({ type: Actions.RESET_PENDING_FILTERS });
         setFilterKey((k) => k + 1);

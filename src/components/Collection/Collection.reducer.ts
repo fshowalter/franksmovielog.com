@@ -1,17 +1,3 @@
-/**
- * Collection reducer with pending filters support
- */
-import type { ListItemValue } from "./Collection";
-
-import {
-  createReleaseYearFilter,
-  createReviewYearFilter,
-  createTitleFilter,
-  getGroupLetter,
-  sortNumber,
-  sortString,
-} from "~/utils/reducerUtils";
-
 import {
   applyPendingFilters,
   buildGroupValues,
@@ -23,6 +9,19 @@ import {
   updatePendingFilter,
   updateSort,
 } from "~/utils/pendingFilters";
+import {
+  createReleaseYearFilter,
+  createReviewYearFilter,
+  createTitleFilter,
+  getGroupLetter,
+  sortNumber,
+  sortString,
+} from "~/utils/reducerUtils";
+
+/**
+ * Collection reducer with pending filters support
+ */
+import type { ListItemValue } from "./Collection";
 
 export type Sort =
   | "grade-asc"
@@ -95,12 +94,12 @@ type SortAction = {
   value: Sort;
 };
 
-type ToggleReviewedAction = {
-  type: Actions.TOGGLE_REVIEWED;
-};
-
 type State = PendingFiltersState<ListItemValue, Sort> & {
   hideReviewed: boolean;
+};
+
+type ToggleReviewedAction = {
+  type: Actions.TOGGLE_REVIEWED;
 };
 
 // Helper functions
@@ -162,11 +161,11 @@ export function initState({
   values: ListItemValue[];
 }): State {
   const baseState = createInitialState({
-    values,
-    initialSort,
-    sortFn: sortValues,
     groupFn: groupValues,
+    initialSort,
     showCount: SHOW_COUNT_DEFAULT,
+    sortFn: sortValues,
+    values,
   });
 
   return {
@@ -212,7 +211,9 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_TITLE: {
-      const filterFn = action.value ? createTitleFilter(action.value) : undefined;
+      const filterFn = action.value
+        ? createTitleFilter(action.value)
+        : undefined;
       return {
         ...updatePendingFilter(state, "title", filterFn, action.value),
         hideReviewed: state.hideReviewed,

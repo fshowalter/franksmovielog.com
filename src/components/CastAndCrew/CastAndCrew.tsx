@@ -52,11 +52,12 @@ export function CastAndCrew({ initialSort, values }: Props): JSX.Element {
       }
       filters={
         <Filters
-          key={filterKey}
           dispatch={dispatch}
           filterValues={state.pendingFilterValues}
+          key={filterKey}
         />
       }
+      hasActiveFilters={Object.keys(state.pendingFilterValues).length > 0}
       list={
         <GroupedList
           data-testid="list"
@@ -71,13 +72,14 @@ export function CastAndCrew({ initialSort, values }: Props): JSX.Element {
           }}
         </GroupedList>
       }
-      hasActiveFilters={Object.keys(state.pendingFilterValues).length > 0}
       onApplyFilters={() => dispatch({ type: Actions.APPLY_PENDING_FILTERS })}
       onClearFilters={() => {
         dispatch({ type: Actions.CLEAR_PENDING_FILTERS });
         setFilterKey((k) => k + 1);
       }}
-      onFilterDrawerOpen={() => dispatch({ type: Actions.RESET_PENDING_FILTERS })}
+      onFilterDrawerOpen={() =>
+        dispatch({ type: Actions.RESET_PENDING_FILTERS })
+      }
       onResetFilters={() => {
         dispatch({ type: Actions.RESET_PENDING_FILTERS });
         setFilterKey((k) => k + 1);

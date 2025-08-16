@@ -1,15 +1,3 @@
-/**
- * CastAndCrew reducer with pending filters support
- */
-import type { ListItemValue } from "./CastAndCrew";
-
-import {
-  createNameFilter,
-  getGroupLetter,
-  sortNumber,
-  sortString,
-} from "~/utils/reducerUtils";
-
 import {
   applyPendingFilters,
   buildGroupValues,
@@ -21,6 +9,17 @@ import {
   updatePendingFilter,
   updateSort,
 } from "~/utils/pendingFilters";
+import {
+  createNameFilter,
+  getGroupLetter,
+  sortNumber,
+  sortString,
+} from "~/utils/reducerUtils";
+
+/**
+ * CastAndCrew reducer with pending filters support
+ */
+import type { ListItemValue } from "./CastAndCrew";
 
 export enum Actions {
   APPLY_PENDING_FILTERS = "APPLY_PENDING_FILTERS",
@@ -121,11 +120,11 @@ export function initState({
   values: ListItemValue[];
 }): State {
   return createInitialState({
-    values,
-    initialSort,
-    sortFn: sortValues,
     groupFn: groupValues,
+    initialSort,
     showCount: SHOW_COUNT_DEFAULT,
+    sortFn: sortValues,
+    values,
   });
 }
 
@@ -140,14 +139,17 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_CREDIT_KIND: {
-      const filterFn = action.value && action.value !== "All"
-        ? (value: ListItemValue) => value.creditedAs.includes(action.value)
-        : undefined;
+      const filterFn =
+        action.value && action.value !== "All"
+          ? (value: ListItemValue) => value.creditedAs.includes(action.value)
+          : undefined;
       return updatePendingFilter(state, "credits", filterFn, action.value);
     }
 
     case Actions.PENDING_FILTER_NAME: {
-      const filterFn = action.value ? createNameFilter(action.value) : undefined;
+      const filterFn = action.value
+        ? createNameFilter(action.value)
+        : undefined;
       return updatePendingFilter(state, "name", filterFn, action.value);
     }
 

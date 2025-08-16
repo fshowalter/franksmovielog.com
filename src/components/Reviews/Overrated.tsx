@@ -41,12 +41,12 @@ export function Overrated({
     <ListWithFilters
       filters={
         <Filters
-          key={filterKey}
           dispatch={dispatch}
           distinctGenres={distinctGenres}
           distinctReleaseYears={distinctReleaseYears}
           distinctReviewYears={distinctReviewYears}
           filterValues={state.pendingFilterValues}
+          key={filterKey}
         />
       }
       list={
@@ -60,7 +60,9 @@ export function Overrated({
         </GroupedPosterList>
       }
       onApplyFilters={() => dispatch({ type: Actions.APPLY_PENDING_FILTERS })}
-      onFilterDrawerOpen={() => dispatch({ type: Actions.RESET_PENDING_FILTERS })}
+      onFilterDrawerOpen={() =>
+        dispatch({ type: Actions.RESET_PENDING_FILTERS })
+      }
       onResetFilters={() => {
         dispatch({ type: Actions.RESET_PENDING_FILTERS });
         setFilterKey((k) => k + 1);

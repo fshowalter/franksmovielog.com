@@ -725,8 +725,8 @@ exports[`Collections > can sort by name desc 1`] = `
           class="w-full"
           height="80"
           loading="lazy"
-          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
-          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
+          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
+          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
           width="80"
         />
       </div>
@@ -740,150 +740,18 @@ exports[`Collections > can sort by name desc 1`] = `
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
       "
-        href="/collections/friday-the-13th/"
+        href="/collections/shaw-brothers/"
       >
         <div
           class="leading-normal"
         >
-          Friday the 13th
+          Shaw Brothers
         </div>
       </a>
       <div
         class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
       >
-        11
-         Reviewed Titles
-      </div>
-    </div>
-  </li>
-  <li
-    class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-5
-        tablet-landscape:has-[a:hover]:scale-[102.5%]
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
-        
-      "
-  >
-    <div
-      class="
-          relative rounded-full
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-          
-        "
-    >
-      <div
-        class="
-          w-16 safari-border-radius-fix overflow-hidden rounded-full
-          drop-shadow-md
-          tablet:w-20
-        "
-      >
-        <img
-          alt=""
-          class="w-full"
-          height="80"
-          loading="lazy"
-          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
-          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
-          width="80"
-        />
-      </div>
-    </div>
-    <div
-      class="flex flex-col justify-center"
-    >
-      <a
-        class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:opacity-0
-      "
-        href="/collections/hammer-films/"
-      >
-        <div
-          class="leading-normal"
-        >
-          Hammer Films
-        </div>
-      </a>
-      <div
-        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
-      >
-        41
-         Reviewed Titles
-      </div>
-    </div>
-  </li>
-  <li
-    class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-5
-        tablet-landscape:has-[a:hover]:scale-[102.5%]
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
-        
-      "
-  >
-    <div
-      class="
-          relative rounded-full
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-          
-        "
-    >
-      <div
-        class="
-          w-16 safari-border-radius-fix overflow-hidden rounded-full
-          drop-shadow-md
-          tablet:w-20
-        "
-      >
-        <img
-          alt=""
-          class="w-full"
-          height="80"
-          loading="lazy"
-          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
-          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
-          width="80"
-        />
-      </div>
-    </div>
-    <div
-      class="flex flex-col justify-center"
-    >
-      <a
-        class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:opacity-0
-      "
-        href="/collections/hatchet/"
-      >
-        <div
-          class="leading-normal"
-        >
-          Hatchet
-        </div>
-      </a>
-      <div
-        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
-      >
-        4
+        14
          Reviewed Titles
       </div>
     </div>
@@ -989,8 +857,8 @@ exports[`Collections > can sort by name desc 1`] = `
           class="w-full"
           height="80"
           loading="lazy"
-          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
-          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
+          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
+          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
           width="80"
         />
       </div>
@@ -1004,18 +872,150 @@ exports[`Collections > can sort by name desc 1`] = `
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
       "
-        href="/collections/shaw-brothers/"
+        href="/collections/hatchet/"
       >
         <div
           class="leading-normal"
         >
-          Shaw Brothers
+          Hatchet
         </div>
       </a>
       <div
         class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
       >
-        14
+        4
+         Reviewed Titles
+      </div>
+    </div>
+  </li>
+  <li
+    class="
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
+        tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-5
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        laptop:px-6
+        
+      "
+  >
+    <div
+      class="
+          relative rounded-full
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+          
+        "
+    >
+      <div
+        class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full
+          drop-shadow-md
+          tablet:w-20
+        "
+      >
+        <img
+          alt=""
+          class="w-full"
+          height="80"
+          loading="lazy"
+          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
+          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
+          width="80"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col justify-center"
+    >
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/hammer-films/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Hammer Films
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        41
+         Reviewed Titles
+      </div>
+    </div>
+  </li>
+  <li
+    class="
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
+        tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-5
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        laptop:px-6
+        
+      "
+  >
+    <div
+      class="
+          relative rounded-full
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+          
+        "
+    >
+      <div
+        class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full
+          drop-shadow-md
+          tablet:w-20
+        "
+      >
+        <img
+          alt=""
+          class="w-full"
+          height="80"
+          loading="lazy"
+          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
+          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
+          width="80"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col justify-center"
+    >
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/friday-the-13th/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Friday the 13th
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        11
          Reviewed Titles
       </div>
     </div>
@@ -1066,6 +1066,72 @@ exports[`Collections > can sort by review count asc 1`] = `
           class="w-full"
           height="80"
           loading="lazy"
+          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
+          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
+          width="80"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col justify-center"
+    >
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/hatchet/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Hatchet
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        4
+         Reviewed Titles
+      </div>
+    </div>
+  </li>
+  <li
+    class="
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
+        tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-5
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        laptop:px-6
+        
+      "
+  >
+    <div
+      class="
+          relative rounded-full
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+          
+        "
+    >
+      <div
+        class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full
+          drop-shadow-md
+          tablet:w-20
+        "
+      >
+        <img
+          alt=""
+          class="w-full"
+          height="80"
+          loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
           srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
           width="80"
@@ -1132,8 +1198,8 @@ exports[`Collections > can sort by review count asc 1`] = `
           class="w-full"
           height="80"
           loading="lazy"
-          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
-          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
+          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
+          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
           width="80"
         />
       </div>
@@ -1147,84 +1213,18 @@ exports[`Collections > can sort by review count asc 1`] = `
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
       "
-        href="/collections/hammer-films/"
+        href="/collections/shaw-brothers/"
       >
         <div
           class="leading-normal"
         >
-          Hammer Films
+          Shaw Brothers
         </div>
       </a>
       <div
         class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
       >
-        41
-         Reviewed Titles
-      </div>
-    </div>
-  </li>
-  <li
-    class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-5
-        tablet-landscape:has-[a:hover]:scale-[102.5%]
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
-        
-      "
-  >
-    <div
-      class="
-          relative rounded-full
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-          
-        "
-    >
-      <div
-        class="
-          w-16 safari-border-radius-fix overflow-hidden rounded-full
-          drop-shadow-md
-          tablet:w-20
-        "
-      >
-        <img
-          alt=""
-          class="w-full"
-          height="80"
-          loading="lazy"
-          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
-          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
-          width="80"
-        />
-      </div>
-    </div>
-    <div
-      class="flex flex-col justify-center"
-    >
-      <a
-        class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:opacity-0
-      "
-        href="/collections/hatchet/"
-      >
-        <div
-          class="leading-normal"
-        >
-          Hatchet
-        </div>
-      </a>
-      <div
-        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
-      >
-        4
+        14
          Reviewed Titles
       </div>
     </div>
@@ -1330,8 +1330,8 @@ exports[`Collections > can sort by review count asc 1`] = `
           class="w-full"
           height="80"
           loading="lazy"
-          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
-          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
+          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
+          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
           width="80"
         />
       </div>
@@ -1345,18 +1345,18 @@ exports[`Collections > can sort by review count asc 1`] = `
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
       "
-        href="/collections/shaw-brothers/"
+        href="/collections/hammer-films/"
       >
         <div
           class="leading-normal"
         >
-          Shaw Brothers
+          Hammer Films
         </div>
       </a>
       <div
         class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
       >
-        14
+        41
          Reviewed Titles
       </div>
     </div>
@@ -1407,72 +1407,6 @@ exports[`Collections > can sort by review count desc 1`] = `
           class="w-full"
           height="80"
           loading="lazy"
-          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
-          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
-          width="80"
-        />
-      </div>
-    </div>
-    <div
-      class="flex flex-col justify-center"
-    >
-      <a
-        class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:opacity-0
-      "
-        href="/collections/friday-the-13th/"
-      >
-        <div
-          class="leading-normal"
-        >
-          Friday the 13th
-        </div>
-      </a>
-      <div
-        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
-      >
-        11
-         Reviewed Titles
-      </div>
-    </div>
-  </li>
-  <li
-    class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-5
-        tablet-landscape:has-[a:hover]:scale-[102.5%]
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
-        
-      "
-  >
-    <div
-      class="
-          relative rounded-full
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-          
-        "
-    >
-      <div
-        class="
-          w-16 safari-border-radius-fix overflow-hidden rounded-full
-          drop-shadow-md
-          tablet:w-20
-        "
-      >
-        <img
-          alt=""
-          class="w-full"
-          height="80"
-          loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
           srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
           width="80"
@@ -1500,72 +1434,6 @@ exports[`Collections > can sort by review count desc 1`] = `
         class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
       >
         41
-         Reviewed Titles
-      </div>
-    </div>
-  </li>
-  <li
-    class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-5
-        tablet-landscape:has-[a:hover]:scale-[102.5%]
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
-        
-      "
-  >
-    <div
-      class="
-          relative rounded-full
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-          
-        "
-    >
-      <div
-        class="
-          w-16 safari-border-radius-fix overflow-hidden rounded-full
-          drop-shadow-md
-          tablet:w-20
-        "
-      >
-        <img
-          alt=""
-          class="w-full"
-          height="80"
-          loading="lazy"
-          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
-          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
-          width="80"
-        />
-      </div>
-    </div>
-    <div
-      class="flex flex-col justify-center"
-    >
-      <a
-        class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:opacity-0
-      "
-        href="/collections/hatchet/"
-      >
-        <div
-          class="leading-normal"
-        >
-          Hatchet
-        </div>
-      </a>
-      <div
-        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
-      >
-        4
          Reviewed Titles
       </div>
     </div>
@@ -1702,17 +1570,6 @@ exports[`Collections > can sort by review count desc 1`] = `
       </div>
     </div>
   </li>
-</ol>
-`;
-
-exports[`Collections > can sort by title count asc 1`] = `
-<ol
-  class="
-            mt-4 bg-subtle
-            tablet-landscape:my-24
-          "
-  data-testid="list"
->
   <li
     class="
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
@@ -1814,8 +1671,8 @@ exports[`Collections > can sort by title count asc 1`] = `
           class="w-full"
           height="80"
           loading="lazy"
-          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
-          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
+          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
+          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
           width="80"
         />
       </div>
@@ -1829,22 +1686,33 @@ exports[`Collections > can sort by title count asc 1`] = `
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
       "
-        href="/collections/hammer-films/"
+        href="/collections/hatchet/"
       >
         <div
           class="leading-normal"
         >
-          Hammer Films
+          Hatchet
         </div>
       </a>
       <div
         class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
       >
-        41
+        4
          Reviewed Titles
       </div>
     </div>
   </li>
+</ol>
+`;
+
+exports[`Collections > can sort by title count asc 1`] = `
+<ol
+  class="
+            mt-4 bg-subtle
+            tablet-landscape:my-24
+          "
+  data-testid="list"
+>
   <li
     class="
         group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
@@ -1946,6 +1814,72 @@ exports[`Collections > can sort by title count asc 1`] = `
           class="w-full"
           height="80"
           loading="lazy"
+          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
+          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
+          width="80"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col justify-center"
+    >
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/friday-the-13th/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Friday the 13th
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        11
+         Reviewed Titles
+      </div>
+    </div>
+  </li>
+  <li
+    class="
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
+        tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-5
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        laptop:px-6
+        
+      "
+  >
+    <div
+      class="
+          relative rounded-full
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+          
+        "
+    >
+      <div
+        class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full
+          drop-shadow-md
+          tablet:w-20
+        "
+      >
+        <img
+          alt=""
+          class="w-full"
+          height="80"
+          loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
           srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
           width="80"
@@ -1973,6 +1907,72 @@ exports[`Collections > can sort by title count asc 1`] = `
         class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
       >
         24
+         Reviewed Titles
+      </div>
+    </div>
+  </li>
+  <li
+    class="
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
+        tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-5
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        laptop:px-6
+        
+      "
+  >
+    <div
+      class="
+          relative rounded-full
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+          
+        "
+    >
+      <div
+        class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full
+          drop-shadow-md
+          tablet:w-20
+        "
+      >
+        <img
+          alt=""
+          class="w-full"
+          height="80"
+          loading="lazy"
+          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
+          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
+          width="80"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col justify-center"
+    >
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/hammer-films/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Hammer Films
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        41
          Reviewed Titles
       </div>
     </div>
@@ -2089,8 +2089,8 @@ exports[`Collections > can sort by title count desc 1`] = `
           class="w-full"
           height="80"
           loading="lazy"
-          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
-          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
+          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
+          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
           width="80"
         />
       </div>
@@ -2104,18 +2104,18 @@ exports[`Collections > can sort by title count desc 1`] = `
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
       "
-        href="/collections/friday-the-13th/"
+        href="/collections/shaw-brothers/"
       >
         <div
           class="leading-normal"
         >
-          Friday the 13th
+          Shaw Brothers
         </div>
       </a>
       <div
         class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
       >
-        11
+        14
          Reviewed Titles
       </div>
     </div>
@@ -2221,72 +2221,6 @@ exports[`Collections > can sort by title count desc 1`] = `
           class="w-full"
           height="80"
           loading="lazy"
-          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
-          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
-          width="80"
-        />
-      </div>
-    </div>
-    <div
-      class="flex flex-col justify-center"
-    >
-      <a
-        class="
-        leading-normal font-sans text-sm font-medium text-accent
-        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:opacity-0
-      "
-        href="/collections/hatchet/"
-      >
-        <div
-          class="leading-normal"
-        >
-          Hatchet
-        </div>
-      </a>
-      <div
-        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
-      >
-        4
-         Reviewed Titles
-      </div>
-    </div>
-  </li>
-  <li
-    class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-5
-        tablet-landscape:has-[a:hover]:scale-[102.5%]
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
-        
-      "
-  >
-    <div
-      class="
-          relative rounded-full
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-          
-        "
-    >
-      <div
-        class="
-          w-16 safari-border-radius-fix overflow-hidden rounded-full
-          drop-shadow-md
-          tablet:w-20
-        "
-      >
-        <img
-          alt=""
-          class="w-full"
-          height="80"
-          loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
           srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
           width="80"
@@ -2353,8 +2287,8 @@ exports[`Collections > can sort by title count desc 1`] = `
           class="w-full"
           height="80"
           loading="lazy"
-          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
-          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
+          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
+          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
           width="80"
         />
       </div>
@@ -2368,18 +2302,84 @@ exports[`Collections > can sort by title count desc 1`] = `
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
       "
-        href="/collections/shaw-brothers/"
+        href="/collections/friday-the-13th/"
       >
         <div
           class="leading-normal"
         >
-          Shaw Brothers
+          Friday the 13th
         </div>
       </a>
       <div
         class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
       >
-        14
+        11
+         Reviewed Titles
+      </div>
+    </div>
+  </li>
+  <li
+    class="
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-4 bg-default px-container py-4
+        transition-transform
+        tablet:gap-x-6 tablet:px-4
+        tablet-landscape:has-[a:hover]:z-5
+        tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:shadow-all
+        tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        laptop:px-6
+        
+      "
+  >
+    <div
+      class="
+          relative rounded-full
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+          
+        "
+    >
+      <div
+        class="
+          w-16 safari-border-radius-fix overflow-hidden rounded-full
+          drop-shadow-md
+          tablet:w-20
+        "
+      >
+        <img
+          alt=""
+          class="w-full"
+          height="80"
+          loading="lazy"
+          src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
+          srcset="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=160&h=160&q=80&f=avif 2x"
+          width="80"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col justify-center"
+    >
+      <a
+        class="
+        leading-normal font-sans text-sm font-medium text-accent
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+      "
+        href="/collections/hatchet/"
+      >
+        <div
+          class="leading-normal"
+        >
+          Hatchet
+        </div>
+      </a>
+      <div
+        class="mt-1 font-sans text-xxs font-light text-nowrap text-muted"
+      >
+        4
          Reviewed Titles
       </div>
     </div>

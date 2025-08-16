@@ -7,17 +7,22 @@ import type { ActionType } from "./CastAndCrew.reducer";
 
 import { Actions } from "./CastAndCrew.reducer";
 
+type FilterValues = {
+  credits?: string;
+  name?: string;
+};
+
 export function Filters({
   dispatch,
   filterValues = {},
 }: {
   dispatch: React.Dispatch<ActionType>;
-  filterValues?: Record<string, any>;
+  filterValues?: FilterValues;
 }): JSX.Element {
   return (
     <>
       <TextFilter
-        initialValue={filterValues.name || ""}
+        initialValue={filterValues.name ?? ""}
         label="Name"
         onInputChange={(value) =>
           dispatch({ type: Actions.PENDING_FILTER_NAME, value })
@@ -33,7 +38,7 @@ export function Filters({
             value: e.target.value,
           })
         }
-        value={filterValues.credits || "All"}
+        value={filterValues.credits ?? "All"}
       >
         <option value="All">All</option>
         <option value="director">Director</option>

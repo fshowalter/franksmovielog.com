@@ -12,7 +12,7 @@
 import { collator } from "./collator";
 
 // Core types
-export type FilterableState<TItem, TSortValue, TGroupedValues> = {
+type FilterableState<TItem, TSortValue, TGroupedValues> = {
   allValues: TItem[];
   filteredValues: TItem[];
   filters: Record<string, (item: TItem) => boolean>;
@@ -22,7 +22,7 @@ export type FilterableState<TItem, TSortValue, TGroupedValues> = {
 };
 
 // Common state update patterns
-export function applyShowMore<
+function applyShowMore<
   TItem,
   TSortValue,
   TGroupedValues,
@@ -50,7 +50,7 @@ export function applyShowMore<
 }
 
 // Build group values factory
-export function buildGroupValues<TItem, TSortValue>(
+function buildGroupValues<TItem, TSortValue>(
   valueGrouper: (item: TItem, sortValue: TSortValue) => string,
 ) {
   return function groupValues(
@@ -100,7 +100,7 @@ export function createTitleFilter(value: string) {
 }
 
 // Filter tools factory
-export function filterTools<TItem, TSortValue, TGroupedValues>(
+function filterTools<TItem, TSortValue, TGroupedValues>(
   sorter: (items: TItem[], sortOrder: TSortValue) => TItem[],
   grouper: (items: TItem[], sortOrder: TSortValue) => TGroupedValues,
 ) {

@@ -19347,16 +19347,32 @@ exports[`Viewings > renders 1`] = `
                   [@media(min-height:815px)]:drop-shadow-none
                 "
             >
-              <button
-                class="
-                    flex w-full cursor-pointer items-center justify-center
-                    gap-x-4 bg-footer px-4 py-3 font-sans text-xs text-nowrap
-                    text-inverse uppercase
-                  "
-                type="button"
+              <div
+                class="flex gap-x-4"
               >
-                View 30 Results
-              </button>
+                <button
+                  class="
+                      flex items-center justify-center
+                      gap-x-4 px-4 py-3 font-sans text-xs text-nowrap
+                      uppercase
+                      cursor-not-allowed bg-canvas text-muted opacity-50
+                    "
+                  disabled=""
+                  type="button"
+                >
+                  Clear
+                </button>
+                <button
+                  class="
+                      flex flex-1 cursor-pointer items-center justify-center
+                      gap-x-4 bg-footer px-4 py-3 font-sans text-xs text-nowrap
+                      text-inverse uppercase
+                    "
+                  type="button"
+                >
+                  View 30 Results
+                </button>
+              </div>
             </div>
           </div>
         </div>

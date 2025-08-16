@@ -66,20 +66,21 @@ export function CastAndCrewMember({
     initState,
   );
   const [filterKey, setFilterKey] = useState(0);
-  
+
   return (
     <ListWithFilters
       filters={
         <Filters
-          key={filterKey}
           creditedAs={value.creditedAs}
           dispatch={dispatch}
           distinctReleaseYears={distinctReleaseYears}
           distinctReviewYears={distinctReviewYears}
           filterValues={state.pendingFilterValues}
           hideReviewed={state.hideReviewed}
+          key={filterKey}
         />
       }
+      hasActiveFilters={Object.keys(state.pendingFilterValues).length > 0}
       list={
         <GroupedPosterList
           groupedValues={state.groupedValues}
@@ -92,13 +93,14 @@ export function CastAndCrewMember({
           }}
         </GroupedPosterList>
       }
-      hasActiveFilters={Object.keys(state.pendingFilterValues).length > 0}
       onApplyFilters={() => dispatch({ type: Actions.APPLY_PENDING_FILTERS })}
       onClearFilters={() => {
         dispatch({ type: Actions.CLEAR_PENDING_FILTERS });
         setFilterKey((k) => k + 1);
       }}
-      onFilterDrawerOpen={() => dispatch({ type: Actions.RESET_PENDING_FILTERS })}
+      onFilterDrawerOpen={() =>
+        dispatch({ type: Actions.RESET_PENDING_FILTERS })
+      }
       onResetFilters={() => {
         dispatch({ type: Actions.RESET_PENDING_FILTERS });
         setFilterKey((k) => k + 1);

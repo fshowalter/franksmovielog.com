@@ -1,17 +1,3 @@
-/**
- * CastAndCrewMember reducer with pending filters support
- */
-import type { ListItemValue } from "./CastAndCrewMember";
-
-import {
-  createReleaseYearFilter,
-  createReviewYearFilter,
-  createTitleFilter,
-  getGroupLetter,
-  sortNumber,
-  sortString,
-} from "~/utils/reducerUtils";
-
 import {
   applyPendingFilters,
   buildGroupValues,
@@ -23,6 +9,19 @@ import {
   updatePendingFilter,
   updateSort,
 } from "~/utils/pendingFilters";
+import {
+  createReleaseYearFilter,
+  createReviewYearFilter,
+  createTitleFilter,
+  getGroupLetter,
+  sortNumber,
+  sortString,
+} from "~/utils/reducerUtils";
+
+/**
+ * CastAndCrewMember reducer with pending filters support
+ */
+import type { ListItemValue } from "./CastAndCrewMember";
 
 export type Sort =
   | "grade-asc"
@@ -102,12 +101,12 @@ type SortAction = {
   value: Sort;
 };
 
-type ToggleReviewedAction = {
-  type: Actions.TOGGLE_REVIEWED;
-};
-
 type State = PendingFiltersState<ListItemValue, Sort> & {
   hideReviewed: boolean;
+};
+
+type ToggleReviewedAction = {
+  type: Actions.TOGGLE_REVIEWED;
 };
 
 // Helper functions
@@ -169,11 +168,11 @@ export function initState({
   values: ListItemValue[];
 }): State {
   const baseState = createInitialState({
-    values,
-    initialSort,
-    sortFn: sortValues,
     groupFn: groupValues,
+    initialSort,
     showCount: SHOW_COUNT_DEFAULT,
+    sortFn: sortValues,
+    values,
   });
 
   return {
@@ -199,9 +198,10 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_CREDIT_KIND: {
-      const filterFn = action.value && action.value !== "All"
-        ? (value: ListItemValue) => value.creditedAs.includes(action.value)
-        : undefined;
+      const filterFn =
+        action.value && action.value !== "All"
+          ? (value: ListItemValue) => value.creditedAs.includes(action.value)
+          : undefined;
       return {
         ...updatePendingFilter(state, "credits", filterFn, action.value),
         hideReviewed: state.hideReviewed,
@@ -229,7 +229,9 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_TITLE: {
-      const filterFn = action.value ? createTitleFilter(action.value) : undefined;
+      const filterFn = action.value
+        ? createTitleFilter(action.value)
+        : undefined;
       return {
         ...updatePendingFilter(state, "title", filterFn, action.value),
         hideReviewed: state.hideReviewed,

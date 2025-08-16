@@ -1,15 +1,3 @@
-/**
- * Watchlist reducer with pending filters support
- */
-import type { ListItemValue } from "./Watchlist";
-
-import {
-  createReleaseYearFilter,
-  createTitleFilter,
-  getGroupLetter,
-  sortString,
-} from "~/utils/reducerUtils";
-
 import {
   applyPendingFilters,
   buildGroupValues,
@@ -21,6 +9,17 @@ import {
   updatePendingFilter,
   updateSort,
 } from "~/utils/pendingFilters";
+import {
+  createReleaseYearFilter,
+  createTitleFilter,
+  getGroupLetter,
+  sortString,
+} from "~/utils/reducerUtils";
+
+/**
+ * Watchlist reducer with pending filters support
+ */
+import type { ListItemValue } from "./Watchlist";
 
 export type Sort =
   | "release-date-asc"
@@ -152,11 +151,11 @@ export function initState({
   values: ListItemValue[];
 }): State {
   const baseState = createInitialState({
-    values,
-    initialSort,
-    sortFn: sortValues,
     groupFn: groupValues,
+    initialSort,
     showCount: SHOW_COUNT_DEFAULT,
+    sortFn: sortValues,
+    values,
   });
 
   return {
@@ -182,10 +181,11 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_COLLECTION: {
-      const filterFn = action.value && action.value !== "All"
-        ? (value: ListItemValue) =>
-            value.watchlistCollectionNames.includes(action.value)
-        : undefined;
+      const filterFn =
+        action.value && action.value !== "All"
+          ? (value: ListItemValue) =>
+              value.watchlistCollectionNames.includes(action.value)
+          : undefined;
       return {
         ...updatePendingFilter(state, "collection", filterFn, action.value),
         hideReviewed: state.hideReviewed,
@@ -193,10 +193,11 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_DIRECTOR: {
-      const filterFn = action.value && action.value !== "All"
-        ? (value: ListItemValue) =>
-            value.watchlistDirectorNames.includes(action.value)
-        : undefined;
+      const filterFn =
+        action.value && action.value !== "All"
+          ? (value: ListItemValue) =>
+              value.watchlistDirectorNames.includes(action.value)
+          : undefined;
       return {
         ...updatePendingFilter(state, "director", filterFn, action.value),
         hideReviewed: state.hideReviewed,
@@ -204,10 +205,11 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_PERFORMER: {
-      const filterFn = action.value && action.value !== "All"
-        ? (value: ListItemValue) =>
-            value.watchlistPerformerNames.includes(action.value)
-        : undefined;
+      const filterFn =
+        action.value && action.value !== "All"
+          ? (value: ListItemValue) =>
+              value.watchlistPerformerNames.includes(action.value)
+          : undefined;
       return {
         ...updatePendingFilter(state, "performer", filterFn, action.value),
         hideReviewed: state.hideReviewed,
@@ -225,7 +227,9 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_TITLE: {
-      const filterFn = action.value ? createTitleFilter(action.value) : undefined;
+      const filterFn = action.value
+        ? createTitleFilter(action.value)
+        : undefined;
       return {
         ...updatePendingFilter(state, "title", filterFn, action.value),
         hideReviewed: state.hideReviewed,
@@ -233,10 +237,11 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_WRITER: {
-      const filterFn = action.value && action.value !== "All"
-        ? (value: ListItemValue) =>
-            value.watchlistWriterNames.includes(action.value)
-        : undefined;
+      const filterFn =
+        action.value && action.value !== "All"
+          ? (value: ListItemValue) =>
+              value.watchlistWriterNames.includes(action.value)
+          : undefined;
       return {
         ...updatePendingFilter(state, "writer", filterFn, action.value),
         hideReviewed: state.hideReviewed,

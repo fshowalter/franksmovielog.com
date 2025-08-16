@@ -5,6 +5,14 @@ import { YearInput } from "~/components/YearInput";
 
 import { Actions, type ActionType } from "./reducer";
 
+type FilterValues = {
+  genres?: readonly string[];
+  grade?: [number, number];
+  releaseYear?: [string, string];
+  reviewYear?: [string, string];
+  title?: string;
+};
+
 export function Filters({
   dispatch,
   distinctGenres,
@@ -16,12 +24,12 @@ export function Filters({
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
-  filterValues?: Record<string, any>;
+  filterValues?: FilterValues;
 }) {
   return (
     <>
       <TextFilter
-        initialValue={filterValues.title || ""}
+        initialValue={filterValues.title ?? ""}
         label="Title"
         onInputChange={(value) =>
           dispatch({ type: Actions.PENDING_FILTER_TITLE, value })
@@ -29,7 +37,7 @@ export function Filters({
         placeholder="Enter all or part of a title"
       />
       <YearInput
-        initialValues={filterValues.releaseYear || []}
+        initialValues={filterValues.releaseYear ?? []}
         label="Release Year"
         onYearChange={(values) =>
           dispatch({ type: Actions.PENDING_FILTER_RELEASE_YEAR, values })
@@ -37,7 +45,7 @@ export function Filters({
         years={distinctReleaseYears}
       />
       <YearInput
-        initialValues={filterValues.reviewYear || []}
+        initialValues={filterValues.reviewYear ?? []}
         label="Review Year"
         onYearChange={(values) =>
           dispatch({ type: Actions.PENDING_FILTER_REVIEW_YEAR, values })
