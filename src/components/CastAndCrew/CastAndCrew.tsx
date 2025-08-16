@@ -40,7 +40,9 @@ export function CastAndCrew({ initialSort, values }: Props): JSX.Element {
 
   return (
     <ListWithFilters
-      className="[--scroll-offset:52px]"
+      className={
+        state.sortValue.startsWith("name-") ? `[--scroll-offset:52px]` : ""
+      }
       dynamicSubNav={
         <AlphabetSubNav
           groupedValues={state.groupedValues}
