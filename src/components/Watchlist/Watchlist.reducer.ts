@@ -1,15 +1,26 @@
+/**
+ * Watchlist reducer with pending filters support
+ */
+import type { ListItemValue } from "./Watchlist";
+
 import {
-  applyShowMore,
-  buildGroupValues,
   createReleaseYearFilter,
   createTitleFilter,
-  type FilterableState,
-  filterTools,
   getGroupLetter,
   sortString,
 } from "~/utils/reducerUtils";
 
-import type { ListItemValue } from "./Watchlist";
+import {
+  applyPendingFilters,
+  buildGroupValues,
+  clearPendingFilters,
+  createInitialState,
+  type PendingFiltersState,
+  resetPendingFilters,
+  showMore,
+  updatePendingFilter,
+  updateSort,
+} from "~/utils/pendingFilters";
 
 export type Sort =
   | "release-date-asc"
@@ -19,58 +30,73 @@ export type Sort =
 
 const SHOW_COUNT_DEFAULT = 100;
 
-const groupValues = buildGroupValues(groupForValue);
-const { applyFilters, updateFilter } = filterTools(sortValues, groupValues);
-
 export enum Actions {
-  FILTER_COLLECTION = "FILTER_COLLECTION",
-  FILTER_DIRECTOR = "FILTER_DIRECTOR",
-  FILTER_PERFORMER = "FILTER_PERFORMER",
-  FILTER_RELEASE_YEAR = "FILTER_RELEASE_YEAR",
-  FILTER_TITLE = "FILTER_TITLE",
-  FILTER_WRITER = "FILTER_WRITER",
+  APPLY_PENDING_FILTERS = "APPLY_PENDING_FILTERS",
+  CLEAR_PENDING_FILTERS = "CLEAR_PENDING_FILTERS",
+  PENDING_FILTER_COLLECTION = "PENDING_FILTER_COLLECTION",
+  PENDING_FILTER_DIRECTOR = "PENDING_FILTER_DIRECTOR",
+  PENDING_FILTER_PERFORMER = "PENDING_FILTER_PERFORMER",
+  PENDING_FILTER_RELEASE_YEAR = "PENDING_FILTER_RELEASE_YEAR",
+  PENDING_FILTER_TITLE = "PENDING_FILTER_TITLE",
+  PENDING_FILTER_WRITER = "PENDING_FILTER_WRITER",
+  RESET_PENDING_FILTERS = "RESET_PENDING_FILTERS",
   SHOW_MORE = "SHOW_MORE",
   SORT = "SORT",
 }
 
 export type ActionType =
-  | FilterCollectionAction
-  | FilterDirectorAction
-  | FilterPerformerAction
-  | FilterReleaseYearAction
-  | FilterTitleAction
-  | FilterWriterAction
+  | ApplyPendingFiltersAction
+  | ClearPendingFiltersAction
+  | PendingFilterCollectionAction
+  | PendingFilterDirectorAction
+  | PendingFilterPerformerAction
+  | PendingFilterReleaseYearAction
+  | PendingFilterTitleAction
+  | PendingFilterWriterAction
+  | ResetPendingFiltersAction
   | ShowMoreAction
   | SortAction;
 
-type FilterCollectionAction = {
-  type: Actions.FILTER_COLLECTION;
+type ApplyPendingFiltersAction = {
+  type: Actions.APPLY_PENDING_FILTERS;
+};
+
+type ClearPendingFiltersAction = {
+  type: Actions.CLEAR_PENDING_FILTERS;
+};
+
+type PendingFilterCollectionAction = {
+  type: Actions.PENDING_FILTER_COLLECTION;
   value: string;
 };
 
-type FilterDirectorAction = {
-  type: Actions.FILTER_DIRECTOR;
+type PendingFilterDirectorAction = {
+  type: Actions.PENDING_FILTER_DIRECTOR;
   value: string;
 };
 
-type FilterPerformerAction = {
-  type: Actions.FILTER_PERFORMER;
+type PendingFilterPerformerAction = {
+  type: Actions.PENDING_FILTER_PERFORMER;
   value: string;
 };
 
-type FilterReleaseYearAction = {
-  type: Actions.FILTER_RELEASE_YEAR;
+type PendingFilterReleaseYearAction = {
+  type: Actions.PENDING_FILTER_RELEASE_YEAR;
   values: [string, string];
 };
 
-type FilterTitleAction = {
-  type: Actions.FILTER_TITLE;
+type PendingFilterTitleAction = {
+  type: Actions.PENDING_FILTER_TITLE;
   value: string;
 };
 
-type FilterWriterAction = {
-  type: Actions.FILTER_WRITER;
+type PendingFilterWriterAction = {
+  type: Actions.PENDING_FILTER_WRITER;
   value: string;
+};
+
+type ResetPendingFiltersAction = {
+  type: Actions.RESET_PENDING_FILTERS;
 };
 
 type ShowMoreAction = {
@@ -82,123 +108,11 @@ type SortAction = {
   value: Sort;
 };
 
-type State = FilterableState<
-  ListItemValue,
-  Sort,
-  Map<string, ListItemValue[]>
-> & {
+type State = PendingFiltersState<ListItemValue, Sort> & {
   hideReviewed: boolean;
 };
 
-export function initState({
-  initialSort,
-  values,
-}: {
-  initialSort: Sort;
-  values: ListItemValue[];
-}): State {
-  const initialValues = sortValues(values, initialSort);
-
-  return {
-    allValues: initialValues,
-    filteredValues: initialValues,
-    filters: {},
-    groupedValues: groupValues(
-      initialValues.slice(0, SHOW_COUNT_DEFAULT),
-      initialSort,
-    ),
-    hideReviewed: false,
-    showCount: SHOW_COUNT_DEFAULT,
-    sortValue: initialSort,
-  };
-}
-
-export function reducer(state: State, action: ActionType): State {
-  let filteredValues;
-  let groupedValues;
-
-  switch (action.type) {
-    case Actions.FILTER_COLLECTION: {
-      return (
-        clearFilter(action.value, state, "collection") ??
-        updateFilter(state, "collection", (value) => {
-          return value.watchlistCollectionNames.includes(action.value);
-        })
-      );
-    }
-    case Actions.FILTER_DIRECTOR: {
-      return (
-        clearFilter(action.value, state, "director") ??
-        updateFilter(state, "director", (value) => {
-          return value.watchlistDirectorNames.includes(action.value);
-        })
-      );
-    }
-    case Actions.FILTER_PERFORMER: {
-      return (
-        clearFilter(action.value, state, "performer") ??
-        updateFilter(state, "performer", (value) => {
-          return value.watchlistPerformerNames.includes(action.value);
-        })
-      );
-    }
-    case Actions.FILTER_RELEASE_YEAR: {
-      return updateFilter(
-        state,
-        "releaseYear",
-        createReleaseYearFilter(action.values[0], action.values[1]),
-      );
-    }
-    case Actions.FILTER_TITLE: {
-      return updateFilter(state, "title", createTitleFilter(action.value));
-    }
-    case Actions.FILTER_WRITER: {
-      return (
-        clearFilter(action.value, state, "writer") ??
-        updateFilter(state, "writer", (value) => {
-          return value.watchlistWriterNames.includes(action.value);
-        })
-      );
-    }
-    case Actions.SHOW_MORE: {
-      return applyShowMore(state, SHOW_COUNT_DEFAULT, groupValues);
-    }
-    case Actions.SORT: {
-      filteredValues = sortValues(state.filteredValues, action.value);
-      groupedValues = groupValues(
-        filteredValues.slice(0, state.showCount),
-        action.value,
-      );
-      return {
-        ...state,
-        filteredValues,
-        groupedValues,
-        sortValue: action.value,
-      };
-    }
-
-    // no default
-  }
-}
-
-function clearFilter(
-  value: string,
-  currentState: State,
-  key: string,
-): State | undefined {
-  if (value != "All") {
-    return undefined;
-  }
-
-  const filters = {
-    ...currentState.filters,
-  };
-
-  delete filters[key];
-
-  return applyFilters(filters, currentState);
-}
-
+// Helper functions
 function groupForValue(value: ListItemValue, sortValue: Sort): string {
   switch (sortValue) {
     case "release-date-asc":
@@ -213,7 +127,7 @@ function groupForValue(value: ListItemValue, sortValue: Sort): string {
   }
 }
 
-function sortValues(values: ListItemValue[], sortOrder: Sort) {
+function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
   const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
     {
       "release-date-asc": (a, b) =>
@@ -225,5 +139,131 @@ function sortValues(values: ListItemValue[], sortOrder: Sort) {
     };
 
   const comparer = sortMap[sortOrder];
-  return values.sort(comparer);
+  return [...values].sort(comparer);
+}
+
+const groupValues = buildGroupValues(groupForValue);
+
+export function initState({
+  initialSort,
+  values,
+}: {
+  initialSort: Sort;
+  values: ListItemValue[];
+}): State {
+  const baseState = createInitialState({
+    values,
+    initialSort,
+    sortFn: sortValues,
+    groupFn: groupValues,
+    showCount: SHOW_COUNT_DEFAULT,
+  });
+
+  return {
+    ...baseState,
+    hideReviewed: false,
+  };
+}
+
+export function reducer(state: State, action: ActionType): State {
+  switch (action.type) {
+    case Actions.APPLY_PENDING_FILTERS: {
+      return {
+        ...applyPendingFilters(state, sortValues, groupValues),
+        hideReviewed: state.hideReviewed,
+      };
+    }
+
+    case Actions.CLEAR_PENDING_FILTERS: {
+      return {
+        ...clearPendingFilters(state),
+        hideReviewed: state.hideReviewed,
+      };
+    }
+
+    case Actions.PENDING_FILTER_COLLECTION: {
+      const filterFn = action.value && action.value !== "All"
+        ? (value: ListItemValue) =>
+            value.watchlistCollectionNames.includes(action.value)
+        : undefined;
+      return {
+        ...updatePendingFilter(state, "collection", filterFn, action.value),
+        hideReviewed: state.hideReviewed,
+      };
+    }
+
+    case Actions.PENDING_FILTER_DIRECTOR: {
+      const filterFn = action.value && action.value !== "All"
+        ? (value: ListItemValue) =>
+            value.watchlistDirectorNames.includes(action.value)
+        : undefined;
+      return {
+        ...updatePendingFilter(state, "director", filterFn, action.value),
+        hideReviewed: state.hideReviewed,
+      };
+    }
+
+    case Actions.PENDING_FILTER_PERFORMER: {
+      const filterFn = action.value && action.value !== "All"
+        ? (value: ListItemValue) =>
+            value.watchlistPerformerNames.includes(action.value)
+        : undefined;
+      return {
+        ...updatePendingFilter(state, "performer", filterFn, action.value),
+        hideReviewed: state.hideReviewed,
+      };
+    }
+
+    case Actions.PENDING_FILTER_RELEASE_YEAR: {
+      const filterFn = action.values[0]
+        ? createReleaseYearFilter(action.values[0], action.values[1])
+        : undefined;
+      return {
+        ...updatePendingFilter(state, "releaseYear", filterFn, action.values),
+        hideReviewed: state.hideReviewed,
+      };
+    }
+
+    case Actions.PENDING_FILTER_TITLE: {
+      const filterFn = action.value ? createTitleFilter(action.value) : undefined;
+      return {
+        ...updatePendingFilter(state, "title", filterFn, action.value),
+        hideReviewed: state.hideReviewed,
+      };
+    }
+
+    case Actions.PENDING_FILTER_WRITER: {
+      const filterFn = action.value && action.value !== "All"
+        ? (value: ListItemValue) =>
+            value.watchlistWriterNames.includes(action.value)
+        : undefined;
+      return {
+        ...updatePendingFilter(state, "writer", filterFn, action.value),
+        hideReviewed: state.hideReviewed,
+      };
+    }
+
+    case Actions.RESET_PENDING_FILTERS: {
+      return {
+        ...resetPendingFilters(state),
+        hideReviewed: state.hideReviewed,
+      };
+    }
+
+    case Actions.SHOW_MORE: {
+      return {
+        ...showMore(state, SHOW_COUNT_DEFAULT, groupValues),
+        hideReviewed: state.hideReviewed,
+      };
+    }
+
+    case Actions.SORT: {
+      return {
+        ...updateSort(state, action.value, sortValues, groupValues),
+        hideReviewed: state.hideReviewed,
+      };
+    }
+
+    // no default
+  }
 }

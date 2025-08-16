@@ -10,32 +10,37 @@ export function Filters({
   distinctGenres,
   distinctReleaseYears,
   distinctReviewYears,
+  filterValues = {},
 }: {
   dispatch: React.Dispatch<ActionType>;
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
+  filterValues?: Record<string, any>;
 }) {
   return (
     <>
       <TextFilter
+        initialValue={filterValues.title || ""}
         label="Title"
         onInputChange={(value) =>
-          dispatch({ type: Actions.FILTER_TITLE, value })
+          dispatch({ type: Actions.PENDING_FILTER_TITLE, value })
         }
         placeholder="Enter all or part of a title"
       />
       <YearInput
+        initialValues={filterValues.releaseYear || []}
         label="Release Year"
         onYearChange={(values) =>
-          dispatch({ type: Actions.FILTER_RELEASE_YEAR, values })
+          dispatch({ type: Actions.PENDING_FILTER_RELEASE_YEAR, values })
         }
         years={distinctReleaseYears}
       />
       <YearInput
+        initialValues={filterValues.reviewYear || []}
         label="Review Year"
         onYearChange={(values) =>
-          dispatch({ type: Actions.FILTER_REVIEW_YEAR, values })
+          dispatch({ type: Actions.PENDING_FILTER_REVIEW_YEAR, values })
         }
         years={distinctReviewYears}
       />
@@ -43,7 +48,7 @@ export function Filters({
         label="Grade"
         onGradeChange={(values) =>
           dispatch({
-            type: Actions.FILTER_GRADE,
+            type: Actions.PENDING_FILTER_GRADE,
             values,
           })
         }
@@ -52,7 +57,7 @@ export function Filters({
         label="Genres"
         onChange={(values) =>
           dispatch({
-            type: Actions.FILTER_GENRES,
+            type: Actions.PENDING_FILTER_GENRES,
             values,
           })
         }

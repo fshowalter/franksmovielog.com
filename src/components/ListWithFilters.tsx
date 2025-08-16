@@ -6,9 +6,11 @@ type Props<T extends string> = {
   className?: string;
   dynamicSubNav?: React.ReactNode;
   filters: React.ReactNode;
+  hasActiveFilters?: boolean;
   list: React.ReactNode;
   listHeaderButtons?: React.ReactNode;
   onApplyFilters?: () => void;
+  onClearFilters?: () => void;
   onFilterDrawerOpen?: () => void;
   onResetFilters?: () => void;
   pendingFilteredCount?: number;
@@ -53,9 +55,11 @@ export function ListWithFilters<T extends string>({
   className,
   dynamicSubNav,
   filters,
+  hasActiveFilters,
   list,
   listHeaderButtons,
   onApplyFilters,
+  onClearFilters,
   onFilterDrawerOpen,
   onResetFilters,
   pendingFilteredCount,
@@ -283,26 +287,47 @@ export function ListWithFilters<T extends string>({
                   [@media(min-height:815px)]:drop-shadow-none
                 `}
               >
-                <button
-                  className={`
-                    flex w-full cursor-pointer items-center justify-center
-                    gap-x-4 bg-footer px-4 py-3 font-sans text-xs text-nowrap
-                    text-inverse uppercase
-                  `}
-                  onClick={() => {
-                    // Apply pending filters
-                    onApplyFilters?.();
-                    handleCloseDrawer(false); // Don't reset filters when applying
-                    document.querySelector("#list")?.scrollIntoView();
-                  }}
-                  type="button"
-                >
-                  View{" "}
-                  {pendingFilteredCount === undefined
-                    ? totalCount
-                    : pendingFilteredCount}{" "}
-                  Results
-                </button>
+                <div className="flex gap-x-4">
+                  <button
+                    className={`
+                      flex items-center justify-center
+                      gap-x-4 px-4 py-3 font-sans text-xs text-nowrap
+                      uppercase
+                      ${hasActiveFilters 
+                        ? "cursor-pointer bg-subtle text-default" 
+                        : "cursor-not-allowed bg-canvas text-muted opacity-50"}
+                    `}
+                    disabled={!hasActiveFilters}
+                    onClick={() => {
+                      if (hasActiveFilters) {
+                        onClearFilters?.();
+                      }
+                    }}
+                    type="button"
+                  >
+                    Clear
+                  </button>
+                  <button
+                    className={`
+                      flex flex-1 cursor-pointer items-center justify-center
+                      gap-x-4 bg-footer px-4 py-3 font-sans text-xs text-nowrap
+                      text-inverse uppercase
+                    `}
+                    onClick={() => {
+                      // Apply pending filters
+                      onApplyFilters?.();
+                      handleCloseDrawer(false); // Don't reset filters when applying
+                      document.querySelector("#list")?.scrollIntoView();
+                    }}
+                    type="button"
+                  >
+                    View{" "}
+                    {pendingFilteredCount === undefined
+                      ? totalCount
+                      : pendingFilteredCount}{" "}
+                    Results
+                  </button>
+                </div>
               </div>
             </div>
           </div>

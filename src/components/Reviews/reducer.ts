@@ -1,16 +1,27 @@
+/**
+ * Reviews reducer with pending filters support
+ */
 import type { ReviewsListItemValue } from "~/components/Reviews/ReviewsListItem";
 
 import {
-  applyShowMore,
-  buildGroupValues,
   createReleaseYearFilter,
   createTitleFilter,
-  type FilterableState,
-  filterTools,
   getGroupLetter,
   sortNumber,
   sortString,
 } from "~/utils/reducerUtils";
+
+import {
+  applyPendingFilters,
+  buildGroupValues,
+  clearPendingFilters,
+  createInitialState,
+  type PendingFiltersState,
+  resetPendingFilters,
+  showMore,
+  updatePendingFilter,
+  updateSort,
+} from "~/utils/pendingFilters";
 
 const SHOW_COUNT_DEFAULT = 100;
 
@@ -25,48 +36,65 @@ type ReviewsSort =
   | "title-desc";
 
 export const Actions = {
-  FILTER_GENRES: "FILTER_GENRES",
-  FILTER_GRADE: "FILTER_GRADE",
-  FILTER_RELEASE_YEAR: "FILTER_RELEASE_YEAR",
-  FILTER_REVIEW_YEAR: "FILTER_REVIEW_YEAR",
-  FILTER_TITLE: "FILTER_TITLE",
+  APPLY_PENDING_FILTERS: "APPLY_PENDING_FILTERS",
+  CLEAR_PENDING_FILTERS: "CLEAR_PENDING_FILTERS",
+  PENDING_FILTER_GENRES: "PENDING_FILTER_GENRES",
+  PENDING_FILTER_GRADE: "PENDING_FILTER_GRADE",
+  PENDING_FILTER_RELEASE_YEAR: "PENDING_FILTER_RELEASE_YEAR",
+  PENDING_FILTER_REVIEW_YEAR: "PENDING_FILTER_REVIEW_YEAR",
+  PENDING_FILTER_TITLE: "PENDING_FILTER_TITLE",
+  RESET_PENDING_FILTERS: "RESET_PENDING_FILTERS",
   SHOW_MORE: "SHOW_MORE",
   SORT: "SORT",
 } as const;
 
 export type ActionType =
-  | FilterGenresAction
-  | FilterGradeAction
-  | FilterReleaseYearAction
-  | FilterReviewYearAction
-  | FilterTitleAction
+  | ApplyPendingFiltersAction
+  | ClearPendingFiltersAction
+  | PendingFilterGenresAction
+  | PendingFilterGradeAction
+  | PendingFilterReleaseYearAction
+  | PendingFilterReviewYearAction
+  | PendingFilterTitleAction
+  | ResetPendingFiltersAction
   | ShowMoreAction
   | SortAction;
 
-// Define action types
-type FilterGenresAction = {
-  type: typeof Actions.FILTER_GENRES;
+type ApplyPendingFiltersAction = {
+  type: typeof Actions.APPLY_PENDING_FILTERS;
+};
+
+type ClearPendingFiltersAction = {
+  type: typeof Actions.CLEAR_PENDING_FILTERS;
+};
+
+type PendingFilterGenresAction = {
+  type: typeof Actions.PENDING_FILTER_GENRES;
   values: readonly string[];
 };
 
-type FilterGradeAction = {
-  type: typeof Actions.FILTER_GRADE;
+type PendingFilterGradeAction = {
+  type: typeof Actions.PENDING_FILTER_GRADE;
   values: [number, number];
 };
 
-type FilterReleaseYearAction = {
-  type: typeof Actions.FILTER_RELEASE_YEAR;
+type PendingFilterReleaseYearAction = {
+  type: typeof Actions.PENDING_FILTER_RELEASE_YEAR;
   values: [string, string];
 };
 
-type FilterReviewYearAction = {
-  type: typeof Actions.FILTER_REVIEW_YEAR;
+type PendingFilterReviewYearAction = {
+  type: typeof Actions.PENDING_FILTER_REVIEW_YEAR;
   values: [string, string];
 };
 
-type FilterTitleAction = {
-  type: typeof Actions.FILTER_TITLE;
+type PendingFilterTitleAction = {
+  type: typeof Actions.PENDING_FILTER_TITLE;
   value: string;
+};
+
+type ResetPendingFiltersAction = {
+  type: typeof Actions.RESET_PENDING_FILTERS;
 };
 
 type ShowMoreAction = {
@@ -78,12 +106,10 @@ type SortAction = {
   value: ReviewsSort;
 };
 
-// Define state type
-type State = FilterableState<
-  ReviewsListItemValue,
-  ReviewsSort,
-  Map<string, ReviewsListItemValue[]>
->;
+type State = PendingFiltersState<ReviewsListItemValue, ReviewsSort>;
+
+// Re-export sort type for convenience
+export type Sort = ReviewsSort;
 
 // Helper functions
 function getReviewDateGroup(value: ReviewsListItemValue): string {
@@ -139,17 +165,11 @@ function sortValues(
   };
 
   const comparer = sortMap[sortOrder];
-  return values.sort(comparer);
+  return [...values].sort(comparer);
 }
 
 // Create groupValues function using buildGroupValues
 const groupValues = buildGroupValues(groupForValue);
-
-// Create filterTools helpers
-const { updateFilter } = filterTools(sortValues, groupValues);
-
-// Re-export sort type for convenience
-export type Sort = ReviewsSort;
 
 // Create initState function
 export function initState({
@@ -159,72 +179,75 @@ export function initState({
   initialSort: ReviewsSort;
   values: ReviewsListItemValue[];
 }): State {
-  const initialValues = sortValues(values, initialSort);
-
-  return {
-    allValues: initialValues,
-    filteredValues: initialValues,
-    filters: {},
-    groupedValues: groupValues(
-      initialValues.slice(0, SHOW_COUNT_DEFAULT),
-      initialSort,
-    ),
+  return createInitialState({
+    values,
+    initialSort,
+    sortFn: sortValues,
+    groupFn: groupValues,
     showCount: SHOW_COUNT_DEFAULT,
-    sortValue: initialSort,
-  };
+  });
 }
 
 // Create reducer function
 export function reducer(state: State, action: ActionType): State {
-  let filteredValues;
-  let groupedValues;
-
   switch (action.type) {
-    case Actions.FILTER_GENRES: {
-      return updateFilter(state, "genres", (value) => {
-        return action.values.every((genre) => value.genres.includes(genre));
-      });
+    case Actions.APPLY_PENDING_FILTERS: {
+      return applyPendingFilters(state, sortValues, groupValues);
     }
-    case Actions.FILTER_GRADE: {
-      return updateFilter(state, "grade", (value) => {
-        return (
-          value.gradeValue >= action.values[0] &&
-          value.gradeValue <= action.values[1]
-        );
-      });
-    }
-    case Actions.FILTER_RELEASE_YEAR: {
-      return updateFilter(
-        state,
-        "releaseYear",
-        createReleaseYearFilter(action.values[0], action.values[1]),
-      );
-    }
-    case Actions.FILTER_REVIEW_YEAR: {
-      return updateFilter(state, "reviewYear", (value) => {
-        const year = value.reviewSequence.slice(0, 4);
 
-        return year >= action.values[0] && year <= action.values[1];
-      });
+    case Actions.CLEAR_PENDING_FILTERS: {
+      return clearPendingFilters(state);
     }
-    case Actions.FILTER_TITLE: {
-      return updateFilter(state, "title", createTitleFilter(action.value));
+
+    case Actions.PENDING_FILTER_GENRES: {
+      const filterFn = action.values.length > 0
+        ? (value: ReviewsListItemValue) =>
+            action.values.every((genre) => value.genres.includes(genre))
+        : undefined;
+      return updatePendingFilter(state, "genres", filterFn, action.values);
     }
+
+    case Actions.PENDING_FILTER_GRADE: {
+      const filterFn = (value: ReviewsListItemValue) =>
+        value.gradeValue >= action.values[0] &&
+        value.gradeValue <= action.values[1];
+      return updatePendingFilter(state, "grade", filterFn, action.values);
+    }
+
+    case Actions.PENDING_FILTER_RELEASE_YEAR: {
+      const filterFn = action.values[0]
+        ? createReleaseYearFilter(action.values[0], action.values[1])
+        : undefined;
+      return updatePendingFilter(state, "releaseYear", filterFn, action.values);
+    }
+
+    case Actions.PENDING_FILTER_REVIEW_YEAR: {
+      const filterFn = action.values[0]
+        ? (value: ReviewsListItemValue) => {
+            const year = value.reviewSequence.slice(0, 4);
+            return year >= action.values[0] && year <= action.values[1];
+          }
+        : undefined;
+      return updatePendingFilter(state, "reviewYear", filterFn, action.values);
+    }
+
+    case Actions.PENDING_FILTER_TITLE: {
+      const filterFn = action.value ? createTitleFilter(action.value) : undefined;
+      return updatePendingFilter(state, "title", filterFn, action.value);
+    }
+
+    case Actions.RESET_PENDING_FILTERS: {
+      return resetPendingFilters(state);
+    }
+
     case Actions.SHOW_MORE: {
-      return applyShowMore(state, SHOW_COUNT_DEFAULT, groupValues);
+      return showMore(state, SHOW_COUNT_DEFAULT, groupValues);
     }
+
     case Actions.SORT: {
-      filteredValues = sortValues(state.filteredValues, action.value);
-      groupedValues = groupValues(
-        filteredValues.slice(0, state.showCount),
-        action.value,
-      );
-      return {
-        ...state,
-        filteredValues,
-        groupedValues,
-        sortValue: action.value,
-      };
+      return updateSort(state, action.value, sortValues, groupValues);
     }
+
+    // no default
   }
 }
