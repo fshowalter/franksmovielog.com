@@ -320,7 +320,10 @@ export function reducer(state: State, action: ActionType): State {
         ...state.pendingFilters,
         media: action.values,
       };
-      const pendingFilteredValues = filterValues(state.allValues, newPendingFilters);
+      const pendingFilteredValues = filterValues(
+        state.allValues,
+        newPendingFilters,
+      );
       return {
         ...state,
         pendingFilteredCount: pendingFilteredValues.length,
@@ -332,7 +335,10 @@ export function reducer(state: State, action: ActionType): State {
         ...state.pendingFilters,
         releaseYears: action.values,
       };
-      const pendingFilteredValues = filterValues(state.allValues, newPendingFilters);
+      const pendingFilteredValues = filterValues(
+        state.allValues,
+        newPendingFilters,
+      );
       return {
         ...state,
         pendingFilteredCount: pendingFilteredValues.length,
@@ -344,7 +350,10 @@ export function reducer(state: State, action: ActionType): State {
         ...state.pendingFilters,
         title: action.value,
       };
-      const pendingFilteredValues = filterValues(state.allValues, newPendingFilters);
+      const pendingFilteredValues = filterValues(
+        state.allValues,
+        newPendingFilters,
+      );
       return {
         ...state,
         pendingFilteredCount: pendingFilteredValues.length,
@@ -356,7 +365,10 @@ export function reducer(state: State, action: ActionType): State {
         ...state.pendingFilters,
         venues: action.values,
       };
-      const pendingFilteredValues = filterValues(state.allValues, newPendingFilters);
+      const pendingFilteredValues = filterValues(
+        state.allValues,
+        newPendingFilters,
+      );
       return {
         ...state,
         pendingFilteredCount: pendingFilteredValues.length,
@@ -368,7 +380,10 @@ export function reducer(state: State, action: ActionType): State {
         ...state.pendingFilters,
         viewingYears: action.values,
       };
-      const pendingFilteredValues = filterValues(state.allValues, newPendingFilters);
+      const pendingFilteredValues = filterValues(
+        state.allValues,
+        newPendingFilters,
+      );
       return {
         ...state,
         pendingFilteredCount: pendingFilteredValues.length,
@@ -397,7 +412,10 @@ export function reducer(state: State, action: ActionType): State {
     }
     case Actions.RESET_PENDING_FILTERS: {
       // Reset pending filters to current applied filters
-      const pendingFilteredValues = filterValues(state.allValues, state.filters);
+      const pendingFilteredValues = filterValues(
+        state.allValues,
+        state.filters,
+      );
       return {
         ...state,
         pendingFilteredCount: pendingFilteredValues.length,

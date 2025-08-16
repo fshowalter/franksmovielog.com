@@ -138,7 +138,9 @@ describe("ListWithFilters", () => {
       await waitFor(
         () => {
           expect(filterButton.getAttribute("aria-expanded")).toBe("false");
-          expect(document.body.classList.contains("overflow-hidden")).toBe(false);
+          expect(document.body.classList.contains("overflow-hidden")).toBe(
+            false,
+          );
         },
         { timeout: 300 },
       );
@@ -163,7 +165,9 @@ describe("ListWithFilters", () => {
       await waitFor(
         () => {
           expect(filterButton.getAttribute("aria-expanded")).toBe("false");
-          expect(document.body.classList.contains("overflow-hidden")).toBe(false);
+          expect(document.body.classList.contains("overflow-hidden")).toBe(
+            false,
+          );
         },
         { timeout: 300 },
       );
@@ -206,7 +210,9 @@ describe("ListWithFilters", () => {
       await waitFor(
         () => {
           expect(filterButton.getAttribute("aria-expanded")).toBe("false");
-          expect(document.body.classList.contains("overflow-hidden")).toBe(false);
+          expect(document.body.classList.contains("overflow-hidden")).toBe(
+            false,
+          );
         },
         { timeout: 300 },
       );
@@ -235,7 +241,9 @@ describe("ListWithFilters", () => {
       await waitFor(
         () => {
           expect(filterButton.getAttribute("aria-expanded")).toBe("false");
-          expect(document.body.classList.contains("overflow-hidden")).toBe(false);
+          expect(document.body.classList.contains("overflow-hidden")).toBe(
+            false,
+          );
         },
         { timeout: 300 },
       );
