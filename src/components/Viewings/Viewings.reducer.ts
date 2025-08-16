@@ -9,6 +9,14 @@ export enum Actions {
   NEXT_MONTH = "NEXT_MONTH",
   PREV_MONTH = "PREV_MONTH",
   SORT = "SORT",
+  // New actions for pending filters
+  PENDING_FILTER_MEDIUM = "PENDING_FILTER_MEDIUM",
+  PENDING_FILTER_RELEASE_YEAR = "PENDING_FILTER_RELEASE_YEAR",
+  PENDING_FILTER_TITLE = "PENDING_FILTER_TITLE",
+  PENDING_FILTER_VENUE = "PENDING_FILTER_VENUE",
+  PENDING_FILTER_VIEWING_YEAR = "PENDING_FILTER_VIEWING_YEAR",
+  APPLY_PENDING_FILTERS = "APPLY_PENDING_FILTERS",
+  RESET_PENDING_FILTERS = "RESET_PENDING_FILTERS",
 }
 
 export type ActionType =
@@ -19,7 +27,14 @@ export type ActionType =
   | FilterViewingYearAction
   | NextMonthAction
   | PrevMonthAction
-  | SortAction;
+  | SortAction
+  | PendingFilterMediumAction
+  | PendingFilterReleaseYearAction
+  | PendingFilterTitleAction
+  | PendingFilterVenueAction
+  | PendingFilterViewingYearAction
+  | ApplyPendingFiltersAction
+  | ResetPendingFiltersAction;
 
 export type Sort = "viewing-date-asc" | "viewing-date-desc";
 
@@ -61,6 +76,39 @@ type SortAction = {
   value: Sort;
 };
 
+type PendingFilterMediumAction = {
+  type: Actions.PENDING_FILTER_MEDIUM;
+  values: string[];
+};
+
+type PendingFilterReleaseYearAction = {
+  type: Actions.PENDING_FILTER_RELEASE_YEAR;
+  values: string[];
+};
+
+type PendingFilterTitleAction = {
+  type: Actions.PENDING_FILTER_TITLE;
+  value: string;
+};
+
+type PendingFilterVenueAction = {
+  type: Actions.PENDING_FILTER_VENUE;
+  values: string[];
+};
+
+type PendingFilterViewingYearAction = {
+  type: Actions.PENDING_FILTER_VIEWING_YEAR;
+  values: string[];
+};
+
+type ApplyPendingFiltersAction = {
+  type: Actions.APPLY_PENDING_FILTERS;
+};
+
+type ResetPendingFiltersAction = {
+  type: Actions.RESET_PENDING_FILTERS;
+};
+
 type State = {
   allValues: ListItemValue[];
   currentMonth: Date;
@@ -72,6 +120,15 @@ type State = {
     venues: string[];
     viewingYears: string[];
   };
+  // AIDEV-NOTE: Pending filters store the user's selections before applying
+  pendingFilters: {
+    media: string[];
+    releaseYears: string[];
+    title: string;
+    venues: string[];
+    viewingYears: string[];
+  };
+  pendingFilteredCount: number; // Count of results with pending filters
   hasNextMonth: boolean;
   hasPrevMonth: boolean;
   monthViewings: ListItemValue[];
@@ -88,18 +145,21 @@ export function initState({
   const sortedValues = sortValues(values, initialSort);
   const currentMonth = getInitialMonth(sortedValues, initialSort);
   const monthViewings = getMonthViewings(sortedValues, currentMonth);
+  const initialFilters = {
+    media: [],
+    releaseYears: [],
+    title: "",
+    venues: [],
+    viewingYears: [],
+  };
 
   return {
     allValues: values, // Keep original unsorted values
     currentMonth,
     filteredValues: sortedValues,
-    filters: {
-      media: [],
-      releaseYears: [],
-      title: "",
-      venues: [],
-      viewingYears: [],
-    },
+    filters: initialFilters,
+    pendingFilters: { ...initialFilters },
+    pendingFilteredCount: sortedValues.length,
     hasNextMonth:
       getNextMonthWithViewings(currentMonth, sortedValues) !== undefined,
     hasPrevMonth:
@@ -279,6 +339,93 @@ export function reducer(state: State, action: ActionType): State {
         hasPrevMonth: newMonth > oldestMonth,
         monthViewings: getMonthViewings(filteredValues, newMonth),
         sortValue: action.value,
+      };
+    }
+    // AIDEV-NOTE: Pending filter actions only update pendingFilters and count
+    case Actions.PENDING_FILTER_MEDIUM: {
+      const newPendingFilters = {
+        ...state.pendingFilters,
+        media: action.values,
+      };
+      const pendingFilteredValues = filterValues(state.allValues, newPendingFilters);
+      return {
+        ...state,
+        pendingFilters: newPendingFilters,
+        pendingFilteredCount: pendingFilteredValues.length,
+      };
+    }
+    case Actions.PENDING_FILTER_RELEASE_YEAR: {
+      const newPendingFilters = {
+        ...state.pendingFilters,
+        releaseYears: action.values,
+      };
+      const pendingFilteredValues = filterValues(state.allValues, newPendingFilters);
+      return {
+        ...state,
+        pendingFilters: newPendingFilters,
+        pendingFilteredCount: pendingFilteredValues.length,
+      };
+    }
+    case Actions.PENDING_FILTER_TITLE: {
+      const newPendingFilters = {
+        ...state.pendingFilters,
+        title: action.value,
+      };
+      const pendingFilteredValues = filterValues(state.allValues, newPendingFilters);
+      return {
+        ...state,
+        pendingFilters: newPendingFilters,
+        pendingFilteredCount: pendingFilteredValues.length,
+      };
+    }
+    case Actions.PENDING_FILTER_VENUE: {
+      const newPendingFilters = {
+        ...state.pendingFilters,
+        venues: action.values,
+      };
+      const pendingFilteredValues = filterValues(state.allValues, newPendingFilters);
+      return {
+        ...state,
+        pendingFilters: newPendingFilters,
+        pendingFilteredCount: pendingFilteredValues.length,
+      };
+    }
+    case Actions.PENDING_FILTER_VIEWING_YEAR: {
+      const newPendingFilters = {
+        ...state.pendingFilters,
+        viewingYears: action.values,
+      };
+      const pendingFilteredValues = filterValues(state.allValues, newPendingFilters);
+      return {
+        ...state,
+        pendingFilters: newPendingFilters,
+        pendingFilteredCount: pendingFilteredValues.length,
+      };
+    }
+    case Actions.APPLY_PENDING_FILTERS: {
+      // Apply pending filters to actual filters
+      filteredValues = filterValues(state.allValues, state.pendingFilters);
+      filteredValues = sortValues(filteredValues, state.sortValue);
+      newMonth = getInitialMonth(filteredValues, state.sortValue);
+      return {
+        ...state,
+        currentMonth: newMonth,
+        filteredValues,
+        filters: { ...state.pendingFilters },
+        hasNextMonth:
+          getNextMonthWithViewings(newMonth, filteredValues) !== undefined,
+        hasPrevMonth:
+          getPrevMonthWithViewings(newMonth, filteredValues) !== undefined,
+        monthViewings: getMonthViewings(filteredValues, newMonth),
+      };
+    }
+    case Actions.RESET_PENDING_FILTERS: {
+      // Reset pending filters to current applied filters
+      const pendingFilteredValues = filterValues(state.allValues, state.filters);
+      return {
+        ...state,
+        pendingFilters: { ...state.filters },
+        pendingFilteredCount: pendingFilteredValues.length,
       };
     }
     default: {

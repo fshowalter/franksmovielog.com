@@ -8,6 +8,10 @@ type Props<T extends string> = {
   filters: React.ReactNode;
   list: React.ReactNode;
   listHeaderButtons?: React.ReactNode;
+  onApplyFilters?: () => void;
+  onFilterDrawerOpen?: () => void;
+  onResetFilters?: () => void;
+  pendingFilteredCount?: number;
   sortProps: SortProps<T>;
   totalCount: number;
 };
@@ -51,23 +55,51 @@ export function ListWithFilters<T extends string>({
   filters,
   list,
   listHeaderButtons,
+  onApplyFilters,
+  onFilterDrawerOpen,
+  onResetFilters,
+  pendingFilteredCount,
   sortProps,
   totalCount,
 }: Props<T>): JSX.Element {
   const [filterDrawerVisible, setFilterDrawerVisible] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+  const [isOpening, setIsOpening] = useState(false);
   const filtersRef = useRef<HTMLDivElement | null>(null);
   const toggleButtonRef = useRef<HTMLButtonElement | null>(null);
+
+  const handleCloseDrawer = useCallback(
+    (shouldResetFilters = true) => {
+      setIsClosing(true);
+      // Start the spin animation, then close after a short delay
+      setTimeout(() => {
+        document.body.classList.remove("overflow-hidden");
+        setFilterDrawerVisible(false);
+        setIsClosing(false);
+        if (shouldResetFilters) {
+          onResetFilters?.();
+        }
+      }, 250); // Delay to see the spin animation
+    },
+    [onResetFilters],
+  );
 
   const onFilterClick = useCallback(
     (event: React.MouseEvent) => {
       event.preventDefault();
 
       if (filterDrawerVisible) {
-        document.body.classList.remove("overflow-hidden");
-        setFilterDrawerVisible(false);
+        handleCloseDrawer();
       } else {
+        setIsOpening(true);
         document.body.classList.add("overflow-hidden");
         setFilterDrawerVisible(true);
+        // Call onFilterDrawerOpen when opening
+        onFilterDrawerOpen?.();
+        // Clear the opening state after animation completes
+        setTimeout(() => {
+          setIsOpening(false);
+        }, 400); // Match the wind-up animation duration
         // Focus first focusable element after drawer opens
         requestAnimationFrame(() => {
           const firstFocusable = filtersRef.current?.querySelector<HTMLElement>(
@@ -77,22 +109,21 @@ export function ListWithFilters<T extends string>({
         });
       }
     },
-    [filterDrawerVisible],
+    [filterDrawerVisible, handleCloseDrawer, onFilterDrawerOpen],
   );
 
   // Handle escape key
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape" && filterDrawerVisible) {
-        setFilterDrawerVisible(false);
-        document.body.classList.remove("overflow-hidden");
+      if (e.key === "Escape" && filterDrawerVisible && !isClosing) {
+        handleCloseDrawer();
         toggleButtonRef.current?.focus();
       }
     };
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [filterDrawerVisible]);
+  }, [filterDrawerVisible, handleCloseDrawer, isClosing]);
 
   return (
     <div
@@ -151,8 +182,9 @@ export function ListWithFilters<T extends string>({
               }
             `}
             onClick={() => {
-              document.body.classList.remove("overflow-hidden");
-              setFilterDrawerVisible(false);
+              if (!isClosing) {
+                handleCloseDrawer();
+              }
             }}
           />
 
@@ -182,10 +214,46 @@ export function ListWithFilters<T extends string>({
                 [@media(min-height:815px)]:pt-12
               `}
             >
+              {/* Close button */}
+              <button
+                aria-label="Close filters"
+                className={`
+                  absolute top-7 right-4 z-10 flex h-10 w-10 transform-gpu
+                  cursor-pointer items-center justify-center rounded-full
+                  bg-subtle text-default transition-transform
+                  hover:scale-105
+                  ${isClosing ? "pointer-events-none" : ""}
+                `}
+                onClick={() => {
+                  if (!isClosing) {
+                    handleCloseDrawer();
+                    toggleButtonRef.current?.focus();
+                  }
+                }}
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  className={`
+                    h-4 w-4
+                    ${isClosing ? "animate-spin-recoil" : ""}
+                    ${isOpening ? "animate-spin-wind-up" : ""}
+                  `}
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 28 28"
+                >
+                  <path
+                    d="M7 21L21 7M7 7l14 14"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
               <fieldset
                 className={`
                   mt-0 flex grow flex-col gap-5 px-container py-10
-                  [--control-scroll-offset:calc(181px_+_var(--scroll-offset,0px))]
                   tablet:gap-8
                   tablet-landscape:grow-0 tablet-landscape:gap-12
                   tablet-landscape:px-12
@@ -222,13 +290,18 @@ export function ListWithFilters<T extends string>({
                     text-inverse uppercase
                   `}
                   onClick={() => {
-                    setFilterDrawerVisible(false);
-                    document.body.classList.remove("overflow-hidden");
+                    // Apply pending filters
+                    onApplyFilters?.();
+                    handleCloseDrawer(false); // Don't reset filters when applying
                     document.querySelector("#list")?.scrollIntoView();
                   }}
                   type="button"
                 >
-                  View {totalCount} Results
+                  View{" "}
+                  {pendingFilteredCount === undefined
+                    ? totalCount
+                    : pendingFilteredCount}{" "}
+                  Results
                 </button>
               </div>
             </div>
