@@ -585,7 +585,7 @@
             </ul>
           </nav>
           <astro-island
-            uid="Z1MIF9W"
+            uid="Z2e2IsG"
             prefix="r1"
             component-url="~/components/Reviews/Underrated"
             component-export="Underrated"
@@ -1858,8 +1858,28 @@
                     <div
                       class="flex h-full w-full flex-col text-sm tablet:text-base [@media(min-height:815px)]:pt-12"
                     >
+                      <button
+                        aria-label="Close filters"
+                        class="absolute top-7 right-4 z-10 flex h-10 w-10 transform-gpu cursor-pointer items-center justify-center rounded-full bg-subtle text-default transition-transform hover:scale-105"
+                        type="button"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="h-4 w-4 transform-gpu"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          viewBox="0 0 28 28"
+                        >
+                          <path
+                            d="M7 21L21 7M7 7l14 14"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </button>
                       <fieldset
-                        class="mt-0 flex grow flex-col gap-5 px-container py-10 [--control-scroll-offset:calc(181px_+_var(--scroll-offset,0px))] tablet:gap-8 tablet-landscape:grow-0 tablet-landscape:gap-12 tablet-landscape:px-12"
+                        class="mt-0 flex grow flex-col gap-5 px-container py-10 tablet:gap-8 tablet-landscape:grow-0 tablet-landscape:gap-12 tablet-landscape:px-12"
                       >
                         <legend
                           class="block w-full pt-10 pb-8 font-sans text-lg text-xxs font-semibold tracking-wide text-subtle uppercase shadow-bottom"
@@ -1874,6 +1894,7 @@
                             class="border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
                             placeholder="Enter all or part of a title"
                             type="text"
+                            value=""
                         /></label>
                         <fieldset class="text-subtle">
                           <legend
@@ -2066,9 +2087,9 @@
                           class="flex w-full cursor-pointer items-center justify-center gap-x-4 bg-footer px-4 py-3 font-sans text-xs text-nowrap text-inverse uppercase"
                           type="button"
                         >
-                          View
+                          View<!-- -->
                           <!-- -->15<!-- -->
-                          Results
+                          <!-- -->Results
                         </button>
                       </div>
                     </div>

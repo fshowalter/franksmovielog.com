@@ -1,4 +1,4 @@
-import { act, render, screen } from "@testing-library/react";
+import { act, render, screen, waitFor } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { afterEach, describe, it, vi } from "vitest";
 
@@ -134,8 +134,14 @@ describe("ListWithFilters", () => {
 
       // Close drawer
       await userEvent.click(filterButton);
-      expect(filterButton.getAttribute("aria-expanded")).toBe("false");
-      expect(document.body.classList.contains("overflow-hidden")).toBe(false);
+      // Wait for animation to complete
+      await waitFor(
+        () => {
+          expect(filterButton.getAttribute("aria-expanded")).toBe("false");
+          expect(document.body.classList.contains("overflow-hidden")).toBe(false);
+        },
+        { timeout: 300 },
+      );
     });
 
     it("closes filter drawer with escape key", async ({ expect }) => {
@@ -153,8 +159,14 @@ describe("ListWithFilters", () => {
 
       // Press escape
       await userEvent.keyboard("{Escape}");
-      expect(filterButton.getAttribute("aria-expanded")).toBe("false");
-      expect(document.body.classList.contains("overflow-hidden")).toBe(false);
+      // Wait for animation to complete
+      await waitFor(
+        () => {
+          expect(filterButton.getAttribute("aria-expanded")).toBe("false");
+          expect(document.body.classList.contains("overflow-hidden")).toBe(false);
+        },
+        { timeout: 300 },
+      );
     });
 
     it("closes filter drawer when clicking outside (on backdrop)", async ({
@@ -190,9 +202,14 @@ describe("ListWithFilters", () => {
         });
       }
 
-      // Drawer should be closed
-      expect(filterButton.getAttribute("aria-expanded")).toBe("false");
-      expect(document.body.classList.contains("overflow-hidden")).toBe(false);
+      // Drawer should be closed - wait for animation
+      await waitFor(
+        () => {
+          expect(filterButton.getAttribute("aria-expanded")).toBe("false");
+          expect(document.body.classList.contains("overflow-hidden")).toBe(false);
+        },
+        { timeout: 300 },
+      );
     });
 
     it("closes filter drawer with View Results button", async ({ expect }) => {
@@ -214,8 +231,14 @@ describe("ListWithFilters", () => {
       });
       await userEvent.click(viewResultsButton);
 
-      expect(filterButton.getAttribute("aria-expanded")).toBe("false");
-      expect(document.body.classList.contains("overflow-hidden")).toBe(false);
+      // Wait for animation to complete
+      await waitFor(
+        () => {
+          expect(filterButton.getAttribute("aria-expanded")).toBe("false");
+          expect(document.body.classList.contains("overflow-hidden")).toBe(false);
+        },
+        { timeout: 300 },
+      );
     });
   });
 });

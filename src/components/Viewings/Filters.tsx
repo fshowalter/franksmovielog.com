@@ -33,8 +33,8 @@ export function Filters({
   return (
     <>
       <TextFilter
-        key={`title-${filterKey}`}
         initialValue={pendingFilters.title}
+        key={`title-${filterKey}`}
         label="Title"
         onInputChange={(value) =>
           dispatch({ type: Actions.PENDING_FILTER_TITLE, value })
@@ -42,8 +42,8 @@ export function Filters({
         placeholder="Enter all or part of a title"
       />
       <YearInput
-        key={`release-year-${filterKey}`}
         initialValues={pendingFilters.releaseYears}
+        key={`release-year-${filterKey}`}
         label="Release Year"
         onYearChange={(values) =>
           dispatch({ type: Actions.PENDING_FILTER_RELEASE_YEAR, values })
@@ -51,8 +51,8 @@ export function Filters({
         years={distinctReleaseYears}
       />
       <YearInput
-        key={`viewing-year-${filterKey}`}
         initialValues={pendingFilters.viewingYears}
+        key={`viewing-year-${filterKey}`}
         label="Viewing Year"
         onYearChange={(values) =>
           dispatch({ type: Actions.PENDING_FILTER_VIEWING_YEAR, values })

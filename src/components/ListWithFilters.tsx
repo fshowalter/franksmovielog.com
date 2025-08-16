@@ -235,7 +235,7 @@ export function ListWithFilters<T extends string>({
                 <svg
                   aria-hidden="true"
                   className={`
-                    h-4 w-4
+                    h-4 w-4 transform-gpu
                     ${isClosing ? "animate-spin-recoil" : ""}
                     ${isOpening ? "animate-spin-wind-up" : ""}
                   `}
