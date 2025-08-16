@@ -473,16 +473,14 @@ function filterValues(
 
     if (
       filters.media.length > 0 &&
-      value.medium &&
-      !filters.media.includes(value.medium)
+      (!value.medium || !filters.media.includes(value.medium))
     ) {
       return false;
     }
 
     if (
       filters.venues.length > 0 &&
-      value.venue &&
-      !filters.venues.includes(value.venue)
+      (!value.venue || !filters.venues.includes(value.venue))
     ) {
       return false;
     }
