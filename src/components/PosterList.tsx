@@ -72,10 +72,10 @@ export function PosterList({
         className={`
           [--poster-list-item-width:50%]
           tablet:flex tablet:flex-wrap
-          @min-[calc((298px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%]
-          @min-[calc((298px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
-          @min-[calc((298px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%]
-          @min-[calc((298px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]
+          @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%]
+          @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
+          @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%]
+          @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]
           ${className}
         `}
       >

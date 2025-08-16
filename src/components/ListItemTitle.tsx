@@ -8,12 +8,7 @@ export function ListItemTitle({
   year: string;
 }) {
   const yearBox = (
-    <span
-      className={`
-        text-xxs leading-none font-light text-subtle
-        tablet:text-xs
-      `}
-    >
+    <span className={`text-xxs leading-none font-light text-subtle`}>
       {year}
     </span>
   );
