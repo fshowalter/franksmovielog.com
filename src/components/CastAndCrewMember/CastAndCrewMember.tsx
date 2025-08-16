@@ -78,7 +78,6 @@ export function CastAndCrewMember({
       }
       list={
         <GroupedPosterList
-          data-testid="list"
           groupedValues={state.groupedValues}
           onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
           totalCount={state.filteredValues.length}

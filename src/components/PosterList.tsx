@@ -29,7 +29,7 @@ export function GroupedPosterList<T>({
 }): JSX.Element {
   return (
     <>
-      <ol {...rest}>
+      <ol data-testid="grouped-poster-list" {...rest}>
         {[...groupedValues].map((groupedValue) => {
           const [group, groupValues] = groupedValue;
           return (

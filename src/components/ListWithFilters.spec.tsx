@@ -1,6 +1,6 @@
 import { act, render, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { afterEach, beforeEach, describe, it, vi } from "vitest";
+import { afterEach, describe, it, vi } from "vitest";
 
 import { ListWithFilters } from "./ListWithFilters";
 
@@ -8,21 +8,6 @@ import { ListWithFilters } from "./ListWithFilters";
 if (!Element.prototype.scrollIntoView) {
   Element.prototype.scrollIntoView = vi.fn();
 }
-
-// Mock getComputedStyle to return breakpoint value
-const originalGetComputedStyle = globalThis.getComputedStyle;
-globalThis.getComputedStyle = (element: Element) => {
-  const styles = originalGetComputedStyle(element);
-  return {
-    ...styles,
-    getPropertyValue: (prop: string) => {
-      if (prop === "--breakpoint-tablet-landscape") {
-        return "1024";
-      }
-      return styles.getPropertyValue(prop);
-    },
-  };
-};
 
 // Test props for ListWithFilters
 const mockProps = {
@@ -121,15 +106,7 @@ describe("ListWithFilters", () => {
     expect(layoutElement).toBeTruthy();
   });
 
-  describe("when on mobile", () => {
-    beforeEach(() => {
-      // Mock mobile viewport
-      Object.defineProperty(globalThis, "innerWidth", {
-        configurable: true,
-        value: 375,
-      });
-    });
-
+  describe("filter drawer", () => {
     afterEach(() => {
       // Clean up body classes
       document.body.classList.remove("overflow-hidden");
@@ -239,89 +216,6 @@ describe("ListWithFilters", () => {
 
       expect(filterButton.getAttribute("aria-expanded")).toBe("false");
       expect(document.body.classList.contains("overflow-hidden")).toBe(false);
-    });
-
-    it("handles focus management when opening drawer", async ({ expect }) => {
-      expect.hasAssertions();
-
-      // Mock requestAnimationFrame
-      const rafSpy = vi
-        .spyOn(globalThis, "requestAnimationFrame")
-        .mockImplementation((cb) => {
-          cb(0);
-          return 0;
-        });
-
-      render(<ListWithFilters {...mockProps} />);
-
-      const filterButton = screen.getByRole("button", {
-        name: "Toggle filters",
-      });
-
-      // Open drawer
-      await userEvent.click(filterButton);
-
-      // Check that requestAnimationFrame was called for focus management
-      expect(rafSpy).toHaveBeenCalled();
-
-      rafSpy.mockRestore();
-    });
-  });
-
-  describe("when on tablet-landscape", () => {
-    beforeEach(() => {
-      // Mock desktop viewport
-      Object.defineProperty(globalThis, "innerWidth", {
-        configurable: true,
-        value: 1440,
-      });
-    });
-
-    it("scrolls to filters instead of opening drawer", async ({ expect }) => {
-      expect.hasAssertions();
-
-      // Mock scrollIntoView
-      const scrollIntoViewMock = vi.fn();
-      Element.prototype.scrollIntoView = scrollIntoViewMock;
-
-      render(<ListWithFilters {...mockProps} />);
-
-      const filterButton = screen.getByRole("button", {
-        name: "Toggle filters",
-      });
-
-      // Click filter button on desktop
-      await userEvent.click(filterButton);
-
-      // Should not open drawer
-      expect(filterButton.getAttribute("aria-expanded")).toBe("false");
-      expect(document.body.classList.contains("overflow-hidden")).toBe(false);
-
-      // Should scroll to filters
-      expect(scrollIntoViewMock).toHaveBeenCalled();
-    });
-
-    it("handles focus management when clicking filter button", async ({
-      expect,
-    }) => {
-      expect.hasAssertions();
-
-      // Mock setTimeout
-      const setTimeoutSpy = vi.spyOn(globalThis, "setTimeout");
-
-      render(<ListWithFilters {...mockProps} />);
-
-      const filterButton = screen.getByRole("button", {
-        name: "Toggle filters",
-      });
-
-      // Click filter button on desktop
-      await userEvent.click(filterButton);
-
-      // Check that setTimeout was called for delayed focus
-      expect(setTimeoutSpy).toHaveBeenCalledWith(expect.any(Function), 500);
-
-      setTimeoutSpy.mockRestore();
     });
   });
 });

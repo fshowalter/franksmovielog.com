@@ -21,12 +21,12 @@ describe("Overrated", () => {
     await userEvent.type(screen.getByLabelText("Title"), "Bad Seed");
     await waitFor(
       () => {
-        expect(screen.getByTestId("list")).toBeInTheDocument();
+        expect(screen.getByTestId("grouped-poster-list")).toBeInTheDocument();
       },
       { timeout: 600 },
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can show more titles", async ({ expect }) => {
@@ -56,7 +56,7 @@ describe("Overrated", () => {
     };
     render(<Overrated {...propsWithManyValues} />);
     await userEvent.click(screen.getByText("Show More"));
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by title (A → Z)", async ({ expect }) => {
@@ -69,7 +69,7 @@ describe("Overrated", () => {
       "Title (A → Z)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by title (Z → A)", async ({ expect }) => {
@@ -82,7 +82,7 @@ describe("Overrated", () => {
       "Title (Z → A)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by release date with oldest first", async ({ expect }) => {
@@ -95,7 +95,7 @@ describe("Overrated", () => {
       "Release Date (Oldest First)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by release date with newest first", async ({ expect }) => {
@@ -108,7 +108,7 @@ describe("Overrated", () => {
       "Release Date (Newest First)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by grade with best first", async ({ expect }) => {
@@ -121,7 +121,7 @@ describe("Overrated", () => {
       "Grade (Best First)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can sort by grade with worst first", async ({ expect }) => {
@@ -134,7 +134,7 @@ describe("Overrated", () => {
       "Grade (Worst First)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can filter by release year", async ({ expect }) => {
@@ -148,7 +148,7 @@ describe("Overrated", () => {
     await userEvent.selectOptions(fromInput, "1982");
     await userEvent.selectOptions(toInput, "2021");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can filter by release year reversed", async ({ expect }) => {
@@ -165,7 +165,7 @@ describe("Overrated", () => {
     await userEvent.selectOptions(fromInput, "2021");
     await userEvent.selectOptions(toInput, "1982");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
   it("can filter by genres", async ({ expect }) => {
@@ -203,6 +203,6 @@ describe("Overrated", () => {
     // Click outside to close the dropdown
     await userEvent.click(document.body);
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 });
