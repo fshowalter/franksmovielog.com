@@ -9,6 +9,7 @@ import { allUnderratedSurprises } from "~/api/underratedSurprises";
 import { allUnderseenGems } from "~/api/underseenGems";
 import { BackdropImageConfig } from "~/components/Backdrop";
 import { PosterListItemImageConfig } from "~/components/PosterList";
+import { displayDate } from "~/utils/displayDate";
 
 import type { Props } from "./AllReviews";
 import type { Props as OverratedProps } from "./Overrated";
@@ -161,16 +162,7 @@ async function buildReviewListItemValues(
         ),
         releaseSequence: review.releaseSequence,
         releaseYear: review.releaseYear,
-        reviewDisplayDate: `${date.toLocaleDateString("en-US", {
-          timeZone: "UTC",
-          year: "numeric",
-        })}-${date.toLocaleDateString("en-US", {
-          month: "short",
-          timeZone: "UTC",
-        })}-${date.toLocaleDateString("en-US", {
-          day: "2-digit",
-          timeZone: "UTC",
-        })}`,
+        reviewDisplayDate: displayDate(review.reviewDate),
         ...(includeReviewMonth && {
           reviewMonth: date.toLocaleDateString("en-US", {
             month: "long",

@@ -254,29 +254,25 @@ function CalendarHeader({
     year: "numeric",
   });
 
-  const prevMonthName = hasPrevMonth
-    ? new Date(
-        currentMonth.getFullYear(),
-        currentMonth.getMonth() - 1,
-        1,
-      ).toLocaleString("en-US", {
-        month: "short",
-        timeZone: "UTC",
-        year: "numeric",
-      })
-    : "";
+  const prevMonthName = new Date(
+    currentMonth.getFullYear(),
+    currentMonth.getMonth() - 1,
+    1,
+  ).toLocaleString("en-US", {
+    month: "short",
+    timeZone: "UTC",
+    year: "numeric",
+  });
 
-  const nextMonthName = hasNextMonth
-    ? new Date(
-        currentMonth.getFullYear(),
-        currentMonth.getMonth() + 1,
-        1,
-      ).toLocaleString("en-US", {
-        month: "short",
-        timeZone: "UTC",
-        year: "numeric",
-      })
-    : "";
+  const nextMonthName = new Date(
+    currentMonth.getFullYear(),
+    currentMonth.getMonth() + 1,
+    1,
+  ).toLocaleString("en-US", {
+    month: "short",
+    timeZone: "UTC",
+    year: "numeric",
+  });
 
   return (
     <div
@@ -290,6 +286,7 @@ function CalendarHeader({
       <div className="w-1/3">
         {hasPrevMonth && (
           <button
+            aria-disabled={false}
             aria-label={`Navigate to previous month: ${prevMonthName}`}
             className={`
               transform-gpu cursor-pointer font-sans text-xs text-accent
@@ -315,6 +312,7 @@ function CalendarHeader({
       <div className="w-1/3 text-right">
         {hasNextMonth && (
           <button
+            aria-disabled={false}
             aria-label={`Navigate to next month: ${nextMonthName}`}
             className={`
               transform-gpu cursor-pointer font-sans text-xs text-accent

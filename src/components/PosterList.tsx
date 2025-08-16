@@ -69,6 +69,12 @@ export function PosterList({
 }) {
   return (
     <div className="@container/poster-list">
+      {/* AIDEV-NOTE: The 250px values below cannot be extracted to a constant/variable
+          because Tailwind's utility class system requires literal values at build time.
+          Tailwind scans the codebase for class names and generates CSS only for the 
+          classes it finds. Using dynamic values or variables would break this process
+          and the styles wouldn't be generated. The repeated 250px represents the 
+          minimum poster width for responsive breakpoints. */}
       <ol
         className={`
           [--poster-list-item-width:50%]
