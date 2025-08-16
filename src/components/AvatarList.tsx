@@ -60,10 +60,10 @@ function ListItemAvatar({
   const avatar = (
     <Avatar
       className="w-full"
-      height={ListItemAvatarImageConfig.height}
+      height={AvatarListItemImageConfig.height}
       imageProps={imageProps}
       loading="lazy"
-      width={ListItemAvatarImageConfig.width}
+      width={AvatarListItemImageConfig.width}
     />
   );
 

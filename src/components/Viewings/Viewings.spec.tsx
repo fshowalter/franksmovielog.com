@@ -2,8 +2,6 @@ import { act, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { describe, it } from "vitest";
 
-import type { ListItemValue } from "./Viewings";
-
 import { getProps } from "./getProps";
 import { Viewings } from "./Viewings";
 
@@ -165,22 +163,22 @@ describe("Viewings", () => {
 
   it("can navigate between months", async ({ expect }) => {
     expect.hasAssertions();
-    
+
     // Just test with the normal props which should have multiple months of data
     render(<Viewings {...props} />);
-    
+
     // Get the calendar element
     const calendar = screen.getByTestId("calendar");
-    
+
     // Take a snapshot of the initial state
     expect(calendar).toMatchSnapshot();
-    
+
     // Check if we can sort to oldest first - this should change the initial month
     await userEvent.selectOptions(
       screen.getByLabelText("Sort"),
       "Viewing Date (Oldest First)",
     );
-    
+
     // Take another snapshot after sorting
     expect(calendar).toMatchSnapshot();
   });
