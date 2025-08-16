@@ -59,6 +59,33 @@ export function GroupedPosterList<T>({
   );
 }
 
+export function ListItemPoster({
+  imageProps,
+}: {
+  imageProps: PosterImageProps;
+}) {
+  return (
+    <div
+      className={`
+        relative w-1/4 max-w-[250px] shrink-0 transition-transform
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:bg-default after:opacity-15 after:transition-opacity
+        group-has-[a:hover]/list-item:after:opacity-0
+        tablet:w-auto
+      `}
+    >
+      <img
+        {...imageProps}
+        alt=""
+        {...PosterListItemImageConfig}
+        className="aspect-poster w-full object-cover"
+        decoding="async"
+        loading="lazy"
+      />
+    </div>
+  );
+}
+
 export function PosterList({
   children,
   className = "",
@@ -110,28 +137,5 @@ export function PosterListItem({
       <ListItemPoster imageProps={posterImageProps} />
       {children}
     </li>
-  );
-}
-
-function ListItemPoster({ imageProps }: { imageProps: PosterImageProps }) {
-  return (
-    <div
-      className={`
-        relative w-1/4 max-w-[250px] shrink-0 transition-transform
-        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
-        group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
-      `}
-    >
-      <img
-        {...imageProps}
-        alt=""
-        {...PosterListItemImageConfig}
-        className="aspect-poster w-full object-cover"
-        decoding="async"
-        loading="lazy"
-      />
-    </div>
   );
 }

@@ -38,10 +38,7 @@ export async function getProps(): Promise<PageProps> {
         sortTitle: viewing.sortTitle,
         title: viewing.title,
         venue: viewing.venue,
-        viewingDate: viewingDate.toLocaleString("en-US", {
-          day: "numeric",
-          timeZone: "UTC",
-        }),
+        viewingDate: viewing.viewingDate, // Keep original date string for calendar
         viewingDay: viewingDate.toLocaleString("en-US", {
           timeZone: "UTC",
           weekday: "short",

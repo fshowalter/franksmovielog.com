@@ -48,7 +48,7 @@ export function Filters({
         onChange={(e) =>
           dispatch({
             type: Actions.FILTER_MEDIUM,
-            value: e.target.value,
+            values: e.target.value ? [e.target.value] : [],
           })
         }
       >
@@ -59,7 +59,7 @@ export function Filters({
         onChange={(e) =>
           dispatch({
             type: Actions.FILTER_VENUE,
-            value: e.target.value,
+            values: e.target.value ? [e.target.value] : [],
           })
         }
       >

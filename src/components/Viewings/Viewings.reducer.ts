@@ -1,18 +1,6 @@
-import {
-  createReleaseYearFilter,
-  createTitleFilter,
-  type FilterableState,
-  filterTools,
-  sortNumber,
-} from "~/utils/reducerUtils";
-
 import type { ListItemValue } from "./Viewings";
 
-const SHOW_COUNT_DEFAULT = 100;
-
-export type Sort = "viewing-date-asc" | "viewing-date-desc";
-
-const { clearFilter, updateFilter } = filterTools(sortValues, groupValues);
+export const SHOW_COUNT_DEFAULT = 100;
 
 export enum Actions {
   FILTER_MEDIUM = "FILTER_MEDIUM",
@@ -20,6 +8,8 @@ export enum Actions {
   FILTER_TITLE = "FILTER_TITLE",
   FILTER_VENUE = "FILTER_VENUE",
   FILTER_VIEWING_YEAR = "FILTER_VIEWING_YEAR",
+  NEXT_MONTH = "NEXT_MONTH",
+  PREV_MONTH = "PREV_MONTH",
   SHOW_MORE = "SHOW_MORE",
   SORT = "SORT",
 }
@@ -30,17 +20,41 @@ export type ActionType =
   | FilterTitleAction
   | FilterVenueAction
   | FilterViewingYearAction
+  | NextMonthAction
+  | PrevMonthAction
   | ShowMoreAction
   | SortAction;
 
+export type Sort =
+  | "viewing-date-asc"
+  | "viewing-date-desc";
+
+export type State = {
+  allValues: ListItemValue[];
+  currentMonth: Date;
+  filteredValues: ListItemValue[];
+  filters: {
+    media: string[];
+    releaseYears: string[];
+    title: string;
+    venues: string[];
+    viewingYears: string[];
+  };
+  hasNextMonth: boolean;
+  hasPrevMonth: boolean;
+  monthViewings: ListItemValue[];
+  showCount: number;
+  sortValue: Sort;
+};
+
 type FilterMediumAction = {
   type: Actions.FILTER_MEDIUM;
-  value: string;
+  values: string[];
 };
 
 type FilterReleaseYearAction = {
   type: Actions.FILTER_RELEASE_YEAR;
-  values: [string, string];
+  values: string[];
 };
 
 type FilterTitleAction = {
@@ -50,12 +64,20 @@ type FilterTitleAction = {
 
 type FilterVenueAction = {
   type: Actions.FILTER_VENUE;
-  value: string;
+  values: string[];
 };
 
 type FilterViewingYearAction = {
   type: Actions.FILTER_VIEWING_YEAR;
-  values: [string, string];
+  values: string[];
+};
+
+type NextMonthAction = {
+  type: Actions.NEXT_MONTH;
+};
+
+type PrevMonthAction = {
+  type: Actions.PREV_MONTH;
 };
 
 type ShowMoreAction = {
@@ -67,12 +89,6 @@ type SortAction = {
   value: Sort;
 };
 
-type State = FilterableState<
-  ListItemValue,
-  Sort,
-  Map<string, Map<string, ListItemValue[]>>
->;
-
 export function initState({
   initialSort,
   values,
@@ -80,122 +96,377 @@ export function initState({
   initialSort: Sort;
   values: ListItemValue[];
 }): State {
-  const initialValues = sortValues(values, initialSort);
+  const sortedValues = sortValues(values, initialSort);
+  const currentMonth = getInitialMonth(sortedValues, initialSort);
+  const monthViewings = getMonthViewings(sortedValues, currentMonth);
 
   return {
-    allValues: initialValues,
-    filteredValues: initialValues,
-    filters: {},
-    groupedValues: groupValues(initialValues.slice(0, SHOW_COUNT_DEFAULT)),
+    allValues: values, // Keep original unsorted values
+    currentMonth,
+    filteredValues: sortedValues,
+    filters: {
+      media: [],
+      releaseYears: [],
+      title: "",
+      venues: [],
+      viewingYears: [],
+    },
+    hasNextMonth: getNextMonthWithViewings(currentMonth, sortedValues) !== undefined,
+    hasPrevMonth: getPrevMonthWithViewings(currentMonth, sortedValues) !== undefined,
+    monthViewings,
     showCount: SHOW_COUNT_DEFAULT,
     sortValue: initialSort,
   };
 }
 
 export function reducer(state: State, action: ActionType): State {
-  let groupedValues;
+  let filters;
   let filteredValues;
+  let newMonth;
+  let oldestMonth;
+  let mostRecentMonth;
 
   switch (action.type) {
     case Actions.FILTER_MEDIUM: {
-      return (
-        clearFilter(action.value, state, "medium") ??
-        updateFilter(state, "medium", (value) => {
-          return value.medium === action.value;
-        })
-      );
-    }
-    case Actions.FILTER_RELEASE_YEAR: {
-      return updateFilter(
-        state,
-        "releaseYear",
-        createReleaseYearFilter(action.values[0], action.values[1]),
-      );
-    }
-    case Actions.FILTER_TITLE: {
-      return updateFilter(state, "title", createTitleFilter(action.value));
-    }
-    case Actions.FILTER_VENUE: {
-      return (
-        clearFilter(action.value, state, "venue") ??
-        updateFilter(state, "venue", (value) => {
-          return value.venue === action.value;
-        })
-      );
-    }
-    case Actions.FILTER_VIEWING_YEAR: {
-      return updateFilter(state, "viewingYear", (value) => {
-        return (
-          value.viewingYear >= action.values[0] &&
-          value.viewingYear <= action.values[1]
-        );
-      });
-    }
-    case Actions.SHOW_MORE: {
-      const showCount = state.showCount + SHOW_COUNT_DEFAULT;
-
-      groupedValues = groupValues(state.filteredValues.slice(0, showCount));
-
+      filters = {
+        ...state.filters,
+        media: action.values,
+      };
+      filteredValues = filterValues(state.allValues, filters);
+      filteredValues = sortValues(filteredValues, state.sortValue);
+      newMonth = getInitialMonth(filteredValues, state.sortValue);
       return {
         ...state,
-        groupedValues,
-        showCount,
+        currentMonth: newMonth,
+        filteredValues,
+        filters,
+        hasNextMonth:
+          getNextMonthWithViewings(newMonth, filteredValues) !== undefined,
+        hasPrevMonth:
+          getPrevMonthWithViewings(newMonth, filteredValues) !== undefined,
+        monthViewings: getMonthViewings(filteredValues, newMonth),
+        showCount: SHOW_COUNT_DEFAULT,
+      };
+    }
+    case Actions.FILTER_RELEASE_YEAR: {
+      filters = {
+        ...state.filters,
+        releaseYears: action.values,
+      };
+      filteredValues = filterValues(state.allValues, filters);
+      filteredValues = sortValues(filteredValues, state.sortValue);
+      newMonth = getInitialMonth(filteredValues, state.sortValue);
+      return {
+        ...state,
+        currentMonth: newMonth,
+        filteredValues,
+        filters,
+        hasNextMonth:
+          getNextMonthWithViewings(newMonth, filteredValues) !== undefined,
+        hasPrevMonth:
+          getPrevMonthWithViewings(newMonth, filteredValues) !== undefined,
+        monthViewings: getMonthViewings(filteredValues, newMonth),
+        showCount: SHOW_COUNT_DEFAULT,
+      };
+    }
+    case Actions.FILTER_TITLE: {
+      filters = {
+        ...state.filters,
+        title: action.value,
+      };
+      filteredValues = filterValues(state.allValues, filters);
+      filteredValues = sortValues(filteredValues, state.sortValue);
+      newMonth = getInitialMonth(filteredValues, state.sortValue);
+      return {
+        ...state,
+        currentMonth: newMonth,
+        filteredValues,
+        filters,
+        hasNextMonth:
+          getNextMonthWithViewings(newMonth, filteredValues) !== undefined,
+        hasPrevMonth:
+          getPrevMonthWithViewings(newMonth, filteredValues) !== undefined,
+        monthViewings: getMonthViewings(filteredValues, newMonth),
+        showCount: SHOW_COUNT_DEFAULT,
+      };
+    }
+    case Actions.FILTER_VENUE: {
+      filters = {
+        ...state.filters,
+        venues: action.values,
+      };
+      filteredValues = filterValues(state.allValues, filters);
+      filteredValues = sortValues(filteredValues, state.sortValue);
+      newMonth = getInitialMonth(filteredValues, state.sortValue);
+      return {
+        ...state,
+        currentMonth: newMonth,
+        filteredValues,
+        filters,
+        hasNextMonth:
+          getNextMonthWithViewings(newMonth, filteredValues) !== undefined,
+        hasPrevMonth:
+          getPrevMonthWithViewings(newMonth, filteredValues) !== undefined,
+        monthViewings: getMonthViewings(filteredValues, newMonth),
+        showCount: SHOW_COUNT_DEFAULT,
+      };
+    }
+    case Actions.FILTER_VIEWING_YEAR: {
+      filters = {
+        ...state.filters,
+        viewingYears: action.values,
+      };
+      filteredValues = filterValues(state.allValues, filters);
+      filteredValues = sortValues(filteredValues, state.sortValue);
+      newMonth = getInitialMonth(filteredValues, state.sortValue);
+      return {
+        ...state,
+        currentMonth: newMonth,
+        filteredValues,
+        filters,
+        hasNextMonth:
+          getNextMonthWithViewings(newMonth, filteredValues) !== undefined,
+        hasPrevMonth:
+          getPrevMonthWithViewings(newMonth, filteredValues) !== undefined,
+        monthViewings: getMonthViewings(filteredValues, newMonth),
+        showCount: SHOW_COUNT_DEFAULT,
+      };
+    }
+    case Actions.NEXT_MONTH: {
+      newMonth = getNextMonthWithViewings(
+        state.currentMonth,
+        state.filteredValues,
+      );
+      if (!newMonth) {
+        return state; // No next month with viewings
+      }
+      return {
+        ...state,
+        currentMonth: newMonth,
+        hasNextMonth:
+          getNextMonthWithViewings(newMonth, state.filteredValues) !== null,
+        hasPrevMonth:
+          getPrevMonthWithViewings(newMonth, state.filteredValues) !== null,
+        monthViewings: getMonthViewings(state.filteredValues, newMonth),
+      };
+    }
+    case Actions.PREV_MONTH: {
+      newMonth = getPrevMonthWithViewings(
+        state.currentMonth,
+        state.filteredValues,
+      );
+      if (!newMonth) {
+        return state; // No previous month with viewings
+      }
+      return {
+        ...state,
+        currentMonth: newMonth,
+        hasNextMonth:
+          getNextMonthWithViewings(newMonth, state.filteredValues) !== null,
+        hasPrevMonth:
+          getPrevMonthWithViewings(newMonth, state.filteredValues) !== null,
+        monthViewings: getMonthViewings(state.filteredValues, newMonth),
+      };
+    }
+    case Actions.SHOW_MORE: {
+      return {
+        ...state,
+        showCount: state.showCount + SHOW_COUNT_DEFAULT,
       };
     }
     case Actions.SORT: {
-      filteredValues = sortValues(state.filteredValues, action.value);
-      groupedValues = groupValues(filteredValues.slice(0, state.showCount));
+      // First filter, then sort
+      filteredValues = filterValues(state.allValues, state.filters);
+      filteredValues = sortValues(filteredValues, action.value);
+
+      // Determine which month to show based on sort order
+      newMonth = action.value === "viewing-date-asc"
+        ? getOldestMonth(filteredValues) // For ascending sort, go to oldest month
+        : getMostRecentMonth(filteredValues); // For descending sort, go to most recent month
+
+      mostRecentMonth = getMostRecentMonth(filteredValues);
+      oldestMonth = getOldestMonth(filteredValues);
+
       return {
         ...state,
+        currentMonth: newMonth,
         filteredValues,
-        groupedValues,
+        hasNextMonth: newMonth < mostRecentMonth,
+        hasPrevMonth: newMonth > oldestMonth,
+        monthViewings: getMonthViewings(filteredValues, newMonth),
+        showCount: SHOW_COUNT_DEFAULT,
         sortValue: action.value,
       };
     }
-
-    // no default
+    default: {
+      return state;
+    }
   }
 }
 
-function groupValues(
+function filterValues(
   values: ListItemValue[],
-): Map<string, Map<string, ListItemValue[]>> {
-  const groupedValues = new Map<string, Map<string, ListItemValue[]>>();
-
-  values.map((value) => {
-    const monthYearGroup = `${value.viewingMonth} ${value.viewingYear}`;
-
-    let groupValue = groupedValues.get(monthYearGroup);
-
-    if (!groupValue) {
-      groupValue = new Map<string, ListItemValue[]>();
-      groupedValues.set(monthYearGroup, groupValue);
+  filters: State["filters"],
+): ListItemValue[] {
+  return values.filter((value) => {
+    if (
+      filters.releaseYears.length > 0 &&
+      !filters.releaseYears.includes(value.releaseYear)
+    ) {
+      return false;
     }
 
-    const dayGroup = `${value.viewingDay}-${value.viewingDate}-${value.viewingMonthShort}-${value.viewingYear}`;
-
-    let dayGroupValue = groupValue.get(dayGroup);
-
-    if (!dayGroupValue) {
-      dayGroupValue = [];
-      groupValue.set(dayGroup, dayGroupValue);
+    if (
+      filters.viewingYears.length > 0 &&
+      !filters.viewingYears.includes(value.viewingYear)
+    ) {
+      return false;
     }
 
-    dayGroupValue.push(value);
+    if (filters.media.length > 0 && value.medium && !filters.media.includes(value.medium)) {
+      return false;
+    }
+
+    if (filters.venues.length > 0 && value.venue && !filters.venues.includes(value.venue)) {
+      return false;
+    }
+
+    if (
+      filters.title &&
+      !value.title.toLowerCase().includes(filters.title.toLowerCase())
+    ) {
+      return false;
+    }
+
+    return true;
   });
+}
 
-  return groupedValues;
+// Determine initial month based on sort order
+function getInitialMonth(values: ListItemValue[], sortValue: Sort): Date {
+  if (values.length === 0) {
+    return new Date();
+  }
+
+  return sortValue === "viewing-date-asc"
+    ? getOldestMonth(values)
+    : getMostRecentMonth(values);
+}
+
+// Get all months that have viewings
+function getMonthsWithViewings(values: ListItemValue[]): Set<string> {
+  const months = new Set<string>();
+  for (const value of values) {
+    const date = new Date(value.viewingDate);
+    const monthKey = `${date.getUTCFullYear()}-${date.getUTCMonth()}`;
+    months.add(monthKey);
+  }
+  return months;
+}
+
+function getMonthViewings(
+  values: ListItemValue[],
+  month: Date,
+): ListItemValue[] {
+  const year = month.getFullYear();
+  const monthIndex = month.getMonth();
+
+  return values.filter((value) => {
+    const viewingDate = new Date(value.viewingDate);
+    return (
+      viewingDate.getUTCFullYear() === year &&
+      viewingDate.getUTCMonth() === monthIndex
+    );
+  });
+}
+
+function getMostRecentMonth(values: ListItemValue[]): Date {
+  if (values.length === 0) {
+    return new Date();
+  }
+
+  // Get the most recent viewing date
+  const sortedValues = [...values].sort(
+    (a, b) => b.viewingSequence - a.viewingSequence,
+  );
+  const mostRecentDate = new Date(sortedValues[0].viewingDate);
+
+  // Create a date for the first day of that month
+  return new Date(
+    mostRecentDate.getUTCFullYear(),
+    mostRecentDate.getUTCMonth(),
+    1,
+  );
+}
+
+// Get next month that has viewings
+function getNextMonthWithViewings(
+  currentMonth: Date,
+  values: ListItemValue[],
+): Date | undefined {
+  const monthsWithViewings = getMonthsWithViewings(values);
+  let checkMonth = new Date(currentMonth);
+  const mostRecent = getMostRecentMonth(values);
+
+  while (checkMonth < mostRecent) {
+    checkMonth = new Date(
+      checkMonth.getFullYear(),
+      checkMonth.getMonth() + 1,
+      1,
+    );
+    const monthKey = `${checkMonth.getFullYear()}-${checkMonth.getMonth()}`;
+    if (monthsWithViewings.has(monthKey)) {
+      return checkMonth;
+    }
+  }
+  return undefined;
+}
+
+function getOldestMonth(values: ListItemValue[]): Date {
+  if (values.length === 0) {
+    return new Date();
+  }
+
+  // Get the oldest viewing date
+  const sortedValues = [...values].sort(
+    (a, b) => a.viewingSequence - b.viewingSequence,
+  );
+  const oldestDate = new Date(sortedValues[0].viewingDate);
+
+  // Create a date for the first day of that month
+  return new Date(oldestDate.getUTCFullYear(), oldestDate.getUTCMonth(), 1);
+}
+
+// Get previous month that has viewings
+function getPrevMonthWithViewings(
+  currentMonth: Date,
+  values: ListItemValue[],
+): Date | undefined {
+  const monthsWithViewings = getMonthsWithViewings(values);
+  let checkMonth = new Date(currentMonth);
+  const oldest = getOldestMonth(values);
+
+  while (checkMonth > oldest) {
+    checkMonth = new Date(
+      checkMonth.getFullYear(),
+      checkMonth.getMonth() - 1,
+      1,
+    );
+    const monthKey = `${checkMonth.getFullYear()}-${checkMonth.getMonth()}`;
+    if (monthsWithViewings.has(monthKey)) {
+      return checkMonth;
+    }
+  }
+  return undefined;
 }
 
 function sortValues(values: ListItemValue[], sortOrder: Sort) {
   const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
     {
-      "viewing-date-asc": (a, b) =>
-        sortNumber(a.viewingSequence, b.viewingSequence),
-      "viewing-date-desc": (a, b) =>
-        sortNumber(a.viewingSequence, b.viewingSequence) * -1,
+      "viewing-date-asc": (a, b) => a.viewingSequence - b.viewingSequence,
+      "viewing-date-desc": (a, b) => b.viewingSequence - a.viewingSequence,
     };
 
   const comparer = sortMap[sortOrder];
-  return values.sort(comparer);
+  return [...values].sort(comparer); // Create a copy before sorting
 }
