@@ -119,7 +119,10 @@ function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
           title={value.title}
           year={value.releaseYear}
         />
-        <CreditedAs values={value.creditedAs} />
+        <CreditedAs
+          className="font-light text-subtle"
+          values={value.creditedAs}
+        />
         {value.grade && (
           <Grade className="mb-1" height={16} value={value.grade} />
         )}

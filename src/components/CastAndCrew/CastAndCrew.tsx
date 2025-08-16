@@ -169,7 +169,7 @@ function MemberListItem({ value }: { value: ListItemValue }): JSX.Element {
           name={value.name}
         />
         <div className="mt-1">
-          <CreditedAs values={value.creditedAs} />
+          <CreditedAs className="font-light" values={value.creditedAs} />
         </div>
         <div
           className={`
