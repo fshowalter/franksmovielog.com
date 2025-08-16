@@ -40,7 +40,7 @@ export function GroupedPosterList<T>({
               key={group}
             >
               {" "}
-              <div className="-mx-6">
+              <div className="tablet:-mx-6">
                 <PosterList>
                   {[...groupValues].map((value) => children(value))}
                 </PosterList>
