@@ -1,22 +1,26 @@
 import type { JSX } from "react";
 
-import { useReducer } from "react";
+import { useMemo, useReducer } from "react";
 
 import type { PosterImageProps } from "~/api/posters";
 import type { Viewing } from "~/api/viewings";
 
-import { GroupedList } from "~/components/GroupedList";
 import { ListItemMediumAndVenue } from "~/components/ListItemMediumAndVenue";
-import { ListItemPoster } from "~/components/ListItemPoster";
+import { ListItemTitle } from "~/components/ListItemTitle";
 import {
   ListHeaderButton,
   ListWithFilters,
 } from "~/components/ListWithFilters";
-
-import type { Sort } from "./Viewings.reducer";
+import { PosterListItem } from "~/components/PosterList";
 
 import { Filters, SortOptions } from "./Filters";
-import { Actions, initState, reducer } from "./Viewings.reducer";
+import {
+  Actions,
+  type ActionType,
+  initState,
+  reducer,
+  type Sort,
+} from "./Viewings.reducer";
 
 export type ListItemValue = Pick<
   Viewing,
@@ -27,11 +31,11 @@ export type ListItemValue = Pick<
   | "sortTitle"
   | "title"
   | "venue"
-  | "viewingDate"
   | "viewingSequence"
   | "viewingYear"
 > & {
   posterImageProps: PosterImageProps;
+  viewingDate: string; // Full date string YYYY-MM-DD
   viewingDay: string;
   viewingMonth: string;
   viewingMonthShort: string;
@@ -44,6 +48,33 @@ export type Props = {
   distinctViewingYears: readonly string[];
   initialSort: Sort;
   values: ListItemValue[];
+};
+
+type CalendarDayData = {
+  date: number | undefined;
+  isOtherMonth?: boolean;
+  viewings: ListItemValue[];
+  weekday?: string;
+};
+
+type CalendarHeaderProps = {
+  currentMonth: Date;
+  dispatch: React.Dispatch<ActionType>;
+  hasNextMonth: boolean;
+  hasPrevMonth: boolean;
+};
+
+type CalendarMonthProps = {
+  currentMonth: Date;
+  viewingsByDate: Record<string, ListItemValue[]>;
+};
+
+type CalendarViewProps = {
+  currentMonth: Date;
+  dispatch: React.Dispatch<ActionType>;
+  hasNextMonth: boolean;
+  hasPrevMonth: boolean;
+  viewingsByDate: Record<string, ListItemValue[]>;
 };
 
 export function Viewings({
@@ -63,6 +94,30 @@ export function Viewings({
     initState,
   );
 
+  // Create index of viewings by date for O(1) calendar lookups
+  // Recalculated when monthViewings changes (due to filters)
+  const viewingsByDate = useMemo(() => {
+    const index: Record<string, ListItemValue[]> = {};
+
+    for (const viewing of state.monthViewings) {
+      const date = new Date(viewing.viewingDate);
+      // Key format: "year-month-day" without padding
+      const dateKey = `${date.getUTCFullYear()}-${date.getUTCMonth() + 1}-${date.getUTCDate()}`;
+
+      if (!index[dateKey]) {
+        index[dateKey] = [];
+      }
+      index[dateKey].push(viewing);
+    }
+
+    // Sort viewings within each day by sequence
+    for (const dayViewings of Object.values(index)) {
+      dayViewings.sort((a, b) => a.viewingSequence - b.viewingSequence);
+    }
+
+    return index;
+  }, [state.monthViewings]);
+
   return (
     <ListWithFilters
       filters={
@@ -75,24 +130,13 @@ export function Viewings({
         />
       }
       list={
-        <GroupedList
-          data-testid="list"
-          groupedValues={state.groupedValues}
-          onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
-          totalCount={state.filteredValues.length}
-          visibleCount={state.showCount}
-        >
-          {(dateGroup) => {
-            const [dayAndDate, values] = dateGroup;
-            return (
-              <DateListItem
-                dayAndDate={dayAndDate}
-                key={dayAndDate}
-                values={values}
-              />
-            );
-          }}
-        </GroupedList>
+        <CalendarView
+          currentMonth={state.currentMonth}
+          dispatch={dispatch}
+          hasNextMonth={state.hasNextMonth}
+          hasPrevMonth={state.hasPrevMonth}
+          viewingsByDate={viewingsByDate}
+        />
       }
       listHeaderButtons={
         <ListHeaderButton href="/viewings/stats/" text="stats" />
@@ -111,175 +155,319 @@ export function Viewings({
   );
 }
 
-function DateListItem({
-  dayAndDate,
-  values,
-}: {
-  dayAndDate: string;
-  values: ListItemValue[];
-}): JSX.Element {
-  const [day, date, month, year] = dayAndDate.split("-");
-
-  return (
-    <li
-      className={`
-        relative flex max-w-(--breakpoint-desktop) flex-col bg-group
-        last-of-type:pb-12
-        tablet:mb-12 tablet:flex-row tablet:py-4 tablet:pr-4
-        tablet:last-of-type:pb-4
-      `}
-    >
-      <div
-        className={`
-          px-container py-4
-          tablet:px-4 tablet:py-0 tablet:text-muted
-        `}
-      >
-        <div
-          className={`
-            flex items-center gap-1
-            tablet:h-full tablet:flex-col tablet:justify-center
-          `}
-        >
-          <div
-            className={`
-              mr-1 py-2 text-center font-sans text-xxs/none font-light
-              text-subtle uppercase
-              tablet:mr-0 tablet:w-12 tablet:py-0 tablet:pb-1
-            `}
-          >
-            {month}
-          </div>
-          <div
-            className={`
-              text-center text-2xl text-muted
-              tablet:text-2.5xl/8
-            `}
-          >
-            {date}
-          </div>
-          <div
-            className={`
-              ml-0 px-1 py-2 text-center font-sans text-xs/none font-light
-              text-subtle uppercase
-              tablet:w-12 tablet:px-0 tablet:py-1
-            `}
-          >
-            {year}
-          </div>
-          <div
-            className={`
-              ml-auto py-2 font-sans text-xxs/none font-light text-subtle
-              uppercase
-              tablet:ml-0 tablet:w-12 tablet:pt-4 tablet:pb-0 tablet:text-center
-            `}
-          >
-            {day}
-          </div>
-        </div>
-      </div>
-      <ul
-        className={`
-          flex h-full grow flex-col
-          tablet:gap-y-0
-        `}
-      >
-        {values.map((value) => {
-          return <ViewingListItem key={value.viewingSequence} value={value} />;
-        })}
-      </ul>
-    </li>
-  );
-}
-
-function ListItemTitle({
-  slug,
-  title,
-  year,
-}: {
-  slug?: string;
-  title: string;
-  year: string;
-}) {
-  const yearBox = (
-    <span
-      className={`
-        text-xxs font-light text-subtle
-        tablet:text-xs
-      `}
-    >
-      {year}
-    </span>
-  );
-
-  if (slug) {
+function CalendarDay({ day }: { day: CalendarDayData }): JSX.Element {
+  if (!day.date) {
     return (
-      <a
+      <td
         className={`
-          block font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:opacity-0
+          hidden min-h-[100px] border border-default bg-transparent p-2
+          align-top
+          tablet-landscape:table-cell
         `}
-        href={`/reviews/${slug}/`}
-      >
-        {title}
-        {"\u202F"}
-        {"\u202F"}
-        {yearBox}
-      </a>
+      />
     );
   }
 
-  return (
-    <span className="block font-sans text-sm font-normal text-muted">
-      {title}
-      {"\u202F"}
-      {"\u202F"}
-      {yearBox}
-    </span>
-  );
-}
-
-function ViewingListItem({ value }: { value: ListItemValue }): JSX.Element {
-  let rest = {};
-  if (value.slug) {
-    rest = { "data-has-review": true };
-  }
+  const weekday = day.weekday || "";
 
   return (
-    <li
+    <td
       className={`
-        group/list-item relative mb-1 flex transform-gpu flex-row items-center
-        gap-x-4 transition-transform
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-105
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        ${value.slug ? `bg-default` : `bg-unreviewed`}
-        px-container py-4
-        last-of-type:mb-0
-        tablet:gap-x-6 tablet:pl-4
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        ${day.isOtherMonth ? "opacity-50" : ""}
+        ${day.viewings.length === 0 && `hidden`}
       `}
-      {...rest}
+      data-weekday={weekday}
     >
       <div
         className={`
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          ${day.viewings.length > 0 ? "text-default" : "text-muted"}
         `}
       >
-        <ListItemPoster imageProps={value.posterImageProps} />
+        <span
+          className={`
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          `}
+        >
+          {weekday}
+        </span>
+        {day.date}
       </div>
-      <div className="flex grow flex-col gap-1">
-        <ListItemTitle
-          slug={value.slug}
-          title={value.title}
-          year={value.releaseYear}
-        />
-        <ListItemMediumAndVenue medium={value.medium} venue={value.venue} />
+      {day.viewings.length > 0 && (
+        <div className="@container/poster-list">
+          <ol
+            className={`
+              flex flex-col
+              [--poster-list-item-width:33.33%]
+              tablet:flex-row tablet:flex-wrap
+              tablet-landscape:flex-col
+              tablet-landscape:[--poster-list-item-width:100%]
+              @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
+            `}
+          >
+            {day.viewings.map((viewing) => (
+              <PosterListItem
+                className="items-center"
+                key={viewing.viewingSequence}
+                posterImageProps={viewing.posterImageProps}
+              >
+                <div
+                  className={`
+                    flex flex-col
+                    tablet:mt-2 tablet:px-1
+                  `}
+                >
+                  <ListItemTitle
+                    slug={viewing.slug}
+                    title={viewing.title}
+                    year={viewing.releaseYear}
+                  />
+                  <ListItemMediumAndVenue
+                    medium={viewing.medium}
+                    venue={viewing.venue}
+                  />
+                </div>
+              </PosterListItem>
+            ))}
+          </ol>
+        </div>
+      )}
+    </td>
+  );
+}
+
+function CalendarHeader({
+  currentMonth,
+  dispatch,
+  hasNextMonth,
+  hasPrevMonth,
+}: CalendarHeaderProps): JSX.Element {
+  const monthName = currentMonth.toLocaleString("en-US", {
+    month: "long",
+    timeZone: "UTC",
+    year: "numeric",
+  });
+
+  const prevMonthName = new Date(
+    currentMonth.getFullYear(),
+    currentMonth.getMonth() - 1,
+    1,
+  ).toLocaleString("en-US", {
+    month: "short",
+    timeZone: "UTC",
+    year: "numeric",
+  });
+
+  const nextMonthName = new Date(
+    currentMonth.getFullYear(),
+    currentMonth.getMonth() + 1,
+    1,
+  ).toLocaleString("en-US", {
+    month: "short",
+    timeZone: "UTC",
+    year: "numeric",
+  });
+
+  return (
+    <div
+      className={`
+        sticky top-(--list-scroll-offset) z-sticky flex items-center
+        justify-between border-b border-default bg-subtle px-container py-4
+        tablet:-mx-(--container-padding) tablet:py-6
+        tablet-landscape:py-8
+      `}
+    >
+      <div className="w-1/3">
+        {hasPrevMonth && (
+          <button
+            aria-disabled={false}
+            aria-label={`Navigate to previous month: ${prevMonthName}`}
+            className={`
+              transform-gpu cursor-pointer font-sans text-xs text-accent
+              transition-transform
+              hover:scale-105
+              tablet-landscape:text-sm
+            `}
+            onClick={() => dispatch({ type: Actions.PREV_MONTH })}
+          >
+            ← {prevMonthName}
+          </button>
+        )}
       </div>
-    </li>
+      <h2
+        className={`
+          w-1/3 text-center text-base font-medium
+          tablet:text-lg
+          tablet-landscape:text-xl
+        `}
+      >
+        {monthName}
+      </h2>
+      <div className="w-1/3 text-right">
+        {hasNextMonth && (
+          <button
+            aria-disabled={false}
+            aria-label={`Navigate to next month: ${nextMonthName}`}
+            className={`
+              transform-gpu cursor-pointer font-sans text-xs text-accent
+              transition-transform
+              hover:scale-105
+              tablet-landscape:text-sm
+            `}
+            onClick={() => dispatch({ type: Actions.NEXT_MONTH })}
+          >
+            {nextMonthName} →
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function CalendarMonth({
+  currentMonth,
+  viewingsByDate,
+}: CalendarMonthProps): JSX.Element {
+  const calendarDays = getCalendarDays(currentMonth, viewingsByDate);
+  const weeks = getCalendarWeeks(calendarDays);
+
+  return (
+    <div
+      className={`
+        tablet:mt-8
+        tablet-landscape:mt-16
+      `}
+      data-testid="calendar"
+    >
+      <table
+        className={`
+          w-full border-default
+          tablet-landscape:border-collapse tablet-landscape:border
+        `}
+      >
+        <thead
+          className={`
+            hidden
+            tablet-landscape:sticky
+            tablet-landscape:top-[calc(var(--list-scroll-offset)_+_93px)]
+            tablet-landscape:z-sticky tablet-landscape:table-header-group
+          `}
+        >
+          <tr className={`tablet-landscape:shadow-bottom`}>
+            <WeekdayHeader>Sun</WeekdayHeader>
+            <WeekdayHeader> Mon</WeekdayHeader>
+            <WeekdayHeader>Tue</WeekdayHeader>
+            <WeekdayHeader>Wed</WeekdayHeader>
+            <WeekdayHeader>Thu</WeekdayHeader>
+            <WeekdayHeader>Fri</WeekdayHeader>
+            <WeekdayHeader>Sat</WeekdayHeader>
+          </tr>
+        </thead>
+        <tbody>
+          {weeks.map((week, weekIndex) => (
+            <tr className="tablet-landscape:table-row" key={weekIndex}>
+              {week.map((day, dayIndex) => (
+                <CalendarDay day={day} key={`${weekIndex}-${dayIndex}`} />
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function CalendarView({
+  currentMonth,
+  dispatch,
+  hasNextMonth,
+  hasPrevMonth,
+  viewingsByDate,
+}: CalendarViewProps): JSX.Element {
+  return (
+    <div className="mx-auto w-full max-w-(--breakpoint-desktop)">
+      <CalendarHeader
+        currentMonth={currentMonth}
+        dispatch={dispatch}
+        hasNextMonth={hasNextMonth}
+        hasPrevMonth={hasPrevMonth}
+      />
+      <CalendarMonth
+        currentMonth={currentMonth}
+        viewingsByDate={viewingsByDate}
+      />
+    </div>
+  );
+}
+
+function getCalendarDays(
+  month: Date,
+  viewingsByDate: Record<string, ListItemValue[]>,
+): CalendarDayData[] {
+  const year = month.getFullYear();
+  const monthIndex = month.getMonth();
+  const firstDay = new Date(year, monthIndex, 1);
+  const lastDay = new Date(year, monthIndex + 1, 0);
+  const startPadding = firstDay.getDay();
+  const daysInMonth = lastDay.getDate();
+
+  const days: CalendarDayData[] = [];
+  const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  // Add empty cells for days before month starts
+  for (let i = 0; i < startPadding; i++) {
+    days.push({ date: undefined, viewings: [] });
+  }
+
+  // Add days of the month
+  for (let date = 1; date <= daysInMonth; date++) {
+    const currentDate = new Date(year, monthIndex, date);
+    const weekday = weekdays[currentDate.getDay()];
+
+    // Use pre-indexed viewings for O(1) lookup
+    // Key format: "year-month-day" without padding
+    const dateKey = `${year}-${monthIndex + 1}-${date}`;
+    const dayViewings = viewingsByDate[dateKey] || [];
+    // Viewings are already sorted in getProps, no need to sort again
+
+    days.push({
+      date,
+      viewings: dayViewings,
+      weekday,
+    });
+  }
+
+  // Fill remaining cells to complete the grid
+  while (days.length % 7 !== 0) {
+    days.push({ date: undefined, viewings: [] });
+  }
+
+  return days;
+}
+
+function getCalendarWeeks(days: CalendarDayData[]): CalendarDayData[][] {
+  const weeks: CalendarDayData[][] = [];
+  for (let i = 0; i < days.length; i += 7) {
+    weeks.push(days.slice(i, i + 7));
+  }
+  return weeks;
+}
+
+function WeekdayHeader({ children }: { children: React.ReactNode }) {
+  return (
+    <th
+      className={`
+        border border-default bg-default px-2 py-3 text-center font-sans text-xs
+        font-light tracking-wide text-subtle uppercase
+      `}
+    >
+      {children}
+    </th>
   );
 }

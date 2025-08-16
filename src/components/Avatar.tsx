@@ -7,23 +7,21 @@ type AvatarProps = React.ImgHTMLAttributes<HTMLImageElement> & {
   height: number;
   imageProps: AvatarImageProps | undefined;
   loading: "eager" | "lazy";
-  name: string;
   width: number;
 };
 
 export function Avatar({
   className,
   imageProps,
-  name,
   ...rest
 }: AvatarProps): JSX.Element {
   if (imageProps) {
-    return <img alt={name} {...imageProps} {...rest} className={className} />;
+    return <img alt="" {...imageProps} {...rest} className={className} />;
   }
 
   return (
-    <div data-pagefind-meta="image:/assets/default_avatar.svg">
-      <div className={className} data-pagefind-meta={`image_alt:${name}`}>
+    <div>
+      <div className={className}>
         <svg
           fill="var(--bg-canvas)"
           viewBox="0 0 16 16"

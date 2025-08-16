@@ -1,4 +1,4 @@
-import { ListItemAvatarImageConfig } from "src/components/ListItemAvatar";
+import { AvatarListItemImageConfig } from "src/components/AvatarList";
 
 import type { AvatarImageProps } from "~/api/avatars";
 import type { BackdropImageProps } from "~/api/backdrops";
@@ -8,7 +8,8 @@ import { getBackdropImageProps } from "~/api/backdrops";
 import { castAndCrewMember } from "~/api/castAndCrew";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
 import { BackdropImageConfig } from "~/components/Backdrop";
-import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
+import { PosterListItemImageConfig } from "~/components/PosterList";
+import { displayDate } from "~/utils/displayDate";
 
 import type { Props } from "./CastAndCrewMember";
 
@@ -26,7 +27,7 @@ export async function getProps(slug: string): Promise<PageProps> {
   return {
     avatarImageProps: await getAvatarImageProps(
       member.slug,
-      ListItemAvatarImageConfig,
+      AvatarListItemImageConfig,
     ),
     backdropImageProps: await getBackdropImageProps(
       member.slug,
@@ -43,20 +44,9 @@ export async function getProps(slug: string): Promise<PageProps> {
           ...title,
           posterImageProps: await getFluidWidthPosterImageProps(
             title.slug,
-            ListItemPosterImageConfig,
+            PosterListItemImageConfig,
           ),
-          reviewDisplayDate: title.reviewDate
-            ? `${new Date(title.reviewDate).toLocaleDateString("en-US", {
-                timeZone: "UTC",
-                year: "numeric",
-              })}-${new Date(title.reviewDate).toLocaleDateString("en-US", {
-                month: "short",
-                timeZone: "UTC",
-              })}-${new Date(title.reviewDate).toLocaleDateString("en-US", {
-                day: "2-digit",
-                timeZone: "UTC",
-              })}`
-            : "",
+          reviewDisplayDate: displayDate(title.reviewDate),
           reviewSequence: title.reviewSequence,
           reviewYear: title.reviewDate
             ? new Date(title.reviewDate).toLocaleDateString("en-US", {

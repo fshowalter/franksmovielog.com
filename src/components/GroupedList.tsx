@@ -1,12 +1,14 @@
 import type { JSX } from "react";
 
 import { Button } from "./Button";
+import { GroupingListItem } from "./GroupingListItem";
 
 export function GroupedList<T>({
   children,
   className,
   groupedValues,
   groupItemClassName,
+  isGrid = true,
   onShowMore,
   totalCount,
   visibleCount,
@@ -16,24 +18,39 @@ export function GroupedList<T>({
   className?: string;
   groupedValues: Map<string, Iterable<T>>;
   groupItemClassName?: string;
+  isGrid?: boolean;
   onShowMore?: () => void;
   totalCount: number;
   visibleCount: number;
 }): JSX.Element {
   return (
     <>
-      <ol className={className ?? ""} {...rest}>
-        {[...groupedValues].map((groupedValue, index) => {
+      <ol
+        className={`
+          ${className ?? ""}
+        `}
+        {...rest}
+      >
+        {[...groupedValues].map((groupedValue) => {
           const [group, groupValues] = groupedValue;
-
           return (
             <GroupingListItem
-              className={groupItemClassName ?? groupItemClassName}
+              className={groupItemClassName}
               groupText={group}
               key={group}
-              zIndex={index + 1}
             >
-              <ol>{[...groupValues].map((value) => children(value))}</ol>
+              <ol
+                className={
+                  isGrid
+                    ? `
+                      grid-cols-[repeat(auto-fill,minmax(calc(100%_/_var(--grouped-list-number-of-columns,1)),1fr))]
+                      tablet:-mx-6 tablet:grid tablet:gap-y-12
+                    `
+                    : ""
+                }
+              >
+                {[...groupValues].map((value) => children(value))}
+              </ol>
             </GroupingListItem>
           );
         })}
@@ -46,40 +63,5 @@ export function GroupedList<T>({
         </div>
       )}
     </>
-  );
-}
-
-function GroupingListItem({
-  children,
-  className,
-  groupText,
-  zIndex,
-}: {
-  children: React.ReactNode;
-  className?: string;
-  groupText: string;
-  zIndex: number;
-}) {
-  return (
-    <li
-      className={`
-        block
-        ${className ?? ""}
-      `}
-      id={groupText}
-    >
-      <div className={`pt-0 text-md`} style={{ zIndex: zIndex }}>
-        <div
-          className={`
-            max-w-(--breakpoint-desktop) bg-subtle px-container py-8 text-xl
-            leading-8
-            tablet:px-1
-          `}
-        >
-          {groupText}
-        </div>
-      </div>
-      <div className="bg-subtle">{children}</div>
-    </li>
   );
 }

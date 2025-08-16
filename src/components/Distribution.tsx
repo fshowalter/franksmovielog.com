@@ -15,7 +15,12 @@ export function Distribution({
   const maxBar = values.reduce((total, value) => total + value.count, 0);
 
   return (
-    <section className="w-full bg-default px-container pb-8">
+    <section
+      className={`
+        w-full bg-default px-container pb-8
+        laptop:px-12
+      `}
+    >
       <h2 className="py-4 text-xl font-medium">{title}</h2>
       <div
         className={`

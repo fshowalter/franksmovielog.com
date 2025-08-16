@@ -1,5 +1,5 @@
 import type { BackdropImageProps } from "~/api/backdrops";
-import type { ReviewListItemValue } from "~/components/ReviewListItem";
+import type { ReviewsListItemValue } from "~/components/Reviews/ReviewsListItem";
 
 import { getBackdropImageProps } from "~/api/backdrops";
 import { allOverratedDisappointments } from "~/api/overratedDisappointments";
@@ -8,7 +8,8 @@ import { allReviews } from "~/api/reviews";
 import { allUnderratedSurprises } from "~/api/underratedSurprises";
 import { allUnderseenGems } from "~/api/underseenGems";
 import { BackdropImageConfig } from "~/components/Backdrop";
-import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
+import { PosterListItemImageConfig } from "~/components/PosterList";
+import { displayDate } from "~/utils/displayDate";
 
 import type { Props } from "./AllReviews";
 import type { Props as OverratedProps } from "./Overrated";
@@ -67,7 +68,7 @@ export async function getPropsForOverrated(): Promise<
     distinctGenres,
     distinctReleaseYears,
     distinctReviewYears,
-    initialSort: "release-date-desc",
+    initialSort: "title-asc",
     metaDescription:
       "Feeling contrarian? Behold my one and two star reviews of movies that somehow received and above-average IMDb rating.",
     values,
@@ -95,7 +96,7 @@ export async function getPropsForUnderrated(): Promise<
     distinctGenres,
     distinctReleaseYears,
     distinctReviewYears,
-    initialSort: "release-date-desc",
+    initialSort: "title-asc",
     metaDescription:
       "The masses are wrong. These are movies have a four or five star review despite a below-average IMDb rating.",
     values,
@@ -123,7 +124,7 @@ export async function getPropsForUnderseen(): Promise<
     distinctGenres,
     distinctReleaseYears,
     distinctReviewYears,
-    initialSort: "release-date-desc",
+    initialSort: "title-asc",
     metaDescription:
       "Looking for something new? Behold my four and five star reviews of movies with a below average number of IMDb votes.",
     values,
@@ -145,32 +146,23 @@ async function buildReviewListItemValues(
     title: string;
   }[],
   includeReviewMonth: boolean,
-): Promise<ReviewListItemValue[]> {
+): Promise<ReviewsListItemValue[]> {
   return Promise.all(
     reviews.map(async (review) => {
       const date = review.reviewDate;
 
-      const value: ReviewListItemValue = {
+      const value: ReviewsListItemValue = {
         genres: review.genres,
         grade: review.grade,
         gradeValue: review.gradeValue,
         imdbId: review.imdbId,
         posterImageProps: await getFluidWidthPosterImageProps(
           review.slug,
-          ListItemPosterImageConfig,
+          PosterListItemImageConfig,
         ),
         releaseSequence: review.releaseSequence,
         releaseYear: review.releaseYear,
-        reviewDisplayDate: `${date.toLocaleDateString("en-US", {
-          timeZone: "UTC",
-          year: "numeric",
-        })}-${date.toLocaleDateString("en-US", {
-          month: "short",
-          timeZone: "UTC",
-        })}-${date.toLocaleDateString("en-US", {
-          day: "2-digit",
-          timeZone: "UTC",
-        })}`,
+        reviewDisplayDate: displayDate(review.reviewDate),
         ...(includeReviewMonth && {
           reviewMonth: date.toLocaleDateString("en-US", {
             month: "long",

@@ -5,10 +5,10 @@ import { useReducer } from "react";
 import type { AvatarImageProps } from "~/api/avatars";
 import type { CastAndCrewMember } from "~/api/castAndCrew";
 
+import { AvatarListItem } from "~/components/AvatarList";
 import { CreditedAs } from "~/components/CreditedAs";
 import { GroupedList } from "~/components/GroupedList";
-import { ListItem } from "~/components/ListItem";
-import { ListItemAvatar } from "~/components/ListItemAvatar";
+import { ListItemName } from "~/components/ListItemName";
 import { ListWithFilters } from "~/components/ListWithFilters";
 
 import type { Sort } from "./CastAndCrew.reducer";
@@ -40,7 +40,9 @@ export function CastAndCrew({ initialSort, values }: Props): JSX.Element {
 
   return (
     <ListWithFilters
-      className="[--scroll-offset:52px]"
+      className={
+        state.sortValue.startsWith("name-") ? `[--scroll-offset:52px]` : ""
+      }
       dynamicSubNav={
         <AlphabetSubNav
           groupedValues={state.groupedValues}
@@ -53,6 +55,7 @@ export function CastAndCrew({ initialSort, values }: Props): JSX.Element {
           data-testid="list"
           groupedValues={state.groupedValues}
           groupItemClassName={`scroll-mt-[calc(52px_+_var(--list-scroll-offset))]`}
+          isGrid={false}
           totalCount={state.filteredValues.length}
           visibleCount={state.showCount}
         >
@@ -159,44 +162,23 @@ function LetterLink({
 
 function MemberListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
-    <ListItem extraVerticalPadding={true} itemsCenter={true}>
-      <div
-        className={`
-          relative rounded-full
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
-        `}
-      >
-        <ListItemAvatar imageProps={value.avatarImageProps} name={value.name} />
+    <AvatarListItem avatarImageProps={value.avatarImageProps}>
+      <div className="flex flex-col justify-center">
+        <ListItemName
+          href={`/cast-and-crew/${value.slug}/`}
+          name={value.name}
+        />
+        <div className="mt-1">
+          <CreditedAs className="font-light" values={value.creditedAs} />
+        </div>
+        <div
+          className={`
+            mt-[6px] font-sans text-xxs font-light text-nowrap text-muted
+          `}
+        >
+          {value.reviewCount} Reviews
+        </div>
       </div>
-      <MemberName value={value} />
-      <div
-        className={`
-          ml-auto font-sans text-xs text-nowrap text-subtle
-          laptop:text-sm
-        `}
-      >
-        {value.reviewCount}
-      </div>
-    </ListItem>
-  );
-}
-
-function MemberName({ value }: { value: ListItemValue }) {
-  return (
-    <div>
-      <a
-        className={`
-          leading-normal font-sans text-sm font-medium text-accent
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:opacity-0
-        `}
-        href={`/cast-and-crew/${value.slug}/`}
-      >
-        {value.name}
-      </a>
-      <CreditedAs values={value.creditedAs} />
-    </div>
+    </AvatarListItem>
   );
 }

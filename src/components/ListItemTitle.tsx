@@ -8,12 +8,7 @@ export function ListItemTitle({
   year: string;
 }) {
   const yearBox = (
-    <span
-      className={`
-        text-xxs leading-none font-light text-subtle
-        tablet:text-xs
-      `}
-    >
+    <span className={`text-xxs leading-none font-light text-subtle`}>
       {year}
     </span>
   );
@@ -22,7 +17,7 @@ export function ListItemTitle({
     return (
       <a
         className={`
-          font-sans text-sm font-medium text-accent
+          font-sans text-xs font-medium text-accent
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
         `}
@@ -36,7 +31,7 @@ export function ListItemTitle({
   }
 
   return (
-    <span className="block font-sans text-sm font-normal text-muted">
+    <span className="block font-sans text-xs font-normal text-muted">
       {title}
       &#x202F;&#x202F;
       {yearBox}

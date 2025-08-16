@@ -1,10 +1,10 @@
 import type { BackdropImageProps } from "~/api/backdrops";
 
 import { getBackdropImageProps } from "~/api/backdrops";
-import { getFixedWidthPosterImageProps } from "~/api/posters";
+import { getFluidWidthPosterImageProps } from "~/api/posters";
 import { allWatchlistTitles } from "~/api/watchlistTitles";
 import { BackdropImageConfig } from "~/components/Backdrop";
-import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
+import { PosterListItemImageConfig } from "~/components/PosterList";
 
 import type { Props } from "./Watchlist";
 
@@ -24,9 +24,9 @@ export async function getProps(): Promise<PageProps> {
     watchlistTitles,
   } = await allWatchlistTitles();
 
-  const defaultPosterImageProps = await getFixedWidthPosterImageProps(
+  const defaultPosterImageProps = await getFluidWidthPosterImageProps(
     "default",
-    ListItemPosterImageConfig,
+    PosterListItemImageConfig,
   );
 
   return {
@@ -41,7 +41,7 @@ export async function getProps(): Promise<PageProps> {
     distinctPerformers,
     distinctReleaseYears,
     distinctWriters,
-    initialSort: "release-date-asc",
+    initialSort: "title-asc",
     metaDescription:
       "My to-review bucket list. See what I've yet to review. Sort or filter titles by reason, release date, or title.",
     values: watchlistTitles,

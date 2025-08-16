@@ -3,8 +3,8 @@ import type { JSX } from "react";
 import type { PosterImageProps } from "~/api/posters";
 
 import { ListItemMediumAndVenue } from "./ListItemMediumAndVenue";
-import { ListItemPoster } from "./ListItemPoster";
 import { ListItemTitle } from "./ListItemTitle";
+import { PosterList, PosterListItem } from "./PosterList";
 
 export type MostWatchedPeopleListItemValue = {
   count: number;
@@ -40,6 +40,7 @@ export function MostWatchedPeople({
       className={`
         w-full bg-default pb-8
         tablet:px-container
+        laptop:px-12
       `}
     >
       <h2
@@ -50,12 +51,7 @@ export function MostWatchedPeople({
       >
         {header}
       </h2>
-      <div
-        className={`
-          w-full
-          tablet:whitespace-nowrap
-        `}
-      >
+      <div className={`w-full`}>
         {values.map((value) => {
           return (
             <div className="py-3" key={value.name}>
@@ -90,12 +86,7 @@ export function MostWatchedPeople({
                   tablet:px-0
                 `}
               >
-                <details
-                  className={`
-                    bg-group
-                    tablet:px-2
-                  `}
-                >
+                <details className={`bg-subtle px-2`}>
                   <summary
                     className={`
                       cursor-pointer px-4 py-1 font-sans text-sm text-subtle
@@ -104,9 +95,7 @@ export function MostWatchedPeople({
                   >
                     Details
                   </summary>
-                  <ol
-                    className={`tablet:px-4 tablet:py-1 tablet:pt-2 tablet:pb-5`}
-                  >
+                  <PosterList>
                     {value.viewings.map((viewing) => {
                       return (
                         <MostWatchedPersonViewingListItem
@@ -115,7 +104,7 @@ export function MostWatchedPeople({
                         />
                       );
                     })}
-                  </ol>
+                  </PosterList>
                 </details>
               </div>
             </div>
@@ -132,41 +121,29 @@ function MostWatchedPersonViewingListItem({
   value: ViewingSubListItemValue;
 }) {
   return (
-    <li
+    <PosterListItem
       className={`
         ${value.slug ? "bg-default" : "bg-unreviewed"}
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 py-4 transition-transform
-        tablet:gap-x-6 tablet:px-4
-        tablet-landscape:has-[a:hover]:z-hover
-        tablet-landscape:has-[a:hover]:scale-105
-        tablet-landscape:has-[a:hover]:shadow-all
-        tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:px-6
       `}
+      posterImageProps={value.posterImageProps}
     >
       <div
         className={`
-          relative
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-has-[a:hover]/list-item:after:opacity-0
+          flex grow flex-col gap-2 px-1
+          tablet:mt-2 tablet:grow-0
         `}
       >
-        <ListItemPoster imageProps={value.posterImageProps} />
-      </div>
-      <div className="flex grow flex-col gap-2">
         <ListItemTitle
           slug={value.slug}
           title={value.title}
           year={value.releaseYear}
         />
-        <div className="-mt-px font-sans text-xs font-light text-muted">
+        <div className="font-sans text-xs font-light text-muted">
           {value.displayDate}
         </div>
         <ListItemMediumAndVenue medium={value.medium} venue={value.venue} />
       </div>
-    </li>
+    </PosterListItem>
   );
 }
 

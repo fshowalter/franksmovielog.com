@@ -4,7 +4,7 @@ import { getBackdropImageProps } from "~/api/backdrops";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
 import { allViewings } from "~/api/viewings";
 import { BackdropImageConfig } from "~/components/Backdrop";
-import { ListItemPosterImageConfig } from "~/components/ListItemPoster";
+import { PosterListItemImageConfig } from "~/components/PosterList";
 
 import type { ListItemValue, Props } from "./Viewings";
 
@@ -30,7 +30,7 @@ export async function getProps(): Promise<PageProps> {
         medium: viewing.medium,
         posterImageProps: await getFluidWidthPosterImageProps(
           viewing.slug,
-          ListItemPosterImageConfig,
+          PosterListItemImageConfig,
         ),
         releaseSequence: viewing.releaseSequence,
         releaseYear: viewing.releaseYear,
@@ -38,10 +38,7 @@ export async function getProps(): Promise<PageProps> {
         sortTitle: viewing.sortTitle,
         title: viewing.title,
         venue: viewing.venue,
-        viewingDate: viewingDate.toLocaleString("en-US", {
-          day: "numeric",
-          timeZone: "UTC",
-        }),
+        viewingDate: viewing.viewingDate, // Keep original date string for calendar
         viewingDay: viewingDate.toLocaleString("en-US", {
           timeZone: "UTC",
           weekday: "short",

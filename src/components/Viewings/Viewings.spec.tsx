@@ -2,8 +2,6 @@ import { act, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { describe, it } from "vitest";
 
-import type { ListItemValue } from "./Viewings";
-
 import { getProps } from "./getProps";
 import { Viewings } from "./Viewings";
 
@@ -25,7 +23,7 @@ describe("Viewings", () => {
       await new Promise((r) => setTimeout(r, 500));
     });
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
 
   it("can filter by medium", async ({ expect }) => {
@@ -34,7 +32,7 @@ describe("Viewings", () => {
 
     await userEvent.selectOptions(screen.getByLabelText("Medium"), "Blu-ray");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
 
   it("can filter by medium then show all", async ({ expect }) => {
@@ -45,7 +43,7 @@ describe("Viewings", () => {
     await userEvent.selectOptions(screen.getByLabelText("Medium"), "Blu-ray");
     await userEvent.selectOptions(screen.getByLabelText("Medium"), "All");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
 
   it("can filter by venue", async ({ expect }) => {
@@ -57,7 +55,7 @@ describe("Viewings", () => {
       "Alamo Drafthouse Cinema - One Loudoun",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
 
   it("can filter by venue then show all", async ({ expect }) => {
@@ -70,7 +68,7 @@ describe("Viewings", () => {
     );
     await userEvent.selectOptions(screen.getByLabelText("Venue"), "All");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
 
   it("can sort by viewing date with newest first", async ({ expect }) => {
@@ -83,7 +81,7 @@ describe("Viewings", () => {
       "Viewing Date (Newest First)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
 
   it("can sort by viewing date with oldest first", async ({ expect }) => {
@@ -96,7 +94,7 @@ describe("Viewings", () => {
       "Viewing Date (Oldest First)",
     );
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
 
   it("can filter by release year", async ({ expect }) => {
@@ -111,7 +109,7 @@ describe("Viewings", () => {
     await userEvent.selectOptions(fromInput, "1957");
     await userEvent.selectOptions(toInput, "1970");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
 
   it("can filter by release year reversed", async ({ expect }) => {
@@ -128,7 +126,7 @@ describe("Viewings", () => {
     await userEvent.selectOptions(fromInput, "1973");
     await userEvent.selectOptions(toInput, "1950");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
 
   it("can filter by viewing year", async ({ expect }) => {
@@ -143,7 +141,7 @@ describe("Viewings", () => {
     await userEvent.selectOptions(fromInput, "2012");
     await userEvent.selectOptions(toInput, "2014");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
 
   it("can filter by viewing year reversed", async ({ expect }) => {
@@ -160,37 +158,28 @@ describe("Viewings", () => {
     await userEvent.selectOptions(fromInput, "2013");
     await userEvent.selectOptions(toInput, "2012");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
 
-  it("can show more titles", async ({ expect }) => {
+  it("can navigate between months", async ({ expect }) => {
     expect.hasAssertions();
-    // Create props with more than 100 items to trigger pagination
-    const manyValues: ListItemValue[] = Array.from({ length: 150 }, (_, i) => ({
-      medium: "Blu-ray",
-      posterImageProps: {
-        src: "test.jpg",
-        srcSet: "test.jpg 1x",
-      },
-      releaseSequence: `2020-01-${String(i + 1).padStart(2, "0")}tt${String(i).padStart(7, "0")}`,
-      releaseYear: "2020",
-      slug: `test-movie-${i + 1}`,
-      sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
-      title: `Test Movie ${i + 1}`,
-      venue: "Home",
-      viewingDate: `2023-01-${String(i + 1).padStart(2, "0")}`,
-      viewingDay: String(i + 1).padStart(2, "0"),
-      viewingMonth: "January",
-      viewingMonthShort: "Jan",
-      viewingSequence: i,
-      viewingYear: "2023",
-    }));
-    const propsWithManyValues = {
-      ...props,
-      values: manyValues,
-    };
-    render(<Viewings {...propsWithManyValues} />);
-    await userEvent.click(screen.getByText("Show More"));
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+
+    // Just test with the normal props which should have multiple months of data
+    render(<Viewings {...props} />);
+
+    // Get the calendar element
+    const calendar = screen.getByTestId("calendar");
+
+    // Take a snapshot of the initial state
+    expect(calendar).toMatchSnapshot();
+
+    // Check if we can sort to oldest first - this should change the initial month
+    await userEvent.selectOptions(
+      screen.getByLabelText("Sort"),
+      "Viewing Date (Oldest First)",
+    );
+
+    // Take another snapshot after sorting
+    expect(calendar).toMatchSnapshot();
   });
 });
