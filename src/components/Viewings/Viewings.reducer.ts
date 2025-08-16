@@ -23,23 +23,6 @@ export type ActionType =
 
 export type Sort = "viewing-date-asc" | "viewing-date-desc";
 
-export type State = {
-  allValues: ListItemValue[];
-  currentMonth: Date;
-  filteredValues: ListItemValue[];
-  filters: {
-    media: string[];
-    releaseYears: string[];
-    title: string;
-    venues: string[];
-    viewingYears: string[];
-  };
-  hasNextMonth: boolean;
-  hasPrevMonth: boolean;
-  monthViewings: ListItemValue[];
-  sortValue: Sort;
-};
-
 type FilterMediumAction = {
   type: Actions.FILTER_MEDIUM;
   values: string[];
@@ -76,6 +59,23 @@ type PrevMonthAction = {
 type SortAction = {
   type: Actions.SORT;
   value: Sort;
+};
+
+type State = {
+  allValues: ListItemValue[];
+  currentMonth: Date;
+  filteredValues: ListItemValue[];
+  filters: {
+    media: string[];
+    releaseYears: string[];
+    title: string;
+    venues: string[];
+    viewingYears: string[];
+  };
+  hasNextMonth: boolean;
+  hasPrevMonth: boolean;
+  monthViewings: ListItemValue[];
+  sortValue: Sort;
 };
 
 export function initState({

@@ -7,12 +7,6 @@ import { ccn } from "~/utils/concatClassNames";
 import { ListItemTitle } from "./ListItemTitle";
 import { PosterList, PosterListItem } from "./PosterList";
 
-export const MostWatchedMoviesPosterConfig = {
-  height: 375,
-  sizes: "(min-width: 780px) 248px, 64px",
-  width: 250,
-};
-
 export type MostWatchedMoviesListItemValue = {
   count: number;
   imdbId: string;

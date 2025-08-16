@@ -5,15 +5,14 @@ import { useReducer } from "react";
 import type { PosterImageProps } from "~/api/posters";
 import type { Viewing } from "~/api/viewings";
 
-import { ListItemPoster } from "~/components/ListItemPoster";
+import { ListItemMediumAndVenue } from "~/components/ListItemMediumAndVenue";
 import { ListItemTitle } from "~/components/ListItemTitle";
 import {
   ListHeaderButton,
   ListWithFilters,
 } from "~/components/ListWithFilters";
+import { PosterListItem } from "~/components/PosterList";
 
-import { ListItemMediumAndVenue } from "../ListItemMediumAndVenue";
-import { PosterListItem } from "../PosterList";
 import { Filters, SortOptions } from "./Filters";
 import {
   Actions,

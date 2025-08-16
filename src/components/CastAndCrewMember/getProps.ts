@@ -1,4 +1,4 @@
-import { ListItemAvatarImageConfig } from "src/components/ListItemAvatar";
+import { AvatarListItemImageConfig } from "src/components/AvatarList";
 
 import type { AvatarImageProps } from "~/api/avatars";
 import type { BackdropImageProps } from "~/api/backdrops";
@@ -27,7 +27,7 @@ export async function getProps(slug: string): Promise<PageProps> {
   return {
     avatarImageProps: await getAvatarImageProps(
       member.slug,
-      ListItemAvatarImageConfig,
+      AvatarListItemImageConfig,
     ),
     backdropImageProps: await getBackdropImageProps(
       member.slug,
