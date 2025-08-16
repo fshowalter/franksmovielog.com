@@ -16262,9 +16262,11 @@ exports[`Viewings > renders 1`] = `
                 class="w-1/3"
               >
                 <button
+                  aria-label="Navigate to previous month: Jul 2014"
                   class="
-              font-sans text-xs text-accent
-              hover:underline
+              transform-gpu cursor-pointer font-sans text-xs text-accent
+              transition-transform
+              hover:scale-105
               tablet-landscape:text-sm
             "
                 >

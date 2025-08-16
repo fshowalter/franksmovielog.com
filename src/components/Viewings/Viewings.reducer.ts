@@ -229,9 +229,9 @@ export function reducer(state: State, action: ActionType): State {
         ...state,
         currentMonth: newMonth,
         hasNextMonth:
-          getNextMonthWithViewings(newMonth, state.filteredValues) !== null,
+          getNextMonthWithViewings(newMonth, state.filteredValues) !== undefined,
         hasPrevMonth:
-          getPrevMonthWithViewings(newMonth, state.filteredValues) !== null,
+          getPrevMonthWithViewings(newMonth, state.filteredValues) !== undefined,
         monthViewings: getMonthViewings(state.filteredValues, newMonth),
       };
     }
@@ -247,9 +247,9 @@ export function reducer(state: State, action: ActionType): State {
         ...state,
         currentMonth: newMonth,
         hasNextMonth:
-          getNextMonthWithViewings(newMonth, state.filteredValues) !== null,
+          getNextMonthWithViewings(newMonth, state.filteredValues) !== undefined,
         hasPrevMonth:
-          getPrevMonthWithViewings(newMonth, state.filteredValues) !== null,
+          getPrevMonthWithViewings(newMonth, state.filteredValues) !== undefined,
         monthViewings: getMonthViewings(state.filteredValues, newMonth),
       };
     }
