@@ -7,7 +7,8 @@ import { GroupingListItem } from "./GroupingListItem";
 
 export const PosterListItemImageConfig = {
   height: 375,
-  sizes: "(max-width: 767px) 64px, (max-width: 1279px) 76px, 80px",
+  sizes:
+    "(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)",
   width: 250,
 };
 
