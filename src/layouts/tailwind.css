@@ -252,9 +252,11 @@
   0% {
     transform: rotate(0deg);
   }
+
   15% {
     transform: rotate(-2deg);
   }
+
   100% {
     transform: rotate(180deg);
   }
@@ -264,9 +266,11 @@
   0% {
     transform: rotate(0deg);
   }
+
   30% {
     transform: rotate(-45deg); /* 45 degree counter-clockwise overshoot */
   }
+
   100% {
     transform: rotate(0deg);
   }
