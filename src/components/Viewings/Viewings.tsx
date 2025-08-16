@@ -136,7 +136,8 @@ function CalendarDay({ day }: { day: CalendarDayData }): JSX.Element {
     return (
       <td
         className={`
-          hidden min-h-[100px] border border-default bg-subtle p-2 align-top
+          hidden min-h-[100px] border border-default bg-transparent p-2
+          align-top
           tablet-landscape:table-cell
         `}
       />
@@ -148,9 +149,8 @@ function CalendarDay({ day }: { day: CalendarDayData }): JSX.Element {
   return (
     <td
       className={`
-        mb-2 block min-h-[100px] w-full border border-default bg-default py-2
-        align-top
-        tablet:px-2
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
         tablet-landscape:mb-0 tablet-landscape:table-cell
         tablet-landscape:w-[14.28%]
         ${day.isOtherMonth ? "opacity-50" : ""}
@@ -257,18 +257,19 @@ function CalendarHeader({
   return (
     <div
       className={`
-        sticky top-(--list-scroll-offset) z-sticky flex min-h-[2rem]
-        items-center justify-between border-b border-default bg-subtle
-        px-container py-8
-        tablet:-mx-(--container-padding)
+        sticky top-(--list-scroll-offset) z-sticky flex items-center
+        justify-between border-b border-default bg-subtle px-container py-4
+        tablet:-mx-(--container-padding) tablet:py-6
+        tablet-landscape:py-8
       `}
     >
       <div className="w-1/3">
         {hasPrevMonth && (
           <button
             className={`
-              font-sans text-sm text-accent
+              font-sans text-xs text-accent
               hover:underline
+              tablet-landscape:text-sm
             `}
             onClick={() => dispatch({ type: Actions.PREV_MONTH })}
           >
@@ -276,13 +277,22 @@ function CalendarHeader({
           </button>
         )}
       </div>
-      <h2 className="w-1/3 text-center text-xl font-medium">{monthName}</h2>
+      <h2
+        className={`
+          w-1/3 text-center text-base font-medium
+          tablet:text-lg
+          tablet-landscape:text-xl
+        `}
+      >
+        {monthName}
+      </h2>
       <div className="w-1/3 text-right">
         {hasNextMonth && (
           <button
             className={`
-              font-sans text-sm text-accent
+              font-sans text-xs text-accent
               hover:underline
+              tablet-landscape:text-sm
             `}
             onClick={() => dispatch({ type: Actions.NEXT_MONTH })}
           >
@@ -302,15 +312,28 @@ function CalendarMonth({
   const weeks = getCalendarWeeks(calendarDays);
 
   return (
-    <div className="mt-16" data-testid="calendar">
-      <table className="w-full border-collapse border border-default">
+    <div
+      className={`
+        tablet:mt-8
+        tablet-landscape:mt-16
+      `}
+      data-testid="calendar"
+    >
+      <table
+        className={`
+          w-full border-default
+          tablet-landscape:border-collapse tablet-landscape:border
+        `}
+      >
         <thead
           className={`
             hidden
-            tablet-landscape:table-header-group
+            tablet-landscape:sticky
+            tablet-landscape:top-[calc(var(--list-scroll-offset)_+_93px)]
+            tablet-landscape:z-sticky tablet-landscape:table-header-group
           `}
         >
-          <tr>
+          <tr className={`tablet-landscape:shadow-bottom`}>
             <WeekdayHeader>Sun</WeekdayHeader>
             <WeekdayHeader> Mon</WeekdayHeader>
             <WeekdayHeader>Tue</WeekdayHeader>
