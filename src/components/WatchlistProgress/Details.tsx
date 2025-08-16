@@ -62,7 +62,7 @@ export function Details({
                 text-subtle transition-transform
                 last-of-type:shadow-none
                 tablet-landscape:has-[a:hover]:z-hover
-                tablet-landscape:has-[a:hover]:scale-105
+                tablet-landscape:has-[a:hover]:scale-[102.5%]
                 tablet-landscape:has-[a:hover]:shadow-all
                 tablet-landscape:has-[a:hover]:drop-shadow-2xl
               `}
@@ -81,7 +81,6 @@ export function Details({
                 <DetailsItemAvatar
                   className=""
                   imageProps={value.avatarImageProps}
-                  name={value.name}
                 />
               </div>
               <div
@@ -154,11 +153,9 @@ export const DetailsAvatarImageConfig = {
 function DetailsItemAvatar({
   className,
   imageProps,
-  name,
 }: {
   className?: string;
   imageProps: AvatarImageProps | undefined;
-  name: string;
 }) {
   const avatar = (
     <Avatar
@@ -166,7 +163,6 @@ function DetailsItemAvatar({
       height={DetailsAvatarImageConfig.height}
       imageProps={imageProps}
       loading="lazy"
-      name={name}
       width={DetailsAvatarImageConfig.width}
     />
   );

@@ -13,18 +13,8 @@ export function ListItemGenres({ values }: { values: readonly string[] }) {
 
         return (
           <>
-            <span
-              className={`
-                hidden
-                tablet-landscape:inline
-              `}
-              key={value}
-            >
+            <span key={value}>
               , <span className="whitespace-nowrap">{value}</span>
-            </span>
-            <span className={`tablet-landscape:hidden`} key={value}>
-              {" "}
-              | <span className="whitespace-nowrap">{value}</span>
             </span>
           </>
         );

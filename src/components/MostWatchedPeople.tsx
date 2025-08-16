@@ -40,6 +40,7 @@ export function MostWatchedPeople({
       className={`
         w-full bg-default pb-8
         tablet:px-container
+        laptop:px-12
       `}
     >
       <h2
