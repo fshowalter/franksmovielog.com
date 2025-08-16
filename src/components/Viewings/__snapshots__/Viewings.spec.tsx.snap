@@ -124,13 +124,6 @@ exports[`Viewings > can filter by medium 1`] = `
         />
         <td
           class="
-          hidden min-h-[100px] border border-default bg-transparent p-2
-          align-top
-          tablet-landscape:table-cell
-        "
-        />
-        <td
-          class="
         mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
         tablet:border tablet:px-2
         tablet-landscape:mb-0 tablet-landscape:table-cell
@@ -138,7 +131,7 @@ exports[`Viewings > can filter by medium 1`] = `
         
         hidden
       "
-          data-weekday="Sat"
+          data-weekday="Fri"
         >
           <div
             class="
@@ -153,129 +146,9 @@ exports[`Viewings > can filter by medium 1`] = `
             tablet-landscape:hidden
           "
             >
-              Sat
+              Fri
             </span>
             1
-          </div>
-        </td>
-      </tr>
-      <tr
-        class="tablet-landscape:table-row"
-      >
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Sun"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Sun
-            </span>
-            2
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Mon"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Mon
-            </span>
-            3
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Tue"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Tue
-            </span>
-            4
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Wed"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Wed
-            </span>
-            5
           </div>
         </td>
         <td
@@ -287,7 +160,7 @@ exports[`Viewings > can filter by medium 1`] = `
         
         false
       "
-          data-weekday="Thu"
+          data-weekday="Sat"
         >
           <div
             class="
@@ -302,9 +175,9 @@ exports[`Viewings > can filter by medium 1`] = `
             tablet-landscape:hidden
           "
             >
-              Thu
+              Sat
             </span>
-            6
+            2
           </div>
           <div
             class="@container/poster-list"
@@ -347,8 +220,8 @@ exports[`Viewings > can filter by medium 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -364,14 +237,14 @@ exports[`Viewings > can filter by medium 1`] = `
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
         "
-                    href="/reviews/nightcrawler-2014/"
+                    href="/reviews/the-bloody-judge-1970/"
                   >
-                    Nightcrawler
+                    The Bloody Judge
                       
                     <span
                       class="text-xxs leading-none font-light text-subtle"
                     >
-                      2014
+                      1970
                     </span>
                   </a>
                   <div
@@ -380,13 +253,17 @@ exports[`Viewings > can filter by medium 1`] = `
             tablet:text-xxs
           "
                   >
-                    Alamo Drafthouse Cinema - One Loudoun
+                    DVD
                   </div>
                 </div>
               </li>
             </ol>
           </div>
         </td>
+      </tr>
+      <tr
+        class="tablet-landscape:table-row"
+      >
         <td
           class="
         mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
@@ -396,7 +273,7 @@ exports[`Viewings > can filter by medium 1`] = `
         
         hidden
       "
-          data-weekday="Fri"
+          data-weekday="Sun"
         >
           <div
             class="
@@ -411,7 +288,123 @@ exports[`Viewings > can filter by medium 1`] = `
             tablet-landscape:hidden
           "
             >
-              Fri
+              Sun
+            </span>
+            3
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Mon"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Mon
+            </span>
+            4
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Tue"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Tue
+            </span>
+            5
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Wed"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Wed
+            </span>
+            6
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Thu"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Thu
             </span>
             7
           </div>
@@ -425,7 +418,7 @@ exports[`Viewings > can filter by medium 1`] = `
         
         hidden
       "
-          data-weekday="Sat"
+          data-weekday="Fri"
         >
           <div
             class="
@@ -440,9 +433,118 @@ exports[`Viewings > can filter by medium 1`] = `
             tablet-landscape:hidden
           "
             >
-              Sat
+              Fri
             </span>
             8
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        false
+      "
+          data-weekday="Sat"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-default
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Sat
+            </span>
+            9
+          </div>
+          <div
+            class="@container/poster-list"
+          >
+            <ol
+              class="
+              flex flex-col
+              [--poster-list-item-width:33.33%]
+              tablet:flex-row tablet:flex-wrap
+              tablet-landscape:flex-col
+              tablet-landscape:[--poster-list-item-width:100%]
+              @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
+            "
+            >
+              <li
+                class="
+        group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
+        transition-transform
+        tablet:w-(--poster-list-item-width) tablet:flex-col
+        tablet:bg-transparent tablet:px-6 tablet:py-6
+        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        tablet:has-[a:hover]:drop-shadow-2xl
+        items-center
+      "
+              >
+                <div
+                  class="
+        relative w-1/4 max-w-[250px] shrink-0 transition-transform
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:bg-default after:opacity-15 after:transition-opacity
+        group-has-[a:hover]/list-item:after:opacity-0
+        tablet:w-auto
+      "
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster w-full object-cover"
+                    decoding="async"
+                    height="375"
+                    loading="lazy"
+                    sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    width="250"
+                  />
+                </div>
+                <div
+                  class="
+                    flex flex-col
+                    tablet:mt-2 tablet:px-1
+                  "
+                >
+                  <a
+                    class="
+          font-sans text-xs font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                    href="/reviews/psycho-circus-1966/"
+                  >
+                    Psycho-Circus
+                      
+                    <span
+                      class="text-xxs leading-none font-light text-subtle"
+                    >
+                      1966
+                    </span>
+                  </a>
+                  <div
+                    class="
+            font-sans text-xs font-light text-subtle
+            tablet:text-xxs
+          "
+                  >
+                    DVD
+                  </div>
+                </div>
+              </li>
+            </ol>
           </div>
         </td>
       </tr>
@@ -474,35 +576,6 @@ exports[`Viewings > can filter by medium 1`] = `
           "
             >
               Sun
-            </span>
-            9
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Mon"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Mon
             </span>
             10
           </div>
@@ -516,7 +589,7 @@ exports[`Viewings > can filter by medium 1`] = `
         
         hidden
       "
-          data-weekday="Tue"
+          data-weekday="Mon"
         >
           <div
             class="
@@ -531,7 +604,7 @@ exports[`Viewings > can filter by medium 1`] = `
             tablet-landscape:hidden
           "
             >
-              Tue
+              Mon
             </span>
             11
           </div>
@@ -545,7 +618,7 @@ exports[`Viewings > can filter by medium 1`] = `
         
         hidden
       "
-          data-weekday="Wed"
+          data-weekday="Tue"
         >
           <div
             class="
@@ -560,7 +633,7 @@ exports[`Viewings > can filter by medium 1`] = `
             tablet-landscape:hidden
           "
             >
-              Wed
+              Tue
             </span>
             12
           </div>
@@ -574,7 +647,7 @@ exports[`Viewings > can filter by medium 1`] = `
         
         hidden
       "
-          data-weekday="Thu"
+          data-weekday="Wed"
         >
           <div
             class="
@@ -589,7 +662,7 @@ exports[`Viewings > can filter by medium 1`] = `
             tablet-landscape:hidden
           "
             >
-              Thu
+              Wed
             </span>
             13
           </div>
@@ -603,7 +676,7 @@ exports[`Viewings > can filter by medium 1`] = `
         
         hidden
       "
-          data-weekday="Fri"
+          data-weekday="Thu"
         >
           <div
             class="
@@ -618,7 +691,7 @@ exports[`Viewings > can filter by medium 1`] = `
             tablet-landscape:hidden
           "
             >
-              Fri
+              Thu
             </span>
             14
           </div>
@@ -632,7 +705,7 @@ exports[`Viewings > can filter by medium 1`] = `
         
         hidden
       "
-          data-weekday="Sat"
+          data-weekday="Fri"
         >
           <div
             class="
@@ -647,9 +720,118 @@ exports[`Viewings > can filter by medium 1`] = `
             tablet-landscape:hidden
           "
             >
-              Sat
+              Fri
             </span>
             15
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        false
+      "
+          data-weekday="Sat"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-default
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Sat
+            </span>
+            16
+          </div>
+          <div
+            class="@container/poster-list"
+          >
+            <ol
+              class="
+              flex flex-col
+              [--poster-list-item-width:33.33%]
+              tablet:flex-row tablet:flex-wrap
+              tablet-landscape:flex-col
+              tablet-landscape:[--poster-list-item-width:100%]
+              @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
+            "
+            >
+              <li
+                class="
+        group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
+        transition-transform
+        tablet:w-(--poster-list-item-width) tablet:flex-col
+        tablet:bg-transparent tablet:px-6 tablet:py-6
+        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        tablet:has-[a:hover]:drop-shadow-2xl
+        items-center
+      "
+              >
+                <div
+                  class="
+        relative w-1/4 max-w-[250px] shrink-0 transition-transform
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:bg-default after:opacity-15 after:transition-opacity
+        group-has-[a:hover]/list-item:after:opacity-0
+        tablet:w-auto
+      "
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster w-full object-cover"
+                    decoding="async"
+                    height="375"
+                    loading="lazy"
+                    sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    width="250"
+                  />
+                </div>
+                <div
+                  class="
+                    flex flex-col
+                    tablet:mt-2 tablet:px-1
+                  "
+                >
+                  <a
+                    class="
+          font-sans text-xs font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                    href="/reviews/horror-of-dracula-1958/"
+                  >
+                    Horror of Dracula
+                      
+                    <span
+                      class="text-xxs leading-none font-light text-subtle"
+                    >
+                      1958
+                    </span>
+                  </a>
+                  <div
+                    class="
+            font-sans text-xs font-light text-subtle
+            tablet:text-xxs
+          "
+                  >
+                    DVD
+                  </div>
+                </div>
+              </li>
+            </ol>
           </div>
         </td>
       </tr>
@@ -681,35 +863,6 @@ exports[`Viewings > can filter by medium 1`] = `
           "
             >
               Sun
-            </span>
-            16
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Mon"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Mon
             </span>
             17
           </div>
@@ -723,6 +876,35 @@ exports[`Viewings > can filter by medium 1`] = `
         
         hidden
       "
+          data-weekday="Mon"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Mon
+            </span>
+            18
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
           data-weekday="Tue"
         >
           <div
@@ -740,7 +922,7 @@ exports[`Viewings > can filter by medium 1`] = `
             >
               Tue
             </span>
-            18
+            19
           </div>
         </td>
         <td
@@ -769,7 +951,7 @@ exports[`Viewings > can filter by medium 1`] = `
             >
               Wed
             </span>
-            19
+            20
           </div>
         </td>
         <td
@@ -798,7 +980,7 @@ exports[`Viewings > can filter by medium 1`] = `
             >
               Thu
             </span>
-            20
+            21
           </div>
         </td>
         <td
@@ -827,7 +1009,7 @@ exports[`Viewings > can filter by medium 1`] = `
             >
               Fri
             </span>
-            21
+            22
           </div>
         </td>
         <td
@@ -856,7 +1038,7 @@ exports[`Viewings > can filter by medium 1`] = `
             >
               Sat
             </span>
-            22
+            23
           </div>
         </td>
       </tr>
@@ -889,7 +1071,7 @@ exports[`Viewings > can filter by medium 1`] = `
             >
               Sun
             </span>
-            23
+            24
           </div>
         </td>
         <td
@@ -918,7 +1100,7 @@ exports[`Viewings > can filter by medium 1`] = `
             >
               Mon
             </span>
-            24
+            25
           </div>
         </td>
         <td
@@ -947,7 +1129,7 @@ exports[`Viewings > can filter by medium 1`] = `
             >
               Tue
             </span>
-            25
+            26
           </div>
         </td>
         <td
@@ -976,7 +1158,7 @@ exports[`Viewings > can filter by medium 1`] = `
             >
               Wed
             </span>
-            26
+            27
           </div>
         </td>
         <td
@@ -1005,7 +1187,7 @@ exports[`Viewings > can filter by medium 1`] = `
             >
               Thu
             </span>
-            27
+            28
           </div>
         </td>
         <td
@@ -1034,7 +1216,7 @@ exports[`Viewings > can filter by medium 1`] = `
             >
               Fri
             </span>
-            28
+            29
           </div>
         </td>
         <td
@@ -1063,7 +1245,7 @@ exports[`Viewings > can filter by medium 1`] = `
             >
               Sat
             </span>
-            29
+            30
           </div>
         </td>
       </tr>
@@ -1096,7 +1278,7 @@ exports[`Viewings > can filter by medium 1`] = `
             >
               Sun
             </span>
-            30
+            31
           </div>
         </td>
         <td
@@ -1271,13 +1453,6 @@ exports[`Viewings > can filter by medium then show all 1`] = `
         />
         <td
           class="
-          hidden min-h-[100px] border border-default bg-transparent p-2
-          align-top
-          tablet-landscape:table-cell
-        "
-        />
-        <td
-          class="
         mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
         tablet:border tablet:px-2
         tablet-landscape:mb-0 tablet-landscape:table-cell
@@ -1285,7 +1460,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
         
         hidden
       "
-          data-weekday="Sat"
+          data-weekday="Fri"
         >
           <div
             class="
@@ -1300,129 +1475,9 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             tablet-landscape:hidden
           "
             >
-              Sat
+              Fri
             </span>
             1
-          </div>
-        </td>
-      </tr>
-      <tr
-        class="tablet-landscape:table-row"
-      >
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Sun"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Sun
-            </span>
-            2
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Mon"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Mon
-            </span>
-            3
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Tue"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Tue
-            </span>
-            4
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Wed"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Wed
-            </span>
-            5
           </div>
         </td>
         <td
@@ -1434,7 +1489,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
         
         false
       "
-          data-weekday="Thu"
+          data-weekday="Sat"
         >
           <div
             class="
@@ -1449,9 +1504,9 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             tablet-landscape:hidden
           "
             >
-              Thu
+              Sat
             </span>
-            6
+            2
           </div>
           <div
             class="@container/poster-list"
@@ -1494,8 +1549,8 @@ exports[`Viewings > can filter by medium then show all 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -1511,14 +1566,14 @@ exports[`Viewings > can filter by medium then show all 1`] = `
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
         "
-                    href="/reviews/nightcrawler-2014/"
+                    href="/reviews/the-bloody-judge-1970/"
                   >
-                    Nightcrawler
+                    The Bloody Judge
                       
                     <span
                       class="text-xxs leading-none font-light text-subtle"
                     >
-                      2014
+                      1970
                     </span>
                   </a>
                   <div
@@ -1527,13 +1582,17 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             tablet:text-xxs
           "
                   >
-                    Alamo Drafthouse Cinema - One Loudoun
+                    DVD
                   </div>
                 </div>
               </li>
             </ol>
           </div>
         </td>
+      </tr>
+      <tr
+        class="tablet-landscape:table-row"
+      >
         <td
           class="
         mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
@@ -1543,7 +1602,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
         
         hidden
       "
-          data-weekday="Fri"
+          data-weekday="Sun"
         >
           <div
             class="
@@ -1558,7 +1617,123 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             tablet-landscape:hidden
           "
             >
-              Fri
+              Sun
+            </span>
+            3
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Mon"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Mon
+            </span>
+            4
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Tue"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Tue
+            </span>
+            5
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Wed"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Wed
+            </span>
+            6
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Thu"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Thu
             </span>
             7
           </div>
@@ -1572,7 +1747,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
         
         hidden
       "
-          data-weekday="Sat"
+          data-weekday="Fri"
         >
           <div
             class="
@@ -1587,9 +1762,118 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             tablet-landscape:hidden
           "
             >
-              Sat
+              Fri
             </span>
             8
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        false
+      "
+          data-weekday="Sat"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-default
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Sat
+            </span>
+            9
+          </div>
+          <div
+            class="@container/poster-list"
+          >
+            <ol
+              class="
+              flex flex-col
+              [--poster-list-item-width:33.33%]
+              tablet:flex-row tablet:flex-wrap
+              tablet-landscape:flex-col
+              tablet-landscape:[--poster-list-item-width:100%]
+              @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
+            "
+            >
+              <li
+                class="
+        group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
+        transition-transform
+        tablet:w-(--poster-list-item-width) tablet:flex-col
+        tablet:bg-transparent tablet:px-6 tablet:py-6
+        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        tablet:has-[a:hover]:drop-shadow-2xl
+        items-center
+      "
+              >
+                <div
+                  class="
+        relative w-1/4 max-w-[250px] shrink-0 transition-transform
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:bg-default after:opacity-15 after:transition-opacity
+        group-has-[a:hover]/list-item:after:opacity-0
+        tablet:w-auto
+      "
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster w-full object-cover"
+                    decoding="async"
+                    height="375"
+                    loading="lazy"
+                    sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    width="250"
+                  />
+                </div>
+                <div
+                  class="
+                    flex flex-col
+                    tablet:mt-2 tablet:px-1
+                  "
+                >
+                  <a
+                    class="
+          font-sans text-xs font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                    href="/reviews/psycho-circus-1966/"
+                  >
+                    Psycho-Circus
+                      
+                    <span
+                      class="text-xxs leading-none font-light text-subtle"
+                    >
+                      1966
+                    </span>
+                  </a>
+                  <div
+                    class="
+            font-sans text-xs font-light text-subtle
+            tablet:text-xxs
+          "
+                  >
+                    DVD
+                  </div>
+                </div>
+              </li>
+            </ol>
           </div>
         </td>
       </tr>
@@ -1621,35 +1905,6 @@ exports[`Viewings > can filter by medium then show all 1`] = `
           "
             >
               Sun
-            </span>
-            9
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Mon"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Mon
             </span>
             10
           </div>
@@ -1663,7 +1918,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
         
         hidden
       "
-          data-weekday="Tue"
+          data-weekday="Mon"
         >
           <div
             class="
@@ -1678,7 +1933,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             tablet-landscape:hidden
           "
             >
-              Tue
+              Mon
             </span>
             11
           </div>
@@ -1692,7 +1947,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
         
         hidden
       "
-          data-weekday="Wed"
+          data-weekday="Tue"
         >
           <div
             class="
@@ -1707,7 +1962,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             tablet-landscape:hidden
           "
             >
-              Wed
+              Tue
             </span>
             12
           </div>
@@ -1721,7 +1976,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
         
         hidden
       "
-          data-weekday="Thu"
+          data-weekday="Wed"
         >
           <div
             class="
@@ -1736,7 +1991,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             tablet-landscape:hidden
           "
             >
-              Thu
+              Wed
             </span>
             13
           </div>
@@ -1750,7 +2005,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
         
         hidden
       "
-          data-weekday="Fri"
+          data-weekday="Thu"
         >
           <div
             class="
@@ -1765,7 +2020,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             tablet-landscape:hidden
           "
             >
-              Fri
+              Thu
             </span>
             14
           </div>
@@ -1779,7 +2034,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
         
         hidden
       "
-          data-weekday="Sat"
+          data-weekday="Fri"
         >
           <div
             class="
@@ -1794,9 +2049,118 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             tablet-landscape:hidden
           "
             >
-              Sat
+              Fri
             </span>
             15
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        false
+      "
+          data-weekday="Sat"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-default
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Sat
+            </span>
+            16
+          </div>
+          <div
+            class="@container/poster-list"
+          >
+            <ol
+              class="
+              flex flex-col
+              [--poster-list-item-width:33.33%]
+              tablet:flex-row tablet:flex-wrap
+              tablet-landscape:flex-col
+              tablet-landscape:[--poster-list-item-width:100%]
+              @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
+            "
+            >
+              <li
+                class="
+        group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
+        transition-transform
+        tablet:w-(--poster-list-item-width) tablet:flex-col
+        tablet:bg-transparent tablet:px-6 tablet:py-6
+        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        tablet:has-[a:hover]:drop-shadow-2xl
+        items-center
+      "
+              >
+                <div
+                  class="
+        relative w-1/4 max-w-[250px] shrink-0 transition-transform
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:bg-default after:opacity-15 after:transition-opacity
+        group-has-[a:hover]/list-item:after:opacity-0
+        tablet:w-auto
+      "
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster w-full object-cover"
+                    decoding="async"
+                    height="375"
+                    loading="lazy"
+                    sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    width="250"
+                  />
+                </div>
+                <div
+                  class="
+                    flex flex-col
+                    tablet:mt-2 tablet:px-1
+                  "
+                >
+                  <a
+                    class="
+          font-sans text-xs font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                    href="/reviews/horror-of-dracula-1958/"
+                  >
+                    Horror of Dracula
+                      
+                    <span
+                      class="text-xxs leading-none font-light text-subtle"
+                    >
+                      1958
+                    </span>
+                  </a>
+                  <div
+                    class="
+            font-sans text-xs font-light text-subtle
+            tablet:text-xxs
+          "
+                  >
+                    DVD
+                  </div>
+                </div>
+              </li>
+            </ol>
           </div>
         </td>
       </tr>
@@ -1828,35 +2192,6 @@ exports[`Viewings > can filter by medium then show all 1`] = `
           "
             >
               Sun
-            </span>
-            16
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Mon"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Mon
             </span>
             17
           </div>
@@ -1870,6 +2205,35 @@ exports[`Viewings > can filter by medium then show all 1`] = `
         
         hidden
       "
+          data-weekday="Mon"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Mon
+            </span>
+            18
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
           data-weekday="Tue"
         >
           <div
@@ -1887,7 +2251,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             >
               Tue
             </span>
-            18
+            19
           </div>
         </td>
         <td
@@ -1916,7 +2280,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             >
               Wed
             </span>
-            19
+            20
           </div>
         </td>
         <td
@@ -1945,7 +2309,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             >
               Thu
             </span>
-            20
+            21
           </div>
         </td>
         <td
@@ -1974,7 +2338,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             >
               Fri
             </span>
-            21
+            22
           </div>
         </td>
         <td
@@ -2003,7 +2367,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             >
               Sat
             </span>
-            22
+            23
           </div>
         </td>
       </tr>
@@ -2036,7 +2400,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             >
               Sun
             </span>
-            23
+            24
           </div>
         </td>
         <td
@@ -2065,7 +2429,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             >
               Mon
             </span>
-            24
+            25
           </div>
         </td>
         <td
@@ -2094,7 +2458,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             >
               Tue
             </span>
-            25
+            26
           </div>
         </td>
         <td
@@ -2123,7 +2487,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             >
               Wed
             </span>
-            26
+            27
           </div>
         </td>
         <td
@@ -2152,7 +2516,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             >
               Thu
             </span>
-            27
+            28
           </div>
         </td>
         <td
@@ -2181,7 +2545,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             >
               Fri
             </span>
-            28
+            29
           </div>
         </td>
         <td
@@ -2210,7 +2574,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             >
               Sat
             </span>
-            29
+            30
           </div>
         </td>
       </tr>
@@ -2243,7 +2607,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
             >
               Sun
             </span>
-            30
+            31
           </div>
         </td>
         <td
@@ -2739,7 +3103,7 @@ exports[`Viewings > can filter by release year 1`] = `
         tablet-landscape:mb-0 tablet-landscape:table-cell
         tablet-landscape:w-[14.28%]
         
-        hidden
+        false
       "
           data-weekday="Sat"
         >
@@ -2747,7 +3111,7 @@ exports[`Viewings > can filter by release year 1`] = `
             class="
           mb-1 px-container text-sm font-medium
           tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
+          text-default
         "
           >
             <span
@@ -2759,6 +3123,86 @@ exports[`Viewings > can filter by release year 1`] = `
               Sat
             </span>
             9
+          </div>
+          <div
+            class="@container/poster-list"
+          >
+            <ol
+              class="
+              flex flex-col
+              [--poster-list-item-width:33.33%]
+              tablet:flex-row tablet:flex-wrap
+              tablet-landscape:flex-col
+              tablet-landscape:[--poster-list-item-width:100%]
+              @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
+            "
+            >
+              <li
+                class="
+        group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
+        transition-transform
+        tablet:w-(--poster-list-item-width) tablet:flex-col
+        tablet:bg-transparent tablet:px-6 tablet:py-6
+        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        tablet:has-[a:hover]:drop-shadow-2xl
+        items-center
+      "
+              >
+                <div
+                  class="
+        relative w-1/4 max-w-[250px] shrink-0 transition-transform
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:bg-default after:opacity-15 after:transition-opacity
+        group-has-[a:hover]/list-item:after:opacity-0
+        tablet:w-auto
+      "
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster w-full object-cover"
+                    decoding="async"
+                    height="375"
+                    loading="lazy"
+                    sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    width="250"
+                  />
+                </div>
+                <div
+                  class="
+                    flex flex-col
+                    tablet:mt-2 tablet:px-1
+                  "
+                >
+                  <a
+                    class="
+          font-sans text-xs font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                    href="/reviews/psycho-circus-1966/"
+                  >
+                    Psycho-Circus
+                      
+                    <span
+                      class="text-xxs leading-none font-light text-subtle"
+                    >
+                      1966
+                    </span>
+                  </a>
+                  <div
+                    class="
+            font-sans text-xs font-light text-subtle
+            tablet:text-xxs
+          "
+                  >
+                    DVD
+                  </div>
+                </div>
+              </li>
+            </ol>
           </div>
         </td>
       </tr>
@@ -2946,7 +3390,7 @@ exports[`Viewings > can filter by release year 1`] = `
         tablet-landscape:mb-0 tablet-landscape:table-cell
         tablet-landscape:w-[14.28%]
         
-        hidden
+        false
       "
           data-weekday="Sat"
         >
@@ -2954,7 +3398,7 @@ exports[`Viewings > can filter by release year 1`] = `
             class="
           mb-1 px-container text-sm font-medium
           tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
+          text-default
         "
           >
             <span
@@ -2966,6 +3410,86 @@ exports[`Viewings > can filter by release year 1`] = `
               Sat
             </span>
             16
+          </div>
+          <div
+            class="@container/poster-list"
+          >
+            <ol
+              class="
+              flex flex-col
+              [--poster-list-item-width:33.33%]
+              tablet:flex-row tablet:flex-wrap
+              tablet-landscape:flex-col
+              tablet-landscape:[--poster-list-item-width:100%]
+              @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
+            "
+            >
+              <li
+                class="
+        group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
+        transition-transform
+        tablet:w-(--poster-list-item-width) tablet:flex-col
+        tablet:bg-transparent tablet:px-6 tablet:py-6
+        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        tablet:has-[a:hover]:drop-shadow-2xl
+        items-center
+      "
+              >
+                <div
+                  class="
+        relative w-1/4 max-w-[250px] shrink-0 transition-transform
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:bg-default after:opacity-15 after:transition-opacity
+        group-has-[a:hover]/list-item:after:opacity-0
+        tablet:w-auto
+      "
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster w-full object-cover"
+                    decoding="async"
+                    height="375"
+                    loading="lazy"
+                    sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    width="250"
+                  />
+                </div>
+                <div
+                  class="
+                    flex flex-col
+                    tablet:mt-2 tablet:px-1
+                  "
+                >
+                  <a
+                    class="
+          font-sans text-xs font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                    href="/reviews/horror-of-dracula-1958/"
+                  >
+                    Horror of Dracula
+                      
+                    <span
+                      class="text-xxs leading-none font-light text-subtle"
+                    >
+                      1958
+                    </span>
+                  </a>
+                  <div
+                    class="
+            font-sans text-xs font-light text-subtle
+            tablet:text-xxs
+          "
+                  >
+                    DVD
+                  </div>
+                </div>
+              </li>
+            </ol>
           </div>
         </td>
       </tr>
@@ -3580,6 +4104,13 @@ exports[`Viewings > can filter by release year reversed 1`] = `
         />
         <td
           class="
+          hidden min-h-[100px] border border-default bg-transparent p-2
+          align-top
+          tablet-landscape:table-cell
+        "
+        />
+        <td
+          class="
         mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
         tablet:border tablet:px-2
         tablet-landscape:mb-0 tablet-landscape:table-cell
@@ -3587,7 +4118,7 @@ exports[`Viewings > can filter by release year reversed 1`] = `
         
         hidden
       "
-          data-weekday="Thu"
+          data-weekday="Fri"
         >
           <div
             class="
@@ -3602,7 +4133,7 @@ exports[`Viewings > can filter by release year reversed 1`] = `
             tablet-landscape:hidden
           "
             >
-              Thu
+              Fri
             </span>
             1
           </div>
@@ -3614,630 +4145,9 @@ exports[`Viewings > can filter by release year reversed 1`] = `
         tablet-landscape:mb-0 tablet-landscape:table-cell
         tablet-landscape:w-[14.28%]
         
-        hidden
-      "
-          data-weekday="Fri"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Fri
-            </span>
-            2
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Sat"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Sat
-            </span>
-            3
-          </div>
-        </td>
-      </tr>
-      <tr
-        class="tablet-landscape:table-row"
-      >
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Sun"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Sun
-            </span>
-            4
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Mon"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Mon
-            </span>
-            5
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Tue"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Tue
-            </span>
-            6
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Wed"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Wed
-            </span>
-            7
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Thu"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Thu
-            </span>
-            8
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Fri"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Fri
-            </span>
-            9
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Sat"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Sat
-            </span>
-            10
-          </div>
-        </td>
-      </tr>
-      <tr
-        class="tablet-landscape:table-row"
-      >
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Sun"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Sun
-            </span>
-            11
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Mon"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Mon
-            </span>
-            12
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Tue"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Tue
-            </span>
-            13
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Wed"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Wed
-            </span>
-            14
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Thu"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Thu
-            </span>
-            15
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Fri"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Fri
-            </span>
-            16
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Sat"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Sat
-            </span>
-            17
-          </div>
-        </td>
-      </tr>
-      <tr
-        class="tablet-landscape:table-row"
-      >
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Sun"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Sun
-            </span>
-            18
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Mon"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Mon
-            </span>
-            19
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Tue"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Tue
-            </span>
-            20
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Wed"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Wed
-            </span>
-            21
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Thu"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Thu
-            </span>
-            22
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
         false
       "
-          data-weekday="Fri"
+          data-weekday="Sat"
         >
           <div
             class="
@@ -4252,9 +4162,9 @@ exports[`Viewings > can filter by release year reversed 1`] = `
             tablet-landscape:hidden
           "
             >
-              Fri
+              Sat
             </span>
-            23
+            2
           </div>
           <div
             class="@container/poster-list"
@@ -4297,8 +4207,8 @@ exports[`Viewings > can filter by release year reversed 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fharry-in-your-pocket-1973.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fharry-in-your-pocket-1973.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fharry-in-your-pocket-1973.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fharry-in-your-pocket-1973.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fharry-in-your-pocket-1973.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -4314,14 +4224,14 @@ exports[`Viewings > can filter by release year reversed 1`] = `
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
         "
-                    href="/reviews/harry-in-your-pocket-1973/"
+                    href="/reviews/the-bloody-judge-1970/"
                   >
-                    Harry in Your Pocket
+                    The Bloody Judge
                       
                     <span
                       class="text-xxs leading-none font-light text-subtle"
                     >
-                      1973
+                      1970
                     </span>
                   </a>
                   <div
@@ -4330,40 +4240,11 @@ exports[`Viewings > can filter by release year reversed 1`] = `
             tablet:text-xxs
           "
                   >
-                    TCM HD
+                    DVD
                   </div>
                 </div>
               </li>
             </ol>
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Sat"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Sat
-            </span>
-            24
           </div>
         </td>
       </tr>
@@ -4396,7 +4277,7 @@ exports[`Viewings > can filter by release year reversed 1`] = `
             >
               Sun
             </span>
-            25
+            3
           </div>
         </td>
         <td
@@ -4425,7 +4306,7 @@ exports[`Viewings > can filter by release year reversed 1`] = `
             >
               Mon
             </span>
-            26
+            4
           </div>
         </td>
         <td
@@ -4454,7 +4335,7 @@ exports[`Viewings > can filter by release year reversed 1`] = `
             >
               Tue
             </span>
-            27
+            5
           </div>
         </td>
         <td
@@ -4483,7 +4364,7 @@ exports[`Viewings > can filter by release year reversed 1`] = `
             >
               Wed
             </span>
-            28
+            6
           </div>
         </td>
         <td
@@ -4512,7 +4393,7 @@ exports[`Viewings > can filter by release year reversed 1`] = `
             >
               Thu
             </span>
-            29
+            7
           </div>
         </td>
         <td
@@ -4541,9 +4422,887 @@ exports[`Viewings > can filter by release year reversed 1`] = `
             >
               Fri
             </span>
+            8
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        false
+      "
+          data-weekday="Sat"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-default
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Sat
+            </span>
+            9
+          </div>
+          <div
+            class="@container/poster-list"
+          >
+            <ol
+              class="
+              flex flex-col
+              [--poster-list-item-width:33.33%]
+              tablet:flex-row tablet:flex-wrap
+              tablet-landscape:flex-col
+              tablet-landscape:[--poster-list-item-width:100%]
+              @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
+            "
+            >
+              <li
+                class="
+        group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
+        transition-transform
+        tablet:w-(--poster-list-item-width) tablet:flex-col
+        tablet:bg-transparent tablet:px-6 tablet:py-6
+        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        tablet:has-[a:hover]:drop-shadow-2xl
+        items-center
+      "
+              >
+                <div
+                  class="
+        relative w-1/4 max-w-[250px] shrink-0 transition-transform
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:bg-default after:opacity-15 after:transition-opacity
+        group-has-[a:hover]/list-item:after:opacity-0
+        tablet:w-auto
+      "
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster w-full object-cover"
+                    decoding="async"
+                    height="375"
+                    loading="lazy"
+                    sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    width="250"
+                  />
+                </div>
+                <div
+                  class="
+                    flex flex-col
+                    tablet:mt-2 tablet:px-1
+                  "
+                >
+                  <a
+                    class="
+          font-sans text-xs font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                    href="/reviews/psycho-circus-1966/"
+                  >
+                    Psycho-Circus
+                      
+                    <span
+                      class="text-xxs leading-none font-light text-subtle"
+                    >
+                      1966
+                    </span>
+                  </a>
+                  <div
+                    class="
+            font-sans text-xs font-light text-subtle
+            tablet:text-xxs
+          "
+                  >
+                    DVD
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="tablet-landscape:table-row"
+      >
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Sun"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Sun
+            </span>
+            10
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Mon"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Mon
+            </span>
+            11
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Tue"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Tue
+            </span>
+            12
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Wed"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Wed
+            </span>
+            13
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Thu"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Thu
+            </span>
+            14
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Fri"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Fri
+            </span>
+            15
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        false
+      "
+          data-weekday="Sat"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-default
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Sat
+            </span>
+            16
+          </div>
+          <div
+            class="@container/poster-list"
+          >
+            <ol
+              class="
+              flex flex-col
+              [--poster-list-item-width:33.33%]
+              tablet:flex-row tablet:flex-wrap
+              tablet-landscape:flex-col
+              tablet-landscape:[--poster-list-item-width:100%]
+              @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
+            "
+            >
+              <li
+                class="
+        group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
+        transition-transform
+        tablet:w-(--poster-list-item-width) tablet:flex-col
+        tablet:bg-transparent tablet:px-6 tablet:py-6
+        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        tablet:has-[a:hover]:drop-shadow-2xl
+        items-center
+      "
+              >
+                <div
+                  class="
+        relative w-1/4 max-w-[250px] shrink-0 transition-transform
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:bg-default after:opacity-15 after:transition-opacity
+        group-has-[a:hover]/list-item:after:opacity-0
+        tablet:w-auto
+      "
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster w-full object-cover"
+                    decoding="async"
+                    height="375"
+                    loading="lazy"
+                    sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    width="250"
+                  />
+                </div>
+                <div
+                  class="
+                    flex flex-col
+                    tablet:mt-2 tablet:px-1
+                  "
+                >
+                  <a
+                    class="
+          font-sans text-xs font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                    href="/reviews/horror-of-dracula-1958/"
+                  >
+                    Horror of Dracula
+                      
+                    <span
+                      class="text-xxs leading-none font-light text-subtle"
+                    >
+                      1958
+                    </span>
+                  </a>
+                  <div
+                    class="
+            font-sans text-xs font-light text-subtle
+            tablet:text-xxs
+          "
+                  >
+                    DVD
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="tablet-landscape:table-row"
+      >
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Sun"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Sun
+            </span>
+            17
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Mon"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Mon
+            </span>
+            18
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Tue"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Tue
+            </span>
+            19
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Wed"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Wed
+            </span>
+            20
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Thu"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Thu
+            </span>
+            21
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Fri"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Fri
+            </span>
+            22
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Sat"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Sat
+            </span>
+            23
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="tablet-landscape:table-row"
+      >
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Sun"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Sun
+            </span>
+            24
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Mon"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Mon
+            </span>
+            25
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Tue"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Tue
+            </span>
+            26
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Wed"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Wed
+            </span>
+            27
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Thu"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Thu
+            </span>
+            28
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Fri"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Fri
+            </span>
+            29
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Sat"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Sat
+            </span>
             30
           </div>
         </td>
+      </tr>
+      <tr
+        class="tablet-landscape:table-row"
+      >
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Sun"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Sun
+            </span>
+            31
+          </div>
+        </td>
+        <td
+          class="
+          hidden min-h-[100px] border border-default bg-transparent p-2
+          align-top
+          tablet-landscape:table-cell
+        "
+        />
+        <td
+          class="
+          hidden min-h-[100px] border border-default bg-transparent p-2
+          align-top
+          tablet-landscape:table-cell
+        "
+        />
+        <td
+          class="
+          hidden min-h-[100px] border border-default bg-transparent p-2
+          align-top
+          tablet-landscape:table-cell
+        "
+        />
+        <td
+          class="
+          hidden min-h-[100px] border border-default bg-transparent p-2
+          align-top
+          tablet-landscape:table-cell
+        "
+        />
+        <td
+          class="
+          hidden min-h-[100px] border border-default bg-transparent p-2
+          align-top
+          tablet-landscape:table-cell
+        "
+        />
         <td
           class="
           hidden min-h-[100px] border border-default bg-transparent p-2
@@ -4715,7 +5474,7 @@ exports[`Viewings > can filter by title 1`] = `
         tablet-landscape:mb-0 tablet-landscape:table-cell
         tablet-landscape:w-[14.28%]
         
-        hidden
+        false
       "
           data-weekday="Sat"
         >
@@ -4723,7 +5482,7 @@ exports[`Viewings > can filter by title 1`] = `
             class="
           mb-1 px-container text-sm font-medium
           tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
+          text-default
         "
           >
             <span
@@ -4735,6 +5494,86 @@ exports[`Viewings > can filter by title 1`] = `
               Sat
             </span>
             2
+          </div>
+          <div
+            class="@container/poster-list"
+          >
+            <ol
+              class="
+              flex flex-col
+              [--poster-list-item-width:33.33%]
+              tablet:flex-row tablet:flex-wrap
+              tablet-landscape:flex-col
+              tablet-landscape:[--poster-list-item-width:100%]
+              @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
+            "
+            >
+              <li
+                class="
+        group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
+        transition-transform
+        tablet:w-(--poster-list-item-width) tablet:flex-col
+        tablet:bg-transparent tablet:px-6 tablet:py-6
+        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        tablet:has-[a:hover]:drop-shadow-2xl
+        items-center
+      "
+              >
+                <div
+                  class="
+        relative w-1/4 max-w-[250px] shrink-0 transition-transform
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:bg-default after:opacity-15 after:transition-opacity
+        group-has-[a:hover]/list-item:after:opacity-0
+        tablet:w-auto
+      "
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster w-full object-cover"
+                    decoding="async"
+                    height="375"
+                    loading="lazy"
+                    sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    width="250"
+                  />
+                </div>
+                <div
+                  class="
+                    flex flex-col
+                    tablet:mt-2 tablet:px-1
+                  "
+                >
+                  <a
+                    class="
+          font-sans text-xs font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                    href="/reviews/the-bloody-judge-1970/"
+                  >
+                    The Bloody Judge
+                      
+                    <span
+                      class="text-xxs leading-none font-light text-subtle"
+                    >
+                      1970
+                    </span>
+                  </a>
+                  <div
+                    class="
+            font-sans text-xs font-light text-subtle
+            tablet:text-xxs
+          "
+                  >
+                    DVD
+                  </div>
+                </div>
+              </li>
+            </ol>
           </div>
         </td>
       </tr>
@@ -4922,7 +5761,7 @@ exports[`Viewings > can filter by title 1`] = `
         tablet-landscape:mb-0 tablet-landscape:table-cell
         tablet-landscape:w-[14.28%]
         
-        hidden
+        false
       "
           data-weekday="Sat"
         >
@@ -4930,7 +5769,7 @@ exports[`Viewings > can filter by title 1`] = `
             class="
           mb-1 px-container text-sm font-medium
           tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
+          text-default
         "
           >
             <span
@@ -4942,6 +5781,86 @@ exports[`Viewings > can filter by title 1`] = `
               Sat
             </span>
             9
+          </div>
+          <div
+            class="@container/poster-list"
+          >
+            <ol
+              class="
+              flex flex-col
+              [--poster-list-item-width:33.33%]
+              tablet:flex-row tablet:flex-wrap
+              tablet-landscape:flex-col
+              tablet-landscape:[--poster-list-item-width:100%]
+              @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
+            "
+            >
+              <li
+                class="
+        group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
+        transition-transform
+        tablet:w-(--poster-list-item-width) tablet:flex-col
+        tablet:bg-transparent tablet:px-6 tablet:py-6
+        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        tablet:has-[a:hover]:drop-shadow-2xl
+        items-center
+      "
+              >
+                <div
+                  class="
+        relative w-1/4 max-w-[250px] shrink-0 transition-transform
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:bg-default after:opacity-15 after:transition-opacity
+        group-has-[a:hover]/list-item:after:opacity-0
+        tablet:w-auto
+      "
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster w-full object-cover"
+                    decoding="async"
+                    height="375"
+                    loading="lazy"
+                    sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    width="250"
+                  />
+                </div>
+                <div
+                  class="
+                    flex flex-col
+                    tablet:mt-2 tablet:px-1
+                  "
+                >
+                  <a
+                    class="
+          font-sans text-xs font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                    href="/reviews/psycho-circus-1966/"
+                  >
+                    Psycho-Circus
+                      
+                    <span
+                      class="text-xxs leading-none font-light text-subtle"
+                    >
+                      1966
+                    </span>
+                  </a>
+                  <div
+                    class="
+            font-sans text-xs font-light text-subtle
+            tablet:text-xxs
+          "
+                  >
+                    DVD
+                  </div>
+                </div>
+              </li>
+            </ol>
           </div>
         </td>
       </tr>
@@ -5129,7 +6048,7 @@ exports[`Viewings > can filter by title 1`] = `
         tablet-landscape:mb-0 tablet-landscape:table-cell
         tablet-landscape:w-[14.28%]
         
-        hidden
+        false
       "
           data-weekday="Sat"
         >
@@ -5137,7 +6056,7 @@ exports[`Viewings > can filter by title 1`] = `
             class="
           mb-1 px-container text-sm font-medium
           tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
+          text-default
         "
           >
             <span
@@ -5149,6 +6068,86 @@ exports[`Viewings > can filter by title 1`] = `
               Sat
             </span>
             16
+          </div>
+          <div
+            class="@container/poster-list"
+          >
+            <ol
+              class="
+              flex flex-col
+              [--poster-list-item-width:33.33%]
+              tablet:flex-row tablet:flex-wrap
+              tablet-landscape:flex-col
+              tablet-landscape:[--poster-list-item-width:100%]
+              @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
+            "
+            >
+              <li
+                class="
+        group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
+        transition-transform
+        tablet:w-(--poster-list-item-width) tablet:flex-col
+        tablet:bg-transparent tablet:px-6 tablet:py-6
+        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        tablet:has-[a:hover]:drop-shadow-2xl
+        items-center
+      "
+              >
+                <div
+                  class="
+        relative w-1/4 max-w-[250px] shrink-0 transition-transform
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:bg-default after:opacity-15 after:transition-opacity
+        group-has-[a:hover]/list-item:after:opacity-0
+        tablet:w-auto
+      "
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster w-full object-cover"
+                    decoding="async"
+                    height="375"
+                    loading="lazy"
+                    sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    width="250"
+                  />
+                </div>
+                <div
+                  class="
+                    flex flex-col
+                    tablet:mt-2 tablet:px-1
+                  "
+                >
+                  <a
+                    class="
+          font-sans text-xs font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                    href="/reviews/horror-of-dracula-1958/"
+                  >
+                    Horror of Dracula
+                      
+                    <span
+                      class="text-xxs leading-none font-light text-subtle"
+                    >
+                      1958
+                    </span>
+                  </a>
+                  <div
+                    class="
+            font-sans text-xs font-light text-subtle
+            tablet:text-xxs
+          "
+                  >
+                    DVD
+                  </div>
+                </div>
+              </li>
+            </ol>
           </div>
         </td>
       </tr>
@@ -9722,6 +10721,41 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
       >
         <td
           class="
+          hidden min-h-[100px] border border-default bg-transparent p-2
+          align-top
+          tablet-landscape:table-cell
+        "
+        />
+        <td
+          class="
+          hidden min-h-[100px] border border-default bg-transparent p-2
+          align-top
+          tablet-landscape:table-cell
+        "
+        />
+        <td
+          class="
+          hidden min-h-[100px] border border-default bg-transparent p-2
+          align-top
+          tablet-landscape:table-cell
+        "
+        />
+        <td
+          class="
+          hidden min-h-[100px] border border-default bg-transparent p-2
+          align-top
+          tablet-landscape:table-cell
+        "
+        />
+        <td
+          class="
+          hidden min-h-[100px] border border-default bg-transparent p-2
+          align-top
+          tablet-landscape:table-cell
+        "
+        />
+        <td
+          class="
         mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
         tablet:border tablet:px-2
         tablet-landscape:mb-0 tablet-landscape:table-cell
@@ -9729,7 +10763,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
         
         hidden
       "
-          data-weekday="Sun"
+          data-weekday="Fri"
         >
           <div
             class="
@@ -9744,7 +10778,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
             tablet-landscape:hidden
           "
             >
-              Sun
+              Fri
             </span>
             1
           </div>
@@ -9756,125 +10790,9 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
         tablet-landscape:mb-0 tablet-landscape:table-cell
         tablet-landscape:w-[14.28%]
         
-        hidden
-      "
-          data-weekday="Mon"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Mon
-            </span>
-            2
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Tue"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Tue
-            </span>
-            3
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Wed"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Wed
-            </span>
-            4
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Thu"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Thu
-            </span>
-            5
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
         false
       "
-          data-weekday="Fri"
+          data-weekday="Sat"
         >
           <div
             class="
@@ -9889,9 +10807,9 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
             tablet-landscape:hidden
           "
             >
-              Fri
+              Sat
             </span>
-            6
+            2
           </div>
           <div
             class="@container/poster-list"
@@ -9934,8 +10852,8 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhard-eight-1996.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhard-eight-1996.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhard-eight-1996.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhard-eight-1996.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhard-eight-1996.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -9951,14 +10869,14 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
         "
-                    href="/reviews/hard-eight-1996/"
+                    href="/reviews/the-bloody-judge-1970/"
                   >
-                    Hard Eight
+                    The Bloody Judge
                       
                     <span
                       class="text-xxs leading-none font-light text-subtle"
                     >
-                      1996
+                      1970
                     </span>
                   </a>
                   <div
@@ -9967,40 +10885,11 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
             tablet:text-xxs
           "
                   >
-                    Netflix
+                    DVD
                   </div>
                 </div>
               </li>
             </ol>
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Sat"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Sat
-            </span>
-            7
           </div>
         </td>
       </tr>
@@ -10033,7 +10922,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
             >
               Sun
             </span>
-            8
+            3
           </div>
         </td>
         <td
@@ -10062,7 +10951,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
             >
               Mon
             </span>
-            9
+            4
           </div>
         </td>
         <td
@@ -10090,6 +10979,235 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
           "
             >
               Tue
+            </span>
+            5
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Wed"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Wed
+            </span>
+            6
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Thu"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Thu
+            </span>
+            7
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Fri"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Fri
+            </span>
+            8
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        false
+      "
+          data-weekday="Sat"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-default
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Sat
+            </span>
+            9
+          </div>
+          <div
+            class="@container/poster-list"
+          >
+            <ol
+              class="
+              flex flex-col
+              [--poster-list-item-width:33.33%]
+              tablet:flex-row tablet:flex-wrap
+              tablet-landscape:flex-col
+              tablet-landscape:[--poster-list-item-width:100%]
+              @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
+            "
+            >
+              <li
+                class="
+        group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
+        transition-transform
+        tablet:w-(--poster-list-item-width) tablet:flex-col
+        tablet:bg-transparent tablet:px-6 tablet:py-6
+        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        tablet:has-[a:hover]:drop-shadow-2xl
+        items-center
+      "
+              >
+                <div
+                  class="
+        relative w-1/4 max-w-[250px] shrink-0 transition-transform
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:bg-default after:opacity-15 after:transition-opacity
+        group-has-[a:hover]/list-item:after:opacity-0
+        tablet:w-auto
+      "
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster w-full object-cover"
+                    decoding="async"
+                    height="375"
+                    loading="lazy"
+                    sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    width="250"
+                  />
+                </div>
+                <div
+                  class="
+                    flex flex-col
+                    tablet:mt-2 tablet:px-1
+                  "
+                >
+                  <a
+                    class="
+          font-sans text-xs font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                    href="/reviews/psycho-circus-1966/"
+                  >
+                    Psycho-Circus
+                      
+                    <span
+                      class="text-xxs leading-none font-light text-subtle"
+                    >
+                      1966
+                    </span>
+                  </a>
+                  <div
+                    class="
+            font-sans text-xs font-light text-subtle
+            tablet:text-xxs
+          "
+                  >
+                    DVD
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="tablet-landscape:table-row"
+      >
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Sun"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Sun
             </span>
             10
           </div>
@@ -10103,7 +11221,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
         
         hidden
       "
-          data-weekday="Wed"
+          data-weekday="Mon"
         >
           <div
             class="
@@ -10118,7 +11236,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
             tablet-landscape:hidden
           "
             >
-              Wed
+              Mon
             </span>
             11
           </div>
@@ -10132,7 +11250,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
         
         hidden
       "
-          data-weekday="Thu"
+          data-weekday="Tue"
         >
           <div
             class="
@@ -10147,7 +11265,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
             tablet-landscape:hidden
           "
             >
-              Thu
+              Tue
             </span>
             12
           </div>
@@ -10161,7 +11279,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
         
         hidden
       "
-          data-weekday="Fri"
+          data-weekday="Wed"
         >
           <div
             class="
@@ -10176,7 +11294,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
             tablet-landscape:hidden
           "
             >
-              Fri
+              Wed
             </span>
             13
           </div>
@@ -10190,7 +11308,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
         
         hidden
       "
-          data-weekday="Sat"
+          data-weekday="Thu"
         >
           <div
             class="
@@ -10205,9 +11323,147 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
             tablet-landscape:hidden
           "
             >
-              Sat
+              Thu
             </span>
             14
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Fri"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Fri
+            </span>
+            15
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        false
+      "
+          data-weekday="Sat"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-default
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Sat
+            </span>
+            16
+          </div>
+          <div
+            class="@container/poster-list"
+          >
+            <ol
+              class="
+              flex flex-col
+              [--poster-list-item-width:33.33%]
+              tablet:flex-row tablet:flex-wrap
+              tablet-landscape:flex-col
+              tablet-landscape:[--poster-list-item-width:100%]
+              @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
+            "
+            >
+              <li
+                class="
+        group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
+        transition-transform
+        tablet:w-(--poster-list-item-width) tablet:flex-col
+        tablet:bg-transparent tablet:px-6 tablet:py-6
+        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        tablet:has-[a:hover]:drop-shadow-2xl
+        items-center
+      "
+              >
+                <div
+                  class="
+        relative w-1/4 max-w-[250px] shrink-0 transition-transform
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:bg-default after:opacity-15 after:transition-opacity
+        group-has-[a:hover]/list-item:after:opacity-0
+        tablet:w-auto
+      "
+                >
+                  <img
+                    alt=""
+                    class="aspect-poster w-full object-cover"
+                    decoding="async"
+                    height="375"
+                    loading="lazy"
+                    sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    width="250"
+                  />
+                </div>
+                <div
+                  class="
+                    flex flex-col
+                    tablet:mt-2 tablet:px-1
+                  "
+                >
+                  <a
+                    class="
+          font-sans text-xs font-medium text-accent
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+        "
+                    href="/reviews/horror-of-dracula-1958/"
+                  >
+                    Horror of Dracula
+                      
+                    <span
+                      class="text-xxs leading-none font-light text-subtle"
+                    >
+                      1958
+                    </span>
+                  </a>
+                  <div
+                    class="
+            font-sans text-xs font-light text-subtle
+            tablet:text-xxs
+          "
+                  >
+                    DVD
+                  </div>
+                </div>
+              </li>
+            </ol>
           </div>
         </td>
       </tr>
@@ -10239,64 +11495,6 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
           "
             >
               Sun
-            </span>
-            15
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Mon"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Mon
-            </span>
-            16
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Tue"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Tue
             </span>
             17
           </div>
@@ -10310,7 +11508,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
         
         hidden
       "
-          data-weekday="Wed"
+          data-weekday="Mon"
         >
           <div
             class="
@@ -10325,7 +11523,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
             tablet-landscape:hidden
           "
             >
-              Wed
+              Mon
             </span>
             18
           </div>
@@ -10339,155 +11537,6 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
         
         hidden
       "
-          data-weekday="Thu"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Thu
-            </span>
-            19
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Fri"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Fri
-            </span>
-            20
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Sat"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Sat
-            </span>
-            21
-          </div>
-        </td>
-      </tr>
-      <tr
-        class="tablet-landscape:table-row"
-      >
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Sun"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Sun
-            </span>
-            22
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
-          data-weekday="Mon"
-        >
-          <div
-            class="
-          mb-1 px-container text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs font-light text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Mon
-            </span>
-            23
-          </div>
-        </td>
-        <td
-          class="
-        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
-        
-        hidden
-      "
           data-weekday="Tue"
         >
           <div
@@ -10505,7 +11554,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
             >
               Tue
             </span>
-            24
+            19
           </div>
         </td>
         <td
@@ -10534,7 +11583,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
             >
               Wed
             </span>
-            25
+            20
           </div>
         </td>
         <td
@@ -10563,7 +11612,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
             >
               Thu
             </span>
-            26
+            21
           </div>
         </td>
         <td
@@ -10592,7 +11641,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
             >
               Fri
             </span>
-            27
+            22
           </div>
         </td>
         <td
@@ -10621,7 +11670,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
             >
               Sat
             </span>
-            28
+            23
           </div>
         </td>
       </tr>
@@ -10654,7 +11703,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
             >
               Sun
             </span>
-            29
+            24
           </div>
         </td>
         <td
@@ -10683,7 +11732,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
             >
               Mon
             </span>
-            30
+            25
           </div>
         </td>
         <td
@@ -10712,9 +11761,172 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
             >
               Tue
             </span>
+            26
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Wed"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Wed
+            </span>
+            27
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Thu"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Thu
+            </span>
+            28
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Fri"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Fri
+            </span>
+            29
+          </div>
+        </td>
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Sat"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Sat
+            </span>
+            30
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="tablet-landscape:table-row"
+      >
+        <td
+          class="
+        mb-2 block min-h-[100px] w-full border-default bg-default py-2 align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%]
+        
+        hidden
+      "
+          data-weekday="Sun"
+        >
+          <div
+            class="
+          mb-1 px-container text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs font-light text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Sun
+            </span>
             31
           </div>
         </td>
+        <td
+          class="
+          hidden min-h-[100px] border border-default bg-transparent p-2
+          align-top
+          tablet-landscape:table-cell
+        "
+        />
+        <td
+          class="
+          hidden min-h-[100px] border border-default bg-transparent p-2
+          align-top
+          tablet-landscape:table-cell
+        "
+        />
         <td
           class="
           hidden min-h-[100px] border border-default bg-transparent p-2
@@ -17638,10 +18850,39 @@ exports[`Viewings > renders 1`] = `
                 [@media(min-height:815px)]:pt-12
               "
           >
+            <button
+              aria-label="Close filters"
+              class="
+                  absolute top-7 right-4 z-10 flex h-10 w-10 transform-gpu
+                  cursor-pointer items-center justify-center rounded-full
+                  bg-subtle text-default transition-transform
+                  hover:scale-105
+                  
+                "
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="
+                    h-4 w-4 transform-gpu
+                    
+                    
+                  "
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 28 28"
+              >
+                <path
+                  d="M7 21L21 7M7 7l14 14"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
             <fieldset
               class="
                   mt-0 flex grow flex-col gap-5 px-container py-10
-                  [--control-scroll-offset:calc(181px_+_var(--scroll-offset,0px))]
                   tablet:gap-8
                   tablet-landscape:grow-0 tablet-landscape:gap-12
                   tablet-landscape:px-12
@@ -17675,6 +18916,7 @@ exports[`Viewings > renders 1`] = `
         "
                   placeholder="Enter all or part of a title"
                   type="text"
+                  value=""
                 />
               </label>
               <fieldset

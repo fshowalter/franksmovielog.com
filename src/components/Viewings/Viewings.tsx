@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 
-import { useMemo, useReducer } from "react";
+import { useMemo, useReducer, useState } from "react";
 
 import type { PosterImageProps } from "~/api/posters";
 import type { Viewing } from "~/api/viewings";
@@ -93,6 +93,7 @@ export function Viewings({
     },
     initState,
   );
+  const [filterKey, setFilterKey] = useState(0);
 
   // Create index of viewings by date for O(1) calendar lookups
   // Recalculated when monthViewings changes (due to filters)
@@ -127,6 +128,8 @@ export function Viewings({
           distinctReleaseYears={distinctReleaseYears}
           distinctVenues={distinctVenues}
           distinctViewingYears={distinctViewingYears}
+          filterKey={String(filterKey)}
+          pendingFilters={state.pendingFilters}
         />
       }
       list={
@@ -141,6 +144,14 @@ export function Viewings({
       listHeaderButtons={
         <ListHeaderButton href="/viewings/stats/" text="stats" />
       }
+      onApplyFilters={() => dispatch({ type: Actions.APPLY_PENDING_FILTERS })}
+      onFilterDrawerOpen={() => {
+        // Increment key to force remount of filter components
+        setFilterKey((prev) => prev + 1);
+        dispatch({ type: Actions.RESET_PENDING_FILTERS });
+      }}
+      onResetFilters={() => dispatch({ type: Actions.RESET_PENDING_FILTERS })}
+      pendingFilteredCount={state.pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sortValue,
         onSortChange: (e) =>
