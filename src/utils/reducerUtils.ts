@@ -11,69 +11,6 @@
  */
 import { collator } from "./collator";
 
-// Core types
-export type FilterableState<TItem, TSortValue, TGroupedValues> = {
-  allValues: TItem[];
-  filteredValues: TItem[];
-  filters: Record<string, (item: TItem) => boolean>;
-  groupedValues: TGroupedValues;
-  showCount: number;
-  sortValue: TSortValue;
-};
-
-// Common state update patterns
-export function applyShowMore<
-  TItem,
-  TSortValue,
-  TGroupedValues,
-  TState extends {
-    filteredValues: TItem[];
-    groupedValues: TGroupedValues;
-    showCount: number;
-    sortValue: TSortValue;
-  },
->(
-  state: TState,
-  increment: number,
-  groupValues: (items: TItem[], sortValue: TSortValue) => TGroupedValues,
-): TState {
-  const showCount = state.showCount + increment;
-  const groupedValues = groupValues(
-    state.filteredValues.slice(0, showCount),
-    state.sortValue,
-  );
-  return {
-    ...state,
-    groupedValues,
-    showCount,
-  };
-}
-
-// Build group values factory
-export function buildGroupValues<TItem, TSortValue>(
-  valueGrouper: (item: TItem, sortValue: TSortValue) => string,
-) {
-  return function groupValues(
-    items: TItem[],
-    sortValue: TSortValue,
-  ): Map<string, TItem[]> {
-    const groupedValues = new Map<string, TItem[]>();
-
-    for (const item of items) {
-      const group = valueGrouper(item, sortValue);
-      let groupValue = groupedValues.get(group);
-
-      if (!groupValue) {
-        groupValue = [];
-        groupedValues.set(group, groupValue);
-      }
-      groupValue.push(item);
-    }
-
-    return groupedValues;
-  };
-}
-
 export function createNameFilter(value: string) {
   const regex = new RegExp(value, "i");
   return <T extends { name: string }>(item: T) => regex.test(item.name);
@@ -97,53 +34,6 @@ export function createReviewYearFilter(minYear: string, maxYear: string) {
 export function createTitleFilter(value: string) {
   const regex = new RegExp(value, "i");
   return <T extends { title: string }>(item: T) => regex.test(item.title);
-}
-
-// Filter tools factory
-export function filterTools<TItem, TSortValue, TGroupedValues>(
-  sorter: (items: TItem[], sortOrder: TSortValue) => TItem[],
-  grouper: (items: TItem[], sortOrder: TSortValue) => TGroupedValues,
-) {
-  const applyFilters = buildApplyFilters(sorter, grouper);
-
-  const updateFilter = <
-    TState extends FilterableState<TItem, TSortValue, TGroupedValues>,
-  >(
-    currentState: TState,
-    key: string,
-    handler: (item: TItem) => boolean,
-  ): TState => {
-    const filters = {
-      ...currentState.filters,
-      [key]: handler,
-    };
-
-    return applyFilters(filters, currentState);
-  };
-
-  return {
-    applyFilters,
-    clearFilter: <
-      TState extends FilterableState<TItem, TSortValue, TGroupedValues>,
-    >(
-      value: string,
-      currentState: TState,
-      key: string,
-    ): TState | undefined => {
-      if (value != "All") {
-        return undefined;
-      }
-
-      const filters = {
-        ...currentState.filters,
-      };
-
-      delete filters[key];
-
-      return applyFilters(filters, currentState);
-    },
-    updateFilter,
-  };
 }
 
 // Filter values helper
@@ -185,37 +75,4 @@ export function sortNumber(a: number, b: number): number {
 
 export function sortString(a: string, b: string): number {
   return collator.compare(a, b);
-}
-
-// Build apply filters helper
-function buildApplyFilters<TItem, TSortValue, TGroupedValues>(
-  sorter: (values: TItem[], sortOrder: TSortValue) => TItem[],
-  grouper: (values: TItem[], sortOrder: TSortValue) => TGroupedValues,
-) {
-  return function applyFilters<
-    TState extends FilterableState<TItem, TSortValue, TGroupedValues>,
-  >(
-    newFilters: Record<string, (value: TItem) => boolean>,
-    currentState: TState,
-  ): TState {
-    const filteredValues = sorter(
-      filterValues({
-        filters: newFilters,
-        values: currentState.allValues,
-      }),
-      currentState.sortValue,
-    );
-
-    const groupedValues = grouper(
-      filteredValues.slice(0, currentState.showCount),
-      currentState.sortValue,
-    );
-
-    return {
-      ...currentState,
-      filteredValues,
-      filters: newFilters,
-      groupedValues,
-    };
-  };
 }

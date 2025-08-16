@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 
-import { useReducer } from "react";
+import { useReducer, useState } from "react";
 
 import type { PosterImageProps } from "~/api/posters";
 import type { WatchlistTitle } from "~/api/watchlistTitles";
@@ -61,6 +61,7 @@ export function Watchlist({
     },
     initState,
   );
+  const [filterKey, setFilterKey] = useState(0);
 
   return (
     <ListWithFilters
@@ -72,8 +73,11 @@ export function Watchlist({
           distinctPerformers={distinctPerformers}
           distinctReleaseYears={distinctReleaseYears}
           distinctWriters={distinctWriters}
+          filterValues={state.pendingFilterValues}
+          key={filterKey}
         />
       }
+      hasActiveFilters={Object.keys(state.pendingFilterValues).length > 0}
       list={
         <div className="@container/list">
           <GroupedPosterList
@@ -97,6 +101,19 @@ export function Watchlist({
       listHeaderButtons={
         <ListHeaderButton href="/watchlist/progress/" text="progress" />
       }
+      onApplyFilters={() => dispatch({ type: Actions.APPLY_PENDING_FILTERS })}
+      onClearFilters={() => {
+        dispatch({ type: Actions.CLEAR_PENDING_FILTERS });
+        setFilterKey((k) => k + 1);
+      }}
+      onFilterDrawerOpen={() =>
+        dispatch({ type: Actions.RESET_PENDING_FILTERS })
+      }
+      onResetFilters={() => {
+        dispatch({ type: Actions.RESET_PENDING_FILTERS });
+        setFilterKey((k) => k + 1);
+      }}
+      pendingFilteredCount={state.pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sortValue,
         onSortChange: (e) =>

@@ -10,17 +10,26 @@ import type { ActionType } from "./CastAndCrewMember.reducer";
 
 import { Actions } from "./CastAndCrewMember.reducer";
 
+type FilterValues = {
+  credits?: string;
+  releaseYear?: [string, string];
+  reviewYear?: [string, string];
+  title?: string;
+};
+
 export function Filters({
   creditedAs,
   dispatch,
   distinctReleaseYears,
   distinctReviewYears,
+  filterValues = {},
   hideReviewed,
 }: {
   creditedAs: readonly string[];
   dispatch: React.Dispatch<ActionType>;
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
+  filterValues?: FilterValues;
   hideReviewed: boolean;
 }): JSX.Element {
   return (
@@ -34,10 +43,11 @@ export function Filters({
           label="Credits"
           onChange={(e) =>
             dispatch({
-              type: Actions.FILTER_CREDIT_KIND,
+              type: Actions.PENDING_FILTER_CREDIT_KIND,
               value: e.target.value,
             })
           }
+          value={filterValues.credits ?? "All"}
         >
           <option value="All">All</option>
           {creditedAs.map((credit) => {
@@ -50,24 +60,27 @@ export function Filters({
         </SelectField>
       )}
       <TextFilter
+        initialValue={filterValues.title ?? ""}
         label="Title"
         onInputChange={(value) =>
-          dispatch({ type: Actions.FILTER_TITLE, value })
+          dispatch({ type: Actions.PENDING_FILTER_TITLE, value })
         }
         placeholder="Enter all or part of a title"
       />
 
       <YearInput
+        initialValues={filterValues.releaseYear ?? []}
         label="Release Year"
         onYearChange={(values) =>
-          dispatch({ type: Actions.FILTER_RELEASE_YEAR, values })
+          dispatch({ type: Actions.PENDING_FILTER_RELEASE_YEAR, values })
         }
         years={distinctReleaseYears}
       />
       <YearInput
+        initialValues={filterValues.reviewYear ?? []}
         label="Review Year"
         onYearChange={(values) =>
-          dispatch({ type: Actions.FILTER_REVIEW_YEAR, values })
+          dispatch({ type: Actions.PENDING_FILTER_REVIEW_YEAR, values })
         }
         years={distinctReviewYears}
       />

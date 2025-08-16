@@ -546,7 +546,7 @@
             </div>
           </header>
           <astro-island
-            uid="ZeccGl"
+            uid="h8207"
             prefix="r1"
             component-url="~/components/CastAndCrewMember/CastAndCrewMember"
             component-export="CastAndCrewMember"
@@ -6210,7 +6210,7 @@
                           ><select
                             class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
                           >
-                            <option value="All">All</option>
+                            <option value="All" selected="">All</option>
                             <option value="performer">Performer</option>
                             <option value="director">Director</option>
                           </select></label
@@ -6392,14 +6392,23 @@
                       <div
                         class="sticky bottom-0 z-filter-footer mt-auto w-full self-end border-t border-t-default bg-default px-8 py-4 drop-shadow-2xl tablet-landscape:px-12 [@media(min-height:815px)]:static [@media(min-height:815px)]:bottom-auto [@media(min-height:815px)]:mt-0 [@media(min-height:815px)]:self-auto [@media(min-height:815px)]:border-t-0 [@media(min-height:815px)]:drop-shadow-none"
                       >
-                        <button
-                          class="flex w-full cursor-pointer items-center justify-center gap-x-4 bg-footer px-4 py-3 font-sans text-xs text-nowrap text-inverse uppercase"
-                          type="button"
-                        >
-                          View<!-- -->
-                          <!-- -->146<!-- -->
-                          <!-- -->Results
-                        </button>
+                        <div class="flex gap-x-4">
+                          <button
+                            aria-label="Clear all filters"
+                            class="flex items-center justify-center gap-x-4 px-4 py-3 font-sans text-xs text-nowrap uppercase cursor-not-allowed bg-canvas text-muted opacity-50"
+                            disabled=""
+                            type="button"
+                          >
+                            Clear</button
+                          ><button
+                            class="flex flex-1 cursor-pointer items-center justify-center gap-x-4 bg-footer px-4 py-3 font-sans text-xs text-nowrap text-inverse uppercase"
+                            type="button"
+                          >
+                            View<!-- -->
+                            <!-- -->146<!-- -->
+                            <!-- -->Results
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>

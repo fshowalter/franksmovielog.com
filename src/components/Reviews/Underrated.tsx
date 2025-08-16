@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 
-import { useReducer } from "react";
+import { useReducer, useState } from "react";
 
 import { ListWithFilters } from "~/components/ListWithFilters";
 import { GroupedPosterList } from "~/components/PosterList";
@@ -35,6 +35,7 @@ export function Underrated({
     },
     initState,
   );
+  const [filterKey, setFilterKey] = useState(0);
 
   return (
     <ListWithFilters
@@ -44,6 +45,8 @@ export function Underrated({
           distinctGenres={distinctGenres}
           distinctReleaseYears={distinctReleaseYears}
           distinctReviewYears={distinctReviewYears}
+          filterValues={state.pendingFilterValues}
+          key={filterKey}
         />
       }
       list={
@@ -56,6 +59,15 @@ export function Underrated({
           {(value) => <ReviewsListItem key={value.imdbId} value={value} />}
         </GroupedPosterList>
       }
+      onApplyFilters={() => dispatch({ type: Actions.APPLY_PENDING_FILTERS })}
+      onFilterDrawerOpen={() =>
+        dispatch({ type: Actions.RESET_PENDING_FILTERS })
+      }
+      onResetFilters={() => {
+        dispatch({ type: Actions.RESET_PENDING_FILTERS });
+        setFilterKey((k) => k + 1);
+      }}
+      pendingFilteredCount={state.pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sortValue,
         onSortChange: (e) =>

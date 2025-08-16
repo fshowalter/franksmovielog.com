@@ -9,6 +9,15 @@ import type { ActionType } from "./Watchlist.reducer";
 
 import { Actions } from "./Watchlist.reducer";
 
+type FilterValues = {
+  collection?: string;
+  director?: string;
+  performer?: string;
+  releaseYear?: [string, string];
+  title?: string;
+  writer?: string;
+};
+
 export function Filters({
   dispatch,
   distinctCollections,
@@ -16,6 +25,7 @@ export function Filters({
   distinctPerformers,
   distinctReleaseYears,
   distinctWriters,
+  filterValues = {},
 }: {
   dispatch: React.Dispatch<ActionType>;
   distinctCollections: readonly string[];
@@ -23,44 +33,51 @@ export function Filters({
   distinctPerformers: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctWriters: readonly string[];
+  filterValues?: FilterValues;
 }): JSX.Element {
   return (
     <>
       <TextFilter
+        initialValue={filterValues.title ?? ""}
         label="Title"
         onInputChange={(value) =>
-          dispatch({ type: Actions.FILTER_TITLE, value })
+          dispatch({ type: Actions.PENDING_FILTER_TITLE, value })
         }
         placeholder="Enter all or part of a title"
       />
       <CreditSelectField
-        actionType={Actions.FILTER_DIRECTOR}
+        actionType={Actions.PENDING_FILTER_DIRECTOR}
         dispatch={dispatch}
+        initialValue={filterValues.director ?? "All"}
         label="Director"
         options={distinctDirectors}
       />
       <CreditSelectField
-        actionType={Actions.FILTER_PERFORMER}
+        actionType={Actions.PENDING_FILTER_PERFORMER}
         dispatch={dispatch}
+        initialValue={filterValues.performer ?? "All"}
         label="Performer"
         options={distinctPerformers}
       />
       <CreditSelectField
-        actionType={Actions.FILTER_WRITER}
+        actionType={Actions.PENDING_FILTER_WRITER}
         dispatch={dispatch}
+        initialValue={filterValues.writer ?? "All"}
         label="Writer"
         options={distinctWriters}
       />
       <CreditSelectField
-        actionType={Actions.FILTER_COLLECTION}
+        actionType={Actions.PENDING_FILTER_COLLECTION}
         dispatch={dispatch}
+        initialValue={filterValues.collection ?? "All"}
         label="Collection"
         options={distinctCollections}
       />
       <YearInput
+        initialValues={filterValues.releaseYear ?? []}
         label="Release Year"
         onYearChange={(values) =>
-          dispatch({ type: Actions.FILTER_RELEASE_YEAR, values })
+          dispatch({ type: Actions.PENDING_FILTER_RELEASE_YEAR, values })
         }
         years={distinctReleaseYears}
       />
@@ -82,15 +99,17 @@ export function SortOptions() {
 function CreditSelectField({
   actionType,
   dispatch,
+  initialValue = "All",
   label,
   options,
 }: {
   actionType:
-    | Actions.FILTER_COLLECTION
-    | Actions.FILTER_DIRECTOR
-    | Actions.FILTER_PERFORMER
-    | Actions.FILTER_WRITER;
+    | Actions.PENDING_FILTER_COLLECTION
+    | Actions.PENDING_FILTER_DIRECTOR
+    | Actions.PENDING_FILTER_PERFORMER
+    | Actions.PENDING_FILTER_WRITER;
   dispatch: React.Dispatch<ActionType>;
+  initialValue?: string;
   label: string;
   options: readonly string[];
 }) {
@@ -103,6 +122,7 @@ function CreditSelectField({
           value: e.target.value,
         })
       }
+      value={initialValue}
     >
       <SelectOptions options={options} />
     </SelectField>

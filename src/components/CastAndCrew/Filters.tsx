@@ -7,17 +7,25 @@ import type { ActionType } from "./CastAndCrew.reducer";
 
 import { Actions } from "./CastAndCrew.reducer";
 
+type FilterValues = {
+  credits?: string;
+  name?: string;
+};
+
 export function Filters({
   dispatch,
+  filterValues = {},
 }: {
   dispatch: React.Dispatch<ActionType>;
+  filterValues?: FilterValues;
 }): JSX.Element {
   return (
     <>
       <TextFilter
+        initialValue={filterValues.name ?? ""}
         label="Name"
         onInputChange={(value) =>
-          dispatch({ type: Actions.FILTER_NAME, value })
+          dispatch({ type: Actions.PENDING_FILTER_NAME, value })
         }
         placeholder="Enter all or part of a name"
       />
@@ -26,10 +34,11 @@ export function Filters({
         label="Credits"
         onChange={(e) =>
           dispatch({
-            type: Actions.FILTER_CREDIT_KIND,
+            type: Actions.PENDING_FILTER_CREDIT_KIND,
             value: e.target.value,
           })
         }
+        value={filterValues.credits ?? "All"}
       >
         <option value="All">All</option>
         <option value="director">Director</option>
