@@ -1,27 +1,46 @@
 import type { ListItemValue } from "./Viewings";
 
 export enum Actions {
+  APPLY_PENDING_FILTERS = "APPLY_PENDING_FILTERS",
   FILTER_MEDIUM = "FILTER_MEDIUM",
   FILTER_RELEASE_YEAR = "FILTER_RELEASE_YEAR",
   FILTER_TITLE = "FILTER_TITLE",
   FILTER_VENUE = "FILTER_VENUE",
   FILTER_VIEWING_YEAR = "FILTER_VIEWING_YEAR",
   NEXT_MONTH = "NEXT_MONTH",
+  // New actions for pending filters
+  PENDING_FILTER_MEDIUM = "PENDING_FILTER_MEDIUM",
+  PENDING_FILTER_RELEASE_YEAR = "PENDING_FILTER_RELEASE_YEAR",
+  PENDING_FILTER_TITLE = "PENDING_FILTER_TITLE",
+  PENDING_FILTER_VENUE = "PENDING_FILTER_VENUE",
+  PENDING_FILTER_VIEWING_YEAR = "PENDING_FILTER_VIEWING_YEAR",
   PREV_MONTH = "PREV_MONTH",
+  RESET_PENDING_FILTERS = "RESET_PENDING_FILTERS",
   SORT = "SORT",
 }
 
 export type ActionType =
+  | ApplyPendingFiltersAction
   | FilterMediumAction
   | FilterReleaseYearAction
   | FilterTitleAction
   | FilterVenueAction
   | FilterViewingYearAction
   | NextMonthAction
+  | PendingFilterMediumAction
+  | PendingFilterReleaseYearAction
+  | PendingFilterTitleAction
+  | PendingFilterVenueAction
+  | PendingFilterViewingYearAction
   | PrevMonthAction
+  | ResetPendingFiltersAction
   | SortAction;
 
 export type Sort = "viewing-date-asc" | "viewing-date-desc";
+
+type ApplyPendingFiltersAction = {
+  type: Actions.APPLY_PENDING_FILTERS;
+};
 
 type FilterMediumAction = {
   type: Actions.FILTER_MEDIUM;
@@ -52,8 +71,37 @@ type NextMonthAction = {
   type: Actions.NEXT_MONTH;
 };
 
+type PendingFilterMediumAction = {
+  type: Actions.PENDING_FILTER_MEDIUM;
+  values: string[];
+};
+
+type PendingFilterReleaseYearAction = {
+  type: Actions.PENDING_FILTER_RELEASE_YEAR;
+  values: string[];
+};
+
+type PendingFilterTitleAction = {
+  type: Actions.PENDING_FILTER_TITLE;
+  value: string;
+};
+
+type PendingFilterVenueAction = {
+  type: Actions.PENDING_FILTER_VENUE;
+  values: string[];
+};
+
+type PendingFilterViewingYearAction = {
+  type: Actions.PENDING_FILTER_VIEWING_YEAR;
+  values: string[];
+};
+
 type PrevMonthAction = {
   type: Actions.PREV_MONTH;
+};
+
+type ResetPendingFiltersAction = {
+  type: Actions.RESET_PENDING_FILTERS;
 };
 
 type SortAction = {
@@ -75,6 +123,15 @@ type State = {
   hasNextMonth: boolean;
   hasPrevMonth: boolean;
   monthViewings: ListItemValue[];
+  pendingFilteredCount: number; // Count of results with pending filters
+  // AIDEV-NOTE: Pending filters store the user's selections before applying
+  pendingFilters: {
+    media: string[];
+    releaseYears: string[];
+    title: string;
+    venues: string[];
+    viewingYears: string[];
+  };
   sortValue: Sort;
 };
 
@@ -88,23 +145,26 @@ export function initState({
   const sortedValues = sortValues(values, initialSort);
   const currentMonth = getInitialMonth(sortedValues, initialSort);
   const monthViewings = getMonthViewings(sortedValues, currentMonth);
+  const initialFilters = {
+    media: [],
+    releaseYears: [],
+    title: "",
+    venues: [],
+    viewingYears: [],
+  };
 
   return {
     allValues: values, // Keep original unsorted values
     currentMonth,
     filteredValues: sortedValues,
-    filters: {
-      media: [],
-      releaseYears: [],
-      title: "",
-      venues: [],
-      viewingYears: [],
-    },
+    filters: initialFilters,
     hasNextMonth:
       getNextMonthWithViewings(currentMonth, sortedValues) !== undefined,
     hasPrevMonth:
       getPrevMonthWithViewings(currentMonth, sortedValues) !== undefined,
     monthViewings,
+    pendingFilteredCount: sortedValues.length,
+    pendingFilters: { ...initialFilters },
     sortValue: initialSort,
   };
 }
@@ -117,6 +177,23 @@ export function reducer(state: State, action: ActionType): State {
   let mostRecentMonth;
 
   switch (action.type) {
+    case Actions.APPLY_PENDING_FILTERS: {
+      // Apply pending filters to actual filters
+      filteredValues = filterValues(state.allValues, state.pendingFilters);
+      filteredValues = sortValues(filteredValues, state.sortValue);
+      newMonth = getInitialMonth(filteredValues, state.sortValue);
+      return {
+        ...state,
+        currentMonth: newMonth,
+        filteredValues,
+        filters: { ...state.pendingFilters },
+        hasNextMonth:
+          getNextMonthWithViewings(newMonth, filteredValues) !== undefined,
+        hasPrevMonth:
+          getPrevMonthWithViewings(newMonth, filteredValues) !== undefined,
+        monthViewings: getMonthViewings(filteredValues, newMonth),
+      };
+    }
     case Actions.FILTER_MEDIUM: {
       filters = {
         ...state.filters,
@@ -237,6 +314,82 @@ export function reducer(state: State, action: ActionType): State {
         monthViewings: getMonthViewings(state.filteredValues, newMonth),
       };
     }
+    // AIDEV-NOTE: Pending filter actions only update pendingFilters and count
+    case Actions.PENDING_FILTER_MEDIUM: {
+      const newPendingFilters = {
+        ...state.pendingFilters,
+        media: action.values,
+      };
+      const pendingFilteredValues = filterValues(
+        state.allValues,
+        newPendingFilters,
+      );
+      return {
+        ...state,
+        pendingFilteredCount: pendingFilteredValues.length,
+        pendingFilters: newPendingFilters,
+      };
+    }
+    case Actions.PENDING_FILTER_RELEASE_YEAR: {
+      const newPendingFilters = {
+        ...state.pendingFilters,
+        releaseYears: action.values,
+      };
+      const pendingFilteredValues = filterValues(
+        state.allValues,
+        newPendingFilters,
+      );
+      return {
+        ...state,
+        pendingFilteredCount: pendingFilteredValues.length,
+        pendingFilters: newPendingFilters,
+      };
+    }
+    case Actions.PENDING_FILTER_TITLE: {
+      const newPendingFilters = {
+        ...state.pendingFilters,
+        title: action.value,
+      };
+      const pendingFilteredValues = filterValues(
+        state.allValues,
+        newPendingFilters,
+      );
+      return {
+        ...state,
+        pendingFilteredCount: pendingFilteredValues.length,
+        pendingFilters: newPendingFilters,
+      };
+    }
+    case Actions.PENDING_FILTER_VENUE: {
+      const newPendingFilters = {
+        ...state.pendingFilters,
+        venues: action.values,
+      };
+      const pendingFilteredValues = filterValues(
+        state.allValues,
+        newPendingFilters,
+      );
+      return {
+        ...state,
+        pendingFilteredCount: pendingFilteredValues.length,
+        pendingFilters: newPendingFilters,
+      };
+    }
+    case Actions.PENDING_FILTER_VIEWING_YEAR: {
+      const newPendingFilters = {
+        ...state.pendingFilters,
+        viewingYears: action.values,
+      };
+      const pendingFilteredValues = filterValues(
+        state.allValues,
+        newPendingFilters,
+      );
+      return {
+        ...state,
+        pendingFilteredCount: pendingFilteredValues.length,
+        pendingFilters: newPendingFilters,
+      };
+    }
     case Actions.PREV_MONTH: {
       newMonth = getPrevMonthWithViewings(
         state.currentMonth,
@@ -255,6 +408,18 @@ export function reducer(state: State, action: ActionType): State {
           getPrevMonthWithViewings(newMonth, state.filteredValues) !==
           undefined,
         monthViewings: getMonthViewings(state.filteredValues, newMonth),
+      };
+    }
+    case Actions.RESET_PENDING_FILTERS: {
+      // Reset pending filters to current applied filters
+      const pendingFilteredValues = filterValues(
+        state.allValues,
+        state.filters,
+      );
+      return {
+        ...state,
+        pendingFilteredCount: pendingFilteredValues.length,
+        pendingFilters: { ...state.filters },
       };
     }
     case Actions.SORT: {
@@ -308,16 +473,14 @@ function filterValues(
 
     if (
       filters.media.length > 0 &&
-      value.medium &&
-      !filters.media.includes(value.medium)
+      (!value.medium || !filters.media.includes(value.medium))
     ) {
       return false;
     }
 
     if (
       filters.venues.length > 0 &&
-      value.venue &&
-      !filters.venues.includes(value.venue)
+      (!value.venue || !filters.venues.includes(value.venue))
     ) {
       return false;
     }

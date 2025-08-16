@@ -13,33 +13,49 @@ export function Filters({
   distinctReleaseYears,
   distinctVenues,
   distinctViewingYears,
+  filterKey,
+  pendingFilters,
 }: {
   dispatch: React.Dispatch<ActionType>;
   distinctMedia: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctVenues: readonly string[];
   distinctViewingYears: readonly string[];
+  filterKey?: string;
+  pendingFilters: {
+    media: string[];
+    releaseYears: string[];
+    title: string;
+    venues: string[];
+    viewingYears: string[];
+  };
 }) {
   return (
     <>
       <TextFilter
+        initialValue={pendingFilters.title}
+        key={`title-${filterKey}`}
         label="Title"
         onInputChange={(value) =>
-          dispatch({ type: Actions.FILTER_TITLE, value })
+          dispatch({ type: Actions.PENDING_FILTER_TITLE, value })
         }
         placeholder="Enter all or part of a title"
       />
       <YearInput
+        initialValues={pendingFilters.releaseYears}
+        key={`release-year-${filterKey}`}
         label="Release Year"
         onYearChange={(values) =>
-          dispatch({ type: Actions.FILTER_RELEASE_YEAR, values })
+          dispatch({ type: Actions.PENDING_FILTER_RELEASE_YEAR, values })
         }
         years={distinctReleaseYears}
       />
       <YearInput
+        initialValues={pendingFilters.viewingYears}
+        key={`viewing-year-${filterKey}`}
         label="Viewing Year"
         onYearChange={(values) =>
-          dispatch({ type: Actions.FILTER_VIEWING_YEAR, values })
+          dispatch({ type: Actions.PENDING_FILTER_VIEWING_YEAR, values })
         }
         years={distinctViewingYears}
       />
@@ -47,10 +63,14 @@ export function Filters({
         label="Medium"
         onChange={(e) =>
           dispatch({
-            type: Actions.FILTER_MEDIUM,
-            values: e.target.value ? [e.target.value] : [],
+            type: Actions.PENDING_FILTER_MEDIUM,
+            values:
+              e.target.value === "All" || !e.target.value
+                ? []
+                : [e.target.value],
           })
         }
+        value={pendingFilters.media[0] || ""}
       >
         <SelectOptions options={distinctMedia} />
       </SelectField>
@@ -58,10 +78,14 @@ export function Filters({
         label="Venue"
         onChange={(e) =>
           dispatch({
-            type: Actions.FILTER_VENUE,
-            values: e.target.value ? [e.target.value] : [],
+            type: Actions.PENDING_FILTER_VENUE,
+            values:
+              e.target.value === "All" || !e.target.value
+                ? []
+                : [e.target.value],
           })
         }
+        value={pendingFilters.venues[0] || ""}
       >
         <SelectOptions options={distinctVenues} />
       </SelectField>
