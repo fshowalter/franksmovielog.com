@@ -118,7 +118,7 @@ function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
                 return <span key={genre}>{genre}</span>;
               }
 
-              return <span key={genre}> | {genre}</span>;
+              return <span key={genre}>, {genre}</span>;
             })}
           </div>
         </div>

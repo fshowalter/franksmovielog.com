@@ -107,7 +107,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
               return <span key={genre}>{genre}</span>;
             }
 
-            return <span key={genre}> | {genre}</span>;
+            return <span key={genre}>, {genre}</span>;
           })}
         </div>
       </div>
