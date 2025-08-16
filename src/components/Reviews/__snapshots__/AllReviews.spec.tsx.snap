@@ -76946,9 +76946,8 @@ exports[`AllReviews > renders 1`] = `
               >
                 <button
                   class="
-                      flex items-center justify-center
-                      gap-x-4 px-4 py-3 font-sans text-xs text-nowrap
-                      uppercase
+                      flex items-center justify-center gap-x-4 px-4 py-3
+                      font-sans text-xs text-nowrap uppercase
                       cursor-not-allowed bg-canvas text-muted opacity-50
                     "
                   disabled=""

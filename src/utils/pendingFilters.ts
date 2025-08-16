@@ -6,16 +6,6 @@
 import { filterValues as applyFilters } from "./reducerUtils";
 
 /**
- * Common action types for pending filter reducers
- */
-type PendingFilterActions = {
-  APPLY_PENDING_FILTERS: "APPLY_PENDING_FILTERS";
-  RESET_PENDING_FILTERS: "RESET_PENDING_FILTERS";
-  SHOW_MORE: "SHOW_MORE";
-  SORT: "SORT";
-};
-
-/**
  * State structure for components with pending filters, grouping, and pagination
  */
 export type PendingFiltersState<TItem, TSortValue> = {
