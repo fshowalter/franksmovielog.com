@@ -296,7 +296,9 @@ export function reducer(state: State, action: ActionType): State {
         filteredValues,
         filters,
         groupedValues: groupValues(
-          filteredValues.slice(0, state.showCount),
+          state.showCount
+            ? filteredValues.slice(0, state.showCount)
+            : filteredValues,
           state.sortValue,
         ),
         hideReviewed,

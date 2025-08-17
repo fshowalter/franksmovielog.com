@@ -55,7 +55,7 @@ export function AllReviews({
           groupedValues={state.groupedValues}
           onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
           totalCount={state.filteredValues.length}
-          visibleCount={state.showCount}
+          visibleCount={state.showCount!}
         >
           {(value) => <ReviewsListItem key={value.imdbId} value={value} />}
         </GroupedPosterList>

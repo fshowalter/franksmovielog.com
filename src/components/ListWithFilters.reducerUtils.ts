@@ -41,7 +41,7 @@ export type ListWithFiltersState<TItem, TSortValue> = {
     string,
     [number, number] | [string, string] | readonly string[] | string
   >; // Raw pending filter values for UI
-  showCount: number;
+  showCount?: number; // Optional - when undefined, no pagination is applied
   sortValue: TSortValue;
 };
 
@@ -61,8 +61,11 @@ export function applyPendingFilters<TItem, TSortValue>(
     state.sortValue,
   );
 
+  const valuesToGroup = state.showCount
+    ? filteredValues.slice(0, state.showCount)
+    : filteredValues;
   const groupedValues = groupFn
-    ? groupFn(filteredValues.slice(0, state.showCount), state.sortValue)
+    ? groupFn(valuesToGroup, state.sortValue)
     : new Map<string, TItem[]>();
 
   return {
@@ -122,7 +125,7 @@ export function clearPendingFilters<TItem, TSortValue>(
 export function createInitialState<TItem, TSortValue>({
   groupFn,
   initialSort,
-  showCount = 100,
+  showCount,
   sortFn,
   values,
 }: {
@@ -133,8 +136,11 @@ export function createInitialState<TItem, TSortValue>({
   values: TItem[];
 }): ListWithFiltersState<TItem, TSortValue> {
   const sortedValues = sortFn(values, initialSort);
+  const valuesToGroup = showCount
+    ? sortedValues.slice(0, showCount)
+    : sortedValues;
   const groupedValues = groupFn
-    ? groupFn(sortedValues.slice(0, showCount), initialSort)
+    ? groupFn(valuesToGroup, initialSort)
     : new Map<string, TItem[]>();
 
   return {
@@ -262,6 +268,9 @@ export function showMore<TItem, TSortValue>(
   increment: number,
   groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>,
 ): ListWithFiltersState<TItem, TSortValue> {
+  if (!state.showCount) {
+    throw new Error("showMore called on state without pagination");
+  }
   const showCount = state.showCount + increment;
   const groupedValues = groupFn
     ? groupFn(state.filteredValues.slice(0, showCount), state.sortValue)
@@ -331,8 +340,11 @@ export function updateSort<TItem, TSortValue>(
   groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>,
 ): ListWithFiltersState<TItem, TSortValue> {
   const filteredValues = sortFn(state.filteredValues, sortValue);
+  const valuesToGroup = state.showCount
+    ? filteredValues.slice(0, state.showCount)
+    : filteredValues;
   const groupedValues = groupFn
-    ? groupFn(filteredValues.slice(0, state.showCount), sortValue)
+    ? groupFn(valuesToGroup, sortValue)
     : new Map<string, TItem[]>();
 
   return {

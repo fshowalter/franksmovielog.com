@@ -84,7 +84,7 @@ export function Watchlist({
             groupedValues={state.groupedValues}
             onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
             totalCount={state.filteredValues.length}
-            visibleCount={state.showCount}
+            visibleCount={state.showCount!}
           >
             {(value) => {
               return (

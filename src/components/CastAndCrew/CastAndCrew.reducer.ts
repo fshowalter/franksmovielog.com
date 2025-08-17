@@ -112,7 +112,7 @@ export function initState({
   return createInitialState({
     groupFn: groupValues,
     initialSort,
-    showCount: Number.MAX_SAFE_INTEGER, // CastAndCrew doesn't paginate
+    // showCount omitted - CastAndCrew doesn't paginate
     sortFn: sortValues,
     values,
   });

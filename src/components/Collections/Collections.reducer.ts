@@ -71,7 +71,7 @@ export function initState({
 }): State {
   return createInitialState({
     initialSort,
-    showCount: Number.MAX_SAFE_INTEGER, // Collections don't paginate
+    // showCount omitted - Collections don't paginate
     sortFn: sortValues,
     values,
   });
