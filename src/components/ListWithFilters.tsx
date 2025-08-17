@@ -75,6 +75,7 @@ export function ListWithFilters<T extends string>({
   const filtersRef = useRef<HTMLDivElement | null>(null);
   const toggleButtonRef = useRef<HTMLButtonElement | null>(null);
   const timeoutRefs = useRef<Set<NodeJS.Timeout>>(new Set());
+  const prevSortValueRef = useRef<T>(sortProps.currentSortValue);
 
   const handleCloseDrawer = useCallback(
     (shouldResetFilters = true) => {
@@ -148,6 +149,16 @@ export function ListWithFilters<T extends string>({
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [filterDrawerVisible, handleCloseDrawer, isClosing]);
+
+  // Scroll to top of list when sort changes
+  useEffect(() => {
+    if (prevSortValueRef.current !== sortProps.currentSortValue) {
+      prevSortValueRef.current = sortProps.currentSortValue;
+      if (typeof document !== "undefined") {
+        document.querySelector("#list")?.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [sortProps.currentSortValue]);
 
   return (
     <div
