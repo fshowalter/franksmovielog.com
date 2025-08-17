@@ -3,7 +3,9 @@ import { MultiSelectField } from "~/components/MultiSelectField";
 import { TextFilter } from "~/components/TextFilter";
 import { YearInput } from "~/components/YearInput";
 
-import { Actions, type ActionType } from "./reducer";
+import type { ActionType } from "./reducer";
+
+import { Actions } from "./reducer";
 
 type FilterValues = {
   genres?: readonly string[];

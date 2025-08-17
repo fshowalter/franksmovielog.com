@@ -1,3 +1,5 @@
+import type { ListWithFiltersState } from "~/components/ListWithFilters.reducerUtils";
+
 import {
   clearPendingFilters as baseClearPendingFilters,
   applyPendingFilters as basePendingFilters,
@@ -7,7 +9,6 @@ import {
   createInitialState,
   handlePendingFilterTitle,
   ListWithFiltersActions,
-  type ListWithFiltersState,
   updatePendingFilter,
 } from "~/components/ListWithFilters.reducerUtils";
 

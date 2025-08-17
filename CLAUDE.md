@@ -181,3 +181,4 @@ Add specially formatted comments throughout the codebase, where appropriate, for
 ## TypeScript Best Practices
 
 - Don't use the `any` type. The linter will error on it.
+- **IMPORTANT**: Always use `import type { ... }` for type-only imports to ensure proper tree-shaking. Never mix type imports with regular imports using `import { type ... }` syntax as this can prevent tree-shaking optimizations.
