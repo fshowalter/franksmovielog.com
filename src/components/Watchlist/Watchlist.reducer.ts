@@ -128,15 +128,21 @@ export function reducer(state: State, action: ActionType): State {
   switch (action.type) {
     // Field-specific shared filters
     case ListWithFiltersActions.PENDING_FILTER_GENRES: {
-      return handleGenreFilterAction(state, action, { hideReviewed: state.hideReviewed });
+      return handleGenreFilterAction(state, action, {
+        hideReviewed: state.hideReviewed,
+      });
     }
 
     case ListWithFiltersActions.PENDING_FILTER_RELEASE_YEAR: {
-      return handleReleaseYearFilterAction(state, action, { hideReviewed: state.hideReviewed });
+      return handleReleaseYearFilterAction(state, action, {
+        hideReviewed: state.hideReviewed,
+      });
     }
 
     case ListWithFiltersActions.PENDING_FILTER_TITLE: {
-      return handleTitleFilterAction(state, action, { hideReviewed: state.hideReviewed });
+      return handleTitleFilterAction(state, action, {
+        hideReviewed: state.hideReviewed,
+      });
     }
 
     case WatchlistActions.PENDING_FILTER_COLLECTION: {
@@ -147,7 +153,12 @@ export function reducer(state: State, action: ActionType): State {
               value.watchlistCollectionNames.includes(typedAction.value)
           : undefined;
       return {
-        ...updatePendingFilter(state, "collection", filterFn, typedAction.value),
+        ...updatePendingFilter(
+          state,
+          "collection",
+          filterFn,
+          typedAction.value,
+        ),
         hideReviewed: state.hideReviewed,
       };
     }

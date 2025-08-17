@@ -163,11 +163,10 @@ export function reducer(state: State, action: ActionType): State {
 
     default: {
       // Handle shared list structure actions
-      return handleListWithFiltersAction(
-        state,
-        action,
-        { groupFn: groupValues, sortFn: sortValues },
-      );
+      return handleListWithFiltersAction(state, action, {
+        groupFn: groupValues,
+        sortFn: sortValues,
+      });
     }
   }
 }

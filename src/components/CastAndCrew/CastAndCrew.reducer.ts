@@ -100,18 +100,18 @@ export function reducer(state: State, action: ActionType): State {
       const typedAction = action;
       const filterFn =
         typedAction.value && typedAction.value !== "All"
-          ? (value: ListItemValue) => value.creditedAs.includes(typedAction.value)
+          ? (value: ListItemValue) =>
+              value.creditedAs.includes(typedAction.value)
           : undefined;
       return updatePendingFilter(state, "credits", filterFn, typedAction.value);
     }
 
     default: {
       // Handle shared actions
-      return handleListWithFiltersAction(
-        state,
-        action,
-        { groupFn: groupValues, sortFn: sortValues },
-      );
+      return handleListWithFiltersAction(state, action, {
+        groupFn: groupValues,
+        sortFn: sortValues,
+      });
     }
   }
 }

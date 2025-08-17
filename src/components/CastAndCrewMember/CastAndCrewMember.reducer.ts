@@ -12,6 +12,7 @@ import {
   handleReleaseYearFilterAction,
   handleReviewYearFilterAction,
   handleTitleFilterAction,
+  handleToggleReviewedAction,
   ListWithFiltersActions,
   sortNumber,
   sortString,
@@ -141,7 +142,8 @@ export function reducer(state: State, action: ActionType): State {
       const typedAction = action;
       const filterFn =
         typedAction.value && typedAction.value !== "All"
-          ? (value: ListItemValue) => value.creditedAs.includes(typedAction.value)
+          ? (value: ListItemValue) =>
+              value.creditedAs.includes(typedAction.value)
           : undefined;
       return {
         ...updatePendingFilter(state, "credits", filterFn, typedAction.value),
@@ -150,81 +152,32 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case CastAndCrewMemberActions.TOGGLE_REVIEWED: {
-      const hideReviewed = !state.hideReviewed;
-      const filters = hideReviewed
-        ? {
-            ...state.filters,
-            hideReviewed: (value: ListItemValue) => !value.slug,
-          }
-        : (() => {
-            const newFilters = { ...state.filters };
-            delete newFilters.hideReviewed;
-            return newFilters;
-          })();
-
-      const pendingFilters = hideReviewed
-        ? {
-            ...state.pendingFilters,
-            hideReviewed: (value: ListItemValue) => !value.slug,
-          }
-        : (() => {
-            const newFilters = { ...state.pendingFilters };
-            delete newFilters.hideReviewed;
-            return newFilters;
-          })();
-
-      const filteredValues = sortValues(
-        [...state.allValues].filter((value) => {
-          for (const filter of Object.values(filters)) {
-            if (!filter(value)) {
-              return false;
-            }
-          }
-          return true;
-        }),
-        state.sortValue,
-      );
-
-      const pendingFilteredCount = state.allValues.filter((value) => {
-        for (const filter of Object.values(pendingFilters)) {
-          if (!filter(value)) {
-            return false;
-          }
-        }
-        return true;
-      }).length;
-
-      return {
-        ...state,
-        filteredValues,
-        filters,
-        groupedValues: groupValues(
-          state.showCount
-            ? filteredValues.slice(0, state.showCount)
-            : filteredValues,
-          state.sortValue,
-        ),
-        hideReviewed,
-        pendingFilteredCount,
-        pendingFilters,
-      };
+      return handleToggleReviewedAction(state, sortValues, groupValues);
     }
 
     // Field-specific shared filters
     case ListWithFiltersActions.PENDING_FILTER_GENRES: {
-      return handleGenreFilterAction(state, action, { hideReviewed: state.hideReviewed });
+      return handleGenreFilterAction(state, action, {
+        hideReviewed: state.hideReviewed,
+      });
     }
 
     case ListWithFiltersActions.PENDING_FILTER_RELEASE_YEAR: {
-      return handleReleaseYearFilterAction(state, action, { hideReviewed: state.hideReviewed });
+      return handleReleaseYearFilterAction(state, action, {
+        hideReviewed: state.hideReviewed,
+      });
     }
 
     case ListWithFiltersActions.PENDING_FILTER_REVIEW_YEAR: {
-      return handleReviewYearFilterAction(state, action, { hideReviewed: state.hideReviewed });
+      return handleReviewYearFilterAction(state, action, {
+        hideReviewed: state.hideReviewed,
+      });
     }
 
     case ListWithFiltersActions.PENDING_FILTER_TITLE: {
-      return handleTitleFilterAction(state, action, { hideReviewed: state.hideReviewed });
+      return handleTitleFilterAction(state, action, {
+        hideReviewed: state.hideReviewed,
+      });
     }
 
     default: {

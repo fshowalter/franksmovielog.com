@@ -16,7 +16,6 @@ import type { ListItemValue } from "./Collections";
 
 // Collections only uses shared actions
 
-
 export type ActionType = ListWithFiltersActionType<Sort>;
 
 export type Sort =
@@ -55,11 +54,7 @@ export function reducer(state: State, action: ActionType): State {
 
     default: {
       // Handle shared list structure actions
-      return handleListWithFiltersAction(
-        state,
-        action,
-        { sortFn: sortValues },
-      );
+      return handleListWithFiltersAction(state, action, { sortFn: sortValues });
     }
   }
 }
@@ -81,4 +76,4 @@ function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
   return values.sort(comparer);
 }
 
-export {ListWithFiltersActions as Actions} from "~/components/ListWithFilters.reducerUtils";
+export { ListWithFiltersActions as Actions } from "~/components/ListWithFilters.reducerUtils";

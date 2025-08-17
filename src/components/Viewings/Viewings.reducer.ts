@@ -1,15 +1,13 @@
-import type { 
+import type {
   ListWithFiltersActionType,
   ListWithFiltersState,
 } from "~/components/ListWithFilters.reducerUtils";
 
 import {
-  clearPendingFilters as baseClearPendingFilters,
-  applyPendingFilters as basePendingFilters,
-  resetPendingFilters as baseResetPendingFilters,
-  updateSort as baseUpdateSort,
   buildGroupValues,
   createInitialState,
+  handleListWithFiltersAction,
+  handleReleaseYearFilterAction,
   handleTitleFilterAction,
   ListWithFiltersActions,
   updatePendingFilter,
@@ -20,7 +18,6 @@ import type { ListItemValue } from "./Viewings";
 enum ViewingsActions {
   NEXT_MONTH = "NEXT_MONTH",
   PENDING_FILTER_MEDIUM = "PENDING_FILTER_MEDIUM",
-  PENDING_FILTER_RELEASE_YEAR = "PENDING_FILTER_RELEASE_YEAR",
   PENDING_FILTER_VENUE = "PENDING_FILTER_VENUE",
   PENDING_FILTER_VIEWING_YEAR = "PENDING_FILTER_VIEWING_YEAR",
   PREV_MONTH = "PREV_MONTH",
@@ -36,7 +33,6 @@ export type ActionType =
   | ListWithFiltersActionType<Sort>
   | NextMonthAction
   | PendingFilterMediumAction
-  | PendingFilterReleaseYearAction
   | PendingFilterVenueAction
   | PendingFilterViewingYearAction
   | PrevMonthAction;
@@ -44,7 +40,6 @@ export type ActionType =
 export type Sort = "viewing-date-asc" | "viewing-date-desc";
 
 // Using shared action types from ListWithFilters
-
 
 type NextMonthAction = {
   type: ViewingsActions.NEXT_MONTH;
@@ -55,10 +50,7 @@ type PendingFilterMediumAction = {
   values: string[];
 };
 
-type PendingFilterReleaseYearAction = {
-  type: ViewingsActions.PENDING_FILTER_RELEASE_YEAR;
-  values: string[];
-};
+// Using shared PendingFilterReleaseYearAction from ListWithFilters
 
 // Using the shared PendingFilterTitleAction from ListWithFilters
 
@@ -75,8 +67,6 @@ type PendingFilterViewingYearAction = {
 type PrevMonthAction = {
   type: ViewingsActions.PREV_MONTH;
 };
-
-
 
 // AIDEV-NOTE: Viewings state extends ListWithFiltersState with month navigation
 type State = ListWithFiltersState<ListItemValue, Sort> & {
@@ -127,15 +117,9 @@ export function reducer(state: State, action: ActionType): State {
   let newMonth;
 
   switch (action.type) {
-    case ListWithFiltersActions.APPLY_PENDING_FILTERS: {
-      return applyPendingFilters(state);
-    }
-
-    case ListWithFiltersActions.CLEAR_PENDING_FILTERS: {
-      return clearPendingFilters(state);
-    }
-    case ListWithFiltersActions.PENDING_FILTER_TITLE: {
-      return handleTitleFilterAction(state, action, {
+    // Field-specific shared filters
+    case ListWithFiltersActions.PENDING_FILTER_RELEASE_YEAR: {
+      return handleReleaseYearFilterAction(state, action, {
         currentMonth: state.currentMonth,
         hasNextMonth: state.hasNextMonth,
         hasPrevMonth: state.hasPrevMonth,
@@ -143,12 +127,13 @@ export function reducer(state: State, action: ActionType): State {
       });
     }
 
-    case ListWithFiltersActions.RESET_PENDING_FILTERS: {
-      return resetPendingFilters(state);
-    }
-
-    case ListWithFiltersActions.SORT: {
-      return updateSort(state, action.value);
+    case ListWithFiltersActions.PENDING_FILTER_TITLE: {
+      return handleTitleFilterAction(state, action, {
+        currentMonth: state.currentMonth,
+        hasNextMonth: state.hasNextMonth,
+        hasPrevMonth: state.hasPrevMonth,
+        monthViewings: state.monthViewings,
+      });
     }
 
     case ViewingsActions.NEXT_MONTH: {
@@ -187,19 +172,6 @@ export function reducer(state: State, action: ActionType): State {
       };
     }
 
-    case ViewingsActions.PENDING_FILTER_RELEASE_YEAR: {
-      const filterFn =
-        action.values.length > 0
-          ? (value: ListItemValue) => action.values.includes(value.releaseYear)
-          : undefined;
-      return {
-        ...updatePendingFilter(state, "releaseYears", filterFn, action.values),
-        currentMonth: state.currentMonth,
-        hasNextMonth: state.hasNextMonth,
-        hasPrevMonth: state.hasPrevMonth,
-        monthViewings: state.monthViewings,
-      };
-    }
     case ViewingsActions.PENDING_FILTER_VENUE: {
       const filterFn =
         action.values.length > 0
@@ -250,42 +222,45 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     default: {
-      // This should never be reached due to exhaustive handling above
-      return state;
+      // Handle shared list structure actions
+      const result = handleListWithFiltersAction(
+        state,
+        action,
+        { groupFn: groupValues, sortFn: sortValues },
+        {
+          currentMonth: state.currentMonth,
+          hasNextMonth: state.hasNextMonth,
+          hasPrevMonth: state.hasPrevMonth,
+          monthViewings: state.monthViewings,
+        },
+      );
+
+      // Update month-related state on APPLY_PENDING_FILTERS and SORT
+      if (
+        action.type === ListWithFiltersActions.APPLY_PENDING_FILTERS ||
+        action.type === ListWithFiltersActions.SORT
+      ) {
+        // Always reset to initial month based on filtered results and sort order
+        const newMonth = getInitialMonth(
+          result.filteredValues,
+          result.sortValue,
+        );
+        return {
+          ...result,
+          currentMonth: newMonth,
+          hasNextMonth:
+            getNextMonthWithViewings(newMonth, result.filteredValues) !==
+            undefined,
+          hasPrevMonth:
+            getPrevMonthWithViewings(newMonth, result.filteredValues) !==
+            undefined,
+          monthViewings: getMonthViewings(result.filteredValues, newMonth),
+        };
+      }
+
+      return result;
     }
   }
-}
-
-// Helper function to apply pending filters with month updates
-function applyPendingFilters(state: State): State {
-  const updatedState = basePendingFilters(state, sortValues, groupValues);
-  const newMonth = getInitialMonth(
-    updatedState.filteredValues,
-    state.sortValue,
-  );
-
-  return {
-    ...updatedState,
-    currentMonth: newMonth,
-    hasNextMonth:
-      getNextMonthWithViewings(newMonth, updatedState.filteredValues) !==
-      undefined,
-    hasPrevMonth:
-      getPrevMonthWithViewings(newMonth, updatedState.filteredValues) !==
-      undefined,
-    monthViewings: getMonthViewings(updatedState.filteredValues, newMonth),
-  };
-}
-
-// Helper function to clear pending filters
-function clearPendingFilters(state: State): State {
-  return {
-    ...baseClearPendingFilters(state),
-    currentMonth: state.currentMonth,
-    hasNextMonth: state.hasNextMonth,
-    hasPrevMonth: state.hasPrevMonth,
-    monthViewings: state.monthViewings,
-  };
 }
 
 // Determine initial month based on sort order
@@ -406,17 +381,6 @@ function getPrevMonthWithViewings(
   return undefined;
 }
 
-// Helper function to reset pending filters
-function resetPendingFilters(state: State): State {
-  return {
-    ...baseResetPendingFilters(state),
-    currentMonth: state.currentMonth,
-    hasNextMonth: state.hasNextMonth,
-    hasPrevMonth: state.hasPrevMonth,
-    monthViewings: state.monthViewings,
-  };
-}
-
 function sortValues(values: ListItemValue[], sortOrder: Sort) {
   const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
     {
@@ -426,28 +390,4 @@ function sortValues(values: ListItemValue[], sortOrder: Sort) {
 
   const comparer = sortMap[sortOrder];
   return [...values].sort(comparer); // Create a copy before sorting
-}
-
-// Helper function to update sort with month updates
-function updateSort(state: State, sortValue: Sort): State {
-  const updatedState = baseUpdateSort(
-    state,
-    sortValue,
-    sortValues,
-    groupValues,
-  );
-  const newMonth =
-    sortValue === "viewing-date-asc"
-      ? getOldestMonth(updatedState.filteredValues)
-      : getMostRecentMonth(updatedState.filteredValues);
-  const mostRecentMonth = getMostRecentMonth(updatedState.filteredValues);
-  const oldestMonth = getOldestMonth(updatedState.filteredValues);
-
-  return {
-    ...updatedState,
-    currentMonth: newMonth,
-    hasNextMonth: newMonth < mostRecentMonth,
-    hasPrevMonth: newMonth > oldestMonth,
-    monthViewings: getMonthViewings(updatedState.filteredValues, newMonth),
-  };
 }
