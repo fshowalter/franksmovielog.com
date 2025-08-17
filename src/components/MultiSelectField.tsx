@@ -11,8 +11,6 @@ const SPACE_BUFFER_ABOVE = 20;
 const SPACE_BUFFER_BELOW = 10;
 const MIN_DROPDOWN_HEIGHT = 120;
 const MAX_DROPDOWN_HEIGHT = 300;
-const MOBILE_FOOTER_BUFFER = 100;
-const DESKTOP_FOOTER_BUFFER = 20;
 const MIN_FALLBACK_HEIGHT = 80;
 const SCROLL_DELAY_MS = 50;
 
@@ -41,11 +39,9 @@ const findScrollableContainer = (
 const calculateAvailableSpace = (
   buttonRect: DOMRect,
   scrollableContainer: HTMLElement | undefined,
-  isMobileDrawer: boolean,
 ) => {
   let effectiveSpaceBelow: number;
   let effectiveSpaceAbove: number;
-  const viewportHeight = window.innerHeight;
 
   if (scrollableContainer) {
     // We're inside a scrollable container
@@ -71,14 +67,9 @@ const calculateAvailableSpace = (
     }
   } else {
     // Not in a scrollable container, use viewport
+    const viewportHeight = window.innerHeight;
     effectiveSpaceBelow = viewportHeight - buttonRect.bottom;
     effectiveSpaceAbove = buttonRect.top;
-
-    // Account for footer in mobile drawer (non-scrollable case)
-    const footerBuffer = isMobileDrawer
-      ? MOBILE_FOOTER_BUFFER
-      : DESKTOP_FOOTER_BUFFER;
-    effectiveSpaceBelow -= footerBuffer;
   }
 
   // Add small buffer for visual spacing
@@ -294,18 +285,14 @@ export function MultiSelectField({
   // Calculate available space and position when dropdown opens
   // AIDEV-NOTE: Dropdown positioning logic - opens upward when insufficient space below
   // Handles both viewport boundaries and scrollable container boundaries
-  // The isMobileDrawer variable is needed because mobile drawers have different footer
-  // buffer requirements (100px vs 20px) to account for sticky footer elements that
-  // behave differently on mobile vs desktop layouts
   const calculateDropdownPositionAndHeight = () => {
     if (!buttonRef.current) return;
 
     const buttonRect = buttonRef.current.getBoundingClientRect();
-    const isMobileDrawer = window.innerWidth < TABLET_LANDSCAPE_BREAKPOINT;
     const scrollableContainer = findScrollableContainer(buttonRef.current);
 
     const { effectiveSpaceAbove, effectiveSpaceBelow } =
-      calculateAvailableSpace(buttonRect, scrollableContainer, isMobileDrawer);
+      calculateAvailableSpace(buttonRect, scrollableContainer);
 
     const { height, position } = determineDropdownLayout(
       effectiveSpaceAbove,
