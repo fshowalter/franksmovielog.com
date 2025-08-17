@@ -182,21 +182,13 @@ export function createNameFilter(value: string | undefined) {
   return <T extends { name: string }>(item: T) => regex.test(item.name);
 }
 
-export function createReleaseYearFilter(
-  minYear: string | undefined,
-  maxYear: string | undefined,
-) {
-  if (!minYear || !maxYear) return undefined;
+export function createReleaseYearFilter(minYear: string, maxYear: string) {
   return <T extends { releaseYear: string }>(item: T) => {
     return item.releaseYear >= minYear && item.releaseYear <= maxYear;
   };
 }
 
-export function createReviewYearFilter(
-  minYear: string | undefined,
-  maxYear: string | undefined,
-) {
-  if (!minYear || !maxYear) return undefined;
+export function createReviewYearFilter(minYear: string, maxYear: string) {
   return <T extends { reviewYear?: string }>(item: T) => {
     const year = item.reviewYear;
     if (!year) return false;
