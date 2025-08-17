@@ -146,9 +146,7 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_NAME: {
-      const filterFn = action.value
-        ? createNameFilter(action.value)
-        : undefined;
+      const filterFn = createNameFilter(action.value);
       return updatePendingFilter(state, "name", filterFn, action.value);
     }
 

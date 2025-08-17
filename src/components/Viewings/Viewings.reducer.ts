@@ -199,9 +199,7 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_TITLE: {
-      const filterFn = action.value
-        ? createTitleFilter(action.value)
-        : undefined;
+      const filterFn = createTitleFilter(action.value);
       return {
         ...updatePendingFilter(state, "title", filterFn, action.value),
         currentMonth: state.currentMonth,

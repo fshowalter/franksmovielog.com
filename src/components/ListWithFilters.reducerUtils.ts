@@ -172,18 +172,27 @@ export function createInitialState<TItem, TSortValue>({
   };
 }
 
-export function createNameFilter(value: string) {
+export function createNameFilter(value: string | undefined) {
+  if (!value) return undefined;
   const regex = new RegExp(value, "i");
   return <T extends { name: string }>(item: T) => regex.test(item.name);
 }
 
-export function createReleaseYearFilter(minYear: string, maxYear: string) {
+export function createReleaseYearFilter(
+  minYear: string | undefined,
+  maxYear: string | undefined,
+) {
+  if (!minYear || !maxYear) return undefined;
   return <T extends { releaseYear: string }>(item: T) => {
     return item.releaseYear >= minYear && item.releaseYear <= maxYear;
   };
 }
 
-export function createReviewYearFilter(minYear: string, maxYear: string) {
+export function createReviewYearFilter(
+  minYear: string | undefined,
+  maxYear: string | undefined,
+) {
+  if (!minYear || !maxYear) return undefined;
   return <T extends { reviewYear?: string }>(item: T) => {
     const year = item.reviewYear;
     if (!year) return false;
@@ -192,7 +201,8 @@ export function createReviewYearFilter(minYear: string, maxYear: string) {
 }
 
 // Common filter creators - simple functions that create filter functions
-export function createTitleFilter(value: string) {
+export function createTitleFilter(value: string | undefined) {
+  if (!value) return undefined;
   const regex = new RegExp(value, "i");
   return <T extends { title: string }>(item: T) => regex.test(item.title);
 }
