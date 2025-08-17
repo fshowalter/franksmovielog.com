@@ -23,7 +23,7 @@ import {
  */
 import type { ListItemValue } from "./CastAndCrewMember";
 
-export enum CastAndCrewMemberActions {
+enum CastAndCrewMemberActions {
   PENDING_FILTER_CREDIT_KIND = "PENDING_FILTER_CREDIT_KIND",
   TOGGLE_REVIEWED = "TOGGLE_REVIEWED",
 }

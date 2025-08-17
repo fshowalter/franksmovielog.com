@@ -21,7 +21,7 @@ import {
  */
 import type { ListItemValue } from "./Collection";
 
-export enum CollectionActions {
+enum CollectionActions {
   TOGGLE_REVIEWED = "TOGGLE_REVIEWED",
 }
 

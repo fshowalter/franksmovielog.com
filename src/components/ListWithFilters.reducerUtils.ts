@@ -416,29 +416,6 @@ export function resetPendingFilters<TItem, TSortValue>(
   };
 }
 
-/**
- * Handle "Show More" pagination
- */
-function showMore<TItem, TSortValue>(
-  state: ListWithFiltersState<TItem, TSortValue>,
-  increment: number,
-  groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>,
-): ListWithFiltersState<TItem, TSortValue> {
-  if (!state.showCount) {
-    throw new Error("showMore called on state without pagination");
-  }
-  const showCount = state.showCount + increment;
-  const groupedValues = groupFn
-    ? groupFn(state.filteredValues.slice(0, showCount), state.sortValue)
-    : new Map<string, TItem[]>();
-
-  return {
-    ...state,
-    groupedValues,
-    showCount,
-  };
-}
-
 export function sortNumber(a: number, b: number): number {
   return a - b;
 }
@@ -524,15 +501,15 @@ function createNameFilter(value: string | undefined) {
   return <T extends { name: string }>(item: T) => regex.test(item.name);
 }
 
-/**
- * Handler functions that combine filter creation and state updates
- */
-
 function createReleaseYearFilter(minYear: string, maxYear: string) {
   return <T extends { releaseYear: string }>(item: T) => {
     return item.releaseYear >= minYear && item.releaseYear <= maxYear;
   };
 }
+
+/**
+ * Handler functions that combine filter creation and state updates
+ */
 
 function createReviewYearFilter(minYear: string, maxYear: string) {
   return <T extends { reviewYear?: string }>(item: T) => {
@@ -562,4 +539,27 @@ function filterValues<TItem>({
       return filter(item);
     });
   });
+}
+
+/**
+ * Handle "Show More" pagination
+ */
+function showMore<TItem, TSortValue>(
+  state: ListWithFiltersState<TItem, TSortValue>,
+  increment: number,
+  groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>,
+): ListWithFiltersState<TItem, TSortValue> {
+  if (!state.showCount) {
+    throw new Error("showMore called on state without pagination");
+  }
+  const showCount = state.showCount + increment;
+  const groupedValues = groupFn
+    ? groupFn(state.filteredValues.slice(0, showCount), state.sortValue)
+    : new Map<string, TItem[]>();
+
+  return {
+    ...state,
+    groupedValues,
+    showCount,
+  };
 }

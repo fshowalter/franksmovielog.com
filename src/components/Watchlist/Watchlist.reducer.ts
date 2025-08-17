@@ -21,7 +21,7 @@ import {
  */
 import type { ListItemValue } from "./Watchlist";
 
-export enum WatchlistActions {
+enum WatchlistActions {
   PENDING_FILTER_COLLECTION = "PENDING_FILTER_COLLECTION",
   PENDING_FILTER_DIRECTOR = "PENDING_FILTER_DIRECTOR",
   PENDING_FILTER_PERFORMER = "PENDING_FILTER_PERFORMER",

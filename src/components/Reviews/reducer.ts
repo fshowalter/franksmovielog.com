@@ -22,7 +22,7 @@ import {
   updatePendingFilter,
 } from "~/components/ListWithFilters.reducerUtils";
 
-export enum ReviewsActions {
+enum ReviewsActions {
   PENDING_FILTER_GRADE = "PENDING_FILTER_GRADE",
 }
 
