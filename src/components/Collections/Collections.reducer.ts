@@ -1,23 +1,24 @@
 import {
   applyPendingFilters,
-  buildGroupValues,
   clearPendingFilters,
   createInitialState,
-  type PendingFiltersState,
+  handlePendingFilterName,
+  ListWithFiltersActions,
+  type ListWithFiltersState,
   resetPendingFilters,
-  updatePendingFilter,
+  sortNumber,
+  sortString,
   updateSort,
-} from "~/utils/pendingFilters";
-import { createNameFilter, sortNumber, sortString } from "~/utils/reducerUtils";
+} from "~/components/ListWithFilters.reducerUtils";
 
 import type { ListItemValue } from "./Collections";
 
 export enum Actions {
-  APPLY_PENDING_FILTERS = "APPLY_PENDING_FILTERS",
-  CLEAR_PENDING_FILTERS = "CLEAR_PENDING_FILTERS",
+  APPLY_PENDING_FILTERS = ListWithFiltersActions.APPLY_PENDING_FILTERS,
+  CLEAR_PENDING_FILTERS = ListWithFiltersActions.CLEAR_PENDING_FILTERS,
   PENDING_FILTER_NAME = "PENDING_FILTER_NAME",
-  RESET_PENDING_FILTERS = "RESET_PENDING_FILTERS",
-  SORT = "SORT",
+  RESET_PENDING_FILTERS = ListWithFiltersActions.RESET_PENDING_FILTERS,
+  SORT = ListWithFiltersActions.SORT,
 }
 
 export type ActionType =
@@ -57,10 +58,9 @@ type SortAction = {
   value: Sort;
 };
 
-type State = PendingFiltersState<ListItemValue, Sort>;
+type State = ListWithFiltersState<ListItemValue, Sort>;
 
-// AIDEV-NOTE: Collections don't use grouping, so we use a simple no-op group function
-const groupValues = buildGroupValues<ListItemValue, Sort>(() => "all");
+// AIDEV-NOTE: Collections don't use grouping, so we don't pass a groupFn
 
 export function initState({
   initialSort,
@@ -70,9 +70,8 @@ export function initState({
   values: ListItemValue[];
 }): State {
   return createInitialState({
-    groupFn: groupValues,
     initialSort,
-    showCount: Number.MAX_SAFE_INTEGER, // Collections don't paginate
+    // showCount omitted - Collections don't paginate
     sortFn: sortValues,
     values,
   });
@@ -81,7 +80,7 @@ export function initState({
 export function reducer(state: State, action: ActionType): State {
   switch (action.type) {
     case Actions.APPLY_PENDING_FILTERS: {
-      return applyPendingFilters(state, sortValues, groupValues);
+      return applyPendingFilters(state, sortValues);
     }
 
     case Actions.CLEAR_PENDING_FILTERS: {
@@ -89,10 +88,7 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_NAME: {
-      const filterFn = action.value
-        ? createNameFilter(action.value)
-        : undefined;
-      return updatePendingFilter(state, "name", filterFn, action.value);
+      return handlePendingFilterName(state, action.value);
     }
 
     case Actions.RESET_PENDING_FILTERS: {
@@ -100,7 +96,7 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.SORT: {
-      return updateSort(state, action.value, sortValues, groupValues);
+      return updateSort(state, action.value, sortValues);
     }
 
     // no default

@@ -129,10 +129,10 @@ export function Viewings({
           distinctVenues={distinctVenues}
           distinctViewingYears={distinctViewingYears}
           filterKey={String(filterKey)}
-          pendingFilters={state.pendingFilterValues}
+          filterValues={state.pendingFilterValues}
         />
       }
-      hasActiveFilters={Object.keys(state.pendingFilterValues).length > 0}
+      hasActiveFilters={state.hasActiveFilters}
       list={
         <CalendarView
           currentMonth={state.currentMonth}

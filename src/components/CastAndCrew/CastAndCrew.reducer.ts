@@ -3,18 +3,16 @@ import {
   buildGroupValues,
   clearPendingFilters,
   createInitialState,
-  type PendingFiltersState,
-  resetPendingFilters,
-  showMore,
-  updatePendingFilter,
-  updateSort,
-} from "~/utils/pendingFilters";
-import {
-  createNameFilter,
   getGroupLetter,
+  handlePendingFilterName,
+  ListWithFiltersActions,
+  type ListWithFiltersState,
+  resetPendingFilters,
   sortNumber,
   sortString,
-} from "~/utils/reducerUtils";
+  updatePendingFilter,
+  updateSort,
+} from "~/components/ListWithFilters.reducerUtils";
 
 /**
  * CastAndCrew reducer with pending filters support
@@ -22,22 +20,13 @@ import {
 import type { ListItemValue } from "./CastAndCrew";
 
 export enum Actions {
-  APPLY_PENDING_FILTERS = "APPLY_PENDING_FILTERS",
-  CLEAR_PENDING_FILTERS = "CLEAR_PENDING_FILTERS",
+  APPLY_PENDING_FILTERS = ListWithFiltersActions.APPLY_PENDING_FILTERS,
+  CLEAR_PENDING_FILTERS = ListWithFiltersActions.CLEAR_PENDING_FILTERS,
   PENDING_FILTER_CREDIT_KIND = "PENDING_FILTER_CREDIT_KIND",
   PENDING_FILTER_NAME = "PENDING_FILTER_NAME",
-  RESET_PENDING_FILTERS = "RESET_PENDING_FILTERS",
-  SHOW_MORE = "SHOW_MORE",
-  SORT = "SORT",
+  RESET_PENDING_FILTERS = ListWithFiltersActions.RESET_PENDING_FILTERS,
+  SORT = ListWithFiltersActions.SORT,
 }
-
-export type Sort =
-  | "name-asc"
-  | "name-desc"
-  | "review-count-asc"
-  | "review-count-desc";
-
-const SHOW_COUNT_DEFAULT = 100;
 
 export type ActionType =
   | ApplyPendingFiltersAction
@@ -45,8 +34,13 @@ export type ActionType =
   | PendingFilterCreditKindAction
   | PendingFilterNameAction
   | ResetPendingFiltersAction
-  | ShowMoreAction
   | SortAction;
+
+export type Sort =
+  | "name-asc"
+  | "name-desc"
+  | "review-count-asc"
+  | "review-count-desc";
 
 type ApplyPendingFiltersAction = {
   type: Actions.APPLY_PENDING_FILTERS;
@@ -70,16 +64,12 @@ type ResetPendingFiltersAction = {
   type: Actions.RESET_PENDING_FILTERS;
 };
 
-type ShowMoreAction = {
-  type: Actions.SHOW_MORE;
-};
-
 type SortAction = {
   type: Actions.SORT;
   value: Sort;
 };
 
-type State = PendingFiltersState<ListItemValue, Sort>;
+type State = ListWithFiltersState<ListItemValue, Sort>;
 
 // Helper functions
 function groupForValue(item: ListItemValue, sortValue: Sort): string {
@@ -122,7 +112,7 @@ export function initState({
   return createInitialState({
     groupFn: groupValues,
     initialSort,
-    showCount: SHOW_COUNT_DEFAULT,
+    // showCount omitted - CastAndCrew doesn't paginate
     sortFn: sortValues,
     values,
   });
@@ -147,18 +137,11 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_NAME: {
-      const filterFn = action.value
-        ? createNameFilter(action.value)
-        : undefined;
-      return updatePendingFilter(state, "name", filterFn, action.value);
+      return handlePendingFilterName(state, action.value);
     }
 
     case Actions.RESET_PENDING_FILTERS: {
       return resetPendingFilters(state);
-    }
-
-    case Actions.SHOW_MORE: {
-      return showMore(state, SHOW_COUNT_DEFAULT, groupValues);
     }
 
     case Actions.SORT: {

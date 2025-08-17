@@ -8,19 +8,19 @@ import {
   buildGroupValues,
   clearPendingFilters,
   createInitialState,
-  type PendingFiltersState,
+  getGroupLetter,
+  handlePendingFilterReleaseYear,
+  handlePendingFilterReviewYear,
+  handlePendingFilterTitle,
+  ListWithFiltersActions,
+  type ListWithFiltersState,
   resetPendingFilters,
   showMore,
-  updatePendingFilter,
-  updateSort,
-} from "~/utils/pendingFilters";
-import {
-  createReleaseYearFilter,
-  createTitleFilter,
-  getGroupLetter,
   sortNumber,
   sortString,
-} from "~/utils/reducerUtils";
+  updatePendingFilter,
+  updateSort,
+} from "~/components/ListWithFilters.reducerUtils";
 
 const SHOW_COUNT_DEFAULT = 100;
 
@@ -35,16 +35,16 @@ type ReviewsSort =
   | "title-desc";
 
 export const Actions = {
-  APPLY_PENDING_FILTERS: "APPLY_PENDING_FILTERS",
-  CLEAR_PENDING_FILTERS: "CLEAR_PENDING_FILTERS",
+  APPLY_PENDING_FILTERS: ListWithFiltersActions.APPLY_PENDING_FILTERS,
+  CLEAR_PENDING_FILTERS: ListWithFiltersActions.CLEAR_PENDING_FILTERS,
   PENDING_FILTER_GENRES: "PENDING_FILTER_GENRES",
   PENDING_FILTER_GRADE: "PENDING_FILTER_GRADE",
   PENDING_FILTER_RELEASE_YEAR: "PENDING_FILTER_RELEASE_YEAR",
   PENDING_FILTER_REVIEW_YEAR: "PENDING_FILTER_REVIEW_YEAR",
   PENDING_FILTER_TITLE: "PENDING_FILTER_TITLE",
-  RESET_PENDING_FILTERS: "RESET_PENDING_FILTERS",
-  SHOW_MORE: "SHOW_MORE",
-  SORT: "SORT",
+  RESET_PENDING_FILTERS: ListWithFiltersActions.RESET_PENDING_FILTERS,
+  SHOW_MORE: ListWithFiltersActions.SHOW_MORE,
+  SORT: ListWithFiltersActions.SORT,
 } as const;
 
 export type ActionType =
@@ -108,7 +108,7 @@ type SortAction = {
   value: ReviewsSort;
 };
 
-type State = PendingFiltersState<ReviewsListItemValue, ReviewsSort>;
+type State = ListWithFiltersState<ReviewsListItemValue, ReviewsSort>;
 
 // Helper functions
 function getReviewDateGroup(value: ReviewsListItemValue): string {
@@ -215,27 +215,15 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_RELEASE_YEAR: {
-      const filterFn = action.values[0]
-        ? createReleaseYearFilter(action.values[0], action.values[1])
-        : undefined;
-      return updatePendingFilter(state, "releaseYear", filterFn, action.values);
+      return handlePendingFilterReleaseYear(state, action.values);
     }
 
     case Actions.PENDING_FILTER_REVIEW_YEAR: {
-      const filterFn = action.values[0]
-        ? (value: ReviewsListItemValue) => {
-            const year = value.reviewSequence.slice(0, 4);
-            return year >= action.values[0] && year <= action.values[1];
-          }
-        : undefined;
-      return updatePendingFilter(state, "reviewYear", filterFn, action.values);
+      return handlePendingFilterReviewYear(state, action.values);
     }
 
     case Actions.PENDING_FILTER_TITLE: {
-      const filterFn = action.value
-        ? createTitleFilter(action.value)
-        : undefined;
-      return updatePendingFilter(state, "title", filterFn, action.value);
+      return handlePendingFilterTitle(state, action.value);
     }
 
     case Actions.RESET_PENDING_FILTERS: {

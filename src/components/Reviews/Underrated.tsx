@@ -49,13 +49,13 @@ export function Underrated({
           key={filterKey}
         />
       }
-      hasActiveFilters={Object.keys(state.pendingFilterValues).length > 0}
+      hasActiveFilters={state.hasActiveFilters}
       list={
         <GroupedPosterList
           groupedValues={state.groupedValues}
           onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
           totalCount={state.filteredValues.length}
-          visibleCount={state.showCount}
+          visibleCount={state.showCount!}
         >
           {(value) => <ReviewsListItem key={value.imdbId} value={value} />}
         </GroupedPosterList>

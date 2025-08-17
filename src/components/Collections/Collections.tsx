@@ -43,15 +43,10 @@ export function Collections({ initialSort, values }: Props): JSX.Element {
         <Filters
           dispatch={dispatch}
           filterKey={String(filterKey)}
-          pendingNameFilter={
-            state.pendingFilterValues.name as string | undefined
-          }
+          filterValues={state.pendingFilterValues}
         />
       }
-      hasActiveFilters={
-        !!state.pendingFilterValues.name &&
-        state.pendingFilterValues.name !== ""
-      }
+      hasActiveFilters={state.hasActiveFilters}
       list={
         <ol
           className={`

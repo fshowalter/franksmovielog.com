@@ -3,20 +3,18 @@ import {
   buildGroupValues,
   clearPendingFilters,
   createInitialState,
-  type PendingFiltersState,
+  getGroupLetter,
+  handlePendingFilterReleaseYear,
+  handlePendingFilterReviewYear,
+  handlePendingFilterTitle,
+  ListWithFiltersActions,
+  type ListWithFiltersState,
   resetPendingFilters,
   showMore,
-  updatePendingFilter,
-  updateSort,
-} from "~/utils/pendingFilters";
-import {
-  createReleaseYearFilter,
-  createReviewYearFilter,
-  createTitleFilter,
-  getGroupLetter,
   sortNumber,
   sortString,
-} from "~/utils/reducerUtils";
+  updateSort,
+} from "~/components/ListWithFilters.reducerUtils";
 
 /**
  * Collection reducer with pending filters support
@@ -36,14 +34,14 @@ export type Sort =
 const SHOW_COUNT_DEFAULT = 100;
 
 export enum Actions {
-  APPLY_PENDING_FILTERS = "APPLY_PENDING_FILTERS",
-  CLEAR_PENDING_FILTERS = "CLEAR_PENDING_FILTERS",
+  APPLY_PENDING_FILTERS = ListWithFiltersActions.APPLY_PENDING_FILTERS,
+  CLEAR_PENDING_FILTERS = ListWithFiltersActions.CLEAR_PENDING_FILTERS,
   PENDING_FILTER_RELEASE_YEAR = "PENDING_FILTER_RELEASE_YEAR",
   PENDING_FILTER_REVIEW_YEAR = "PENDING_FILTER_REVIEW_YEAR",
   PENDING_FILTER_TITLE = "PENDING_FILTER_TITLE",
-  RESET_PENDING_FILTERS = "RESET_PENDING_FILTERS",
-  SHOW_MORE = "SHOW_MORE",
-  SORT = "SORT",
+  RESET_PENDING_FILTERS = ListWithFiltersActions.RESET_PENDING_FILTERS,
+  SHOW_MORE = ListWithFiltersActions.SHOW_MORE,
+  SORT = ListWithFiltersActions.SORT,
   TOGGLE_REVIEWED = "TOGGLE_REVIEWED",
 }
 
@@ -94,7 +92,7 @@ type SortAction = {
   value: Sort;
 };
 
-type State = PendingFiltersState<ListItemValue, Sort> & {
+type State = ListWithFiltersState<ListItemValue, Sort> & {
   hideReviewed: boolean;
 };
 
@@ -191,33 +189,21 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_RELEASE_YEAR: {
-      const filterFn = action.values[0]
-        ? createReleaseYearFilter(action.values[0], action.values[1])
-        : undefined;
-      return {
-        ...updatePendingFilter(state, "releaseYear", filterFn, action.values),
+      return handlePendingFilterReleaseYear(state, action.values, {
         hideReviewed: state.hideReviewed,
-      };
+      });
     }
 
     case Actions.PENDING_FILTER_REVIEW_YEAR: {
-      const filterFn = action.values[0]
-        ? createReviewYearFilter(action.values[0], action.values[1])
-        : undefined;
-      return {
-        ...updatePendingFilter(state, "reviewYear", filterFn, action.values),
+      return handlePendingFilterReviewYear(state, action.values, {
         hideReviewed: state.hideReviewed,
-      };
+      });
     }
 
     case Actions.PENDING_FILTER_TITLE: {
-      const filterFn = action.value
-        ? createTitleFilter(action.value)
-        : undefined;
-      return {
-        ...updatePendingFilter(state, "title", filterFn, action.value),
+      return handlePendingFilterTitle(state, action.value, {
         hideReviewed: state.hideReviewed,
-      };
+      });
     }
 
     case Actions.RESET_PENDING_FILTERS: {
@@ -291,7 +277,9 @@ export function reducer(state: State, action: ActionType): State {
         filteredValues,
         filters,
         groupedValues: groupValues(
-          filteredValues.slice(0, state.showCount),
+          state.showCount
+            ? filteredValues.slice(0, state.showCount)
+            : filteredValues,
           state.sortValue,
         ),
         hideReviewed,

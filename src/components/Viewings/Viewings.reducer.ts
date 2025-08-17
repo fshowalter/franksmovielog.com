@@ -5,16 +5,17 @@ import {
   updateSort as baseUpdateSort,
   buildGroupValues,
   createInitialState,
-  type PendingFiltersState,
+  handlePendingFilterTitle,
+  ListWithFiltersActions,
+  type ListWithFiltersState,
   updatePendingFilter,
-} from "~/utils/pendingFilters";
-import { createTitleFilter } from "~/utils/reducerUtils";
+} from "~/components/ListWithFilters.reducerUtils";
 
 import type { ListItemValue } from "./Viewings";
 
 export enum Actions {
-  APPLY_PENDING_FILTERS = "APPLY_PENDING_FILTERS",
-  CLEAR_PENDING_FILTERS = "CLEAR_PENDING_FILTERS",
+  APPLY_PENDING_FILTERS = ListWithFiltersActions.APPLY_PENDING_FILTERS,
+  CLEAR_PENDING_FILTERS = ListWithFiltersActions.CLEAR_PENDING_FILTERS,
   NEXT_MONTH = "NEXT_MONTH",
   PENDING_FILTER_MEDIUM = "PENDING_FILTER_MEDIUM",
   PENDING_FILTER_RELEASE_YEAR = "PENDING_FILTER_RELEASE_YEAR",
@@ -22,8 +23,8 @@ export enum Actions {
   PENDING_FILTER_VENUE = "PENDING_FILTER_VENUE",
   PENDING_FILTER_VIEWING_YEAR = "PENDING_FILTER_VIEWING_YEAR",
   PREV_MONTH = "PREV_MONTH",
-  RESET_PENDING_FILTERS = "RESET_PENDING_FILTERS",
-  SORT = "SORT",
+  RESET_PENDING_FILTERS = ListWithFiltersActions.RESET_PENDING_FILTERS,
+  SORT = ListWithFiltersActions.SORT,
 }
 
 export type ActionType =
@@ -91,8 +92,8 @@ type SortAction = {
   value: Sort;
 };
 
-// AIDEV-NOTE: Viewings state extends PendingFiltersState with month navigation
-type State = PendingFiltersState<ListItemValue, Sort> & {
+// AIDEV-NOTE: Viewings state extends ListWithFiltersState with month navigation
+type State = ListWithFiltersState<ListItemValue, Sort> & {
   currentMonth: Date;
   hasNextMonth: boolean;
   hasPrevMonth: boolean;
@@ -198,16 +199,12 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_TITLE: {
-      const filterFn = action.value
-        ? createTitleFilter(action.value)
-        : undefined;
-      return {
-        ...updatePendingFilter(state, "title", filterFn, action.value),
+      return handlePendingFilterTitle(state, action.value, {
         currentMonth: state.currentMonth,
         hasNextMonth: state.hasNextMonth,
         hasPrevMonth: state.hasPrevMonth,
         monthViewings: state.monthViewings,
-      };
+      });
     }
 
     case Actions.PENDING_FILTER_VENUE: {
