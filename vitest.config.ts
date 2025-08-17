@@ -16,6 +16,7 @@ export default getViteConfig({
           environment: "node",
           include: ["src/api/**/*.spec.ts"],
           name: "api-node",
+          setupFiles: ["setupTests.ts", "setupTestCache.ts"],
         },
       },
       {
@@ -24,6 +25,7 @@ export default getViteConfig({
           environment: "node",
           include: ["src/pages/**/*.spec.ts"],
           name: "pages-node",
+          setupFiles: ["setupTests.ts", "setupTestCache.ts"],
         },
       },
       {
@@ -48,6 +50,15 @@ export default getViteConfig({
           environment: "node",
           include: ["src/layouts/**/*.spec.ts"],
           name: "layouts-node",
+        },
+      },
+      {
+        extends: true,
+        test: {
+          environment: "node",
+          include: ["src/utils/**/*.spec.ts"],
+          name: "utils-node",
+          setupFiles: ["setupTests.ts", "setupTestCache.ts"],
         },
       },
     ],

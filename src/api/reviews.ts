@@ -6,6 +6,7 @@ import remarkRehype from "remark-rehype";
 import smartypants from "remark-smartypants";
 import strip from "strip-markdown";
 
+import { ENABLE_CACHE } from "~/utils/cache";
 import { collator } from "~/utils/collator";
 
 import type { ReviewedTitleJson } from "./data/reviewedTitlesJson";
@@ -29,8 +30,7 @@ let cachedReviewedTitlesJson: ReviewedTitleJson[];
 let cachedReviews: Reviews;
 const cachedExcerptHtml: Map<string, string> = new Map();
 
-// Enable caching during builds but not in dev mode
-const ENABLE_CACHE = !import.meta.env.DEV;
+// ENABLE_CACHE is now imported from utils/cache
 
 export type Review = Omit<MarkdownReview, "date"> & ReviewedTitleJson;
 

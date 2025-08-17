@@ -1,3 +1,5 @@
+import { ENABLE_CACHE } from "~/utils/cache";
+
 import {
   allCastAndCrewJson,
   type CastAndCrewMemberJson,
@@ -6,7 +8,7 @@ import { perfLogger } from "./data/utils/performanceLogger";
 
 // Cache at API level - lazy caching for better build performance
 let cachedCastAndCrewJson: CastAndCrewMemberJson[];
-const ENABLE_CACHE = !import.meta.env.DEV;
+// ENABLE_CACHE is now imported from utils/cache
 
 export type CastAndCrewMember = CastAndCrewMemberJson & {};
 
