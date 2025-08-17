@@ -48,10 +48,7 @@ export function Collections({ initialSort, values }: Props): JSX.Element {
           }
         />
       }
-      hasActiveFilters={
-        !!state.pendingFilterValues.name &&
-        state.pendingFilterValues.name !== ""
-      }
+      hasActiveFilters={state.hasActiveFilters}
       list={
         <ol
           className={`

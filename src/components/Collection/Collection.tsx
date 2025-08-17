@@ -73,7 +73,7 @@ export function Collection({
           showHideReviewed={value.reviewCount != titles.length}
         />
       }
-      hasActiveFilters={Object.keys(state.pendingFilterValues).length > 0}
+      hasActiveFilters={state.hasActiveFilters}
       list={
         <GroupedPosterList
           groupedValues={state.groupedValues}

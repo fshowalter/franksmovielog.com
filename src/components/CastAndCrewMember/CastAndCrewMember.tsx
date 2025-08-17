@@ -80,7 +80,7 @@ export function CastAndCrewMember({
           key={filterKey}
         />
       }
-      hasActiveFilters={Object.keys(state.pendingFilterValues).length > 0}
+      hasActiveFilters={state.hasActiveFilters}
       list={
         <GroupedPosterList
           groupedValues={state.groupedValues}

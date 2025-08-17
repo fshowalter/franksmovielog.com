@@ -2,13 +2,12 @@ import {
   applyPendingFilters,
   clearPendingFilters,
   createInitialState,
-  createNameFilter,
+  handlePendingFilterName,
   ListWithFiltersActions,
   type ListWithFiltersState,
   resetPendingFilters,
   sortNumber,
   sortString,
-  updatePendingFilter,
   updateSort,
 } from "~/components/ListWithFilters.reducerUtils";
 
@@ -89,8 +88,7 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_NAME: {
-      const filterFn = createNameFilter(action.value);
-      return updatePendingFilter(state, "name", filterFn, action.value);
+      return handlePendingFilterName(state, action.value);
     }
 
     case Actions.RESET_PENDING_FILTERS: {

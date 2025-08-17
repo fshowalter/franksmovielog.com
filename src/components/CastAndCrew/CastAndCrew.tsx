@@ -57,7 +57,7 @@ export function CastAndCrew({ initialSort, values }: Props): JSX.Element {
           key={filterKey}
         />
       }
-      hasActiveFilters={Object.keys(state.pendingFilterValues).length > 0}
+      hasActiveFilters={state.hasActiveFilters}
       list={
         <GroupedList
           data-testid="list"

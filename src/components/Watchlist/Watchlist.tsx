@@ -77,7 +77,7 @@ export function Watchlist({
           key={filterKey}
         />
       }
-      hasActiveFilters={Object.keys(state.pendingFilterValues).length > 0}
+      hasActiveFilters={state.hasActiveFilters}
       list={
         <div className="@container/list">
           <GroupedPosterList

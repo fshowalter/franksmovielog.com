@@ -5,7 +5,7 @@ import {
   updateSort as baseUpdateSort,
   buildGroupValues,
   createInitialState,
-  createTitleFilter,
+  handlePendingFilterTitle,
   ListWithFiltersActions,
   type ListWithFiltersState,
   updatePendingFilter,
@@ -199,14 +199,12 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_TITLE: {
-      const filterFn = createTitleFilter(action.value);
-      return {
-        ...updatePendingFilter(state, "title", filterFn, action.value),
+      return handlePendingFilterTitle(state, action.value, {
         currentMonth: state.currentMonth,
         hasNextMonth: state.hasNextMonth,
         hasPrevMonth: state.hasPrevMonth,
         monthViewings: state.monthViewings,
-      };
+      });
     }
 
     case Actions.PENDING_FILTER_VENUE: {

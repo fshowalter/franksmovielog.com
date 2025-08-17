@@ -132,7 +132,7 @@ export function Viewings({
           pendingFilters={state.pendingFilterValues}
         />
       }
-      hasActiveFilters={Object.keys(state.pendingFilterValues).length > 0}
+      hasActiveFilters={state.hasActiveFilters}
       list={
         <CalendarView
           currentMonth={state.currentMonth}

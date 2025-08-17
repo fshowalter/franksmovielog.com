@@ -3,17 +3,16 @@ import {
   buildGroupValues,
   clearPendingFilters,
   createInitialState,
-  createReleaseYearFilter,
-  createReviewYearFilter,
-  createTitleFilter,
   getGroupLetter,
+  handlePendingFilterReleaseYear,
+  handlePendingFilterReviewYear,
+  handlePendingFilterTitle,
   ListWithFiltersActions,
   type ListWithFiltersState,
   resetPendingFilters,
   showMore,
   sortNumber,
   sortString,
-  updatePendingFilter,
   updateSort,
 } from "~/components/ListWithFilters.reducerUtils";
 
@@ -190,27 +189,21 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_RELEASE_YEAR: {
-      const filterFn = createReleaseYearFilter(action.values[0], action.values[1]);
-      return {
-        ...updatePendingFilter(state, "releaseYear", filterFn, action.values),
+      return handlePendingFilterReleaseYear(state, action.values, {
         hideReviewed: state.hideReviewed,
-      };
+      });
     }
 
     case Actions.PENDING_FILTER_REVIEW_YEAR: {
-      const filterFn = createReviewYearFilter(action.values[0], action.values[1]);
-      return {
-        ...updatePendingFilter(state, "reviewYear", filterFn, action.values),
+      return handlePendingFilterReviewYear(state, action.values, {
         hideReviewed: state.hideReviewed,
-      };
+      });
     }
 
     case Actions.PENDING_FILTER_TITLE: {
-      const filterFn = createTitleFilter(action.value);
-      return {
-        ...updatePendingFilter(state, "title", filterFn, action.value),
+      return handlePendingFilterTitle(state, action.value, {
         hideReviewed: state.hideReviewed,
-      };
+      });
     }
 
     case Actions.RESET_PENDING_FILTERS: {
