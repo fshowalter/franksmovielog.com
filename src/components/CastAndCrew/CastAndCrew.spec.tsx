@@ -32,9 +32,6 @@ describe("CastAndCrew", () => {
 
     render(<CastAndCrew {...props} />);
 
-    // Get initial list content for comparison
-    const initialList = screen.getByTestId("list").textContent;
-
     // Open filter drawer
     await user.click(screen.getByRole("button", { name: "Toggle filters" }));
 
@@ -116,9 +113,6 @@ describe("CastAndCrew", () => {
 
     await userEvent.selectOptions(screen.getByLabelText("Credits"), "Director");
 
-    // Get initial list content for comparison
-    const initialList = screen.getByTestId("list").textContent;
-
     // Apply the filter
     await userEvent.click(
       screen.getByRole("button", { name: /View \d+ Results/ }),
@@ -153,9 +147,6 @@ describe("CastAndCrew", () => {
 
     await userEvent.selectOptions(screen.getByLabelText("Credits"), "All");
 
-    // Get current list content for comparison
-    const beforeAllList = screen.getByTestId("list").textContent;
-
     // Apply the filter
     await userEvent.click(
       screen.getByRole("button", { name: /View \d+ Results/ }),
@@ -177,9 +168,6 @@ describe("CastAndCrew", () => {
     );
 
     await userEvent.selectOptions(screen.getByLabelText("Credits"), "Writer");
-
-    // Get initial list content for comparison
-    const initialList = screen.getByTestId("list").textContent;
 
     // Apply the filter
     await userEvent.click(
@@ -215,9 +203,6 @@ describe("CastAndCrew", () => {
 
     await userEvent.selectOptions(screen.getByLabelText("Credits"), "All");
 
-    // Get current list content for comparison
-    const beforeAllList = screen.getByTestId("list").textContent;
-
     // Apply the filter
     await userEvent.click(
       screen.getByRole("button", { name: /View \d+ Results/ }),
@@ -242,9 +227,6 @@ describe("CastAndCrew", () => {
       screen.getByLabelText("Credits"),
       "Performer",
     );
-
-    // Get initial list content for comparison
-    const initialList = screen.getByTestId("list").textContent;
 
     // Apply the filter
     await userEvent.click(
@@ -282,9 +264,6 @@ describe("CastAndCrew", () => {
     );
 
     await userEvent.selectOptions(screen.getByLabelText("Credits"), "All");
-
-    // Get current list content for comparison
-    const beforeAllList = screen.getByTestId("list").textContent;
 
     // Apply the filter
     await userEvent.click(

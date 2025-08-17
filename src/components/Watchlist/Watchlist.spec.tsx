@@ -38,9 +38,6 @@ describe("/watchlist", () => {
 
     render(<Watchlist {...props} />);
 
-    // Get initial list content for comparison
-    const initialList = screen.getByTestId("grouped-poster-list").textContent;
-
     // Open filter drawer
     await user.click(screen.getByRole("button", { name: "Toggle filters" }));
 
@@ -76,9 +73,6 @@ describe("/watchlist", () => {
       vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
     });
 
-    // Get initial list content for comparison
-    const initialList = screen.getByTestId("grouped-poster-list").textContent;
-
     await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
 
     // List updates synchronously with fake timers
@@ -99,9 +93,6 @@ describe("/watchlist", () => {
       screen.getByLabelText("Director"),
       "Howard Hawks",
     );
-
-    // Get initial list content for comparison
-    const initialList = screen.getByTestId("grouped-poster-list").textContent;
 
     await userEvent.click(
       screen.getByRole("button", { name: /View \d+ Results/ }),
@@ -138,9 +129,6 @@ describe("/watchlist", () => {
 
     await userEvent.selectOptions(screen.getByLabelText("Director"), "All");
 
-    // Get initial list content for comparison
-    const initialList = screen.getByTestId("grouped-poster-list").textContent;
-
     await userEvent.click(
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
@@ -163,9 +151,6 @@ describe("/watchlist", () => {
       screen.getByLabelText("Performer"),
       "Bette Davis",
     );
-
-    // Get initial list content for comparison
-    const initialList = screen.getByTestId("grouped-poster-list").textContent;
 
     await userEvent.click(
       screen.getByRole("button", { name: /View \d+ Results/ }),
@@ -202,9 +187,6 @@ describe("/watchlist", () => {
 
     await userEvent.selectOptions(screen.getByLabelText("Performer"), "All");
 
-    // Get initial list content for comparison
-    const initialList = screen.getByTestId("grouped-poster-list").textContent;
-
     await userEvent.click(
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
@@ -227,9 +209,6 @@ describe("/watchlist", () => {
       screen.getByLabelText("Writer"),
       "Leigh Brackett",
     );
-
-    // Get initial list content for comparison
-    const initialList = screen.getByTestId("grouped-poster-list").textContent;
 
     await userEvent.click(
       screen.getByRole("button", { name: /View \d+ Results/ }),
@@ -266,9 +245,6 @@ describe("/watchlist", () => {
 
     await userEvent.selectOptions(screen.getByLabelText("Writer"), "All");
 
-    // Get initial list content for comparison
-    const initialList = screen.getByTestId("grouped-poster-list").textContent;
-
     await userEvent.click(
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
@@ -292,9 +268,6 @@ describe("/watchlist", () => {
       screen.getByLabelText("Collection"),
       "Universal Monsters",
     );
-
-    // Get initial list content for comparison
-    const initialList = screen.getByTestId("grouped-poster-list").textContent;
 
     await userEvent.click(
       screen.getByRole("button", { name: /View \d+ Results/ }),
@@ -330,9 +303,6 @@ describe("/watchlist", () => {
     );
 
     await userEvent.selectOptions(screen.getByLabelText("Collection"), "All");
-
-    // Get initial list content for comparison
-    const initialList = screen.getByTestId("grouped-poster-list").textContent;
 
     await userEvent.click(
       screen.getByRole("button", { name: /View \d+ Results/ }),
@@ -411,9 +381,6 @@ describe("/watchlist", () => {
 
     await userEvent.selectOptions(fromInput, "1930");
     await userEvent.selectOptions(toInput, "1935");
-
-    // Get initial list content for comparison
-    const initialList = screen.getByTestId("grouped-poster-list").textContent;
 
     await userEvent.click(
       screen.getByRole("button", { name: /View \d+ Results/ }),

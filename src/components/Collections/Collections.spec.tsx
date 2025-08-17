@@ -32,9 +32,6 @@ describe("Collections", () => {
 
     render(<Collections {...props} />);
 
-    // Get initial list content for comparison
-    const initialList = screen.getByTestId("list").textContent;
-
     // Open filter drawer
     await user.click(screen.getByRole("button", { name: "Toggle filters" }));
 

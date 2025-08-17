@@ -40,9 +40,6 @@ describe("CastAndCrewMember", () => {
 
     render(<CastAndCrewMember {...props} />);
 
-    // Get initial list content for comparison
-    const initialList = screen.getByTestId("grouped-poster-list").textContent;
-
     // Open filter drawer
     await user.click(screen.getByRole("button", { name: "Toggle filters" }));
 
@@ -181,9 +178,6 @@ describe("CastAndCrewMember", () => {
     await userEvent.selectOptions(fromInput, "1970");
     await userEvent.selectOptions(toInput, "1980");
 
-    // Get initial list content for comparison
-    const initialList = screen.getByTestId("grouped-poster-list").textContent;
-
     // Apply the filter
     await userEvent.click(
       screen.getByRole("button", { name: /View \d+ Results/ }),
@@ -210,9 +204,6 @@ describe("CastAndCrewMember", () => {
 
     await userEvent.selectOptions(fromInput, "2021");
     await userEvent.selectOptions(toInput, "2022");
-
-    // Get initial list content for comparison
-    const initialList = screen.getByTestId("grouped-poster-list").textContent;
 
     // Apply the filter
     await userEvent.click(

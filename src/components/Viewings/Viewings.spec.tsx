@@ -38,9 +38,6 @@ describe("Viewings", () => {
 
     render(<Viewings {...props} />);
 
-    // Get initial calendar content for comparison
-    const initialCalendar = screen.getByTestId("calendar").textContent;
-
     // Open filter drawer
     await user.click(screen.getByRole("button", { name: "Toggle filters" }));
 
@@ -68,9 +65,6 @@ describe("Viewings", () => {
     );
 
     await userEvent.selectOptions(screen.getByLabelText("Medium"), "Blu-ray");
-
-    // Get initial calendar content for comparison
-    const initialCalendar = screen.getByTestId("calendar").textContent;
 
     // Apply the filter
     await userEvent.click(
@@ -106,9 +100,6 @@ describe("Viewings", () => {
 
     await userEvent.selectOptions(screen.getByLabelText("Medium"), "All");
 
-    // Get initial calendar content for comparison
-    const initialCalendar = screen.getByTestId("calendar").textContent;
-
     // Apply the filter
     await userEvent.click(
       screen.getByRole("button", { name: /View \d+ Results/ }),
@@ -132,9 +123,6 @@ describe("Viewings", () => {
       screen.getByLabelText("Venue"),
       "Alamo Drafthouse Cinema - One Loudoun",
     );
-
-    // Get initial calendar content for comparison
-    const initialCalendar = screen.getByTestId("calendar").textContent;
 
     // Apply the filter
     await userEvent.click(
@@ -171,9 +159,6 @@ describe("Viewings", () => {
     );
 
     await userEvent.selectOptions(screen.getByLabelText("Venue"), "All");
-
-    // Get initial calendar content for comparison
-    const initialCalendar = screen.getByTestId("calendar").textContent;
 
     // Apply the filter
     await userEvent.click(
@@ -228,9 +213,6 @@ describe("Viewings", () => {
     await userEvent.selectOptions(fromInput, "1957");
     await userEvent.selectOptions(toInput, "1970");
 
-    // Get initial calendar content for comparison
-    const initialCalendar = screen.getByTestId("calendar").textContent;
-
     // Apply the filter
     await userEvent.click(
       screen.getByRole("button", { name: /View \d+ Results/ }),
@@ -260,9 +242,6 @@ describe("Viewings", () => {
     await userEvent.selectOptions(fromInput, "1973");
     await userEvent.selectOptions(toInput, "1950");
 
-    // Get initial calendar content for comparison
-    const initialCalendar = screen.getByTestId("calendar").textContent;
-
     // Apply the filter
     await userEvent.click(
       screen.getByRole("button", { name: /View \d+ Results/ }),
@@ -277,9 +256,6 @@ describe("Viewings", () => {
     expect.hasAssertions();
 
     render(<Viewings {...props} />);
-
-    // Get initial calendar content for comparison (before any filters)
-    const initialCalendar = screen.getByTestId("calendar").textContent;
 
     // Open filter drawer
     await userEvent.click(
@@ -322,9 +298,6 @@ describe("Viewings", () => {
     await userEvent.selectOptions(toInput, "2014");
     await userEvent.selectOptions(fromInput, "2013");
     await userEvent.selectOptions(toInput, "2012");
-
-    // Get initial calendar content for comparison
-    const initialCalendar = screen.getByTestId("calendar").textContent;
 
     // Apply the filter
     await userEvent.click(
