@@ -3,6 +3,7 @@ import { userEvent } from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import { DRAWER_CLOSE_ANIMATION_MS } from "~/components/ListWithFilters";
+import { DROPDOWN_CLOSE_DELAY_MS } from "~/components/MultiSelectField";
 import { TEXT_FILTER_DEBOUNCE_MS } from "~/components/TextFilter";
 
 import { getProps } from "./getProps";
@@ -313,6 +314,52 @@ describe("/watchlist", () => {
     );
 
     // List updates synchronously with fake timers
+
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+  });
+
+  it("can filter by genres", async ({ expect }) => {
+    expect.hasAssertions();
+
+    // Setup userEvent with advanceTimers
+    const user = userEvent.setup({
+      advanceTimers: vi.advanceTimersByTime,
+    });
+
+    render(<Watchlist {...props} />);
+
+    // Open filter drawer
+    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+
+    const genresButton = screen.getByLabelText("Genres");
+
+    // Click to open the dropdown
+    await user.click(genresButton);
+
+    // Select Horror
+    const horrorOption = await screen.findByRole("option", { name: "Horror" });
+    await user.click(horrorOption);
+
+    // Advance timers for dropdown to close
+    act(() => {
+      vi.advanceTimersByTime(DROPDOWN_CLOSE_DELAY_MS);
+    });
+
+    // Click to open the dropdown again
+    await user.click(genresButton);
+
+    // Select Thriller
+    const thrillerOption = await screen.findByRole("option", {
+      name: "Thriller",
+    });
+    await user.click(thrillerOption);
+
+    // Advance timers for dropdown to close again
+    act(() => {
+      vi.advanceTimersByTime(DROPDOWN_CLOSE_DELAY_MS);
+    });
+
+    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
