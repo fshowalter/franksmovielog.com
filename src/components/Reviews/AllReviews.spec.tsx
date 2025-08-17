@@ -12,6 +12,10 @@ const props = await getProps();
 
 describe("AllReviews", () => {
   beforeEach(() => {
+    // AIDEV-NOTE: Using shouldAdvanceTime: true prevents userEvent from hanging
+    // when fake timers are active. This allows async userEvent operations to complete
+    // while still controlling timer advancement for debounced inputs.
+    // See https://github.com/testing-library/user-event/issues/833
     vi.useFakeTimers({ shouldAdvanceTime: true });
   });
 

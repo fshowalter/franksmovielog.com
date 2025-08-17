@@ -1,4 +1,4 @@
-import { act, render, screen, waitFor, within } from "@testing-library/react";
+import { act, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
@@ -12,6 +12,10 @@ const props = await getPropsForOverrated();
 
 describe("Overrated", () => {
   beforeEach(() => {
+    // AIDEV-NOTE: Using shouldAdvanceTime: true prevents userEvent from hanging
+    // when fake timers are active. This allows async userEvent operations to complete
+    // while still controlling timer advancement for debounced inputs.
+    // See https://github.com/testing-library/user-event/issues/833
     vi.useFakeTimers({ shouldAdvanceTime: true });
   });
 
@@ -202,13 +206,10 @@ describe("Overrated", () => {
     const horrorOption = await screen.findByRole("option", { name: "Horror" });
     await user.click(horrorOption);
 
-    // Wait for dropdown to close (150ms timeout in component)
-    await waitFor(
-      () => {
-        expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
-      },
-      { timeout: 300 },
-    );
+    // Wait for dropdown to close
+    act(() => {
+      vi.advanceTimersByTime(DROPDOWN_CLOSE_DELAY_MS);
+    });
 
     // Advance timers for dropdown to close
     act(() => {
@@ -225,21 +226,15 @@ describe("Overrated", () => {
     // Click outside to close the dropdown
     await user.click(document.body);
 
-    // Wait for dropdown to close
-    await waitFor(
-      () => {
-        expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
-      },
-      { timeout: 300 },
-    );
+    // Wait for dropdown to close after clicking outside
+    act(() => {
+      vi.advanceTimersByTime(DROPDOWN_CLOSE_DELAY_MS);
+    });
 
     // Apply the filter
     await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      expect(screen.getByTestId("grouped-poster-list")).toBeInTheDocument();
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });

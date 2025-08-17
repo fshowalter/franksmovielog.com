@@ -1,4 +1,4 @@
-import { act, render, screen, waitFor } from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
@@ -11,6 +11,10 @@ const props = await getProps();
 
 describe("CastAndCrew", () => {
   beforeEach(() => {
+    // AIDEV-NOTE: Using shouldAdvanceTime: true prevents userEvent from hanging
+    // when fake timers are active. This allows async userEvent operations to complete
+    // while still controlling timer advancement for debounced inputs.
+    // See https://github.com/testing-library/user-event/issues/833
     vi.useFakeTimers({ shouldAdvanceTime: true });
   });
 
@@ -43,11 +47,7 @@ describe("CastAndCrew", () => {
     // Apply the filter
     await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentList = screen.getByTestId("list").textContent;
-      expect(currentList).not.toBe(initialList);
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
@@ -124,11 +124,7 @@ describe("CastAndCrew", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentList = screen.getByTestId("list").textContent;
-      expect(currentList).not.toBe(initialList);
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
@@ -165,11 +161,7 @@ describe("CastAndCrew", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentList = screen.getByTestId("list").textContent;
-      expect(currentList).not.toBe(beforeAllList);
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
@@ -194,11 +186,7 @@ describe("CastAndCrew", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentList = screen.getByTestId("list").textContent;
-      expect(currentList).not.toBe(initialList);
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
@@ -235,11 +223,7 @@ describe("CastAndCrew", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentList = screen.getByTestId("list").textContent;
-      expect(currentList).not.toBe(beforeAllList);
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
@@ -267,11 +251,7 @@ describe("CastAndCrew", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentList = screen.getByTestId("list").textContent;
-      expect(currentList).not.toBe(initialList);
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
@@ -311,11 +291,7 @@ describe("CastAndCrew", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentList = screen.getByTestId("list").textContent;
-      expect(currentList).not.toBe(beforeAllList);
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });

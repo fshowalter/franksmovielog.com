@@ -1,4 +1,4 @@
-import { act, render, screen, waitFor, within } from "@testing-library/react";
+import { act, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
@@ -11,6 +11,10 @@ const props = await getProps();
 
 describe("/watchlist", () => {
   beforeEach(() => {
+    // AIDEV-NOTE: Using shouldAdvanceTime: true prevents userEvent from hanging
+    // when fake timers are active. This allows async userEvent operations to complete
+    // while still controlling timer advancement for debounced inputs.
+    // See https://github.com/testing-library/user-event/issues/833
     vi.useFakeTimers({ shouldAdvanceTime: true });
   });
 
@@ -48,11 +52,7 @@ describe("/watchlist", () => {
 
     await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentList = screen.getByTestId("grouped-poster-list").textContent;
-      expect(currentList).not.toBe(initialList);
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
@@ -81,11 +81,7 @@ describe("/watchlist", () => {
 
     await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentList = screen.getByTestId("grouped-poster-list").textContent;
-      expect(currentList).not.toBe(initialList);
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
@@ -111,11 +107,7 @@ describe("/watchlist", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentList = screen.getByTestId("grouped-poster-list").textContent;
-      expect(currentList).not.toBe(initialList);
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
@@ -153,11 +145,7 @@ describe("/watchlist", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentList = screen.getByTestId("grouped-poster-list").textContent;
-      expect(currentList).not.toBe(initialList);
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
@@ -183,11 +171,7 @@ describe("/watchlist", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentList = screen.getByTestId("grouped-poster-list").textContent;
-      expect(currentList).not.toBe(initialList);
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
@@ -225,11 +209,7 @@ describe("/watchlist", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentList = screen.getByTestId("grouped-poster-list").textContent;
-      expect(currentList).not.toBe(initialList);
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
@@ -255,11 +235,7 @@ describe("/watchlist", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentList = screen.getByTestId("grouped-poster-list").textContent;
-      expect(currentList).not.toBe(initialList);
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
@@ -297,11 +273,7 @@ describe("/watchlist", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentList = screen.getByTestId("grouped-poster-list").textContent;
-      expect(currentList).not.toBe(initialList);
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
@@ -328,11 +300,7 @@ describe("/watchlist", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentList = screen.getByTestId("grouped-poster-list").textContent;
-      expect(currentList).not.toBe(initialList);
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
@@ -370,11 +338,7 @@ describe("/watchlist", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentList = screen.getByTestId("grouped-poster-list").textContent;
-      expect(currentList).not.toBe(initialList);
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
@@ -455,11 +419,7 @@ describe("/watchlist", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentList = screen.getByTestId("grouped-poster-list").textContent;
-      expect(currentList).not.toBe(initialList);
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });

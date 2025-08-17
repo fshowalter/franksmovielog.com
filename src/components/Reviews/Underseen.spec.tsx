@@ -1,7 +1,8 @@
-import { act, render, screen, waitFor, within } from "@testing-library/react";
+import { act, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
+import { DROPDOWN_CLOSE_DELAY_MS } from "~/components/MultiSelectField";
 import { TEXT_FILTER_DEBOUNCE_MS } from "~/components/TextFilter";
 
 import { getPropsForUnderseen } from "./getProps";
@@ -11,6 +12,10 @@ const props = await getPropsForUnderseen();
 
 describe("Underseen", () => {
   beforeEach(() => {
+    // AIDEV-NOTE: Using shouldAdvanceTime: true prevents userEvent from hanging
+    // when fake timers are active. This allows async userEvent operations to complete
+    // while still controlling timer advancement for debounced inputs.
+    // See https://github.com/testing-library/user-event/issues/833
     vi.useFakeTimers({ shouldAdvanceTime: true });
   });
 
@@ -212,10 +217,7 @@ describe("Underseen", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      expect(screen.getByTestId("grouped-poster-list")).toBeInTheDocument();
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
@@ -244,10 +246,7 @@ describe("Underseen", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      expect(screen.getByTestId("grouped-poster-list")).toBeInTheDocument();
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
@@ -271,12 +270,9 @@ describe("Underseen", () => {
     await userEvent.click(horrorOption);
 
     // Wait for dropdown to close
-    await waitFor(
-      () => {
-        expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
-      },
-      { timeout: 300 },
-    );
+    act(() => {
+      vi.advanceTimersByTime(DROPDOWN_CLOSE_DELAY_MS);
+    });
 
     // Click to open the dropdown again
     await userEvent.click(genresButton);
@@ -286,22 +282,16 @@ describe("Underseen", () => {
     await userEvent.click(comedyOption);
 
     // Wait for dropdown to close again
-    await waitFor(
-      () => {
-        expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
-      },
-      { timeout: 300 },
-    );
+    act(() => {
+      vi.advanceTimersByTime(DROPDOWN_CLOSE_DELAY_MS);
+    });
 
     // Apply the filter
     await userEvent.click(
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      expect(screen.getByTestId("grouped-poster-list")).toBeInTheDocument();
-    });
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });

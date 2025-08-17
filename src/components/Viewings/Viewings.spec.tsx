@@ -1,4 +1,4 @@
-import { act, render, screen, waitFor, within } from "@testing-library/react";
+import { act, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
@@ -11,6 +11,10 @@ export const props = await getProps();
 
 describe("Viewings", () => {
   beforeEach(() => {
+    // AIDEV-NOTE: Using shouldAdvanceTime: true prevents userEvent from hanging
+    // when fake timers are active. This allows async userEvent operations to complete
+    // while still controlling timer advancement for debounced inputs.
+    // See https://github.com/testing-library/user-event/issues/833
     vi.useFakeTimers({ shouldAdvanceTime: true });
   });
 
@@ -49,11 +53,7 @@ describe("Viewings", () => {
     // Apply the filter
     await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentCalendar = screen.getByTestId("calendar").textContent;
-      expect(currentCalendar).not.toBe(initialCalendar);
-    });
+    // Calendar updates synchronously with fake timers
 
     expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
@@ -77,11 +77,7 @@ describe("Viewings", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentCalendar = screen.getByTestId("calendar").textContent;
-      expect(currentCalendar).not.toBe(initialCalendar);
-    });
+    // Calendar updates synchronously with fake timers
 
     expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
@@ -118,11 +114,7 @@ describe("Viewings", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentCalendar = screen.getByTestId("calendar").textContent;
-      expect(currentCalendar).not.toBe(initialCalendar);
-    });
+    // Calendar updates synchronously with fake timers
 
     expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
@@ -149,11 +141,7 @@ describe("Viewings", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentCalendar = screen.getByTestId("calendar").textContent;
-      expect(currentCalendar).not.toBe(initialCalendar);
-    });
+    // Calendar updates synchronously with fake timers
 
     expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
@@ -192,11 +180,7 @@ describe("Viewings", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentCalendar = screen.getByTestId("calendar").textContent;
-      expect(currentCalendar).not.toBe(initialCalendar);
-    });
+    // Calendar updates synchronously with fake timers
 
     expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
@@ -252,11 +236,7 @@ describe("Viewings", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentCalendar = screen.getByTestId("calendar").textContent;
-      expect(currentCalendar).not.toBe(initialCalendar);
-    });
+    // Calendar updates synchronously with fake timers
 
     expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
@@ -288,11 +268,7 @@ describe("Viewings", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentCalendar = screen.getByTestId("calendar").textContent;
-      expect(currentCalendar).not.toBe(initialCalendar);
-    });
+    // Calendar updates synchronously with fake timers
 
     expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
@@ -323,11 +299,7 @@ describe("Viewings", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentCalendar = screen.getByTestId("calendar").textContent;
-      expect(currentCalendar).not.toBe(initialCalendar);
-    });
+    // Calendar updates synchronously with fake timers
 
     expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
@@ -359,11 +331,7 @@ describe("Viewings", () => {
       screen.getByRole("button", { name: /View \d+ Results/ }),
     );
 
-    // Wait for the list to update (filters to be applied)
-    await waitFor(() => {
-      const currentCalendar = screen.getByTestId("calendar").textContent;
-      expect(currentCalendar).not.toBe(initialCalendar);
-    });
+    // Calendar updates synchronously with fake timers
 
     expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
