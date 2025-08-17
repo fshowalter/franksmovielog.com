@@ -25,11 +25,11 @@ export enum ListWithFiltersActions {
 /**
  * Common action type definitions
  */
-export type ApplyPendingFiltersAction = {
+type ApplyPendingFiltersAction = {
   type: typeof ListWithFiltersActions.APPLY_PENDING_FILTERS;
 };
 
-export type ClearPendingFiltersAction = {
+type ClearPendingFiltersAction = {
   type: typeof ListWithFiltersActions.CLEAR_PENDING_FILTERS;
 };
 
@@ -56,15 +56,15 @@ export type ListWithFiltersState<TItem, TSortValue> = {
   sortValue: TSortValue;
 };
 
-export type ResetPendingFiltersAction = {
+type ResetPendingFiltersAction = {
   type: typeof ListWithFiltersActions.RESET_PENDING_FILTERS;
 };
 
-export type ShowMoreAction = {
+type ShowMoreAction = {
   type: typeof ListWithFiltersActions.SHOW_MORE;
 };
 
-export type SortAction<TSort> = {
+type SortAction<TSort> = {
   type: typeof ListWithFiltersActions.SORT;
   value: TSort;
 };
@@ -176,19 +176,19 @@ export function createInitialState<TItem, TSortValue>({
   };
 }
 
-export function createNameFilter(value: string | undefined) {
+function createNameFilter(value: string | undefined) {
   if (!value) return;
   const regex = new RegExp(value, "i");
   return <T extends { name: string }>(item: T) => regex.test(item.name);
 }
 
-export function createReleaseYearFilter(minYear: string, maxYear: string) {
+function createReleaseYearFilter(minYear: string, maxYear: string) {
   return <T extends { releaseYear: string }>(item: T) => {
     return item.releaseYear >= minYear && item.releaseYear <= maxYear;
   };
 }
 
-export function createReviewYearFilter(minYear: string, maxYear: string) {
+function createReviewYearFilter(minYear: string, maxYear: string) {
   return <T extends { reviewYear?: string }>(item: T) => {
     const year = item.reviewYear;
     if (!year) return false;
@@ -197,14 +197,14 @@ export function createReviewYearFilter(minYear: string, maxYear: string) {
 }
 
 // Common filter creators - simple functions that create filter functions
-export function createTitleFilter(value: string | undefined) {
+function createTitleFilter(value: string | undefined) {
   if (!value) return;
   const regex = new RegExp(value, "i");
   return <T extends { title: string }>(item: T) => regex.test(item.title);
 }
 
 // Filter values helper
-export function filterValues<TItem>({
+function filterValues<TItem>({
   filters,
   values,
 }: {
