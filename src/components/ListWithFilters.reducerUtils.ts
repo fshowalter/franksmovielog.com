@@ -48,15 +48,6 @@ export type ListWithFiltersActionType<TSortValue = unknown> =
   | SortAction<TSortValue>;
 
 /**
- * State for lists with pagination ("Show More") enabled
- * The presence of showCount acts as the discriminator
- */
-type ListWithFiltersAndShowCountState<TItem, TSortValue> =
-  BaseListWithFiltersState<TItem, TSortValue> & {
-    showCount: number; // Required for paginated lists
-  };
-
-/**
  * Union type for all list states - backwards compatible
  */
 export type ListWithFiltersState<TItem, TSortValue> =
@@ -95,6 +86,15 @@ type BaseListWithFiltersState<TItem, TSortValue> = {
 type ClearPendingFiltersAction = {
   type: ListWithFiltersActions.CLEAR_PENDING_FILTERS;
 };
+
+/**
+ * State for lists with pagination ("Show More") enabled
+ * The presence of showCount acts as the discriminator
+ */
+type ListWithFiltersAndShowCountState<TItem, TSortValue> =
+  BaseListWithFiltersState<TItem, TSortValue> & {
+    showCount: number; // Required for paginated lists
+  };
 
 /**
  * State for lists without pagination
