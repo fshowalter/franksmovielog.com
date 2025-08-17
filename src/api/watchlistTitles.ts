@@ -10,6 +10,7 @@ export type WatchlistTitle = WatchlistTitleJson & {};
 type WatchlistTitles = {
   distinctCollections: string[];
   distinctDirectors: string[];
+  distinctGenres: string[];
   distinctPerformers: string[];
   distinctReleaseYears: string[];
   distinctWriters: string[];
@@ -19,6 +20,7 @@ type WatchlistTitles = {
 export async function allWatchlistTitles(): Promise<WatchlistTitles> {
   const watchlistTitlesJson = await allWatchlistTitlesJson();
   const distinctDirectors = new Set<string>();
+  const distinctGenres = new Set<string>();
   const distinctPerformers = new Set<string>();
   const distinctWriters = new Set<string>();
   const distinctCollections = new Set<string>();
@@ -32,6 +34,7 @@ export async function allWatchlistTitles(): Promise<WatchlistTitles> {
     for (const name of title.watchlistWriterNames) distinctWriters.add(name);
     for (const name of title.watchlistCollectionNames)
       distinctCollections.add(name);
+    for (const genre of title.genres) distinctGenres.add(genre);
     distinctReleaseYears.add(title.releaseYear);
 
     return {
@@ -46,6 +49,7 @@ export async function allWatchlistTitles(): Promise<WatchlistTitles> {
     distinctDirectors: [...distinctDirectors].sort((a, b) =>
       collator.compare(a, b),
     ),
+    distinctGenres: [...distinctGenres].sort((a, b) => collator.compare(a, b)),
     distinctPerformers: [...distinctPerformers].sort((a, b) =>
       collator.compare(a, b),
     ),

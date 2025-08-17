@@ -17,10 +17,41 @@ import { collator } from "~/utils/collator";
 export enum ListWithFiltersActions {
   APPLY_PENDING_FILTERS = "APPLY_PENDING_FILTERS",
   CLEAR_PENDING_FILTERS = "CLEAR_PENDING_FILTERS",
+  PENDING_FILTER_GENRES = "PENDING_FILTER_GENRES",
+  PENDING_FILTER_NAME = "PENDING_FILTER_NAME",
+  PENDING_FILTER_RELEASE_YEAR = "PENDING_FILTER_RELEASE_YEAR",
+  PENDING_FILTER_REVIEW_YEAR = "PENDING_FILTER_REVIEW_YEAR",
+  PENDING_FILTER_TITLE = "PENDING_FILTER_TITLE",
   RESET_PENDING_FILTERS = "RESET_PENDING_FILTERS",
   SHOW_MORE = "SHOW_MORE",
   SORT = "SORT",
 }
+
+/**
+ * Common Action Type Definitions
+ */
+export type ApplyPendingFiltersAction = {
+  type: ListWithFiltersActions.APPLY_PENDING_FILTERS;
+};
+
+export type ClearPendingFiltersAction = {
+  type: ListWithFiltersActions.CLEAR_PENDING_FILTERS;
+};
+
+/**
+ * Union type of all ListWithFilters actions
+ */
+export type ListWithFiltersActionType<TSortValue = unknown> =
+  | ApplyPendingFiltersAction
+  | ClearPendingFiltersAction
+  | PendingFilterGenresAction
+  | PendingFilterNameAction
+  | PendingFilterReleaseYearAction
+  | PendingFilterReviewYearAction
+  | PendingFilterTitleAction
+  | ResetPendingFiltersAction
+  | ShowMoreAction
+  | SortAction<TSortValue>;
 
 /**
  * State structure for lists with pending filters, grouping, and pagination
@@ -43,6 +74,44 @@ export type ListWithFiltersState<TItem, TSortValue> = {
   >; // Raw pending filter values for UI
   showCount?: number; // Optional - when undefined, no pagination is applied
   sortValue: TSortValue;
+};
+
+export type PendingFilterGenresAction = {
+  type: ListWithFiltersActions.PENDING_FILTER_GENRES;
+  values: readonly string[];
+};
+
+export type PendingFilterNameAction = {
+  type: ListWithFiltersActions.PENDING_FILTER_NAME;
+  value: string;
+};
+
+export type PendingFilterReleaseYearAction = {
+  type: ListWithFiltersActions.PENDING_FILTER_RELEASE_YEAR;
+  values: [string, string];
+};
+
+export type PendingFilterReviewYearAction = {
+  type: ListWithFiltersActions.PENDING_FILTER_REVIEW_YEAR;
+  values: [string, string];
+};
+
+export type PendingFilterTitleAction = {
+  type: ListWithFiltersActions.PENDING_FILTER_TITLE;
+  value: string;
+};
+
+export type ResetPendingFiltersAction = {
+  type: ListWithFiltersActions.RESET_PENDING_FILTERS;
+};
+
+export type ShowMoreAction = {
+  type: ListWithFiltersActions.SHOW_MORE;
+};
+
+export type SortAction<TSortValue> = {
+  type: ListWithFiltersActions.SORT;
+  value: TSortValue;
 };
 
 /**
@@ -174,6 +243,137 @@ export function getGroupLetter(str: string): string {
   }
 
   return letter.toLocaleUpperCase();
+}
+
+/**
+ * Shared reducer handler for common ListWithFilters actions
+ */
+export function handleListWithFiltersAction<
+  TItem extends Record<string, unknown>,
+  TSortValue,
+  TExtendedState extends Record<string, unknown> = Record<string, never>,
+>(
+  state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
+  action: ListWithFiltersActionType<TSortValue>,
+  handlers: {
+    groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>;
+    sortFn: (values: TItem[], sort: TSortValue) => TItem[];
+  },
+  extendedState?: TExtendedState,
+): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
+  switch (action.type) {
+    case ListWithFiltersActions.APPLY_PENDING_FILTERS: {
+      const baseState = applyPendingFilters(
+        state,
+        handlers.sortFn,
+        handlers.groupFn,
+      );
+      return extendedState ? { ...baseState, ...extendedState } : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
+    }
+
+    case ListWithFiltersActions.CLEAR_PENDING_FILTERS: {
+      const baseState = clearPendingFilters(state);
+      return extendedState ? { ...baseState, ...extendedState } : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
+    }
+
+    case ListWithFiltersActions.PENDING_FILTER_GENRES: {
+      if (state.allValues.length > 0 && 'genres' in state.allValues[0]) {
+        return handlePendingFilterGenres(
+          state as unknown as ListWithFiltersState<TItem & { genres: readonly string[] }, TSortValue> & TExtendedState,
+          action.values,
+          extendedState,
+        ) as unknown as ListWithFiltersState<TItem, TSortValue> & TExtendedState;
+      }
+      return state;
+    }
+
+    case ListWithFiltersActions.PENDING_FILTER_NAME: {
+      if (state.allValues.length > 0 && 'name' in state.allValues[0]) {
+        return handlePendingFilterName(
+          state as unknown as ListWithFiltersState<TItem & { name: string }, TSortValue> & TExtendedState,
+          action.value,
+          extendedState,
+        ) as unknown as ListWithFiltersState<TItem, TSortValue> & TExtendedState;
+      }
+      return state;
+    }
+
+    case ListWithFiltersActions.PENDING_FILTER_RELEASE_YEAR: {
+      if (state.allValues.length > 0 && 'releaseYear' in state.allValues[0]) {
+        return handlePendingFilterReleaseYear(
+          state as unknown as ListWithFiltersState<TItem & { releaseYear: string }, TSortValue> & TExtendedState,
+          action.values,
+          extendedState,
+        ) as unknown as ListWithFiltersState<TItem, TSortValue> & TExtendedState;
+      }
+      return state;
+    }
+
+    case ListWithFiltersActions.PENDING_FILTER_REVIEW_YEAR: {
+      if (state.allValues.length > 0 && 'reviewYear' in state.allValues[0]) {
+        return handlePendingFilterReviewYear(
+          state as unknown as ListWithFiltersState<TItem & { reviewYear?: string }, TSortValue> & TExtendedState,
+          action.values,
+          extendedState,
+        ) as unknown as ListWithFiltersState<TItem, TSortValue> & TExtendedState;
+      }
+      return state;
+    }
+
+    case ListWithFiltersActions.PENDING_FILTER_TITLE: {
+      if (state.allValues.length > 0 && 'title' in state.allValues[0]) {
+        return handlePendingFilterTitle(
+          state as unknown as ListWithFiltersState<TItem & { title: string }, TSortValue> & TExtendedState,
+          action.value,
+          extendedState,
+        ) as unknown as ListWithFiltersState<TItem, TSortValue> & TExtendedState;
+      }
+      return state;
+    }
+
+    case ListWithFiltersActions.RESET_PENDING_FILTERS: {
+      const baseState = resetPendingFilters(state);
+      return extendedState ? { ...baseState, ...extendedState } : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
+    }
+
+    case ListWithFiltersActions.SHOW_MORE: {
+      if (state.showCount !== undefined) {
+        const baseState = showMore(state, 100, handlers.groupFn); // Default increment
+        return extendedState ? { ...baseState, ...extendedState } : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
+      }
+      return state;
+    }
+
+    case ListWithFiltersActions.SORT: {
+      const baseState = updateSort(
+        state,
+        action.value,
+        handlers.sortFn,
+        handlers.groupFn,
+      );
+      return extendedState ? { ...baseState, ...extendedState } : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
+    }
+
+    default: {
+      return state;
+    }
+  }
+}
+
+export function handlePendingFilterGenres<
+  TItem extends { genres: readonly string[] },
+  TSortValue,
+  TExtendedState extends Record<string, unknown> = Record<string, never>,
+>(
+  state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
+  values: readonly string[],
+  extendedState?: TExtendedState,
+): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
+  const filterFn = createGenresFilter(values);
+  const baseState = updatePendingFilter(state, "genres", filterFn, values);
+  return extendedState
+    ? { ...baseState, ...extendedState }
+    : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
 }
 
 export function handlePendingFilterName<
@@ -352,6 +552,13 @@ export function updateSort<TItem, TSortValue>(
     filteredValues,
     groupedValues,
     sortValue,
+  };
+}
+
+function createGenresFilter(genres: readonly string[]) {
+  if (genres.length === 0) return;
+  return <T extends { genres: readonly string[] }>(item: T) => {
+    return genres.every((genre) => item.genres.includes(genre));
   };
 }
 

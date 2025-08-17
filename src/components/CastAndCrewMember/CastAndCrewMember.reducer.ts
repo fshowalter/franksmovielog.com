@@ -1,21 +1,17 @@
-import type { ListWithFiltersState } from "~/components/ListWithFilters.reducerUtils";
+import type {
+  ListWithFiltersActionType,
+  ListWithFiltersState,
+} from "~/components/ListWithFilters.reducerUtils";
 
 import {
-  applyPendingFilters,
   buildGroupValues,
-  clearPendingFilters,
   createInitialState,
   getGroupLetter,
-  handlePendingFilterReleaseYear,
-  handlePendingFilterReviewYear,
-  handlePendingFilterTitle,
+  handleListWithFiltersAction,
   ListWithFiltersActions,
-  resetPendingFilters,
-  showMore,
   sortNumber,
   sortString,
   updatePendingFilter,
-  updateSort,
 } from "~/components/ListWithFilters.reducerUtils";
 
 /**
@@ -35,70 +31,26 @@ export type Sort =
 
 const SHOW_COUNT_DEFAULT = 100;
 
-export enum Actions {
-  APPLY_PENDING_FILTERS = ListWithFiltersActions.APPLY_PENDING_FILTERS,
-  CLEAR_PENDING_FILTERS = ListWithFiltersActions.CLEAR_PENDING_FILTERS,
+export enum CastAndCrewMemberActions {
   PENDING_FILTER_CREDIT_KIND = "PENDING_FILTER_CREDIT_KIND",
-  PENDING_FILTER_RELEASE_YEAR = "PENDING_FILTER_RELEASE_YEAR",
-  PENDING_FILTER_REVIEW_YEAR = "PENDING_FILTER_REVIEW_YEAR",
-  PENDING_FILTER_TITLE = "PENDING_FILTER_TITLE",
-  RESET_PENDING_FILTERS = ListWithFiltersActions.RESET_PENDING_FILTERS,
-  SHOW_MORE = ListWithFiltersActions.SHOW_MORE,
-  SORT = ListWithFiltersActions.SORT,
   TOGGLE_REVIEWED = "TOGGLE_REVIEWED",
 }
 
+// Re-export shared actions for component convenience
+export const Actions = {
+  ...ListWithFiltersActions,
+  ...CastAndCrewMemberActions,
+} as const;
+
 export type ActionType =
-  | ApplyPendingFiltersAction
-  | ClearPendingFiltersAction
+  | ListWithFiltersActionType<Sort>
   | PendingFilterCreditKindAction
-  | PendingFilterReleaseYearAction
-  | PendingFilterReviewYearAction
-  | PendingFilterTitleAction
-  | ResetPendingFiltersAction
-  | ShowMoreAction
-  | SortAction
   | ToggleReviewedAction;
 
-type ApplyPendingFiltersAction = {
-  type: Actions.APPLY_PENDING_FILTERS;
-};
-
-type ClearPendingFiltersAction = {
-  type: Actions.CLEAR_PENDING_FILTERS;
-};
-
+// CastAndCrewMember-specific actions
 type PendingFilterCreditKindAction = {
-  type: Actions.PENDING_FILTER_CREDIT_KIND;
+  type: CastAndCrewMemberActions.PENDING_FILTER_CREDIT_KIND;
   value: string;
-};
-
-type PendingFilterReleaseYearAction = {
-  type: Actions.PENDING_FILTER_RELEASE_YEAR;
-  values: [string, string];
-};
-
-type PendingFilterReviewYearAction = {
-  type: Actions.PENDING_FILTER_REVIEW_YEAR;
-  values: [string, string];
-};
-
-type PendingFilterTitleAction = {
-  type: Actions.PENDING_FILTER_TITLE;
-  value: string;
-};
-
-type ResetPendingFiltersAction = {
-  type: Actions.RESET_PENDING_FILTERS;
-};
-
-type ShowMoreAction = {
-  type: Actions.SHOW_MORE;
-};
-
-type SortAction = {
-  type: Actions.SORT;
-  value: Sort;
 };
 
 type State = ListWithFiltersState<ListItemValue, Sort> & {
@@ -106,7 +58,7 @@ type State = ListWithFiltersState<ListItemValue, Sort> & {
 };
 
 type ToggleReviewedAction = {
-  type: Actions.TOGGLE_REVIEWED;
+  type: CastAndCrewMemberActions.TOGGLE_REVIEWED;
 };
 
 // Helper functions
@@ -183,71 +135,19 @@ export function initState({
 
 export function reducer(state: State, action: ActionType): State {
   switch (action.type) {
-    case Actions.APPLY_PENDING_FILTERS: {
-      return {
-        ...applyPendingFilters(state, sortValues, groupValues),
-        hideReviewed: state.hideReviewed,
-      };
-    }
-
-    case Actions.CLEAR_PENDING_FILTERS: {
-      return {
-        ...clearPendingFilters(state),
-        hideReviewed: state.hideReviewed,
-      };
-    }
-
-    case Actions.PENDING_FILTER_CREDIT_KIND: {
+    case CastAndCrewMemberActions.PENDING_FILTER_CREDIT_KIND: {
+      const typedAction = action;
       const filterFn =
-        action.value && action.value !== "All"
-          ? (value: ListItemValue) => value.creditedAs.includes(action.value)
+        typedAction.value && typedAction.value !== "All"
+          ? (value: ListItemValue) => value.creditedAs.includes(typedAction.value)
           : undefined;
       return {
-        ...updatePendingFilter(state, "credits", filterFn, action.value),
+        ...updatePendingFilter(state, "credits", filterFn, typedAction.value),
         hideReviewed: state.hideReviewed,
       };
     }
 
-    case Actions.PENDING_FILTER_RELEASE_YEAR: {
-      return handlePendingFilterReleaseYear(state, action.values, {
-        hideReviewed: state.hideReviewed,
-      });
-    }
-
-    case Actions.PENDING_FILTER_REVIEW_YEAR: {
-      return handlePendingFilterReviewYear(state, action.values, {
-        hideReviewed: state.hideReviewed,
-      });
-    }
-
-    case Actions.PENDING_FILTER_TITLE: {
-      return handlePendingFilterTitle(state, action.value, {
-        hideReviewed: state.hideReviewed,
-      });
-    }
-
-    case Actions.RESET_PENDING_FILTERS: {
-      return {
-        ...resetPendingFilters(state),
-        hideReviewed: state.hideReviewed,
-      };
-    }
-
-    case Actions.SHOW_MORE: {
-      return {
-        ...showMore(state, SHOW_COUNT_DEFAULT, groupValues),
-        hideReviewed: state.hideReviewed,
-      };
-    }
-
-    case Actions.SORT: {
-      return {
-        ...updateSort(state, action.value, sortValues, groupValues),
-        hideReviewed: state.hideReviewed,
-      };
-    }
-
-    case Actions.TOGGLE_REVIEWED: {
+    case CastAndCrewMemberActions.TOGGLE_REVIEWED: {
       const hideReviewed = !state.hideReviewed;
       const filters = hideReviewed
         ? {
@@ -308,6 +208,14 @@ export function reducer(state: State, action: ActionType): State {
       };
     }
 
-    // no default
+    default: {
+      // Handle shared actions
+      return handleListWithFiltersAction(
+        state,
+        action,
+        { groupFn: groupValues, sortFn: sortValues },
+        { hideReviewed: state.hideReviewed },
+      );
+    }
   }
 }

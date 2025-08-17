@@ -1,33 +1,22 @@
-import type { ListWithFiltersState } from "~/components/ListWithFilters.reducerUtils";
+import type {
+  ListWithFiltersActionType,
+  ListWithFiltersState,
+} from "~/components/ListWithFilters.reducerUtils";
 
 import {
-  applyPendingFilters,
-  clearPendingFilters,
   createInitialState,
-  handlePendingFilterName,
-  ListWithFiltersActions,
-  resetPendingFilters,
+  handleListWithFiltersAction,
+  
   sortNumber,
   sortString,
-  updateSort,
 } from "~/components/ListWithFilters.reducerUtils";
 
 import type { ListItemValue } from "./Collections";
 
-export enum Actions {
-  APPLY_PENDING_FILTERS = ListWithFiltersActions.APPLY_PENDING_FILTERS,
-  CLEAR_PENDING_FILTERS = ListWithFiltersActions.CLEAR_PENDING_FILTERS,
-  PENDING_FILTER_NAME = "PENDING_FILTER_NAME",
-  RESET_PENDING_FILTERS = ListWithFiltersActions.RESET_PENDING_FILTERS,
-  SORT = ListWithFiltersActions.SORT,
-}
+// Collections only uses shared actions
 
-export type ActionType =
-  | ApplyPendingFiltersAction
-  | ClearPendingFiltersAction
-  | PendingFilterNameAction
-  | ResetPendingFiltersAction
-  | SortAction;
+
+export type ActionType = ListWithFiltersActionType<Sort>;
 
 export type Sort =
   | "name-asc"
@@ -36,28 +25,6 @@ export type Sort =
   | "review-count-desc"
   | "title-count-asc"
   | "title-count-desc";
-
-type ApplyPendingFiltersAction = {
-  type: Actions.APPLY_PENDING_FILTERS;
-};
-
-type ClearPendingFiltersAction = {
-  type: Actions.CLEAR_PENDING_FILTERS;
-};
-
-type PendingFilterNameAction = {
-  type: Actions.PENDING_FILTER_NAME;
-  value: string;
-};
-
-type ResetPendingFiltersAction = {
-  type: Actions.RESET_PENDING_FILTERS;
-};
-
-type SortAction = {
-  type: Actions.SORT;
-  value: Sort;
-};
 
 type State = ListWithFiltersState<ListItemValue, Sort>;
 
@@ -79,29 +46,12 @@ export function initState({
 }
 
 export function reducer(state: State, action: ActionType): State {
-  switch (action.type) {
-    case Actions.APPLY_PENDING_FILTERS: {
-      return applyPendingFilters(state, sortValues);
-    }
-
-    case Actions.CLEAR_PENDING_FILTERS: {
-      return clearPendingFilters(state);
-    }
-
-    case Actions.PENDING_FILTER_NAME: {
-      return handlePendingFilterName(state, action.value);
-    }
-
-    case Actions.RESET_PENDING_FILTERS: {
-      return resetPendingFilters(state);
-    }
-
-    case Actions.SORT: {
-      return updateSort(state, action.value, sortValues);
-    }
-
-    // no default
-  }
+  // All actions are handled by the shared handler
+  return handleListWithFiltersAction(
+    state,
+    action,
+    { sortFn: sortValues },
+  );
 }
 
 function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
@@ -120,3 +70,5 @@ function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
 
   return values.sort(comparer);
 }
+
+export {ListWithFiltersActions as Actions} from "~/components/ListWithFilters.reducerUtils";

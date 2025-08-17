@@ -1,5 +1,6 @@
 import type { JSX } from "react";
 
+import { MultiSelectField } from "~/components/MultiSelectField";
 import { SelectField } from "~/components/SelectField";
 import { SelectOptions } from "~/components/SelectOptions";
 import { TextFilter } from "~/components/TextFilter";
@@ -12,6 +13,7 @@ import { Actions } from "./Watchlist.reducer";
 type FilterValues = {
   collection?: string;
   director?: string;
+  genres?: readonly string[];
   performer?: string;
   releaseYear?: [string, string];
   title?: string;
@@ -22,6 +24,7 @@ export function Filters({
   dispatch,
   distinctCollections,
   distinctDirectors,
+  distinctGenres,
   distinctPerformers,
   distinctReleaseYears,
   distinctWriters,
@@ -30,6 +33,7 @@ export function Filters({
   dispatch: React.Dispatch<ActionType>;
   distinctCollections: readonly string[];
   distinctDirectors: readonly string[];
+  distinctGenres: readonly string[];
   distinctPerformers: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctWriters: readonly string[];
@@ -81,6 +85,16 @@ export function Filters({
         }
         years={distinctReleaseYears}
       />
+      <MultiSelectField
+        label="Genres"
+        onChange={(values) =>
+          dispatch({
+            type: Actions.PENDING_FILTER_GENRES,
+            values,
+          })
+        }
+        options={distinctGenres}
+      />
     </>
   );
 }
@@ -104,10 +118,10 @@ function CreditSelectField({
   options,
 }: {
   actionType:
-    | Actions.PENDING_FILTER_COLLECTION
-    | Actions.PENDING_FILTER_DIRECTOR
-    | Actions.PENDING_FILTER_PERFORMER
-    | Actions.PENDING_FILTER_WRITER;
+    | typeof Actions.PENDING_FILTER_COLLECTION
+    | typeof Actions.PENDING_FILTER_DIRECTOR
+    | typeof Actions.PENDING_FILTER_PERFORMER
+    | typeof Actions.PENDING_FILTER_WRITER;
   dispatch: React.Dispatch<ActionType>;
   initialValue: string;
   label: string;

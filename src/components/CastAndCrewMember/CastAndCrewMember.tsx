@@ -20,6 +20,7 @@ import { Filters, SortOptions } from "./Filters";
 export type ListItemValue = Pick<
   CastAndCrewMember["titles"][0],
   | "creditedAs"
+  | "genres"
   | "grade"
   | "gradeValue"
   | "imdbId"
@@ -40,6 +41,7 @@ export type ListItemValue = Pick<
 };
 
 export type Props = {
+  distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   initialSort: Sort;
@@ -51,6 +53,7 @@ export type Props = {
 };
 
 export function CastAndCrewMember({
+  distinctGenres,
   distinctReleaseYears,
   distinctReviewYears,
   initialSort,
@@ -73,6 +76,7 @@ export function CastAndCrewMember({
         <Filters
           creditedAs={value.creditedAs}
           dispatch={dispatch}
+          distinctGenres={distinctGenres}
           distinctReleaseYears={distinctReleaseYears}
           distinctReviewYears={distinctReviewYears}
           filterValues={state.pendingFilterValues}

@@ -20,6 +20,7 @@ import { Actions, initState, reducer } from "./Watchlist.reducer";
 
 export type ListItemValue = Pick<
   WatchlistTitle,
+  | "genres"
   | "imdbId"
   | "releaseSequence"
   | "releaseYear"
@@ -36,6 +37,7 @@ export type Props = {
   defaultPosterImageProps: PosterImageProps;
   distinctCollections: string[];
   distinctDirectors: string[];
+  distinctGenres: string[];
   distinctPerformers: string[];
   distinctReleaseYears: string[];
   distinctWriters: string[];
@@ -47,6 +49,7 @@ export function Watchlist({
   defaultPosterImageProps,
   distinctCollections,
   distinctDirectors,
+  distinctGenres,
   distinctPerformers,
   distinctReleaseYears,
   distinctWriters,
@@ -70,6 +73,7 @@ export function Watchlist({
           dispatch={dispatch}
           distinctCollections={distinctCollections}
           distinctDirectors={distinctDirectors}
+          distinctGenres={distinctGenres}
           distinctPerformers={distinctPerformers}
           distinctReleaseYears={distinctReleaseYears}
           distinctWriters={distinctWriters}

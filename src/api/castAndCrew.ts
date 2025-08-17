@@ -29,6 +29,7 @@ export async function allCastAndCrew(): Promise<{
 }
 
 export async function castAndCrewMember(slug: string): Promise<{
+  distinctGenres: string[];
   distinctReleaseYears: string[];
   distinctReviewYears: string[];
   member: CastAndCrewMember;
@@ -41,11 +42,15 @@ export async function castAndCrewMember(slug: string): Promise<{
     }
     const member = castAndCrewJson.find((value) => value.slug === slug)!;
 
+    const distinctGenres = new Set<string>();
     const releaseYears = new Set<string>();
     const distinctReviewYears = new Set<string>();
 
     for (const title of member.titles) {
       releaseYears.add(title.releaseYear);
+      for (const genre of title.genres) {
+        distinctGenres.add(genre);
+      }
 
       if (title.reviewDate) {
         distinctReviewYears.add(
@@ -58,6 +63,7 @@ export async function castAndCrewMember(slug: string): Promise<{
     }
 
     return {
+      distinctGenres: [...distinctGenres].toSorted(),
       distinctReleaseYears: [...releaseYears].toSorted(),
       distinctReviewYears: [...distinctReviewYears].toSorted(),
       member,
