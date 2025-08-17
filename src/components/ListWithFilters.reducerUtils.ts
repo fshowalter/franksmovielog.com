@@ -419,7 +419,7 @@ export function resetPendingFilters<TItem, TSortValue>(
 /**
  * Handle "Show More" pagination
  */
-export function showMore<TItem, TSortValue>(
+function showMore<TItem, TSortValue>(
   state: ListWithFiltersState<TItem, TSortValue>,
   increment: number,
   groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>,
