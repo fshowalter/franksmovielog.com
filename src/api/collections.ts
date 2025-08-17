@@ -6,6 +6,8 @@ import remarkRehype from "remark-rehype";
 import smartypants from "remark-smartypants";
 import strip from "strip-markdown";
 
+import { ENABLE_CACHE } from "~/utils/cache";
+
 import {
   allCollectionsJson,
   type CollectionJson,
@@ -16,7 +18,7 @@ import { rootAsSpan } from "./utils/markdown/rootAsSpan";
 
 // Cache at API level - lazy caching for better build performance
 let cachedCollectionsJson: CollectionJson[];
-const ENABLE_CACHE = !import.meta.env.DEV;
+// ENABLE_CACHE is now imported from utils/cache
 
 export type Collection = CollectionJson & {};
 
