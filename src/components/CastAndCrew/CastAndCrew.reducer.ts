@@ -36,7 +36,6 @@ export type ActionType =
   | ResetPendingFiltersAction
   | SortAction;
 
-
 export type Sort =
   | "name-asc"
   | "name-desc"
