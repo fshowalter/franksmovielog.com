@@ -7,7 +7,11 @@ import {
   buildGroupValues,
   createInitialState,
   getGroupLetter,
+  handleGenreFilterAction,
   handleListWithFiltersAction,
+  handleReleaseYearFilterAction,
+  handleReviewYearFilterAction,
+  handleTitleFilterAction,
   ListWithFiltersActions,
   sortNumber,
   sortString,
@@ -206,8 +210,25 @@ export function reducer(state: State, action: ActionType): State {
       };
     }
 
+    // Field-specific shared filters
+    case ListWithFiltersActions.PENDING_FILTER_GENRES: {
+      return handleGenreFilterAction(state, action, { hideReviewed: state.hideReviewed });
+    }
+
+    case ListWithFiltersActions.PENDING_FILTER_RELEASE_YEAR: {
+      return handleReleaseYearFilterAction(state, action, { hideReviewed: state.hideReviewed });
+    }
+
+    case ListWithFiltersActions.PENDING_FILTER_REVIEW_YEAR: {
+      return handleReviewYearFilterAction(state, action, { hideReviewed: state.hideReviewed });
+    }
+
+    case ListWithFiltersActions.PENDING_FILTER_TITLE: {
+      return handleTitleFilterAction(state, action, { hideReviewed: state.hideReviewed });
+    }
+
     default: {
-      // Handle shared actions
+      // Handle shared list structure actions
       return handleListWithFiltersAction(
         state,
         action,

@@ -1,4 +1,7 @@
-import type { ListWithFiltersState } from "~/components/ListWithFilters.reducerUtils";
+import type { 
+  ListWithFiltersState,
+  PendingFilterTitleAction as SharedPendingFilterTitleAction,
+} from "~/components/ListWithFilters.reducerUtils";
 
 import {
   clearPendingFilters as baseClearPendingFilters,
@@ -7,7 +10,7 @@ import {
   updateSort as baseUpdateSort,
   buildGroupValues,
   createInitialState,
-  handlePendingFilterTitle,
+  handleTitleFilterAction,
   ListWithFiltersActions,
   updatePendingFilter,
 } from "~/components/ListWithFilters.reducerUtils";
@@ -20,7 +23,7 @@ export enum Actions {
   NEXT_MONTH = "NEXT_MONTH",
   PENDING_FILTER_MEDIUM = "PENDING_FILTER_MEDIUM",
   PENDING_FILTER_RELEASE_YEAR = "PENDING_FILTER_RELEASE_YEAR",
-  PENDING_FILTER_TITLE = "PENDING_FILTER_TITLE",
+  PENDING_FILTER_TITLE = ListWithFiltersActions.PENDING_FILTER_TITLE,
   PENDING_FILTER_VENUE = "PENDING_FILTER_VENUE",
   PENDING_FILTER_VIEWING_YEAR = "PENDING_FILTER_VIEWING_YEAR",
   PREV_MONTH = "PREV_MONTH",
@@ -34,11 +37,11 @@ export type ActionType =
   | NextMonthAction
   | PendingFilterMediumAction
   | PendingFilterReleaseYearAction
-  | PendingFilterTitleAction
   | PendingFilterVenueAction
   | PendingFilterViewingYearAction
   | PrevMonthAction
   | ResetPendingFiltersAction
+  | SharedPendingFilterTitleAction
   | SortAction;
 
 export type Sort = "viewing-date-asc" | "viewing-date-desc";
@@ -65,10 +68,7 @@ type PendingFilterReleaseYearAction = {
   values: string[];
 };
 
-type PendingFilterTitleAction = {
-  type: Actions.PENDING_FILTER_TITLE;
-  value: string;
-};
+// Using the shared PendingFilterTitleAction from ListWithFilters
 
 type PendingFilterVenueAction = {
   type: Actions.PENDING_FILTER_VENUE;
@@ -200,7 +200,7 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_TITLE: {
-      return handlePendingFilterTitle(state, action.value, {
+      return handleTitleFilterAction(state, action, {
         currentMonth: state.currentMonth,
         hasNextMonth: state.hasNextMonth,
         hasPrevMonth: state.hasPrevMonth,
@@ -264,7 +264,10 @@ export function reducer(state: State, action: ActionType): State {
       return updateSort(state, action.value);
     }
 
-    // no default
+    default: {
+      // This should never be reached due to exhaustive handling above
+      return state;
+    }
   }
 }
 

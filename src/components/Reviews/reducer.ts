@@ -11,7 +11,11 @@ import {
   buildGroupValues,
   createInitialState,
   getGroupLetter,
+  handleGenreFilterAction,
   handleListWithFiltersAction,
+  handleReleaseYearFilterAction,
+  handleReviewYearFilterAction,
+  handleTitleFilterAction,
   ListWithFiltersActions,
   sortNumber,
   sortString,
@@ -132,6 +136,23 @@ export function initState({
 // Create reducer function
 export function reducer(state: State, action: ActionType): State {
   switch (action.type) {
+    // Field-specific shared filters
+    case ListWithFiltersActions.PENDING_FILTER_GENRES: {
+      return handleGenreFilterAction(state, action);
+    }
+
+    case ListWithFiltersActions.PENDING_FILTER_RELEASE_YEAR: {
+      return handleReleaseYearFilterAction(state, action);
+    }
+
+    case ListWithFiltersActions.PENDING_FILTER_REVIEW_YEAR: {
+      return handleReviewYearFilterAction(state, action);
+    }
+
+    case ListWithFiltersActions.PENDING_FILTER_TITLE: {
+      return handleTitleFilterAction(state, action);
+    }
+
     case ReviewsActions.PENDING_FILTER_GRADE: {
       const typedAction = action;
       const filterFn = (value: ReviewsListItemValue) =>
@@ -141,7 +162,7 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     default: {
-      // Handle shared actions
+      // Handle shared list structure actions
       return handleListWithFiltersAction(
         state,
         action,

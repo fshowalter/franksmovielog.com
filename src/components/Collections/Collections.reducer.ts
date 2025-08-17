@@ -6,7 +6,8 @@ import type {
 import {
   createInitialState,
   handleListWithFiltersAction,
-  
+  handleNameFilterAction,
+  ListWithFiltersActions,
   sortNumber,
   sortString,
 } from "~/components/ListWithFilters.reducerUtils";
@@ -46,12 +47,21 @@ export function initState({
 }
 
 export function reducer(state: State, action: ActionType): State {
-  // All actions are handled by the shared handler
-  return handleListWithFiltersAction(
-    state,
-    action,
-    { sortFn: sortValues },
-  );
+  switch (action.type) {
+    // Field-specific shared filter
+    case ListWithFiltersActions.PENDING_FILTER_NAME: {
+      return handleNameFilterAction(state, action);
+    }
+
+    default: {
+      // Handle shared list structure actions
+      return handleListWithFiltersAction(
+        state,
+        action,
+        { sortFn: sortValues },
+      );
+    }
+  }
 }
 
 function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {

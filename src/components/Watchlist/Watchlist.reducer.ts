@@ -7,7 +7,10 @@ import {
   buildGroupValues,
   createInitialState,
   getGroupLetter,
+  handleGenreFilterAction,
   handleListWithFiltersAction,
+  handleReleaseYearFilterAction,
+  handleTitleFilterAction,
   ListWithFiltersActions,
   sortString,
   updatePendingFilter,
@@ -123,6 +126,19 @@ export function initState({
 
 export function reducer(state: State, action: ActionType): State {
   switch (action.type) {
+    // Field-specific shared filters
+    case ListWithFiltersActions.PENDING_FILTER_GENRES: {
+      return handleGenreFilterAction(state, action, { hideReviewed: state.hideReviewed });
+    }
+
+    case ListWithFiltersActions.PENDING_FILTER_RELEASE_YEAR: {
+      return handleReleaseYearFilterAction(state, action, { hideReviewed: state.hideReviewed });
+    }
+
+    case ListWithFiltersActions.PENDING_FILTER_TITLE: {
+      return handleTitleFilterAction(state, action, { hideReviewed: state.hideReviewed });
+    }
+
     case WatchlistActions.PENDING_FILTER_COLLECTION: {
       const typedAction = action;
       const filterFn =
@@ -176,7 +192,7 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     default: {
-      // Handle shared actions
+      // Handle shared list structure actions
       return handleListWithFiltersAction(
         state,
         action,

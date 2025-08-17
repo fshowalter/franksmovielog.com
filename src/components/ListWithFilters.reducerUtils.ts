@@ -253,10 +253,29 @@ export function getGroupLetter(str: string): string {
 }
 
 /**
- * Shared reducer handler for common ListWithFilters actions
+ * Field-specific filter handlers that require specific item properties
+ */
+export function handleGenreFilterAction<
+  TItem extends { genres: readonly string[] },
+  TSortValue,
+  TExtendedState extends Record<string, unknown> = Record<string, never>,
+>(
+  state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
+  action: PendingFilterGenresAction,
+  extendedState?: TExtendedState,
+): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
+  const filterFn = createGenresFilter(action.values);
+  const baseState = updatePendingFilter(state, "genres", filterFn, action.values);
+  return extendedState
+    ? { ...baseState, ...extendedState }
+    : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
+}
+
+/**
+ * Shared reducer handler for list structure actions that don't require item values
  */
 export function handleListWithFiltersAction<
-  TItem extends Record<string, unknown>,
+  TItem,
   TSortValue,
   TExtendedState extends Record<string, unknown> = Record<string, never>,
 >(
@@ -281,61 +300,6 @@ export function handleListWithFiltersAction<
     case ListWithFiltersActions.CLEAR_PENDING_FILTERS: {
       const baseState = clearPendingFilters(state);
       return extendedState ? { ...baseState, ...extendedState } : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
-    }
-
-    case ListWithFiltersActions.PENDING_FILTER_GENRES: {
-      if (state.allValues.some(item => 'genres' in item)) {
-        return handlePendingFilterGenres(
-          state as unknown as ListWithFiltersState<TItem & { genres: readonly string[] }, TSortValue> & TExtendedState,
-          action.values,
-          extendedState,
-        ) as unknown as ListWithFiltersState<TItem, TSortValue> & TExtendedState;
-      }
-      return state;
-    }
-
-    case ListWithFiltersActions.PENDING_FILTER_NAME: {
-      if (state.allValues.some(item => 'name' in item)) {
-        return handlePendingFilterName(
-          state as unknown as ListWithFiltersState<TItem & { name: string }, TSortValue> & TExtendedState,
-          action.value,
-          extendedState,
-        ) as unknown as ListWithFiltersState<TItem, TSortValue> & TExtendedState;
-      }
-      return state;
-    }
-
-    case ListWithFiltersActions.PENDING_FILTER_RELEASE_YEAR: {
-      if (state.allValues.some(item => 'releaseYear' in item)) {
-        return handlePendingFilterReleaseYear(
-          state as unknown as ListWithFiltersState<TItem & { releaseYear: string }, TSortValue> & TExtendedState,
-          action.values,
-          extendedState,
-        ) as unknown as ListWithFiltersState<TItem, TSortValue> & TExtendedState;
-      }
-      return state;
-    }
-
-    case ListWithFiltersActions.PENDING_FILTER_REVIEW_YEAR: {
-      if (state.allValues.some(item => 'reviewYear' in item)) {
-        return handlePendingFilterReviewYear(
-          state as unknown as ListWithFiltersState<TItem & { reviewYear?: string }, TSortValue> & TExtendedState,
-          action.values,
-          extendedState,
-        ) as unknown as ListWithFiltersState<TItem, TSortValue> & TExtendedState;
-      }
-      return state;
-    }
-
-    case ListWithFiltersActions.PENDING_FILTER_TITLE: {
-      if (state.allValues.some(item => 'title' in item)) {
-        return handlePendingFilterTitle(
-          state as unknown as ListWithFiltersState<TItem & { title: string }, TSortValue> & TExtendedState,
-          action.value,
-          extendedState,
-        ) as unknown as ListWithFiltersState<TItem, TSortValue> & TExtendedState;
-      }
-      return state;
     }
 
     case ListWithFiltersActions.RESET_PENDING_FILTERS: {
@@ -368,81 +332,65 @@ export function handleListWithFiltersAction<
   }
 }
 
-export function handlePendingFilterGenres<
-  TItem extends { genres: readonly string[] },
-  TSortValue,
-  TExtendedState extends Record<string, unknown> = Record<string, never>,
->(
-  state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
-  values: readonly string[],
-  extendedState?: TExtendedState,
-): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
-  const filterFn = createGenresFilter(values);
-  const baseState = updatePendingFilter(state, "genres", filterFn, values);
-  return extendedState
-    ? { ...baseState, ...extendedState }
-    : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
-}
-
-export function handlePendingFilterName<
+export function handleNameFilterAction<
   TItem extends { name: string },
   TSortValue,
   TExtendedState extends Record<string, unknown> = Record<string, never>,
 >(
   state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
-  value: string | undefined,
+  action: PendingFilterNameAction,
   extendedState?: TExtendedState,
 ): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
-  const filterFn = createNameFilter(value);
-  const baseState = updatePendingFilter(state, "name", filterFn, value);
+  const filterFn = createNameFilter(action.value);
+  const baseState = updatePendingFilter(state, "name", filterFn, action.value);
   return extendedState
     ? { ...baseState, ...extendedState }
     : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
 }
 
-export function handlePendingFilterReleaseYear<
+export function handleReleaseYearFilterAction<
   TItem extends { releaseYear: string },
   TSortValue,
   TExtendedState extends Record<string, unknown> = Record<string, never>,
 >(
   state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
-  values: [string, string],
+  action: PendingFilterReleaseYearAction,
   extendedState?: TExtendedState,
 ): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
-  const filterFn = createReleaseYearFilter(values[0], values[1]);
-  const baseState = updatePendingFilter(state, "releaseYear", filterFn, values);
+  const filterFn = createReleaseYearFilter(action.values[0], action.values[1]);
+  const baseState = updatePendingFilter(state, "releaseYear", filterFn, action.values);
   return extendedState
     ? { ...baseState, ...extendedState }
     : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
 }
 
-export function handlePendingFilterReviewYear<
+export function handleReviewYearFilterAction<
   TItem extends { reviewYear?: string },
   TSortValue,
   TExtendedState extends Record<string, unknown> = Record<string, never>,
 >(
   state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
-  values: [string, string],
+  action: PendingFilterReviewYearAction,
   extendedState?: TExtendedState,
 ): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
-  const filterFn = createReviewYearFilter(values[0], values[1]);
-  const baseState = updatePendingFilter(state, "reviewYear", filterFn, values);
+  const filterFn = createReviewYearFilter(action.values[0], action.values[1]);
+  const baseState = updatePendingFilter(state, "reviewYear", filterFn, action.values);
   return extendedState
     ? { ...baseState, ...extendedState }
     : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
 }
 
-export function handlePendingFilterTitle<
+export function handleTitleFilterAction<
   TItem extends { title: string },
   TSortValue,
   TExtendedState extends Record<string, unknown> = Record<string, never>,
 >(
   state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
-  value: string | undefined,
+  action: PendingFilterTitleAction,
   extendedState?: TExtendedState,
 ): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
-  const filterFn = createTitleFilter(value);
-  const baseState = updatePendingFilter(state, "title", filterFn, value);
+  const filterFn = createTitleFilter(action.value);
+  const baseState = updatePendingFilter(state, "title", filterFn, action.value);
   return extendedState
     ? { ...baseState, ...extendedState }
     : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
