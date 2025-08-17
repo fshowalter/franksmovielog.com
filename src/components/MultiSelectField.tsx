@@ -18,6 +18,9 @@ export function MultiSelectField({
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownMaxHeight, setDropdownMaxHeight] = useState("15rem");
+  const [dropdownPosition, setDropdownPosition] = useState<"above" | "below">(
+    "below",
+  );
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -177,25 +180,94 @@ export function MultiSelectField({
     }
   };
 
-  // Calculate available space when dropdown opens
-  const calculateDropdownHeight = () => {
+  // Calculate available space and position when dropdown opens
+  // AIDEV-NOTE: Dropdown positioning logic - opens upward when insufficient space below
+  // Handles both viewport boundaries and scrollable container boundaries
+  const calculateDropdownPositionAndHeight = () => {
+    if (!buttonRef.current) return;
+
+    const buttonRect = buttonRef.current.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
     const isMobileDrawer = window.innerWidth < 1024;
 
-    if (isMobileDrawer && buttonRef.current) {
-      const buttonRect = buttonRef.current.getBoundingClientRect();
-      const viewportHeight = window.innerHeight;
-      const footerHeight = 100;
-      const availableSpace = viewportHeight - buttonRect.bottom - footerHeight;
-      const minHeight = 120;
-      const maxHeight = 300;
+    // Find the nearest scrollable container (if any)
+    let scrollableContainer: HTMLElement | undefined;
+    let element = buttonRef.current.parentElement;
 
-      if (availableSpace < minHeight) {
-        setDropdownMaxHeight(`${Math.max(availableSpace, 80)}px`);
-      } else {
-        setDropdownMaxHeight(`${Math.min(availableSpace, maxHeight)}px`);
+    while (element && element !== document.body) {
+      const style = globalThis.getComputedStyle(element);
+      const overflowY = style.overflowY;
+
+      if (overflowY === "auto" || overflowY === "scroll") {
+        scrollableContainer = element;
+        break;
+      }
+      element = element.parentElement;
+    }
+
+    // Calculate boundaries based on container or viewport
+    let effectiveSpaceBelow: number;
+    let effectiveSpaceAbove: number;
+
+    if (scrollableContainer) {
+      // We're inside a scrollable container
+      const containerRect = scrollableContainer.getBoundingClientRect();
+
+      // Space within the visible container area
+      effectiveSpaceBelow = containerRect.bottom - buttonRect.bottom;
+      effectiveSpaceAbove = buttonRect.top - containerRect.top;
+
+      // Check for sticky footer within container
+      const stickyFooter =
+        scrollableContainer.querySelector(".z-filter-footer");
+      if (stickyFooter) {
+        const footerRect = stickyFooter.getBoundingClientRect();
+        // If footer is visible, subtract its height from space below
+        if (footerRect.top < containerRect.bottom) {
+          effectiveSpaceBelow = Math.min(
+            effectiveSpaceBelow,
+            footerRect.top - buttonRect.bottom,
+          );
+        }
       }
     } else {
-      setDropdownMaxHeight("15rem");
+      // Not in a scrollable container, use viewport
+      effectiveSpaceBelow = viewportHeight - buttonRect.bottom;
+      effectiveSpaceAbove = buttonRect.top;
+
+      // Account for footer in mobile drawer (non-scrollable case)
+      const footerBuffer = isMobileDrawer ? 100 : 20;
+      effectiveSpaceBelow -= footerBuffer;
+    }
+
+    // Add small buffer for visual spacing
+    effectiveSpaceAbove -= 20;
+    effectiveSpaceBelow -= 10;
+
+    // Minimum height needed for a usable dropdown
+    const minDropdownHeight = 120;
+    const maxDropdownHeight = 300;
+
+    // Determine position based on available space
+    if (
+      effectiveSpaceBelow < minDropdownHeight &&
+      effectiveSpaceAbove > effectiveSpaceBelow
+    ) {
+      // Open upward if more space above
+      setDropdownPosition("above");
+      const height = Math.min(
+        Math.max(effectiveSpaceAbove, 80),
+        maxDropdownHeight,
+      );
+      setDropdownMaxHeight(`${height}px`);
+    } else {
+      // Default to opening below
+      setDropdownPosition("below");
+      const height = Math.min(
+        Math.max(effectiveSpaceBelow, 80),
+        maxDropdownHeight,
+      );
+      setDropdownMaxHeight(`${height}px`);
     }
   };
 
@@ -246,24 +318,52 @@ export function MultiSelectField({
     };
   }, [isOpen]);
 
-  // Calculate dropdown height when it opens
+  // Calculate dropdown position and height when it opens
   useEffect(() => {
     if (isOpen) {
-      calculateDropdownHeight();
+      calculateDropdownPositionAndHeight();
     }
   }, [isOpen]);
 
-  // Add resize listener
+  // Add resize and scroll listeners
   useEffect(() => {
+    if (!isOpen) return;
+
     const handleResize = () => {
-      if (isOpen) {
-        calculateDropdownHeight();
-      }
+      calculateDropdownPositionAndHeight();
+    };
+
+    const handleScroll = () => {
+      calculateDropdownPositionAndHeight();
     };
 
     if (globalThis.window !== undefined) {
       window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
+
+      // Find and listen to scrollable container
+      let scrollableContainer: HTMLElement | undefined;
+      if (buttonRef.current) {
+        let element = buttonRef.current.parentElement;
+        while (element && element !== document.body) {
+          const style = globalThis.getComputedStyle(element);
+          if (style.overflowY === "auto" || style.overflowY === "scroll") {
+            scrollableContainer = element;
+            break;
+          }
+          element = element.parentElement;
+        }
+      }
+
+      if (scrollableContainer) {
+        scrollableContainer.addEventListener("scroll", handleScroll);
+      }
+
+      return () => {
+        window.removeEventListener("resize", handleResize);
+        if (scrollableContainer) {
+          scrollableContainer.removeEventListener("scroll", handleScroll);
+        }
+      };
     }
   }, [isOpen]);
 
@@ -436,10 +536,15 @@ export function MultiSelectField({
         {isOpen && (
           <div
             className={`
-              absolute z-10 mt-1 w-full overflow-auto rounded-sm bg-default py-1
+              absolute z-10 w-full overflow-auto rounded-sm bg-default py-1
               text-base text-subtle
               shadow-[0px_0px_0px_1px_rgba(0,0,0,0.1),0px_4px_11px_rgba(0,0,0,0.1)]
               focus:outline-none
+              ${
+                dropdownPosition === "above"
+                  ? "bottom-full mb-1"
+                  : `top-full mt-1`
+              }
             `}
             onKeyDown={handleListboxKeyDown}
             ref={dropdownRef}
