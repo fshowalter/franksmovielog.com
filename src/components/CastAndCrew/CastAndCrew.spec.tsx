@@ -19,6 +19,9 @@ describe("CastAndCrew", () => {
   });
 
   afterEach(() => {
+    // AIDEV-NOTE: Clear all pending timers before restoring real timers
+    // to ensure test isolation and prevent timer leaks between tests
+    vi.clearAllTimers();
     vi.useRealTimers();
   });
 
