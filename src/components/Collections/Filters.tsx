@@ -6,19 +6,23 @@ import type { ActionType } from "./Collections.reducer";
 
 import { Actions } from "./Collections.reducer";
 
+type FilterValues = {
+  name?: string;
+};
+
 export function Filters({
   dispatch,
   filterKey,
-  pendingNameFilter,
+  filterValues,
 }: {
   dispatch: React.Dispatch<ActionType>;
   filterKey?: string;
-  pendingNameFilter?: string;
+  filterValues: FilterValues;
 }): JSX.Element {
   return (
     <>
       <TextFilter
-        initialValue={pendingNameFilter}
+        initialValue={filterValues.name || ""}
         key={`name-${filterKey}`}
         label="Name"
         onInputChange={(value) =>

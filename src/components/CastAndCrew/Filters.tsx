@@ -14,15 +14,15 @@ type FilterValues = {
 
 export function Filters({
   dispatch,
-  filterValues = {},
+  filterValues,
 }: {
   dispatch: React.Dispatch<ActionType>;
-  filterValues?: FilterValues;
+  filterValues: FilterValues;
 }): JSX.Element {
   return (
     <>
       <TextFilter
-        initialValue={filterValues.name ?? ""}
+        initialValue={filterValues.name || ""}
         label="Name"
         onInputChange={(value) =>
           dispatch({ type: Actions.PENDING_FILTER_NAME, value })
@@ -38,7 +38,7 @@ export function Filters({
             value: e.target.value,
           })
         }
-        value={filterValues.credits ?? "All"}
+        value={filterValues.credits || "All"}
       >
         <option value="All">All</option>
         <option value="director">Director</option>

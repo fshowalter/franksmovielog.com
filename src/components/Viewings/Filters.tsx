@@ -7,6 +7,14 @@ import type { ActionType } from "./Viewings.reducer";
 
 import { Actions } from "./Viewings.reducer";
 
+type FilterValues = {
+  media?: string[];
+  releaseYears?: string[];
+  title?: string;
+  venues?: string[];
+  viewingYears?: string[];
+};
+
 export function Filters({
   dispatch,
   distinctMedia,
@@ -14,7 +22,7 @@ export function Filters({
   distinctVenues,
   distinctViewingYears,
   filterKey,
-  pendingFilters,
+  filterValues,
 }: {
   dispatch: React.Dispatch<ActionType>;
   distinctMedia: readonly string[];
@@ -22,15 +30,12 @@ export function Filters({
   distinctVenues: readonly string[];
   distinctViewingYears: readonly string[];
   filterKey?: string;
-  pendingFilters: Record<
-    string,
-    [number, number] | [string, string] | readonly string[] | string
-  >;
+  filterValues: FilterValues;
 }) {
   return (
     <>
       <TextFilter
-        initialValue={(pendingFilters.title as string) || ""}
+        initialValue={filterValues.title || ""}
         key={`title-${filterKey}`}
         label="Title"
         onInputChange={(value) =>
@@ -39,7 +44,7 @@ export function Filters({
         placeholder="Enter all or part of a title"
       />
       <YearInput
-        initialValues={(pendingFilters.releaseYears as string[]) || []}
+        initialValues={filterValues.releaseYears || []}
         key={`release-year-${filterKey}`}
         label="Release Year"
         onYearChange={(values) =>
@@ -48,7 +53,7 @@ export function Filters({
         years={distinctReleaseYears}
       />
       <YearInput
-        initialValues={(pendingFilters.viewingYears as string[]) || []}
+        initialValues={filterValues.viewingYears || []}
         key={`viewing-year-${filterKey}`}
         label="Viewing Year"
         onYearChange={(values) =>
@@ -67,7 +72,7 @@ export function Filters({
                 : [e.target.value],
           })
         }
-        value={((pendingFilters.media as string[]) || [])[0] || ""}
+        value={(filterValues.media || [])[0] || ""}
       >
         <SelectOptions options={distinctMedia} />
       </SelectField>
@@ -82,7 +87,7 @@ export function Filters({
                 : [e.target.value],
           })
         }
-        value={((pendingFilters.venues as string[]) || [])[0] || ""}
+        value={(filterValues.venues || [])[0] || ""}
       >
         <SelectOptions options={distinctVenues} />
       </SelectField>

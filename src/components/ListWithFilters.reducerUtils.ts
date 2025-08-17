@@ -23,17 +23,6 @@ export enum ListWithFiltersActions {
 }
 
 /**
- * Common action type definitions
- */
-type ApplyPendingFiltersAction = {
-  type: typeof ListWithFiltersActions.APPLY_PENDING_FILTERS;
-};
-
-type ClearPendingFiltersAction = {
-  type: typeof ListWithFiltersActions.CLEAR_PENDING_FILTERS;
-};
-
-/**
  * State structure for lists with pending filters, grouping, and pagination
  */
 export type ListWithFiltersState<TItem, TSortValue> = {
@@ -54,19 +43,6 @@ export type ListWithFiltersState<TItem, TSortValue> = {
   >; // Raw pending filter values for UI
   showCount: number;
   sortValue: TSortValue;
-};
-
-type ResetPendingFiltersAction = {
-  type: typeof ListWithFiltersActions.RESET_PENDING_FILTERS;
-};
-
-type ShowMoreAction = {
-  type: typeof ListWithFiltersActions.SHOW_MORE;
-};
-
-type SortAction<TSort> = {
-  type: typeof ListWithFiltersActions.SORT;
-  value: TSort;
 };
 
 /**
@@ -174,48 +150,6 @@ export function createInitialState<TItem, TSortValue>({
     showCount,
     sortValue: initialSort,
   };
-}
-
-function createNameFilter(value: string | undefined) {
-  if (!value) return;
-  const regex = new RegExp(value, "i");
-  return <T extends { name: string }>(item: T) => regex.test(item.name);
-}
-
-function createReleaseYearFilter(minYear: string, maxYear: string) {
-  return <T extends { releaseYear: string }>(item: T) => {
-    return item.releaseYear >= minYear && item.releaseYear <= maxYear;
-  };
-}
-
-function createReviewYearFilter(minYear: string, maxYear: string) {
-  return <T extends { reviewYear?: string }>(item: T) => {
-    const year = item.reviewYear;
-    if (!year) return false;
-    return year >= minYear && year <= maxYear;
-  };
-}
-
-// Common filter creators - simple functions that create filter functions
-function createTitleFilter(value: string | undefined) {
-  if (!value) return;
-  const regex = new RegExp(value, "i");
-  return <T extends { title: string }>(item: T) => regex.test(item.title);
-}
-
-// Filter values helper
-function filterValues<TItem>({
-  filters,
-  values,
-}: {
-  filters: Record<string, (arg0: TItem) => boolean>;
-  values: readonly TItem[];
-}): TItem[] {
-  return values.filter((item) => {
-    return Object.values(filters).every((filter) => {
-      return filter(item);
-    });
-  });
 }
 
 /**
@@ -340,10 +274,6 @@ export function showMore<TItem, TSortValue>(
   };
 }
 
-/**
- * Handler functions that combine filter creation and state updates
- */
-
 export function sortNumber(a: number, b: number): number {
   return a - b;
 }
@@ -411,4 +341,50 @@ export function updateSort<TItem, TSortValue>(
     groupedValues,
     sortValue,
   };
+}
+
+function createNameFilter(value: string | undefined) {
+  if (!value) return;
+  const regex = new RegExp(value, "i");
+  return <T extends { name: string }>(item: T) => regex.test(item.name);
+}
+
+/**
+ * Handler functions that combine filter creation and state updates
+ */
+
+function createReleaseYearFilter(minYear: string, maxYear: string) {
+  return <T extends { releaseYear: string }>(item: T) => {
+    return item.releaseYear >= minYear && item.releaseYear <= maxYear;
+  };
+}
+
+function createReviewYearFilter(minYear: string, maxYear: string) {
+  return <T extends { reviewYear?: string }>(item: T) => {
+    const year = item.reviewYear;
+    if (!year) return false;
+    return year >= minYear && year <= maxYear;
+  };
+}
+
+// Common filter creators - simple functions that create filter functions
+function createTitleFilter(value: string | undefined) {
+  if (!value) return;
+  const regex = new RegExp(value, "i");
+  return <T extends { title: string }>(item: T) => regex.test(item.title);
+}
+
+// Filter values helper
+function filterValues<TItem>({
+  filters,
+  values,
+}: {
+  filters: Record<string, (arg0: TItem) => boolean>;
+  values: readonly TItem[];
+}): TItem[] {
+  return values.filter((item) => {
+    return Object.values(filters).every((filter) => {
+      return filter(item);
+    });
+  });
 }

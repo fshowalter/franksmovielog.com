@@ -129,7 +129,7 @@ export function Viewings({
           distinctVenues={distinctVenues}
           distinctViewingYears={distinctViewingYears}
           filterKey={String(filterKey)}
-          pendingFilters={state.pendingFilterValues}
+          filterValues={state.pendingFilterValues}
         />
       }
       hasActiveFilters={state.hasActiveFilters}

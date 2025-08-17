@@ -22,14 +22,14 @@ export function Filters({
   dispatch,
   distinctReleaseYears,
   distinctReviewYears,
-  filterValues = {},
+  filterValues,
   hideReviewed,
 }: {
   creditedAs: readonly string[];
   dispatch: React.Dispatch<ActionType>;
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
-  filterValues?: FilterValues;
+  filterValues: FilterValues;
   hideReviewed: boolean;
 }): JSX.Element {
   return (
@@ -47,7 +47,7 @@ export function Filters({
               value: e.target.value,
             })
           }
-          value={filterValues.credits ?? "All"}
+          value={filterValues.credits || "All"}
         >
           <option value="All">All</option>
           {creditedAs.map((credit) => {
@@ -60,7 +60,7 @@ export function Filters({
         </SelectField>
       )}
       <TextFilter
-        initialValue={filterValues.title ?? ""}
+        initialValue={filterValues.title || ""}
         label="Title"
         onInputChange={(value) =>
           dispatch({ type: Actions.PENDING_FILTER_TITLE, value })
@@ -69,7 +69,7 @@ export function Filters({
       />
 
       <YearInput
-        initialValues={filterValues.releaseYear ?? []}
+        initialValues={filterValues.releaseYear || []}
         label="Release Year"
         onYearChange={(values) =>
           dispatch({ type: Actions.PENDING_FILTER_RELEASE_YEAR, values })
@@ -77,7 +77,7 @@ export function Filters({
         years={distinctReleaseYears}
       />
       <YearInput
-        initialValues={filterValues.reviewYear ?? []}
+        initialValues={filterValues.reviewYear || []}
         label="Review Year"
         onYearChange={(values) =>
           dispatch({ type: Actions.PENDING_FILTER_REVIEW_YEAR, values })
