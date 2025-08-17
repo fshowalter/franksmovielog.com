@@ -2,6 +2,7 @@ import { act, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
+import { DRAWER_CLOSE_ANIMATION_MS } from "~/components/ListWithFilters";
 import { TEXT_FILTER_DEBOUNCE_MS } from "~/components/TextFilter";
 
 import { getProps } from "./getProps";
@@ -422,5 +423,105 @@ describe("/watchlist", () => {
     await userEvent.click(screen.getByText("Show More"));
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+  });
+
+  it("can clear all filters", async ({ expect }) => {
+    expect.hasAssertions();
+
+    // Setup userEvent with advanceTimers
+    const user = userEvent.setup({
+      advanceTimers: vi.advanceTimersByTime,
+    });
+
+    render(<Watchlist {...props} />);
+
+    // Open filter drawer
+    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+
+    // Apply multiple filters
+    await user.type(screen.getByLabelText("Title"), "Test");
+    act(() => {
+      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
+    });
+
+    await userEvent.selectOptions(
+      screen.getByLabelText("Director"),
+      "Howard Hawks",
+    );
+
+    await userEvent.selectOptions(
+      screen.getByLabelText("Performer"),
+      "Bette Davis",
+    );
+
+    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+
+    // Open filter drawer again
+    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+
+    // Clear all filters
+    await user.click(screen.getByRole("button", { name: "Clear all filters" }));
+
+    // Check that filters are cleared
+    expect(screen.getByLabelText("Title")).toHaveValue("");
+    expect(screen.getByLabelText("Director")).toHaveValue("All");
+    expect(screen.getByLabelText("Performer")).toHaveValue("All");
+
+    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+  });
+
+  it("can reset filters when closing drawer", async ({ expect }) => {
+    expect.hasAssertions();
+
+    // Setup userEvent with advanceTimers
+    const user = userEvent.setup({
+      advanceTimers: vi.advanceTimersByTime,
+    });
+
+    render(<Watchlist {...props} />);
+
+    // Open filter drawer
+    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+
+    // Apply filters
+    await user.type(screen.getByLabelText("Title"), "Test");
+    act(() => {
+      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
+    });
+
+    await userEvent.selectOptions(
+      screen.getByLabelText("Director"),
+      "Howard Hawks",
+    );
+
+    // Apply the filters
+    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+
+    // Open filter drawer again
+    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+
+    // Start typing a new filter but don't apply
+    await user.clear(screen.getByLabelText("Title"));
+    await user.type(screen.getByLabelText("Title"), "Another Test");
+    act(() => {
+      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
+    });
+
+    // Close the drawer with the X button (should reset pending changes)
+    await user.click(screen.getByRole("button", { name: "Close filters" }));
+
+    // Wait for drawer close animation - onResetFilters is called after animation
+    act(() => {
+      vi.advanceTimersByTime(DRAWER_CLOSE_ANIMATION_MS);
+    });
+
+    // Open filter drawer again to verify filters were reset to last applied state
+    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+
+    // Should show the originally applied filter, not the pending change
+    expect(screen.getByLabelText("Title")).toHaveValue("Test");
+    expect(screen.getByLabelText("Director")).toHaveValue("Howard Hawks");
   });
 });

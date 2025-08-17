@@ -49,6 +49,7 @@ export function Overrated({
           key={filterKey}
         />
       }
+      hasActiveFilters={Object.keys(state.pendingFilterValues).length > 0}
       list={
         <GroupedPosterList
           groupedValues={state.groupedValues}
@@ -60,6 +61,10 @@ export function Overrated({
         </GroupedPosterList>
       }
       onApplyFilters={() => dispatch({ type: Actions.APPLY_PENDING_FILTERS })}
+      onClearFilters={() => {
+        dispatch({ type: Actions.CLEAR_PENDING_FILTERS });
+        setFilterKey((k) => k + 1);
+      }}
       onFilterDrawerOpen={() =>
         dispatch({ type: Actions.RESET_PENDING_FILTERS })
       }

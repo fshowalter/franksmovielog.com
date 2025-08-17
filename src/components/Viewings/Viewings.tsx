@@ -132,6 +132,13 @@ export function Viewings({
           pendingFilters={state.pendingFilters}
         />
       }
+      hasActiveFilters={
+        state.pendingFilters.title !== "" ||
+        state.pendingFilters.media.length > 0 ||
+        state.pendingFilters.releaseYears.length > 0 ||
+        state.pendingFilters.venues.length > 0 ||
+        state.pendingFilters.viewingYears.length > 0
+      }
       list={
         <CalendarView
           currentMonth={state.currentMonth}
@@ -145,6 +152,10 @@ export function Viewings({
         <ListHeaderButton href="/viewings/stats/" text="stats" />
       }
       onApplyFilters={() => dispatch({ type: Actions.APPLY_PENDING_FILTERS })}
+      onClearFilters={() => {
+        dispatch({ type: Actions.CLEAR_PENDING_FILTERS });
+        setFilterKey((prev) => prev + 1);
+      }}
       onFilterDrawerOpen={() => {
         // Increment key to force remount of filter components
         setFilterKey((prev) => prev + 1);
