@@ -1,16 +1,20 @@
 import {
-  createNameFilter,
-  filterValues,
-  sortNumber,
-  sortString,
-} from "~/utils/reducerUtils";
+  applyPendingFilters,
+  buildGroupValues,
+  clearPendingFilters,
+  createInitialState,
+  type PendingFiltersState,
+  resetPendingFilters,
+  updatePendingFilter,
+  updateSort,
+} from "~/utils/pendingFilters";
+import { createNameFilter, sortNumber, sortString } from "~/utils/reducerUtils";
 
 import type { ListItemValue } from "./Collections";
 
 export enum Actions {
   APPLY_PENDING_FILTERS = "APPLY_PENDING_FILTERS",
   CLEAR_PENDING_FILTERS = "CLEAR_PENDING_FILTERS",
-  FILTER_NAME = "FILTER_NAME",
   PENDING_FILTER_NAME = "PENDING_FILTER_NAME",
   RESET_PENDING_FILTERS = "RESET_PENDING_FILTERS",
   SORT = "SORT",
@@ -19,7 +23,6 @@ export enum Actions {
 export type ActionType =
   | ApplyPendingFiltersAction
   | ClearPendingFiltersAction
-  | FilterNameAction
   | PendingFilterNameAction
   | ResetPendingFiltersAction
   | SortAction;
@@ -40,11 +43,6 @@ type ClearPendingFiltersAction = {
   type: Actions.CLEAR_PENDING_FILTERS;
 };
 
-type FilterNameAction = {
-  type: Actions.FILTER_NAME;
-  value: string;
-};
-
 type PendingFilterNameAction = {
   type: Actions.PENDING_FILTER_NAME;
   value: string;
@@ -59,20 +57,10 @@ type SortAction = {
   value: Sort;
 };
 
-type State = {
-  allValues: ListItemValue[];
-  filteredValues: ListItemValue[];
-  filters: Record<string, (value: ListItemValue) => boolean>;
-  filterValues: {
-    name: string;
-  };
-  pendingFilteredCount: number;
-  pendingFilters: Record<string, (value: ListItemValue) => boolean>;
-  pendingFilterValues: {
-    name: string;
-  };
-  sortValue: Sort;
-};
+type State = PendingFiltersState<ListItemValue, Sort>;
+
+// AIDEV-NOTE: Collections don't use grouping, so we use a simple no-op group function
+const groupValues = buildGroupValues<ListItemValue, Sort>(() => "all");
 
 export function initState({
   initialSort,
@@ -81,133 +69,38 @@ export function initState({
   initialSort: Sort;
   values: ListItemValue[];
 }): State {
-  const initialValues = sortValues(values, initialSort);
-
-  return {
-    allValues: [...initialValues],
-    filteredValues: [...initialValues],
-    filters: {},
-    filterValues: {
-      name: "",
-    },
-    pendingFilteredCount: initialValues.length,
-    pendingFilters: {},
-    pendingFilterValues: {
-      name: "",
-    },
-    sortValue: initialSort,
-  };
+  return createInitialState({
+    groupFn: groupValues,
+    initialSort,
+    showCount: Number.MAX_SAFE_INTEGER, // Collections don't paginate
+    sortFn: sortValues,
+    values,
+  });
 }
 
 export function reducer(state: State, action: ActionType): State {
-  let filters;
-  let filteredValues;
-  let pendingFilters;
-  let pendingFilteredValues;
-
   switch (action.type) {
     case Actions.APPLY_PENDING_FILTERS: {
-      // Apply pending filters to actual filters
-      filteredValues = sortValues(
-        filterValues<ListItemValue>({
-          filters: state.pendingFilters,
-          values: state.allValues,
-        }),
-        state.sortValue,
-      );
-      return {
-        ...state,
-        filteredValues,
-        filters: { ...state.pendingFilters },
-        filterValues: { ...state.pendingFilterValues },
-        pendingFilteredCount: filteredValues.length,
-      };
+      return applyPendingFilters(state, sortValues, groupValues);
     }
+
     case Actions.CLEAR_PENDING_FILTERS: {
-      // Clear all pending filters to empty/default values
-      const clearedFilteredValues = state.allValues;
-      return {
-        ...state,
-        pendingFilteredCount: clearedFilteredValues.length,
-        pendingFilters: {},
-        pendingFilterValues: {
-          name: "",
-        },
-      };
+      return clearPendingFilters(state);
     }
-    case Actions.FILTER_NAME: {
-      filters = action.value
-        ? {
-            ...state.filters,
-            name: createNameFilter(action.value),
-          }
-        : (() => {
-            const newFilters = { ...state.filters };
-            delete newFilters.name;
-            return newFilters;
-          })();
-      filteredValues = sortValues(
-        filterValues<ListItemValue>({
-          filters,
-          values: state.allValues,
-        }),
-        state.sortValue,
-      );
-      return {
-        ...state,
-        filteredValues,
-        filters,
-        filterValues: {
-          ...state.filterValues,
-          name: action.value,
-        },
-      };
-    }
+
     case Actions.PENDING_FILTER_NAME: {
-      if (action.value) {
-        pendingFilters = {
-          ...state.pendingFilters,
-          name: createNameFilter(action.value),
-        };
-      } else {
-        // Clear the filter if value is empty
-        pendingFilters = { ...state.pendingFilters };
-        delete pendingFilters.name;
-      }
-      pendingFilteredValues = filterValues<ListItemValue>({
-        filters: pendingFilters,
-        values: state.allValues,
-      });
-      return {
-        ...state,
-        pendingFilteredCount: pendingFilteredValues.length,
-        pendingFilters,
-        pendingFilterValues: {
-          ...state.pendingFilterValues,
-          name: action.value,
-        },
-      };
+      const filterFn = action.value
+        ? createNameFilter(action.value)
+        : undefined;
+      return updatePendingFilter(state, "name", filterFn, action.value);
     }
+
     case Actions.RESET_PENDING_FILTERS: {
-      // Reset pending filters to current applied filters
-      pendingFilteredValues = filterValues<ListItemValue>({
-        filters: state.filters,
-        values: state.allValues,
-      });
-      return {
-        ...state,
-        pendingFilteredCount: pendingFilteredValues.length,
-        pendingFilters: { ...state.filters },
-        pendingFilterValues: { ...state.filterValues },
-      };
+      return resetPendingFilters(state);
     }
+
     case Actions.SORT: {
-      filteredValues = sortValues(state.filteredValues, action.value);
-      return {
-        ...state,
-        filteredValues,
-        sortValue: action.value,
-      };
+      return updateSort(state, action.value, sortValues, groupValues);
     }
 
     // no default

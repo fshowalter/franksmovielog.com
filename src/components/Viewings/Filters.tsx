@@ -22,18 +22,15 @@ export function Filters({
   distinctVenues: readonly string[];
   distinctViewingYears: readonly string[];
   filterKey?: string;
-  pendingFilters: {
-    media: string[];
-    releaseYears: string[];
-    title: string;
-    venues: string[];
-    viewingYears: string[];
-  };
+  pendingFilters: Record<
+    string,
+    [number, number] | [string, string] | readonly string[] | string
+  >;
 }) {
   return (
     <>
       <TextFilter
-        initialValue={pendingFilters.title}
+        initialValue={(pendingFilters.title as string) || ""}
         key={`title-${filterKey}`}
         label="Title"
         onInputChange={(value) =>
@@ -42,7 +39,7 @@ export function Filters({
         placeholder="Enter all or part of a title"
       />
       <YearInput
-        initialValues={pendingFilters.releaseYears}
+        initialValues={(pendingFilters.releaseYears as string[]) || []}
         key={`release-year-${filterKey}`}
         label="Release Year"
         onYearChange={(values) =>
@@ -51,7 +48,7 @@ export function Filters({
         years={distinctReleaseYears}
       />
       <YearInput
-        initialValues={pendingFilters.viewingYears}
+        initialValues={(pendingFilters.viewingYears as string[]) || []}
         key={`viewing-year-${filterKey}`}
         label="Viewing Year"
         onYearChange={(values) =>
@@ -70,7 +67,7 @@ export function Filters({
                 : [e.target.value],
           })
         }
-        value={pendingFilters.media[0] || ""}
+        value={((pendingFilters.media as string[]) || [])[0] || ""}
       >
         <SelectOptions options={distinctMedia} />
       </SelectField>
@@ -85,7 +82,7 @@ export function Filters({
                 : [e.target.value],
           })
         }
-        value={pendingFilters.venues[0] || ""}
+        value={((pendingFilters.venues as string[]) || [])[0] || ""}
       >
         <SelectOptions options={distinctVenues} />
       </SelectField>
