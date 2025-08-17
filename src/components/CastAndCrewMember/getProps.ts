@@ -21,7 +21,7 @@ type PageProps = Props & {
 };
 
 export async function getProps(slug: string): Promise<PageProps> {
-  const { distinctReleaseYears, distinctReviewYears, member } =
+  const { distinctGenres, distinctReleaseYears, distinctReviewYears, member } =
     await castAndCrewMember(slug);
 
   return {
@@ -34,6 +34,7 @@ export async function getProps(slug: string): Promise<PageProps> {
       BackdropImageConfig,
     ),
     deck: deck(member),
+    distinctGenres,
     distinctReleaseYears,
     distinctReviewYears,
     initialSort: "release-date-asc",

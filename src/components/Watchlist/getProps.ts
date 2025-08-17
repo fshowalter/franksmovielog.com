@@ -18,6 +18,7 @@ export async function getProps(): Promise<PageProps> {
   const {
     distinctCollections,
     distinctDirectors,
+    distinctGenres,
     distinctPerformers,
     distinctReleaseYears,
     distinctWriters,
@@ -38,6 +39,7 @@ export async function getProps(): Promise<PageProps> {
     defaultPosterImageProps,
     distinctCollections,
     distinctDirectors,
+    distinctGenres,
     distinctPerformers,
     distinctReleaseYears,
     distinctWriters,

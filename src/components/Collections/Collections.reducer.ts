@@ -1,33 +1,24 @@
-import type { ListWithFiltersState } from "~/components/ListWithFilters.reducerUtils";
+import type {
+  ListWithFiltersActionType,
+  ListWithFiltersState,
+} from "~/components/ListWithFilters.reducerUtils";
 
 import {
-  applyPendingFilters,
-  clearPendingFilters,
+  buildSortValues,
   createInitialState,
-  handlePendingFilterName,
+  handleListWithFiltersAction,
+  handleNameFilterAction,
   ListWithFiltersActions,
-  resetPendingFilters,
+  sortName,
   sortNumber,
-  sortString,
-  updateSort,
+  sortReviewCount,
 } from "~/components/ListWithFilters.reducerUtils";
 
 import type { ListItemValue } from "./Collections";
 
-export enum Actions {
-  APPLY_PENDING_FILTERS = ListWithFiltersActions.APPLY_PENDING_FILTERS,
-  CLEAR_PENDING_FILTERS = ListWithFiltersActions.CLEAR_PENDING_FILTERS,
-  PENDING_FILTER_NAME = "PENDING_FILTER_NAME",
-  RESET_PENDING_FILTERS = ListWithFiltersActions.RESET_PENDING_FILTERS,
-  SORT = ListWithFiltersActions.SORT,
-}
+// Collections only uses shared actions
 
-export type ActionType =
-  | ApplyPendingFiltersAction
-  | ClearPendingFiltersAction
-  | PendingFilterNameAction
-  | ResetPendingFiltersAction
-  | SortAction;
+export type ActionType = ListWithFiltersActionType<Sort>;
 
 export type Sort =
   | "name-asc"
@@ -36,28 +27,6 @@ export type Sort =
   | "review-count-desc"
   | "title-count-asc"
   | "title-count-desc";
-
-type ApplyPendingFiltersAction = {
-  type: Actions.APPLY_PENDING_FILTERS;
-};
-
-type ClearPendingFiltersAction = {
-  type: Actions.CLEAR_PENDING_FILTERS;
-};
-
-type PendingFilterNameAction = {
-  type: Actions.PENDING_FILTER_NAME;
-  value: string;
-};
-
-type ResetPendingFiltersAction = {
-  type: Actions.RESET_PENDING_FILTERS;
-};
-
-type SortAction = {
-  type: Actions.SORT;
-  value: Sort;
-};
 
 type State = ListWithFiltersState<ListItemValue, Sort>;
 
@@ -72,7 +41,7 @@ export function initState({
 }): State {
   return createInitialState({
     initialSort,
-    // showCount omitted - Collections don't paginate
+    showMoreEnabled: false,
     sortFn: sortValues,
     values,
   });
@@ -80,43 +49,23 @@ export function initState({
 
 export function reducer(state: State, action: ActionType): State {
   switch (action.type) {
-    case Actions.APPLY_PENDING_FILTERS: {
-      return applyPendingFilters(state, sortValues);
+    // Field-specific shared filter
+    case ListWithFiltersActions.PENDING_FILTER_NAME: {
+      return handleNameFilterAction(state, action);
     }
 
-    case Actions.CLEAR_PENDING_FILTERS: {
-      return clearPendingFilters(state);
+    default: {
+      // Handle shared list structure actions
+      return handleListWithFiltersAction(state, action, { sortFn: sortValues });
     }
-
-    case Actions.PENDING_FILTER_NAME: {
-      return handlePendingFilterName(state, action.value);
-    }
-
-    case Actions.RESET_PENDING_FILTERS: {
-      return resetPendingFilters(state);
-    }
-
-    case Actions.SORT: {
-      return updateSort(state, action.value, sortValues);
-    }
-
-    // no default
   }
 }
 
-function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
-  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
-    {
-      "name-asc": (a, b) => sortString(a.name, b.name),
-      "name-desc": (a, b) => sortString(a.name, b.name) * -1,
-      "review-count-asc": (a, b) => sortNumber(a.reviewCount, b.reviewCount),
-      "review-count-desc": (a, b) =>
-        sortNumber(a.reviewCount, b.reviewCount) * -1,
-      "title-count-asc": (a, b) => sortNumber(a.titleCount, b.titleCount),
-      "title-count-desc": (a, b) => sortNumber(a.titleCount, b.titleCount) * -1,
-    };
+const sortValues = buildSortValues<ListItemValue, Sort>({
+  ...sortName<ListItemValue>(),
+  ...sortReviewCount<ListItemValue>(),
+  "title-count-asc": (a, b) => sortNumber(a.titleCount, b.titleCount),
+  "title-count-desc": (a, b) => sortNumber(a.titleCount, b.titleCount) * -1,
+});
 
-  const comparer = sortMap[sortOrder];
-
-  return values.sort(comparer);
-}
+export { ListWithFiltersActions as Actions } from "~/components/ListWithFilters.reducerUtils";

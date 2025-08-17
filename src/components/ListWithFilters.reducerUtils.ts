@@ -12,15 +12,40 @@
 import { collator } from "~/utils/collator";
 
 /**
+ * Default number of items to show per page for paginated lists
+ */
+const SHOW_COUNT_DEFAULT = 100;
+
+/**
  * Common Action Types shared across reducers
  */
 export enum ListWithFiltersActions {
   APPLY_PENDING_FILTERS = "APPLY_PENDING_FILTERS",
   CLEAR_PENDING_FILTERS = "CLEAR_PENDING_FILTERS",
+  PENDING_FILTER_GENRES = "PENDING_FILTER_GENRES",
+  PENDING_FILTER_NAME = "PENDING_FILTER_NAME",
+  PENDING_FILTER_RELEASE_YEAR = "PENDING_FILTER_RELEASE_YEAR",
+  PENDING_FILTER_REVIEW_YEAR = "PENDING_FILTER_REVIEW_YEAR",
+  PENDING_FILTER_TITLE = "PENDING_FILTER_TITLE",
   RESET_PENDING_FILTERS = "RESET_PENDING_FILTERS",
   SHOW_MORE = "SHOW_MORE",
   SORT = "SORT",
 }
+
+/**
+ * Union type of all ListWithFilters actions
+ */
+export type ListWithFiltersActionType<TSortValue = unknown> =
+  | ApplyPendingFiltersAction
+  | ClearPendingFiltersAction
+  | PendingFilterGenresAction
+  | PendingFilterNameAction
+  | PendingFilterReleaseYearAction
+  | PendingFilterReviewYearAction
+  | PendingFilterTitleAction
+  | ResetPendingFiltersAction
+  | ShowMoreAction
+  | SortAction<TSortValue>;
 
 /**
  * State structure for lists with pending filters, grouping, and pagination
@@ -46,38 +71,54 @@ export type ListWithFiltersState<TItem, TSortValue> = {
 };
 
 /**
- * Apply pending filters to become active filters
+ * Common Action Type Definitions
  */
-export function applyPendingFilters<TItem, TSortValue>(
-  state: ListWithFiltersState<TItem, TSortValue>,
-  sortFn: (values: TItem[], sort: TSortValue) => TItem[],
-  groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>,
-): ListWithFiltersState<TItem, TSortValue> {
-  const filteredValues = sortFn(
-    filterValues({
-      filters: state.pendingFilters,
-      values: state.allValues,
-    }),
-    state.sortValue,
-  );
+type ApplyPendingFiltersAction = {
+  type: ListWithFiltersActions.APPLY_PENDING_FILTERS;
+};
 
-  const valuesToGroup = state.showCount
-    ? filteredValues.slice(0, state.showCount)
-    : filteredValues;
-  const groupedValues = groupFn
-    ? groupFn(valuesToGroup, state.sortValue)
-    : new Map<string, TItem[]>();
+type ClearPendingFiltersAction = {
+  type: ListWithFiltersActions.CLEAR_PENDING_FILTERS;
+};
 
-  return {
-    ...state,
-    filteredValues,
-    filters: { ...state.pendingFilters },
-    filterValues: { ...state.pendingFilterValues },
-    groupedValues,
-    hasActiveFilters: Object.keys(state.pendingFilterValues).length > 0,
-    pendingFilteredCount: filteredValues.length,
-  };
-}
+type PendingFilterGenresAction = {
+  type: ListWithFiltersActions.PENDING_FILTER_GENRES;
+  values: readonly string[];
+};
+
+type PendingFilterNameAction = {
+  type: ListWithFiltersActions.PENDING_FILTER_NAME;
+  value: string;
+};
+
+type PendingFilterReleaseYearAction = {
+  type: ListWithFiltersActions.PENDING_FILTER_RELEASE_YEAR;
+  values: [string, string];
+};
+
+type PendingFilterReviewYearAction = {
+  type: ListWithFiltersActions.PENDING_FILTER_REVIEW_YEAR;
+  values: [string, string];
+};
+
+type PendingFilterTitleAction = {
+  type: ListWithFiltersActions.PENDING_FILTER_TITLE;
+  value: string;
+};
+
+type ResetPendingFiltersAction = {
+  type: ListWithFiltersActions.RESET_PENDING_FILTERS;
+};
+
+type ShowMoreAction = {
+  increment?: number;
+  type: ListWithFiltersActions.SHOW_MORE;
+};
+
+type SortAction<TSortValue> = {
+  type: ListWithFiltersActions.SORT;
+  value: TSortValue;
+};
 
 /**
  * Build group values helper - groups items by a key function
@@ -102,20 +143,12 @@ export function buildGroupValues<TItem, TSortValue>(
   };
 }
 
-/**
- * Clear all pending filters
- */
-export function clearPendingFilters<TItem, TSortValue>(
-  state: ListWithFiltersState<TItem, TSortValue>,
-): ListWithFiltersState<TItem, TSortValue> {
-  const pendingFilteredCount = state.allValues.length;
-
-  return {
-    ...state,
-    hasActiveFilters: false,
-    pendingFilteredCount,
-    pendingFilters: {},
-    pendingFilterValues: {},
+export function buildSortValues<V, S extends string>(
+  sortMap: Record<S, (a: V, b: V) => number>,
+) {
+  return (values: V[], sortOrder: S): V[] => {
+    const comparer = sortMap[sortOrder];
+    return [...values].sort(comparer);
   };
 }
 
@@ -125,17 +158,18 @@ export function clearPendingFilters<TItem, TSortValue>(
 export function createInitialState<TItem, TSortValue>({
   groupFn,
   initialSort,
-  showCount,
+  showMoreEnabled = true,
   sortFn,
   values,
 }: {
   groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>;
   initialSort: TSortValue;
-  showCount?: number;
+  showMoreEnabled?: boolean;
   sortFn: (values: TItem[], sort: TSortValue) => TItem[];
   values: TItem[];
 }): ListWithFiltersState<TItem, TSortValue> {
   const sortedValues = sortFn(values, initialSort);
+  const showCount = showMoreEnabled ? SHOW_COUNT_DEFAULT : undefined;
   const valuesToGroup = showCount
     ? sortedValues.slice(0, showCount)
     : sortedValues;
@@ -176,110 +210,253 @@ export function getGroupLetter(str: string): string {
   return letter.toLocaleUpperCase();
 }
 
-export function handlePendingFilterName<
+/**
+ * Field-specific filter handlers that require specific item properties
+ */
+export function handleGenreFilterAction<
+  TItem extends { genres: readonly string[] },
+  TSortValue,
+  TExtendedState extends Record<string, unknown> = Record<string, never>,
+>(
+  state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
+  action: PendingFilterGenresAction,
+  extendedState?: TExtendedState,
+): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
+  const filterFn = createGenresFilter(action.values);
+  const baseState = updatePendingFilter(
+    state,
+    "genres",
+    filterFn,
+    action.values,
+  );
+  return extendedState
+    ? { ...baseState, ...extendedState }
+    : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
+}
+
+/**
+ * Shared reducer handler for list structure actions that don't require item values
+ */
+export function handleListWithFiltersAction<
+  TItem,
+  TSortValue,
+  TExtendedState extends Record<string, unknown> = Record<string, never>,
+>(
+  state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
+  action: ListWithFiltersActionType<TSortValue>,
+  handlers: {
+    groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>;
+    sortFn: (values: TItem[], sort: TSortValue) => TItem[];
+  },
+  extendedState?: TExtendedState,
+): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
+  switch (action.type) {
+    case ListWithFiltersActions.APPLY_PENDING_FILTERS: {
+      const baseState = applyPendingFilters(
+        state,
+        handlers.sortFn,
+        handlers.groupFn,
+      );
+      return extendedState
+        ? { ...baseState, ...extendedState }
+        : (baseState as ListWithFiltersState<TItem, TSortValue> &
+            TExtendedState);
+    }
+
+    case ListWithFiltersActions.CLEAR_PENDING_FILTERS: {
+      const baseState = clearPendingFilters(state);
+      return extendedState
+        ? { ...baseState, ...extendedState }
+        : (baseState as ListWithFiltersState<TItem, TSortValue> &
+            TExtendedState);
+    }
+
+    case ListWithFiltersActions.RESET_PENDING_FILTERS: {
+      const baseState = resetPendingFilters(state);
+      return extendedState
+        ? { ...baseState, ...extendedState }
+        : (baseState as ListWithFiltersState<TItem, TSortValue> &
+            TExtendedState);
+    }
+
+    case ListWithFiltersActions.SHOW_MORE: {
+      if (state.showCount !== undefined) {
+        const increment = action.increment ?? SHOW_COUNT_DEFAULT;
+        const baseState = showMore(state, increment, handlers.groupFn);
+        return extendedState
+          ? { ...baseState, ...extendedState }
+          : (baseState as ListWithFiltersState<TItem, TSortValue> &
+              TExtendedState);
+      }
+      return state;
+    }
+
+    case ListWithFiltersActions.SORT: {
+      const baseState = updateSort(
+        state,
+        action.value,
+        handlers.sortFn,
+        handlers.groupFn,
+      );
+      return extendedState
+        ? { ...baseState, ...extendedState }
+        : (baseState as ListWithFiltersState<TItem, TSortValue> &
+            TExtendedState);
+    }
+
+    default: {
+      return state;
+    }
+  }
+}
+
+export function handleNameFilterAction<
   TItem extends { name: string },
   TSortValue,
   TExtendedState extends Record<string, unknown> = Record<string, never>,
 >(
   state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
-  value: string | undefined,
+  action: PendingFilterNameAction,
   extendedState?: TExtendedState,
 ): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
-  const filterFn = createNameFilter(value);
-  const baseState = updatePendingFilter(state, "name", filterFn, value);
+  const filterFn = createNameFilter(action.value);
+  const baseState = updatePendingFilter(state, "name", filterFn, action.value);
   return extendedState
     ? { ...baseState, ...extendedState }
     : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
 }
 
-export function handlePendingFilterReleaseYear<
+export function handleReleaseYearFilterAction<
   TItem extends { releaseYear: string },
   TSortValue,
   TExtendedState extends Record<string, unknown> = Record<string, never>,
 >(
   state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
-  values: [string, string],
+  action: PendingFilterReleaseYearAction,
   extendedState?: TExtendedState,
 ): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
-  const filterFn = createReleaseYearFilter(values[0], values[1]);
-  const baseState = updatePendingFilter(state, "releaseYear", filterFn, values);
+  const filterFn = createReleaseYearFilter(action.values[0], action.values[1]);
+  const baseState = updatePendingFilter(
+    state,
+    "releaseYear",
+    filterFn,
+    action.values,
+  );
   return extendedState
     ? { ...baseState, ...extendedState }
     : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
 }
 
-export function handlePendingFilterReviewYear<
+export function handleReviewYearFilterAction<
   TItem extends { reviewYear?: string },
   TSortValue,
   TExtendedState extends Record<string, unknown> = Record<string, never>,
 >(
   state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
-  values: [string, string],
+  action: PendingFilterReviewYearAction,
   extendedState?: TExtendedState,
 ): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
-  const filterFn = createReviewYearFilter(values[0], values[1]);
-  const baseState = updatePendingFilter(state, "reviewYear", filterFn, values);
+  const filterFn = createReviewYearFilter(action.values[0], action.values[1]);
+  const baseState = updatePendingFilter(
+    state,
+    "reviewYear",
+    filterFn,
+    action.values,
+  );
   return extendedState
     ? { ...baseState, ...extendedState }
     : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
 }
 
-export function handlePendingFilterTitle<
+export function handleTitleFilterAction<
   TItem extends { title: string },
   TSortValue,
   TExtendedState extends Record<string, unknown> = Record<string, never>,
 >(
   state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
-  value: string | undefined,
+  action: PendingFilterTitleAction,
   extendedState?: TExtendedState,
 ): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
-  const filterFn = createTitleFilter(value);
-  const baseState = updatePendingFilter(state, "title", filterFn, value);
+  const filterFn = createTitleFilter(action.value);
+  const baseState = updatePendingFilter(state, "title", filterFn, action.value);
   return extendedState
     ? { ...baseState, ...extendedState }
     : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
 }
 
-/**
- * Reset pending filters to current active filters
- */
-export function resetPendingFilters<TItem, TSortValue>(
-  state: ListWithFiltersState<TItem, TSortValue>,
-): ListWithFiltersState<TItem, TSortValue> {
+export function handleToggleReviewedAction<
+  TItem extends { slug?: string },
+  TSortValue,
+  TExtendedState extends { hideReviewed: boolean },
+>(
+  state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
+  sortFn: (values: TItem[], sort: TSortValue) => TItem[],
+  groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>,
+): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
+  const hideReviewed = !state.hideReviewed;
+
+  const filters = hideReviewed
+    ? {
+        ...state.filters,
+        hideReviewed: (value: TItem) => !value.slug,
+      }
+    : (() => {
+        const newFilters = { ...state.filters };
+        delete newFilters.hideReviewed;
+        return newFilters;
+      })();
+
+  const pendingFilters = hideReviewed
+    ? {
+        ...state.pendingFilters,
+        hideReviewed: (value: TItem) => !value.slug,
+      }
+    : (() => {
+        const newFilters = { ...state.pendingFilters };
+        delete newFilters.hideReviewed;
+        return newFilters;
+      })();
+
+  const filteredValues = sortFn(
+    filterValues({ filters, values: state.allValues }),
+    state.sortValue,
+  );
+
   const pendingFilteredCount = filterValues({
-    filters: state.filters,
+    filters: pendingFilters,
     values: state.allValues,
   }).length;
 
+  const valuesToGroup = state.showCount
+    ? filteredValues.slice(0, state.showCount)
+    : filteredValues;
+
   return {
     ...state,
-    hasActiveFilters: Object.keys(state.filterValues).length > 0,
+    filteredValues,
+    filters,
+    groupedValues: groupFn
+      ? groupFn(valuesToGroup, state.sortValue)
+      : new Map<string, TItem[]>(),
+    hideReviewed,
     pendingFilteredCount,
-    pendingFilters: { ...state.filters },
-    pendingFilterValues: { ...state.filterValues },
+    pendingFilters,
   };
 }
 
-/**
- * Handle "Show More" pagination
- */
-export function showMore<TItem, TSortValue>(
-  state: ListWithFiltersState<TItem, TSortValue>,
-  increment: number,
-  groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>,
-): ListWithFiltersState<TItem, TSortValue> {
-  if (!state.showCount) {
-    throw new Error("showMore called on state without pagination");
-  }
-  const showCount = state.showCount + increment;
-  const groupedValues = groupFn
-    ? groupFn(state.filteredValues.slice(0, showCount), state.sortValue)
-    : new Map<string, TItem[]>();
-
+export function sortGrade<T extends { gradeValue?: null | number }>() {
   return {
-    ...state,
-    groupedValues,
-    showCount,
+    "grade-asc": (a: T, b: T) =>
+      sortNumber(a.gradeValue || 0, b.gradeValue || 0),
+    "grade-desc": (a: T, b: T) =>
+      sortNumber(a.gradeValue || 0, b.gradeValue || 0) * -1,
+  };
+}
+
+export function sortName<T extends { name: string }>() {
+  return {
+    "name-asc": (a: T, b: T) => sortString(a.name, b.name),
+    "name-desc": (a: T, b: T) => sortString(a.name, b.name) * -1,
   };
 }
 
@@ -287,8 +464,38 @@ export function sortNumber(a: number, b: number): number {
   return a - b;
 }
 
-export function sortString(a: string, b: string): number {
-  return collator.compare(a, b);
+export function sortReleaseDate<T extends { releaseSequence: string }>() {
+  return {
+    "release-date-asc": (a: T, b: T) =>
+      sortString(a.releaseSequence, b.releaseSequence),
+    "release-date-desc": (a: T, b: T) =>
+      sortString(a.releaseSequence, b.releaseSequence) * -1,
+  };
+}
+
+export function sortReviewCount<T extends { reviewCount: number }>() {
+  return {
+    "review-count-asc": (a: T, b: T) =>
+      sortNumber(a.reviewCount, b.reviewCount),
+    "review-count-desc": (a: T, b: T) =>
+      sortNumber(a.reviewCount, b.reviewCount) * -1,
+  };
+}
+
+export function sortReviewDate<T extends { reviewSequence?: null | string }>() {
+  return {
+    "review-date-asc": (a: T, b: T) =>
+      sortString(a.reviewSequence || "", b.reviewSequence || ""),
+    "review-date-desc": (a: T, b: T) =>
+      sortString(a.reviewSequence || "", b.reviewSequence || "") * -1,
+  };
+}
+
+export function sortTitle<T extends { sortTitle: string }>() {
+  return {
+    "title-asc": (a: T, b: T) => sortString(a.sortTitle, b.sortTitle),
+    "title-desc": (a: T, b: T) => sortString(a.sortTitle, b.sortTitle) * -1,
+  };
 }
 
 /**
@@ -331,27 +538,60 @@ export function updatePendingFilter<TItem, TSortValue>(
 }
 
 /**
- * Handle sorting
+ * Apply pending filters to become active filters
  */
-export function updateSort<TItem, TSortValue>(
+function applyPendingFilters<TItem, TSortValue>(
   state: ListWithFiltersState<TItem, TSortValue>,
-  sortValue: TSortValue,
   sortFn: (values: TItem[], sort: TSortValue) => TItem[],
   groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>,
 ): ListWithFiltersState<TItem, TSortValue> {
-  const filteredValues = sortFn(state.filteredValues, sortValue);
+  const filteredValues = sortFn(
+    filterValues({
+      filters: state.pendingFilters,
+      values: state.allValues,
+    }),
+    state.sortValue,
+  );
+
   const valuesToGroup = state.showCount
     ? filteredValues.slice(0, state.showCount)
     : filteredValues;
   const groupedValues = groupFn
-    ? groupFn(valuesToGroup, sortValue)
+    ? groupFn(valuesToGroup, state.sortValue)
     : new Map<string, TItem[]>();
 
   return {
     ...state,
     filteredValues,
+    filters: { ...state.pendingFilters },
+    filterValues: { ...state.pendingFilterValues },
     groupedValues,
-    sortValue,
+    hasActiveFilters: Object.keys(state.pendingFilterValues).length > 0,
+    pendingFilteredCount: filteredValues.length,
+  };
+}
+
+/**
+ * Clear all pending filters
+ */
+function clearPendingFilters<TItem, TSortValue>(
+  state: ListWithFiltersState<TItem, TSortValue>,
+): ListWithFiltersState<TItem, TSortValue> {
+  const pendingFilteredCount = state.allValues.length;
+
+  return {
+    ...state,
+    hasActiveFilters: false,
+    pendingFilteredCount,
+    pendingFilters: {},
+    pendingFilterValues: {},
+  };
+}
+
+function createGenresFilter(genres: readonly string[]) {
+  if (genres.length === 0) return;
+  return <T extends { genres: readonly string[] }>(item: T) => {
+    return genres.every((genre) => item.genres.includes(genre));
   };
 }
 
@@ -360,10 +600,6 @@ function createNameFilter(value: string | undefined) {
   const regex = new RegExp(value, "i");
   return <T extends { name: string }>(item: T) => regex.test(item.name);
 }
-
-/**
- * Handler functions that combine filter creation and state updates
- */
 
 function createReleaseYearFilter(minYear: string, maxYear: string) {
   return <T extends { releaseYear: string }>(item: T) => {
@@ -399,4 +635,80 @@ function filterValues<TItem>({
       return filter(item);
     });
   });
+}
+
+/**
+ * Handler functions that combine filter creation and state updates
+ */
+
+/**
+ * Reset pending filters to current active filters
+ */
+function resetPendingFilters<TItem, TSortValue>(
+  state: ListWithFiltersState<TItem, TSortValue>,
+): ListWithFiltersState<TItem, TSortValue> {
+  const pendingFilteredCount = filterValues({
+    filters: state.filters,
+    values: state.allValues,
+  }).length;
+
+  return {
+    ...state,
+    hasActiveFilters: Object.keys(state.filterValues).length > 0,
+    pendingFilteredCount,
+    pendingFilters: { ...state.filters },
+    pendingFilterValues: { ...state.filterValues },
+  };
+}
+
+/**
+ * Handle "Show More" pagination
+ */
+function showMore<TItem, TSortValue>(
+  state: ListWithFiltersState<TItem, TSortValue>,
+  increment: number,
+  groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>,
+): ListWithFiltersState<TItem, TSortValue> {
+  if (!state.showCount) {
+    throw new Error("showMore called on state without pagination");
+  }
+  const showCount = state.showCount + increment;
+  const groupedValues = groupFn
+    ? groupFn(state.filteredValues.slice(0, showCount), state.sortValue)
+    : new Map<string, TItem[]>();
+
+  return {
+    ...state,
+    groupedValues,
+    showCount,
+  };
+}
+
+function sortString(a: string, b: string): number {
+  return collator.compare(a, b);
+}
+
+/**
+ * Handle sorting
+ */
+function updateSort<TItem, TSortValue>(
+  state: ListWithFiltersState<TItem, TSortValue>,
+  sortValue: TSortValue,
+  sortFn: (values: TItem[], sort: TSortValue) => TItem[],
+  groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>,
+): ListWithFiltersState<TItem, TSortValue> {
+  const filteredValues = sortFn(state.filteredValues, sortValue);
+  const valuesToGroup = state.showCount
+    ? filteredValues.slice(0, state.showCount)
+    : filteredValues;
+  const groupedValues = groupFn
+    ? groupFn(valuesToGroup, sortValue)
+    : new Map<string, TItem[]>();
+
+  return {
+    ...state,
+    filteredValues,
+    groupedValues,
+    sortValue,
+  };
 }

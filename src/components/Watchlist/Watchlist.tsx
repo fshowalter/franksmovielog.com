@@ -5,6 +5,7 @@ import { useReducer, useState } from "react";
 import type { PosterImageProps } from "~/api/posters";
 import type { WatchlistTitle } from "~/api/watchlistTitles";
 
+import { ListItemGenres } from "~/components/ListItemGenres";
 import { ListItemTitle } from "~/components/ListItemTitle";
 import {
   ListHeaderButton,
@@ -20,6 +21,7 @@ import { Actions, initState, reducer } from "./Watchlist.reducer";
 
 export type ListItemValue = Pick<
   WatchlistTitle,
+  | "genres"
   | "imdbId"
   | "releaseSequence"
   | "releaseYear"
@@ -36,6 +38,7 @@ export type Props = {
   defaultPosterImageProps: PosterImageProps;
   distinctCollections: string[];
   distinctDirectors: string[];
+  distinctGenres: string[];
   distinctPerformers: string[];
   distinctReleaseYears: string[];
   distinctWriters: string[];
@@ -47,6 +50,7 @@ export function Watchlist({
   defaultPosterImageProps,
   distinctCollections,
   distinctDirectors,
+  distinctGenres,
   distinctPerformers,
   distinctReleaseYears,
   distinctWriters,
@@ -70,6 +74,7 @@ export function Watchlist({
           dispatch={dispatch}
           distinctCollections={distinctCollections}
           distinctDirectors={distinctDirectors}
+          distinctGenres={distinctGenres}
           distinctPerformers={distinctPerformers}
           distinctReleaseYears={distinctReleaseYears}
           distinctWriters={distinctWriters}
@@ -153,6 +158,7 @@ function WatchlistListItem({
           performerNames={value.watchlistPerformerNames}
           writerNames={value.watchlistWriterNames}
         />
+        <ListItemGenres values={value.genres} />
       </div>
     </PosterListItem>
   );

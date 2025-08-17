@@ -1,6 +1,7 @@
 import type { JSX } from "react";
 
 import { Button } from "~/components/Button";
+import { MultiSelectField } from "~/components/MultiSelectField";
 import { SelectField } from "~/components/SelectField";
 import { TextFilter } from "~/components/TextFilter";
 import { YearInput } from "~/components/YearInput";
@@ -12,6 +13,7 @@ import { Actions } from "./CastAndCrewMember.reducer";
 
 type FilterValues = {
   credits?: string;
+  genres?: readonly string[];
   releaseYear?: [string, string];
   reviewYear?: [string, string];
   title?: string;
@@ -20,6 +22,7 @@ type FilterValues = {
 export function Filters({
   creditedAs,
   dispatch,
+  distinctGenres,
   distinctReleaseYears,
   distinctReviewYears,
   filterValues,
@@ -27,6 +30,7 @@ export function Filters({
 }: {
   creditedAs: readonly string[];
   dispatch: React.Dispatch<ActionType>;
+  distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   filterValues: FilterValues;
@@ -83,6 +87,16 @@ export function Filters({
           dispatch({ type: Actions.PENDING_FILTER_REVIEW_YEAR, values })
         }
         years={distinctReviewYears}
+      />
+      <MultiSelectField
+        label="Genres"
+        onChange={(values) =>
+          dispatch({
+            type: Actions.PENDING_FILTER_GENRES,
+            values,
+          })
+        }
+        options={distinctGenres}
       />
     </>
   );

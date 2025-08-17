@@ -1,19 +1,21 @@
-import type { ListWithFiltersState } from "~/components/ListWithFilters.reducerUtils";
+import type {
+  ListWithFiltersActionType,
+  ListWithFiltersState,
+} from "~/components/ListWithFilters.reducerUtils";
 
 import {
-  applyPendingFilters,
   buildGroupValues,
-  clearPendingFilters,
+  buildSortValues,
   createInitialState,
   getGroupLetter,
-  handlePendingFilterReleaseYear,
-  handlePendingFilterTitle,
+  handleGenreFilterAction,
+  handleListWithFiltersAction,
+  handleReleaseYearFilterAction,
+  handleTitleFilterAction,
   ListWithFiltersActions,
-  resetPendingFilters,
-  showMore,
-  sortString,
+  sortReleaseDate,
+  sortTitle,
   updatePendingFilter,
-  updateSort,
 } from "~/components/ListWithFilters.reducerUtils";
 
 /**
@@ -21,90 +23,51 @@ import {
  */
 import type { ListItemValue } from "./Watchlist";
 
+enum WatchlistActions {
+  PENDING_FILTER_COLLECTION = "PENDING_FILTER_COLLECTION",
+  PENDING_FILTER_DIRECTOR = "PENDING_FILTER_DIRECTOR",
+  PENDING_FILTER_PERFORMER = "PENDING_FILTER_PERFORMER",
+  PENDING_FILTER_WRITER = "PENDING_FILTER_WRITER",
+}
+
 export type Sort =
   | "release-date-asc"
   | "release-date-desc"
   | "title-asc"
   | "title-desc";
 
-const SHOW_COUNT_DEFAULT = 100;
-
-export enum Actions {
-  APPLY_PENDING_FILTERS = ListWithFiltersActions.APPLY_PENDING_FILTERS,
-  CLEAR_PENDING_FILTERS = ListWithFiltersActions.CLEAR_PENDING_FILTERS,
-  PENDING_FILTER_COLLECTION = "PENDING_FILTER_COLLECTION",
-  PENDING_FILTER_DIRECTOR = "PENDING_FILTER_DIRECTOR",
-  PENDING_FILTER_PERFORMER = "PENDING_FILTER_PERFORMER",
-  PENDING_FILTER_RELEASE_YEAR = "PENDING_FILTER_RELEASE_YEAR",
-  PENDING_FILTER_TITLE = "PENDING_FILTER_TITLE",
-  PENDING_FILTER_WRITER = "PENDING_FILTER_WRITER",
-  RESET_PENDING_FILTERS = ListWithFiltersActions.RESET_PENDING_FILTERS,
-  SHOW_MORE = ListWithFiltersActions.SHOW_MORE,
-  SORT = ListWithFiltersActions.SORT,
-}
+// Re-export shared actions for component convenience
+export const Actions = {
+  ...ListWithFiltersActions,
+  ...WatchlistActions,
+} as const;
 
 export type ActionType =
-  | ApplyPendingFiltersAction
-  | ClearPendingFiltersAction
+  | ListWithFiltersActionType<Sort>
   | PendingFilterCollectionAction
   | PendingFilterDirectorAction
   | PendingFilterPerformerAction
-  | PendingFilterReleaseYearAction
-  | PendingFilterTitleAction
-  | PendingFilterWriterAction
-  | ResetPendingFiltersAction
-  | ShowMoreAction
-  | SortAction;
+  | PendingFilterWriterAction;
 
-type ApplyPendingFiltersAction = {
-  type: Actions.APPLY_PENDING_FILTERS;
-};
-
-type ClearPendingFiltersAction = {
-  type: Actions.CLEAR_PENDING_FILTERS;
-};
-
+// Watchlist-specific filter actions
 type PendingFilterCollectionAction = {
-  type: Actions.PENDING_FILTER_COLLECTION;
+  type: WatchlistActions.PENDING_FILTER_COLLECTION;
   value: string;
 };
 
 type PendingFilterDirectorAction = {
-  type: Actions.PENDING_FILTER_DIRECTOR;
+  type: WatchlistActions.PENDING_FILTER_DIRECTOR;
   value: string;
 };
 
 type PendingFilterPerformerAction = {
-  type: Actions.PENDING_FILTER_PERFORMER;
-  value: string;
-};
-
-type PendingFilterReleaseYearAction = {
-  type: Actions.PENDING_FILTER_RELEASE_YEAR;
-  values: [string, string];
-};
-
-type PendingFilterTitleAction = {
-  type: Actions.PENDING_FILTER_TITLE;
+  type: WatchlistActions.PENDING_FILTER_PERFORMER;
   value: string;
 };
 
 type PendingFilterWriterAction = {
-  type: Actions.PENDING_FILTER_WRITER;
+  type: WatchlistActions.PENDING_FILTER_WRITER;
   value: string;
-};
-
-type ResetPendingFiltersAction = {
-  type: Actions.RESET_PENDING_FILTERS;
-};
-
-type ShowMoreAction = {
-  type: Actions.SHOW_MORE;
-};
-
-type SortAction = {
-  type: Actions.SORT;
-  value: Sort;
 };
 
 type State = ListWithFiltersState<ListItemValue, Sort> & {
@@ -126,20 +89,10 @@ function groupForValue(value: ListItemValue, sortValue: Sort): string {
   }
 }
 
-function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
-  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
-    {
-      "release-date-asc": (a, b) =>
-        sortString(a.releaseSequence, b.releaseSequence),
-      "release-date-desc": (a, b) =>
-        sortString(a.releaseSequence, b.releaseSequence) * -1,
-      "title-asc": (a, b) => sortString(a.sortTitle, b.sortTitle),
-      "title-desc": (a, b) => sortString(a.sortTitle, b.sortTitle) * -1,
-    };
-
-  const comparer = sortMap[sortOrder];
-  return [...values].sort(comparer);
-}
+const sortValues = buildSortValues<ListItemValue, Sort>({
+  ...sortReleaseDate<ListItemValue>(),
+  ...sortTitle<ListItemValue>(),
+});
 
 const groupValues = buildGroupValues(groupForValue);
 
@@ -153,7 +106,6 @@ export function initState({
   const baseState = createInitialState({
     groupFn: groupValues,
     initialSort,
-    showCount: SHOW_COUNT_DEFAULT,
     sortFn: sortValues,
     values,
   });
@@ -166,101 +118,90 @@ export function initState({
 
 export function reducer(state: State, action: ActionType): State {
   switch (action.type) {
-    case Actions.APPLY_PENDING_FILTERS: {
-      return {
-        ...applyPendingFilters(state, sortValues, groupValues),
-        hideReviewed: state.hideReviewed,
-      };
-    }
-
-    case Actions.CLEAR_PENDING_FILTERS: {
-      return {
-        ...clearPendingFilters(state),
-        hideReviewed: state.hideReviewed,
-      };
-    }
-
-    case Actions.PENDING_FILTER_COLLECTION: {
-      const filterFn =
-        action.value && action.value !== "All"
-          ? (value: ListItemValue) =>
-              value.watchlistCollectionNames.includes(action.value)
-          : undefined;
-      return {
-        ...updatePendingFilter(state, "collection", filterFn, action.value),
-        hideReviewed: state.hideReviewed,
-      };
-    }
-
-    case Actions.PENDING_FILTER_DIRECTOR: {
-      const filterFn =
-        action.value && action.value !== "All"
-          ? (value: ListItemValue) =>
-              value.watchlistDirectorNames.includes(action.value)
-          : undefined;
-      return {
-        ...updatePendingFilter(state, "director", filterFn, action.value),
-        hideReviewed: state.hideReviewed,
-      };
-    }
-
-    case Actions.PENDING_FILTER_PERFORMER: {
-      const filterFn =
-        action.value && action.value !== "All"
-          ? (value: ListItemValue) =>
-              value.watchlistPerformerNames.includes(action.value)
-          : undefined;
-      return {
-        ...updatePendingFilter(state, "performer", filterFn, action.value),
-        hideReviewed: state.hideReviewed,
-      };
-    }
-
-    case Actions.PENDING_FILTER_RELEASE_YEAR: {
-      return handlePendingFilterReleaseYear(state, action.values, {
+    // Field-specific shared filters
+    case ListWithFiltersActions.PENDING_FILTER_GENRES: {
+      return handleGenreFilterAction(state, action, {
         hideReviewed: state.hideReviewed,
       });
     }
 
-    case Actions.PENDING_FILTER_TITLE: {
-      return handlePendingFilterTitle(state, action.value, {
+    case ListWithFiltersActions.PENDING_FILTER_RELEASE_YEAR: {
+      return handleReleaseYearFilterAction(state, action, {
         hideReviewed: state.hideReviewed,
       });
     }
 
-    case Actions.PENDING_FILTER_WRITER: {
+    case ListWithFiltersActions.PENDING_FILTER_TITLE: {
+      return handleTitleFilterAction(state, action, {
+        hideReviewed: state.hideReviewed,
+      });
+    }
+
+    case WatchlistActions.PENDING_FILTER_COLLECTION: {
+      const typedAction = action;
       const filterFn =
-        action.value && action.value !== "All"
+        typedAction.value && typedAction.value !== "All"
           ? (value: ListItemValue) =>
-              value.watchlistWriterNames.includes(action.value)
+              value.watchlistCollectionNames.includes(typedAction.value)
           : undefined;
       return {
-        ...updatePendingFilter(state, "writer", filterFn, action.value),
+        ...updatePendingFilter(
+          state,
+          "collection",
+          filterFn,
+          typedAction.value,
+        ),
         hideReviewed: state.hideReviewed,
       };
     }
 
-    case Actions.RESET_PENDING_FILTERS: {
+    case WatchlistActions.PENDING_FILTER_DIRECTOR: {
+      const typedAction = action;
+      const filterFn =
+        typedAction.value && typedAction.value !== "All"
+          ? (value: ListItemValue) =>
+              value.watchlistDirectorNames.includes(typedAction.value)
+          : undefined;
       return {
-        ...resetPendingFilters(state),
+        ...updatePendingFilter(state, "director", filterFn, typedAction.value),
         hideReviewed: state.hideReviewed,
       };
     }
 
-    case Actions.SHOW_MORE: {
+    case WatchlistActions.PENDING_FILTER_PERFORMER: {
+      const typedAction = action;
+      const filterFn =
+        typedAction.value && typedAction.value !== "All"
+          ? (value: ListItemValue) =>
+              value.watchlistPerformerNames.includes(typedAction.value)
+          : undefined;
       return {
-        ...showMore(state, SHOW_COUNT_DEFAULT, groupValues),
+        ...updatePendingFilter(state, "performer", filterFn, typedAction.value),
         hideReviewed: state.hideReviewed,
       };
     }
 
-    case Actions.SORT: {
+    case WatchlistActions.PENDING_FILTER_WRITER: {
+      const typedAction = action;
+      const filterFn =
+        typedAction.value && typedAction.value !== "All"
+          ? (value: ListItemValue) =>
+              value.watchlistWriterNames.includes(typedAction.value)
+          : undefined;
       return {
-        ...updateSort(state, action.value, sortValues, groupValues),
+        ...updatePendingFilter(state, "writer", filterFn, typedAction.value),
         hideReviewed: state.hideReviewed,
       };
     }
 
-    // no default
+    default: {
+      // Handle shared list structure actions
+      return handleListWithFiltersAction(
+        state,
+        action,
+        { groupFn: groupValues, sortFn: sortValues },
+        { hideReviewed: state.hideReviewed },
+      );
+    }
   }
 }

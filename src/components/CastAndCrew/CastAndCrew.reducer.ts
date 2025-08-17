@@ -1,18 +1,19 @@
-import type { ListWithFiltersState } from "~/components/ListWithFilters.reducerUtils";
+import type {
+  ListWithFiltersActionType,
+  ListWithFiltersState,
+} from "~/components/ListWithFilters.reducerUtils";
 
 import {
-  applyPendingFilters,
   buildGroupValues,
-  clearPendingFilters,
+  buildSortValues,
   createInitialState,
   getGroupLetter,
-  handlePendingFilterName,
+  handleListWithFiltersAction,
+  handleNameFilterAction,
   ListWithFiltersActions,
-  resetPendingFilters,
-  sortNumber,
-  sortString,
+  sortName,
+  sortReviewCount,
   updatePendingFilter,
-  updateSort,
 } from "~/components/ListWithFilters.reducerUtils";
 
 /**
@@ -20,22 +21,19 @@ import {
  */
 import type { ListItemValue } from "./CastAndCrew";
 
-export enum Actions {
-  APPLY_PENDING_FILTERS = ListWithFiltersActions.APPLY_PENDING_FILTERS,
-  CLEAR_PENDING_FILTERS = ListWithFiltersActions.CLEAR_PENDING_FILTERS,
+enum CastAndCrewActions {
   PENDING_FILTER_CREDIT_KIND = "PENDING_FILTER_CREDIT_KIND",
-  PENDING_FILTER_NAME = "PENDING_FILTER_NAME",
-  RESET_PENDING_FILTERS = ListWithFiltersActions.RESET_PENDING_FILTERS,
-  SORT = ListWithFiltersActions.SORT,
 }
 
+// Re-export shared actions for component convenience
+export const Actions = {
+  ...ListWithFiltersActions,
+  ...CastAndCrewActions,
+} as const;
+
 export type ActionType =
-  | ApplyPendingFiltersAction
-  | ClearPendingFiltersAction
-  | PendingFilterCreditKindAction
-  | PendingFilterNameAction
-  | ResetPendingFiltersAction
-  | SortAction;
+  | ListWithFiltersActionType<Sort>
+  | PendingFilterCreditKindAction;
 
 export type Sort =
   | "name-asc"
@@ -43,31 +41,10 @@ export type Sort =
   | "review-count-asc"
   | "review-count-desc";
 
-type ApplyPendingFiltersAction = {
-  type: Actions.APPLY_PENDING_FILTERS;
-};
-
-type ClearPendingFiltersAction = {
-  type: Actions.CLEAR_PENDING_FILTERS;
-};
-
+// CastAndCrew-specific action
 type PendingFilterCreditKindAction = {
-  type: Actions.PENDING_FILTER_CREDIT_KIND;
+  type: CastAndCrewActions.PENDING_FILTER_CREDIT_KIND;
   value: string;
-};
-
-type PendingFilterNameAction = {
-  type: Actions.PENDING_FILTER_NAME;
-  value: string;
-};
-
-type ResetPendingFiltersAction = {
-  type: Actions.RESET_PENDING_FILTERS;
-};
-
-type SortAction = {
-  type: Actions.SORT;
-  value: Sort;
 };
 
 type State = ListWithFiltersState<ListItemValue, Sort>;
@@ -87,19 +64,10 @@ function groupForValue(item: ListItemValue, sortValue: Sort): string {
   }
 }
 
-function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
-  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
-    {
-      "name-asc": (a, b) => sortString(a.name, b.name),
-      "name-desc": (a, b) => sortString(a.name, b.name) * -1,
-      "review-count-asc": (a, b) => sortNumber(a.reviewCount, b.reviewCount),
-      "review-count-desc": (a, b) =>
-        sortNumber(a.reviewCount, b.reviewCount) * -1,
-    };
-
-  const comparer = sortMap[sortOrder];
-  return [...values].sort(comparer);
-}
+const sortValues = buildSortValues<ListItemValue, Sort>({
+  ...sortName<ListItemValue>(),
+  ...sortReviewCount<ListItemValue>(),
+});
 
 const groupValues = buildGroupValues(groupForValue);
 
@@ -121,34 +89,27 @@ export function initState({
 
 export function reducer(state: State, action: ActionType): State {
   switch (action.type) {
-    case Actions.APPLY_PENDING_FILTERS: {
-      return applyPendingFilters(state, sortValues, groupValues);
-    }
-
-    case Actions.CLEAR_PENDING_FILTERS: {
-      return clearPendingFilters(state);
-    }
-
-    case Actions.PENDING_FILTER_CREDIT_KIND: {
+    case CastAndCrewActions.PENDING_FILTER_CREDIT_KIND: {
+      const typedAction = action;
       const filterFn =
-        action.value && action.value !== "All"
-          ? (value: ListItemValue) => value.creditedAs.includes(action.value)
+        typedAction.value && typedAction.value !== "All"
+          ? (value: ListItemValue) =>
+              value.creditedAs.includes(typedAction.value)
           : undefined;
-      return updatePendingFilter(state, "credits", filterFn, action.value);
+      return updatePendingFilter(state, "credits", filterFn, typedAction.value);
     }
 
-    case Actions.PENDING_FILTER_NAME: {
-      return handlePendingFilterName(state, action.value);
+    // Field-specific shared filter
+    case ListWithFiltersActions.PENDING_FILTER_NAME: {
+      return handleNameFilterAction(state, action);
     }
 
-    case Actions.RESET_PENDING_FILTERS: {
-      return resetPendingFilters(state);
+    default: {
+      // Handle shared actions
+      return handleListWithFiltersAction(state, action, {
+        groupFn: groupValues,
+        sortFn: sortValues,
+      });
     }
-
-    case Actions.SORT: {
-      return updateSort(state, action.value, sortValues, groupValues);
-    }
-
-    // no default
   }
 }
