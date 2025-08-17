@@ -12,7 +12,8 @@ import {
   handleReleaseYearFilterAction,
   handleTitleFilterAction,
   ListWithFiltersActions,
-  sortString,
+  sortReleaseDate,
+  sortTitle,
   updatePendingFilter,
 } from "~/components/ListWithFilters.reducerUtils";
 
@@ -90,12 +91,8 @@ function groupForValue(value: ListItemValue, sortValue: Sort): string {
 function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
   const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
     {
-      "release-date-asc": (a, b) =>
-        sortString(a.releaseSequence, b.releaseSequence),
-      "release-date-desc": (a, b) =>
-        sortString(a.releaseSequence, b.releaseSequence) * -1,
-      "title-asc": (a, b) => sortString(a.sortTitle, b.sortTitle),
-      "title-desc": (a, b) => sortString(a.sortTitle, b.sortTitle) * -1,
+      ...sortReleaseDate<ListItemValue>(),
+      ...sortTitle<ListItemValue>(),
     };
 
   const comparer = sortMap[sortOrder];

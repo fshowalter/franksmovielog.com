@@ -9,8 +9,8 @@ import {
   getGroupLetter,
   handleListWithFiltersAction,
   ListWithFiltersActions,
-  sortNumber,
-  sortString,
+  sortName,
+  sortReviewCount,
   updatePendingFilter,
 } from "~/components/ListWithFilters.reducerUtils";
 
@@ -65,11 +65,8 @@ function groupForValue(item: ListItemValue, sortValue: Sort): string {
 function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
   const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
     {
-      "name-asc": (a, b) => sortString(a.name, b.name),
-      "name-desc": (a, b) => sortString(a.name, b.name) * -1,
-      "review-count-asc": (a, b) => sortNumber(a.reviewCount, b.reviewCount),
-      "review-count-desc": (a, b) =>
-        sortNumber(a.reviewCount, b.reviewCount) * -1,
+      ...sortName<ListItemValue>(),
+      ...sortReviewCount<ListItemValue>(),
     };
 
   const comparer = sortMap[sortOrder];

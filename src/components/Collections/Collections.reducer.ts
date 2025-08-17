@@ -8,8 +8,9 @@ import {
   handleListWithFiltersAction,
   handleNameFilterAction,
   ListWithFiltersActions,
+  sortName,
   sortNumber,
-  sortString,
+  sortReviewCount,
 } from "~/components/ListWithFilters.reducerUtils";
 
 import type { ListItemValue } from "./Collections";
@@ -62,11 +63,8 @@ export function reducer(state: State, action: ActionType): State {
 function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
   const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
     {
-      "name-asc": (a, b) => sortString(a.name, b.name),
-      "name-desc": (a, b) => sortString(a.name, b.name) * -1,
-      "review-count-asc": (a, b) => sortNumber(a.reviewCount, b.reviewCount),
-      "review-count-desc": (a, b) =>
-        sortNumber(a.reviewCount, b.reviewCount) * -1,
+      ...sortName<ListItemValue>(),
+      ...sortReviewCount<ListItemValue>(),
       "title-count-asc": (a, b) => sortNumber(a.titleCount, b.titleCount),
       "title-count-desc": (a, b) => sortNumber(a.titleCount, b.titleCount) * -1,
     };

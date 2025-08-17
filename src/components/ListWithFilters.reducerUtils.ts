@@ -435,12 +435,62 @@ export function handleToggleReviewedAction<
   };
 }
 
+export function sortGrade<T extends { gradeValue?: null | number }>() {
+  return {
+    "grade-asc": (a: T, b: T) =>
+      sortNumber(a.gradeValue || 0, b.gradeValue || 0),
+    "grade-desc": (a: T, b: T) =>
+      sortNumber(a.gradeValue || 0, b.gradeValue || 0) * -1,
+  };
+}
+
+export function sortName<T extends { name: string }>() {
+  return {
+    "name-asc": (a: T, b: T) => sortString(a.name, b.name),
+    "name-desc": (a: T, b: T) => sortString(a.name, b.name) * -1,
+  };
+}
+
 export function sortNumber(a: number, b: number): number {
   return a - b;
 }
 
-export function sortString(a: string, b: string): number {
+export function sortReleaseDate<T extends { releaseSequence: string }>() {
+  return {
+    "release-date-asc": (a: T, b: T) =>
+      sortString(a.releaseSequence, b.releaseSequence),
+    "release-date-desc": (a: T, b: T) =>
+      sortString(a.releaseSequence, b.releaseSequence) * -1,
+  };
+}
+
+export function sortReviewCount<T extends { reviewCount: number }>() {
+  return {
+    "review-count-asc": (a: T, b: T) =>
+      sortNumber(a.reviewCount, b.reviewCount),
+    "review-count-desc": (a: T, b: T) =>
+      sortNumber(a.reviewCount, b.reviewCount) * -1,
+  };
+}
+
+export function sortReviewDate<T extends { reviewSequence?: null | string }>() {
+  return {
+    "review-date-asc": (a: T, b: T) =>
+      sortString(a.reviewSequence || "", b.reviewSequence || ""),
+    "review-date-desc": (a: T, b: T) =>
+      sortString(a.reviewSequence || "", b.reviewSequence || "") * -1,
+  };
+}
+
+function sortString(a: string, b: string): number {
   return collator.compare(a, b);
+}
+
+export function sortTitle<T extends { sortTitle: string }>() {
+  return {
+    "title-asc": (a: T, b: T) => sortString(a.sortTitle, b.sortTitle),
+    "title-desc": (a: T, b: T) => sortString(a.sortTitle, b.sortTitle) * -1,
+  };
 }
 
 /**

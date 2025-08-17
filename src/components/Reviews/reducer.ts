@@ -17,8 +17,10 @@ import {
   handleReviewYearFilterAction,
   handleTitleFilterAction,
   ListWithFiltersActions,
-  sortNumber,
-  sortString,
+  sortGrade,
+  sortReleaseDate,
+  sortReviewDate,
+  sortTitle,
   updatePendingFilter,
 } from "~/components/ListWithFilters.reducerUtils";
 
@@ -97,17 +99,10 @@ function sortValues(
     ReviewsSort,
     (a: ReviewsListItemValue, b: ReviewsListItemValue) => number
   > = {
-    "grade-asc": (a, b) => sortNumber(a.gradeValue, b.gradeValue),
-    "grade-desc": (a, b) => sortNumber(a.gradeValue, b.gradeValue) * -1,
-    "release-date-asc": (a, b) =>
-      sortString(a.releaseSequence, b.releaseSequence),
-    "release-date-desc": (a, b) =>
-      sortString(a.releaseSequence, b.releaseSequence) * -1,
-    "review-date-asc": (a, b) => sortString(a.reviewSequence, b.reviewSequence),
-    "review-date-desc": (a, b) =>
-      sortString(a.reviewSequence, b.reviewSequence) * -1,
-    "title-asc": (a, b) => sortString(a.sortTitle, b.sortTitle),
-    "title-desc": (a, b) => sortString(a.sortTitle, b.sortTitle) * -1,
+    ...sortGrade<ReviewsListItemValue>(),
+    ...sortReleaseDate<ReviewsListItemValue>(),
+    ...sortReviewDate<ReviewsListItemValue>(),
+    ...sortTitle<ReviewsListItemValue>(),
   };
 
   const comparer = sortMap[sortOrder];
