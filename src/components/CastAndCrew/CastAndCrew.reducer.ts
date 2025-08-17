@@ -5,9 +5,11 @@ import type {
 
 import {
   buildGroupValues,
+  buildSortValues,
   createInitialState,
   getGroupLetter,
   handleListWithFiltersAction,
+  handleNameFilterAction,
   ListWithFiltersActions,
   sortName,
   sortReviewCount,
@@ -62,16 +64,10 @@ function groupForValue(item: ListItemValue, sortValue: Sort): string {
   }
 }
 
-function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
-  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
-    {
-      ...sortName<ListItemValue>(),
-      ...sortReviewCount<ListItemValue>(),
-    };
-
-  const comparer = sortMap[sortOrder];
-  return [...values].sort(comparer);
-}
+const sortValues = buildSortValues<ListItemValue, Sort>({
+  ...sortName<ListItemValue>(),
+  ...sortReviewCount<ListItemValue>(),
+});
 
 const groupValues = buildGroupValues(groupForValue);
 
@@ -101,6 +97,11 @@ export function reducer(state: State, action: ActionType): State {
               value.creditedAs.includes(typedAction.value)
           : undefined;
       return updatePendingFilter(state, "credits", filterFn, typedAction.value);
+    }
+
+    // Field-specific shared filter
+    case ListWithFiltersActions.PENDING_FILTER_NAME: {
+      return handleNameFilterAction(state, action);
     }
 
     default: {

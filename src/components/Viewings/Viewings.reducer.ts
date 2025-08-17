@@ -5,6 +5,7 @@ import type {
 
 import {
   buildGroupValues,
+  buildSortValues,
   createInitialState,
   handleListWithFiltersAction,
   handleReleaseYearFilterAction,
@@ -381,13 +382,7 @@ function getPrevMonthWithViewings(
   return undefined;
 }
 
-function sortValues(values: ListItemValue[], sortOrder: Sort) {
-  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
-    {
-      "viewing-date-asc": (a, b) => a.viewingSequence - b.viewingSequence,
-      "viewing-date-desc": (a, b) => b.viewingSequence - a.viewingSequence,
-    };
-
-  const comparer = sortMap[sortOrder];
-  return [...values].sort(comparer); // Create a copy before sorting
-}
+const sortValues = buildSortValues<ListItemValue, Sort>({
+  "viewing-date-asc": (a, b) => a.viewingSequence - b.viewingSequence,
+  "viewing-date-desc": (a, b) => b.viewingSequence - a.viewingSequence,
+});

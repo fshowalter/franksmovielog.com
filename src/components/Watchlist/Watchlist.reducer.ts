@@ -5,6 +5,7 @@ import type {
 
 import {
   buildGroupValues,
+  buildSortValues,
   createInitialState,
   getGroupLetter,
   handleGenreFilterAction,
@@ -88,16 +89,10 @@ function groupForValue(value: ListItemValue, sortValue: Sort): string {
   }
 }
 
-function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
-  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
-    {
-      ...sortReleaseDate<ListItemValue>(),
-      ...sortTitle<ListItemValue>(),
-    };
-
-  const comparer = sortMap[sortOrder];
-  return [...values].sort(comparer);
-}
+const sortValues = buildSortValues<ListItemValue, Sort>({
+  ...sortReleaseDate<ListItemValue>(),
+  ...sortTitle<ListItemValue>(),
+});
 
 const groupValues = buildGroupValues(groupForValue);
 

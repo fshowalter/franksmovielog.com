@@ -9,6 +9,7 @@ import type { ReviewsListItemValue } from "~/components/Reviews/ReviewsListItem"
 
 import {
   buildGroupValues,
+  buildSortValues,
   createInitialState,
   getGroupLetter,
   handleGenreFilterAction,
@@ -91,23 +92,12 @@ function groupForValue(
   }
 }
 
-function sortValues(
-  values: ReviewsListItemValue[],
-  sortOrder: ReviewsSort,
-): ReviewsListItemValue[] {
-  const sortMap: Record<
-    ReviewsSort,
-    (a: ReviewsListItemValue, b: ReviewsListItemValue) => number
-  > = {
-    ...sortGrade<ReviewsListItemValue>(),
-    ...sortReleaseDate<ReviewsListItemValue>(),
-    ...sortReviewDate<ReviewsListItemValue>(),
-    ...sortTitle<ReviewsListItemValue>(),
-  };
-
-  const comparer = sortMap[sortOrder];
-  return [...values].sort(comparer);
-}
+const sortValues = buildSortValues<ReviewsListItemValue, ReviewsSort>({
+  ...sortGrade<ReviewsListItemValue>(),
+  ...sortReleaseDate<ReviewsListItemValue>(),
+  ...sortReviewDate<ReviewsListItemValue>(),
+  ...sortTitle<ReviewsListItemValue>(),
+});
 
 // Create groupValues function using buildGroupValues
 const groupValues = buildGroupValues(groupForValue);

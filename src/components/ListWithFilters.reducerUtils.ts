@@ -143,6 +143,15 @@ export function buildGroupValues<TItem, TSortValue>(
   };
 }
 
+export function buildSortValues<V, S extends string>(
+  sortMap: Record<S, (a: V, b: V) => number>,
+) {
+  return (values: V[], sortOrder: S): V[] => {
+    const comparer = sortMap[sortOrder];
+    return [...values].sort(comparer);
+  };
+}
+
 /**
  * Helper to create initial state with pending filters support
  */
@@ -482,10 +491,6 @@ export function sortReviewDate<T extends { reviewSequence?: null | string }>() {
   };
 }
 
-function sortString(a: string, b: string): number {
-  return collator.compare(a, b);
-}
-
 export function sortTitle<T extends { sortTitle: string }>() {
   return {
     "title-asc": (a: T, b: T) => sortString(a.sortTitle, b.sortTitle),
@@ -617,10 +622,6 @@ function createTitleFilter(value: string | undefined) {
   return <T extends { title: string }>(item: T) => regex.test(item.title);
 }
 
-/**
- * Handler functions that combine filter creation and state updates
- */
-
 // Filter values helper
 function filterValues<TItem>({
   filters,
@@ -635,6 +636,10 @@ function filterValues<TItem>({
     });
   });
 }
+
+/**
+ * Handler functions that combine filter creation and state updates
+ */
 
 /**
  * Reset pending filters to current active filters
@@ -677,6 +682,10 @@ function showMore<TItem, TSortValue>(
     groupedValues,
     showCount,
   };
+}
+
+function sortString(a: string, b: string): number {
+  return collator.compare(a, b);
 }
 
 /**
