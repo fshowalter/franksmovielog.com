@@ -1,15 +1,21 @@
+import {
+  clearPendingFilters as baseClearPendingFilters,
+  applyPendingFilters as basePendingFilters,
+  resetPendingFilters as baseResetPendingFilters,
+  updateSort as baseUpdateSort,
+  buildGroupValues,
+  createInitialState,
+  type PendingFiltersState,
+  updatePendingFilter,
+} from "~/utils/pendingFilters";
+import { createTitleFilter } from "~/utils/reducerUtils";
+
 import type { ListItemValue } from "./Viewings";
 
 export enum Actions {
   APPLY_PENDING_FILTERS = "APPLY_PENDING_FILTERS",
   CLEAR_PENDING_FILTERS = "CLEAR_PENDING_FILTERS",
-  FILTER_MEDIUM = "FILTER_MEDIUM",
-  FILTER_RELEASE_YEAR = "FILTER_RELEASE_YEAR",
-  FILTER_TITLE = "FILTER_TITLE",
-  FILTER_VENUE = "FILTER_VENUE",
-  FILTER_VIEWING_YEAR = "FILTER_VIEWING_YEAR",
   NEXT_MONTH = "NEXT_MONTH",
-  // New actions for pending filters
   PENDING_FILTER_MEDIUM = "PENDING_FILTER_MEDIUM",
   PENDING_FILTER_RELEASE_YEAR = "PENDING_FILTER_RELEASE_YEAR",
   PENDING_FILTER_TITLE = "PENDING_FILTER_TITLE",
@@ -23,11 +29,6 @@ export enum Actions {
 export type ActionType =
   | ApplyPendingFiltersAction
   | ClearPendingFiltersAction
-  | FilterMediumAction
-  | FilterReleaseYearAction
-  | FilterTitleAction
-  | FilterVenueAction
-  | FilterViewingYearAction
   | NextMonthAction
   | PendingFilterMediumAction
   | PendingFilterReleaseYearAction
@@ -46,31 +47,6 @@ type ApplyPendingFiltersAction = {
 
 type ClearPendingFiltersAction = {
   type: Actions.CLEAR_PENDING_FILTERS;
-};
-
-type FilterMediumAction = {
-  type: Actions.FILTER_MEDIUM;
-  values: string[];
-};
-
-type FilterReleaseYearAction = {
-  type: Actions.FILTER_RELEASE_YEAR;
-  values: string[];
-};
-
-type FilterTitleAction = {
-  type: Actions.FILTER_TITLE;
-  value: string;
-};
-
-type FilterVenueAction = {
-  type: Actions.FILTER_VENUE;
-  values: string[];
-};
-
-type FilterViewingYearAction = {
-  type: Actions.FILTER_VIEWING_YEAR;
-  values: string[];
 };
 
 type NextMonthAction = {
@@ -115,31 +91,16 @@ type SortAction = {
   value: Sort;
 };
 
-type State = {
-  allValues: ListItemValue[];
+// AIDEV-NOTE: Viewings state extends PendingFiltersState with month navigation
+type State = PendingFiltersState<ListItemValue, Sort> & {
   currentMonth: Date;
-  filteredValues: ListItemValue[];
-  filters: {
-    media: string[];
-    releaseYears: string[];
-    title: string;
-    venues: string[];
-    viewingYears: string[];
-  };
   hasNextMonth: boolean;
   hasPrevMonth: boolean;
   monthViewings: ListItemValue[];
-  pendingFilteredCount: number; // Count of results with pending filters
-  // AIDEV-NOTE: Pending filters store the user's selections before applying
-  pendingFilters: {
-    media: string[];
-    releaseYears: string[];
-    title: string;
-    venues: string[];
-    viewingYears: string[];
-  };
-  sortValue: Sort;
 };
+
+// AIDEV-NOTE: Viewings don't use grouping, so we use a simple no-op group function
+const groupValues = buildGroupValues<ListItemValue, Sort>(() => "all");
 
 export function initState({
   initialSort,
@@ -148,176 +109,43 @@ export function initState({
   initialSort: Sort;
   values: ListItemValue[];
 }): State {
-  const sortedValues = sortValues(values, initialSort);
-  const currentMonth = getInitialMonth(sortedValues, initialSort);
-  const monthViewings = getMonthViewings(sortedValues, currentMonth);
-  const initialFilters = {
-    media: [],
-    releaseYears: [],
-    title: "",
-    venues: [],
-    viewingYears: [],
-  };
+  const baseState = createInitialState({
+    groupFn: groupValues,
+    initialSort,
+    showCount: Number.MAX_SAFE_INTEGER, // Viewings don't paginate
+    sortFn: sortValues,
+    values,
+  });
+
+  const currentMonth = getInitialMonth(baseState.filteredValues, initialSort);
+  const monthViewings = getMonthViewings(
+    baseState.filteredValues,
+    currentMonth,
+  );
 
   return {
-    allValues: values, // Keep original unsorted values
+    ...baseState,
     currentMonth,
-    filteredValues: sortedValues,
-    filters: initialFilters,
     hasNextMonth:
-      getNextMonthWithViewings(currentMonth, sortedValues) !== undefined,
+      getNextMonthWithViewings(currentMonth, baseState.filteredValues) !==
+      undefined,
     hasPrevMonth:
-      getPrevMonthWithViewings(currentMonth, sortedValues) !== undefined,
+      getPrevMonthWithViewings(currentMonth, baseState.filteredValues) !==
+      undefined,
     monthViewings,
-    pendingFilteredCount: sortedValues.length,
-    pendingFilters: { ...initialFilters },
-    sortValue: initialSort,
   };
 }
 
 export function reducer(state: State, action: ActionType): State {
-  let filters;
-  let filteredValues;
   let newMonth;
-  let oldestMonth;
-  let mostRecentMonth;
 
   switch (action.type) {
     case Actions.APPLY_PENDING_FILTERS: {
-      // Apply pending filters to actual filters
-      filteredValues = filterValues(state.allValues, state.pendingFilters);
-      filteredValues = sortValues(filteredValues, state.sortValue);
-      newMonth = getInitialMonth(filteredValues, state.sortValue);
-      return {
-        ...state,
-        currentMonth: newMonth,
-        filteredValues,
-        filters: { ...state.pendingFilters },
-        hasNextMonth:
-          getNextMonthWithViewings(newMonth, filteredValues) !== undefined,
-        hasPrevMonth:
-          getPrevMonthWithViewings(newMonth, filteredValues) !== undefined,
-        monthViewings: getMonthViewings(filteredValues, newMonth),
-      };
+      return applyPendingFilters(state);
     }
+
     case Actions.CLEAR_PENDING_FILTERS: {
-      // Clear all pending filters to empty/default values
-      const clearedFilters = {
-        media: [],
-        releaseYears: [],
-        title: "",
-        venues: [],
-        viewingYears: [],
-      };
-      const pendingFilteredValues = filterValues(
-        state.allValues,
-        clearedFilters,
-      );
-      return {
-        ...state,
-        pendingFilteredCount: pendingFilteredValues.length,
-        pendingFilters: clearedFilters,
-      };
-    }
-    case Actions.FILTER_MEDIUM: {
-      filters = {
-        ...state.filters,
-        media: action.values,
-      };
-      filteredValues = filterValues(state.allValues, filters);
-      filteredValues = sortValues(filteredValues, state.sortValue);
-      newMonth = getInitialMonth(filteredValues, state.sortValue);
-      return {
-        ...state,
-        currentMonth: newMonth,
-        filteredValues,
-        filters,
-        hasNextMonth:
-          getNextMonthWithViewings(newMonth, filteredValues) !== undefined,
-        hasPrevMonth:
-          getPrevMonthWithViewings(newMonth, filteredValues) !== undefined,
-        monthViewings: getMonthViewings(filteredValues, newMonth),
-      };
-    }
-    case Actions.FILTER_RELEASE_YEAR: {
-      filters = {
-        ...state.filters,
-        releaseYears: action.values,
-      };
-      filteredValues = filterValues(state.allValues, filters);
-      filteredValues = sortValues(filteredValues, state.sortValue);
-      newMonth = getInitialMonth(filteredValues, state.sortValue);
-      return {
-        ...state,
-        currentMonth: newMonth,
-        filteredValues,
-        filters,
-        hasNextMonth:
-          getNextMonthWithViewings(newMonth, filteredValues) !== undefined,
-        hasPrevMonth:
-          getPrevMonthWithViewings(newMonth, filteredValues) !== undefined,
-        monthViewings: getMonthViewings(filteredValues, newMonth),
-      };
-    }
-    case Actions.FILTER_TITLE: {
-      filters = {
-        ...state.filters,
-        title: action.value,
-      };
-      filteredValues = filterValues(state.allValues, filters);
-      filteredValues = sortValues(filteredValues, state.sortValue);
-      newMonth = getInitialMonth(filteredValues, state.sortValue);
-      return {
-        ...state,
-        currentMonth: newMonth,
-        filteredValues,
-        filters,
-        hasNextMonth:
-          getNextMonthWithViewings(newMonth, filteredValues) !== undefined,
-        hasPrevMonth:
-          getPrevMonthWithViewings(newMonth, filteredValues) !== undefined,
-        monthViewings: getMonthViewings(filteredValues, newMonth),
-      };
-    }
-    case Actions.FILTER_VENUE: {
-      filters = {
-        ...state.filters,
-        venues: action.values,
-      };
-      filteredValues = filterValues(state.allValues, filters);
-      filteredValues = sortValues(filteredValues, state.sortValue);
-      newMonth = getInitialMonth(filteredValues, state.sortValue);
-      return {
-        ...state,
-        currentMonth: newMonth,
-        filteredValues,
-        filters,
-        hasNextMonth:
-          getNextMonthWithViewings(newMonth, filteredValues) !== undefined,
-        hasPrevMonth:
-          getPrevMonthWithViewings(newMonth, filteredValues) !== undefined,
-        monthViewings: getMonthViewings(filteredValues, newMonth),
-      };
-    }
-    case Actions.FILTER_VIEWING_YEAR: {
-      filters = {
-        ...state.filters,
-        viewingYears: action.values,
-      };
-      filteredValues = filterValues(state.allValues, filters);
-      filteredValues = sortValues(filteredValues, state.sortValue);
-      newMonth = getInitialMonth(filteredValues, state.sortValue);
-      return {
-        ...state,
-        currentMonth: newMonth,
-        filteredValues,
-        filters,
-        hasNextMonth:
-          getNextMonthWithViewings(newMonth, filteredValues) !== undefined,
-        hasPrevMonth:
-          getPrevMonthWithViewings(newMonth, filteredValues) !== undefined,
-        monthViewings: getMonthViewings(filteredValues, newMonth),
-      };
+      return clearPendingFilters(state);
     }
     case Actions.NEXT_MONTH: {
       newMonth = getNextMonthWithViewings(
@@ -339,80 +167,75 @@ export function reducer(state: State, action: ActionType): State {
         monthViewings: getMonthViewings(state.filteredValues, newMonth),
       };
     }
-    // AIDEV-NOTE: Pending filter actions only update pendingFilters and count
+
     case Actions.PENDING_FILTER_MEDIUM: {
-      const newPendingFilters = {
-        ...state.pendingFilters,
-        media: action.values,
-      };
-      const pendingFilteredValues = filterValues(
-        state.allValues,
-        newPendingFilters,
-      );
+      const filterFn =
+        action.values.length > 0
+          ? (value: ListItemValue) =>
+              value.medium ? action.values.includes(value.medium) : false
+          : undefined;
       return {
-        ...state,
-        pendingFilteredCount: pendingFilteredValues.length,
-        pendingFilters: newPendingFilters,
+        ...updatePendingFilter(state, "media", filterFn, action.values),
+        currentMonth: state.currentMonth,
+        hasNextMonth: state.hasNextMonth,
+        hasPrevMonth: state.hasPrevMonth,
+        monthViewings: state.monthViewings,
       };
     }
+
     case Actions.PENDING_FILTER_RELEASE_YEAR: {
-      const newPendingFilters = {
-        ...state.pendingFilters,
-        releaseYears: action.values,
-      };
-      const pendingFilteredValues = filterValues(
-        state.allValues,
-        newPendingFilters,
-      );
+      const filterFn =
+        action.values.length > 0
+          ? (value: ListItemValue) => action.values.includes(value.releaseYear)
+          : undefined;
       return {
-        ...state,
-        pendingFilteredCount: pendingFilteredValues.length,
-        pendingFilters: newPendingFilters,
+        ...updatePendingFilter(state, "releaseYears", filterFn, action.values),
+        currentMonth: state.currentMonth,
+        hasNextMonth: state.hasNextMonth,
+        hasPrevMonth: state.hasPrevMonth,
+        monthViewings: state.monthViewings,
       };
     }
+
     case Actions.PENDING_FILTER_TITLE: {
-      const newPendingFilters = {
-        ...state.pendingFilters,
-        title: action.value,
-      };
-      const pendingFilteredValues = filterValues(
-        state.allValues,
-        newPendingFilters,
-      );
+      const filterFn = action.value
+        ? createTitleFilter(action.value)
+        : undefined;
       return {
-        ...state,
-        pendingFilteredCount: pendingFilteredValues.length,
-        pendingFilters: newPendingFilters,
+        ...updatePendingFilter(state, "title", filterFn, action.value),
+        currentMonth: state.currentMonth,
+        hasNextMonth: state.hasNextMonth,
+        hasPrevMonth: state.hasPrevMonth,
+        monthViewings: state.monthViewings,
       };
     }
+
     case Actions.PENDING_FILTER_VENUE: {
-      const newPendingFilters = {
-        ...state.pendingFilters,
-        venues: action.values,
-      };
-      const pendingFilteredValues = filterValues(
-        state.allValues,
-        newPendingFilters,
-      );
+      const filterFn =
+        action.values.length > 0
+          ? (value: ListItemValue) =>
+              value.venue ? action.values.includes(value.venue) : false
+          : undefined;
       return {
-        ...state,
-        pendingFilteredCount: pendingFilteredValues.length,
-        pendingFilters: newPendingFilters,
+        ...updatePendingFilter(state, "venues", filterFn, action.values),
+        currentMonth: state.currentMonth,
+        hasNextMonth: state.hasNextMonth,
+        hasPrevMonth: state.hasPrevMonth,
+        monthViewings: state.monthViewings,
       };
     }
+
     case Actions.PENDING_FILTER_VIEWING_YEAR: {
-      const newPendingFilters = {
-        ...state.pendingFilters,
-        viewingYears: action.values,
-      };
-      const pendingFilteredValues = filterValues(
-        state.allValues,
-        newPendingFilters,
-      );
+      const filterFn =
+        action.values.length > 0
+          ? (value: ListItemValue) => action.values.includes(value.viewingYear)
+          : undefined;
       return {
-        ...state,
-        pendingFilteredCount: pendingFilteredValues.length,
-        pendingFilters: newPendingFilters,
+        ...updatePendingFilter(state, "viewingYears", filterFn, action.values),
+        currentMonth: state.currentMonth,
+        hasNextMonth: state.hasNextMonth,
+        hasPrevMonth: state.hasPrevMonth,
+        monthViewings: state.monthViewings,
       };
     }
     case Actions.PREV_MONTH: {
@@ -436,89 +259,47 @@ export function reducer(state: State, action: ActionType): State {
       };
     }
     case Actions.RESET_PENDING_FILTERS: {
-      // Reset pending filters to current applied filters
-      const pendingFilteredValues = filterValues(
-        state.allValues,
-        state.filters,
-      );
-      return {
-        ...state,
-        pendingFilteredCount: pendingFilteredValues.length,
-        pendingFilters: { ...state.filters },
-      };
+      return resetPendingFilters(state);
     }
+
     case Actions.SORT: {
-      // First filter, then sort
-      filteredValues = filterValues(state.allValues, state.filters);
-      filteredValues = sortValues(filteredValues, action.value);
-
-      // Determine which month to show based on sort order
-      newMonth =
-        action.value === "viewing-date-asc"
-          ? getOldestMonth(filteredValues) // For ascending sort, go to oldest month
-          : getMostRecentMonth(filteredValues); // For descending sort, go to most recent month
-
-      mostRecentMonth = getMostRecentMonth(filteredValues);
-      oldestMonth = getOldestMonth(filteredValues);
-
-      return {
-        ...state,
-        currentMonth: newMonth,
-        filteredValues,
-        hasNextMonth: newMonth < mostRecentMonth,
-        hasPrevMonth: newMonth > oldestMonth,
-        monthViewings: getMonthViewings(filteredValues, newMonth),
-        sortValue: action.value,
-      };
+      return updateSort(state, action.value);
     }
-    default: {
-      return state;
-    }
+
+    // no default
   }
 }
 
-function filterValues(
-  values: ListItemValue[],
-  filters: State["filters"],
-): ListItemValue[] {
-  return values.filter((value) => {
-    if (
-      filters.releaseYears.length > 0 &&
-      !filters.releaseYears.includes(value.releaseYear)
-    ) {
-      return false;
-    }
+// Helper function to apply pending filters with month updates
+function applyPendingFilters(state: State): State {
+  const updatedState = basePendingFilters(state, sortValues, groupValues);
+  const newMonth = getInitialMonth(
+    updatedState.filteredValues,
+    state.sortValue,
+  );
 
-    if (
-      filters.viewingYears.length > 0 &&
-      !filters.viewingYears.includes(value.viewingYear)
-    ) {
-      return false;
-    }
+  return {
+    ...updatedState,
+    currentMonth: newMonth,
+    hasNextMonth:
+      getNextMonthWithViewings(newMonth, updatedState.filteredValues) !==
+      undefined,
+    hasPrevMonth:
+      getPrevMonthWithViewings(newMonth, updatedState.filteredValues) !==
+      undefined,
+    monthViewings: getMonthViewings(updatedState.filteredValues, newMonth),
+  };
+}
 
-    if (
-      filters.media.length > 0 &&
-      (!value.medium || !filters.media.includes(value.medium))
-    ) {
-      return false;
-    }
-
-    if (
-      filters.venues.length > 0 &&
-      (!value.venue || !filters.venues.includes(value.venue))
-    ) {
-      return false;
-    }
-
-    if (
-      filters.title &&
-      !value.title.toLowerCase().includes(filters.title.toLowerCase())
-    ) {
-      return false;
-    }
-
-    return true;
-  });
+// Helper function to clear pending filters
+function clearPendingFilters(state: State): State {
+  return {
+    ...baseClearPendingFilters(state),
+    currentMonth: state.currentMonth,
+    hasNextMonth: state.hasNextMonth,
+    hasPrevMonth: state.hasPrevMonth,
+    monthViewings: state.monthViewings,
+  };
 }
 
 // Determine initial month based on sort order
@@ -639,6 +420,17 @@ function getPrevMonthWithViewings(
   return undefined;
 }
 
+// Helper function to reset pending filters
+function resetPendingFilters(state: State): State {
+  return {
+    ...baseResetPendingFilters(state),
+    currentMonth: state.currentMonth,
+    hasNextMonth: state.hasNextMonth,
+    hasPrevMonth: state.hasPrevMonth,
+    monthViewings: state.monthViewings,
+  };
+}
+
 function sortValues(values: ListItemValue[], sortOrder: Sort) {
   const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
     {
@@ -648,4 +440,28 @@ function sortValues(values: ListItemValue[], sortOrder: Sort) {
 
   const comparer = sortMap[sortOrder];
   return [...values].sort(comparer); // Create a copy before sorting
+}
+
+// Helper function to update sort with month updates
+function updateSort(state: State, sortValue: Sort): State {
+  const updatedState = baseUpdateSort(
+    state,
+    sortValue,
+    sortValues,
+    groupValues,
+  );
+  const newMonth =
+    sortValue === "viewing-date-asc"
+      ? getOldestMonth(updatedState.filteredValues)
+      : getMostRecentMonth(updatedState.filteredValues);
+  const mostRecentMonth = getMostRecentMonth(updatedState.filteredValues);
+  const oldestMonth = getOldestMonth(updatedState.filteredValues);
+
+  return {
+    ...updatedState,
+    currentMonth: newMonth,
+    hasNextMonth: newMonth < mostRecentMonth,
+    hasPrevMonth: newMonth > oldestMonth,
+    monthViewings: getMonthViewings(updatedState.filteredValues, newMonth),
+  };
 }
