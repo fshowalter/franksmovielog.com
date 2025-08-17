@@ -16,6 +16,10 @@ const DESKTOP_FOOTER_BUFFER = 20;
 const MIN_FALLBACK_HEIGHT = 80;
 const SCROLL_DELAY_MS = 50;
 
+// CSS selectors and breakpoints
+const STICKY_FOOTER_SELECTOR = ".z-filter-footer";
+const TABLET_LANDSCAPE_BREAKPOINT = 1024; // Matches Tailwind's tablet-landscape breakpoint
+
 // Helper to find the nearest scrollable container
 const findScrollableContainer = (
   element: HTMLElement | null,
@@ -52,7 +56,9 @@ const calculateAvailableSpace = (
     effectiveSpaceAbove = buttonRect.top - containerRect.top;
 
     // Check for sticky footer within container
-    const stickyFooter = scrollableContainer.querySelector(".z-filter-footer");
+    const stickyFooter = scrollableContainer.querySelector(
+      STICKY_FOOTER_SELECTOR,
+    );
     if (stickyFooter) {
       const footerRect = stickyFooter.getBoundingClientRect();
       // If footer is visible, subtract its height from space below
@@ -176,7 +182,7 @@ export function MultiSelectField({
     // On desktop, scroll to keep control in view if removing items might cause layout shift
     if (
       globalThis.window !== undefined &&
-      window.innerWidth >= 1024 &&
+      window.innerWidth >= TABLET_LANDSCAPE_BREAKPOINT &&
       buttonRef.current
     ) {
       const timeoutId = setTimeout(() => {
@@ -198,7 +204,7 @@ export function MultiSelectField({
     // On desktop, scroll to keep control in view after clearing
     if (
       globalThis.window !== undefined &&
-      window.innerWidth >= 1024 &&
+      window.innerWidth >= TABLET_LANDSCAPE_BREAKPOINT &&
       buttonRef.current
     ) {
       const timeoutId = setTimeout(() => {
@@ -288,11 +294,14 @@ export function MultiSelectField({
   // Calculate available space and position when dropdown opens
   // AIDEV-NOTE: Dropdown positioning logic - opens upward when insufficient space below
   // Handles both viewport boundaries and scrollable container boundaries
+  // The isMobileDrawer variable is needed because mobile drawers have different footer
+  // buffer requirements (100px vs 20px) to account for sticky footer elements that
+  // behave differently on mobile vs desktop layouts
   const calculateDropdownPositionAndHeight = () => {
     if (!buttonRef.current) return;
 
     const buttonRect = buttonRef.current.getBoundingClientRect();
-    const isMobileDrawer = window.innerWidth < 1024;
+    const isMobileDrawer = window.innerWidth < TABLET_LANDSCAPE_BREAKPOINT;
     const scrollableContainer = findScrollableContainer(buttonRef.current);
 
     const { effectiveSpaceAbove, effectiveSpaceBelow } =
