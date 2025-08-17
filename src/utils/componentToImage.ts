@@ -1,4 +1,4 @@
-import type { JSX } from "react";
+import type { JSX, ReactElement } from "react";
 import type { Font } from "satori";
 
 import fs from "node:fs/promises";
@@ -12,12 +12,20 @@ import {
   getCachedItem,
   saveCachedItem,
 } from "./cache";
-import { serializeJsx } from "./serializeJsx";
 
 const cacheConfig = createCacheConfig("og-images");
 
 // Font data cache to avoid reading fonts multiple times
 let fontDataCache: Font[] | undefined;
+
+type ReactElementWithType = ReactElement & {
+  $$typeof?: symbol;
+  props?: {
+    [key: string]: unknown;
+    children?: unknown;
+  };
+  type: ((props: unknown) => JSX.Element) | string;
+};
 
 export async function componentToImage(
   component: JSX.Element,
@@ -112,4 +120,64 @@ async function getFontData() {
   ];
 
   return fontDataCache;
+}
+
+/**
+ * Serialize a JSX element to a stable string representation for hashing.
+ * Simplified for OG image generation use case.
+ * AIDEV-NOTE: This function is only used for OG image caching and handles
+ * the specific JSX structures used in OG images (HTML elements, strings, arrays).
+ */
+function serializeJsx(element: JSX.Element): string {
+  // Handle primitive values (strings, numbers, booleans)
+  if (
+    typeof element !== "object" ||
+    element === null ||
+    element === undefined
+  ) {
+    return JSON.stringify(element);
+  }
+
+  // Handle arrays
+  if (Array.isArray(element)) {
+    return `[${element.map((item) => serializeJsx(item as JSX.Element)).join(",")}]`;
+  }
+
+  // Handle React elements
+  const reactElement = element as ReactElementWithType;
+  if (reactElement.$$typeof) {
+    // For OG images, we only use string types (HTML elements)
+    const typeName =
+      typeof reactElement.type === "string" ? reactElement.type : "Component";
+
+    const props: Record<string, unknown> = {};
+
+    // Process props, excluding children
+    if (reactElement.props) {
+      const elementProps = reactElement.props as Record<string, unknown>;
+      for (const [key, value] of Object.entries(elementProps)) {
+        if (key === "children") continue;
+
+        // For OG images, we only have primitives and objects (style objects)
+        // For objects and arrays (but not null), serialize as JSON
+        props[key] =
+          typeof value === "object" && value !== null
+            ? JSON.stringify(value)
+            : value; // Primitives (including null/undefined)
+      }
+    }
+
+    // Sort props for deterministic output
+    const sortedPropsStr = JSON.stringify(props, Object.keys(props).sort());
+
+    // Serialize children
+    const children = reactElement.props?.children;
+    const childrenStr = children ? serializeJsx(children as JSX.Element) : "";
+
+    // Combine into a stable string representation
+    return `<${typeName}:${sortedPropsStr}>${childrenStr}</${typeName}>`;
+  }
+
+  // Fallback for other objects (shouldn't happen with OG images)
+  return JSON.stringify(element);
 }
