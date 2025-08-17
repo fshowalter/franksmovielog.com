@@ -4,7 +4,6 @@ import type {
 } from "~/components/ListWithFilters.reducerUtils";
 
 import {
-  buildGroupValues,
   buildSortValues,
   createInitialState,
   handleListWithFiltersAction,
@@ -77,8 +76,7 @@ type State = ListWithFiltersState<ListItemValue, Sort> & {
   monthViewings: ListItemValue[];
 };
 
-// AIDEV-NOTE: Viewings don't use grouping, so we use a simple no-op group function
-const groupValues = buildGroupValues<ListItemValue, Sort>(() => "all");
+// AIDEV-NOTE: Viewings don't use grouping, so groupFn is omitted
 
 export function initState({
   initialSort,
@@ -88,7 +86,6 @@ export function initState({
   values: ListItemValue[];
 }): State {
   const baseState = createInitialState({
-    groupFn: groupValues,
     initialSort,
     showMoreEnabled: false, // Viewings don't paginate
     sortFn: sortValues,
@@ -227,7 +224,7 @@ export function reducer(state: State, action: ActionType): State {
       const result = handleListWithFiltersAction(
         state,
         action,
-        { groupFn: groupValues, sortFn: sortValues },
+        { sortFn: sortValues },
         {
           currentMonth: state.currentMonth,
           hasNextMonth: state.hasNextMonth,
