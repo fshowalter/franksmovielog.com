@@ -10,6 +10,7 @@ import {
   createInitialState,
   getGroupLetter,
   handlePendingFilterReleaseYear,
+  handlePendingFilterReviewYear,
   handlePendingFilterTitle,
   ListWithFiltersActions,
   type ListWithFiltersState,
@@ -218,13 +219,7 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case Actions.PENDING_FILTER_REVIEW_YEAR: {
-      const filterFn = action.values[0]
-        ? (value: ReviewsListItemValue) => {
-            const year = value.reviewSequence.slice(0, 4);
-            return year >= action.values[0] && year <= action.values[1];
-          }
-        : undefined;
-      return updatePendingFilter(state, "reviewYear", filterFn, action.values);
+      return handlePendingFilterReviewYear(state, action.values);
     }
 
     case Actions.PENDING_FILTER_TITLE: {
