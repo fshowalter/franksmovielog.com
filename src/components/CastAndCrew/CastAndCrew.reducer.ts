@@ -1,3 +1,5 @@
+import type { ListWithFiltersState } from "~/components/ListWithFilters.reducerUtils";
+
 import {
   applyPendingFilters,
   buildGroupValues,
@@ -6,7 +8,6 @@ import {
   getGroupLetter,
   handlePendingFilterName,
   ListWithFiltersActions,
-  type ListWithFiltersState,
   resetPendingFilters,
   sortNumber,
   sortString,

@@ -1,6 +1,7 @@
 /**
  * Reviews reducer with pending filters support
  */
+import type { ListWithFiltersState } from "~/components/ListWithFilters.reducerUtils";
 import type { ReviewsListItemValue } from "~/components/Reviews/ReviewsListItem";
 
 import {
@@ -13,7 +14,6 @@ import {
   handlePendingFilterReviewYear,
   handlePendingFilterTitle,
   ListWithFiltersActions,
-  type ListWithFiltersState,
   resetPendingFilters,
   showMore,
   sortNumber,
