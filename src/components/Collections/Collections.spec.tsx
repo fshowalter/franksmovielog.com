@@ -1,6 +1,8 @@
 import { act, render, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { describe, it } from "vitest";
+import { afterEach, beforeEach, describe, it, vi } from "vitest";
+
+import { TEXT_FILTER_DEBOUNCE_MS } from "~/components/TextFilter";
 
 import { Collections } from "./Collections";
 import { getProps } from "./getProps";
@@ -8,15 +10,44 @@ import { getProps } from "./getProps";
 const props = await getProps();
 
 describe("Collections", () => {
+  beforeEach(() => {
+    // AIDEV-NOTE: Using shouldAdvanceTime: true prevents userEvent from hanging
+    // when fake timers are active. This allows async userEvent operations to complete
+    // while still controlling timer advancement for debounced inputs.
+    // See https://github.com/testing-library/user-event/issues/833
+    vi.useFakeTimers({ shouldAdvanceTime: true });
+  });
+
+  afterEach(() => {
+    // AIDEV-NOTE: Clear all pending timers before restoring real timers
+    // to ensure test isolation and prevent timer leaks between tests
+    vi.clearAllTimers();
+    vi.useRealTimers();
+  });
+
   it("can filter by name", async ({ expect }) => {
     expect.hasAssertions();
 
+    // Setup userEvent with advanceTimers
+    const user = userEvent.setup({
+      advanceTimers: vi.advanceTimersByTime,
+    });
+
     render(<Collections {...props} />);
 
-    await act(async () => {
-      await userEvent.type(screen.getByLabelText("Name"), "Friday the 13th");
-      await new Promise((r) => setTimeout(r, 500));
+    // Open filter drawer
+    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+
+    // Type the filter text
+    await user.type(screen.getByLabelText("Name"), "Friday the 13th");
+    act(() => {
+      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
     });
+
+    // Apply the filter
+    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });

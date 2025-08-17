@@ -2,6 +2,9 @@ import type { JSX, ReactNode } from "react";
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
+const DRAWER_CLOSE_ANIMATION_MS = 250;
+const DRAWER_OPEN_ANIMATION_MS = 400;
+
 type Props<T extends string> = {
   className?: string;
   dynamicSubNav?: React.ReactNode;
@@ -71,19 +74,24 @@ export function ListWithFilters<T extends string>({
   const [isOpening, setIsOpening] = useState(false);
   const filtersRef = useRef<HTMLDivElement | null>(null);
   const toggleButtonRef = useRef<HTMLButtonElement | null>(null);
+  const timeoutRefs = useRef<Set<NodeJS.Timeout>>(new Set());
 
   const handleCloseDrawer = useCallback(
     (shouldResetFilters = true) => {
       setIsClosing(true);
       // Start the spin animation, then close after a short delay
-      setTimeout(() => {
-        document.body.classList.remove("overflow-hidden");
+      const timeoutId = setTimeout(() => {
+        if (typeof document !== "undefined") {
+          document.body.classList.remove("overflow-hidden");
+        }
         setFilterDrawerVisible(false);
         setIsClosing(false);
         if (shouldResetFilters) {
           onResetFilters?.();
         }
-      }, 250); // Delay to see the spin animation
+        timeoutRefs.current.delete(timeoutId);
+      }, DRAWER_CLOSE_ANIMATION_MS);
+      timeoutRefs.current.add(timeoutId);
     },
     [onResetFilters],
   );
@@ -96,14 +104,18 @@ export function ListWithFilters<T extends string>({
         handleCloseDrawer();
       } else {
         setIsOpening(true);
-        document.body.classList.add("overflow-hidden");
+        if (typeof document !== "undefined") {
+          document.body.classList.add("overflow-hidden");
+        }
         setFilterDrawerVisible(true);
         // Call onFilterDrawerOpen when opening
         onFilterDrawerOpen?.();
         // Clear the opening state after animation completes
-        setTimeout(() => {
+        const timeoutId = setTimeout(() => {
           setIsOpening(false);
-        }, 400); // Match the wind-up animation duration
+          timeoutRefs.current.delete(timeoutId);
+        }, DRAWER_OPEN_ANIMATION_MS);
+        timeoutRefs.current.add(timeoutId);
         // Focus first focusable element after drawer opens
         requestAnimationFrame(() => {
           const firstFocusable = filtersRef.current?.querySelector<HTMLElement>(
@@ -115,6 +127,14 @@ export function ListWithFilters<T extends string>({
     },
     [filterDrawerVisible, handleCloseDrawer, onFilterDrawerOpen],
   );
+
+  // Cleanup timeouts on unmount
+  useEffect(() => {
+    return () => {
+      for (const timeoutId of timeoutRefs.current) clearTimeout(timeoutId);
+      timeoutRefs.current.clear();
+    };
+  }, []);
 
   // Handle escape key
   useEffect(() => {
@@ -319,7 +339,9 @@ export function ListWithFilters<T extends string>({
                       // Apply pending filters
                       onApplyFilters?.();
                       handleCloseDrawer(false); // Don't reset filters when applying
-                      document.querySelector("#list")?.scrollIntoView();
+                      if (typeof document !== "undefined") {
+                        document.querySelector("#list")?.scrollIntoView();
+                      }
                     }}
                     type="button"
                   >

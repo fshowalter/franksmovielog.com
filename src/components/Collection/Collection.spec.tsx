@@ -1,6 +1,8 @@
 import { act, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { describe, it } from "vitest";
+import { afterEach, beforeEach, describe, it, vi } from "vitest";
+
+import { TEXT_FILTER_DEBOUNCE_MS } from "~/components/TextFilter";
 
 import { Collection } from "./Collection";
 import { getProps } from "./getProps";
@@ -8,6 +10,21 @@ import { getProps } from "./getProps";
 const props = await getProps("shaw-brothers");
 
 describe("Collection", () => {
+  beforeEach(() => {
+    // AIDEV-NOTE: Using shouldAdvanceTime: true prevents userEvent from hanging
+    // when fake timers are active. This allows async userEvent operations to complete
+    // while still controlling timer advancement for debounced inputs.
+    // See https://github.com/testing-library/user-event/issues/833
+    vi.useFakeTimers({ shouldAdvanceTime: true });
+  });
+
+  afterEach(() => {
+    // AIDEV-NOTE: Clear all pending timers before restoring real timers
+    // to ensure test isolation and prevent timer leaks between tests
+    vi.clearAllTimers();
+    vi.useRealTimers();
+  });
+
   it("renders", ({ expect }) => {
     const { asFragment } = render(<Collection {...props} />);
 
@@ -16,12 +33,27 @@ describe("Collection", () => {
 
   it("can filter by title", async ({ expect }) => {
     expect.hasAssertions();
+
+    // Setup userEvent with advanceTimers
+    const user = userEvent.setup({
+      advanceTimers: vi.advanceTimersByTime,
+    });
+
     render(<Collection {...props} />);
 
-    await act(async () => {
-      await userEvent.type(screen.getByLabelText("Title"), "Dracula");
-      await new Promise((r) => setTimeout(r, 500));
+    // Open filter drawer
+    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+
+    // Type the filter text
+    await user.type(screen.getByLabelText("Title"), "Dracula");
+    act(() => {
+      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
     });
+
+    // Apply the filter
+    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
@@ -135,12 +167,24 @@ describe("Collection", () => {
 
     render(<Collection {...props} />);
 
+    // Open filter drawer
+    await userEvent.click(
+      screen.getByRole("button", { name: "Toggle filters" }),
+    );
+
     const fieldset = screen.getByRole("group", { name: "Release Year" });
     const fromInput = within(fieldset).getByLabelText("From");
     const toInput = within(fieldset).getByLabelText("to");
 
     await userEvent.selectOptions(fromInput, "1970");
     await userEvent.selectOptions(toInput, "1980");
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
@@ -150,12 +194,24 @@ describe("Collection", () => {
 
     render(<Collection {...props} />);
 
+    // Open filter drawer
+    await userEvent.click(
+      screen.getByRole("button", { name: "Toggle filters" }),
+    );
+
     const fieldset = screen.getByRole("group", { name: "Review Year" });
     const fromInput = within(fieldset).getByLabelText("From");
     const toInput = within(fieldset).getByLabelText("to");
 
     await userEvent.selectOptions(fromInput, "2021");
     await userEvent.selectOptions(toInput, "2022");
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    // List updates synchronously with fake timers
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });

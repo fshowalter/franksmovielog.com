@@ -6,6 +6,8 @@ import { debounceOnChange } from "~/utils/debounce";
 
 import { LabelText } from "./LabelText";
 
+export const TEXT_FILTER_DEBOUNCE_MS = 150;
+
 type onChangeHandler = (value: string) => void;
 
 export function TextFilter({
@@ -21,7 +23,10 @@ export function TextFilter({
 }): JSX.Element {
   // Initialize with the initial value, then manage state internally
   const [localValue, setLocalValue] = useState(initialValue || "");
-  const debouncedHandleChange = debounceOnChange(onInputChange, 150);
+  const debouncedHandleChange = debounceOnChange(
+    onInputChange,
+    TEXT_FILTER_DEBOUNCE_MS,
+  );
 
   const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
     const newValue = (e.target as HTMLInputElement).value;

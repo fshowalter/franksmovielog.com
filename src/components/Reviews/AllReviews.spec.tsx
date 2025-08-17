@@ -1,6 +1,9 @@
-import { render, screen, waitFor, within } from "@testing-library/react";
+import { act, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { describe, it } from "vitest";
+import { afterEach, beforeEach, describe, it, vi } from "vitest";
+
+import { DROPDOWN_CLOSE_DELAY_MS } from "~/components/MultiSelectField";
+import { TEXT_FILTER_DEBOUNCE_MS } from "~/components/TextFilter";
 
 import { AllReviews } from "./AllReviews";
 import { getProps } from "./getProps";
@@ -8,6 +11,21 @@ import { getProps } from "./getProps";
 const props = await getProps();
 
 describe("AllReviews", () => {
+  beforeEach(() => {
+    // AIDEV-NOTE: Using shouldAdvanceTime: true prevents userEvent from hanging
+    // when fake timers are active. This allows async userEvent operations to complete
+    // while still controlling timer advancement for debounced inputs.
+    // See https://github.com/testing-library/user-event/issues/833
+    vi.useFakeTimers({ shouldAdvanceTime: true });
+  });
+
+  afterEach(() => {
+    // AIDEV-NOTE: Clear all pending timers before restoring real timers
+    // to ensure test isolation and prevent timer leaks between tests
+    vi.clearAllTimers();
+    vi.useRealTimers();
+  });
+
   it("renders", ({ expect }) => {
     const { asFragment } = render(<AllReviews {...props} />);
 
@@ -16,15 +34,19 @@ describe("AllReviews", () => {
 
   it("can filter by title", async ({ expect }) => {
     expect.hasAssertions();
+
+    // Setup userEvent with advanceTimers
+    const user = userEvent.setup({
+      advanceTimers: vi.advanceTimersByTime,
+    });
+
     render(<AllReviews {...props} />);
 
-    await userEvent.type(screen.getByLabelText("Title"), "Apostle");
-    await waitFor(
-      () => {
-        expect(screen.getByTestId("grouped-poster-list")).toBeInTheDocument();
-      },
-      { timeout: 600 },
-    );
+    // Type the filter text
+    await user.type(screen.getByLabelText("Title"), "Apostle");
+    act(() => {
+      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
+    });
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
@@ -214,37 +236,44 @@ describe("AllReviews", () => {
 
   it("can filter by genres", async ({ expect }) => {
     expect.hasAssertions();
+
+    // Setup userEvent with advanceTimers
+    const user = userEvent.setup({
+      advanceTimers: vi.advanceTimersByTime,
+    });
+
     render(<AllReviews {...props} />);
+
+    // Open filter drawer
+    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
 
     const genresButton = screen.getByLabelText("Genres");
 
     // Click to open the dropdown
-    await userEvent.click(genresButton);
+    await user.click(genresButton);
 
     // Select Horror
     const horrorOption = await screen.findByRole("option", { name: "Horror" });
-    await userEvent.click(horrorOption);
+    await user.click(horrorOption);
 
-    // Wait for dropdown to close (150ms timeout in component)
-    await waitFor(
-      () => {
-        expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
-      },
-      { timeout: 300 },
-    );
-
-    // Small additional wait to ensure state is settled
-    await new Promise((r) => setTimeout(r, 50));
+    // Advance timers for dropdown to close
+    act(() => {
+      vi.advanceTimersByTime(DROPDOWN_CLOSE_DELAY_MS);
+    });
 
     // Click to open the dropdown again
-    await userEvent.click(genresButton);
+    await user.click(genresButton);
 
     // Select Comedy
     const comedyOption = await screen.findByRole("option", { name: "Comedy" });
-    await userEvent.click(comedyOption);
+    await user.click(comedyOption);
 
-    // Click outside to close the dropdown
-    await userEvent.click(document.body);
+    // Advance timers for dropdown to close again
+    act(() => {
+      vi.advanceTimersByTime(DROPDOWN_CLOSE_DELAY_MS);
+    });
+
+    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
