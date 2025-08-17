@@ -6,6 +6,111 @@ import { LabelText } from "~/components/LabelText";
 
 export const DROPDOWN_CLOSE_DELAY_MS = 150;
 
+// Positioning constants
+const SPACE_BUFFER_ABOVE = 20;
+const SPACE_BUFFER_BELOW = 10;
+const MIN_DROPDOWN_HEIGHT = 120;
+const MAX_DROPDOWN_HEIGHT = 300;
+const MOBILE_FOOTER_BUFFER = 100;
+const DESKTOP_FOOTER_BUFFER = 20;
+const MIN_FALLBACK_HEIGHT = 80;
+const SCROLL_DELAY_MS = 50;
+
+// Helper to find the nearest scrollable container
+const findScrollableContainer = (
+  element: HTMLElement | null,
+): HTMLElement | undefined => {
+  if (!element) return undefined;
+
+  let parent = element.parentElement;
+  while (parent && parent !== document.body) {
+    const style = globalThis.getComputedStyle(parent);
+    if (style.overflowY === "auto" || style.overflowY === "scroll") {
+      return parent;
+    }
+    parent = parent.parentElement;
+  }
+  return undefined;
+};
+
+// Calculate available space above and below the button
+const calculateAvailableSpace = (
+  buttonRect: DOMRect,
+  scrollableContainer: HTMLElement | undefined,
+  isMobileDrawer: boolean,
+) => {
+  let effectiveSpaceBelow: number;
+  let effectiveSpaceAbove: number;
+  const viewportHeight = window.innerHeight;
+
+  if (scrollableContainer) {
+    // We're inside a scrollable container
+    const containerRect = scrollableContainer.getBoundingClientRect();
+
+    // Space within the visible container area
+    effectiveSpaceBelow = containerRect.bottom - buttonRect.bottom;
+    effectiveSpaceAbove = buttonRect.top - containerRect.top;
+
+    // Check for sticky footer within container
+    const stickyFooter = scrollableContainer.querySelector(".z-filter-footer");
+    if (stickyFooter) {
+      const footerRect = stickyFooter.getBoundingClientRect();
+      // If footer is visible, subtract its height from space below
+      if (footerRect.top < containerRect.bottom) {
+        effectiveSpaceBelow = Math.min(
+          effectiveSpaceBelow,
+          footerRect.top - buttonRect.bottom,
+        );
+      }
+    }
+  } else {
+    // Not in a scrollable container, use viewport
+    effectiveSpaceBelow = viewportHeight - buttonRect.bottom;
+    effectiveSpaceAbove = buttonRect.top;
+
+    // Account for footer in mobile drawer (non-scrollable case)
+    const footerBuffer = isMobileDrawer
+      ? MOBILE_FOOTER_BUFFER
+      : DESKTOP_FOOTER_BUFFER;
+    effectiveSpaceBelow -= footerBuffer;
+  }
+
+  // Add small buffer for visual spacing
+  effectiveSpaceAbove -= SPACE_BUFFER_ABOVE;
+  effectiveSpaceBelow -= SPACE_BUFFER_BELOW;
+
+  return { effectiveSpaceAbove, effectiveSpaceBelow };
+};
+
+// Determine dropdown position and height based on available space
+const determineDropdownLayout = (
+  effectiveSpaceAbove: number,
+  effectiveSpaceBelow: number,
+) => {
+  const minDropdownHeight = MIN_DROPDOWN_HEIGHT;
+  const maxDropdownHeight = MAX_DROPDOWN_HEIGHT;
+
+  // Determine position based on available space
+  if (
+    effectiveSpaceBelow < minDropdownHeight &&
+    effectiveSpaceAbove > effectiveSpaceBelow
+  ) {
+    // Open upward if more space above
+    const height = Math.min(
+      Math.max(effectiveSpaceAbove, MIN_FALLBACK_HEIGHT),
+      maxDropdownHeight,
+    );
+    return { height: `${height}px`, position: "above" as const };
+  } else {
+    // Default to opening below
+    const height = Math.min(
+      Math.max(effectiveSpaceBelow, MIN_FALLBACK_HEIGHT),
+      maxDropdownHeight,
+    );
+    return { height: `${height}px`, position: "below" as const };
+  }
+};
+
 export function MultiSelectField({
   label,
   onChange,
@@ -80,7 +185,7 @@ export function MultiSelectField({
           block: "nearest",
         });
         timeoutRefs.current.delete(timeoutId);
-      }, 50);
+      }, SCROLL_DELAY_MS);
       timeoutRefs.current.add(timeoutId);
     }
   };
@@ -102,7 +207,7 @@ export function MultiSelectField({
           block: "nearest",
         });
         timeoutRefs.current.delete(timeoutId);
-      }, 50);
+      }, SCROLL_DELAY_MS);
       timeoutRefs.current.add(timeoutId);
     }
   };
@@ -187,88 +292,19 @@ export function MultiSelectField({
     if (!buttonRef.current) return;
 
     const buttonRect = buttonRef.current.getBoundingClientRect();
-    const viewportHeight = window.innerHeight;
     const isMobileDrawer = window.innerWidth < 1024;
+    const scrollableContainer = findScrollableContainer(buttonRef.current);
 
-    // Find the nearest scrollable container (if any)
-    let scrollableContainer: HTMLElement | undefined;
-    let element = buttonRef.current.parentElement;
+    const { effectiveSpaceAbove, effectiveSpaceBelow } =
+      calculateAvailableSpace(buttonRect, scrollableContainer, isMobileDrawer);
 
-    while (element && element !== document.body) {
-      const style = globalThis.getComputedStyle(element);
-      const overflowY = style.overflowY;
+    const { height, position } = determineDropdownLayout(
+      effectiveSpaceAbove,
+      effectiveSpaceBelow,
+    );
 
-      if (overflowY === "auto" || overflowY === "scroll") {
-        scrollableContainer = element;
-        break;
-      }
-      element = element.parentElement;
-    }
-
-    // Calculate boundaries based on container or viewport
-    let effectiveSpaceBelow: number;
-    let effectiveSpaceAbove: number;
-
-    if (scrollableContainer) {
-      // We're inside a scrollable container
-      const containerRect = scrollableContainer.getBoundingClientRect();
-
-      // Space within the visible container area
-      effectiveSpaceBelow = containerRect.bottom - buttonRect.bottom;
-      effectiveSpaceAbove = buttonRect.top - containerRect.top;
-
-      // Check for sticky footer within container
-      const stickyFooter =
-        scrollableContainer.querySelector(".z-filter-footer");
-      if (stickyFooter) {
-        const footerRect = stickyFooter.getBoundingClientRect();
-        // If footer is visible, subtract its height from space below
-        if (footerRect.top < containerRect.bottom) {
-          effectiveSpaceBelow = Math.min(
-            effectiveSpaceBelow,
-            footerRect.top - buttonRect.bottom,
-          );
-        }
-      }
-    } else {
-      // Not in a scrollable container, use viewport
-      effectiveSpaceBelow = viewportHeight - buttonRect.bottom;
-      effectiveSpaceAbove = buttonRect.top;
-
-      // Account for footer in mobile drawer (non-scrollable case)
-      const footerBuffer = isMobileDrawer ? 100 : 20;
-      effectiveSpaceBelow -= footerBuffer;
-    }
-
-    // Add small buffer for visual spacing
-    effectiveSpaceAbove -= 20;
-    effectiveSpaceBelow -= 10;
-
-    // Minimum height needed for a usable dropdown
-    const minDropdownHeight = 120;
-    const maxDropdownHeight = 300;
-
-    // Determine position based on available space
-    if (
-      effectiveSpaceBelow < minDropdownHeight &&
-      effectiveSpaceAbove > effectiveSpaceBelow
-    ) {
-      // Open upward if more space above
-      setDropdownPosition("above");
-      const height = Math.min(
-        Math.max(effectiveSpaceAbove, 80),
-        maxDropdownHeight,
-      );
-      setDropdownMaxHeight(`${height}px`);
-    } else {
-      // Default to opening below
-      setDropdownPosition("below");
-      const height = Math.min(
-        Math.max(effectiveSpaceBelow, 80),
-        maxDropdownHeight,
-      );
-      setDropdownMaxHeight(`${height}px`);
-    }
+    setDropdownPosition(position);
+    setDropdownMaxHeight(height);
   };
 
   // Scroll highlighted option into view
@@ -325,40 +361,44 @@ export function MultiSelectField({
     }
   }, [isOpen]);
 
-  // Add resize and scroll listeners
+  // Add resize and scroll listeners with debouncing
   useEffect(() => {
     if (!isOpen) return;
 
+    let debounceTimer: NodeJS.Timeout | undefined;
+
+    const debouncedCalculate = () => {
+      if (debounceTimer) {
+        clearTimeout(debounceTimer);
+      }
+      debounceTimer = setTimeout(() => {
+        calculateDropdownPositionAndHeight();
+        debounceTimer = undefined;
+      }, 16); // ~60fps
+    };
+
     const handleResize = () => {
-      calculateDropdownPositionAndHeight();
+      debouncedCalculate();
     };
 
     const handleScroll = () => {
-      calculateDropdownPositionAndHeight();
+      debouncedCalculate();
     };
 
     if (globalThis.window !== undefined) {
       window.addEventListener("resize", handleResize);
 
       // Find and listen to scrollable container
-      let scrollableContainer: HTMLElement | undefined;
-      if (buttonRef.current) {
-        let element = buttonRef.current.parentElement;
-        while (element && element !== document.body) {
-          const style = globalThis.getComputedStyle(element);
-          if (style.overflowY === "auto" || style.overflowY === "scroll") {
-            scrollableContainer = element;
-            break;
-          }
-          element = element.parentElement;
-        }
-      }
+      const scrollableContainer = findScrollableContainer(buttonRef.current);
 
       if (scrollableContainer) {
         scrollableContainer.addEventListener("scroll", handleScroll);
       }
 
       return () => {
+        if (debounceTimer) {
+          clearTimeout(debounceTimer);
+        }
         window.removeEventListener("resize", handleResize);
         if (scrollableContainer) {
           scrollableContainer.removeEventListener("scroll", handleScroll);
@@ -543,7 +583,7 @@ export function MultiSelectField({
               ${
                 dropdownPosition === "above"
                   ? "bottom-full mb-1"
-                  : `top-full mt-1`
+                  : "top-full mt-1"
               }
             `}
             onKeyDown={handleListboxKeyDown}
