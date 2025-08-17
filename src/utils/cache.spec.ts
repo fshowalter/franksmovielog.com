@@ -26,12 +26,7 @@ describe("cache", () => {
       await ensureCacheDir(config.cacheDir);
 
       // Save item to cache
-      await saveCachedItem(
-        config.cacheDir,
-        cacheKey,
-        "txt",
-        testContent,
-      );
+      await saveCachedItem(config.cacheDir, cacheKey, "txt", testContent);
 
       // Retrieve item from cache
       const cachedContent = await getCachedItem<string>(
@@ -71,12 +66,7 @@ describe("cache", () => {
       await ensureCacheDir(config.cacheDir);
 
       // Save binary item to cache
-      await saveCachedItem(
-        config.cacheDir,
-        cacheKey,
-        "bin",
-        testContent,
-      );
+      await saveCachedItem(config.cacheDir, cacheKey, "bin", testContent);
 
       // Retrieve binary item from cache
       const cachedContent = await getCachedItem<Buffer>(

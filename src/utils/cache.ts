@@ -1,6 +1,5 @@
 import { createHash } from "node:crypto";
 import fs from "node:fs/promises";
-import { tmpdir } from "node:os";
 import path from "node:path";
 
 type CacheConfig = {

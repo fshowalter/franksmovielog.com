@@ -1,7 +1,10 @@
-import { vi } from "vitest";
+import type { IFS } from "unionfs";
+
 import { fs as memFs, vol } from "memfs";
-import { Union } from "unionfs";
 import realFs from "node:fs";
+import { tmpdir } from "node:os";
+import { Union } from "unionfs";
+import { beforeEach, vi } from "vitest";
 
 // Create a union filesystem that overlays memfs on top of the real filesystem
 // This allows cache operations to go to memory while other operations go to disk
@@ -11,40 +14,48 @@ const ufs = new Union();
 ufs.use(realFs);
 
 // Add memfs second (higher priority - will override real fs for matching paths)
-ufs.use(memFs as any);
+
+ufs.use(memFs as unknown as IFS);
+
+// Create promise versions of the unionfs methods
+type AsyncFn<T extends unknown[], R> = (...args: T) => Promise<R>;
+type CallbackFn<T extends unknown[], R> = (
+  ...args: [...T, (err: Error | null, result?: R) => void]
+) => void;
+
+const promisify = <T extends unknown[], R>(
+  fn: CallbackFn<T, R>,
+): AsyncFn<T, R> => {
+  return (...args: T) =>
+    new Promise((resolve, reject) => {
+      fn(...args, (err: Error | null, result?: R) => {
+        if (err) reject(err);
+        else resolve(result as R);
+      });
+    });
+};
 
 // Mock node:fs/promises to use our union filesystem
 vi.mock("node:fs/promises", () => {
-  // Create promise versions of the unionfs methods
-  const promisify = (fn: Function) => {
-    return (...args: any[]) =>
-      new Promise((resolve, reject) => {
-        fn(...args, (err: any, result: any) => {
-          if (err) reject(err);
-          else resolve(result);
-        });
-      });
-  };
-
   return {
+    access: promisify(ufs.access.bind(ufs)),
     default: {
-      mkdir: promisify(ufs.mkdir.bind(ufs)),
-      readFile: promisify(ufs.readFile.bind(ufs)),
-      writeFile: promisify(ufs.writeFile.bind(ufs)),
       access: promisify(ufs.access.bind(ufs)),
-      stat: promisify(ufs.stat.bind(ufs)),
+      mkdir: promisify(ufs.mkdir.bind(ufs)),
       readdir: promisify(ufs.readdir.bind(ufs)),
-      unlink: promisify(ufs.unlink.bind(ufs)),
+      readFile: promisify(ufs.readFile.bind(ufs)),
       rmdir: promisify(ufs.rmdir.bind(ufs)),
+      stat: promisify(ufs.stat.bind(ufs)),
+      unlink: promisify(ufs.unlink.bind(ufs)),
+      writeFile: promisify(ufs.writeFile.bind(ufs)),
     },
     mkdir: promisify(ufs.mkdir.bind(ufs)),
-    readFile: promisify(ufs.readFile.bind(ufs)),
-    writeFile: promisify(ufs.writeFile.bind(ufs)),
-    access: promisify(ufs.access.bind(ufs)),
-    stat: promisify(ufs.stat.bind(ufs)),
     readdir: promisify(ufs.readdir.bind(ufs)),
-    unlink: promisify(ufs.unlink.bind(ufs)),
+    readFile: promisify(ufs.readFile.bind(ufs)),
     rmdir: promisify(ufs.rmdir.bind(ufs)),
+    stat: promisify(ufs.stat.bind(ufs)),
+    unlink: promisify(ufs.unlink.bind(ufs)),
+    writeFile: promisify(ufs.writeFile.bind(ufs)),
   };
 });
 
@@ -52,6 +63,6 @@ vi.mock("node:fs/promises", () => {
 beforeEach(() => {
   vol.reset();
   // Pre-create the temp directory structure for cache
-  const tmpdir = require("node:os").tmpdir();
-  vol.mkdirSync(tmpdir, { recursive: true });
+  const tempDir = tmpdir();
+  vol.mkdirSync(tempDir, { recursive: true });
 });
