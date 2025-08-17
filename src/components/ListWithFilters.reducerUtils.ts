@@ -48,9 +48,32 @@ export type ListWithFiltersActionType<TSortValue = unknown> =
   | SortAction<TSortValue>;
 
 /**
- * State structure for lists with pending filters, grouping, and pagination
+ * State for lists with pagination ("Show More") enabled
+ * The presence of showCount acts as the discriminator
  */
-export type ListWithFiltersState<TItem, TSortValue> = {
+type ListWithFiltersAndShowCountState<TItem, TSortValue> =
+  BaseListWithFiltersState<TItem, TSortValue> & {
+    showCount: number; // Required for paginated lists
+  };
+
+/**
+ * Union type for all list states - backwards compatible
+ */
+export type ListWithFiltersState<TItem, TSortValue> =
+  | ListWithFiltersAndShowCountState<TItem, TSortValue>
+  | ListWithFiltersOnlyState<TItem, TSortValue>;
+
+/**
+ * Common Action Type Definitions
+ */
+type ApplyPendingFiltersAction = {
+  type: ListWithFiltersActions.APPLY_PENDING_FILTERS;
+};
+
+/**
+ * Base state structure shared by both paginated and non-paginated lists
+ */
+type BaseListWithFiltersState<TItem, TSortValue> = {
   allValues: TItem[];
   filteredValues: TItem[];
   filters: Record<string, (item: TItem) => boolean>;
@@ -66,19 +89,22 @@ export type ListWithFiltersState<TItem, TSortValue> = {
     string,
     [number, number] | [string, string] | readonly string[] | string
   >; // Raw pending filter values for UI
-  showCount?: number; // Optional - when undefined, no pagination is applied
   sortValue: TSortValue;
-};
-
-/**
- * Common Action Type Definitions
- */
-type ApplyPendingFiltersAction = {
-  type: ListWithFiltersActions.APPLY_PENDING_FILTERS;
 };
 
 type ClearPendingFiltersAction = {
   type: ListWithFiltersActions.CLEAR_PENDING_FILTERS;
+};
+
+/**
+ * State for lists without pagination
+ * The absence of showCount (undefined) acts as the discriminator
+ */
+type ListWithFiltersOnlyState<TItem, TSortValue> = BaseListWithFiltersState<
+  TItem,
+  TSortValue
+> & {
+  showCount?: undefined; // Explicitly undefined for non-paginated
 };
 
 type PendingFilterGenresAction = {
@@ -662,16 +688,13 @@ function resetPendingFilters<TItem, TSortValue>(
 }
 
 /**
- * Handle "Show More" pagination
+ * Handle "Show More" pagination - only accepts paginated states
  */
 function showMore<TItem, TSortValue>(
-  state: ListWithFiltersState<TItem, TSortValue>,
+  state: ListWithFiltersAndShowCountState<TItem, TSortValue>,
   increment: number,
   groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>,
-): ListWithFiltersState<TItem, TSortValue> {
-  if (!state.showCount) {
-    throw new Error("showMore called on state without pagination");
-  }
+): ListWithFiltersAndShowCountState<TItem, TSortValue> {
   const showCount = state.showCount + increment;
   const groupedValues = groupFn
     ? groupFn(state.filteredValues.slice(0, showCount), state.sortValue)

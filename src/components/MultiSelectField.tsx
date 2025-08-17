@@ -543,9 +543,7 @@ export function MultiSelectField({
               ${
                 dropdownPosition === "above"
                   ? "bottom-full mb-1"
-                  : `
-                top-full mt-1
-              `
+                  : `top-full mt-1`
               }
             `}
             onKeyDown={handleListboxKeyDown}
