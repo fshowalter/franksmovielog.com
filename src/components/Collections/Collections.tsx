@@ -46,6 +46,7 @@ export function Collections({ initialSort, values }: Props): JSX.Element {
           pendingNameFilter={state.pendingFilterValues.name}
         />
       }
+      hasActiveFilters={state.pendingFilterValues.name !== ""}
       list={
         <ol
           className={`
@@ -60,6 +61,10 @@ export function Collections({ initialSort, values }: Props): JSX.Element {
         </ol>
       }
       onApplyFilters={() => dispatch({ type: Actions.APPLY_PENDING_FILTERS })}
+      onClearFilters={() => {
+        dispatch({ type: Actions.CLEAR_PENDING_FILTERS });
+        setFilterKey((prev) => prev + 1);
+      }}
       onFilterDrawerOpen={() => {
         // Increment key to force remount of filter components
         setFilterKey((prev) => prev + 1);

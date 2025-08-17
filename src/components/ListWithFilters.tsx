@@ -2,7 +2,7 @@ import type { JSX, ReactNode } from "react";
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
-const DRAWER_CLOSE_ANIMATION_MS = 250;
+export const DRAWER_CLOSE_ANIMATION_MS = 250;
 const DRAWER_OPEN_ANIMATION_MS = 400;
 
 type Props<T extends string> = {

@@ -2,6 +2,7 @@ import { act, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
+import { DRAWER_CLOSE_ANIMATION_MS } from "~/components/ListWithFilters";
 import { DROPDOWN_CLOSE_DELAY_MS } from "~/components/MultiSelectField";
 import { TEXT_FILTER_DEBOUNCE_MS } from "~/components/TextFilter";
 
@@ -323,5 +324,119 @@ describe("AllReviews", () => {
     render(<AllReviews {...propsWithManyValues} />);
     await userEvent.click(screen.getByText("Show More"));
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+  });
+
+  it("can clear all filters", async ({ expect }) => {
+    expect.hasAssertions();
+
+    // Setup userEvent with advanceTimers
+    const user = userEvent.setup({
+      advanceTimers: vi.advanceTimersByTime,
+    });
+
+    render(<AllReviews {...props} />);
+
+    // Open filter drawer
+    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+
+    // Apply multiple filters
+    await user.type(screen.getByLabelText("Title"), "Halloween");
+    act(() => {
+      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
+    });
+
+    const releaseYearFieldset = screen.getByRole("group", {
+      name: "Release Year",
+    });
+    await userEvent.selectOptions(
+      within(releaseYearFieldset).getByLabelText("From"),
+      "1973",
+    );
+
+    const gradeFieldset = screen.getByRole("group", { name: "Grade" });
+    await userEvent.selectOptions(
+      within(gradeFieldset).getByLabelText("From"),
+      "B-",
+    );
+
+    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+
+    // Verify filters are applied (should show filtered results)
+    const listBeforeClear = screen.getByTestId("grouped-poster-list");
+    const itemsBeforeClear = within(listBeforeClear).queryAllByRole("listitem");
+    expect(itemsBeforeClear.length).toBeLessThan(20); // Should be filtered
+
+    // Open filter drawer again
+    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+
+    // Clear all filters
+    await user.click(screen.getByRole("button", { name: "Clear all filters" }));
+
+    // Apply the cleared filters
+    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+
+    // Verify all items are shown again (filters cleared)
+    const listAfterClear = screen.getByTestId("grouped-poster-list");
+    const itemsAfterClear = within(listAfterClear).queryAllByRole("listitem");
+    expect(itemsAfterClear.length).toBeGreaterThan(itemsBeforeClear.length);
+
+    expect(listAfterClear).toMatchSnapshot();
+  });
+
+  it("can reset filters when closing drawer", async ({ expect }) => {
+    expect.hasAssertions();
+
+    // Setup userEvent with advanceTimers
+    const user = userEvent.setup({
+      advanceTimers: vi.advanceTimersByTime,
+    });
+
+    render(<AllReviews {...props} />);
+
+    // Open filter drawer
+    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+
+    // Apply initial filter
+    await user.type(screen.getByLabelText("Title"), "Halloween");
+    act(() => {
+      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
+    });
+
+    // Apply the filters
+    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+
+    // Store the count of filtered results
+    const filteredList = screen.getByTestId("grouped-poster-list");
+    const filteredCount =
+      within(filteredList).queryAllByRole("listitem").length;
+
+    // Open filter drawer again
+    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+
+    // Start typing a new filter but don't apply
+    await user.clear(screen.getByLabelText("Title"));
+    await user.type(screen.getByLabelText("Title"), "Completely Different");
+    act(() => {
+      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
+    });
+
+    // Close the drawer with the X button (should reset pending changes)
+    await user.click(screen.getByRole("button", { name: "Close filters" }));
+
+    // Wait for drawer close animation - onResetFilters is called after animation
+    act(() => {
+      vi.advanceTimersByTime(DRAWER_CLOSE_ANIMATION_MS);
+    });
+
+    // The list should still show the originally filtered results
+    const listAfterReset = screen.getByTestId("grouped-poster-list");
+    const resetCount = within(listAfterReset).queryAllByRole("listitem").length;
+    expect(resetCount).toBe(filteredCount);
+
+    // Open filter drawer again to verify filters were reset to last applied state
+    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+
+    // Should show the originally applied filter, not the pending change
+    expect(screen.getByLabelText("Title")).toHaveValue("Halloween");
   });
 });

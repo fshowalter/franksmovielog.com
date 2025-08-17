@@ -9,6 +9,7 @@ import type { ListItemValue } from "./Collections";
 
 export enum Actions {
   APPLY_PENDING_FILTERS = "APPLY_PENDING_FILTERS",
+  CLEAR_PENDING_FILTERS = "CLEAR_PENDING_FILTERS",
   FILTER_NAME = "FILTER_NAME",
   PENDING_FILTER_NAME = "PENDING_FILTER_NAME",
   RESET_PENDING_FILTERS = "RESET_PENDING_FILTERS",
@@ -17,6 +18,7 @@ export enum Actions {
 
 export type ActionType =
   | ApplyPendingFiltersAction
+  | ClearPendingFiltersAction
   | FilterNameAction
   | PendingFilterNameAction
   | ResetPendingFiltersAction
@@ -32,6 +34,10 @@ export type Sort =
 
 type ApplyPendingFiltersAction = {
   type: Actions.APPLY_PENDING_FILTERS;
+};
+
+type ClearPendingFiltersAction = {
+  type: Actions.CLEAR_PENDING_FILTERS;
 };
 
 type FilterNameAction = {
@@ -115,6 +121,18 @@ export function reducer(state: State, action: ActionType): State {
         filters: { ...state.pendingFilters },
         filterValues: { ...state.pendingFilterValues },
         pendingFilteredCount: filteredValues.length,
+      };
+    }
+    case Actions.CLEAR_PENDING_FILTERS: {
+      // Clear all pending filters to empty/default values
+      const clearedFilteredValues = state.allValues;
+      return {
+        ...state,
+        pendingFilteredCount: clearedFilteredValues.length,
+        pendingFilters: {},
+        pendingFilterValues: {
+          name: "",
+        },
       };
     }
     case Actions.FILTER_NAME: {

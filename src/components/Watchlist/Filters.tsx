@@ -99,7 +99,7 @@ export function SortOptions() {
 function CreditSelectField({
   actionType,
   dispatch,
-  initialValue = "All",
+  initialValue,
   label,
   options,
 }: {
@@ -109,7 +109,7 @@ function CreditSelectField({
     | Actions.PENDING_FILTER_PERFORMER
     | Actions.PENDING_FILTER_WRITER;
   dispatch: React.Dispatch<ActionType>;
-  initialValue?: string;
+  initialValue: string;
   label: string;
   options: readonly string[];
 }) {

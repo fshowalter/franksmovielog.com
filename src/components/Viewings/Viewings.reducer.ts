@@ -2,6 +2,7 @@ import type { ListItemValue } from "./Viewings";
 
 export enum Actions {
   APPLY_PENDING_FILTERS = "APPLY_PENDING_FILTERS",
+  CLEAR_PENDING_FILTERS = "CLEAR_PENDING_FILTERS",
   FILTER_MEDIUM = "FILTER_MEDIUM",
   FILTER_RELEASE_YEAR = "FILTER_RELEASE_YEAR",
   FILTER_TITLE = "FILTER_TITLE",
@@ -21,6 +22,7 @@ export enum Actions {
 
 export type ActionType =
   | ApplyPendingFiltersAction
+  | ClearPendingFiltersAction
   | FilterMediumAction
   | FilterReleaseYearAction
   | FilterTitleAction
@@ -40,6 +42,10 @@ export type Sort = "viewing-date-asc" | "viewing-date-desc";
 
 type ApplyPendingFiltersAction = {
   type: Actions.APPLY_PENDING_FILTERS;
+};
+
+type ClearPendingFiltersAction = {
+  type: Actions.CLEAR_PENDING_FILTERS;
 };
 
 type FilterMediumAction = {
@@ -192,6 +198,25 @@ export function reducer(state: State, action: ActionType): State {
         hasPrevMonth:
           getPrevMonthWithViewings(newMonth, filteredValues) !== undefined,
         monthViewings: getMonthViewings(filteredValues, newMonth),
+      };
+    }
+    case Actions.CLEAR_PENDING_FILTERS: {
+      // Clear all pending filters to empty/default values
+      const clearedFilters = {
+        media: [],
+        releaseYears: [],
+        title: "",
+        venues: [],
+        viewingYears: [],
+      };
+      const pendingFilteredValues = filterValues(
+        state.allValues,
+        clearedFilters,
+      );
+      return {
+        ...state,
+        pendingFilteredCount: pendingFilteredValues.length,
+        pendingFilters: clearedFilters,
       };
     }
     case Actions.FILTER_MEDIUM: {
