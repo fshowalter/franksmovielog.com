@@ -3,20 +3,19 @@ import {
   buildGroupValues,
   clearPendingFilters,
   createInitialState,
-  type PendingFiltersState,
-  resetPendingFilters,
-  showMore,
-  updatePendingFilter,
-  updateSort,
-} from "~/utils/pendingFilters";
-import {
   createReleaseYearFilter,
   createReviewYearFilter,
   createTitleFilter,
   getGroupLetter,
+  ListWithFiltersActions,
+  type ListWithFiltersState,
+  resetPendingFilters,
+  showMore,
   sortNumber,
   sortString,
-} from "~/utils/reducerUtils";
+  updatePendingFilter,
+  updateSort,
+} from "~/components/ListWithFilters.reducerUtils";
 
 /**
  * CastAndCrewMember reducer with pending filters support
@@ -36,15 +35,15 @@ export type Sort =
 const SHOW_COUNT_DEFAULT = 100;
 
 export enum Actions {
-  APPLY_PENDING_FILTERS = "APPLY_PENDING_FILTERS",
-  CLEAR_PENDING_FILTERS = "CLEAR_PENDING_FILTERS",
+  APPLY_PENDING_FILTERS = ListWithFiltersActions.APPLY_PENDING_FILTERS,
+  CLEAR_PENDING_FILTERS = ListWithFiltersActions.CLEAR_PENDING_FILTERS,
   PENDING_FILTER_CREDIT_KIND = "PENDING_FILTER_CREDIT_KIND",
   PENDING_FILTER_RELEASE_YEAR = "PENDING_FILTER_RELEASE_YEAR",
   PENDING_FILTER_REVIEW_YEAR = "PENDING_FILTER_REVIEW_YEAR",
   PENDING_FILTER_TITLE = "PENDING_FILTER_TITLE",
-  RESET_PENDING_FILTERS = "RESET_PENDING_FILTERS",
-  SHOW_MORE = "SHOW_MORE",
-  SORT = "SORT",
+  RESET_PENDING_FILTERS = ListWithFiltersActions.RESET_PENDING_FILTERS,
+  SHOW_MORE = ListWithFiltersActions.SHOW_MORE,
+  SORT = ListWithFiltersActions.SORT,
   TOGGLE_REVIEWED = "TOGGLE_REVIEWED",
 }
 
@@ -101,7 +100,7 @@ type SortAction = {
   value: Sort;
 };
 
-type State = PendingFiltersState<ListItemValue, Sort> & {
+type State = ListWithFiltersState<ListItemValue, Sort> & {
   hideReviewed: boolean;
 };
 

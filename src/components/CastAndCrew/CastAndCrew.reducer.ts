@@ -3,18 +3,17 @@ import {
   buildGroupValues,
   clearPendingFilters,
   createInitialState,
-  type PendingFiltersState,
-  resetPendingFilters,
-  showMore,
-  updatePendingFilter,
-  updateSort,
-} from "~/utils/pendingFilters";
-import {
   createNameFilter,
   getGroupLetter,
+  ListWithFiltersActions,
+  type ListWithFiltersState,
+  resetPendingFilters,
+  showMore,
   sortNumber,
   sortString,
-} from "~/utils/reducerUtils";
+  updatePendingFilter,
+  updateSort,
+} from "~/components/ListWithFilters.reducerUtils";
 
 /**
  * CastAndCrew reducer with pending filters support
@@ -22,13 +21,13 @@ import {
 import type { ListItemValue } from "./CastAndCrew";
 
 export enum Actions {
-  APPLY_PENDING_FILTERS = "APPLY_PENDING_FILTERS",
-  CLEAR_PENDING_FILTERS = "CLEAR_PENDING_FILTERS",
+  APPLY_PENDING_FILTERS = ListWithFiltersActions.APPLY_PENDING_FILTERS,
+  CLEAR_PENDING_FILTERS = ListWithFiltersActions.CLEAR_PENDING_FILTERS,
   PENDING_FILTER_CREDIT_KIND = "PENDING_FILTER_CREDIT_KIND",
   PENDING_FILTER_NAME = "PENDING_FILTER_NAME",
-  RESET_PENDING_FILTERS = "RESET_PENDING_FILTERS",
-  SHOW_MORE = "SHOW_MORE",
-  SORT = "SORT",
+  RESET_PENDING_FILTERS = ListWithFiltersActions.RESET_PENDING_FILTERS,
+  SHOW_MORE = ListWithFiltersActions.SHOW_MORE,
+  SORT = ListWithFiltersActions.SORT,
 }
 
 export type Sort =
@@ -79,7 +78,7 @@ type SortAction = {
   value: Sort;
 };
 
-type State = PendingFiltersState<ListItemValue, Sort>;
+type State = ListWithFiltersState<ListItemValue, Sort>;
 
 // Helper functions
 function groupForValue(item: ListItemValue, sortValue: Sort): string {

@@ -3,18 +3,17 @@ import {
   buildGroupValues,
   clearPendingFilters,
   createInitialState,
-  type PendingFiltersState,
-  resetPendingFilters,
-  showMore,
-  updatePendingFilter,
-  updateSort,
-} from "~/utils/pendingFilters";
-import {
   createReleaseYearFilter,
   createTitleFilter,
   getGroupLetter,
+  ListWithFiltersActions,
+  type ListWithFiltersState,
+  resetPendingFilters,
+  showMore,
   sortString,
-} from "~/utils/reducerUtils";
+  updatePendingFilter,
+  updateSort,
+} from "~/components/ListWithFilters.reducerUtils";
 
 /**
  * Watchlist reducer with pending filters support
@@ -30,17 +29,17 @@ export type Sort =
 const SHOW_COUNT_DEFAULT = 100;
 
 export enum Actions {
-  APPLY_PENDING_FILTERS = "APPLY_PENDING_FILTERS",
-  CLEAR_PENDING_FILTERS = "CLEAR_PENDING_FILTERS",
+  APPLY_PENDING_FILTERS = ListWithFiltersActions.APPLY_PENDING_FILTERS,
+  CLEAR_PENDING_FILTERS = ListWithFiltersActions.CLEAR_PENDING_FILTERS,
   PENDING_FILTER_COLLECTION = "PENDING_FILTER_COLLECTION",
   PENDING_FILTER_DIRECTOR = "PENDING_FILTER_DIRECTOR",
   PENDING_FILTER_PERFORMER = "PENDING_FILTER_PERFORMER",
   PENDING_FILTER_RELEASE_YEAR = "PENDING_FILTER_RELEASE_YEAR",
   PENDING_FILTER_TITLE = "PENDING_FILTER_TITLE",
   PENDING_FILTER_WRITER = "PENDING_FILTER_WRITER",
-  RESET_PENDING_FILTERS = "RESET_PENDING_FILTERS",
-  SHOW_MORE = "SHOW_MORE",
-  SORT = "SORT",
+  RESET_PENDING_FILTERS = ListWithFiltersActions.RESET_PENDING_FILTERS,
+  SHOW_MORE = ListWithFiltersActions.SHOW_MORE,
+  SORT = ListWithFiltersActions.SORT,
 }
 
 export type ActionType =
@@ -107,7 +106,7 @@ type SortAction = {
   value: Sort;
 };
 
-type State = PendingFiltersState<ListItemValue, Sort> & {
+type State = ListWithFiltersState<ListItemValue, Sort> & {
   hideReviewed: boolean;
 };
 
