@@ -5,6 +5,7 @@ import { useReducer, useState } from "react";
 import type { PosterImageProps } from "~/api/posters";
 import type { WatchlistTitle } from "~/api/watchlistTitles";
 
+import { ListItemGenres } from "~/components/ListItemGenres";
 import { ListItemTitle } from "~/components/ListItemTitle";
 import {
   ListHeaderButton,
@@ -157,6 +158,7 @@ function WatchlistListItem({
           performerNames={value.watchlistPerformerNames}
           writerNames={value.watchlistWriterNames}
         />
+        <ListItemGenres values={value.genres} />
       </div>
     </PosterListItem>
   );

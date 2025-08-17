@@ -9,6 +9,7 @@ import {
   getGroupLetter,
   handleListWithFiltersAction,
   ListWithFiltersActions,
+  SHOW_COUNT_DEFAULT,
   sortNumber,
   sortString,
 } from "~/components/ListWithFilters.reducerUtils";
@@ -17,6 +18,10 @@ import {
  * Collection reducer with pending filters support
  */
 import type { ListItemValue } from "./Collection";
+
+export enum CollectionActions {
+  TOGGLE_REVIEWED = "TOGGLE_REVIEWED",
+}
 
 export type Sort =
   | "grade-asc"
@@ -27,12 +32,6 @@ export type Sort =
   | "review-date-desc"
   | "title-asc"
   | "title-desc";
-
-const SHOW_COUNT_DEFAULT = 100;
-
-export enum CollectionActions {
-  TOGGLE_REVIEWED = "TOGGLE_REVIEWED",
-}
 
 // Re-export shared actions for component convenience
 export const Actions = {

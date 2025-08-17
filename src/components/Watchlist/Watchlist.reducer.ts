@@ -9,6 +9,7 @@ import {
   getGroupLetter,
   handleListWithFiltersAction,
   ListWithFiltersActions,
+  SHOW_COUNT_DEFAULT,
   sortString,
   updatePendingFilter,
 } from "~/components/ListWithFilters.reducerUtils";
@@ -18,20 +19,18 @@ import {
  */
 import type { ListItemValue } from "./Watchlist";
 
-export type Sort =
-  | "release-date-asc"
-  | "release-date-desc"
-  | "title-asc"
-  | "title-desc";
-
-const SHOW_COUNT_DEFAULT = 100;
-
 export enum WatchlistActions {
   PENDING_FILTER_COLLECTION = "PENDING_FILTER_COLLECTION",
   PENDING_FILTER_DIRECTOR = "PENDING_FILTER_DIRECTOR",
   PENDING_FILTER_PERFORMER = "PENDING_FILTER_PERFORMER",
   PENDING_FILTER_WRITER = "PENDING_FILTER_WRITER",
 }
+
+export type Sort =
+  | "release-date-asc"
+  | "release-date-desc"
+  | "title-asc"
+  | "title-desc";
 
 // Re-export shared actions for component convenience
 export const Actions = {

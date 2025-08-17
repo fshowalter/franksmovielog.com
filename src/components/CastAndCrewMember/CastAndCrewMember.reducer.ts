@@ -9,6 +9,7 @@ import {
   getGroupLetter,
   handleListWithFiltersAction,
   ListWithFiltersActions,
+  SHOW_COUNT_DEFAULT,
   sortNumber,
   sortString,
   updatePendingFilter,
@@ -19,6 +20,11 @@ import {
  */
 import type { ListItemValue } from "./CastAndCrewMember";
 
+export enum CastAndCrewMemberActions {
+  PENDING_FILTER_CREDIT_KIND = "PENDING_FILTER_CREDIT_KIND",
+  TOGGLE_REVIEWED = "TOGGLE_REVIEWED",
+}
+
 export type Sort =
   | "grade-asc"
   | "grade-desc"
@@ -28,13 +34,6 @@ export type Sort =
   | "review-date-desc"
   | "title-asc"
   | "title-desc";
-
-const SHOW_COUNT_DEFAULT = 100;
-
-export enum CastAndCrewMemberActions {
-  PENDING_FILTER_CREDIT_KIND = "PENDING_FILTER_CREDIT_KIND",
-  TOGGLE_REVIEWED = "TOGGLE_REVIEWED",
-}
 
 // Re-export shared actions for component convenience
 export const Actions = {

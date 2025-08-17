@@ -13,12 +13,11 @@ import {
   getGroupLetter,
   handleListWithFiltersAction,
   ListWithFiltersActions,
+  SHOW_COUNT_DEFAULT,
   sortNumber,
   sortString,
   updatePendingFilter,
 } from "~/components/ListWithFilters.reducerUtils";
-
-const SHOW_COUNT_DEFAULT = 100;
 
 export enum ReviewsActions {
   PENDING_FILTER_GRADE = "PENDING_FILTER_GRADE",

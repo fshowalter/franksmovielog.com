@@ -12,6 +12,11 @@
 import { collator } from "~/utils/collator";
 
 /**
+ * Default number of items to show per page for paginated lists
+ */
+export const SHOW_COUNT_DEFAULT = 100;
+
+/**
  * Common Action Types shared across reducers
  */
 export enum ListWithFiltersActions {
@@ -277,7 +282,7 @@ export function handleListWithFiltersAction<
     }
 
     case ListWithFiltersActions.PENDING_FILTER_GENRES: {
-      if (state.allValues.length > 0 && 'genres' in state.allValues[0]) {
+      if (state.allValues.some(item => 'genres' in item)) {
         return handlePendingFilterGenres(
           state as unknown as ListWithFiltersState<TItem & { genres: readonly string[] }, TSortValue> & TExtendedState,
           action.values,
@@ -288,7 +293,7 @@ export function handleListWithFiltersAction<
     }
 
     case ListWithFiltersActions.PENDING_FILTER_NAME: {
-      if (state.allValues.length > 0 && 'name' in state.allValues[0]) {
+      if (state.allValues.some(item => 'name' in item)) {
         return handlePendingFilterName(
           state as unknown as ListWithFiltersState<TItem & { name: string }, TSortValue> & TExtendedState,
           action.value,
@@ -299,7 +304,7 @@ export function handleListWithFiltersAction<
     }
 
     case ListWithFiltersActions.PENDING_FILTER_RELEASE_YEAR: {
-      if (state.allValues.length > 0 && 'releaseYear' in state.allValues[0]) {
+      if (state.allValues.some(item => 'releaseYear' in item)) {
         return handlePendingFilterReleaseYear(
           state as unknown as ListWithFiltersState<TItem & { releaseYear: string }, TSortValue> & TExtendedState,
           action.values,
@@ -310,7 +315,7 @@ export function handleListWithFiltersAction<
     }
 
     case ListWithFiltersActions.PENDING_FILTER_REVIEW_YEAR: {
-      if (state.allValues.length > 0 && 'reviewYear' in state.allValues[0]) {
+      if (state.allValues.some(item => 'reviewYear' in item)) {
         return handlePendingFilterReviewYear(
           state as unknown as ListWithFiltersState<TItem & { reviewYear?: string }, TSortValue> & TExtendedState,
           action.values,
@@ -321,7 +326,7 @@ export function handleListWithFiltersAction<
     }
 
     case ListWithFiltersActions.PENDING_FILTER_TITLE: {
-      if (state.allValues.length > 0 && 'title' in state.allValues[0]) {
+      if (state.allValues.some(item => 'title' in item)) {
         return handlePendingFilterTitle(
           state as unknown as ListWithFiltersState<TItem & { title: string }, TSortValue> & TExtendedState,
           action.value,
@@ -338,7 +343,7 @@ export function handleListWithFiltersAction<
 
     case ListWithFiltersActions.SHOW_MORE: {
       if (state.showCount !== undefined) {
-        const baseState = showMore(state, 100, handlers.groupFn); // Default increment
+        const baseState = showMore(state, SHOW_COUNT_DEFAULT, handlers.groupFn);
         return extendedState ? { ...baseState, ...extendedState } : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
       }
       return state;

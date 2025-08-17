@@ -7,6 +7,7 @@ import type { PosterImageProps } from "~/api/posters";
 
 import { CreditedAs } from "~/components/CreditedAs";
 import { Grade } from "~/components/Grade";
+import { ListItemGenres } from "~/components/ListItemGenres";
 import { ListItemTitle } from "~/components/ListItemTitle";
 import { ListWithFilters } from "~/components/ListWithFilters";
 import { GroupedPosterList, PosterListItem } from "~/components/PosterList";
@@ -156,9 +157,12 @@ function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
             writerNames={value.watchlistWriterNames}
           />
         )}
-        <div className="font-sans text-xs leading-4 font-light text-subtle">
-          {value.reviewDisplayDate}
-        </div>
+        {value.reviewDisplayDate && (
+          <div className={`font-sans text-xs leading-4 font-light text-subtle`}>
+            {value.reviewDisplayDate}
+          </div>
+        )}
+        <ListItemGenres values={value.genres} />
       </div>
     </PosterListItem>
   );
