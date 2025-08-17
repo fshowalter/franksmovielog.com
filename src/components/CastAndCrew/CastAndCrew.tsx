@@ -65,7 +65,7 @@ export function CastAndCrew({ initialSort, values }: Props): JSX.Element {
           groupItemClassName={`scroll-mt-[calc(52px_+_var(--list-scroll-offset))]`}
           isGrid={false}
           totalCount={state.filteredValues.length}
-          visibleCount={state.showCount}
+          visibleCount={state.filteredValues.length}
         >
           {(value) => {
             return <MemberListItem key={value.name} value={value} />;

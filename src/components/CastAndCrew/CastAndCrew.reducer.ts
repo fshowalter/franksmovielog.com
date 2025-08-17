@@ -8,7 +8,6 @@ import {
   ListWithFiltersActions,
   type ListWithFiltersState,
   resetPendingFilters,
-  showMore,
   sortNumber,
   sortString,
   updatePendingFilter,
@@ -26,17 +25,8 @@ export enum Actions {
   PENDING_FILTER_CREDIT_KIND = "PENDING_FILTER_CREDIT_KIND",
   PENDING_FILTER_NAME = "PENDING_FILTER_NAME",
   RESET_PENDING_FILTERS = ListWithFiltersActions.RESET_PENDING_FILTERS,
-  SHOW_MORE = ListWithFiltersActions.SHOW_MORE,
   SORT = ListWithFiltersActions.SORT,
 }
-
-export type Sort =
-  | "name-asc"
-  | "name-desc"
-  | "review-count-asc"
-  | "review-count-desc";
-
-const SHOW_COUNT_DEFAULT = 100;
 
 export type ActionType =
   | ApplyPendingFiltersAction
@@ -44,8 +34,14 @@ export type ActionType =
   | PendingFilterCreditKindAction
   | PendingFilterNameAction
   | ResetPendingFiltersAction
-  | ShowMoreAction
   | SortAction;
+
+
+export type Sort =
+  | "name-asc"
+  | "name-desc"
+  | "review-count-asc"
+  | "review-count-desc";
 
 type ApplyPendingFiltersAction = {
   type: Actions.APPLY_PENDING_FILTERS;
@@ -67,10 +63,6 @@ type PendingFilterNameAction = {
 
 type ResetPendingFiltersAction = {
   type: Actions.RESET_PENDING_FILTERS;
-};
-
-type ShowMoreAction = {
-  type: Actions.SHOW_MORE;
 };
 
 type SortAction = {
@@ -121,7 +113,7 @@ export function initState({
   return createInitialState({
     groupFn: groupValues,
     initialSort,
-    showCount: SHOW_COUNT_DEFAULT,
+    showCount: Number.MAX_SAFE_INTEGER, // CastAndCrew doesn't paginate
     sortFn: sortValues,
     values,
   });
@@ -151,10 +143,6 @@ export function reducer(state: State, action: ActionType): State {
 
     case Actions.RESET_PENDING_FILTERS: {
       return resetPendingFilters(state);
-    }
-
-    case Actions.SHOW_MORE: {
-      return showMore(state, SHOW_COUNT_DEFAULT, groupValues);
     }
 
     case Actions.SORT: {
