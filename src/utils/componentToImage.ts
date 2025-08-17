@@ -22,51 +22,51 @@ let fontDataCache: Font[] | undefined;
 export async function componentToImage(
   component: JSX.Element,
 ): Promise<Uint8Array<ArrayBuffer>> {
-  if (cacheConfig.enableCache) {
-    await ensureCacheDir(cacheConfig.cacheDir);
-
-    // Serialize the component to create a stable cache key
-    const serialized = serializeJsx(component);
-    const cacheKey = createCacheKey(serialized);
-
-    // Check for cached image
-    const cachedImage = await getCachedItem<Uint8Array<ArrayBuffer>>(
-      cacheConfig.cacheDir,
-      cacheKey,
-      "jpg",
-      true,
-      cacheConfig.debugCache,
-      `OG Image: ${cacheKey.slice(0, 8)}...`,
-    );
-
-    if (cachedImage) {
-      return cachedImage;
-    }
-
-    if (process.env.DEBUG_CACHE_VERBOSE === "true") {
-      console.log(`[CACHE] Serialized length: ${serialized.length}`);
-      console.log(`[CACHE] Serialized preview: ${serialized.slice(0, 200)}...`);
-    }
-
-    // Generate the SVG (expensive operation)
+  // If caching is disabled, generate and return image directly
+  if (!cacheConfig.enableCache) {
     const svg = await componentToSvg(component);
-
-    // Convert SVG to JPEG
-    const imageBuffer = (await sharp(Buffer.from(svg))
+    return (await sharp(Buffer.from(svg))
       .jpeg()
       .toBuffer()) as Uint8Array<ArrayBuffer>;
-
-    // Save to cache
-    await saveCachedItem(cacheConfig.cacheDir, cacheKey, "jpg", imageBuffer);
-
-    return imageBuffer;
   }
 
-  // No caching - generate SVG and convert to JPEG
+  await ensureCacheDir(cacheConfig.cacheDir);
+
+  // Serialize the component to create a stable cache key
+  const serialized = serializeJsx(component);
+  const cacheKey = createCacheKey(serialized);
+
+  // Check for cached image
+  const cachedImage = await getCachedItem<Uint8Array<ArrayBuffer>>(
+    cacheConfig.cacheDir,
+    cacheKey,
+    "jpg",
+    true,
+    cacheConfig.debugCache,
+    `OG Image: ${cacheKey.slice(0, 8)}...`,
+  );
+
+  if (cachedImage) {
+    return cachedImage;
+  }
+
+  if (process.env.DEBUG_CACHE_VERBOSE === "true") {
+    console.log(`[CACHE] Serialized length: ${serialized.length}`);
+    console.log(`[CACHE] Serialized preview: ${serialized.slice(0, 200)}...`);
+  }
+
+  // Generate the SVG (expensive operation)
   const svg = await componentToSvg(component);
-  return (await sharp(Buffer.from(svg))
+
+  // Convert SVG to JPEG
+  const imageBuffer = (await sharp(Buffer.from(svg))
     .jpeg()
     .toBuffer()) as Uint8Array<ArrayBuffer>;
+
+  // Save to cache
+  await saveCachedItem(cacheConfig.cacheDir, cacheKey, "jpg", imageBuffer);
+
+  return imageBuffer;
 }
 
 async function componentToSvg(component: JSX.Element) {

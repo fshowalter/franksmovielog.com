@@ -3,6 +3,7 @@ import type { IFS } from "unionfs";
 import { fs as memFs, vol } from "memfs";
 import realFs from "node:fs";
 import { tmpdir } from "node:os";
+import path from "node:path";
 import { Union } from "unionfs";
 import { beforeEach, vi } from "vitest";
 
@@ -56,6 +57,28 @@ vi.mock("node:fs/promises", () => {
     stat: promisify(ufs.stat.bind(ufs)),
     unlink: promisify(ufs.unlink.bind(ufs)),
     writeFile: promisify(ufs.writeFile.bind(ufs)),
+  };
+});
+
+// AIDEV-NOTE: Mock createCacheConfig to use a test-specific directory
+// This ensures tests never read from the real .cache directory
+vi.mock("./src/utils/cache", async () => {
+  const actual = await vi.importActual("./src/utils/cache");
+
+  // Generate a unique test cache directory per test run
+  const testCacheRoot = path.join(
+    tmpdir(),
+    "test-cache",
+    process.pid.toString(),
+  );
+
+  return {
+    ...actual,
+    createCacheConfig: (name: string) => ({
+      cacheDir: path.join(testCacheRoot, name),
+      debugCache: process.env.DEBUG_CACHE === "true",
+      enableCache: actual.ENABLE_CACHE,
+    }),
   };
 });
 
