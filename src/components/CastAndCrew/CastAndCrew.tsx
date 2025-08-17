@@ -6,8 +6,8 @@ import type { AvatarImageProps } from "~/api/avatars";
 import type { CastAndCrewMember } from "~/api/castAndCrew";
 
 import { AvatarListItem } from "~/components/AvatarList";
+import { GroupedAvatarList } from "~/components/AvatarList";
 import { CreditedAs } from "~/components/CreditedAs";
-import { GroupedList } from "~/components/GroupedList";
 import { ListItemName } from "~/components/ListItemName";
 import { ListWithFilters } from "~/components/ListWithFilters";
 
@@ -59,18 +59,15 @@ export function CastAndCrew({ initialSort, values }: Props): JSX.Element {
       }
       hasActiveFilters={state.hasActiveFilters}
       list={
-        <GroupedList
+        <GroupedAvatarList
           data-testid="list"
           groupedValues={state.groupedValues}
           groupItemClassName={`scroll-mt-[calc(52px_+_var(--list-scroll-offset))]`}
-          isGrid={false}
-          totalCount={state.filteredValues.length}
-          visibleCount={state.showCount ?? state.filteredValues.length}
         >
           {(value) => {
             return <MemberListItem key={value.name} value={value} />;
           }}
-        </GroupedList>
+        </GroupedAvatarList>
       }
       onApplyFilters={() => dispatch({ type: Actions.APPLY_PENDING_FILTERS })}
       onClearFilters={() => {

@@ -5,6 +5,8 @@ import type { AvatarImageProps } from "~/api/avatars";
 import { Avatar } from "~/components/Avatar";
 import { ccn } from "~/utils/concatClassNames";
 
+import { GroupingListItem } from "./GroupingListItem";
+
 export const AvatarListItemImageConfig = {
   height: 80,
   width: 80,
@@ -47,6 +49,43 @@ export function AvatarListItem({
       </div>
       {children}
     </li>
+  );
+}
+
+export function GroupedAvatarList<T>({
+  children,
+  className,
+  groupedValues,
+  groupItemClassName,
+  ...rest
+}: {
+  children: (item: T) => React.ReactNode;
+  className?: string;
+  groupedValues: Map<string, Iterable<T>>;
+  groupItemClassName?: string;
+}): JSX.Element {
+  return (
+    <>
+      <ol
+        className={`
+          ${className ?? ""}
+        `}
+        {...rest}
+      >
+        {[...groupedValues].map((groupedValue) => {
+          const [group, groupValues] = groupedValue;
+          return (
+            <GroupingListItem
+              className={groupItemClassName}
+              groupText={group}
+              key={group}
+            >
+              <ol>{[...groupValues].map((value) => children(value))}</ol>
+            </GroupingListItem>
+          );
+        })}
+      </ol>
+    </>
   );
 }
 
