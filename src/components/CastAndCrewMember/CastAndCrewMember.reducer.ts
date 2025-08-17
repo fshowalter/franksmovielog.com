@@ -9,7 +9,6 @@ import {
   getGroupLetter,
   handleListWithFiltersAction,
   ListWithFiltersActions,
-  SHOW_COUNT_DEFAULT,
   sortNumber,
   sortString,
   updatePendingFilter,
@@ -121,7 +120,7 @@ export function initState({
   const baseState = createInitialState({
     groupFn: groupValues,
     initialSort,
-    showCount: SHOW_COUNT_DEFAULT,
+    showMoreEnabled: false,
     sortFn: sortValues,
     values,
   });

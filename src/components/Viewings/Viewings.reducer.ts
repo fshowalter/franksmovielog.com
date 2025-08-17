@@ -114,7 +114,7 @@ export function initState({
   const baseState = createInitialState({
     groupFn: groupValues,
     initialSort,
-    showCount: Number.MAX_SAFE_INTEGER, // Viewings don't paginate
+    showMoreEnabled: false, // Viewings don't paginate
     sortFn: sortValues,
     values,
   });

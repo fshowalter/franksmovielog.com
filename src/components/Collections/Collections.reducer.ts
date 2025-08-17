@@ -39,7 +39,7 @@ export function initState({
 }): State {
   return createInitialState({
     initialSort,
-    // showCount omitted - Collections don't paginate
+    showMoreEnabled: false,
     sortFn: sortValues,
     values,
   });

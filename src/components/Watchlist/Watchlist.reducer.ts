@@ -9,7 +9,6 @@ import {
   getGroupLetter,
   handleListWithFiltersAction,
   ListWithFiltersActions,
-  SHOW_COUNT_DEFAULT,
   sortString,
   updatePendingFilter,
 } from "~/components/ListWithFilters.reducerUtils";
@@ -112,7 +111,6 @@ export function initState({
   const baseState = createInitialState({
     groupFn: groupValues,
     initialSort,
-    showCount: SHOW_COUNT_DEFAULT,
     sortFn: sortValues,
     values,
   });

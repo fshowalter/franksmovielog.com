@@ -14,7 +14,7 @@ import { collator } from "~/utils/collator";
 /**
  * Default number of items to show per page for paginated lists
  */
-export const SHOW_COUNT_DEFAULT = 100;
+const SHOW_COUNT_DEFAULT = 100;
 
 /**
  * Common Action Types shared across reducers
@@ -111,6 +111,7 @@ export type ResetPendingFiltersAction = {
 };
 
 export type ShowMoreAction = {
+  increment?: number;
   type: ListWithFiltersActions.SHOW_MORE;
 };
 
@@ -199,17 +200,18 @@ export function clearPendingFilters<TItem, TSortValue>(
 export function createInitialState<TItem, TSortValue>({
   groupFn,
   initialSort,
-  showCount,
+  showMoreEnabled = true,
   sortFn,
   values,
 }: {
   groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>;
   initialSort: TSortValue;
-  showCount?: number;
+  showMoreEnabled?: boolean;
   sortFn: (values: TItem[], sort: TSortValue) => TItem[];
   values: TItem[];
 }): ListWithFiltersState<TItem, TSortValue> {
   const sortedValues = sortFn(values, initialSort);
+  const showCount = showMoreEnabled ? SHOW_COUNT_DEFAULT : undefined;
   const valuesToGroup = showCount
     ? sortedValues.slice(0, showCount)
     : sortedValues;
@@ -343,7 +345,8 @@ export function handleListWithFiltersAction<
 
     case ListWithFiltersActions.SHOW_MORE: {
       if (state.showCount !== undefined) {
-        const baseState = showMore(state, SHOW_COUNT_DEFAULT, handlers.groupFn);
+        const increment = action.increment ?? SHOW_COUNT_DEFAULT;
+        const baseState = showMore(state, increment, handlers.groupFn);
         return extendedState ? { ...baseState, ...extendedState } : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
       }
       return state;
