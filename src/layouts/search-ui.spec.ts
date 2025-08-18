@@ -170,6 +170,7 @@ describe("SearchUI", () => {
 
   describe("destroy functionality", () => {
     it("should abort pending searches when destroyed", async () => {
+      // Initialize first to set up abort controller
       await searchUI.init();
 
       const abortSpy = vi.spyOn(AbortController.prototype, "abort");
@@ -177,6 +178,9 @@ describe("SearchUI", () => {
       // Start a search
       input.value = "test";
       input.dispatchEvent(new Event("input"));
+
+      // Wait a tick for the search to start
+      await new Promise((resolve) => setTimeout(resolve, 0));
 
       // Destroy before search completes
       await searchUI.destroy();
