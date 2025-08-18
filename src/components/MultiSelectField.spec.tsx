@@ -122,6 +122,45 @@ describe("MultiSelectField", () => {
       expect(screen.getByRole("listbox")).toBeInTheDocument();
     });
 
+    it("opens dropdown with Space key", async ({ expect }) => {
+      const user = userEvent.setup();
+      render(<MultiSelectField {...defaultProps} />);
+      
+      const button = screen.getByRole("button", { name: "Test Label" });
+      button.focus();
+      await user.keyboard(" ");
+      
+      expect(screen.getByRole("listbox")).toBeInTheDocument();
+    });
+
+    it("opens dropdown with ArrowDown key", async ({ expect }) => {
+      const user = userEvent.setup();
+      render(<MultiSelectField {...defaultProps} />);
+      
+      const button = screen.getByRole("button", { name: "Test Label" });
+      button.focus();
+      await user.keyboard("{ArrowDown}");
+      
+      expect(screen.getByRole("listbox")).toBeInTheDocument();
+      // Should also highlight first item
+      const options = screen.getAllByRole("option");
+      expect(options[0].className).toContain("bg-stripe");
+    });
+
+    it("opens dropdown with ArrowUp key", async ({ expect }) => {
+      const user = userEvent.setup();
+      render(<MultiSelectField {...defaultProps} />);
+      
+      const button = screen.getByRole("button", { name: "Test Label" });
+      button.focus();
+      await user.keyboard("{ArrowUp}");
+      
+      expect(screen.getByRole("listbox")).toBeInTheDocument();
+      // Should also highlight first item
+      const options = screen.getAllByRole("option");
+      expect(options[0].className).toContain("bg-stripe");
+    });
+
     it("navigates options with arrow keys", async ({ expect }) => {
       const user = userEvent.setup();
       render(<MultiSelectField {...defaultProps} />);
@@ -145,7 +184,73 @@ describe("MultiSelectField", () => {
       expect(options[0].className).toContain("bg-stripe");
     });
 
-    it("selects option with click", async ({ expect }) => {
+    it("navigates to last option with End key", async ({ expect }) => {
+      const user = userEvent.setup();
+      render(<MultiSelectField {...defaultProps} />);
+      
+      const button = screen.getByRole("button", { name: "Test Label" });
+      await user.click(button);
+      
+      // Press End to go to last option
+      await user.keyboard("{End}");
+      
+      const options = screen.getAllByRole("option");
+      expect(options[options.length - 1].className).toContain("bg-stripe");
+    });
+
+    it("navigates to first option with Home key", async ({ expect }) => {
+      const user = userEvent.setup();
+      render(<MultiSelectField {...defaultProps} />);
+      
+      const button = screen.getByRole("button", { name: "Test Label" });
+      await user.click(button);
+      
+      // Navigate down a few times first
+      await user.keyboard("{ArrowDown}");
+      await user.keyboard("{ArrowDown}");
+      await user.keyboard("{ArrowDown}");
+      
+      // Press Home to go back to first option
+      await user.keyboard("{Home}");
+      
+      const options = screen.getAllByRole("option");
+      expect(options[0].className).toContain("bg-stripe");
+    });
+
+    it("doesn't navigate past last option with ArrowDown", async ({ expect }) => {
+      const user = userEvent.setup();
+      render(<MultiSelectField {...defaultProps} />);
+      
+      const button = screen.getByRole("button", { name: "Test Label" });
+      await user.click(button);
+      
+      // Navigate to last option
+      await user.keyboard("{End}");
+      
+      // Try to go past the last option
+      await user.keyboard("{ArrowDown}");
+      
+      const options = screen.getAllByRole("option");
+      // Should still be on last option
+      expect(options[options.length - 1].className).toContain("bg-stripe");
+    });
+
+    it("doesn't navigate before first option with ArrowUp", async ({ expect }) => {
+      const user = userEvent.setup();
+      render(<MultiSelectField {...defaultProps} />);
+      
+      const button = screen.getByRole("button", { name: "Test Label" });
+      await user.click(button);
+      
+      // Already at first option, try to go up
+      await user.keyboard("{ArrowUp}");
+      
+      const options = screen.getAllByRole("option");
+      // Should still be on first option
+      expect(options[0].className).toContain("bg-stripe");
+    });
+
+    it("selects option with mouse click after keyboard navigation", async ({ expect }) => {
       const onChange = vi.fn();
       const user = userEvent.setup();
       render(<MultiSelectField {...defaultProps} onChange={onChange} />);
@@ -153,12 +258,41 @@ describe("MultiSelectField", () => {
       const button = screen.getByRole("button", { name: "Test Label" });
       await user.click(button);
       
-      // Click on the first option
-      const firstOption = screen.getByText("Option 1");
-      await user.click(firstOption);
+      // Navigate to third option with keyboard
+      const listbox = screen.getByRole("listbox");
+      listbox.focus();
+      await user.keyboard("{ArrowDown}");
+      await user.keyboard("{ArrowDown}");
+      
+      // Click on the highlighted option
+      const thirdOption = screen.getByText("Option 3");
+      await user.click(thirdOption);
       
       await waitFor(() => {
-        expect(onChange).toHaveBeenCalledWith(["Option 1"]);
+        expect(onChange).toHaveBeenCalledWith(["Option 3"]);
+      });
+    });
+
+    it("closes dropdown with Tab key", async ({ expect }) => {
+      const user = userEvent.setup();
+      render(
+        <div>
+          <MultiSelectField {...defaultProps} />
+          <button type="button">Next Element</button>
+        </div>
+      );
+      
+      const button = screen.getByRole("button", { name: "Test Label" });
+      await user.click(button);
+      expect(screen.getByRole("listbox")).toBeInTheDocument();
+      
+      // Focus the listbox and tab away
+      const listbox = screen.getByRole("listbox");
+      listbox.focus();
+      await user.keyboard("{Tab}");
+      
+      await waitFor(() => {
+        expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
       });
     });
 
@@ -178,6 +312,78 @@ describe("MultiSelectField", () => {
       await waitFor(() => {
         expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
       });
+      
+      // Focus should return to button
+      expect(button).toHaveFocus();
+    });
+
+    it("maintains dropdown open after selecting an option", async ({ expect }) => {
+      const onChange = vi.fn();
+      const user = userEvent.setup();
+      render(<MultiSelectField {...defaultProps} onChange={onChange} />);
+      
+      const button = screen.getByRole("button", { name: "Test Label" });
+      await user.click(button);
+      
+      // Select an option
+      await user.click(screen.getByText("Option 2"));
+      
+      await waitFor(() => {
+        expect(onChange).toHaveBeenCalledWith(["Option 2"]);
+      });
+      
+      // Dropdown should still be open
+      expect(screen.getByRole("listbox")).toBeInTheDocument();
+      
+      // Option 2 should not be in the available options anymore
+      const options = screen.getAllByRole("option");
+      expect(options).toHaveLength(7);
+      // Verify Option 2 is not among the options
+      const optionTexts = options.map(opt => opt.textContent);
+      expect(optionTexts).not.toContain("Option 2");
+    });
+
+    it("updates available options after selection", async ({ expect }) => {
+      const onChange = vi.fn();
+      const user = userEvent.setup();
+      render(<MultiSelectField {...defaultProps} onChange={onChange} />);
+      
+      const button = screen.getByRole("button", { name: "Test Label" });
+      await user.click(button);
+      
+      // Initially should have 8 options
+      let options = screen.getAllByRole("option");
+      expect(options).toHaveLength(8);
+      
+      // Select Option 1
+      await user.click(screen.getByText("Option 1"));
+      
+      // Should now have 7 options
+      options = screen.getAllByRole("option");
+      expect(options).toHaveLength(7);
+      
+      // Option 1 should not be in the list
+      expect(screen.queryByRole("option", { name: "Option 1" })).not.toBeInTheDocument();
+    });
+
+    it("handles keyboard navigation when no options available", async ({ expect }) => {
+      const user = userEvent.setup();
+      render(<MultiSelectField {...defaultProps} options={[]} />);
+      
+      const button = screen.getByRole("button", { name: "Test Label" });
+      await user.click(button);
+      
+      // Should show no options available message
+      expect(screen.getByText("No options available")).toBeInTheDocument();
+      
+      // Arrow keys shouldn't cause errors
+      await user.keyboard("{ArrowDown}");
+      await user.keyboard("{ArrowUp}");
+      await user.keyboard("{Home}");
+      await user.keyboard("{End}");
+      
+      // Message should still be there
+      expect(screen.getByText("No options available")).toBeInTheDocument();
     });
   });
 
