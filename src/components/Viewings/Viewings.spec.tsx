@@ -313,26 +313,85 @@ describe("Viewings", () => {
     expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
 
-  it("can navigate between months", async ({ expect }) => {
+  it("can navigate to previous month", async ({ expect }) => {
     expect.hasAssertions();
 
-    // Just test with the normal props which should have multiple months of data
     render(<Viewings {...props} />);
 
-    // Get the calendar element
-    const calendar = screen.getByTestId("calendar");
-
-    // Take a snapshot of the initial state
-    expect(calendar).toMatchSnapshot();
-
-    // Check if we can sort to oldest first - this should change the initial month
+    // Sort by oldest first to ensure we have a next month button
     await userEvent.selectOptions(
       screen.getByLabelText("Sort"),
       "Viewing Date (Oldest First)",
     );
 
-    // Take another snapshot after sorting
-    expect(calendar).toMatchSnapshot();
+    // Find and click the next month button first to ensure we can go back
+    const nextMonthButton = await screen.findByRole("button", {
+      name: /Navigate to next month:/,
+    });
+    await userEvent.click(nextMonthButton);
+
+    // Now find and click the previous month button
+    const prevMonthButton = await screen.findByRole("button", {
+      name: /Navigate to previous month:/,
+    });
+    await userEvent.click(prevMonthButton);
+
+    expect(screen.getByTestId("calendar")).toMatchSnapshot();
+  });
+
+  it("can navigate to next month", async ({ expect }) => {
+    expect.hasAssertions();
+
+    render(<Viewings {...props} />);
+
+    // Sort by oldest first to ensure we start at the beginning
+    await userEvent.selectOptions(
+      screen.getByLabelText("Sort"),
+      "Viewing Date (Oldest First)",
+    );
+
+    // Find and click the next month button
+    const nextMonthButton = await screen.findByRole("button", {
+      name: /Navigate to next month:/,
+    });
+    await userEvent.click(nextMonthButton);
+
+    expect(screen.getByTestId("calendar")).toMatchSnapshot();
+  });
+
+  it("shows correct month navigation buttons", async ({ expect }) => {
+    expect.hasAssertions();
+
+    render(<Viewings {...props} />);
+
+    // Default sort is newest first, should show previous month button
+    const prevMonthButton = screen.queryByRole("button", {
+      name: /Navigate to previous month:/,
+    });
+    const nextMonthButton = screen.queryByRole("button", {
+      name: /Navigate to next month:/,
+    });
+
+    // At newest month, should only have previous month button
+    expect(prevMonthButton).toBeInTheDocument();
+    expect(nextMonthButton).not.toBeInTheDocument();
+
+    // Sort by oldest first
+    await userEvent.selectOptions(
+      screen.getByLabelText("Sort"),
+      "Viewing Date (Oldest First)",
+    );
+
+    // At oldest month, should only have next month button
+    const prevMonthButtonAfterSort = screen.queryByRole("button", {
+      name: /Navigate to previous month:/,
+    });
+    const nextMonthButtonAfterSort = screen.queryByRole("button", {
+      name: /Navigate to next month:/,
+    });
+
+    expect(prevMonthButtonAfterSort).not.toBeInTheDocument();
+    expect(nextMonthButtonAfterSort).toBeInTheDocument();
   });
 
   it("can clear all filters", async ({ expect }) => {

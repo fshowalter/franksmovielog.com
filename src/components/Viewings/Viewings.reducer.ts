@@ -138,10 +138,7 @@ export function reducer(state: State, action: ActionType): State {
       newMonth = getNextMonthWithViewings(
         state.currentMonth,
         state.filteredValues,
-      );
-      if (!newMonth) {
-        return state; // No next month with viewings
-      }
+      )!; // Bang operator - we know this exists because button is only rendered when hasNextMonth is true
       return {
         ...state,
         currentMonth: newMonth,
@@ -157,10 +154,10 @@ export function reducer(state: State, action: ActionType): State {
 
     case ViewingsActions.PENDING_FILTER_MEDIUM: {
       const filterFn =
-        action.values.length > 0
-          ? (value: ListItemValue) =>
-              value.medium ? action.values.includes(value.medium) : false
-          : undefined;
+        action.values.length === 0
+          ? undefined
+          : (value: ListItemValue) =>
+              value.medium ? action.values.includes(value.medium) : false;
       return {
         ...updatePendingFilter(state, "media", filterFn, action.values),
         currentMonth: state.currentMonth,
@@ -172,10 +169,10 @@ export function reducer(state: State, action: ActionType): State {
 
     case ViewingsActions.PENDING_FILTER_VENUE: {
       const filterFn =
-        action.values.length > 0
-          ? (value: ListItemValue) =>
-              value.venue ? action.values.includes(value.venue) : false
-          : undefined;
+        action.values.length === 0
+          ? undefined
+          : (value: ListItemValue) =>
+              value.venue ? action.values.includes(value.venue) : false;
       return {
         ...updatePendingFilter(state, "venues", filterFn, action.values),
         currentMonth: state.currentMonth,
@@ -185,10 +182,9 @@ export function reducer(state: State, action: ActionType): State {
       };
     }
     case ViewingsActions.PENDING_FILTER_VIEWING_YEAR: {
-      const filterFn =
-        action.values.length > 0
-          ? (value: ListItemValue) => action.values.includes(value.viewingYear)
-          : undefined;
+      const [minYear, maxYear] = action.values;
+      const filterFn = (value: ListItemValue) =>
+        value.viewingYear >= minYear && value.viewingYear <= maxYear;
       return {
         ...updatePendingFilter(state, "viewingYears", filterFn, action.values),
         currentMonth: state.currentMonth,
@@ -202,10 +198,7 @@ export function reducer(state: State, action: ActionType): State {
       newMonth = getPrevMonthWithViewings(
         state.currentMonth,
         state.filteredValues,
-      );
-      if (!newMonth) {
-        return state; // No previous month with viewings
-      }
+      )!; // Bang operator - we know this exists because button is only rendered when hasPrevMonth is true
       return {
         ...state,
         currentMonth: newMonth,
