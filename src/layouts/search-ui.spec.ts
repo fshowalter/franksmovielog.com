@@ -83,14 +83,12 @@ describe("SearchUI", () => {
     clearButton = container.querySelector(
       ".pagefind-ui__search-clear",
     ) as HTMLButtonElement;
-    container.querySelector(".pagefind-ui__button") as HTMLButtonElement;
     resultsContainer = container.querySelector(
       ".pagefind-ui__results",
     ) as HTMLElement;
     resultsCounter = container.querySelector(
       ".pagefind-ui__results-count",
     ) as HTMLElement;
-    container.querySelector(".pagefind-ui__results-footer") as HTMLElement;
 
     // Reset mocks
     vi.clearAllMocks();
@@ -230,35 +228,6 @@ describe("SearchUI", () => {
 
       expect(abortSpy).toHaveBeenCalled();
       abortSpy.mockRestore();
-    });
-  });
-
-  describe("screen reader announcements", () => {
-    it("should create announcement elements", async () => {
-      await searchUI.init();
-
-      // Trigger a search that would cause an announcement
-      input.value = "test";
-      input.dispatchEvent(new Event("input"));
-
-      // Wait a moment for any async operations
-      await new Promise((resolve) => setTimeout(resolve, 10));
-
-      // The announcement element may be created and removed quickly
-      // Let's test that the announcement function would work
-      const announcement = document.createElement("div");
-      announcement.setAttribute("role", "status");
-      announcement.setAttribute("aria-live", "polite");
-      announcement.className = "sr-only";
-      announcement.textContent = "Test announcement";
-      document.body.append(announcement);
-
-      const element = document.querySelector('[role="status"]');
-      expect(element).toBeTruthy();
-      expect(element?.textContent).toBe("Test announcement");
-
-      // Clean up
-      announcement.remove();
     });
   });
 
