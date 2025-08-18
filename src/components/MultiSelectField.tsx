@@ -5,11 +5,11 @@ import { useEffect, useRef, useState } from "react";
 import { LabelText } from "~/components/LabelText";
 
 export const DROPDOWN_CLOSE_DELAY_MS = 150;
+export const SCROLL_DELAY_MS = 50;
 
 // Positioning constants
 const SPACE_BUFFER_ABOVE = 20;
 const SPACE_BUFFER_BELOW = 10;
-const SCROLL_DELAY_MS = 50;
 
 // Dropdown sizing based on items
 const ITEM_HEIGHT = 40; // Approximate height of each dropdown item in pixels
