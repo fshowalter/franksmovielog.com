@@ -58,6 +58,7 @@ export default tsEslint.config(
       "@typescript-eslint/array-type": "error",
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
       "@typescript-eslint/consistent-type-imports": "error",
+      "@typescript-eslint/no-import-type-side-effects": "error",
       "no-restricted-imports": [
         "error",
         {
