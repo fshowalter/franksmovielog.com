@@ -57,24 +57,23 @@ describe("SearchUI", () => {
     `;
 
     container = document.querySelector("#pagefind__search") as HTMLElement;
-    input = container.querySelector(".pagefind-ui__search-input") as HTMLInputElement;
-    clearButton = container.querySelector(".pagefind-ui__search-clear") as HTMLButtonElement;
+    input = container.querySelector(
+      ".pagefind-ui__search-input",
+    ) as HTMLInputElement;
+    clearButton = container.querySelector(
+      ".pagefind-ui__search-clear",
+    ) as HTMLButtonElement;
     container.querySelector(".pagefind-ui__button") as HTMLButtonElement;
-    resultsContainer = container.querySelector(".pagefind-ui__results") as HTMLElement;
-    resultsCounter = container.querySelector(".pagefind-ui__results-count") as HTMLElement;
+    resultsContainer = container.querySelector(
+      ".pagefind-ui__results",
+    ) as HTMLElement;
+    resultsCounter = container.querySelector(
+      ".pagefind-ui__results-count",
+    ) as HTMLElement;
     container.querySelector(".pagefind-ui__results-footer") as HTMLElement;
 
     // Reset mocks
     vi.clearAllMocks();
-    
-    // Mock import.meta.env
-    vi.stubGlobal("import", {
-      meta: {
-        env: {
-          BASE_URL: "/",
-        },
-      },
-    });
 
     // Mock dynamic import for pagefind
     vi.doMock("/pagefind/pagefind.js", () => mockPagefindAPI);
@@ -85,7 +84,6 @@ describe("SearchUI", () => {
   afterEach(() => {
     document.body.innerHTML = "";
     vi.clearAllMocks();
-    vi.unstubAllGlobals();
     vi.doUnmock("/pagefind/pagefind.js");
   });
 
@@ -93,7 +91,7 @@ describe("SearchUI", () => {
     it("should handle missing DOM elements gracefully", async () => {
       document.body.innerHTML = "";
       const newSearchUI = new SearchUI();
-      
+
       // Should not throw when elements are missing
       await expect(newSearchUI.init()).resolves.toBeUndefined();
     });
@@ -112,8 +110,10 @@ describe("SearchUI", () => {
 
       const newSearchUI = new SearchUI();
       await newSearchUI.init();
-      
-      const fallbackInput = document.querySelector("#pagefind-search-input") as HTMLInputElement;
+
+      const fallbackInput = document.querySelector(
+        "#pagefind-search-input",
+      ) as HTMLInputElement;
       expect(fallbackInput).toBeTruthy();
     });
   });
@@ -121,11 +121,11 @@ describe("SearchUI", () => {
   describe("search functionality", () => {
     it("should clear search when clear button is clicked", async () => {
       await searchUI.init();
-      
+
       // First set some input
       input.value = "test";
       input.dispatchEvent(new Event("input"));
-      
+
       expect(clearButton.classList.contains("hidden")).toBe(false);
 
       // Click clear button
@@ -139,10 +139,10 @@ describe("SearchUI", () => {
 
     it("should clear search when input is emptied", async () => {
       await searchUI.init();
-      
+
       input.value = "test";
       input.dispatchEvent(new Event("input"));
-      
+
       input.value = "";
       input.dispatchEvent(new Event("input"));
 
@@ -152,9 +152,9 @@ describe("SearchUI", () => {
 
     it("should cancel pending search when new search starts", async () => {
       await searchUI.init();
-      
+
       const abortSpy = vi.spyOn(AbortController.prototype, "abort");
-      
+
       // Start first search
       input.value = "first";
       input.dispatchEvent(new Event("input"));
@@ -171,9 +171,9 @@ describe("SearchUI", () => {
   describe("destroy functionality", () => {
     it("should abort pending searches when destroyed", async () => {
       await searchUI.init();
-      
+
       const abortSpy = vi.spyOn(AbortController.prototype, "abort");
-      
+
       // Start a search
       input.value = "test";
       input.dispatchEvent(new Event("input"));
@@ -195,7 +195,7 @@ describe("SearchUI", () => {
       input.dispatchEvent(new Event("input"));
 
       // Wait a moment for any async operations
-      await new Promise(resolve => setTimeout(resolve, 10));
+      await new Promise((resolve) => setTimeout(resolve, 10));
 
       // The announcement element may be created and removed quickly
       // Let's test that the announcement function would work
@@ -224,7 +224,7 @@ describe("SearchUI", () => {
       input.dispatchEvent(new Event("input"));
 
       // Should clear for whitespace-only input
-      await new Promise(resolve => setTimeout(resolve, 10));
+      await new Promise((resolve) => setTimeout(resolve, 10));
       expect(resultsContainer.innerHTML).toBe("");
     });
 
@@ -245,7 +245,6 @@ describe("SearchUI", () => {
       expect(clearButton.classList.contains("hidden")).toBe(true);
     });
   });
-
 
   // Load more functionality is tested through the public API by simulating user interactions
 

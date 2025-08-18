@@ -8,11 +8,11 @@ describe("search-ui utility functions", () => {
   describe("DOM element handling", () => {
     it("should handle missing search container", () => {
       document.body.innerHTML = "";
-      
+
       // Test that code handles missing elements gracefully
       const container = document.querySelector("#pagefind__search");
       expect(container).toBeNull();
-      
+
       // Fallback to individual element selectors
       const input = document.querySelector("#pagefind-search-input");
       expect(input).toBeNull();
@@ -26,10 +26,10 @@ describe("search-ui utility functions", () => {
           <div class="pagefind-ui__results"></div>
         </div>
       `;
-      
+
       const container = document.querySelector("#pagefind__search");
       expect(container).toBeTruthy();
-      
+
       const input = container?.querySelector(".pagefind-ui__search-input");
       expect(input).toBeTruthy();
     });
@@ -40,13 +40,13 @@ describe("search-ui utility functions", () => {
         <button id="pagefind-clear-button">Clear</button>
         <div id="pagefind-results"></div>
       `;
-      
+
       const input = document.querySelector("#pagefind-search-input");
       expect(input).toBeTruthy();
-      
+
       const clearButton = document.querySelector("#pagefind-clear-button");
       expect(clearButton).toBeTruthy();
-      
+
       const results = document.querySelector("#pagefind-results");
       expect(results).toBeTruthy();
     });
@@ -65,7 +65,7 @@ describe("search-ui utility functions", () => {
         totalResults: 0,
         visibleResults: 0,
       };
-      
+
       expect(initialState.error).toBeUndefined();
       expect(initialState.hasSearched).toBe(false);
       expect(initialState.isSearching).toBe(false);
@@ -87,15 +87,15 @@ describe("search-ui utility functions", () => {
         totalResults: 0,
         visibleResults: 0,
       };
-      
+
       const updates = {
         hasSearched: true,
         isSearching: true,
         query: "test",
       };
-      
+
       const newState = { ...state, ...updates };
-      
+
       expect(newState.query).toBe("test");
       expect(newState.hasSearched).toBe(true);
       expect(newState.isSearching).toBe(true);
@@ -110,19 +110,19 @@ describe("search-ui utility functions", () => {
         one_result: '[COUNT] result for "[SEARCH_TERM]"',
         zero_results: 'No results for "[SEARCH_TERM]"',
       };
-      
+
       // Test zero results
       let text = resultsText.zero_results
         .replace("[COUNT]", "0")
         .replace("[SEARCH_TERM]", "test");
       expect(text).toBe('No results for "test"');
-      
+
       // Test one result
       text = resultsText.one_result
         .replace("[COUNT]", "1")
         .replace("[SEARCH_TERM]", "test");
       expect(text).toBe('1 result for "test"');
-      
+
       // Test many results
       text = resultsText.many_results
         .replace("[COUNT]", "5")
@@ -139,14 +139,14 @@ describe("search-ui utility functions", () => {
       announcement.setAttribute("aria-live", "polite");
       announcement.className = "sr-only";
       announcement.textContent = message;
-      
+
       document.body.append(announcement);
-      
+
       const element = document.querySelector('[role="status"]');
       expect(element).toBeTruthy();
       expect(element?.textContent).toBe(message);
       expect(element?.className).toBe("sr-only");
-      
+
       // Clean up
       announcement.remove();
     });
@@ -165,7 +165,7 @@ describe("search-ui utility functions", () => {
         },
         showImages: true,
       };
-      
+
       expect(config.bundlePath).toBe("/pagefind/");
       expect(config.debounceTimeoutMs).toBe(150);
       expect(config.pageSize).toBe(5);
@@ -183,7 +183,7 @@ describe("search-ui utility functions", () => {
     it("should distinguish between abort and other errors", () => {
       const abortError = new DOMException("Search aborted", "AbortError");
       const otherError = new Error("Network error");
-      
+
       expect(abortError.name).toBe("AbortError");
       expect(otherError.name).not.toBe("AbortError");
     });
@@ -193,12 +193,12 @@ describe("search-ui utility functions", () => {
     it("should slice results correctly for pagination", () => {
       const results = Array.from({ length: 10 }, (_, i) => ({ id: i }));
       const pageSize = 5;
-      
+
       const firstPage = results.slice(0, pageSize);
       expect(firstPage).toHaveLength(5);
       expect(firstPage[0].id).toBe(0);
       expect(firstPage[4].id).toBe(4);
-      
+
       const remaining = results.slice(pageSize);
       expect(remaining).toHaveLength(5);
       expect(remaining[0].id).toBe(5);
@@ -208,10 +208,10 @@ describe("search-ui utility functions", () => {
     it("should handle partial pages", () => {
       const results = Array.from({ length: 7 }, (_, i) => ({ id: i }));
       const pageSize = 5;
-      
+
       const firstPage = results.slice(0, pageSize);
       expect(firstPage).toHaveLength(5);
-      
+
       const remaining = results.slice(pageSize);
       expect(remaining).toHaveLength(2);
     });
