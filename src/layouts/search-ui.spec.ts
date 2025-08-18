@@ -10,6 +10,37 @@ vi.mock("~/utils/debounce", () => ({
   debounce: <T extends (...args: unknown[]) => unknown>(fn: T) => fn,
 }));
 
+function createMockResult(id: string) {
+  return {
+    data: vi.fn().mockResolvedValue({
+      excerpt: `Excerpt ${id}`,
+      filters: {},
+      meta: { title: `Result ${id}` },
+      url: `/result${id}`,
+      weighted_locations: [],
+    }),
+    id,
+    score: 1,
+    words: [1],
+  };
+}
+
+// Helper functions for creating mock results
+function createMockResultWithTitle(id: string, title: string) {
+  return {
+    data: vi.fn().mockResolvedValue({
+      excerpt: `Excerpt ${id}`,
+      filters: {},
+      meta: { title },
+      url: `/result${id}`,
+      weighted_locations: [],
+    }),
+    id,
+    score: 1,
+    words: [1],
+  };
+}
+
 describe("SearchUI", () => {
   let searchUI: SearchUI;
   let container: HTMLElement;
@@ -63,12 +94,12 @@ describe("SearchUI", () => {
 
     // Reset mocks
     vi.clearAllMocks();
-    
+
     // Mock console.error to suppress expected error logs
     consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(() => {
       // Explicitly do nothing - suppress output
     });
-    
+
     // Set up default mock return values
     mockPagefindAPI.search.mockResolvedValue({
       filters: {},
@@ -77,7 +108,7 @@ describe("SearchUI", () => {
       totalFilters: {},
       unfilteredResultCount: 0,
     });
-    
+
     mockPagefindAPI.debouncedSearch.mockResolvedValue({
       filters: {},
       results: [],
@@ -411,21 +442,8 @@ describe("SearchUI", () => {
 
   describe("load more functionality", () => {
     it("should load more results when button is clicked", async () => {
-      const createMockResult = (id: string, title: string) => ({
-        data: vi.fn().mockResolvedValue({
-          excerpt: `Excerpt ${id}`,
-          filters: {},
-          meta: { title },
-          url: `/result${id}`,
-          weighted_locations: [],
-        }),
-        id,
-        score: 1,
-        words: [1],
-      });
-
       const mockResults = Array.from({ length: 10 }, (_, i) =>
-        createMockResult(`${i + 1}`, `Result ${i + 1}`),
+        createMockResultWithTitle(`${i + 1}`, `Result ${i + 1}`),
       );
 
       mockPagefindAPI.debouncedSearch.mockResolvedValueOnce({
@@ -526,19 +544,6 @@ describe("SearchUI", () => {
     });
 
     it("should create screen reader announcements when loading more", async () => {
-      const createMockResult = (id: string) => ({
-        data: vi.fn().mockResolvedValue({
-          excerpt: `Excerpt ${id}`,
-          filters: {},
-          meta: { title: `Result ${id}` },
-          url: `/result${id}`,
-          weighted_locations: [],
-        }),
-        id,
-        score: 1,
-        words: [1],
-      });
-
       const mockResults = Array.from({ length: 10 }, (_, i) =>
         createMockResult(`${i + 1}`),
       );
@@ -594,7 +599,7 @@ describe("SearchUI", () => {
         "Failed to initialize search API:",
         expect.any(Error),
       );
-      
+
       // Restore the mock for other tests
       vi.doUnmock("/pagefind/pagefind.js");
       vi.doMock("/pagefind/pagefind.js", () => mockPagefindAPI);
@@ -623,10 +628,10 @@ describe("SearchUI", () => {
 
     it("should ignore aborted search errors", async () => {
       await searchUI.init();
-      
+
       // Clear any previous calls to console.error
       consoleErrorSpy.mockClear();
-      
+
       // Set up the mock to reject with an AbortError
       const abortError = new Error("Aborted");
       abortError.name = "AbortError";
@@ -676,7 +681,7 @@ describe("SearchUI", () => {
   describe("edge cases", () => {
     it("should not reinitialize when already initialized", async () => {
       await searchUI.init();
-      
+
       // Clear the mock call count after first init
       mockPagefindAPI.init.mockClear();
 
@@ -701,19 +706,6 @@ describe("SearchUI", () => {
     });
 
     it("should maintain scroll position when loading more results", async () => {
-      const createMockResult = (id: string) => ({
-        data: vi.fn().mockResolvedValue({
-          excerpt: `Excerpt ${id}`,
-          filters: {},
-          meta: { title: `Result ${id}` },
-          url: `/result${id}`,
-          weighted_locations: [],
-        }),
-        id,
-        score: 1,
-        words: [1],
-      });
-
       const mockResults = Array.from({ length: 10 }, (_, i) =>
         createMockResult(`${i + 1}`),
       );
@@ -751,7 +743,7 @@ describe("SearchUI", () => {
       // Start a search but don't wait for it to complete
       input.value = "test";
       input.dispatchEvent(new Event("input"));
-      
+
       // Immediately destroy while search is pending
       await searchUI.destroy();
 
