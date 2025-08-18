@@ -5,6 +5,10 @@ import fs from "node:fs/promises";
 import satori from "satori";
 import sharp from "sharp";
 
+import type { HomeOpenGraphImageComponentType } from "~/components/Home/OpenGraphImage";
+import type { OpenGraphImageComponentType } from "~/components/OpenGraphImage";
+import type { ReviewOpenGraphImageComponentType } from "~/components/Review/OpenGraphImage";
+
 import {
   createCacheConfig,
   createCacheKey,
@@ -18,17 +22,22 @@ const cacheConfig = createCacheConfig("og-images");
 // Font data cache to avoid reading fonts multiple times
 let fontDataCache: Font[] | undefined;
 
+type OpenGraphImageComponent =
+  | HomeOpenGraphImageComponentType
+  | OpenGraphImageComponentType
+  | ReviewOpenGraphImageComponentType;
+
 type ReactElementWithType = ReactElement & {
   $$typeof?: symbol;
-  props?: {
+  props: {
     [key: string]: unknown;
     children?: unknown;
   };
-  type: ((props: unknown) => JSX.Element) | string;
+  type: string;
 };
 
 export async function componentToImage(
-  component: JSX.Element,
+  component: ReturnType<OpenGraphImageComponent>,
 ): Promise<Uint8Array<ArrayBuffer>> {
   // If caching is disabled, generate and return image directly
   if (!cacheConfig.enableCache) {
@@ -58,11 +67,6 @@ export async function componentToImage(
     return cachedImage;
   }
 
-  if (process.env.DEBUG_CACHE_VERBOSE === "true") {
-    console.log(`[CACHE] Serialized length: ${serialized.length}`);
-    console.log(`[CACHE] Serialized preview: ${serialized.slice(0, 200)}...`);
-  }
-
   // Generate the SVG (expensive operation)
   const svg = await componentToSvg(component);
 
@@ -77,7 +81,7 @@ export async function componentToImage(
   return imageBuffer;
 }
 
-async function componentToSvg(component: JSX.Element) {
+async function componentToSvg(component: ReturnType<OpenGraphImageComponent>) {
   const fonts = await getFontData();
 
   return await satori(component, {
@@ -145,39 +149,31 @@ function serializeJsx(element: JSX.Element): string {
 
   // Handle React elements
   const reactElement = element as ReactElementWithType;
-  if (reactElement.$$typeof) {
-    // For OG images, we only use string types (HTML elements)
-    const typeName =
-      typeof reactElement.type === "string" ? reactElement.type : "Component";
+  // For OG images, we only use string types (HTML elements)
+  const typeName = reactElement.type;
 
-    const props: Record<string, unknown> = {};
+  const props: Record<string, unknown> = {};
 
-    // Process props, excluding children
-    if (reactElement.props) {
-      const elementProps = reactElement.props as Record<string, unknown>;
-      for (const [key, value] of Object.entries(elementProps)) {
-        if (key === "children") continue;
+  // Process props, excluding children
+  const elementProps = reactElement.props as Record<string, unknown>;
+  for (const [key, value] of Object.entries(elementProps)) {
+    if (key === "children") continue;
 
-        // For OG images, we only have primitives and objects (style objects)
-        // For objects and arrays (but not null), serialize as JSON
-        props[key] =
-          typeof value === "object" && value !== null
-            ? JSON.stringify(value)
-            : value; // Primitives (including null/undefined)
-      }
-    }
-
-    // Sort props for deterministic output
-    const sortedPropsStr = JSON.stringify(props, Object.keys(props).sort());
-
-    // Serialize children
-    const children = reactElement.props?.children;
-    const childrenStr = children ? serializeJsx(children as JSX.Element) : "";
-
-    // Combine into a stable string representation
-    return `<${typeName}:${sortedPropsStr}>${childrenStr}</${typeName}>`;
+    // For OG images, we only have primitives and objects (style objects)
+    // For objects and arrays (but not null), serialize as JSON
+    props[key] =
+      typeof value === "object" && value !== null
+        ? JSON.stringify(value)
+        : value; // Primitives (including null/undefined)
   }
 
-  // Fallback for other objects (shouldn't happen with OG images)
-  return JSON.stringify(element);
+  // Sort props for deterministic output
+  const sortedPropsStr = JSON.stringify(props, Object.keys(props).sort());
+
+  // Serialize children
+  const children = reactElement.props?.children;
+  const childrenStr = children ? serializeJsx(children as JSX.Element) : "";
+
+  // Combine into a stable string representation
+  return `<${typeName}:${sortedPropsStr}>${childrenStr}</${typeName}>`;
 }

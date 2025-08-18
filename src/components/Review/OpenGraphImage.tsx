@@ -1,15 +1,22 @@
 import type { JSX } from "react";
+
+export type ReviewOpenGraphImageComponentType = (
+  props: ReviewOpenGraphImageProps,
+) => JSX.Element;
+
+type ReviewOpenGraphImageProps = {
+  backdrop: string;
+  grade: string;
+  releaseYear: string;
+  title: string;
+};
+
 export function OpenGraphImage({
   backdrop,
   grade,
   releaseYear,
   title,
-}: {
-  backdrop: string;
-  grade: string;
-  releaseYear: string;
-  title: string;
-}): JSX.Element {
+}: ReviewOpenGraphImageProps): JSX.Element {
   return (
     <div
       style={{
