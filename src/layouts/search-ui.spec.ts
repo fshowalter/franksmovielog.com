@@ -1,12 +1,14 @@
 /**
  * @vitest-environment jsdom
  */
-import { afterEach, beforeEach, describe, expect, it, vi, type Mock } from "vitest";
+/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-assignment */
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+
 import { SearchUI } from "./search-ui";
 
 // Mock the debounce utility
 vi.mock("~/utils/debounce", () => ({
-  debounce: (fn: Function) => fn,
+  debounce: <T extends (...args: unknown[]) => unknown>(fn: T) => fn,
 }));
 
 describe("SearchUI", () => {
@@ -14,32 +16,30 @@ describe("SearchUI", () => {
   let container: HTMLElement;
   let input: HTMLInputElement;
   let clearButton: HTMLButtonElement;
-  let loadMoreButton: HTMLButtonElement;
   let resultsContainer: HTMLElement;
   let resultsCounter: HTMLElement;
-  let loadMoreWrapper: HTMLElement;
 
   // Mock pagefind API
   const mockPagefindAPI = {
-    options: vi.fn().mockResolvedValue(undefined),
-    init: vi.fn().mockResolvedValue(undefined),
-    destroy: vi.fn().mockResolvedValue(undefined),
-    search: vi.fn().mockResolvedValue({
-      results: [],
-      filters: {},
-      timings: { preload: 0, search: 0, total: 0 },
-      totalFilters: {},
-      unfilteredResultCount: 0,
-    }),
     debouncedSearch: vi.fn().mockResolvedValue({
-      results: [],
       filters: {},
+      results: [],
       timings: { preload: 0, search: 0, total: 0 },
       totalFilters: {},
       unfilteredResultCount: 0,
     }),
+    destroy: vi.fn().mockResolvedValue(),
     filters: vi.fn().mockResolvedValue({}),
-    preload: vi.fn().mockResolvedValue(undefined),
+    init: vi.fn().mockResolvedValue(),
+    options: vi.fn().mockResolvedValue(),
+    preload: vi.fn().mockResolvedValue(),
+    search: vi.fn().mockResolvedValue({
+      filters: {},
+      results: [],
+      timings: { preload: 0, search: 0, total: 0 },
+      totalFilters: {},
+      unfilteredResultCount: 0,
+    }),
   };
 
   beforeEach(() => {
@@ -60,10 +60,10 @@ describe("SearchUI", () => {
     container = document.querySelector("#pagefind__search") as HTMLElement;
     input = container.querySelector(".pagefind-ui__search-input") as HTMLInputElement;
     clearButton = container.querySelector(".pagefind-ui__search-clear") as HTMLButtonElement;
-    loadMoreButton = container.querySelector(".pagefind-ui__button") as HTMLButtonElement;
+    container.querySelector(".pagefind-ui__button") as HTMLButtonElement;
     resultsContainer = container.querySelector(".pagefind-ui__results") as HTMLElement;
     resultsCounter = container.querySelector(".pagefind-ui__results-count") as HTMLElement;
-    loadMoreWrapper = container.querySelector(".pagefind-ui__results-footer") as HTMLElement;
+    container.querySelector(".pagefind-ui__results-footer") as HTMLElement;
 
     // Reset mocks
     vi.clearAllMocks();
@@ -205,7 +205,7 @@ describe("SearchUI", () => {
       announcement.setAttribute("aria-live", "polite");
       announcement.className = "sr-only";
       announcement.textContent = "Test announcement";
-      document.body.appendChild(announcement);
+      document.body.append(announcement);
 
       const element = document.querySelector('[role="status"]');
       expect(element).toBeTruthy();
@@ -251,12 +251,12 @@ describe("SearchUI", () => {
     it("should handle SearchAPI initialization when already initialized", async () => {
       // Create a mock SearchAPI-like behavior
       const mockSearchAPI = {
-        isInitialized: false,
+        destroy: vi.fn(),
         init: vi.fn(async function(this: any) {
           if (this.isInitialized) return;
           this.isInitialized = true;
         }),
-        destroy: vi.fn(),
+        isInitialized: false,
         search: vi.fn(),
       };
 
@@ -330,15 +330,15 @@ describe("SearchUI", () => {
       await searchUI.init();
       
       // Mock results
-      const mockResults = Array(10).fill(null).map((_, i) => ({
-        id: String(i),
+      const mockResults = Array.from({length: 10}, (_, i) => ({
         data: vi.fn().mockResolvedValue({
-          url: `/test-${i}`,
-          meta: { title: `Test ${i}` },
           excerpt: `Excerpt ${i}`,
           filters: {},
+          meta: { title: `Test ${i}` },
+          url: `/test-${i}`,
           weighted_locations: [],
         }),
+        id: String(i),
       }));
       
       // Set up state for load more with initial results already fetched
@@ -367,8 +367,8 @@ describe("SearchUI", () => {
       
       // Mock results that fail
       const mockResults = [{
-        id: "1",
         data: vi.fn().mockRejectedValue(new Error("Load failed")),
+        id: "1",
       }];
       
       (searchUI as any).currentSearchResults = mockResults;
@@ -390,23 +390,20 @@ describe("SearchUI", () => {
   describe("result rendering", () => {
     it("should render result item with image", () => {
       const result = {
-        url: "/test",
-        meta: {
-          title: "Test Title",
-          image: "/test.jpg",
-          image_alt: "Test Alt",
-        },
         excerpt: "Test excerpt",
         filters: {},
+        meta: {
+          image: "/test.jpg",
+          image_alt: "Test Alt",
+          title: "Test Title",
+        },
+        url: "/test",
         weighted_locations: [],
       };
       
       const html = (searchUI as any).renderResultItem(result);
       
-      expect(html).toContain("Test Title");
-      expect(html).toContain("/test.jpg");
-      expect(html).toContain("Test Alt");
-      expect(html).toContain("Test excerpt");
+      expect(html).toMatchSnapshot();
     });
 
     it("should render results with one result", async () => {
@@ -417,7 +414,7 @@ describe("SearchUI", () => {
         hasSearched: true,
         isSearching: false,
         query: "test",
-        results: [{ meta: { title: "Test" }, url: "/test", excerpt: "Test" }],
+        results: [{ excerpt: "Test", meta: { title: "Test" }, url: "/test" }],
         totalResults: 1,
         visibleResults: 1,
       };

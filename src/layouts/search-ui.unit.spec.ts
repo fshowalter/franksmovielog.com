@@ -1,18 +1,10 @@
 /**
  * @vitest-environment jsdom
  */
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it } from "vitest";
 
 // Test specific functions that can be isolated
 describe("search-ui utility functions", () => {
-  describe("debounce integration", () => {
-    it("should import and use debounce", () => {
-      // Test that debounce is imported correctly
-      const debounce = vi.fn((fn: Function) => fn);
-      expect(debounce).toBeDefined();
-    });
-  });
-
   describe("DOM element handling", () => {
     it("should handle missing search container", () => {
       document.body.innerHTML = "";
@@ -97,9 +89,9 @@ describe("search-ui utility functions", () => {
       };
       
       const updates = {
-        query: "test",
         hasSearched: true,
         isSearching: true,
+        query: "test",
       };
       
       const newState = { ...state, ...updates };
@@ -111,71 +103,7 @@ describe("search-ui utility functions", () => {
     });
   });
 
-  describe("result rendering", () => {
-    it("should generate correct HTML for results with images", () => {
-      const result = {
-        url: "/test",
-        meta: {
-          title: "Test Title",
-          image: "/test.jpg",
-          image_alt: "Test Image",
-        },
-        excerpt: "Test excerpt",
-        filters: {},
-        weighted_locations: [],
-      };
-      
-      const html = `
-        <li class="gap-x-6 tablet:px-6 laptop:px-8 py-6 px-[8%] hover:bg-subtle border-t border-default last-of-type:border-b grid grid-cols-[min(25%,80px)_1fr] focus-within:bg-subtle focus-within:outline-[rgb(38,132,255)] focus-within:outline-1 focus-within:-outline-offset-2">
-          
-            <div class="shrink-0 drop-shadow-md">
-              <img 
-                src="/test.jpg" 
-                alt="Test Image"
-                class="h-auto w-full"
-                loading="lazy"
-              >
-            </div>
-          
-          <div class="min-w-0 flex-1">
-            <h3 class="font-sans text-base font-semibold text-accent">
-              <a href="/test" class="block">
-                Test Title
-              </a>
-            </h3>
-            <p class="text-sm leading-normal text-default">
-              Test excerpt
-            </p>
-          </div>
-        </li>
-    `;
-      
-      expect(html).toContain("Test Title");
-      expect(html).toContain("/test.jpg");
-      expect(html).toContain("Test Image");
-      expect(html).toContain("Test excerpt");
-    });
-
-    it("should generate loading skeleton HTML", () => {
-      const skeletonHTML = `
-      <div class="animate-pulse px-4 py-4">
-        <div class="gap-x-6 tablet:px-6 laptop:px-8 py-6 px-[8%] grid grid-cols-[min(25%,80px)_1fr]">
-          
-            <div class="h-12 w-full shrink-0 bg-subtle"></div>
-          
-          <div class="min-w-0 flex-1">
-            <div class="mb-2 h-5 w-3/4 bg-subtle"></div>
-            <div class="h-3 w-full bg-subtle"></div>
-            <div class="mt-1 h-3 w-5/6 bg-subtle"></div>
-          </div>
-        </div>
-      </div>
-    `;
-      
-      expect(skeletonHTML).toContain("animate-pulse");
-      expect(skeletonHTML).toContain("bg-subtle");
-    });
-
+  describe("counter text generation", () => {
     it("should generate correct counter text", () => {
       const resultsText = {
         many_results: '[COUNT] results for "[SEARCH_TERM]"',
@@ -212,7 +140,7 @@ describe("search-ui utility functions", () => {
       announcement.className = "sr-only";
       announcement.textContent = message;
       
-      document.body.appendChild(announcement);
+      document.body.append(announcement);
       
       const element = document.querySelector('[role="status"]');
       expect(element).toBeTruthy();
