@@ -794,7 +794,7 @@ describe("MultiSelectField", () => {
     }) => {
       // Mock getBoundingClientRect to simulate button near bottom of viewport
       const originalGetBoundingClientRect =
-        HTMLElement.prototype.getBoundingClientRect.bind(HTMLElement.prototype);
+        HTMLElement.prototype.getBoundingClientRect;
       HTMLElement.prototype.getBoundingClientRect = vi.fn(function (
         this: HTMLElement,
       ) {
@@ -833,7 +833,7 @@ describe("MultiSelectField", () => {
     }) => {
       // Mock getBoundingClientRect to simulate button in middle with no space
       const originalGetBoundingClientRect =
-        HTMLElement.prototype.getBoundingClientRect.bind(HTMLElement.prototype);
+        HTMLElement.prototype.getBoundingClientRect;
       HTMLElement.prototype.getBoundingClientRect = vi.fn(function (
         this: HTMLElement,
       ) {
