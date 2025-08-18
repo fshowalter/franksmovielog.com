@@ -2,10 +2,7 @@ import { act, render, screen, waitFor } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
-import { MultiSelectField } from "./MultiSelectField";
-
-// Import the constant for timer tests
-const SCROLL_DELAY_MS = 50;
+import { MultiSelectField, SCROLL_DELAY_MS } from "./MultiSelectField";
 
 // Mock scrollIntoView for all tests
 if (!Element.prototype.scrollIntoView) {
@@ -794,24 +791,24 @@ describe("MultiSelectField", () => {
     }) => {
       // Mock getBoundingClientRect to simulate button near bottom of viewport
       const originalGetBoundingClientRect =
-        HTMLElement.prototype.getBoundingClientRect;
-      HTMLElement.prototype.getBoundingClientRect = vi.fn(function (
-        this: HTMLElement,
-      ) {
-        if (this.tagName === "BUTTON") {
-          return {
-            bottom: window.innerHeight - 60,
-            height: 40,
-            left: 0,
-            right: 100,
-            top: window.innerHeight - 100, // Near bottom
-            width: 100,
-            x: 0,
-            y: window.innerHeight - 100,
-          } as DOMRect;
-        }
-        return originalGetBoundingClientRect.call(this);
-      });
+        Element.prototype.getBoundingClientRect; // eslint-disable-line @typescript-eslint/unbound-method
+      vi.spyOn(Element.prototype, "getBoundingClientRect").mockImplementation(
+        function (this: Element) {
+          if ((this as HTMLElement).tagName === "BUTTON") {
+            return {
+              bottom: window.innerHeight - 60,
+              height: 40,
+              left: 0,
+              right: 100,
+              top: window.innerHeight - 100, // Near bottom
+              width: 100,
+              x: 0,
+              y: window.innerHeight - 100,
+            } as DOMRect;
+          }
+          return originalGetBoundingClientRect.call(this);
+        },
+      );
 
       render(<MultiSelectField {...defaultProps} />);
 
@@ -824,8 +821,7 @@ describe("MultiSelectField", () => {
       expect(dropdown?.className).toContain("bottom-full");
 
       // Restore original
-      HTMLElement.prototype.getBoundingClientRect =
-        originalGetBoundingClientRect;
+      vi.restoreAllMocks();
     });
 
     it("uses minimal height when neither direction has enough space", ({
@@ -833,24 +829,24 @@ describe("MultiSelectField", () => {
     }) => {
       // Mock getBoundingClientRect to simulate button in middle with no space
       const originalGetBoundingClientRect =
-        HTMLElement.prototype.getBoundingClientRect;
-      HTMLElement.prototype.getBoundingClientRect = vi.fn(function (
-        this: HTMLElement,
-      ) {
-        if (this.tagName === "BUTTON") {
-          return {
-            bottom: 140,
-            height: 40,
-            left: 0,
-            right: 100,
-            top: 100,
-            width: 100,
-            x: 0,
-            y: 100,
-          } as DOMRect;
-        }
-        return originalGetBoundingClientRect.call(this);
-      });
+        Element.prototype.getBoundingClientRect; // eslint-disable-line @typescript-eslint/unbound-method
+      vi.spyOn(Element.prototype, "getBoundingClientRect").mockImplementation(
+        function (this: Element) {
+          if ((this as HTMLElement).tagName === "BUTTON") {
+            return {
+              bottom: 140,
+              height: 40,
+              left: 0,
+              right: 100,
+              top: 100,
+              width: 100,
+              x: 0,
+              y: 100,
+            } as DOMRect;
+          }
+          return originalGetBoundingClientRect.call(this);
+        },
+      );
 
       // Mock window height to be very small
       Object.defineProperty(globalThis, "innerHeight", {
@@ -870,8 +866,7 @@ describe("MultiSelectField", () => {
       expect(dropdown?.className).toContain("top-full");
 
       // Restore original
-      HTMLElement.prototype.getBoundingClientRect =
-        originalGetBoundingClientRect;
+      vi.restoreAllMocks();
       Object.defineProperty(globalThis, "innerHeight", {
         configurable: true,
         value: 768,
