@@ -9,13 +9,28 @@ export const DROPDOWN_CLOSE_DELAY_MS = 150;
 // Positioning constants
 const SPACE_BUFFER_ABOVE = 20;
 const SPACE_BUFFER_BELOW = 10;
-const MIN_DROPDOWN_HEIGHT = 120;
-const MAX_DROPDOWN_HEIGHT = 300;
-const MIN_FALLBACK_HEIGHT = 80;
 const SCROLL_DELAY_MS = 50;
 
-// CSS selectors
-const STICKY_FOOTER_SELECTOR = ".z-filter-footer";
+// Dropdown sizing based on items
+const ITEM_HEIGHT = 40; // Approximate height of each dropdown item in pixels
+const MIN_VISIBLE_ITEMS = 4;
+const MAX_VISIBLE_ITEMS = 7;
+
+// Helper to find the nearest fieldset parent
+const findFieldsetParent = (
+  element: HTMLElement | null,
+): HTMLElement | undefined => {
+  if (!element) return undefined;
+
+  let parent = element.parentElement;
+  while (parent && parent !== document.body) {
+    if (parent.tagName.toLowerCase() === "fieldset") {
+      return parent;
+    }
+    parent = parent.parentElement;
+  }
+  return undefined;
+};
 
 // Helper to find the nearest scrollable container
 const findScrollableContainer = (
@@ -37,35 +52,18 @@ const findScrollableContainer = (
 // Calculate available space above and below the button
 const calculateAvailableSpace = (
   buttonRect: DOMRect,
-  scrollableContainer: HTMLElement | undefined,
+  fieldsetParent: HTMLElement | undefined,
 ) => {
   let effectiveSpaceBelow: number;
   let effectiveSpaceAbove: number;
 
-  if (scrollableContainer) {
-    // We're inside a scrollable container
-    const containerRect = scrollableContainer.getBoundingClientRect();
-
-    // Space within the visible container area
-    effectiveSpaceBelow = containerRect.bottom - buttonRect.bottom;
-    effectiveSpaceAbove = buttonRect.top - containerRect.top;
-
-    // Check for sticky footer within container
-    const stickyFooter = scrollableContainer.querySelector(
-      STICKY_FOOTER_SELECTOR,
-    );
-    if (stickyFooter) {
-      const footerRect = stickyFooter.getBoundingClientRect();
-      // If footer is visible, subtract its height from space below
-      if (footerRect.top < containerRect.bottom) {
-        effectiveSpaceBelow = Math.min(
-          effectiveSpaceBelow,
-          footerRect.top - buttonRect.bottom,
-        );
-      }
-    }
+  if (fieldsetParent) {
+    // We're inside a fieldset - use its boundaries
+    const fieldsetRect = fieldsetParent.getBoundingClientRect();
+    effectiveSpaceBelow = fieldsetRect.bottom - buttonRect.bottom;
+    effectiveSpaceAbove = buttonRect.top - fieldsetRect.top;
   } else {
-    // Not in a scrollable container, use viewport
+    // No fieldset parent, use viewport
     const viewportHeight = window.innerHeight;
     effectiveSpaceBelow = viewportHeight - buttonRect.bottom;
     effectiveSpaceAbove = buttonRect.top;
@@ -82,27 +80,37 @@ const calculateAvailableSpace = (
 const determineDropdownLayout = (
   effectiveSpaceAbove: number,
   effectiveSpaceBelow: number,
+  itemCount: number,
 ) => {
-  const minDropdownHeight = MIN_DROPDOWN_HEIGHT;
-  const maxDropdownHeight = MAX_DROPDOWN_HEIGHT;
-
-  // Determine position based on available space
-  if (
-    effectiveSpaceBelow < minDropdownHeight &&
-    effectiveSpaceAbove > effectiveSpaceBelow
-  ) {
-    // Open upward if more space above
-    const height = Math.min(
-      Math.max(effectiveSpaceAbove, MIN_FALLBACK_HEIGHT),
-      maxDropdownHeight,
-    );
-    return { height: `${height}px`, position: "above" as const };
+  // Calculate heights based on number of items
+  const minDropdownHeight = MIN_VISIBLE_ITEMS * ITEM_HEIGHT;
+  const maxDropdownHeight = Math.min(MAX_VISIBLE_ITEMS, itemCount) * ITEM_HEIGHT;
+  
+  // Check if we can fit minimum items below
+  if (effectiveSpaceBelow < minDropdownHeight) {
+    // Can't fit minimum below, try above
+    if (effectiveSpaceAbove >= minDropdownHeight) {
+      // Open upward - fit as many items as possible up to max
+      const itemsThatFit = Math.min(
+        Math.floor(effectiveSpaceAbove / ITEM_HEIGHT),
+        MAX_VISIBLE_ITEMS,
+        itemCount
+      );
+      const height = Math.max(MIN_VISIBLE_ITEMS, itemsThatFit) * ITEM_HEIGHT;
+      return { height: `${height}px`, position: "above" as const };
+    } else {
+      // Can't fit minimum in either direction, use what space we have below
+      const height = Math.max(effectiveSpaceBelow, ITEM_HEIGHT);
+      return { height: `${height}px`, position: "below" as const };
+    }
   } else {
-    // Default to opening below
-    const height = Math.min(
-      Math.max(effectiveSpaceBelow, MIN_FALLBACK_HEIGHT),
-      maxDropdownHeight,
+    // Can fit at least minimum below, use as much space as we can
+    const itemsThatFit = Math.min(
+      Math.floor(effectiveSpaceBelow / ITEM_HEIGHT),
+      MAX_VISIBLE_ITEMS,
+      itemCount
     );
+    const height = Math.max(MIN_VISIBLE_ITEMS, itemsThatFit) * ITEM_HEIGHT;
     return { height: `${height}px`, position: "below" as const };
   }
 };
@@ -135,11 +143,13 @@ export function MultiSelectField({
   );
 
   const handleToggle = () => {
-    setIsOpen(!isOpen);
     if (!isOpen) {
+      // Calculate position BEFORE opening to prevent flash
+      calculateDropdownPositionAndHeight();
       // Reset highlighted index when opening
       setHighlightedIndex(0);
     }
+    setIsOpen(!isOpen);
   };
 
   const handleSelect = (option: string) => {
@@ -274,20 +284,21 @@ export function MultiSelectField({
   };
 
   // Calculate available space and position when dropdown opens
-  // AIDEV-NOTE: Dropdown positioning logic - opens upward when insufficient space below
-  // Handles both viewport boundaries and scrollable container boundaries
+  // AIDEV-NOTE: Dropdown positioning logic - opens upward when there's more space above
+  // and the space below is insufficient for the minimum number of items
   const calculateDropdownPositionAndHeight = () => {
     if (!buttonRef.current) return;
 
     const buttonRect = buttonRef.current.getBoundingClientRect();
-    const scrollableContainer = findScrollableContainer(buttonRef.current);
-
+    const fieldsetParent = findFieldsetParent(buttonRef.current);
+    
     const { effectiveSpaceAbove, effectiveSpaceBelow } =
-      calculateAvailableSpace(buttonRect, scrollableContainer);
+      calculateAvailableSpace(buttonRect, fieldsetParent);
 
     const { height, position } = determineDropdownLayout(
       effectiveSpaceAbove,
       effectiveSpaceBelow,
+      availableOptions.length
     );
 
     setDropdownPosition(position);
@@ -341,12 +352,12 @@ export function MultiSelectField({
     };
   }, [isOpen]);
 
-  // Calculate dropdown position and height when it opens
+  // Recalculate position when available options change
   useEffect(() => {
     if (isOpen) {
       calculateDropdownPositionAndHeight();
     }
-  }, [isOpen]);
+  }, [availableOptions.length]);
 
   // Add resize and scroll listeners with debouncing
   useEffect(() => {
