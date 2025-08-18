@@ -13,7 +13,7 @@ const SCROLL_DELAY_MS = 50;
 
 // Dropdown sizing based on items
 const ITEM_HEIGHT = 40; // Approximate height of each dropdown item in pixels
-const MIN_VISIBLE_ITEMS = 4;
+const MIN_VISIBLE_ITEMS = 3;
 const MAX_VISIBLE_ITEMS = 7;
 
 // Helper to find the nearest fieldset parent
@@ -84,8 +84,7 @@ const determineDropdownLayout = (
 ) => {
   // Calculate heights based on number of items
   const minDropdownHeight = MIN_VISIBLE_ITEMS * ITEM_HEIGHT;
-  const maxDropdownHeight = Math.min(MAX_VISIBLE_ITEMS, itemCount) * ITEM_HEIGHT;
-  
+
   // Check if we can fit minimum items below
   if (effectiveSpaceBelow < minDropdownHeight) {
     // Can't fit minimum below, try above
@@ -94,7 +93,7 @@ const determineDropdownLayout = (
       const itemsThatFit = Math.min(
         Math.floor(effectiveSpaceAbove / ITEM_HEIGHT),
         MAX_VISIBLE_ITEMS,
-        itemCount
+        itemCount,
       );
       const height = Math.max(MIN_VISIBLE_ITEMS, itemsThatFit) * ITEM_HEIGHT;
       return { height: `${height}px`, position: "above" as const };
@@ -108,7 +107,7 @@ const determineDropdownLayout = (
     const itemsThatFit = Math.min(
       Math.floor(effectiveSpaceBelow / ITEM_HEIGHT),
       MAX_VISIBLE_ITEMS,
-      itemCount
+      itemCount,
     );
     const height = Math.max(MIN_VISIBLE_ITEMS, itemsThatFit) * ITEM_HEIGHT;
     return { height: `${height}px`, position: "below" as const };
@@ -291,14 +290,14 @@ export function MultiSelectField({
 
     const buttonRect = buttonRef.current.getBoundingClientRect();
     const fieldsetParent = findFieldsetParent(buttonRef.current);
-    
+
     const { effectiveSpaceAbove, effectiveSpaceBelow } =
       calculateAvailableSpace(buttonRect, fieldsetParent);
 
     const { height, position } = determineDropdownLayout(
       effectiveSpaceAbove,
       effectiveSpaceBelow,
-      availableOptions.length
+      availableOptions.length,
     );
 
     setDropdownPosition(position);
