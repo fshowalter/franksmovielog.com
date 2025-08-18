@@ -52,7 +52,6 @@ export type Props = {
 
 type CalendarDayData = {
   date: number | undefined;
-  isOtherMonth?: boolean;
   viewings: ListItemValue[];
   weekday?: string;
 };
@@ -184,7 +183,7 @@ function CalendarDay({ day }: { day: CalendarDayData }): JSX.Element {
     );
   }
 
-  const weekday = day.weekday || "";
+  const weekday = day.weekday!; // Always defined for days with dates
 
   return (
     <td
@@ -193,8 +192,7 @@ function CalendarDay({ day }: { day: CalendarDayData }): JSX.Element {
         tablet:border tablet:px-2
         tablet-landscape:mb-0 tablet-landscape:table-cell
         tablet-landscape:w-[14.28%]
-        ${day.isOtherMonth ? "opacity-50" : ""}
-        ${day.viewings.length === 0 && `hidden`}
+        ${day.viewings.length === 0 ? `hidden` : ""}
       `}
       data-weekday={weekday}
     >
