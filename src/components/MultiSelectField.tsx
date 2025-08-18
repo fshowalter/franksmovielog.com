@@ -14,9 +14,8 @@ const MAX_DROPDOWN_HEIGHT = 300;
 const MIN_FALLBACK_HEIGHT = 80;
 const SCROLL_DELAY_MS = 50;
 
-// CSS selectors and breakpoints
+// CSS selectors
 const STICKY_FOOTER_SELECTOR = ".z-filter-footer";
-const TABLET_LANDSCAPE_BREAKPOINT = 1024; // Matches Tailwind's tablet-landscape breakpoint
 
 // Helper to find the nearest scrollable container
 const findScrollableContainer = (
@@ -170,12 +169,8 @@ export function MultiSelectField({
       buttonRef.current.focus();
     }
 
-    // On desktop, scroll to keep control in view if removing items might cause layout shift
-    if (
-      globalThis.window !== undefined &&
-      window.innerWidth >= TABLET_LANDSCAPE_BREAKPOINT &&
-      buttonRef.current
-    ) {
+    // Scroll to keep control in view if removing items might cause layout shift
+    if (buttonRef.current) {
       const timeoutId = setTimeout(() => {
         buttonRef.current?.scrollIntoView({
           behavior: "smooth",
@@ -192,12 +187,8 @@ export function MultiSelectField({
     onChange([]);
     buttonRef.current?.focus();
 
-    // On desktop, scroll to keep control in view after clearing
-    if (
-      globalThis.window !== undefined &&
-      window.innerWidth >= TABLET_LANDSCAPE_BREAKPOINT &&
-      buttonRef.current
-    ) {
+    // Scroll to keep control in view after clearing
+    if (buttonRef.current) {
       const timeoutId = setTimeout(() => {
         buttonRef.current?.scrollIntoView({
           behavior: "smooth",
