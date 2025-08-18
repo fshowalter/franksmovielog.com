@@ -92,7 +92,8 @@
     "typescript": "5.9.2",
     "typescript-eslint": "8.39.1",
     "unionfs": "4.6.0",
-    "vitest": "3.2.4"
+    "vitest": "3.2.4",
+    "vitest-fail-on-console": "0.9.0"
   },
   "engines": {
     "node": "22.18.0",
