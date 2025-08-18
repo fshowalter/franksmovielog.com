@@ -1,4 +1,5 @@
 import type {
+  GroupFn,
   ListWithFiltersActionType,
   ListWithFiltersState,
 } from "~/components/ListWithFilters.reducerUtils";
@@ -76,8 +77,6 @@ type State = ListWithFiltersState<ListItemValue, Sort> & {
   monthViewings: ListItemValue[];
 };
 
-// AIDEV-NOTE: Viewings don't use grouping, so groupFn is omitted
-
 export function initState({
   initialSort,
   values,
@@ -86,6 +85,7 @@ export function initState({
   values: ListItemValue[];
 }): State {
   const baseState = createInitialState({
+    groupFn: groupValuesSortedBySequence,
     initialSort,
     showMoreEnabled: false, // Viewings don't paginate
     sortFn: sortValues,
@@ -217,7 +217,7 @@ export function reducer(state: State, action: ActionType): State {
       const result = handleListWithFiltersAction(
         state,
         action,
-        { sortFn: sortValues },
+        { groupFn: groupValuesSortedBySequence, sortFn: sortValues },
         {
           currentMonth: state.currentMonth,
           hasNextMonth: state.hasNextMonth,
@@ -236,6 +236,7 @@ export function reducer(state: State, action: ActionType): State {
           result.filteredValues,
           result.sortValue,
         );
+
         return {
           ...result,
           currentMonth: newMonth,
@@ -371,6 +372,36 @@ function getPrevMonthWithViewings(
   }
   return undefined;
 }
+
+// AIDEV-NOTE: Group viewings by date for calendar display
+// Creates a map where keys are "year-month-day" and values are arrays of viewings for that day
+function groupByDate(value: ListItemValue): string {
+  const date = new Date(value.viewingDate);
+  // Key format: "year-month-day" without padding (matches calendar lookup needs)
+  return `${date.getUTCFullYear()}-${date.getUTCMonth() + 1}-${date.getUTCDate()}`;
+}
+
+// Custom grouping function that sorts viewings within each day by sequence
+// The sortValue parameter is required by the groupFn interface but not used here
+const groupValuesSortedBySequence: GroupFn<ListItemValue, Sort> = (
+  items: ListItemValue[],
+): Map<string, ListItemValue[]> => {
+  const grouped = new Map<string, ListItemValue[]>();
+
+  for (const item of items) {
+    const key = groupByDate(item);
+    const group = grouped.get(key) || [];
+    group.push(item);
+    grouped.set(key, group);
+  }
+
+  // Sort viewings within each day by sequence
+  for (const dayViewings of grouped.values()) {
+    dayViewings.sort((a, b) => a.viewingSequence - b.viewingSequence);
+  }
+
+  return grouped;
+};
 
 const sortValues = buildSortValues<ListItemValue, Sort>({
   "viewing-date-asc": (a, b) => a.viewingSequence - b.viewingSequence,

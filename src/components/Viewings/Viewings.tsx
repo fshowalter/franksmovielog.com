@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 
-import { useMemo, useReducer, useState } from "react";
+import { useReducer, useState } from "react";
 
 import type { PosterImageProps } from "~/api/posters";
 import type { Viewing } from "~/api/viewings";
@@ -65,15 +65,15 @@ type CalendarHeaderProps = {
 
 type CalendarMonthProps = {
   currentMonth: Date;
-  viewingsByDate: Record<string, ListItemValue[]>;
+  groupedValues: Map<string, ListItemValue[]>;
 };
 
 type CalendarViewProps = {
   currentMonth: Date;
   dispatch: React.Dispatch<ActionType>;
+  groupedValues: Map<string, ListItemValue[]>;
   hasNextMonth: boolean;
   hasPrevMonth: boolean;
-  viewingsByDate: Record<string, ListItemValue[]>;
 };
 
 export function Viewings({
@@ -94,30 +94,6 @@ export function Viewings({
   );
   const [filterKey, setFilterKey] = useState(0);
 
-  // Create index of viewings by date for O(1) calendar lookups
-  // Recalculated when monthViewings changes (due to filters)
-  const viewingsByDate = useMemo(() => {
-    const index: Record<string, ListItemValue[]> = {};
-
-    for (const viewing of state.monthViewings) {
-      const date = new Date(viewing.viewingDate);
-      // Key format: "year-month-day" without padding
-      const dateKey = `${date.getUTCFullYear()}-${date.getUTCMonth() + 1}-${date.getUTCDate()}`;
-
-      if (!index[dateKey]) {
-        index[dateKey] = [];
-      }
-      index[dateKey].push(viewing);
-    }
-
-    // Sort viewings within each day by sequence
-    for (const dayViewings of Object.values(index)) {
-      dayViewings.sort((a, b) => a.viewingSequence - b.viewingSequence);
-    }
-
-    return index;
-  }, [state.monthViewings]);
-
   return (
     <ListWithFilters
       filters={
@@ -136,9 +112,9 @@ export function Viewings({
         <CalendarView
           currentMonth={state.currentMonth}
           dispatch={dispatch}
+          groupedValues={state.groupedValues}
           hasNextMonth={state.hasNextMonth}
           hasPrevMonth={state.hasPrevMonth}
-          viewingsByDate={viewingsByDate}
         />
       }
       listHeaderButtons={
@@ -346,9 +322,9 @@ function CalendarHeader({
 
 function CalendarMonth({
   currentMonth,
-  viewingsByDate,
+  groupedValues,
 }: CalendarMonthProps): JSX.Element {
-  const calendarDays = getCalendarDays(currentMonth, viewingsByDate);
+  const calendarDays = getCalendarDays(currentMonth, groupedValues);
   const weeks = getCalendarWeeks(calendarDays);
 
   return (
@@ -400,9 +376,9 @@ function CalendarMonth({
 function CalendarView({
   currentMonth,
   dispatch,
+  groupedValues,
   hasNextMonth,
   hasPrevMonth,
-  viewingsByDate,
 }: CalendarViewProps): JSX.Element {
   return (
     <div className="mx-auto w-full max-w-(--breakpoint-desktop)">
@@ -414,7 +390,7 @@ function CalendarView({
       />
       <CalendarMonth
         currentMonth={currentMonth}
-        viewingsByDate={viewingsByDate}
+        groupedValues={groupedValues}
       />
     </div>
   );
@@ -422,7 +398,7 @@ function CalendarView({
 
 function getCalendarDays(
   month: Date,
-  viewingsByDate: Record<string, ListItemValue[]>,
+  groupedValues: Map<string, ListItemValue[]>,
 ): CalendarDayData[] {
   const year = month.getFullYear();
   const monthIndex = month.getMonth();
@@ -447,8 +423,8 @@ function getCalendarDays(
     // Use pre-indexed viewings for O(1) lookup
     // Key format: "year-month-day" without padding
     const dateKey = `${year}-${monthIndex + 1}-${date}`;
-    const dayViewings = viewingsByDate[dateKey] || [];
-    // Viewings are already sorted in getProps, no need to sort again
+    const dayViewings = groupedValues.get(dateKey) || [];
+    // Viewings are already sorted in the reducer
 
     days.push({
       date,
