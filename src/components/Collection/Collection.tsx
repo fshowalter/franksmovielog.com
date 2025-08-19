@@ -5,16 +5,15 @@ import { useReducer, useState } from "react";
 import type { Collection, CollectionWithDetails } from "~/api/collections";
 import type { PosterImageProps } from "~/api/posters";
 
-import { Grade } from "~/components/Grade";
+import { ListItemDetails } from "~/components/ListItemDetails";
+import { ListItemGrade } from "~/components/ListItemGrade";
+import { ListItemReviewDate } from "~/components/ListItemReviewDate";
 import { ListItemTitle } from "~/components/ListItemTitle";
 import { ListWithFilters } from "~/components/ListWithFilters";
 import { GroupedPosterList, PosterListItem } from "~/components/PosterList";
 
 import type { Sort } from "./Collection.reducer";
 
-import { ListItemDetails } from "../ListItemDetails";
-import { ListItemGrade } from "../ListItemGrade";
-import { ListItemReviewDate } from "../ListItemReviewDate";
 import { Actions, initState, reducer } from "./Collection.reducer";
 import { Filters, SortOptions } from "./Filters";
 
