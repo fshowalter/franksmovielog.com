@@ -139,10 +139,7 @@ function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
           title={value.title}
           year={value.releaseYear}
         />
-        <CreditedAs
-          className="font-light text-subtle"
-          values={value.creditedAs}
-        />
+        <CreditedAs values={value.creditedAs} />
         {value.grade && <ListItemGrade grade={value.grade} />}
         {!value.grade && (
           <WatchlistTitleSlug
