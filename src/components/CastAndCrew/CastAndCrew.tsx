@@ -190,7 +190,8 @@ function MemberListItem({ value }: { value: ListItemValue }): JSX.Element {
         </div>
         <div
           className={`
-            mt-[6px] font-sans text-xs font-light text-nowrap text-subtle
+            mt-[6px] font-sans text-xs font-light tracking-prose text-nowrap
+            text-subtle
           `}
         >
           {value.reviewCount} Reviews

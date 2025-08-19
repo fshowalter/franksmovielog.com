@@ -8,7 +8,9 @@ export function ListItemMediumAndVenue({
 }): false | JSX.Element {
   if (medium && venue) {
     return (
-      <div className={`font-sans text-xs font-light text-subtle`}>
+      <div
+        className={`font-sans text-xs font-light tracking-prose text-subtle`}
+      >
         {medium} at {venue}
       </div>
     );
@@ -16,13 +18,21 @@ export function ListItemMediumAndVenue({
 
   if (medium) {
     return (
-      <div className={`font-sans text-xs font-light text-subtle`}>{medium}</div>
+      <div
+        className={`font-sans text-xs font-light tracking-prose text-subtle`}
+      >
+        {medium}
+      </div>
     );
   }
 
   if (venue) {
     return (
-      <div className={`font-sans text-xs font-light text-subtle`}>{venue}</div>
+      <div
+        className={`font-sans text-xs font-light tracking-prose text-subtle`}
+      >
+        {venue}
+      </div>
     );
   }
 

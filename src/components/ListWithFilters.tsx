@@ -288,7 +288,7 @@ export function ListWithFilters<T extends string>({
               </button>
               <fieldset
                 className={`
-                  mt-0 flex grow flex-col gap-5 px-container py-10
+                  mt-0 flex h-full grow flex-col gap-5 px-container py-10
                   tablet:gap-8
                   tablet-landscape:grow-0 tablet-landscape:gap-12
                   tablet-landscape:px-12
@@ -310,12 +310,6 @@ export function ListWithFilters<T extends string>({
                   sticky bottom-0 z-filter-footer mt-auto w-full self-end
                   border-t border-t-default bg-default px-8 py-4 drop-shadow-2xl
                   tablet-landscape:px-12
-                  [@media(min-height:815px)]:static
-                  [@media(min-height:815px)]:bottom-auto
-                  [@media(min-height:815px)]:mt-0
-                  [@media(min-height:815px)]:self-auto
-                  [@media(min-height:815px)]:border-t-0
-                  [@media(min-height:815px)]:drop-shadow-none
                 `}
               >
                 <div className="flex gap-x-4">
