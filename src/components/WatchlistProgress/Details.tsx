@@ -123,7 +123,7 @@ function Name({ value, valueType }: { value: Value; valueType: ValueType }) {
       <span>
         <a
           className={`
-            pb-1 font-sans text-[13px] leading-none font-medium text-accent
+            pb-1 text-base leading-none font-semibold text-accent
             after:absolute after:top-0 after:left-0 after:z-hover
             after:size-full after:opacity-0
           `}

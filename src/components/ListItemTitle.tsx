@@ -17,7 +17,7 @@ export function ListItemTitle({
     return (
       <a
         className={`
-          font-sans text-[13px] leading-4 font-medium text-accent
+          text-base leading-5 font-semibold text-accent
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
         `}
@@ -31,11 +31,7 @@ export function ListItemTitle({
   }
 
   return (
-    <span
-      className={`
-        block font-sans text-[13px] leading-4 font-semibold text-muted
-      `}
-    >
+    <span className={`block text-base leading-5 font-semibold text-muted`}>
       {title}
       &#x202F;&#x202F;
       {yearBox}
