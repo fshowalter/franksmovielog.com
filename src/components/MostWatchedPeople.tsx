@@ -3,6 +3,7 @@ import type { JSX } from "react";
 import type { PosterImageProps } from "~/api/posters";
 
 import { ListItemMediumAndVenue } from "./ListItemMediumAndVenue";
+import { ListItemReviewDate } from "./ListItemReviewDate";
 import { ListItemTitle } from "./ListItemTitle";
 import { PosterList, PosterListItem } from "./PosterList";
 
@@ -129,8 +130,8 @@ function MostWatchedPersonViewingListItem({
     >
       <div
         className={`
-          flex grow flex-col gap-2 px-1
-          tablet:mt-2 tablet:grow-0
+          flex grow flex-col items-start gap-y-1
+          tablet:mt-2 tablet:w-full tablet:px-1
         `}
       >
         <ListItemTitle
@@ -138,9 +139,7 @@ function MostWatchedPersonViewingListItem({
           title={value.title}
           year={value.releaseYear}
         />
-        <div className="font-sans text-xs font-light text-muted">
-          {value.displayDate}
-        </div>
+        <ListItemReviewDate displayDate={value.displayDate} />
         <ListItemMediumAndVenue medium={value.medium} venue={value.venue} />
       </div>
     </PosterListItem>

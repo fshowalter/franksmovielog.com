@@ -5,7 +5,9 @@ import { useReducer, useState } from "react";
 import type { Collection, CollectionWithDetails } from "~/api/collections";
 import type { PosterImageProps } from "~/api/posters";
 
-import { Grade } from "~/components/Grade";
+import { ListItemDetails } from "~/components/ListItemDetails";
+import { ListItemGrade } from "~/components/ListItemGrade";
+import { ListItemReviewDate } from "~/components/ListItemReviewDate";
 import { ListItemTitle } from "~/components/ListItemTitle";
 import { ListWithFilters } from "~/components/ListWithFilters";
 import { GroupedPosterList, PosterListItem } from "~/components/PosterList";
@@ -119,24 +121,15 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
       className={value.slug ? "bg-default" : "bg-unreviewed"}
       posterImageProps={value.posterImageProps}
     >
-      <div
-        className={`
-          flex grow flex-col items-start gap-y-2
-          tablet:mt-2 tablet:w-full
-        `}
-      >
+      <ListItemDetails>
         <ListItemTitle
           slug={value.slug}
           title={value.title}
           year={value.releaseYear}
         />
-        {value.grade && (
-          <Grade className="mb-1" height={16} value={value.grade} />
-        )}
-        <div className="font-sans text-xs leading-4 font-light text-subtle">
-          {value.reviewDisplayDate}
-        </div>
-      </div>
+        {value.grade && <ListItemGrade grade={value.grade} />}
+        <ListItemReviewDate displayDate={value.reviewDisplayDate} />
+      </ListItemDetails>
     </PosterListItem>
   );
 }

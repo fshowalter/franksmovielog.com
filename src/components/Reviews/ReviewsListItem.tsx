@@ -1,7 +1,9 @@
 import type { PosterImageProps } from "~/api/posters";
 
-import { Grade } from "~/components/Grade";
+import { ListItemDetails } from "~/components/ListItemDetails";
 import { ListItemGenres } from "~/components/ListItemGenres";
+import { ListItemGrade } from "~/components/ListItemGrade";
+import { ListItemReviewDate } from "~/components/ListItemReviewDate";
 import { ListItemTitle } from "~/components/ListItemTitle";
 import { PosterListItem } from "~/components/PosterList";
 
@@ -25,28 +27,16 @@ export type ReviewsListItemValue = {
 export function ReviewsListItem({ value }: { value: ReviewsListItemValue }) {
   return (
     <PosterListItem posterImageProps={value.posterImageProps}>
-      <div
-        className={`
-          flex grow flex-col items-start gap-y-2
-          tablet:mt-2 tablet:w-full tablet:px-1
-        `}
-      >
+      <ListItemDetails>
         <ListItemTitle
           slug={value.slug}
           title={value.title}
           year={value.releaseYear}
         />
-        <Grade className="mb-1" height={16} value={value.grade} />
-        <div
-          className={`
-            font-sans text-xs leading-4 font-light text-subtle
-            tablet:text-xxs
-          `}
-        >
-          {value.reviewDisplayDate}
-        </div>
+        <ListItemGrade grade={value.grade} />
+        <ListItemReviewDate displayDate={value.reviewDisplayDate} />
         <ListItemGenres values={value.genres} />
-      </div>
+      </ListItemDetails>
     </PosterListItem>
   );
 }
