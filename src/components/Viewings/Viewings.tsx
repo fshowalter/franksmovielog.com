@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 
-import { useReducer, useState } from "react";
+import { useEffect, useReducer, useRef, useState } from "react";
 
 import type { PosterImageProps } from "~/api/posters";
 import type { Viewing } from "~/api/viewings";
@@ -93,6 +93,19 @@ export function Viewings({
     initState,
   );
   const [filterKey, setFilterKey] = useState(0);
+  const prevMonthRef = useRef(state.currentMonth);
+
+  // Scroll to top of calendar when month changes
+  useEffect(() => {
+    if (prevMonthRef.current.getTime() !== state.currentMonth.getTime()) {
+      prevMonthRef.current = state.currentMonth;
+      if (typeof document !== "undefined") {
+        document
+          .querySelector("#calendar")
+          ?.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [state.currentMonth]);
 
   return (
     <ListWithFilters
@@ -267,10 +280,12 @@ function CalendarHeader({
   return (
     <div
       className={`
-        sticky top-(--list-scroll-offset) z-sticky flex items-center
-        justify-between border-b border-default bg-subtle px-container py-4
+        sticky top-(--list-scroll-offset) z-sticky flex
+        max-w-(--breakpoint-desktop) items-center justify-between border-b
+        border-default bg-subtle px-container py-4
         tablet:-mx-(--container-padding) tablet:py-6
         tablet-landscape:py-8
+        desktop:-mx-0 desktop:px-0
       `}
     >
       <div className="w-1/3">
@@ -330,10 +345,13 @@ function CalendarMonth({
   return (
     <div
       className={`
+        scroll-mt-(--calendar-scroll-offset)
+        [--calendar-scroll-offset:calc(var(--list-scroll-offset)_+_92px)]
         tablet:mt-8
         tablet-landscape:mt-16
       `}
       data-testid="calendar"
+      id="calendar"
     >
       <table
         className={`
@@ -343,13 +361,13 @@ function CalendarMonth({
       >
         <thead
           className={`
-            hidden
+            hidden transform-gpu bg-default
             tablet-landscape:sticky
-            tablet-landscape:top-[calc(var(--list-scroll-offset)_+_93px)]
+            tablet-landscape:top-(--calendar-scroll-offset)
             tablet-landscape:z-sticky tablet-landscape:table-header-group
           `}
         >
-          <tr className={`tablet-landscape:shadow-bottom`}>
+          <tr className={`tablet-landscape:shadow-all`}>
             <WeekdayHeader>Sun</WeekdayHeader>
             <WeekdayHeader> Mon</WeekdayHeader>
             <WeekdayHeader>Tue</WeekdayHeader>
@@ -453,8 +471,8 @@ function WeekdayHeader({ children }: { children: React.ReactNode }) {
   return (
     <th
       className={`
-        border border-default bg-default px-2 py-3 text-center font-sans text-xs
-        font-light tracking-wide text-subtle uppercase
+        border-separate border border-default px-2 py-3 text-center font-sans
+        text-xs font-light tracking-wide text-subtle uppercase
       `}
     >
       {children}
