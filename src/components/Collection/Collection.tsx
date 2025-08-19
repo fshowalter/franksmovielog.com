@@ -12,6 +12,9 @@ import { GroupedPosterList, PosterListItem } from "~/components/PosterList";
 
 import type { Sort } from "./Collection.reducer";
 
+import { ListItemDetails } from "../ListItemDetails";
+import { ListItemGrade } from "../ListItemGrade";
+import { ListItemReviewDate } from "../ListItemReviewDate";
 import { Actions, initState, reducer } from "./Collection.reducer";
 import { Filters, SortOptions } from "./Filters";
 
@@ -119,24 +122,15 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
       className={value.slug ? "bg-default" : "bg-unreviewed"}
       posterImageProps={value.posterImageProps}
     >
-      <div
-        className={`
-          flex grow flex-col items-start gap-y-2
-          tablet:mt-2 tablet:w-full
-        `}
-      >
+      <ListItemDetails>
         <ListItemTitle
           slug={value.slug}
           title={value.title}
           year={value.releaseYear}
         />
-        {value.grade && (
-          <Grade className="mb-1" height={16} value={value.grade} />
-        )}
-        <div className="font-sans text-xs leading-4 font-light text-subtle">
-          {value.reviewDisplayDate}
-        </div>
-      </div>
+        {value.grade && <ListItemGrade grade={value.grade} />}
+        <ListItemReviewDate displayDate={value.reviewDisplayDate} />
+      </ListItemDetails>
     </PosterListItem>
   );
 }

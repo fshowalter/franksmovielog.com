@@ -92,9 +92,9 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
       <div className="flex flex-col justify-center">
         <ListItemName href={`/collections/${value.slug}/`} name={value.name} />
         <div
-          className={`mt-1 font-sans text-xxs font-light text-nowrap text-muted`}
+          className={`mt-1 font-sans text-xs font-light text-nowrap text-subtle`}
         >
-          {value.reviewCount} Reviewed Titles
+          {value.reviewCount} Reviews
         </div>
       </div>
     </AvatarListItem>
