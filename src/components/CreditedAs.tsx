@@ -10,7 +10,7 @@ export function CreditedAs({
   return (
     <div
       className={`
-        font-sans text-xs leading-4 font-medium text-muted
+        font-sans text-xs leading-4 font-normal text-muted
         ${className}
       `}
     >
