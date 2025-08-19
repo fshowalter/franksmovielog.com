@@ -189,8 +189,7 @@ function SearchButton() {
   return (
     <div
       className={`
-        z-1000 transform-gpu transition-transform
-        hover:scale-105
+        z-1000
         [body.nav-open_&]:!text-[#fff]
       `}
     >
@@ -198,8 +197,9 @@ function SearchButton() {
         aria-keyshortcuts="Control+K"
         aria-label="Search"
         className={`
-          flex size-10 items-center justify-center overflow-hidden text-sm
-          leading-6 ring-default
+          flex size-10 transform-gpu cursor-pointer items-center justify-center
+          overflow-hidden text-sm leading-6 ring-default transition-transform
+          hover:scale-105
           laptop:ml-6
         `}
         data-open-modal
