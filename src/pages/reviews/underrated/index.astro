@@ -1,7 +1,7 @@
 ---
 import React from "react";
 
-import { Backdrop } from "~/components/Backdrop";
+import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
 import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
 import { getPropsForUnderrated as getProps } from "~/components/Reviews/getProps";
 import { ReviewsSubNav } from "~/components/Reviews/ReviewsSubNav";
@@ -13,8 +13,14 @@ const props = await getProps();
 // Separate layout props from interactive props
 const { backdropImageProps, deck, ...interactiveProps } = props;
 
+const breadcrumb = React.createElement(BreadcrumbLink, {
+  children: "Reviews",
+  href: "/reviews/",
+});
+
 // Create React elements in front matter
 const backdropElement = React.createElement(Backdrop, {
+  breadcrumb,
   deck,
   imageProps: backdropImageProps,
   title: "Underrated Surprises",

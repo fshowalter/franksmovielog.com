@@ -117,8 +117,7 @@ function AlphabetSubNav({
       <ul
         className={`
           mx-auto flex scrollbar-hidden max-w-(--breakpoint-desktop) snap-x
-          overflow-x-auto px-container font-sans text-sm font-normal
-          tracking-wide
+          overflow-x-auto px-container text-md font-semibold tracking-wide
           laptop:justify-center
         `}
       >

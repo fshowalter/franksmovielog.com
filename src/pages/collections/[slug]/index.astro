@@ -2,7 +2,7 @@
 import React from "react";
 
 import { allCollections } from "~/api/collections";
-import { Backdrop } from "~/components/Backdrop";
+import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
 import { Collection } from "~/components/Collection/Collection";
 import { getProps } from "~/components/Collection/getProps";
 import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
@@ -34,8 +34,14 @@ const props = await getProps(slug);
 // Separate layout props from interactive props
 const { backdropImageProps, ...interactiveProps } = props;
 
+const breadcrumb = React.createElement(BreadcrumbLink, {
+  children: "Collections",
+  href: "/collections/",
+});
+
 // Create React elements in front matter
 const backdropElement = React.createElement(Backdrop, {
+  breadcrumb,
   deck: React.createElement("span", {
     dangerouslySetInnerHTML: { __html: props.value.descriptionHtml },
   }),

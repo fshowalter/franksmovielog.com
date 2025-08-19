@@ -28,7 +28,7 @@ export function Grade({
   value,
 }: {
   className?: string;
-  height: 14 | 16 | 18 | 24 | 32;
+  height: 15 | 16 | 18 | 24 | 32;
   value: string;
 }) {
   const [src, alt] = gradeMap[value];
