@@ -540,7 +540,7 @@
             </div>
           </header>
           <astro-island
-            uid="Z2lbczT"
+            uid="od08"
             prefix="r1"
             component-url="~/components/Viewings/Viewings"
             component-export="Viewings"
@@ -618,7 +618,7 @@
                   >
                     <div class="mx-auto w-full max-w-(--breakpoint-desktop)">
                       <div
-                        class="sticky top-(--list-scroll-offset) z-sticky flex items-center justify-between border-b border-default bg-subtle px-container py-4 tablet:-mx-(--container-padding) tablet:py-6 tablet-landscape:py-8"
+                        class="sticky top-(--list-scroll-offset) z-sticky flex max-w-(--breakpoint-desktop) items-center justify-between border-b border-default bg-subtle px-container py-4 tablet:-mx-(--container-padding) tablet:py-6 tablet-landscape:py-8 desktop:-mx-0 desktop:px-0"
                       >
                         <div class="w-1/3">
                           <button
@@ -638,48 +638,49 @@
                         <div class="w-1/3 text-right"></div>
                       </div>
                       <div
-                        class="tablet:mt-8 tablet-landscape:mt-16"
+                        class="scroll-mt-(--calendar-scroll-offset) [--calendar-scroll-offset:calc(var(--list-scroll-offset)_+_93px)] tablet:mt-8 tablet-landscape:mt-16"
                         data-testid="calendar"
+                        id="calendar"
                       >
                         <table
                           class="w-full border-default tablet-landscape:border-collapse tablet-landscape:border"
                         >
                           <thead
-                            class="hidden tablet-landscape:sticky tablet-landscape:top-[calc(var(--list-scroll-offset)_+_93px)] tablet-landscape:z-sticky tablet-landscape:table-header-group"
+                            class="hidden transform-gpu bg-default tablet-landscape:sticky tablet-landscape:top-(--calendar-scroll-offset) tablet-landscape:z-sticky tablet-landscape:table-header-group"
                           >
-                            <tr class="tablet-landscape:shadow-bottom">
+                            <tr class="tablet-landscape:shadow-all">
                               <th
-                                class="border border-default bg-default px-2 py-3 text-center font-sans text-xs font-light tracking-wide text-subtle uppercase"
+                                class="border-separate border border-default px-2 py-3 text-center font-sans text-xs font-light tracking-wide text-subtle uppercase"
                               >
                                 Sun
                               </th>
                               <th
-                                class="border border-default bg-default px-2 py-3 text-center font-sans text-xs font-light tracking-wide text-subtle uppercase"
+                                class="border-separate border border-default px-2 py-3 text-center font-sans text-xs font-light tracking-wide text-subtle uppercase"
                               >
                                 Mon
                               </th>
                               <th
-                                class="border border-default bg-default px-2 py-3 text-center font-sans text-xs font-light tracking-wide text-subtle uppercase"
+                                class="border-separate border border-default px-2 py-3 text-center font-sans text-xs font-light tracking-wide text-subtle uppercase"
                               >
                                 Tue
                               </th>
                               <th
-                                class="border border-default bg-default px-2 py-3 text-center font-sans text-xs font-light tracking-wide text-subtle uppercase"
+                                class="border-separate border border-default px-2 py-3 text-center font-sans text-xs font-light tracking-wide text-subtle uppercase"
                               >
                                 Wed
                               </th>
                               <th
-                                class="border border-default bg-default px-2 py-3 text-center font-sans text-xs font-light tracking-wide text-subtle uppercase"
+                                class="border-separate border border-default px-2 py-3 text-center font-sans text-xs font-light tracking-wide text-subtle uppercase"
                               >
                                 Thu
                               </th>
                               <th
-                                class="border border-default bg-default px-2 py-3 text-center font-sans text-xs font-light tracking-wide text-subtle uppercase"
+                                class="border-separate border border-default px-2 py-3 text-center font-sans text-xs font-light tracking-wide text-subtle uppercase"
                               >
                                 Fri
                               </th>
                               <th
-                                class="border border-default bg-default px-2 py-3 text-center font-sans text-xs font-light tracking-wide text-subtle uppercase"
+                                class="border-separate border border-default px-2 py-3 text-center font-sans text-xs font-light tracking-wide text-subtle uppercase"
                               >
                                 Sat
                               </th>
