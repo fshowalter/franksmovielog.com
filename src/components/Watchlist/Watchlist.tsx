@@ -5,6 +5,7 @@ import { useReducer, useState } from "react";
 import type { PosterImageProps } from "~/api/posters";
 import type { WatchlistTitle } from "~/api/watchlistTitles";
 
+import { ListItemDetails } from "~/components/ListItemDetails";
 import { ListItemGenres } from "~/components/ListItemGenres";
 import { ListItemTitle } from "~/components/ListItemTitle";
 import {
@@ -145,12 +146,7 @@ function WatchlistListItem({
       className={`bg-unreviewed`}
       posterImageProps={defaultPosterImageProps}
     >
-      <div
-        className={`
-          mt-1 flex flex-1 flex-col justify-center gap-y-1
-          tablet:w-full tablet:justify-normal tablet:px-1
-        `}
-      >
+      <ListItemDetails>
         <ListItemTitle title={value.title} year={value.releaseYear} />
         <WatchlistTitleSlug
           collectionNames={value.watchlistCollectionNames}
@@ -159,7 +155,7 @@ function WatchlistListItem({
           writerNames={value.watchlistWriterNames}
         />
         <ListItemGenres values={value.genres} />
-      </div>
+      </ListItemDetails>
     </PosterListItem>
   );
 }

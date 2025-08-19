@@ -187,11 +187,11 @@ function MemberListItem({ value }: { value: ListItemValue }): JSX.Element {
           name={value.name}
         />
         <div className="mt-1">
-          <CreditedAs className="font-light" values={value.creditedAs} />
+          <CreditedAs values={value.creditedAs} />
         </div>
         <div
           className={`
-            mt-[6px] font-sans text-xxs font-light text-nowrap text-muted
+            mt-[6px] font-sans text-xs font-light text-nowrap text-subtle
           `}
         >
           {value.reviewCount} Reviews

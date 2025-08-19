@@ -2,7 +2,9 @@ import type { JSX } from "react";
 
 import type { PosterImageProps } from "~/api/posters";
 
+import { ListItemDetails } from "./ListItemDetails";
 import { ListItemMediumAndVenue } from "./ListItemMediumAndVenue";
+import { ListItemReviewDate } from "./ListItemReviewDate";
 import { ListItemTitle } from "./ListItemTitle";
 import { PosterList, PosterListItem } from "./PosterList";
 
@@ -127,22 +129,15 @@ function MostWatchedPersonViewingListItem({
       `}
       posterImageProps={value.posterImageProps}
     >
-      <div
-        className={`
-          flex grow flex-col gap-2 px-1
-          tablet:mt-2 tablet:grow-0
-        `}
-      >
+      <ListItemDetails>
         <ListItemTitle
           slug={value.slug}
           title={value.title}
           year={value.releaseYear}
         />
-        <div className="font-sans text-xs font-light text-muted">
-          {value.displayDate}
-        </div>
+        <ListItemReviewDate displayDate={value.displayDate} />
         <ListItemMediumAndVenue medium={value.medium} venue={value.venue} />
-      </div>
+      </ListItemDetails>
     </PosterListItem>
   );
 }

@@ -6,8 +6,10 @@ import type { CastAndCrewMember } from "~/api/castAndCrew";
 import type { PosterImageProps } from "~/api/posters";
 
 import { CreditedAs } from "~/components/CreditedAs";
-import { Grade } from "~/components/Grade";
+import { ListItemDetails } from "~/components/ListItemDetails";
 import { ListItemGenres } from "~/components/ListItemGenres";
+import { ListItemGrade } from "~/components/ListItemGrade";
+import { ListItemReviewDate } from "~/components/ListItemReviewDate";
 import { ListItemTitle } from "~/components/ListItemTitle";
 import { ListWithFilters } from "~/components/ListWithFilters";
 import { GroupedPosterList, PosterListItem } from "~/components/PosterList";
@@ -131,12 +133,7 @@ function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
       className={value.slug ? "bg-default" : "bg-unreviewed"}
       posterImageProps={value.posterImageProps}
     >
-      <div
-        className={`
-          flex grow flex-col items-start gap-y-2 px-1
-          tablet:mt-2 tablet:w-full
-        `}
-      >
+      <ListItemDetails>
         <ListItemTitle
           slug={value.slug}
           title={value.title}
@@ -146,9 +143,7 @@ function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
           className="font-light text-subtle"
           values={value.creditedAs}
         />
-        {value.grade && (
-          <Grade className="mb-1" height={16} value={value.grade} />
-        )}
+        {value.grade && <ListItemGrade grade={value.grade} />}
         {!value.grade && (
           <WatchlistTitleSlug
             collectionNames={value.watchlistCollectionNames}
@@ -157,13 +152,11 @@ function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
             writerNames={value.watchlistWriterNames}
           />
         )}
-        {value.reviewDisplayDate && (
-          <div className={`font-sans text-xs leading-4 font-light text-subtle`}>
-            {value.reviewDisplayDate}
-          </div>
+        {value.grade && (
+          <ListItemReviewDate displayDate={value.reviewDisplayDate} />
         )}
         <ListItemGenres values={value.genres} />
-      </div>
+      </ListItemDetails>
     </PosterListItem>
   );
 }
