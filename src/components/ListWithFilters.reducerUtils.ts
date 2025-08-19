@@ -32,6 +32,11 @@ export enum ListWithFiltersActions {
   SORT = "SORT",
 }
 
+export type GroupFn<TItem, TSortValue> = (
+  items: TItem[],
+  sortValue: TSortValue,
+) => Map<string, TItem[]>;
+
 /**
  * Union type of all ListWithFilters actions
  */
@@ -151,7 +156,7 @@ type SortAction<TSortValue> = {
  */
 export function buildGroupValues<TItem, TSortValue>(
   keyFn: (item: TItem, sortValue: TSortValue) => string,
-) {
+): GroupFn<TItem, TSortValue> {
   return function groupValues(
     items: TItem[],
     sortValue: TSortValue,
@@ -188,7 +193,7 @@ export function createInitialState<TItem, TSortValue>({
   sortFn,
   values,
 }: {
-  groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>;
+  groupFn?: GroupFn<TItem, TSortValue>;
   initialSort: TSortValue;
   showMoreEnabled?: boolean;
   sortFn: (values: TItem[], sort: TSortValue) => TItem[];
@@ -271,7 +276,7 @@ export function handleListWithFiltersAction<
   state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
   action: ListWithFiltersActionType<TSortValue>,
   handlers: {
-    groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>;
+    groupFn?: GroupFn<TItem, TSortValue>;
     sortFn: (values: TItem[], sort: TSortValue) => TItem[];
   },
   extendedState?: TExtendedState,
@@ -417,7 +422,7 @@ export function handleToggleReviewedAction<
 >(
   state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
   sortFn: (values: TItem[], sort: TSortValue) => TItem[],
-  groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>,
+  groupFn?: GroupFn<TItem, TSortValue>,
 ): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
   const hideReviewed = !state.hideReviewed;
 
@@ -569,7 +574,7 @@ export function updatePendingFilter<TItem, TSortValue>(
 function applyPendingFilters<TItem, TSortValue>(
   state: ListWithFiltersState<TItem, TSortValue>,
   sortFn: (values: TItem[], sort: TSortValue) => TItem[],
-  groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>,
+  groupFn?: GroupFn<TItem, TSortValue>,
 ): ListWithFiltersState<TItem, TSortValue> {
   const filteredValues = sortFn(
     filterValues({
@@ -693,7 +698,7 @@ function resetPendingFilters<TItem, TSortValue>(
 function showMore<TItem, TSortValue>(
   state: ListWithFiltersAndShowCountState<TItem, TSortValue>,
   increment: number,
-  groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>,
+  groupFn?: GroupFn<TItem, TSortValue>,
 ): ListWithFiltersAndShowCountState<TItem, TSortValue> {
   const showCount = state.showCount + increment;
   const groupedValues = groupFn
@@ -718,7 +723,7 @@ function updateSort<TItem, TSortValue>(
   state: ListWithFiltersState<TItem, TSortValue>,
   sortValue: TSortValue,
   sortFn: (values: TItem[], sort: TSortValue) => TItem[],
-  groupFn?: (values: TItem[], sort: TSortValue) => Map<string, TItem[]>,
+  groupFn?: GroupFn<TItem, TSortValue>,
 ): ListWithFiltersState<TItem, TSortValue> {
   const filteredValues = sortFn(state.filteredValues, sortValue);
   const valuesToGroup = state.showCount
