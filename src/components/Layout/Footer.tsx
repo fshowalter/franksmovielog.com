@@ -177,8 +177,11 @@ function NavListItem({ value }: { value: NavItem }): JSX.Element {
     <li className="block w-1/2 text-2xl whitespace-nowrap">
       <a
         className={`
-          inline-block origin-left transform-gpu transition-transform
-          hover:scale-105
+          relative inline-block origin-left transform-gpu transition-all
+          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
+          after:origin-bottom-left after:scale-0 after:bg-(--fg-muted)
+          after:transition-transform
+          hover:scale-105 hover:after:scale-100
         `}
         href={value.target}
       >
@@ -200,16 +203,20 @@ function SubNavList({ values }: { values: NavItem[] }): false | JSX.Element {
         return (
           <li
             className={`
-              mb-4 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
+              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
               uppercase
-              last:mb-0
+              last:-mb-1
             `}
             key={value.target}
           >
             <a
               className={`
-                inline-block origin-left transform-gpu transition-all
-                hover:scale-105 hover:text-inverse
+                relative inline-block origin-left transform-gpu pb-1
+                transition-all
+                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                after:w-full after:origin-bottom-left after:scale-0
+                after:bg-(--fg-muted) after:transition-transform
+                hover:scale-105 hover:text-inverse hover:after:scale-100
               `}
               href={value.target}
             >

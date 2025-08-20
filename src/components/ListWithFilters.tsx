@@ -43,12 +43,22 @@ export function ListHeaderButton({
     >
       <a
         className={`
-          block transform-gpu px-4 py-2 transition-all
+          group/button block transform-gpu px-4 py-2 transition-all
           hover:scale-105 hover:bg-accent hover:text-inverse
         `}
         href={href}
       >
-        {text}
+        <span
+          className={`
+            relative inline-block
+            after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
+            after:origin-center after:scale-x-0 after:bg-(--fg-muted)
+            after:transition-transform
+            group-hover/button:after:scale-x-100
+          `}
+        >
+          {text}
+        </span>
       </a>
     </div>
   );

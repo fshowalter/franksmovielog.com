@@ -23,8 +23,11 @@ export function MoreInCollections({ values }: Props) {
       <SubHeading as="h2">
         <a
           className={`
-            inline-block transform-gpu transition-transform
-            hover:scale-110
+            relative -mb-1 inline-block transform-gpu pb-1 transition-transform
+            after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
+            after:origin-center after:scale-0 after:bg-(--fg-accent)
+            after:transition-transform
+            hover:scale-105 hover:after:scale-100
           `}
           href={`/collections/${value.slug}/`}
         >

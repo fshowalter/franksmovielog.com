@@ -95,10 +95,13 @@ export function Credits({
       </div>
       <a
         className={`
-          mx-auto mt-8 flex w-full max-w-button transform-gpu cursor-pointer
-          place-content-center items-center py-5 font-sans text-xs tracking-wide
-          uppercase shadow-all transition-all
-          hover:scale-105 hover:bg-inverse hover:text-inverse
+          relative mx-auto mt-8 flex w-full max-w-button transform-gpu
+          cursor-pointer place-content-center items-center py-5 font-sans
+          text-xs tracking-wide uppercase shadow-all transition-all
+          before:absolute before:bottom-0 before:left-0 before:-z-10
+          before:h-full before:w-full before:origin-center before:scale-x-0
+          before:bg-inverse before:transition-transform
+          hover:scale-105 hover:text-inverse hover:before:scale-100
         `}
         href="#top"
       >

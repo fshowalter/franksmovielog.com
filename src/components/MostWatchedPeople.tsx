@@ -154,7 +154,9 @@ function Name({
   if (value.slug) {
     return (
       <a
-        className="inline-block leading-6 font-normal text-accent"
+        className={`
+          inline-block font-serif text-base leading-6 font-normal text-accent
+        `}
         href={`/cast-and-crew/${value.slug}/`}
       >
         {value.name}
@@ -162,5 +164,9 @@ function Name({
     );
   }
 
-  return <span className="font-normal">{value.name}</span>;
+  return (
+    <span className={`inline-block font-serif text-base leading-6 font-normal`}>
+      {value.name}
+    </span>
+  );
 }
