@@ -77,9 +77,9 @@ export function Review({
               relative inline-block pb-1 font-sans text-xs tracking-wider
               text-subtle uppercase transition-all
               after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-              after:origin-center after:scale-0 after:bg-(--fg-accent)
+              after:origin-center after:scale-x-0 after:bg-(--fg-accent)
               after:transition-transform
-              hover:text-accent hover:after:scale-100
+              hover:text-accent hover:after:scale-x-100
             `}
             href="/reviews/"
           >

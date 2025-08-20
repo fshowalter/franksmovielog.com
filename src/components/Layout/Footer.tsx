@@ -179,9 +179,9 @@ function NavListItem({ value }: { value: NavItem }): JSX.Element {
         className={`
           relative inline-block origin-left transform-gpu transition-all
           after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-0 after:bg-(--fg-muted)
+          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
           after:transition-transform
-          hover:scale-105 hover:after:scale-100
+          hover:scale-105 hover:after:scale-x-100
         `}
         href={value.target}
       >
@@ -214,9 +214,9 @@ function SubNavList({ values }: { values: NavItem[] }): false | JSX.Element {
                 relative inline-block origin-left transform-gpu pb-1
                 transition-all
                 after:absolute after:bottom-0 after:left-0 after:h-0.5
-                after:w-full after:origin-bottom-left after:scale-0
+                after:w-full after:origin-bottom-left after:scale-x-0
                 after:bg-(--fg-muted) after:transition-transform
-                hover:scale-105 hover:text-inverse hover:after:scale-100
+                hover:scale-105 hover:text-inverse hover:after:scale-x-100
               `}
               href={value.target}
             >

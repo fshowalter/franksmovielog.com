@@ -2025,9 +2025,9 @@ exports[`Home > matches snapshot 1`] = `
                     class="
           relative inline-block origin-left transform-gpu transition-all
           after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-0 after:bg-(--fg-muted)
+          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
           after:transition-transform
-          hover:scale-105 hover:after:scale-100
+          hover:scale-105 hover:after:scale-x-100
         "
                     href="/"
                   >
@@ -2041,9 +2041,9 @@ exports[`Home > matches snapshot 1`] = `
                     class="
           relative inline-block origin-left transform-gpu transition-all
           after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-0 after:bg-(--fg-muted)
+          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
           after:transition-transform
-          hover:scale-105 hover:after:scale-100
+          hover:scale-105 hover:after:scale-x-100
         "
                     href="/how-i-grade/"
                   >
@@ -2057,9 +2057,9 @@ exports[`Home > matches snapshot 1`] = `
                     class="
           relative inline-block origin-left transform-gpu transition-all
           after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-0 after:bg-(--fg-muted)
+          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
           after:transition-transform
-          hover:scale-105 hover:after:scale-100
+          hover:scale-105 hover:after:scale-x-100
         "
                     href="/reviews/"
                   >
@@ -2080,9 +2080,9 @@ exports[`Home > matches snapshot 1`] = `
                 relative inline-block origin-left transform-gpu pb-1
                 transition-all
                 after:absolute after:bottom-0 after:left-0 after:h-0.5
-                after:w-full after:origin-bottom-left after:scale-0
+                after:w-full after:origin-bottom-left after:scale-x-0
                 after:bg-(--fg-muted) after:transition-transform
-                hover:scale-105 hover:text-inverse hover:after:scale-100
+                hover:scale-105 hover:text-inverse hover:after:scale-x-100
               "
                         href="/cast-and-crew/"
                       >
@@ -2101,9 +2101,9 @@ exports[`Home > matches snapshot 1`] = `
                 relative inline-block origin-left transform-gpu pb-1
                 transition-all
                 after:absolute after:bottom-0 after:left-0 after:h-0.5
-                after:w-full after:origin-bottom-left after:scale-0
+                after:w-full after:origin-bottom-left after:scale-x-0
                 after:bg-(--fg-muted) after:transition-transform
-                hover:scale-105 hover:text-inverse hover:after:scale-100
+                hover:scale-105 hover:text-inverse hover:after:scale-x-100
               "
                         href="/collections/"
                       >
@@ -2122,9 +2122,9 @@ exports[`Home > matches snapshot 1`] = `
                 relative inline-block origin-left transform-gpu pb-1
                 transition-all
                 after:absolute after:bottom-0 after:left-0 after:h-0.5
-                after:w-full after:origin-bottom-left after:scale-0
+                after:w-full after:origin-bottom-left after:scale-x-0
                 after:bg-(--fg-muted) after:transition-transform
-                hover:scale-105 hover:text-inverse hover:after:scale-100
+                hover:scale-105 hover:text-inverse hover:after:scale-x-100
               "
                         href="/reviews/overrated/"
                       >
@@ -2143,9 +2143,9 @@ exports[`Home > matches snapshot 1`] = `
                 relative inline-block origin-left transform-gpu pb-1
                 transition-all
                 after:absolute after:bottom-0 after:left-0 after:h-0.5
-                after:w-full after:origin-bottom-left after:scale-0
+                after:w-full after:origin-bottom-left after:scale-x-0
                 after:bg-(--fg-muted) after:transition-transform
-                hover:scale-105 hover:text-inverse hover:after:scale-100
+                hover:scale-105 hover:text-inverse hover:after:scale-x-100
               "
                         href="/reviews/underrated/"
                       >
@@ -2164,9 +2164,9 @@ exports[`Home > matches snapshot 1`] = `
                 relative inline-block origin-left transform-gpu pb-1
                 transition-all
                 after:absolute after:bottom-0 after:left-0 after:h-0.5
-                after:w-full after:origin-bottom-left after:scale-0
+                after:w-full after:origin-bottom-left after:scale-x-0
                 after:bg-(--fg-muted) after:transition-transform
-                hover:scale-105 hover:text-inverse hover:after:scale-100
+                hover:scale-105 hover:text-inverse hover:after:scale-x-100
               "
                         href="/reviews/underseen/"
                       >
@@ -2182,9 +2182,9 @@ exports[`Home > matches snapshot 1`] = `
                     class="
           relative inline-block origin-left transform-gpu transition-all
           after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-0 after:bg-(--fg-muted)
+          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
           after:transition-transform
-          hover:scale-105 hover:after:scale-100
+          hover:scale-105 hover:after:scale-x-100
         "
                     href="/viewings/"
                   >
@@ -2205,9 +2205,9 @@ exports[`Home > matches snapshot 1`] = `
                 relative inline-block origin-left transform-gpu pb-1
                 transition-all
                 after:absolute after:bottom-0 after:left-0 after:h-0.5
-                after:w-full after:origin-bottom-left after:scale-0
+                after:w-full after:origin-bottom-left after:scale-x-0
                 after:bg-(--fg-muted) after:transition-transform
-                hover:scale-105 hover:text-inverse hover:after:scale-100
+                hover:scale-105 hover:text-inverse hover:after:scale-x-100
               "
                         href="/viewings/stats/"
                       >
@@ -2223,9 +2223,9 @@ exports[`Home > matches snapshot 1`] = `
                     class="
           relative inline-block origin-left transform-gpu transition-all
           after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-0 after:bg-(--fg-muted)
+          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
           after:transition-transform
-          hover:scale-105 hover:after:scale-100
+          hover:scale-105 hover:after:scale-x-100
         "
                     href="/watchlist/"
                   >
@@ -2246,9 +2246,9 @@ exports[`Home > matches snapshot 1`] = `
                 relative inline-block origin-left transform-gpu pb-1
                 transition-all
                 after:absolute after:bottom-0 after:left-0 after:h-0.5
-                after:w-full after:origin-bottom-left after:scale-0
+                after:w-full after:origin-bottom-left after:scale-x-0
                 after:bg-(--fg-muted) after:transition-transform
-                hover:scale-105 hover:text-inverse hover:after:scale-100
+                hover:scale-105 hover:text-inverse hover:after:scale-x-100
               "
                         href="/watchlist/progress/"
                       >
