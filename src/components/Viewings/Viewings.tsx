@@ -296,7 +296,10 @@ function CalendarHeader({
             className={`
               transform-gpu cursor-pointer font-sans text-xs font-medium
               text-accent transition-transform
-              hover:scale-105
+              after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+              after:origin-center after:scale-x-0 after:bg-(--fg-accent)
+              after:transition-transform
+              hover:scale-105 hover:after:scale-x-100
               tablet-landscape:text-sm
             `}
             onClick={() => dispatch({ type: Actions.PREV_MONTH })}
@@ -322,7 +325,10 @@ function CalendarHeader({
             className={`
               transform-gpu cursor-pointer font-sans text-xs font-medium
               text-accent transition-transform
-              hover:scale-105
+              after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+              after:origin-center after:scale-x-0 after:bg-(--fg-accent)
+              after:transition-transform
+              hover:scale-105 hover:after:scale-x-100
               tablet-landscape:text-sm
             `}
             onClick={() => dispatch({ type: Actions.NEXT_MONTH })}

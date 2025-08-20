@@ -68,15 +68,18 @@ export function Review({
       >
         <nav
           className={`
-            transform-gpu pb-3 transition-transform
+            transform-gpu pb-2 transition-transform
             has-[a:hover]:scale-110
           `}
         >
           <a
             className={`
-              font-sans text-xs tracking-wider text-subtle uppercase
-              transition-all
-              hover:text-accent
+              relative inline-block pb-1 font-sans text-xs tracking-wider
+              text-subtle uppercase transition-all
+              after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+              after:origin-center after:scale-0 after:bg-(--fg-accent)
+              after:transition-transform
+              hover:text-accent hover:after:scale-100
             `}
             href="/reviews/"
           >
@@ -161,8 +164,12 @@ export function Review({
           <SubHeading as="h2">
             <a
               className={`
-                inline-block transform-gpu transition-transform
-                hover:scale-110
+                relative -mb-1 inline-block transform-gpu pb-1
+                transition-transform
+                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                after:w-full after:origin-center after:scale-x-0
+                after:bg-(--fg-accent) after:transition-transform
+                hover:scale-105 hover:after:scale-x-100
               `}
               href={`/reviews/`}
             >

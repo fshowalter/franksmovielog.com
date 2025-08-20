@@ -65,13 +65,23 @@ function AllTimeLink({
       ) : (
         <a
           className={`
-            block transform-gpu p-4 whitespace-nowrap transition-all
+            group/all-time block transform-gpu px-4 pt-4 pb-3 whitespace-nowrap
+            transition-all
             hover:scale-105 hover:bg-accent hover:text-inverse
-            laptop:py-4
           `}
           href={linkFunc("all")}
         >
-          All-Time
+          <span
+            className={`
+              relative inline-block pb-1
+              after:absolute after:bottom-0 after:left-0 after:h-0.5
+              after:w-full after:origin-center after:scale-x-0
+              after:bg-(--fg-muted) after:transition-transform
+              group-hover/all-time:after:scale-x-100
+            `}
+          >
+            All-Time
+          </span>
         </a>
       )}
     </li>
@@ -106,12 +116,22 @@ function YearLink({
       ) : (
         <a
           className={`
-            block transform-gpu p-4 transition-all
+            group/year block transform-gpu px-4 pt-4 pb-3 transition-all
             hover:scale-105 hover:bg-accent hover:text-inverse
           `}
           href={linkFunc(year)}
         >
-          {year}
+          <span
+            className={`
+              relative inline-block pb-1
+              after:absolute after:bottom-0 after:left-0 after:h-0.5
+              after:w-full after:origin-center after:scale-x-0
+              after:bg-(--fg-muted) after:transition-transform
+              group-hover/year:after:scale-x-100
+            `}
+          >
+            {year}
+          </span>
         </a>
       )}
     </li>

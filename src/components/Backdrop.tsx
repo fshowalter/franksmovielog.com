@@ -62,9 +62,12 @@ export function BreadcrumbLink({
   return (
     <a
       className={`
-        font-sans text-sm tracking-wide uppercase decoration-inverse-subtle
-        decoration-2 underline-offset-8
-        hover:underline
+        relative inline-block font-sans text-sm tracking-wide uppercase
+        decoration-inverse-subtle decoration-2 underline-offset-8
+        after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
+        after:origin-center after:scale-x-0 after:bg-(--fg-muted)
+        after:transition-transform
+        hover:after:scale-x-100
       `}
       href={href}
     >
