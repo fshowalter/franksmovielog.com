@@ -25,8 +25,13 @@ exports[`Home > matches snapshot 1`] = `
         tablet:py-6
         laptop:inset-x-0 laptop:z-40 laptop:flex-row laptop:flex-wrap
         laptop:px-16 laptop:py-8 laptop:text-left
+        
+              absolute
+              [--mast-color:#fff]
+            
+        text-(--mast-color)
       "
-        style="background-image: linear-gradient(to bottom, rgba(0,0,0,.85), transparent 95%); color: rgb(255, 255, 255); position: absolute;"
+        style="background-image: linear-gradient(to bottom, rgba(0,0,0,.85), transparent 95%);"
       >
         <div />
         <div
@@ -53,7 +58,7 @@ exports[`Home > matches snapshot 1`] = `
                   class="
           relative block text-inherit
           after:absolute after:bottom-1 after:left-0 after:h-0.5 after:w-full
-          after:origin-center after:scale-x-0 after:bg-(--fg-muted)
+          after:origin-center after:scale-x-0 after:bg-(--mast-color)/80
           after:transition-transform
           hover:after:scale-x-100
         "
@@ -75,7 +80,7 @@ exports[`Home > matches snapshot 1`] = `
                   class="
           relative block text-inherit
           after:absolute after:bottom-1 after:left-0 after:h-0.5 after:w-full
-          after:origin-center after:scale-x-0 after:bg-(--fg-muted)
+          after:origin-center after:scale-x-0 after:bg-(--mast-color)/80
           after:transition-transform
           hover:after:scale-x-100
         "
@@ -97,7 +102,7 @@ exports[`Home > matches snapshot 1`] = `
                   class="
           relative block text-inherit
           after:absolute after:bottom-1 after:left-0 after:h-0.5 after:w-full
-          after:origin-center after:scale-x-0 after:bg-(--fg-muted)
+          after:origin-center after:scale-x-0 after:bg-(--mast-color)/80
           after:transition-transform
           hover:after:scale-x-100
         "
@@ -119,7 +124,7 @@ exports[`Home > matches snapshot 1`] = `
                   class="
           relative block text-inherit
           after:absolute after:bottom-1 after:left-0 after:h-0.5 after:w-full
-          after:origin-center after:scale-x-0 after:bg-(--fg-muted)
+          after:origin-center after:scale-x-0 after:bg-(--mast-color)/80
           after:transition-transform
           hover:after:scale-x-100
         "
@@ -141,7 +146,7 @@ exports[`Home > matches snapshot 1`] = `
                   class="
           relative block text-inherit
           after:absolute after:bottom-1 after:left-0 after:h-0.5 after:w-full
-          after:origin-center after:scale-x-0 after:bg-(--fg-muted)
+          after:origin-center after:scale-x-0 after:bg-(--mast-color)/80
           after:transition-transform
           hover:after:scale-x-100
         "
@@ -1836,10 +1841,10 @@ exports[`Home > matches snapshot 1`] = `
           >
             <a
               class="
-              mx-auto mb-8 w-full max-w-button bg-canvas py-5 text-center
-              font-sans text-xs tracking-wide text-default uppercase
+              mx-auto mb-8 w-full max-w-button transform-gpu bg-canvas py-5
+              text-center font-sans text-xs tracking-wide text-default uppercase
               transition-all
-              hover:scale-105 hover:bg-inverse hover:text-inverse
+              hover:scale-105 hover:bg-default hover:text-default
               tablet:mx-0
             "
               href="#top"
@@ -2027,7 +2032,7 @@ exports[`Home > matches snapshot 1`] = `
           after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
           after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
           after:transition-transform
-          hover:scale-105 hover:after:scale-x-100
+          hover:after:scale-x-100
         "
                     href="/"
                   >
@@ -2043,7 +2048,7 @@ exports[`Home > matches snapshot 1`] = `
           after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
           after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
           after:transition-transform
-          hover:scale-105 hover:after:scale-x-100
+          hover:after:scale-x-100
         "
                     href="/how-i-grade/"
                   >
@@ -2059,7 +2064,7 @@ exports[`Home > matches snapshot 1`] = `
           after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
           after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
           after:transition-transform
-          hover:scale-105 hover:after:scale-x-100
+          hover:after:scale-x-100
         "
                     href="/reviews/"
                   >
@@ -2082,7 +2087,7 @@ exports[`Home > matches snapshot 1`] = `
                 after:absolute after:bottom-0 after:left-0 after:h-0.5
                 after:w-full after:origin-bottom-left after:scale-x-0
                 after:bg-(--fg-muted) after:transition-transform
-                hover:scale-105 hover:text-inverse hover:after:scale-x-100
+                hover:text-inverse hover:after:scale-x-100
               "
                         href="/cast-and-crew/"
                       >
@@ -2103,7 +2108,7 @@ exports[`Home > matches snapshot 1`] = `
                 after:absolute after:bottom-0 after:left-0 after:h-0.5
                 after:w-full after:origin-bottom-left after:scale-x-0
                 after:bg-(--fg-muted) after:transition-transform
-                hover:scale-105 hover:text-inverse hover:after:scale-x-100
+                hover:text-inverse hover:after:scale-x-100
               "
                         href="/collections/"
                       >
@@ -2124,7 +2129,7 @@ exports[`Home > matches snapshot 1`] = `
                 after:absolute after:bottom-0 after:left-0 after:h-0.5
                 after:w-full after:origin-bottom-left after:scale-x-0
                 after:bg-(--fg-muted) after:transition-transform
-                hover:scale-105 hover:text-inverse hover:after:scale-x-100
+                hover:text-inverse hover:after:scale-x-100
               "
                         href="/reviews/overrated/"
                       >
@@ -2145,7 +2150,7 @@ exports[`Home > matches snapshot 1`] = `
                 after:absolute after:bottom-0 after:left-0 after:h-0.5
                 after:w-full after:origin-bottom-left after:scale-x-0
                 after:bg-(--fg-muted) after:transition-transform
-                hover:scale-105 hover:text-inverse hover:after:scale-x-100
+                hover:text-inverse hover:after:scale-x-100
               "
                         href="/reviews/underrated/"
                       >
@@ -2166,7 +2171,7 @@ exports[`Home > matches snapshot 1`] = `
                 after:absolute after:bottom-0 after:left-0 after:h-0.5
                 after:w-full after:origin-bottom-left after:scale-x-0
                 after:bg-(--fg-muted) after:transition-transform
-                hover:scale-105 hover:text-inverse hover:after:scale-x-100
+                hover:text-inverse hover:after:scale-x-100
               "
                         href="/reviews/underseen/"
                       >
@@ -2184,7 +2189,7 @@ exports[`Home > matches snapshot 1`] = `
           after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
           after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
           after:transition-transform
-          hover:scale-105 hover:after:scale-x-100
+          hover:after:scale-x-100
         "
                     href="/viewings/"
                   >
@@ -2207,7 +2212,7 @@ exports[`Home > matches snapshot 1`] = `
                 after:absolute after:bottom-0 after:left-0 after:h-0.5
                 after:w-full after:origin-bottom-left after:scale-x-0
                 after:bg-(--fg-muted) after:transition-transform
-                hover:scale-105 hover:text-inverse hover:after:scale-x-100
+                hover:text-inverse hover:after:scale-x-100
               "
                         href="/viewings/stats/"
                       >
@@ -2225,7 +2230,7 @@ exports[`Home > matches snapshot 1`] = `
           after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
           after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
           after:transition-transform
-          hover:scale-105 hover:after:scale-x-100
+          hover:after:scale-x-100
         "
                     href="/watchlist/"
                   >
@@ -2248,7 +2253,7 @@ exports[`Home > matches snapshot 1`] = `
                 after:absolute after:bottom-0 after:left-0 after:h-0.5
                 after:w-full after:origin-bottom-left after:scale-x-0
                 after:bg-(--fg-muted) after:transition-transform
-                hover:scale-105 hover:text-inverse hover:after:scale-x-100
+                hover:text-inverse hover:after:scale-x-100
               "
                         href="/watchlist/progress/"
                       >

@@ -38,27 +38,21 @@ export function ListHeaderButton({
   return (
     <div
       className={`
-        flex items-start gap-x-4 bg-default text-nowrap text-accent uppercase
+        flex items-start gap-x-4 bg-default px-4 text-nowrap text-accent
+        uppercase
       `}
     >
       <a
         className={`
-          group/button block transform-gpu px-4 py-2 transition-all
-          hover:scale-105 hover:bg-accent hover:text-inverse
+          relative inline-block transform-gpu py-1 transition-transform
+          after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-center after:scale-x-0 after:bg-(--fg-accent)
+          after:transition-transform
+          hover:after:scale-x-100
         `}
         href={href}
       >
-        <span
-          className={`
-            relative inline-block
-            after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-            after:origin-center after:scale-x-0 after:bg-(--fg-muted)
-            after:transition-transform
-            group-hover/button:after:scale-x-100
-          `}
-        >
-          {text}
-        </span>
+        {text}
       </a>
     </div>
   );
@@ -444,8 +438,9 @@ function ListHeader<T extends string>({
         aria-label="Toggle filters"
         className={`
           col-start-4 row-start-1 flex transform-gpu cursor-pointer items-center
-          justify-center gap-x-4 bg-canvas px-4 py-2 text-nowrap text-muted
-          uppercase shadow-all transition-transform
+          justify-center gap-x-4 bg-canvas px-4 py-2 font-sans text-xs
+          font-semibold text-nowrap text-muted uppercase shadow-all
+          transition-transform
           hover:scale-110
           tablet:col-start-5 tablet:w-20
         `}

@@ -24,10 +24,10 @@ export function MoreInCollections({ values }: Props) {
         <a
           className={`
             relative -mb-1 inline-block transform-gpu pb-1 transition-transform
-            after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-            after:origin-center after:scale-x-0 after:bg-(--fg-accent)
+            after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+            after:origin-bottom-right after:scale-x-0 after:bg-(--fg-accent)
             after:transition-transform
-            hover:scale-105 hover:after:scale-x-100
+            hover:after:scale-x-100
           `}
           href={`/collections/${value.slug}/`}
         >
