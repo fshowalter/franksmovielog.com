@@ -1,4 +1,5 @@
 import type { JSX } from "react";
+import type React from "react";
 
 import type { NavItem } from "./navItems";
 
@@ -21,13 +22,23 @@ export function Mast({
         tablet:py-6
         laptop:inset-x-0 laptop:z-40 laptop:flex-row laptop:flex-wrap
         laptop:px-16 laptop:py-8 laptop:text-left
+        ${
+          hasBackdrop
+            ? `
+              absolute
+              [--mast-color:#fff]
+            `
+            : `
+              static
+              [--mast-color:var(--fg-default)]
+            `
+        }
+        text-(--mast-color)
       `}
       style={{
         backgroundImage: addGradient
           ? "linear-gradient(to bottom, rgba(0,0,0,.85), transparent 95%)"
           : "",
-        color: hasBackdrop ? "#fff" : "var(--fg-default)",
-        position: hasBackdrop ? "absolute" : "static",
       }}
     >
       {hideLogo ? <div /> : <Logo className="" />}
@@ -179,7 +190,7 @@ function NavListItem({
         className={`
           relative block text-inherit
           after:absolute after:bottom-1 after:left-0 after:h-0.5 after:w-full
-          after:origin-center after:scale-x-0 after:bg-(--fg-muted)
+          after:origin-center after:scale-x-0 after:bg-(--mast-color)/80
           after:transition-transform
           hover:after:scale-x-100
         `}

@@ -70,8 +70,7 @@
       >
       <div class="flex min-h-full w-full flex-col bg-default">
         <header
-          class="group z-30 flex w-full items-center justify-between px-container py-4 tablet:py-6 laptop:inset-x-0 laptop:z-40 laptop:flex-row laptop:flex-wrap laptop:px-16 laptop:py-8 laptop:text-left"
-          style="color: var(--fg-default); position: static"
+          class="group z-30 flex w-full items-center justify-between px-container py-4 tablet:py-6 laptop:inset-x-0 laptop:z-40 laptop:flex-row laptop:flex-wrap laptop:px-16 laptop:py-8 laptop:text-left static [--mast-color:var(--fg-default)] text-(--mast-color)"
         >
           <div
             class="flex transform-gpu flex-col transition-transform has-[a:hover]:scale-105"
@@ -92,7 +91,7 @@
                   class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform has-[a:hover]:scale-105 [body.nav-open_&amp;]:opacity-0"
                 >
                   <a
-                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:after:scale-x-100"
+                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-(--mast-color)/80 after:transition-transform hover:after:scale-x-100"
                     href="/"
                     >Home</a
                   >
@@ -101,7 +100,7 @@
                   class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform has-[a:hover]:scale-105 [body.nav-open_&amp;]:opacity-0"
                 >
                   <a
-                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:after:scale-x-100"
+                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-(--mast-color)/80 after:transition-transform hover:after:scale-x-100"
                     href="/how-i-grade/"
                     >How I Grade</a
                   >
@@ -110,7 +109,7 @@
                   class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform has-[a:hover]:scale-105 [body.nav-open_&amp;]:opacity-0"
                 >
                   <a
-                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:after:scale-x-100"
+                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-(--mast-color)/80 after:transition-transform hover:after:scale-x-100"
                     href="/reviews/"
                     >Reviews</a
                   >
@@ -119,7 +118,7 @@
                   class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform has-[a:hover]:scale-105 [body.nav-open_&amp;]:opacity-0"
                 >
                   <a
-                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:after:scale-x-100"
+                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-(--mast-color)/80 after:transition-transform hover:after:scale-x-100"
                     href="/viewings/"
                     >Viewing Log</a
                   >
@@ -128,7 +127,7 @@
                   class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform has-[a:hover]:scale-105 [body.nav-open_&amp;]:opacity-0"
                 >
                   <a
-                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:after:scale-x-100"
+                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-(--mast-color)/80 after:transition-transform hover:after:scale-x-100"
                     href="/watchlist/"
                     >Watchlist</a
                   >
@@ -313,9 +312,7 @@
           <header
             class="relative z-base mb-8 flex flex-col items-center px-[8%] pt-10"
           >
-            <nav
-              class="transform-gpu pb-2 transition-transform has-[a:hover]:scale-110"
-            >
+            <nav class="transform-gpu pb-2 transition-transform">
               <a
                 class="relative inline-block pb-1 font-sans text-xs tracking-wider text-subtle uppercase transition-all after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-(--fg-accent) after:transition-transform hover:text-accent hover:after:scale-x-100"
                 href="/reviews/"
@@ -352,7 +349,7 @@
               <span
                 ><span>|</span>
                 <a
-                  class="inline-block origin-bottom-left transform-gpu text-accent transition-transform hover:scale-105"
+                  class="relative -mb-1 inline-block origin-bottom-left pb-1 text-default after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-(--fg-default)/80 after:transition-transform hover:after:scale-x-100"
                   href="#credits"
                   >More...</a
                 ></span
@@ -642,7 +639,7 @@
                 </dl>
               </div>
               <a
-                class="relative mx-auto mt-8 flex w-full max-w-button transform-gpu cursor-pointer place-content-center items-center py-5 font-sans text-xs tracking-wide uppercase shadow-all transition-all before:absolute before:bottom-0 before:left-0 before:-z-10 before:h-full before:w-full before:origin-center before:scale-x-0 before:bg-inverse before:transition-transform hover:scale-105 hover:text-inverse hover:before:scale-100"
+                class="mx-auto mt-8 flex w-full max-w-button transform-gpu place-content-center items-center py-5 font-sans text-xs tracking-wide uppercase shadow-all transition-all hover:scale-105 hover:bg-footer hover:text-inverse"
                 href="#top"
                 >Back to Top</a
               >
@@ -660,7 +657,7 @@
                   class="py-10 font-sans text-xs font-semibold tracking-wide text-subtle uppercase"
                 >
                   <a
-                    class="relative -mb-1 inline-block transform-gpu pb-1 transition-transform after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-(--fg-accent) after:transition-transform hover:scale-105 hover:after:scale-x-100"
+                    class="relative -mb-1 inline-block transform-gpu pb-1 transition-transform after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-(--fg-accent) after:transition-transform hover:after:scale-x-100"
                     href="/cast-and-crew/terence-fisher/"
                     >More directed by<!-- -->
                     <span class="text-accent">Terence Fisher</span></a
@@ -985,7 +982,7 @@
                   class="py-10 font-sans text-xs font-semibold tracking-wide text-subtle uppercase"
                 >
                   <a
-                    class="relative -mb-1 inline-block transform-gpu pb-1 transition-transform after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-(--fg-accent) after:transition-transform hover:scale-105 hover:after:scale-x-100"
+                    class="relative -mb-1 inline-block transform-gpu pb-1 transition-transform after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-(--fg-accent) after:transition-transform hover:after:scale-x-100"
                     href="/cast-and-crew/jimmy-sangster/"
                     >More written by<!-- -->
                     <span class="text-accent">Jimmy Sangster</span></a
@@ -1292,7 +1289,7 @@
                   class="py-10 font-sans text-xs font-semibold tracking-wide text-subtle uppercase"
                 >
                   <a
-                    class="relative -mb-1 inline-block transform-gpu pb-1 transition-transform after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-(--fg-accent) after:transition-transform hover:scale-105 hover:after:scale-x-100"
+                    class="relative -mb-1 inline-block transform-gpu pb-1 transition-transform after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-(--fg-accent) after:transition-transform hover:after:scale-x-100"
                     href="/cast-and-crew/peter-cushing/"
                     >More with<!-- -->
                     <span class="text-accent">Peter Cushing</span></a
@@ -1393,7 +1390,7 @@
                   class="py-10 font-sans text-xs font-semibold tracking-wide text-subtle uppercase"
                 >
                   <a
-                    class="relative -mb-1 inline-block transform-gpu pb-1 transition-transform after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-(--fg-accent) after:transition-transform hover:scale-105 hover:after:scale-x-100"
+                    class="relative -mb-1 inline-block transform-gpu pb-1 transition-transform after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-(--fg-accent) after:transition-transform hover:after:scale-x-100"
                     href="/collections/hammer-films/"
                     >More <span class="text-accent">Hammer Films</span></a
                   >
@@ -1713,7 +1710,7 @@
                   class="py-10 font-sans text-xs font-semibold tracking-wide text-subtle uppercase"
                 >
                   <a
-                    class="relative -mb-1 inline-block transform-gpu pb-1 transition-transform after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-(--fg-accent) after:transition-transform hover:scale-105 hover:after:scale-x-100"
+                    class="relative -mb-1 inline-block transform-gpu pb-1 transition-transform after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-(--fg-accent) after:transition-transform hover:after:scale-x-100"
                     href="/reviews/"
                     >More <span class="text-accent">Reviews</span></a
                   >
@@ -2057,7 +2054,7 @@
               class="flex w-full flex-col tablet:flex-row-reverse tablet:justify-between"
             >
               <a
-                class="mx-auto mb-8 w-full max-w-button bg-canvas py-5 text-center font-sans text-xs tracking-wide text-default uppercase transition-all hover:scale-105 hover:bg-inverse hover:text-inverse tablet:mx-0"
+                class="mx-auto mb-8 w-full max-w-button transform-gpu bg-canvas py-5 text-center font-sans text-xs tracking-wide text-default uppercase transition-all hover:scale-105 hover:bg-default hover:text-default tablet:mx-0"
                 href="#top"
                 >To the top</a
               >
@@ -2165,21 +2162,21 @@
                 >
                   <li class="block w-1/2 text-2xl whitespace-nowrap">
                     <a
-                      class="relative inline-block origin-left transform-gpu transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:scale-105 hover:after:scale-x-100"
+                      class="relative inline-block origin-left transform-gpu transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:after:scale-x-100"
                       href="/"
                       >Home</a
                     >
                   </li>
                   <li class="block w-1/2 text-2xl whitespace-nowrap">
                     <a
-                      class="relative inline-block origin-left transform-gpu transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:scale-105 hover:after:scale-x-100"
+                      class="relative inline-block origin-left transform-gpu transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:after:scale-x-100"
                       href="/how-i-grade/"
                       >How I Grade</a
                     >
                   </li>
                   <li class="block w-1/2 text-2xl whitespace-nowrap">
                     <a
-                      class="relative inline-block origin-left transform-gpu transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:scale-105 hover:after:scale-x-100"
+                      class="relative inline-block origin-left transform-gpu transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:after:scale-x-100"
                       href="/reviews/"
                       >Reviews</a
                     >
@@ -2188,7 +2185,7 @@
                         class="mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:-mb-1"
                       >
                         <a
-                          class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:scale-105 hover:text-inverse hover:after:scale-x-100"
+                          class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:text-inverse hover:after:scale-x-100"
                           href="/cast-and-crew/"
                           >Cast &amp; Crew</a
                         >
@@ -2197,7 +2194,7 @@
                         class="mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:-mb-1"
                       >
                         <a
-                          class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:scale-105 hover:text-inverse hover:after:scale-x-100"
+                          class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:text-inverse hover:after:scale-x-100"
                           href="/collections/"
                           >Collections</a
                         >
@@ -2206,7 +2203,7 @@
                         class="mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:-mb-1"
                       >
                         <a
-                          class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:scale-105 hover:text-inverse hover:after:scale-x-100"
+                          class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:text-inverse hover:after:scale-x-100"
                           href="/reviews/overrated/"
                           >Overrated</a
                         >
@@ -2215,7 +2212,7 @@
                         class="mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:-mb-1"
                       >
                         <a
-                          class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:scale-105 hover:text-inverse hover:after:scale-x-100"
+                          class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:text-inverse hover:after:scale-x-100"
                           href="/reviews/underrated/"
                           >Underrated</a
                         >
@@ -2224,7 +2221,7 @@
                         class="mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:-mb-1"
                       >
                         <a
-                          class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:scale-105 hover:text-inverse hover:after:scale-x-100"
+                          class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:text-inverse hover:after:scale-x-100"
                           href="/reviews/underseen/"
                           >Underseen</a
                         >
@@ -2233,7 +2230,7 @@
                   </li>
                   <li class="block w-1/2 text-2xl whitespace-nowrap">
                     <a
-                      class="relative inline-block origin-left transform-gpu transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:scale-105 hover:after:scale-x-100"
+                      class="relative inline-block origin-left transform-gpu transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:after:scale-x-100"
                       href="/viewings/"
                       >Viewing Log</a
                     >
@@ -2242,7 +2239,7 @@
                         class="mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:-mb-1"
                       >
                         <a
-                          class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:scale-105 hover:text-inverse hover:after:scale-x-100"
+                          class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:text-inverse hover:after:scale-x-100"
                           href="/viewings/stats/"
                           >Stats</a
                         >
@@ -2251,7 +2248,7 @@
                   </li>
                   <li class="block w-1/2 text-2xl whitespace-nowrap">
                     <a
-                      class="relative inline-block origin-left transform-gpu transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:scale-105 hover:after:scale-x-100"
+                      class="relative inline-block origin-left transform-gpu transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:after:scale-x-100"
                       href="/watchlist/"
                       >Watchlist</a
                     >
@@ -2260,7 +2257,7 @@
                         class="mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:-mb-1"
                       >
                         <a
-                          class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:scale-105 hover:text-inverse hover:after:scale-x-100"
+                          class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:text-inverse hover:after:scale-x-100"
                           href="/watchlist/progress/"
                           >Progress</a
                         >

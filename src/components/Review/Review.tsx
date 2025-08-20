@@ -66,12 +66,7 @@ export function Review({
           relative z-base mb-8 flex flex-col items-center px-[8%] pt-10
         `}
       >
-        <nav
-          className={`
-            transform-gpu pb-2 transition-transform
-            has-[a:hover]:scale-110
-          `}
-        >
+        <nav className={`transform-gpu pb-2 transition-transform`}>
           <a
             className={`
               relative inline-block pb-1 font-sans text-xs tracking-wider
@@ -166,10 +161,10 @@ export function Review({
               className={`
                 relative -mb-1 inline-block transform-gpu pb-1
                 transition-transform
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
-                after:w-full after:origin-center after:scale-x-0
+                after:absolute after:bottom-0 after:left-0 after:h-px
+                after:w-full after:origin-bottom-right after:scale-x-0
                 after:bg-(--fg-accent) after:transition-transform
-                hover:scale-105 hover:after:scale-x-100
+                hover:after:scale-x-100
               `}
               href={`/reviews/`}
             >
@@ -229,9 +224,11 @@ function Meta({
         <span>|</span>{" "}
         <a
           className={`
-            inline-block origin-bottom-left transform-gpu text-accent
-            transition-transform
-            hover:scale-105
+            relative -mb-1 inline-block origin-bottom-left pb-1 text-default
+            after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
+            after:origin-left after:scale-x-0 after:bg-(--fg-default)/80
+            after:transition-transform
+            hover:after:scale-x-100
           `}
           href="#credits"
         >

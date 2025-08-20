@@ -17,10 +17,10 @@ export function Footer(): JSX.Element {
         >
           <a
             className={`
-              mx-auto mb-8 w-full max-w-button bg-canvas py-5 text-center
-              font-sans text-xs tracking-wide text-default uppercase
+              mx-auto mb-8 w-full max-w-button transform-gpu bg-canvas py-5
+              text-center font-sans text-xs tracking-wide text-default uppercase
               transition-all
-              hover:scale-105 hover:bg-inverse hover:text-inverse
+              hover:scale-105 hover:bg-default hover:text-default
               tablet:mx-0
             `}
             href="#top"
@@ -181,7 +181,7 @@ function NavListItem({ value }: { value: NavItem }): JSX.Element {
           after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
           after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
           after:transition-transform
-          hover:scale-105 hover:after:scale-x-100
+          hover:after:scale-x-100
         `}
         href={value.target}
       >
@@ -216,7 +216,7 @@ function SubNavList({ values }: { values: NavItem[] }): false | JSX.Element {
                 after:absolute after:bottom-0 after:left-0 after:h-0.5
                 after:w-full after:origin-bottom-left after:scale-x-0
                 after:bg-(--fg-muted) after:transition-transform
-                hover:scale-105 hover:text-inverse hover:after:scale-x-100
+                hover:text-inverse hover:after:scale-x-100
               `}
               href={value.target}
             >

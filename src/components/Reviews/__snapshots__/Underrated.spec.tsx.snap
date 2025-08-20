@@ -29868,8 +29868,9 @@ exports[`Underrated > renders 1`] = `
             aria-label="Toggle filters"
             class="
           col-start-4 row-start-1 flex transform-gpu cursor-pointer items-center
-          justify-center gap-x-4 bg-canvas px-4 py-2 text-nowrap text-muted
-          uppercase shadow-all transition-transform
+          justify-center gap-x-4 bg-canvas px-4 py-2 font-sans text-xs
+          font-semibold text-nowrap text-muted uppercase shadow-all
+          transition-transform
           hover:scale-110
           tablet:col-start-5 tablet:w-20
         "
