@@ -46,7 +46,7 @@ export function Home({ backdropImageProps, deck, values }: Props): JSX.Element {
           <a
             className={`
               group/all-reviews mx-auto w-full max-w-button transform-gpu
-              rounded-md bg-default py-5 text-center font-sans text-xs
+              rounded-md bg-default pt-5 pb-4 text-center font-sans text-xs
               font-semibold tracking-wide text-accent uppercase transition-all
               hover:scale-105 hover:bg-accent hover:text-inverse
             `}
@@ -54,10 +54,11 @@ export function Home({ backdropImageProps, deck, values }: Props): JSX.Element {
           >
             <span
               className={`
-                relative inline-block
-                after:absolute after:bottom-0 after:left-0 after:h-px
+                relative inline-block pb-1
+                after:absolute after:bottom-0 after:left-0 after:h-0.5
                 after:w-full after:origin-center after:scale-x-0
-                after:bg-(--fg-inverse) after:transition-transform
+                after:transform-gpu after:bg-(--fg-inverse)
+                after:transition-transform
                 group-hover/all-reviews:after:scale-x-100
               `}
             >
