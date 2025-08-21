@@ -156,10 +156,10 @@ function MenuItem({ value }: { value: NavItem }): JSX.Element {
       <a
         className={`
           relative inline-block origin-left transform-gpu transition-all
-          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
+          after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75
           after:transition-transform
-          hover:scale-105 hover:after:scale-x-100
+          hover:after:scale-x-100
         `}
         href={value.target}
       >
@@ -182,15 +182,14 @@ function NavListItem({
       className={`
         block leading-10 tracking-serif-wide whitespace-nowrap
         transition-transform
-        has-[a:hover]:scale-105
         [body.nav-open_&]:opacity-0
       `}
     >
       <a
         className={`
           relative block text-inherit
-          after:absolute after:bottom-1 after:left-0 after:h-0.5 after:w-full
-          after:origin-center after:scale-x-0 after:bg-(--mast-color)/80
+          after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
+          after:origin-center after:scale-x-0 after:bg-(--mast-color)/75
           after:transition-transform
           hover:after:scale-x-100
         `}
@@ -269,10 +268,10 @@ function SubMenu({ values }: { values: NavItem[] }): false | JSX.Element {
               className={`
                 relative inline-block origin-left transform-gpu pb-1
                 transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:scale-105 hover:text-inverse hover:after:scale-x-100
+                after:bg-(--fg-inverse)/75 after:transition-transform
+                hover:text-inverse hover:after:scale-x-100
               `}
               href={value.target}
             >

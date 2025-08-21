@@ -294,13 +294,13 @@ function CalendarHeader({
             aria-disabled={false}
             aria-label={`Navigate to previous month: ${prevMonthName}`}
             className={`
-              transform-gpu cursor-pointer font-sans text-xs font-medium
-              text-accent transition-transform
+              -mb-1 transform-gpu cursor-pointer pb-1 font-sans text-xs
+              font-medium text-accent transition-transform
               after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
               after:origin-bottom-right after:scale-x-0 after:bg-(--fg-accent)
               after:transition-transform
               hover:after:scale-x-100
-              tablet-landscape:text-sm
+              tablet-landscape:tracking-wide tablet-landscape:uppercase
             `}
             onClick={() => dispatch({ type: Actions.PREV_MONTH })}
           >
@@ -323,13 +323,13 @@ function CalendarHeader({
             aria-disabled={false}
             aria-label={`Navigate to next month: ${nextMonthName}`}
             className={`
-              transform-gpu cursor-pointer font-sans text-xs font-medium
-              text-accent transition-transform
+              -mb-1 transform-gpu cursor-pointer pb-1 font-sans text-xs
+              font-medium text-accent transition-transform
               after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
               after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent)
               after:transition-transform
               hover:after:scale-x-100
-              tablet-landscape:text-sm
+              tablet-landscape:tracking-wide tablet-landscape:uppercase
             `}
             onClick={() => dispatch({ type: Actions.NEXT_MONTH })}
           >

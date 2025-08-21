@@ -43,7 +43,7 @@ export function Credits({
     <aside
       className={ccn(
         `
-          bg-subtle px-container pt-8 pb-8
+          group/credits bg-subtle px-container pt-8 pb-8
           tablet:pt-12
         `,
         className,
@@ -95,9 +95,10 @@ export function Credits({
       </div>
       <a
         className={`
-          mx-auto mt-8 flex w-full max-w-button transform-gpu
-          place-content-center items-center py-5 font-sans text-xs tracking-wide
-          uppercase shadow-all transition-all
+          mx-auto mt-8 hidden w-full max-w-button transform-gpu
+          place-content-center items-center rounded-md py-5 font-sans text-xs
+          tracking-wide uppercase shadow-all transition-all
+          group-target/credits:flex
           hover:scale-105 hover:bg-footer hover:text-inverse
         `}
         href="#top"

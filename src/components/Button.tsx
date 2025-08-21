@@ -15,9 +15,9 @@ export function Button({
     <button
       className={ccn(
         `
-          mx-auto w-full max-w-button transform-gpu cursor-pointer bg-canvas
-          py-5 text-center font-sans text-xs font-semibold tracking-wide
-          uppercase transition-transform
+          mx-auto w-full max-w-button transform-gpu cursor-pointer rounded-md
+          bg-canvas py-5 text-center font-sans text-xs font-semibold
+          tracking-wide uppercase transition-transform
           hover:scale-105
         `,
         className,

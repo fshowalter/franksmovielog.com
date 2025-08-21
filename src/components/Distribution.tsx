@@ -37,8 +37,7 @@ export function Distribution({
               <div className="col-span-3 grid grid-cols-subgrid">
                 <div
                   className={`
-                    pb-1 font-sans text-xs leading-3.5 text-muted
-                    tablet:text-sm
+                    pb-1 font-sans text-xs leading-3.5 tracking-prose text-muted
                   `}
                 >
                   {value.name}
@@ -47,7 +46,6 @@ export function Distribution({
                   className={`
                     col-start-3 self-center pb-1 text-right font-sans text-xs
                     leading-3.5 text-nowrap text-subtle
-                    tablet:text-sm
                   `}
                 >
                   {value.count}

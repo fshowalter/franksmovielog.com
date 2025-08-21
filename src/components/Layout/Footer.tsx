@@ -17,9 +17,9 @@ export function Footer(): JSX.Element {
         >
           <a
             className={`
-              mx-auto mb-8 w-full max-w-button transform-gpu bg-canvas py-5
-              text-center font-sans text-xs tracking-wide text-default uppercase
-              transition-all
+              mx-auto mb-8 w-full max-w-button transform-gpu rounded-md
+              bg-canvas py-5 text-center font-sans text-xs tracking-wide
+              text-default uppercase transition-all
               hover:scale-105 hover:bg-default hover:text-default
               tablet:mx-0
             `}

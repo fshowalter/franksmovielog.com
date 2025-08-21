@@ -45,14 +45,24 @@ export function Home({ backdropImageProps, deck, values }: Props): JSX.Element {
         <div className="flex px-container py-10">
           <a
             className={`
-              mx-auto w-full max-w-button transform-gpu bg-default py-5
-              text-center font-sans text-xs font-semibold tracking-wide
-              text-accent uppercase transition-all
+              group/all-reviews mx-auto w-full max-w-button transform-gpu
+              rounded-md bg-default py-5 text-center font-sans text-xs
+              font-semibold tracking-wide text-accent uppercase transition-all
               hover:scale-105 hover:bg-accent hover:text-inverse
             `}
             href="/reviews/"
           >
-            All Reviews
+            <span
+              className={`
+                relative inline-block
+                after:absolute after:bottom-0 after:left-0 after:h-px
+                after:w-full after:origin-center after:scale-x-0
+                after:bg-(--fg-inverse) after:transition-transform
+                group-hover/all-reviews:after:scale-x-100
+              `}
+            >
+              All Reviews
+            </span>
           </a>
         </div>
       </nav>
