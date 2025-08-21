@@ -294,8 +294,8 @@ function CalendarHeader({
             aria-disabled={false}
             aria-label={`Navigate to previous month: ${prevMonthName}`}
             className={`
-              transform-gpu cursor-pointer font-sans text-xs font-medium
-              text-accent transition-transform
+              -mb-1 transform-gpu cursor-pointer pb-1 font-sans text-xs
+              font-medium text-accent transition-transform
               after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
               after:origin-bottom-right after:scale-x-0 after:bg-(--fg-accent)
               after:transition-transform
@@ -323,8 +323,8 @@ function CalendarHeader({
             aria-disabled={false}
             aria-label={`Navigate to next month: ${nextMonthName}`}
             className={`
-              transform-gpu cursor-pointer font-sans text-xs font-medium
-              text-accent transition-transform
+              -mb-1 transform-gpu cursor-pointer pb-1 font-sans text-xs
+              font-medium text-accent transition-transform
               after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
               after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent)
               after:transition-transform
