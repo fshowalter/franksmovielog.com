@@ -66,7 +66,6 @@ export function MostWatchedPeople({
                   className={`
                     transform-gpu font-sans text-xs text-muted
                     transition-transform
-                    has-[a:hover]:scale-110
                     tablet:text-sm
                   `}
                 >
@@ -90,8 +89,8 @@ export function MostWatchedPeople({
                 <details className={`bg-subtle px-2`}>
                   <summary
                     className={`
-                      cursor-pointer px-4 py-1 font-sans text-sm text-subtle
-                      tablet:px-0
+                      cursor-pointer rounded-sm py-1 font-sans text-xs
+                      tracking-prose text-subtle
                     `}
                   >
                     Details
@@ -156,6 +155,10 @@ function Name({
       <a
         className={`
           inline-block font-serif text-base leading-6 font-normal text-accent
+          after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent)
+          after:transition-transform
+          hover:after:scale-x-100
         `}
         href={`/cast-and-crew/${value.slug}/`}
       >

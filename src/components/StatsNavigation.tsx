@@ -67,7 +67,7 @@ function AllTimeLink({
           className={`
             group/all-time block transform-gpu px-4 pt-4 pb-3 whitespace-nowrap
             transition-all
-            hover:scale-105 hover:bg-accent hover:text-inverse
+            hover:bg-accent hover:text-inverse
           `}
           href={linkFunc("all")}
         >
@@ -76,7 +76,7 @@ function AllTimeLink({
               relative inline-block pb-1
               after:absolute after:bottom-0 after:left-0 after:h-0.5
               after:w-full after:origin-center after:scale-x-0
-              after:bg-(--fg-muted) after:transition-transform
+              after:bg-(--fg-inverse) after:transition-transform
               group-hover/all-time:after:scale-x-100
             `}
           >
@@ -117,7 +117,7 @@ function YearLink({
         <a
           className={`
             group/year block transform-gpu px-4 pt-4 pb-3 transition-all
-            hover:scale-105 hover:bg-accent hover:text-inverse
+            hover:bg-accent hover:text-inverse
           `}
           href={linkFunc(year)}
         >
@@ -126,7 +126,7 @@ function YearLink({
               relative inline-block pb-1
               after:absolute after:bottom-0 after:left-0 after:h-0.5
               after:w-full after:origin-center after:scale-x-0
-              after:bg-(--fg-muted) after:transition-transform
+              after:bg-(--fg-inverse) after:transition-transform
               group-hover/year:after:scale-x-100
             `}
           >

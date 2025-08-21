@@ -300,7 +300,7 @@ function CalendarHeader({
               after:origin-bottom-right after:scale-x-0 after:bg-(--fg-accent)
               after:transition-transform
               hover:after:scale-x-100
-              tablet-landscape:text-sm
+              tablet-landscape:tracking-wide tablet-landscape:uppercase
             `}
             onClick={() => dispatch({ type: Actions.PREV_MONTH })}
           >
@@ -329,7 +329,7 @@ function CalendarHeader({
               after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent)
               after:transition-transform
               hover:after:scale-x-100
-              tablet-landscape:text-sm
+              tablet-landscape:tracking-wide tablet-landscape:uppercase
             `}
             onClick={() => dispatch({ type: Actions.NEXT_MONTH })}
           >
