@@ -24,7 +24,7 @@ exports[`ListWithFilters > filter drawer > opens and closes filter drawer 1`] = 
       class="
                   absolute top-7 right-4 z-10 flex h-10 w-10 transform-gpu
                   cursor-pointer items-center justify-center rounded-full
-                  bg-subtle text-default transition-transform
+                  bg-canvas text-default drop-shadow-md transition-transform
                   hover:scale-105
                   
                 "
@@ -93,9 +93,10 @@ exports[`ListWithFilters > filter drawer > opens and closes filter drawer 1`] = 
         <button
           aria-label="Clear all filters"
           class="
-                      flex items-center justify-center gap-x-4 rounded-sm px-4
-                      py-3 font-sans text-xs text-nowrap uppercase
-                      cursor-not-allowed bg-canvas text-muted opacity-50
+                      flex items-center justify-center gap-x-4 rounded-sm
+                      bg-canvas px-4 py-3 font-sans text-xs text-nowrap
+                      uppercase
+                      cursor-not-allowed text-muted opacity-50
                     "
           disabled=""
           type="button"
@@ -149,7 +150,7 @@ exports[`ListWithFilters > filter drawer > opens and closes filter drawer 2`] = 
       class="
                   absolute top-7 right-4 z-10 flex h-10 w-10 transform-gpu
                   cursor-pointer items-center justify-center rounded-full
-                  bg-subtle text-default transition-transform
+                  bg-canvas text-default drop-shadow-md transition-transform
                   hover:scale-105
                   
                 "
@@ -218,9 +219,10 @@ exports[`ListWithFilters > filter drawer > opens and closes filter drawer 2`] = 
         <button
           aria-label="Clear all filters"
           class="
-                      flex items-center justify-center gap-x-4 rounded-sm px-4
-                      py-3 font-sans text-xs text-nowrap uppercase
-                      cursor-not-allowed bg-canvas text-muted opacity-50
+                      flex items-center justify-center gap-x-4 rounded-sm
+                      bg-canvas px-4 py-3 font-sans text-xs text-nowrap
+                      uppercase
+                      cursor-not-allowed text-muted opacity-50
                     "
           disabled=""
           type="button"
@@ -397,7 +399,7 @@ exports[`ListWithFilters > renders 1`] = `
               class="
                   absolute top-7 right-4 z-10 flex h-10 w-10 transform-gpu
                   cursor-pointer items-center justify-center rounded-full
-                  bg-subtle text-default transition-transform
+                  bg-canvas text-default drop-shadow-md transition-transform
                   hover:scale-105
                   
                 "
@@ -466,9 +468,10 @@ exports[`ListWithFilters > renders 1`] = `
                 <button
                   aria-label="Clear all filters"
                   class="
-                      flex items-center justify-center gap-x-4 rounded-sm px-4
-                      py-3 font-sans text-xs text-nowrap uppercase
-                      cursor-not-allowed bg-canvas text-muted opacity-50
+                      flex items-center justify-center gap-x-4 rounded-sm
+                      bg-canvas px-4 py-3 font-sans text-xs text-nowrap
+                      uppercase
+                      cursor-not-allowed text-muted opacity-50
                     "
                   disabled=""
                   type="button"
