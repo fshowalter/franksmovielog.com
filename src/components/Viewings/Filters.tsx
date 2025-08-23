@@ -8,10 +8,10 @@ import type { ActionType } from "./Viewings.reducer";
 import { Actions } from "./Viewings.reducer";
 
 type FilterValues = {
-  media?: string[];
+  medium?: string;
   releaseYears?: string[];
   title?: string;
-  venues?: string[];
+  venue?: string;
   viewingYears?: string[];
 };
 
@@ -72,7 +72,7 @@ export function Filters({
                 : [e.target.value],
           })
         }
-        value={(filterValues.media || [])[0] || ""}
+        value={filterValues.medium || "All"}
       >
         <SelectOptions options={distinctMedia} />
       </SelectField>
@@ -87,7 +87,7 @@ export function Filters({
                 : [e.target.value],
           })
         }
-        value={(filterValues.venues || [])[0] || ""}
+        value={filterValues.venue || "All"}
       >
         <SelectOptions options={distinctVenues} />
       </SelectField>
