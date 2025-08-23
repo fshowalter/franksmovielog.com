@@ -281,8 +281,8 @@ function getMonthViewings(
   values: ListItemValue[],
   month: Date,
 ): ListItemValue[] {
-  const year = month.getFullYear();
-  const monthIndex = month.getMonth();
+  const year = month.getUTCFullYear();
+  const monthIndex = month.getUTCMonth();
 
   return values.filter((value) => {
     const viewingDate = new Date(value.viewingDate);
@@ -323,11 +323,11 @@ function getNextMonthWithViewings(
 
   while (checkMonth < mostRecent) {
     checkMonth = new Date(
-      checkMonth.getFullYear(),
-      checkMonth.getMonth() + 1,
+      checkMonth.getUTCFullYear(),
+      checkMonth.getUTCMonth() + 1,
       1,
     );
-    const monthKey = `${checkMonth.getFullYear()}-${checkMonth.getMonth()}`;
+    const monthKey = `${checkMonth.getUTCFullYear()}-${checkMonth.getUTCMonth()}`;
     if (monthsWithViewings.has(monthKey)) {
       return checkMonth;
     }
@@ -361,11 +361,11 @@ function getPrevMonthWithViewings(
 
   while (checkMonth > oldest) {
     checkMonth = new Date(
-      checkMonth.getFullYear(),
-      checkMonth.getMonth() - 1,
+      checkMonth.getUTCFullYear(),
+      checkMonth.getUTCMonth() - 1,
       1,
     );
-    const monthKey = `${checkMonth.getFullYear()}-${checkMonth.getMonth()}`;
+    const monthKey = `${checkMonth.getUTCFullYear()}-${checkMonth.getUTCMonth()}`;
     if (monthsWithViewings.has(monthKey)) {
       return checkMonth;
     }
