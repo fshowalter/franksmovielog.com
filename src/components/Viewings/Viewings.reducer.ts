@@ -75,6 +75,8 @@ type State = ListWithFiltersState<ListItemValue, Sort> & {
   hasNextMonth: boolean;
   hasPrevMonth: boolean;
   monthViewings: ListItemValue[];
+  nextMonth: Date | undefined;
+  prevMonth: Date | undefined;
 };
 
 export function initState({
@@ -97,17 +99,23 @@ export function initState({
     baseState.filteredValues,
     currentMonth,
   );
+  const nextMonth = getNextMonthWithViewings(
+    currentMonth,
+    baseState.filteredValues,
+  );
+  const prevMonth = getPrevMonthWithViewings(
+    currentMonth,
+    baseState.filteredValues,
+  );
 
   return {
     ...baseState,
     currentMonth,
-    hasNextMonth:
-      getNextMonthWithViewings(currentMonth, baseState.filteredValues) !==
-      undefined,
-    hasPrevMonth:
-      getPrevMonthWithViewings(currentMonth, baseState.filteredValues) !==
-      undefined,
+    hasNextMonth: nextMonth !== undefined,
+    hasPrevMonth: prevMonth !== undefined,
     monthViewings,
+    nextMonth,
+    prevMonth,
   };
 }
 
@@ -122,6 +130,8 @@ export function reducer(state: State, action: ActionType): State {
         hasNextMonth: state.hasNextMonth,
         hasPrevMonth: state.hasPrevMonth,
         monthViewings: state.monthViewings,
+        nextMonth: state.nextMonth,
+        prevMonth: state.prevMonth,
       });
     }
 
@@ -131,6 +141,8 @@ export function reducer(state: State, action: ActionType): State {
         hasNextMonth: state.hasNextMonth,
         hasPrevMonth: state.hasPrevMonth,
         monthViewings: state.monthViewings,
+        nextMonth: state.nextMonth,
+        prevMonth: state.prevMonth,
       });
     }
 
@@ -139,16 +151,22 @@ export function reducer(state: State, action: ActionType): State {
         state.currentMonth,
         state.filteredValues,
       )!; // Bang operator - we know this exists because button is only rendered when hasNextMonth is true
+      const nextMonth = getNextMonthWithViewings(
+        newMonth,
+        state.filteredValues,
+      );
+      const prevMonth = getPrevMonthWithViewings(
+        newMonth,
+        state.filteredValues,
+      );
       return {
         ...state,
         currentMonth: newMonth,
-        hasNextMonth:
-          getNextMonthWithViewings(newMonth, state.filteredValues) !==
-          undefined,
-        hasPrevMonth:
-          getPrevMonthWithViewings(newMonth, state.filteredValues) !==
-          undefined,
+        hasNextMonth: nextMonth !== undefined,
+        hasPrevMonth: prevMonth !== undefined,
         monthViewings: getMonthViewings(state.filteredValues, newMonth),
+        nextMonth,
+        prevMonth,
       };
     }
 
@@ -164,6 +182,8 @@ export function reducer(state: State, action: ActionType): State {
         hasNextMonth: state.hasNextMonth,
         hasPrevMonth: state.hasPrevMonth,
         monthViewings: state.monthViewings,
+        nextMonth: state.nextMonth,
+        prevMonth: state.prevMonth,
       };
     }
 
@@ -179,6 +199,8 @@ export function reducer(state: State, action: ActionType): State {
         hasNextMonth: state.hasNextMonth,
         hasPrevMonth: state.hasPrevMonth,
         monthViewings: state.monthViewings,
+        nextMonth: state.nextMonth,
+        prevMonth: state.prevMonth,
       };
     }
     case ViewingsActions.PENDING_FILTER_VIEWING_YEAR: {
@@ -191,6 +213,8 @@ export function reducer(state: State, action: ActionType): State {
         hasNextMonth: state.hasNextMonth,
         hasPrevMonth: state.hasPrevMonth,
         monthViewings: state.monthViewings,
+        nextMonth: state.nextMonth,
+        prevMonth: state.prevMonth,
       };
     }
 
@@ -199,16 +223,22 @@ export function reducer(state: State, action: ActionType): State {
         state.currentMonth,
         state.filteredValues,
       )!; // Bang operator - we know this exists because button is only rendered when hasPrevMonth is true
+      const nextMonth = getNextMonthWithViewings(
+        newMonth,
+        state.filteredValues,
+      );
+      const prevMonth = getPrevMonthWithViewings(
+        newMonth,
+        state.filteredValues,
+      );
       return {
         ...state,
         currentMonth: newMonth,
-        hasNextMonth:
-          getNextMonthWithViewings(newMonth, state.filteredValues) !==
-          undefined,
-        hasPrevMonth:
-          getPrevMonthWithViewings(newMonth, state.filteredValues) !==
-          undefined,
+        hasNextMonth: nextMonth !== undefined,
+        hasPrevMonth: prevMonth !== undefined,
         monthViewings: getMonthViewings(state.filteredValues, newMonth),
+        nextMonth,
+        prevMonth,
       };
     }
 
@@ -223,6 +253,8 @@ export function reducer(state: State, action: ActionType): State {
           hasNextMonth: state.hasNextMonth,
           hasPrevMonth: state.hasPrevMonth,
           monthViewings: state.monthViewings,
+          nextMonth: state.nextMonth,
+          prevMonth: state.prevMonth,
         },
       );
 
@@ -236,17 +268,23 @@ export function reducer(state: State, action: ActionType): State {
           result.filteredValues,
           result.sortValue,
         );
+        const nextMonth = getNextMonthWithViewings(
+          newMonth,
+          result.filteredValues,
+        );
+        const prevMonth = getPrevMonthWithViewings(
+          newMonth,
+          result.filteredValues,
+        );
 
         return {
           ...result,
           currentMonth: newMonth,
-          hasNextMonth:
-            getNextMonthWithViewings(newMonth, result.filteredValues) !==
-            undefined,
-          hasPrevMonth:
-            getPrevMonthWithViewings(newMonth, result.filteredValues) !==
-            undefined,
+          hasNextMonth: nextMonth !== undefined,
+          hasPrevMonth: prevMonth !== undefined,
           monthViewings: getMonthViewings(result.filteredValues, newMonth),
+          nextMonth,
+          prevMonth,
         };
       }
 
@@ -281,8 +319,8 @@ function getMonthViewings(
   values: ListItemValue[],
   month: Date,
 ): ListItemValue[] {
-  const year = month.getFullYear();
-  const monthIndex = month.getMonth();
+  const year = month.getUTCFullYear();
+  const monthIndex = month.getUTCMonth();
 
   return values.filter((value) => {
     const viewingDate = new Date(value.viewingDate);
@@ -323,11 +361,11 @@ function getNextMonthWithViewings(
 
   while (checkMonth < mostRecent) {
     checkMonth = new Date(
-      checkMonth.getFullYear(),
-      checkMonth.getMonth() + 1,
+      checkMonth.getUTCFullYear(),
+      checkMonth.getUTCMonth() + 1,
       1,
     );
-    const monthKey = `${checkMonth.getFullYear()}-${checkMonth.getMonth()}`;
+    const monthKey = `${checkMonth.getUTCFullYear()}-${checkMonth.getUTCMonth()}`;
     if (monthsWithViewings.has(monthKey)) {
       return checkMonth;
     }
@@ -361,11 +399,11 @@ function getPrevMonthWithViewings(
 
   while (checkMonth > oldest) {
     checkMonth = new Date(
-      checkMonth.getFullYear(),
-      checkMonth.getMonth() - 1,
+      checkMonth.getUTCFullYear(),
+      checkMonth.getUTCMonth() - 1,
       1,
     );
-    const monthKey = `${checkMonth.getFullYear()}-${checkMonth.getMonth()}`;
+    const monthKey = `${checkMonth.getUTCFullYear()}-${checkMonth.getUTCMonth()}`;
     if (monthsWithViewings.has(monthKey)) {
       return checkMonth;
     }

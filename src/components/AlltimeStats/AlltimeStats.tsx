@@ -106,12 +106,7 @@ export function AlltimeStats({
           <MediaDistribution values={stats.mediaDistribution} />
           <VenueDistribution values={stats.venueDistribution} />
         </div>
-        <div
-          className={`
-            mx-auto flex w-full flex-col gap-y-8
-            laptop:max-w-[calc(66%+24px)]
-          `}
-        >
+        <div className={`mx-auto flex w-full max-w-popout flex-col gap-y-8`}>
           <MostWatchedDirectors values={mostWatchedDirectors} />
           <MostWatchedPerformers values={mostWatchedPerformers} />
           <MostWatchedWriters values={mostWatchedWriters} />

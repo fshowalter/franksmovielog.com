@@ -61,6 +61,8 @@ type CalendarHeaderProps = {
   dispatch: React.Dispatch<ActionType>;
   hasNextMonth: boolean;
   hasPrevMonth: boolean;
+  nextMonth: Date | undefined;
+  prevMonth: Date | undefined;
 };
 
 type CalendarMonthProps = {
@@ -74,6 +76,8 @@ type CalendarViewProps = {
   groupedValues: Map<string, ListItemValue[]>;
   hasNextMonth: boolean;
   hasPrevMonth: boolean;
+  nextMonth: Date | undefined;
+  prevMonth: Date | undefined;
 };
 
 export function Viewings({
@@ -128,6 +132,8 @@ export function Viewings({
           groupedValues={state.groupedValues}
           hasNextMonth={state.hasNextMonth}
           hasPrevMonth={state.hasPrevMonth}
+          nextMonth={state.nextMonth}
+          prevMonth={state.prevMonth}
         />
       }
       listHeaderButtons={
@@ -250,6 +256,8 @@ function CalendarHeader({
   dispatch,
   hasNextMonth,
   hasPrevMonth,
+  nextMonth,
+  prevMonth,
 }: CalendarHeaderProps): JSX.Element {
   const monthName = currentMonth.toLocaleString("en-US", {
     month: "long",
@@ -257,25 +265,21 @@ function CalendarHeader({
     year: "numeric",
   });
 
-  const prevMonthName = new Date(
-    currentMonth.getFullYear(),
-    currentMonth.getMonth() - 1,
-    1,
-  ).toLocaleString("en-US", {
-    month: "short",
-    timeZone: "UTC",
-    year: "numeric",
-  });
+  const prevMonthName = prevMonth
+    ? prevMonth.toLocaleString("en-US", {
+        month: "short",
+        timeZone: "UTC",
+        year: "numeric",
+      })
+    : "";
 
-  const nextMonthName = new Date(
-    currentMonth.getFullYear(),
-    currentMonth.getMonth() + 1,
-    1,
-  ).toLocaleString("en-US", {
-    month: "short",
-    timeZone: "UTC",
-    year: "numeric",
-  });
+  const nextMonthName = nextMonth
+    ? nextMonth.toLocaleString("en-US", {
+        month: "short",
+        timeZone: "UTC",
+        year: "numeric",
+      })
+    : "";
 
   return (
     <div
@@ -403,6 +407,8 @@ function CalendarView({
   groupedValues,
   hasNextMonth,
   hasPrevMonth,
+  nextMonth,
+  prevMonth,
 }: CalendarViewProps): JSX.Element {
   return (
     <div className="mx-auto w-full max-w-(--breakpoint-desktop)">
@@ -411,6 +417,8 @@ function CalendarView({
         dispatch={dispatch}
         hasNextMonth={hasNextMonth}
         hasPrevMonth={hasPrevMonth}
+        nextMonth={nextMonth}
+        prevMonth={prevMonth}
       />
       <CalendarMonth
         currentMonth={currentMonth}
