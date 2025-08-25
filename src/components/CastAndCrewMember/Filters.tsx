@@ -43,7 +43,6 @@ export function Filters({
       </Button>
       {creditedAs.length > 1 && (
         <SelectField
-          className="basis-full"
           label="Credits"
           onChange={(e) =>
             dispatch({

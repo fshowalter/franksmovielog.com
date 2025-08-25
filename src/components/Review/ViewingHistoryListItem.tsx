@@ -28,7 +28,7 @@ export function ViewingHistoryListItem({ value }: { value: Viewing }) {
   return (
     <li
       className={`
-        mb-1 flex flex-col bg-subtle px-container font-sans text-xs font-light
+        mb-1 flex flex-col bg-subtle px-container font-sans text-sm font-normal
         tablet:px-6
       `}
     >
@@ -90,7 +90,7 @@ function MediumNotes({ value }: { value: Viewing["mediumNotes"] }) {
     return false;
   }
   return (
-    <span className="font-light tracking-normal text-subtle">
+    <span className="font-normal tracking-prose text-subtle">
       {" "}
       (
       <RenderedMarkdown as="span" className="leading-none" text={value} />)
@@ -123,7 +123,7 @@ function VenueNotes({ value }: { value: Viewing["venueNotes"] }) {
     return false;
   }
   return (
-    <span className="font-light tracking-normal text-subtle">
+    <span className="font-light tracking-normal text-muted">
       (
       <RenderedMarkdown as="span" className="leading-none" text={value} />)
     </span>
@@ -137,7 +137,7 @@ function ViewingNotes({ value }: { value: Viewing["viewingNotes"] }) {
   return (
     <div
       className={`
-        px-2 pb-6 text-sm font-light
+        px-2 pb-6 text-base font-normal
         tablet:mx-24 tablet:px-0
       `}
     >

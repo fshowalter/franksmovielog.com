@@ -73,8 +73,8 @@ export function MostWatchedPeople({
                 </div>
                 <div
                   className={`
-                    col-start-2 self-center pb-1 text-right font-sans text-xs
-                    text-nowrap text-subtle
+                    col-start-2 self-center pr-1 pb-1 text-right font-sans
+                    text-xs text-nowrap text-subtle
                   `}
                 >
                   {value.count}
@@ -86,16 +86,21 @@ export function MostWatchedPeople({
                   tablet:px-0
                 `}
               >
-                <details className={`bg-subtle px-2`}>
+                <details
+                  className={`
+                    rounded-md bg-canvas px-2
+                    open:pb-2
+                  `}
+                >
                   <summary
                     className={`
-                      cursor-pointer rounded-sm py-1 font-sans text-xs
-                      tracking-prose text-subtle
+                      cursor-pointer rounded-sm py-1 font-sans text-sm
+                      font-normal tracking-prose text-subtle
                     `}
                   >
                     Details
                   </summary>
-                  <PosterList>
+                  <PosterList className="bg-subtle">
                     {value.viewings.map((viewing) => {
                       return (
                         <MostWatchedPersonViewingListItem

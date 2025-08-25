@@ -147,7 +147,11 @@ function WatchlistListItem({
       posterImageProps={defaultPosterImageProps}
     >
       <ListItemDetails>
-        <ListItemTitle title={value.title} year={value.releaseYear} />
+        <ListItemTitle
+          className={`[--list-item-title-unreviewed-color:var(--fg-muted)]`}
+          title={value.title}
+          year={value.releaseYear}
+        />
         <WatchlistTitleSlug
           collectionNames={value.watchlistCollectionNames}
           directorNames={value.watchlistDirectorNames}

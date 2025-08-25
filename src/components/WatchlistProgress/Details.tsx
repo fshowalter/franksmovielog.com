@@ -37,8 +37,8 @@ export function Details({
     >
       <h2
         className={`
-          px-container py-8 font-sans text-xs font-medium tracking-wide
-          text-muted uppercase
+          px-container py-8 font-sans text-xs font-bold tracking-wide text-muted
+          uppercase
           laptop:px-8
         `}
       >
@@ -123,9 +123,10 @@ function Name({ value, valueType }: { value: Value; valueType: ValueType }) {
       <span>
         <a
           className={`
-            pb-1 text-base leading-none font-normal text-accent
+            pb-1 text-base leading-none font-normal text-[#252525]
             after:absolute after:top-0 after:left-0 after:z-hover
             after:size-full after:opacity-0
+            hover:text-accent
           `}
           href={linkTarget}
         >

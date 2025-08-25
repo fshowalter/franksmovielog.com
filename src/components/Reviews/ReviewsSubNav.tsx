@@ -16,7 +16,7 @@ export function ReviewsSubNav({ active }: { active: keyof typeof items }) {
       <ul
         className={`
           mx-auto flex scrollbar-hidden max-w-(--breakpoint-desktop) snap-x
-          overflow-x-auto px-container font-sans text-xs font-medium
+          overflow-x-auto px-container font-sans text-sm font-bold
           tracking-wider uppercase
           tablet:justify-center
         `}

@@ -109,7 +109,7 @@ function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
           />
           <div
             className={`
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             `}
           >

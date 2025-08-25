@@ -16,9 +16,9 @@ export function Button({
       className={ccn(
         `
           mx-auto w-full max-w-button transform-gpu cursor-pointer rounded-md
-          bg-canvas py-5 text-center font-sans text-xs font-semibold
-          tracking-wide uppercase transition-transform
-          hover:scale-105
+          bg-canvas py-5 text-center font-sans text-sm font-bold tracking-wide
+          uppercase shadow-all transition-transform
+          hover:scale-105 hover:drop-shadow-lg
         `,
         className,
       )}

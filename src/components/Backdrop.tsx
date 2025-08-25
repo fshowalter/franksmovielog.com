@@ -80,7 +80,7 @@ function Breadcrumb({ value }: { value?: React.ReactNode }) {
     return false;
   }
 
-  return <p className="mb-2">{value}</p>;
+  return <p className="mb-4">{value}</p>;
 }
 
 function Deck({
@@ -99,7 +99,7 @@ function Deck({
   return (
     <p
       className={`
-        mt-1 text-base
+        mt-1 font-sans text-base
         laptop:my-4 laptop:text-xl
         ${shadow ? `[text-shadow:1px_1px_2px_black]` : ""}
         ${center ? `text-center` : ""}
@@ -124,9 +124,10 @@ function Title({
       className={
         className ||
         `
-          font-sans
           ${center ? "text-center" : ""}
-          text-2xl font-bold tracking-widest uppercase
+          text-[2rem] leading-10 font-extrabold
+          [text-shadow:1px_1px_2px_rgba(0,0,0,.25)]
+          tablet:text-4xl
           laptop:text-7xl
         `
       }

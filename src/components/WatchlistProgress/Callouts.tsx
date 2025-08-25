@@ -115,7 +115,13 @@ function Callout({
         `}
       >
         {reviewed.toLocaleString()} / {total.toLocaleString()}
-        <div className="font-sans text-sm leading-4 font-light">Reviewed</div>
+        <div
+          className={`
+            font-sans text-sm leading-4 font-normal tracking-prose text-subtle
+          `}
+        >
+          Reviewed
+        </div>
       </div>
     </div>
   );
@@ -161,7 +167,7 @@ function ProgressRing({
         {percent}%
       </text>
       <text
-        className="font-sans font-normal"
+        className="font-sans"
         fill="var(--fg-default)"
         fontSize=".2em"
         textAnchor="middle"
@@ -171,7 +177,7 @@ function ProgressRing({
         {label}
       </text>
       <text
-        className="font-sans font-light"
+        className="font-sans"
         fill="var(--fg-subtle)"
         fontSize=".2em"
         textAnchor="middle"

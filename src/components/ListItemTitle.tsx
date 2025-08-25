@@ -1,8 +1,10 @@
 export function ListItemTitle({
+  className = "",
   slug,
   title,
   year,
 }: {
+  className?: string;
   slug?: string;
   title: string;
   year: string;
@@ -17,9 +19,10 @@ export function ListItemTitle({
     return (
       <a
         className={`
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525]
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         `}
         href={`/reviews/${slug}/`}
       >
@@ -31,7 +34,13 @@ export function ListItemTitle({
   }
 
   return (
-    <span className={`block text-base leading-5 font-semibold text-muted`}>
+    <span
+      className={`
+        ${className}
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      `}
+    >
       {title}
       &#x202F;&#x202F;
       {yearBox}

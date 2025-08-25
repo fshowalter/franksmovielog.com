@@ -59,7 +59,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
       >
         <div
           className={`
-            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
             text-subtle uppercase
             laptop:tracking-wide
           `}
@@ -68,7 +68,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
         </div>
         <a
           className={`
-            mb-3 block text-2.5xl leading-7 font-medium
+            mb-3 block text-2.5xl leading-7 font-medium text-[#252525]
             before:absolute before:inset-x-[8%] before:top-12
             before:aspect-video before:bg-default before:opacity-15
             after:absolute after:top-0 after:left-0 after:z-sticky
@@ -97,8 +97,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
         />
         <div
           className={`
-            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
-            text-subtle
+            mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
             laptop:tracking-wide
           `}
         >
