@@ -491,10 +491,6 @@ export function sortName<T extends { name: string }>() {
   };
 }
 
-export function sortNumber(a: number, b: number): number {
-  return a - b;
-}
-
 export function sortReleaseDate<T extends { releaseSequence: string }>() {
   return {
     "release-date-asc": (a: T, b: T) =>
@@ -669,10 +665,6 @@ function filterValues<TItem>({
 }
 
 /**
- * Handler functions that combine filter creation and state updates
- */
-
-/**
  * Reset pending filters to current active filters
  */
 function resetPendingFilters<TItem, TSortValue>(
@@ -693,6 +685,10 @@ function resetPendingFilters<TItem, TSortValue>(
 }
 
 /**
+ * Handler functions that combine filter creation and state updates
+ */
+
+/**
  * Handle "Show More" pagination - only accepts paginated states
  */
 function showMore<TItem, TSortValue>(
@@ -710,6 +706,10 @@ function showMore<TItem, TSortValue>(
     groupedValues,
     showCount,
   };
+}
+
+function sortNumber(a: number, b: number): number {
+  return a - b;
 }
 
 function sortString(a: string, b: string): number {

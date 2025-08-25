@@ -48,7 +48,7 @@ type NextMonthAction = {
 
 type PendingFilterMediumAction = {
   type: ViewingsActions.PENDING_FILTER_MEDIUM;
-  values: string[];
+  value: string;
 };
 
 // Using shared PendingFilterReleaseYearAction from ListWithFilters
@@ -57,7 +57,7 @@ type PendingFilterMediumAction = {
 
 type PendingFilterVenueAction = {
   type: ViewingsActions.PENDING_FILTER_VENUE;
-  values: string[];
+  value: string;
 };
 
 type PendingFilterViewingYearAction = {
@@ -172,12 +172,11 @@ export function reducer(state: State, action: ActionType): State {
 
     case ViewingsActions.PENDING_FILTER_MEDIUM: {
       const filterFn =
-        action.values.length === 0
-          ? undefined
-          : (value: ListItemValue) =>
-              value.medium ? action.values.includes(value.medium) : false;
+        action.value && action.value !== "All"
+          ? (value: ListItemValue) => value.medium == action.value
+          : undefined;
       return {
-        ...updatePendingFilter(state, "media", filterFn, action.values),
+        ...updatePendingFilter(state, "medium", filterFn, action.value),
         currentMonth: state.currentMonth,
         hasNextMonth: state.hasNextMonth,
         hasPrevMonth: state.hasPrevMonth,
@@ -189,12 +188,11 @@ export function reducer(state: State, action: ActionType): State {
 
     case ViewingsActions.PENDING_FILTER_VENUE: {
       const filterFn =
-        action.values.length === 0
-          ? undefined
-          : (value: ListItemValue) =>
-              value.venue ? action.values.includes(value.venue) : false;
+        action.value && action.value !== "All"
+          ? (value: ListItemValue) => value.venue == action.value
+          : undefined;
       return {
-        ...updatePendingFilter(state, "venues", filterFn, action.values),
+        ...updatePendingFilter(state, "venue", filterFn, action.value),
         currentMonth: state.currentMonth,
         hasNextMonth: state.hasNextMonth,
         hasPrevMonth: state.hasPrevMonth,

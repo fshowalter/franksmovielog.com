@@ -21,7 +21,6 @@ export function Filters({
   distinctReleaseYears,
   distinctVenues,
   distinctViewingYears,
-  filterKey,
   filterValues,
 }: {
   dispatch: React.Dispatch<ActionType>;
@@ -29,14 +28,12 @@ export function Filters({
   distinctReleaseYears: readonly string[];
   distinctVenues: readonly string[];
   distinctViewingYears: readonly string[];
-  filterKey?: string;
   filterValues: FilterValues;
 }) {
   return (
     <>
       <TextFilter
         initialValue={filterValues.title || ""}
-        key={`title-${filterKey}`}
         label="Title"
         onInputChange={(value) =>
           dispatch({ type: Actions.PENDING_FILTER_TITLE, value })
@@ -45,7 +42,6 @@ export function Filters({
       />
       <YearInput
         initialValues={filterValues.releaseYears || []}
-        key={`release-year-${filterKey}`}
         label="Release Year"
         onYearChange={(values) =>
           dispatch({ type: Actions.PENDING_FILTER_RELEASE_YEAR, values })
@@ -54,7 +50,6 @@ export function Filters({
       />
       <YearInput
         initialValues={filterValues.viewingYears || []}
-        key={`viewing-year-${filterKey}`}
         label="Viewing Year"
         onYearChange={(values) =>
           dispatch({ type: Actions.PENDING_FILTER_VIEWING_YEAR, values })
@@ -66,13 +61,9 @@ export function Filters({
         onChange={(e) =>
           dispatch({
             type: Actions.PENDING_FILTER_MEDIUM,
-            values:
-              e.target.value === "All" || !e.target.value
-                ? []
-                : [e.target.value],
+            value: e.target.value,
           })
         }
-        value={filterValues.medium || "All"}
       >
         <SelectOptions options={distinctMedia} />
       </SelectField>
@@ -81,13 +72,9 @@ export function Filters({
         onChange={(e) =>
           dispatch({
             type: Actions.PENDING_FILTER_VENUE,
-            values:
-              e.target.value === "All" || !e.target.value
-                ? []
-                : [e.target.value],
+            value: e.target.value,
           })
         }
-        value={filterValues.venue || "All"}
       >
         <SelectOptions options={distinctVenues} />
       </SelectField>
