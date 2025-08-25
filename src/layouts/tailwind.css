@@ -106,7 +106,7 @@
     --fg-subtle: #575757;
     --image-filter: initial;
     --container-padding: 8%;
-    --font-sans: "ArgentumSans";
+    --font-sans: "Assistant";
     --font-serif: "FrankRuhlLibre";
     --list-item-poster-width: 64px;
 
@@ -165,34 +165,10 @@
 
   @font-face {
     font-display: swap;
-    font-family: ArgentumSans;
+    font-family: Assistant;
     font-style: normal;
-    font-weight: 600;
-    src: url("/fonts/ArgentumSans/ArgentumSans-SemiBold.woff2") format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: ArgentumSans;
-    font-style: normal;
-    font-weight: 500;
-    src: url("/fonts/ArgentumSans/ArgentumSans-Medium.woff2") format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: ArgentumSans;
-    font-style: normal;
-    font-weight: 300;
-    src: url("/fonts/ArgentumSans/ArgentumSans-Light.woff2") format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: ArgentumSans;
-    font-style: normal;
-    font-weight: normal;
-    src: url("/fonts/ArgentumSans/ArgentumSans-Regular.woff2") format("woff2");
+    font-weight: 200 800;
+    src: url("/fonts/Assistant/Assistant-Variable.woff2") format("woff2");
   }
 
   @font-face {

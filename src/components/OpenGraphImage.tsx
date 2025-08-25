@@ -48,7 +48,7 @@ export function OpenGraphImage({
         <div
           style={{
             color: "#b0b0b0",
-            fontFamily: "ArgentumSans",
+            fontFamily: "Assistant",
             marginBottom: "16px",
             textShadow: "1px 1px 2px black",
             textTransform: "uppercase",
@@ -61,7 +61,7 @@ export function OpenGraphImage({
             color: "#fff",
             display: "flex",
             flexWrap: "wrap",
-            fontFamily: "ArgentumSans",
+            fontFamily: "Assistant",
             fontSize: "88px",
             fontWeight: 600,
             lineHeight: 1,
