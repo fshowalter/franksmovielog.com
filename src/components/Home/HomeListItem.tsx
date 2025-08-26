@@ -33,19 +33,30 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
   return (
     <li
       className={`
-        relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12
-        transition-transform
+        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
+        px-[8%] pt-12 transition-transform duration-500
         tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
-        tablet-landscape:has-[a:hover]:-translate-y-2
+        tablet-landscape:has-[a:hover]:scale-105
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
         laptop:max-w-[31.33%]
       `}
     >
-      <div className={`mb-6 block`}>
+      <div
+        className={`
+          relative mb-6 block overflow-hidden
+          after:absolute after:top-0 after:left-0 after:aspect-video
+          after:size-full after:bg-default after:opacity-15 after:duration-500
+          group-has-[a:hover]/list-item:after:opacity-0
+          tablet:after:inset-x-0 tablet:after:top-0
+        `}
+      >
         <Still
           imageProps={value.stillImageProps}
           {...StillImageConfig}
-          className="h-auto w-full"
+          className={`
+            h-auto w-full transform-gpu transition-transform duration-500
+            group-has-[a:hover]/list-item:scale-105
+          `}
           decoding="async"
           loading="lazy"
         />
@@ -69,12 +80,10 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
         <a
           className={`
             mb-3 block text-2.5xl leading-7 font-medium text-[#252525]
-            before:absolute before:inset-x-[8%] before:top-12
-            before:aspect-video before:bg-default before:opacity-15
+            transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
-            hover:text-accent hover:before:opacity-0
-            tablet:before:inset-x-0 tablet:before:top-0
+            hover:text-accent
           `}
           href={`/reviews/${value.slug}/`}
         >

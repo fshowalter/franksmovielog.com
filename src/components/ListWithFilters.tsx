@@ -9,7 +9,7 @@ type Props<T extends string> = {
   className?: string;
   dynamicSubNav?: React.ReactNode;
   filters: React.ReactNode;
-  hasActiveFilters?: boolean;
+  hasActiveFilters: boolean;
   list: React.ReactNode;
   listHeaderButtons?: React.ReactNode;
   onApplyFilters?: () => void;
@@ -38,7 +38,7 @@ export function ListHeaderButton({
   return (
     <div
       className={`
-        flex items-start gap-x-4 bg-default px-4 font-sans text-sm font-semibold
+        flex items-start gap-x-4 bg-default px-4 font-sans text-[13px] font-bold
         text-nowrap text-accent uppercase
       `}
     >
@@ -47,7 +47,7 @@ export function ListHeaderButton({
           relative inline-block transform-gpu py-1 transition-transform
           after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
           after:origin-center after:scale-x-0 after:bg-accent
-          after:transition-transform
+          after:transition-transform after:duration-500
           hover:after:scale-x-100
         `}
         href={href}
@@ -292,9 +292,9 @@ export function ListWithFilters<T extends string>({
               </button>
               <fieldset
                 className={`
-                  mt-0 flex h-full grow flex-col gap-5 px-container py-10
+                  mt-0 flex grow flex-col gap-5 px-container py-10
                   tablet:gap-8
-                  tablet-landscape:grow-0 tablet-landscape:gap-12
+                  tablet-landscape:grow-0 tablet-landscape:gap-10
                   tablet-landscape:px-12
                 `}
               >
@@ -310,8 +310,8 @@ export function ListWithFilters<T extends string>({
               </fieldset>
               <div
                 className={`
-                  sticky bottom-0 z-filter-footer mt-auto w-full self-end
-                  border-t border-t-default bg-default px-8 py-4 drop-shadow-2xl
+                  sticky bottom-0 z-filter-footer mt-auto w-full border-t
+                  border-t-default bg-default px-8 py-4 drop-shadow-2xl
                   tablet-landscape:px-12
                 `}
               >
@@ -329,7 +329,7 @@ export function ListWithFilters<T extends string>({
                           : "cursor-not-allowed text-muted opacity-50"
                       }
                     `}
-                    disabled={!hasActiveFilters}
+                    disabled={hasActiveFilters ? undefined : false}
                     onClick={() => {
                       if (hasActiveFilters) {
                         onClearFilters?.();
@@ -405,7 +405,10 @@ function ListHeader<T extends string>({
         <span className={`text-sm font-bold text-default`}>
           {totalCount.toLocaleString()}
         </span>
-        <span className="text-xs leading-none tracking-wide"> Results</span>
+        <span className="text-xs leading-none font-normal tracking-wide">
+          {" "}
+          Results
+        </span>
       </span>
       <div className={``}>{listHeaderButtons && listHeaderButtons}</div>
       <div

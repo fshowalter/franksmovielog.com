@@ -41,6 +41,7 @@ export function ReviewsSubNav({ active }: { active: keyof typeof items }) {
                 <a
                   className={`
                     group/item block transform-gpu px-6 pt-8 pb-7 transition-all
+                    duration-500
                     hover:bg-accent hover:text-inverse
                   `}
                   href={value.href}
@@ -51,6 +52,7 @@ export function ReviewsSubNav({ active }: { active: keyof typeof items }) {
                       after:absolute after:bottom-0 after:left-0 after:h-0.5
                       after:w-full after:origin-center after:scale-x-0
                       after:bg-(--fg-inverse)/80 after:transition-transform
+                      after:duration-500
                       group-hover/item:after:scale-x-100
                     `}
                   >

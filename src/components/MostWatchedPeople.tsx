@@ -74,7 +74,7 @@ export function MostWatchedPeople({
                 <div
                   className={`
                     col-start-2 self-center pr-1 pb-1 text-right font-sans
-                    text-xs text-nowrap text-subtle
+                    text-sm text-nowrap text-subtle
                   `}
                 >
                   {value.count}
@@ -163,7 +163,7 @@ function Name({
           text-accent
           after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
           after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent)
-          after:transition-transform
+          after:transition-all after:duration-500
           hover:after:scale-x-100
         `}
         href={`/cast-and-crew/${value.slug}/`}

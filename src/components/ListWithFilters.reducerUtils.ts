@@ -23,8 +23,10 @@ export enum ListWithFiltersActions {
   APPLY_PENDING_FILTERS = "APPLY_PENDING_FILTERS",
   CLEAR_PENDING_FILTERS = "CLEAR_PENDING_FILTERS",
   PENDING_FILTER_GENRES = "PENDING_FILTER_GENRES",
+  PENDING_FILTER_GRADE = "PENDING_FILTER_GRADE",
   PENDING_FILTER_NAME = "PENDING_FILTER_NAME",
   PENDING_FILTER_RELEASE_YEAR = "PENDING_FILTER_RELEASE_YEAR",
+  PENDING_FILTER_REVIEW_STATUS = "PENDING_FILTER_REVIEW_STATUS",
   PENDING_FILTER_REVIEW_YEAR = "PENDING_FILTER_REVIEW_YEAR",
   PENDING_FILTER_TITLE = "PENDING_FILTER_TITLE",
   RESET_PENDING_FILTERS = "RESET_PENDING_FILTERS",
@@ -44,8 +46,10 @@ export type ListWithFiltersActionType<TSortValue = unknown> =
   | ApplyPendingFiltersAction
   | ClearPendingFiltersAction
   | PendingFilterGenresAction
+  | PendingFilterGradeAction
   | PendingFilterNameAction
   | PendingFilterReleaseYearAction
+  | PendingFilterReviewStatusAction
   | PendingFilterReviewYearAction
   | PendingFilterTitleAction
   | ResetPendingFiltersAction
@@ -117,6 +121,12 @@ type PendingFilterGenresAction = {
   values: readonly string[];
 };
 
+// Grade filter is specific to Reviews
+type PendingFilterGradeAction = {
+  type: ListWithFiltersActions.PENDING_FILTER_GRADE;
+  values: [number, number];
+};
+
 type PendingFilterNameAction = {
   type: ListWithFiltersActions.PENDING_FILTER_NAME;
   value: string;
@@ -125,6 +135,11 @@ type PendingFilterNameAction = {
 type PendingFilterReleaseYearAction = {
   type: ListWithFiltersActions.PENDING_FILTER_RELEASE_YEAR;
   values: [string, string];
+};
+
+type PendingFilterReviewStatusAction = {
+  type: ListWithFiltersActions.PENDING_FILTER_REVIEW_STATUS;
+  value: string;
 };
 
 type PendingFilterReviewYearAction = {
@@ -266,6 +281,30 @@ export function handleGenreFilterAction<
 }
 
 /**
+ * Handle Grade filter action
+ */
+export function handleGradeFilterAction<
+  TItem extends { gradeValue: number | undefined },
+  TSortValue,
+  TExtendedState extends Record<string, unknown> = Record<string, never>,
+>(
+  state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
+  action: PendingFilterGradeAction,
+  extendedState?: TExtendedState,
+): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
+  const filterFn = createGradeFilter(action.values[0], action.values[1]);
+  const baseState = updatePendingFilter(
+    state,
+    "grade",
+    filterFn,
+    action.values,
+  );
+  return extendedState
+    ? { ...baseState, ...extendedState }
+    : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
+}
+
+/**
  * Shared reducer handler for list structure actions that don't require item values
  */
 export function handleListWithFiltersAction<
@@ -372,6 +411,30 @@ export function handleReleaseYearFilterAction<
     "releaseYear",
     filterFn,
     action.values,
+  );
+  return extendedState
+    ? { ...baseState, ...extendedState }
+    : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
+}
+
+/**
+ * Handle ReviewStatus filter action
+ */
+export function handleReviewStatusFilterAction<
+  TItem extends { slug: string | undefined },
+  TSortValue,
+  TExtendedState extends Record<string, unknown> = Record<string, never>,
+>(
+  state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
+  action: PendingFilterReviewStatusAction,
+  extendedState?: TExtendedState,
+): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
+  const filterFn = createReviewStatusFilter(action.value);
+  const baseState = updatePendingFilter(
+    state,
+    "reviewStatus",
+    filterFn,
+    action.value,
   );
   return extendedState
     ? { ...baseState, ...extendedState }
@@ -622,6 +685,18 @@ function createGenresFilter(genres: readonly string[]) {
   };
 }
 
+/**
+ * Create a Grade filter function
+ */
+function createGradeFilter(minGradeValue: number, maxGradeValue: number) {
+  return <T extends { gradeValue: number | undefined }>(item: T) => {
+    if (!item.gradeValue) {
+      return false;
+    }
+    return item.gradeValue >= minGradeValue && item.gradeValue <= maxGradeValue;
+  };
+}
+
 function createNameFilter(value: string | undefined) {
   if (!value) return;
   const regex = new RegExp(value, "i");
@@ -631,6 +706,23 @@ function createNameFilter(value: string | undefined) {
 function createReleaseYearFilter(minYear: string, maxYear: string) {
   return <T extends { releaseYear: string }>(item: T) => {
     return item.releaseYear >= minYear && item.releaseYear <= maxYear;
+  };
+}
+
+/**
+ * Create a Review Status filter function
+ */
+function createReviewStatusFilter(status: string) {
+  return <T extends { slug: string | undefined }>(item: T): boolean => {
+    if (status == "All") {
+      return true;
+    }
+
+    if (status == "Reviewed") {
+      return !!item.slug;
+    }
+
+    return !item.slug;
   };
 }
 

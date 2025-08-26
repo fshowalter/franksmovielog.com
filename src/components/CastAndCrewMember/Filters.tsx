@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 
-import { Button } from "~/components/Button";
+import { GradeInput } from "~/components/GradeInput";
 import { MultiSelectField } from "~/components/MultiSelectField";
 import { SelectField } from "~/components/SelectField";
 import { TextFilter } from "~/components/TextFilter";
@@ -15,6 +15,7 @@ type FilterValues = {
   credits?: string;
   genres?: readonly string[];
   releaseYear?: [string, string];
+  reviewStatus?: number;
   reviewYear?: [string, string];
   title?: string;
 };
@@ -26,7 +27,6 @@ export function Filters({
   distinctReleaseYears,
   distinctReviewYears,
   filterValues,
-  hideReviewed,
 }: {
   creditedAs: readonly string[];
   dispatch: React.Dispatch<ActionType>;
@@ -34,13 +34,9 @@ export function Filters({
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   filterValues: FilterValues;
-  hideReviewed: boolean;
 }): JSX.Element {
   return (
     <>
-      <Button onClick={() => dispatch({ type: Actions.TOGGLE_REVIEWED })}>
-        {hideReviewed ? "Show Reviewed" : "Hide Reviewed"}
-      </Button>
       {creditedAs.length > 1 && (
         <SelectField
           label="Credits"
@@ -50,7 +46,6 @@ export function Filters({
               value: e.target.value,
             })
           }
-          value={filterValues.credits || "All"}
         >
           <option value="All">All</option>
           {creditedAs.map((credit) => {
@@ -62,6 +57,25 @@ export function Filters({
           })}
         </SelectField>
       )}
+      <SelectField
+        label="Reviewed Status"
+        onChange={(e) =>
+          dispatch({
+            type: Actions.PENDING_FILTER_REVIEW_STATUS,
+            value: e.target.value,
+          })
+        }
+      >
+        <option key={0} value={"All"}>
+          All
+        </option>
+        <option key={1} value={"Reviewed"}>
+          Reviewed
+        </option>
+        <option key={2} value={"Not Reviewed"}>
+          Not Reviewed
+        </option>
+      </SelectField>
       <TextFilter
         initialValue={filterValues.title || ""}
         label="Title"
@@ -86,6 +100,15 @@ export function Filters({
           dispatch({ type: Actions.PENDING_FILTER_REVIEW_YEAR, values })
         }
         years={distinctReviewYears}
+      />
+      <GradeInput
+        label="Grade"
+        onGradeChange={(values) =>
+          dispatch({
+            type: Actions.PENDING_FILTER_GRADE,
+            values,
+          })
+        }
       />
       <MultiSelectField
         label="Genres"

@@ -59,25 +59,28 @@ function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
   return (
     <li
       className={`
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       `}
     >
       <div className={`bg-default`}>
         <div
           className={`
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           `}
         >
           <Still
             imageProps={value.stillImageProps}
             {...MoreReviewsImageConfig}
-            className="h-auto w-full"
+            className={`
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            `}
             decoding="async"
             loading="lazy"
           />
@@ -91,6 +94,7 @@ function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
           <a
             className={`
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0

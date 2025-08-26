@@ -83,7 +83,6 @@ export function CastAndCrewMember({
           distinctReleaseYears={distinctReleaseYears}
           distinctReviewYears={distinctReviewYears}
           filterValues={state.pendingFilterValues}
-          hideReviewed={state.hideReviewed}
           key={filterKey}
         />
       }

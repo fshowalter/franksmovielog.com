@@ -274,6 +274,30 @@
       text-decoration-thickness: auto;
     }
 
+    .data-footnote-backref {
+      display: inline-block;
+      position: relative;
+      text-decoration: none;
+    }
+
+    .data-footnote-backref::after {
+      background-color: var(--bg-accent);
+      bottom: 1px;
+      content: "";
+      height: 1px;
+      left: 0;
+      position: absolute;
+      transform: scale(0, 1);
+      transform-origin: center;
+      transition: all;
+      transition-duration: 500ms;
+      width: 100%;
+    }
+
+    .data-footnote-backref:hover::after {
+      transform: scale(1, 1);
+    }
+
     sup a {
       border: solid 1px var(--border-default);
       border-radius: 3em;
@@ -302,6 +326,7 @@
     sup:hover {
       transform: scale(1.1);
       transition: all;
+      transition-duration: 500ms;
     }
 
     p {

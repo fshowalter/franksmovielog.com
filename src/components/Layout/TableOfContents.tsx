@@ -33,9 +33,10 @@ function MenuItem({ value }: { value: NavItem }): JSX.Element {
       <a
         className={`
           relative inline-block origin-left transform-gpu transition-all
+          duration-500
           after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
           after:origin-bottom-left after:scale-x-0 after:bg-accent
-          after:transition-transform
+          after:transition-transform after:duration-500
           hover:text-accent hover:after:scale-x-100
         `}
         href={value.target}
@@ -67,10 +68,10 @@ function SubMenu({ values }: { values: NavItem[] }): false | JSX.Element {
             <a
               className={`
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-accent after:transition-transform
+                after:bg-accent after:transition-transform after:duration-500
                 hover:text-accent hover:after:scale-x-100
               `}
               href={value.target}
