@@ -50,7 +50,7 @@ export function OpenGraphImage({
       >
         <div
           style={{
-            color: "#b0b0b0",
+            color: "#c29d52",
             fontFamily: "Assistant",
             fontSize: "18px",
             fontWeight: 700,

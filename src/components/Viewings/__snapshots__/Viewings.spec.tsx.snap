@@ -31,7 +31,7 @@ exports[`Viewings > can clear all filters 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sun
@@ -39,7 +39,7 @@ exports[`Viewings > can clear all filters 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
            Mon
@@ -47,7 +47,7 @@ exports[`Viewings > can clear all filters 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Tue
@@ -55,7 +55,7 @@ exports[`Viewings > can clear all filters 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Wed
@@ -63,7 +63,7 @@ exports[`Viewings > can clear all filters 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Thu
@@ -71,7 +71,7 @@ exports[`Viewings > can clear all filters 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Fri
@@ -79,7 +79,7 @@ exports[`Viewings > can clear all filters 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sat
@@ -197,7 +197,7 @@ exports[`Viewings > can clear all filters 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -208,16 +208,21 @@ exports[`Viewings > can clear all filters 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -235,9 +240,11 @@ exports[`Viewings > can clear all filters 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/the-bloody-judge-1970/"
                   >
@@ -475,7 +482,7 @@ exports[`Viewings > can clear all filters 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -486,16 +493,21 @@ exports[`Viewings > can clear all filters 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -513,9 +525,11 @@ exports[`Viewings > can clear all filters 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/psycho-circus-1966/"
                   >
@@ -753,7 +767,7 @@ exports[`Viewings > can clear all filters 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -764,16 +778,21 @@ exports[`Viewings > can clear all filters 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -791,9 +810,11 @@ exports[`Viewings > can clear all filters 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/horror-of-dracula-1958/"
                   >
@@ -1326,7 +1347,7 @@ exports[`Viewings > can filter by medium 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sun
@@ -1334,7 +1355,7 @@ exports[`Viewings > can filter by medium 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
            Mon
@@ -1342,7 +1363,7 @@ exports[`Viewings > can filter by medium 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Tue
@@ -1350,7 +1371,7 @@ exports[`Viewings > can filter by medium 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Wed
@@ -1358,7 +1379,7 @@ exports[`Viewings > can filter by medium 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Thu
@@ -1366,7 +1387,7 @@ exports[`Viewings > can filter by medium 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Fri
@@ -1374,7 +1395,7 @@ exports[`Viewings > can filter by medium 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sat
@@ -2299,7 +2320,7 @@ exports[`Viewings > can filter by medium 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -2310,16 +2331,21 @@ exports[`Viewings > can filter by medium 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -2337,9 +2363,11 @@ exports[`Viewings > can filter by medium 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/hellraiser-1987/"
                   >
@@ -2412,7 +2440,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sun
@@ -2420,7 +2448,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
            Mon
@@ -2428,7 +2456,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Tue
@@ -2436,7 +2464,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Wed
@@ -2444,7 +2472,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Thu
@@ -2452,7 +2480,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Fri
@@ -2460,7 +2488,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sat
@@ -2578,7 +2606,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -2589,16 +2617,21 @@ exports[`Viewings > can filter by medium then show all 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -2616,9 +2649,11 @@ exports[`Viewings > can filter by medium then show all 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/the-bloody-judge-1970/"
                   >
@@ -2856,7 +2891,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -2867,16 +2902,21 @@ exports[`Viewings > can filter by medium then show all 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -2894,9 +2934,11 @@ exports[`Viewings > can filter by medium then show all 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/psycho-circus-1966/"
                   >
@@ -3134,7 +3176,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -3145,16 +3187,21 @@ exports[`Viewings > can filter by medium then show all 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -3172,9 +3219,11 @@ exports[`Viewings > can filter by medium then show all 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/horror-of-dracula-1958/"
                   >
@@ -3707,7 +3756,7 @@ exports[`Viewings > can filter by release year 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sun
@@ -3715,7 +3764,7 @@ exports[`Viewings > can filter by release year 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
            Mon
@@ -3723,7 +3772,7 @@ exports[`Viewings > can filter by release year 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Tue
@@ -3731,7 +3780,7 @@ exports[`Viewings > can filter by release year 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Wed
@@ -3739,7 +3788,7 @@ exports[`Viewings > can filter by release year 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Thu
@@ -3747,7 +3796,7 @@ exports[`Viewings > can filter by release year 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Fri
@@ -3755,7 +3804,7 @@ exports[`Viewings > can filter by release year 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sat
@@ -3873,7 +3922,7 @@ exports[`Viewings > can filter by release year 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -3884,16 +3933,21 @@ exports[`Viewings > can filter by release year 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -3911,9 +3965,11 @@ exports[`Viewings > can filter by release year 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/the-bloody-judge-1970/"
                   >
@@ -4151,7 +4207,7 @@ exports[`Viewings > can filter by release year 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -4162,16 +4218,21 @@ exports[`Viewings > can filter by release year 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -4189,9 +4250,11 @@ exports[`Viewings > can filter by release year 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/psycho-circus-1966/"
                   >
@@ -4429,7 +4492,7 @@ exports[`Viewings > can filter by release year 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -4440,16 +4503,21 @@ exports[`Viewings > can filter by release year 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -4467,9 +4535,11 @@ exports[`Viewings > can filter by release year 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/horror-of-dracula-1958/"
                   >
@@ -5002,7 +5072,7 @@ exports[`Viewings > can filter by release year reversed 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sun
@@ -5010,7 +5080,7 @@ exports[`Viewings > can filter by release year reversed 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
            Mon
@@ -5018,7 +5088,7 @@ exports[`Viewings > can filter by release year reversed 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Tue
@@ -5026,7 +5096,7 @@ exports[`Viewings > can filter by release year reversed 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Wed
@@ -5034,7 +5104,7 @@ exports[`Viewings > can filter by release year reversed 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Thu
@@ -5042,7 +5112,7 @@ exports[`Viewings > can filter by release year reversed 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Fri
@@ -5050,7 +5120,7 @@ exports[`Viewings > can filter by release year reversed 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sat
@@ -5168,7 +5238,7 @@ exports[`Viewings > can filter by release year reversed 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -5179,16 +5249,21 @@ exports[`Viewings > can filter by release year reversed 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -5206,9 +5281,11 @@ exports[`Viewings > can filter by release year reversed 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/the-bloody-judge-1970/"
                   >
@@ -5446,7 +5523,7 @@ exports[`Viewings > can filter by release year reversed 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -5457,16 +5534,21 @@ exports[`Viewings > can filter by release year reversed 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -5484,9 +5566,11 @@ exports[`Viewings > can filter by release year reversed 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/psycho-circus-1966/"
                   >
@@ -5724,7 +5808,7 @@ exports[`Viewings > can filter by release year reversed 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -5735,16 +5819,21 @@ exports[`Viewings > can filter by release year reversed 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -5762,9 +5851,11 @@ exports[`Viewings > can filter by release year reversed 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/horror-of-dracula-1958/"
                   >
@@ -6297,7 +6388,7 @@ exports[`Viewings > can filter by title 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sun
@@ -6305,7 +6396,7 @@ exports[`Viewings > can filter by title 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
            Mon
@@ -6313,7 +6404,7 @@ exports[`Viewings > can filter by title 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Tue
@@ -6321,7 +6412,7 @@ exports[`Viewings > can filter by title 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Wed
@@ -6329,7 +6420,7 @@ exports[`Viewings > can filter by title 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Thu
@@ -6337,7 +6428,7 @@ exports[`Viewings > can filter by title 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Fri
@@ -6345,7 +6436,7 @@ exports[`Viewings > can filter by title 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sat
@@ -7358,7 +7449,7 @@ exports[`Viewings > can filter by venue 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sun
@@ -7366,7 +7457,7 @@ exports[`Viewings > can filter by venue 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
            Mon
@@ -7374,7 +7465,7 @@ exports[`Viewings > can filter by venue 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Tue
@@ -7382,7 +7473,7 @@ exports[`Viewings > can filter by venue 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Wed
@@ -7390,7 +7481,7 @@ exports[`Viewings > can filter by venue 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Thu
@@ -7398,7 +7489,7 @@ exports[`Viewings > can filter by venue 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Fri
@@ -7406,7 +7497,7 @@ exports[`Viewings > can filter by venue 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sat
@@ -7647,7 +7738,7 @@ exports[`Viewings > can filter by venue 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -7658,16 +7749,21 @@ exports[`Viewings > can filter by venue 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -7685,9 +7781,11 @@ exports[`Viewings > can filter by venue 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/nightcrawler-2014/"
                   >
@@ -8476,7 +8574,7 @@ exports[`Viewings > can filter by venue then show all 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sun
@@ -8484,7 +8582,7 @@ exports[`Viewings > can filter by venue then show all 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
            Mon
@@ -8492,7 +8590,7 @@ exports[`Viewings > can filter by venue then show all 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Tue
@@ -8500,7 +8598,7 @@ exports[`Viewings > can filter by venue then show all 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Wed
@@ -8508,7 +8606,7 @@ exports[`Viewings > can filter by venue then show all 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Thu
@@ -8516,7 +8614,7 @@ exports[`Viewings > can filter by venue then show all 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Fri
@@ -8524,7 +8622,7 @@ exports[`Viewings > can filter by venue then show all 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sat
@@ -8642,7 +8740,7 @@ exports[`Viewings > can filter by venue then show all 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -8653,16 +8751,21 @@ exports[`Viewings > can filter by venue then show all 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -8680,9 +8783,11 @@ exports[`Viewings > can filter by venue then show all 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/the-bloody-judge-1970/"
                   >
@@ -8920,7 +9025,7 @@ exports[`Viewings > can filter by venue then show all 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -8931,16 +9036,21 @@ exports[`Viewings > can filter by venue then show all 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -8958,9 +9068,11 @@ exports[`Viewings > can filter by venue then show all 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/psycho-circus-1966/"
                   >
@@ -9198,7 +9310,7 @@ exports[`Viewings > can filter by venue then show all 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -9209,16 +9321,21 @@ exports[`Viewings > can filter by venue then show all 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -9236,9 +9353,11 @@ exports[`Viewings > can filter by venue then show all 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/horror-of-dracula-1958/"
                   >
@@ -9771,7 +9890,7 @@ exports[`Viewings > can filter by viewing year 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sun
@@ -9779,7 +9898,7 @@ exports[`Viewings > can filter by viewing year 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
            Mon
@@ -9787,7 +9906,7 @@ exports[`Viewings > can filter by viewing year 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Tue
@@ -9795,7 +9914,7 @@ exports[`Viewings > can filter by viewing year 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Wed
@@ -9803,7 +9922,7 @@ exports[`Viewings > can filter by viewing year 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Thu
@@ -9811,7 +9930,7 @@ exports[`Viewings > can filter by viewing year 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Fri
@@ -9819,7 +9938,7 @@ exports[`Viewings > can filter by viewing year 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sat
@@ -10688,7 +10807,7 @@ exports[`Viewings > can filter by viewing year 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -10699,16 +10818,21 @@ exports[`Viewings > can filter by viewing year 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -10726,9 +10850,11 @@ exports[`Viewings > can filter by viewing year 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/headhunters-2011/"
                   >
@@ -10910,7 +11036,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sun
@@ -10918,7 +11044,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
            Mon
@@ -10926,7 +11052,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Tue
@@ -10934,7 +11060,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Wed
@@ -10942,7 +11068,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Thu
@@ -10950,7 +11076,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Fri
@@ -10958,7 +11084,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sat
@@ -11153,7 +11279,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -11164,16 +11290,21 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -11191,9 +11322,11 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/hard-eight-1996/"
                   >
@@ -11996,7 +12129,7 @@ exports[`Viewings > can navigate to next month 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sun
@@ -12004,7 +12137,7 @@ exports[`Viewings > can navigate to next month 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
            Mon
@@ -12012,7 +12145,7 @@ exports[`Viewings > can navigate to next month 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Tue
@@ -12020,7 +12153,7 @@ exports[`Viewings > can navigate to next month 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Wed
@@ -12028,7 +12161,7 @@ exports[`Viewings > can navigate to next month 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Thu
@@ -12036,7 +12169,7 @@ exports[`Viewings > can navigate to next month 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Fri
@@ -12044,7 +12177,7 @@ exports[`Viewings > can navigate to next month 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sat
@@ -12383,7 +12516,7 @@ exports[`Viewings > can navigate to next month 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -12394,16 +12527,21 @@ exports[`Viewings > can navigate to next month 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -12421,9 +12559,11 @@ exports[`Viewings > can navigate to next month 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/curse-of-the-demon-1957/"
                   >
@@ -12545,7 +12685,7 @@ exports[`Viewings > can navigate to next month 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -12556,16 +12696,21 @@ exports[`Viewings > can navigate to next month 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -12583,9 +12728,11 @@ exports[`Viewings > can navigate to next month 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/crisis-1950/"
                   >
@@ -12655,7 +12802,7 @@ exports[`Viewings > can navigate to next month 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -12666,16 +12813,21 @@ exports[`Viewings > can navigate to next month 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -12693,9 +12845,11 @@ exports[`Viewings > can navigate to next month 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/the-crimson-cult-1968/"
                   >
@@ -13073,7 +13227,7 @@ exports[`Viewings > can navigate to next month 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -13084,16 +13238,21 @@ exports[`Viewings > can navigate to next month 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -13111,9 +13270,11 @@ exports[`Viewings > can navigate to next month 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/bandido-1956/"
                   >
@@ -13316,7 +13477,7 @@ exports[`Viewings > can navigate to previous month 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sun
@@ -13324,7 +13485,7 @@ exports[`Viewings > can navigate to previous month 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
            Mon
@@ -13332,7 +13493,7 @@ exports[`Viewings > can navigate to previous month 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Tue
@@ -13340,7 +13501,7 @@ exports[`Viewings > can navigate to previous month 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Wed
@@ -13348,7 +13509,7 @@ exports[`Viewings > can navigate to previous month 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Thu
@@ -13356,7 +13517,7 @@ exports[`Viewings > can navigate to previous month 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Fri
@@ -13364,7 +13525,7 @@ exports[`Viewings > can navigate to previous month 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sat
@@ -13833,7 +13994,7 @@ exports[`Viewings > can navigate to previous month 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -13844,16 +14005,21 @@ exports[`Viewings > can navigate to previous month 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -13871,9 +14037,11 @@ exports[`Viewings > can navigate to previous month 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/halloween-1978/"
                   >
@@ -13896,7 +14064,7 @@ exports[`Viewings > can navigate to previous month 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -13907,16 +14075,21 @@ exports[`Viewings > can navigate to previous month 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -13934,9 +14107,11 @@ exports[`Viewings > can navigate to previous month 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/the-thing-1982/"
                   >
@@ -14444,7 +14619,7 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sun
@@ -14452,7 +14627,7 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
            Mon
@@ -14460,7 +14635,7 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Tue
@@ -14468,7 +14643,7 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Wed
@@ -14476,7 +14651,7 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Thu
@@ -14484,7 +14659,7 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Fri
@@ -14492,7 +14667,7 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sat
@@ -14610,7 +14785,7 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -14621,16 +14796,21 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -14648,9 +14828,11 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/the-bloody-judge-1970/"
                   >
@@ -14888,7 +15070,7 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -14899,16 +15081,21 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -14926,9 +15113,11 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/psycho-circus-1966/"
                   >
@@ -15166,7 +15355,7 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -15177,16 +15366,21 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -15204,9 +15398,11 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/horror-of-dracula-1958/"
                   >
@@ -15739,7 +15935,7 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sun
@@ -15747,7 +15943,7 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
            Mon
@@ -15755,7 +15951,7 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Tue
@@ -15763,7 +15959,7 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Wed
@@ -15771,7 +15967,7 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Thu
@@ -15779,7 +15975,7 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Fri
@@ -15787,7 +15983,7 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
         <th
           class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
         >
           Sat
@@ -16256,7 +16452,7 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -16267,16 +16463,21 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -16294,9 +16495,11 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/halloween-1978/"
                   >
@@ -16319,7 +16522,7 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -16330,16 +16533,21 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
                 <div
                   class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                 >
                   <img
                     alt=""
-                    class="aspect-poster w-full object-cover"
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                     decoding="async"
                     height="375"
                     loading="lazy"
@@ -16357,9 +16565,11 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
                 >
                   <a
                     class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                     href="/reviews/the-thing-1982/"
                   >
@@ -16868,12 +17078,12 @@ exports[`Viewings > renders 1`] = `
             class="text-nowrap"
           >
             <span
-              class="font-semibold text-default"
+              class="text-sm font-bold text-default"
             >
               32
             </span>
             <span
-              class="text-xxs leading-none tracking-wide"
+              class="text-xs leading-none font-normal tracking-wide"
             >
                Results
             </span>
@@ -16883,16 +17093,16 @@ exports[`Viewings > renders 1`] = `
           >
             <div
               class="
-        flex items-start gap-x-4 bg-default px-4 text-nowrap text-accent
-        uppercase
+        flex items-start gap-x-4 bg-default px-4 font-sans text-[13px] font-bold
+        text-nowrap text-accent uppercase
       "
             >
               <a
                 class="
           relative inline-block transform-gpu py-1 transition-transform
           after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-          after:origin-center after:scale-x-0 after:bg-(--fg-accent)
-          after:transition-transform
+          after:origin-center after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
           hover:after:scale-x-100
         "
                 href="/viewings/stats/"
@@ -16910,7 +17120,7 @@ exports[`Viewings > renders 1`] = `
           >
             <label
               class="
-            flex items-baseline gap-x-4 text-xxs font-semibold tracking-wide
+            flex items-baseline gap-x-4 text-xs font-bold tracking-wide
             text-subtle
           "
             >
@@ -16942,9 +17152,9 @@ exports[`Viewings > renders 1`] = `
             class="
           col-start-4 row-start-1 flex transform-gpu cursor-pointer items-center
           justify-center gap-x-4 rounded-sm bg-canvas px-4 py-2 font-sans
-          text-xs font-semibold text-nowrap text-muted uppercase shadow-all
+          text-xs font-bold text-nowrap text-muted uppercase shadow-all
           transition-transform
-          hover:scale-110
+          hover:scale-110 hover:drop-shadow-md
           tablet:col-start-5 tablet:w-20
         "
             type="button"
@@ -16989,11 +17199,11 @@ exports[`Viewings > renders 1`] = `
                   aria-disabled="false"
                   aria-label="Navigate to previous month: Dec 2013"
                   class="
-              -mb-1 transform-gpu cursor-pointer pb-1 font-sans text-xs
-              font-medium text-accent transition-transform
+              -mb-1 transform-gpu cursor-pointer pb-1 font-sans text-sm
+              font-bold text-accent transition-transform
               after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-              after:origin-bottom-right after:scale-x-0 after:bg-(--fg-accent)
-              after:transition-transform
+              after:origin-bottom-right after:scale-x-0 after:bg-accent
+              after:transition-transform after:duration-500
               hover:after:scale-x-100
               tablet-landscape:tracking-wide tablet-landscape:uppercase
             "
@@ -17044,7 +17254,7 @@ exports[`Viewings > renders 1`] = `
                     <th
                       class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
                     >
                       Sun
@@ -17052,7 +17262,7 @@ exports[`Viewings > renders 1`] = `
                     <th
                       class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
                     >
                        Mon
@@ -17060,7 +17270,7 @@ exports[`Viewings > renders 1`] = `
                     <th
                       class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
                     >
                       Tue
@@ -17068,7 +17278,7 @@ exports[`Viewings > renders 1`] = `
                     <th
                       class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
                     >
                       Wed
@@ -17076,7 +17286,7 @@ exports[`Viewings > renders 1`] = `
                     <th
                       class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
                     >
                       Thu
@@ -17084,7 +17294,7 @@ exports[`Viewings > renders 1`] = `
                     <th
                       class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
                     >
                       Fri
@@ -17092,7 +17302,7 @@ exports[`Viewings > renders 1`] = `
                     <th
                       class="
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       "
                     >
                       Sat
@@ -17210,7 +17420,7 @@ exports[`Viewings > renders 1`] = `
                             class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -17221,16 +17431,21 @@ exports[`Viewings > renders 1`] = `
                             <div
                               class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                             >
                               <img
                                 alt=""
-                                class="aspect-poster w-full object-cover"
+                                class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                                 decoding="async"
                                 height="375"
                                 loading="lazy"
@@ -17248,9 +17463,11 @@ exports[`Viewings > renders 1`] = `
                             >
                               <a
                                 class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                                 href="/reviews/the-bloody-judge-1970/"
                               >
@@ -17487,7 +17704,7 @@ exports[`Viewings > renders 1`] = `
                             class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -17498,16 +17715,21 @@ exports[`Viewings > renders 1`] = `
                             <div
                               class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                             >
                               <img
                                 alt=""
-                                class="aspect-poster w-full object-cover"
+                                class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                                 decoding="async"
                                 height="375"
                                 loading="lazy"
@@ -17525,9 +17747,11 @@ exports[`Viewings > renders 1`] = `
                             >
                               <a
                                 class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                                 href="/reviews/psycho-circus-1966/"
                               >
@@ -17764,7 +17988,7 @@ exports[`Viewings > renders 1`] = `
                             class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -17775,16 +17999,21 @@ exports[`Viewings > renders 1`] = `
                             <div
                               class="
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       "
                             >
                               <img
                                 alt=""
-                                class="aspect-poster w-full object-cover"
+                                class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
                                 decoding="async"
                                 height="375"
                                 loading="lazy"
@@ -17802,9 +18031,11 @@ exports[`Viewings > renders 1`] = `
                             >
                               <a
                                 class="
-          text-base leading-5 font-semibold text-accent
+          text-base leading-5 font-semibold text-[#252525] transition-all
+          duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0
+          hover:text-accent
         "
                                 href="/reviews/horror-of-dracula-1958/"
                               >
@@ -18337,7 +18568,7 @@ exports[`Viewings > renders 1`] = `
                   absolute top-7 right-4 z-10 flex h-10 w-10 transform-gpu
                   cursor-pointer items-center justify-center rounded-full
                   bg-canvas text-default drop-shadow-md transition-transform
-                  hover:scale-105
+                  hover:scale-105 hover:drop-shadow-md
                   
                 "
               type="button"
@@ -18363,17 +18594,16 @@ exports[`Viewings > renders 1`] = `
             </button>
             <fieldset
               class="
-                  mt-0 flex h-full grow flex-col gap-5 px-container py-10
+                  mt-0 flex grow flex-col gap-5 px-container py-10
                   tablet:gap-8
-                  tablet-landscape:grow-0 tablet-landscape:gap-12
+                  tablet-landscape:grow-0 tablet-landscape:gap-10
                   tablet-landscape:px-12
                 "
             >
               <legend
                 class="
-                    block w-full pt-10 pb-8 font-sans text-lg text-xxs
-                    font-semibold tracking-wide text-subtle uppercase
-                    shadow-bottom
+                    block w-full pt-10 pb-8 font-sans text-sm font-bold
+                    tracking-wide text-subtle uppercase shadow-bottom
                   "
               >
                 Filter
@@ -18383,8 +18613,8 @@ exports[`Viewings > renders 1`] = `
               >
                 <span
                   class="
-        inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide
-        text-subtle uppercase
+        inline-block h-6 text-left font-sans text-xs leading-none font-semibold
+        tracking-wide text-subtle uppercase
       "
                 >
                   Title
@@ -18405,8 +18635,8 @@ exports[`Viewings > renders 1`] = `
               >
                 <legend
                   class="
-        inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide
-        text-subtle uppercase
+        inline-block h-6 text-left font-sans text-xs leading-none font-semibold
+        tracking-wide text-subtle uppercase
       "
                 >
                   Release Year
@@ -18673,8 +18903,8 @@ exports[`Viewings > renders 1`] = `
               >
                 <legend
                   class="
-        inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide
-        text-subtle uppercase
+        inline-block h-6 text-left font-sans text-xs leading-none font-semibold
+        tracking-wide text-subtle uppercase
       "
                 >
                   Viewing Year
@@ -18761,8 +18991,8 @@ exports[`Viewings > renders 1`] = `
               >
                 <span
                   class="
-        inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide
-        text-subtle uppercase
+        inline-block h-6 text-left font-sans text-xs leading-none font-semibold
+        tracking-wide text-subtle uppercase
       "
                 >
                   Medium
@@ -18805,8 +19035,8 @@ exports[`Viewings > renders 1`] = `
               >
                 <span
                   class="
-        inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide
-        text-subtle uppercase
+        inline-block h-6 text-left font-sans text-xs leading-none font-semibold
+        tracking-wide text-subtle uppercase
       "
                 >
                   Venue
@@ -18837,8 +19067,8 @@ exports[`Viewings > renders 1`] = `
             </fieldset>
             <div
               class="
-                  sticky bottom-0 z-filter-footer mt-auto w-full self-end
-                  border-t border-t-default bg-default px-8 py-4 drop-shadow-2xl
+                  sticky bottom-0 z-filter-footer mt-auto w-full border-t
+                  border-t-default bg-default px-8 py-4 drop-shadow-2xl
                   tablet-landscape:px-12
                 "
             >
@@ -18850,19 +19080,21 @@ exports[`Viewings > renders 1`] = `
                   class="
                       flex items-center justify-center gap-x-4 rounded-sm
                       bg-canvas px-4 py-3 font-sans text-xs text-nowrap
-                      uppercase
+                      uppercase transition-transform
+                      enabled:hover:scale-105 enabled:hover:drop-shadow-md
                       cursor-not-allowed text-muted opacity-50
                     "
-                  disabled=""
                   type="button"
                 >
                   Clear
                 </button>
                 <button
                   class="
-                      flex flex-1 cursor-pointer items-center justify-center
-                      gap-x-4 rounded-sm bg-footer px-4 py-3 font-sans text-xs
-                      text-nowrap text-inverse uppercase
+                      flex flex-1 transform-gpu cursor-pointer items-center
+                      justify-center gap-x-4 rounded-sm bg-footer px-4 py-3
+                      font-sans text-xs font-bold tracking-wide text-nowrap
+                      text-inverse uppercase transition-transform
+                      hover:scale-105 hover:drop-shadow-md
                     "
                   type="button"
                 >

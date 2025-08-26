@@ -34,7 +34,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
       >
         <div
           class="
-        flex transform-gpu flex-col transition-transform
+        flex transform-gpu flex-col transition-transform duration-500
         has-[a:hover]:scale-105
         
       "
@@ -72,7 +72,6 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
               <li
                 class="
         block leading-10 tracking-serif-wide whitespace-nowrap
-        transition-transform
         [body.nav-open_&]:opacity-0
       "
               >
@@ -81,7 +80,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
           relative block text-inherit
           after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
           after:origin-center after:scale-x-0 after:bg-(--mast-color)/75
-          after:transition-transform
+          after:transition-transform after:duration-500
           hover:after:scale-x-100
         "
                   href="/"
@@ -92,7 +91,6 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
               <li
                 class="
         block leading-10 tracking-serif-wide whitespace-nowrap
-        transition-transform
         [body.nav-open_&]:opacity-0
       "
               >
@@ -101,7 +99,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
           relative block text-inherit
           after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
           after:origin-center after:scale-x-0 after:bg-(--mast-color)/75
-          after:transition-transform
+          after:transition-transform after:duration-500
           hover:after:scale-x-100
         "
                   href="/how-i-grade/"
@@ -112,7 +110,6 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
               <li
                 class="
         block leading-10 tracking-serif-wide whitespace-nowrap
-        transition-transform
         [body.nav-open_&]:opacity-0
       "
               >
@@ -121,7 +118,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
           relative block text-inherit
           after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
           after:origin-center after:scale-x-0 after:bg-(--mast-color)/75
-          after:transition-transform
+          after:transition-transform after:duration-500
           hover:after:scale-x-100
         "
                   href="/reviews/"
@@ -132,7 +129,6 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
               <li
                 class="
         block leading-10 tracking-serif-wide whitespace-nowrap
-        transition-transform
         [body.nav-open_&]:opacity-0
       "
               >
@@ -141,7 +137,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
           relative block text-inherit
           after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
           after:origin-center after:scale-x-0 after:bg-(--mast-color)/75
-          after:transition-transform
+          after:transition-transform after:duration-500
           hover:after:scale-x-100
         "
                   href="/viewings/"
@@ -152,7 +148,6 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
               <li
                 class="
         block leading-10 tracking-serif-wide whitespace-nowrap
-        transition-transform
         [body.nav-open_&]:opacity-0
       "
               >
@@ -161,7 +156,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
           relative block text-inherit
           after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
           after:origin-center after:scale-x-0 after:bg-(--mast-color)/75
-          after:transition-transform
+          after:transition-transform after:duration-500
           hover:after:scale-x-100
         "
                   href="/watchlist/"
@@ -253,8 +248,10 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
           <nav
             aria-label="Main navigation"
           >
-            <ul
+            <ol
               class="
+        flex w-full flex-col gap-y-6
+        
             invisible fixed top-0 right-0 flex h-full w-0
             transform-[translateX(100%)] flex-col items-start gap-y-5
             overflow-hidden bg-footer text-left text-inverse opacity-0
@@ -269,7 +266,8 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
             [body.nav-open_&]:pl-[12%] [body.nav-open_&]:opacity-100
             [body.nav-open_&]:drop-shadow-2xl [body.nav-open_&]:tablet:px-10
             [body.nav-open_&]:tablet:pt-40 [body.nav-open_&]:laptop:px-20
-          "
+          
+      "
               data-nav-menu="true"
               id="nav-menu"
             >
@@ -282,10 +280,11 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                 <a
                   class="
           relative inline-block origin-left transform-gpu transition-all
+          duration-500
           after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75
-          after:transition-transform
-          hover:after:scale-x-100
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                   href="/"
                 >
@@ -301,10 +300,11 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                 <a
                   class="
           relative inline-block origin-left transform-gpu transition-all
+          duration-500
           after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75
-          after:transition-transform
-          hover:after:scale-x-100
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                   href="/how-i-grade/"
                 >
@@ -320,10 +320,11 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                 <a
                   class="
           relative inline-block origin-left transform-gpu transition-all
+          duration-500
           after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75
-          after:transition-transform
-          hover:after:scale-x-100
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                   href="/reviews/"
                 >
@@ -334,19 +335,19 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                 >
                   <li
                     class="
-              mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                   >
                     <a
                       class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-inverse)/75 after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                       href="/cast-and-crew/"
                     >
@@ -355,19 +356,19 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   </li>
                   <li
                     class="
-              mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                   >
                     <a
                       class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-inverse)/75 after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                       href="/collections/"
                     >
@@ -376,19 +377,19 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   </li>
                   <li
                     class="
-              mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                   >
                     <a
                       class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-inverse)/75 after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                       href="/reviews/overrated/"
                     >
@@ -397,19 +398,19 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   </li>
                   <li
                     class="
-              mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                   >
                     <a
                       class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-inverse)/75 after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                       href="/reviews/underrated/"
                     >
@@ -418,19 +419,19 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   </li>
                   <li
                     class="
-              mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                   >
                     <a
                       class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-inverse)/75 after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                       href="/reviews/underseen/"
                     >
@@ -448,10 +449,11 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                 <a
                   class="
           relative inline-block origin-left transform-gpu transition-all
+          duration-500
           after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75
-          after:transition-transform
-          hover:after:scale-x-100
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                   href="/viewings/"
                 >
@@ -462,19 +464,19 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                 >
                   <li
                     class="
-              mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                   >
                     <a
                       class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-inverse)/75 after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                       href="/viewings/stats/"
                     >
@@ -492,10 +494,11 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                 <a
                   class="
           relative inline-block origin-left transform-gpu transition-all
+          duration-500
           after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75
-          after:transition-transform
-          hover:after:scale-x-100
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                   href="/watchlist/"
                 >
@@ -506,19 +509,19 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                 >
                   <li
                     class="
-              mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                   >
                     <a
                       class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-inverse)/75 after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                       href="/watchlist/progress/"
                     >
@@ -527,7 +530,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   </li>
                 </ol>
               </li>
-            </ul>
+            </ol>
           </nav>
         </div>
       </header>
@@ -547,10 +550,10 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
           >
             <a
               class="
-              relative inline-block pb-1 font-sans text-xs tracking-wider
+              relative inline-block pb-1 font-sans text-[13px] tracking-wider
               text-subtle uppercase transition-all
               after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-              after:origin-center after:scale-x-0 after:bg-(--fg-accent)
+              after:origin-center after:scale-x-0 after:bg-accent
               after:transition-transform
               hover:text-accent hover:after:scale-x-100
             "
@@ -588,7 +591,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
             />
           </picture>
           <div
-            class="text-center font-sans text-xs tracking-wide text-subtle uppercase 
+            class="text-center font-sans text-sm tracking-wide text-subtle uppercase 
             mb-10
             tablet:mb-12
           "
@@ -621,7 +624,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                
               <a
                 class="
-            relative -mb-1 inline-block origin-bottom-left pb-1 text-default
+            relative -mb-1 inline-block origin-bottom-left pb-1 text-[#333]
             after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
             after:origin-left after:scale-x-0 after:bg-(--fg-default)/80
             after:transition-transform
@@ -751,10 +754,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
             class="w-full max-w-popout"
           >
             <h2
-              class="
-          py-10 font-sans text-xs font-semibold tracking-wide text-subtle
-          uppercase
-         text-center shadow-bottom"
+              class="py-10 font-sans text-xs font-bold tracking-wide text-subtle uppercase text-center shadow-bottom"
             >
               Viewing History
             </h2>
@@ -763,7 +763,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
             >
               <li
                 class="
-        mb-1 flex flex-col bg-subtle px-container font-sans text-xs font-light
+        mb-1 flex flex-col bg-subtle px-container font-sans text-sm font-normal
         tablet:px-6
       "
               >
@@ -816,7 +816,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
               </li>
               <li
                 class="
-        mb-1 flex flex-col bg-subtle px-container font-sans text-xs font-light
+        mb-1 flex flex-col bg-subtle px-container font-sans text-sm font-normal
         tablet:px-6
       "
               >
@@ -906,7 +906,9 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
               >
                 <div>
                   <dt
-                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                    class="
+          font-sans text-xs leading-4 tracking-wide text-subtle uppercase
+        "
                   >
                     Title
                   </dt>
@@ -918,7 +920,9 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                    class="
+          font-sans text-xs leading-4 tracking-wide text-subtle uppercase
+        "
                   >
                     Original Title
                   </dt>
@@ -930,7 +934,9 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                    class="
+          font-sans text-xs leading-4 tracking-wide text-subtle uppercase
+        "
                   >
                     Year
                   </dt>
@@ -942,7 +948,9 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                    class="
+          font-sans text-xs leading-4 tracking-wide text-subtle uppercase
+        "
                   >
                     Financing
                   </dt>
@@ -954,7 +962,9 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                    class="
+          font-sans text-xs leading-4 tracking-wide text-subtle uppercase
+        "
                   >
                     Running Time
                   </dt>
@@ -966,7 +976,9 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                    class="
+          font-sans text-xs leading-4 tracking-wide text-subtle uppercase
+        "
                   >
                     Directed by
                   </dt>
@@ -980,7 +992,9 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                    class="
+          font-sans text-xs leading-4 tracking-wide text-subtle uppercase
+        "
                   >
                     Written by
                   </dt>
@@ -1006,7 +1020,9 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                 </div>
                 <div>
                   <dt
-                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                    class="
+          font-sans text-xs leading-4 tracking-wide text-subtle uppercase
+        "
                   >
                     Starring
                   </dt>
@@ -1021,10 +1037,11 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
             <a
               class="
           mx-auto mt-8 hidden w-full max-w-button transform-gpu
-          place-content-center items-center rounded-md py-5 font-sans text-xs
+          place-content-center items-center rounded-md py-5 font-sans text-sm
           tracking-wide uppercase shadow-all transition-all
           group-target/credits:flex
           hover:scale-105 hover:bg-footer hover:text-inverse
+          hover:drop-shadow-lg
         "
               href="#top"
             >
@@ -1050,10 +1067,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
         "
             >
               <h2
-                class="
-          py-10 font-sans text-xs font-semibold tracking-wide text-subtle
-          uppercase
-        "
+                class="py-10 font-sans text-xs font-bold tracking-wide text-subtle uppercase"
               >
                 <a
                   class="
@@ -1061,7 +1075,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                 transition-transform
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-right after:scale-x-0
-                after:bg-(--fg-accent) after:transition-transform
+                after:bg-accent after:transition-transform
                 hover:after:scale-x-100
               "
                   href="/reviews/"
@@ -1083,9 +1097,9 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
               >
                 <li
                   class="
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       "
                 >
@@ -1094,15 +1108,18 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   >
                     <div
                       class="
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           "
                     >
                       <img
                         alt=""
-                        class="aspect-video h-auto w-full"
+                        class="aspect-video 
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            "
                         decoding="async"
                         height="360"
                         loading="lazy"
@@ -1121,6 +1138,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                       <a
                         class="
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0
@@ -1164,7 +1182,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                       </div>
                       <div
                         class="
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             "
                       >
@@ -1180,9 +1198,9 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                 </li>
                 <li
                   class="
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       "
                 >
@@ -1191,15 +1209,18 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   >
                     <div
                       class="
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           "
                     >
                       <img
                         alt=""
-                        class="aspect-video h-auto w-full"
+                        class="aspect-video 
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            "
                         decoding="async"
                         height="360"
                         loading="lazy"
@@ -1218,6 +1239,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                       <a
                         class="
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0
@@ -1253,7 +1275,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                       </div>
                       <div
                         class="
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             "
                       >
@@ -1278,9 +1300,9 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                 </li>
                 <li
                   class="
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       "
                 >
@@ -1289,15 +1311,18 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   >
                     <div
                       class="
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           "
                     >
                       <img
                         alt=""
-                        class="aspect-video h-auto w-full"
+                        class="aspect-video 
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            "
                         decoding="async"
                         height="360"
                         loading="lazy"
@@ -1316,6 +1341,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                       <a
                         class="
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0
@@ -1351,7 +1377,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                       </div>
                       <div
                         class="
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             "
                       >
@@ -1367,9 +1393,9 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                 </li>
                 <li
                   class="
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       "
                 >
@@ -1378,15 +1404,18 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   >
                     <div
                       class="
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           "
                     >
                       <img
                         alt=""
-                        class="aspect-video h-auto w-full"
+                        class="aspect-video 
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            "
                         decoding="async"
                         height="360"
                         loading="lazy"
@@ -1405,6 +1434,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                       <a
                         class="
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0
@@ -1451,7 +1481,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                       </div>
                       <div
                         class="
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             "
                       >
@@ -1496,9 +1526,10 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
             <a
               class="
               mx-auto mb-8 w-full max-w-button transform-gpu rounded-md
-              bg-canvas py-5 text-center font-sans text-xs tracking-wide
-              text-default uppercase transition-all
+              bg-canvas py-5 text-center font-sans text-sm font-normal
+              tracking-wide text-default uppercase transition-all
               hover:scale-105 hover:bg-default hover:text-default
+              hover:drop-shadow-lg
               tablet:mx-0
             "
               href="#top"
@@ -1507,7 +1538,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
             </a>
             <div
               class="
-        flex transform-gpu flex-col transition-transform
+        flex transform-gpu flex-col transition-transform duration-500
         has-[a:hover]:scale-105
         
       "
@@ -1544,9 +1575,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
             "
             >
               <div
-                class="
-                pt-10 font-sans text-sm font-light text-inverse-subtle
-              "
+                class="pt-10 font-sans font-normal text-inverse-subtle"
               >
                 <p
                   class="
@@ -1580,7 +1609,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   <a
                     class="
         underline
-        hover:text-inverse
+        hover:text-accent
       "
                     href="/how-i-grade/"
                   >
@@ -1590,7 +1619,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   <a
                     class="
         underline
-        hover:text-inverse
+        hover:text-accent
       "
                     href="/reviews/"
                   >
@@ -1600,7 +1629,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   <a
                     class="
         underline
-        hover:text-inverse
+        hover:text-accent
       "
                     href="/reviews/underseen/"
                   >
@@ -1610,7 +1639,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   <a
                     class="
         underline
-        hover:text-inverse
+        hover:text-accent
       "
                     href="/reviews/overrated/"
                   >
@@ -1625,7 +1654,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   <a
                     class="
         underline
-        hover:text-inverse
+        hover:text-accent
       "
                     href="/viewings/"
                   >
@@ -1635,7 +1664,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   <a
                     class="
         underline
-        hover:text-inverse
+        hover:text-accent
       "
                     href="/viewings/stats/"
                   >
@@ -1650,7 +1679,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   <a
                     class="
         underline
-        hover:text-inverse
+        hover:text-accent
       "
                     href="/watchlist/"
                   >
@@ -1671,22 +1700,26 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
               tablet:basis-button tablet:pr-10
             "
             >
-              <ul
+              <ol
                 class="
-                flex w-full flex-col gap-y-10 text-inverse
-                desktop:w-auto
-              "
+        flex w-full flex-col gap-y-6
+        desktop:w-auto
+      "
               >
                 <li
-                  class="block w-1/2 text-2xl whitespace-nowrap"
+                  class="
+        block w-1/2 text-2xl whitespace-nowrap
+        laptop:w-full
+      "
                 >
                   <a
                     class="
           relative inline-block origin-left transform-gpu transition-all
-          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
-          after:transition-transform
-          hover:after:scale-x-100
+          duration-500
+          after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                     href="/"
                   >
@@ -1694,15 +1727,19 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   </a>
                 </li>
                 <li
-                  class="block w-1/2 text-2xl whitespace-nowrap"
+                  class="
+        block w-1/2 text-2xl whitespace-nowrap
+        laptop:w-full
+      "
                 >
                   <a
                     class="
           relative inline-block origin-left transform-gpu transition-all
-          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
-          after:transition-transform
-          hover:after:scale-x-100
+          duration-500
+          after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                     href="/how-i-grade/"
                   >
@@ -1710,15 +1747,19 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   </a>
                 </li>
                 <li
-                  class="block w-1/2 text-2xl whitespace-nowrap"
+                  class="
+        block w-1/2 text-2xl whitespace-nowrap
+        laptop:w-full
+      "
                 >
                   <a
                     class="
           relative inline-block origin-left transform-gpu transition-all
-          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
-          after:transition-transform
-          hover:after:scale-x-100
+          duration-500
+          after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                     href="/reviews/"
                   >
@@ -1729,19 +1770,19 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   >
                     <li
                       class="
-              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                     >
                       <a
                         class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                transition-all duration-500
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                         href="/cast-and-crew/"
                       >
@@ -1750,19 +1791,19 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                     </li>
                     <li
                       class="
-              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                     >
                       <a
                         class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                transition-all duration-500
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                         href="/collections/"
                       >
@@ -1771,19 +1812,19 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                     </li>
                     <li
                       class="
-              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                     >
                       <a
                         class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                transition-all duration-500
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                         href="/reviews/overrated/"
                       >
@@ -1792,19 +1833,19 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                     </li>
                     <li
                       class="
-              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                     >
                       <a
                         class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                transition-all duration-500
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                         href="/reviews/underrated/"
                       >
@@ -1813,19 +1854,19 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                     </li>
                     <li
                       class="
-              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                     >
                       <a
                         class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                transition-all duration-500
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                         href="/reviews/underseen/"
                       >
@@ -1835,15 +1876,19 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   </ol>
                 </li>
                 <li
-                  class="block w-1/2 text-2xl whitespace-nowrap"
+                  class="
+        block w-1/2 text-2xl whitespace-nowrap
+        laptop:w-full
+      "
                 >
                   <a
                     class="
           relative inline-block origin-left transform-gpu transition-all
-          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
-          after:transition-transform
-          hover:after:scale-x-100
+          duration-500
+          after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                     href="/viewings/"
                   >
@@ -1854,19 +1899,19 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   >
                     <li
                       class="
-              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                     >
                       <a
                         class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                transition-all duration-500
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                         href="/viewings/stats/"
                       >
@@ -1876,15 +1921,19 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   </ol>
                 </li>
                 <li
-                  class="block w-1/2 text-2xl whitespace-nowrap"
+                  class="
+        block w-1/2 text-2xl whitespace-nowrap
+        laptop:w-full
+      "
                 >
                   <a
                     class="
           relative inline-block origin-left transform-gpu transition-all
-          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
-          after:transition-transform
-          hover:after:scale-x-100
+          duration-500
+          after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                     href="/watchlist/"
                   >
@@ -1895,19 +1944,19 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   >
                     <li
                       class="
-              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                     >
                       <a
                         class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                transition-all duration-500
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                         href="/watchlist/progress/"
                       >
@@ -1916,7 +1965,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                     </li>
                   </ol>
                 </li>
-              </ul>
+              </ol>
             </div>
           </div>
         </div>
@@ -1928,11 +1977,28 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
         >
           All reviews by Frank Showalter. All images used in accordance with the 
           <a
-            class="text-inherit underline"
+            class="
+            relative inline-block pr-4 text-inherit underline underline-offset-3
+            hover:bg-default hover:text-accent
+          "
             href="http://www.copyright.gov/title17/92chap1.html#107"
             rel="nofollow"
           >
             Fair Use Law
+            <svg
+              class="absolute top-0.5 right-0 size-3"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </a>
           .
         </p>
@@ -1976,7 +2042,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
       >
         <div
           class="
-        flex transform-gpu flex-col transition-transform
+        flex transform-gpu flex-col transition-transform duration-500
         has-[a:hover]:scale-105
         
       "
@@ -2014,7 +2080,6 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               <li
                 class="
         block leading-10 tracking-serif-wide whitespace-nowrap
-        transition-transform
         [body.nav-open_&]:opacity-0
       "
               >
@@ -2023,7 +2088,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
           relative block text-inherit
           after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
           after:origin-center after:scale-x-0 after:bg-(--mast-color)/75
-          after:transition-transform
+          after:transition-transform after:duration-500
           hover:after:scale-x-100
         "
                   href="/"
@@ -2034,7 +2099,6 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               <li
                 class="
         block leading-10 tracking-serif-wide whitespace-nowrap
-        transition-transform
         [body.nav-open_&]:opacity-0
       "
               >
@@ -2043,7 +2107,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
           relative block text-inherit
           after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
           after:origin-center after:scale-x-0 after:bg-(--mast-color)/75
-          after:transition-transform
+          after:transition-transform after:duration-500
           hover:after:scale-x-100
         "
                   href="/how-i-grade/"
@@ -2054,7 +2118,6 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               <li
                 class="
         block leading-10 tracking-serif-wide whitespace-nowrap
-        transition-transform
         [body.nav-open_&]:opacity-0
       "
               >
@@ -2063,7 +2126,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
           relative block text-inherit
           after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
           after:origin-center after:scale-x-0 after:bg-(--mast-color)/75
-          after:transition-transform
+          after:transition-transform after:duration-500
           hover:after:scale-x-100
         "
                   href="/reviews/"
@@ -2074,7 +2137,6 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               <li
                 class="
         block leading-10 tracking-serif-wide whitespace-nowrap
-        transition-transform
         [body.nav-open_&]:opacity-0
       "
               >
@@ -2083,7 +2145,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
           relative block text-inherit
           after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
           after:origin-center after:scale-x-0 after:bg-(--mast-color)/75
-          after:transition-transform
+          after:transition-transform after:duration-500
           hover:after:scale-x-100
         "
                   href="/viewings/"
@@ -2094,7 +2156,6 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               <li
                 class="
         block leading-10 tracking-serif-wide whitespace-nowrap
-        transition-transform
         [body.nav-open_&]:opacity-0
       "
               >
@@ -2103,7 +2164,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
           relative block text-inherit
           after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
           after:origin-center after:scale-x-0 after:bg-(--mast-color)/75
-          after:transition-transform
+          after:transition-transform after:duration-500
           hover:after:scale-x-100
         "
                   href="/watchlist/"
@@ -2195,8 +2256,10 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
           <nav
             aria-label="Main navigation"
           >
-            <ul
+            <ol
               class="
+        flex w-full flex-col gap-y-6
+        
             invisible fixed top-0 right-0 flex h-full w-0
             transform-[translateX(100%)] flex-col items-start gap-y-5
             overflow-hidden bg-footer text-left text-inverse opacity-0
@@ -2211,7 +2274,8 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             [body.nav-open_&]:pl-[12%] [body.nav-open_&]:opacity-100
             [body.nav-open_&]:drop-shadow-2xl [body.nav-open_&]:tablet:px-10
             [body.nav-open_&]:tablet:pt-40 [body.nav-open_&]:laptop:px-20
-          "
+          
+      "
               data-nav-menu="true"
               id="nav-menu"
             >
@@ -2224,10 +2288,11 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 <a
                   class="
           relative inline-block origin-left transform-gpu transition-all
+          duration-500
           after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75
-          after:transition-transform
-          hover:after:scale-x-100
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                   href="/"
                 >
@@ -2243,10 +2308,11 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 <a
                   class="
           relative inline-block origin-left transform-gpu transition-all
+          duration-500
           after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75
-          after:transition-transform
-          hover:after:scale-x-100
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                   href="/how-i-grade/"
                 >
@@ -2262,10 +2328,11 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 <a
                   class="
           relative inline-block origin-left transform-gpu transition-all
+          duration-500
           after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75
-          after:transition-transform
-          hover:after:scale-x-100
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                   href="/reviews/"
                 >
@@ -2276,19 +2343,19 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 >
                   <li
                     class="
-              mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                   >
                     <a
                       class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-inverse)/75 after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                       href="/cast-and-crew/"
                     >
@@ -2297,19 +2364,19 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   </li>
                   <li
                     class="
-              mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                   >
                     <a
                       class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-inverse)/75 after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                       href="/collections/"
                     >
@@ -2318,19 +2385,19 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   </li>
                   <li
                     class="
-              mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                   >
                     <a
                       class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-inverse)/75 after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                       href="/reviews/overrated/"
                     >
@@ -2339,19 +2406,19 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   </li>
                   <li
                     class="
-              mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                   >
                     <a
                       class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-inverse)/75 after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                       href="/reviews/underrated/"
                     >
@@ -2360,19 +2427,19 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   </li>
                   <li
                     class="
-              mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                   >
                     <a
                       class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-inverse)/75 after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                       href="/reviews/underseen/"
                     >
@@ -2390,10 +2457,11 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 <a
                   class="
           relative inline-block origin-left transform-gpu transition-all
+          duration-500
           after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75
-          after:transition-transform
-          hover:after:scale-x-100
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                   href="/viewings/"
                 >
@@ -2404,19 +2472,19 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 >
                   <li
                     class="
-              mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                   >
                     <a
                       class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-inverse)/75 after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                       href="/viewings/stats/"
                     >
@@ -2434,10 +2502,11 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 <a
                   class="
           relative inline-block origin-left transform-gpu transition-all
+          duration-500
           after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75
-          after:transition-transform
-          hover:after:scale-x-100
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                   href="/watchlist/"
                 >
@@ -2448,19 +2517,19 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 >
                   <li
                     class="
-              mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                   >
                     <a
                       class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-inverse)/75 after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                       href="/watchlist/progress/"
                     >
@@ -2469,7 +2538,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   </li>
                 </ol>
               </li>
-            </ul>
+            </ol>
           </nav>
         </div>
       </header>
@@ -2489,10 +2558,10 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
           >
             <a
               class="
-              relative inline-block pb-1 font-sans text-xs tracking-wider
+              relative inline-block pb-1 font-sans text-[13px] tracking-wider
               text-subtle uppercase transition-all
               after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-              after:origin-center after:scale-x-0 after:bg-(--fg-accent)
+              after:origin-center after:scale-x-0 after:bg-accent
               after:transition-transform
               hover:text-accent hover:after:scale-x-100
             "
@@ -2528,7 +2597,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             />
           </picture>
           <div
-            class="text-center font-sans text-xs tracking-wide text-subtle uppercase 
+            class="text-center font-sans text-sm tracking-wide text-subtle uppercase 
             mb-10
             tablet:mb-12
           "
@@ -2549,7 +2618,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                
               <a
                 class="
-            relative -mb-1 inline-block origin-bottom-left pb-1 text-default
+            relative -mb-1 inline-block origin-bottom-left pb-1 text-[#333]
             after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
             after:origin-left after:scale-x-0 after:bg-(--fg-default)/80
             after:transition-transform
@@ -2677,10 +2746,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             class="w-full max-w-popout"
           >
             <h2
-              class="
-          py-10 font-sans text-xs font-semibold tracking-wide text-subtle
-          uppercase
-         text-center shadow-bottom"
+              class="py-10 font-sans text-xs font-bold tracking-wide text-subtle uppercase text-center shadow-bottom"
             >
               Viewing History
             </h2>
@@ -2689,7 +2755,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             >
               <li
                 class="
-        mb-1 flex flex-col bg-subtle px-container font-sans text-xs font-light
+        mb-1 flex flex-col bg-subtle px-container font-sans text-sm font-normal
         tablet:px-6
       "
               >
@@ -2736,7 +2802,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       Blu-ray
                     </span>
                     <span
-                      class="font-light tracking-normal text-subtle"
+                      class="font-normal tracking-prose text-subtle"
                     >
                        (
                       <span
@@ -2762,7 +2828,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     </span>
                      
                     <span
-                      class="font-light tracking-normal text-subtle"
+                      class="font-light tracking-normal text-muted"
                     >
                       (
                       <span
@@ -2779,7 +2845,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 <div>
                   <div
                     class="
-        px-2 pb-6 text-sm font-light
+        px-2 pb-6 text-base font-normal
         tablet:mx-24 tablet:px-0
       "
                   >
@@ -2795,7 +2861,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               </li>
               <li
                 class="
-        mb-1 flex flex-col bg-subtle px-container font-sans text-xs font-light
+        mb-1 flex flex-col bg-subtle px-container font-sans text-sm font-normal
         tablet:px-6
       "
               >
@@ -2880,7 +2946,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               >
                 <div>
                   <dt
-                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                    class="
+          font-sans text-xs leading-4 tracking-wide text-subtle uppercase
+        "
                   >
                     Title
                   </dt>
@@ -2892,7 +2960,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </div>
                 <div>
                   <dt
-                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                    class="
+          font-sans text-xs leading-4 tracking-wide text-subtle uppercase
+        "
                   >
                     Year
                   </dt>
@@ -2904,7 +2974,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </div>
                 <div>
                   <dt
-                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                    class="
+          font-sans text-xs leading-4 tracking-wide text-subtle uppercase
+        "
                   >
                     Financing
                   </dt>
@@ -2916,7 +2988,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </div>
                 <div>
                   <dt
-                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                    class="
+          font-sans text-xs leading-4 tracking-wide text-subtle uppercase
+        "
                   >
                     Running Time
                   </dt>
@@ -2928,7 +3002,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </div>
                 <div>
                   <dt
-                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                    class="
+          font-sans text-xs leading-4 tracking-wide text-subtle uppercase
+        "
                   >
                     Directed by
                   </dt>
@@ -2942,7 +3018,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </div>
                 <div>
                   <dt
-                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                    class="
+          font-sans text-xs leading-4 tracking-wide text-subtle uppercase
+        "
                   >
                     Written by
                   </dt>
@@ -2959,7 +3037,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </div>
                 <div>
                   <dt
-                    class="font-sans text-xxs tracking-wide text-subtle uppercase"
+                    class="
+          font-sans text-xs leading-4 tracking-wide text-subtle uppercase
+        "
                   >
                     Starring
                   </dt>
@@ -2974,10 +3054,11 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             <a
               class="
           mx-auto mt-8 hidden w-full max-w-button transform-gpu
-          place-content-center items-center rounded-md py-5 font-sans text-xs
+          place-content-center items-center rounded-md py-5 font-sans text-sm
           tracking-wide uppercase shadow-all transition-all
           group-target/credits:flex
           hover:scale-105 hover:bg-footer hover:text-inverse
+          hover:drop-shadow-lg
         "
               href="#top"
             >
@@ -3003,10 +3084,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
         "
             >
               <h2
-                class="
-          py-10 font-sans text-xs font-semibold tracking-wide text-subtle
-          uppercase
-        "
+                class="py-10 font-sans text-xs font-bold tracking-wide text-subtle uppercase"
               >
                 <a
                   class="
@@ -3035,9 +3113,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               >
                 <li
                   class="
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       "
                 >
@@ -3046,15 +3124,18 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   >
                     <div
                       class="
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           "
                     >
                       <img
                         alt=""
-                        class="aspect-video h-auto w-full"
+                        class="aspect-video 
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            "
                         decoding="async"
                         height="360"
                         loading="lazy"
@@ -3073,6 +3154,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       <a
                         class="
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0
@@ -3116,7 +3198,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       </div>
                       <div
                         class="
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             "
                       >
@@ -3132,9 +3214,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </li>
                 <li
                   class="
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       "
                 >
@@ -3143,15 +3225,18 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   >
                     <div
                       class="
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           "
                     >
                       <img
                         alt=""
-                        class="aspect-video h-auto w-full"
+                        class="aspect-video 
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            "
                         decoding="async"
                         height="360"
                         loading="lazy"
@@ -3170,6 +3255,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       <a
                         class="
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0
@@ -3205,7 +3291,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       </div>
                       <div
                         class="
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             "
                       >
@@ -3230,9 +3316,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </li>
                 <li
                   class="
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       "
                 >
@@ -3241,15 +3327,18 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   >
                     <div
                       class="
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           "
                     >
                       <img
                         alt=""
-                        class="aspect-video h-auto w-full"
+                        class="aspect-video 
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            "
                         decoding="async"
                         height="360"
                         loading="lazy"
@@ -3268,6 +3357,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       <a
                         class="
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0
@@ -3311,7 +3401,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       </div>
                       <div
                         class="
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             "
                       >
@@ -3333,9 +3423,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </li>
                 <li
                   class="
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       "
                 >
@@ -3344,15 +3434,18 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   >
                     <div
                       class="
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           "
                     >
                       <img
                         alt=""
-                        class="aspect-video h-auto w-full"
+                        class="aspect-video 
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            "
                         decoding="async"
                         height="360"
                         loading="lazy"
@@ -3371,6 +3464,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       <a
                         class="
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0
@@ -3406,7 +3500,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       </div>
                       <div
                         class="
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             "
                       >
@@ -3442,10 +3536,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
         "
             >
               <h2
-                class="
-          py-10 font-sans text-xs font-semibold tracking-wide text-subtle
-          uppercase
-        "
+                class="py-10 font-sans text-xs font-bold tracking-wide text-subtle uppercase"
               >
                 <a
                   class="
@@ -3474,9 +3565,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               >
                 <li
                   class="
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       "
                 >
@@ -3485,15 +3576,18 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   >
                     <div
                       class="
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           "
                     >
                       <img
                         alt=""
-                        class="aspect-video h-auto w-full"
+                        class="aspect-video 
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            "
                         decoding="async"
                         height="360"
                         loading="lazy"
@@ -3512,6 +3606,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       <a
                         class="
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0
@@ -3547,7 +3642,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       </div>
                       <div
                         class="
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             "
                       >
@@ -3563,9 +3658,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </li>
                 <li
                   class="
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       "
                 >
@@ -3574,15 +3669,18 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   >
                     <div
                       class="
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           "
                     >
                       <img
                         alt=""
-                        class="aspect-video h-auto w-full"
+                        class="aspect-video 
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            "
                         decoding="async"
                         height="360"
                         loading="lazy"
@@ -3601,6 +3699,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       <a
                         class="
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0
@@ -3647,7 +3746,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       </div>
                       <div
                         class="
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             "
                       >
@@ -3669,9 +3768,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </li>
                 <li
                   class="
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       "
                 >
@@ -3680,15 +3779,18 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   >
                     <div
                       class="
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           "
                     >
                       <img
                         alt=""
-                        class="aspect-video h-auto w-full"
+                        class="aspect-video 
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            "
                         decoding="async"
                         height="360"
                         loading="lazy"
@@ -3707,6 +3809,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       <a
                         class="
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0
@@ -3742,7 +3845,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       </div>
                       <div
                         class="
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             "
                       >
@@ -3761,9 +3864,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </li>
                 <li
                   class="
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       "
                 >
@@ -3772,15 +3875,18 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   >
                     <div
                       class="
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           "
                     >
                       <img
                         alt=""
-                        class="aspect-video h-auto w-full"
+                        class="aspect-video 
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            "
                         decoding="async"
                         height="360"
                         loading="lazy"
@@ -3799,6 +3905,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       <a
                         class="
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0
@@ -3837,7 +3944,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       </div>
                       <div
                         class="
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             "
                       >
@@ -3867,10 +3974,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
         "
             >
               <h2
-                class="
-          py-10 font-sans text-xs font-semibold tracking-wide text-subtle
-          uppercase
-        "
+                class="py-10 font-sans text-xs font-bold tracking-wide text-subtle uppercase"
               >
                 <a
                   class="
@@ -3899,9 +4003,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               >
                 <li
                   class="
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       "
                 >
@@ -3910,15 +4014,18 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   >
                     <div
                       class="
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           "
                     >
                       <img
                         alt=""
-                        class="aspect-video h-auto w-full"
+                        class="aspect-video 
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            "
                         decoding="async"
                         height="360"
                         loading="lazy"
@@ -3937,6 +4044,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       <a
                         class="
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0
@@ -3980,7 +4088,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       </div>
                       <div
                         class="
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             "
                       >
@@ -4013,10 +4121,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
         "
             >
               <h2
-                class="
-          py-10 font-sans text-xs font-semibold tracking-wide text-subtle
-          uppercase
-        "
+                class="py-10 font-sans text-xs font-bold tracking-wide text-subtle uppercase"
               >
                 <a
                   class="
@@ -4045,9 +4150,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               >
                 <li
                   class="
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       "
                 >
@@ -4056,15 +4161,18 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   >
                     <div
                       class="
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           "
                     >
                       <img
                         alt=""
-                        class="aspect-video h-auto w-full"
+                        class="aspect-video 
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            "
                         decoding="async"
                         height="360"
                         loading="lazy"
@@ -4083,6 +4191,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       <a
                         class="
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0
@@ -4118,7 +4227,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       </div>
                       <div
                         class="
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             "
                       >
@@ -4143,9 +4252,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </li>
                 <li
                   class="
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       "
                 >
@@ -4154,15 +4263,18 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   >
                     <div
                       class="
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           "
                     >
                       <img
                         alt=""
-                        class="aspect-video h-auto w-full"
+                        class="aspect-video 
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            "
                         decoding="async"
                         height="360"
                         loading="lazy"
@@ -4181,6 +4293,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       <a
                         class="
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0
@@ -4219,7 +4332,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       </div>
                       <div
                         class="
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             "
                       >
@@ -4235,9 +4348,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </li>
                 <li
                   class="
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       "
                 >
@@ -4246,15 +4359,18 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   >
                     <div
                       class="
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           "
                     >
                       <img
                         alt=""
-                        class="aspect-video h-auto w-full"
+                        class="aspect-video 
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            "
                         decoding="async"
                         height="360"
                         loading="lazy"
@@ -4273,6 +4389,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       <a
                         class="
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0
@@ -4308,7 +4425,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       </div>
                       <div
                         class="
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             "
                       >
@@ -4324,9 +4441,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </li>
                 <li
                   class="
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       "
                 >
@@ -4335,15 +4452,18 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   >
                     <div
                       class="
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           "
                     >
                       <img
                         alt=""
-                        class="aspect-video h-auto w-full"
+                        class="aspect-video 
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            "
                         decoding="async"
                         height="360"
                         loading="lazy"
@@ -4362,6 +4482,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       <a
                         class="
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0
@@ -4405,7 +4526,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       </div>
                       <div
                         class="
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             "
                       >
@@ -4438,10 +4559,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
         "
             >
               <h2
-                class="
-          py-10 font-sans text-xs font-semibold tracking-wide text-subtle
-          uppercase
-        "
+                class="py-10 font-sans text-xs font-bold tracking-wide text-subtle uppercase"
               >
                 <a
                   class="
@@ -4449,7 +4567,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 transition-transform
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-right after:scale-x-0
-                after:bg-(--fg-accent) after:transition-transform
+                after:bg-accent after:transition-transform
                 hover:after:scale-x-100
               "
                   href="/reviews/"
@@ -4471,9 +4589,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               >
                 <li
                   class="
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       "
                 >
@@ -4482,15 +4600,18 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   >
                     <div
                       class="
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           "
                     >
                       <img
                         alt=""
-                        class="aspect-video h-auto w-full"
+                        class="aspect-video 
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            "
                         decoding="async"
                         height="360"
                         loading="lazy"
@@ -4509,6 +4630,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       <a
                         class="
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0
@@ -4547,7 +4669,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       </div>
                       <div
                         class="
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             "
                       >
@@ -4569,9 +4691,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </li>
                 <li
                   class="
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       "
                 >
@@ -4580,15 +4702,18 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   >
                     <div
                       class="
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           "
                     >
                       <img
                         alt=""
-                        class="aspect-video h-auto w-full"
+                        class="aspect-video 
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            "
                         decoding="async"
                         height="360"
                         loading="lazy"
@@ -4607,6 +4732,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       <a
                         class="
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0
@@ -4648,7 +4774,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       </div>
                       <div
                         class="
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             "
                       >
@@ -4664,9 +4790,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </li>
                 <li
                   class="
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       "
                 >
@@ -4675,15 +4801,18 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   >
                     <div
                       class="
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           "
                     >
                       <img
                         alt=""
-                        class="aspect-video h-auto w-full"
+                        class="aspect-video 
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            "
                         decoding="async"
                         height="360"
                         loading="lazy"
@@ -4702,6 +4831,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       <a
                         class="
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0
@@ -4743,7 +4873,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       </div>
                       <div
                         class="
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             "
                       >
@@ -4765,9 +4895,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 </li>
                 <li
                   class="
-        group/list-item relative w-full transform-gpu transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
-        has-[a:hover]:drop-shadow-2xl
+        group/list-item relative w-full transform-gpu transition-all
+        duration-500
+        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       "
                 >
@@ -4776,15 +4906,18 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   >
                     <div
                       class="
-            block
+            block overflow-hidden
             after:absolute after:inset-x-0 after:top-0 after:aspect-video
-            after:bg-default after:opacity-15
+            after:bg-default after:opacity-20 after:duration-500
             group-has-[a:hover]/list-item:after:opacity-0
           "
                     >
                       <img
                         alt=""
-                        class="aspect-video h-auto w-full"
+                        class="aspect-video 
+              h-auto w-full transform-gpu transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-105
+            "
                         decoding="async"
                         height="360"
                         loading="lazy"
@@ -4803,6 +4936,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       <a
                         class="
               mb-3 block text-xl leading-6 font-medium text-default
+              transition-all duration-500
               after:absolute after:top-0 after:left-0 after:z-sticky
               after:size-full after:opacity-0
               hover:text-accent hover:before:opacity-0
@@ -4838,7 +4972,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                       </div>
                       <div
                         class="
-              font-sans text-xxs leading-4 font-light tracking-wider text-subtle
+              mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
               laptop:tracking-wide
             "
                       >
@@ -4880,9 +5014,10 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             <a
               class="
               mx-auto mb-8 w-full max-w-button transform-gpu rounded-md
-              bg-canvas py-5 text-center font-sans text-xs tracking-wide
-              text-default uppercase transition-all
+              bg-canvas py-5 text-center font-sans text-sm font-normal
+              tracking-wide text-default uppercase transition-all
               hover:scale-105 hover:bg-default hover:text-default
+              hover:drop-shadow-lg
               tablet:mx-0
             "
               href="#top"
@@ -4891,7 +5026,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             </a>
             <div
               class="
-        flex transform-gpu flex-col transition-transform
+        flex transform-gpu flex-col transition-transform duration-500
         has-[a:hover]:scale-105
         
       "
@@ -4928,9 +5063,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             "
             >
               <div
-                class="
-                pt-10 font-sans text-sm font-light text-inverse-subtle
-              "
+                class="pt-10 font-sans font-normal text-inverse-subtle"
               >
                 <p
                   class="
@@ -4964,7 +5097,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   <a
                     class="
         underline
-        hover:text-inverse
+        hover:text-accent
       "
                     href="/how-i-grade/"
                   >
@@ -4974,7 +5107,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   <a
                     class="
         underline
-        hover:text-inverse
+        hover:text-accent
       "
                     href="/reviews/"
                   >
@@ -4984,7 +5117,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   <a
                     class="
         underline
-        hover:text-inverse
+        hover:text-accent
       "
                     href="/reviews/underseen/"
                   >
@@ -4994,7 +5127,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   <a
                     class="
         underline
-        hover:text-inverse
+        hover:text-accent
       "
                     href="/reviews/overrated/"
                   >
@@ -5009,7 +5142,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   <a
                     class="
         underline
-        hover:text-inverse
+        hover:text-accent
       "
                     href="/viewings/"
                   >
@@ -5019,7 +5152,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   <a
                     class="
         underline
-        hover:text-inverse
+        hover:text-accent
       "
                     href="/viewings/stats/"
                   >
@@ -5034,7 +5167,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   <a
                     class="
         underline
-        hover:text-inverse
+        hover:text-accent
       "
                     href="/watchlist/"
                   >
@@ -5055,22 +5188,26 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               tablet:basis-button tablet:pr-10
             "
             >
-              <ul
+              <ol
                 class="
-                flex w-full flex-col gap-y-10 text-inverse
-                desktop:w-auto
-              "
+        flex w-full flex-col gap-y-6
+        desktop:w-auto
+      "
               >
                 <li
-                  class="block w-1/2 text-2xl whitespace-nowrap"
+                  class="
+        block w-1/2 text-2xl whitespace-nowrap
+        laptop:w-full
+      "
                 >
                   <a
                     class="
           relative inline-block origin-left transform-gpu transition-all
-          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
-          after:transition-transform
-          hover:after:scale-x-100
+          duration-500
+          after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                     href="/"
                   >
@@ -5078,15 +5215,19 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   </a>
                 </li>
                 <li
-                  class="block w-1/2 text-2xl whitespace-nowrap"
+                  class="
+        block w-1/2 text-2xl whitespace-nowrap
+        laptop:w-full
+      "
                 >
                   <a
                     class="
           relative inline-block origin-left transform-gpu transition-all
-          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
-          after:transition-transform
-          hover:after:scale-x-100
+          duration-500
+          after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                     href="/how-i-grade/"
                   >
@@ -5094,15 +5235,19 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   </a>
                 </li>
                 <li
-                  class="block w-1/2 text-2xl whitespace-nowrap"
+                  class="
+        block w-1/2 text-2xl whitespace-nowrap
+        laptop:w-full
+      "
                 >
                   <a
                     class="
           relative inline-block origin-left transform-gpu transition-all
-          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
-          after:transition-transform
-          hover:after:scale-x-100
+          duration-500
+          after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                     href="/reviews/"
                   >
@@ -5113,19 +5258,19 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   >
                     <li
                       class="
-              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                     >
                       <a
                         class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                transition-all duration-500
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                         href="/cast-and-crew/"
                       >
@@ -5134,19 +5279,19 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     </li>
                     <li
                       class="
-              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                     >
                       <a
                         class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                transition-all duration-500
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                         href="/collections/"
                       >
@@ -5155,19 +5300,19 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     </li>
                     <li
                       class="
-              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                     >
                       <a
                         class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                transition-all duration-500
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                         href="/reviews/overrated/"
                       >
@@ -5176,19 +5321,19 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     </li>
                     <li
                       class="
-              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                     >
                       <a
                         class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                transition-all duration-500
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                         href="/reviews/underrated/"
                       >
@@ -5197,19 +5342,19 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     </li>
                     <li
                       class="
-              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                     >
                       <a
                         class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                transition-all duration-500
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                         href="/reviews/underseen/"
                       >
@@ -5219,15 +5364,19 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   </ol>
                 </li>
                 <li
-                  class="block w-1/2 text-2xl whitespace-nowrap"
+                  class="
+        block w-1/2 text-2xl whitespace-nowrap
+        laptop:w-full
+      "
                 >
                   <a
                     class="
           relative inline-block origin-left transform-gpu transition-all
-          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
-          after:transition-transform
-          hover:after:scale-x-100
+          duration-500
+          after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                     href="/viewings/"
                   >
@@ -5238,19 +5387,19 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   >
                     <li
                       class="
-              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                     >
                       <a
                         class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                transition-all duration-500
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                         href="/viewings/stats/"
                       >
@@ -5260,15 +5409,19 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   </ol>
                 </li>
                 <li
-                  class="block w-1/2 text-2xl whitespace-nowrap"
+                  class="
+        block w-1/2 text-2xl whitespace-nowrap
+        laptop:w-full
+      "
                 >
                   <a
                     class="
           relative inline-block origin-left transform-gpu transition-all
-          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
-          after:transition-transform
-          hover:after:scale-x-100
+          duration-500
+          after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                     href="/watchlist/"
                   >
@@ -5279,19 +5432,19 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   >
                     <li
                       class="
-              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                     >
                       <a
                         class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                transition-all duration-500
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                         href="/watchlist/progress/"
                       >
@@ -5300,7 +5453,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     </li>
                   </ol>
                 </li>
-              </ul>
+              </ol>
             </div>
           </div>
         </div>
@@ -5312,11 +5465,28 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
         >
           All reviews by Frank Showalter. All images used in accordance with the 
           <a
-            class="text-inherit underline"
+            class="
+            relative inline-block pr-4 text-inherit underline underline-offset-3
+            hover:bg-default hover:text-accent
+          "
             href="http://www.copyright.gov/title17/92chap1.html#107"
             rel="nofollow"
           >
             Fair Use Law
+            <svg
+              class="absolute top-0.5 right-0 size-3"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </a>
           .
         </p>
