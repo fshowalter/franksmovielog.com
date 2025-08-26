@@ -9,7 +9,6 @@ export const BackdropImageConfig = {
 };
 
 export function Backdrop({
-  bottomShadow = false,
   breadcrumb,
   centerText = false,
   deck,
@@ -18,7 +17,6 @@ export function Backdrop({
   title,
   titleStyle,
 }: {
-  bottomShadow?: boolean;
   breadcrumb?: React.ReactNode;
   centerText?: boolean;
   deck?: React.ReactNode;
@@ -39,12 +37,7 @@ export function Backdrop({
   );
 
   return (
-    <Wrapper
-      bottomShadow={bottomShadow}
-      centerText={centerText}
-      heroImage={heroImage}
-      size={size}
-    >
+    <Wrapper centerText={centerText} heroImage={heroImage} size={size}>
       <Breadcrumb value={breadcrumb} />
       <Title className={titleStyle} value={title} />
       <Deck center={centerText} shadow={true} value={deck} />
@@ -62,8 +55,8 @@ export function BreadcrumbLink({
   return (
     <a
       className={`
-        relative inline-block font-sans text-sm font-semibold tracking-wide
-        uppercase
+        relative inline-block font-sans text-sm font-bold tracking-wide
+        text-[#fff]/85 uppercase
         after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
         after:origin-center after:scale-x-0 after:bg-(--fg-inverse)/75
         after:transition-transform after:duration-500
@@ -140,13 +133,11 @@ function Title({
 }
 
 function Wrapper({
-  bottomShadow = false,
   centerText = false,
   children,
   heroImage,
   size = "default",
 }: {
-  bottomShadow?: boolean;
   centerText?: boolean;
   children: React.ReactNode;
   heroImage?: React.ReactNode;
@@ -182,16 +173,9 @@ function Wrapper({
           ${centerText ? "items-center" : ""}
           z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col
           px-container
-          ${
-            bottomShadow
-              ? `
-                after:absolute after:top-0 after:left-0 after:-z-10 after:h-full
-                after:w-full after:bg-linear-to-t after:from-[rgba(0,0,0,.85)]
-                after:to-50%
-                tablet:after:to-25%
-              `
-              : ""
-          }
+          after:absolute after:top-0 after:left-0 after:-z-10 after:h-full
+          after:w-full after:bg-linear-to-t after:from-[rgba(0,0,0,.5)]
+          after:via-25% after:to-[rgba(0,0,0,.2)] after:to-40%
         `}
       >
         {children}
