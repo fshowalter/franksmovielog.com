@@ -478,66 +478,6 @@ export function handleTitleFilterAction<
     : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
 }
 
-export function handleToggleReviewedAction<
-  TItem extends { slug?: string },
-  TSortValue,
-  TExtendedState extends { hideReviewed: boolean },
->(
-  state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
-  sortFn: (values: TItem[], sort: TSortValue) => TItem[],
-  groupFn?: GroupFn<TItem, TSortValue>,
-): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
-  const hideReviewed = !state.hideReviewed;
-
-  const filters = hideReviewed
-    ? {
-        ...state.filters,
-        hideReviewed: (value: TItem) => !value.slug,
-      }
-    : (() => {
-        const newFilters = { ...state.filters };
-        delete newFilters.hideReviewed;
-        return newFilters;
-      })();
-
-  const pendingFilters = hideReviewed
-    ? {
-        ...state.pendingFilters,
-        hideReviewed: (value: TItem) => !value.slug,
-      }
-    : (() => {
-        const newFilters = { ...state.pendingFilters };
-        delete newFilters.hideReviewed;
-        return newFilters;
-      })();
-
-  const filteredValues = sortFn(
-    filterValues({ filters, values: state.allValues }),
-    state.sortValue,
-  );
-
-  const pendingFilteredCount = filterValues({
-    filters: pendingFilters,
-    values: state.allValues,
-  }).length;
-
-  const valuesToGroup = state.showCount
-    ? filteredValues.slice(0, state.showCount)
-    : filteredValues;
-
-  return {
-    ...state,
-    filteredValues,
-    filters,
-    groupedValues: groupFn
-      ? groupFn(valuesToGroup, state.sortValue)
-      : new Map<string, TItem[]>(),
-    hideReviewed,
-    pendingFilteredCount,
-    pendingFilters,
-  };
-}
-
 export function sortGrade<T extends { gradeValue?: null | number }>() {
   return {
     "grade-asc": (a: T, b: T) =>
