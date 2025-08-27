@@ -174,7 +174,7 @@ export function ListWithFilters<T extends string>({
       <div className={`group/list-with-filters mx-auto bg-subtle`}>
         <div
           className={`
-            sticky top-[calc(0px_+_var(--scroll-offset,0px))] z-sticky
+            sticky top-[calc(0px_+_var(--scroll-offset,0px))] z-20
             scroll-mt-[calc(0px_+_var(--scroll-offset,0px))] border-b
             border-default bg-default text-xs
             tablet:col-span-full
