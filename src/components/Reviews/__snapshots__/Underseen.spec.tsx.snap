@@ -32045,7 +32045,7 @@ exports[`Underseen > renders 1`] = `
     >
       <div
         class="
-            sticky top-[calc(0px_+_var(--scroll-offset,0px))] z-sticky
+            sticky top-[calc(0px_+_var(--scroll-offset,0px))] z-20
             scroll-mt-[calc(0px_+_var(--scroll-offset,0px))] border-b
             border-default bg-default text-xs
             tablet:col-span-full
