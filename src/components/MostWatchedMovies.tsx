@@ -76,7 +76,8 @@ function ListItem({
         />
         <div
           className={`
-            mt-1 flex justify-start font-sans text-xs font-light text-subtle
+            mt-1 flex justify-start font-sans text-[13px] font-normal
+            text-subtle
             tablet:justify-center
           `}
         >

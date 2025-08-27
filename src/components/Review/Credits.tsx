@@ -96,10 +96,11 @@ export function Credits({
       <a
         className={`
           mx-auto mt-8 hidden w-full max-w-button transform-gpu
-          place-content-center items-center rounded-md py-5 font-sans text-xs
+          place-content-center items-center rounded-md py-5 font-sans text-sm
           tracking-wide uppercase shadow-all transition-all
           group-target/credits:flex
           hover:scale-105 hover:bg-footer hover:text-inverse
+          hover:drop-shadow-lg
         `}
         href="#top"
       >
@@ -112,7 +113,11 @@ export function Credits({
 function Credit({ term, value }: { term: string; value: React.ReactNode }) {
   return (
     <div>
-      <dt className="font-sans text-xxs tracking-wide text-subtle uppercase">
+      <dt
+        className={`
+          font-sans text-xs leading-4 tracking-wide text-subtle uppercase
+        `}
+      >
         {term}
       </dt>
       <dd className="font-normal text-wrap text-muted">{value}</dd>

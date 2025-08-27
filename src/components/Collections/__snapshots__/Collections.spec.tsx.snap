@@ -10,14 +10,15 @@ exports[`Collections > can clear all filters 1`] = `
 >
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -26,7 +27,8 @@ exports[`Collections > can clear all filters 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -40,7 +42,10 @@ exports[`Collections > can clear all filters 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -54,9 +59,11 @@ exports[`Collections > can clear all filters 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/friday-the-13th/"
       >
@@ -68,7 +75,7 @@ exports[`Collections > can clear all filters 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -79,14 +86,15 @@ exports[`Collections > can clear all filters 1`] = `
   </li>
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -95,7 +103,8 @@ exports[`Collections > can clear all filters 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -109,7 +118,10 @@ exports[`Collections > can clear all filters 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -123,9 +135,11 @@ exports[`Collections > can clear all filters 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/hammer-films/"
       >
@@ -137,7 +151,7 @@ exports[`Collections > can clear all filters 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -148,14 +162,15 @@ exports[`Collections > can clear all filters 1`] = `
   </li>
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -164,7 +179,8 @@ exports[`Collections > can clear all filters 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -178,7 +194,10 @@ exports[`Collections > can clear all filters 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -192,9 +211,11 @@ exports[`Collections > can clear all filters 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/hatchet/"
       >
@@ -206,7 +227,7 @@ exports[`Collections > can clear all filters 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -217,14 +238,15 @@ exports[`Collections > can clear all filters 1`] = `
   </li>
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -233,7 +255,8 @@ exports[`Collections > can clear all filters 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -247,7 +270,10 @@ exports[`Collections > can clear all filters 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -261,9 +287,11 @@ exports[`Collections > can clear all filters 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/james-bond/"
       >
@@ -275,7 +303,7 @@ exports[`Collections > can clear all filters 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -286,14 +314,15 @@ exports[`Collections > can clear all filters 1`] = `
   </li>
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -302,7 +331,8 @@ exports[`Collections > can clear all filters 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -316,7 +346,10 @@ exports[`Collections > can clear all filters 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -330,9 +363,11 @@ exports[`Collections > can clear all filters 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/shaw-brothers/"
       >
@@ -344,7 +379,7 @@ exports[`Collections > can clear all filters 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -366,14 +401,15 @@ exports[`Collections > can filter by name 1`] = `
 >
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -382,7 +418,8 @@ exports[`Collections > can filter by name 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -396,7 +433,10 @@ exports[`Collections > can filter by name 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -410,9 +450,11 @@ exports[`Collections > can filter by name 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/friday-the-13th/"
       >
@@ -424,7 +466,7 @@ exports[`Collections > can filter by name 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -446,14 +488,15 @@ exports[`Collections > can sort by name asc 1`] = `
 >
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -462,7 +505,8 @@ exports[`Collections > can sort by name asc 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -476,7 +520,10 @@ exports[`Collections > can sort by name asc 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -490,9 +537,11 @@ exports[`Collections > can sort by name asc 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/friday-the-13th/"
       >
@@ -504,7 +553,7 @@ exports[`Collections > can sort by name asc 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -515,14 +564,15 @@ exports[`Collections > can sort by name asc 1`] = `
   </li>
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -531,7 +581,8 @@ exports[`Collections > can sort by name asc 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -545,7 +596,10 @@ exports[`Collections > can sort by name asc 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -559,9 +613,11 @@ exports[`Collections > can sort by name asc 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/hammer-films/"
       >
@@ -573,7 +629,7 @@ exports[`Collections > can sort by name asc 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -584,14 +640,15 @@ exports[`Collections > can sort by name asc 1`] = `
   </li>
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -600,7 +657,8 @@ exports[`Collections > can sort by name asc 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -614,7 +672,10 @@ exports[`Collections > can sort by name asc 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -628,9 +689,11 @@ exports[`Collections > can sort by name asc 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/hatchet/"
       >
@@ -642,7 +705,7 @@ exports[`Collections > can sort by name asc 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -653,14 +716,15 @@ exports[`Collections > can sort by name asc 1`] = `
   </li>
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -669,7 +733,8 @@ exports[`Collections > can sort by name asc 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -683,7 +748,10 @@ exports[`Collections > can sort by name asc 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -697,9 +765,11 @@ exports[`Collections > can sort by name asc 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/james-bond/"
       >
@@ -711,7 +781,7 @@ exports[`Collections > can sort by name asc 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -722,14 +792,15 @@ exports[`Collections > can sort by name asc 1`] = `
   </li>
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -738,7 +809,8 @@ exports[`Collections > can sort by name asc 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -752,7 +824,10 @@ exports[`Collections > can sort by name asc 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -766,9 +841,11 @@ exports[`Collections > can sort by name asc 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/shaw-brothers/"
       >
@@ -780,7 +857,7 @@ exports[`Collections > can sort by name asc 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -802,14 +879,15 @@ exports[`Collections > can sort by name desc 1`] = `
 >
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -818,7 +896,8 @@ exports[`Collections > can sort by name desc 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -832,7 +911,10 @@ exports[`Collections > can sort by name desc 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -846,9 +928,11 @@ exports[`Collections > can sort by name desc 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/shaw-brothers/"
       >
@@ -860,7 +944,7 @@ exports[`Collections > can sort by name desc 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -871,14 +955,15 @@ exports[`Collections > can sort by name desc 1`] = `
   </li>
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -887,7 +972,8 @@ exports[`Collections > can sort by name desc 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -901,7 +987,10 @@ exports[`Collections > can sort by name desc 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -915,9 +1004,11 @@ exports[`Collections > can sort by name desc 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/james-bond/"
       >
@@ -929,7 +1020,7 @@ exports[`Collections > can sort by name desc 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -940,14 +1031,15 @@ exports[`Collections > can sort by name desc 1`] = `
   </li>
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -956,7 +1048,8 @@ exports[`Collections > can sort by name desc 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -970,7 +1063,10 @@ exports[`Collections > can sort by name desc 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -984,9 +1080,11 @@ exports[`Collections > can sort by name desc 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/hatchet/"
       >
@@ -998,7 +1096,7 @@ exports[`Collections > can sort by name desc 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -1009,14 +1107,15 @@ exports[`Collections > can sort by name desc 1`] = `
   </li>
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -1025,7 +1124,8 @@ exports[`Collections > can sort by name desc 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -1039,7 +1139,10 @@ exports[`Collections > can sort by name desc 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -1053,9 +1156,11 @@ exports[`Collections > can sort by name desc 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/hammer-films/"
       >
@@ -1067,7 +1172,7 @@ exports[`Collections > can sort by name desc 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -1078,14 +1183,15 @@ exports[`Collections > can sort by name desc 1`] = `
   </li>
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -1094,7 +1200,8 @@ exports[`Collections > can sort by name desc 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -1108,7 +1215,10 @@ exports[`Collections > can sort by name desc 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -1122,9 +1232,11 @@ exports[`Collections > can sort by name desc 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/friday-the-13th/"
       >
@@ -1136,7 +1248,7 @@ exports[`Collections > can sort by name desc 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -1158,14 +1270,15 @@ exports[`Collections > can sort by review count asc 1`] = `
 >
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -1174,7 +1287,8 @@ exports[`Collections > can sort by review count asc 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -1188,7 +1302,10 @@ exports[`Collections > can sort by review count asc 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -1202,9 +1319,11 @@ exports[`Collections > can sort by review count asc 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/hatchet/"
       >
@@ -1216,7 +1335,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -1227,14 +1346,15 @@ exports[`Collections > can sort by review count asc 1`] = `
   </li>
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -1243,7 +1363,8 @@ exports[`Collections > can sort by review count asc 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -1257,7 +1378,10 @@ exports[`Collections > can sort by review count asc 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -1271,9 +1395,11 @@ exports[`Collections > can sort by review count asc 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/friday-the-13th/"
       >
@@ -1285,7 +1411,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -1296,14 +1422,15 @@ exports[`Collections > can sort by review count asc 1`] = `
   </li>
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -1312,7 +1439,8 @@ exports[`Collections > can sort by review count asc 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -1326,7 +1454,10 @@ exports[`Collections > can sort by review count asc 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -1340,9 +1471,11 @@ exports[`Collections > can sort by review count asc 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/shaw-brothers/"
       >
@@ -1354,7 +1487,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -1365,14 +1498,15 @@ exports[`Collections > can sort by review count asc 1`] = `
   </li>
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -1381,7 +1515,8 @@ exports[`Collections > can sort by review count asc 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -1395,7 +1530,10 @@ exports[`Collections > can sort by review count asc 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -1409,9 +1547,11 @@ exports[`Collections > can sort by review count asc 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/james-bond/"
       >
@@ -1423,7 +1563,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -1434,14 +1574,15 @@ exports[`Collections > can sort by review count asc 1`] = `
   </li>
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -1450,7 +1591,8 @@ exports[`Collections > can sort by review count asc 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -1464,7 +1606,10 @@ exports[`Collections > can sort by review count asc 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -1478,9 +1623,11 @@ exports[`Collections > can sort by review count asc 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/hammer-films/"
       >
@@ -1492,7 +1639,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -1514,14 +1661,15 @@ exports[`Collections > can sort by review count desc 1`] = `
 >
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -1530,7 +1678,8 @@ exports[`Collections > can sort by review count desc 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -1544,7 +1693,10 @@ exports[`Collections > can sort by review count desc 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -1558,9 +1710,11 @@ exports[`Collections > can sort by review count desc 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/hammer-films/"
       >
@@ -1572,7 +1726,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -1583,14 +1737,15 @@ exports[`Collections > can sort by review count desc 1`] = `
   </li>
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -1599,7 +1754,8 @@ exports[`Collections > can sort by review count desc 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -1613,7 +1769,10 @@ exports[`Collections > can sort by review count desc 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -1627,9 +1786,11 @@ exports[`Collections > can sort by review count desc 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/james-bond/"
       >
@@ -1641,7 +1802,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -1652,14 +1813,15 @@ exports[`Collections > can sort by review count desc 1`] = `
   </li>
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -1668,7 +1830,8 @@ exports[`Collections > can sort by review count desc 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -1682,7 +1845,10 @@ exports[`Collections > can sort by review count desc 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -1696,9 +1862,11 @@ exports[`Collections > can sort by review count desc 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/shaw-brothers/"
       >
@@ -1710,7 +1878,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -1721,14 +1889,15 @@ exports[`Collections > can sort by review count desc 1`] = `
   </li>
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -1737,7 +1906,8 @@ exports[`Collections > can sort by review count desc 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -1751,7 +1921,10 @@ exports[`Collections > can sort by review count desc 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -1765,9 +1938,11 @@ exports[`Collections > can sort by review count desc 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/friday-the-13th/"
       >
@@ -1779,7 +1954,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >
@@ -1790,14 +1965,15 @@ exports[`Collections > can sort by review count desc 1`] = `
   </li>
   <li
     class="
-        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-4 bg-default px-container py-4
-        transition-transform
+        group/list-item relative mb-1 flex max-w-(--breakpoint-desktop) flex-row
+        gap-x-4 bg-default px-container py-4 transition-all
         tablet:gap-x-6 tablet:px-4
         tablet-landscape:has-[a:hover]:z-5
         tablet-landscape:has-[a:hover]:scale-[102.5%]
+        tablet-landscape:has-[a:hover]:transform-gpu
         tablet-landscape:has-[a:hover]:shadow-all
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
+        tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
         
       "
@@ -1806,7 +1982,8 @@ exports[`Collections > can sort by review count desc 1`] = `
       class="
           relative rounded-full
           after:absolute after:top-0 after:left-0 after:size-full
-          after:bg-default after:opacity-15 after:transition-opacity
+          after:bg-default after:opacity-20 after:transition-opacity
+          after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
           
         "
@@ -1820,7 +1997,10 @@ exports[`Collections > can sort by review count desc 1`] = `
       >
         <img
           alt=""
-          class="w-full"
+          class="
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      "
           height="80"
           loading="lazy"
           src="/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=80&h=80&q=80&f=avif"
@@ -1834,9 +2014,11 @@ exports[`Collections > can sort by review count desc 1`] = `
     >
       <a
         class="
-        leading-normal text-base font-semibold text-accent
+        leading-normal text-base font-semibold text-[#252525] transition-all
+        duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0
+        hover:text-accent
       "
         href="/collections/hatchet/"
       >
@@ -1848,7 +2030,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       </a>
       <div
         class="
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           "
       >

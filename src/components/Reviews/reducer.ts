@@ -13,6 +13,7 @@ import {
   createInitialState,
   getGroupLetter,
   handleGenreFilterAction,
+  handleGradeFilterAction,
   handleListWithFiltersAction,
   handleReleaseYearFilterAction,
   handleReviewYearFilterAction,
@@ -22,12 +23,7 @@ import {
   sortReleaseDate,
   sortReviewDate,
   sortTitle,
-  updatePendingFilter,
 } from "~/components/ListWithFilters.reducerUtils";
-
-enum ReviewsActions {
-  PENDING_FILTER_GRADE = "PENDING_FILTER_GRADE",
-}
 
 type ReviewsSort =
   | "grade-asc"
@@ -42,21 +38,12 @@ type ReviewsSort =
 // Re-export shared actions for component convenience
 export const Actions = {
   ...ListWithFiltersActions,
-  ...ReviewsActions,
 } as const;
 
-export type ActionType =
-  | ListWithFiltersActionType<ReviewsSort>
-  | PendingFilterGradeAction;
+export type ActionType = ListWithFiltersActionType<ReviewsSort>;
 
 // Re-export sort type for convenience
 export type Sort = ReviewsSort;
-
-// Grade filter is specific to Reviews
-type PendingFilterGradeAction = {
-  type: ReviewsActions.PENDING_FILTER_GRADE;
-  values: [number, number];
-};
 
 type State = ListWithFiltersState<ReviewsListItemValue, ReviewsSort>;
 
@@ -126,6 +113,10 @@ export function reducer(state: State, action: ActionType): State {
       return handleGenreFilterAction(state, action);
     }
 
+    case ListWithFiltersActions.PENDING_FILTER_GRADE: {
+      return handleGradeFilterAction(state, action);
+    }
+
     case ListWithFiltersActions.PENDING_FILTER_RELEASE_YEAR: {
       return handleReleaseYearFilterAction(state, action);
     }
@@ -136,14 +127,6 @@ export function reducer(state: State, action: ActionType): State {
 
     case ListWithFiltersActions.PENDING_FILTER_TITLE: {
       return handleTitleFilterAction(state, action);
-    }
-
-    case ReviewsActions.PENDING_FILTER_GRADE: {
-      const typedAction = action;
-      const filterFn = (value: ReviewsListItemValue) =>
-        value.gradeValue >= typedAction.values[0] &&
-        value.gradeValue <= typedAction.values[1];
-      return updatePendingFilter(state, "grade", filterFn, typedAction.values);
     }
 
     default: {

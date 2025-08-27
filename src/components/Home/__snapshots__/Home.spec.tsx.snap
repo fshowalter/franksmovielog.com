@@ -49,7 +49,6 @@ exports[`Home > matches snapshot 1`] = `
               <li
                 class="
         block leading-10 tracking-serif-wide whitespace-nowrap
-        transition-transform
         [body.nav-open_&]:opacity-0
       "
               >
@@ -58,7 +57,7 @@ exports[`Home > matches snapshot 1`] = `
           relative block text-inherit
           after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
           after:origin-center after:scale-x-0 after:bg-(--mast-color)/75
-          after:transition-transform
+          after:transition-transform after:duration-500
           hover:after:scale-x-100
         "
                   href="/"
@@ -70,7 +69,6 @@ exports[`Home > matches snapshot 1`] = `
               <li
                 class="
         block leading-10 tracking-serif-wide whitespace-nowrap
-        transition-transform
         [body.nav-open_&]:opacity-0
       "
               >
@@ -79,7 +77,7 @@ exports[`Home > matches snapshot 1`] = `
           relative block text-inherit
           after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
           after:origin-center after:scale-x-0 after:bg-(--mast-color)/75
-          after:transition-transform
+          after:transition-transform after:duration-500
           hover:after:scale-x-100
         "
                   href="/how-i-grade/"
@@ -91,7 +89,6 @@ exports[`Home > matches snapshot 1`] = `
               <li
                 class="
         block leading-10 tracking-serif-wide whitespace-nowrap
-        transition-transform
         [body.nav-open_&]:opacity-0
       "
               >
@@ -100,7 +97,7 @@ exports[`Home > matches snapshot 1`] = `
           relative block text-inherit
           after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
           after:origin-center after:scale-x-0 after:bg-(--mast-color)/75
-          after:transition-transform
+          after:transition-transform after:duration-500
           hover:after:scale-x-100
         "
                   href="/reviews/"
@@ -112,7 +109,6 @@ exports[`Home > matches snapshot 1`] = `
               <li
                 class="
         block leading-10 tracking-serif-wide whitespace-nowrap
-        transition-transform
         [body.nav-open_&]:opacity-0
       "
               >
@@ -121,7 +117,7 @@ exports[`Home > matches snapshot 1`] = `
           relative block text-inherit
           after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
           after:origin-center after:scale-x-0 after:bg-(--mast-color)/75
-          after:transition-transform
+          after:transition-transform after:duration-500
           hover:after:scale-x-100
         "
                   href="/viewings/"
@@ -133,7 +129,6 @@ exports[`Home > matches snapshot 1`] = `
               <li
                 class="
         block leading-10 tracking-serif-wide whitespace-nowrap
-        transition-transform
         [body.nav-open_&]:opacity-0
       "
               >
@@ -142,7 +137,7 @@ exports[`Home > matches snapshot 1`] = `
           relative block text-inherit
           after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
           after:origin-center after:scale-x-0 after:bg-(--mast-color)/75
-          after:transition-transform
+          after:transition-transform after:duration-500
           hover:after:scale-x-100
         "
                   href="/watchlist/"
@@ -235,8 +230,10 @@ exports[`Home > matches snapshot 1`] = `
           <nav
             aria-label="Main navigation"
           >
-            <ul
+            <ol
               class="
+        flex w-full flex-col gap-y-6
+        
             invisible fixed top-0 right-0 flex h-full w-0
             transform-[translateX(100%)] flex-col items-start gap-y-5
             overflow-hidden bg-footer text-left text-inverse opacity-0
@@ -251,7 +248,8 @@ exports[`Home > matches snapshot 1`] = `
             [body.nav-open_&]:pl-[12%] [body.nav-open_&]:opacity-100
             [body.nav-open_&]:drop-shadow-2xl [body.nav-open_&]:tablet:px-10
             [body.nav-open_&]:tablet:pt-40 [body.nav-open_&]:laptop:px-20
-          "
+          
+      "
               data-nav-menu="true"
               id="nav-menu"
             >
@@ -264,10 +262,11 @@ exports[`Home > matches snapshot 1`] = `
                 <a
                   class="
           relative inline-block origin-left transform-gpu transition-all
+          duration-500
           after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75
-          after:transition-transform
-          hover:after:scale-x-100
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                   href="/"
                 >
@@ -283,10 +282,11 @@ exports[`Home > matches snapshot 1`] = `
                 <a
                   class="
           relative inline-block origin-left transform-gpu transition-all
+          duration-500
           after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75
-          after:transition-transform
-          hover:after:scale-x-100
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                   href="/how-i-grade/"
                 >
@@ -302,10 +302,11 @@ exports[`Home > matches snapshot 1`] = `
                 <a
                   class="
           relative inline-block origin-left transform-gpu transition-all
+          duration-500
           after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75
-          after:transition-transform
-          hover:after:scale-x-100
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                   href="/reviews/"
                 >
@@ -316,19 +317,19 @@ exports[`Home > matches snapshot 1`] = `
                 >
                   <li
                     class="
-              mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                   >
                     <a
                       class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-inverse)/75 after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                       href="/cast-and-crew/"
                     >
@@ -337,19 +338,19 @@ exports[`Home > matches snapshot 1`] = `
                   </li>
                   <li
                     class="
-              mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                   >
                     <a
                       class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-inverse)/75 after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                       href="/collections/"
                     >
@@ -358,19 +359,19 @@ exports[`Home > matches snapshot 1`] = `
                   </li>
                   <li
                     class="
-              mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                   >
                     <a
                       class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-inverse)/75 after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                       href="/reviews/overrated/"
                     >
@@ -379,19 +380,19 @@ exports[`Home > matches snapshot 1`] = `
                   </li>
                   <li
                     class="
-              mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                   >
                     <a
                       class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-inverse)/75 after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                       href="/reviews/underrated/"
                     >
@@ -400,19 +401,19 @@ exports[`Home > matches snapshot 1`] = `
                   </li>
                   <li
                     class="
-              mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                   >
                     <a
                       class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-inverse)/75 after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                       href="/reviews/underseen/"
                     >
@@ -430,10 +431,11 @@ exports[`Home > matches snapshot 1`] = `
                 <a
                   class="
           relative inline-block origin-left transform-gpu transition-all
+          duration-500
           after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75
-          after:transition-transform
-          hover:after:scale-x-100
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                   href="/viewings/"
                 >
@@ -444,19 +446,19 @@ exports[`Home > matches snapshot 1`] = `
                 >
                   <li
                     class="
-              mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                   >
                     <a
                       class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-inverse)/75 after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                       href="/viewings/stats/"
                     >
@@ -474,10 +476,11 @@ exports[`Home > matches snapshot 1`] = `
                 <a
                   class="
           relative inline-block origin-left transform-gpu transition-all
+          duration-500
           after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75
-          after:transition-transform
-          hover:after:scale-x-100
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                   href="/watchlist/"
                 >
@@ -488,19 +491,19 @@ exports[`Home > matches snapshot 1`] = `
                 >
                   <li
                     class="
-              mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                   >
                     <a
                       class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
+                transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-inverse)/75 after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                       href="/watchlist/progress/"
                     >
@@ -509,7 +512,7 @@ exports[`Home > matches snapshot 1`] = `
                   </li>
                 </ol>
               </li>
-            </ul>
+            </ol>
           </nav>
         </div>
       </header>
@@ -542,18 +545,26 @@ exports[`Home > matches snapshot 1`] = `
           
           z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col
           px-container
-          
+          after:absolute after:top-0 after:left-0 after:-z-10 after:h-full
+          after:w-full after:bg-linear-to-t after:from-[rgba(0,0,0,.5)]
+          after:via-25% after:to-[rgba(0,0,0,.2)] after:to-40%
         "
           >
             <h1
-              class="[text-shadow:1px_1px_2px_black] text-[2rem] leading-10 tablet:text-4xl laptop:text-7xl"
+              class="
+          
+          text-[2rem] leading-10 font-extrabold
+          [text-shadow:1px_1px_2px_rgba(0,0,0,.25)]
+          tablet:text-4xl
+          laptop:text-7xl
+        "
               data-pagefind-weight="10"
             >
               Frank's Movie Log
             </h1>
             <p
               class="
-        mt-1 text-base
+        mt-1 font-sans text-base
         laptop:my-4 laptop:text-xl
         [text-shadow:1px_1px_2px_black]
         
@@ -567,10 +578,7 @@ exports[`Home > matches snapshot 1`] = `
           class="mx-auto max-w-(--breakpoint-desktop)"
         >
           <h2
-            class="
-          py-10 font-sans text-xs font-semibold tracking-wide text-subtle
-          uppercase
-         px-container"
+            class="py-10 font-sans text-xs font-bold tracking-wide text-subtle uppercase px-container"
           >
             Latest Reviews
           </h2>
@@ -585,20 +593,29 @@ exports[`Home > matches snapshot 1`] = `
           >
             <li
               class="
-        relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12
-        transition-transform
+        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
+        px-[8%] pt-12 transition-transform duration-500
         tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
-        tablet-landscape:has-[a:hover]:-translate-y-2
+        tablet-landscape:has-[a:hover]:scale-105
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
         laptop:max-w-[31.33%]
       "
             >
               <div
-                class="mb-6 block"
+                class="
+          relative mb-6 block overflow-hidden
+          after:absolute after:top-0 after:left-0 after:aspect-video
+          after:size-full after:bg-default after:opacity-15 after:duration-500
+          group-has-[a:hover]/list-item:after:opacity-0
+          tablet:after:inset-x-0 tablet:after:top-0
+        "
               >
                 <img
                   alt=""
-                  class="aspect-video h-auto w-full"
+                  class="aspect-video 
+            h-auto w-full transform-gpu transition-transform duration-500
+            group-has-[a:hover]/list-item:scale-105
+          "
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -617,7 +634,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <div
                   class="
-            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
             text-subtle uppercase
             laptop:tracking-wide
           "
@@ -626,13 +643,11 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium
-            before:absolute before:inset-x-[8%] before:top-12
-            before:aspect-video before:bg-default before:opacity-15
+            mb-3 block text-2.5xl leading-7 font-medium text-[#252525]
+            transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
-            hover:text-accent hover:before:opacity-0
-            tablet:before:inset-x-0 tablet:before:top-0
+            hover:text-accent
           "
                   href="/reviews/the-midnight-meat-train-2008/"
                 >
@@ -672,8 +687,7 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <div
                   class="
-            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
-            text-subtle
+            mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
             laptop:tracking-wide
           "
                 >
@@ -691,20 +705,29 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12
-        transition-transform
+        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
+        px-[8%] pt-12 transition-transform duration-500
         tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
-        tablet-landscape:has-[a:hover]:-translate-y-2
+        tablet-landscape:has-[a:hover]:scale-105
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
         laptop:max-w-[31.33%]
       "
             >
               <div
-                class="mb-6 block"
+                class="
+          relative mb-6 block overflow-hidden
+          after:absolute after:top-0 after:left-0 after:aspect-video
+          after:size-full after:bg-default after:opacity-15 after:duration-500
+          group-has-[a:hover]/list-item:after:opacity-0
+          tablet:after:inset-x-0 tablet:after:top-0
+        "
               >
                 <img
                   alt=""
-                  class="aspect-video h-auto w-full"
+                  class="aspect-video 
+            h-auto w-full transform-gpu transition-transform duration-500
+            group-has-[a:hover]/list-item:scale-105
+          "
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -723,7 +746,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <div
                   class="
-            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
             text-subtle uppercase
             laptop:tracking-wide
           "
@@ -732,13 +755,11 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium
-            before:absolute before:inset-x-[8%] before:top-12
-            before:aspect-video before:bg-default before:opacity-15
+            mb-3 block text-2.5xl leading-7 font-medium text-[#252525]
+            transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
-            hover:text-accent hover:before:opacity-0
-            tablet:before:inset-x-0 tablet:before:top-0
+            hover:text-accent
           "
                   href="/reviews/the-entity-1982/"
                 >
@@ -774,8 +795,7 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <div
                   class="
-            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
-            text-subtle
+            mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
             laptop:tracking-wide
           "
                 >
@@ -790,20 +810,29 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12
-        transition-transform
+        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
+        px-[8%] pt-12 transition-transform duration-500
         tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
-        tablet-landscape:has-[a:hover]:-translate-y-2
+        tablet-landscape:has-[a:hover]:scale-105
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
         laptop:max-w-[31.33%]
       "
             >
               <div
-                class="mb-6 block"
+                class="
+          relative mb-6 block overflow-hidden
+          after:absolute after:top-0 after:left-0 after:aspect-video
+          after:size-full after:bg-default after:opacity-15 after:duration-500
+          group-has-[a:hover]/list-item:after:opacity-0
+          tablet:after:inset-x-0 tablet:after:top-0
+        "
               >
                 <img
                   alt=""
-                  class="aspect-video h-auto w-full"
+                  class="aspect-video 
+            h-auto w-full transform-gpu transition-transform duration-500
+            group-has-[a:hover]/list-item:scale-105
+          "
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -822,7 +851,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <div
                   class="
-            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
             text-subtle uppercase
             laptop:tracking-wide
           "
@@ -831,13 +860,11 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium
-            before:absolute before:inset-x-[8%] before:top-12
-            before:aspect-video before:bg-default before:opacity-15
+            mb-3 block text-2.5xl leading-7 font-medium text-[#252525]
+            transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
-            hover:text-accent hover:before:opacity-0
-            tablet:before:inset-x-0 tablet:before:top-0
+            hover:text-accent
           "
                   href="/reviews/aqua-teen-forever-plantasm-2022/"
                 >
@@ -873,8 +900,7 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <div
                   class="
-            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
-            text-subtle
+            mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
             laptop:tracking-wide
           "
                 >
@@ -889,20 +915,29 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12
-        transition-transform
+        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
+        px-[8%] pt-12 transition-transform duration-500
         tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
-        tablet-landscape:has-[a:hover]:-translate-y-2
+        tablet-landscape:has-[a:hover]:scale-105
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
         laptop:max-w-[31.33%]
       "
             >
               <div
-                class="mb-6 block"
+                class="
+          relative mb-6 block overflow-hidden
+          after:absolute after:top-0 after:left-0 after:aspect-video
+          after:size-full after:bg-default after:opacity-15 after:duration-500
+          group-has-[a:hover]/list-item:after:opacity-0
+          tablet:after:inset-x-0 tablet:after:top-0
+        "
               >
                 <img
                   alt=""
-                  class="aspect-video h-auto w-full"
+                  class="aspect-video 
+            h-auto w-full transform-gpu transition-transform duration-500
+            group-has-[a:hover]/list-item:scale-105
+          "
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -921,7 +956,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <div
                   class="
-            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
             text-subtle uppercase
             laptop:tracking-wide
           "
@@ -930,13 +965,11 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium
-            before:absolute before:inset-x-[8%] before:top-12
-            before:aspect-video before:bg-default before:opacity-15
+            mb-3 block text-2.5xl leading-7 font-medium text-[#252525]
+            transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
-            hover:text-accent hover:before:opacity-0
-            tablet:before:inset-x-0 tablet:before:top-0
+            hover:text-accent
           "
                   href="/reviews/big-jim-mclain-1952/"
                 >
@@ -972,8 +1005,7 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <div
                   class="
-            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
-            text-subtle
+            mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
             laptop:tracking-wide
           "
                 >
@@ -997,20 +1029,29 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12
-        transition-transform
+        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
+        px-[8%] pt-12 transition-transform duration-500
         tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
-        tablet-landscape:has-[a:hover]:-translate-y-2
+        tablet-landscape:has-[a:hover]:scale-105
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
         laptop:max-w-[31.33%]
       "
             >
               <div
-                class="mb-6 block"
+                class="
+          relative mb-6 block overflow-hidden
+          after:absolute after:top-0 after:left-0 after:aspect-video
+          after:size-full after:bg-default after:opacity-15 after:duration-500
+          group-has-[a:hover]/list-item:after:opacity-0
+          tablet:after:inset-x-0 tablet:after:top-0
+        "
               >
                 <img
                   alt=""
-                  class="aspect-video h-auto w-full"
+                  class="aspect-video 
+            h-auto w-full transform-gpu transition-transform duration-500
+            group-has-[a:hover]/list-item:scale-105
+          "
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -1029,7 +1070,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <div
                   class="
-            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
             text-subtle uppercase
             laptop:tracking-wide
           "
@@ -1038,13 +1079,11 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium
-            before:absolute before:inset-x-[8%] before:top-12
-            before:aspect-video before:bg-default before:opacity-15
+            mb-3 block text-2.5xl leading-7 font-medium text-[#252525]
+            transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
-            hover:text-accent hover:before:opacity-0
-            tablet:before:inset-x-0 tablet:before:top-0
+            hover:text-accent
           "
                   href="/reviews/the-heavenly-body-1944/"
                 >
@@ -1080,8 +1119,7 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <div
                   class="
-            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
-            text-subtle
+            mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
             laptop:tracking-wide
           "
                 >
@@ -1096,20 +1134,29 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12
-        transition-transform
+        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
+        px-[8%] pt-12 transition-transform duration-500
         tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
-        tablet-landscape:has-[a:hover]:-translate-y-2
+        tablet-landscape:has-[a:hover]:scale-105
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
         laptop:max-w-[31.33%]
       "
             >
               <div
-                class="mb-6 block"
+                class="
+          relative mb-6 block overflow-hidden
+          after:absolute after:top-0 after:left-0 after:aspect-video
+          after:size-full after:bg-default after:opacity-15 after:duration-500
+          group-has-[a:hover]/list-item:after:opacity-0
+          tablet:after:inset-x-0 tablet:after:top-0
+        "
               >
                 <img
                   alt=""
-                  class="aspect-video h-auto w-full"
+                  class="aspect-video 
+            h-auto w-full transform-gpu transition-transform duration-500
+            group-has-[a:hover]/list-item:scale-105
+          "
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -1128,7 +1175,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <div
                   class="
-            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
             text-subtle uppercase
             laptop:tracking-wide
           "
@@ -1137,13 +1184,11 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium
-            before:absolute before:inset-x-[8%] before:top-12
-            before:aspect-video before:bg-default before:opacity-15
+            mb-3 block text-2.5xl leading-7 font-medium text-[#252525]
+            transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
-            hover:text-accent hover:before:opacity-0
-            tablet:before:inset-x-0 tablet:before:top-0
+            hover:text-accent
           "
                   href="/reviews/the-oklahoma-kid-1939/"
                 >
@@ -1179,8 +1224,7 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <div
                   class="
-            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
-            text-subtle
+            mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
             laptop:tracking-wide
           "
                 >
@@ -1195,20 +1239,29 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12
-        transition-transform
+        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
+        px-[8%] pt-12 transition-transform duration-500
         tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
-        tablet-landscape:has-[a:hover]:-translate-y-2
+        tablet-landscape:has-[a:hover]:scale-105
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
         laptop:max-w-[31.33%]
       "
             >
               <div
-                class="mb-6 block"
+                class="
+          relative mb-6 block overflow-hidden
+          after:absolute after:top-0 after:left-0 after:aspect-video
+          after:size-full after:bg-default after:opacity-15 after:duration-500
+          group-has-[a:hover]/list-item:after:opacity-0
+          tablet:after:inset-x-0 tablet:after:top-0
+        "
               >
                 <img
                   alt=""
-                  class="aspect-video h-auto w-full"
+                  class="aspect-video 
+            h-auto w-full transform-gpu transition-transform duration-500
+            group-has-[a:hover]/list-item:scale-105
+          "
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -1227,7 +1280,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <div
                   class="
-            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
             text-subtle uppercase
             laptop:tracking-wide
           "
@@ -1236,13 +1289,11 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium
-            before:absolute before:inset-x-[8%] before:top-12
-            before:aspect-video before:bg-default before:opacity-15
+            mb-3 block text-2.5xl leading-7 font-medium text-[#252525]
+            transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
-            hover:text-accent hover:before:opacity-0
-            tablet:before:inset-x-0 tablet:before:top-0
+            hover:text-accent
           "
                   href="/reviews/live-and-let-die-1973/"
                 >
@@ -1281,8 +1332,7 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <div
                   class="
-            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
-            text-subtle
+            mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
             laptop:tracking-wide
           "
                 >
@@ -1300,20 +1350,29 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12
-        transition-transform
+        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
+        px-[8%] pt-12 transition-transform duration-500
         tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
-        tablet-landscape:has-[a:hover]:-translate-y-2
+        tablet-landscape:has-[a:hover]:scale-105
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
         laptop:max-w-[31.33%]
       "
             >
               <div
-                class="mb-6 block"
+                class="
+          relative mb-6 block overflow-hidden
+          after:absolute after:top-0 after:left-0 after:aspect-video
+          after:size-full after:bg-default after:opacity-15 after:duration-500
+          group-has-[a:hover]/list-item:after:opacity-0
+          tablet:after:inset-x-0 tablet:after:top-0
+        "
               >
                 <img
                   alt=""
-                  class="aspect-video h-auto w-full"
+                  class="aspect-video 
+            h-auto w-full transform-gpu transition-transform duration-500
+            group-has-[a:hover]/list-item:scale-105
+          "
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -1332,7 +1391,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <div
                   class="
-            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
             text-subtle uppercase
             laptop:tracking-wide
           "
@@ -1341,13 +1400,11 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium
-            before:absolute before:inset-x-[8%] before:top-12
-            before:aspect-video before:bg-default before:opacity-15
+            mb-3 block text-2.5xl leading-7 font-medium text-[#252525]
+            transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
-            hover:text-accent hover:before:opacity-0
-            tablet:before:inset-x-0 tablet:before:top-0
+            hover:text-accent
           "
                   href="/reviews/pilgrimage-1933/"
                 >
@@ -1383,8 +1440,7 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <div
                   class="
-            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
-            text-subtle
+            mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
             laptop:tracking-wide
           "
                 >
@@ -1396,20 +1452,29 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12
-        transition-transform
+        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
+        px-[8%] pt-12 transition-transform duration-500
         tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
-        tablet-landscape:has-[a:hover]:-translate-y-2
+        tablet-landscape:has-[a:hover]:scale-105
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
         laptop:max-w-[31.33%]
       "
             >
               <div
-                class="mb-6 block"
+                class="
+          relative mb-6 block overflow-hidden
+          after:absolute after:top-0 after:left-0 after:aspect-video
+          after:size-full after:bg-default after:opacity-15 after:duration-500
+          group-has-[a:hover]/list-item:after:opacity-0
+          tablet:after:inset-x-0 tablet:after:top-0
+        "
               >
                 <img
                   alt=""
-                  class="aspect-video h-auto w-full"
+                  class="aspect-video 
+            h-auto w-full transform-gpu transition-transform duration-500
+            group-has-[a:hover]/list-item:scale-105
+          "
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -1428,7 +1493,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <div
                   class="
-            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
             text-subtle uppercase
             laptop:tracking-wide
           "
@@ -1437,13 +1502,11 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium
-            before:absolute before:inset-x-[8%] before:top-12
-            before:aspect-video before:bg-default before:opacity-15
+            mb-3 block text-2.5xl leading-7 font-medium text-[#252525]
+            transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
-            hover:text-accent hover:before:opacity-0
-            tablet:before:inset-x-0 tablet:before:top-0
+            hover:text-accent
           "
                   href="/reviews/no-time-to-die-2021/"
                 >
@@ -1482,8 +1545,7 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <div
                   class="
-            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
-            text-subtle
+            mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
             laptop:tracking-wide
           "
                 >
@@ -1501,20 +1563,29 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12
-        transition-transform
+        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
+        px-[8%] pt-12 transition-transform duration-500
         tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
-        tablet-landscape:has-[a:hover]:-translate-y-2
+        tablet-landscape:has-[a:hover]:scale-105
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
         laptop:max-w-[31.33%]
       "
             >
               <div
-                class="mb-6 block"
+                class="
+          relative mb-6 block overflow-hidden
+          after:absolute after:top-0 after:left-0 after:aspect-video
+          after:size-full after:bg-default after:opacity-15 after:duration-500
+          group-has-[a:hover]/list-item:after:opacity-0
+          tablet:after:inset-x-0 tablet:after:top-0
+        "
               >
                 <img
                   alt=""
-                  class="aspect-video h-auto w-full"
+                  class="aspect-video 
+            h-auto w-full transform-gpu transition-transform duration-500
+            group-has-[a:hover]/list-item:scale-105
+          "
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -1533,7 +1604,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <div
                   class="
-            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
             text-subtle uppercase
             laptop:tracking-wide
           "
@@ -1542,13 +1613,11 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium
-            before:absolute before:inset-x-[8%] before:top-12
-            before:aspect-video before:bg-default before:opacity-15
+            mb-3 block text-2.5xl leading-7 font-medium text-[#252525]
+            transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
-            hover:text-accent hover:before:opacity-0
-            tablet:before:inset-x-0 tablet:before:top-0
+            hover:text-accent
           "
                   href="/reviews/3-from-hell-2019/"
                 >
@@ -1592,8 +1661,7 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <div
                   class="
-            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
-            text-subtle
+            mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
             laptop:tracking-wide
           "
                 >
@@ -1608,20 +1676,29 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12
-        transition-transform
+        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
+        px-[8%] pt-12 transition-transform duration-500
         tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
-        tablet-landscape:has-[a:hover]:-translate-y-2
+        tablet-landscape:has-[a:hover]:scale-105
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
         laptop:max-w-[31.33%]
       "
             >
               <div
-                class="mb-6 block"
+                class="
+          relative mb-6 block overflow-hidden
+          after:absolute after:top-0 after:left-0 after:aspect-video
+          after:size-full after:bg-default after:opacity-15 after:duration-500
+          group-has-[a:hover]/list-item:after:opacity-0
+          tablet:after:inset-x-0 tablet:after:top-0
+        "
               >
                 <img
                   alt=""
-                  class="aspect-video h-auto w-full"
+                  class="aspect-video 
+            h-auto w-full transform-gpu transition-transform duration-500
+            group-has-[a:hover]/list-item:scale-105
+          "
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -1640,7 +1717,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <div
                   class="
-            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
             text-subtle uppercase
             laptop:tracking-wide
           "
@@ -1649,13 +1726,11 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium
-            before:absolute before:inset-x-[8%] before:top-12
-            before:aspect-video before:bg-default before:opacity-15
+            mb-3 block text-2.5xl leading-7 font-medium text-[#252525]
+            transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
-            hover:text-accent hover:before:opacity-0
-            tablet:before:inset-x-0 tablet:before:top-0
+            hover:text-accent
           "
                   href="/reviews/croupier-1998/"
                 >
@@ -1691,8 +1766,7 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <div
                   class="
-            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
-            text-subtle
+            mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
             laptop:tracking-wide
           "
                 >
@@ -1707,20 +1781,29 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12
-        transition-transform
+        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
+        px-[8%] pt-12 transition-transform duration-500
         tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
-        tablet-landscape:has-[a:hover]:-translate-y-2
+        tablet-landscape:has-[a:hover]:scale-105
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
         laptop:max-w-[31.33%]
       "
             >
               <div
-                class="mb-6 block"
+                class="
+          relative mb-6 block overflow-hidden
+          after:absolute after:top-0 after:left-0 after:aspect-video
+          after:size-full after:bg-default after:opacity-15 after:duration-500
+          group-has-[a:hover]/list-item:after:opacity-0
+          tablet:after:inset-x-0 tablet:after:top-0
+        "
               >
                 <img
                   alt=""
-                  class="aspect-video h-auto w-full"
+                  class="aspect-video 
+            h-auto w-full transform-gpu transition-transform duration-500
+            group-has-[a:hover]/list-item:scale-105
+          "
                   decoding="async"
                   height="360"
                   loading="lazy"
@@ -1739,7 +1822,7 @@ exports[`Home > matches snapshot 1`] = `
               >
                 <div
                   class="
-            mb-3 font-sans text-xxs leading-4 font-light tracking-wider
+            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
             text-subtle uppercase
             laptop:tracking-wide
           "
@@ -1748,13 +1831,11 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium
-            before:absolute before:inset-x-[8%] before:top-12
-            before:aspect-video before:bg-default before:opacity-15
+            mb-3 block text-2.5xl leading-7 font-medium text-[#252525]
+            transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
-            hover:text-accent hover:before:opacity-0
-            tablet:before:inset-x-0 tablet:before:top-0
+            hover:text-accent
           "
                   href="/reviews/harold-and-kumar-go-to-white-castle-2004/"
                 >
@@ -1790,8 +1871,7 @@ exports[`Home > matches snapshot 1`] = `
                 </div>
                 <div
                   class="
-            mt-auto font-sans text-xxs leading-4 font-light tracking-wider
-            text-subtle
+            mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
             laptop:tracking-wide
           "
                 >
@@ -1806,13 +1886,16 @@ exports[`Home > matches snapshot 1`] = `
             </li>
           </ul>
           <div
-            class="flex px-container py-10"
+            class="
+            flex px-container py-10
+            has-[a:hover]:drop-shadow-lg
+          "
           >
             <a
               class="
               group/all-reviews mx-auto w-full max-w-button transform-gpu
-              rounded-md bg-default pt-5 pb-4 text-center font-sans text-xs
-              font-semibold tracking-wide text-accent uppercase transition-all
+              rounded-md bg-default pt-5 pb-4 text-center font-sans text-sm
+              font-bold tracking-wide text-accent uppercase transition-all
               hover:scale-105 hover:bg-accent hover:text-inverse
             "
               href="/reviews/"
@@ -1823,7 +1906,7 @@ exports[`Home > matches snapshot 1`] = `
                 after:absolute after:bottom-0 after:left-0 after:h-0.5
                 after:w-full after:origin-center after:scale-x-0
                 after:transform-gpu after:bg-(--fg-inverse)
-                after:transition-transform
+                after:transition-transform after:duration-500
                 group-hover/all-reviews:after:scale-x-100
               "
               >
@@ -1848,9 +1931,10 @@ exports[`Home > matches snapshot 1`] = `
             <a
               class="
               mx-auto mb-8 w-full max-w-button transform-gpu rounded-md
-              bg-canvas py-5 text-center font-sans text-xs tracking-wide
-              text-default uppercase transition-all
+              bg-canvas py-5 text-center font-sans text-sm font-normal
+              tracking-wide text-default uppercase transition-all
               hover:scale-105 hover:bg-default hover:text-default
+              hover:drop-shadow-lg
               tablet:mx-0
             "
               href="#top"
@@ -1859,7 +1943,7 @@ exports[`Home > matches snapshot 1`] = `
             </a>
             <div
               class="
-        flex transform-gpu flex-col transition-transform
+        flex transform-gpu flex-col transition-transform duration-500
         has-[a:hover]:scale-105
         
       "
@@ -1896,9 +1980,7 @@ exports[`Home > matches snapshot 1`] = `
             "
             >
               <div
-                class="
-                pt-10 font-sans text-sm font-light text-inverse-subtle
-              "
+                class="pt-10 font-sans font-normal text-inverse-subtle"
               >
                 <p
                   class="
@@ -1932,7 +2014,7 @@ exports[`Home > matches snapshot 1`] = `
                   <a
                     class="
         underline
-        hover:text-inverse
+        hover:text-accent
       "
                     href="/how-i-grade/"
                   >
@@ -1942,7 +2024,7 @@ exports[`Home > matches snapshot 1`] = `
                   <a
                     class="
         underline
-        hover:text-inverse
+        hover:text-accent
       "
                     href="/reviews/"
                   >
@@ -1952,7 +2034,7 @@ exports[`Home > matches snapshot 1`] = `
                   <a
                     class="
         underline
-        hover:text-inverse
+        hover:text-accent
       "
                     href="/reviews/underseen/"
                   >
@@ -1962,7 +2044,7 @@ exports[`Home > matches snapshot 1`] = `
                   <a
                     class="
         underline
-        hover:text-inverse
+        hover:text-accent
       "
                     href="/reviews/overrated/"
                   >
@@ -1977,7 +2059,7 @@ exports[`Home > matches snapshot 1`] = `
                   <a
                     class="
         underline
-        hover:text-inverse
+        hover:text-accent
       "
                     href="/viewings/"
                   >
@@ -1987,7 +2069,7 @@ exports[`Home > matches snapshot 1`] = `
                   <a
                     class="
         underline
-        hover:text-inverse
+        hover:text-accent
       "
                     href="/viewings/stats/"
                   >
@@ -2002,7 +2084,7 @@ exports[`Home > matches snapshot 1`] = `
                   <a
                     class="
         underline
-        hover:text-inverse
+        hover:text-accent
       "
                     href="/watchlist/"
                   >
@@ -2023,22 +2105,26 @@ exports[`Home > matches snapshot 1`] = `
               tablet:basis-button tablet:pr-10
             "
             >
-              <ul
+              <ol
                 class="
-                flex w-full flex-col gap-y-10 text-inverse
-                desktop:w-auto
-              "
+        flex w-full flex-col gap-y-6
+        desktop:w-auto
+      "
               >
                 <li
-                  class="block w-1/2 text-2xl whitespace-nowrap"
+                  class="
+        block w-1/2 text-2xl whitespace-nowrap
+        laptop:w-full
+      "
                 >
                   <a
                     class="
           relative inline-block origin-left transform-gpu transition-all
-          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
-          after:transition-transform
-          hover:after:scale-x-100
+          duration-500
+          after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                     href="/"
                   >
@@ -2046,15 +2132,19 @@ exports[`Home > matches snapshot 1`] = `
                   </a>
                 </li>
                 <li
-                  class="block w-1/2 text-2xl whitespace-nowrap"
+                  class="
+        block w-1/2 text-2xl whitespace-nowrap
+        laptop:w-full
+      "
                 >
                   <a
                     class="
           relative inline-block origin-left transform-gpu transition-all
-          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
-          after:transition-transform
-          hover:after:scale-x-100
+          duration-500
+          after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                     href="/how-i-grade/"
                   >
@@ -2062,15 +2152,19 @@ exports[`Home > matches snapshot 1`] = `
                   </a>
                 </li>
                 <li
-                  class="block w-1/2 text-2xl whitespace-nowrap"
+                  class="
+        block w-1/2 text-2xl whitespace-nowrap
+        laptop:w-full
+      "
                 >
                   <a
                     class="
           relative inline-block origin-left transform-gpu transition-all
-          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
-          after:transition-transform
-          hover:after:scale-x-100
+          duration-500
+          after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                     href="/reviews/"
                   >
@@ -2081,19 +2175,19 @@ exports[`Home > matches snapshot 1`] = `
                   >
                     <li
                       class="
-              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                     >
                       <a
                         class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                transition-all duration-500
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                         href="/cast-and-crew/"
                       >
@@ -2102,19 +2196,19 @@ exports[`Home > matches snapshot 1`] = `
                     </li>
                     <li
                       class="
-              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                     >
                       <a
                         class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                transition-all duration-500
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                         href="/collections/"
                       >
@@ -2123,19 +2217,19 @@ exports[`Home > matches snapshot 1`] = `
                     </li>
                     <li
                       class="
-              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                     >
                       <a
                         class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                transition-all duration-500
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                         href="/reviews/overrated/"
                       >
@@ -2144,19 +2238,19 @@ exports[`Home > matches snapshot 1`] = `
                     </li>
                     <li
                       class="
-              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                     >
                       <a
                         class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                transition-all duration-500
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                         href="/reviews/underrated/"
                       >
@@ -2165,19 +2259,19 @@ exports[`Home > matches snapshot 1`] = `
                     </li>
                     <li
                       class="
-              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                     >
                       <a
                         class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                transition-all duration-500
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                         href="/reviews/underseen/"
                       >
@@ -2187,15 +2281,19 @@ exports[`Home > matches snapshot 1`] = `
                   </ol>
                 </li>
                 <li
-                  class="block w-1/2 text-2xl whitespace-nowrap"
+                  class="
+        block w-1/2 text-2xl whitespace-nowrap
+        laptop:w-full
+      "
                 >
                   <a
                     class="
           relative inline-block origin-left transform-gpu transition-all
-          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
-          after:transition-transform
-          hover:after:scale-x-100
+          duration-500
+          after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                     href="/viewings/"
                   >
@@ -2206,19 +2304,19 @@ exports[`Home > matches snapshot 1`] = `
                   >
                     <li
                       class="
-              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                     >
                       <a
                         class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                transition-all duration-500
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                         href="/viewings/stats/"
                       >
@@ -2228,15 +2326,19 @@ exports[`Home > matches snapshot 1`] = `
                   </ol>
                 </li>
                 <li
-                  class="block w-1/2 text-2xl whitespace-nowrap"
+                  class="
+        block w-1/2 text-2xl whitespace-nowrap
+        laptop:w-full
+      "
                 >
                   <a
                     class="
           relative inline-block origin-left transform-gpu transition-all
-          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted)
-          after:transition-transform
-          hover:after:scale-x-100
+          duration-500
+          after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:text-accent hover:after:scale-x-100
         "
                     href="/watchlist/"
                   >
@@ -2247,19 +2349,19 @@ exports[`Home > matches snapshot 1`] = `
                   >
                     <li
                       class="
-              mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle
-              uppercase
+              mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
+              text-inverse-subtle uppercase
               last:-mb-1
             "
                     >
                       <a
                         class="
                 relative inline-block origin-left transform-gpu pb-1
-                transition-all
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
+                transition-all duration-500
+                after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-(--fg-muted) after:transition-transform
-                hover:text-inverse hover:after:scale-x-100
+                after:bg-accent after:transition-transform after:duration-500
+                hover:text-accent hover:after:scale-x-100
               "
                         href="/watchlist/progress/"
                       >
@@ -2268,7 +2370,7 @@ exports[`Home > matches snapshot 1`] = `
                     </li>
                   </ol>
                 </li>
-              </ul>
+              </ol>
             </div>
           </div>
         </div>
@@ -2280,11 +2382,28 @@ exports[`Home > matches snapshot 1`] = `
         >
           All reviews by Frank Showalter. All images used in accordance with the 
           <a
-            class="text-inherit underline"
+            class="
+            relative inline-block pr-4 text-inherit underline underline-offset-3
+            hover:bg-default hover:text-accent
+          "
             href="http://www.copyright.gov/title17/92chap1.html#107"
             rel="nofollow"
           >
             Fair Use Law
+            <svg
+              class="absolute top-0.5 right-0 size-3"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </a>
           .
         </p>

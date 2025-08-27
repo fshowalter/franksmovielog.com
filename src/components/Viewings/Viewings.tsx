@@ -298,11 +298,11 @@ function CalendarHeader({
             aria-disabled={false}
             aria-label={`Navigate to previous month: ${prevMonthName}`}
             className={`
-              -mb-1 transform-gpu cursor-pointer pb-1 font-sans text-xs
-              font-medium text-accent transition-transform
+              -mb-1 transform-gpu cursor-pointer pb-1 font-sans text-sm
+              font-bold text-accent transition-transform
               after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-              after:origin-bottom-right after:scale-x-0 after:bg-(--fg-accent)
-              after:transition-transform
+              after:origin-bottom-right after:scale-x-0 after:bg-accent
+              after:transition-transform after:duration-500
               hover:after:scale-x-100
               tablet-landscape:tracking-wide tablet-landscape:uppercase
             `}
@@ -327,11 +327,11 @@ function CalendarHeader({
             aria-disabled={false}
             aria-label={`Navigate to next month: ${nextMonthName}`}
             className={`
-              -mb-1 transform-gpu cursor-pointer pb-1 font-sans text-xs
-              font-medium text-accent transition-transform
+              -mb-1 transform-gpu cursor-pointer pb-1 font-sans text-sm
+              font-bold text-accent transition-transform
               after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-              after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent)
-              after:transition-transform
+              after:origin-bottom-left after:scale-x-0 after:bg-accent
+              after:transition-transform after:duration-500
               hover:after:scale-x-100
               tablet-landscape:tracking-wide tablet-landscape:uppercase
             `}
@@ -486,7 +486,7 @@ function WeekdayHeader({ children }: { children: React.ReactNode }) {
     <th
       className={`
         border-separate border border-default px-2 py-3 text-center font-sans
-        text-xs font-light tracking-wide text-subtle uppercase
+        text-sm font-normal tracking-wide text-subtle uppercase
       `}
     >
       {children}

@@ -217,23 +217,66 @@ describe("Collection", () => {
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
-  it("can hide reviewed titles", async ({ expect }) => {
+  it("can filter reviewed titles", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Collection {...props} />);
 
-    await userEvent.click(screen.getByText("Hide Reviewed"));
+    await userEvent.selectOptions(
+      screen.getByLabelText("Reviewed Status"),
+      "Reviewed",
+    );
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });
 
-  it("can show hidden reviewed titles", async ({ expect }) => {
+  it("can show unreviewed titles", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Collection {...props} />);
 
-    await userEvent.click(screen.getByText("Hide Reviewed"));
-    await userEvent.click(screen.getByText("Show Reviewed"));
+    await userEvent.selectOptions(
+      screen.getByLabelText("Reviewed Status"),
+      "Not Reviewed",
+    );
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+  });
+
+  it("can show all titles", async ({ expect }) => {
+    expect.hasAssertions();
+
+    render(<Collection {...props} />);
+
+    await userEvent.selectOptions(
+      screen.getByLabelText("Reviewed Status"),
+      "Not Reviewed",
+    );
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    await userEvent.selectOptions(
+      screen.getByLabelText("Reviewed Status"),
+      "All",
+    );
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
 
     expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
   });

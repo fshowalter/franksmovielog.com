@@ -149,7 +149,7 @@ function LetterLink({
   return (
     <li
       className={`
-        snap-start text-center
+        snap-start text-center font-sans
         ${linkFunc ? "text-inverse" : `text-inverse-subtle`}
       `}
     >
@@ -157,7 +157,7 @@ function LetterLink({
         <a
           className={`
             block transform-gpu p-4 transition-all
-            hover:scale-105 hover:bg-accent hover:text-inverse
+            hover:scale-105 hover:bg-canvas hover:text-default
           `}
           href={linkFunc(letter)}
         >
@@ -190,8 +190,8 @@ function MemberListItem({ value }: { value: ListItemValue }): JSX.Element {
         </div>
         <div
           className={`
-            mt-[6px] font-sans text-xs font-light tracking-prose text-nowrap
-            text-subtle
+            mt-[6px] font-sans text-[13px] font-normal tracking-prose
+            text-nowrap text-subtle
           `}
         >
           {value.reviewCount} Reviews

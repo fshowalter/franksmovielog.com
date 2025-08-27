@@ -26,7 +26,7 @@ export function WatchlistTitleSlug({
   return (
     <div
       className={`
-        font-sans text-xs leading-4 font-light tracking-prose text-muted
+        font-sans text-sm leading-4 font-normal tracking-prose text-subtle
       `}
     >
       Because {toSentence(credits)}.

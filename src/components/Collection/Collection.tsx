@@ -50,7 +50,6 @@ export function Collection({
   distinctReviewYears,
   initialSort,
   titles,
-  value,
 }: Props): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
@@ -70,9 +69,7 @@ export function Collection({
           distinctReleaseYears={distinctReleaseYears}
           distinctReviewYears={distinctReviewYears}
           filterValues={state.pendingFilterValues}
-          hideReviewed={state.hideReviewed}
           key={filterKey}
-          showHideReviewed={value.reviewCount != titles.length}
         />
       }
       hasActiveFilters={state.hasActiveFilters}

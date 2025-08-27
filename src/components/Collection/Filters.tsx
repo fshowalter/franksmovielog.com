@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 
-import { Button } from "~/components/Button";
+import { SelectField } from "~/components/SelectField";
 import { TextFilter } from "~/components/TextFilter";
 import { YearInput } from "~/components/YearInput";
 
@@ -19,25 +19,33 @@ export function Filters({
   distinctReleaseYears,
   distinctReviewYears,
   filterValues,
-  hideReviewed,
-  showHideReviewed,
 }: {
   dispatch: React.Dispatch<ActionType>;
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   filterValues: FilterValues;
-  hideReviewed: boolean;
-  showHideReviewed: boolean;
 }): JSX.Element {
   return (
     <>
-      {showHideReviewed && (
-        <div className="flex basis-full flex-col items-center justify-end">
-          <Button onClick={() => dispatch({ type: Actions.TOGGLE_REVIEWED })}>
-            {hideReviewed ? "Show Reviewed" : "Hide Reviewed"}
-          </Button>
-        </div>
-      )}
+      <SelectField
+        label="Reviewed Status"
+        onChange={(e) =>
+          dispatch({
+            type: Actions.PENDING_FILTER_REVIEW_STATUS,
+            value: e.target.value,
+          })
+        }
+      >
+        <option key={0} value={"All"}>
+          All
+        </option>
+        <option key={1} value={"Reviewed"}>
+          Reviewed
+        </option>
+        <option key={2} value={"Not Reviewed"}>
+          Not Reviewed
+        </option>
+      </SelectField>
       <TextFilter
         initialValue={filterValues.title || ""}
         label="Title"

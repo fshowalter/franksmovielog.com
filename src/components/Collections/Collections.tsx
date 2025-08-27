@@ -93,7 +93,7 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
         <ListItemName href={`/collections/${value.slug}/`} name={value.name} />
         <div
           className={`
-            mt-1 font-sans text-xs font-light tracking-prose text-nowrap
+            font-sans text-[13px] font-normal tracking-prose text-nowrap
             text-subtle
           `}
         >

@@ -86,27 +86,27 @@
 
 @layer base {
   :root {
-    --bg-accent: #a52422;
-    --bg-canvas: #dfdfdf;
+    --bg-accent: #946d19;
+    --bg-canvas: #f4f1ea;
     --bg-default: #fff;
-    --bg-footer: #252525;
+    --bg-footer: #2b292b;
     --bg-hover: #f7f5f3;
     --bg-inverse: rgb(0 0 0 / 75%);
     --bg-progress: #14bd41;
     --bg-stripe: #fcfcfc;
     --bg-unreviewed: #fcfcfc;
     --bg-group: #ededed;
-    --bg-subtle: #fafafa;
+    --bg-subtle: #f9f7f4;
     --border-default: #e9e7e0;
-    --fg-accent: #a52422;
+    --fg-accent: #946d19;
     --fg-default: #252525;
     --fg-inverse: #fff;
     --fg-inverse-subtle: #b0b0b0;
     --fg-muted: #4a4a4a;
-    --fg-subtle: #575757;
+    --fg-subtle: rgb(0 0 0 / 60%);
     --image-filter: initial;
     --container-padding: 8%;
-    --font-sans: "ArgentumSans";
+    --font-sans: "Assistant";
     --font-serif: "FrankRuhlLibre";
     --list-item-poster-width: 64px;
 
@@ -165,34 +165,10 @@
 
   @font-face {
     font-display: swap;
-    font-family: ArgentumSans;
+    font-family: Assistant;
     font-style: normal;
-    font-weight: 600;
-    src: url("/fonts/ArgentumSans/ArgentumSans-SemiBold.woff2") format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: ArgentumSans;
-    font-style: normal;
-    font-weight: 500;
-    src: url("/fonts/ArgentumSans/ArgentumSans-Medium.woff2") format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: ArgentumSans;
-    font-style: normal;
-    font-weight: 300;
-    src: url("/fonts/ArgentumSans/ArgentumSans-Light.woff2") format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: ArgentumSans;
-    font-style: normal;
-    font-weight: normal;
-    src: url("/fonts/ArgentumSans/ArgentumSans-Regular.woff2") format("woff2");
+    font-weight: 200 800;
+    src: url("/fonts/Assistant/Assistant.woff2") format("woff2");
   }
 
   @font-face {
@@ -200,7 +176,7 @@
     font-family: FrankRuhlLibre;
     font-style: normal;
     font-weight: 300 900;
-    src: url("/fonts/Frank-Ruhl-Libre/Frank-Ruhl-Libre_latin_300 900_normal.woff2")
+    src: url("/fonts/Frank-Ruhl-Libre/Frank-Ruhl-Libre_latin_300-900_normal.woff2")
       format("woff2");
     unicode-range:
       U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
@@ -298,6 +274,30 @@
       text-decoration-thickness: auto;
     }
 
+    .data-footnote-backref {
+      display: inline-block;
+      position: relative;
+      text-decoration: none;
+    }
+
+    .data-footnote-backref::after {
+      background-color: var(--bg-accent);
+      bottom: 1px;
+      content: "";
+      height: 1px;
+      left: 0;
+      position: absolute;
+      transform: scale(0, 1);
+      transform-origin: center;
+      transition: all;
+      transition-duration: 500ms;
+      width: 100%;
+    }
+
+    .data-footnote-backref:hover::after {
+      transform: scale(1, 1);
+    }
+
     sup a {
       border: solid 1px var(--border-default);
       border-radius: 3em;
@@ -314,8 +314,9 @@
 
     sup a:hover {
       background-color: var(--bg-accent);
-      border-color: var(--fg-accent);
+      border-color: transparent;
       color: var(--fg-inverse);
+      filter: drop-shadow(0 1px 2px rgb(0 0 0 / 15%));
     }
 
     sup {
@@ -325,6 +326,7 @@
     sup:hover {
       transform: scale(1.1);
       transition: all;
+      transition-duration: 500ms;
     }
 
     p {
@@ -417,9 +419,9 @@
 
       li {
         font-family: var(--font-sans);
-        font-size: 0.875rem;
-        font-weight: 300;
-        line-height: 1.25rem;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5rem;
       }
 
       li::before {

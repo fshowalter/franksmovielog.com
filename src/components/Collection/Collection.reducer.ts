@@ -10,9 +10,9 @@ import {
   getGroupLetter,
   handleListWithFiltersAction,
   handleReleaseYearFilterAction,
+  handleReviewStatusFilterAction,
   handleReviewYearFilterAction,
   handleTitleFilterAction,
-  handleToggleReviewedAction,
   ListWithFiltersActions,
   sortGrade,
   sortReleaseDate,
@@ -24,10 +24,6 @@ import {
  * Collection reducer with pending filters support
  */
 import type { ListItemValue } from "./Collection";
-
-enum CollectionActions {
-  TOGGLE_REVIEWED = "TOGGLE_REVIEWED",
-}
 
 export type Sort =
   | "grade-asc"
@@ -42,18 +38,11 @@ export type Sort =
 // Re-export shared actions for component convenience
 export const Actions = {
   ...ListWithFiltersActions,
-  ...CollectionActions,
 } as const;
 
-export type ActionType = ListWithFiltersActionType<Sort> | ToggleReviewedAction;
+export type ActionType = ListWithFiltersActionType<Sort>;
 
-type State = ListWithFiltersState<ListItemValue, Sort> & {
-  hideReviewed: boolean;
-};
-
-type ToggleReviewedAction = {
-  type: CollectionActions.TOGGLE_REVIEWED;
-};
+type State = ListWithFiltersState<ListItemValue, Sort>;
 
 // Helper functions
 function getReviewDateGroup(value: ListItemValue): string {
@@ -107,43 +96,34 @@ export function initState({
 
   return {
     ...baseState,
-    hideReviewed: false,
   };
 }
 
 export function reducer(state: State, action: ActionType): State {
   switch (action.type) {
-    case CollectionActions.TOGGLE_REVIEWED: {
-      return handleToggleReviewedAction(state, sortValues, groupValues);
+    case ListWithFiltersActions.PENDING_FILTER_RELEASE_YEAR: {
+      return handleReleaseYearFilterAction(state, action);
     }
 
     // Field-specific shared filters
-    case ListWithFiltersActions.PENDING_FILTER_RELEASE_YEAR: {
-      return handleReleaseYearFilterAction(state, action, {
-        hideReviewed: state.hideReviewed,
-      });
+    case ListWithFiltersActions.PENDING_FILTER_REVIEW_STATUS: {
+      return handleReviewStatusFilterAction(state, action);
     }
 
     case ListWithFiltersActions.PENDING_FILTER_REVIEW_YEAR: {
-      return handleReviewYearFilterAction(state, action, {
-        hideReviewed: state.hideReviewed,
-      });
+      return handleReviewYearFilterAction(state, action);
     }
 
     case ListWithFiltersActions.PENDING_FILTER_TITLE: {
-      return handleTitleFilterAction(state, action, {
-        hideReviewed: state.hideReviewed,
-      });
+      return handleTitleFilterAction(state, action);
     }
 
     default: {
       // Handle shared list structure actions
-      return handleListWithFiltersAction(
-        state,
-        action,
-        { groupFn: groupValues, sortFn: sortValues },
-        { hideReviewed: state.hideReviewed },
-      );
+      return handleListWithFiltersAction(state, action, {
+        groupFn: groupValues,
+        sortFn: sortValues,
+      });
     }
   }
 }

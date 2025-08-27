@@ -18,7 +18,7 @@ export function StatsNavigation({
       <ul
         className={`
           mx-auto flex scrollbar-hidden max-w-(--breakpoint-desktop) snap-x
-          overflow-x-auto px-container font-sans text-sm font-normal
+          overflow-x-auto px-container font-sans text-base font-semibold
           tracking-wide
           laptop:justify-center
         `}
@@ -66,7 +66,7 @@ function AllTimeLink({
         <a
           className={`
             group/all-time block transform-gpu px-4 pt-4 pb-3 whitespace-nowrap
-            transition-all
+            transition-all duration-500
             hover:bg-accent hover:text-inverse
           `}
           href={linkFunc("all")}
@@ -77,6 +77,7 @@ function AllTimeLink({
               after:absolute after:bottom-0 after:left-0 after:h-0.5
               after:w-full after:origin-center after:scale-x-0
               after:bg-(--fg-inverse) after:transition-transform
+              after:duration-500
               group-hover/all-time:after:scale-x-100
             `}
           >
@@ -117,6 +118,7 @@ function YearLink({
         <a
           className={`
             group/year block transform-gpu px-4 pt-4 pb-3 transition-all
+            duration-500
             hover:bg-accent hover:text-inverse
           `}
           href={linkFunc(year)}
@@ -127,6 +129,7 @@ function YearLink({
               after:absolute after:bottom-0 after:left-0 after:h-0.5
               after:w-full after:origin-center after:scale-x-0
               after:bg-(--fg-inverse) after:transition-transform
+              after:duration-500
               group-hover/year:after:scale-x-100
             `}
           >

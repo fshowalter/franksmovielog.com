@@ -106,7 +106,7 @@ export function PosterListItem({
       className={`
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
         transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform
+        transition-transform duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
         tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
@@ -129,18 +129,23 @@ function PosterListItemPoster({
     <div
       className={`
         relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all transition-transform
+        rounded-sm shadow-all
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-opacity
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
         group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-auto
+        tablet:w-full
       `}
     >
       <img
         {...imageProps}
         alt=""
         {...PosterListItemImageConfig}
-        className="aspect-poster w-full object-cover"
+        className={`
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        `}
         decoding="async"
         loading="lazy"
       />

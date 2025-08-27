@@ -9,7 +9,6 @@ export const BackdropImageConfig = {
 };
 
 export function Backdrop({
-  bottomShadow = false,
   breadcrumb,
   centerText = false,
   deck,
@@ -18,7 +17,6 @@ export function Backdrop({
   title,
   titleStyle,
 }: {
-  bottomShadow?: boolean;
   breadcrumb?: React.ReactNode;
   centerText?: boolean;
   deck?: React.ReactNode;
@@ -39,12 +37,7 @@ export function Backdrop({
   );
 
   return (
-    <Wrapper
-      bottomShadow={bottomShadow}
-      centerText={centerText}
-      heroImage={heroImage}
-      size={size}
-    >
+    <Wrapper centerText={centerText} heroImage={heroImage} size={size}>
       <Breadcrumb value={breadcrumb} />
       <Title className={titleStyle} value={title} />
       <Deck center={centerText} shadow={true} value={deck} />
@@ -62,10 +55,11 @@ export function BreadcrumbLink({
   return (
     <a
       className={`
-        relative inline-block font-sans text-sm tracking-wide uppercase
+        relative inline-block font-sans text-sm font-bold tracking-wide
+        text-[#fff]/85 uppercase
         after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
         after:origin-center after:scale-x-0 after:bg-(--fg-inverse)/75
-        after:transition-transform
+        after:transition-transform after:duration-500
         hover:after:scale-x-100
       `}
       href={href}
@@ -80,7 +74,7 @@ function Breadcrumb({ value }: { value?: React.ReactNode }) {
     return false;
   }
 
-  return <p className="mb-2">{value}</p>;
+  return <p className="mb-4">{value}</p>;
 }
 
 function Deck({
@@ -99,7 +93,7 @@ function Deck({
   return (
     <p
       className={`
-        mt-1 text-base
+        mt-1 font-sans text-base
         laptop:my-4 laptop:text-xl
         ${shadow ? `[text-shadow:1px_1px_2px_black]` : ""}
         ${center ? `text-center` : ""}
@@ -124,9 +118,10 @@ function Title({
       className={
         className ||
         `
-          font-sans
           ${center ? "text-center" : ""}
-          text-2xl font-bold tracking-widest uppercase
+          text-[2rem] leading-10 font-extrabold
+          [text-shadow:1px_1px_2px_rgba(0,0,0,.25)]
+          tablet:text-4xl
           laptop:text-7xl
         `
       }
@@ -138,13 +133,11 @@ function Title({
 }
 
 function Wrapper({
-  bottomShadow = false,
   centerText = false,
   children,
   heroImage,
   size = "default",
 }: {
-  bottomShadow?: boolean;
   centerText?: boolean;
   children: React.ReactNode;
   heroImage?: React.ReactNode;
@@ -180,16 +173,9 @@ function Wrapper({
           ${centerText ? "items-center" : ""}
           z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col
           px-container
-          ${
-            bottomShadow
-              ? `
-                after:absolute after:top-0 after:left-0 after:-z-10 after:h-full
-                after:w-full after:bg-linear-to-t after:from-[rgba(0,0,0,.85)]
-                after:to-50%
-                tablet:after:to-25%
-              `
-              : ""
-          }
+          after:absolute after:top-0 after:left-0 after:-z-10 after:h-full
+          after:w-full after:bg-linear-to-t after:from-[rgba(0,0,0,.5)]
+          after:via-25% after:to-[rgba(0,0,0,.2)] after:to-40%
         `}
       >
         {children}

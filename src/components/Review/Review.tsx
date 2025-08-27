@@ -69,10 +69,10 @@ export function Review({
         <nav className={`transform-gpu pb-2 transition-transform`}>
           <a
             className={`
-              relative inline-block pb-1 font-sans text-xs tracking-wider
+              relative inline-block pb-1 font-sans text-[13px] tracking-wider
               text-subtle uppercase transition-all
               after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-              after:origin-center after:scale-x-0 after:bg-(--fg-accent)
+              after:origin-center after:scale-x-0 after:bg-accent
               after:transition-transform
               hover:text-accent hover:after:scale-x-100
             `}
@@ -163,7 +163,7 @@ export function Review({
                 transition-transform
                 after:absolute after:bottom-0 after:left-0 after:h-px
                 after:w-full after:origin-bottom-right after:scale-x-0
-                after:bg-(--fg-accent) after:transition-transform
+                after:bg-accent after:transition-transform
                 hover:after:scale-x-100
               `}
               href={`/reviews/`}
@@ -213,7 +213,7 @@ function Meta({
   return (
     <div
       className={ccn(
-        "text-center font-sans text-xs tracking-wide text-subtle uppercase",
+        "text-center font-sans text-sm tracking-wide text-subtle uppercase",
         className,
       )}
     >
@@ -224,7 +224,7 @@ function Meta({
         <span>|</span>{" "}
         <a
           className={`
-            relative -mb-1 inline-block origin-bottom-left pb-1 text-default
+            relative -mb-1 inline-block origin-bottom-left pb-1 text-[#333]
             after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
             after:origin-left after:scale-x-0 after:bg-(--fg-default)/80
             after:transition-transform

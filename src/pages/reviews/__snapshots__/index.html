@@ -9,6 +9,18 @@
     <link href="/apple-touch-icon.png" rel="apple-touch-icon" />
     <link href="/site.webmanifest" rel="manifest" />
     <link href="/sitemap-index.xml" rel="sitemap" />
+    <link
+      as="font"
+      href="/fonts/Assistant/Assistant.woff2"
+      rel="preload"
+      type="font/woff2"
+    />
+    <link
+      as="font"
+      href="/fonts/Frank-Ruhl-Libre/Frank-Ruhl-Libre_latin_300-900_normal.woff2"
+      rel="preload"
+      type="font/woff2"
+    />
     <meta
       content="All my movie reviews, from 2003 to present day. Filter by title, genre, review date, release date, or grade. Sort by best or worst, oldest or newest, or title."
       name="description"
@@ -263,7 +275,7 @@
           "
         >
           <div
-            class="flex transform-gpu flex-col transition-transform has-[a:hover]:scale-105"
+            class="flex transform-gpu flex-col transition-transform duration-500 has-[a:hover]:scale-105"
           >
             <div
               class="text-[1.375rem] leading-8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
@@ -278,50 +290,50 @@
             <nav class="hidden w-full laptop:block laptop:w-auto">
               <ul class="flex flex-wrap justify-start gap-x-6 text-xl">
                 <li
-                  class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform [body.nav-open_&amp;]:opacity-0"
+                  class="block leading-10 tracking-serif-wide whitespace-nowrap [body.nav-open_&amp;]:opacity-0"
                 >
                   <a
-                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-(--mast-color)/75 after:transition-transform hover:after:scale-x-100"
+                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-(--mast-color)/75 after:transition-transform after:duration-500 hover:after:scale-x-100"
                     href="/"
                     style="text-shadow: 1px 1px 2px black"
                     >Home</a
                   >
                 </li>
                 <li
-                  class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform [body.nav-open_&amp;]:opacity-0"
+                  class="block leading-10 tracking-serif-wide whitespace-nowrap [body.nav-open_&amp;]:opacity-0"
                 >
                   <a
-                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-(--mast-color)/75 after:transition-transform hover:after:scale-x-100"
+                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-(--mast-color)/75 after:transition-transform after:duration-500 hover:after:scale-x-100"
                     href="/how-i-grade/"
                     style="text-shadow: 1px 1px 2px black"
                     >How I Grade</a
                   >
                 </li>
                 <li
-                  class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform [body.nav-open_&amp;]:opacity-0"
+                  class="block leading-10 tracking-serif-wide whitespace-nowrap [body.nav-open_&amp;]:opacity-0"
                 >
                   <a
-                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-(--mast-color)/75 after:transition-transform hover:after:scale-x-100"
+                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-(--mast-color)/75 after:transition-transform after:duration-500 hover:after:scale-x-100"
                     href="/reviews/"
                     style="text-shadow: 1px 1px 2px black"
                     >Reviews</a
                   >
                 </li>
                 <li
-                  class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform [body.nav-open_&amp;]:opacity-0"
+                  class="block leading-10 tracking-serif-wide whitespace-nowrap [body.nav-open_&amp;]:opacity-0"
                 >
                   <a
-                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-(--mast-color)/75 after:transition-transform hover:after:scale-x-100"
+                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-(--mast-color)/75 after:transition-transform after:duration-500 hover:after:scale-x-100"
                     href="/viewings/"
                     style="text-shadow: 1px 1px 2px black"
                     >Viewing Log</a
                   >
                 </li>
                 <li
-                  class="block leading-10 tracking-serif-wide whitespace-nowrap transition-transform [body.nav-open_&amp;]:opacity-0"
+                  class="block leading-10 tracking-serif-wide whitespace-nowrap [body.nav-open_&amp;]:opacity-0"
                 >
                   <a
-                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-(--mast-color)/75 after:transition-transform hover:after:scale-x-100"
+                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-(--mast-color)/75 after:transition-transform after:duration-500 hover:after:scale-x-100"
                     href="/watchlist/"
                     style="text-shadow: 1px 1px 2px black"
                     >Watchlist</a
@@ -375,8 +387,8 @@
               ></span>
             </button>
             <nav aria-label="Main navigation">
-              <ul
-                class="invisible fixed top-0 right-0 flex h-full w-0 transform-[translateX(100%)] flex-col items-start gap-y-5 overflow-hidden bg-footer text-left text-inverse opacity-0 duration-200 ease-in-out tablet:max-w-[35vw] tablet:gap-y-10 laptop:max-w-[25vw] [body.nav-open_&amp;]:visible [body.nav-open_&amp;]:bottom-0 [body.nav-open_&amp;]:z-nav-menu [body.nav-open_&amp;]:h-full [body.nav-open_&amp;]:w-full [body.nav-open_&amp;]:transform-[translateX(0)] [body.nav-open_&amp;]:overflow-y-auto [body.nav-open_&amp;]:pt-20 [body.nav-open_&amp;]:pr-[16%] [body.nav-open_&amp;]:pb-5 [body.nav-open_&amp;]:pl-[12%] [body.nav-open_&amp;]:opacity-100 [body.nav-open_&amp;]:drop-shadow-2xl [body.nav-open_&amp;]:tablet:px-10 [body.nav-open_&amp;]:tablet:pt-40 [body.nav-open_&amp;]:laptop:px-20"
+              <ol
+                class="flex w-full flex-col gap-y-6 invisible fixed top-0 right-0 flex h-full w-0 transform-[translateX(100%)] flex-col items-start gap-y-5 overflow-hidden bg-footer text-left text-inverse opacity-0 duration-200 ease-in-out tablet:max-w-[35vw] tablet:gap-y-10 laptop:max-w-[25vw] [body.nav-open_&amp;]:visible [body.nav-open_&amp;]:bottom-0 [body.nav-open_&amp;]:z-nav-menu [body.nav-open_&amp;]:h-full [body.nav-open_&amp;]:w-full [body.nav-open_&amp;]:transform-[translateX(0)] [body.nav-open_&amp;]:overflow-y-auto [body.nav-open_&amp;]:pt-20 [body.nav-open_&amp;]:pr-[16%] [body.nav-open_&amp;]:pb-5 [body.nav-open_&amp;]:pl-[12%] [body.nav-open_&amp;]:opacity-100 [body.nav-open_&amp;]:drop-shadow-2xl [body.nav-open_&amp;]:tablet:px-10 [body.nav-open_&amp;]:tablet:pt-40 [body.nav-open_&amp;]:laptop:px-20"
                 data-nav-menu="true"
                 id="nav-menu"
               >
@@ -384,7 +396,7 @@
                   class="block w-1/2 text-2xl whitespace-nowrap laptop:w-full"
                 >
                   <a
-                    class="relative inline-block origin-left transform-gpu transition-all after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75 after:transition-transform hover:after:scale-x-100"
+                    class="relative inline-block origin-left transform-gpu transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                     href="/"
                     >Home</a
                   >
@@ -393,7 +405,7 @@
                   class="block w-1/2 text-2xl whitespace-nowrap laptop:w-full"
                 >
                   <a
-                    class="relative inline-block origin-left transform-gpu transition-all after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75 after:transition-transform hover:after:scale-x-100"
+                    class="relative inline-block origin-left transform-gpu transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                     href="/how-i-grade/"
                     >How I Grade</a
                   >
@@ -402,52 +414,52 @@
                   class="block w-1/2 text-2xl whitespace-nowrap laptop:w-full"
                 >
                   <a
-                    class="relative inline-block origin-left transform-gpu transition-all after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75 after:transition-transform hover:after:scale-x-100"
+                    class="relative inline-block origin-left transform-gpu transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                     href="/reviews/"
                     >Reviews</a
                   >
                   <ol class="mt-4">
                     <li
-                      class="mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:-mb-1"
+                      class="mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider text-inverse-subtle uppercase last:-mb-1"
                     >
                       <a
-                        class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75 after:transition-transform hover:text-inverse hover:after:scale-x-100"
+                        class="relative inline-block origin-left transform-gpu pb-1 transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                         href="/cast-and-crew/"
                         >Cast &amp; Crew</a
                       >
                     </li>
                     <li
-                      class="mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:-mb-1"
+                      class="mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider text-inverse-subtle uppercase last:-mb-1"
                     >
                       <a
-                        class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75 after:transition-transform hover:text-inverse hover:after:scale-x-100"
+                        class="relative inline-block origin-left transform-gpu pb-1 transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                         href="/collections/"
                         >Collections</a
                       >
                     </li>
                     <li
-                      class="mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:-mb-1"
+                      class="mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider text-inverse-subtle uppercase last:-mb-1"
                     >
                       <a
-                        class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75 after:transition-transform hover:text-inverse hover:after:scale-x-100"
+                        class="relative inline-block origin-left transform-gpu pb-1 transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                         href="/reviews/overrated/"
                         >Overrated</a
                       >
                     </li>
                     <li
-                      class="mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:-mb-1"
+                      class="mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider text-inverse-subtle uppercase last:-mb-1"
                     >
                       <a
-                        class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75 after:transition-transform hover:text-inverse hover:after:scale-x-100"
+                        class="relative inline-block origin-left transform-gpu pb-1 transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                         href="/reviews/underrated/"
                         >Underrated</a
                       >
                     </li>
                     <li
-                      class="mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:-mb-1"
+                      class="mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider text-inverse-subtle uppercase last:-mb-1"
                     >
                       <a
-                        class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75 after:transition-transform hover:text-inverse hover:after:scale-x-100"
+                        class="relative inline-block origin-left transform-gpu pb-1 transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                         href="/reviews/underseen/"
                         >Underseen</a
                       >
@@ -458,16 +470,16 @@
                   class="block w-1/2 text-2xl whitespace-nowrap laptop:w-full"
                 >
                   <a
-                    class="relative inline-block origin-left transform-gpu transition-all after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75 after:transition-transform hover:after:scale-x-100"
+                    class="relative inline-block origin-left transform-gpu transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                     href="/viewings/"
                     >Viewing Log</a
                   >
                   <ol class="mt-4">
                     <li
-                      class="mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:-mb-1"
+                      class="mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider text-inverse-subtle uppercase last:-mb-1"
                     >
                       <a
-                        class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75 after:transition-transform hover:text-inverse hover:after:scale-x-100"
+                        class="relative inline-block origin-left transform-gpu pb-1 transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                         href="/viewings/stats/"
                         >Stats</a
                       >
@@ -478,23 +490,23 @@
                   class="block w-1/2 text-2xl whitespace-nowrap laptop:w-full"
                 >
                   <a
-                    class="relative inline-block origin-left transform-gpu transition-all after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75 after:transition-transform hover:after:scale-x-100"
+                    class="relative inline-block origin-left transform-gpu transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                     href="/watchlist/"
                     >Watchlist</a
                   >
                   <ol class="mt-4">
                     <li
-                      class="mb-3 ml-1 font-sans text-xs tracking-wider text-inverse-subtle uppercase last:-mb-1"
+                      class="mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider text-inverse-subtle uppercase last:-mb-1"
                     >
                       <a
-                        class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-inverse)/75 after:transition-transform hover:text-inverse hover:after:scale-x-100"
+                        class="relative inline-block origin-left transform-gpu pb-1 transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                         href="/watchlist/progress/"
                         >Progress</a
                       >
                     </li>
                   </ol>
                 </li>
-              </ul>
+              </ol>
             </nav>
           </div>
         </header>
@@ -519,16 +531,16 @@
               loading="eager"
             />
             <div
-              class="z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col px-container"
+              class="z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col px-container after:absolute after:top-0 after:left-0 after:-z-10 after:h-full after:w-full after:bg-linear-to-t after:from-[rgba(0,0,0,.5)] after:via-25% after:to-[rgba(0,0,0,.2)] after:to-40%"
             >
               <h1
-                class="font-sans text-2xl font-bold tracking-widest uppercase laptop:text-7xl"
+                class="text-[2rem] leading-10 font-extrabold [text-shadow:1px_1px_2px_rgba(0,0,0,.25)] tablet:text-4xl laptop:text-7xl"
                 data-pagefind-weight="10"
               >
                 Reviews
               </h1>
               <p
-                class="mt-1 text-base laptop:my-4 laptop:text-xl [text-shadow:1px_1px_2px_black]"
+                class="mt-1 font-sans text-base laptop:my-4 laptop:text-xl [text-shadow:1px_1px_2px_black]"
               >
                 &quot;&#x27;Sorry&#x27; don&#x27;t get it done, Dude.&quot;
               </p>
@@ -536,7 +548,7 @@
           </header>
           <nav class="bg-footer">
             <ul
-              class="mx-auto flex scrollbar-hidden max-w-(--breakpoint-desktop) snap-x overflow-x-auto px-container font-sans text-xs font-medium tracking-wider uppercase tablet:justify-center"
+              class="mx-auto flex scrollbar-hidden max-w-(--breakpoint-desktop) snap-x overflow-x-auto px-container font-sans text-sm font-bold tracking-wider uppercase tablet:justify-center"
             >
               <li class="snap-start text-center whitespace-nowrap text-inverse">
                 <a
@@ -549,10 +561,10 @@
                 class="snap-start text-center whitespace-nowrap text-inverse-subtle"
               >
                 <a
-                  class="group/item block transform-gpu px-6 pt-8 pb-7 transition-all hover:bg-accent hover:text-inverse"
+                  class="group/item block transform-gpu px-6 pt-8 pb-7 transition-all duration-500 hover:bg-accent hover:text-inverse"
                   href="/reviews/overrated/"
                   ><span
-                    class="relative inline-block pb-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-(--fg-inverse)/80 after:transition-transform group-hover/item:after:scale-x-100"
+                    class="relative inline-block pb-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-(--fg-inverse)/80 after:transition-transform after:duration-500 group-hover/item:after:scale-x-100"
                     >Overrated</span
                   ></a
                 >
@@ -561,10 +573,10 @@
                 class="snap-start text-center whitespace-nowrap text-inverse-subtle"
               >
                 <a
-                  class="group/item block transform-gpu px-6 pt-8 pb-7 transition-all hover:bg-accent hover:text-inverse"
+                  class="group/item block transform-gpu px-6 pt-8 pb-7 transition-all duration-500 hover:bg-accent hover:text-inverse"
                   href="/reviews/underrated/"
                   ><span
-                    class="relative inline-block pb-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-(--fg-inverse)/80 after:transition-transform group-hover/item:after:scale-x-100"
+                    class="relative inline-block pb-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-(--fg-inverse)/80 after:transition-transform after:duration-500 group-hover/item:after:scale-x-100"
                     >Underrated</span
                   ></a
                 >
@@ -573,10 +585,10 @@
                 class="snap-start text-center whitespace-nowrap text-inverse-subtle"
               >
                 <a
-                  class="group/item block transform-gpu px-6 pt-8 pb-7 transition-all hover:bg-accent hover:text-inverse"
+                  class="group/item block transform-gpu px-6 pt-8 pb-7 transition-all duration-500 hover:bg-accent hover:text-inverse"
                   href="/reviews/underseen/"
                   ><span
-                    class="relative inline-block pb-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-(--fg-inverse)/80 after:transition-transform group-hover/item:after:scale-x-100"
+                    class="relative inline-block pb-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-(--fg-inverse)/80 after:transition-transform after:duration-500 group-hover/item:after:scale-x-100"
                     >Underseen</span
                   ></a
                 >
@@ -584,7 +596,7 @@
             </ul>
           </nav>
           <astro-island
-            uid="19ec9a"
+            uid="1Y3nsb"
             prefix="r1"
             component-url="~/components/Reviews/AllReviews"
             component-export="AllReviews"
@@ -608,9 +620,11 @@
                     class="mx-auto grid max-w-[var(--breakpoint-desktop)] grid-cols-[auto_auto_1fr_auto] items-baseline gap-y-7 px-container py-10 font-sans font-medium tracking-wide text-subtle uppercase tablet:grid-cols-[auto_auto_1fr_auto_auto] tablet:gap-x-4 tablet-landscape:grid-cols-[auto_auto_1fr_minmax(302px,calc(33%_-_192px))_auto] desktop:grid-cols-[auto_auto_1fr_calc(33%_-_96px)_auto]"
                   >
                     <span class="text-nowrap"
-                      ><span class="font-semibold text-default">28</span
-                      ><span class="text-xxs leading-none tracking-wide">
-                        Results</span
+                      ><span class="text-sm font-bold text-default">28</span
+                      ><span
+                        class="text-xs leading-none font-normal tracking-wide"
+                      >
+                        <!-- -->Results</span
                       ></span
                     >
                     <div class=""></div>
@@ -618,7 +632,7 @@
                       class="col-span-full tablet:col-span-1 tablet:col-start-4 desktop:pl-8"
                     >
                       <label
-                        class="flex items-baseline gap-x-4 text-xxs font-semibold tracking-wide text-subtle"
+                        class="flex items-baseline gap-x-4 text-xs font-bold tracking-wide text-subtle"
                         >Sort<!-- -->
                         <select
                           class="flex w-full appearance-none border-none bg-default py-2 pr-4 pl-4 font-serif text-base font-normal tracking-normal overflow-ellipsis text-default shadow-all outline-accent"
@@ -648,7 +662,7 @@
                       aria-controls="filters"
                       aria-expanded="false"
                       aria-label="Toggle filters"
-                      class="col-start-4 row-start-1 flex transform-gpu cursor-pointer items-center justify-center gap-x-4 rounded-sm bg-canvas px-4 py-2 font-sans text-xs font-semibold text-nowrap text-muted uppercase shadow-all transition-transform hover:scale-110 tablet:col-start-5 tablet:w-20"
+                      class="col-start-4 row-start-1 flex transform-gpu cursor-pointer items-center justify-center gap-x-4 rounded-sm bg-canvas px-4 py-2 font-sans text-xs font-bold text-nowrap text-muted uppercase shadow-all transition-transform hover:scale-110 hover:drop-shadow-md tablet:col-start-5 tablet:w-20"
                       type="button"
                     >
                       Filter
@@ -678,10 +692,10 @@
                                 class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]"
                               >
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2F3-from-hell-2019.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -695,7 +709,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -704,7 +718,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/3-from-hell-2019/"
                                       >3 from Hell<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -722,12 +736,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Mon, Jan 17, 2022
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -759,10 +773,10 @@
                                 class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]"
                               >
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fapostle-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -776,7 +790,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -785,7 +799,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/apostle-2018/"
                                       >Apostle<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -803,12 +817,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Fri, Jan 01, 2021
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span
@@ -836,10 +850,10 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Faqua-teen-forever-plantasm-2022.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -853,7 +867,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -862,7 +876,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/aqua-teen-forever-plantasm-2022/"
                                       >Aqua Teen Forever: Plantasm<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -880,12 +894,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Thu, Aug 31, 2023
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Animation</span
                                       ><span
@@ -898,10 +912,10 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Favengers-endgame-2019.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -915,7 +929,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -924,7 +938,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/avengers-endgame-2019/"
                                       >Avengers: Endgame<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -942,12 +956,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Sat, Nov 14, 2020
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -970,10 +984,10 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Favengers-infinity-war-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -987,7 +1001,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -996,7 +1010,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/avengers-infinity-war-2018/"
                                       >Avengers: Infinity War<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1014,12 +1028,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Sat, Oct 17, 2020
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -1056,10 +1070,10 @@
                                 class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]"
                               >
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fbad-seed-1934.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -1073,7 +1087,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -1082,7 +1096,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/bad-seed-1934/"
                                       >Bad Seed<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1100,12 +1114,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Sun, Feb 21, 2021
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Comedy</span
                                       ><span
@@ -1123,10 +1137,10 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fbig-jim-mclain-1952.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -1140,7 +1154,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -1149,7 +1163,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/big-jim-mclain-1952/"
                                       >Big Jim McLain<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1167,12 +1181,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Mon, Jul 31, 2023
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Crime</span
                                       ><span
@@ -1200,10 +1214,10 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-bloody-judge-1970.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -1217,7 +1231,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -1226,7 +1240,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-bloody-judge-1970/"
                                       >The Bloody Judge<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1244,12 +1258,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Sat, Aug 02, 2014
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Biography</span
                                       ><span
@@ -1281,10 +1295,10 @@
                                 class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]"
                               >
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrisis-1946.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -1298,7 +1312,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -1307,7 +1321,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/crisis-1946/"
                                       >Crisis<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1325,12 +1339,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Sun, Dec 13, 2020
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span
@@ -1343,10 +1357,10 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcroupier-1998.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -1360,7 +1374,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -1369,7 +1383,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/croupier-1998/"
                                       >Croupier<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1387,12 +1401,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Sat, Sep 25, 2021
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Crime</span
                                       ><span
@@ -1405,10 +1419,10 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-curse-of-frankenstein-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -1422,7 +1436,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -1431,7 +1445,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-curse-of-frankenstein-1957/"
                                       >The Curse of Frankenstein<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1449,12 +1463,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Sat, Sep 19, 2020
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Horror</span
                                       ><span
@@ -1472,10 +1486,10 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -1489,7 +1503,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -1498,7 +1512,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/curse-of-the-demon-1957/"
                                       >Curse of the Demon<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1516,12 +1530,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Mon, Oct 19, 2020
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Fantasy</span
                                       ><span
@@ -1563,10 +1577,10 @@
                                 class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]"
                               >
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-dawn-patrol-1930.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -1580,7 +1594,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -1589,7 +1603,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-dawn-patrol-1930/"
                                       >The Dawn Patrol<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1607,12 +1621,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Sun, Sep 13, 2020
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -1649,10 +1663,10 @@
                                 class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]"
                               >
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-entity-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -1666,7 +1680,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -1675,7 +1689,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-entity-1982/"
                                       >The Entity<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1693,12 +1707,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Sun, Feb 18, 2024
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span
@@ -1730,10 +1744,10 @@
                                 class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]"
                               >
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffrankenstein-1931.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -1747,7 +1761,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -1756,7 +1770,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/frankenstein-1931/"
                                       >Frankenstein<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1774,12 +1788,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Tue, Apr 20, 2021
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span
@@ -1802,10 +1816,10 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Ffriday-the-13th-part-3-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -1819,7 +1833,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -1828,7 +1842,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/friday-the-13th-part-3-1982/"
                                       >Friday the 13th: Part 3<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1846,12 +1860,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Fri, Mar 12, 2021
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Horror</span
                                       ><span
@@ -1883,10 +1897,10 @@
                                 class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]"
                               >
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fharold-and-kumar-go-to-white-castle-2004.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -1900,7 +1914,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -1909,7 +1923,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/harold-and-kumar-go-to-white-castle-2004/"
                                       >Harold &amp; Kumar Go to White Castle<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1927,12 +1941,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Sat, Aug 14, 2021
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Adventure</span
                                       ><span
@@ -1945,10 +1959,10 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-heavenly-body-1944.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -1962,7 +1976,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -1971,7 +1985,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-heavenly-body-1944/"
                                       >The Heavenly Body<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1989,12 +2003,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Fri, Jun 23, 2023
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Comedy</span
                                       ><span
@@ -2007,10 +2021,10 @@
                                   </div>
                                 </li>
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhells-house-1932.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -2024,7 +2038,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -2033,7 +2047,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/hells-house-1932/"
                                       >Hell&#x27;s House<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2051,22 +2065,22 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Fri, May 14, 2021
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span>
                                     </div>
                                   </div>
                                 </li>
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhereditary-2018.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -2080,7 +2094,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -2089,7 +2103,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/hereditary-2018/"
                                       >Hereditary<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2107,12 +2121,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Fri, Sep 04, 2020
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span
@@ -2154,10 +2168,10 @@
                                 class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]"
                               >
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Flive-and-let-die-1973.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -2171,7 +2185,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -2180,7 +2194,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/live-and-let-die-1973/"
                                       >Live and Let Die<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2198,12 +2212,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Fri, Jul 01, 2022
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -2240,10 +2254,10 @@
                                 class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]"
                               >
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -2257,7 +2271,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -2266,7 +2280,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-midnight-meat-train-2008/"
                                       >The Midnight Meat Train<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2284,12 +2298,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Sat, Apr 27, 2024
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Horror</span
                                       ><span
@@ -2326,10 +2340,10 @@
                                 class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]"
                               >
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fno-time-to-die-2021.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -2343,7 +2357,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -2352,7 +2366,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/no-time-to-die-2021/"
                                       >No Time to Die<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2370,12 +2384,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Thu, Jun 16, 2022
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -2412,10 +2426,10 @@
                                 class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]"
                               >
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-oklahoma-kid-1939.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -2429,7 +2443,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -2438,7 +2452,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-oklahoma-kid-1939/"
                                       >The Oklahoma Kid<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2456,12 +2470,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Thu, Oct 06, 2022
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -2493,10 +2507,10 @@
                                 class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]"
                               >
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpilgrimage-1933.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -2510,7 +2524,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -2519,7 +2533,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/pilgrimage-1933/"
                                       >Pilgrimage<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2537,12 +2551,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Tue, Jun 21, 2022
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span>
                                     </div>
@@ -2568,10 +2582,10 @@
                                 class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]"
                               >
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-rise-and-fall-of-legs-diamond-1960.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -2585,7 +2599,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -2594,7 +2608,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-rise-and-fall-of-legs-diamond-1960/"
                                       >The Rise and Fall of Legs Diamond<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2612,12 +2626,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Mon, Feb 08, 2021
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Biography</span
                                       ><span
@@ -2654,10 +2668,10 @@
                                 class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]"
                               >
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Ftorso-1973.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -2671,7 +2685,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -2680,7 +2694,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/torso-1973/"
                                       >Torso<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2698,12 +2712,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Fri, Oct 30, 2020
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Crime</span
                                       ><span
@@ -2745,10 +2759,10 @@
                                 class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]"
                               >
                                 <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
                                 >
                                   <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
+                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                                   >
                                     <img
                                       src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fa-walk-among-the-tombstones-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
@@ -2762,7 +2776,7 @@
                                       height="375"
                                       sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
                                       width="250"
-                                      class="aspect-poster w-full object-cover"
+                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                                       decoding="async"
                                       loading="lazy"
                                     />
@@ -2771,7 +2785,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-accent after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0"
+                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/a-walk-among-the-tombstones-2014/"
                                       >A Walk Among the Tombstones<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2789,12 +2803,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-muted"
+                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
                                     >
                                       Thu, Sep 25, 2014
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 font-light tracking-prose text-subtle"
+                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -2845,7 +2859,7 @@
                     >
                       <button
                         aria-label="Close filters"
-                        class="absolute top-7 right-4 z-10 flex h-10 w-10 transform-gpu cursor-pointer items-center justify-center rounded-full bg-canvas text-default drop-shadow-md transition-transform hover:scale-105"
+                        class="absolute top-7 right-4 z-10 flex h-10 w-10 transform-gpu cursor-pointer items-center justify-center rounded-full bg-canvas text-default drop-shadow-md transition-transform hover:scale-105 hover:drop-shadow-md"
                         type="button"
                       >
                         <svg
@@ -2864,16 +2878,16 @@
                         </svg>
                       </button>
                       <fieldset
-                        class="mt-0 flex h-full grow flex-col gap-5 px-container py-10 tablet:gap-8 tablet-landscape:grow-0 tablet-landscape:gap-12 tablet-landscape:px-12"
+                        class="mt-0 flex grow flex-col gap-5 px-container py-10 tablet:gap-8 tablet-landscape:grow-0 tablet-landscape:gap-10 tablet-landscape:px-12"
                       >
                         <legend
-                          class="block w-full pt-10 pb-8 font-sans text-lg text-xxs font-semibold tracking-wide text-subtle uppercase shadow-bottom"
+                          class="block w-full pt-10 pb-8 font-sans text-sm font-bold tracking-wide text-subtle uppercase shadow-bottom"
                         >
                           Filter
                         </legend>
                         <label class="flex flex-col text-subtle"
                           ><span
-                            class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
+                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
                             >Title</span
                           ><input
                             class="border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
@@ -2883,7 +2897,7 @@
                         /></label>
                         <fieldset class="text-subtle">
                           <legend
-                            class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
+                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
                           >
                             Release Year
                           </legend>
@@ -2953,7 +2967,7 @@
                         </fieldset>
                         <fieldset class="text-subtle">
                           <legend
-                            class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
+                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
                           >
                             Review Year
                           </legend>
@@ -2991,7 +3005,7 @@
                         </fieldset>
                         <fieldset class="text-subtle">
                           <legend
-                            class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
+                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
                           >
                             Grade
                           </legend>
@@ -3043,7 +3057,7 @@
                         </fieldset>
                         <div class="flex flex-col text-left text-subtle">
                           <label
-                            class="inline-block h-6 text-left font-sans text-xxs leading-none tracking-wide text-subtle uppercase"
+                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
                             for="button-genres"
                             >Genres</label
                           >
@@ -3082,18 +3096,17 @@
                         </div>
                       </fieldset>
                       <div
-                        class="sticky bottom-0 z-filter-footer mt-auto w-full self-end border-t border-t-default bg-default px-8 py-4 drop-shadow-2xl tablet-landscape:px-12"
+                        class="sticky bottom-0 z-filter-footer mt-auto w-full border-t border-t-default bg-default px-8 py-4 drop-shadow-2xl tablet-landscape:px-12"
                       >
                         <div class="flex gap-x-4">
                           <button
                             aria-label="Clear all filters"
-                            class="flex items-center justify-center gap-x-4 rounded-sm bg-canvas px-4 py-3 font-sans text-xs text-nowrap uppercase cursor-not-allowed text-muted opacity-50"
-                            disabled=""
+                            class="flex items-center justify-center gap-x-4 rounded-sm bg-canvas px-4 py-3 font-sans text-xs text-nowrap uppercase transition-transform enabled:hover:scale-105 enabled:hover:drop-shadow-md cursor-not-allowed text-muted opacity-50"
                             type="button"
                           >
                             Clear</button
                           ><button
-                            class="flex flex-1 cursor-pointer items-center justify-center gap-x-4 rounded-sm bg-footer px-4 py-3 font-sans text-xs text-nowrap text-inverse uppercase"
+                            class="flex flex-1 transform-gpu cursor-pointer items-center justify-center gap-x-4 rounded-sm bg-footer px-4 py-3 font-sans text-xs font-bold tracking-wide text-nowrap text-inverse uppercase transition-transform hover:scale-105 hover:drop-shadow-md"
                             type="button"
                           >
                             View<!-- -->
@@ -3116,12 +3129,12 @@
               class="flex w-full flex-col tablet:flex-row-reverse tablet:justify-between"
             >
               <a
-                class="mx-auto mb-8 w-full max-w-button transform-gpu rounded-md bg-canvas py-5 text-center font-sans text-xs tracking-wide text-default uppercase transition-all hover:scale-105 hover:bg-default hover:text-default tablet:mx-0"
+                class="mx-auto mb-8 w-full max-w-button transform-gpu rounded-md bg-canvas py-5 text-center font-sans text-sm font-normal tracking-wide text-default uppercase transition-all hover:scale-105 hover:bg-default hover:text-default hover:drop-shadow-lg tablet:mx-0"
                 href="#top"
                 >To the top</a
               >
               <div
-                class="flex transform-gpu flex-col transition-transform has-[a:hover]:scale-105"
+                class="flex transform-gpu flex-col transition-transform duration-500 has-[a:hover]:scale-105"
               >
                 <div
                   class="text-[1.375rem] leading-8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
@@ -3135,9 +3148,7 @@
             </div>
             <div class="justify-between tablet:flex">
               <div class="flex max-w-[640px] flex-col pb-12 tablet:pr-32">
-                <div
-                  class="pt-10 font-sans text-sm font-light text-inverse-subtle"
-                >
+                <div class="pt-10 font-sans font-normal text-inverse-subtle">
                   <p
                     class="mb-6 text-pretty first-letter:float-left first-letter:mt-[6px] first-letter:pr-1 first-letter:font-sans first-letter:text-[40px] first-letter:leading-[.8] first-letter:font-bold first-letter:text-inverse"
                   >
@@ -3162,36 +3173,36 @@
                   </p>
                   <p class="mb-6 text-pretty">
                     New visitors might want to start by reading about<!-- -->
-                    <a class="underline hover:text-inverse" href="/how-i-grade/"
+                    <a class="underline hover:text-accent" href="/how-i-grade/"
                       >how I grade</a
                     >
                     films. After that, feel free to browse<!-- -->
-                    <a class="underline hover:text-inverse" href="/reviews/"
+                    <a class="underline hover:text-accent" href="/reviews/"
                       >my reviews</a
                     >. If you&#x27;re looking for something that flew under the
                     radar but deserves your attention, I recommend my<!-- -->
                     <a
-                      class="underline hover:text-inverse"
+                      class="underline hover:text-accent"
                       href="/reviews/underseen/"
                       >underseen gems</a
                     >
                     <!-- -->section. Or, for those moments when you want to feel
                     righteously contrarian, I maintain an list of<!-- -->
                     <a
-                      class="underline hover:text-inverse"
+                      class="underline hover:text-accent"
                       href="/reviews/overrated/"
                       >overrated disappointments</a
                     >.
                   </p>
                   <p class="mb-6 text-pretty">
                     I also keep a<!-- -->
-                    <a class="underline hover:text-inverse" href="/viewings/"
+                    <a class="underline hover:text-accent" href="/viewings/"
                       >viewing log</a
                     >
                     that tracks everything I watch, whether it gets a full
                     review or not, complete with<!-- -->
                     <a
-                      class="underline hover:text-inverse"
+                      class="underline hover:text-accent"
                       href="/viewings/stats/"
                       >stats</a
                     >. In an age of endless content, sometimes the act of
@@ -3201,7 +3212,7 @@
                   <p class="mb-6 text-pretty">
                     And finally, if you&#x27;re curious about what&#x27;s on my
                     critical horizon,<!-- -->
-                    <a class="underline hover:text-inverse" href="/watchlist/"
+                    <a class="underline hover:text-accent" href="/watchlist/"
                       >my watchlist</a
                     >
                     details the films I plan to review and why they&#x27;ve
@@ -3219,114 +3230,122 @@
               <div
                 class="flex grow-0 flex-col gap-20 pt-10 pb-20 tablet:basis-button tablet:pr-10"
               >
-                <ul
-                  class="flex w-full flex-col gap-y-10 text-inverse desktop:w-auto"
-                >
-                  <li class="block w-1/2 text-2xl whitespace-nowrap">
+                <ol class="flex w-full flex-col gap-y-6 desktop:w-auto">
+                  <li
+                    class="block w-1/2 text-2xl whitespace-nowrap laptop:w-full"
+                  >
                     <a
-                      class="relative inline-block origin-left transform-gpu transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:after:scale-x-100"
+                      class="relative inline-block origin-left transform-gpu transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                       href="/"
                       >Home</a
                     >
                   </li>
-                  <li class="block w-1/2 text-2xl whitespace-nowrap">
+                  <li
+                    class="block w-1/2 text-2xl whitespace-nowrap laptop:w-full"
+                  >
                     <a
-                      class="relative inline-block origin-left transform-gpu transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:after:scale-x-100"
+                      class="relative inline-block origin-left transform-gpu transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                       href="/how-i-grade/"
                       >How I Grade</a
                     >
                   </li>
-                  <li class="block w-1/2 text-2xl whitespace-nowrap">
+                  <li
+                    class="block w-1/2 text-2xl whitespace-nowrap laptop:w-full"
+                  >
                     <a
-                      class="relative inline-block origin-left transform-gpu transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:after:scale-x-100"
+                      class="relative inline-block origin-left transform-gpu transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                       href="/reviews/"
                       >Reviews</a
                     >
                     <ol class="mt-4">
                       <li
-                        class="mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:-mb-1"
+                        class="mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider text-inverse-subtle uppercase last:-mb-1"
                       >
                         <a
-                          class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:text-inverse hover:after:scale-x-100"
+                          class="relative inline-block origin-left transform-gpu pb-1 transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                           href="/cast-and-crew/"
                           >Cast &amp; Crew</a
                         >
                       </li>
                       <li
-                        class="mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:-mb-1"
+                        class="mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider text-inverse-subtle uppercase last:-mb-1"
                       >
                         <a
-                          class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:text-inverse hover:after:scale-x-100"
+                          class="relative inline-block origin-left transform-gpu pb-1 transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                           href="/collections/"
                           >Collections</a
                         >
                       </li>
                       <li
-                        class="mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:-mb-1"
+                        class="mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider text-inverse-subtle uppercase last:-mb-1"
                       >
                         <a
-                          class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:text-inverse hover:after:scale-x-100"
+                          class="relative inline-block origin-left transform-gpu pb-1 transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                           href="/reviews/overrated/"
                           >Overrated</a
                         >
                       </li>
                       <li
-                        class="mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:-mb-1"
+                        class="mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider text-inverse-subtle uppercase last:-mb-1"
                       >
                         <a
-                          class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:text-inverse hover:after:scale-x-100"
+                          class="relative inline-block origin-left transform-gpu pb-1 transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                           href="/reviews/underrated/"
                           >Underrated</a
                         >
                       </li>
                       <li
-                        class="mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:-mb-1"
+                        class="mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider text-inverse-subtle uppercase last:-mb-1"
                       >
                         <a
-                          class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:text-inverse hover:after:scale-x-100"
+                          class="relative inline-block origin-left transform-gpu pb-1 transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                           href="/reviews/underseen/"
                           >Underseen</a
                         >
                       </li>
                     </ol>
                   </li>
-                  <li class="block w-1/2 text-2xl whitespace-nowrap">
+                  <li
+                    class="block w-1/2 text-2xl whitespace-nowrap laptop:w-full"
+                  >
                     <a
-                      class="relative inline-block origin-left transform-gpu transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:after:scale-x-100"
+                      class="relative inline-block origin-left transform-gpu transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                       href="/viewings/"
                       >Viewing Log</a
                     >
                     <ol class="mt-4">
                       <li
-                        class="mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:-mb-1"
+                        class="mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider text-inverse-subtle uppercase last:-mb-1"
                       >
                         <a
-                          class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:text-inverse hover:after:scale-x-100"
+                          class="relative inline-block origin-left transform-gpu pb-1 transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                           href="/viewings/stats/"
                           >Stats</a
                         >
                       </li>
                     </ol>
                   </li>
-                  <li class="block w-1/2 text-2xl whitespace-nowrap">
+                  <li
+                    class="block w-1/2 text-2xl whitespace-nowrap laptop:w-full"
+                  >
                     <a
-                      class="relative inline-block origin-left transform-gpu transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:after:scale-x-100"
+                      class="relative inline-block origin-left transform-gpu transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                       href="/watchlist/"
                       >Watchlist</a
                     >
                     <ol class="mt-4">
                       <li
-                        class="mb-3 ml-1 font-sans text-xs tracking-wide text-inverse-subtle uppercase last:-mb-1"
+                        class="mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider text-inverse-subtle uppercase last:-mb-1"
                       >
                         <a
-                          class="relative inline-block origin-left transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-muted) after:transition-transform hover:text-inverse hover:after:scale-x-100"
+                          class="relative inline-block origin-left transform-gpu pb-1 transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                           href="/watchlist/progress/"
                           >Progress</a
                         >
                       </li>
                     </ol>
                   </li>
-                </ul>
+                </ol>
               </div>
             </div>
           </div>
@@ -3336,10 +3355,22 @@
             All reviews by Frank Showalter. All images used in accordance with
             the<!-- -->
             <a
-              class="text-inherit underline"
+              class="relative inline-block pr-4 text-inherit underline underline-offset-3 hover:bg-default hover:text-accent"
               href="http://www.copyright.gov/title17/92chap1.html#107"
               rel="nofollow"
-              >Fair Use Law</a
+              >Fair Use Law<svg
+                class="absolute top-0.5 right-0 size-3"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path></svg></a
             >.
           </p>
         </footer>

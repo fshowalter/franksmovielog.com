@@ -9,11 +9,12 @@ import {
   createInitialState,
   getGroupLetter,
   handleGenreFilterAction,
+  handleGradeFilterAction,
   handleListWithFiltersAction,
   handleReleaseYearFilterAction,
+  handleReviewStatusFilterAction,
   handleReviewYearFilterAction,
   handleTitleFilterAction,
-  handleToggleReviewedAction,
   ListWithFiltersActions,
   sortGrade,
   sortReleaseDate,
@@ -29,7 +30,6 @@ import type { ListItemValue } from "./CastAndCrewMember";
 
 enum CastAndCrewMemberActions {
   PENDING_FILTER_CREDIT_KIND = "PENDING_FILTER_CREDIT_KIND",
-  TOGGLE_REVIEWED = "TOGGLE_REVIEWED",
 }
 
 export type Sort =
@@ -50,8 +50,7 @@ export const Actions = {
 
 export type ActionType =
   | ListWithFiltersActionType<Sort>
-  | PendingFilterCreditKindAction
-  | ToggleReviewedAction;
+  | PendingFilterCreditKindAction;
 
 // CastAndCrewMember-specific actions
 type PendingFilterCreditKindAction = {
@@ -59,13 +58,7 @@ type PendingFilterCreditKindAction = {
   value: string;
 };
 
-type State = ListWithFiltersState<ListItemValue, Sort> & {
-  hideReviewed: boolean;
-};
-
-type ToggleReviewedAction = {
-  type: CastAndCrewMemberActions.TOGGLE_REVIEWED;
-};
+type State = ListWithFiltersState<ListItemValue, Sort>;
 
 // Helper functions
 function getReviewDateGroup(value: ListItemValue): string {
@@ -120,7 +113,6 @@ export function initState({
 
   return {
     ...baseState,
-    hideReviewed: false,
   };
 }
 
@@ -135,47 +127,40 @@ export function reducer(state: State, action: ActionType): State {
           : undefined;
       return {
         ...updatePendingFilter(state, "credits", filterFn, typedAction.value),
-        hideReviewed: state.hideReviewed,
       };
-    }
-
-    case CastAndCrewMemberActions.TOGGLE_REVIEWED: {
-      return handleToggleReviewedAction(state, sortValues, groupValues);
     }
 
     // Field-specific shared filters
     case ListWithFiltersActions.PENDING_FILTER_GENRES: {
-      return handleGenreFilterAction(state, action, {
-        hideReviewed: state.hideReviewed,
-      });
+      return handleGenreFilterAction(state, action);
+    }
+
+    case ListWithFiltersActions.PENDING_FILTER_GRADE: {
+      return handleGradeFilterAction(state, action);
     }
 
     case ListWithFiltersActions.PENDING_FILTER_RELEASE_YEAR: {
-      return handleReleaseYearFilterAction(state, action, {
-        hideReviewed: state.hideReviewed,
-      });
+      return handleReleaseYearFilterAction(state, action);
+    }
+
+    case ListWithFiltersActions.PENDING_FILTER_REVIEW_STATUS: {
+      return handleReviewStatusFilterAction(state, action);
     }
 
     case ListWithFiltersActions.PENDING_FILTER_REVIEW_YEAR: {
-      return handleReviewYearFilterAction(state, action, {
-        hideReviewed: state.hideReviewed,
-      });
+      return handleReviewYearFilterAction(state, action);
     }
 
     case ListWithFiltersActions.PENDING_FILTER_TITLE: {
-      return handleTitleFilterAction(state, action, {
-        hideReviewed: state.hideReviewed,
-      });
+      return handleTitleFilterAction(state, action);
     }
 
     default: {
       // Handle shared list structure actions
-      return handleListWithFiltersAction(
-        state,
-        action,
-        { groupFn: groupValues, sortFn: sortValues },
-        { hideReviewed: state.hideReviewed },
-      );
+      return handleListWithFiltersAction(state, action, {
+        groupFn: groupValues,
+        sortFn: sortValues,
+      });
     }
   }
 }

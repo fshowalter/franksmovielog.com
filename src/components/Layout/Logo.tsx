@@ -2,7 +2,7 @@ export function Logo({ className }: { className?: string }) {
   return (
     <div
       className={`
-        flex transform-gpu flex-col transition-transform
+        flex transform-gpu flex-col transition-transform duration-500
         has-[a:hover]:scale-105
         ${className ?? ""}
       `}

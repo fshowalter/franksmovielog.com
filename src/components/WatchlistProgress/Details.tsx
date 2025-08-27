@@ -37,8 +37,8 @@ export function Details({
     >
       <h2
         className={`
-          px-container py-8 font-sans text-xs font-medium tracking-wide
-          text-muted uppercase
+          px-container py-8 font-sans text-xs font-bold tracking-wide text-muted
+          uppercase
           laptop:px-8
         `}
       >
@@ -59,7 +59,7 @@ export function Details({
               className={`
                 group/list-item relative col-span-5 grid transform-gpu
                 grid-cols-subgrid grid-rows-[1fr_auto_auto_1fr] bg-default py-4
-                text-subtle transition-transform
+                text-subtle transition-all duration-500
                 last-of-type:shadow-none
                 tablet-landscape:has-[a:hover]:z-hover
                 tablet-landscape:has-[a:hover]:scale-[102.5%]
@@ -70,11 +70,11 @@ export function Details({
             >
               <div
                 className={`
-                  relative col-start-2 row-span-4 transition-opacity
+                  relative col-start-2 row-span-4 transition-all
                   after:absolute after:top-0 after:left-0
                   after:z-watchlist-overlay after:size-full
                   after:overflow-hidden after:rounded-full after:bg-default
-                  after:opacity-15
+                  after:opacity-20 after:duration-500
                   group-has-[a:hover]/list-item:after:opacity-0
                 `}
               >
@@ -123,9 +123,11 @@ function Name({ value, valueType }: { value: Value; valueType: ValueType }) {
       <span>
         <a
           className={`
-            pb-1 text-base leading-none font-normal text-accent
+            pb-1 text-base leading-none font-normal text-[#252525]
+            transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-hover
             after:size-full after:opacity-0
+            hover:text-accent
           `}
           href={linkTarget}
         >
@@ -159,7 +161,10 @@ function DetailsItemAvatar({
 }) {
   const avatar = (
     <Avatar
-      className="w-full"
+      className={`
+        w-full transform-gpu transition-transform duration-500
+        group-has-[a:hover]/list-item:scale-110
+      `}
       height={DetailsAvatarImageConfig.height}
       imageProps={imageProps}
       loading="lazy"

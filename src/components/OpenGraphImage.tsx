@@ -34,23 +34,26 @@ export function OpenGraphImage({
       />
       <div
         style={{
+          backgroundImage:
+            "radial-gradient(400px at left bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.75) 15%, rgba(0, 0, 0, 0)) 25%",
           bottom: 0,
           display: "flex",
           flexDirection: "column",
           paddingBottom: "64px",
           paddingLeft: "80px",
           paddingRight: "80px",
-          paddingTop: "32px",
+          paddingTop: "332px",
           position: "absolute",
           width: "1200px",
         }}
       >
         <div
           style={{
-            color: "#b0b0b0",
-            fontFamily: "ArgentumSans",
-            marginBottom: "16px",
-            textShadow: "1px 1px 2px black",
+            color: "#c29d52",
+            fontFamily: "Assistant",
+            fontSize: "18px",
+            fontWeight: 700,
+            marginBottom: "8px",
             textTransform: "uppercase",
           }}
         >
@@ -61,11 +64,11 @@ export function OpenGraphImage({
             color: "#fff",
             display: "flex",
             flexWrap: "wrap",
-            fontFamily: "ArgentumSans",
+            fontFamily: "FrankRuhlLibre",
             fontSize: "88px",
-            fontWeight: 600,
+            fontWeight: 800,
             lineHeight: 1,
-            textTransform: "uppercase",
+            textShadow: "1px 1px 2px black",
             textWrap: "balance",
           }}
         >
