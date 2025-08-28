@@ -50,7 +50,7 @@ function StatsCallout({
       </div>{" "}
       <div
         className={`
-          font-sans text-xxs leading-6 font-light text-subtle
+          font-sans text-xxs leading-6 font-light text-muted
           tablet:text-sm
         `}
       >

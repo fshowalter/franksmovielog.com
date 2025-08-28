@@ -174,7 +174,11 @@ function Name({
   }
 
   return (
-    <span className={`inline-block font-serif text-base leading-6 font-normal`}>
+    <span
+      className={`
+        inline-block font-serif text-base leading-6 font-normal text-muted
+      `}
+    >
       {value.name}
     </span>
   );
