@@ -17,7 +17,7 @@ import type { GroupFn } from "~/utils/reducerUtils";
 /**
  * Generic Action Types for list filtering and sorting
  * Type-specific actions are defined in:
- * - titlesReducerUtils for movie/title lists  
+ * - titlesReducerUtils for movie/title lists
  * - collectionsReducerUtils for collection lists
  */
 export enum ListWithFiltersActions {
@@ -26,7 +26,6 @@ export enum ListWithFiltersActions {
   RESET_PENDING_FILTERS = "RESET_PENDING_FILTERS",
   SORT = "SORT",
 }
-
 
 /**
  * Base type for generic ListWithFilters actions
@@ -79,7 +78,6 @@ type SortAction<TSortValue> = {
   value: TSortValue;
 };
 
-
 /**
  * Helper to create initial state with pending filters support
  */
@@ -127,7 +125,6 @@ export function createInitialState<
     ? { ...baseState, ...extendedState }
     : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
 }
-
 
 /**
  * Shared reducer handler for list structure actions that don't require item values

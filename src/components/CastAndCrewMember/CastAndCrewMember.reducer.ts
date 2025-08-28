@@ -1,5 +1,8 @@
 import type { ListWithFiltersState } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
-import type { TitlesActionType, TitlesWithShowCountState } from "~/components/ListWithFilters/titlesReducerUtils";
+import type {
+  TitlesActionType,
+  TitlesWithShowCountState,
+} from "~/components/ListWithFilters/titlesReducerUtils";
 
 import {
   createInitialState,
@@ -54,9 +57,7 @@ export const Actions = {
   ...CastAndCrewMemberActions,
 } as const;
 
-export type ActionType =
-  | PendingFilterCreditKindAction
-  | TitlesActionType<Sort>;
+export type ActionType = PendingFilterCreditKindAction | TitlesActionType<Sort>;
 
 // CastAndCrewMember-specific actions
 type PendingFilterCreditKindAction = {
@@ -64,7 +65,8 @@ type PendingFilterCreditKindAction = {
   value: string;
 };
 
-type State = ListWithFiltersState<ListItemValue, Sort> & TitlesWithShowCountState;
+type State = ListWithFiltersState<ListItemValue, Sort> &
+  TitlesWithShowCountState;
 
 // Helper functions
 function getReviewDateGroup(value: ListItemValue): string {
@@ -141,35 +143,52 @@ export function reducer(state: State, action: ActionType): State {
 
     // Field-specific shared filters
     case TitlesActions.PENDING_FILTER_GENRES: {
-      return handleGenreFilterAction(state, action, { showCount: state.showCount });
+      return handleGenreFilterAction(state, action, {
+        showCount: state.showCount,
+      });
     }
 
     case TitlesActions.PENDING_FILTER_GRADE: {
-      return handleGradeFilterAction(state, action, { showCount: state.showCount });
+      return handleGradeFilterAction(state, action, {
+        showCount: state.showCount,
+      });
     }
 
     case TitlesActions.PENDING_FILTER_RELEASE_YEAR: {
-      return handleReleaseYearFilterAction(state, action, { showCount: state.showCount });
+      return handleReleaseYearFilterAction(state, action, {
+        showCount: state.showCount,
+      });
     }
 
     case TitlesActions.PENDING_FILTER_REVIEW_STATUS: {
-      return handleReviewStatusFilterAction(state, action, { showCount: state.showCount });
+      return handleReviewStatusFilterAction(state, action, {
+        showCount: state.showCount,
+      });
     }
 
     case TitlesActions.PENDING_FILTER_REVIEW_YEAR: {
-      return handleReviewYearFilterAction(state, action, { showCount: state.showCount });
+      return handleReviewYearFilterAction(state, action, {
+        showCount: state.showCount,
+      });
     }
 
     case TitlesActions.PENDING_FILTER_TITLE: {
-      return handleTitleFilterAction(state, action, { showCount: state.showCount });
+      return handleTitleFilterAction(state, action, {
+        showCount: state.showCount,
+      });
     }
 
     default: {
       // Handle shared list structure actions including show more
-      return handleTitlesListAction(state, action, {
-        groupFn: groupValues,
-        sortFn: sortValues,
-      }, { showCount: state.showCount });
+      return handleTitlesListAction(
+        state,
+        action,
+        {
+          groupFn: groupValues,
+          sortFn: sortValues,
+        },
+        { showCount: state.showCount },
+      );
     }
   }
 }

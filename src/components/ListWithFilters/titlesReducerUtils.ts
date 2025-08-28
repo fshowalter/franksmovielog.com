@@ -256,10 +256,12 @@ export function handleTitlesListAction<
   // Handle show more action if applicable
   if (action.type === TitlesActions.SHOW_MORE) {
     // Check if state has showCount property (for TypeScript)
-    if ('showCount' in state && typeof state.showCount === 'number') {
+    if ("showCount" in state && typeof state.showCount === "number") {
       const increment = action.increment ?? SHOW_COUNT_DEFAULT;
       const baseState = showMore(
-        state as ListWithFiltersState<TItem, TSortValue> & TExtendedState & TitlesWithShowCountState,
+        state as ListWithFiltersState<TItem, TSortValue> &
+          TExtendedState &
+          TitlesWithShowCountState,
         increment,
         handlers.groupFn,
       );
@@ -269,9 +271,10 @@ export function handleTitlesListAction<
   }
 
   // Get showCount if it exists in extended state for passing to base handler
-  const showCount = 'showCount' in state && typeof state.showCount === 'number'
-    ? state.showCount
-    : undefined;
+  const showCount =
+    "showCount" in state && typeof state.showCount === "number"
+      ? state.showCount
+      : undefined;
 
   // Delegate to base handler for other actions
   return baseHandleListWithFiltersAction(
@@ -401,4 +404,3 @@ function showMore<
     showCount,
   };
 }
-

@@ -1,5 +1,8 @@
 import type { ListWithFiltersState } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
-import type { TitlesActionType, TitlesWithShowCountState } from "~/components/ListWithFilters/titlesReducerUtils";
+import type {
+  TitlesActionType,
+  TitlesWithShowCountState,
+} from "~/components/ListWithFilters/titlesReducerUtils";
 
 import {
   createInitialState,
@@ -76,7 +79,8 @@ type PendingFilterWriterAction = {
   value: string;
 };
 
-type State = ListWithFiltersState<ListItemValue, Sort> & TitlesWithShowCountState;
+type State = ListWithFiltersState<ListItemValue, Sort> &
+  TitlesWithShowCountState;
 
 // Helper functions
 function groupForValue(value: ListItemValue, sortValue: Sort): string {

@@ -5,12 +5,10 @@
 
 import type {
   ListWithFiltersActionType,
-  ListWithFiltersState
+  ListWithFiltersState,
 } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 
-import {
-  updatePendingFilter,
-} from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
+import { updatePendingFilter } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import { sortNumber, sortString } from "~/utils/reducerUtils";
 
 // ============================================================================
@@ -86,4 +84,3 @@ function createNameFilter(value: string | undefined) {
   const regex = new RegExp(value, "i");
   return <T extends { name: string }>(item: T) => regex.test(item.name);
 }
-
