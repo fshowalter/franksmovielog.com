@@ -198,13 +198,12 @@ exports[`Viewings > can clear all filters 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -490,13 +489,12 @@ exports[`Viewings > can clear all filters 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -782,13 +780,12 @@ exports[`Viewings > can clear all filters 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -2381,13 +2378,12 @@ exports[`Viewings > can filter by medium 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -2669,13 +2665,12 @@ exports[`Viewings > can filter by medium then show all 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -2961,13 +2956,12 @@ exports[`Viewings > can filter by medium then show all 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -3253,13 +3247,12 @@ exports[`Viewings > can filter by medium then show all 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -4016,13 +4009,12 @@ exports[`Viewings > can filter by release year 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -4308,13 +4300,12 @@ exports[`Viewings > can filter by release year 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -4600,13 +4591,12 @@ exports[`Viewings > can filter by release year 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -5363,13 +5353,12 @@ exports[`Viewings > can filter by release year reversed 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -5655,13 +5644,12 @@ exports[`Viewings > can filter by release year reversed 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -5947,13 +5935,12 @@ exports[`Viewings > can filter by release year reversed 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -7929,13 +7916,12 @@ exports[`Viewings > can filter by venue 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -8957,13 +8943,12 @@ exports[`Viewings > can filter by venue then show all 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -9249,13 +9234,12 @@ exports[`Viewings > can filter by venue then show all 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -9541,13 +9525,12 @@ exports[`Viewings > can filter by venue then show all 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -11081,13 +11064,12 @@ exports[`Viewings > can filter by viewing year 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -11562,13 +11544,12 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -12605,13 +12586,12 @@ exports[`Viewings > can filter reviewed titles 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -12897,13 +12877,12 @@ exports[`Viewings > can filter reviewed titles 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -13189,13 +13168,12 @@ exports[`Viewings > can filter reviewed titles 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -14182,13 +14160,12 @@ exports[`Viewings > can navigate to next month 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -14354,13 +14331,12 @@ exports[`Viewings > can navigate to next month 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -14472,13 +14448,12 @@ exports[`Viewings > can navigate to next month 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -14909,13 +14884,12 @@ exports[`Viewings > can navigate to next month 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -15695,13 +15669,12 @@ exports[`Viewings > can navigate to previous month 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -15765,13 +15738,12 @@ exports[`Viewings > can navigate to previous month 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -16503,13 +16475,12 @@ exports[`Viewings > can show all titles 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -16795,13 +16766,12 @@ exports[`Viewings > can show all titles 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -17087,13 +17057,12 @@ exports[`Viewings > can show all titles 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -18942,13 +18911,12 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -19234,13 +19202,12 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -19526,13 +19493,12 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -20653,13 +20619,12 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -20723,13 +20688,12 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
               <li
                 class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
               >
                 <div
@@ -21638,13 +21602,12 @@ exports[`Viewings > renders 1`] = `
                           <li
                             class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
                           >
                             <div
@@ -21929,13 +21892,12 @@ exports[`Viewings > renders 1`] = `
                           <li
                             class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
                           >
                             <div
@@ -22220,13 +22182,12 @@ exports[`Viewings > renders 1`] = `
                           <li
                             class="
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        items-center
+        bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent
       "
                           >
                             <div
@@ -22869,9 +22830,9 @@ exports[`Viewings > renders 1`] = `
                 </span>
                 <select
                   class="
-          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
-          leading-6 text-subtle shadow-all outline-accent
-        "
+        w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
+        leading-6 text-subtle shadow-all outline-accent
+      "
                 >
                   <option
                     value="All"
@@ -22936,9 +22897,9 @@ exports[`Viewings > renders 1`] = `
                     </span>
                     <select
                       class="
-          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
-          leading-6 text-subtle shadow-all outline-accent
-        "
+        w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
+        leading-6 text-subtle shadow-all outline-accent
+      "
                     >
                       <option
                         value="1931"
@@ -23062,9 +23023,9 @@ exports[`Viewings > renders 1`] = `
                     </span>
                     <select
                       class="
-          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
-          leading-6 text-subtle shadow-all outline-accent
-        "
+        w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
+        leading-6 text-subtle shadow-all outline-accent
+      "
                     >
                       <option
                         value="2014"
@@ -23204,9 +23165,9 @@ exports[`Viewings > renders 1`] = `
                     </span>
                     <select
                       class="
-          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
-          leading-6 text-subtle shadow-all outline-accent
-        "
+        w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
+        leading-6 text-subtle shadow-all outline-accent
+      "
                     >
                       <option
                         value="2011"
@@ -23240,9 +23201,9 @@ exports[`Viewings > renders 1`] = `
                     </span>
                     <select
                       class="
-          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
-          leading-6 text-subtle shadow-all outline-accent
-        "
+        w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
+        leading-6 text-subtle shadow-all outline-accent
+      "
                     >
                       <option
                         value="2014"
@@ -23281,9 +23242,9 @@ exports[`Viewings > renders 1`] = `
                 </span>
                 <select
                   class="
-          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
-          leading-6 text-subtle shadow-all outline-accent
-        "
+        w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
+        leading-6 text-subtle shadow-all outline-accent
+      "
                 >
                   <option
                     value="All"
@@ -23325,9 +23286,9 @@ exports[`Viewings > renders 1`] = `
                 </span>
                 <select
                   class="
-          w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
-          leading-6 text-subtle shadow-all outline-accent
-        "
+        w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base
+        leading-6 text-subtle shadow-all outline-accent
+      "
                 >
                   <option
                     value="All"

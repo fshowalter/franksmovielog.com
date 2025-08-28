@@ -37,7 +37,7 @@ export function WatchlistProgress({
   progress,
 }: Props): JSX.Element {
   return (
-    <Layout className="bg-subtle">
+    <Layout>
       <Backdrop
         breadcrumb={
           <BreadcrumbLink href="/watchlist/">Watchlist</BreadcrumbLink>
@@ -68,7 +68,7 @@ export function WatchlistProgress({
           `}
         >
           <Details
-            className="col-start-1 row-span-3"
+            gridClasses="col-start-1 row-span-3"
             label="Directors"
             values={progress.directorDetails}
             valueType="director"
@@ -79,13 +79,13 @@ export function WatchlistProgress({
             valueType="performer"
           />
           <Details
-            className="col-start-2 row-start-2"
+            gridClasses="col-start-2 row-start-2"
             label="Writers"
             values={progress.writerDetails}
             valueType="writer"
           />
           <Details
-            className="col-start-2 row-start-3"
+            gridClasses="col-start-2 row-start-3"
             label="Collections"
             values={progress.collectionDetails}
             valueType="collection"

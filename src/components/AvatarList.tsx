@@ -3,7 +3,6 @@ import type { JSX } from "react";
 import type { AvatarImageProps } from "~/api/avatars";
 
 import { Avatar } from "~/components/Avatar";
-import { ccn } from "~/utils/concatClassNames";
 
 import { GroupingListItem } from "./GroupingListItem";
 
@@ -15,11 +14,9 @@ export const AvatarListItemImageConfig = {
 export function AvatarListItem({
   avatarImageProps,
   children,
-  className = "",
 }: {
   avatarImageProps: AvatarImageProps | undefined;
   children: React.ReactNode;
-  className?: string;
 }): JSX.Element {
   return (
     <li
@@ -34,7 +31,6 @@ export function AvatarListItem({
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
         tablet-landscape:has-[a:hover]:duration-500
         laptop:px-6
-        ${className}
       `}
     >
       <div
@@ -44,7 +40,6 @@ export function AvatarListItem({
           after:bg-default after:opacity-20 after:transition-opacity
           after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
-          ${className}
         `}
       >
         <ListItemAvatar imageProps={avatarImageProps} />
@@ -92,10 +87,8 @@ export function GroupedAvatarList<T>({
 }
 
 function ListItemAvatar({
-  className,
   imageProps,
 }: {
-  className?: string;
   imageProps: AvatarImageProps | undefined;
 }) {
   const avatar = (
@@ -113,14 +106,11 @@ function ListItemAvatar({
 
   return (
     <div
-      className={ccn(
-        `
-          w-16 safari-border-radius-fix overflow-hidden rounded-full
-          drop-shadow-md
-          tablet:w-20
-        `,
-        className,
-      )}
+      className={`
+        w-16 safari-border-radius-fix overflow-hidden rounded-full
+        drop-shadow-md
+        tablet:w-20
+      `}
     >
       {avatar}
     </div>

@@ -61,11 +61,13 @@ export function GroupedPosterList<T>({
 }
 
 export function PosterList({
+  bgClasses = "",
   children,
-  className = "",
+  justifyClasses = "",
 }: {
+  bgClasses?: string;
   children: React.ReactNode;
-  className?: string;
+  justifyClasses?: string;
 }) {
   return (
     <div className="@container/poster-list">
@@ -83,7 +85,8 @@ export function PosterList({
           @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
           @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%]
           @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]
-          ${className}
+          ${bgClasses}
+          ${justifyClasses}
         `}
       >
         {children}
@@ -93,25 +96,24 @@ export function PosterList({
 }
 
 export function PosterListItem({
+  bgClasses = "bg-default tablet:has-[a:hover]:bg-default tablet:bg-transparent",
   children,
-  className,
   posterImageProps,
 }: {
+  bgClasses?: string;
   children: React.ReactNode;
-  className?: string;
   posterImageProps: PosterImageProps;
 }) {
   return (
     <li
       className={`
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col tablet:px-6
+        tablet:py-6 tablet:has-[a:hover]:-translate-y-2
         tablet:has-[a:hover]:drop-shadow-2xl
-        ${className ?? ""}
+        ${bgClasses}
       `}
     >
       <PosterListItemPoster imageProps={posterImageProps} />

@@ -23,12 +23,12 @@ export function fileForGrade(value: string) {
 }
 
 export function Grade({
-  className,
   height,
+  otherClasses,
   value,
 }: {
-  className?: string;
   height: 15 | 16 | 18 | 24 | 32;
+  otherClasses?: string;
   value: string;
 }) {
   const [src, alt] = gradeMap[value];
@@ -43,7 +43,7 @@ export function Grade({
       />
       <img
         alt={`${value}: ${alt}`}
-        className={className}
+        className={otherClasses}
         height={height}
         src={src}
         width={width}

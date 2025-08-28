@@ -10,7 +10,7 @@ export function Content({ className, content }: Props) {
   return (
     <div className={className}>
       <LongFormText
-        className={`
+        otherClasses={`
           max-w-prose
           first-letter:leading-[.8] first-letter:text-default
           tablet:first-letter:pr-3

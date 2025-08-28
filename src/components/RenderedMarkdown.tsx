@@ -1,7 +1,5 @@
 import type { ElementType, JSX } from "react";
 
-import { ccn } from "~/utils/concatClassNames";
-
 export function RenderedMarkdown({
   as = "div",
   className,
@@ -19,7 +17,10 @@ export function RenderedMarkdown({
 
   return (
     <Component
-      className={ccn("rendered-markdown", className)}
+      className={`
+        rendered-markdown
+        ${className ?? ""}
+      `}
       dangerouslySetInnerHTML={{
         __html: text,
       }}

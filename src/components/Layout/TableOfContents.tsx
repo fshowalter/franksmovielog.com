@@ -4,14 +4,20 @@ import type { NavItem } from "./navItems";
 
 import { navItems } from "./navItems";
 
-type Props = React.HTMLAttributes<HTMLOListElement>;
-
-export function TableOfContents({ className, ...rest }: Props): JSX.Element {
+export function TableOfContents({
+  otherClasses,
+  widthClasses = "w-full",
+  ...rest
+}: Omit<React.HTMLAttributes<HTMLOListElement>, "className"> & {
+  otherClasses?: string;
+  widthClasses?: string;
+}): JSX.Element {
   return (
     <ol
       className={`
-        flex w-full flex-col gap-y-6
-        ${className ?? ""}
+        flex flex-col gap-y-6
+        ${widthClasses}
+        ${otherClasses ?? ""}
       `}
       {...rest}
     >

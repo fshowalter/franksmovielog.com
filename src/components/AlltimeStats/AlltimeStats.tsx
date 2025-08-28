@@ -51,7 +51,7 @@ export function AlltimeStats({
   stats,
 }: Props): JSX.Element {
   return (
-    <Layout className="flex flex-col items-center bg-subtle">
+    <Layout flexClasses="flex flex-col" itemsClasses="items-center">
       <Backdrop
         breadcrumb={
           <BreadcrumbLink href="/viewings/">Viewing Log</BreadcrumbLink>
@@ -61,11 +61,12 @@ export function AlltimeStats({
         title="All-Time Stats"
       />
       <StatsNavigation
-        className="mb-12 w-full"
         currentYear={"all"}
         linkFunc={(year: string) => {
           return `/viewings/stats/${year}/`;
         }}
+        marginClasses="mb-12"
+        widthClasses="w-full"
         years={distinctStatYears}
       />
       <Callouts

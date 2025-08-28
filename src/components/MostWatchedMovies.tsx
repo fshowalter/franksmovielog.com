@@ -2,8 +2,6 @@ import type { JSX } from "react";
 
 import type { PosterImageProps } from "~/api/posters";
 
-import { ccn } from "~/utils/concatClassNames";
-
 import { ListItemTitle } from "./ListItemTitle";
 import { PosterList, PosterListItem } from "./PosterList";
 
@@ -17,10 +15,8 @@ export type MostWatchedMoviesListItemValue = {
 };
 
 export function MostWatchedMovies({
-  className,
   values,
 }: {
-  className?: string;
   values: readonly MostWatchedMoviesListItemValue[];
 }): false | JSX.Element {
   if (values.length === 0) {
@@ -29,14 +25,11 @@ export function MostWatchedMovies({
 
   return (
     <section
-      className={ccn(
-        `
-          max-w-[calc(250px_*_4)] pb-5
-          laptop:pb-10
-          desktop:max-w-[calc(298px_*_4)]
-        `,
-        className,
-      )}
+      className={`
+        max-w-[calc(250px_*_4)] pb-5
+        laptop:pb-10
+        desktop:max-w-[calc(298px_*_4)]
+      `}
     >
       <h2
         className={`
@@ -47,7 +40,7 @@ export function MostWatchedMovies({
       >
         Most Watched Movies
       </h2>
-      <PosterList className={`justify-center`}>
+      <PosterList justifyClasses="justify-center">
         {values.map((value) => {
           return <ListItem key={value.imdbId} value={value} />;
         })}

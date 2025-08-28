@@ -2,9 +2,7 @@ import type { JSX } from "react";
 
 import type { StillImageProps } from "~/api/stills";
 
-import { ccn } from "~/utils/concatClassNames";
-
-type Props = React.ImgHTMLAttributes<HTMLImageElement> & {
+type Props = Omit<React.ImgHTMLAttributes<HTMLImageElement>, "className"> & {
   className?: string;
   decoding: "async" | "auto" | "sync";
   height: number;
@@ -15,7 +13,7 @@ type Props = React.ImgHTMLAttributes<HTMLImageElement> & {
 };
 
 export function Still({
-  className,
+  className = "aspect-video",
   decoding,
   imageProps,
   loading,
@@ -25,10 +23,10 @@ export function Still({
     <img
       {...imageProps}
       alt=""
+      className={className}
       decoding={decoding}
       loading={loading}
       {...rest}
-      className={ccn("aspect-video", className)}
     />
   );
 }

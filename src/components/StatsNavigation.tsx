@@ -1,20 +1,28 @@
 import type { JSX } from "react";
 
-import { ccn } from "~/utils/concatClassNames";
-
 export function StatsNavigation({
-  className,
+  bgClasses = "bg-footer",
   currentYear,
   linkFunc,
+  marginClasses,
+  widthClasses,
   years,
 }: {
-  className?: string;
+  bgClasses?: string;
   currentYear: string;
   linkFunc: (year: string) => string;
+  marginClasses?: string;
+  widthClasses?: string;
   years: readonly string[];
 }): JSX.Element {
   return (
-    <nav className={ccn("bg-footer", className)}>
+    <nav
+      className={`
+        ${bgClasses}
+        ${marginClasses ?? ""}
+        ${widthClasses ?? ""}
+      `}
+    >
       <ul
         className={`
           mx-auto flex scrollbar-hidden max-w-(--breakpoint-desktop) snap-x

@@ -1,22 +1,31 @@
-import { ccn } from "~/utils/concatClassNames";
-
 export function SubHeading({
   as,
   children,
-  className,
+  fontClasses = "font-sans font-bold",
+  otherClasses,
+  paddingClasses = "py-10",
+  textClasses = "text-xs text-subtle uppercase",
+  trackingClasses = "tracking-wide",
 }: {
   as: "h2" | "h3" | "h4" | "h5";
   children: React.ReactNode;
-  className?: string;
+  fontClasses?: string;
+  otherClasses?: string;
+  paddingClasses?: string;
+  textClasses?: string;
+  trackingClasses?: string;
 }) {
   const Component = as;
 
   return (
     <Component
-      className={ccn(
-        `py-10 font-sans text-xs font-bold tracking-wide text-subtle uppercase`,
-        className,
-      )}
+      className={`
+        ${paddingClasses}
+        ${fontClasses}
+        ${textClasses}
+        ${trackingClasses}
+        ${otherClasses ?? ""}
+      `}
     >
       {children}
     </Component>

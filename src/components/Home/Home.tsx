@@ -18,14 +18,14 @@ export type Props = {
 
 export function Home({ backdropImageProps, deck, values }: Props): JSX.Element {
   return (
-    <Layout className="bg-subtle pb-8" hideLogo={true}>
+    <Layout hideLogo={true} paddingClasses="pb-8">
       <Backdrop
         deck={deck}
         imageProps={backdropImageProps}
         title="Frank's Movie Log"
       />
       <nav className="mx-auto max-w-(--breakpoint-desktop)">
-        <SubHeading as="h2" className="px-container">
+        <SubHeading as="h2" otherClasses="px-container">
           Latest Reviews
         </SubHeading>
         <ul

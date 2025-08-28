@@ -2,7 +2,6 @@ import type { AvatarImageProps } from "~/api/avatars";
 
 import { Avatar } from "~/components/Avatar";
 import { BarGradient } from "~/components/BarGradient";
-import { ccn } from "~/utils/concatClassNames";
 
 type Value = {
   avatarImageProps: AvatarImageProps | undefined;
@@ -15,25 +14,23 @@ type Value = {
 type ValueType = "collection" | "director" | "performer" | "writer";
 
 export function Details({
-  className,
+  gridClasses = "",
   label,
   values,
   valueType,
 }: {
-  className?: string;
+  gridClasses?: string;
   label: string;
   values: Value[];
   valueType: ValueType;
 }) {
   return (
     <section
-      className={ccn(
-        `
-          w-full
-          laptop:w-auto laptop:basis-[calc(50%-16px)]
-        `,
-        className,
-      )}
+      className={`
+        w-full
+        laptop:w-auto laptop:basis-[calc(50%-16px)]
+        ${gridClasses}
+      `}
     >
       <h2
         className={`
@@ -149,10 +146,8 @@ export const DetailsAvatarImageConfig = {
 };
 
 function DetailsItemAvatar({
-  className,
   imageProps,
 }: {
-  className?: string;
   imageProps: AvatarImageProps | undefined;
 }) {
   const avatar = (
@@ -168,9 +163,5 @@ function DetailsItemAvatar({
     />
   );
 
-  return (
-    <div className={ccn("w-12 overflow-hidden rounded-full", className)}>
-      {avatar}
-    </div>
-  );
+  return <div className="w-12 overflow-hidden rounded-full">{avatar}</div>;
 }

@@ -100,7 +100,7 @@ export function MostWatchedPeople({
                   >
                     Details
                   </summary>
-                  <PosterList className="bg-subtle">
+                  <PosterList bgClasses="bg-subtle">
                     {value.viewings.map((viewing) => {
                       return (
                         <MostWatchedPersonViewingListItem
@@ -127,9 +127,11 @@ function MostWatchedPersonViewingListItem({
 }) {
   return (
     <PosterListItem
-      className={`
-        ${value.slug ? "bg-default" : "bg-unreviewed"}
-      `}
+      bgClasses={
+        value.slug
+          ? "bg-default tablet:has-[a:hover]:bg-default"
+          : "bg-unreviewed"
+      }
       posterImageProps={value.posterImageProps}
     >
       <div

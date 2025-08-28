@@ -1,22 +1,28 @@
 import type { JSX } from "react";
 
-import { ccn } from "~/utils/concatClassNames";
-
 import { Footer } from "./Footer";
 import { Mast } from "./Mast";
 
 export function Layout({
+  bgClasses = "bg-subtle",
   children,
-  className,
+  flexClasses,
+  growClasses = "grow",
   hasBackdrop = true,
   hideLogo = false,
-  ...rest
+  itemsClasses,
+  paddingClasses,
+  ...mainProps
 }: {
-  [x: string]: unknown;
+  [key: string]: unknown;
+  bgClasses?: string;
   children: React.ReactNode;
-  className?: string;
+  flexClasses?: string;
+  growClasses?: string;
   hasBackdrop?: boolean;
   hideLogo?: boolean;
+  itemsClasses?: string;
+  paddingClasses?: string;
 }): JSX.Element {
   return (
     <div className="group">
@@ -33,7 +39,17 @@ export function Layout({
       </a>
       <div className="flex min-h-full w-full flex-col bg-default">
         <Mast hasBackdrop={hasBackdrop} hideLogo={hideLogo} />
-        <main className={ccn("grow", className)} id="content" {...rest}>
+        <main
+          className={`
+            ${growClasses}
+            ${bgClasses}
+            ${flexClasses ?? ""}
+            ${paddingClasses ?? ""}
+            ${itemsClasses ?? ""}
+          `}
+          id="content"
+          {...mainProps}
+        >
           {children}
         </main>
         <Footer />

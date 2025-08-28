@@ -106,7 +106,7 @@ function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
               {value.releaseYear}
             </span>
           </a>
-          <Grade className="mb-4" height={18} value={value.grade} />
+          <Grade height={18} otherClasses="mb-4" value={value.grade} />
           <RenderedMarkdown
             className="mb-8 text-base leading-[1.6] tracking-prose text-muted"
             text={value.excerpt}

@@ -9,7 +9,6 @@ import { Layout } from "~/components/Layout";
 import { MoreReviews } from "~/components/MoreReviews";
 import { Still } from "~/components/Still";
 import { SubHeading } from "~/components/SubHeading";
-import { ccn } from "~/utils/concatClassNames";
 
 import { Content } from "./Content";
 import { Credits } from "./Credits";
@@ -56,9 +55,10 @@ export function Review({
 }: Props): JSX.Element {
   return (
     <Layout
-      className="flex flex-col"
+      bgClasses=""
       data-pagefind-body
       data-pagefind-meta={`image:${searchPosterImageProps.src}`}
+      flexClasses="flex flex-col"
       hasBackdrop={false}
     >
       <header
@@ -95,7 +95,7 @@ export function Review({
           className="mb-4 text-muted"
           value={value.originalTitle}
         />
-        <Grade className="mb-6" height={24} value={value.grade} />
+        <Grade height={24} otherClasses="mb-6" value={value.grade} />
         <Meta
           className={`
             mb-10
@@ -107,7 +107,7 @@ export function Review({
         />
         <Still
           {...StillImageConfig}
-          className="mx-auto mb-[.191px]"
+          className="mx-auto mb-[.191px] aspect-video"
           decoding="sync"
           imageProps={stillImageProps}
           loading="eager"
@@ -133,7 +133,6 @@ export function Review({
         <Content content={value.content} />
         <ViewingHistory value={value} />
         <Credits
-          className="w-full max-w-popout"
           countries={value.countries}
           directorNames={value.directorNames}
           originalTitle={value.originalTitle}
@@ -142,6 +141,7 @@ export function Review({
           releaseYear={value.releaseYear}
           runtimeMinutes={value.runtimeMinutes}
           title={value.title}
+          widthClasses="w-full max-w-popout"
           writerNames={value.writerNames}
         />
       </div>
@@ -186,13 +186,10 @@ export function Review({
 }
 
 function Meta({
-  className,
   countries,
   releaseYear,
   runtimeMinutes,
-}: Pick<Review, "countries" | "releaseYear" | "runtimeMinutes"> & {
-  className?: string;
-}) {
+}: Pick<Review, "countries" | "releaseYear" | "runtimeMinutes">) {
   let allCountries;
 
   for (const country of countries) {
@@ -212,10 +209,9 @@ function Meta({
 
   return (
     <div
-      className={ccn(
-        "text-center font-sans text-sm tracking-wide text-subtle uppercase",
-        className,
-      )}
+      className={`
+        text-center font-sans text-sm tracking-wide text-subtle uppercase
+      `}
     >
       {releaseYear} <span>|</span> {allCountries} <span>|</span>{" "}
       {runtimeMinutes}
@@ -257,7 +253,7 @@ function ViewingHistory({ value }: Pick<Props, "value">) {
   const viewings: ReviewContent["viewings"] = value.viewings;
   return (
     <aside className="w-full max-w-popout">
-      <SubHeading as="h2" className="text-center shadow-bottom">
+      <SubHeading as="h2" otherClasses="text-center shadow-bottom">
         Viewing History
       </SubHeading>
       <ul className="bg-default">

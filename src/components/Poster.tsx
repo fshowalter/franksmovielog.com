@@ -2,10 +2,7 @@ import type { JSX } from "react";
 
 import type { PosterImageProps } from "~/api/posters";
 
-import { ccn } from "~/utils/concatClassNames";
-
 type PosterProps = React.ImgHTMLAttributes<HTMLImageElement> & {
-  className?: string;
   decoding: "async" | "auto" | "sync";
   height: number;
   imageProps: PosterImageProps | undefined;
@@ -14,7 +11,6 @@ type PosterProps = React.ImgHTMLAttributes<HTMLImageElement> & {
 };
 
 export function Poster({
-  className,
   decoding,
   imageProps,
   loading,
@@ -25,7 +21,7 @@ export function Poster({
       {...imageProps}
       alt=""
       {...rest}
-      className={ccn("aspect-poster", className)}
+      className="aspect-poster"
       decoding={decoding}
       loading={loading}
     />

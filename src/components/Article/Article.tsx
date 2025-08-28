@@ -25,7 +25,7 @@ export function Article({
   title,
 }: Props): JSX.Element {
   return (
-    <Layout>
+    <Layout bgClasses="">
       <article>
         <Backdrop
           centerText={true}
@@ -36,7 +36,7 @@ export function Article({
         />
         <section className="flex flex-col items-center pt-16 pb-32">
           <div className="px-container">
-            <LongFormText className="max-w-prose" text={content} />
+            <LongFormText otherClasses="max-w-prose" text={content} />
           </div>
         </section>
       </article>

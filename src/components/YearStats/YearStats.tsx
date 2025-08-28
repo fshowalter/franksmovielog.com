@@ -42,7 +42,7 @@ export function YearStats({
   year,
 }: Props): JSX.Element {
   return (
-    <Layout className="flex flex-col items-center bg-subtle">
+    <Layout flexClasses="flex flex-col" itemsClasses="items-center">
       <Backdrop
         breadcrumb={
           <BreadcrumbLink href="/viewings/">Viewing Log</BreadcrumbLink>
@@ -52,7 +52,6 @@ export function YearStats({
         title={`${year} Stats`}
       />
       <StatsNavigation
-        className="mb-12 w-full"
         currentYear={year}
         linkFunc={(year: string) => {
           if (year === "all") {
@@ -61,6 +60,8 @@ export function YearStats({
 
           return `/viewings/stats/${year}/`;
         }}
+        marginClasses="mb-12"
+        widthClasses="w-full"
         years={distinctStatYears}
       />
       <Callouts
