@@ -11,7 +11,7 @@ import { ListItemGenres } from "~/components/ListItemGenres";
 import { ListItemGrade } from "~/components/ListItemGrade";
 import { ListItemReviewDate } from "~/components/ListItemReviewDate";
 import { ListItemTitle } from "~/components/ListItemTitle";
-import { ListWithFilters } from "~/components/ListWithFilters";
+import { ListWithFilters } from "~/components/ListWithFilters/ListWithFilters";
 import { GroupedPosterList, PosterListItem } from "~/components/PosterList";
 import { WatchlistTitleSlug } from "~/components/WatchlistTitleSlug";
 
@@ -92,7 +92,7 @@ export function CastAndCrewMember({
           groupedValues={state.groupedValues}
           onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
           totalCount={state.filteredValues.length}
-          visibleCount={state.showCount!}
+          visibleCount={state.showCount}
         >
           {(value) => {
             return <TitleListItem key={value.imdbId} value={value} />;

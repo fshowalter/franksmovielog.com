@@ -5,7 +5,7 @@ import { allCastAndCrew } from "~/api/castAndCrew";
 import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
 import { CastAndCrewMember } from "~/components/CastAndCrewMember/CastAndCrewMember";
 import { getProps } from "~/components/CastAndCrewMember/getProps";
-import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
+import { Layout as ComponentLayout } from "~/components/Layout";
 import Layout from "~/layouts/Layout.astro";
 
 interface Props {
@@ -37,14 +37,6 @@ const breadcrumb = React.createElement(BreadcrumbLink, {
   children: "Cast & Crew",
   href: "/cast-and-crew/",
 });
-
-// Create React elements in front matter
-const backdropElement = React.createElement(Backdrop, {
-  breadcrumb: breadcrumb,
-  deck,
-  imageProps: backdropImageProps,
-  title: props.value.name,
-});
 ---
 
 <Layout
@@ -56,7 +48,13 @@ const backdropElement = React.createElement(Backdrop, {
   }}
   title={`${props.value.name} movie reviews`}
 >
-  <ListWithFiltersLayout backdrop={backdropElement}>
+  <ComponentLayout addGradient className="bg-subtle">
+    <Backdrop
+      breadcrumb={breadcrumb}
+      deck={deck}
+      imageProps={backdropImageProps}
+      title={props.value.name}
+    />
     <CastAndCrewMember client:load {...interactiveProps} />
-  </ListWithFiltersLayout>
+  </ComponentLayout>
 </Layout>

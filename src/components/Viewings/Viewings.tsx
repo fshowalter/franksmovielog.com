@@ -10,7 +10,7 @@ import { ListItemTitle } from "~/components/ListItemTitle";
 import {
   ListHeaderButton,
   ListWithFilters,
-} from "~/components/ListWithFilters";
+} from "~/components/ListWithFilters/ListWithFilters";
 import { PosterListItem } from "~/components/PosterList";
 
 import { Filters, SortOptions } from "./Filters";

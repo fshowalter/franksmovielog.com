@@ -2,7 +2,7 @@ import type { JSX } from "react";
 
 import { useReducer, useState } from "react";
 
-import { ListWithFilters } from "~/components/ListWithFilters";
+import { ListWithFilters } from "~/components/ListWithFilters/ListWithFilters";
 import { GroupedPosterList } from "~/components/PosterList";
 
 import type { Sort } from "./reducer";
@@ -55,7 +55,7 @@ export function Underrated({
           groupedValues={state.groupedValues}
           onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
           totalCount={state.filteredValues.length}
-          visibleCount={state.showCount!}
+          visibleCount={state.showCount}
         >
           {(value) => <ReviewsListItem key={value.imdbId} value={value} />}
         </GroupedPosterList>

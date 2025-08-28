@@ -159,7 +159,7 @@ function Name({
     return (
       <a
         className={`
-          relative inline-block font-serif text-base leading-6 font-normal
+          relative inline-block font-serif text-base leading-6 font-medium
           text-accent
           after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
           after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent)

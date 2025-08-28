@@ -1,29 +1,30 @@
 /**
  * Reviews reducer with pending filters support
  */
-import type {
-  ListWithFiltersActionType,
-  ListWithFiltersState,
-} from "~/components/ListWithFilters.reducerUtils";
+import type { ListWithFiltersState } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
+import type { TitlesActionType, TitlesWithShowCountState } from "~/components/ListWithFilters/titlesReducerUtils";
 import type { ReviewsListItemValue } from "~/components/Reviews/ReviewsListItem";
 
+import { createInitialState } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import {
-  buildGroupValues,
-  buildSortValues,
-  createInitialState,
-  getGroupLetter,
   handleGenreFilterAction,
   handleGradeFilterAction,
-  handleListWithFiltersAction,
   handleReleaseYearFilterAction,
   handleReviewYearFilterAction,
   handleTitleFilterAction,
-  ListWithFiltersActions,
+  handleTitlesListAction,
+  SHOW_COUNT_DEFAULT,
   sortGrade,
   sortReleaseDate,
   sortReviewDate,
   sortTitle,
-} from "~/components/ListWithFilters.reducerUtils";
+  TitlesActions,
+} from "~/components/ListWithFilters/titlesReducerUtils";
+import {
+  buildGroupValues,
+  buildSortValues,
+  getGroupLetter,
+} from "~/utils/reducerUtils";
 
 type ReviewsSort =
   | "grade-asc"
@@ -35,17 +36,20 @@ type ReviewsSort =
   | "title-asc"
   | "title-desc";
 
-// Re-export shared actions for component convenience
+// Re-export actions for component convenience
+import { ListWithFiltersActions } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
+
 export const Actions = {
   ...ListWithFiltersActions,
+  ...TitlesActions,
 } as const;
 
-export type ActionType = ListWithFiltersActionType<ReviewsSort>;
+export type ActionType = TitlesActionType<ReviewsSort>;
 
 // Re-export sort type for convenience
 export type Sort = ReviewsSort;
 
-type State = ListWithFiltersState<ReviewsListItemValue, ReviewsSort>;
+type State = ListWithFiltersState<ReviewsListItemValue, ReviewsSort> & TitlesWithShowCountState;
 
 // Helper functions
 function getReviewDateGroup(value: ReviewsListItemValue): string {
@@ -97,9 +101,14 @@ export function initState({
   initialSort: ReviewsSort;
   values: ReviewsListItemValue[];
 }): State {
+  const showCount = SHOW_COUNT_DEFAULT;
   return createInitialState({
+    extendedState: {
+      showCount,
+    },
     groupFn: groupValues,
     initialSort,
+    showCount,
     sortFn: sortValues,
     values,
   });
@@ -109,32 +118,37 @@ export function initState({
 export function reducer(state: State, action: ActionType): State {
   switch (action.type) {
     // Field-specific shared filters
-    case ListWithFiltersActions.PENDING_FILTER_GENRES: {
-      return handleGenreFilterAction(state, action);
+    case TitlesActions.PENDING_FILTER_GENRES: {
+      return handleGenreFilterAction(state, action, { showCount: state.showCount });
     }
 
-    case ListWithFiltersActions.PENDING_FILTER_GRADE: {
-      return handleGradeFilterAction(state, action);
+    case TitlesActions.PENDING_FILTER_GRADE: {
+      return handleGradeFilterAction(state, action, { showCount: state.showCount });
     }
 
-    case ListWithFiltersActions.PENDING_FILTER_RELEASE_YEAR: {
-      return handleReleaseYearFilterAction(state, action);
+    case TitlesActions.PENDING_FILTER_RELEASE_YEAR: {
+      return handleReleaseYearFilterAction(state, action, { showCount: state.showCount });
     }
 
-    case ListWithFiltersActions.PENDING_FILTER_REVIEW_YEAR: {
-      return handleReviewYearFilterAction(state, action);
+    case TitlesActions.PENDING_FILTER_REVIEW_YEAR: {
+      return handleReviewYearFilterAction(state, action, { showCount: state.showCount });
     }
 
-    case ListWithFiltersActions.PENDING_FILTER_TITLE: {
-      return handleTitleFilterAction(state, action);
+    case TitlesActions.PENDING_FILTER_TITLE: {
+      return handleTitleFilterAction(state, action, { showCount: state.showCount });
     }
 
     default: {
       // Handle shared list structure actions
-      return handleListWithFiltersAction(state, action, {
-        groupFn: groupValues,
-        sortFn: sortValues,
-      });
+      return handleTitlesListAction(
+        state,
+        action,
+        {
+          groupFn: groupValues,
+          sortFn: sortValues,
+        },
+        { showCount: state.showCount },
+      );
     }
   }
 }

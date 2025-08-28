@@ -2,7 +2,7 @@
 import React from "react";
 
 import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
-import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
+import { Layout as ComponentLayout } from "~/components/Layout";
 import { getPropsForUnderrated as getProps } from "~/components/Reviews/getProps";
 import { ReviewsSubNav } from "~/components/Reviews/ReviewsSubNav";
 import { Underrated } from "~/components/Reviews/Underrated";
@@ -17,18 +17,6 @@ const breadcrumb = React.createElement(BreadcrumbLink, {
   children: "Reviews",
   href: "/reviews/",
 });
-
-// Create React elements in front matter
-const backdropElement = React.createElement(Backdrop, {
-  breadcrumb,
-  deck,
-  imageProps: backdropImageProps,
-  title: "Underrated Surprises",
-});
-
-const subNavElement = React.createElement(ReviewsSubNav, {
-  active: "underrated",
-});
 ---
 
 <Layout
@@ -37,7 +25,14 @@ const subNavElement = React.createElement(ReviewsSubNav, {
   openGraph={{ description: deck, type: "website" }}
   title="Underrated Surprises"
 >
-  <ListWithFiltersLayout backdrop={backdropElement} subNav={subNavElement}>
+  <ComponentLayout addGradient className="bg-subtle">
+    <Backdrop
+      breadcrumb={breadcrumb}
+      deck={deck}
+      imageProps={backdropImageProps}
+      title="Underrated Surprises"
+    />
+    <ReviewsSubNav active="underrated" />
     <Underrated client:load {...interactiveProps} />
-  </ListWithFiltersLayout>
+  </ComponentLayout>
 </Layout>

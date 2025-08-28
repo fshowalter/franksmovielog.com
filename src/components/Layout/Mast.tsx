@@ -37,7 +37,7 @@ export function Mast({
       `}
       style={{
         backgroundImage: addGradient
-          ? "linear-gradient(to bottom, rgba(0,0,0,.85), transparent 95%)"
+          ? "linear-gradient(to bottom, rgba(0,0,0,.55), transparent 90%)"
           : "",
       }}
     >

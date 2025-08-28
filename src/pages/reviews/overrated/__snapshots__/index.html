@@ -256,13 +256,6 @@
         }
       })();
     </script>
-    <link
-      rel="preload"
-      as="image"
-      imagesrcset="/_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Foverrated.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=720&amp;h=405&amp;q=80&amp;f=avif 720w, /_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Foverrated.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=1200&amp;h=675&amp;q=80&amp;f=avif 1200w, /_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Foverrated.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=1920&amp;h=1080&amp;q=80&amp;f=avif 1920w, /_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Foverrated.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=2400&amp;h=1350&amp;q=80&amp;f=avif 2400w"
-      imagesizes="100vw"
-      fetchpriority="high"
-    />
     <div class="group">
       <a
         class="absolute top-0.5 left-1/2 z-skip-link mx-auto [transform:translate(-50%,calc(-100%-2px))] bg-subtle px-6 py-2 text-center text-accent focus:[transform:translate(-50%,0%)]"
@@ -275,8 +268,8 @@
           style="
             background-image: linear-gradient(
               to bottom,
-              rgba(0, 0, 0, 0.85),
-              transparent 95%
+              rgba(0, 0, 0, 0.55),
+              transparent 90%
             );
           "
         >
@@ -517,6 +510,13 @@
           </div>
         </header>
         <main class="grow bg-subtle" id="content">
+          <link
+            rel="preload"
+            as="image"
+            imagesrcset="/_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Foverrated.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=720&amp;h=405&amp;q=80&amp;f=avif 720w, /_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Foverrated.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=1200&amp;h=675&amp;q=80&amp;f=avif 1200w, /_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Foverrated.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=1920&amp;h=1080&amp;q=80&amp;f=avif 1920w, /_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Foverrated.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=2400&amp;h=1350&amp;q=80&amp;f=avif 2400w"
+            imagesizes="100vw"
+            fetchpriority="high"
+          />
           <header
             class="min-h-[400px] tablet:min-h-[640px] laptop:min-h-[clamp(640px,70vh,1350px)] relative flex w-full flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pt-40 pb-8 text-inverse tablet:pt-40 tablet:pb-10 laptop:pt-40 laptop:pb-16"
           >
@@ -610,7 +610,7 @@
           </nav>
           <astro-island
             uid="Z2dTMBN"
-            prefix="r1"
+            prefix="r5"
             component-url="~/components/Reviews/Overrated"
             component-export="Overrated"
             renderer-url="@astrojs/react/client.js"
