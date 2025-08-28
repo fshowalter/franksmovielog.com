@@ -1,7 +1,10 @@
 /**
  * Reviews reducer with pending filters support
  */
-import type { ListWithFiltersState } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
+import type {
+  ListWithFiltersActionType,
+  ListWithFiltersState,
+} from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import type { TitlesActionType } from "~/components/ListWithFilters/titlesReducerUtils";
 import type { ReviewsListItemValue } from "~/components/Reviews/ReviewsListItem";
 
@@ -49,16 +52,13 @@ export const Actions = {
 
 export type ActionType = Extract<
   TitlesActionType<ReviewsSort>,
+  | ListWithFiltersActionType<ReviewsSort>
   | { type: TitlesActions.PENDING_FILTER_GENRES }
   | { type: TitlesActions.PENDING_FILTER_GRADE }
   | { type: TitlesActions.PENDING_FILTER_RELEASE_YEAR }
   | { type: TitlesActions.PENDING_FILTER_REVIEW_YEAR }
   | { type: TitlesActions.PENDING_FILTER_TITLE }
   | { type: TitlesActions.SHOW_MORE }
-  | { type: ListWithFiltersActions.APPLY_PENDING_FILTERS }
-  | { type: ListWithFiltersActions.CLEAR_PENDING_FILTERS }
-  | { type: ListWithFiltersActions.RESET_PENDING_FILTERS }
-  | { type: ListWithFiltersActions.SORT }
 >;
 
 // Re-export sort type for convenience

@@ -1,4 +1,7 @@
-import type { ListWithFiltersState } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
+import type {
+  ListWithFiltersActionType,
+  ListWithFiltersState,
+} from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import type { TitlesActionType } from "~/components/ListWithFilters/titlesReducerUtils";
 import type { GroupFn } from "~/utils/reducerUtils";
 
@@ -33,20 +36,17 @@ export const Actions = {
 } as const;
 
 export type ActionType =
+  | Extract<
+      TitlesActionType<Sort>,
+      | ListWithFiltersActionType<Sort>
+      | { type: TitlesActions.PENDING_FILTER_RELEASE_YEAR }
+      | { type: TitlesActions.PENDING_FILTER_TITLE }
+    >
   | NextMonthAction
   | PendingFilterMediumAction
   | PendingFilterVenueAction
   | PendingFilterViewingYearAction
-  | PrevMonthAction
-  | Extract<
-      TitlesActionType<Sort>,
-      | { type: TitlesActions.PENDING_FILTER_RELEASE_YEAR }
-      | { type: TitlesActions.PENDING_FILTER_TITLE }
-      | { type: ListWithFiltersActions.APPLY_PENDING_FILTERS }
-      | { type: ListWithFiltersActions.CLEAR_PENDING_FILTERS }
-      | { type: ListWithFiltersActions.RESET_PENDING_FILTERS }
-      | { type: ListWithFiltersActions.SORT }
-    >;
+  | PrevMonthAction;
 
 export type Sort = "viewing-date-asc" | "viewing-date-desc";
 

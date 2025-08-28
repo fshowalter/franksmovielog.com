@@ -1,4 +1,7 @@
-import type { ListWithFiltersState } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
+import type {
+  ListWithFiltersActionType,
+  ListWithFiltersState,
+} from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import type { TitlesActionType } from "~/components/ListWithFilters/titlesReducerUtils";
 
 import {
@@ -49,15 +52,12 @@ export const Actions = {
 
 export type ActionType = Extract<
   TitlesActionType<Sort>,
+  | ListWithFiltersActionType<Sort>
   | { type: TitlesActions.PENDING_FILTER_RELEASE_YEAR }
   | { type: TitlesActions.PENDING_FILTER_REVIEW_STATUS }
   | { type: TitlesActions.PENDING_FILTER_REVIEW_YEAR }
   | { type: TitlesActions.PENDING_FILTER_TITLE }
   | { type: TitlesActions.SHOW_MORE }
-  | { type: ListWithFiltersActions.APPLY_PENDING_FILTERS }
-  | { type: ListWithFiltersActions.CLEAR_PENDING_FILTERS }
-  | { type: ListWithFiltersActions.RESET_PENDING_FILTERS }
-  | { type: ListWithFiltersActions.SORT }
 >;
 
 type State = ListWithFiltersState<ListItemValue, Sort> & {
