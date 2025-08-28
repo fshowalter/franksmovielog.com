@@ -152,10 +152,7 @@ export function reducer(state: State, action: ActionType): State {
       return handleShowMore(state, action, groupValues);
     }
 
-    case ListWithFiltersActions.APPLY_PENDING_FILTERS:
-    case ListWithFiltersActions.CLEAR_PENDING_FILTERS:
-    case ListWithFiltersActions.RESET_PENDING_FILTERS:
-    case ListWithFiltersActions.SORT: {
+    default: {
       // Handle shared list structure actions
       const paginatedGroupFn = createPaginatedGroupFn(
         groupValues,
@@ -170,10 +167,6 @@ export function reducer(state: State, action: ActionType): State {
         },
         { showCount: state.showCount },
       );
-    }
-
-    default: {
-      return state;
     }
   }
 }
