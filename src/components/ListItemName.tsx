@@ -2,7 +2,7 @@ export function ListItemName({ href, name }: { href: string; name: string }) {
   return (
     <a
       className={`
-        leading-normal text-base font-semibold text-[#252525] transition-all
+        leading-normal text-base font-semibold text-default transition-all
         duration-500
         after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
         after:opacity-0

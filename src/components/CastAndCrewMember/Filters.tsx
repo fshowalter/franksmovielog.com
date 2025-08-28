@@ -2,6 +2,7 @@ import type { JSX } from "react";
 
 import { GradeInput } from "~/components/GradeInput";
 import { MultiSelectField } from "~/components/MultiSelectField";
+import { ReviewedStatusField } from "~/components/ReviewedStatusField";
 import { SelectField } from "~/components/SelectField";
 import { TextFilter } from "~/components/TextFilter";
 import { YearInput } from "~/components/YearInput";
@@ -57,25 +58,15 @@ export function Filters({
           })}
         </SelectField>
       )}
-      <SelectField
-        label="Reviewed Status"
+      <ReviewedStatusField
         onChange={(e) =>
           dispatch({
             type: Actions.PENDING_FILTER_REVIEW_STATUS,
             value: e.target.value,
           })
         }
-      >
-        <option key={0} value={"All"}>
-          All
-        </option>
-        <option key={1} value={"Reviewed"}>
-          Reviewed
-        </option>
-        <option key={2} value={"Not Reviewed"}>
-          Not Reviewed
-        </option>
-      </SelectField>
+      />
+
       <TextFilter
         initialValue={filterValues.title || ""}
         label="Title"

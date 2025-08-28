@@ -1,3 +1,4 @@
+import { ReviewedStatusField } from "~/components/ReviewedStatusField";
 import { SelectField } from "~/components/SelectField";
 import { SelectOptions } from "~/components/SelectOptions";
 import { TextFilter } from "~/components/TextFilter";
@@ -32,6 +33,14 @@ export function Filters({
 }) {
   return (
     <>
+      <ReviewedStatusField
+        onChange={(e) =>
+          dispatch({
+            type: Actions.PENDING_FILTER_REVIEW_STATUS,
+            value: e.target.value,
+          })
+        }
+      />
       <TextFilter
         initialValue={filterValues.title || ""}
         label="Title"
