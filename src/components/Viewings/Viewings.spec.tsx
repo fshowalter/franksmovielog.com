@@ -80,6 +80,70 @@ describe("Viewings", () => {
     expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
 
+  it("can filter reviewed titles", async ({ expect }) => {
+    expect.hasAssertions();
+
+    render(<Viewings {...props} />);
+
+    await userEvent.selectOptions(
+      screen.getByLabelText("Reviewed Status"),
+      "Reviewed",
+    );
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    expect(screen.getByTestId("calendar")).toMatchSnapshot();
+  });
+
+  it("can show unreviewed titles", async ({ expect }) => {
+    expect.hasAssertions();
+
+    render(<Viewings {...props} />);
+
+    await userEvent.selectOptions(
+      screen.getByLabelText("Reviewed Status"),
+      "Not Reviewed",
+    );
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    expect(screen.getByTestId("calendar")).toMatchSnapshot();
+  });
+
+  it("can show all titles", async ({ expect }) => {
+    expect.hasAssertions();
+
+    render(<Viewings {...props} />);
+
+    await userEvent.selectOptions(
+      screen.getByLabelText("Reviewed Status"),
+      "Not Reviewed",
+    );
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    await userEvent.selectOptions(
+      screen.getByLabelText("Reviewed Status"),
+      "All",
+    );
+
+    // Apply the filter
+    await userEvent.click(
+      screen.getByRole("button", { name: /View \d+ Results/ }),
+    );
+
+    expect(screen.getByTestId("calendar")).toMatchSnapshot();
+  });
+
   it("can filter by medium then show all", async ({ expect }) => {
     expect.hasAssertions();
 
