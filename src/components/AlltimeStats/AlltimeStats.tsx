@@ -82,10 +82,7 @@ export function AlltimeStats({
           tablet:px-container
         `}
       >
-        <MostWatchedMovies
-          className="mx-auto w-full"
-          values={mostWatchedMovies}
-        />
+        <MostWatchedMovies values={mostWatchedMovies} />
         <div
           className={`
             flex flex-col items-start gap-y-8

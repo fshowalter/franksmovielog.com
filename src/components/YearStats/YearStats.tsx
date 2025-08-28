@@ -76,10 +76,7 @@ export function YearStats({
           tablet:px-container
         `}
       >
-        <MostWatchedMovies
-          className="mx-auto w-full"
-          values={mostWatchedMovies}
-        />
+        <MostWatchedMovies values={mostWatchedMovies} />
         <div
           className={`
             mx-auto flex w-full max-w-popout grid-cols-2 flex-col items-start

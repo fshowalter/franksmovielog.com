@@ -115,7 +115,7 @@ export function Collection({
 function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
   return (
     <PosterListItem
-      className={value.slug ? "bg-default" : "bg-unreviewed"}
+      bgClasses={value.slug ? "bg-default" : "bg-unreviewed"}
       posterImageProps={value.posterImageProps}
     >
       <ListItemDetails>

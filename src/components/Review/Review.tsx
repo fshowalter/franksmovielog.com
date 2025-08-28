@@ -97,10 +97,6 @@ export function Review({
         />
         <Grade height={24} otherClasses="mb-6" value={value.grade} />
         <Meta
-          className={`
-            mb-10
-            tablet:mb-12
-          `}
           countries={value.countries}
           releaseYear={value.releaseYear}
           runtimeMinutes={value.runtimeMinutes}
@@ -210,7 +206,8 @@ function Meta({
   return (
     <div
       className={`
-        text-center font-sans text-sm tracking-wide text-subtle uppercase
+        mb-10 text-center font-sans text-sm tracking-wide text-subtle uppercase
+        tablet:mb-12
       `}
     >
       {releaseYear} <span>|</span> {allCountries} <span>|</span>{" "}

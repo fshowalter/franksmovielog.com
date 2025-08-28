@@ -93,11 +93,11 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
           </span>
         </a>
         <Grade
-          className={`
+          height={24}
+          otherClasses={`
             mb-5
             tablet:mb-8
           `}
-          height={24}
           value={value.grade}
         />
         <RenderedMarkdown

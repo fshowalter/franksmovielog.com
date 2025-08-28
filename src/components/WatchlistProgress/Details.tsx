@@ -75,10 +75,7 @@ export function Details({
                   group-has-[a:hover]/list-item:after:opacity-0
                 `}
               >
-                <DetailsItemAvatar
-                  className=""
-                  imageProps={value.avatarImageProps}
-                />
+                <DetailsItemAvatar imageProps={value.avatarImageProps} />
               </div>
               <div
                 className={`

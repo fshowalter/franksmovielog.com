@@ -223,7 +223,6 @@ function CalendarDay({ day }: { day: CalendarDayData }): JSX.Element {
           >
             {day.viewings.map((viewing) => (
               <PosterListItem
-                className="items-center"
                 key={viewing.viewingSequence}
                 posterImageProps={viewing.posterImageProps}
               >

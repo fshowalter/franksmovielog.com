@@ -30,7 +30,6 @@ export function Filters({
         placeholder="Enter all or part of a name"
       />
       <SelectField
-        className="basis-full"
         label="Credits"
         onChange={(e) =>
           dispatch({
