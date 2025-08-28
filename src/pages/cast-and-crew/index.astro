@@ -20,7 +20,7 @@ const { backdropImageProps, deck, ...interactiveProps } = props;
   }}
   title="Cast and Crew"
 >
-  <ComponentLayout addGradient className="bg-subtle">
+  <ComponentLayout className="bg-subtle">
     <Backdrop deck={deck} imageProps={backdropImageProps} title="Cast & Crew" />
     <CastAndCrew client:load {...interactiveProps} />
   </ComponentLayout>

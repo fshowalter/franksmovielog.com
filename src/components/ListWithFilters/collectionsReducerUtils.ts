@@ -27,7 +27,7 @@ export type CollectionsActionType<TSortValue = unknown> =
   | ListWithFiltersActionType<TSortValue>
   | PendingFilterNameAction;
 
-export type PendingFilterNameAction = {
+type PendingFilterNameAction = {
   type: CollectionsActions.PENDING_FILTER_NAME;
   value: string;
 };

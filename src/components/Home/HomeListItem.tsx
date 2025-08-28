@@ -79,7 +79,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
         </div>
         <a
           className={`
-            mb-3 block text-2.5xl leading-7 font-medium text-[#252525]
+            mb-3 block text-2.5xl leading-7 font-medium text-default
             transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full

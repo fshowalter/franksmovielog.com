@@ -20,7 +20,7 @@ const { backdropImageProps, deck, ...interactiveProps } = props;
   }}
   title="Watchlist"
 >
-  <ComponentLayout addGradient className="bg-subtle">
+  <ComponentLayout className="bg-subtle">
     <Backdrop deck={deck} imageProps={backdropImageProps} title="Watchlist" />
     <Watchlist client:load {...interactiveProps} />
   </ComponentLayout>

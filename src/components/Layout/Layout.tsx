@@ -6,7 +6,6 @@ import { Footer } from "./Footer";
 import { Mast } from "./Mast";
 
 export function Layout({
-  addGradient,
   children,
   className,
   hasBackdrop = true,
@@ -14,16 +13,11 @@ export function Layout({
   ...rest
 }: {
   [x: string]: unknown;
-  addGradient?: boolean;
   children: React.ReactNode;
   className?: string;
   hasBackdrop?: boolean;
   hideLogo?: boolean;
 }): JSX.Element {
-  if (addGradient === undefined) {
-    addGradient = hasBackdrop;
-  }
-
   return (
     <div className="group">
       <a
@@ -38,11 +32,7 @@ export function Layout({
         Skip to content
       </a>
       <div className="flex min-h-full w-full flex-col bg-default">
-        <Mast
-          addGradient={addGradient}
-          hasBackdrop={hasBackdrop}
-          hideLogo={hideLogo}
-        />
+        <Mast hasBackdrop={hasBackdrop} hideLogo={hideLogo} />
         <main className={ccn("grow", className)} id="content" {...rest}>
           {children}
         </main>

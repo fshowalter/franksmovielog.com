@@ -21,6 +21,7 @@
   --background-color-*: initial;
   --background-color-accent: var(--bg-accent);
   --background-color-canvas: var(--bg-canvas);
+  --background-color-calendar: var(--bg-calendar);
   --background-color-default: var(--bg-default);
   --background-color-footer: var(--bg-footer);
   --background-color-group: var(--bg-group);
@@ -82,10 +83,13 @@
   --max-width-prose: 39rem;
 
   --width-list-item-poster: var(--list-item-poster-width);
+
+  --drop-shadow-2xl: var(--drop-shadow-2xl);
 }
 
 @layer base {
   :root {
+    --bg-calendar: #fff;
     --bg-accent: #b4841e;
     --bg-canvas: #f4f1ea;
     --bg-default: #fff;
@@ -97,6 +101,7 @@
     --bg-unreviewed: #fcfcfc;
     --bg-group: #ededed;
     --bg-subtle: #f9f7f4;
+
     --border-default: #e9e7e0;
     --fg-accent: #bf8a00;
     --fg-default: #252525;
@@ -109,8 +114,17 @@
     --font-sans: "Assistant";
     --font-serif: "FrankRuhlLibre";
     --list-item-poster-width: 64px;
-
-    text-size-adjust: none;
+    --hero-gradient: linear-gradient(
+      to top,
+      rgb(0 0 0 / 55%),
+      rgb(0 0 0 / 17%) 25%,
+      transparent 40%,
+      rgb(0 0 0 / 17%) 75%,
+      rgb(0 0 0 / 55%) 100%
+    );
+    --drop-shadow-md: 0 3px 3px rgb(0 0 0 / 12%);
+    --drop-shadow-2xl: 0 25px 25px rgb(0 0 0 / 15%);
+    --drop-shadow-lg: 0 4px 4px rgb(0 0 0 / 15%);
   }
 
   body {
@@ -130,7 +144,8 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg-accent: #a52422;
+      --bg-calendar: #3e3d3c;
+      --bg-accent: #8e6b00;
       --bg-canvas: #484745;
       --bg-default: #322f2f;
       --bg-hover: #3c393a;
@@ -139,13 +154,17 @@
       --bg-group: #464646;
       --bg-stripe: #3c393a;
       --bg-unreviewed: #3c393a;
-      --bg-subtle: #373434;
+      --bg-subtle: #3e3d3c;
       --border-default: #484745;
-      --fg-accent: #c86666;
+      --fg-accent: #bf8a00;
       --fg-default: rgb(255 255 255 / 75%);
       --fg-muted: rgb(255 255 255 / 65%);
       --fg-subtle: rgb(255 255 255 / 60%);
       --image-filter: brightness(0.8) contrast(1);
+      --hero-gradient: unset;
+      --drop-shadow-md: 0 3px 3px rgb(0 0 0 / 19%);
+      --drop-shadow-2xl: 0 25px 25px rgb(0 0 0 / 65%);
+      --drop-shadow-lg: 0 4px 4px rgb(0 0 0 / 25%);
     }
   }
 

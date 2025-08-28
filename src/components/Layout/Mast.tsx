@@ -7,11 +7,9 @@ import { navItems } from "./navItems";
 import { TableOfContents } from "./TableOfContents";
 
 export function Mast({
-  addGradient,
   hasBackdrop,
   hideLogo,
 }: {
-  addGradient: boolean;
   hasBackdrop: boolean;
   hideLogo: boolean;
 }) {
@@ -35,11 +33,6 @@ export function Mast({
         }
         text-(--mast-color)
       `}
-      style={{
-        backgroundImage: addGradient
-          ? "linear-gradient(to bottom, rgba(0,0,0,.55), transparent 90%)"
-          : "",
-      }}
     >
       {hideLogo ? <div /> : <Logo className="" />}
       <div className="flex items-center">

@@ -18,7 +18,7 @@ const { backdropImageProps, deck, ...interactiveProps } = props;
   openGraph={{ description: deck, type: "website" }}
   title="All Reviews"
 >
-  <ComponentLayout addGradient className="bg-subtle">
+  <ComponentLayout className="bg-subtle">
     <Backdrop deck={deck} imageProps={backdropImageProps} title="Reviews" />
     <ReviewsSubNav active="all" />
     <AllReviews client:load {...interactiveProps} />

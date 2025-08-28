@@ -37,41 +37,6 @@ export enum TitlesActions {
   SHOW_MORE = "SHOW_MORE",
 }
 
-export type PendingFilterGenresAction = {
-  type: TitlesActions.PENDING_FILTER_GENRES;
-  values: readonly string[];
-};
-
-export type PendingFilterGradeAction = {
-  type: TitlesActions.PENDING_FILTER_GRADE;
-  values: [number, number];
-};
-
-export type PendingFilterReleaseYearAction = {
-  type: TitlesActions.PENDING_FILTER_RELEASE_YEAR;
-  values: [string, string];
-};
-
-export type PendingFilterReviewStatusAction = {
-  type: TitlesActions.PENDING_FILTER_REVIEW_STATUS;
-  value: string;
-};
-
-export type PendingFilterReviewYearAction = {
-  type: TitlesActions.PENDING_FILTER_REVIEW_YEAR;
-  values: [string, string];
-};
-
-export type PendingFilterTitleAction = {
-  type: TitlesActions.PENDING_FILTER_TITLE;
-  value: string;
-};
-
-export type ShowMoreAction = {
-  increment?: number;
-  type: TitlesActions.SHOW_MORE;
-};
-
 // Union type for all title-specific actions
 export type TitlesActionType<TSortValue = unknown> =
   | ListWithFiltersActionType<TSortValue>
@@ -83,15 +48,50 @@ export type TitlesActionType<TSortValue = unknown> =
   | PendingFilterTitleAction
   | ShowMoreAction;
 
-// ============================================================================
-// Title-specific Filter Handlers
-// ============================================================================
-
 /**
  * Extended state for title lists that support pagination
  */
 export type TitlesWithShowCountState = {
   showCount: number;
+};
+
+type PendingFilterGenresAction = {
+  type: TitlesActions.PENDING_FILTER_GENRES;
+  values: readonly string[];
+};
+
+type PendingFilterGradeAction = {
+  type: TitlesActions.PENDING_FILTER_GRADE;
+  values: [number, number];
+};
+
+type PendingFilterReleaseYearAction = {
+  type: TitlesActions.PENDING_FILTER_RELEASE_YEAR;
+  values: [string, string];
+};
+
+type PendingFilterReviewStatusAction = {
+  type: TitlesActions.PENDING_FILTER_REVIEW_STATUS;
+  value: string;
+};
+
+type PendingFilterReviewYearAction = {
+  type: TitlesActions.PENDING_FILTER_REVIEW_YEAR;
+  values: [string, string];
+};
+
+type PendingFilterTitleAction = {
+  type: TitlesActions.PENDING_FILTER_TITLE;
+  value: string;
+};
+
+// ============================================================================
+// Title-specific Filter Handlers
+// ============================================================================
+
+type ShowMoreAction = {
+  increment?: number;
+  type: TitlesActions.SHOW_MORE;
 };
 
 /**
