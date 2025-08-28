@@ -9,10 +9,7 @@ import type {
 } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import type { GroupFn } from "~/utils/reducerUtils";
 
-import {
-  handleListWithFiltersAction as baseHandleListWithFiltersAction,
-  updatePendingFilter,
-} from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
+import { updatePendingFilter } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import { sortNumber, sortString } from "~/utils/reducerUtils";
 
 /**
@@ -47,7 +44,6 @@ export type TitlesActionType<TSortValue = unknown> =
   | PendingFilterReviewYearAction
   | PendingFilterTitleAction
   | ShowMoreAction;
-
 
 type PendingFilterGenresAction = {
   type: TitlesActions.PENDING_FILTER_GENRES;
@@ -87,6 +83,21 @@ type ShowMoreAction = {
   increment?: number;
   type: TitlesActions.SHOW_MORE;
 };
+
+/**
+ * Creates a pagination-aware group function that slices items before grouping
+ */
+export function createPaginatedGroupFn<TItem, TSortValue>(
+  baseGroupFn: GroupFn<TItem, TSortValue> | undefined,
+  showCount: number,
+): GroupFn<TItem, TSortValue> | undefined {
+  if (!baseGroupFn) return undefined;
+
+  return (items: TItem[], sortValue: TSortValue) => {
+    const paginatedItems = items.slice(0, showCount);
+    return baseGroupFn(paginatedItems, sortValue);
+  };
+}
 
 /**
  * Handle Genre filter action for titles
@@ -184,6 +195,10 @@ export function handleReviewStatusFilterAction<
     : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
 }
 
+// ============================================================================
+// Title-specific Sort Functions
+// ============================================================================
+
 /**
  * Handle Review Year filter action for titles
  */
@@ -208,9 +223,21 @@ export function handleReviewYearFilterAction<
     : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
 }
 
-// ============================================================================
-// Title-specific Sort Functions
-// ============================================================================
+/**
+ * Handle "Show More" action for title lists with pagination
+ */
+export function handleShowMore<
+  TItem,
+  TSortValue,
+  TExtendedState extends { showCount: number },
+>(
+  state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
+  action: ShowMoreAction,
+  groupFn?: GroupFn<TItem, TSortValue>,
+): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
+  const increment = action.increment ?? SHOW_COUNT_DEFAULT;
+  return showMore(state, increment, groupFn);
+}
 
 /**
  * Handle Title filter action for titles
@@ -229,53 +256,6 @@ export function handleTitleFilterAction<
   return extendedState
     ? { ...baseState, ...extendedState }
     : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
-}
-
-/**
- * Handle actions for title-based lists, including show more
- */
-export function handleTitlesListAction<
-  TItem,
-  TSortValue,
-  TExtendedState extends Record<string, unknown> = Record<string, never>,
->(
-  state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
-  action: TitlesActionType<TSortValue>,
-  handlers: {
-    groupFn?: GroupFn<TItem, TSortValue>;
-    sortFn: (values: TItem[], sort: TSortValue) => TItem[];
-  },
-  extendedState?: TExtendedState,
-): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
-  // Handle show more action if applicable
-  if (action.type === TitlesActions.SHOW_MORE) {
-    // Check if state has showCount property (for TypeScript)
-    if ("showCount" in state && typeof state.showCount === "number") {
-      const increment = action.increment ?? SHOW_COUNT_DEFAULT;
-      const baseState = showMore(
-        state as ListWithFiltersState<TItem, TSortValue> &
-          TExtendedState & { showCount: number },
-        increment,
-        handlers.groupFn,
-      );
-      return baseState;
-    }
-    return state;
-  }
-
-  // Get showCount if it exists in extended state for passing to base handler
-  const showCount =
-    "showCount" in state && typeof state.showCount === "number"
-      ? state.showCount
-      : undefined;
-
-  // Delegate to base handler for other actions
-  return baseHandleListWithFiltersAction(
-    state,
-    action as ListWithFiltersActionType<TSortValue>,
-    { ...handlers, showCount },
-    extendedState,
-  );
 }
 
 export function sortGrade<T extends { gradeValue?: null | number }>() {

@@ -138,7 +138,6 @@ export function handleListWithFiltersAction<
   action: ListWithFiltersActionType<TSortValue>,
   handlers: {
     groupFn?: GroupFn<TItem, TSortValue>;
-    showCount?: number;
     sortFn: (values: TItem[], sort: TSortValue) => TItem[];
   },
   extendedState?: TExtendedState,
@@ -149,7 +148,6 @@ export function handleListWithFiltersAction<
         state,
         handlers.sortFn,
         handlers.groupFn,
-        handlers.showCount,
       );
       return extendedState
         ? { ...baseState, ...extendedState }
@@ -179,7 +177,6 @@ export function handleListWithFiltersAction<
         action.value,
         handlers.sortFn,
         handlers.groupFn,
-        handlers.showCount,
       );
       return extendedState
         ? { ...baseState, ...extendedState }
@@ -239,7 +236,6 @@ function applyPendingFilters<TItem, TSortValue>(
   state: ListWithFiltersState<TItem, TSortValue>,
   sortFn: (values: TItem[], sort: TSortValue) => TItem[],
   groupFn?: GroupFn<TItem, TSortValue>,
-  showCount?: number,
 ): ListWithFiltersState<TItem, TSortValue> {
   const filteredValues = sortFn(
     filterValues({
@@ -249,11 +245,8 @@ function applyPendingFilters<TItem, TSortValue>(
     state.sortValue,
   );
 
-  const valuesToGroup = showCount
-    ? filteredValues.slice(0, showCount)
-    : filteredValues;
   const groupedValues = groupFn
-    ? groupFn(valuesToGroup, state.sortValue)
+    ? groupFn(filteredValues, state.sortValue)
     : new Map<string, TItem[]>();
 
   return {
@@ -327,14 +320,10 @@ function updateSort<TItem, TSortValue>(
   sortValue: TSortValue,
   sortFn: (values: TItem[], sort: TSortValue) => TItem[],
   groupFn?: GroupFn<TItem, TSortValue>,
-  showCount?: number,
 ): ListWithFiltersState<TItem, TSortValue> {
   const filteredValues = sortFn(state.filteredValues, sortValue);
-  const valuesToGroup = showCount
-    ? filteredValues.slice(0, showCount)
-    : filteredValues;
   const groupedValues = groupFn
-    ? groupFn(valuesToGroup, sortValue)
+    ? groupFn(filteredValues, sortValue)
     : new Map<string, TItem[]>();
 
   return {
