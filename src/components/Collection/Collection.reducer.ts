@@ -47,7 +47,18 @@ export const Actions = {
   ...TitlesActions,
 } as const;
 
-export type ActionType = TitlesActionType<Sort>;
+export type ActionType = Extract<
+  TitlesActionType<Sort>,
+  | { type: TitlesActions.PENDING_FILTER_RELEASE_YEAR }
+  | { type: TitlesActions.PENDING_FILTER_REVIEW_STATUS }
+  | { type: TitlesActions.PENDING_FILTER_REVIEW_YEAR }
+  | { type: TitlesActions.PENDING_FILTER_TITLE }
+  | { type: TitlesActions.SHOW_MORE }
+  | { type: ListWithFiltersActions.APPLY_PENDING_FILTERS }
+  | { type: ListWithFiltersActions.CLEAR_PENDING_FILTERS }
+  | { type: ListWithFiltersActions.RESET_PENDING_FILTERS }
+  | { type: ListWithFiltersActions.SORT }
+>;
 
 type State = ListWithFiltersState<ListItemValue, Sort> & {
   showCount: number;
@@ -113,6 +124,34 @@ export function initState({
 
 export function reducer(state: State, action: ActionType): State {
   switch (action.type) {
+    case TitlesActions.PENDING_FILTER_RELEASE_YEAR: {
+      return handleReleaseYearFilterAction(state, action, {
+        showCount: state.showCount,
+      });
+    }
+
+    case TitlesActions.PENDING_FILTER_REVIEW_STATUS: {
+      return handleReviewStatusFilterAction(state, action, {
+        showCount: state.showCount,
+      });
+    }
+
+    case TitlesActions.PENDING_FILTER_REVIEW_YEAR: {
+      return handleReviewYearFilterAction(state, action, {
+        showCount: state.showCount,
+      });
+    }
+
+    case TitlesActions.PENDING_FILTER_TITLE: {
+      return handleTitleFilterAction(state, action, {
+        showCount: state.showCount,
+      });
+    }
+
+    case TitlesActions.SHOW_MORE: {
+      return handleShowMore(state, action, groupValues);
+    }
+
     case ListWithFiltersActions.APPLY_PENDING_FILTERS:
     case ListWithFiltersActions.CLEAR_PENDING_FILTERS:
     case ListWithFiltersActions.RESET_PENDING_FILTERS:
@@ -131,32 +170,6 @@ export function reducer(state: State, action: ActionType): State {
         },
         { showCount: state.showCount },
       );
-    }
-
-    case TitlesActions.PENDING_FILTER_RELEASE_YEAR: {
-      return handleReleaseYearFilterAction(state, action, {
-        showCount: state.showCount,
-      });
-    }
-
-    // Field-specific shared filters
-    case TitlesActions.PENDING_FILTER_REVIEW_STATUS: {
-      return handleReviewStatusFilterAction(state, action, {
-        showCount: state.showCount,
-      });
-    }
-    case TitlesActions.PENDING_FILTER_REVIEW_YEAR: {
-      return handleReviewYearFilterAction(state, action, {
-        showCount: state.showCount,
-      });
-    }
-    case TitlesActions.PENDING_FILTER_TITLE: {
-      return handleTitleFilterAction(state, action, {
-        showCount: state.showCount,
-      });
-    }
-    case TitlesActions.SHOW_MORE: {
-      return handleShowMore(state, action, groupValues);
     }
 
     default: {

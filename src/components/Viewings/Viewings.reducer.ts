@@ -38,7 +38,15 @@ export type ActionType =
   | PendingFilterVenueAction
   | PendingFilterViewingYearAction
   | PrevMonthAction
-  | TitlesActionType<Sort>;
+  | Extract<
+      TitlesActionType<Sort>,
+      | { type: TitlesActions.PENDING_FILTER_RELEASE_YEAR }
+      | { type: TitlesActions.PENDING_FILTER_TITLE }
+      | { type: ListWithFiltersActions.APPLY_PENDING_FILTERS }
+      | { type: ListWithFiltersActions.CLEAR_PENDING_FILTERS }
+      | { type: ListWithFiltersActions.RESET_PENDING_FILTERS }
+      | { type: ListWithFiltersActions.SORT }
+    >;
 
 export type Sort = "viewing-date-asc" | "viewing-date-desc";
 
@@ -125,58 +133,6 @@ export function reducer(state: State, action: ActionType): State {
   let newMonth;
 
   switch (action.type) {
-    case ListWithFiltersActions.APPLY_PENDING_FILTERS:
-    case ListWithFiltersActions.CLEAR_PENDING_FILTERS:
-    case ListWithFiltersActions.RESET_PENDING_FILTERS:
-    case ListWithFiltersActions.SORT: {
-      // Handle shared list structure actions (no show more for this component)
-      const result = handleListWithFiltersAction(
-        state,
-        action,
-        { groupFn: groupValuesSortedBySequence, sortFn: sortValues },
-        {
-          currentMonth: state.currentMonth,
-          hasNextMonth: state.hasNextMonth,
-          hasPrevMonth: state.hasPrevMonth,
-          monthViewings: state.monthViewings,
-          nextMonth: state.nextMonth,
-          prevMonth: state.prevMonth,
-        },
-      );
-
-      // Update month-related state on APPLY_PENDING_FILTERS and SORT
-      if (
-        action.type === ListWithFiltersActions.APPLY_PENDING_FILTERS ||
-        action.type === ListWithFiltersActions.SORT
-      ) {
-        // Always reset to initial month based on filtered results and sort order
-        const newMonth = getInitialMonth(
-          result.filteredValues,
-          result.sortValue,
-        );
-        const nextMonth = getNextMonthWithViewings(
-          newMonth,
-          result.filteredValues,
-        );
-        const prevMonth = getPrevMonthWithViewings(
-          newMonth,
-          result.filteredValues,
-        );
-
-        return {
-          ...result,
-          currentMonth: newMonth,
-          hasNextMonth: nextMonth !== undefined,
-          hasPrevMonth: prevMonth !== undefined,
-          monthViewings: getMonthViewings(result.filteredValues, newMonth),
-          nextMonth,
-          prevMonth,
-        };
-      }
-
-      return result;
-    }
-
     // Field-specific shared filters
     case TitlesActions.PENDING_FILTER_RELEASE_YEAR: {
       return handleReleaseYearFilterAction(state, action, {
@@ -292,7 +248,52 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     default: {
-      return state;
+      // Handle shared list structure actions (no show more for this component)
+      const result = handleListWithFiltersAction(
+        state,
+        action,
+        { groupFn: groupValuesSortedBySequence, sortFn: sortValues },
+        {
+          currentMonth: state.currentMonth,
+          hasNextMonth: state.hasNextMonth,
+          hasPrevMonth: state.hasPrevMonth,
+          monthViewings: state.monthViewings,
+          nextMonth: state.nextMonth,
+          prevMonth: state.prevMonth,
+        },
+      );
+
+      // Update month-related state on APPLY_PENDING_FILTERS and SORT
+      if (
+        action.type === ListWithFiltersActions.APPLY_PENDING_FILTERS ||
+        action.type === ListWithFiltersActions.SORT
+      ) {
+        // Always reset to initial month based on filtered results and sort order
+        const newMonth = getInitialMonth(
+          result.filteredValues,
+          result.sortValue,
+        );
+        const nextMonth = getNextMonthWithViewings(
+          newMonth,
+          result.filteredValues,
+        );
+        const prevMonth = getPrevMonthWithViewings(
+          newMonth,
+          result.filteredValues,
+        );
+
+        return {
+          ...result,
+          currentMonth: newMonth,
+          hasNextMonth: nextMonth !== undefined,
+          hasPrevMonth: prevMonth !== undefined,
+          monthViewings: getMonthViewings(result.filteredValues, newMonth),
+          nextMonth,
+          prevMonth,
+        };
+      }
+
+      return result;
     }
   }
 }

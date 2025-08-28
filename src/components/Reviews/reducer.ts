@@ -47,7 +47,19 @@ export const Actions = {
   ...TitlesActions,
 } as const;
 
-export type ActionType = TitlesActionType<ReviewsSort>;
+export type ActionType = Extract<
+  TitlesActionType<ReviewsSort>,
+  | { type: TitlesActions.PENDING_FILTER_GENRES }
+  | { type: TitlesActions.PENDING_FILTER_GRADE }
+  | { type: TitlesActions.PENDING_FILTER_RELEASE_YEAR }
+  | { type: TitlesActions.PENDING_FILTER_REVIEW_YEAR }
+  | { type: TitlesActions.PENDING_FILTER_TITLE }
+  | { type: TitlesActions.SHOW_MORE }
+  | { type: ListWithFiltersActions.APPLY_PENDING_FILTERS }
+  | { type: ListWithFiltersActions.CLEAR_PENDING_FILTERS }
+  | { type: ListWithFiltersActions.RESET_PENDING_FILTERS }
+  | { type: ListWithFiltersActions.SORT }
+>;
 
 // Re-export sort type for convenience
 export type Sort = ReviewsSort;
@@ -122,26 +134,6 @@ export function initState({
 // Create reducer function
 export function reducer(state: State, action: ActionType): State {
   switch (action.type) {
-    case ListWithFiltersActions.APPLY_PENDING_FILTERS:
-    case ListWithFiltersActions.CLEAR_PENDING_FILTERS:
-    case ListWithFiltersActions.RESET_PENDING_FILTERS:
-    case ListWithFiltersActions.SORT: {
-      // Handle shared list structure actions
-      const paginatedGroupFn = createPaginatedGroupFn(
-        groupValues,
-        state.showCount,
-      );
-      return handleListWithFiltersAction(
-        state,
-        action,
-        {
-          groupFn: paginatedGroupFn,
-          sortFn: sortValues,
-        },
-        { showCount: state.showCount },
-      );
-    }
-
     // Field-specific shared filters
     case TitlesActions.PENDING_FILTER_GENRES: {
       return handleGenreFilterAction(state, action, {
@@ -175,7 +167,20 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     default: {
-      return state;
+      // Handle shared list structure actions
+      const paginatedGroupFn = createPaginatedGroupFn(
+        groupValues,
+        state.showCount,
+      );
+      return handleListWithFiltersAction(
+        state,
+        action,
+        {
+          groupFn: paginatedGroupFn,
+          sortFn: sortValues,
+        },
+        { showCount: state.showCount },
+      );
     }
   }
 }

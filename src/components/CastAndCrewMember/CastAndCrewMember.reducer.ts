@@ -140,26 +140,6 @@ export function reducer(state: State, action: ActionType): State {
       };
     }
 
-    case ListWithFiltersActions.APPLY_PENDING_FILTERS:
-    case ListWithFiltersActions.CLEAR_PENDING_FILTERS:
-    case ListWithFiltersActions.RESET_PENDING_FILTERS:
-    case ListWithFiltersActions.SORT: {
-      // Handle shared list structure actions
-      const paginatedGroupFn = createPaginatedGroupFn(
-        groupValues,
-        state.showCount,
-      );
-      return handleListWithFiltersAction(
-        state,
-        action,
-        {
-          groupFn: paginatedGroupFn,
-          sortFn: sortValues,
-        },
-        { showCount: state.showCount },
-      );
-    }
-
     // Field-specific shared filters
     case TitlesActions.PENDING_FILTER_GENRES: {
       return handleGenreFilterAction(state, action, {
@@ -199,7 +179,20 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     default: {
-      return state;
+      // Handle shared list structure actions
+      const paginatedGroupFn = createPaginatedGroupFn(
+        groupValues,
+        state.showCount,
+      );
+      return handleListWithFiltersAction(
+        state,
+        action,
+        {
+          groupFn: paginatedGroupFn,
+          sortFn: sortValues,
+        },
+        { showCount: state.showCount },
+      );
     }
   }
 }
