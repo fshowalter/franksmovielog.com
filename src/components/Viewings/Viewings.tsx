@@ -200,7 +200,7 @@ function CalendarDay({ day }: { day: CalendarDayData }): JSX.Element {
       >
         <span
           className={`
-            mr-2 font-sans text-xs font-light text-subtle uppercase
+            mr-2 font-sans text-xs text-subtle uppercase
             tablet-landscape:hidden
           `}
         >
@@ -298,7 +298,7 @@ function CalendarHeader({
             aria-disabled={false}
             aria-label={`Navigate to previous month: ${prevMonthName}`}
             className={`
-              -mb-1 transform-gpu cursor-pointer pb-1 font-sans text-sm
+              -mb-1 transform-gpu cursor-pointer pb-1 font-sans text-[13px]
               font-bold text-accent transition-transform
               after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
               after:origin-bottom-right after:scale-x-0 after:bg-accent
@@ -327,7 +327,7 @@ function CalendarHeader({
             aria-disabled={false}
             aria-label={`Navigate to next month: ${nextMonthName}`}
             className={`
-              -mb-1 transform-gpu cursor-pointer pb-1 font-sans text-sm
+              -mb-1 transform-gpu cursor-pointer pb-1 font-sans text-[13px]
               font-bold text-accent transition-transform
               after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
               after:origin-bottom-left after:scale-x-0 after:bg-accent

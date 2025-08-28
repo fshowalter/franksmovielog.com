@@ -42,7 +42,7 @@ export function ReviewsSubNav({ active }: { active: keyof typeof items }) {
                   className={`
                     group/item block transform-gpu px-6 pt-8 pb-7 transition-all
                     duration-500
-                    hover:bg-accent/85 hover:text-inverse
+                    hover:bg-accent hover:text-inverse
                   `}
                   href={value.href}
                 >

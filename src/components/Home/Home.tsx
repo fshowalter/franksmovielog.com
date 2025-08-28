@@ -50,7 +50,7 @@ export function Home({ backdropImageProps, deck, values }: Props): JSX.Element {
           <a
             className={`
               group/all-reviews mx-auto w-full max-w-button transform-gpu
-              rounded-md bg-default pt-5 pb-4 text-center font-sans text-sm
+              rounded-md bg-default pt-5 pb-4 text-center font-sans text-[13px]
               font-bold tracking-wide text-accent uppercase transition-all
               hover:scale-105 hover:bg-accent hover:text-inverse
             `}
