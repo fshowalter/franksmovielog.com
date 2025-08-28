@@ -137,11 +137,7 @@ function Name({ value, valueType }: { value: Value; valueType: ValueType }) {
     );
 
   return (
-    <span
-      className={`
-        block pb-1 font-sans text-sm leading-none font-light text-subtle
-      `}
-    >
+    <span className={`block pb-1 font-sans text-sm leading-none text-subtle`}>
       {value.name}
     </span>
   );

@@ -256,13 +256,6 @@
         }
       })();
     </script>
-    <link
-      rel="preload"
-      as="image"
-      imagesrcset="/_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Fburt-reynolds.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=720&amp;h=405&amp;q=80&amp;f=avif 720w, /_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Fburt-reynolds.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=1200&amp;h=675&amp;q=80&amp;f=avif 1200w, /_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Fburt-reynolds.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=1920&amp;h=1080&amp;q=80&amp;f=avif 1920w, /_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Fburt-reynolds.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=2400&amp;h=1350&amp;q=80&amp;f=avif 2400w"
-      imagesizes="100vw"
-      fetchpriority="high"
-    />
     <div class="group">
       <a
         class="absolute top-0.5 left-1/2 z-skip-link mx-auto [transform:translate(-50%,calc(-100%-2px))] bg-subtle px-6 py-2 text-center text-accent focus:[transform:translate(-50%,0%)]"
@@ -272,13 +265,6 @@
       <div class="flex min-h-full w-full flex-col bg-default">
         <header
           class="group z-30 flex w-full items-center justify-between px-container py-4 tablet:py-6 laptop:inset-x-0 laptop:z-40 laptop:flex-row laptop:flex-wrap laptop:px-16 laptop:py-8 laptop:text-left absolute [--mast-color:#fff] text-(--mast-color)"
-          style="
-            background-image: linear-gradient(
-              to bottom,
-              rgba(0, 0, 0, 0.85),
-              transparent 95%
-            );
-          "
         >
           <div
             class="flex transform-gpu flex-col transition-transform duration-500 has-[a:hover]:scale-105"
@@ -517,6 +503,13 @@
           </div>
         </header>
         <main class="grow bg-subtle" id="content">
+          <link
+            rel="preload"
+            as="image"
+            imagesrcset="/_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Fburt-reynolds.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=720&amp;h=405&amp;q=80&amp;f=avif 720w, /_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Fburt-reynolds.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=1200&amp;h=675&amp;q=80&amp;f=avif 1200w, /_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Fburt-reynolds.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=1920&amp;h=1080&amp;q=80&amp;f=avif 1920w, /_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Fburt-reynolds.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=2400&amp;h=1350&amp;q=80&amp;f=avif 2400w"
+            imagesizes="100vw"
+            fetchpriority="high"
+          />
           <header
             class="min-h-[400px] tablet:min-h-[640px] laptop:min-h-[clamp(640px,70vh,1350px)] relative flex w-full flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pt-40 pb-8 text-inverse tablet:pt-40 tablet:pb-10 laptop:pt-40 laptop:pb-16"
           >
@@ -537,7 +530,7 @@
               loading="eager"
             />
             <div
-              class="z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col px-container after:absolute after:top-0 after:left-0 after:-z-10 after:h-full after:w-full after:bg-linear-to-t after:from-[rgba(0,0,0,.5)] after:via-25% after:to-[rgba(0,0,0,.2)] after:to-40%"
+              class="z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col px-container after:absolute after:top-0 after:left-0 after:-z-10 after:h-full after:w-full after:bg-(image:--hero-gradient)"
             >
               <p class="mb-4">
                 <a
@@ -561,8 +554,8 @@
             </div>
           </header>
           <astro-island
-            uid="24jtlK"
-            prefix="r1"
+            uid="C1Fl6"
+            prefix="r3"
             component-url="~/components/CastAndCrewMember/CastAndCrewMember"
             component-export="CastAndCrewMember"
             renderer-url="@astrojs/react/client.js"
@@ -681,7 +674,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/angel-baby-1961/"
                                       >Angel Baby<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1362,7 +1355,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-[#252525] transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/fuzz-1972/"
                                       >Fuzz<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -6465,698 +6458,20 @@
                                     ></div>
                                   </div>
                                 </li>
-                                <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl bg-unreviewed"
-                                >
-                                  <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
-                                  >
-                                    <img
-                                      src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
-                                      srcset="
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif    63w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w
-                                      "
-                                      alt=""
-                                      height="375"
-                                      sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                                      width="250"
-                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
-                                      decoding="async"
-                                      loading="lazy"
-                                    />
-                                  </div>
-                                  <div
-                                    class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                                  >
-                                    <span
-                                      class="block text-base leading-5 font-semibold text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]"
-                                      >Not Another Not Another Movie<!-- -->  <span
-                                        class="text-xxs leading-none font-light text-subtle"
-                                        >2011</span
-                                      ></span
-                                    >
-                                    <div
-                                      class="text-sm leading-5 font-normal tracking-prose text-muted"
-                                    >
-                                      Performer
-                                    </div>
-                                    <div
-                                      class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
-                                    >
-                                      Because
-                                      <!-- -->Burt Reynolds performed<!-- -->.
-                                    </div>
-                                    <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
-                                    ></div>
-                                  </div>
-                                </li>
-                              </ol>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="block first-of-type:mt-4" id="2014">
-                        <div class="pt-0 text-md">
-                          <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
-                          >
-                            2014
-                          </div>
-                        </div>
-                        <div class="bg-subtle">
-                          <div class="tablet:-mx-6">
-                            <div class="@container/poster-list">
-                              <ol
-                                class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]"
-                              >
-                                <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl bg-unreviewed"
-                                >
-                                  <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
-                                  >
-                                    <img
-                                      src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
-                                      srcset="
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif    63w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w
-                                      "
-                                      alt=""
-                                      height="375"
-                                      sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                                      width="250"
-                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
-                                      decoding="async"
-                                      loading="lazy"
-                                    />
-                                  </div>
-                                  <div
-                                    class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                                  >
-                                    <span
-                                      class="block text-base leading-5 font-semibold text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]"
-                                      >Category 5<!-- -->  <span
-                                        class="text-xxs leading-none font-light text-subtle"
-                                        >2014</span
-                                      ></span
-                                    >
-                                    <div
-                                      class="text-sm leading-5 font-normal tracking-prose text-muted"
-                                    >
-                                      Performer
-                                    </div>
-                                    <div
-                                      class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
-                                    >
-                                      Because
-                                      <!-- -->Burt Reynolds performed<!-- -->.
-                                    </div>
-                                    <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
-                                    ></div>
-                                  </div>
-                                </li>
-                                <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl bg-unreviewed"
-                                >
-                                  <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
-                                  >
-                                    <img
-                                      src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
-                                      srcset="
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif    63w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w
-                                      "
-                                      alt=""
-                                      height="375"
-                                      sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                                      width="250"
-                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
-                                      decoding="async"
-                                      loading="lazy"
-                                    />
-                                  </div>
-                                  <div
-                                    class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                                  >
-                                    <span
-                                      class="block text-base leading-5 font-semibold text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]"
-                                      >Hamlet &amp; Hutch<!-- -->  <span
-                                        class="text-xxs leading-none font-light text-subtle"
-                                        >2014</span
-                                      ></span
-                                    >
-                                    <div
-                                      class="text-sm leading-5 font-normal tracking-prose text-muted"
-                                    >
-                                      Performer
-                                    </div>
-                                    <div
-                                      class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
-                                    >
-                                      Because
-                                      <!-- -->Burt Reynolds performed<!-- -->.
-                                    </div>
-                                    <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
-                                    ></div>
-                                  </div>
-                                </li>
-                              </ol>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="block first-of-type:mt-4" id="2015">
-                        <div class="pt-0 text-md">
-                          <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
-                          >
-                            2015
-                          </div>
-                        </div>
-                        <div class="bg-subtle">
-                          <div class="tablet:-mx-6">
-                            <div class="@container/poster-list">
-                              <ol
-                                class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]"
-                              >
-                                <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl bg-unreviewed"
-                                >
-                                  <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
-                                  >
-                                    <img
-                                      src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
-                                      srcset="
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif    63w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w
-                                      "
-                                      alt=""
-                                      height="375"
-                                      sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                                      width="250"
-                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
-                                      decoding="async"
-                                      loading="lazy"
-                                    />
-                                  </div>
-                                  <div
-                                    class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                                  >
-                                    <span
-                                      class="block text-base leading-5 font-semibold text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]"
-                                      >Pocket Listing<!-- -->  <span
-                                        class="text-xxs leading-none font-light text-subtle"
-                                        >2015</span
-                                      ></span
-                                    >
-                                    <div
-                                      class="text-sm leading-5 font-normal tracking-prose text-muted"
-                                    >
-                                      Performer
-                                    </div>
-                                    <div
-                                      class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
-                                    >
-                                      Because
-                                      <!-- -->Burt Reynolds performed<!-- -->.
-                                    </div>
-                                    <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
-                                    ></div>
-                                  </div>
-                                </li>
-                              </ol>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="block first-of-type:mt-4" id="2016">
-                        <div class="pt-0 text-md">
-                          <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
-                          >
-                            2016
-                          </div>
-                        </div>
-                        <div class="bg-subtle">
-                          <div class="tablet:-mx-6">
-                            <div class="@container/poster-list">
-                              <ol
-                                class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]"
-                              >
-                                <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl bg-unreviewed"
-                                >
-                                  <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
-                                  >
-                                    <img
-                                      src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
-                                      srcset="
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif    63w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w
-                                      "
-                                      alt=""
-                                      height="375"
-                                      sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                                      width="250"
-                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
-                                      decoding="async"
-                                      loading="lazy"
-                                    />
-                                  </div>
-                                  <div
-                                    class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                                  >
-                                    <span
-                                      class="block text-base leading-5 font-semibold text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]"
-                                      >Hollow Creek<!-- -->  <span
-                                        class="text-xxs leading-none font-light text-subtle"
-                                        >2016</span
-                                      ></span
-                                    >
-                                    <div
-                                      class="text-sm leading-5 font-normal tracking-prose text-muted"
-                                    >
-                                      Performer
-                                    </div>
-                                    <div
-                                      class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
-                                    >
-                                      Because
-                                      <!-- -->Burt Reynolds performed<!-- -->.
-                                    </div>
-                                    <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
-                                    ></div>
-                                  </div>
-                                </li>
-                                <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl bg-unreviewed"
-                                >
-                                  <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
-                                  >
-                                    <img
-                                      src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
-                                      srcset="
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif    63w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w
-                                      "
-                                      alt=""
-                                      height="375"
-                                      sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                                      width="250"
-                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
-                                      decoding="async"
-                                      loading="lazy"
-                                    />
-                                  </div>
-                                  <div
-                                    class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                                  >
-                                    <span
-                                      class="block text-base leading-5 font-semibold text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]"
-                                      >Elbow Grease<!-- -->  <span
-                                        class="text-xxs leading-none font-light text-subtle"
-                                        >2016</span
-                                      ></span
-                                    >
-                                    <div
-                                      class="text-sm leading-5 font-normal tracking-prose text-muted"
-                                    >
-                                      Performer
-                                    </div>
-                                    <div
-                                      class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
-                                    >
-                                      Because
-                                      <!-- -->Burt Reynolds performed<!-- -->.
-                                    </div>
-                                    <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
-                                    ></div>
-                                  </div>
-                                </li>
-                              </ol>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="block first-of-type:mt-4" id="2017">
-                        <div class="pt-0 text-md">
-                          <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
-                          >
-                            2017
-                          </div>
-                        </div>
-                        <div class="bg-subtle">
-                          <div class="tablet:-mx-6">
-                            <div class="@container/poster-list">
-                              <ol
-                                class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]"
-                              >
-                                <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl bg-unreviewed"
-                                >
-                                  <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
-                                  >
-                                    <img
-                                      src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
-                                      srcset="
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif    63w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w
-                                      "
-                                      alt=""
-                                      height="375"
-                                      sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                                      width="250"
-                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
-                                      decoding="async"
-                                      loading="lazy"
-                                    />
-                                  </div>
-                                  <div
-                                    class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                                  >
-                                    <span
-                                      class="block text-base leading-5 font-semibold text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]"
-                                      >Apple of My Eye<!-- -->  <span
-                                        class="text-xxs leading-none font-light text-subtle"
-                                        >2017</span
-                                      ></span
-                                    >
-                                    <div
-                                      class="text-sm leading-5 font-normal tracking-prose text-muted"
-                                    >
-                                      Performer
-                                    </div>
-                                    <div
-                                      class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
-                                    >
-                                      Because
-                                      <!-- -->Burt Reynolds performed<!-- -->.
-                                    </div>
-                                    <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
-                                    ></div>
-                                  </div>
-                                </li>
-                                <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl bg-unreviewed"
-                                >
-                                  <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
-                                  >
-                                    <img
-                                      src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
-                                      srcset="
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif    63w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w
-                                      "
-                                      alt=""
-                                      height="375"
-                                      sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                                      width="250"
-                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
-                                      decoding="async"
-                                      loading="lazy"
-                                    />
-                                  </div>
-                                  <div
-                                    class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                                  >
-                                    <span
-                                      class="block text-base leading-5 font-semibold text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]"
-                                      >The Last Movie Star<!-- -->  <span
-                                        class="text-xxs leading-none font-light text-subtle"
-                                        >2017</span
-                                      ></span
-                                    >
-                                    <div
-                                      class="text-sm leading-5 font-normal tracking-prose text-muted"
-                                    >
-                                      Performer
-                                    </div>
-                                    <div
-                                      class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
-                                    >
-                                      Because
-                                      <!-- -->Burt Reynolds performed<!-- -->.
-                                    </div>
-                                    <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
-                                    ></div>
-                                  </div>
-                                </li>
-                                <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl bg-unreviewed"
-                                >
-                                  <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
-                                  >
-                                    <img
-                                      src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
-                                      srcset="
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif    63w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w
-                                      "
-                                      alt=""
-                                      height="375"
-                                      sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                                      width="250"
-                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
-                                      decoding="async"
-                                      loading="lazy"
-                                    />
-                                  </div>
-                                  <div
-                                    class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                                  >
-                                    <span
-                                      class="block text-base leading-5 font-semibold text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]"
-                                      >Miami Love Affair<!-- -->  <span
-                                        class="text-xxs leading-none font-light text-subtle"
-                                        >2017</span
-                                      ></span
-                                    >
-                                    <div
-                                      class="text-sm leading-5 font-normal tracking-prose text-muted"
-                                    >
-                                      Performer
-                                    </div>
-                                    <div
-                                      class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
-                                    >
-                                      Because
-                                      <!-- -->Burt Reynolds performed<!-- -->.
-                                    </div>
-                                    <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
-                                    ></div>
-                                  </div>
-                                </li>
-                                <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl bg-unreviewed"
-                                >
-                                  <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
-                                  >
-                                    <img
-                                      src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
-                                      srcset="
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif    63w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w
-                                      "
-                                      alt=""
-                                      height="375"
-                                      sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                                      width="250"
-                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
-                                      decoding="async"
-                                      loading="lazy"
-                                    />
-                                  </div>
-                                  <div
-                                    class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                                  >
-                                    <span
-                                      class="block text-base leading-5 font-semibold text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]"
-                                      >Henri<!-- -->  <span
-                                        class="text-xxs leading-none font-light text-subtle"
-                                        >2017</span
-                                      ></span
-                                    >
-                                    <div
-                                      class="text-sm leading-5 font-normal tracking-prose text-muted"
-                                    >
-                                      Performer
-                                    </div>
-                                    <div
-                                      class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
-                                    >
-                                      Because
-                                      <!-- -->Burt Reynolds performed<!-- -->.
-                                    </div>
-                                    <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
-                                    ></div>
-                                  </div>
-                                </li>
-                                <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl bg-unreviewed"
-                                >
-                                  <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
-                                  >
-                                    <img
-                                      src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
-                                      srcset="
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif    63w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w
-                                      "
-                                      alt=""
-                                      height="375"
-                                      sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                                      width="250"
-                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
-                                      decoding="async"
-                                      loading="lazy"
-                                    />
-                                  </div>
-                                  <div
-                                    class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                                  >
-                                    <span
-                                      class="block text-base leading-5 font-semibold text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]"
-                                      >Shadow Fighter<!-- -->  <span
-                                        class="text-xxs leading-none font-light text-subtle"
-                                        >2017</span
-                                      ></span
-                                    >
-                                    <div
-                                      class="text-sm leading-5 font-normal tracking-prose text-muted"
-                                    >
-                                      Performer
-                                    </div>
-                                    <div
-                                      class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
-                                    >
-                                      Because
-                                      <!-- -->Burt Reynolds performed<!-- -->.
-                                    </div>
-                                    <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
-                                    ></div>
-                                  </div>
-                                </li>
-                              </ol>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="block first-of-type:mt-4" id="2021">
-                        <div class="pt-0 text-md">
-                          <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
-                          >
-                            2021
-                          </div>
-                        </div>
-                        <div class="bg-subtle">
-                          <div class="tablet:-mx-6">
-                            <div class="@container/poster-list">
-                              <ol
-                                class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px_*_4)_+_1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px_*_5)_+_1px)]/poster-list:[--poster-list-item-width:16.66%]"
-                              >
-                                <li
-                                  class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl bg-unreviewed"
-                                >
-                                  <div
-                                    class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
-                                  >
-                                    <img
-                                      src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
-                                      srcset="
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif    63w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w,
-                                        /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w
-                                      "
-                                      alt=""
-                                      height="375"
-                                      sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                                      width="250"
-                                      class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
-                                      decoding="async"
-                                      loading="lazy"
-                                    />
-                                  </div>
-                                  <div
-                                    class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                                  >
-                                    <span
-                                      class="block text-base leading-5 font-semibold text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]"
-                                      >Defining Moments<!-- -->  <span
-                                        class="text-xxs leading-none font-light text-subtle"
-                                        >2021</span
-                                      ></span
-                                    >
-                                    <div
-                                      class="text-sm leading-5 font-normal tracking-prose text-muted"
-                                    >
-                                      Performer
-                                    </div>
-                                    <div
-                                      class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
-                                    >
-                                      Because
-                                      <!-- -->Burt Reynolds performed<!-- -->.
-                                    </div>
-                                    <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
-                                    ></div>
-                                  </div>
-                                </li>
                               </ol>
                             </div>
                           </div>
                         </div>
                       </li>
                     </ol>
-                    <div
-                      class="flex flex-col items-center px-container py-10"
-                    ></div>
+                    <div class="flex flex-col items-center px-container py-10">
+                      <button
+                        class="mx-auto w-full max-w-button transform-gpu cursor-pointer rounded-md bg-canvas py-5 text-center font-sans text-sm font-bold tracking-wide uppercase shadow-all transition-transform hover:scale-105 hover:drop-shadow-lg"
+                        type="button"
+                      >
+                        Show More
+                      </button>
+                    </div>
                   </div>
                   <div
                     aria-hidden="true"

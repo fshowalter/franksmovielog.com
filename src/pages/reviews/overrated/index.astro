@@ -2,7 +2,7 @@
 import React from "react";
 
 import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
-import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
+import { Layout as ComponentLayout } from "~/components/Layout";
 import { getPropsForOverrated as getProps } from "~/components/Reviews/getProps";
 import { Overrated } from "~/components/Reviews/Overrated";
 import { ReviewsSubNav } from "~/components/Reviews/ReviewsSubNav";
@@ -17,18 +17,6 @@ const breadcrumb = React.createElement(BreadcrumbLink, {
   children: "Reviews",
   href: "/reviews/",
 });
-
-// Create React elements in front matter
-const backdropElement = React.createElement(Backdrop, {
-  breadcrumb,
-  deck,
-  imageProps: backdropImageProps,
-  title: "Overrated",
-});
-
-const subNavElement = React.createElement(ReviewsSubNav, {
-  active: "overrated",
-});
 ---
 
 <Layout
@@ -42,7 +30,14 @@ const subNavElement = React.createElement(ReviewsSubNav, {
   }}
   title="Overrated Disappointments"
 >
-  <ListWithFiltersLayout backdrop={backdropElement} subNav={subNavElement}>
+  <ComponentLayout className="bg-subtle">
+    <Backdrop
+      breadcrumb={breadcrumb}
+      deck={deck}
+      imageProps={backdropImageProps}
+      title="Overrated"
+    />
+    <ReviewsSubNav active="overrated" />
     <Overrated client:load {...interactiveProps} />
-  </ListWithFiltersLayout>
+  </ComponentLayout>
 </Layout>

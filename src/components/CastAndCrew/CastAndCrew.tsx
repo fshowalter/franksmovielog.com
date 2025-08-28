@@ -9,7 +9,7 @@ import { AvatarListItem } from "~/components/AvatarList";
 import { GroupedAvatarList } from "~/components/AvatarList";
 import { CreditedAs } from "~/components/CreditedAs";
 import { ListItemName } from "~/components/ListItemName";
-import { ListWithFilters } from "~/components/ListWithFilters";
+import { ListWithFilters } from "~/components/ListWithFilters/ListWithFilters";
 
 import type { Sort } from "./CastAndCrew.reducer";
 

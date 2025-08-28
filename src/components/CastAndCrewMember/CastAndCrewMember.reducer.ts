@@ -1,27 +1,33 @@
-import type {
-  ListWithFiltersActionType,
-  ListWithFiltersState,
-} from "~/components/ListWithFilters.reducerUtils";
+import type { ListWithFiltersState } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
+import type { TitlesActionType } from "~/components/ListWithFilters/titlesReducerUtils";
 
 import {
-  buildGroupValues,
-  buildSortValues,
   createInitialState,
-  getGroupLetter,
+  handleListWithFiltersAction,
+  ListWithFiltersActions,
+  updatePendingFilter,
+} from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
+import {
+  createPaginatedGroupFn,
   handleGenreFilterAction,
   handleGradeFilterAction,
-  handleListWithFiltersAction,
   handleReleaseYearFilterAction,
   handleReviewStatusFilterAction,
   handleReviewYearFilterAction,
+  handleShowMore,
   handleTitleFilterAction,
-  ListWithFiltersActions,
+  SHOW_COUNT_DEFAULT,
   sortGrade,
   sortReleaseDate,
   sortReviewDate,
   sortTitle,
-  updatePendingFilter,
-} from "~/components/ListWithFilters.reducerUtils";
+  TitlesActions,
+} from "~/components/ListWithFilters/titlesReducerUtils";
+import {
+  buildGroupValues,
+  buildSortValues,
+  getGroupLetter,
+} from "~/utils/reducerUtils";
 
 /**
  * CastAndCrewMember reducer with pending filters support
@@ -42,15 +48,14 @@ export type Sort =
   | "title-asc"
   | "title-desc";
 
-// Re-export shared actions for component convenience
+// Re-export actions for component convenience
 export const Actions = {
   ...ListWithFiltersActions,
+  ...TitlesActions,
   ...CastAndCrewMemberActions,
 } as const;
 
-export type ActionType =
-  | ListWithFiltersActionType<Sort>
-  | PendingFilterCreditKindAction;
+export type ActionType = PendingFilterCreditKindAction | TitlesActionType<Sort>;
 
 // CastAndCrewMember-specific actions
 type PendingFilterCreditKindAction = {
@@ -58,7 +63,9 @@ type PendingFilterCreditKindAction = {
   value: string;
 };
 
-type State = ListWithFiltersState<ListItemValue, Sort>;
+type State = ListWithFiltersState<ListItemValue, Sort> & {
+  showCount: number;
+};
 
 // Helper functions
 function getReviewDateGroup(value: ListItemValue): string {
@@ -103,17 +110,19 @@ export function initState({
   initialSort: Sort;
   values: ListItemValue[];
 }): State {
+  const showCount = SHOW_COUNT_DEFAULT;
   const baseState = createInitialState({
+    extendedState: {
+      showCount,
+    },
     groupFn: groupValues,
     initialSort,
-    showMoreEnabled: false,
+    showCount,
     sortFn: sortValues,
     values,
   });
 
-  return {
-    ...baseState,
-  };
+  return baseState;
 }
 
 export function reducer(state: State, action: ActionType): State {
@@ -127,40 +136,63 @@ export function reducer(state: State, action: ActionType): State {
           : undefined;
       return {
         ...updatePendingFilter(state, "credits", filterFn, typedAction.value),
+        showCount: state.showCount,
       };
     }
 
     // Field-specific shared filters
-    case ListWithFiltersActions.PENDING_FILTER_GENRES: {
-      return handleGenreFilterAction(state, action);
+    case TitlesActions.PENDING_FILTER_GENRES: {
+      return handleGenreFilterAction(state, action, {
+        showCount: state.showCount,
+      });
     }
 
-    case ListWithFiltersActions.PENDING_FILTER_GRADE: {
-      return handleGradeFilterAction(state, action);
+    case TitlesActions.PENDING_FILTER_GRADE: {
+      return handleGradeFilterAction(state, action, {
+        showCount: state.showCount,
+      });
     }
 
-    case ListWithFiltersActions.PENDING_FILTER_RELEASE_YEAR: {
-      return handleReleaseYearFilterAction(state, action);
+    case TitlesActions.PENDING_FILTER_RELEASE_YEAR: {
+      return handleReleaseYearFilterAction(state, action, {
+        showCount: state.showCount,
+      });
     }
 
-    case ListWithFiltersActions.PENDING_FILTER_REVIEW_STATUS: {
-      return handleReviewStatusFilterAction(state, action);
+    case TitlesActions.PENDING_FILTER_REVIEW_STATUS: {
+      return handleReviewStatusFilterAction(state, action, {
+        showCount: state.showCount,
+      });
     }
-
-    case ListWithFiltersActions.PENDING_FILTER_REVIEW_YEAR: {
-      return handleReviewYearFilterAction(state, action);
+    case TitlesActions.PENDING_FILTER_REVIEW_YEAR: {
+      return handleReviewYearFilterAction(state, action, {
+        showCount: state.showCount,
+      });
     }
-
-    case ListWithFiltersActions.PENDING_FILTER_TITLE: {
-      return handleTitleFilterAction(state, action);
+    case TitlesActions.PENDING_FILTER_TITLE: {
+      return handleTitleFilterAction(state, action, {
+        showCount: state.showCount,
+      });
+    }
+    case TitlesActions.SHOW_MORE: {
+      return handleShowMore(state, action, groupValues);
     }
 
     default: {
       // Handle shared list structure actions
-      return handleListWithFiltersAction(state, action, {
-        groupFn: groupValues,
-        sortFn: sortValues,
-      });
+      const paginatedGroupFn = createPaginatedGroupFn(
+        groupValues,
+        state.showCount,
+      );
+      return handleListWithFiltersAction(
+        state,
+        action,
+        {
+          groupFn: paginatedGroupFn,
+          sortFn: sortValues,
+        },
+        { showCount: state.showCount },
+      );
     }
   }
 }

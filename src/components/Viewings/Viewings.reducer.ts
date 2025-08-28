@@ -1,18 +1,22 @@
 import type {
-  GroupFn,
   ListWithFiltersActionType,
   ListWithFiltersState,
-} from "~/components/ListWithFilters.reducerUtils";
+} from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
+import type { TitlesActionType } from "~/components/ListWithFilters/titlesReducerUtils";
+import type { GroupFn } from "~/utils/reducerUtils";
 
 import {
-  buildSortValues,
   createInitialState,
   handleListWithFiltersAction,
-  handleReleaseYearFilterAction,
-  handleTitleFilterAction,
   ListWithFiltersActions,
   updatePendingFilter,
-} from "~/components/ListWithFilters.reducerUtils";
+} from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
+import {
+  handleReleaseYearFilterAction,
+  handleTitleFilterAction,
+  TitlesActions,
+} from "~/components/ListWithFilters/titlesReducerUtils";
+import { buildSortValues } from "~/utils/reducerUtils";
 
 import type { ListItemValue } from "./Viewings";
 
@@ -24,14 +28,20 @@ enum ViewingsActions {
   PREV_MONTH = "PREV_MONTH",
 }
 
-// Re-export shared actions for component convenience
+// Re-export actions for component convenience
 export const Actions = {
   ...ListWithFiltersActions,
+  ...TitlesActions,
   ...ViewingsActions,
 } as const;
 
 export type ActionType =
-  | ListWithFiltersActionType<Sort>
+  | Extract<
+      TitlesActionType<Sort>,
+      | ListWithFiltersActionType<Sort>
+      | { type: TitlesActions.PENDING_FILTER_RELEASE_YEAR }
+      | { type: TitlesActions.PENDING_FILTER_TITLE }
+    >
   | NextMonthAction
   | PendingFilterMediumAction
   | PendingFilterVenueAction
@@ -89,7 +99,7 @@ export function initState({
   const baseState = createInitialState({
     groupFn: groupValuesSortedBySequence,
     initialSort,
-    showMoreEnabled: false, // Viewings don't paginate
+    showCount: undefined, // Viewings don't paginate
     sortFn: sortValues,
     values,
   });
@@ -124,7 +134,7 @@ export function reducer(state: State, action: ActionType): State {
 
   switch (action.type) {
     // Field-specific shared filters
-    case ListWithFiltersActions.PENDING_FILTER_RELEASE_YEAR: {
+    case TitlesActions.PENDING_FILTER_RELEASE_YEAR: {
       return handleReleaseYearFilterAction(state, action, {
         currentMonth: state.currentMonth,
         hasNextMonth: state.hasNextMonth,
@@ -134,8 +144,7 @@ export function reducer(state: State, action: ActionType): State {
         prevMonth: state.prevMonth,
       });
     }
-
-    case ListWithFiltersActions.PENDING_FILTER_TITLE: {
+    case TitlesActions.PENDING_FILTER_TITLE: {
       return handleTitleFilterAction(state, action, {
         currentMonth: state.currentMonth,
         hasNextMonth: state.hasNextMonth,
@@ -185,7 +194,6 @@ export function reducer(state: State, action: ActionType): State {
         prevMonth: state.prevMonth,
       };
     }
-
     case ViewingsActions.PENDING_FILTER_VENUE: {
       const filterFn =
         action.value && action.value !== "All"
@@ -215,7 +223,6 @@ export function reducer(state: State, action: ActionType): State {
         prevMonth: state.prevMonth,
       };
     }
-
     case ViewingsActions.PREV_MONTH: {
       newMonth = getPrevMonthWithViewings(
         state.currentMonth,
@@ -241,7 +248,7 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     default: {
-      // Handle shared list structure actions
+      // Handle shared list structure actions (no show more for this component)
       const result = handleListWithFiltersAction(
         state,
         action,

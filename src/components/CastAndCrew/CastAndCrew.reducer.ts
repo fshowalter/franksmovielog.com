@@ -1,20 +1,22 @@
-import type {
-  ListWithFiltersActionType,
-  ListWithFiltersState,
-} from "~/components/ListWithFilters.reducerUtils";
+import type { CollectionsActionType } from "~/components/ListWithFilters/collectionsReducerUtils";
+import type { ListWithFiltersState } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 
+import {
+  CollectionsActions,
+  handleNameFilterAction,
+  sortName,
+  sortReviewCount,
+} from "~/components/ListWithFilters/collectionsReducerUtils";
+import {
+  createInitialState,
+  handleListWithFiltersAction,
+  updatePendingFilter,
+} from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import {
   buildGroupValues,
   buildSortValues,
-  createInitialState,
   getGroupLetter,
-  handleListWithFiltersAction,
-  handleNameFilterAction,
-  ListWithFiltersActions,
-  sortName,
-  sortReviewCount,
-  updatePendingFilter,
-} from "~/components/ListWithFilters.reducerUtils";
+} from "~/utils/reducerUtils";
 
 /**
  * CastAndCrew reducer with pending filters support
@@ -25,14 +27,17 @@ enum CastAndCrewActions {
   PENDING_FILTER_CREDIT_KIND = "PENDING_FILTER_CREDIT_KIND",
 }
 
-// Re-export shared actions for component convenience
+// Re-export actions for component convenience
+import { ListWithFiltersActions } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
+
 export const Actions = {
   ...ListWithFiltersActions,
+  ...CollectionsActions,
   ...CastAndCrewActions,
 } as const;
 
 export type ActionType =
-  | ListWithFiltersActionType<Sort>
+  | CollectionsActionType<Sort>
   | PendingFilterCreditKindAction;
 
 export type Sort =
@@ -81,7 +86,7 @@ export function initState({
   return createInitialState({
     groupFn: groupValues,
     initialSort,
-    // showCount omitted - CastAndCrew doesn't paginate
+    showCount: undefined, // CastAndCrew doesn't paginate
     sortFn: sortValues,
     values,
   });
@@ -100,7 +105,7 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     // Field-specific shared filter
-    case ListWithFiltersActions.PENDING_FILTER_NAME: {
+    case CollectionsActions.PENDING_FILTER_NAME: {
       return handleNameFilterAction(state, action);
     }
 

@@ -1,23 +1,14 @@
 ---
-import React from "react";
-
 import { Backdrop } from "~/components/Backdrop";
 import { CastAndCrew } from "~/components/CastAndCrew/CastAndCrew";
 import { getProps } from "~/components/CastAndCrew/getProps";
-import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
+import { Layout as ComponentLayout } from "~/components/Layout";
 import Layout from "~/layouts/Layout.astro";
 
 const props = await getProps();
 
 // Separate layout props from interactive props
 const { backdropImageProps, deck, ...interactiveProps } = props;
-
-// Create React elements in front matter
-const backdropElement = React.createElement(Backdrop, {
-  deck,
-  imageProps: backdropImageProps,
-  title: "Cast & Crew",
-});
 ---
 
 <Layout
@@ -29,7 +20,8 @@ const backdropElement = React.createElement(Backdrop, {
   }}
   title="Cast and Crew"
 >
-  <ListWithFiltersLayout backdrop={backdropElement}>
+  <ComponentLayout className="bg-subtle">
+    <Backdrop deck={deck} imageProps={backdropImageProps} title="Cast & Crew" />
     <CastAndCrew client:load {...interactiveProps} />
-  </ListWithFiltersLayout>
+  </ComponentLayout>
 </Layout>

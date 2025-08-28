@@ -1,24 +1,33 @@
 import type {
   ListWithFiltersActionType,
   ListWithFiltersState,
-} from "~/components/ListWithFilters.reducerUtils";
+} from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
+import type { TitlesActionType } from "~/components/ListWithFilters/titlesReducerUtils";
 
 import {
-  buildGroupValues,
-  buildSortValues,
   createInitialState,
-  getGroupLetter,
   handleListWithFiltersAction,
+  ListWithFiltersActions,
+} from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
+import {
+  createPaginatedGroupFn,
   handleReleaseYearFilterAction,
   handleReviewStatusFilterAction,
   handleReviewYearFilterAction,
+  handleShowMore,
   handleTitleFilterAction,
-  ListWithFiltersActions,
+  SHOW_COUNT_DEFAULT,
   sortGrade,
   sortReleaseDate,
   sortReviewDate,
   sortTitle,
-} from "~/components/ListWithFilters.reducerUtils";
+  TitlesActions,
+} from "~/components/ListWithFilters/titlesReducerUtils";
+import {
+  buildGroupValues,
+  buildSortValues,
+  getGroupLetter,
+} from "~/utils/reducerUtils";
 
 /**
  * Collection reducer with pending filters support
@@ -35,14 +44,25 @@ export type Sort =
   | "title-asc"
   | "title-desc";
 
-// Re-export shared actions for component convenience
+// Re-export actions for component convenience
 export const Actions = {
   ...ListWithFiltersActions,
+  ...TitlesActions,
 } as const;
 
-export type ActionType = ListWithFiltersActionType<Sort>;
+export type ActionType = Extract<
+  TitlesActionType<Sort>,
+  | ListWithFiltersActionType<Sort>
+  | { type: TitlesActions.PENDING_FILTER_RELEASE_YEAR }
+  | { type: TitlesActions.PENDING_FILTER_REVIEW_STATUS }
+  | { type: TitlesActions.PENDING_FILTER_REVIEW_YEAR }
+  | { type: TitlesActions.PENDING_FILTER_TITLE }
+  | { type: TitlesActions.SHOW_MORE }
+>;
 
-type State = ListWithFiltersState<ListItemValue, Sort>;
+type State = ListWithFiltersState<ListItemValue, Sort> & {
+  showCount: number;
+};
 
 // Helper functions
 function getReviewDateGroup(value: ListItemValue): string {
@@ -87,43 +107,66 @@ export function initState({
   initialSort: Sort;
   values: ListItemValue[];
 }): State {
+  const showCount = SHOW_COUNT_DEFAULT;
   const baseState = createInitialState({
+    extendedState: {
+      showCount,
+    },
     groupFn: groupValues,
     initialSort,
+    showCount,
     sortFn: sortValues,
     values,
   });
 
-  return {
-    ...baseState,
-  };
+  return baseState;
 }
 
 export function reducer(state: State, action: ActionType): State {
   switch (action.type) {
-    case ListWithFiltersActions.PENDING_FILTER_RELEASE_YEAR: {
-      return handleReleaseYearFilterAction(state, action);
+    case TitlesActions.PENDING_FILTER_RELEASE_YEAR: {
+      return handleReleaseYearFilterAction(state, action, {
+        showCount: state.showCount,
+      });
     }
 
-    // Field-specific shared filters
-    case ListWithFiltersActions.PENDING_FILTER_REVIEW_STATUS: {
-      return handleReviewStatusFilterAction(state, action);
+    case TitlesActions.PENDING_FILTER_REVIEW_STATUS: {
+      return handleReviewStatusFilterAction(state, action, {
+        showCount: state.showCount,
+      });
     }
 
-    case ListWithFiltersActions.PENDING_FILTER_REVIEW_YEAR: {
-      return handleReviewYearFilterAction(state, action);
+    case TitlesActions.PENDING_FILTER_REVIEW_YEAR: {
+      return handleReviewYearFilterAction(state, action, {
+        showCount: state.showCount,
+      });
     }
 
-    case ListWithFiltersActions.PENDING_FILTER_TITLE: {
-      return handleTitleFilterAction(state, action);
+    case TitlesActions.PENDING_FILTER_TITLE: {
+      return handleTitleFilterAction(state, action, {
+        showCount: state.showCount,
+      });
+    }
+
+    case TitlesActions.SHOW_MORE: {
+      return handleShowMore(state, action, groupValues);
     }
 
     default: {
       // Handle shared list structure actions
-      return handleListWithFiltersAction(state, action, {
-        groupFn: groupValues,
-        sortFn: sortValues,
-      });
+      const paginatedGroupFn = createPaginatedGroupFn(
+        groupValues,
+        state.showCount,
+      );
+      return handleListWithFiltersAction(
+        state,
+        action,
+        {
+          groupFn: paginatedGroupFn,
+          sortFn: sortValues,
+        },
+        { showCount: state.showCount },
+      );
     }
   }
 }

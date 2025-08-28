@@ -1,8 +1,6 @@
 ---
-import React from "react";
-
 import { Backdrop } from "~/components/Backdrop";
-import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
+import { Layout as ComponentLayout } from "~/components/Layout";
 import { getProps } from "~/components/Watchlist/getProps";
 import { Watchlist } from "~/components/Watchlist/Watchlist";
 import Layout from "~/layouts/Layout.astro";
@@ -11,13 +9,6 @@ const props = await getProps();
 
 // Separate layout props from interactive props
 const { backdropImageProps, deck, ...interactiveProps } = props;
-
-// Create React elements in front matter
-const backdropElement = React.createElement(Backdrop, {
-  deck,
-  imageProps: backdropImageProps,
-  title: "Watchlist",
-});
 ---
 
 <Layout
@@ -29,7 +20,8 @@ const backdropElement = React.createElement(Backdrop, {
   }}
   title="Watchlist"
 >
-  <ListWithFiltersLayout backdrop={backdropElement}>
+  <ComponentLayout className="bg-subtle">
+    <Backdrop deck={deck} imageProps={backdropImageProps} title="Watchlist" />
     <Watchlist client:load {...interactiveProps} />
-  </ListWithFiltersLayout>
+  </ComponentLayout>
 </Layout>

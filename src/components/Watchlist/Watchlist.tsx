@@ -11,7 +11,7 @@ import { ListItemTitle } from "~/components/ListItemTitle";
 import {
   ListHeaderButton,
   ListWithFilters,
-} from "~/components/ListWithFilters";
+} from "~/components/ListWithFilters/ListWithFilters";
 import { GroupedPosterList, PosterListItem } from "~/components/PosterList";
 import { WatchlistTitleSlug } from "~/components/WatchlistTitleSlug";
 
@@ -90,7 +90,7 @@ export function Watchlist({
             groupedValues={state.groupedValues}
             onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
             totalCount={state.filteredValues.length}
-            visibleCount={state.showCount!}
+            visibleCount={state.showCount}
           >
             {(value) => {
               return (

@@ -9,7 +9,7 @@ import { ListItemDetails } from "~/components/ListItemDetails";
 import { ListItemGrade } from "~/components/ListItemGrade";
 import { ListItemReviewDate } from "~/components/ListItemReviewDate";
 import { ListItemTitle } from "~/components/ListItemTitle";
-import { ListWithFilters } from "~/components/ListWithFilters";
+import { ListWithFilters } from "~/components/ListWithFilters/ListWithFilters";
 import { GroupedPosterList, PosterListItem } from "~/components/PosterList";
 
 import type { Sort } from "./Collection.reducer";
@@ -78,7 +78,7 @@ export function Collection({
           groupedValues={state.groupedValues}
           onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
           totalCount={state.filteredValues.length}
-          visibleCount={state.showCount!}
+          visibleCount={state.showCount}
         >
           {(value) => {
             return <CollectionListItem key={value.imdbId} value={value} />;

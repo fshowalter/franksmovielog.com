@@ -51,10 +51,7 @@ export function AlltimeStats({
   stats,
 }: Props): JSX.Element {
   return (
-    <Layout
-      addGradient={false}
-      className="flex flex-col items-center bg-subtle"
-    >
+    <Layout className="flex flex-col items-center bg-subtle">
       <Backdrop
         breadcrumb={
           <BreadcrumbLink href="/viewings/">Viewing Log</BreadcrumbLink>

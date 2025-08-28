@@ -5,7 +5,7 @@ import { allCollections } from "~/api/collections";
 import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
 import { Collection } from "~/components/Collection/Collection";
 import { getProps } from "~/components/Collection/getProps";
-import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
+import { Layout as ComponentLayout } from "~/components/Layout";
 import Layout from "~/layouts/Layout.astro";
 
 interface Props {
@@ -39,14 +39,8 @@ const breadcrumb = React.createElement(BreadcrumbLink, {
   href: "/collections/",
 });
 
-// Create React elements in front matter
-const backdropElement = React.createElement(Backdrop, {
-  breadcrumb,
-  deck: React.createElement("span", {
-    dangerouslySetInnerHTML: { __html: props.value.descriptionHtml },
-  }),
-  imageProps: backdropImageProps,
-  title: props.value.name,
+const deckElement = React.createElement("span", {
+  dangerouslySetInnerHTML: { __html: props.value.descriptionHtml },
 });
 ---
 
@@ -61,7 +55,13 @@ const backdropElement = React.createElement(Backdrop, {
   }}
   title={`${props.value.name} movie reviews`}
 >
-  <ListWithFiltersLayout backdrop={backdropElement}>
+  <ComponentLayout className="bg-subtle">
+    <Backdrop
+      breadcrumb={breadcrumb}
+      deck={deckElement}
+      imageProps={backdropImageProps}
+      title={props.value.name}
+    />
     <Collection client:load {...interactiveProps} />
-  </ListWithFiltersLayout>
+  </ComponentLayout>
 </Layout>

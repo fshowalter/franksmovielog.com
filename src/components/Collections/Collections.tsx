@@ -7,7 +7,7 @@ import type { Collection } from "~/api/collections";
 
 import { AvatarListItem } from "~/components/AvatarList";
 import { ListItemName } from "~/components/ListItemName";
-import { ListWithFilters } from "~/components/ListWithFilters";
+import { ListWithFilters } from "~/components/ListWithFilters/ListWithFilters";
 
 import type { Sort } from "./Collections.reducer";
 

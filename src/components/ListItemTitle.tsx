@@ -19,7 +19,7 @@ export function ListItemTitle({
     return (
       <a
         className={`
-          text-base leading-5 font-semibold text-[#252525] transition-all
+          text-base leading-5 font-semibold text-default transition-all
           duration-500
           after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
           after:opacity-0

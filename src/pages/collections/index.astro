@@ -1,23 +1,14 @@
 ---
-import React from "react";
-
 import { Backdrop } from "~/components/Backdrop";
 import { Collections } from "~/components/Collections/Collections";
 import { getProps } from "~/components/Collections/getProps";
-import { ListWithFiltersLayout } from "~/components/ListWithFiltersLayout";
+import { Layout as ComponentLayout } from "~/components/Layout";
 import Layout from "~/layouts/Layout.astro";
 
 const props = await getProps();
 
 // Separate layout props from interactive props
 const { backdropImageProps, deck, ...interactiveProps } = props;
-
-// Create React elements in front matter
-const backdropElement = React.createElement(Backdrop, {
-  deck,
-  imageProps: backdropImageProps,
-  title: "Collections",
-});
 ---
 
 <Layout
@@ -29,7 +20,8 @@ const backdropElement = React.createElement(Backdrop, {
   openGraph={{ description: deck, type: "website" }}
   title="Collections"
 >
-  <ListWithFiltersLayout backdrop={backdropElement}>
+  <ComponentLayout className="bg-subtle">
+    <Backdrop deck={deck} imageProps={backdropImageProps} title="Collections" />
     <Collections client:load {...interactiveProps} />
-  </ListWithFiltersLayout>
+  </ComponentLayout>
 </Layout>
