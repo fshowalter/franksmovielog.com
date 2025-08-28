@@ -48,12 +48,6 @@ export type TitlesActionType<TSortValue = unknown> =
   | PendingFilterTitleAction
   | ShowMoreAction;
 
-/**
- * Extended state for title lists that support pagination
- */
-export type TitlesWithShowCountState = {
-  showCount: number;
-};
 
 type PendingFilterGenresAction = {
   type: TitlesActions.PENDING_FILTER_GENRES;
@@ -260,8 +254,7 @@ export function handleTitlesListAction<
       const increment = action.increment ?? SHOW_COUNT_DEFAULT;
       const baseState = showMore(
         state as ListWithFiltersState<TItem, TSortValue> &
-          TExtendedState &
-          TitlesWithShowCountState,
+          TExtendedState & { showCount: number },
         increment,
         handlers.groupFn,
       );
@@ -387,7 +380,7 @@ function createTitleFilter(value: string | undefined) {
 function showMore<
   TItem,
   TSortValue,
-  TExtendedState extends TitlesWithShowCountState,
+  TExtendedState extends { showCount: number },
 >(
   state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
   increment: number,

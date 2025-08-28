@@ -1,8 +1,5 @@
 import type { ListWithFiltersState } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
-import type {
-  TitlesActionType,
-  TitlesWithShowCountState,
-} from "~/components/ListWithFilters/titlesReducerUtils";
+import type { TitlesActionType } from "~/components/ListWithFilters/titlesReducerUtils";
 
 import { createInitialState } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import {
@@ -49,8 +46,9 @@ export const Actions = {
 
 export type ActionType = TitlesActionType<Sort>;
 
-type State = ListWithFiltersState<ListItemValue, Sort> &
-  TitlesWithShowCountState;
+type State = ListWithFiltersState<ListItemValue, Sort> & {
+  showCount: number;
+};
 
 // Helper functions
 function getReviewDateGroup(value: ListItemValue): string {
