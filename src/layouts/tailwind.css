@@ -89,7 +89,7 @@
 
 @layer base {
   :root {
-    --bg-calendar: #fff;
+    --bg-calendar: #fbfaf8;
     --bg-accent: #b4841e;
     --bg-canvas: #f4f1ea;
     --bg-default: #fff;
@@ -142,10 +142,16 @@
     filter: var(--image-filter);
   }
 
+  @media (prefers-contrast: more) {
+    :root {
+      --fg-accent: #986d00;
+    }
+  }
+
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg-calendar: #3e3d3c;
-      --bg-accent: #8e6b00;
+      --bg-calendar: #393938;
+      --bg-accent: #aa7f33;
       --bg-canvas: #484745;
       --bg-default: #322f2f;
       --bg-hover: #3c393a;
@@ -159,10 +165,10 @@
       --fg-accent: #bf8a00;
       --fg-default: rgb(255 255 255 / 75%);
       --fg-muted: rgb(255 255 255 / 65%);
-      --fg-subtle: rgb(255 255 255 / 60%);
+      --fg-subtle: #b2b0b0;
       --image-filter: brightness(0.8) contrast(1);
       --hero-gradient: unset;
-      --drop-shadow-md: 0 3px 3px rgb(0 0 0 / 19%);
+      --drop-shadow-md: 0 3px 3px rgb(0 0 0 / 80%);
       --drop-shadow-2xl: 0 25px 25px rgb(0 0 0 / 65%);
       --drop-shadow-lg: 0 4px 4px rgb(0 0 0 / 25%);
     }
@@ -188,6 +194,12 @@
     font-style: normal;
     font-weight: 200 800;
     src: url("/fonts/Assistant/Assistant.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: Assistant;
+    src: url("/fonts/Assistant/AssistantSymbols.woff2") format("woff2");
+    unicode-range: U+21A9; /* Only for the arrow */
   }
 
   @font-face {
