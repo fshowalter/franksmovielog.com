@@ -372,7 +372,7 @@ function CalendarMonth({
       >
         <thead
           className={`
-            hidden transform-gpu bg-default
+            hidden transform-gpu bg-calendar
             tablet-landscape:sticky
             tablet-landscape:top-(--calendar-scroll-offset)
             tablet-landscape:z-sticky tablet-landscape:table-header-group
