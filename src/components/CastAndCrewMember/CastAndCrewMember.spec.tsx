@@ -10,7 +10,7 @@ import {
 } from "~/components/ListWithFilters/ListWithFilters.testHelper";
 import { clickMultiSelectField } from "~/components/MultiSelectField.testHelper";
 import { getGroupedPosterList } from "~/components/PosterList.testHelper";
-import { clickReviewedStatus } from "~/components/ReviewStatusField.testHelper";
+import { clickReviewedStatus } from "~/components/ReviewStatusFilter.testHelper";
 import { clickSelectField } from "~/components/SelectField.testHelper";
 import { fillTextFilter } from "~/components/TextFilter.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";

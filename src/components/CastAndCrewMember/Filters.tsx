@@ -1,10 +1,15 @@
 import type { JSX } from "react";
 
+import { CreditedAsFilter } from "~/components/CreditedAsFilter";
 import { GradeInput } from "~/components/GradeInput";
 import { MultiSelectField } from "~/components/MultiSelectField";
-import { ReviewedStatusField } from "~/components/ReviewedStatusField";
+import { ReviewedStatusFilter } from "~/components/ReviewedStatusFilter";
 import { SelectField } from "~/components/SelectField";
 import { TextFilter } from "~/components/TextFilter";
+import {
+  TitleFilters,
+  type TitleFilterValues,
+} from "~/components/TitleFilters";
 import { YearInput } from "~/components/YearInput";
 import { capitalize } from "~/utils/capitalize";
 
@@ -12,13 +17,9 @@ import type { ActionType } from "./CastAndCrewMember.reducer";
 
 import { Actions } from "./CastAndCrewMember.reducer";
 
-type FilterValues = {
-  credits?: string;
-  genres?: readonly string[];
-  releaseYear?: [string, string];
-  reviewStatus?: number;
-  reviewYear?: [string, string];
-  title?: string;
+type FilterValues = TitleFilterValues & {
+  creditedAs?: string;
+  reviewedStatus?: string;
 };
 
 export function Filters({
@@ -39,50 +40,35 @@ export function Filters({
   return (
     <>
       {creditedAs.length > 1 && (
-        <SelectField
-          label="Credits"
-          onChange={(e) =>
+        <CreditedAsFilter
+          initialValue={filterValues.creditedAs}
+          onChange={(value) =>
             dispatch({
               type: Actions.PENDING_FILTER_CREDIT_KIND,
-              value: e.target.value,
+              value,
             })
           }
-        >
-          <option value="All">All</option>
-          {creditedAs.map((credit) => {
-            return (
-              <option key={credit} value={credit}>
-                {capitalize(credit)}
-              </option>
-            );
-          })}
-        </SelectField>
+          values={creditedAs}
+        />
       )}
-      <ReviewedStatusField
-        onChange={(e) =>
+      <ReviewedStatusFilter
+        initialValue={filterValues.reviewedStatus}
+        onChange={(value) =>
           dispatch({
             type: Actions.PENDING_FILTER_REVIEW_STATUS,
-            value: e.target.value,
+            value,
           })
         }
       />
-
-      <TextFilter
-        initialValue={filterValues.title || ""}
-        label="Title"
-        onInputChange={(value) =>
-          dispatch({ type: Actions.PENDING_FILTER_TITLE, value })
-        }
-        placeholder="Enter all or part of a title"
-      />
-
-      <YearInput
-        initialValues={filterValues.releaseYear || []}
-        label="Release Year"
-        onYearChange={(values) =>
+      <TitleFilters
+        distinctReleaseYears={distinctReleaseYears}
+        filterValues={filterValues}
+        onReleaseYearChange={(values) =>
           dispatch({ type: Actions.PENDING_FILTER_RELEASE_YEAR, values })
         }
-        years={distinctReleaseYears}
+        onTitleChange={(value) =>
+          dispatch({ type: Actions.PENDING_FILTER_TITLE, value })
+        }
       />
       <YearInput
         initialValues={filterValues.reviewYear || []}

@@ -1,15 +1,16 @@
 import type { JSX } from "react";
 
-import { SelectField } from "~/components/SelectField";
-import { TextFilter } from "~/components/TextFilter";
+import type { CollectionFilterValues } from "~/components/CollectionFilters";
+
+import { CollectionFilters } from "~/components/CollectionFilters";
+import { CreditedAsFilter } from "~/components/CreditedAsFilter";
 
 import type { ActionType } from "./CastAndCrew.reducer";
 
 import { Actions } from "./CastAndCrew.reducer";
 
-type FilterValues = {
-  credits?: string;
-  name?: string;
+type FilterValues = CollectionFilterValues & {
+  creditedAs?: string;
 };
 
 export function Filters({
@@ -21,41 +22,22 @@ export function Filters({
 }): JSX.Element {
   return (
     <>
-      <TextFilter
-        initialValue={filterValues.name || ""}
-        label="Name"
-        onInputChange={(value) =>
+      <CollectionFilters
+        filterValues={filterValues}
+        onNameChange={(value) =>
           dispatch({ type: Actions.PENDING_FILTER_NAME, value })
         }
-        placeholder="Enter all or part of a name"
       />
-      <SelectField
-        className="basis-full"
-        label="Credits"
-        onChange={(e) =>
+      <CreditedAsFilter
+        initialValue={filterValues.creditedAs}
+        onChange={(value) =>
           dispatch({
             type: Actions.PENDING_FILTER_CREDIT_KIND,
-            value: e.target.value,
+            value: value,
           })
         }
-        value={filterValues.credits || "All"}
-      >
-        <option value="All">All</option>
-        <option value="director">Director</option>
-        <option value="writer">Writer</option>
-        <option value="performer">Performer</option>
-      </SelectField>
-    </>
-  );
-}
-
-export function SortOptions() {
-  return (
-    <>
-      <option value="name-asc">Name (A &rarr; Z)</option>
-      <option value="name-desc">Name (Z &rarr; A)</option>
-      <option value="review-count-desc">Review Count (Most First)</option>
-      <option value="review-count-asc">Review Count (Fewest First)</option>
+        values={["director", "performer", "writer"]}
+      />
     </>
   );
 }

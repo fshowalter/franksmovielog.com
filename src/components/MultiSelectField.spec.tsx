@@ -11,6 +11,7 @@ if (!Element.prototype.scrollIntoView) {
 
 describe("MultiSelectField", () => {
   const defaultProps = {
+    initialValues: [],
     label: "Test Label",
     onChange: vi.fn(),
     options: [

@@ -1,0 +1,31 @@
+import type { JSX } from "react";
+
+import { SelectField } from "~/components/SelectField";
+import { capitalize } from "~/utils/capitalize";
+
+export function CreditedAsFilter({
+  initialValue,
+  onChange,
+  values,
+}: {
+  initialValue: string | undefined;
+  onChange: (value: string) => void;
+  values: readonly string[];
+}): JSX.Element {
+  return (
+    <SelectField
+      initialValue={initialValue}
+      label="Credited As"
+      onChange={onChange}
+    >
+      <option value="All">All</option>
+      {values.map((credit) => {
+        return (
+          <option key={credit} value={credit}>
+            {capitalize(credit)}
+          </option>
+        );
+      })}
+    </SelectField>
+  );
+}

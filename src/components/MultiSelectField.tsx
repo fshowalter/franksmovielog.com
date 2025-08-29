@@ -120,13 +120,13 @@ export function MultiSelectField({
   onChange,
   options,
 }: {
-  initialValues: string[];
+  initialValues: readonly string[] | undefined;
   label: string;
   onChange: (values: string[]) => void;
   options: readonly string[];
 }) {
   const [selectedOptions, setSelectedOptions] = useState<string[]>(
-    initialValues || [],
+    initialValues ? [...initialValues] : [],
   );
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownMaxHeight, setDropdownMaxHeight] = useState("15rem");

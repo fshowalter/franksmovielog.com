@@ -1,14 +1,18 @@
-import type { ChangeEvent } from "react";
-
 import { SelectField } from "./SelectField";
 
-export function ReviewedStatusField({
+export function ReviewedStatusFilter({
+  initialValue,
   onChange,
 }: {
-  onChange: (e: ChangeEvent<HTMLSelectElement>) => void;
+  initialValue: string | undefined;
+  onChange: (value: string) => void;
 }) {
   return (
-    <SelectField label="Reviewed Status" onChange={onChange}>
+    <SelectField
+      initialValue={initialValue}
+      label="Reviewed Status"
+      onChange={onChange}
+    >
       <option key={0} value={"All"}>
         All
       </option>

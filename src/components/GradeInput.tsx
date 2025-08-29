@@ -52,7 +52,7 @@ export function GradeInput({
   label,
   onGradeChange,
 }: {
-  initialValues: number[];
+  initialValues: number[] | undefined;
   label: string;
   onGradeChange: (values: [number, number]) => void;
 }): JSX.Element {

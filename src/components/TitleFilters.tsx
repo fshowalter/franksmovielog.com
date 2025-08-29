@@ -3,74 +3,78 @@ import { MultiSelectField } from "~/components/MultiSelectField";
 import { TextFilter } from "~/components/TextFilter";
 import { YearInput } from "~/components/YearInput";
 
-type FilterValues = {
-  genres?: string[];
-  grade?: [number, number];
-  releaseYear?: [string, string];
-  reviewYear?: [string, string];
-  title?: string;
+type TitleFiltersProps = {
+  genre?: {
+    initialValue: readonly string[] | undefined;
+    onChange: (values: string[]) => void;
+    values: readonly string[];
+  };
+  grade?: {
+    initialValue: [number, number] | undefined;
+    onChange: (values: [number, number]) => void;
+  };
+  releaseYear?: {
+    initialValue: [string, string];
+    onChange: (values: [string, string]) => void;
+    values: readonly string[];
+  };
+  reviewYear?: {
+    initialValue: [string, string];
+    onChange: (values: [string, string]) => void;
+    values: readonly string[];
+  };
+  title?: {
+    initialValue: string | undefined;
+    onChange: (value: string) => void;
+  };
 };
 
 export function TitleFilters({
-  distinctGenres,
-  distinctReleaseYears,
-  distinctReviewYears,
-  filterValues,
-  onGenreChange,
-  onGradeChange,
-  onReleaseYearChange,
-  onReviewYearChange,
-  onTitleChange,
-}: {
-  distinctGenres: readonly string[];
-  distinctReleaseYears: readonly string[];
-  distinctReviewYears: readonly string[];
-  filterValues: FilterValues;
-  onGenreChange?: (values: string[]) => void;
-  onGradeChange?: (values: [number, number]) => void;
-  onReleaseYearChange?: (values: [string, string]) => void;
-  onReviewYearChange?: (values: [string, string]) => void;
-  onTitleChange?: (value: string) => void;
-}) {
+  genre,
+  grade,
+  releaseYear,
+  reviewYear,
+  title,
+}: TitleFiltersProps) {
   return (
     <>
-      {onTitleChange && (
+      {title && (
         <TextFilter
-          initialValue={filterValues.title || ""}
+          initialValue={title.initialValue}
           label="Title"
-          onInputChange={onTitleChange}
+          onInputChange={title.onChange}
           placeholder="Enter all or part of a title"
         />
       )}
-      {onReleaseYearChange && (
+      {releaseYear && (
         <YearInput
-          initialValues={filterValues.releaseYear || []}
+          initialValues={releaseYear.initialValue}
           label="Release Year"
-          onYearChange={onReleaseYearChange}
-          years={distinctReleaseYears}
+          onYearChange={releaseYear.onChange}
+          years={releaseYear.values}
         />
       )}
-      {onReviewYearChange && (
+      {reviewYear && (
         <YearInput
-          initialValues={filterValues.reviewYear || []}
+          initialValues={reviewYear.initialValue}
           label="Review Year"
-          onYearChange={onReviewYearChange}
-          years={distinctReviewYears}
+          onYearChange={reviewYear.onChange}
+          years={reviewYear.values}
         />
       )}
-      {onGradeChange && (
+      {grade && (
         <GradeInput
-          initialValues={filterValues.grade || []}
+          initialValues={grade.initialValue}
           label="Grade"
-          onGradeChange={onGradeChange}
+          onGradeChange={grade.onChange}
         />
       )}
-      {onGenreChange && (
+      {genre && (
         <MultiSelectField
-          initialValues={filterValues.genres || []}
+          initialValues={genre.initialValue}
           label="Genres"
-          onChange={onGenreChange}
-          options={distinctGenres}
+          onChange={genre.onChange}
+          options={genre.values}
         />
       )}
     </>

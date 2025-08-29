@@ -1,17 +1,12 @@
-import { TitleFilters } from "~/components/TitleFilters";
+import {
+  TitleFilters,
+  type TitleFilterValues,
+} from "~/components/TitleFilters";
 import { TitleSortOptions } from "~/components/TitleSortOptions";
 
 import type { ActionType } from "./reducer";
 
 import { Actions } from "./reducer";
-
-type FilterValues = {
-  genres?: string[];
-  grade?: [number, number];
-  releaseYear?: [string, string];
-  reviewYear?: [string, string];
-  title?: string;
-};
 
 export function Filters({
   dispatch,
@@ -24,7 +19,7 @@ export function Filters({
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
-  filterValues: FilterValues;
+  filterValues: TitleFilterValues;
 }) {
   return (
     <TitleFilters
@@ -53,6 +48,11 @@ export function Filters({
       onTitleChange={(value) =>
         dispatch({ type: Actions.PENDING_FILTER_TITLE, value })
       }
+      title={{
+        initialValue={filterValues.title}
+        onChange: (value) =>
+          dispatch({ type: Actions.PENDING_FILTER_TITLE, value }),
+      }}
     />
   );
 }
