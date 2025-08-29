@@ -1,5 +1,4 @@
 import { render, screen, within } from "@testing-library/react";
-import { userEvent } from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import {
@@ -10,7 +9,9 @@ import {
   clickViewResults,
 } from "~/components/ListWithFilters/ListWithFilters.testHelper";
 import { clickMultiSelectField } from "~/components/MultiSelectField.testHelper";
+import { getGroupedPosterList } from "~/components/PosterList.testHelper";
 import { clickReviewedStatus } from "~/components/ReviewStatusField.testHelper";
+import { clickSelectField } from "~/components/SelectField.testHelper";
 import { fillTextFilter } from "~/components/TextFilter.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 import { fillYearInput } from "~/components/YearInput.testHelper";
@@ -62,7 +63,7 @@ describe("CastAndCrewMember", () => {
     await clickViewResults(user);
 
     // List updates synchronously with fake timers
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by genres", async ({ expect }) => {
@@ -83,7 +84,7 @@ describe("CastAndCrewMember", () => {
 
     await clickViewResults(user);
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by title A → Z", async ({ expect }) => {
@@ -96,7 +97,7 @@ describe("CastAndCrewMember", () => {
 
     await clickSortOption(user, "Title (A → Z)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by title Z → A", async ({ expect }) => {
@@ -109,7 +110,7 @@ describe("CastAndCrewMember", () => {
 
     await clickSortOption(user, "Title (Z → A)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by release date with oldest first", async ({ expect }) => {
@@ -122,7 +123,7 @@ describe("CastAndCrewMember", () => {
 
     await clickSortOption(user, "Release Date (Oldest First)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by release date with newest first", async ({ expect }) => {
@@ -135,7 +136,7 @@ describe("CastAndCrewMember", () => {
 
     await clickSortOption(user, "Release Date (Newest First)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by grade with best first", async ({ expect }) => {
@@ -148,7 +149,7 @@ describe("CastAndCrewMember", () => {
 
     await clickSortOption(user, "Grade (Best First)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by grade with worst first", async ({ expect }) => {
@@ -161,7 +162,7 @@ describe("CastAndCrewMember", () => {
 
     await clickSortOption(user, "Grade (Worst First)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by review date with oldest first", async ({ expect }) => {
@@ -174,7 +175,7 @@ describe("CastAndCrewMember", () => {
 
     await clickSortOption(user, "Review Date (Oldest First)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by review date with newest first", async ({ expect }) => {
@@ -187,7 +188,7 @@ describe("CastAndCrewMember", () => {
 
     await clickSortOption(user, "Review Date (Newest First)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by release year", async ({ expect }) => {
@@ -207,8 +208,7 @@ describe("CastAndCrewMember", () => {
     await clickViewResults(user);
 
     // List updates synchronously with fake timers
-
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by review year", async ({ expect }) => {
@@ -228,9 +228,9 @@ describe("CastAndCrewMember", () => {
     await clickViewResults(user);
 
     // List updates synchronously with fake timers
-
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
+
   it("can filter reviewed titles", async ({ expect }) => {
     expect.hasAssertions();
 
@@ -239,12 +239,14 @@ describe("CastAndCrewMember", () => {
 
     render(<CastAndCrewMember {...props} />);
 
+    await clickToggleFilters(user);
+
     await clickReviewedStatus(user, "Reviewed");
 
     // Apply the filter
     await clickViewResults(user);
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter unreviewed titles", async ({ expect }) => {
@@ -260,7 +262,7 @@ describe("CastAndCrewMember", () => {
     // Apply the filter
     await clickViewResults(user);
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter all reviewed status titles", async ({ expect }) => {
@@ -281,7 +283,7 @@ describe("CastAndCrewMember", () => {
     // Apply the filter
     await clickViewResults(user);
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter director titles", async ({ expect }) => {
@@ -292,9 +294,13 @@ describe("CastAndCrewMember", () => {
 
     render(<CastAndCrewMember {...props} />);
 
-    await user.selectOptions(screen.getByLabelText("Credits"), "Director");
+    await clickToggleFilters(user);
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    await clickSelectField(user, "Credits", "Director");
+
+    await clickViewResults(user);
+
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter director titles then show all", async ({ expect }) => {
@@ -305,10 +311,19 @@ describe("CastAndCrewMember", () => {
 
     render(<CastAndCrewMember {...props} />);
 
-    await user.selectOptions(screen.getByLabelText("Credits"), "Director");
-    await user.selectOptions(screen.getByLabelText("Credits"), "All");
+    await clickToggleFilters(user);
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    await clickSelectField(user, "Credits", "Director");
+
+    await clickViewResults(user);
+
+    await clickToggleFilters(user);
+
+    await clickSelectField(user, "Credits", "All");
+
+    await clickViewResults(user);
+
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter writer titles", async ({ expect }) => {
@@ -319,9 +334,13 @@ describe("CastAndCrewMember", () => {
 
     render(<CastAndCrewMember {...props} />);
 
-    await user.selectOptions(screen.getByLabelText("Credits"), "Writer");
+    await clickToggleFilters(user);
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    await clickSelectField(user, "Credits", "Writer");
+
+    await clickViewResults(user);
+
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter writer titles then show all", async ({ expect }) => {
@@ -332,10 +351,19 @@ describe("CastAndCrewMember", () => {
 
     render(<CastAndCrewMember {...props} />);
 
-    await user.selectOptions(screen.getByLabelText("Credits"), "Writer");
-    await user.selectOptions(screen.getByLabelText("Credits"), "All");
+    await clickToggleFilters(user);
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    await clickSelectField(user, "Credits", "Writer");
+
+    await clickViewResults(user);
+
+    await clickToggleFilters(user);
+
+    await clickSelectField(user, "Credits", "All");
+
+    await clickViewResults(user);
+
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter performer titles", async ({ expect }) => {
@@ -346,9 +374,13 @@ describe("CastAndCrewMember", () => {
 
     render(<CastAndCrewMember {...props} />);
 
-    await user.selectOptions(screen.getByLabelText("Credits"), "Performer");
+    await clickToggleFilters(user);
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    await clickSelectField(user, "Credits", "Performer");
+
+    await clickViewResults(user);
+
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter performer titles then show all", async ({ expect }) => {
@@ -359,10 +391,19 @@ describe("CastAndCrewMember", () => {
 
     render(<CastAndCrewMember {...props} />);
 
-    await user.selectOptions(screen.getByLabelText("Credits"), "Performer");
-    await userEvent.selectOptions(screen.getByLabelText("Credits"), "All");
+    await clickToggleFilters(user);
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    await clickSelectField(user, "Credits", "Performer");
+
+    await clickViewResults(user);
+
+    await clickToggleFilters(user);
+
+    await clickSelectField(user, "Credits", "All");
+
+    await clickViewResults(user);
+
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can clear all filters", async ({ expect }) => {
@@ -379,7 +420,7 @@ describe("CastAndCrewMember", () => {
     // Apply multiple filters
     await fillTextFilter(user, "Title", "Smokey");
 
-    await userEvent.selectOptions(screen.getByLabelText("Credits"), "Writer");
+    await clickSelectField(user, "Credits", "Writer");
 
     await clickViewResults(user);
 
@@ -395,7 +436,7 @@ describe("CastAndCrewMember", () => {
 
     await clickViewResults(user);
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can reset filters when closing drawer", async ({ expect }) => {
@@ -416,7 +457,7 @@ describe("CastAndCrewMember", () => {
     await clickViewResults(user);
 
     // Store the count of filtered results
-    const filteredList = screen.getByTestId("grouped-poster-list");
+    const filteredList = getGroupedPosterList();
     const filteredCount =
       within(filteredList).queryAllByRole("listitem").length;
 
@@ -430,7 +471,7 @@ describe("CastAndCrewMember", () => {
     await clickCloseFilters(user);
 
     // The list should still show the originally filtered results
-    const listAfterReset = screen.getByTestId("grouped-poster-list");
+    const listAfterReset = getGroupedPosterList();
     const resetCount = within(listAfterReset).queryAllByRole("listitem").length;
     expect(resetCount).toBe(filteredCount);
 
