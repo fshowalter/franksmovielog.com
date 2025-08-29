@@ -87,8 +87,8 @@ export function AlltimeStats({
         />
         <div
           className={`
-            flex flex-col items-start gap-y-8
-            laptop:flex-row laptop:gap-x-8
+            mx-auto flex w-full max-w-popout flex-col items-start gap-y-8
+            laptop:max-w-unset laptop:flex-row laptop:gap-x-8
           `}
         >
           <GradeDistribution values={stats.gradeDistribution} />
@@ -96,8 +96,8 @@ export function AlltimeStats({
         </div>
         <div
           className={`
-            flex flex-col items-start gap-y-8
-            laptop:flex-row laptop:gap-x-8
+            mx-auto flex w-full max-w-popout flex-col items-start gap-y-8
+            laptop:max-w-unset laptop:flex-row laptop:gap-x-8
           `}
         >
           <MediaDistribution values={stats.mediaDistribution} />
