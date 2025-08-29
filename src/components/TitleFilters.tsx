@@ -1,30 +1,38 @@
+import type { TitleFilterValues } from "~/components/ListWithFilters/titlesReducerUtils";
+
 import { GradeInput } from "~/components/GradeInput";
 import { MultiSelectField } from "~/components/MultiSelectField";
 import { TextFilter } from "~/components/TextFilter";
 import { YearInput } from "~/components/YearInput";
 
+import { ReviewedStatusFilter } from "./ReviewedStatusFilter";
+
 type TitleFiltersProps = {
   genre?: {
-    initialValue: readonly string[] | undefined;
+    initialValue: TitleFilterValues["genre"];
     onChange: (values: string[]) => void;
     values: readonly string[];
   };
   grade?: {
-    initialValue: [number, number] | undefined;
+    initialValue: TitleFilterValues["grade"];
     onChange: (values: [number, number]) => void;
   };
   releaseYear?: {
-    initialValue: [string, string];
+    initialValue: TitleFilterValues["releaseYear"];
     onChange: (values: [string, string]) => void;
     values: readonly string[];
   };
+  reviewedStatus?: {
+    initialValue: TitleFilterValues["reviewedStatus"];
+    onChange: (value: string) => void;
+  };
   reviewYear?: {
-    initialValue: [string, string];
+    initialValue: TitleFilterValues["reviewYear"];
     onChange: (values: [string, string]) => void;
     values: readonly string[];
   };
   title?: {
-    initialValue: string | undefined;
+    initialValue: TitleFilterValues["title"];
     onChange: (value: string) => void;
   };
 };
@@ -33,6 +41,7 @@ export function TitleFilters({
   genre,
   grade,
   releaseYear,
+  reviewedStatus,
   reviewYear,
   title,
 }: TitleFiltersProps) {
@@ -44,6 +53,12 @@ export function TitleFilters({
           label="Title"
           onInputChange={title.onChange}
           placeholder="Enter all or part of a title"
+        />
+      )}
+      {reviewedStatus && (
+        <ReviewedStatusFilter
+          initialValue={reviewedStatus.initialValue}
+          onChange={reviewedStatus.onChange}
         />
       )}
       {releaseYear && (

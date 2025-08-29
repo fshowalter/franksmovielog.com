@@ -556,7 +556,7 @@
             </div>
           </header>
           <astro-island
-            uid="C1Fl6"
+            uid="1szxTj"
             prefix="r3"
             component-url="~/components/CastAndCrewMember/CastAndCrewMember"
             component-export="CastAndCrewMember"
@@ -597,16 +597,16 @@
                         <select
                           class="flex w-full appearance-none border-none bg-default py-2 pr-4 pl-4 font-serif text-base font-normal tracking-normal overflow-ellipsis text-default shadow-all outline-accent"
                         >
+                          <option value="title-asc">Title (A → Z)</option>
+                          <option value="title-desc">Title (Z → A)</option>
+                          <option value="grade-desc">Grade (Best First)</option>
+                          <option value="grade-asc">Grade (Worst First)</option>
                           <option value="release-date-desc">
                             Release Date (Newest First)
                           </option>
                           <option value="release-date-asc" selected="">
                             Release Date (Oldest First)
                           </option>
-                          <option value="title-asc">Title (A → Z)</option>
-                          <option value="title-desc">Title (Z → A)</option>
-                          <option value="grade-desc">Grade (Best First)</option>
-                          <option value="grade-asc">Grade (Worst First)</option>
                           <option value="review-date-desc">
                             Review Date (Newest First)
                           </option>
@@ -6518,7 +6518,7 @@
                         <label class="flex flex-col"
                           ><span
                             class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                            >Credits</span
+                            >Credited As</span
                           ><select
                             class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
                           >
@@ -6527,6 +6527,15 @@
                             <option value="director">Director</option>
                             <option value="writer">Writer</option>
                           </select></label
+                        ><label class="flex flex-col text-subtle"
+                          ><span
+                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
+                            >Title</span
+                          ><input
+                            class="border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
+                            placeholder="Enter all or part of a title"
+                            type="text"
+                            value="" /></label
                         ><label class="flex flex-col"
                           ><span
                             class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
@@ -6538,16 +6547,7 @@
                             <option value="Reviewed">Reviewed</option>
                             <option value="Not Reviewed">Not Reviewed</option>
                           </select></label
-                        ><label class="flex flex-col text-subtle"
-                          ><span
-                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                            >Title</span
-                          ><input
-                            class="border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
-                            placeholder="Enter all or part of a title"
-                            type="text"
-                            value=""
-                        /></label>
+                        >
                         <fieldset class="text-subtle">
                           <legend
                             class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"

@@ -3,9 +3,11 @@
  */
 import type {
   ListWithFiltersActionType,
-  ListWithFiltersState,
 } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
-import type { TitlesActionType } from "~/components/ListWithFilters/titlesReducerUtils";
+import type {
+  TitlesActionType,
+  TitlesListState,
+} from "~/components/ListWithFilters/titlesReducerUtils";
 import type { ReviewsListItemValue } from "~/components/Reviews/ReviewsListItem";
 
 import {
@@ -64,7 +66,7 @@ export type ActionType = Extract<
 // Re-export sort type for convenience
 export type Sort = ReviewsSort;
 
-type State = ListWithFiltersState<ReviewsListItemValue, ReviewsSort> & {
+type State = TitlesListState<ReviewsListItemValue, ReviewsSort> & {
   showCount: number;
 };
 
@@ -128,7 +130,7 @@ export function initState({
     showCount,
     sortFn: sortValues,
     values,
-  });
+  }) as State;
 }
 
 // Create reducer function

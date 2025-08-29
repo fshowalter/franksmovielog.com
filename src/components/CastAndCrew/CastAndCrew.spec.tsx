@@ -2,6 +2,7 @@ import { render, screen, within } from "@testing-library/react";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import { getGroupedAvatarList } from "~/components/AvatarList.testHelper";
+import { clickCreditedAsFilter } from "~/components/CreditedAsFilter.testHelper";
 import {
   clickClearFilters,
   clickCloseFilters,
@@ -118,7 +119,7 @@ describe("CastAndCrew", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    await clickSelectField(user, "Credits", "Director");
+    await clickCreditedAsFilter(user, "Director");
 
     // Apply the filter
     await clickViewResults(user);
@@ -138,7 +139,7 @@ describe("CastAndCrew", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    await clickSelectField(user, "Credits", "Director");
+    await clickCreditedAsFilter(user, "Director");
 
     // Apply the filter
     await clickViewResults(user);
@@ -146,7 +147,7 @@ describe("CastAndCrew", () => {
     // Open filter drawer again
     await clickToggleFilters(user);
 
-    await clickSelectField(user, "Credits", "All");
+    await clickCreditedAsFilter(user, "All");
 
     // Apply the filter
     await clickViewResults(user);
@@ -166,7 +167,7 @@ describe("CastAndCrew", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    await clickSelectField(user, "Credits", "Writer");
+    await clickCreditedAsFilter(user, "Writer");
 
     // Apply the filter
     await clickViewResults(user);
@@ -187,7 +188,7 @@ describe("CastAndCrew", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    await clickSelectField(user, "Credits", "Writer");
+    await clickCreditedAsFilter(user, "Writer");
 
     // Apply the filter
     await clickViewResults(user);
@@ -195,7 +196,7 @@ describe("CastAndCrew", () => {
     // Open filter drawer again
     await clickToggleFilters(user);
 
-    await clickSelectField(user, "Credits", "All");
+    await clickCreditedAsFilter(user, "All");
 
     // Apply the filter
     await clickViewResults(user);
@@ -215,7 +216,7 @@ describe("CastAndCrew", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    await clickSelectField(user, "Credits", "Performer");
+    await clickCreditedAsFilter(user, "Performer");
 
     // Apply the filter
     await clickViewResults(user);
@@ -236,7 +237,7 @@ describe("CastAndCrew", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    await clickSelectField(user, "Credits", "Performer");
+    await clickCreditedAsFilter(user, "Performer");
 
     // Apply the filter
     await clickViewResults(user);
@@ -244,7 +245,7 @@ describe("CastAndCrew", () => {
     // Open filter drawer again
     await clickToggleFilters(user);
 
-    await clickSelectField(user, "Credits", "All");
+    await clickCreditedAsFilter(user, "All");
 
     // Apply the filter
     await clickViewResults(user);
@@ -268,7 +269,7 @@ describe("CastAndCrew", () => {
     // Apply multiple filters
     await fillTextFilter(user, "Name", "John");
 
-    await clickSelectField(user, "Credits", "Director");
+    await clickCreditedAsFilter(user, "Director");
 
     await clickViewResults(user);
 
@@ -280,7 +281,7 @@ describe("CastAndCrew", () => {
 
     // Check that filters are cleared
     expect(screen.getByLabelText("Name")).toHaveValue("");
-    expect(screen.getByLabelText("Credits")).toHaveValue("All");
+    expect(screen.getByLabelText("Credited As")).toHaveValue("All");
 
     await clickViewResults(user);
 

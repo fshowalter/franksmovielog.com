@@ -13,13 +13,21 @@ import { updatePendingFilter } from "~/components/ListWithFilters/ListWithFilter
 import { sortNumber, sortString } from "~/components/utils/reducerUtils";
 
 /**
+ * Type for title filter values with known keys
+ */
+export type TitleFilterValues = {
+  genre?: readonly string[];
+  grade?: [number, number];
+  releaseYear?: [string, string];
+  reviewedStatus?: string;
+  reviewYear?: [string, string];
+  title?: string;
+};
+
+/**
  * Default number of items to show per page for paginated lists
  */
 export const SHOW_COUNT_DEFAULT = 100;
-
-// ============================================================================
-// Title-specific Action Types
-// ============================================================================
 
 /**
  * Title-specific filter actions
@@ -34,6 +42,10 @@ export enum TitlesActions {
   SHOW_MORE = "SHOW_MORE",
 }
 
+// ============================================================================
+// Title-specific Action Types
+// ============================================================================
+
 // Union type for all title-specific actions
 export type TitlesActionType<TSortValue = unknown> =
   | ListWithFiltersActionType<TSortValue>
@@ -44,6 +56,17 @@ export type TitlesActionType<TSortValue = unknown> =
   | PendingFilterReviewYearAction
   | PendingFilterTitleAction
   | ShowMoreAction;
+
+/**
+ * Specialized state type for title-based lists with typed filter values
+ */
+export type TitlesListState<TItem, TSortValue> = Omit<
+  ListWithFiltersState<TItem, TSortValue>,
+  "filterValues" | "pendingFilterValues"
+> & {
+  filterValues: TitleFilterValues;
+  pendingFilterValues: TitleFilterValues;
+};
 
 type PendingFilterGenresAction = {
   type: TitlesActions.PENDING_FILTER_GENRES;
@@ -112,9 +135,10 @@ export function handleGenreFilterAction<
   extendedState?: TExtendedState,
 ): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
   const filterFn = createGenresFilter(action.values);
+  const filterKey: keyof TitleFilterValues = "genre";
   const baseState = updatePendingFilter(
     state,
-    "genres",
+    filterKey,
     filterFn,
     action.values,
   );
@@ -136,9 +160,10 @@ export function handleGradeFilterAction<
   extendedState?: TExtendedState,
 ): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
   const filterFn = createGradeFilter(action.values[0], action.values[1]);
+  const filterKey: keyof TitleFilterValues = "grade";
   const baseState = updatePendingFilter(
     state,
-    "grade",
+    filterKey,
     filterFn,
     action.values,
   );
@@ -161,9 +186,10 @@ export function handleReleaseYearFilterAction<
   extendedState?: TExtendedState,
 ): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
   const filterFn = createReleaseYearFilter(action.values[0], action.values[1]);
+  const filterKey: keyof TitleFilterValues = "releaseYear";
   const baseState = updatePendingFilter(
     state,
-    "releaseYear",
+    filterKey,
     filterFn,
     action.values,
   );
@@ -185,9 +211,10 @@ export function handleReviewStatusFilterAction<
   extendedState?: TExtendedState,
 ): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
   const filterFn = createReviewStatusFilter(action.value);
+  const filterKey: keyof TitleFilterValues = "reviewedStatus";
   const baseState = updatePendingFilter(
     state,
-    "reviewStatus",
+    filterKey,
     filterFn,
     action.value,
   );
@@ -213,9 +240,10 @@ export function handleReviewYearFilterAction<
   extendedState?: TExtendedState,
 ): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
   const filterFn = createReviewYearFilter(action.values[0], action.values[1]);
+  const filterKey: keyof TitleFilterValues = "reviewYear";
   const baseState = updatePendingFilter(
     state,
-    "reviewYear",
+    filterKey,
     filterFn,
     action.values,
   );
@@ -253,7 +281,13 @@ export function handleTitleFilterAction<
   extendedState?: TExtendedState,
 ): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
   const filterFn = createTitleFilter(action.value);
-  const baseState = updatePendingFilter(state, "title", filterFn, action.value);
+  const filterKey: keyof TitleFilterValues = "title";
+  const baseState = updatePendingFilter(
+    state,
+    filterKey,
+    filterFn,
+    action.value,
+  );
   return extendedState
     ? { ...baseState, ...extendedState }
     : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);

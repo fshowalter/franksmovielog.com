@@ -1,26 +1,14 @@
 import type { JSX } from "react";
 
 import { CreditedAsFilter } from "~/components/CreditedAsFilter";
-import { GradeInput } from "~/components/GradeInput";
-import { MultiSelectField } from "~/components/MultiSelectField";
-import { ReviewedStatusFilter } from "~/components/ReviewedStatusFilter";
-import { SelectField } from "~/components/SelectField";
-import { TextFilter } from "~/components/TextFilter";
-import {
-  TitleFilters,
-  type TitleFilterValues,
-} from "~/components/TitleFilters";
-import { YearInput } from "~/components/YearInput";
-import { capitalize } from "~/utils/capitalize";
+import { TitleFilters } from "~/components/TitleFilters";
 
-import type { ActionType } from "./CastAndCrewMember.reducer";
+import type {
+  ActionType,
+  CastAndCrewMemberFilterValues,
+} from "./CastAndCrewMember.reducer";
 
 import { Actions } from "./CastAndCrewMember.reducer";
-
-type FilterValues = TitleFilterValues & {
-  creditedAs?: string;
-  reviewedStatus?: string;
-};
 
 export function Filters({
   creditedAs,
@@ -35,7 +23,7 @@ export function Filters({
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
-  filterValues: FilterValues;
+  filterValues: CastAndCrewMemberFilterValues;
 }): JSX.Element {
   return (
     <>
@@ -44,58 +32,57 @@ export function Filters({
           initialValue={filterValues.creditedAs}
           onChange={(value) =>
             dispatch({
-              type: Actions.PENDING_FILTER_CREDIT_KIND,
+              type: Actions.PENDING_FILTER_CREDITED_AS,
               value,
             })
           }
           values={creditedAs}
         />
       )}
-      <ReviewedStatusFilter
-        initialValue={filterValues.reviewedStatus}
-        onChange={(value) =>
-          dispatch({
-            type: Actions.PENDING_FILTER_REVIEW_STATUS,
-            value,
-          })
-        }
-      />
       <TitleFilters
-        distinctReleaseYears={distinctReleaseYears}
-        filterValues={filterValues}
-        onReleaseYearChange={(values) =>
-          dispatch({ type: Actions.PENDING_FILTER_RELEASE_YEAR, values })
-        }
-        onTitleChange={(value) =>
-          dispatch({ type: Actions.PENDING_FILTER_TITLE, value })
-        }
-      />
-      <YearInput
-        initialValues={filterValues.reviewYear || []}
-        label="Review Year"
-        onYearChange={(values) =>
-          dispatch({ type: Actions.PENDING_FILTER_REVIEW_YEAR, values })
-        }
-        years={distinctReviewYears}
-      />
-      <GradeInput
-        label="Grade"
-        onGradeChange={(values) =>
-          dispatch({
-            type: Actions.PENDING_FILTER_GRADE,
-            values,
-          })
-        }
-      />
-      <MultiSelectField
-        label="Genres"
-        onChange={(values) =>
-          dispatch({
-            type: Actions.PENDING_FILTER_GENRES,
-            values,
-          })
-        }
-        options={distinctGenres}
+        genre={{
+          initialValue: filterValues.genre,
+
+          onChange: (values) =>
+            dispatch({
+              type: Actions.PENDING_FILTER_GENRES,
+              values,
+            }),
+          values: distinctGenres,
+        }}
+        grade={{
+          initialValue: filterValues.grade,
+          onChange: (values) =>
+            dispatch({
+              type: Actions.PENDING_FILTER_GRADE,
+              values,
+            }),
+        }}
+        releaseYear={{
+          initialValue: filterValues.releaseYear,
+          onChange: (values) =>
+            dispatch({ type: Actions.PENDING_FILTER_RELEASE_YEAR, values }),
+          values: distinctReleaseYears,
+        }}
+        reviewedStatus={{
+          initialValue: filterValues.reviewedStatus,
+          onChange: (value) =>
+            dispatch({
+              type: Actions.PENDING_FILTER_REVIEW_STATUS,
+              value,
+            }),
+        }}
+        reviewYear={{
+          initialValue: filterValues.reviewYear,
+          onChange: (values) =>
+            dispatch({ type: Actions.PENDING_FILTER_REVIEW_YEAR, values }),
+          values: distinctReviewYears,
+        }}
+        title={{
+          initialValue: filterValues.title,
+          onChange: (value) =>
+            dispatch({ type: Actions.PENDING_FILTER_TITLE, value }),
+        }}
       />
     </>
   );

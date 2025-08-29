@@ -23,33 +23,37 @@ export function Filters({
 }) {
   return (
     <TitleFilters
-      distinctGenres={distinctGenres}
-      distinctReleaseYears={distinctReleaseYears}
-      distinctReviewYears={distinctReviewYears}
-      filterValues={filterValues}
-      onGenreChange={(values) =>
-        dispatch({
-          type: Actions.PENDING_FILTER_GENRES,
-          values,
-        })
-      }
-      onGradeChange={(values) =>
-        dispatch({
-          type: Actions.PENDING_FILTER_GRADE,
-          values,
-        })
-      }
-      onReleaseYearChange={(values) =>
-        dispatch({ type: Actions.PENDING_FILTER_RELEASE_YEAR, values })
-      }
-      onReviewYearChange={(values) =>
-        dispatch({ type: Actions.PENDING_FILTER_REVIEW_YEAR, values })
-      }
-      onTitleChange={(value) =>
-        dispatch({ type: Actions.PENDING_FILTER_TITLE, value })
-      }
+      genre={{
+        initialValue: filterValues.genres,
+        onChange: (values) =>
+          dispatch({
+            type: Actions.PENDING_FILTER_GENRES,
+            values,
+          }),
+        values: distinctGenres,
+      }}
+      grade={{
+        initialValue: filterValues.grade,
+        onChange: (values) =>
+          dispatch({
+            type: Actions.PENDING_FILTER_GRADE,
+            values,
+          }),
+      }}
+      releaseYear={{
+        initialValue: filterValues.releaseYear,
+        onChange: (values) =>
+          dispatch({ type: Actions.PENDING_FILTER_RELEASE_YEAR, values }),
+        values: distinctReleaseYears,
+      }}
+      reviewYear={{
+        initialValue: filterValues.reviewYear,
+        onChange: (values) =>
+          dispatch({ type: Actions.PENDING_FILTER_REVIEW_YEAR, values }),
+        values: distinctReviewYears,
+      }}
       title={{
-        initialValue={filterValues.title}
+        initialValue: filterValues.title,
         onChange: (value) =>
           dispatch({ type: Actions.PENDING_FILTER_TITLE, value }),
       }}

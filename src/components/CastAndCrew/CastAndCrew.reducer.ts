@@ -1,5 +1,8 @@
-import type { CollectionsActionType } from "~/components/ListWithFilters/collectionsReducerUtils";
-import type { ListWithFiltersState } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
+import type {
+  CollectionFilterValues,
+  CollectionsActionType,
+  CollectionsListState,
+} from "~/components/ListWithFilters/collectionsReducerUtils";
 
 import {
   CollectionsActions,
@@ -27,6 +30,10 @@ enum CastAndCrewActions {
   PENDING_FILTER_CREDIT_KIND = "PENDING_FILTER_CREDIT_KIND",
 }
 
+export type CastAndCrewFilterValues = CollectionFilterValues & {
+  creditedAs?: string;
+};
+
 // Re-export actions for component convenience
 import { ListWithFiltersActions } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 
@@ -52,7 +59,7 @@ type PendingFilterCreditKindAction = {
   value: string;
 };
 
-type State = ListWithFiltersState<ListItemValue, Sort>;
+type State = CollectionsListState<ListItemValue, Sort>;
 
 // Helper functions
 function groupForValue(item: ListItemValue, sortValue: Sort): string {
@@ -89,7 +96,7 @@ export function initState({
     showCount: undefined, // CastAndCrew doesn't paginate
     sortFn: sortValues,
     values,
-  });
+  }) as State;
 }
 
 export function reducer(state: State, action: ActionType): State {
@@ -101,7 +108,8 @@ export function reducer(state: State, action: ActionType): State {
           ? (value: ListItemValue) =>
               value.creditedAs.includes(typedAction.value)
           : undefined;
-      return updatePendingFilter(state, "credits", filterFn, typedAction.value);
+      const filterKey: keyof CastAndCrewFilterValues = "creditedAs";
+      return updatePendingFilter(state, filterKey, filterFn, typedAction.value);
     }
 
     // Field-specific shared filter

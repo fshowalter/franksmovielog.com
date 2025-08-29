@@ -1,28 +1,25 @@
 import type { JSX } from "react";
 
+import type { CollectionFilterValues } from "~/components/ListWithFilters/collectionsReducerUtils";
+
 import { TextFilter } from "~/components/TextFilter";
 
-export type CollectionFilterValues = {
-  name?: string;
-};
-
 export function CollectionFilters({
-  filterValues,
-  onNameChange,
+  name,
 }: {
-  filterValues: CollectionFilterValues;
-  onNameChange: (value: string) => void;
+  name: {
+    initialValue: CollectionFilterValues["name"];
+    onChange: (value: string) => void;
+  };
 }): JSX.Element {
   return (
     <>
-      {onNameChange && (
-        <TextFilter
-          initialValue={filterValues.name}
-          label="Name"
-          onInputChange={onNameChange}
-          placeholder="Enter all or part of a name"
-        />
-      )}
+      <TextFilter
+        initialValue={name.initialValue}
+        label="Name"
+        onInputChange={name.onChange}
+        placeholder="Enter all or part of a name"
+      />
     </>
   );
 }

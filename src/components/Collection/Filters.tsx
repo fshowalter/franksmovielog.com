@@ -10,6 +10,7 @@ import { Actions } from "./Collection.reducer";
 
 type FilterValues = {
   releaseYear?: [string, string];
+  reviewStatus?: string;
   reviewYear?: [string, string];
   title?: string;
 };
@@ -28,11 +29,12 @@ export function Filters({
   return (
     <>
       <SelectField
+        initialValue={filterValues.reviewStatus}
         label="Reviewed Status"
-        onChange={(e) =>
+        onChange={(value) =>
           dispatch({
             type: Actions.PENDING_FILTER_REVIEW_STATUS,
-            value: e.target.value,
+            value,
           })
         }
       >

@@ -11,6 +11,7 @@ import { Actions } from "./Viewings.reducer";
 type FilterValues = {
   medium?: string;
   releaseYears?: string[];
+  reviewStatus?: string;
   title?: string;
   venue?: string;
   viewingYears?: string[];
@@ -34,10 +35,11 @@ export function Filters({
   return (
     <>
       <ReviewedStatusFilter
-        onChange={(e) =>
+        initialValue={filterValues.reviewStatus}
+        onChange={(value) =>
           dispatch({
             type: Actions.PENDING_FILTER_REVIEW_STATUS,
-            value: e.target.value,
+            value,
           })
         }
       />
@@ -80,7 +82,7 @@ export function Filters({
       <SelectField
         initialValue={filterValues.venue}
         label="Venue"
-        onChange={(e) =>
+        onChange={(value) =>
           dispatch({
             type: Actions.PENDING_FILTER_VENUE,
             value,

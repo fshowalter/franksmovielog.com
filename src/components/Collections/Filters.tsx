@@ -1,14 +1,12 @@
 import type { JSX } from "react";
 
+import type { CollectionFilterValues } from "~/components/ListWithFilters/collectionsReducerUtils";
+
 import { TextFilter } from "~/components/TextFilter";
 
 import type { ActionType } from "./Collections.reducer";
 
 import { Actions } from "./Collections.reducer";
-
-type FilterValues = {
-  name?: string;
-};
 
 export function Filters({
   dispatch,
@@ -17,7 +15,7 @@ export function Filters({
 }: {
   dispatch: React.Dispatch<ActionType>;
   filterKey?: string;
-  filterValues: FilterValues;
+  filterValues: CollectionFilterValues;
 }): JSX.Element {
   return (
     <>

@@ -1,5 +1,8 @@
 import type { ListWithFiltersState } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
-import type { TitlesActionType } from "~/components/ListWithFilters/titlesReducerUtils";
+import type {
+  TitleFilterValues,
+  TitlesActionType,
+} from "~/components/ListWithFilters/titlesReducerUtils";
 
 import {
   createInitialState,
@@ -35,8 +38,12 @@ import {
 import type { ListItemValue } from "./CastAndCrewMember";
 
 enum CastAndCrewMemberActions {
-  PENDING_FILTER_CREDIT_KIND = "PENDING_FILTER_CREDIT_KIND",
+  PENDING_FILTER_CREDITED_AS = "PENDING_FILTER_CREDITED_AS",
 }
+
+export type CastAndCrewMemberFilterValues = TitleFilterValues & {
+  creditedAs?: string;
+};
 
 export type Sort =
   | "grade-asc"
@@ -55,11 +62,11 @@ export const Actions = {
   ...CastAndCrewMemberActions,
 } as const;
 
-export type ActionType = PendingFilterCreditKindAction | TitlesActionType<Sort>;
+export type ActionType = PendingFilterCreditedAsAction | TitlesActionType<Sort>;
 
 // CastAndCrewMember-specific actions
-type PendingFilterCreditKindAction = {
-  type: CastAndCrewMemberActions.PENDING_FILTER_CREDIT_KIND;
+type PendingFilterCreditedAsAction = {
+  type: CastAndCrewMemberActions.PENDING_FILTER_CREDITED_AS;
   value: string;
 };
 
@@ -127,15 +134,16 @@ export function initState({
 
 export function reducer(state: State, action: ActionType): State {
   switch (action.type) {
-    case CastAndCrewMemberActions.PENDING_FILTER_CREDIT_KIND: {
+    case CastAndCrewMemberActions.PENDING_FILTER_CREDITED_AS: {
       const typedAction = action;
+      const filterKey: keyof CastAndCrewMemberFilterValues = "creditedAs";
       const filterFn =
         typedAction.value && typedAction.value !== "All"
           ? (value: ListItemValue) =>
               value.creditedAs.includes(typedAction.value)
           : undefined;
       return {
-        ...updatePendingFilter(state, "credits", filterFn, typedAction.value),
+        ...updatePendingFilter(state, filterKey, filterFn, typedAction.value),
         showCount: state.showCount,
       };
     }

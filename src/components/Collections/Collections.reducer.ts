@@ -1,5 +1,7 @@
-import type { CollectionsActionType } from "~/components/ListWithFilters/collectionsReducerUtils";
-import type { ListWithFiltersState } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
+import type {
+  CollectionsActionType,
+  CollectionsListState,
+} from "~/components/ListWithFilters/collectionsReducerUtils";
 
 import {
   CollectionsActions,
@@ -25,7 +27,7 @@ export type Sort =
   | "review-count-asc"
   | "review-count-desc";
 
-type State = ListWithFiltersState<ListItemValue, Sort>;
+type State = CollectionsListState<ListItemValue, Sort>;
 
 // AIDEV-NOTE: Collections don't use grouping, so we don't pass a groupFn
 
@@ -41,7 +43,7 @@ export function initState({
     showCount: undefined, // Collections don't paginate
     sortFn: sortValues,
     values,
-  });
+  }) as State;
 }
 
 export function reducer(state: State, action: ActionType): State {

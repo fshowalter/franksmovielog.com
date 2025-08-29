@@ -11,10 +11,6 @@ import type {
 import { updatePendingFilter } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import { sortNumber, sortString } from "~/components/utils/reducerUtils";
 
-// ============================================================================
-// Collection-specific Action Types
-// ============================================================================
-
 /**
  * Collection-specific filter actions
  */
@@ -22,10 +18,32 @@ export enum CollectionsActions {
   PENDING_FILTER_NAME = "PENDING_FILTER_NAME",
 }
 
+/**
+ * Type for collection filter values with known keys
+ */
+export type CollectionFilterValues = {
+  name?: string;
+};
+
+// ============================================================================
+// Collection-specific Action Types
+// ============================================================================
+
 // Union type for all collection-specific actions
 export type CollectionsActionType<TSortValue = unknown> =
   | ListWithFiltersActionType<TSortValue>
   | PendingFilterNameAction;
+
+/**
+ * Specialized state type for collection-based lists with typed filter values
+ */
+export type CollectionsListState<TItem, TSortValue> = Omit<
+  ListWithFiltersState<TItem, TSortValue>,
+  "filterValues" | "pendingFilterValues"
+> & {
+  filterValues: CollectionFilterValues;
+  pendingFilterValues: CollectionFilterValues;
+};
 
 type PendingFilterNameAction = {
   type: CollectionsActions.PENDING_FILTER_NAME;
@@ -49,7 +67,13 @@ export function handleNameFilterAction<
   extendedState?: TExtendedState,
 ): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
   const filterFn = createNameFilter(action.value);
-  const baseState = updatePendingFilter(state, "name", filterFn, action.value);
+  const filterKey: keyof CollectionFilterValues = "name";
+  const baseState = updatePendingFilter(
+    state,
+    filterKey,
+    filterFn,
+    action.value,
+  );
   return extendedState
     ? { ...baseState, ...extendedState }
     : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
