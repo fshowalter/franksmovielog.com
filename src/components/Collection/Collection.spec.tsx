@@ -1,5 +1,4 @@
 import { render, screen, within } from "@testing-library/react";
-import { userEvent } from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import {
@@ -9,6 +8,10 @@ import {
   clickToggleFilters,
   clickViewResults,
 } from "~/components/ListWithFilters/ListWithFilters.testHelper";
+import {
+  clickShowMore,
+  getGroupedPosterList,
+} from "~/components/PosterList.testHelper";
 import { clickReviewedStatus } from "~/components/ReviewStatusField.testHelper";
 import { fillTextFilter } from "~/components/TextFilter.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
@@ -60,7 +63,7 @@ describe("Collection", () => {
 
     // List updates synchronously with fake timers
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by title A → Z", async ({ expect }) => {
@@ -73,7 +76,7 @@ describe("Collection", () => {
 
     await clickSortOption(user, "Title (A → Z)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by title Z → A", async ({ expect }) => {
@@ -86,7 +89,7 @@ describe("Collection", () => {
 
     await clickSortOption(user, "Title (Z → A)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by release date with oldest first", async ({ expect }) => {
@@ -99,7 +102,7 @@ describe("Collection", () => {
 
     await clickSortOption(user, "Release Date (Oldest First)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by release date with newest first", async ({ expect }) => {
@@ -112,7 +115,7 @@ describe("Collection", () => {
 
     await clickSortOption(user, "Release Date (Newest First)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by grade with best first", async ({ expect }) => {
@@ -125,7 +128,7 @@ describe("Collection", () => {
 
     await clickSortOption(user, "Grade (Best First)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by grade with worst first", async ({ expect }) => {
@@ -138,7 +141,7 @@ describe("Collection", () => {
 
     await clickSortOption(user, "Grade (Worst First)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by review date with oldest first", async ({ expect }) => {
@@ -151,7 +154,7 @@ describe("Collection", () => {
 
     await clickSortOption(user, "Review Date (Oldest First)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by review date with newest first", async ({ expect }) => {
@@ -164,7 +167,7 @@ describe("Collection", () => {
 
     await clickSortOption(user, "Review Date (Newest First)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by release year", async ({ expect }) => {
@@ -178,19 +181,14 @@ describe("Collection", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    const fieldset = screen.getByRole("group", { name: "Release Year" });
-    const fromInput = within(fieldset).getByLabelText("From");
-    const toInput = within(fieldset).getByLabelText("to");
-
-    await userEvent.selectOptions(fromInput, "1970");
-    await userEvent.selectOptions(toInput, "1980");
+    await fillYearInput(user, "Release Year", "1970", "1980");
 
     // Apply the filter
     await clickViewResults(user);
 
     // List updates synchronously with fake timers
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by review year", async ({ expect }) => {
@@ -211,7 +209,7 @@ describe("Collection", () => {
 
     // List updates synchronously with fake timers
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter reviewed titles", async ({ expect }) => {
@@ -227,7 +225,7 @@ describe("Collection", () => {
     // Apply the filter
     await clickViewResults(user);
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter unreviewed titles", async ({ expect }) => {
@@ -243,7 +241,7 @@ describe("Collection", () => {
     // Apply the filter
     await clickViewResults(user);
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can clear reviewed status filter", async ({ expect }) => {
@@ -264,11 +262,15 @@ describe("Collection", () => {
     // Apply the filter
     await clickViewResults(user);
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can show more titles", async ({ expect }) => {
     expect.hasAssertions();
+
+    // Setup userEvent with advanceTimers
+    const user = getUserWithFakeTimers();
+
     // Create props with more than 100 items to trigger pagination
     const manyValues = Array.from({ length: 150 }, (_, i) => ({
       grade: i % 2 === 0 ? "B+" : undefined,
@@ -286,9 +288,12 @@ describe("Collection", () => {
       ...props,
       values: manyValues,
     };
+
     render(<Collection {...propsWithManyValues} />);
-    await userEvent.click(screen.getByText("Show More"));
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+
+    await clickShowMore(user);
+
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can clear all filters", async ({ expect }) => {
@@ -318,7 +323,7 @@ describe("Collection", () => {
 
     await clickViewResults(user);
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can reset filters when closing drawer", async ({ expect }) => {
@@ -339,7 +344,7 @@ describe("Collection", () => {
     await clickViewResults(user);
 
     // Store the count of filtered results
-    const filteredList = screen.getByTestId("grouped-poster-list");
+    const filteredList = getGroupedPosterList();
     const filteredCount =
       within(filteredList).queryAllByRole("listitem").length;
 
@@ -353,7 +358,7 @@ describe("Collection", () => {
     await clickCloseFilters(user);
 
     // The list should still show the originally filtered results
-    const listAfterReset = screen.getByTestId("grouped-poster-list");
+    const listAfterReset = getGroupedPosterList();
     const resetCount = within(listAfterReset).queryAllByRole("listitem").length;
     expect(resetCount).toBe(filteredCount);
 
