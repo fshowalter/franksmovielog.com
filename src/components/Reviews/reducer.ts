@@ -1,9 +1,7 @@
 /**
  * Reviews reducer with pending filters support
  */
-import type {
-  ListWithFiltersActionType,
-} from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
+import type { ListWithFiltersActionType } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import type {
   TitlesActionType,
   TitlesListState,
