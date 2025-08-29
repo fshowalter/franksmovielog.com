@@ -120,7 +120,7 @@ export function Footer(): JSX.Element {
               tablet:basis-button tablet:pr-10
             `}
           >
-            <TableOfContents className={`desktop:w-auto`} />
+            <TableOfContents />
           </div>
         </div>
       </div>
