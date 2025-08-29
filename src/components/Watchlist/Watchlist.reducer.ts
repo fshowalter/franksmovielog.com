@@ -25,7 +25,7 @@ import {
   buildGroupValues,
   buildSortValues,
   getGroupLetter,
-} from "~/utils/reducerUtils";
+} from "~/components/utils/reducerUtils";
 
 /**
  * Watchlist reducer with pending filters support

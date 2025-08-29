@@ -3,7 +3,7 @@ import type {
   ListWithFiltersState,
 } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import type { TitlesActionType } from "~/components/ListWithFilters/titlesReducerUtils";
-import type { GroupFn } from "~/utils/reducerUtils";
+import type { GroupFn } from "~/components/utils/reducerUtils";
 
 import {
   createInitialState,
@@ -17,7 +17,7 @@ import {
   handleTitleFilterAction,
   TitlesActions,
 } from "~/components/ListWithFilters/titlesReducerUtils";
-import { buildSortValues } from "~/utils/reducerUtils";
+import { buildSortValues } from "~/components/utils/reducerUtils";
 
 import type { ListItemValue } from "./Viewings";
 

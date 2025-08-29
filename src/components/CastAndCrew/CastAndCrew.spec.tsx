@@ -1,9 +1,16 @@
-import { act, render, screen, within } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
-import { DRAWER_CLOSE_ANIMATION_MS } from "~/components/ListWithFilters/ListWithFilters";
-import { TEXT_FILTER_DEBOUNCE_MS } from "~/components/TextFilter";
+import {
+  clickClearFilters,
+  clickCloseFilters,
+  clickSortOption,
+  clickToggleFilters,
+  clickViewResults,
+} from "~/components/ListWithFilters/ListWithFilters.testHelper";
+import { fillTextFilter } from "~/components/TextFilter.testHelper";
+import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
 import { CastAndCrew } from "./CastAndCrew";
 import { getProps } from "./getProps";
@@ -30,202 +37,183 @@ describe("CastAndCrew", () => {
     expect.hasAssertions();
 
     // Setup userEvent with advanceTimers
-    const user = userEvent.setup({
-      advanceTimers: vi.advanceTimersByTime,
-    });
+    const user = getUserWithFakeTimers();
 
     render(<CastAndCrew {...props} />);
 
     // Open filter drawer
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Type the filter text
-    await user.type(screen.getByLabelText("Name"), "John Wayne");
-    act(() => {
-      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
-    });
+    await fillTextFilter(user, "Name", "John Wayne");
 
     // Apply the filter
-    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+    await clickViewResults(user);
 
     // List updates synchronously with fake timers
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-avatar-list")).toMatchSnapshot();
   });
 
   it("can sort by name desc", async ({ expect }) => {
     expect.hasAssertions();
 
+    // Setup userEvent with advanceTimers
+    const user = getUserWithFakeTimers();
+
     render(<CastAndCrew {...props} />);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Name (Z → A)",
-    );
+    await clickSortOption(user, "Name (Z → A)");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-avatar-list")).toMatchSnapshot();
   });
 
   it("can sort by name asc", async ({ expect }) => {
     expect.hasAssertions();
 
+    // Setup userEvent with advanceTimers
+    const user = getUserWithFakeTimers();
+
     render(<CastAndCrew {...props} />);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Name (A → Z)",
-    );
+    await clickSortOption(user, "Name (A → Z)");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-avatar-list")).toMatchSnapshot();
   });
 
   it("can sort by review count desc", async ({ expect }) => {
     expect.hasAssertions();
 
+    // Setup userEvent with advanceTimers
+    const user = getUserWithFakeTimers();
+
     render(<CastAndCrew {...props} />);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Review Count (Most First)",
-    );
+    await clickSortOption(user, "Review Count (Most First)");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-avatar-list")).toMatchSnapshot();
   });
 
   it("can sort by review count asc", async ({ expect }) => {
     expect.hasAssertions();
 
+    // Setup userEvent with advanceTimers
+    const user = getUserWithFakeTimers();
+
     render(<CastAndCrew {...props} />);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Review Count (Fewest First)",
-    );
+    await clickSortOption(user, "Review Count (Fewest First)");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-avatar-list")).toMatchSnapshot();
   });
 
   it("can filter directors", async ({ expect }) => {
     expect.hasAssertions();
 
+    // Setup userEvent with advanceTimers
+    const user = getUserWithFakeTimers();
+
     render(<CastAndCrew {...props} />);
 
     // Open filter drawer
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
-    await userEvent.selectOptions(screen.getByLabelText("Credits"), "Director");
+    await user.selectOptions(screen.getByLabelText("Credits"), "Director");
 
     // Apply the filter
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
     // List updates synchronously with fake timers
-
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-avatar-list")).toMatchSnapshot();
   });
 
   it("can filter directors then show all", async ({ expect }) => {
     expect.hasAssertions();
 
+    // Setup userEvent with advanceTimers
+    const user = getUserWithFakeTimers();
+
     render(<CastAndCrew {...props} />);
 
     // Open filter drawer
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
     await userEvent.selectOptions(screen.getByLabelText("Credits"), "Director");
 
     // Apply the filter
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
     // Open filter drawer again
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
     await userEvent.selectOptions(screen.getByLabelText("Credits"), "All");
 
     // Apply the filter
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
     // List updates synchronously with fake timers
-
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-avatar-list")).toMatchSnapshot();
   });
 
   it("can filter writers", async ({ expect }) => {
     expect.hasAssertions();
 
+    // Setup userEvent with advanceTimers
+    const user = getUserWithFakeTimers();
+
     render(<CastAndCrew {...props} />);
 
     // Open filter drawer
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
     await userEvent.selectOptions(screen.getByLabelText("Credits"), "Writer");
 
     // Apply the filter
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
     // List updates synchronously with fake timers
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-avatar-list")).toMatchSnapshot();
   });
 
   it("can filter writers then show all", async ({ expect }) => {
     expect.hasAssertions();
 
+    // Setup userEvent with advanceTimers
+    const user = getUserWithFakeTimers();
+
     render(<CastAndCrew {...props} />);
 
     // Open filter drawer
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
     await userEvent.selectOptions(screen.getByLabelText("Credits"), "Writer");
 
     // Apply the filter
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
     // Open filter drawer again
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
     await userEvent.selectOptions(screen.getByLabelText("Credits"), "All");
 
     // Apply the filter
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
     // List updates synchronously with fake timers
-
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-avatar-list")).toMatchSnapshot();
   });
 
   it("can filter performers", async ({ expect }) => {
     expect.hasAssertions();
 
+    // Setup userEvent with advanceTimers
+    const user = getUserWithFakeTimers();
+
     render(<CastAndCrew {...props} />);
 
     // Open filter drawer
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
     await userEvent.selectOptions(
       screen.getByLabelText("Credits"),
@@ -233,24 +221,23 @@ describe("CastAndCrew", () => {
     );
 
     // Apply the filter
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
     // List updates synchronously with fake timers
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-avatar-list")).toMatchSnapshot();
   });
 
   it("can filter performers then show all", async ({ expect }) => {
     expect.hasAssertions();
 
+    // Setup userEvent with advanceTimers
+    const user = getUserWithFakeTimers();
+
     render(<CastAndCrew {...props} />);
 
     // Open filter drawer
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
     await userEvent.selectOptions(
       screen.getByLabelText("Credits"),
@@ -258,117 +245,93 @@ describe("CastAndCrew", () => {
     );
 
     // Apply the filter
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
     // Open filter drawer again
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
     await userEvent.selectOptions(screen.getByLabelText("Credits"), "All");
 
     // Apply the filter
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
     // List updates synchronously with fake timers
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-avatar-list")).toMatchSnapshot();
   });
 
   it("can clear all filters", async ({ expect }) => {
     expect.hasAssertions();
 
     // Setup userEvent with advanceTimers
-    const user = userEvent.setup({
-      advanceTimers: vi.advanceTimersByTime,
-    });
+    const user = getUserWithFakeTimers();
 
     render(<CastAndCrew {...props} />);
 
     // Open filter drawer
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Apply multiple filters
-    await user.type(screen.getByLabelText("Name"), "John");
-    act(() => {
-      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
-    });
+    await fillTextFilter(user, "Name", "John");
 
     await userEvent.selectOptions(screen.getByLabelText("Credits"), "Director");
 
-    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+    await clickViewResults(user);
 
     // Open filter drawer again
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Clear all filters
-    await user.click(screen.getByRole("button", { name: "Clear all filters" }));
+    await clickClearFilters(user);
 
     // Check that filters are cleared
     expect(screen.getByLabelText("Name")).toHaveValue("");
     expect(screen.getByLabelText("Credits")).toHaveValue("All");
 
-    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+    await clickViewResults(user);
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(screen.getByTestId("grouped-avatar-list")).toMatchSnapshot();
   });
 
   it("can reset filters when closing drawer", async ({ expect }) => {
     expect.hasAssertions();
 
     // Setup userEvent with advanceTimers
-    const user = userEvent.setup({
-      advanceTimers: vi.advanceTimersByTime,
-    });
+    const user = getUserWithFakeTimers();
 
     render(<CastAndCrew {...props} />);
 
     // Open filter drawer
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Apply initial filter
-    await user.type(screen.getByLabelText("Name"), "John");
-    act(() => {
-      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
-    });
+    await fillTextFilter(user, "Name", "John");
 
     // Apply the filters
-    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+    await clickViewResults(user);
 
     // Store the count of filtered results
-    const filteredList = screen.getByTestId("list");
+    const filteredList = screen.getByTestId("grouped-avatar-list");
+
     const filteredCount =
       within(filteredList).queryAllByRole("listitem").length;
 
     // Open filter drawer again
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Start typing a new filter but don't apply
-    await user.clear(screen.getByLabelText("Name"));
-    await user.type(screen.getByLabelText("Name"), "Different");
-    act(() => {
-      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
-    });
+    await fillTextFilter(user, "Name", "Different");
 
     // Close the drawer with the X button (should reset pending changes)
-    await user.click(screen.getByRole("button", { name: "Close filters" }));
-
-    // Wait for drawer close animation
-    act(() => {
-      vi.advanceTimersByTime(DRAWER_CLOSE_ANIMATION_MS);
-    });
+    await clickCloseFilters(user);
 
     // The list should still show the originally filtered results
-    const listAfterReset = screen.getByTestId("list");
+    const listAfterReset = screen.getByTestId("grouped-avatar-list");
     const resetCount = within(listAfterReset).queryAllByRole("listitem").length;
     expect(resetCount).toBe(filteredCount);
 
     // Open filter drawer again to verify filters were reset to last applied state
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Should show the originally applied filter, not the pending change
     expect(screen.getByLabelText("Name")).toHaveValue("John");

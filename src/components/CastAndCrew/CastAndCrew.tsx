@@ -60,7 +60,6 @@ export function CastAndCrew({ initialSort, values }: Props): JSX.Element {
       hasActiveFilters={state.hasActiveFilters}
       list={
         <GroupedAvatarList
-          data-testid="list"
           groupedValues={state.groupedValues}
           groupItemClassName={`scroll-mt-[calc(52px_+_var(--list-scroll-offset))]`}
         >

@@ -12,7 +12,7 @@
  * - TGroupedValues: The type of grouped values structure
  */
 
-import type { GroupFn } from "~/utils/reducerUtils";
+import type { GroupFn } from "~/components/utils/reducerUtils";
 
 /**
  * Generic Action Types for list filtering and sorting

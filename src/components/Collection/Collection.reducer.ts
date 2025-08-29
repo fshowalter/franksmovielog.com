@@ -27,7 +27,7 @@ import {
   buildGroupValues,
   buildSortValues,
   getGroupLetter,
-} from "~/utils/reducerUtils";
+} from "~/components/utils/reducerUtils";
 
 /**
  * Collection reducer with pending filters support

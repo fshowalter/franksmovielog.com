@@ -3,7 +3,6 @@ import type { JSX } from "react";
 import type { AvatarImageProps } from "~/api/avatars";
 
 import { Avatar } from "~/components/Avatar";
-import { ccn } from "~/utils/concatClassNames";
 
 import { GroupingListItem } from "./GroupingListItem";
 
@@ -72,6 +71,7 @@ export function GroupedAvatarList<T>({
         className={`
           ${className ?? ""}
         `}
+        data-testid="grouped-avatar-list"
         {...rest}
       >
         {[...groupedValues].map((groupedValue) => {
@@ -92,10 +92,8 @@ export function GroupedAvatarList<T>({
 }
 
 function ListItemAvatar({
-  className,
   imageProps,
 }: {
-  className?: string;
   imageProps: AvatarImageProps | undefined;
 }) {
   const avatar = (
@@ -113,14 +111,11 @@ function ListItemAvatar({
 
   return (
     <div
-      className={ccn(
-        `
-          w-16 safari-border-radius-fix overflow-hidden rounded-full
-          drop-shadow-md
-          tablet:w-20
-        `,
-        className,
-      )}
+      className={`
+        w-16 safari-border-radius-fix overflow-hidden rounded-full
+        drop-shadow-md
+        tablet:w-20
+      `}
     >
       {avatar}
     </div>

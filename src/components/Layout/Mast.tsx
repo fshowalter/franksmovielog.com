@@ -109,7 +109,7 @@ function HamburgerMenu({ hasBackdrop }: { hasBackdrop: boolean }) {
         />
       </button>
       <nav aria-label="Main navigation">
-        <TableOfContents
+        <div
           className={`
             invisible fixed top-0 right-0 flex h-full w-0
             transform-[translateX(100%)] flex-col items-start gap-y-5
@@ -128,7 +128,9 @@ function HamburgerMenu({ hasBackdrop }: { hasBackdrop: boolean }) {
           `}
           data-nav-menu
           id="nav-menu"
-        />
+        >
+          <TableOfContents />
+        </div>
       </nav>
     </>
   );

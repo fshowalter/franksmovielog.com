@@ -4,17 +4,9 @@ import type { NavItem } from "./navItems";
 
 import { navItems } from "./navItems";
 
-type Props = React.HTMLAttributes<HTMLOListElement>;
-
-export function TableOfContents({ className, ...rest }: Props): JSX.Element {
+export function TableOfContents(): JSX.Element {
   return (
-    <ol
-      className={`
-        flex w-full flex-col gap-y-6
-        ${className ?? ""}
-      `}
-      {...rest}
-    >
+    <ol className={`flex flex-col gap-y-6`}>
       {navItems.map((item) => {
         return <MenuItem key={item.target} value={item} />;
       })}
