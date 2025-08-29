@@ -19,6 +19,10 @@ export async function clickCloseFilters(user: UserEvent) {
   });
 }
 
+export async function clickSortOption(user: UserEvent, sortText: string) {
+  await user.selectOptions(screen.getByLabelText("Sort"), sortText);
+}
+
 export async function clickToggleFilters(user: UserEvent) {
   return user.click(screen.getByRole("button", { name: "Toggle filters" }));
 }

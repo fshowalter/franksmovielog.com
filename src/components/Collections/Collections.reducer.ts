@@ -11,7 +11,7 @@ import {
   createInitialState,
   handleListWithFiltersAction,
 } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
-import { buildSortValues } from "~/utils/reducerUtils";
+import { buildSortValues } from "~/components/utils/reducerUtils";
 
 import type { ListItemValue } from "./Collections";
 

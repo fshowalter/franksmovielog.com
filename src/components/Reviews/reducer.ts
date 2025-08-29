@@ -32,7 +32,7 @@ import {
   buildGroupValues,
   buildSortValues,
   getGroupLetter,
-} from "~/utils/reducerUtils";
+} from "~/components/utils/reducerUtils";
 
 type ReviewsSort =
   | "grade-asc"

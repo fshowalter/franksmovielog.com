@@ -9,7 +9,7 @@ import type {
 } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 
 import { updatePendingFilter } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
-import { sortNumber, sortString } from "~/utils/reducerUtils";
+import { sortNumber, sortString } from "~/components/utils/reducerUtils";
 
 // ============================================================================
 // Collection-specific Action Types

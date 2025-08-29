@@ -5,7 +5,7 @@ exports[`CastAndCrew > can clear all filters 1`] = `
   class="
           
         "
-  data-testid="list"
+  data-testid="grouped-avatar-list"
 >
   <li
     class="
@@ -1100,7 +1100,7 @@ exports[`CastAndCrew > can filter by name 1`] = `
   class="
           
         "
-  data-testid="list"
+  data-testid="grouped-avatar-list"
 >
   <li
     class="
@@ -1227,7 +1227,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
   class="
           
         "
-  data-testid="list"
+  data-testid="grouped-avatar-list"
 >
   <li
     class="
@@ -1914,7 +1914,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
   class="
           
         "
-  data-testid="list"
+  data-testid="grouped-avatar-list"
 >
   <li
     class="
@@ -3009,7 +3009,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
   class="
           
         "
-  data-testid="list"
+  data-testid="grouped-avatar-list"
 >
   <li
     class="
@@ -3898,7 +3898,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
   class="
           
         "
-  data-testid="list"
+  data-testid="grouped-avatar-list"
 >
   <li
     class="
@@ -4993,7 +4993,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
   class="
           
         "
-  data-testid="list"
+  data-testid="grouped-avatar-list"
 >
   <li
     class="
@@ -5591,7 +5591,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
   class="
           
         "
-  data-testid="list"
+  data-testid="grouped-avatar-list"
 >
   <li
     class="
@@ -6686,7 +6686,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
   class="
           
         "
-  data-testid="list"
+  data-testid="grouped-avatar-list"
 >
   <li
     class="
@@ -7781,7 +7781,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
   class="
           
         "
-  data-testid="list"
+  data-testid="grouped-avatar-list"
 >
   <li
     class="
@@ -8876,7 +8876,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
   class="
           
         "
-  data-testid="list"
+  data-testid="grouped-avatar-list"
 >
   <li
     class="
@@ -9801,7 +9801,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
   class="
           
         "
-  data-testid="list"
+  data-testid="grouped-avatar-list"
 >
   <li
     class="

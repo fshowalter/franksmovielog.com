@@ -7,10 +7,10 @@ import type {
   ListWithFiltersActionType,
   ListWithFiltersState,
 } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
-import type { GroupFn } from "~/utils/reducerUtils";
+import type { GroupFn } from "~/components/utils/reducerUtils";
 
 import { updatePendingFilter } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
-import { sortNumber, sortString } from "~/utils/reducerUtils";
+import { sortNumber, sortString } from "~/components/utils/reducerUtils";
 
 /**
  * Default number of items to show per page for paginated lists
