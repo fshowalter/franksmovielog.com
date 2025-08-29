@@ -10,7 +10,6 @@ import {
   clickToggleFilters,
   clickViewResults,
 } from "~/components/ListWithFilters/ListWithFilters.testHelper";
-import { clickSelectField } from "~/components/SelectField.testHelper";
 import { fillTextFilter } from "~/components/TextFilter.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
