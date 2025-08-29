@@ -16,7 +16,7 @@ export function TextFilter({
   onInputChange,
   placeholder,
 }: {
-  initialValue?: string;
+  initialValue: string;
   label: string;
   onInputChange: onChangeHandler;
   placeholder: string;

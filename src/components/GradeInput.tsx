@@ -48,14 +48,20 @@ const gradeOptions = [
 ];
 
 export function GradeInput({
+  initialValues,
   label,
   onGradeChange,
 }: {
+  initialValues: number[];
   label: string;
   onGradeChange: (values: [number, number]) => void;
 }): JSX.Element {
-  const [minValue, setMinValue] = useState(1);
-  const [maxValue, setMaxValue] = useState(13);
+  const [minValue, setMinValue] = useState(
+    initialValues && initialValues.length > 0 ? initialValues[0] : 1,
+  );
+  const [maxValue, setMaxValue] = useState(
+    initialValues && initialValues.length > 1 ? initialValues[1] : 13,
+  );
 
   const handleMinChange = (value: string) => {
     const newMin = Number.parseInt(value, 10);

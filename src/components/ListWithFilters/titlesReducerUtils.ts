@@ -47,7 +47,7 @@ export type TitlesActionType<TSortValue = unknown> =
 
 type PendingFilterGenresAction = {
   type: TitlesActions.PENDING_FILTER_GENRES;
-  values: readonly string[];
+  values: string[];
 };
 
 type PendingFilterGradeAction = {
@@ -103,7 +103,7 @@ export function createPaginatedGroupFn<TItem, TSortValue>(
  * Handle Genre filter action for titles
  */
 export function handleGenreFilterAction<
-  TItem extends { genres: readonly string[] },
+  TItem extends { genres: string[] },
   TSortValue,
   TExtendedState extends Record<string, unknown> = Record<string, never>,
 >(
@@ -142,6 +142,7 @@ export function handleGradeFilterAction<
     filterFn,
     action.values,
   );
+
   return extendedState
     ? { ...baseState, ...extendedState }
     : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);

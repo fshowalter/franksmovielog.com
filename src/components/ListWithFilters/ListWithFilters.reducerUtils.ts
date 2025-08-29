@@ -197,12 +197,7 @@ export function updatePendingFilter<TItem, TSortValue>(
   state: ListWithFiltersState<TItem, TSortValue>,
   key: string,
   filterFn: ((item: TItem) => boolean) | undefined,
-  value:
-    | [number, number]
-    | [string, string]
-    | readonly string[]
-    | string
-    | undefined,
+  value: [number, number] | [string, string] | string | string[] | undefined,
 ): ListWithFiltersState<TItem, TSortValue> {
   const pendingFilters = { ...state.pendingFilters };
   const pendingFilterValues = { ...state.pendingFilterValues };

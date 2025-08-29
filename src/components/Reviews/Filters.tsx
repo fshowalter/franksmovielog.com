@@ -1,14 +1,12 @@
-import { GradeInput } from "~/components/GradeInput";
-import { MultiSelectField } from "~/components/MultiSelectField";
-import { TextFilter } from "~/components/TextFilter";
-import { YearInput } from "~/components/YearInput";
+import { TitleFilters } from "~/components/TitleFilters";
+import { TitleSortOptions } from "~/components/TitleSortOptions";
 
 import type { ActionType } from "./reducer";
 
 import { Actions } from "./reducer";
 
 type FilterValues = {
-  genres?: readonly string[];
+  genres?: string[];
   grade?: [number, number];
   releaseYear?: [string, string];
   reviewYear?: [string, string];
@@ -29,65 +27,40 @@ export function Filters({
   filterValues: FilterValues;
 }) {
   return (
-    <>
-      <TextFilter
-        initialValue={filterValues.title || ""}
-        label="Title"
-        onInputChange={(value) =>
-          dispatch({ type: Actions.PENDING_FILTER_TITLE, value })
-        }
-        placeholder="Enter all or part of a title"
-      />
-      <YearInput
-        initialValues={filterValues.releaseYear || []}
-        label="Release Year"
-        onYearChange={(values) =>
-          dispatch({ type: Actions.PENDING_FILTER_RELEASE_YEAR, values })
-        }
-        years={distinctReleaseYears}
-      />
-      <YearInput
-        initialValues={filterValues.reviewYear || []}
-        label="Review Year"
-        onYearChange={(values) =>
-          dispatch({ type: Actions.PENDING_FILTER_REVIEW_YEAR, values })
-        }
-        years={distinctReviewYears}
-      />
-      <GradeInput
-        label="Grade"
-        onGradeChange={(values) =>
-          dispatch({
-            type: Actions.PENDING_FILTER_GRADE,
-            values,
-          })
-        }
-      />
-      <MultiSelectField
-        label="Genres"
-        onChange={(values) =>
-          dispatch({
-            type: Actions.PENDING_FILTER_GENRES,
-            values,
-          })
-        }
-        options={distinctGenres}
-      />
-    </>
+    <TitleFilters
+      distinctGenres={distinctGenres}
+      distinctReleaseYears={distinctReleaseYears}
+      distinctReviewYears={distinctReviewYears}
+      filterValues={filterValues}
+      onGenreChange={(values) =>
+        dispatch({
+          type: Actions.PENDING_FILTER_GENRES,
+          values,
+        })
+      }
+      onGradeChange={(values) =>
+        dispatch({
+          type: Actions.PENDING_FILTER_GRADE,
+          values,
+        })
+      }
+      onReleaseYearChange={(values) =>
+        dispatch({ type: Actions.PENDING_FILTER_RELEASE_YEAR, values })
+      }
+      onReviewYearChange={(values) =>
+        dispatch({ type: Actions.PENDING_FILTER_REVIEW_YEAR, values })
+      }
+      onTitleChange={(value) =>
+        dispatch({ type: Actions.PENDING_FILTER_TITLE, value })
+      }
+    />
   );
 }
 
 export function SortOptions() {
   return (
-    <>
-      <option value="title-asc">Title (A &rarr; Z)</option>
-      <option value="title-desc">Title (Z &rarr; A)</option>
-      <option value="grade-desc">Grade (Best First)</option>
-      <option value="grade-asc">Grade (Worst First)</option>
-      <option value="release-date-desc">Release Date (Newest First)</option>
-      <option value="release-date-asc">Release Date (Oldest First)</option>
-      <option value="review-date-desc">Review Date (Newest First)</option>
-      <option value="review-date-asc">Review Date (Oldest First)</option>
-    </>
+    <TitleSortOptions
+      options={["title", "grade", "release-date", "review-date"]}
+    />
   );
 }
