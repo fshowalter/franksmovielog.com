@@ -87,18 +87,3 @@ export function Filters({
     </>
   );
 }
-
-export function SortOptions() {
-  return (
-    <>
-      <option value="release-date-desc">Release Date (Newest First)</option>
-      <option value="release-date-asc">Release Date (Oldest First)</option>
-      <option value="title-asc">Title (A &rarr; Z)</option>
-      <option value="title-desc">Title (Z &rarr; A)</option>
-      <option value="grade-desc">Grade (Best First)</option>
-      <option value="grade-asc">Grade (Worst First)</option>
-      <option value="review-date-desc">Review Date (Newest First)</option>
-      <option value="review-date-asc">Review Date (Oldest First)</option>
-    </>
-  );
-}

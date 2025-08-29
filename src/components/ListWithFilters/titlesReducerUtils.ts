@@ -355,11 +355,11 @@ function createReleaseYearFilter(minYear: string, maxYear: string) {
 
 function createReviewStatusFilter(status: string) {
   return <T extends { slug: string | undefined }>(item: T): boolean => {
-    if (status == "All") {
+    if (status === "All") {
       return true;
     }
 
-    if (status == "Reviewed") {
+    if (status === "Reviewed") {
       return !!item.slug;
     }
 

@@ -2,6 +2,10 @@ import { render, screen, within } from "@testing-library/react";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import { getGroupedAvatarList } from "~/components/AvatarList.testHelper";
+import {
+  fillNameFilter,
+  getNameFilter,
+} from "~/components/CollectionFilters.testHelper";
 import { clickCreditedAsFilter } from "~/components/CreditedAsFilter.testHelper";
 import {
   clickClearFilters,
@@ -10,7 +14,6 @@ import {
   clickToggleFilters,
   clickViewResults,
 } from "~/components/ListWithFilters/ListWithFilters.testHelper";
-import { fillTextFilter } from "~/components/TextFilter.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
 import { CastAndCrew } from "./CastAndCrew";
@@ -46,7 +49,7 @@ describe("CastAndCrew", () => {
     await clickToggleFilters(user);
 
     // Type the filter text
-    await fillTextFilter(user, "Name", "John Wayne");
+    await fillNameFilter(user, "John Wayne");
 
     // Apply the filter
     await clickViewResults(user);
@@ -266,7 +269,7 @@ describe("CastAndCrew", () => {
     await clickToggleFilters(user);
 
     // Apply multiple filters
-    await fillTextFilter(user, "Name", "John");
+    await fillNameFilter(user, "John");
 
     await clickCreditedAsFilter(user, "Director");
 
@@ -299,7 +302,7 @@ describe("CastAndCrew", () => {
     await clickToggleFilters(user);
 
     // Apply initial filter
-    await fillTextFilter(user, "Name", "John");
+    await fillNameFilter(user, "John");
 
     // Apply the filters
     await clickViewResults(user);
@@ -314,7 +317,7 @@ describe("CastAndCrew", () => {
     await clickToggleFilters(user);
 
     // Start typing a new filter but don't apply
-    await fillTextFilter(user, "Name", "Different");
+    await fillNameFilter(user, "Different");
 
     // Close the drawer with the X button (should reset pending changes)
     await clickCloseFilters(user);
@@ -328,6 +331,6 @@ describe("CastAndCrew", () => {
     await clickToggleFilters(user);
 
     // Should show the originally applied filter, not the pending change
-    expect(screen.getByLabelText("Name")).toHaveValue("John");
+    expect(getNameFilter()).toHaveValue("John");
   });
 });
