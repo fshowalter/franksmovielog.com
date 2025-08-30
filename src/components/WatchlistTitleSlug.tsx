@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import { toSentence } from "~/utils/toSentence";
 
 export function WatchlistTitleSlug({
@@ -12,7 +10,7 @@ export function WatchlistTitleSlug({
   directorNames: readonly string[];
   performerNames: readonly string[];
   writerNames: readonly string[];
-}): JSX.Element {
+}): React.JSX.Element {
   const credits = [
     ...formatPeopleNames(directorNames, "directed"),
     ...formatPeopleNames(performerNames, "performed"),

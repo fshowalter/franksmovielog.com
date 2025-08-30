@@ -17,7 +17,7 @@ type Props = {
   values: CastAndCrewMember[];
 };
 
-export function MoreFromCastAndCrew({ values }: Props) {
+export function MoreFromCastAndCrew({ values }: Props): React.JSX.Element[] {
   return values.map((value) => (
     <MoreReviews key={value.slug} values={value.titles}>
       <MoreReviewsHeading

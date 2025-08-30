@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import type { BackdropImageProps } from "~/api/backdrops";
 import type { YearStats } from "~/api/yearStats";
 import type { MostWatchedMoviesListItemValue } from "~/components/MostWatchedMovies";
@@ -7,7 +5,7 @@ import type { MostWatchedPeopleListItemValue } from "~/components/MostWatchedPeo
 
 import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
 import { DecadeDistribution } from "~/components/DecadeDistribution";
-import { Layout } from "~/components/Layout";
+import { Layout } from "~/components/Layout/Layout";
 import { MediaDistribution } from "~/components/MediaDistribution";
 import { MostWatchedDirectors } from "~/components/MostWatchedDirectors";
 import { MostWatchedMovies } from "~/components/MostWatchedMovies";
@@ -40,7 +38,7 @@ export function YearStats({
   mostWatchedWriters,
   stats,
   year,
-}: Props): JSX.Element {
+}: Props): React.JSX.Element {
   return (
     <Layout className="flex flex-col items-center bg-subtle">
       <Backdrop

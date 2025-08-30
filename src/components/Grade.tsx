@@ -16,7 +16,7 @@ const gradeMap: Record<string, [string, string]> = {
   "F-": ["/svg/half-star.svg", "1/2 star (out of 5)"],
 };
 
-export function fileForGrade(value: string) {
+export function fileForGrade(value: string): string {
   const [src] = gradeMap[value];
 
   return src;
@@ -30,7 +30,7 @@ export function Grade({
   className?: string;
   height: 15 | 16 | 18 | 24 | 32;
   value: string;
-}) {
+}): React.JSX.Element {
   const [src, alt] = gradeMap[value];
 
   const width = height * 5;

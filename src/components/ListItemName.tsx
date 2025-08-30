@@ -1,4 +1,10 @@
-export function ListItemName({ href, name }: { href: string; name: string }) {
+export function ListItemName({
+  href,
+  name,
+}: {
+  href: string;
+  name: string;
+}): React.JSX.Element {
   return (
     <a
       className={`

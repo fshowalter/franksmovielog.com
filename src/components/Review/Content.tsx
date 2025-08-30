@@ -6,7 +6,7 @@ type Props = Pick<ReviewContent, "content"> & {
   className?: string;
 };
 
-export function Content({ className, content }: Props) {
+export function Content({ className, content }: Props): React.JSX.Element {
   return (
     <div className={className}>
       <LongFormText

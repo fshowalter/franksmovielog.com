@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import type { TitleFilterValues } from "~/components/ListWithFilters/titlesReducerUtils";
 
 import { GradeField } from "~/components/GradeField";
@@ -46,7 +44,7 @@ export function TitleFilters({
   reviewedStatus,
   reviewYear,
   title,
-}: TitleFiltersProps): JSX.Element {
+}: TitleFiltersProps): React.JSX.Element {
   return (
     <>
       {title && (

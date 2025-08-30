@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import { useReducer, useState } from "react";
 
 import type { CastAndCrewMember } from "~/api/castAndCrew";
@@ -63,7 +61,7 @@ export function CastAndCrewMember({
   initialSort,
   titles,
   value,
-}: Props): JSX.Element {
+}: Props): React.JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
@@ -131,7 +129,7 @@ export function CastAndCrewMember({
   );
 }
 
-function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
+function TitleListItem({ value }: { value: ListItemValue }): React.JSX.Element {
   return (
     <PosterListItem
       hasReview={!!value.slug}

@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import type { PosterImageProps } from "~/api/posters";
 
 import { GroupingListItem } from "./GroupingListItem";
@@ -26,7 +24,7 @@ export function GroupedPosterList<T>({
   onShowMore?: () => void;
   totalCount: number;
   visibleCount: number;
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <>
       <ol data-testid="grouped-poster-list" {...rest}>
@@ -77,7 +75,7 @@ export function PosterList({
 }: {
   children: React.ReactNode;
   className?: string;
-}) {
+}): React.JSX.Element {
   return (
     <div className="@container/poster-list">
       {/* AIDEV-NOTE: The 250px values below cannot be extracted to a constant/variable
@@ -113,7 +111,7 @@ export function PosterListItem({
   className?: string;
   hasReview?: boolean;
   posterImageProps: PosterImageProps;
-}) {
+}): React.JSX.Element {
   return (
     <li
       className={`
@@ -144,7 +142,7 @@ function PosterListItemPoster({
   imageProps,
 }: {
   imageProps: PosterImageProps;
-}) {
+}): React.JSX.Element {
   return (
     <div
       className={`

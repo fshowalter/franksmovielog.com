@@ -6,7 +6,7 @@ export function ReviewedStatusFilter({
 }: {
   initialValue: string | undefined;
   onChange: (value: string) => void;
-}) {
+}): React.JSX.Element {
   return (
     <SelectField
       initialValue={initialValue}

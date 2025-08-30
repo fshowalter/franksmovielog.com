@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 type Props = {
   className?: string;
   stats: StatItem[];
@@ -10,7 +8,10 @@ type StatItem = {
   value: number;
 };
 
-export function StatsCalloutsGrid({ className, stats }: Props): JSX.Element {
+export function StatsCalloutsGrid({
+  className,
+  stats,
+}: Props): React.JSX.Element {
   const defaultClassName = `
     flex flex-wrap justify-center gap-6 px-container
     laptop:flex-nowrap
@@ -31,7 +32,7 @@ function StatsCallout({
 }: {
   label: string;
   value: number;
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <div
       className={`

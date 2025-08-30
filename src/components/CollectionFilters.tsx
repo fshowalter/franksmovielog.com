@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import type { CollectionFilterValues } from "~/components/ListWithFilters/collectionsReducerUtils";
 
 import { TextFilter } from "~/components/TextFilter";
@@ -11,7 +9,7 @@ export function CollectionFilters({
     initialValue: CollectionFilterValues["name"];
     onChange: (value: string) => void;
   };
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <>
       <TextFilter

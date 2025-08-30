@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import { SelectField } from "~/components/SelectField";
 import { capitalize } from "~/utils/capitalize";
 
@@ -11,7 +9,7 @@ export function CreditedAsFilter({
   initialValue: string | undefined;
   onChange: (value: string) => void;
   values: readonly string[];
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <SelectField
       initialValue={initialValue}

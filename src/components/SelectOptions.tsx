@@ -1,4 +1,8 @@
-export function SelectOptions({ options }: { options: readonly string[] }) {
+export function SelectOptions({
+  options,
+}: {
+  options: readonly string[];
+}): React.JSX.Element {
   return (
     <>
       <option key="all" value="All">

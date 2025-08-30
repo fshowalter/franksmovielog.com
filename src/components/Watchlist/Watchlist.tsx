@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import { useReducer, useState } from "react";
 
 import type { PosterImageProps } from "~/api/posters";
@@ -58,7 +56,7 @@ export function Watchlist({
   distinctWriters,
   initialSort,
   values,
-}: Props): JSX.Element {
+}: Props): React.JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
@@ -141,7 +139,7 @@ function WatchlistListItem({
 }: {
   defaultPosterImageProps: PosterImageProps;
   value: ListItemValue;
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <PosterListItem
       hasReview={false}

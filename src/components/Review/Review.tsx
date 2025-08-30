@@ -1,11 +1,9 @@
-import type { JSX } from "react";
-
 import type { PosterImageProps } from "~/api/posters";
 import type { Review, ReviewContent } from "~/api/reviews";
 import type { StillImageProps } from "~/api/stills";
 
 import { Grade } from "~/components/Grade";
-import { Layout } from "~/components/Layout";
+import { Layout } from "~/components/Layout/Layout";
 import { MoreReviews } from "~/components/MoreReviews";
 import { Still } from "~/components/Still";
 import { SubHeading } from "~/components/SubHeading";
@@ -52,7 +50,7 @@ export function Review({
   seoImageSrc,
   stillImageProps,
   value,
-}: Props): JSX.Element {
+}: Props): React.JSX.Element {
   return (
     <Layout
       className="flex flex-col"
@@ -191,7 +189,7 @@ function Meta({
   runtimeMinutes,
 }: Pick<Review, "countries" | "releaseYear" | "runtimeMinutes"> & {
   className?: string;
-}) {
+}): React.JSX.Element {
   let allCountries;
 
   for (const country of countries) {
@@ -244,7 +242,7 @@ function OriginalTitle({
 }: {
   className: string;
   value: string | undefined;
-}) {
+}): React.JSX.Element {
   if (!value) {
     return <div className={className} />;
   }
@@ -252,7 +250,7 @@ function OriginalTitle({
   return <div className={className}>({value})</div>;
 }
 
-function ViewingHistory({ value }: Pick<Props, "value">) {
+function ViewingHistory({ value }: Pick<Props, "value">): React.JSX.Element {
   const viewings: ReviewContent["viewings"] = value.viewings;
   return (
     <aside className="w-full max-w-popout">

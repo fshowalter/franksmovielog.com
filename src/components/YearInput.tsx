@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import { useState } from "react";
 
 import { LabelText } from "./LabelText";
@@ -15,7 +13,7 @@ export function YearInput({
   label: string;
   onYearChange: (values: [string, string]) => void;
   years: readonly string[];
-}): JSX.Element {
+}): React.JSX.Element {
   const [minYear, setMinYear] = useState(
     initialValues && initialValues.length > 0 ? initialValues[0] : years[0],
   );
@@ -25,7 +23,7 @@ export function YearInput({
       : (years.at(-1) as string),
   );
 
-  const handleMinChange = (value: string) => {
+  const handleMinChange = (value: string): void => {
     const newMin = value;
     setMinYear(newMin);
 
@@ -36,7 +34,7 @@ export function YearInput({
     }
   };
 
-  const handleMaxChange = (value: string) => {
+  const handleMaxChange = (value: string): void => {
     const newMax = value;
     setMaxYear(newMax);
 

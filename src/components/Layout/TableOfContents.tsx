@@ -1,10 +1,8 @@
-import type { JSX } from "react";
-
 import type { NavItem } from "./navItems";
 
 import { navItems } from "./navItems";
 
-export function TableOfContents(): JSX.Element {
+export function TableOfContents(): React.JSX.Element {
   return (
     <ol className={`flex flex-col gap-y-6`}>
       {navItems.map((item) => {
@@ -14,7 +12,7 @@ export function TableOfContents(): JSX.Element {
   );
 }
 
-function MenuItem({ value }: { value: NavItem }): JSX.Element {
+function MenuItem({ value }: { value: NavItem }): React.JSX.Element {
   return (
     <li
       className={`
@@ -40,7 +38,7 @@ function MenuItem({ value }: { value: NavItem }): JSX.Element {
   );
 }
 
-function SubMenu({ values }: { values: NavItem[] }): false | JSX.Element {
+function SubMenu({ values }: { values: NavItem[] }): false | React.JSX.Element {
   if (values.length === 0) {
     return false;
   }

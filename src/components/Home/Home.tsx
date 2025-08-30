@@ -1,9 +1,7 @@
-import type { JSX } from "react";
-
 import type { BackdropImageProps } from "~/api/backdrops";
 
 import { Backdrop } from "~/components/Backdrop";
-import { Layout } from "~/components/Layout";
+import { Layout } from "~/components/Layout/Layout";
 import { SubHeading } from "~/components/SubHeading";
 
 import type { ListItemValue } from "./HomeListItem";
@@ -16,7 +14,11 @@ export type Props = {
   values: ListItemValue[];
 };
 
-export function Home({ backdropImageProps, deck, values }: Props): JSX.Element {
+export function Home({
+  backdropImageProps,
+  deck,
+  values,
+}: Props): React.JSX.Element {
   return (
     <Layout className="bg-subtle pb-8" hideLogo={true}>
       <Backdrop

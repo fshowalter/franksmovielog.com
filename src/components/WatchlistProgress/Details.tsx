@@ -23,7 +23,7 @@ export function Details({
   label: string;
   values: Value[];
   valueType: ValueType;
-}) {
+}): React.JSX.Element {
   return (
     <section
       className={`
@@ -109,7 +109,13 @@ export function Details({
   );
 }
 
-function Name({ value, valueType }: { value: Value; valueType: ValueType }) {
+function Name({
+  value,
+  valueType,
+}: {
+  value: Value;
+  valueType: ValueType;
+}): React.JSX.Element {
   const linkTarget =
     valueType === "collection"
       ? `/collections/${value.slug}/`
@@ -151,7 +157,7 @@ function DetailsItemAvatar({
 }: {
   className?: string;
   imageProps: AvatarImageProps | undefined;
-}) {
+}): React.JSX.Element {
   const avatar = (
     <Avatar
       className={`

@@ -1,8 +1,6 @@
-import type { JSX } from "react";
-
 export type HomeOpenGraphImageComponentType = (
   props: HomeOpenGraphImageProps,
-) => JSX.Element;
+) => React.JSX.Element;
 
 type HomeOpenGraphImageProps = {
   backdrop: string;
@@ -10,7 +8,7 @@ type HomeOpenGraphImageProps = {
 
 export function OpenGraphImage({
   backdrop,
-}: HomeOpenGraphImageProps): JSX.Element {
+}: HomeOpenGraphImageProps): React.JSX.Element {
   return (
     <div
       style={{

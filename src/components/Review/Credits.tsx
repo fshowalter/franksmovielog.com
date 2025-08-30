@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import type { PosterImageProps } from "~/api/posters";
 import type { Review } from "~/api/reviews";
 
@@ -37,7 +35,7 @@ export function Credits({
   runtimeMinutes,
   title,
   writerNames,
-}: Props): JSX.Element {
+}: Props): React.JSX.Element {
   return (
     <aside
       className={`
@@ -107,7 +105,13 @@ export function Credits({
   );
 }
 
-function Credit({ term, value }: { term: string; value: React.ReactNode }) {
+function Credit({
+  term,
+  value,
+}: {
+  term: string;
+  value: React.ReactNode;
+}): React.JSX.Element {
   return (
     <div>
       <dt

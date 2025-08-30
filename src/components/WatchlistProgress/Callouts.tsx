@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import type { WatchlistProgress } from "~/api/watchlistProgress";
 
 export type Props = Pick<
@@ -35,7 +33,7 @@ export function Callouts({
   total,
   writerReviewed,
   writerTotal,
-}: Props): JSX.Element {
+}: Props): React.JSX.Element {
   return (
     <div
       className={`
@@ -88,7 +86,7 @@ function Callout({
   reviewed: number;
   subLabel?: string;
   total: number;
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <div
       className={`
@@ -134,7 +132,7 @@ function ProgressRing({
   subLabel,
   total,
   ...rest
-}: ProgressRingProps) {
+}: ProgressRingProps): React.JSX.Element {
   const percent = Math.floor((complete / total) * 100);
 
   return (

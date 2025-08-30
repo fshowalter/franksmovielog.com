@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import { useReducer, useState } from "react";
 
 import type { AvatarImageProps } from "~/api/avatars";
@@ -27,7 +25,7 @@ export type Props = {
   values: ListItemValue[];
 };
 
-export function Collections({ initialSort, values }: Props): JSX.Element {
+export function Collections({ initialSort, values }: Props): React.JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
@@ -88,7 +86,11 @@ export function Collections({ initialSort, values }: Props): JSX.Element {
   );
 }
 
-function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
+function CollectionListItem({
+  value,
+}: {
+  value: ListItemValue;
+}): React.JSX.Element {
   return (
     <AvatarListItem avatarImageProps={value.avatarImageProps}>
       <div className="flex flex-col justify-center">

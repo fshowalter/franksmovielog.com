@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import type { TitleFilterValues } from "~/components/ListWithFilters/titlesReducerUtils";
 
 import { TitleFilters } from "~/components/TitleFilters";
@@ -20,7 +18,7 @@ export function Filters({
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   filterValues: TitleFilterValues;
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <>
       <TitleFilters

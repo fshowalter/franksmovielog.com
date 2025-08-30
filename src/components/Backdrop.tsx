@@ -1,5 +1,3 @@
-import type React from "react";
-
 import type { BackdropImageProps } from "~/api/backdrops";
 
 export const BackdropImageConfig = {
@@ -24,7 +22,7 @@ export function Backdrop({
   size?: "default" | "large";
   title: string;
   titleStyle?: string;
-}) {
+}): React.JSX.Element {
   const heroImage = (
     <img
       className="absolute inset-0 size-full object-cover object-top"
@@ -51,7 +49,7 @@ export function BreadcrumbLink({
 }: {
   children: React.ReactNode;
   href: string;
-}) {
+}): React.JSX.Element {
   return (
     <a
       className={`
@@ -69,7 +67,11 @@ export function BreadcrumbLink({
   );
 }
 
-function Breadcrumb({ value }: { value?: React.ReactNode }) {
+function Breadcrumb({
+  value,
+}: {
+  value?: React.ReactNode;
+}): false | React.JSX.Element {
   if (!value) {
     return false;
   }
@@ -77,7 +79,13 @@ function Breadcrumb({ value }: { value?: React.ReactNode }) {
   return <p className="mb-4">{value}</p>;
 }
 
-function Deck({ center, value }: { center?: boolean; value: React.ReactNode }) {
+function Deck({
+  center,
+  value,
+}: {
+  center?: boolean;
+  value: React.ReactNode;
+}): React.JSX.Element {
   return (
     <p
       className={`
@@ -99,7 +107,7 @@ function Title({
   center?: boolean;
   className?: string;
   value: string;
-}) {
+}): React.JSX.Element {
   return (
     <h1
       className={
@@ -128,7 +136,7 @@ function Wrapper({
   children: React.ReactNode;
   heroImage?: React.ReactNode;
   size?: "default" | "large" | "small";
-}) {
+}): React.JSX.Element {
   const defaultSizes =
     "min-h-[400px] tablet:min-h-[640px] laptop:min-h-[clamp(640px,70vh,1350px)]";
 

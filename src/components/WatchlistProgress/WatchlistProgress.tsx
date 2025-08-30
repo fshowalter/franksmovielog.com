@@ -1,11 +1,9 @@
-import type { JSX } from "react";
-
 import type { AvatarImageProps } from "~/api/avatars";
 import type { BackdropImageProps } from "~/api/backdrops";
 import type { WatchlistProgress } from "~/api/watchlistProgress";
 
 import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
-import { Layout } from "~/components/Layout";
+import { Layout } from "~/components/Layout/Layout";
 
 import type { Props as CalloutsProps } from "./Callouts";
 
@@ -35,7 +33,7 @@ export function WatchlistProgress({
   backdropImageProps,
   deck,
   progress,
-}: Props): JSX.Element {
+}: Props): React.JSX.Element {
   return (
     <Layout className="bg-subtle">
       <Backdrop

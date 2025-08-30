@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import { Footer } from "./Footer";
 import { Mast } from "./Mast";
 
@@ -15,7 +13,7 @@ export function Layout({
   className?: string;
   hasBackdrop?: boolean;
   hideLogo?: boolean;
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <div className="group">
       <a

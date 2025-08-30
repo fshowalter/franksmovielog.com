@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import type { NavItem } from "./navItems";
 
 import { Logo } from "./Logo";
@@ -12,7 +10,7 @@ export function Mast({
 }: {
   hasBackdrop: boolean;
   hideLogo: boolean;
-}) {
+}): React.JSX.Element {
   return (
     <header
       className={`
@@ -61,7 +59,11 @@ export function Mast({
   );
 }
 
-function HamburgerMenu({ hasBackdrop }: { hasBackdrop: boolean }) {
+function HamburgerMenu({
+  hasBackdrop,
+}: {
+  hasBackdrop: boolean;
+}): React.JSX.Element {
   return (
     <>
       <div
@@ -142,7 +144,7 @@ function NavListItem({
 }: {
   hasBackdrop: boolean;
   value: NavItem;
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <li
       className={`
@@ -169,7 +171,7 @@ function NavListItem({
   );
 }
 
-function SearchButton() {
+function SearchButton(): React.JSX.Element {
   return (
     <div
       className={`

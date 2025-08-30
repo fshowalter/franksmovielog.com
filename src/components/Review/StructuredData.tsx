@@ -22,7 +22,7 @@ export function StructuredData({
   releaseYear,
   seoImageSrc,
   title,
-}: Props) {
+}: Props): React.JSX.Element {
   const structuredData = {
     "@context": "http://schema.org",
     "@type": "Review",

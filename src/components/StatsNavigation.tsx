@@ -1,6 +1,4 @@
-import type { JSX } from "react";
-
-import { ccn } from "~/utils/concatClassNames";
+import type React from "react";
 
 export function StatsNavigation({
   className,
@@ -12,9 +10,14 @@ export function StatsNavigation({
   currentYear: string;
   linkFunc: (year: string) => string;
   years: readonly string[];
-}): JSX.Element {
+}): React.JSX.Element {
   return (
-    <nav className={ccn("bg-footer", className)}>
+    <nav
+      className={`
+        bg-footer
+        ${className ?? ""}
+      `}
+    >
       <ul
         className={`
           mx-auto flex scrollbar-hidden max-w-(--breakpoint-desktop) snap-x
@@ -45,7 +48,7 @@ function AllTimeLink({
 }: {
   currentYear: string;
   linkFunc: (year: string) => string;
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <li
       className={`
@@ -97,7 +100,7 @@ function YearLink({
   currentYear: string;
   linkFunc: (y: string) => string;
   year: string;
-}) {
+}): React.JSX.Element {
   return (
     <li
       className={`

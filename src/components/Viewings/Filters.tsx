@@ -21,7 +21,7 @@ export function Filters({
   distinctVenues: readonly string[];
   distinctViewingYears: readonly string[];
   filterValues: ViewingsFilterValues;
-}) {
+}): React.JSX.Element {
   return (
     <>
       <TitleFilters

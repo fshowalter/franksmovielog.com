@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import type { PosterImageProps } from "~/api/posters";
 
 type PosterProps = React.ImgHTMLAttributes<HTMLImageElement> & {
@@ -17,7 +15,7 @@ export function Poster({
   imageProps,
   loading,
   ...rest
-}: PosterProps): JSX.Element {
+}: PosterProps): React.JSX.Element {
   return (
     <img
       {...imageProps}

@@ -8,7 +8,7 @@ export function ListItemTitle({
   slug?: string;
   title: string;
   year: string;
-}) {
+}): React.JSX.Element {
   const yearBox = (
     <span className={`text-xxs leading-none font-light text-subtle`}>
       {year}

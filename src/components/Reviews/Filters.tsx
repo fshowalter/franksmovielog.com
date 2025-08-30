@@ -19,7 +19,7 @@ export function Filters({
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   filterValues: TitleFilterValues;
-}) {
+}): React.JSX.Element {
   return (
     <TitleFilters
       genre={{
@@ -60,7 +60,7 @@ export function Filters({
   );
 }
 
-export function SortOptions() {
+export function SortOptions(): React.JSX.Element {
   return (
     <TitleSortOptions
       options={["title", "grade", "release-date", "review-date"]}
