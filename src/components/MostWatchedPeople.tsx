@@ -127,7 +127,7 @@ function MostWatchedPersonViewingListItem({
 }) {
   return (
     <PosterListItem
-      className={`
+      bgClasses={`
         ${value.slug ? "bg-default" : "bg-unreviewed"}
       `}
       posterImageProps={value.posterImageProps}

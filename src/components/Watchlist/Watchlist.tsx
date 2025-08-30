@@ -144,7 +144,7 @@ function WatchlistListItem({
 }): JSX.Element {
   return (
     <PosterListItem
-      className={`bg-unreviewed`}
+      hasReview={false}
       posterImageProps={defaultPosterImageProps}
     >
       <ListItemDetails>

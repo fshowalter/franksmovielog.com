@@ -192,12 +192,11 @@ function CalendarDay({ day }: { day: CalendarDayData }): JSX.Element {
   return (
     <td
       className={`
-        mb-2 block min-h-[100px] w-full border-default bg-calendar py-2
-        align-top
+        mb-2 min-h-[100px] w-full border-default bg-calendar py-2 align-top
         tablet:border tablet:px-2
         tablet-landscape:mb-0 tablet-landscape:table-cell
         tablet-landscape:w-[14.28%]
-        ${day.viewings.length === 0 ? `hidden` : ""}
+        ${day.viewings.length === 0 ? `hidden` : "block"}
       `}
       data-weekday={weekday}
     >

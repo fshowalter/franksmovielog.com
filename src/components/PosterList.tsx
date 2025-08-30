@@ -94,24 +94,33 @@ export function PosterList({
 
 export function PosterListItem({
   children,
-  className,
+  hasReview = true,
   posterImageProps,
 }: {
+  bgClasses?: string;
   children: React.ReactNode;
   className?: string;
+  hasReview?: boolean;
   posterImageProps: PosterImageProps;
 }) {
   return (
     <li
       className={`
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
-        tablet:has-[a:hover]:drop-shadow-2xl
-        ${className ?? ""}
+        ${
+          hasReview
+            ? `
+              bg-default
+              tablet:has-[a:hover]:-translate-y-2
+              tablet:has-[a:hover]:bg-default
+              tablet:has-[a:hover]:drop-shadow-2xl
+            `
+            : `bg-transparent`
+        }
       `}
     >
       <PosterListItemPoster imageProps={posterImageProps} />

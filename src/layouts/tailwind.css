@@ -29,7 +29,6 @@
   --background-color-inverse: var(--bg-inverse);
   --background-color-stripe: var(--bg-stripe);
   --background-color-subtle: var(--bg-subtle);
-  --background-color-unreviewed: var(--bg-unreviewed);
   --background-color-unset: unset;
 
   --border-color-*: initial;
@@ -84,7 +83,7 @@
 
   --width-list-item-poster: var(--list-item-poster-width);
 
-  --drop-shadow-sm: var(--drop-shadow-sm);
+  --drop-shadow-sm: var(--drop-shadow-2xl);
   --drop-shadow-2xl: var(--drop-shadow-2xl);
 }
 
@@ -99,7 +98,6 @@
     --bg-inverse: rgb(0 0 0 / 75%);
     --bg-progress: #14bd41;
     --bg-stripe: #fcfcfc;
-    --bg-unreviewed: #fcfcfc;
     --bg-group: #ededed;
     --bg-subtle: #f9f7f4;
 
@@ -161,7 +159,6 @@
       --bg-progress: #379634;
       --bg-group: #464646;
       --bg-stripe: #3c393a;
-      --bg-unreviewed: #3c393a;
       --bg-subtle: #3e3d3c;
       --border-default: #484745;
       --fg-accent: #bf8a00;
