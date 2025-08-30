@@ -3,8 +3,9 @@ import { promises as fs } from "node:fs";
 import pLimit from "p-limit";
 import { z } from "zod";
 
+import { perfLogger } from "~/utils/performanceLogger";
+
 import { getContentPath } from "./utils/getContentPath";
-import { perfLogger } from "./utils/performanceLogger";
 
 const reviewsMarkdownDirectory = getContentPath("reviews");
 

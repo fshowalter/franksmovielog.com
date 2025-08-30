@@ -81,7 +81,7 @@ function HamburgerMenu({
         aria-expanded="false"
         aria-label="Toggle navigation menu"
         className={`
-          relative z-40 ml-2 flex h-10 w-10 transform-gpu cursor-pointer
+          relative z-nav-toggle ml-2 flex h-10 w-10 transform-gpu cursor-pointer
           items-center justify-center transition-transform
           hover:scale-110
         `}
@@ -175,7 +175,7 @@ function SearchButton(): React.JSX.Element {
   return (
     <div
       className={`
-        z-1000
+        z-search-button
         [body.nav-open_&]:!text-[#fff]
       `}
     >

@@ -168,7 +168,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
           </nav>
           <div
             class="
-        z-1000
+        z-search-button
         [body.nav-open_&]:!text-[#fff]
       "
           >
@@ -218,7 +218,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
             aria-expanded="false"
             aria-label="Toggle navigation menu"
             class="
-          relative z-40 ml-2 flex h-10 w-10 transform-gpu cursor-pointer
+          relative z-nav-toggle ml-2 flex h-10 w-10 transform-gpu cursor-pointer
           items-center justify-center transition-transform
           hover:scale-110
         "
@@ -2221,7 +2221,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
           </nav>
           <div
             class="
-        z-1000
+        z-search-button
         [body.nav-open_&]:!text-[#fff]
       "
           >
@@ -2271,7 +2271,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             aria-expanded="false"
             aria-label="Toggle navigation menu"
             class="
-          relative z-40 ml-2 flex h-10 w-10 transform-gpu cursor-pointer
+          relative z-nav-toggle ml-2 flex h-10 w-10 transform-gpu cursor-pointer
           items-center justify-center transition-transform
           hover:scale-110
         "

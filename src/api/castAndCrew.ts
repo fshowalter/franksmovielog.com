@@ -1,10 +1,10 @@
 import { ENABLE_CACHE } from "~/utils/cache";
+import { perfLogger } from "~/utils/performanceLogger";
 
 import {
   allCastAndCrewJson,
   type CastAndCrewMemberJson,
 } from "./data/castAndCrewJson";
-import { perfLogger } from "./data/utils/performanceLogger";
 
 // Cache at API level - lazy caching for better build performance
 let cachedCastAndCrewJson: CastAndCrewMemberJson[];

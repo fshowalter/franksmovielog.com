@@ -15,7 +15,6 @@
   --z-index-search-backdrop: 50;
   --z-index-watchlist-overlay: 60;
   --z-index-filter-drawer: 80;
-  --z-index-mast-backdrop: 90;
   --z-index-search-button: 1000;
 
   --background-color-*: initial;
@@ -29,7 +28,6 @@
   --background-color-inverse: var(--bg-inverse);
   --background-color-stripe: var(--bg-stripe);
   --background-color-subtle: var(--bg-subtle);
-  --background-color-unset: unset;
 
   --border-color-*: initial;
   --border-color-default: var(--border-default);
@@ -42,7 +40,6 @@
   --color-inverse: var(--fg-inverse);
   --color-inverse-subtle: var(--fg-inverse-subtle);
   --color-muted: var(--fg-muted);
-  --color-progress: var(--fg-progress);
   --color-subtle: var(--fg-subtle);
 
   --tracking-*: initial;
@@ -82,9 +79,6 @@
   --max-width-prose: 39rem;
 
   --width-list-item-poster: var(--list-item-poster-width);
-
-  --drop-shadow-sm: var(--drop-shadow-2xl);
-  --drop-shadow-2xl: var(--drop-shadow-2xl);
 }
 
 @layer base {

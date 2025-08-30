@@ -3,9 +3,10 @@ import remarkGfm from "remark-gfm";
 import smartypants from "remark-smartypants";
 import strip from "strip-markdown";
 
+import { perfLogger } from "~/utils/performanceLogger";
+
 import { allPagesMarkdown } from "./data/pagesMarkdown";
 import { allReviewedTitlesJson } from "./data/reviewedTitlesJson";
-import { perfLogger } from "./data/utils/performanceLogger";
 import { getHtml } from "./utils/markdown/getHtml";
 import { removeFootnotes } from "./utils/markdown/removeFootnotes";
 

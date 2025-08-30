@@ -7,12 +7,12 @@ import smartypants from "remark-smartypants";
 import strip from "strip-markdown";
 
 import { ENABLE_CACHE } from "~/utils/cache";
+import { perfLogger } from "~/utils/performanceLogger";
 
 import {
   allCollectionsJson,
   type CollectionJson,
 } from "./data/collectionsJson";
-import { perfLogger } from "./data/utils/performanceLogger";
 import { emToQuotes } from "./utils/markdown/emToQuotes";
 import { rootAsSpan } from "./utils/markdown/rootAsSpan";
 
