@@ -2,8 +2,6 @@ import type { JSX } from "react";
 
 import type { PosterImageProps } from "~/api/posters";
 
-import { ccn } from "~/utils/concatClassNames";
-
 import { ListItemTitle } from "./ListItemTitle";
 import { PosterList, PosterListItem } from "./PosterList";
 
@@ -29,14 +27,12 @@ export function MostWatchedMovies({
 
   return (
     <section
-      className={ccn(
-        `
-          max-w-[calc(250px_*_4)] pb-5
-          laptop:pb-10
-          desktop:max-w-[calc(298px_*_4)]
-        `,
-        className,
-      )}
+      className={`
+        max-w-[calc(250px_*_4)] pb-5
+        laptop:pb-10
+        desktop:max-w-[calc(298px_*_4)]
+        ${className ?? ""}
+      `}
     >
       <h2
         className={`

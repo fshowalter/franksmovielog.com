@@ -5,7 +5,7 @@ import { useReducer, useState } from "react";
 import type { CastAndCrewMember } from "~/api/castAndCrew";
 import type { PosterImageProps } from "~/api/posters";
 
-import { CreditedAs } from "~/components/CreditedAs";
+import { ListItemCreditedAs } from "~/components/ListItemCreditedAs";
 import { ListItemDetails } from "~/components/ListItemDetails";
 import { ListItemGenres } from "~/components/ListItemGenres";
 import { ListItemGrade } from "~/components/ListItemGrade";
@@ -143,7 +143,7 @@ function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
           title={value.title}
           year={value.releaseYear}
         />
-        <CreditedAs values={value.creditedAs} />
+        <ListItemCreditedAs values={value.creditedAs} />
         {value.grade && <ListItemGrade grade={value.grade} />}
         {!value.grade && (
           <WatchlistTitleSlug

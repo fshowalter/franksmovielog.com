@@ -1,6 +1,6 @@
 import { capitalize } from "~/utils/capitalize";
 
-export function CreditedAs({
+export function ListItemCreditedAs({
   className = "",
   values,
 }: {

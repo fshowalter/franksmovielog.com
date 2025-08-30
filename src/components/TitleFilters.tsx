@@ -2,7 +2,7 @@ import type { JSX } from "react";
 
 import type { TitleFilterValues } from "~/components/ListWithFilters/titlesReducerUtils";
 
-import { GradeInput } from "~/components/GradeInput";
+import { GradeField } from "~/components/GradeField";
 import { MultiSelectField } from "~/components/MultiSelectField";
 import { TextFilter } from "~/components/TextFilter";
 import { YearInput } from "~/components/YearInput";
@@ -80,7 +80,7 @@ export function TitleFilters({
         />
       )}
       {grade && (
-        <GradeInput
+        <GradeField
           initialValues={grade.initialValue}
           label="Grade"
           onGradeChange={grade.onChange}

@@ -675,9 +675,9 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
           <div>
             <div
               class="rendered-markdown 
-          text-md/7 tracking-prose
-          tablet:text-xl/8
-         
+        text-md/7 tracking-prose
+        tablet:text-xl/8
+        
           max-w-prose
           first-letter:leading-[.8] first-letter:text-default
           tablet:first-letter:pr-3
@@ -689,7 +689,8 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
           [&>p:first-child]:first-letter:font-sans
           [&>p:first-child]:first-letter:text-[56px]
           [&>p:first-child]:first-letter:font-bold
-        "
+        
+      "
             >
               <p>
                 The extras on 
@@ -899,7 +900,10 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                 >
                   <img
                     alt=""
-                    class="aspect-poster h-auto"
+                    class="
+        aspect-poster
+        h-auto
+      "
                     decoding="async"
                     height="372"
                     loading="lazy"
@@ -2674,9 +2678,9 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
           <div>
             <div
               class="rendered-markdown 
-          text-md/7 tracking-prose
-          tablet:text-xl/8
-         
+        text-md/7 tracking-prose
+        tablet:text-xl/8
+        
           max-w-prose
           first-letter:leading-[.8] first-letter:text-default
           tablet:first-letter:pr-3
@@ -2688,7 +2692,8 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
           [&>p:first-child]:first-letter:font-sans
           [&>p:first-child]:first-letter:text-[56px]
           [&>p:first-child]:first-letter:font-bold
-        "
+        
+      "
             >
               <p>
                 For Peter Cushing and Christopher Lee’s first film for Hammer, 
@@ -2944,7 +2949,10 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                 >
                   <img
                     alt=""
-                    class="aspect-poster h-auto"
+                    class="
+        aspect-poster
+        h-auto
+      "
                     decoding="async"
                     height="372"
                     loading="lazy"

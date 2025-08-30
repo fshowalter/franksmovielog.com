@@ -8,7 +8,7 @@ import type { CastAndCrewMember } from "~/api/castAndCrew";
 import { AvatarListItem } from "~/components/AvatarList";
 import { GroupedAvatarList } from "~/components/AvatarList";
 import { CollectionSortOptions } from "~/components/CollectionSortOptions";
-import { CreditedAs } from "~/components/CreditedAs";
+import { ListItemCreditedAs } from "~/components/ListItemCreditedAs";
 import { ListItemName } from "~/components/ListItemName";
 import { ListWithFilters } from "~/components/ListWithFilters/ListWithFilters";
 
@@ -188,7 +188,7 @@ function MemberListItem({ value }: { value: ListItemValue }): JSX.Element {
           name={value.name}
         />
         <div className="mt-1">
-          <CreditedAs values={value.creditedAs} />
+          <ListItemCreditedAs values={value.creditedAs} />
         </div>
         <div
           className={`
