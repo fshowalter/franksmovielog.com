@@ -123,9 +123,7 @@ describe("PerformanceLogger", () => {
     });
 
     it("returns 0 for non-existent timing", () => {
-      const consoleSpy = vi
-        .spyOn(console, "warn")
-        .mockImplementation(() => {});
+      const consoleSpy = vi.spyOn(console, "warn").mockImplementation(() => {});
       const duration = perfLogger.end("non-existent");
 
       expect(duration).toBe(0);
@@ -181,7 +179,7 @@ describe("PerformanceLogger", () => {
 
     it("sorts operations by max duration", () => {
       vi.useFakeTimers();
-      
+
       perfLogger.start("fast-op");
       vi.advanceTimersByTime(5);
       perfLogger.end("fast-op");
@@ -194,13 +192,15 @@ describe("PerformanceLogger", () => {
 
       const report = perfLogger.getReport();
       const lines = report.split("\n");
-      
+
       let slowLine = -1;
       let fastLine = -1;
-      
+
       // Only check lines in the operations table section (before Operation Call Frequency)
-      const frequencyStart = lines.findIndex(line => line.includes("Operation Call Frequency"));
-      
+      const frequencyStart = lines.findIndex((line) =>
+        line.includes("Operation Call Frequency"),
+      );
+
       for (let i = 0; i < frequencyStart; i++) {
         if (lines[i].includes("slow-op") && lines[i].includes("|")) {
           slowLine = i;
@@ -243,7 +243,9 @@ describe("PerformanceLogger", () => {
 
   describe("writeReportToFile", () => {
     it("does nothing when DEBUG_PERF is not true", () => {
-      const writeFileSpy = vi.spyOn(console, "log").mockImplementation(() => {});
+      const writeFileSpy = vi
+        .spyOn(console, "log")
+        .mockImplementation(() => {});
 
       perfLogger.writeReportToFile();
 
@@ -262,7 +264,6 @@ describe("PerformanceLogger", () => {
         expect.stringContaining("Performance report written to:"),
       );
     });
-
   });
 
   describe("DEBUG_PERF environment variable", () => {
