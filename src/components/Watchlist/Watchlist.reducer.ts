@@ -2,7 +2,11 @@ import type {
   ListWithFiltersActionType,
   ListWithFiltersState,
 } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
-import type { TitlesActionType } from "~/components/ListWithFilters/titlesReducerUtils";
+import type {
+  TitleFilterValues,
+  TitlesActionType,
+  TitleSortType,
+} from "~/components/ListWithFilters/titlesReducerUtils";
 
 import {
   createInitialState,
@@ -12,6 +16,7 @@ import {
 } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import {
   createPaginatedGroupFn,
+  createTitleGroupForValue,
   handleGenreFilterAction,
   handleReleaseYearFilterAction,
   handleShowMore,
@@ -24,7 +29,6 @@ import {
 import {
   buildGroupValues,
   buildSortValues,
-  getGroupLetter,
 } from "~/components/utils/reducerUtils";
 
 /**
@@ -39,11 +43,20 @@ enum WatchlistActions {
   PENDING_FILTER_WRITER = "PENDING_FILTER_WRITER",
 }
 
-export type Sort =
-  | "release-date-asc"
-  | "release-date-desc"
-  | "title-asc"
-  | "title-desc";
+export type Sort = Extract<
+  TitleSortType,
+  "release-date-asc" | "release-date-desc" | "title-asc" | "title-desc"
+>;
+
+export type WatchlistFilterValues = Pick<
+  TitleFilterValues,
+  "genre" | "releaseYear" | "title"
+> & {
+  collection?: string;
+  director?: string;
+  performer?: string;
+  writer?: string;
+};
 
 // Re-export actions for component convenience
 export const Actions = {
@@ -91,20 +104,7 @@ type State = ListWithFiltersState<ListItemValue, Sort> & {
   showCount: number;
 };
 
-// Helper functions
-function groupForValue(value: ListItemValue, sortValue: Sort): string {
-  switch (sortValue) {
-    case "release-date-asc":
-    case "release-date-desc": {
-      return value.releaseYear;
-    }
-    case "title-asc":
-    case "title-desc": {
-      return getGroupLetter(value.sortTitle);
-    }
-    // no default
-  }
-}
+const groupForValue = createTitleGroupForValue<ListItemValue, Sort>();
 
 const sortValues = buildSortValues<ListItemValue, Sort>({
   ...sortReleaseDate<ListItemValue>(),
@@ -167,13 +167,10 @@ export function reducer(state: State, action: ActionType): State {
           ? (value: ListItemValue) =>
               value.watchlistCollectionNames.includes(typedAction.value)
           : undefined;
+
+      const filterKey: keyof WatchlistFilterValues = "collection";
       return {
-        ...updatePendingFilter(
-          state,
-          "collection",
-          filterFn,
-          typedAction.value,
-        ),
+        ...updatePendingFilter(state, filterKey, filterFn, typedAction.value),
         showCount: state.showCount,
       };
     }
@@ -184,8 +181,9 @@ export function reducer(state: State, action: ActionType): State {
           ? (value: ListItemValue) =>
               value.watchlistDirectorNames.includes(typedAction.value)
           : undefined;
+      const filterKey: keyof WatchlistFilterValues = "director";
       return {
-        ...updatePendingFilter(state, "director", filterFn, typedAction.value),
+        ...updatePendingFilter(state, filterKey, filterFn, typedAction.value),
         showCount: state.showCount,
       };
     }
@@ -196,8 +194,9 @@ export function reducer(state: State, action: ActionType): State {
           ? (value: ListItemValue) =>
               value.watchlistPerformerNames.includes(typedAction.value)
           : undefined;
+      const filterKey: keyof WatchlistFilterValues = "performer";
       return {
-        ...updatePendingFilter(state, "performer", filterFn, typedAction.value),
+        ...updatePendingFilter(state, filterKey, filterFn, typedAction.value),
         showCount: state.showCount,
       };
     }
@@ -208,8 +207,9 @@ export function reducer(state: State, action: ActionType): State {
           ? (value: ListItemValue) =>
               value.watchlistWriterNames.includes(typedAction.value)
           : undefined;
+      const filterKey: keyof WatchlistFilterValues = "writer";
       return {
-        ...updatePendingFilter(state, "writer", filterFn, typedAction.value),
+        ...updatePendingFilter(state, filterKey, filterFn, typedAction.value),
         showCount: state.showCount,
       };
     }
