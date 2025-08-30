@@ -13,7 +13,7 @@ import {
 } from "~/components/ListWithFilters/ListWithFilters";
 import { PosterListItem } from "~/components/PosterList";
 
-import { Filters, SortOptions } from "./Filters";
+import { Filters } from "./Filters";
 import {
   Actions,
   type ActionType,
@@ -158,7 +158,16 @@ export function Viewings({
             type: Actions.SORT,
             value: e.target.value as Sort,
           }),
-        sortOptions: <SortOptions />,
+        sortOptions: (
+          <>
+            <option value="viewing-date-desc">
+              Viewing Date (Newest First)
+            </option>
+            <option value="viewing-date-asc">
+              Viewing Date (Oldest First)
+            </option>
+          </>
+        ),
       }}
       totalCount={state.filteredValues.length}
     />
