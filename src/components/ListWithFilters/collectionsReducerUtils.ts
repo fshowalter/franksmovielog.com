@@ -58,7 +58,7 @@ export type CollectionsSortType =
 /**
  * Base type for items that can be grouped by common title sorts
  */
-export type GroupableCollectionItem = {
+type GroupableCollectionItem = {
   name: string;
   reviewCount: number;
 };

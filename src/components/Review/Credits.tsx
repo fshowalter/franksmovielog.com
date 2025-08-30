@@ -4,7 +4,6 @@ import type { PosterImageProps } from "~/api/posters";
 import type { Review } from "~/api/reviews";
 
 import { Poster } from "~/components/Poster";
-import { ccn } from "~/utils/concatClassNames";
 import { toSentence } from "~/utils/toSentence";
 
 export const PosterImageConfig = {
@@ -41,13 +40,11 @@ export function Credits({
 }: Props): JSX.Element {
   return (
     <aside
-      className={ccn(
-        `
-          group/credits bg-subtle px-container pt-8 pb-8
-          tablet:pt-12
-        `,
-        className,
-      )}
+      className={`
+        group/credits bg-subtle px-container pt-8 pb-8
+        tablet:pt-12
+        ${className ?? ""}
+      `}
       data-pagefind-meta={`image:${posterImageProps.src}`}
       id="credits"
     >

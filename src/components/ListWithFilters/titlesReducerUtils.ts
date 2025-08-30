@@ -52,17 +52,6 @@ export enum TitlesActions {
 export type CastAndCrewMemberSort = TitleSortType;
 
 /**
- * Base type for items that can be grouped by common title sorts
- */
-export type GroupableTitleItem = {
-  grade?: string;
-  releaseYear: string;
-  reviewMonth?: string;
-  reviewYear?: string;
-  sortTitle: string;
-};
-
-/**
  * Sort types for reviews (all title sorts)
  */
 export type ReviewsSort = TitleSortType;
@@ -78,10 +67,6 @@ export type TitlesActionType<TSortValue = unknown> =
   | PendingFilterTitleAction
   | ShowMoreAction;
 
-// ============================================================================
-// Title-specific Action Types
-// ============================================================================
-
 /**
  * Specialized state type for title-based lists with typed filter values
  */
@@ -92,6 +77,10 @@ export type TitlesListState<TItem, TSortValue> = Omit<
   filterValues: TitleFilterValues;
   pendingFilterValues: TitleFilterValues;
 };
+
+// ============================================================================
+// Title-specific Action Types
+// ============================================================================
 
 /**
  * Common sort types for title-based lists
@@ -105,6 +94,17 @@ export type TitleSortType =
   | "review-date-desc"
   | "title-asc"
   | "title-desc";
+
+/**
+ * Base type for items that can be grouped by common title sorts
+ */
+type GroupableTitleItem = {
+  grade?: string;
+  releaseYear: string;
+  reviewMonth?: string;
+  reviewYear?: string;
+  sortTitle: string;
+};
 
 type PendingFilterGenresAction = {
   type: TitlesActions.PENDING_FILTER_GENRES;
