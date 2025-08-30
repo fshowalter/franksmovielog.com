@@ -1,12 +1,11 @@
 import { capitalize } from "~/utils/capitalize";
-
 export function ListItemCreditedAs({
   className = "",
   values,
 }: {
   className?: string;
   values: readonly string[];
-}) {
+}): React.JSX.Element {
   return (
     <div
       className={`

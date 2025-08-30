@@ -1,8 +1,5 @@
-import type { JSX } from "react";
-
 import type { PosterImageProps } from "~/api/posters";
 
-import { Button } from "./Button";
 import { GroupingListItem } from "./GroupingListItem";
 
 export const PosterListItemImageConfig = {
@@ -27,7 +24,7 @@ export function GroupedPosterList<T>({
   onShowMore?: () => void;
   totalCount: number;
   visibleCount: number;
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <>
       <ol data-testid="grouped-poster-list" {...rest}>
@@ -52,7 +49,19 @@ export function GroupedPosterList<T>({
       {onShowMore && (
         <div className="flex flex-col items-center px-container py-10">
           {totalCount > visibleCount && (
-            <Button onClick={onShowMore}>Show More</Button>
+            <button
+              className={`
+                mx-auto w-full max-w-button transform-gpu cursor-pointer
+                rounded-md bg-canvas py-5 text-center font-sans text-sm
+                font-bold tracking-wide uppercase shadow-all
+                transition-transform
+                hover:scale-105 hover:drop-shadow-lg
+              `}
+              onClick={onShowMore}
+              type="button"
+            >
+              Show More
+            </button>
           )}
         </div>
       )}
@@ -66,7 +75,7 @@ export function PosterList({
 }: {
   children: React.ReactNode;
   className?: string;
-}) {
+}): React.JSX.Element {
   return (
     <div className="@container/poster-list">
       {/* AIDEV-NOTE: The 250px values below cannot be extracted to a constant/variable
@@ -94,24 +103,33 @@ export function PosterList({
 
 export function PosterListItem({
   children,
-  className,
+  hasReview = true,
   posterImageProps,
 }: {
+  bgClasses?: string;
   children: React.ReactNode;
   className?: string;
+  hasReview?: boolean;
   posterImageProps: PosterImageProps;
-}) {
+}): React.JSX.Element {
   return (
     <li
       className={`
         group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
-        transition-transform duration-500
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:px-6 tablet:py-6
-        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
-        tablet:has-[a:hover]:drop-shadow-2xl
-        ${className ?? ""}
+        ${
+          hasReview
+            ? `
+              bg-default
+              tablet:has-[a:hover]:-translate-y-2
+              tablet:has-[a:hover]:bg-default
+              tablet:has-[a:hover]:drop-shadow-2xl
+            `
+            : `bg-transparent`
+        }
       `}
     >
       <PosterListItemPoster imageProps={posterImageProps} />
@@ -124,7 +142,7 @@ function PosterListItemPoster({
   imageProps,
 }: {
   imageProps: PosterImageProps;
-}) {
+}): React.JSX.Element {
   return (
     <div
       className={`

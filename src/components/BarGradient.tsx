@@ -1,14 +1,10 @@
-import type { JSX } from "react";
-
-import React from "react";
-
 export function BarGradient({
   maxValue,
   value,
 }: {
   maxValue: number;
   value: number;
-}): JSX.Element {
+}): React.JSX.Element {
   const styles = {
     "--bar-percent": `${(value / maxValue) * 100}%`,
   } as React.CSSProperties;

@@ -29,7 +29,11 @@ export type ListItemValue = Pick<
     stillImageProps: StillImageProps;
   };
 
-export function HomeListItem({ value }: { value: ListItemValue }) {
+export function HomeListItem({
+  value,
+}: {
+  value: ListItemValue;
+}): React.JSX.Element {
   return (
     <li
       className={`
@@ -123,7 +127,7 @@ export function HomeListItem({ value }: { value: ListItemValue }) {
   );
 }
 
-function formatDate(reviewDate: Date) {
+function formatDate(reviewDate: Date): string {
   return reviewDate.toLocaleString("en-GB", {
     day: "2-digit",
     month: "short",

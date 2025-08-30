@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import { CollectionFilters } from "~/components/CollectionFilters";
 import { CreditedAsFilter } from "~/components/CreditedAsFilter";
 
@@ -16,7 +14,7 @@ export function Filters({
 }: {
   dispatch: React.Dispatch<ActionType>;
   filterValues: CastAndCrewFilterValues;
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <>
       <CollectionFilters

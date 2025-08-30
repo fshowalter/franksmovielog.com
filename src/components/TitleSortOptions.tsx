@@ -1,10 +1,8 @@
-import type { JSX } from "react";
-
 export function TitleSortOptions({
   options,
 }: {
   options: ("grade" | "release-date" | "review-date" | "title")[];
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <>
       {options.includes("title") && (

@@ -3,7 +3,7 @@ import { userEvent } from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import { DRAWER_CLOSE_ANIMATION_MS } from "~/components/ListWithFilters/ListWithFilters";
-import { TEXT_FILTER_DEBOUNCE_MS } from "~/components/TextFilter";
+import { TEXT_FILTER_DEBOUNCE_MS } from "~/components/TextField";
 
 import { getProps } from "./getProps";
 import { Viewings } from "./Viewings";

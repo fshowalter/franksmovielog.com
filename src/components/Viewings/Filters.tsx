@@ -1,7 +1,7 @@
 import { SelectField } from "~/components/SelectField";
 import { SelectOptions } from "~/components/SelectOptions";
 import { TitleFilters } from "~/components/TitleFilters";
-import { YearInput } from "~/components/YearInput";
+import { YearField } from "~/components/YearField";
 
 import type { ActionType, ViewingsFilterValues } from "./Viewings.reducer";
 
@@ -21,7 +21,7 @@ export function Filters({
   distinctVenues: readonly string[];
   distinctViewingYears: readonly string[];
   filterValues: ViewingsFilterValues;
-}) {
+}): React.JSX.Element {
   return (
     <>
       <TitleFilters
@@ -45,7 +45,7 @@ export function Filters({
             dispatch({ type: Actions.PENDING_FILTER_TITLE, value }),
         }}
       />
-      <YearInput
+      <YearField
         initialValues={filterValues.viewingYears}
         label="Viewing Year"
         onYearChange={(values) =>

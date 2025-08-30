@@ -4,7 +4,7 @@ import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import { DRAWER_CLOSE_ANIMATION_MS } from "~/components/ListWithFilters/ListWithFilters";
 import { DROPDOWN_CLOSE_DELAY_MS } from "~/components/MultiSelectField";
-import { TEXT_FILTER_DEBOUNCE_MS } from "~/components/TextFilter";
+import { TEXT_FILTER_DEBOUNCE_MS } from "~/components/TextField";
 
 import { getPropsForUnderseen } from "./getProps";
 import { Underseen } from "./Underseen";

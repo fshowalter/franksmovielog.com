@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import { useReducer, useState } from "react";
 
 import type { Collection, CollectionWithDetails } from "~/api/collections";
@@ -55,7 +53,7 @@ export function Collection({
   distinctReviewYears,
   initialSort,
   titles,
-}: Props): JSX.Element {
+}: Props): React.JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
@@ -122,10 +120,14 @@ export function Collection({
   );
 }
 
-function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
+function CollectionListItem({
+  value,
+}: {
+  value: ListItemValue;
+}): React.JSX.Element {
   return (
     <PosterListItem
-      className={value.slug ? "bg-default" : "bg-unreviewed"}
+      hasReview={!!value.slug}
       posterImageProps={value.posterImageProps}
     >
       <ListItemDetails>

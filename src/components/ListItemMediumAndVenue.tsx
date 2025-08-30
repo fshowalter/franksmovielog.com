@@ -1,12 +1,10 @@
-import type { JSX } from "react";
-
 export function ListItemMediumAndVenue({
   medium,
   venue,
 }: {
   medium?: string | undefined;
   venue?: string | undefined;
-}): false | JSX.Element {
+}): false | React.JSX.Element {
   if (medium && venue) {
     return (
       <div

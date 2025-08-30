@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import type { PosterImageProps } from "~/api/posters";
 
 import { ListItemMediumAndVenue } from "./ListItemMediumAndVenue";
@@ -31,7 +29,7 @@ export function MostWatchedPeople({
 }: {
   header: string;
   values: readonly MostWatchedPeopleListItemValue[];
-}): false | JSX.Element {
+}): false | React.JSX.Element {
   if (values.length === 0) {
     return false;
   }
@@ -124,10 +122,10 @@ function MostWatchedPersonViewingListItem({
   value,
 }: {
   value: ViewingSubListItemValue;
-}) {
+}): React.JSX.Element {
   return (
     <PosterListItem
-      className={`
+      bgClasses={`
         ${value.slug ? "bg-default" : "bg-unreviewed"}
       `}
       posterImageProps={value.posterImageProps}
@@ -154,7 +152,7 @@ function Name({
   value,
 }: {
   value: MostWatchedPeopleListItemValue;
-}): JSX.Element {
+}): React.JSX.Element {
   if (value.slug) {
     return (
       <a

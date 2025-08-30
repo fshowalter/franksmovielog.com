@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import { useReducer, useState } from "react";
 
 import type { PosterImageProps } from "~/api/posters";
@@ -8,13 +6,13 @@ import type { WatchlistTitle } from "~/api/watchlistTitles";
 import { ListItemDetails } from "~/components/ListItemDetails";
 import { ListItemGenres } from "~/components/ListItemGenres";
 import { ListItemTitle } from "~/components/ListItemTitle";
+import { ListItemWatchlistReason } from "~/components/ListItemWatchlistReason";
 import {
   ListHeaderButton,
   ListWithFilters,
 } from "~/components/ListWithFilters/ListWithFilters";
 import { GroupedPosterList, PosterListItem } from "~/components/PosterList";
 import { TitleSortOptions } from "~/components/TitleSortOptions";
-import { WatchlistTitleSlug } from "~/components/WatchlistTitleSlug";
 
 import type { Sort } from "./Watchlist.reducer";
 
@@ -58,7 +56,7 @@ export function Watchlist({
   distinctWriters,
   initialSort,
   values,
-}: Props): JSX.Element {
+}: Props): React.JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
@@ -141,10 +139,10 @@ function WatchlistListItem({
 }: {
   defaultPosterImageProps: PosterImageProps;
   value: ListItemValue;
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <PosterListItem
-      className={`bg-unreviewed`}
+      hasReview={false}
       posterImageProps={defaultPosterImageProps}
     >
       <ListItemDetails>
@@ -153,7 +151,7 @@ function WatchlistListItem({
           title={value.title}
           year={value.releaseYear}
         />
-        <WatchlistTitleSlug
+        <ListItemWatchlistReason
           collectionNames={value.watchlistCollectionNames}
           directorNames={value.watchlistDirectorNames}
           performerNames={value.watchlistPerformerNames}

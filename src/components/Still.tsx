@@ -1,8 +1,4 @@
-import type { JSX } from "react";
-
 import type { StillImageProps } from "~/api/stills";
-
-import { ccn } from "~/utils/concatClassNames";
 
 type Props = React.ImgHTMLAttributes<HTMLImageElement> & {
   className?: string;
@@ -20,7 +16,7 @@ export function Still({
   imageProps,
   loading,
   ...rest
-}: Props): JSX.Element {
+}: Props): React.JSX.Element {
   return (
     <img
       {...imageProps}
@@ -28,7 +24,10 @@ export function Still({
       decoding={decoding}
       loading={loading}
       {...rest}
-      className={ccn("aspect-video", className)}
+      className={`
+        aspect-video
+        ${className ?? ""}
+      `}
     />
   );
 }

@@ -53,7 +53,7 @@ const findScrollableContainer = (
 const calculateAvailableSpace = (
   buttonRect: DOMRect,
   fieldsetParent: HTMLElement | undefined,
-) => {
+): { effectiveSpaceAbove: number; effectiveSpaceBelow: number } => {
   let effectiveSpaceBelow: number;
   let effectiveSpaceAbove: number;
 
@@ -81,7 +81,7 @@ const determineDropdownLayout = (
   effectiveSpaceAbove: number,
   effectiveSpaceBelow: number,
   itemCount: number,
-) => {
+): { height: string; position: "above" | "below" } => {
   // Calculate heights based on number of items
   const minDropdownHeight = MIN_VISIBLE_ITEMS * ITEM_HEIGHT;
 
@@ -124,7 +124,7 @@ export function MultiSelectField({
   label: string;
   onChange: (values: string[]) => void;
   options: readonly string[];
-}) {
+}): React.JSX.Element {
   const [selectedOptions, setSelectedOptions] = useState<string[]>(
     initialValues ? [...initialValues] : [],
   );
@@ -145,7 +145,7 @@ export function MultiSelectField({
     (option) => !selectedOptions.includes(option),
   );
 
-  const handleToggle = () => {
+  const handleToggle = (): void => {
     if (!isOpen) {
       // Calculate position BEFORE opening to prevent flash
       calculateDropdownPositionAndHeight();
@@ -155,7 +155,7 @@ export function MultiSelectField({
     setIsOpen(!isOpen);
   };
 
-  const handleSelect = (option: string) => {
+  const handleSelect = (option: string): void => {
     const newValues = [...selectedOptions, option];
     setSelectedOptions(newValues);
     onChange(newValues);
@@ -172,7 +172,7 @@ export function MultiSelectField({
     timeoutRefs.current.add(timeoutId);
   };
 
-  const removeOption = (optionToRemove: string, focusButton = true) => {
+  const removeOption = (optionToRemove: string, focusButton = true): void => {
     const newValues = selectedOptions.filter((o) => o !== optionToRemove);
     setSelectedOptions(newValues);
     onChange(newValues);
@@ -195,7 +195,7 @@ export function MultiSelectField({
     }
   };
 
-  const clearAll = () => {
+  const clearAll = (): void => {
     setSelectedOptions([]);
     onChange([]);
     buttonRef.current?.focus();
@@ -214,7 +214,7 @@ export function MultiSelectField({
   };
 
   // Handle keyboard navigation on the button
-  const handleButtonKeyDown = (e: KeyboardEvent<HTMLButtonElement>) => {
+  const handleButtonKeyDown = (e: KeyboardEvent<HTMLButtonElement>): void => {
     switch (e.key) {
       case " ":
       case "Enter": {
@@ -235,7 +235,7 @@ export function MultiSelectField({
   };
 
   // Handle keyboard navigation in the listbox
-  const handleListboxKeyDown = (e: KeyboardEvent) => {
+  const handleListboxKeyDown = (e: KeyboardEvent): void => {
     if (!isOpen) return;
 
     switch (e.key) {
@@ -289,7 +289,7 @@ export function MultiSelectField({
   // Calculate available space and position when dropdown opens
   // AIDEV-NOTE: Dropdown positioning logic - opens upward when there's more space above
   // and the space below is insufficient for the minimum number of items
-  const calculateDropdownPositionAndHeight = () => {
+  const calculateDropdownPositionAndHeight = (): void => {
     if (!buttonRef.current) return;
 
     const buttonRect = buttonRef.current.getBoundingClientRect();
@@ -327,7 +327,7 @@ export function MultiSelectField({
   useEffect(() => {
     if (!isOpen) return;
 
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: MouseEvent): void => {
       if (
         dropdownRef.current &&
         !dropdownRef.current.contains(event.target as Node) &&
@@ -346,7 +346,7 @@ export function MultiSelectField({
     }, 0);
     timeoutRefs.current.add(timer);
 
-    return () => {
+    return (): void => {
       clearTimeout(timer);
       timeoutRefs.current.delete(timer);
       if (typeof document !== "undefined") {
@@ -368,7 +368,7 @@ export function MultiSelectField({
 
     let debounceTimer: NodeJS.Timeout | undefined;
 
-    const debouncedCalculate = () => {
+    const debouncedCalculate = (): void => {
       if (debounceTimer) {
         clearTimeout(debounceTimer);
       }
@@ -378,11 +378,11 @@ export function MultiSelectField({
       }, 16); // ~60fps
     };
 
-    const handleResize = () => {
+    const handleResize = (): void => {
       debouncedCalculate();
     };
 
-    const handleScroll = () => {
+    const handleScroll = (): void => {
       debouncedCalculate();
     };
 
@@ -396,7 +396,7 @@ export function MultiSelectField({
         scrollableContainer.addEventListener("scroll", handleScroll);
       }
 
-      return () => {
+      return (): void => {
         if (debounceTimer) {
           clearTimeout(debounceTimer);
         }
@@ -410,14 +410,14 @@ export function MultiSelectField({
 
   // Cleanup timeouts on unmount
   useEffect(() => {
-    return () => {
+    return (): void => {
       for (const timeoutId of timeoutRefs.current) clearTimeout(timeoutId);
       timeoutRefs.current.clear();
     };
   }, []);
 
   // Generate option ID for aria-activedescendant
-  const getOptionId = (index: number) => `${listboxId}-option-${index}`;
+  const getOptionId = (index: number): string => `${listboxId}-option-${index}`;
 
   return (
     <div className="flex flex-col text-left text-subtle">

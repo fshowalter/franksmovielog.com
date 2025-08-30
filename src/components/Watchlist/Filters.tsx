@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import { SelectField } from "~/components/SelectField";
 import { SelectOptions } from "~/components/SelectOptions";
 import { TitleFilters } from "~/components/TitleFilters";
@@ -26,7 +24,7 @@ export function Filters({
   distinctReleaseYears: readonly string[];
   distinctWriters: readonly string[];
   filterValues: WatchlistFilterValues;
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <>
       <TitleFilters
@@ -100,7 +98,7 @@ function CreditSelectField({
   initialValue: string | undefined;
   label: string;
   options: readonly string[];
-}) {
+}): React.JSX.Element {
   return (
     <SelectField
       initialValue={initialValue}

@@ -1,5 +1,3 @@
-import type { JSX, ReactNode } from "react";
-
 import { useCallback, useEffect, useRef, useState } from "react";
 
 export const DRAWER_CLOSE_ANIMATION_MS = 250;
@@ -34,7 +32,7 @@ export function ListHeaderButton({
 }: {
   href: string;
   text: string;
-}) {
+}): React.JSX.Element {
   return (
     <div
       className={`
@@ -72,7 +70,7 @@ export function ListWithFilters<T extends string>({
   pendingFilteredCount,
   sortProps,
   totalCount,
-}: Props<T>): JSX.Element {
+}: Props<T>): React.JSX.Element {
   const [filterDrawerVisible, setFilterDrawerVisible] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [isOpening, setIsOpening] = useState(false);
@@ -135,7 +133,7 @@ export function ListWithFilters<T extends string>({
 
   // Cleanup timeouts on unmount
   useEffect(() => {
-    return () => {
+    return (): void => {
       for (const timeoutId of timeoutRefs.current) clearTimeout(timeoutId);
       timeoutRefs.current.clear();
     };
@@ -143,7 +141,7 @@ export function ListWithFilters<T extends string>({
 
   // Handle escape key
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: KeyboardEvent): void => {
       if (e.key === "Escape" && filterDrawerVisible && !isClosing) {
         handleCloseDrawer();
         toggleButtonRef.current?.focus();
@@ -151,7 +149,7 @@ export function ListWithFilters<T extends string>({
     };
 
     document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
+    return (): void => document.removeEventListener("keydown", handleKeyDown);
   }, [filterDrawerVisible, handleCloseDrawer, isClosing]);
 
   // Scroll to top of list when sort changes
@@ -382,12 +380,12 @@ function ListHeader<T extends string>({
   totalCount,
 }: {
   filterDrawerVisible: boolean;
-  listHeaderButtons?: ReactNode;
+  listHeaderButtons?: React.ReactNode;
   onFilterClick: (event: React.MouseEvent) => void;
   sortProps: SortProps<T>;
   toggleButtonRef: React.RefObject<HTMLButtonElement | null>;
   totalCount: number;
-}): JSX.Element {
+}): React.JSX.Element {
   const { currentSortValue, onSortChange, sortOptions } = sortProps;
 
   return (

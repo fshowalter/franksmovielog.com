@@ -10,7 +10,11 @@ const items: Record<string, SubNavValue> = {
   underseen: { href: "/reviews/underseen/", text: "Underseen" },
 };
 
-export function ReviewsSubNav({ active }: { active: keyof typeof items }) {
+export function ReviewsSubNav({
+  active,
+}: {
+  active: keyof typeof items;
+}): React.JSX.Element {
   return (
     <nav className="bg-footer">
       <ul

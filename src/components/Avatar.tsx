@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import type { AvatarImageProps } from "~/api/avatars";
 
 type AvatarProps = React.ImgHTMLAttributes<HTMLImageElement> & {
@@ -14,7 +12,7 @@ export function Avatar({
   className,
   imageProps,
   ...rest
-}: AvatarProps): JSX.Element {
+}: AvatarProps): React.JSX.Element {
   if (imageProps) {
     return <img alt="" {...imageProps} {...rest} className={className} />;
   }

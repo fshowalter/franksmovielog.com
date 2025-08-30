@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import { useEffect, useReducer, useRef, useState } from "react";
 
 import type { PosterImageProps } from "~/api/posters";
@@ -87,7 +85,7 @@ export function Viewings({
   distinctViewingYears,
   initialSort,
   values,
-}: Props): JSX.Element {
+}: Props): React.JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
@@ -174,7 +172,7 @@ export function Viewings({
   );
 }
 
-function CalendarDay({ day }: { day: CalendarDayData }): JSX.Element {
+function CalendarDay({ day }: { day: CalendarDayData }): React.JSX.Element {
   if (!day.date) {
     return (
       <td
@@ -192,12 +190,11 @@ function CalendarDay({ day }: { day: CalendarDayData }): JSX.Element {
   return (
     <td
       className={`
-        mb-2 block min-h-[100px] w-full border-default bg-calendar py-2
-        align-top
+        mb-2 min-h-[100px] w-full border-default bg-calendar py-2 align-top
         tablet:border tablet:px-2
         tablet-landscape:mb-0 tablet-landscape:table-cell
         tablet-landscape:w-[14.28%]
-        ${day.viewings.length === 0 ? `hidden` : ""}
+        ${day.viewings.length === 0 ? `hidden` : "block"}
       `}
       data-weekday={weekday}
     >
@@ -268,7 +265,7 @@ function CalendarHeader({
   hasPrevMonth,
   nextMonth,
   prevMonth,
-}: CalendarHeaderProps): JSX.Element {
+}: CalendarHeaderProps): React.JSX.Element {
   const monthName = currentMonth.toLocaleString("en-US", {
     month: "long",
     timeZone: "UTC",
@@ -317,6 +314,7 @@ function CalendarHeader({
               tablet-landscape:tracking-wide tablet-landscape:uppercase
             `}
             onClick={() => dispatch({ type: Actions.PREV_MONTH })}
+            type="button"
           >
             ← {prevMonthName}
           </button>
@@ -346,6 +344,7 @@ function CalendarHeader({
               tablet-landscape:tracking-wide tablet-landscape:uppercase
             `}
             onClick={() => dispatch({ type: Actions.NEXT_MONTH })}
+            type="button"
           >
             {nextMonthName} →
           </button>
@@ -358,7 +357,7 @@ function CalendarHeader({
 function CalendarMonth({
   currentMonth,
   groupedValues,
-}: CalendarMonthProps): JSX.Element {
+}: CalendarMonthProps): React.JSX.Element {
   const calendarDays = getCalendarDays(currentMonth, groupedValues);
   const weeks = getCalendarWeeks(calendarDays);
 
@@ -419,7 +418,7 @@ function CalendarView({
   hasPrevMonth,
   nextMonth,
   prevMonth,
-}: CalendarViewProps): JSX.Element {
+}: CalendarViewProps): React.JSX.Element {
   return (
     <div className="mx-auto w-full max-w-(--breakpoint-desktop)">
       <CalendarHeader
@@ -491,7 +490,11 @@ function getCalendarWeeks(days: CalendarDayData[]): CalendarDayData[][] {
   return weeks;
 }
 
-function WeekdayHeader({ children }: { children: React.ReactNode }) {
+function WeekdayHeader({
+  children,
+}: {
+  children: React.ReactNode;
+}): React.JSX.Element {
   return (
     <th
       className={`

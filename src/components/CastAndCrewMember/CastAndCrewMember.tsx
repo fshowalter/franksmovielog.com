@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import { useReducer, useState } from "react";
 
 import type { CastAndCrewMember } from "~/api/castAndCrew";
@@ -11,10 +9,10 @@ import { ListItemGenres } from "~/components/ListItemGenres";
 import { ListItemGrade } from "~/components/ListItemGrade";
 import { ListItemReviewDate } from "~/components/ListItemReviewDate";
 import { ListItemTitle } from "~/components/ListItemTitle";
+import { ListItemWatchlistReason } from "~/components/ListItemWatchlistReason";
 import { ListWithFilters } from "~/components/ListWithFilters/ListWithFilters";
 import { GroupedPosterList, PosterListItem } from "~/components/PosterList";
 import { TitleSortOptions } from "~/components/TitleSortOptions";
-import { WatchlistTitleSlug } from "~/components/WatchlistTitleSlug";
 
 import type { Sort } from "./CastAndCrewMember.reducer";
 
@@ -63,7 +61,7 @@ export function CastAndCrewMember({
   initialSort,
   titles,
   value,
-}: Props): JSX.Element {
+}: Props): React.JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
@@ -131,10 +129,10 @@ export function CastAndCrewMember({
   );
 }
 
-function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
+function TitleListItem({ value }: { value: ListItemValue }): React.JSX.Element {
   return (
     <PosterListItem
-      className={value.slug ? "bg-default" : "bg-unreviewed"}
+      hasReview={!!value.slug}
       posterImageProps={value.posterImageProps}
     >
       <ListItemDetails>
@@ -146,7 +144,7 @@ function TitleListItem({ value }: { value: ListItemValue }): JSX.Element {
         <ListItemCreditedAs values={value.creditedAs} />
         {value.grade && <ListItemGrade grade={value.grade} />}
         {!value.grade && (
-          <WatchlistTitleSlug
+          <ListItemWatchlistReason
             collectionNames={value.watchlistCollectionNames}
             directorNames={value.watchlistDirectorNames}
             performerNames={value.watchlistPerformerNames}

@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import type { AlltimeStats } from "~/api/alltimeStats";
 
 import { StatsCalloutsGrid } from "~/components/StatsCalloutsGrid";
@@ -14,7 +12,7 @@ export function Callouts({
   titleCount,
   viewingCount,
   watchlistTitlesReviewedCount,
-}: Props): JSX.Element {
+}: Props): React.JSX.Element {
   const stats = [
     { label: "Viewings", value: viewingCount },
     { label: "Movies", value: titleCount },

@@ -6,7 +6,7 @@ export function LongFormText({
 }: {
   className?: string;
   text: string | undefined;
-}) {
+}): React.JSX.Element {
   return (
     <RenderedMarkdown
       className={`

@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import type { AvatarImageProps } from "~/api/avatars";
 
 import { Avatar } from "~/components/Avatar";
@@ -17,7 +15,7 @@ export function AvatarList({
 }: {
   children: React.ReactNode;
   className?: string;
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <ol className={className} data-testid="avatar-list">
       {children}
@@ -33,7 +31,7 @@ export function AvatarListItem({
   avatarImageProps: AvatarImageProps | undefined;
   children: React.ReactNode;
   className?: string;
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <li
       className={`
@@ -78,7 +76,7 @@ export function GroupedAvatarList<T>({
   className?: string;
   groupedValues: Map<string, Iterable<T>>;
   groupItemClassName?: string;
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <>
       <ol
@@ -109,7 +107,7 @@ function ListItemAvatar({
   imageProps,
 }: {
   imageProps: AvatarImageProps | undefined;
-}) {
+}): React.JSX.Element {
   const avatar = (
     <Avatar
       className={`

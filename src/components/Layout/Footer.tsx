@@ -1,9 +1,7 @@
-import type { JSX } from "react";
-
 import { Logo } from "./Logo";
 import { TableOfContents } from "./TableOfContents";
 
-export function Footer(): JSX.Element {
+export function Footer(): React.JSX.Element {
   return (
     <footer className={"bg-footer text-inverse"}>
       <div className="mx-auto max-w-(--breakpoint-laptop) px-container py-20">
@@ -161,7 +159,13 @@ export function Footer(): JSX.Element {
   );
 }
 
-function FooterLink({ href, text }: { href: string; text: string }) {
+function FooterLink({
+  href,
+  text,
+}: {
+  href: string;
+  text: string;
+}): React.JSX.Element {
   return (
     <a
       className={`

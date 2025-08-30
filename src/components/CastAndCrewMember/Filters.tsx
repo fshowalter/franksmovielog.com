@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import { CreditedAsFilter } from "~/components/CreditedAsFilter";
 import { TitleFilters } from "~/components/TitleFilters";
 
@@ -24,7 +22,7 @@ export function Filters({
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   filterValues: CastAndCrewMemberFilterValues;
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <>
       {creditedAs.length > 1 && (

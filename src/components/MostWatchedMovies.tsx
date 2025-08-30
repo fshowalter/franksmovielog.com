@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import type { PosterImageProps } from "~/api/posters";
 
 import { ListItemTitle } from "./ListItemTitle";
@@ -18,9 +16,9 @@ export function MostWatchedMovies({
   className,
   values,
 }: {
-  className?: string;
+  className: string;
   values: readonly MostWatchedMoviesListItemValue[];
-}): false | JSX.Element {
+}): false | React.JSX.Element {
   if (values.length === 0) {
     return false;
   }
@@ -31,7 +29,7 @@ export function MostWatchedMovies({
         max-w-[calc(250px_*_4)] pb-5
         laptop:pb-10
         desktop:max-w-[calc(298px_*_4)]
-        ${className ?? ""}
+        ${className}
       `}
     >
       <h2
@@ -56,7 +54,7 @@ function ListItem({
   value,
 }: {
   value: MostWatchedMoviesListItemValue;
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <PosterListItem posterImageProps={value.posterImageProps}>
       <div

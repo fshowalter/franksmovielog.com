@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import { useReducer, useState } from "react";
 
 import { ListWithFilters } from "~/components/ListWithFilters/ListWithFilters";
@@ -26,7 +24,7 @@ export function Underseen({
   distinctReviewYears,
   initialSort,
   values,
-}: Props): JSX.Element {
+}: Props): React.JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {

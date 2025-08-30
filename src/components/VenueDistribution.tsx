@@ -4,7 +4,7 @@ export function VenueDistribution({
   values,
 }: {
   values: React.ComponentProps<typeof Distribution>["values"];
-}) {
+}): false | React.JSX.Element {
   if (values.length === 0) {
     return false;
   }

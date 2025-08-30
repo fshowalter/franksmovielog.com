@@ -1,10 +1,8 @@
-import type { JSX } from "react";
-
 export function CollectionSortOptions({
   options,
 }: {
   options: ("name" | "review-count")[];
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <>
       {options.includes("name") && (

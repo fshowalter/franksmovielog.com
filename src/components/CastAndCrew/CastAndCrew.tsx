@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import { useReducer, useState } from "react";
 
 import type { AvatarImageProps } from "~/api/avatars";
@@ -29,7 +27,7 @@ export type Props = {
   values: ListItemValue[];
 };
 
-export function CastAndCrew({ initialSort, values }: Props): JSX.Element {
+export function CastAndCrew({ initialSort, values }: Props): React.JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
@@ -104,9 +102,9 @@ function AlphabetSubNav({
 }: {
   groupedValues: Map<string, ListItemValue[]>;
   sortValue: Sort;
-}) {
+}): false | React.JSX.Element {
   if (!sortValue.startsWith("name-")) {
-    return;
+    return false;
   }
 
   const letters = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
@@ -130,7 +128,7 @@ function AlphabetSubNav({
               letter={letter}
               linkFunc={
                 groupedValues.has(letter)
-                  ? (letter: string) => `#${letter}`
+                  ? (letter: string): string => `#${letter}`
                   : undefined
               }
             />
@@ -147,7 +145,7 @@ function LetterLink({
 }: {
   letter: string;
   linkFunc?: (letter: string) => string;
-}) {
+}): React.JSX.Element {
   return (
     <li
       className={`
@@ -179,7 +177,11 @@ function LetterLink({
   );
 }
 
-function MemberListItem({ value }: { value: ListItemValue }): JSX.Element {
+function MemberListItem({
+  value,
+}: {
+  value: ListItemValue;
+}): React.JSX.Element {
   return (
     <AvatarListItem avatarImageProps={value.avatarImageProps}>
       <div className="flex flex-col justify-center">

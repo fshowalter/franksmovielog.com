@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import type { StillImageProps } from "~/api/stills";
 
 import { Grade } from "./Grade";
@@ -30,7 +28,7 @@ export function MoreReviews({
 }: {
   children: React.ReactNode;
   values: MoreReviewsValue[];
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <nav data-pagefind-ignore>
       <div
@@ -66,7 +64,7 @@ export function MoreReviewsHeading({
   as?: "h2" | "h3" | "h4" | "h5";
   href: string;
   text: string;
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <SubHeading as={as}>
       <a
@@ -85,7 +83,11 @@ export function MoreReviewsHeading({
   );
 }
 
-function MoreReviewsCard({ value }: { value: MoreReviewsValue }) {
+function MoreReviewsCard({
+  value,
+}: {
+  value: MoreReviewsValue;
+}): React.JSX.Element {
   return (
     <li
       className={`

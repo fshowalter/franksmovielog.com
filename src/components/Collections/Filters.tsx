@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import type { CollectionFilterValues } from "~/components/ListWithFilters/collectionsReducerUtils";
 
 import { CollectionFilters } from "~/components/CollectionFilters";
@@ -14,7 +12,7 @@ export function Filters({
 }: {
   dispatch: React.Dispatch<ActionType>;
   filterValues: CollectionFilterValues;
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <>
       <CollectionFilters

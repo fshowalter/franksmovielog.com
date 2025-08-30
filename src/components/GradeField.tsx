@@ -1,5 +1,3 @@
-import type { JSX } from "react";
-
 import { useState } from "react";
 
 import { LabelText } from "~/components/LabelText";
@@ -55,7 +53,7 @@ export function GradeField({
   initialValues: number[] | undefined;
   label: string;
   onGradeChange: (values: [number, number]) => void;
-}): JSX.Element {
+}): React.JSX.Element {
   const [minValue, setMinValue] = useState(
     initialValues && initialValues.length > 0 ? initialValues[0] : 1,
   );
@@ -63,7 +61,7 @@ export function GradeField({
     initialValues && initialValues.length > 1 ? initialValues[1] : 13,
   );
 
-  const handleMinChange = (value: string) => {
+  const handleMinChange = (value: string): void => {
     const newMin = Number.parseInt(value, 10);
     setMinValue(newMin);
 
@@ -74,7 +72,7 @@ export function GradeField({
     }
   };
 
-  const handleMaxChange = (value: string) => {
+  const handleMaxChange = (value: string): void => {
     const newMax = Number.parseInt(value, 10);
     setMaxValue(newMax);
 

@@ -24,7 +24,11 @@ const weekdayFormat = new Intl.DateTimeFormat("en-US", {
   weekday: "short",
 });
 
-export function ViewingHistoryListItem({ value }: { value: Viewing }) {
+export function ViewingHistoryListItem({
+  value,
+}: {
+  value: Viewing;
+}): React.JSX.Element {
   return (
     <li
       className={`
@@ -55,7 +59,7 @@ export function ViewingHistoryListItem({ value }: { value: Viewing }) {
   );
 }
 
-function Date({ date }: { date: Date }) {
+function Date({ date }: { date: Date }): React.JSX.Element {
   return (
     <div className="bg-subtle py-2 text-center">
       <div className="px-4 pb-2 font-serif text-md font-normal text-subtle">
@@ -74,7 +78,11 @@ function Date({ date }: { date: Date }) {
   );
 }
 
-function Medium({ value }: { value: Viewing["medium"] }) {
+function Medium({
+  value,
+}: {
+  value: Viewing["medium"];
+}): false | React.JSX.Element {
   if (!value) {
     return false;
   }
@@ -85,7 +93,11 @@ function Medium({ value }: { value: Viewing["medium"] }) {
   );
 }
 
-function MediumNotes({ value }: { value: Viewing["mediumNotes"] }) {
+function MediumNotes({
+  value,
+}: {
+  value: Viewing["mediumNotes"];
+}): false | React.JSX.Element {
   if (!value) {
     return false;
   }
@@ -104,7 +116,7 @@ function Venue({
 }: {
   addArticle: boolean;
   value: Viewing["venue"];
-}) {
+}): false | React.JSX.Element {
   if (!value) {
     return false;
   }
@@ -118,7 +130,11 @@ function Venue({
   );
 }
 
-function VenueNotes({ value }: { value: Viewing["venueNotes"] }) {
+function VenueNotes({
+  value,
+}: {
+  value: Viewing["venueNotes"];
+}): false | React.JSX.Element {
   if (!value) {
     return false;
   }
@@ -130,7 +146,11 @@ function VenueNotes({ value }: { value: Viewing["venueNotes"] }) {
   );
 }
 
-function ViewingNotes({ value }: { value: Viewing["viewingNotes"] }) {
+function ViewingNotes({
+  value,
+}: {
+  value: Viewing["viewingNotes"];
+}): false | React.JSX.Element {
   if (!value) {
     return false;
   }

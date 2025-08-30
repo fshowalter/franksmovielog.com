@@ -16,7 +16,7 @@ type Props = {
   values: Collection[];
 };
 
-export function MoreInCollections({ values }: Props) {
+export function MoreInCollections({ values }: Props): React.JSX.Element[] {
   return values.map((value) => (
     <MoreReviews key={value.slug} values={value.titles}>
       <MoreReviewsHeading
