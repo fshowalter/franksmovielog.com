@@ -3,6 +3,7 @@
  */
 import type { ListWithFiltersActionType } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import type {
+  ReviewsSort,
   TitlesActionType,
   TitlesListState,
 } from "~/components/ListWithFilters/titlesReducerUtils";
@@ -15,6 +16,7 @@ import {
 } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import {
   createPaginatedGroupFn,
+  createTitleGroupForValue,
   handleGenreFilterAction,
   handleGradeFilterAction,
   handleReleaseYearFilterAction,
@@ -31,18 +33,7 @@ import {
 import {
   buildGroupValues,
   buildSortValues,
-  getGroupLetter,
 } from "~/components/utils/reducerUtils";
-
-type ReviewsSort =
-  | "grade-asc"
-  | "grade-desc"
-  | "release-date-asc"
-  | "release-date-desc"
-  | "review-date-asc"
-  | "review-date-desc"
-  | "title-asc"
-  | "title-desc";
 
 // Re-export actions for component convenience
 export const Actions = {
@@ -68,37 +59,11 @@ type State = TitlesListState<ReviewsListItemValue, ReviewsSort> & {
   showCount: number;
 };
 
-// Helper functions
-function getReviewDateGroup(value: ReviewsListItemValue): string {
-  if (value.reviewMonth) {
-    return `${value.reviewMonth} ${value.reviewYear}`;
-  }
-  return value.reviewYear;
-}
-
-function groupForValue(
-  value: ReviewsListItemValue,
-  sortValue: ReviewsSort,
-): string {
-  switch (sortValue) {
-    case "grade-asc":
-    case "grade-desc": {
-      return value.grade;
-    }
-    case "release-date-asc":
-    case "release-date-desc": {
-      return value.releaseYear;
-    }
-    case "review-date-asc":
-    case "review-date-desc": {
-      return getReviewDateGroup(value);
-    }
-    case "title-asc":
-    case "title-desc": {
-      return getGroupLetter(value.sortTitle);
-    }
-  }
-}
+// Create the groupForValue function using the generic builder
+const groupForValue = createTitleGroupForValue<
+  ReviewsListItemValue,
+  ReviewsSort
+>();
 
 const sortValues = buildSortValues<ReviewsListItemValue, ReviewsSort>({
   ...sortGrade<ReviewsListItemValue>(),

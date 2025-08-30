@@ -10,7 +10,11 @@ import type {
 import type { GroupFn } from "~/components/utils/reducerUtils";
 
 import { updatePendingFilter } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
-import { sortNumber, sortString } from "~/components/utils/reducerUtils";
+import {
+  getGroupLetter,
+  sortNumber,
+  sortString,
+} from "~/components/utils/reducerUtils";
 
 /**
  * Type for title filter values with known keys
@@ -42,9 +46,26 @@ export enum TitlesActions {
   SHOW_MORE = "SHOW_MORE",
 }
 
-// ============================================================================
-// Title-specific Action Types
-// ============================================================================
+/**
+ * Sort types for cast and crew member (all title sorts)
+ */
+export type CastAndCrewMemberSort = TitleSortType;
+
+/**
+ * Sort types for reviews (all title sorts)
+ */
+export type ReviewsSort = TitleSortType;
+
+/**
+ * Base type for items that can be grouped by common title sorts
+ */
+export type TitleGroupableItem = {
+  grade?: string;
+  releaseYear: string;
+  reviewMonth?: string;
+  reviewYear?: string;
+  sortTitle: string;
+};
 
 // Union type for all title-specific actions
 export type TitlesActionType<TSortValue = unknown> =
@@ -57,6 +78,10 @@ export type TitlesActionType<TSortValue = unknown> =
   | PendingFilterTitleAction
   | ShowMoreAction;
 
+// ============================================================================
+// Title-specific Action Types
+// ============================================================================
+
 /**
  * Specialized state type for title-based lists with typed filter values
  */
@@ -67,6 +92,27 @@ export type TitlesListState<TItem, TSortValue> = Omit<
   filterValues: TitleFilterValues;
   pendingFilterValues: TitleFilterValues;
 };
+
+/**
+ * Common sort types for title-based lists
+ */
+export type TitleSortType =
+  | "grade-asc"
+  | "grade-desc"
+  | "release-date-asc"
+  | "release-date-desc"
+  | "review-date-asc"
+  | "review-date-desc"
+  | "title-asc"
+  | "title-desc";
+
+/**
+ * Sort types for watchlist (subset of title sorts)
+ */
+export type WatchlistSort = Extract<
+  TitleSortType,
+  "release-date-asc" | "release-date-desc" | "title-asc" | "title-desc"
+>;
 
 type PendingFilterGenresAction = {
   type: TitlesActions.PENDING_FILTER_GENRES;
@@ -93,14 +139,14 @@ type PendingFilterReviewYearAction = {
   values: [string, string];
 };
 
+// ============================================================================
+// Title-specific Filter Handlers
+// ============================================================================
+
 type PendingFilterTitleAction = {
   type: TitlesActions.PENDING_FILTER_TITLE;
   value: string;
 };
-
-// ============================================================================
-// Title-specific Filter Handlers
-// ============================================================================
 
 type ShowMoreAction = {
   increment?: number;
@@ -119,6 +165,46 @@ export function createPaginatedGroupFn<TItem, TSortValue>(
   return (items: TItem[], sortValue: TSortValue) => {
     const paginatedItems = items.slice(0, showCount);
     return baseGroupFn(paginatedItems, sortValue);
+  };
+}
+
+/**
+ * Creates a generic groupForValue function for title-based lists
+ */
+export function createTitleGroupForValue<
+  T extends TitleGroupableItem,
+  TSortValue extends TitleSortType,
+>(): (value: T, sortValue: TSortValue) => string {
+  return (value: T, sortValue: TSortValue): string => {
+    switch (sortValue) {
+      case "grade-asc":
+      case "grade-desc": {
+        return value.grade || "Unreviewed";
+      }
+      case "release-date-asc":
+      case "release-date-desc": {
+        return value.releaseYear;
+      }
+      case "review-date-asc":
+      case "review-date-desc": {
+        if (!value.reviewYear) {
+          return "Unreviewed";
+        }
+        if (value.reviewMonth) {
+          return `${value.reviewMonth} ${value.reviewYear}`;
+        }
+        return value.reviewYear;
+      }
+      case "title-asc":
+      case "title-desc": {
+        return getGroupLetter(value.sortTitle);
+      }
+      default: {
+        // Exhaustive check
+        const _exhaustive: never = sortValue;
+        throw new Error(`Unknown sort value: ${String(_exhaustive)}`);
+      }
+    }
   };
 }
 
@@ -173,6 +259,10 @@ export function handleGradeFilterAction<
     : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
 }
 
+// ============================================================================
+// Title-specific Sort Functions
+// ============================================================================
+
 /**
  * Handle Release Year filter action for titles
  */
@@ -222,10 +312,6 @@ export function handleReviewStatusFilterAction<
     ? { ...baseState, ...extendedState }
     : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
 }
-
-// ============================================================================
-// Title-specific Sort Functions
-// ============================================================================
 
 /**
  * Handle Review Year filter action for titles
@@ -293,6 +379,10 @@ export function handleTitleFilterAction<
     : (baseState as ListWithFiltersState<TItem, TSortValue> & TExtendedState);
 }
 
+// ============================================================================
+// Private Filter Creation Functions
+// ============================================================================
+
 export function sortGrade<T extends { gradeValue?: null | number }>() {
   return {
     "grade-asc": (a: T, b: T) =>
@@ -310,10 +400,6 @@ export function sortReleaseDate<T extends { releaseSequence: string }>() {
       sortString(a.releaseSequence, b.releaseSequence) * -1,
   };
 }
-
-// ============================================================================
-// Private Filter Creation Functions
-// ============================================================================
 
 export function sortReviewDate<T extends { reviewSequence?: null | string }>() {
   return {
@@ -347,11 +433,19 @@ function createGradeFilter(minGradeValue: number, maxGradeValue: number) {
   };
 }
 
+// ============================================================================
+// Title-specific State Types
+// ============================================================================
+
 function createReleaseYearFilter(minYear: string, maxYear: string) {
   return <T extends { releaseYear: string }>(item: T) => {
     return item.releaseYear >= minYear && item.releaseYear <= maxYear;
   };
 }
+
+// ============================================================================
+// Show More Handling
+// ============================================================================
 
 function createReviewStatusFilter(status: string) {
   return <T extends { slug: string | undefined }>(item: T): boolean => {
@@ -367,10 +461,6 @@ function createReviewStatusFilter(status: string) {
   };
 }
 
-// ============================================================================
-// Title-specific State Types
-// ============================================================================
-
 function createReviewYearFilter(minYear: string, maxYear: string) {
   return <T extends { reviewYear?: string }>(item: T) => {
     const year = item.reviewYear;
@@ -380,7 +470,7 @@ function createReviewYearFilter(minYear: string, maxYear: string) {
 }
 
 // ============================================================================
-// Show More Handling
+// Generic Group Function Builder
 // ============================================================================
 
 function createTitleFilter(value: string | undefined) {

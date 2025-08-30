@@ -1,5 +1,6 @@
 import type { ListWithFiltersState } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import type {
+  CastAndCrewMemberSort,
   TitleFilterValues,
   TitlesActionType,
 } from "~/components/ListWithFilters/titlesReducerUtils";
@@ -12,6 +13,7 @@ import {
 } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import {
   createPaginatedGroupFn,
+  createTitleGroupForValue,
   handleGenreFilterAction,
   handleGradeFilterAction,
   handleReleaseYearFilterAction,
@@ -29,7 +31,6 @@ import {
 import {
   buildGroupValues,
   buildSortValues,
-  getGroupLetter,
 } from "~/components/utils/reducerUtils";
 
 /**
@@ -45,15 +46,8 @@ export type CastAndCrewMemberFilterValues = TitleFilterValues & {
   creditedAs?: string;
 };
 
-export type Sort =
-  | "grade-asc"
-  | "grade-desc"
-  | "release-date-asc"
-  | "release-date-desc"
-  | "review-date-asc"
-  | "review-date-desc"
-  | "title-asc"
-  | "title-desc";
+// Re-export sort type for convenience
+export type Sort = CastAndCrewMemberSort;
 
 // Re-export actions for component convenience
 export const Actions = {
@@ -74,32 +68,8 @@ type State = ListWithFiltersState<ListItemValue, Sort> & {
   showCount: number;
 };
 
-// Helper functions
-function getReviewDateGroup(value: ListItemValue): string {
-  return value.reviewYear || "Unreviewed";
-}
-
-function groupForValue(value: ListItemValue, sortValue: Sort): string {
-  switch (sortValue) {
-    case "grade-asc":
-    case "grade-desc": {
-      return value.grade || "Unreviewed";
-    }
-    case "release-date-asc":
-    case "release-date-desc": {
-      return value.releaseYear;
-    }
-    case "review-date-asc":
-    case "review-date-desc": {
-      return getReviewDateGroup(value);
-    }
-    case "title-asc":
-    case "title-desc": {
-      return getGroupLetter(value.sortTitle);
-    }
-    // no default
-  }
-}
+// Create the groupForValue function using the generic builder
+const groupForValue = createTitleGroupForValue<ListItemValue, Sort>();
 
 const sortValues = buildSortValues<ListItemValue, Sort>({
   ...sortGrade<ListItemValue>(),

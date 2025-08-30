@@ -1,7 +1,6 @@
-import {
-  TitleFilters,
-  type TitleFilterValues,
-} from "~/components/TitleFilters";
+import type { TitleFilterValues } from "~/components/ListWithFilters/titlesReducerUtils";
+
+import { TitleFilters } from "~/components/TitleFilters";
 import { TitleSortOptions } from "~/components/TitleSortOptions";
 
 import type { ActionType } from "./reducer";
@@ -24,7 +23,7 @@ export function Filters({
   return (
     <TitleFilters
       genre={{
-        initialValue: filterValues.genres,
+        initialValue: filterValues.genre,
         onChange: (values) =>
           dispatch({
             type: Actions.PENDING_FILTER_GENRES,
