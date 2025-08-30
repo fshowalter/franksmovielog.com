@@ -17,7 +17,7 @@ import {
   handleGenreFilterAction,
   handleGradeFilterAction,
   handleReleaseYearFilterAction,
-  handleReviewStatusFilterAction,
+  handleReviewedStatusFilterAction,
   handleReviewYearFilterAction,
   handleShowMore,
   handleTitleFilterAction,
@@ -137,8 +137,8 @@ export function reducer(state: State, action: ActionType): State {
       });
     }
 
-    case TitlesActions.PENDING_FILTER_REVIEW_STATUS: {
-      return handleReviewStatusFilterAction(state, action, {
+    case TitlesActions.PENDING_FILTER_REVIEWED_STATUS: {
+      return handleReviewedStatusFilterAction(state, action, {
         showCount: state.showCount,
       });
     }

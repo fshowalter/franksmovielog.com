@@ -9,7 +9,11 @@ import type {
 } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 
 import { updatePendingFilter } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
-import { sortNumber, sortString } from "~/components/utils/reducerUtils";
+import {
+  getGroupLetter,
+  sortNumber,
+  sortString,
+} from "~/components/utils/reducerUtils";
 
 /**
  * Collection-specific filter actions
@@ -25,14 +29,14 @@ export type CollectionFilterValues = {
   name?: string;
 };
 
-// ============================================================================
-// Collection-specific Action Types
-// ============================================================================
-
 // Union type for all collection-specific actions
 export type CollectionsActionType<TSortValue = unknown> =
   | ListWithFiltersActionType<TSortValue>
   | PendingFilterNameAction;
+
+// ============================================================================
+// Collection-specific Action Types
+// ============================================================================
 
 /**
  * Specialized state type for collection-based lists with typed filter values
@@ -45,10 +49,45 @@ export type CollectionsListState<TItem, TSortValue> = Omit<
   pendingFilterValues: CollectionFilterValues;
 };
 
+export type CollectionsSortType =
+  | "name-asc"
+  | "name-desc"
+  | "review-count-asc"
+  | "review-count-desc";
+
+/**
+ * Base type for items that can be grouped by common title sorts
+ */
+export type GroupableCollectionItem = {
+  name: string;
+  reviewCount: number;
+};
+
 type PendingFilterNameAction = {
   type: CollectionsActions.PENDING_FILTER_NAME;
   value: string;
 };
+
+/**
+ * Creates a generic groupForValue function for title-based lists
+ */
+export function createCollectionGroupForValue<
+  T extends GroupableCollectionItem,
+  TSortValue extends CollectionsSortType,
+>(): (value: T, sortValue: TSortValue) => string {
+  return (value: T, sortValue: TSortValue): string => {
+    switch (sortValue) {
+      case "name-asc":
+      case "name-desc": {
+        return getGroupLetter(value.name);
+      }
+      case "review-count-asc":
+      case "review-count-desc": {
+        return "";
+      }
+    }
+  };
+}
 
 // ============================================================================
 // Collection-specific Filter Handlers

@@ -1,6 +1,7 @@
 import type {
   CollectionsActionType,
   CollectionsListState,
+  CollectionsSortType,
 } from "~/components/ListWithFilters/collectionsReducerUtils";
 
 import {
@@ -21,11 +22,7 @@ import type { ListItemValue } from "./Collections";
 
 export type ActionType = CollectionsActionType<Sort>;
 
-export type Sort =
-  | "name-asc"
-  | "name-desc"
-  | "review-count-asc"
-  | "review-count-desc";
+export type Sort = CollectionsSortType;
 
 type State = CollectionsListState<ListItemValue, Sort>;
 

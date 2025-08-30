@@ -68,7 +68,7 @@ export function Filters({
           initialValue: filterValues.reviewedStatus,
           onChange: (value) =>
             dispatch({
-              type: Actions.PENDING_FILTER_REVIEW_STATUS,
+              type: Actions.PENDING_FILTER_REVIEWED_STATUS,
               value,
             }),
         }}

@@ -84,6 +84,7 @@
 
   --width-list-item-poster: var(--list-item-poster-width);
 
+  --drop-shadow-sm: var(--drop-shadow-sm);
   --drop-shadow-2xl: var(--drop-shadow-2xl);
 }
 
@@ -122,6 +123,7 @@
       rgb(0 0 0 / 17%) 75%,
       rgb(0 0 0 / 55%) 100%
     );
+    --drop-shadow-sm: 0 1px 2px rgb(0 0 0 / 15%);
     --drop-shadow-md: 0 3px 3px rgb(0 0 0 / 12%);
     --drop-shadow-2xl: 0 25px 25px rgb(0 0 0 / 15%);
     --drop-shadow-lg: 0 4px 4px rgb(0 0 0 / 15%);
@@ -168,6 +170,7 @@
       --fg-subtle: #b2b0b0;
       --image-filter: brightness(0.8) contrast(1);
       --hero-gradient: unset;
+      --drop-shadow-sm: 0 1px 2px rgb(0 0 0 / 80%);
       --drop-shadow-md: 0 3px 3px rgb(0 0 0 / 80%);
       --drop-shadow-2xl: 0 25px 25px rgb(0 0 0 / 65%);
       --drop-shadow-lg: 0 4px 4px rgb(0 0 0 / 25%);

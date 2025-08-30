@@ -30,7 +30,7 @@ export function Filters({
         initialValue={filterValues.creditedAs}
         onChange={(value) =>
           dispatch({
-            type: Actions.PENDING_FILTER_CREDIT_KIND,
+            type: Actions.PENDING_FILTER_CREDITED_AS,
             value: value,
           })
         }

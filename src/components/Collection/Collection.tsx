@@ -6,19 +6,22 @@ import type { Collection, CollectionWithDetails } from "~/api/collections";
 import type { PosterImageProps } from "~/api/posters";
 
 import { ListItemDetails } from "~/components/ListItemDetails";
+import { ListItemGenres } from "~/components/ListItemGenres";
 import { ListItemGrade } from "~/components/ListItemGrade";
 import { ListItemReviewDate } from "~/components/ListItemReviewDate";
 import { ListItemTitle } from "~/components/ListItemTitle";
 import { ListWithFilters } from "~/components/ListWithFilters/ListWithFilters";
 import { GroupedPosterList, PosterListItem } from "~/components/PosterList";
+import { TitleSortOptions } from "~/components/TitleSortOptions";
 
 import type { Sort } from "./Collection.reducer";
 
 import { Actions, initState, reducer } from "./Collection.reducer";
-import { Filters, SortOptions } from "./Filters";
+import { Filters } from "./Filters";
 
 export type ListItemValue = Pick<
-  Collection["titles"][0],
+  Collection["titles"][number],
+  | "genres"
   | "grade"
   | "gradeValue"
   | "imdbId"
@@ -35,6 +38,7 @@ export type ListItemValue = Pick<
 };
 
 export type Props = {
+  distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   initialSort: Sort;
@@ -46,6 +50,7 @@ export type Props = {
 };
 
 export function Collection({
+  distinctGenres,
   distinctReleaseYears,
   distinctReviewYears,
   initialSort,
@@ -66,6 +71,7 @@ export function Collection({
       filters={
         <Filters
           dispatch={dispatch}
+          distinctGenres={distinctGenres}
           distinctReleaseYears={distinctReleaseYears}
           distinctReviewYears={distinctReviewYears}
           filterValues={state.pendingFilterValues}
@@ -105,7 +111,11 @@ export function Collection({
             type: Actions.SORT,
             value: e.target.value as Sort,
           }),
-        sortOptions: <SortOptions />,
+        sortOptions: (
+          <TitleSortOptions
+            options={["grade", "release-date", "review-date", "title"]}
+          />
+        ),
       }}
       totalCount={state.filteredValues.length}
     />
@@ -126,6 +136,7 @@ function CollectionListItem({ value }: { value: ListItemValue }): JSX.Element {
         />
         {value.grade && <ListItemGrade grade={value.grade} />}
         <ListItemReviewDate displayDate={value.reviewDisplayDate} />
+        <ListItemGenres values={value.genres} />
       </ListItemDetails>
     </PosterListItem>
   );

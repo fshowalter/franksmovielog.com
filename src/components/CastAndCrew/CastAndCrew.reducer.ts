@@ -2,10 +2,12 @@ import type {
   CollectionFilterValues,
   CollectionsActionType,
   CollectionsListState,
+  CollectionsSortType,
 } from "~/components/ListWithFilters/collectionsReducerUtils";
 
 import {
   CollectionsActions,
+  createCollectionGroupForValue,
   handleNameFilterAction,
   sortName,
   sortReviewCount,
@@ -18,7 +20,6 @@ import {
 import {
   buildGroupValues,
   buildSortValues,
-  getGroupLetter,
 } from "~/components/utils/reducerUtils";
 
 /**
@@ -27,7 +28,7 @@ import {
 import type { ListItemValue } from "./CastAndCrew";
 
 enum CastAndCrewActions {
-  PENDING_FILTER_CREDIT_KIND = "PENDING_FILTER_CREDIT_KIND",
+  PENDING_FILTER_CREDITED_AS = "PENDING_FILTER_CREDITED_AS",
 }
 
 export type CastAndCrewFilterValues = CollectionFilterValues & {
@@ -45,36 +46,22 @@ export const Actions = {
 
 export type ActionType =
   | CollectionsActionType<Sort>
-  | PendingFilterCreditKindAction;
+  | PendingFilterCreditedAsAction;
 
-export type Sort =
-  | "name-asc"
-  | "name-desc"
-  | "review-count-asc"
-  | "review-count-desc";
+export type Sort = CollectionsSortType;
 
 // CastAndCrew-specific action
-type PendingFilterCreditKindAction = {
-  type: CastAndCrewActions.PENDING_FILTER_CREDIT_KIND;
+type PendingFilterCreditedAsAction = {
+  type: CastAndCrewActions.PENDING_FILTER_CREDITED_AS;
   value: string;
 };
 
 type State = CollectionsListState<ListItemValue, Sort>;
 
-// Helper functions
-function groupForValue(item: ListItemValue, sortValue: Sort): string {
-  switch (sortValue) {
-    case "name-asc":
-    case "name-desc": {
-      return getGroupLetter(item.name);
-    }
-    case "review-count-asc":
-    case "review-count-desc": {
-      return "";
-    }
-    // no default
-  }
-}
+const groupForValue = createCollectionGroupForValue<
+  ListItemValue,
+  CollectionsSortType
+>();
 
 const sortValues = buildSortValues<ListItemValue, Sort>({
   ...sortName<ListItemValue>(),
@@ -101,7 +88,7 @@ export function initState({
 
 export function reducer(state: State, action: ActionType): State {
   switch (action.type) {
-    case CastAndCrewActions.PENDING_FILTER_CREDIT_KIND: {
+    case CastAndCrewActions.PENDING_FILTER_CREDITED_AS: {
       const typedAction = action;
       const filterFn =
         typedAction.value && typedAction.value !== "All"

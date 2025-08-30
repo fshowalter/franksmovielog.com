@@ -1,4 +1,4 @@
-import { render, screen, within } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import { getGroupedAvatarList } from "~/components/AvatarList.testHelper";
@@ -6,7 +6,10 @@ import {
   fillNameFilter,
   getNameFilter,
 } from "~/components/CollectionFilters.testHelper";
-import { clickCreditedAsFilter } from "~/components/CreditedAsFilter.testHelper";
+import {
+  clickCreditedAsFilter,
+  getCreditedAsFilter,
+} from "~/components/CreditedAsFilter.testHelper";
 import {
   clickClearFilters,
   clickCloseFilters,
@@ -282,8 +285,8 @@ describe("CastAndCrew", () => {
     await clickClearFilters(user);
 
     // Check that filters are cleared
-    expect(screen.getByLabelText("Name")).toHaveValue("");
-    expect(screen.getByLabelText("Credited As")).toHaveValue("All");
+    expect(getNameFilter()).toHaveValue("");
+    expect(getCreditedAsFilter()).toHaveValue("All");
 
     await clickViewResults(user);
 
@@ -310,9 +313,6 @@ describe("CastAndCrew", () => {
     // Store the count of filtered results
     const filteredList = getGroupedAvatarList();
 
-    const filteredCount =
-      within(filteredList).queryAllByRole("listitem").length;
-
     // Open filter drawer again
     await clickToggleFilters(user);
 
@@ -324,8 +324,7 @@ describe("CastAndCrew", () => {
 
     // The list should still show the originally filtered results
     const listAfterReset = getGroupedAvatarList();
-    const resetCount = within(listAfterReset).queryAllByRole("listitem").length;
-    expect(resetCount).toBe(filteredCount);
+    expect(filteredList).toEqual(listAfterReset);
 
     // Open filter drawer again to verify filters were reset to last applied state
     await clickToggleFilters(user);

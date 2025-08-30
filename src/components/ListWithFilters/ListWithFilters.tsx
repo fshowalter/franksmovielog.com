@@ -259,7 +259,7 @@ export function ListWithFilters<T extends string>({
                 className={`
                   absolute top-7 right-4 z-10 flex h-10 w-10 transform-gpu
                   cursor-pointer items-center justify-center rounded-full
-                  bg-canvas text-default drop-shadow-md transition-transform
+                  bg-canvas text-default drop-shadow-sm transition-transform
                   hover:scale-105 hover:drop-shadow-md
                   ${isClosing ? "pointer-events-none" : ""}
                 `}

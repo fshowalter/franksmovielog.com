@@ -6,13 +6,14 @@ import type { AvatarImageProps } from "~/api/avatars";
 import type { Collection } from "~/api/collections";
 
 import { AvatarListItem } from "~/components/AvatarList";
+import { CollectionSortOptions } from "~/components/CollectionSortOptions";
 import { ListItemName } from "~/components/ListItemName";
 import { ListWithFilters } from "~/components/ListWithFilters/ListWithFilters";
 
 import type { Sort } from "./Collections.reducer";
 
 import { Actions, initState, reducer } from "./Collections.reducer";
-import { Filters, SortOptions } from "./Filters";
+import { Filters } from "./Filters";
 
 export type ListItemValue = Pick<
   Collection,
@@ -42,8 +43,8 @@ export function Collections({ initialSort, values }: Props): JSX.Element {
       filters={
         <Filters
           dispatch={dispatch}
-          filterKey={String(filterKey)}
           filterValues={state.pendingFilterValues}
+          key={filterKey}
         />
       }
       hasActiveFilters={state.hasActiveFilters}
@@ -79,7 +80,9 @@ export function Collections({ initialSort, values }: Props): JSX.Element {
             type: Actions.SORT,
             value: e.target.value as Sort,
           }),
-        sortOptions: <SortOptions />,
+        sortOptions: (
+          <CollectionSortOptions options={["name", "review-count"]} />
+        ),
       }}
       totalCount={state.filteredValues.length}
     />

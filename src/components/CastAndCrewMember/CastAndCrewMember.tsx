@@ -22,7 +22,7 @@ import { Actions, initState, reducer } from "./CastAndCrewMember.reducer";
 import { Filters } from "./Filters";
 
 export type ListItemValue = Pick<
-  CastAndCrewMember["titles"][0],
+  CastAndCrewMember["titles"][number],
   | "creditedAs"
   | "genres"
   | "grade"

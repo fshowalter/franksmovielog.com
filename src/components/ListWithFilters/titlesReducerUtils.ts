@@ -40,8 +40,8 @@ export enum TitlesActions {
   PENDING_FILTER_GENRES = "PENDING_FILTER_GENRES",
   PENDING_FILTER_GRADE = "PENDING_FILTER_GRADE",
   PENDING_FILTER_RELEASE_YEAR = "PENDING_FILTER_RELEASE_YEAR",
-  PENDING_FILTER_REVIEW_STATUS = "PENDING_FILTER_REVIEW_STATUS",
   PENDING_FILTER_REVIEW_YEAR = "PENDING_FILTER_REVIEW_YEAR",
+  PENDING_FILTER_REVIEWED_STATUS = "PENDING_FILTER_REVIEW_STATUS",
   PENDING_FILTER_TITLE = "PENDING_FILTER_TITLE",
   SHOW_MORE = "SHOW_MORE",
 }
@@ -52,14 +52,9 @@ export enum TitlesActions {
 export type CastAndCrewMemberSort = TitleSortType;
 
 /**
- * Sort types for reviews (all title sorts)
- */
-export type ReviewsSort = TitleSortType;
-
-/**
  * Base type for items that can be grouped by common title sorts
  */
-export type TitleGroupableItem = {
+export type GroupableTitleItem = {
   grade?: string;
   releaseYear: string;
   reviewMonth?: string;
@@ -67,13 +62,18 @@ export type TitleGroupableItem = {
   sortTitle: string;
 };
 
+/**
+ * Sort types for reviews (all title sorts)
+ */
+export type ReviewsSort = TitleSortType;
+
 // Union type for all title-specific actions
 export type TitlesActionType<TSortValue = unknown> =
   | ListWithFiltersActionType<TSortValue>
   | PendingFilterGenresAction
   | PendingFilterGradeAction
   | PendingFilterReleaseYearAction
-  | PendingFilterReviewStatusAction
+  | PendingFilterReviewedStatusAction
   | PendingFilterReviewYearAction
   | PendingFilterTitleAction
   | ShowMoreAction;
@@ -106,14 +106,6 @@ export type TitleSortType =
   | "title-asc"
   | "title-desc";
 
-/**
- * Sort types for watchlist (subset of title sorts)
- */
-export type WatchlistSort = Extract<
-  TitleSortType,
-  "release-date-asc" | "release-date-desc" | "title-asc" | "title-desc"
->;
-
 type PendingFilterGenresAction = {
   type: TitlesActions.PENDING_FILTER_GENRES;
   values: string[];
@@ -129,8 +121,8 @@ type PendingFilterReleaseYearAction = {
   values: [string, string];
 };
 
-type PendingFilterReviewStatusAction = {
-  type: TitlesActions.PENDING_FILTER_REVIEW_STATUS;
+type PendingFilterReviewedStatusAction = {
+  type: TitlesActions.PENDING_FILTER_REVIEWED_STATUS;
   value: string;
 };
 
@@ -172,7 +164,7 @@ export function createPaginatedGroupFn<TItem, TSortValue>(
  * Creates a generic groupForValue function for title-based lists
  */
 export function createTitleGroupForValue<
-  T extends TitleGroupableItem,
+  T extends GroupableTitleItem,
   TSortValue extends TitleSortType,
 >(): (value: T, sortValue: TSortValue) => string {
   return (value: T, sortValue: TSortValue): string => {
@@ -198,11 +190,6 @@ export function createTitleGroupForValue<
       case "title-asc":
       case "title-desc": {
         return getGroupLetter(value.sortTitle);
-      }
-      default: {
-        // Exhaustive check
-        const _exhaustive: never = sortValue;
-        throw new Error(`Unknown sort value: ${String(_exhaustive)}`);
       }
     }
   };
@@ -291,13 +278,13 @@ export function handleReleaseYearFilterAction<
 /**
  * Handle Review Status filter action for titles
  */
-export function handleReviewStatusFilterAction<
+export function handleReviewedStatusFilterAction<
   TItem extends { slug: string | undefined },
   TSortValue,
   TExtendedState extends Record<string, unknown> = Record<string, never>,
 >(
   state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
-  action: PendingFilterReviewStatusAction,
+  action: PendingFilterReviewedStatusAction,
   extendedState?: TExtendedState,
 ): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
   const filterFn = createReviewStatusFilter(action.value);
