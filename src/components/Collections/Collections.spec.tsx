@@ -1,9 +1,19 @@
-import { act, render, screen, within } from "@testing-library/react";
-import { userEvent } from "@testing-library/user-event";
+import { render } from "@testing-library/react";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
-import { DRAWER_CLOSE_ANIMATION_MS } from "~/components/ListWithFilters/ListWithFilters";
-import { TEXT_FILTER_DEBOUNCE_MS } from "~/components/TextFilter";
+import { getAvatarList } from "~/components/AvatarList.testHelper";
+import {
+  fillNameFilter,
+  getNameFilter,
+} from "~/components/CollectionFilters.testHelper";
+import {
+  clickClearFilters,
+  clickCloseFilters,
+  clickSortOption,
+  clickToggleFilters,
+  clickViewResults,
+} from "~/components/ListWithFilters/ListWithFilters.testHelper";
+import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
 import { Collections } from "./Collections";
 import { getProps } from "./getProps";
@@ -29,171 +39,140 @@ describe("Collections", () => {
   it("can filter by name", async ({ expect }) => {
     expect.hasAssertions();
 
-    // Setup userEvent with advanceTimers
-    const user = userEvent.setup({
-      advanceTimers: vi.advanceTimersByTime,
-    });
+    const user = getUserWithFakeTimers();
 
     render(<Collections {...props} />);
 
     // Open filter drawer
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Type the filter text
-    await user.type(screen.getByLabelText("Name"), "Friday the 13th");
-    act(() => {
-      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
-    });
+    await fillNameFilter(user, "Friday the 13th");
 
     // Apply the filter
-    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+    await clickViewResults(user);
 
     // List updates synchronously with fake timers
-
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(getAvatarList()).toMatchSnapshot();
   });
 
   it("can sort by name desc", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<Collections {...props} />);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Name (Z → A)",
-    );
+    await clickSortOption(user, "Name (Z → A)");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(getAvatarList()).toMatchSnapshot();
   });
 
   it("can sort by name asc", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<Collections {...props} />);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Name (A → Z)",
-    );
+    await clickSortOption(user, "Name (A → Z)");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(getAvatarList()).toMatchSnapshot();
   });
 
   it("can sort by review count desc", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<Collections {...props} />);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Review Count (Most First)",
-    );
+    await clickSortOption(user, "Review Count (Most First)");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(getAvatarList()).toMatchSnapshot();
   });
 
   it("can sort by review count asc", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<Collections {...props} />);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Review Count (Fewest First)",
-    );
+    await clickSortOption(user, "Review Count (Fewest First)");
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    expect(getAvatarList()).toMatchSnapshot();
   });
 
   it("can clear all filters", async ({ expect }) => {
     expect.hasAssertions();
 
-    // Setup userEvent with advanceTimers
-    const user = userEvent.setup({
-      advanceTimers: vi.advanceTimersByTime,
-    });
+    const user = getUserWithFakeTimers();
 
     render(<Collections {...props} />);
 
     // Open filter drawer
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Apply filter
-    await user.type(screen.getByLabelText("Name"), "Universal");
-    act(() => {
-      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
-    });
+    await fillNameFilter(user, "Universal");
 
-    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+    await clickViewResults(user);
+
+    const listBeforeClear = getAvatarList().innerHTML;
 
     // Open filter drawer again
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Clear all filters
-    await user.click(screen.getByRole("button", { name: "Clear all filters" }));
+    await clickClearFilters(user);
 
     // Check that filters are cleared
-    expect(screen.getByLabelText("Name")).toHaveValue("");
+    expect(getNameFilter()).toHaveValue("");
 
-    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+    await clickViewResults(user);
 
-    expect(screen.getByTestId("list")).toMatchSnapshot();
+    const listAfterClear = getAvatarList().innerHTML;
+
+    expect(listBeforeClear).not.toEqual(listAfterClear);
   });
 
   it("can reset filters when closing drawer", async ({ expect }) => {
     expect.hasAssertions();
 
-    // Setup userEvent with advanceTimers
-    const user = userEvent.setup({
-      advanceTimers: vi.advanceTimersByTime,
-    });
+    const user = getUserWithFakeTimers();
 
     render(<Collections {...props} />);
 
     // Open filter drawer
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
-    // Apply initial filter
-    await user.type(screen.getByLabelText("Name"), "Universal");
-    act(() => {
-      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
-    });
+    // Apply filter
+    await fillNameFilter(user, "Universal");
 
-    // Apply the filters
-    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+    await clickViewResults(user);
 
-    // Store the count of filtered results
-    const filteredList = screen.getByTestId("list");
-    const filteredCount =
-      within(filteredList).queryAllByRole("listitem").length;
+    const listBeforeReset = getAvatarList().innerHTML;
 
     // Open filter drawer again
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Start typing a new filter but don't apply
-    await user.clear(screen.getByLabelText("Name"));
-    await user.type(screen.getByLabelText("Name"), "Different");
-    act(() => {
-      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
-    });
+    await user.clear(getNameFilter());
+    await fillNameFilter(user, "Different");
 
     // Close the drawer with the X button (should reset pending changes)
-    await user.click(screen.getByRole("button", { name: "Close filters" }));
-
-    // Wait for drawer close animation
-    act(() => {
-      vi.advanceTimersByTime(DRAWER_CLOSE_ANIMATION_MS);
-    });
+    await clickCloseFilters(user);
 
     // The list should still show the originally filtered results
-    const listAfterReset = screen.getByTestId("list");
-    const resetCount = within(listAfterReset).queryAllByRole("listitem").length;
-    expect(resetCount).toBe(filteredCount);
+    const listAfterReset = getAvatarList().innerHTML;
+
+    expect(listBeforeReset).toEqual(listAfterReset);
 
     // Open filter drawer again to verify filters were reset to last applied state
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Should show the originally applied filter, not the pending change
-    expect(screen.getByLabelText("Name")).toHaveValue("Universal");
+    expect(getNameFilter()).toHaveValue("Universal");
   });
 });

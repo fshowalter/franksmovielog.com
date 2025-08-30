@@ -11,7 +11,7 @@ export function YearInput({
   onYearChange,
   years,
 }: {
-  initialValues?: string[];
+  initialValues: string[] | undefined;
   label: string;
   onYearChange: (values: [string, string]) => void;
   years: readonly string[];

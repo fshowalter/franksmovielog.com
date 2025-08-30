@@ -517,7 +517,10 @@ exports[`Home > matches snapshot 1`] = `
         </div>
       </header>
       <main
-        class="grow bg-subtle pb-8"
+        class="
+            grow
+            bg-subtle pb-8
+          "
         id="content"
       >
         <header

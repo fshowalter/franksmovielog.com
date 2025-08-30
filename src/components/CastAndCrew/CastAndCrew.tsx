@@ -7,6 +7,7 @@ import type { CastAndCrewMember } from "~/api/castAndCrew";
 
 import { AvatarListItem } from "~/components/AvatarList";
 import { GroupedAvatarList } from "~/components/AvatarList";
+import { CollectionSortOptions } from "~/components/CollectionSortOptions";
 import { CreditedAs } from "~/components/CreditedAs";
 import { ListItemName } from "~/components/ListItemName";
 import { ListWithFilters } from "~/components/ListWithFilters/ListWithFilters";
@@ -14,7 +15,7 @@ import { ListWithFilters } from "~/components/ListWithFilters/ListWithFilters";
 import type { Sort } from "./CastAndCrew.reducer";
 
 import { Actions, initState, reducer } from "./CastAndCrew.reducer";
-import { Filters, SortOptions } from "./Filters";
+import { Filters } from "./Filters";
 
 export type ListItemValue = Pick<
   CastAndCrewMember,
@@ -88,7 +89,9 @@ export function CastAndCrew({ initialSort, values }: Props): JSX.Element {
             type: Actions.SORT,
             value: e.target.value as Sort,
           }),
-        sortOptions: <SortOptions />,
+        sortOptions: (
+          <CollectionSortOptions options={["name", "review-count"]} />
+        ),
       }}
       totalCount={state.filteredValues.length}
     />

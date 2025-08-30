@@ -1,4 +1,4 @@
-import { ReviewedStatusField } from "~/components/ReviewedStatusField";
+import { ReviewedStatusFilter } from "~/components/ReviewedStatusFilter";
 import { SelectField } from "~/components/SelectField";
 import { SelectOptions } from "~/components/SelectOptions";
 import { TextFilter } from "~/components/TextFilter";
@@ -11,6 +11,7 @@ import { Actions } from "./Viewings.reducer";
 type FilterValues = {
   medium?: string;
   releaseYears?: string[];
+  reviewStatus?: string;
   title?: string;
   venue?: string;
   viewingYears?: string[];
@@ -33,11 +34,12 @@ export function Filters({
 }) {
   return (
     <>
-      <ReviewedStatusField
-        onChange={(e) =>
+      <ReviewedStatusFilter
+        initialValue={filterValues.reviewStatus}
+        onChange={(value) =>
           dispatch({
-            type: Actions.PENDING_FILTER_REVIEW_STATUS,
-            value: e.target.value,
+            type: Actions.PENDING_FILTER_REVIEWED_STATUS,
+            value,
           })
         }
       />
@@ -66,22 +68,24 @@ export function Filters({
         years={distinctViewingYears}
       />
       <SelectField
+        initialValue={filterValues.medium}
         label="Medium"
-        onChange={(e) =>
+        onChange={(value) =>
           dispatch({
             type: Actions.PENDING_FILTER_MEDIUM,
-            value: e.target.value,
+            value,
           })
         }
       >
         <SelectOptions options={distinctMedia} />
       </SelectField>
       <SelectField
+        initialValue={filterValues.venue}
         label="Venue"
-        onChange={(e) =>
+        onChange={(value) =>
           dispatch({
             type: Actions.PENDING_FILTER_VENUE,
-            value: e.target.value,
+            value,
           })
         }
       >

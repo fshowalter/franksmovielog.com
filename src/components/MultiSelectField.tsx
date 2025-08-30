@@ -115,15 +115,19 @@ const determineDropdownLayout = (
 };
 
 export function MultiSelectField({
+  initialValues,
   label,
   onChange,
   options,
 }: {
+  initialValues: readonly string[] | undefined;
   label: string;
   onChange: (values: string[]) => void;
   options: readonly string[];
 }) {
-  const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
+  const [selectedOptions, setSelectedOptions] = useState<string[]>(
+    initialValues ? [...initialValues] : [],
+  );
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownMaxHeight, setDropdownMaxHeight] = useState("15rem");
   const [dropdownPosition, setDropdownPosition] = useState<"above" | "below">(

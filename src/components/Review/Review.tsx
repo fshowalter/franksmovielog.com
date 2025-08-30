@@ -9,7 +9,6 @@ import { Layout } from "~/components/Layout";
 import { MoreReviews } from "~/components/MoreReviews";
 import { Still } from "~/components/Still";
 import { SubHeading } from "~/components/SubHeading";
-import { ccn } from "~/utils/concatClassNames";
 
 import { Content } from "./Content";
 import { Credits } from "./Credits";
@@ -212,10 +211,10 @@ function Meta({
 
   return (
     <div
-      className={ccn(
-        "text-center font-sans text-sm tracking-wide text-subtle uppercase",
-        className,
-      )}
+      className={`
+        text-center font-sans text-sm tracking-wide text-subtle uppercase
+        ${className ?? ""}
+      `}
     >
       {releaseYear} <span>|</span> {allCountries} <span>|</span>{" "}
       {runtimeMinutes}
@@ -224,7 +223,7 @@ function Meta({
         <span>|</span>{" "}
         <a
           className={`
-            relative -mb-1 inline-block origin-bottom-left pb-1 text-[#333]
+            relative -mb-1 inline-block origin-bottom-left pb-1 text-default
             after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
             after:origin-left after:scale-x-0 after:bg-(--fg-default)/80
             after:transition-transform

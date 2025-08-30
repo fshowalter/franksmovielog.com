@@ -19,8 +19,12 @@ type PageProps = Props & {
 };
 
 export async function getProps(slug: string): Promise<PageProps> {
-  const { collection, distinctReleaseYears, distinctReviewYears } =
-    await collectionDetails(slug);
+  const {
+    collection,
+    distinctGenres,
+    distinctReleaseYears,
+    distinctReviewYears,
+  } = await collectionDetails(slug);
 
   return {
     avatarImageProps: await getAvatarImageProps(
@@ -31,6 +35,7 @@ export async function getProps(slug: string): Promise<PageProps> {
       collection.slug,
       BackdropImageConfig,
     ),
+    distinctGenres,
     distinctReleaseYears,
     distinctReviewYears,
     initialSort: "release-date-asc",

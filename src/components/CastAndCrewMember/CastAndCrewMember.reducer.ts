@@ -1,5 +1,9 @@
 import type { ListWithFiltersState } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
-import type { TitlesActionType } from "~/components/ListWithFilters/titlesReducerUtils";
+import type {
+  CastAndCrewMemberSort,
+  TitleFilterValues,
+  TitlesActionType,
+} from "~/components/ListWithFilters/titlesReducerUtils";
 
 import {
   createInitialState,
@@ -9,10 +13,11 @@ import {
 } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import {
   createPaginatedGroupFn,
+  createTitleGroupForValue,
   handleGenreFilterAction,
   handleGradeFilterAction,
   handleReleaseYearFilterAction,
-  handleReviewStatusFilterAction,
+  handleReviewedStatusFilterAction,
   handleReviewYearFilterAction,
   handleShowMore,
   handleTitleFilterAction,
@@ -26,7 +31,6 @@ import {
 import {
   buildGroupValues,
   buildSortValues,
-  getGroupLetter,
 } from "~/components/utils/reducerUtils";
 
 /**
@@ -35,18 +39,15 @@ import {
 import type { ListItemValue } from "./CastAndCrewMember";
 
 enum CastAndCrewMemberActions {
-  PENDING_FILTER_CREDIT_KIND = "PENDING_FILTER_CREDIT_KIND",
+  PENDING_FILTER_CREDITED_AS = "PENDING_FILTER_CREDITED_AS",
 }
 
-export type Sort =
-  | "grade-asc"
-  | "grade-desc"
-  | "release-date-asc"
-  | "release-date-desc"
-  | "review-date-asc"
-  | "review-date-desc"
-  | "title-asc"
-  | "title-desc";
+export type CastAndCrewMemberFilterValues = TitleFilterValues & {
+  creditedAs?: string;
+};
+
+// Re-export sort type for convenience
+export type Sort = CastAndCrewMemberSort;
 
 // Re-export actions for component convenience
 export const Actions = {
@@ -55,11 +56,11 @@ export const Actions = {
   ...CastAndCrewMemberActions,
 } as const;
 
-export type ActionType = PendingFilterCreditKindAction | TitlesActionType<Sort>;
+export type ActionType = PendingFilterCreditedAsAction | TitlesActionType<Sort>;
 
 // CastAndCrewMember-specific actions
-type PendingFilterCreditKindAction = {
-  type: CastAndCrewMemberActions.PENDING_FILTER_CREDIT_KIND;
+type PendingFilterCreditedAsAction = {
+  type: CastAndCrewMemberActions.PENDING_FILTER_CREDITED_AS;
   value: string;
 };
 
@@ -67,32 +68,8 @@ type State = ListWithFiltersState<ListItemValue, Sort> & {
   showCount: number;
 };
 
-// Helper functions
-function getReviewDateGroup(value: ListItemValue): string {
-  return value.reviewYear || "Unreviewed";
-}
-
-function groupForValue(value: ListItemValue, sortValue: Sort): string {
-  switch (sortValue) {
-    case "grade-asc":
-    case "grade-desc": {
-      return value.grade || "Unreviewed";
-    }
-    case "release-date-asc":
-    case "release-date-desc": {
-      return value.releaseYear;
-    }
-    case "review-date-asc":
-    case "review-date-desc": {
-      return getReviewDateGroup(value);
-    }
-    case "title-asc":
-    case "title-desc": {
-      return getGroupLetter(value.sortTitle);
-    }
-    // no default
-  }
-}
+// Create the groupForValue function using the generic builder
+const groupForValue = createTitleGroupForValue<ListItemValue, Sort>();
 
 const sortValues = buildSortValues<ListItemValue, Sort>({
   ...sortGrade<ListItemValue>(),
@@ -127,15 +104,16 @@ export function initState({
 
 export function reducer(state: State, action: ActionType): State {
   switch (action.type) {
-    case CastAndCrewMemberActions.PENDING_FILTER_CREDIT_KIND: {
+    case CastAndCrewMemberActions.PENDING_FILTER_CREDITED_AS: {
       const typedAction = action;
+      const filterKey: keyof CastAndCrewMemberFilterValues = "creditedAs";
       const filterFn =
         typedAction.value && typedAction.value !== "All"
           ? (value: ListItemValue) =>
               value.creditedAs.includes(typedAction.value)
           : undefined;
       return {
-        ...updatePendingFilter(state, "credits", filterFn, typedAction.value),
+        ...updatePendingFilter(state, filterKey, filterFn, typedAction.value),
         showCount: state.showCount,
       };
     }
@@ -159,13 +137,13 @@ export function reducer(state: State, action: ActionType): State {
       });
     }
 
-    case TitlesActions.PENDING_FILTER_REVIEW_STATUS: {
-      return handleReviewStatusFilterAction(state, action, {
+    case TitlesActions.PENDING_FILTER_REVIEW_YEAR: {
+      return handleReviewYearFilterAction(state, action, {
         showCount: state.showCount,
       });
     }
-    case TitlesActions.PENDING_FILTER_REVIEW_YEAR: {
-      return handleReviewYearFilterAction(state, action, {
+    case TitlesActions.PENDING_FILTER_REVIEWED_STATUS: {
+      return handleReviewedStatusFilterAction(state, action, {
         showCount: state.showCount,
       });
     }

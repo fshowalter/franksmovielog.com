@@ -13,7 +13,7 @@ import {
 } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import {
   handleReleaseYearFilterAction,
-  handleReviewStatusFilterAction,
+  handleReviewedStatusFilterAction,
   handleTitleFilterAction,
   TitlesActions,
 } from "~/components/ListWithFilters/titlesReducerUtils";
@@ -41,7 +41,7 @@ export type ActionType =
       TitlesActionType<Sort>,
       | ListWithFiltersActionType<Sort>
       | { type: TitlesActions.PENDING_FILTER_RELEASE_YEAR }
-      | { type: TitlesActions.PENDING_FILTER_REVIEW_STATUS }
+      | { type: TitlesActions.PENDING_FILTER_REVIEWED_STATUS }
       | { type: TitlesActions.PENDING_FILTER_TITLE }
     >
   | NextMonthAction
@@ -146,8 +146,8 @@ export function reducer(state: State, action: ActionType): State {
         prevMonth: state.prevMonth,
       });
     }
-    case TitlesActions.PENDING_FILTER_REVIEW_STATUS: {
-      return handleReviewStatusFilterAction(state, action, {
+    case TitlesActions.PENDING_FILTER_REVIEWED_STATUS: {
+      return handleReviewedStatusFilterAction(state, action, {
         currentMonth: state.currentMonth,
         hasNextMonth: state.hasNextMonth,
         hasPrevMonth: state.hasPrevMonth,

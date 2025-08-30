@@ -43,6 +43,7 @@ export async function allCollections(): Promise<{
 
 export async function collectionDetails(slug: string): Promise<{
   collection: CollectionWithDetails;
+  distinctGenres: string[];
   distinctReleaseYears: string[];
   distinctReviewYears: string[];
 }> {
@@ -53,14 +54,19 @@ export async function collectionDetails(slug: string): Promise<{
     }
     const collection = collections.find((value) => value.slug === slug)!;
 
-    const releaseYears = new Set<string>();
-    const reviewYears = new Set<string>();
+    const distinctReleaseYears = new Set<string>();
+    const distinctReviewYears = new Set<string>();
+    const distinctGenres = new Set<string>();
 
     for (const title of collection.titles) {
-      releaseYears.add(title.releaseYear);
+      distinctReleaseYears.add(title.releaseYear);
+
+      for (const genre of title.genres) {
+        distinctGenres.add(genre);
+      }
 
       if (title.reviewDate) {
-        reviewYears.add(
+        distinctReviewYears.add(
           new Date(title.reviewDate).toLocaleDateString("en-US", {
             timeZone: "UTC",
             year: "numeric",
@@ -75,8 +81,9 @@ export async function collectionDetails(slug: string): Promise<{
         description: descriptionToString(collection.description),
         descriptionHtml: descriptionToHtml(collection.description),
       },
-      distinctReleaseYears: [...releaseYears].toSorted(),
-      distinctReviewYears: [...reviewYears].toSorted(),
+      distinctGenres: [...distinctGenres].toSorted(),
+      distinctReleaseYears: [...distinctReleaseYears].toSorted(),
+      distinctReviewYears: [...distinctReviewYears].toSorted(),
     };
   });
 }

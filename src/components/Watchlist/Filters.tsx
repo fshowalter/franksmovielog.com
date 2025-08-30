@@ -86,6 +86,7 @@ export function Filters({
         years={distinctReleaseYears}
       />
       <MultiSelectField
+        initialValues={filterValues.genres}
         label="Genres"
         onChange={(values) =>
           dispatch({
@@ -129,14 +130,14 @@ function CreditSelectField({
 }) {
   return (
     <SelectField
+      initialValue={initialValue}
       label={label}
-      onChange={(e) =>
+      onChange={(value) =>
         dispatch({
           type: actionType,
-          value: e.target.value,
+          value,
         })
       }
-      value={initialValue}
     >
       <SelectOptions options={options} />
     </SelectField>

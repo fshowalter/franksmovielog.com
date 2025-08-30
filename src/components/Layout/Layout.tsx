@@ -1,7 +1,5 @@
 import type { JSX } from "react";
 
-import { ccn } from "~/utils/concatClassNames";
-
 import { Footer } from "./Footer";
 import { Mast } from "./Mast";
 
@@ -33,7 +31,14 @@ export function Layout({
       </a>
       <div className="flex min-h-full w-full flex-col bg-default">
         <Mast hasBackdrop={hasBackdrop} hideLogo={hideLogo} />
-        <main className={ccn("grow", className)} id="content" {...rest}>
+        <main
+          className={`
+            grow
+            ${className ?? ""}
+          `}
+          id="content"
+          {...rest}
+        >
           {children}
         </main>
         <Footer />

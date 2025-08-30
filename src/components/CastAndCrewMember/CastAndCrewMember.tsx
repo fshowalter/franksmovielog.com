@@ -13,15 +13,16 @@ import { ListItemReviewDate } from "~/components/ListItemReviewDate";
 import { ListItemTitle } from "~/components/ListItemTitle";
 import { ListWithFilters } from "~/components/ListWithFilters/ListWithFilters";
 import { GroupedPosterList, PosterListItem } from "~/components/PosterList";
+import { TitleSortOptions } from "~/components/TitleSortOptions";
 import { WatchlistTitleSlug } from "~/components/WatchlistTitleSlug";
 
 import type { Sort } from "./CastAndCrewMember.reducer";
 
 import { Actions, initState, reducer } from "./CastAndCrewMember.reducer";
-import { Filters, SortOptions } from "./Filters";
+import { Filters } from "./Filters";
 
 export type ListItemValue = Pick<
-  CastAndCrewMember["titles"][0],
+  CastAndCrewMember["titles"][number],
   | "creditedAs"
   | "genres"
   | "grade"
@@ -119,7 +120,11 @@ export function CastAndCrewMember({
             type: Actions.SORT,
             value: e.target.value as Sort,
           }),
-        sortOptions: <SortOptions />,
+        sortOptions: (
+          <TitleSortOptions
+            options={["grade", "release-date", "review-date", "title"]}
+          />
+        ),
       }}
       totalCount={state.filteredValues.length}
     />

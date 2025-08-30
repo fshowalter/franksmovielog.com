@@ -1,4 +1,4 @@
-import { render, screen, within } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import {
@@ -12,10 +12,16 @@ import {
   clickShowMore,
   getGroupedPosterList,
 } from "~/components/PosterList.testHelper";
-import { clickReviewedStatus } from "~/components/ReviewStatusField.testHelper";
-import { fillTextFilter } from "~/components/TextFilter.testHelper";
+import { clickReviewedStatusFilter } from "~/components/ReviewedStatusFilter.testHelper";
+import {
+  clickGenreFilter,
+  fillGradeFilter,
+  fillReleaseYearFilter,
+  fillReviewYearFilter,
+  fillTitleFilter,
+  getTitleFilter,
+} from "~/components/TitleFilters.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
-import { fillYearInput } from "~/components/YearInput.testHelper";
 
 import { Collection } from "./Collection";
 import { getProps } from "./getProps";
@@ -56,7 +62,7 @@ describe("Collection", () => {
     await clickToggleFilters(user);
 
     // Type the filter text
-    await fillTextFilter(user, "Title", "Dracula");
+    await fillTitleFilter(user, "Dracula");
 
     // Apply the filter
     await clickViewResults(user);
@@ -181,7 +187,7 @@ describe("Collection", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    await fillYearInput(user, "Release Year", "1970", "1980");
+    await fillReleaseYearFilter(user, "1970", "1980");
 
     // Apply the filter
     await clickViewResults(user);
@@ -202,7 +208,7 @@ describe("Collection", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    await fillYearInput(user, "Review Year", "2021", "2022");
+    await fillReviewYearFilter(user, "2021", "2022");
 
     // Apply the filter
     await clickViewResults(user);
@@ -220,7 +226,7 @@ describe("Collection", () => {
 
     render(<Collection {...props} />);
 
-    await clickReviewedStatus(user, "Reviewed");
+    await clickReviewedStatusFilter(user, "Reviewed");
 
     // Apply the filter
     await clickViewResults(user);
@@ -236,7 +242,7 @@ describe("Collection", () => {
 
     render(<Collection {...props} />);
 
-    await clickReviewedStatus(user, "Not Reviewed");
+    await clickReviewedStatusFilter(user, "Not Reviewed");
 
     // Apply the filter
     await clickViewResults(user);
@@ -252,12 +258,12 @@ describe("Collection", () => {
 
     render(<Collection {...props} />);
 
-    await clickReviewedStatus(user, "Not Reviewed");
+    await clickReviewedStatusFilter(user, "Not Reviewed");
 
     // Apply the filter
     await clickViewResults(user);
 
-    await clickReviewedStatus(user, "All");
+    await clickReviewedStatusFilter(user, "All");
 
     // Apply the filter
     await clickViewResults(user);
@@ -271,27 +277,54 @@ describe("Collection", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    // Create props with more than 100 items to trigger pagination
-    const manyValues = Array.from({ length: 150 }, (_, i) => ({
-      grade: i % 2 === 0 ? "B+" : undefined,
-      gradeValue: i % 2 === 0 ? 8 : undefined,
-      imdbId: `tt${String(i).padStart(7, "0")}`,
-      posterImageProps: undefined,
-      releaseSequence: `1970-01-${String(i + 1).padStart(2, "0")}tt${String(i).padStart(7, "0")}`,
-      releaseYear: "1970",
-      reviewed: i % 2 === 0,
-      slug: `test-movie-${i + 1}`,
-      sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
-      title: `Test Movie ${i + 1}`,
-    }));
-    const propsWithManyValues = {
-      ...props,
-      values: manyValues,
-    };
-
-    render(<Collection {...propsWithManyValues} />);
+    render(<Collection {...props} />);
 
     await clickShowMore(user);
+
+    expect(getGroupedPosterList()).toMatchSnapshot();
+  });
+
+  it("can filter by genre", async ({ expect }) => {
+    expect.hasAssertions();
+
+    const user = getUserWithFakeTimers();
+
+    render(<Collection {...props} />);
+
+    // Open filter drawer
+    await clickToggleFilters(user);
+
+    await clickGenreFilter(user, "Horror");
+
+    await clickGenreFilter(user, "Comedy");
+
+    await clickViewResults(user);
+
+    expect(getGroupedPosterList()).toMatchSnapshot();
+  });
+
+  it("can filter by grade", async ({ expect }) => {
+    expect.hasAssertions();
+
+    const user = getUserWithFakeTimers();
+
+    render(<Collection {...props} />);
+
+    await fillGradeFilter(user, "B-", "A+");
+
+    expect(getGroupedPosterList()).toMatchSnapshot();
+  });
+
+  it("can filter by grade reversed", async ({ expect }) => {
+    expect.hasAssertions();
+
+    const user = getUserWithFakeTimers();
+
+    render(<Collection {...props} />);
+
+    await fillGradeFilter(user, "B", "B+");
+
+    await fillGradeFilter(user, "A-", "B-");
 
     expect(getGroupedPosterList()).toMatchSnapshot();
   });
@@ -308,9 +341,11 @@ describe("Collection", () => {
     await clickToggleFilters(user);
 
     // Apply filter
-    await fillTextFilter(user, "Title", "Five");
+    await fillTitleFilter(user, "Five");
 
     await clickViewResults(user);
+
+    const listBeforeClear = getGroupedPosterList().innerHTML;
 
     // Open filter drawer again
     await clickToggleFilters(user);
@@ -319,11 +354,13 @@ describe("Collection", () => {
     await clickClearFilters(user);
 
     // Check that filters are cleared
-    expect(screen.getByLabelText("Title")).toHaveValue("");
+    expect(getTitleFilter()).toHaveValue("");
 
     await clickViewResults(user);
 
-    expect(getGroupedPosterList()).toMatchSnapshot();
+    const listAfterClear = getGroupedPosterList().innerHTML;
+
+    expect(listBeforeClear).not.toEqual(listAfterClear);
   });
 
   it("can reset filters when closing drawer", async ({ expect }) => {
@@ -338,34 +375,31 @@ describe("Collection", () => {
     await clickToggleFilters(user);
 
     // Apply initial filter
-    await fillTextFilter(user, "Title", "Five");
+    await fillTitleFilter(user, "Five");
 
     // Apply the filters
     await clickViewResults(user);
 
     // Store the count of filtered results
-    const filteredList = getGroupedPosterList();
-    const filteredCount =
-      within(filteredList).queryAllByRole("listitem").length;
+    const listBeforeReset = getGroupedPosterList().innerHTML;
 
     // Open filter drawer again
     await clickToggleFilters(user);
 
     // Start typing a new filter but don't apply
-    await fillTextFilter(user, "Title", "Different");
+    await fillTitleFilter(user, "Different");
 
     // Close the drawer with the X button (should reset pending changes)
     await clickCloseFilters(user);
 
     // The list should still show the originally filtered results
-    const listAfterReset = getGroupedPosterList();
-    const resetCount = within(listAfterReset).queryAllByRole("listitem").length;
-    expect(resetCount).toBe(filteredCount);
+    const listAfterReset = getGroupedPosterList().innerHTML;
+    expect(listBeforeReset).toEqual(listAfterReset);
 
     // Open filter drawer again to verify filters were reset to last applied state
     await clickToggleFilters(user);
 
     // Should show the originally applied filter, not the pending change
-    expect(screen.getByLabelText("Title")).toHaveValue("Five");
+    expect(getTitleFilter()).toHaveValue("Five");
   });
 });
