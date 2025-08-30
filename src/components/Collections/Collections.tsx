@@ -5,7 +5,7 @@ import { useReducer, useState } from "react";
 import type { AvatarImageProps } from "~/api/avatars";
 import type { Collection } from "~/api/collections";
 
-import { AvatarListItem } from "~/components/AvatarList";
+import { AvatarList, AvatarListItem } from "~/components/AvatarList";
 import { CollectionSortOptions } from "~/components/CollectionSortOptions";
 import { ListItemName } from "~/components/ListItemName";
 import { ListWithFilters } from "~/components/ListWithFilters/ListWithFilters";
@@ -49,17 +49,16 @@ export function Collections({ initialSort, values }: Props): JSX.Element {
       }
       hasActiveFilters={state.hasActiveFilters}
       list={
-        <ol
+        <AvatarList
           className={`
             mt-4 bg-subtle
             tablet-landscape:my-24
           `}
-          data-testid="list"
         >
           {state.filteredValues.map((value) => {
             return <CollectionListItem key={value.name} value={value} />;
           })}
-        </ol>
+        </AvatarList>
       }
       onApplyFilters={() => dispatch({ type: Actions.APPLY_PENDING_FILTERS })}
       onClearFilters={() => {

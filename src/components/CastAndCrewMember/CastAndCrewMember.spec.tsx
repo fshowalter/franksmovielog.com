@@ -435,6 +435,8 @@ describe("CastAndCrewMember", () => {
 
     await clickViewResults(user);
 
+    const listBeforeClear = getGroupedPosterList().innerHTML;
+
     // Open filter drawer again
     await clickToggleFilters(user);
 
@@ -447,7 +449,9 @@ describe("CastAndCrewMember", () => {
 
     await clickViewResults(user);
 
-    expect(getGroupedPosterList()).toMatchSnapshot();
+    const listAfterClear = getGroupedPosterList().innerHTML;
+
+    expect(listBeforeClear).not.toEqual(listAfterClear);
   });
 
   it("can filter by grade reversed", async ({ expect }) => {

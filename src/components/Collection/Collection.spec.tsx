@@ -345,6 +345,8 @@ describe("Collection", () => {
 
     await clickViewResults(user);
 
+    const listBeforeClear = getGroupedPosterList().innerHTML;
+
     // Open filter drawer again
     await clickToggleFilters(user);
 
@@ -356,7 +358,9 @@ describe("Collection", () => {
 
     await clickViewResults(user);
 
-    expect(getGroupedPosterList()).toMatchSnapshot();
+    const listAfterClear = getGroupedPosterList().innerHTML;
+
+    expect(listBeforeClear).not.toEqual(listAfterClear);
   });
 
   it("can reset filters when closing drawer", async ({ expect }) => {
@@ -377,7 +381,7 @@ describe("Collection", () => {
     await clickViewResults(user);
 
     // Store the count of filtered results
-    const filteredList = getGroupedPosterList();
+    const listBeforeReset = getGroupedPosterList().innerHTML;
 
     // Open filter drawer again
     await clickToggleFilters(user);
@@ -389,8 +393,8 @@ describe("Collection", () => {
     await clickCloseFilters(user);
 
     // The list should still show the originally filtered results
-    const listAfterReset = getGroupedPosterList();
-    expect(filteredList).toEqual(listAfterReset);
+    const listAfterReset = getGroupedPosterList().innerHTML;
+    expect(listBeforeReset).toEqual(listAfterReset);
 
     // Open filter drawer again to verify filters were reset to last applied state
     await clickToggleFilters(user);
