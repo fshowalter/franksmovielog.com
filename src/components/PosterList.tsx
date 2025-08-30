@@ -2,7 +2,6 @@ import type { JSX } from "react";
 
 import type { PosterImageProps } from "~/api/posters";
 
-import { Button } from "./Button";
 import { GroupingListItem } from "./GroupingListItem";
 
 export const PosterListItemImageConfig = {
@@ -52,7 +51,19 @@ export function GroupedPosterList<T>({
       {onShowMore && (
         <div className="flex flex-col items-center px-container py-10">
           {totalCount > visibleCount && (
-            <Button onClick={onShowMore}>Show More</Button>
+            <button
+              className={`
+                mx-auto w-full max-w-button transform-gpu cursor-pointer
+                rounded-md bg-canvas py-5 text-center font-sans text-sm
+                font-bold tracking-wide uppercase shadow-all
+                transition-transform
+                hover:scale-105 hover:drop-shadow-lg
+              `}
+              onClick={onShowMore}
+              type="button"
+            >
+              Show More
+            </button>
           )}
         </div>
       )}

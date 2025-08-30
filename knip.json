@@ -3,7 +3,8 @@
   "entry": [
     "src/pages/**/*.astro",
     "src/layouts/search.ts",
-    "src/layouts/navMenu.ts"
+    "src/layouts/navMenu.ts",
+    "eslint.html.config.js"
   ],
   "project": [
     "**/*",
