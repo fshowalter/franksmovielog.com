@@ -2,7 +2,6 @@ import type { AvatarImageProps } from "~/api/avatars";
 
 import { Avatar } from "~/components/Avatar";
 import { BarGradient } from "~/components/BarGradient";
-import { ccn } from "~/utils/concatClassNames";
 
 type Value = {
   avatarImageProps: AvatarImageProps | undefined;
@@ -27,13 +26,11 @@ export function Details({
 }) {
   return (
     <section
-      className={ccn(
-        `
-          w-full
-          laptop:w-auto laptop:basis-[calc(50%-16px)]
-        `,
-        className,
-      )}
+      className={`
+        w-full
+        laptop:w-auto laptop:basis-[calc(50%-16px)]
+        ${className ?? ""}
+      `}
     >
       <h2
         className={`
@@ -169,7 +166,12 @@ function DetailsItemAvatar({
   );
 
   return (
-    <div className={ccn("w-12 overflow-hidden rounded-full", className)}>
+    <div
+      className={`
+        w-12 overflow-hidden rounded-full
+        ${className ?? ""}
+      `}
+    >
       {avatar}
     </div>
   );

@@ -13,11 +13,12 @@ import {
   ListWithFilters,
 } from "~/components/ListWithFilters/ListWithFilters";
 import { GroupedPosterList, PosterListItem } from "~/components/PosterList";
+import { TitleSortOptions } from "~/components/TitleSortOptions";
 import { WatchlistTitleSlug } from "~/components/WatchlistTitleSlug";
 
 import type { Sort } from "./Watchlist.reducer";
 
-import { Filters, SortOptions } from "./Filters";
+import { Filters } from "./Filters";
 import { Actions, initState, reducer } from "./Watchlist.reducer";
 
 export type ListItemValue = Pick<
@@ -127,7 +128,7 @@ export function Watchlist({
             type: Actions.SORT,
             value: e.target.value as Sort,
           }),
-        sortOptions: <SortOptions />,
+        sortOptions: <TitleSortOptions options={["title", "release-date"]} />,
       }}
       totalCount={state.filteredValues.length}
     />

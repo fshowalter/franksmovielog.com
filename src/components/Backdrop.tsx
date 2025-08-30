@@ -40,7 +40,7 @@ export function Backdrop({
     <Wrapper centerText={centerText} heroImage={heroImage} size={size}>
       <Breadcrumb value={breadcrumb} />
       <Title className={titleStyle} value={title} />
-      <Deck center={centerText} shadow={true} value={deck} />
+      <Deck center={centerText} value={deck} />
     </Wrapper>
   );
 }
@@ -77,25 +77,13 @@ function Breadcrumb({ value }: { value?: React.ReactNode }) {
   return <p className="mb-4">{value}</p>;
 }
 
-function Deck({
-  center,
-  shadow,
-  value,
-}: {
-  center?: boolean;
-  shadow: boolean;
-  value?: React.ReactNode;
-}) {
-  if (!value) {
-    return false;
-  }
-
+function Deck({ center, value }: { center?: boolean; value: React.ReactNode }) {
   return (
     <p
       className={`
         mt-1 font-sans text-base
+        [text-shadow:1px_1px_2px_black]
         laptop:my-4 laptop:text-xl
-        ${shadow ? `[text-shadow:1px_1px_2px_black]` : ""}
         ${center ? `text-center` : ""}
       `}
     >
@@ -105,7 +93,6 @@ function Deck({
 }
 
 function Title({
-  center,
   className,
   value,
 }: {
@@ -118,7 +105,6 @@ function Title({
       className={
         className ||
         `
-          ${center ? "text-center" : ""}
           text-[2rem] leading-10 font-extrabold
           [text-shadow:1px_1px_2px_rgba(0,0,0,.25)]
           tablet:text-4xl
@@ -133,12 +119,12 @@ function Title({
 }
 
 function Wrapper({
-  centerText = false,
+  centerText,
   children,
   heroImage,
   size = "default",
 }: {
-  centerText?: boolean;
+  centerText: boolean;
   children: React.ReactNode;
   heroImage?: React.ReactNode;
   size?: "default" | "large" | "small";
@@ -148,14 +134,7 @@ function Wrapper({
 
   const largeSizes = "min-h-[90vh] max-h-[1350px]";
 
-  const smallSizes = "min-h-[240px] laptop:min-h-[clamp(640px,50vh,1350px)]";
-
-  const sizes =
-    size === "large"
-      ? largeSizes
-      : size === "small"
-        ? smallSizes
-        : defaultSizes;
+  const sizes = size === "large" ? largeSizes : defaultSizes;
 
   return (
     <header
