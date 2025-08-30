@@ -554,7 +554,6 @@ exports[`Home > matches snapshot 1`] = `
           >
             <h1
               class="
-          
           text-[2rem] leading-10 font-extrabold
           [text-shadow:1px_1px_2px_rgba(0,0,0,.25)]
           tablet:text-4xl
@@ -567,8 +566,8 @@ exports[`Home > matches snapshot 1`] = `
             <p
               class="
         mt-1 font-sans text-base
-        laptop:my-4 laptop:text-xl
         [text-shadow:1px_1px_2px_black]
+        laptop:my-4 laptop:text-xl
         
       "
             >
