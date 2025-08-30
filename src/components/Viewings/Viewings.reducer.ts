@@ -2,7 +2,10 @@ import type {
   ListWithFiltersActionType,
   ListWithFiltersState,
 } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
-import type { TitlesActionType } from "~/components/ListWithFilters/titlesReducerUtils";
+import type {
+  TitleFilterValues,
+  TitlesActionType,
+} from "~/components/ListWithFilters/titlesReducerUtils";
 import type { GroupFn } from "~/components/utils/reducerUtils";
 
 import {
@@ -28,6 +31,15 @@ enum ViewingsActions {
   PENDING_FILTER_VIEWING_YEAR = "PENDING_FILTER_VIEWING_YEAR",
   PREV_MONTH = "PREV_MONTH",
 }
+
+export type ViewingsFilterValues = Pick<
+  TitleFilterValues,
+  "releaseYear" | "reviewedStatus" | "title"
+> & {
+  medium?: string;
+  venue?: string;
+  viewingYears?: [string, string];
+};
 
 // Re-export actions for component convenience
 export const Actions = {
@@ -197,8 +209,9 @@ export function reducer(state: State, action: ActionType): State {
         action.value && action.value !== "All"
           ? (value: ListItemValue) => value.medium == action.value
           : undefined;
+      const filterKey: keyof ViewingsFilterValues = "medium";
       return {
-        ...updatePendingFilter(state, "medium", filterFn, action.value),
+        ...updatePendingFilter(state, filterKey, filterFn, action.value),
         currentMonth: state.currentMonth,
         hasNextMonth: state.hasNextMonth,
         hasPrevMonth: state.hasPrevMonth,
@@ -212,8 +225,9 @@ export function reducer(state: State, action: ActionType): State {
         action.value && action.value !== "All"
           ? (value: ListItemValue) => value.venue == action.value
           : undefined;
+      const filterKey: keyof ViewingsFilterValues = "venue";
       return {
-        ...updatePendingFilter(state, "venue", filterFn, action.value),
+        ...updatePendingFilter(state, filterKey, filterFn, action.value),
         currentMonth: state.currentMonth,
         hasNextMonth: state.hasNextMonth,
         hasPrevMonth: state.hasPrevMonth,
@@ -226,8 +240,10 @@ export function reducer(state: State, action: ActionType): State {
       const [minYear, maxYear] = action.values;
       const filterFn = (value: ListItemValue) =>
         value.viewingYear >= minYear && value.viewingYear <= maxYear;
+
+      const filterKey: keyof ViewingsFilterValues = "viewingYears";
       return {
-        ...updatePendingFilter(state, "viewingYears", filterFn, action.values),
+        ...updatePendingFilter(state, filterKey, filterFn, action.values),
         currentMonth: state.currentMonth,
         hasNextMonth: state.hasNextMonth,
         hasPrevMonth: state.hasPrevMonth,
