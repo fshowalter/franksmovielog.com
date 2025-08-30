@@ -333,7 +333,7 @@ export function handleShowMore<
 >(
   state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
   action: ShowMoreAction,
-  groupFn?: GroupFn<TItem, TSortValue>,
+  groupFn: GroupFn<TItem, TSortValue>,
 ): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
   const increment = action.increment ?? SHOW_COUNT_DEFAULT;
   return showMore(state, increment, groupFn);
@@ -474,12 +474,13 @@ function showMore<
 >(
   state: ListWithFiltersState<TItem, TSortValue> & TExtendedState,
   increment: number,
-  groupFn?: GroupFn<TItem, TSortValue>,
+  groupFn: GroupFn<TItem, TSortValue>,
 ): ListWithFiltersState<TItem, TSortValue> & TExtendedState {
   const showCount = state.showCount + increment;
-  const groupedValues = groupFn
-    ? groupFn(state.filteredValues.slice(0, showCount), state.sortValue)
-    : new Map<string, TItem[]>();
+  const groupedValues = groupFn(
+    state.filteredValues.slice(0, showCount),
+    state.sortValue,
+  );
 
   return {
     ...state,

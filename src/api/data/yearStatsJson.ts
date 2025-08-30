@@ -1,11 +1,12 @@
 import { promises as fs } from "node:fs";
 import { z } from "zod";
 
+import { perfLogger } from "~/utils/performanceLogger";
+
 import { DistributionSchema } from "./DistributionSchema";
 import { MostWatchedPersonSchema } from "./MostWatchedPersonSchema";
 import { MostWatchedTitleSchema } from "./MostWatchedTitleSchema";
 import { getContentPath } from "./utils/getContentPath";
-import { perfLogger } from "./utils/performanceLogger";
 
 const yearStatsJsonDirectory = getContentPath("data", "year-stats");
 

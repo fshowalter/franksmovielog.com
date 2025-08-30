@@ -8,6 +8,7 @@ import strip from "strip-markdown";
 
 import { ENABLE_CACHE } from "~/utils/cache";
 import { collator } from "~/utils/collator";
+import { perfLogger } from "~/utils/performanceLogger";
 
 import type { ReviewedTitleJson } from "./data/reviewedTitlesJson";
 import type { MarkdownReview } from "./data/reviewsMarkdown";
@@ -15,7 +16,6 @@ import type { MarkdownViewing } from "./data/viewingsMarkdown";
 
 import { allReviewedTitlesJson } from "./data/reviewedTitlesJson";
 import { allReviewsMarkdown } from "./data/reviewsMarkdown";
-import { perfLogger } from "./data/utils/performanceLogger";
 import { allViewingsMarkdown } from "./data/viewingsMarkdown";
 import { linkReviewedTitles } from "./utils/linkReviewedTitles";
 import { getHtml } from "./utils/markdown/getHtml";
