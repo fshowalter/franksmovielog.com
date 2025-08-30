@@ -183,10 +183,6 @@ export function handleListWithFiltersAction<
         : (baseState as ListWithFiltersState<TItem, TSortValue> &
             TExtendedState);
     }
-
-    default: {
-      return state;
-    }
   }
 }
 

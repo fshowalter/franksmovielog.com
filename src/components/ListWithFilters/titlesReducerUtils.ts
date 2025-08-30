@@ -41,7 +41,7 @@ export enum TitlesActions {
   PENDING_FILTER_GRADE = "PENDING_FILTER_GRADE",
   PENDING_FILTER_RELEASE_YEAR = "PENDING_FILTER_RELEASE_YEAR",
   PENDING_FILTER_REVIEW_YEAR = "PENDING_FILTER_REVIEW_YEAR",
-  PENDING_FILTER_REVIEWED_STATUS = "PENDING_FILTER_REVIEW_STATUS",
+  PENDING_FILTER_REVIEWED_STATUS = "PENDING_FILTER_REVIEWED_STATUS",
   PENDING_FILTER_TITLE = "PENDING_FILTER_TITLE",
   SHOW_MORE = "SHOW_MORE",
 }
@@ -149,11 +149,9 @@ type ShowMoreAction = {
  * Creates a pagination-aware group function that slices items before grouping
  */
 export function createPaginatedGroupFn<TItem, TSortValue>(
-  baseGroupFn: GroupFn<TItem, TSortValue> | undefined,
+  baseGroupFn: GroupFn<TItem, TSortValue>,
   showCount: number,
 ): GroupFn<TItem, TSortValue> | undefined {
-  if (!baseGroupFn) return undefined;
-
   return (items: TItem[], sortValue: TSortValue) => {
     const paginatedItems = items.slice(0, showCount);
     return baseGroupFn(paginatedItems, sortValue);

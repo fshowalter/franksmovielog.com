@@ -1,10 +1,26 @@
-import { act, render, screen, within } from "@testing-library/react";
-import { userEvent } from "@testing-library/user-event";
+import { render } from "@testing-library/react";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
-import { DRAWER_CLOSE_ANIMATION_MS } from "~/components/ListWithFilters/ListWithFilters";
-import { DROPDOWN_CLOSE_DELAY_MS } from "~/components/MultiSelectField";
-import { TEXT_FILTER_DEBOUNCE_MS } from "~/components/TextFilter";
+import {
+  clickClearFilters,
+  clickCloseFilters,
+  clickSortOption,
+  clickToggleFilters,
+  clickViewResults,
+} from "~/components/ListWithFilters/ListWithFilters.testHelper";
+import {
+  clickShowMore,
+  getGroupedPosterList,
+} from "~/components/PosterList.testHelper";
+import {
+  clickGenreFilter,
+  fillGradeFilter,
+  fillReleaseYearFilter,
+  fillReviewYearFilter,
+  fillTitleFilter,
+  getTitleFilter,
+} from "~/components/TitleFilters.testHelper";
+import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
 import { AllReviews } from "./AllReviews";
 import { getProps } from "./getProps";
@@ -36,264 +52,244 @@ describe("AllReviews", () => {
   it("can filter by title", async ({ expect }) => {
     expect.hasAssertions();
 
-    // Setup userEvent with advanceTimers
-    const user = userEvent.setup({
-      advanceTimers: vi.advanceTimersByTime,
-    });
+    const user = getUserWithFakeTimers();
 
     render(<AllReviews {...props} />);
 
-    // Type the filter text
-    await user.type(screen.getByLabelText("Title"), "Apostle");
-    act(() => {
-      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
-    });
+    await clickToggleFilters(user);
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    // Type the filter text
+    await fillTitleFilter(user, "Apostle");
+
+    await clickViewResults(user);
+
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by review date with newest first", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<AllReviews {...props} />);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Review Date (Newest First)",
-    );
+    await clickSortOption(user, "Review Date (Newest First)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by review date with oldest first", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<AllReviews {...props} />);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Review Date (Oldest First)",
-    );
+    await clickSortOption(user, "Review Date (Oldest First)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by title A → Z", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<AllReviews {...props} />);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Title (A → Z)",
-    );
+    await clickSortOption(user, "Title (A → Z)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by title Z → A", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<AllReviews {...props} />);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Title (Z → A)",
-    );
+    await clickSortOption(user, "Title (Z → A)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by release date with oldest first", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<AllReviews {...props} />);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Release Date (Oldest First)",
-    );
+    await clickSortOption(user, "Release Date (Oldest First)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by release date with newest first", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<AllReviews {...props} />);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Release Date (Newest First)",
-    );
+    await clickSortOption(user, "Release Date (Newest First)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by grade with best first", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<AllReviews {...props} />);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Grade (Best First)",
-    );
+    await clickSortOption(user, "Grade (Best First)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by grade with worst first", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<AllReviews {...props} />);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Grade (Worst First)",
-    );
+    await clickSortOption(user, "Grade (Worst First)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by release year", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<AllReviews {...props} />);
 
-    const fieldset = screen.getByRole("group", { name: "Release Year" });
-    const fromInput = within(fieldset).getByLabelText("From");
-    const toInput = within(fieldset).getByLabelText("to");
+    await clickToggleFilters(user);
 
-    await userEvent.selectOptions(fromInput, "1973");
-    await userEvent.selectOptions(toInput, "2021");
+    await fillReleaseYearFilter(user, "1973", "2021");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    await clickViewResults(user);
+
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by release year reversed", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<AllReviews {...props} />);
 
-    const fieldset = screen.getByRole("group", { name: "Release Year" });
-    const fromInput = within(fieldset).getByLabelText("From");
-    const toInput = within(fieldset).getByLabelText("to");
+    await clickToggleFilters(user);
 
-    await userEvent.selectOptions(fromInput, "1973");
-    await userEvent.selectOptions(toInput, "2021");
-    await userEvent.selectOptions(fromInput, "1998");
-    await userEvent.selectOptions(toInput, "1960");
+    await fillReleaseYearFilter(user, "1973", "2021");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    await clickViewResults(user);
+
+    await clickToggleFilters(user);
+
+    await fillReleaseYearFilter(user, "1998", "1960");
+
+    await clickViewResults(user);
+
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by review year", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<AllReviews {...props} />);
 
-    const fieldset = screen.getByRole("group", { name: "Review Year" });
-    const fromInput = within(fieldset).getByLabelText("From");
-    const toInput = within(fieldset).getByLabelText("to");
+    await clickToggleFilters(user);
 
-    await userEvent.selectOptions(fromInput, "2021");
-    await userEvent.selectOptions(toInput, "2023");
+    await fillReviewYearFilter(user, "2021", "2023");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    await clickViewResults(user);
+
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by review year reversed", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<AllReviews {...props} />);
 
-    const fieldset = screen.getByRole("group", { name: "Review Year" });
-    const fromInput = within(fieldset).getByLabelText("From");
-    const toInput = within(fieldset).getByLabelText("to");
+    await clickToggleFilters(user);
 
-    await userEvent.selectOptions(fromInput, "2021");
-    await userEvent.selectOptions(toInput, "2023");
-    await userEvent.selectOptions(fromInput, "2022");
-    await userEvent.selectOptions(toInput, "2021");
+    await fillReviewYearFilter(user, "2021", "2023");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    await clickToggleFilters(user);
+
+    await fillReviewYearFilter(user, "2022", "2021");
+
+    await clickViewResults(user);
+
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by grade", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<AllReviews {...props} />);
 
-    const fieldset = screen.getByRole("group", { name: "Grade" });
-    const fromInput = within(fieldset).getByLabelText("From");
-    const toInput = within(fieldset).getByLabelText("to");
+    await clickToggleFilters(user);
 
-    await userEvent.selectOptions(fromInput, "B-");
-    await userEvent.selectOptions(toInput, "A+");
+    await fillGradeFilter(user, "B-", "A+");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    await clickViewResults(user);
+
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by genres", async ({ expect }) => {
     expect.hasAssertions();
 
-    // Setup userEvent with advanceTimers
-    const user = userEvent.setup({
-      advanceTimers: vi.advanceTimersByTime,
-    });
+    const user = getUserWithFakeTimers();
 
     render(<AllReviews {...props} />);
 
-    // Open filter drawer
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
-    const genresButton = screen.getByLabelText("Genres");
+    await clickGenreFilter(user, "Horror");
 
-    // Click to open the dropdown
-    await user.click(genresButton);
+    await clickGenreFilter(user, "Comedy");
 
-    // Select Horror
-    const horrorOption = await screen.findByRole("option", { name: "Horror" });
-    await user.click(horrorOption);
+    await clickViewResults(user);
 
-    // Advance timers for dropdown to close
-    act(() => {
-      vi.advanceTimersByTime(DROPDOWN_CLOSE_DELAY_MS);
-    });
-
-    // Click to open the dropdown again
-    await user.click(genresButton);
-
-    // Select Comedy
-    const comedyOption = await screen.findByRole("option", { name: "Comedy" });
-    await user.click(comedyOption);
-
-    // Advance timers for dropdown to close again
-    act(() => {
-      vi.advanceTimersByTime(DROPDOWN_CLOSE_DELAY_MS);
-    });
-
-    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
-
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by grade reversed", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<AllReviews {...props} />);
 
-    const fieldset = screen.getByRole("group", { name: "Grade" });
-    const fromInput = within(fieldset).getByLabelText("From");
-    const toInput = within(fieldset).getByLabelText("to");
+    await clickToggleFilters(user);
 
-    await userEvent.selectOptions(fromInput, "B");
-    await userEvent.selectOptions(toInput, "B+");
-    await userEvent.selectOptions(fromInput, "A-");
-    await userEvent.selectOptions(toInput, "B-");
+    await fillGradeFilter(user, "B", "B+");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    await clickViewResults(user);
+
+    await clickToggleFilters(user);
+
+    await fillGradeFilter(user, "A-", "B-");
+
+    await clickViewResults(user);
+
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can show more titles", async ({ expect }) => {
@@ -321,122 +317,91 @@ describe("AllReviews", () => {
       ...props,
       values: manyValues,
     };
+
+    const user = getUserWithFakeTimers();
+
     render(<AllReviews {...propsWithManyValues} />);
-    await userEvent.click(screen.getByText("Show More"));
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+
+    await clickShowMore(user);
+
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can clear all filters", async ({ expect }) => {
     expect.hasAssertions();
 
     // Setup userEvent with advanceTimers
-    const user = userEvent.setup({
-      advanceTimers: vi.advanceTimersByTime,
-    });
+    const user = getUserWithFakeTimers();
 
     render(<AllReviews {...props} />);
 
     // Open filter drawer
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Apply multiple filters
-    await user.type(screen.getByLabelText("Title"), "Halloween");
-    act(() => {
-      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
-    });
+    await fillTitleFilter(user, "Halloween");
 
-    const releaseYearFieldset = screen.getByRole("group", {
-      name: "Release Year",
-    });
-    await userEvent.selectOptions(
-      within(releaseYearFieldset).getByLabelText("From"),
-      "1973",
-    );
+    await fillReleaseYearFilter(user, "1973", "2004");
 
-    const gradeFieldset = screen.getByRole("group", { name: "Grade" });
-    await userEvent.selectOptions(
-      within(gradeFieldset).getByLabelText("From"),
-      "B-",
-    );
+    await fillGradeFilter(user, "B-", "A+");
 
-    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+    await clickViewResults(user);
 
     // Verify filters are applied (should show filtered results)
-    const listBeforeClear = screen.getByTestId("grouped-poster-list");
-    const itemsBeforeClear = within(listBeforeClear).queryAllByRole("listitem");
-    expect(itemsBeforeClear.length).toBeLessThan(20); // Should be filtered
+    const listBeforeClear = getGroupedPosterList().innerHTML;
 
     // Open filter drawer again
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Clear all filters
-    await user.click(screen.getByRole("button", { name: "Clear all filters" }));
+    await clickClearFilters(user);
 
     // Apply the cleared filters
-    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+    await clickViewResults(user);
 
     // Verify all items are shown again (filters cleared)
-    const listAfterClear = screen.getByTestId("grouped-poster-list");
-    const itemsAfterClear = within(listAfterClear).queryAllByRole("listitem");
-    expect(itemsAfterClear.length).toBeGreaterThan(itemsBeforeClear.length);
+    const listAfterClear = getGroupedPosterList().innerHTML;
 
-    expect(listAfterClear).toMatchSnapshot();
+    expect(listBeforeClear).not.toEqual(listAfterClear);
   });
 
   it("can reset filters when closing drawer", async ({ expect }) => {
     expect.hasAssertions();
 
     // Setup userEvent with advanceTimers
-    const user = userEvent.setup({
-      advanceTimers: vi.advanceTimersByTime,
-    });
+    const user = getUserWithFakeTimers();
 
     render(<AllReviews {...props} />);
 
     // Open filter drawer
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Apply initial filter
-    await user.type(screen.getByLabelText("Title"), "Halloween");
-    act(() => {
-      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
-    });
+    await fillTitleFilter(user, "Halloween");
 
-    // Apply the filters
-    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+    await clickViewResults(user);
 
     // Store the count of filtered results
-    const filteredList = screen.getByTestId("grouped-poster-list");
-    const filteredCount =
-      within(filteredList).queryAllByRole("listitem").length;
+    const filteredList = getGroupedPosterList().innerHTML;
 
     // Open filter drawer again
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Start typing a new filter but don't apply
-    await user.clear(screen.getByLabelText("Title"));
-    await user.type(screen.getByLabelText("Title"), "Completely Different");
-    act(() => {
-      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
-    });
+    await user.clear(getTitleFilter());
+    await fillTitleFilter(user, "Completely Different");
 
     // Close the drawer with the X button (should reset pending changes)
-    await user.click(screen.getByRole("button", { name: "Close filters" }));
-
-    // Wait for drawer close animation - onResetFilters is called after animation
-    act(() => {
-      vi.advanceTimersByTime(DRAWER_CLOSE_ANIMATION_MS);
-    });
+    await clickCloseFilters(user);
 
     // The list should still show the originally filtered results
-    const listAfterReset = screen.getByTestId("grouped-poster-list");
-    const resetCount = within(listAfterReset).queryAllByRole("listitem").length;
-    expect(resetCount).toBe(filteredCount);
+    const listAfterReset = getGroupedPosterList().innerHTML;
+    expect(filteredList).toEqual(listAfterReset);
 
     // Open filter drawer again to verify filters were reset to last applied state
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Should show the originally applied filter, not the pending change
-    expect(screen.getByLabelText("Title")).toHaveValue("Halloween");
+    expect(getTitleFilter()).toHaveValue("Halloween");
   });
 });

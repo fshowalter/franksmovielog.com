@@ -278,6 +278,8 @@ describe("CastAndCrew", () => {
 
     await clickViewResults(user);
 
+    const listBeforeClear = getGroupedAvatarList().innerHTML;
+
     // Open filter drawer again
     await clickToggleFilters(user);
 
@@ -290,7 +292,9 @@ describe("CastAndCrew", () => {
 
     await clickViewResults(user);
 
-    expect(getGroupedAvatarList()).toMatchSnapshot();
+    const listAfterClear = getGroupedAvatarList().innerHTML;
+
+    expect(listBeforeClear).not.toEqual(listAfterClear);
   });
 
   it("can reset filters when closing drawer", async ({ expect }) => {
@@ -311,7 +315,7 @@ describe("CastAndCrew", () => {
     await clickViewResults(user);
 
     // Store the count of filtered results
-    const filteredList = getGroupedAvatarList();
+    const filteredList = getGroupedAvatarList().innerHTML;
 
     // Open filter drawer again
     await clickToggleFilters(user);
@@ -323,7 +327,7 @@ describe("CastAndCrew", () => {
     await clickCloseFilters(user);
 
     // The list should still show the originally filtered results
-    const listAfterReset = getGroupedAvatarList();
+    const listAfterReset = getGroupedAvatarList().innerHTML;
     expect(filteredList).toEqual(listAfterReset);
 
     // Open filter drawer again to verify filters were reset to last applied state

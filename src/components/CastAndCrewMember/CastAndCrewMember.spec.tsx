@@ -503,7 +503,8 @@ describe("CastAndCrewMember", () => {
     await clickViewResults(user);
 
     // Store the count of filtered results
-    const filteredList = getGroupedPosterList();
+    const listBeforeReset = getGroupedPosterList().innerHTML;
+
     // Open filter drawer again
     await clickToggleFilters(user);
 
@@ -514,8 +515,8 @@ describe("CastAndCrewMember", () => {
     await clickCloseFilters(user);
 
     // The list should still show the originally filtered results
-    const listAfterReset = getGroupedPosterList();
-    expect(listAfterReset).toEqual(filteredList);
+    const listAfterReset = getGroupedPosterList().innerHTML;
+    expect(listBeforeReset).toEqual(listAfterReset);
 
     // Open filter drawer again to verify filters were reset to last applied state
     await clickToggleFilters(user);
