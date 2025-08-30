@@ -47,7 +47,7 @@ const gradeOptions = [
   </option>,
 ];
 
-export function GradeInput({
+export function GradeField({
   initialValues,
   label,
   onGradeChange,

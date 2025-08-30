@@ -1,5 +1,3 @@
-import { ccn } from "~/utils/concatClassNames";
-
 import { RenderedMarkdown } from "./RenderedMarkdown";
 
 export function LongFormText({
@@ -11,13 +9,11 @@ export function LongFormText({
 }) {
   return (
     <RenderedMarkdown
-      className={ccn(
-        `
-          text-md/7 tracking-prose
-          tablet:text-xl/8
-        `,
-        className,
-      )}
+      className={`
+        text-md/7 tracking-prose
+        tablet:text-xl/8
+        ${className ?? ""}
+      `}
       text={text}
     />
   );
