@@ -2,7 +2,7 @@ import type { UserEvent } from "@testing-library/user-event";
 
 import { screen, within } from "@testing-library/react";
 
-export async function fillYearInput(
+export async function fillYearField(
   user: UserEvent,
   labelText: string,
   year1: string,

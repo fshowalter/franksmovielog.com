@@ -16,7 +16,7 @@ export function MostWatchedMovies({
   className,
   values,
 }: {
-  className?: string;
+  className: string;
   values: readonly MostWatchedMoviesListItemValue[];
 }): false | React.JSX.Element {
   if (values.length === 0) {
@@ -29,7 +29,7 @@ export function MostWatchedMovies({
         max-w-[calc(250px_*_4)] pb-5
         laptop:pb-10
         desktop:max-w-[calc(298px_*_4)]
-        ${className ?? ""}
+        ${className}
       `}
     >
       <h2

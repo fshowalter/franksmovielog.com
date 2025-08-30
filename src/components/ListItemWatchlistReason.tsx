@@ -1,6 +1,6 @@
 import { toSentence } from "~/utils/toSentence";
 
-export function WatchlistTitleSlug({
+export function ListItemWatchlistReason({
   collectionNames,
   directorNames,
   performerNames,

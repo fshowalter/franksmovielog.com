@@ -3,7 +3,7 @@ import { useState } from "react";
 import { LabelText } from "./LabelText";
 import { SelectInput } from "./SelectInput";
 
-export function YearInput({
+export function YearField({
   initialValues,
   label,
   onYearChange,

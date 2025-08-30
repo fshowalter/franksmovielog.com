@@ -1,6 +1,6 @@
 import type { CollectionFilterValues } from "~/components/ListWithFilters/collectionsReducerUtils";
 
-import { TextFilter } from "~/components/TextFilter";
+import { TextField } from "~/components/TextField";
 
 export function CollectionFilters({
   name,
@@ -12,7 +12,7 @@ export function CollectionFilters({
 }): React.JSX.Element {
   return (
     <>
-      <TextFilter
+      <TextField
         initialValue={name.initialValue}
         label="Name"
         onInputChange={name.onChange}

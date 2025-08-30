@@ -3,8 +3,8 @@ import type { UserEvent } from "@testing-library/user-event";
 import { screen, within } from "@testing-library/react";
 
 import { clickMultiSelectField } from "./MultiSelectField.testHelper";
-import { fillTextFilter } from "./TextFilter.testHelper";
-import { fillYearInput } from "./YearInput.testHelper";
+import { fillTextField } from "./TextField.testHelper";
+import { fillYearField } from "./YearField.testHelper";
 
 export async function clickGenreFilter(user: UserEvent, value: string) {
   await clickMultiSelectField(user, "Genres", value);
@@ -28,7 +28,7 @@ export async function fillReleaseYearFilter(
   value1: string,
   value2: string,
 ) {
-  await fillYearInput(user, "Release Year", value1, value2);
+  await fillYearField(user, "Release Year", value1, value2);
 }
 
 export async function fillReviewYearFilter(
@@ -36,11 +36,11 @@ export async function fillReviewYearFilter(
   value1: string,
   value2: string,
 ) {
-  await fillYearInput(user, "Review Year", value1, value2);
+  await fillYearField(user, "Review Year", value1, value2);
 }
 
 export async function fillTitleFilter(user: UserEvent, value: string) {
-  await fillTextFilter(user, "Title", value);
+  await fillTextField(user, "Title", value);
 }
 
 export function getTitleFilter() {

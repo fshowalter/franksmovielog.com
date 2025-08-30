@@ -6,13 +6,13 @@ import type { WatchlistTitle } from "~/api/watchlistTitles";
 import { ListItemDetails } from "~/components/ListItemDetails";
 import { ListItemGenres } from "~/components/ListItemGenres";
 import { ListItemTitle } from "~/components/ListItemTitle";
+import { ListItemWatchlistReason } from "~/components/ListItemWatchlistReason";
 import {
   ListHeaderButton,
   ListWithFilters,
 } from "~/components/ListWithFilters/ListWithFilters";
 import { GroupedPosterList, PosterListItem } from "~/components/PosterList";
 import { TitleSortOptions } from "~/components/TitleSortOptions";
-import { WatchlistTitleSlug } from "~/components/WatchlistTitleSlug";
 
 import type { Sort } from "./Watchlist.reducer";
 
@@ -151,7 +151,7 @@ function WatchlistListItem({
           title={value.title}
           year={value.releaseYear}
         />
-        <WatchlistTitleSlug
+        <ListItemWatchlistReason
           collectionNames={value.watchlistCollectionNames}
           directorNames={value.watchlistDirectorNames}
           performerNames={value.watchlistPerformerNames}

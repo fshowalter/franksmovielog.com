@@ -2,8 +2,8 @@ import type { TitleFilterValues } from "~/components/ListWithFilters/titlesReduc
 
 import { GradeField } from "~/components/GradeField";
 import { MultiSelectField } from "~/components/MultiSelectField";
-import { TextFilter } from "~/components/TextFilter";
-import { YearInput } from "~/components/YearInput";
+import { TextField } from "~/components/TextField";
+import { YearField } from "~/components/YearField";
 
 import { ReviewedStatusFilter } from "./ReviewedStatusFilter";
 
@@ -48,7 +48,7 @@ export function TitleFilters({
   return (
     <>
       {title && (
-        <TextFilter
+        <TextField
           initialValue={title.initialValue}
           label="Title"
           onInputChange={title.onChange}
@@ -62,7 +62,7 @@ export function TitleFilters({
         />
       )}
       {releaseYear && (
-        <YearInput
+        <YearField
           initialValues={releaseYear.initialValue}
           label="Release Year"
           onYearChange={releaseYear.onChange}
@@ -70,7 +70,7 @@ export function TitleFilters({
         />
       )}
       {reviewYear && (
-        <YearInput
+        <YearField
           initialValues={reviewYear.initialValue}
           label="Review Year"
           onYearChange={reviewYear.onChange}

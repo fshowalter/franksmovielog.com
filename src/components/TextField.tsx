@@ -8,7 +8,7 @@ export const TEXT_FILTER_DEBOUNCE_MS = 150;
 
 type onChangeHandler = (value: string) => void;
 
-export function TextFilter({
+export function TextField({
   initialValue,
   label,
   onInputChange,

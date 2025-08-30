@@ -9,10 +9,10 @@ import { ListItemGenres } from "~/components/ListItemGenres";
 import { ListItemGrade } from "~/components/ListItemGrade";
 import { ListItemReviewDate } from "~/components/ListItemReviewDate";
 import { ListItemTitle } from "~/components/ListItemTitle";
+import { ListItemWatchlistReason } from "~/components/ListItemWatchlistReason";
 import { ListWithFilters } from "~/components/ListWithFilters/ListWithFilters";
 import { GroupedPosterList, PosterListItem } from "~/components/PosterList";
 import { TitleSortOptions } from "~/components/TitleSortOptions";
-import { WatchlistTitleSlug } from "~/components/WatchlistTitleSlug";
 
 import type { Sort } from "./CastAndCrewMember.reducer";
 
@@ -144,7 +144,7 @@ function TitleListItem({ value }: { value: ListItemValue }): React.JSX.Element {
         <ListItemCreditedAs values={value.creditedAs} />
         {value.grade && <ListItemGrade grade={value.grade} />}
         {!value.grade && (
-          <WatchlistTitleSlug
+          <ListItemWatchlistReason
             collectionNames={value.watchlistCollectionNames}
             directorNames={value.watchlistDirectorNames}
             performerNames={value.watchlistPerformerNames}
