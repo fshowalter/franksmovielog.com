@@ -3,10 +3,7 @@
  * Used by Reviews, CastAndCrewMember, Viewings, Watchlist, and Collection components.
  */
 
-import type {
-  ListWithFiltersActionType,
-  ListWithFiltersState,
-} from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
+import type { ListWithFiltersState } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import type { GroupFn } from "~/components/utils/reducerUtils";
 
 import { updatePendingFilter } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
@@ -47,8 +44,7 @@ export enum TitlesActions {
 }
 
 // Union type for all title-specific actions
-export type TitlesActionType<TSortValue = unknown> =
-  | ListWithFiltersActionType<TSortValue>
+export type TitlesActionType =
   | PendingFilterGenresAction
   | PendingFilterGradeAction
   | PendingFilterReleaseYearAction

@@ -42,7 +42,7 @@ export const Actions = {
 } as const;
 
 export type ActionType = Extract<
-  TitlesActionType<TitleSortType>,
+  TitlesActionType,
   | ListWithFiltersActionType<TitleSortType>
   | { type: TitlesActions.PENDING_FILTER_GENRES }
   | { type: TitlesActions.PENDING_FILTER_GRADE }
