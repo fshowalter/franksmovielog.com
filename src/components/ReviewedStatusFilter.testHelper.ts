@@ -1,10 +1,10 @@
 import type { UserEvent } from "@testing-library/user-event";
 
-import { clickSelectField } from "./SelectField.testHelper";
+import { clickSelectFieldOption } from "./SelectField.testHelper";
 
-export async function clickReviewedStatusFilter(
+export async function clickReviewedStatusFilterOption(
   user: UserEvent,
   reviewedStatus: "All" | "Not Reviewed" | "Reviewed",
 ) {
-  await clickSelectField(user, "Reviewed Status", reviewedStatus);
+  await clickSelectFieldOption(user, "Reviewed Status", reviewedStatus);
 }

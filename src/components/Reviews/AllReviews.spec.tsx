@@ -13,7 +13,7 @@ import {
   getGroupedPosterList,
 } from "~/components/PosterList.testHelper";
 import {
-  clickGenreFilter,
+  clickGenreFilterOption,
   fillGradeFilter,
   fillReleaseYearFilter,
   fillReviewYearFilter,
@@ -261,9 +261,9 @@ describe("AllReviews", () => {
 
     await clickToggleFilters(user);
 
-    await clickGenreFilter(user, "Horror");
+    await clickGenreFilterOption(user, "Horror");
 
-    await clickGenreFilter(user, "Comedy");
+    await clickGenreFilterOption(user, "Comedy");
 
     await clickViewResults(user);
 

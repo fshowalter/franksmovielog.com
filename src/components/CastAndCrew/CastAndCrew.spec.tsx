@@ -7,7 +7,7 @@ import {
   getNameFilter,
 } from "~/components/CollectionFilters.testHelper";
 import {
-  clickCreditedAsFilter,
+  clickCreditedAsFilterOption,
   getCreditedAsFilter,
 } from "~/components/CreditedAsFilter.testHelper";
 import {
@@ -124,7 +124,7 @@ describe("CastAndCrew", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    await clickCreditedAsFilter(user, "Director");
+    await clickCreditedAsFilterOption(user, "Director");
 
     // Apply the filter
     await clickViewResults(user);
@@ -144,7 +144,7 @@ describe("CastAndCrew", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    await clickCreditedAsFilter(user, "Director");
+    await clickCreditedAsFilterOption(user, "Director");
 
     // Apply the filter
     await clickViewResults(user);
@@ -152,7 +152,7 @@ describe("CastAndCrew", () => {
     // Open filter drawer again
     await clickToggleFilters(user);
 
-    await clickCreditedAsFilter(user, "All");
+    await clickCreditedAsFilterOption(user, "All");
 
     // Apply the filter
     await clickViewResults(user);
@@ -172,7 +172,7 @@ describe("CastAndCrew", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    await clickCreditedAsFilter(user, "Writer");
+    await clickCreditedAsFilterOption(user, "Writer");
 
     // Apply the filter
     await clickViewResults(user);
@@ -193,7 +193,7 @@ describe("CastAndCrew", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    await clickCreditedAsFilter(user, "Writer");
+    await clickCreditedAsFilterOption(user, "Writer");
 
     // Apply the filter
     await clickViewResults(user);
@@ -201,7 +201,7 @@ describe("CastAndCrew", () => {
     // Open filter drawer again
     await clickToggleFilters(user);
 
-    await clickCreditedAsFilter(user, "All");
+    await clickCreditedAsFilterOption(user, "All");
 
     // Apply the filter
     await clickViewResults(user);
@@ -221,7 +221,7 @@ describe("CastAndCrew", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    await clickCreditedAsFilter(user, "Performer");
+    await clickCreditedAsFilterOption(user, "Performer");
 
     // Apply the filter
     await clickViewResults(user);
@@ -242,7 +242,7 @@ describe("CastAndCrew", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    await clickCreditedAsFilter(user, "Performer");
+    await clickCreditedAsFilterOption(user, "Performer");
 
     // Apply the filter
     await clickViewResults(user);
@@ -250,7 +250,7 @@ describe("CastAndCrew", () => {
     // Open filter drawer again
     await clickToggleFilters(user);
 
-    await clickCreditedAsFilter(user, "All");
+    await clickCreditedAsFilterOption(user, "All");
 
     // Apply the filter
     await clickViewResults(user);
@@ -274,7 +274,7 @@ describe("CastAndCrew", () => {
     // Apply multiple filters
     await fillNameFilter(user, "John");
 
-    await clickCreditedAsFilter(user, "Director");
+    await clickCreditedAsFilterOption(user, "Director");
 
     await clickViewResults(user);
 

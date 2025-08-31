@@ -2,11 +2,11 @@ import type { UserEvent } from "@testing-library/user-event";
 
 import { screen } from "@testing-library/react";
 
-import { clickSelectField } from "~/components/SelectField.testHelper";
+import { clickSelectFieldOption } from "~/components/SelectField.testHelper";
 import { fillYearField } from "~/components/YearField.testHelper";
 
-export async function clickMediumFilter(user: UserEvent, value: string) {
-  await clickSelectField(user, "Medium", value);
+export async function clickMediumFilterOption(user: UserEvent, value: string) {
+  await clickSelectFieldOption(user, "Medium", value);
 }
 
 export async function clickNextMonthButton(user: UserEvent) {
@@ -25,8 +25,8 @@ export async function clickPreviousMonthButton(user: UserEvent) {
   await user.click(previousMonthButton);
 }
 
-export async function clickVenueFilter(user: UserEvent, value: string) {
-  await clickSelectField(user, "Venue", value);
+export async function clickVenueFilterOption(user: UserEvent, value: string) {
+  await clickSelectFieldOption(user, "Venue", value);
 }
 
 export async function fillViewingYearFilter(

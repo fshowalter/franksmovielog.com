@@ -12,9 +12,9 @@ import {
   clickShowMore,
   getGroupedPosterList,
 } from "~/components/PosterList.testHelper";
-import { clickReviewedStatusFilter } from "~/components/ReviewedStatusFilter.testHelper";
+import { clickReviewedStatusFilterOption } from "~/components/ReviewedStatusFilter.testHelper";
 import {
-  clickGenreFilter,
+  clickGenreFilterOption,
   fillGradeFilter,
   fillReleaseYearFilter,
   fillReviewYearFilter,
@@ -226,7 +226,7 @@ describe("Collection", () => {
 
     render(<Collection {...props} />);
 
-    await clickReviewedStatusFilter(user, "Reviewed");
+    await clickReviewedStatusFilterOption(user, "Reviewed");
 
     // Apply the filter
     await clickViewResults(user);
@@ -242,7 +242,7 @@ describe("Collection", () => {
 
     render(<Collection {...props} />);
 
-    await clickReviewedStatusFilter(user, "Not Reviewed");
+    await clickReviewedStatusFilterOption(user, "Not Reviewed");
 
     // Apply the filter
     await clickViewResults(user);
@@ -258,12 +258,12 @@ describe("Collection", () => {
 
     render(<Collection {...props} />);
 
-    await clickReviewedStatusFilter(user, "Not Reviewed");
+    await clickReviewedStatusFilterOption(user, "Not Reviewed");
 
     // Apply the filter
     await clickViewResults(user);
 
-    await clickReviewedStatusFilter(user, "All");
+    await clickReviewedStatusFilterOption(user, "All");
 
     // Apply the filter
     await clickViewResults(user);
@@ -294,9 +294,9 @@ describe("Collection", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    await clickGenreFilter(user, "Horror");
+    await clickGenreFilterOption(user, "Horror");
 
-    await clickGenreFilter(user, "Comedy");
+    await clickGenreFilterOption(user, "Comedy");
 
     await clickViewResults(user);
 
