@@ -190,18 +190,19 @@ function CalendarDay({ day }: { day: CalendarDayData }): React.JSX.Element {
   return (
     <td
       className={`
-        mb-2 min-h-[100px] w-full border-default bg-calendar py-2 align-top
+        min-h-[100px] w-full border-default bg-calendar align-top
         tablet:border tablet:px-2
         tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%]
+        tablet-landscape:w-[14.28%] tablet-landscape:py-2
         ${day.viewings.length === 0 ? `hidden` : "block"}
       `}
       data-weekday={weekday}
     >
       <div
         className={`
-          mb-1 px-container text-sm font-medium
+          mb-1 px-container py-2 text-sm font-medium
           tablet:px-6 tablet:text-xl tablet:font-normal
+          tablet-landscape:py-0
           ${day.viewings.length > 0 ? "text-default" : "text-muted"}
         `}
       >
