@@ -137,10 +137,10 @@ async function buildReviewListItemValues(
     grade: string;
     gradeValue: number;
     imdbId: string;
-    releaseSequence: string;
+    releaseSequence: number;
     releaseYear: string;
     reviewDate: Date;
-    reviewSequence: string;
+    reviewSequence: number;
     slug: string;
     sortTitle: string;
     title: string;
