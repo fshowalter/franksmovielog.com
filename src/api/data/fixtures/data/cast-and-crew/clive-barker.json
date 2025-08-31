@@ -1,383 +1,139 @@
 {
   "name": "Clive Barker",
   "slug": "clive-barker",
+  "titleCount": 5,
+  "reviewCount": 5,
   "titles": [
     {
-      "creditedAs": [
-        "writer"
-      ],
       "imdbId": "tt0090233",
       "title": "Underworld",
+      "sortTitle": "underworld-1985",
       "releaseYear": "1985",
+      "releaseSequence": 2547,
+      "genres": [
+        "Action",
+        "Horror",
+        "Sci-Fi",
+        "Thriller"
+      ],
       "slug": "underworld-1985",
       "grade": "D-",
-      "sortTitle": "Underworld (1985)",
       "gradeValue": 2,
-      "releaseSequence": "1985-11-29tt0090233",
+      "gradeSequence": 1721,
       "reviewDate": "2022-02-20",
-      "reviewSequence": "2022-02-20-1258",
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": [],
-      "genres": []
-    },
-    {
+      "reviewSequence": 1453,
       "creditedAs": [
         "writer"
       ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0091829",
       "title": "Rawhead Rex",
+      "sortTitle": "rawhead-rex-1986",
       "releaseYear": "1986",
+      "releaseSequence": 2565,
+      "genres": [
+        "Fantasy",
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
       "slug": "rawhead-rex-1986",
       "grade": "D",
-      "sortTitle": "Rawhead Rex (1986)",
       "gradeValue": 3,
-      "releaseSequence": "1986-03-14tt0091829",
+      "gradeSequence": 1634,
       "reviewDate": "2022-02-20",
-      "reviewSequence": "2022-02-20-1259",
+      "reviewSequence": 1454,
+      "creditedAs": [
+        "writer"
+      ],
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "watchlistCollectionNames": [],
-      "genres": []
+      "watchlistCollectionNames": []
     },
     {
-      "creditedAs": [
-        "director",
-        "writer"
-      ],
       "imdbId": "tt0093177",
       "title": "Hellraiser",
+      "sortTitle": "hellraiser-1987",
       "releaseYear": "1987",
+      "releaseSequence": 2633,
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
       "slug": "hellraiser-1987",
       "grade": "A",
-      "sortTitle": "Hellraiser (1987)",
       "gradeValue": 12,
-      "releaseSequence": "1987-09-11tt0093177",
+      "gradeSequence": 53,
       "reviewDate": "2020-11-04",
-      "reviewSequence": "2020-11-04-331",
+      "reviewSequence": 1123,
+      "creditedAs": [
+        "director",
+        "writer"
+      ],
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "watchlistCollectionNames": [],
-      "genres": []
+      "watchlistCollectionNames": []
     },
     {
-      "creditedAs": [
-        "writer"
-      ],
       "imdbId": "tt0095294",
       "title": "Hellbound: Hellraiser II",
+      "sortTitle": "hellbound-hellraiser-ii-1988",
       "releaseYear": "1988",
+      "releaseSequence": 2678,
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
       "slug": "hellbound-hellraiser-ii-1988",
       "grade": "C",
-      "sortTitle": "Hellbound: Hellraiser II (1988)",
       "gradeValue": 6,
-      "releaseSequence": "1988-09-09tt0095294",
+      "gradeSequence": 984,
       "reviewDate": "2021-01-21",
-      "reviewSequence": "2021-01-21-993",
+      "reviewSequence": 1203,
+      "creditedAs": [
+        "writer"
+      ],
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "watchlistCollectionNames": [],
-      "genres": []
+      "watchlistCollectionNames": []
     },
     {
-      "creditedAs": [
-        "director",
-        "writer"
-      ],
-      "imdbId": "tt0100260",
-      "title": "Nightbreed",
-      "releaseYear": "1990",
-      "slug": null,
-      "grade": null,
-      "sortTitle": "Nightbreed (1990)",
-      "gradeValue": null,
-      "releaseSequence": "1990-02-16tt0100260",
-      "reviewDate": null,
-      "reviewSequence": null,
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [
-        "Clive Barker"
-      ],
-      "watchlistCollectionNames": [],
-      "genres": []
-    },
-    {
-      "creditedAs": [
-        "performer"
-      ],
-      "imdbId": "tt0105428",
-      "title": "Sleepwalkers",
-      "releaseYear": "1992",
-      "slug": null,
-      "grade": null,
-      "sortTitle": "Sleepwalkers (1992)",
-      "gradeValue": null,
-      "releaseSequence": "1992-04-10tt0105428",
-      "reviewDate": null,
-      "reviewSequence": null,
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [
-        "Stephen King"
-      ],
-      "watchlistCollectionNames": [],
-      "genres": []
-    },
-    {
-      "creditedAs": [
-        "writer"
-      ],
-      "imdbId": "tt0103919",
-      "title": "Candyman",
-      "releaseYear": "1992",
-      "slug": null,
-      "grade": null,
-      "sortTitle": "Candyman (1992)",
-      "gradeValue": null,
-      "releaseSequence": "1992-09-11tt0103919",
-      "reviewDate": null,
-      "reviewSequence": null,
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [
-        "Clive Barker"
-      ],
-      "watchlistCollectionNames": [],
-      "genres": []
-    },
-    {
-      "creditedAs": [
-        "writer"
-      ],
-      "imdbId": "tt0112625",
-      "title": "Candyman: Farewell to the Flesh",
-      "releaseYear": "1995",
-      "slug": null,
-      "grade": null,
-      "sortTitle": "Candyman: Farewell to the Flesh (1995)",
-      "gradeValue": null,
-      "releaseSequence": "1995-03-17tt0112625",
-      "reviewDate": null,
-      "reviewSequence": null,
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [
-        "Clive Barker"
-      ],
-      "watchlistCollectionNames": [],
-      "genres": []
-    },
-    {
-      "creditedAs": [
-        "director",
-        "writer"
-      ],
-      "imdbId": "tt0113690",
-      "title": "Lord of Illusions",
-      "releaseYear": "1995",
-      "slug": null,
-      "grade": null,
-      "sortTitle": "Lord of Illusions (1995)",
-      "gradeValue": null,
-      "releaseSequence": "1995-08-25tt0113690",
-      "reviewDate": null,
-      "reviewSequence": null,
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [
-        "Clive Barker"
-      ],
-      "watchlistCollectionNames": [],
-      "genres": []
-    },
-    {
-      "creditedAs": [
-        "performer",
-        "writer"
-      ],
-      "imdbId": "tt0119975",
-      "title": "Quicksilver Highway",
-      "releaseYear": "1997",
-      "slug": null,
-      "grade": null,
-      "sortTitle": "Quicksilver Highway (1997)",
-      "gradeValue": null,
-      "releaseSequence": "1997-01-01tt0119975",
-      "reviewDate": null,
-      "reviewSequence": null,
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [
-        "Clive Barker",
-        "Stephen King"
-      ],
-      "watchlistCollectionNames": [],
-      "genres": []
-    },
-    {
-      "creditedAs": [
-        "writer"
-      ],
-      "imdbId": "tt0313016",
-      "title": "Saint Sinner",
-      "releaseYear": "2002",
-      "slug": null,
-      "grade": null,
-      "sortTitle": "Saint Sinner (2002)",
-      "gradeValue": null,
-      "releaseSequence": "2002-10-26tt0313016",
-      "reviewDate": null,
-      "reviewSequence": null,
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [
-        "Clive Barker"
-      ],
-      "watchlistCollectionNames": [],
-      "genres": []
-    },
-    {
-      "creditedAs": [
-        "writer"
-      ],
       "imdbId": "tt0805570",
       "title": "The Midnight Meat Train",
+      "sortTitle": "midnight-meat-train-2008",
       "releaseYear": "2008",
+      "releaseSequence": 3326,
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
       "slug": "the-midnight-meat-train-2008",
       "grade": "D",
-      "sortTitle": "Midnight Meat Train (2008)",
       "gradeValue": 3,
-      "releaseSequence": "2008-05-16tt0805570",
+      "gradeSequence": 1658,
       "reviewDate": "2024-04-27",
-      "reviewSequence": "2024-04-27-1588",
+      "reviewSequence": 1674,
+      "creditedAs": [
+        "writer"
+      ],
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
-      "watchlistCollectionNames": [],
-      "genres": []
-    },
-    {
-      "creditedAs": [
-        "writer"
-      ],
-      "imdbId": "tt1169809",
-      "title": "Book of Blood",
-      "releaseYear": "2009",
-      "slug": null,
-      "grade": null,
-      "sortTitle": "Book of Blood (2009)",
-      "gradeValue": null,
-      "releaseSequence": "2009-03-07tt1169809",
-      "reviewDate": null,
-      "reviewSequence": null,
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [
-        "Clive Barker"
-      ],
-      "watchlistCollectionNames": [],
-      "genres": []
-    },
-    {
-      "creditedAs": [
-        "writer"
-      ],
-      "imdbId": "tt1331307",
-      "title": "Dread",
-      "releaseYear": "2009",
-      "slug": null,
-      "grade": null,
-      "sortTitle": "Dread (2009)",
-      "gradeValue": null,
-      "releaseSequence": "2009-07-14tt1331307",
-      "reviewDate": null,
-      "reviewSequence": null,
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [
-        "Clive Barker"
-      ],
-      "watchlistCollectionNames": [],
-      "genres": []
-    },
-    {
-      "creditedAs": [
-        "writer"
-      ],
-      "imdbId": "tt11242218",
-      "title": "Books of Blood",
-      "releaseYear": "2020",
-      "slug": null,
-      "grade": null,
-      "sortTitle": "Books of Blood (2020)",
-      "gradeValue": null,
-      "releaseSequence": "2020-10-07tt11242218",
-      "reviewDate": null,
-      "reviewSequence": null,
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [
-        "Clive Barker"
-      ],
-      "watchlistCollectionNames": [],
-      "genres": []
-    },
-    {
-      "creditedAs": [
-        "writer"
-      ],
-      "imdbId": "tt9347730",
-      "title": "Candyman",
-      "releaseYear": "2021",
-      "slug": null,
-      "grade": null,
-      "sortTitle": "Candyman (2021)",
-      "gradeValue": null,
-      "releaseSequence": "2021-08-22tt9347730",
-      "reviewDate": null,
-      "reviewSequence": null,
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [
-        "Clive Barker"
-      ],
-      "watchlistCollectionNames": [],
-      "genres": []
-    },
-    {
-      "creditedAs": [
-        "writer"
-      ],
-      "imdbId": "tt0887261",
-      "title": "Hellraiser",
-      "releaseYear": "2022",
-      "slug": null,
-      "grade": null,
-      "sortTitle": "Hellraiser (2022)",
-      "gradeValue": null,
-      "releaseSequence": "2022-09-28tt0887261",
-      "reviewDate": null,
-      "reviewSequence": null,
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [
-        "Clive Barker"
-      ],
-      "watchlistCollectionNames": [],
-      "genres": []
+      "watchlistCollectionNames": []
     }
   ],
-  "reviewCount": 5,
-  "titleCount": 17,
+  "description": "Writer and director with 5 reviewed titles.",
   "creditedAs": [
     "writer",
-    "director",
-    "performer"
-  ],
-  "description": "Writer and director and performer with 5 reviewed and 12 watchlist titles."
+    "director"
+  ]
 }

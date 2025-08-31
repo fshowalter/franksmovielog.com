@@ -372,7 +372,7 @@ describe("/watchlist", () => {
     const manyValues = Array.from({ length: 150 }, (_, i) => ({
       genres: [],
       imdbId: `tt${String(i).padStart(7, "0")}`,
-      releaseSequence: `1930-01-${String(i + 1).padStart(2, "0")}tt${String(i).padStart(7, "0")}`,
+      releaseSequence: i + 1,
       releaseYear: "1930",
       sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
       title: `Test Movie ${i + 1}`,
@@ -413,7 +413,7 @@ describe("/watchlist", () => {
 
     await clickDirectorFilterOption(user, "Howard Hawks");
 
-    await clickPerformerFilterOption(user, "Bette Davis");
+    await clickPerformerFilterOption(user, "John Wayne");
 
     await clickViewResults(user);
 

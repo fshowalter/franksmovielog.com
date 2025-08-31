@@ -11,7 +11,7 @@ const WatchlistTitleJsonSchema = z
   .object({
     genres: z.array(z.string()),
     imdbId: z.string(),
-    releaseSequence: z.string(),
+    releaseSequence: z.number(),
     releaseYear: z.string(),
     sortTitle: z.string(),
     title: z.string(),

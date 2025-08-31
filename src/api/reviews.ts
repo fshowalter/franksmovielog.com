@@ -188,9 +188,7 @@ export async function mostRecentReviews(limit: number) {
       cachedReviewedTitlesJson = reviewedTitlesJson;
     }
 
-    reviewedTitlesJson.sort((a, b) =>
-      b.reviewSequence.localeCompare(a.reviewSequence),
-    );
+    reviewedTitlesJson.sort((a, b) => b.reviewSequence - a.reviewSequence);
     const slicedTitles = reviewedTitlesJson.slice(0, limit);
 
     const { reviews } = await parseReviewedTitlesJson(slicedTitles);

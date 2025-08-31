@@ -25,13 +25,13 @@ export type ListItemValue = Pick<
   | "imdbId"
   | "releaseSequence"
   | "releaseYear"
+  | "reviewSequence"
   | "slug"
   | "sortTitle"
   | "title"
 > & {
   posterImageProps: PosterImageProps;
   reviewDisplayDate: string;
-  reviewSequence?: string;
   reviewYear: string;
 };
 

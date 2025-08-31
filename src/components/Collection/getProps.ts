@@ -41,7 +41,7 @@ export async function getProps(slug: string): Promise<PageProps> {
     initialSort: "release-date-asc",
     titles: await Promise.all(
       collection.titles
-        .sort((a, b) => a.releaseSequence.localeCompare(b.releaseSequence))
+        .sort((a, b) => b.releaseSequence - a.releaseSequence)
         .map(async (title) => {
           return {
             ...title,
