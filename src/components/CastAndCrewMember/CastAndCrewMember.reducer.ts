@@ -1,4 +1,7 @@
-import type { ListWithFiltersState } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
+import type {
+  ListWithFiltersActionType,
+  ListWithFiltersState,
+} from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import type {
   TitleFilterValues,
   TitlesActionType,
@@ -56,7 +59,10 @@ export const Actions = {
   ...CastAndCrewMemberActions,
 } as const;
 
-export type ActionType = PendingFilterCreditedAsAction | TitlesActionType<Sort>;
+export type ActionType =
+  | ListWithFiltersActionType<Sort>
+  | PendingFilterCreditedAsAction
+  | TitlesActionType;
 
 // CastAndCrewMember-specific actions
 type PendingFilterCreditedAsAction = {
